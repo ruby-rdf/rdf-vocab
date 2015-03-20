@@ -61,7 +61,15 @@ module RDF
       }
     }.freeze
 
-    # FIXME vocabularies should be lazy loaded
-    Dir[File.expand_path("../vocab/**/*.rb", __FILE__)].each { |v| require v }
+    # Autoload vocabularies
+    VOCABS.each do |id, params|
+      v = params.fetch(:class_name, id.to_s.upcase).to_sym
+      if RDF.const_defined?(v)
+        # If the vocabulary is defined in RDF.rb, alias it, as it won't be loaded again
+        const_set(v, RDF.const_get(v))
+      else
+        autoload v, "rdf/vocab/#{id}"
+      end
+    end
   end
 end
