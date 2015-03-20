@@ -1,16 +1,37 @@
 #!/usr/bin/env ruby
 $:.unshift(File.expand_path(File.join(File.dirname(__FILE__), 'lib')))
 require 'rdf'
+require 'rdf/vocab'
 require 'linkeddata'
 require 'rake/testtask'
 require 'rdf/cli/vocab-loader'
 
-Rake::TestTask.new do |t|
-    t.libs << 'test'
+namespace :gem do
+  desc "Build the rdf-vocab-#{RDF::Vocab::VERSION}.gem file"
+  task :build do
+    sh "gem build rdf-vocab.gemspec && mv rdf-vocab-#{RDF::Vocab::VERSION}.gem pkg/"
+  end
+
+  desc "Release the rdf-vocab-#{RDF::Vocab::VERSION}.gem file"
+  task :release do
+    sh "gem push pkg/rdf-vocab-#{RDF::Vocab::VERSION}.gem"
+  end
 end
 
-desc "Run tests"
-task :default => :test
+desc 'Default: run specs.'
+task :default => :spec
+task :specs => :spec
+
+require 'rspec/core/rake_task'
+desc 'Run specifications'
+RSpec::Core::RakeTask.new do |spec|
+  spec.rspec_opts = %w(--options spec/spec.opts) if File.exists?('spec/spec.opts')
+end
+
+desc "Run specifications for continuous integration"
+RSpec::Core::RakeTask.new("spec:ci") do |spec|
+  spec.rspec_opts = %w(--options spec/spec.opts) if File.exists?('spec/spec.opts')
+end
 
 desc "Generate Vocabularies"
 task :gen_vocabs => RDF::Vocab::VOCABS.keys.map {|v| "lib/rdf/vocab/#{v}.rb"}

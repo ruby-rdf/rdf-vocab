@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["David Chandek-Stark", "Aaron Coburn", "Gregg Kellogg"]
   spec.email         = "public-rdf-ruby@w3.org"
   spec.summary       = %q{A library of RDF vocabularies}
-  spec.description   = %q{A library of RDF vocabularies}
+  spec.description   = %q{Defines several standard RDF vocabularies}
   spec.homepage      = "http://ruby-rdf.github.com/rdf-vocab"
   spec.license       = "Public Domain" if spec.respond_to?(:license=)
 
