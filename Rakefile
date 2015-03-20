@@ -36,11 +36,11 @@ vocab_sources = {
 }
 
 
-task :gen_vocabs => vocab_sources.keys.map {|v| "lib/rdf-vocab/vocab/#{v}.rb"}
+task :gen_vocabs => vocab_sources.keys.map {|v| "lib/rdf/vocab/#{v}.rb"}
 
 vocab_sources.each do |id, v|
-  file "lib/rdf-vocab/vocab/#{id}.rb" => :do_build do
-    puts "Generate lib/rdf-vocab/vocab/#{id}.rb"
+  file "lib/rdf/vocab/#{id}.rb" => :do_build do
+    puts "Generate lib/rdf/vocab/#{id}.rb"
     begin
       out = StringIO.new
       loader = RDF::VocabularyLoader.new(v[:class_name] ? v[:class_name] : id.to_s.upcase)
@@ -51,7 +51,7 @@ vocab_sources.each do |id, v|
       loader.output = out
       loader.run
       out.rewind
-      File.open("lib/rdf-vocab/vocab/#{id}.rb", "w") {|f| f.write out.read}
+      File.open("lib/rdf/vocab/#{id}.rb", "w") {|f| f.write out.read}
     rescue
       puts "Failed to load #{id}: #{$!.message}"
     end
