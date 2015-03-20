@@ -2,11 +2,4 @@ source "https://rubygems.org"
 
 gemspec
 
-group :develop do
-    gem "linkeddata"
-end
-
-group :test do
-    gem "rake"
-    gem "minitest"
-end
+gem 'rdf', git: "git://github.com/ruby-rdf/rdf.git", branch: "develop"
