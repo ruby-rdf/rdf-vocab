@@ -1,6 +1,9 @@
 # rdf-vocab
 Common RDF Vocabularies for use with Ruby
 
+[![Gem Version](https://badge.fury.io/rb/rdf-vocab.png)](http://badge.fury.io/rb/rdf-vocab)
+[![Build Status](https://travis-ci.org/ruby-rdf/rdf-vocab.png?branch=master)](http://travis-ci.org/ruby-rdf/rdf-vocab)
+
 ##Vocabularies
 
 * RDF::Vocab::ACL - [Web Access Control](http://www.w3.org/wiki/WebAccessControl) (W3C)
