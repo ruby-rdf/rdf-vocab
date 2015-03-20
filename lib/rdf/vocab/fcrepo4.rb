@@ -8,64 +8,64 @@ module RDF::Vocab
     term :AnnotatedResource,
       comment: %(A Resource that maintains properties in its own right.).freeze,
       label: "annotated resource".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Resource".freeze,
+      subClassOf: "fcrepo4:Resource".freeze,
       type: "owl:Class".freeze
     term :Binary,
       comment: %(A bitstream, with no further data properties.).freeze,
       label: "binary".freeze,
-      "owl:disjointWith" => [%(http://fedora.info/definitions/v4/repository#NonRdfSourceDescription).freeze, %(http://fedora.info/definitions/v4/repository#Container).freeze],
-      subClassOf: "http://fedora.info/definitions/v4/repository#Resource".freeze,
+      "owl:disjointWith" => [%(fcrepo4:NonRdfSourceDescription).freeze, %(fcrepo4:Container).freeze],
+      subClassOf: "fcrepo4:Resource".freeze,
       type: "owl:Class".freeze
     term :Blanknode,
       comment: %(An entity that is a representation of an RDF blank node.).freeze,
       label: "blank node".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
+      subClassOf: "fcrepo4:Thing".freeze,
       type: "owl:Class".freeze
     term :Configuration,
       comment: %(A container for transform configuration.).freeze,
       label: "Fedora transform configuration".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
+      subClassOf: "fcrepo4:Thing".freeze,
       type: "owl:Class".freeze
     term :Container,
       comment: %(A Fedora Container: the fundamental quantum of durable content in a Fedora repository.).freeze,
       label: "Fedora Container".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#AnnotatedResource".freeze,
+      subClassOf: "fcrepo4:AnnotatedResource".freeze,
       type: "owl:Class".freeze
     term :EmbedResources,
       comment: %(The set of triples representing child resources of a given resource.).freeze,
       label: "embed resources".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
+      subClassOf: "fcrepo4:Thing".freeze,
       type: "owl:Class".freeze
     term :InboundReferences,
       comment: %(The set of triples representing other repository resources which link to a given resource.).freeze,
       label: "inbound references".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
+      subClassOf: "fcrepo4:Thing".freeze,
       type: "owl:Class".freeze
     term :NodeTypeConfiguration,
       comment: %(A container for transform node type configuration.).freeze,
       label: "Fedora transform node type configuration".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
+      subClassOf: "fcrepo4:Thing".freeze,
       type: "owl:Class".freeze
     term :NonRdfSourceDescription,
       comment: %(A container for a bitstream and associated properties.).freeze,
       label: "Fedora NonRdfSourceDescription".freeze,
-      "owl:disjointWith" => %(http://fedora.info/definitions/v4/repository#Container).freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#AnnotatedResource".freeze,
+      "owl:disjointWith" => %(fcrepo4:Container).freeze,
+      subClassOf: "fcrepo4:AnnotatedResource".freeze,
       type: "owl:Class".freeze
     term :Pairtree,
       comment: %(An entity that is a an intermediary node created in a PairTree hierarchy.).freeze,
       label: "pair tree".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
+      subClassOf: "fcrepo4:Thing".freeze,
       type: "owl:Class".freeze
     term :Relations,
       comment: %(An entity that may be related to other repository entities.).freeze,
       label: "Relations".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
+      subClassOf: "fcrepo4:Thing".freeze,
       type: "owl:Class".freeze
     term :Resource,
       comment: %(An entity that has been committed to the repository for safekeeping. For example, Fedora objects and datastreams are resources. A Fixity is not, because the provenance of the instance is entirely internal to the repository.).freeze,
       label: "Fedora resource".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
+      subClassOf: "fcrepo4:Thing".freeze,
       type: "owl:Class".freeze
     term :ResourceStatus,
       comment: %(Values of the status property.  The default values are active and deleted -- but additional values can be created.).freeze,
@@ -74,7 +74,7 @@ module RDF::Vocab
     term :ServerManaged,
       comment: %(The system-generated triples for a given resource \(as opposed to explicity-declared properties\).).freeze,
       label: "server managed".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
+      subClassOf: "fcrepo4:Thing".freeze,
       type: "owl:Class".freeze
     term :Thing,
       comment: %(Something that is contemplated in the Fedora repository model.).freeze,
@@ -86,7 +86,7 @@ module RDF::Vocab
       type: "owl:Class".freeze
     term :Version,
       label: "A snapshot of a Fedora object at a given point in time.".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Container".freeze,
+      subClassOf: "fcrepo4:Container".freeze,
       type: "owl:Class".freeze
 
     # Property definitions
@@ -95,9 +95,9 @@ module RDF::Vocab
       subPropertyOf: "owl:topDataProperty".freeze,
       type: "owl:DatatypeProperty".freeze
     property :baseVersion,
-      domain: "http://fedora.info/definitions/v4/repository#Container".freeze,
+      domain: "fcrepo4:Container".freeze,
       label: "base version".freeze,
-      range: "http://fedora.info/definitions/v4/repository#Version".freeze,
+      range: "fcrepo4:Version".freeze,
       type: ["owl:ObjectProperty".freeze, "owl:FunctionalProperty".freeze]
     property :clusterCacheMode,
       label: "clusterCacheMode".freeze,
@@ -159,28 +159,28 @@ module RDF::Vocab
       type: "owl:DatatypeProperty".freeze
     property :frozenMixinTypes,
       label: "frozenMixinTypes".freeze,
-      subPropertyOf: "http://fedora.info/definitions/v4/repository#mixinTypes".freeze,
+      subPropertyOf: "fcrepo4:mixinTypes".freeze,
       type: "owl:DatatypeProperty".freeze
     property :frozenPrimaryType,
       label: "frozenPrimaryType".freeze,
-      subPropertyOf: "http://fedora.info/definitions/v4/repository#primaryType".freeze,
+      subPropertyOf: "fcrepo4:primaryType".freeze,
       type: "owl:DatatypeProperty".freeze
     property :frozenUuid,
       label: "frozenUuid".freeze,
-      subPropertyOf: "http://fedora.info/definitions/v4/repository#uuid".freeze,
+      subPropertyOf: "fcrepo4:uuid".freeze,
       type: "owl:DatatypeProperty".freeze
     property :hasAccessRoles,
       label: "has access roles".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasChild,
-      domain: "http://fedora.info/definitions/v4/repository#Container".freeze,
+      domain: "fcrepo4:Container".freeze,
       label: "has child".freeze,
       type: ["owl:ObjectProperty".freeze, "owl:InverseFunctionalProperty".freeze]
     property :hasContent,
       comment: %(Indicates a binary in which content is stored for this datastream.).freeze,
-      domain: "http://fedora.info/definitions/v4/repository#NonRdfSourceDescription".freeze,
+      domain: "fcrepo4:NonRdfSourceDescription".freeze,
       label: "has content".freeze,
-      range: "http://fedora.info/definitions/v4/repository#Binary".freeze,
+      range: "fcrepo4:Binary".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasDefaultWorkspace,
       comment: %(Indicates the default workspace of the repository.).freeze,
@@ -211,21 +211,21 @@ module RDF::Vocab
       subPropertyOf: "owl:topDataProperty".freeze,
       type: "owl:DatatypeProperty".freeze
     property :hasParent,
-      domain: "http://fedora.info/definitions/v4/repository#Resource".freeze,
+      domain: "fcrepo4:Resource".freeze,
       label: "has parent".freeze,
-      range: "http://fedora.info/definitions/v4/repository#Container".freeze,
+      range: "fcrepo4:Container".freeze,
       type: ["owl:ObjectProperty".freeze, "owl:FunctionalProperty".freeze]
     property :hasResultsMember,
       label: "has results member".freeze,
-      range: "http://fedora.info/definitions/v4/repository#Resource".freeze,
+      range: "fcrepo4:Resource".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasTransactionProvider,
       label: "has transaction provider".freeze,
       type: "owl:DatatypeProperty".freeze
     property :hasVersion,
-      domain: "http://fedora.info/definitions/v4/repository#Container".freeze,
+      domain: "fcrepo4:Container".freeze,
       label: "has version".freeze,
-      range: "http://fedora.info/definitions/v4/repository#Version".freeze,
+      range: "fcrepo4:Version".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasVersionLabel,
       label: "hasVersionLabel".freeze,
@@ -249,9 +249,9 @@ module RDF::Vocab
       type: "owl:DatatypeProperty".freeze
     property :isContentOf,
       comment: %(Indicates a datastream for which this resource contains the content. ).freeze,
-      domain: "http://fedora.info/definitions/v4/repository#Binary".freeze,
+      domain: "fcrepo4:Binary".freeze,
       label: "is content of".freeze,
-      range: "http://fedora.info/definitions/v4/repository#NonRdfSourceDescription".freeze,
+      range: "fcrepo4:NonRdfSourceDescription".freeze,
       type: ["owl:ObjectProperty".freeze, "owl:InverseFunctionalProperty".freeze]
     property :lastModified,
       label: "lastModified".freeze,
@@ -300,9 +300,9 @@ module RDF::Vocab
       subPropertyOf: "owl:topDataProperty".freeze,
       type: "owl:DatatypeProperty".freeze
     property :predecessors,
-      domain: "http://fedora.info/definitions/v4/repository#Version".freeze,
+      domain: "fcrepo4:Version".freeze,
       label: "predecessors".freeze,
-      range: "http://fedora.info/definitions/v4/repository#Version".freeze,
+      range: "fcrepo4:Version".freeze,
       type: "owl:ObjectProperty".freeze
     property :primaryType,
       label: "primaryType".freeze,
@@ -509,9 +509,9 @@ module RDF::Vocab
       type: "owl:ObjectProperty".freeze
     property :status,
       comment: %(Describes the status of a resource, such as active or deleted.).freeze,
-      domain: "http://fedora.info/definitions/v4/repository#Resource".freeze,
+      domain: "fcrepo4:Resource".freeze,
       label: "status".freeze,
-      range: "http://fedora.info/definitions/v4/repository#ResourceStatus".freeze,
+      range: "fcrepo4:ResourceStatus".freeze,
       type: "owl:ObjectProperty".freeze
     property :uuid,
       label: "uuid".freeze,
@@ -530,10 +530,10 @@ module RDF::Vocab
     term :active,
       comment: %(The resource is active.).freeze,
       label: "active".freeze,
-      type: ["owl:NamedIndividual".freeze, "http://fedora.info/definitions/v4/repository#ResourceStatus".freeze]
+      type: ["owl:NamedIndividual".freeze, "fcrepo4:ResourceStatus".freeze]
     term :deleted,
       comment: %(The resource has been marked for deletion.).freeze,
       label: "deleted".freeze,
-      type: ["owl:NamedIndividual".freeze, "http://fedora.info/definitions/v4/repository#ResourceStatus".freeze]
+      type: ["owl:NamedIndividual".freeze, "fcrepo4:ResourceStatus".freeze]
   end
 end

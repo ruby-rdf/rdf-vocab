@@ -59,7 +59,8 @@ module RDF
         source: "http://id.loc.gov/vocabulary/preservation/eventType.nt",
         class_name: "PremisEventType"
       }
-    }
+    }.freeze
+
     # FIXME vocabularies should be lazy loaded
     Dir[File.expand_path("../vocab/**/*.rb", __FILE__)].each { |v| require v }
   end
