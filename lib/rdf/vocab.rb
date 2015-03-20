@@ -1,4 +1,5 @@
 require 'rdf'
+require 'rdf/vocabulary'
 require 'rdf/vocab/extensions'
 require 'rdf/vocab/version'
 
@@ -53,23 +54,19 @@ module RDF
       },
       ore: {uri: "http://www.openarchives.org/ore/terms/"},
       premis: {uri: "http://www.loc.gov/premis/rdf/v1#", source: "http://www.loc.gov/premis/rdf/v1.rdf"},
-      prov: {uri: "http://www.w3.org/ns/prov#"},
       premis_event_type: {
         uri: "http://id.loc.gov/vocabulary/preservation/eventType/",
         source: "http://id.loc.gov/vocabulary/preservation/eventType.nt",
         class_name: "PremisEventType"
-      }
+      },
+      #prov: {uri: "http://www.w3.org/ns/prov#"},
     }.freeze
 
     # Autoload vocabularies
     VOCABS.each do |id, params|
       v = params.fetch(:class_name, id.to_s.upcase).to_sym
-      if RDF.const_defined?(v)
-        # If the vocabulary is defined in RDF.rb, alias it, as it won't be loaded again
-        const_set(v, RDF.const_get(v))
-      else
-        autoload v, "rdf/vocab/#{id}"
-      end
+      autoload v, "rdf/vocab/#{id}"
     end
+    PROV = ::RDF::PROV if RDF.const_defined?(:PROV)
   end
 end
