@@ -174,25 +174,25 @@ module RDF::Vocab
       comment: %(Ascending order.).freeze,
       label: "Ascending".freeze,
       "rdfs:isDefinedBy" => %(ldp:).freeze,
-      type: "owl:Individual".freeze,
+      type: "owl:NamedIndividual".freeze,
       "vs:term_status" => %(testing).freeze
     term :Descending,
       comment: %(Descending order.).freeze,
       label: "Descending".freeze,
       "rdfs:isDefinedBy" => %(ldp:).freeze,
-      type: "owl:Individual".freeze,
+      type: "owl:NamedIndividual".freeze,
       "vs:term_status" => %(testing).freeze
     term :MemberSubject,
       comment: %(Used to indicate default and typical behavior for ldp:insertedContentRelation, where the member-URI value in the membership triple added when a creation request is successful is the URI assigned to the newly created resource.).freeze,
       label: "MemberSubject".freeze,
       "rdfs:isDefinedBy" => %(ldp:).freeze,
-      type: "owl:Individual".freeze,
+      type: "owl:NamedIndividual".freeze,
       "vs:term_status" => %(stable).freeze
     term :PreferContainment,
       comment: %(URI identifying a LDPC's containment triples, for example to allow clients to express interest in receiving them.).freeze,
       label: "PreferContainment".freeze,
       "rdfs:isDefinedBy" => %(ldp:).freeze,
-      type: "owl:Individual".freeze,
+      type: "owl:NamedIndividual".freeze,
       "vs:term_status" => %(stable).freeze
     term :PreferEmptyContainer,
       comment: %(Archaic alias for ldp:PreferMinimalContainer).freeze,
@@ -200,19 +200,19 @@ module RDF::Vocab
       "owl:equivalentProperty" => %(ldp:PreferMinimalContainer).freeze,
       "rdfs:isDefinedBy" => %(ldp:).freeze,
       "rdfs:seeAlso" => %(ldp:PreferMinimalContainer).freeze,
-      type: "owl:Individual".freeze,
+      type: "owl:NamedIndividual".freeze,
       "vs:term_status" => %(archaic).freeze
     term :PreferMembership,
       comment: %(URI identifying a LDPC's membership triples, for example to allow clients to express interest in receiving them.).freeze,
       label: "PreferMembership".freeze,
       "rdfs:isDefinedBy" => %(ldp:).freeze,
-      type: "owl:Individual".freeze,
+      type: "owl:NamedIndividual".freeze,
       "vs:term_status" => %(stable).freeze
     term :PreferMinimalContainer,
       comment: %(URI identifying the subset of a LDPC's triples present in an empty LDPC, for example to allow clients to express interest in receiving them.  Currently this excludes containment and membership triples, but in the future other exclusions might be added.  This definition is written to automatically exclude those new classes of triples.).freeze,
       label: "PreferMinimalContainer".freeze,
       "rdfs:isDefinedBy" => %(ldp:).freeze,
-      type: "owl:Individual".freeze,
+      type: "owl:NamedIndividual".freeze,
       "vs:term_status" => %(stable).freeze
   end
 end
