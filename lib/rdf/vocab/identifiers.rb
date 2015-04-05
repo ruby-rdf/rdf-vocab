@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-# This file generated automatically using vocab-fetch from http://id.loc.gov/vocabulary/identifiers.nt
+# This file generated automatically using vocab-fetch from http://id.loc.gov/vocabulary/identifiers.rdf
 require 'rdf'
 module RDF::Vocab
   class Identifiers < RDF::StrictVocabulary("http://id.loc.gov/vocabulary/identifiers/")
@@ -53,6 +53,10 @@ module RDF::Vocab
       "skos:prefLabel" => %(Handle).freeze,
       subPropertyOf: "identifiers:id".freeze,
       type: ["rdf:Property".freeze, "mads:Authority".freeze, "skos:Concept".freeze]
+    property :id,
+      comment: %(Generic Identifier property.  It is expected that one will use one of its many subproperties.).freeze,
+      label: "Identifier".freeze,
+      type: "rdf:Property".freeze
     property :isan,
       label: "International Standard Audiovisual Number".freeze,
       "mads:authoritativeLabel" => %(International Standard Audiovisual Number).freeze,

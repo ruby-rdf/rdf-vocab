@@ -31,8 +31,15 @@ module RDF
   #    iana: {uri: "", source: "etc/iana-relations.rdf"},
       identifiers: {
         uri: "http://id.loc.gov/vocabulary/identifiers/",
-        source: "http://id.loc.gov/vocabulary/identifiers.nt",
-        class_name: "Identifiers"
+        source: "http://id.loc.gov/vocabulary/identifiers.rdf",
+        class_name: "Identifiers",
+        extra: {
+          id: {
+            label: "Identifier",
+            comment: "Generic Identifier property.  It is expected that one will use one of its many subproperties.",
+            type: "rdf:Property"
+          }
+        }
       },
       ldp:  {uri: "http://www.w3.org/ns/ldp#", strict: false},
       mads: {
