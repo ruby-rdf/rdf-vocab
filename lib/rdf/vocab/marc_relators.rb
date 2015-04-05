@@ -1131,7 +1131,7 @@ module RDF::Vocab
       "mads:code" => %(lee).freeze,
       "skos:notation" => %(lee).freeze,
       "skos:prefLabel" => %(Libelee-appellee).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "marcrelators:lei".freeze],
+      subPropertyOf: ["marcrelators:role".freeze],
       type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :lel,
       label: "Libelee".freeze,
