@@ -50,7 +50,7 @@ Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 * RDF::Vocab::VOID      - [Vocabulary of Interlinked Datasets](http://www.w3.org/TR/void/) (W3C) - Alias of `RDF::VOID`
 * RDF::Vocab::VS        - [SemWeb Vocab Status ontology](http://www.w3.org/2003/06/sw-vocab-status/note.html) (W3C) - Alias of `RDF::VS`
 * RDF::Vocab::WOT       - [Web of Trust](http://xmlns.com/wot/0.1/) - Alias of `RDF::WOT`
-* RDF::Vocab::WRDS      - [Protocol for Web Description Resources](http://www.w3.org/TR/powder-primer/) (W3C) - Alias of `RDF::WRDS`
+* RDF::Vocab::WDRS      - [Protocol for Web Description Resources](http://www.w3.org/TR/powder-primer/) (W3C) - Alias of `RDF::WRDS`
 * RDF::Vocab::XHTML     - [Extensible HyperText Markup Language](http://www.w3.org/1999/xhtml/) (W3C) - Alias of `RDF::XHTML`
 * RDF::Vocab::XHV       - [XHTML Vocabulary](http://www.w3.org/1999/xhtml/vocab) (W3C) - Alias of `RDF::XHV`
 
