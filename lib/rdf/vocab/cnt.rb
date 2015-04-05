@@ -76,7 +76,7 @@ module RDF::Vocab
       comment: %(The XML content preceding the document type declaration.).freeze,
       domain: "http://www.w3.org/2011/content#ContentAsXML".freeze,
       label: "XML leading misc".freeze,
-      range: "rdfs:XMLLiteral".freeze,
+      range: "rdf:XMLLiteral".freeze,
       type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
     property :publicId,
       comment: %(The document type declarations's public identifier.).freeze,
@@ -88,7 +88,7 @@ module RDF::Vocab
       comment: %(The XML content following the document type declaration.).freeze,
       domain: "http://www.w3.org/2011/content#ContentAsXML".freeze,
       label: "XML rest".freeze,
-      range: "rdfs:XMLLiteral".freeze,
+      range: "rdf:XMLLiteral".freeze,
       type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
     property :standalone,
       comment: %(The standalone declaration in the XML declaration.).freeze,
