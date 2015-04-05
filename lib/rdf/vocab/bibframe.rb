@@ -1010,6 +1010,9 @@ module RDF::Vocab
       label: "Graphic scale".freeze,
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
+    property :hasAccompaniment,
+      label: "has accompaniment".freeze,
+      type: "rdf:Property".freeze
     property :hasAnnotation,
       comment: %(Resource has an annotation.).freeze,
       label: "Has annotation".freeze,

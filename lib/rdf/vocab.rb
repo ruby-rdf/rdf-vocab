@@ -10,8 +10,11 @@ module RDF
       bibframe: {
         uri: "http://bibframe.org/vocab/",
         source: "http://bibframe.org/vocab.rdf",
-        class_name: "Bibframe"
+        class_name: "Bibframe",
+        extra: {hasAccompaniment: {type: "rdf:Property",label: "has accompaniment"}}
       },
+      cc:     {uri: "http://creativecommons.org/ns#", alias: true},
+      cert:   {uri: "http://www.w3.org/ns/auth/cert#", alias: true},
       cnt: {uri: "http://www.w3.org/2011/content#"},
       crm: {uri: "http://www.cidoc-crm.org/cidoc-crm/", source: "etc/crm.rdf"},
       datacite: {
@@ -19,6 +22,10 @@ module RDF
         source: "http://eelst.cs.unibo.it/apps/LODE/source?url=http://purl.org/spar/datacite",
         class_name: "DataCite"
       },
+      dc:     {uri: "http://purl.org/dc/terms/", alias: true},
+      dc11:   {uri: "http://purl.org/dc/elements/1.1/", alias: true},
+      dcat:   {uri: "http://www.w3.org/ns/dcat#", alias: true},
+      doap:   {uri: "http://usefulinc.com/ns/doap#", alias: true},
       dwc: {
         uri: "http://rs.tdwg.org/dwc/terms/",
         source: "etc/dwcterms.rdf",
@@ -28,7 +35,13 @@ module RDF
         uri: "http://www.europeana.eu/schemas/edm/",
         source: "http://www.europeana.eu/schemas/edm/rdf/edm.owl"
       },
+      exif:   {uri: "http://www.w3.org/2003/12/exif/ns#", alias: true},
       fcrepo4: {uri: "http://fedora.info/definitions/v4/repository#", class_name: "Fcrepo4"},
+      foaf:   {uri: "http://xmlns.com/foaf/0.1/", alias: true},
+      geo:    {uri: "http://www.w3.org/2003/01/geo/wgs84_pos#", alias: true},
+      gr:     {uri: "http://purl.org/goodrelations/v1#", source: "http://www.heppnetz.de/ontologies/goodrelations/v1.owl", alias: true},
+      ht:     {uri: "http://www.w3.org/2011/http#", alias: true},
+      ical:   {uri: "http://www.w3.org/2002/12/cal/icaltzd#", alias: true},
   #    iana: {uri: "", source: "etc/iana-relations.rdf"},
       identifiers: {
         uri: "http://id.loc.gov/vocabulary/identifiers/",
@@ -43,15 +56,24 @@ module RDF
         }
       },
       ldp:  {uri: "http://www.w3.org/ns/ldp#", strict: false},
+      ma:     {uri: "http://www.w3.org/ns/ma-ont#", source: "http://www.w3.org/ns/ma-ont.rdf", strict: false},
       mads: {
         uri: "http://www.loc.gov/mads/rdf/v1#",
         source: "http://www.loc.gov/standards/mads/rdf/v1.rdf"
       },
       marc_relators: {
         uri: "http://id.loc.gov/vocabulary/relators/",
-        source: "http://id.loc.gov/vocabulary/relators.nt",
-        class_name: "MARCRelators"
+        source: "http://id.loc.gov/vocabulary/relators.rdf",
+        class_name: "MARCRelators",
+        extra: {
+          role: {
+            label: "role",
+            type: "owl:ObjectProperty",
+            comment: "This property and its sub-properties are used to associate a Bibliographic Resource with a Resource that played a part in the lifecycle of the Bibliographic Resource.  It is the inverse of relators:roleIn."
+          }
+        }
       },
+      mo:     {uri: "http://purl.org/ontology/mo/", strict: false},
       mods: {
         uri: "http://www.loc.gov/mods/rdf/v1#",
         source: "http://www.loc.gov/standards/mods/modsrdf/v1/modsrdf.owl"
@@ -60,6 +82,8 @@ module RDF
         uri: "http://www.w3.org/ns/oa#",
         source: "http://www.openannotation.org/spec/core/20130208/oa.owl"
       },
+      og:     {uri: "http://ogp.me/ns#", strict: false},
+      ogc:    {uri: "http://ogp.me/ns/class#", source: "http://ogp.me/ns", strict: false},
       ore: {uri: "http://www.openarchives.org/ore/terms/"},
       premis: {uri: "http://www.loc.gov/premis/rdf/v1#", source: "http://www.loc.gov/premis/rdf/v1.rdf"},
       premis_event_type: {
@@ -67,7 +91,22 @@ module RDF
         source: "http://id.loc.gov/vocabulary/preservation/eventType.nt",
         class_name: "PremisEventType"
       },
-      #prov: {uri: "http://www.w3.org/ns/prov#"},
+      prov: {uri: "http://www.w3.org/ns/prov#", alias: true},
+      rsa:    {uri: "http://www.w3.org/ns/auth/rsa#", alias: true},
+      rss:    {uri: "http://purl.org/rss/1.0/", source: "http://purl.org/rss/1.0/schema.rdf", alias: true},
+      schema: {uri: "http://schema.org/", source: "http://schema.org/docs/schema_org_rdfa.html", alias: true},
+      sioc:   {uri: "http://rdfs.org/sioc/ns#", alias: true},
+      skos:   {uri: "http://www.w3.org/2004/02/skos/core#", alias: true},
+      skosxl: {uri: "http://www.w3.org/2008/05/skos-xl#", source: "http://www.w3.org/TR/skos-reference/skos-xl.rdf", alias: true},
+      v:      {uri: "http://rdf.data-vocabulary.org/#", source: "etc/rdf.data-vocab.ttl", alias: true},
+      vmd:    {uri: "http://data-vocabulary.org/", source: "etc/data-vocab.ttl", alias: true},
+      vcard:  {uri: "http://www.w3.org/2006/vcard/ns#", alias: true},
+      void:   {uri: "http://rdfs.org/ns/void#", source: "http://vocab.deri.ie/void.rdf", alias: true},
+      vs:     {uri: "http://www.w3.org/2003/06/sw-vocab-status/ns#", alias: true},
+      wdrs:   {uri: "http://www.w3.org/2007/05/powder-s#", alias: true},
+      wot:    {uri: "http://xmlns.com/wot/0.1/", source: "http://xmlns.com/wot/0.1/index.rdf", alias: true},
+      xhtml:  {uri: "http://www.w3.org/1999/xhtml#", strict: false, alias: true},
+      xhv:    {uri: "http://www.w3.org/1999/xhtml/vocab#", strict: false, alias: true},
     }.freeze
 
     # Autoload vocabularies
@@ -106,9 +145,9 @@ module RDF
     VMD    = ::RDF::VMD     if RDF.const_defined?(:VMD)
     VOID   = ::RDF::VOID    if RDF.const_defined?(:VOID)
     VS     = ::RDF::VS      if RDF.const_defined?(:VS)
-    WRDS   = ::RDF::WRDS    if RDF.const_defined?(:WRDS)
+    WDRS   = ::RDF::WDRS    if RDF.const_defined?(:WDRS)
     WOT    = ::RDF::WOT     if RDF.const_defined?(:WOT)
     XHTML  = ::RDF::XHTML   if RDF.const_defined?(:XHTML)
-    XML    = ::RDF::XML     if RDF.const_defined?(:XML)
+    XHV    = ::RDF::XHV     if RDF.const_defined?(:XHV)
   end
 end
