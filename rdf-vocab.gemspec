@@ -1,11 +1,9 @@
+#!/usr/bin/env ruby -rubygems
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'rdf/vocab/version'
 
 Gem::Specification.new do |spec|
-  spec.version       = RDF::Vocab::VERSION
-  spec.date          = File.mtime(File.expand_path("../lib/rdf/vocab/version.rb", __FILE__)).strftime('%Y-%m-%d')
+  spec.version       = File.read('VERSION').chomp
+  spec.date          = File.mtime('VERSION').strftime('%Y-%m-%d')
 
   spec.name          = "rdf-vocab"
   spec.authors       = ["David Chandek-Stark", "Aaron Coburn", "Gregg Kellogg"]

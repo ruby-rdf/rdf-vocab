@@ -1,10 +1,10 @@
 require 'rdf'
 require 'rdf/vocabulary'
 require 'rdf/vocab/extensions'
-require 'rdf/vocab/version'
 
 module RDF
   module Vocab
+    autoload :VERSION,        'rdf/vocab/version'
     VOCABS = {
       acl: {uri: "http://www.w3.org/ns/auth/acl#"},
       bibframe: {

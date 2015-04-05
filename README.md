@@ -1,5 +1,5 @@
 # rdf-vocab
-Common RDF Vocabularies for use with Ruby
+Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 
 [![Gem Version](https://badge.fury.io/rb/rdf-vocab.png)](http://badge.fury.io/rb/rdf-vocab)
 [![Build Status](https://travis-ci.org/ruby-rdf/rdf-vocab.png?branch=master)](http://travis-ci.org/ruby-rdf/rdf-vocab)
@@ -53,3 +53,51 @@ Common RDF Vocabularies for use with Ruby
 * RDF::Vocab::XHTML     - [Extensible HyperText Markup Language](http://www.w3.org/1999/xhtml/) (W3C) - Alias of `RDF::XHTML`
 * RDF::Vocab::XHV       - [XHTML Vocabulary](http://www.w3.org/1999/xhtml/vocab) (W3C) - Alias of `RDF::XHV`
 
+## Installation
+
+Add to your Gemfile
+
+    gem "rdf-vocab"
+
+then
+
+    bundle install
+    
+## Usage
+
+    require "rdf-vocab"
+    
+This will load all the vocabulary classes in the library.
+
+## Authors
+
+* [David Chandek-Stark](https://github.com/dchandekstark)
+* [Aaron Coburn](https://github.com/acoburn)
+* [Michael J. Giarlo](https://github.com/mjgiarlo)
+* [Gregg Kellogg](http://github.com/gkellogg)
+
+## Contributing
+
+This repository uses [Git Flow](https://github.com/nvie/gitflow) to mange development and release activity. All submissions _must_ be on a feature branch based on the _develop_ branch to ease staging and integration.
+
+* Do your best to adhere to the existing coding conventions and idioms.
+* Don't use hard tabs, and don't leave trailing whitespace on any line.
+  Before committing, run `git diff --check` to make sure of this.
+* Do document every method you add using [YARD][] annotations. Read the
+  [tutorial][YARD-GS] or just look at the existing code for examples.
+* Don't touch the `.gemspec` or `VERSION` files. If you need to change them,
+  do so on your private branch only.
+* Do note that in order for us to merge any non-trivial changes (as a rule
+  of thumb, additions larger than about 15 lines of code), we need an
+  explicit [public domain dedication][PDD] on record from you.
+
+## License
+
+This is free and unencumbered public domain software. For more information,
+see <http://unlicense.org/> or the accompanying {file:LICENSE} file.
+
+[RDF]:              http://www.w3.org/RDF/
+[RDF.rb]:           http://rubydoc.info/github/ruby-rdf/rdf
+[YARD]:             http://yardoc.org/
+[YARD-GS]:          http://rubydoc.info/docs/yard/file/docs/GettingStarted.md
+[PDD]:              http://lists.w3.org/Archives/Public/public-rdf-ruby/2010May/0013.html
