@@ -12,6 +12,7 @@ module RDF
         source: "http://bibframe.org/vocab.rdf",
         class_name: "Bibframe"
       },
+      cnt: {uri: "http://www.w3.org/2011/content#"},
       crm: {uri: "http://www.cidoc-crm.org/cidoc-crm/", source: "etc/crm.rdf"},
       datacite: {
         uri: "http://purl.org/spar/datacite/",

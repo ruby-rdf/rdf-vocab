@@ -10,6 +10,7 @@ Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 * RDF::Vocab::Bibframe  - [Bibliographic Framework Initiaitive](http://bibframe.org/vocab/) (LoC)
 * RDF::Vocab::CC        - [Creative Commons Vocabulary](http://creativecommons.org/ns#) (Creative Commons) - Alias of `RDF::CC`
 * RDF::Vocab::CERT      - [Cert Ontology](http://www.w3.org/ns/auth/cert#) (W3C) - Alias of `RDF::CERT`
+* RDF::Vocab::CNT       - [Representing Content in RDF](http://www.w3.org/TR/Content-in-RDF10/) (W3C)
 * RDF::Vocab::DataCite  - [DataCite Ontology](http://bibframe.org/vocab/)
 * RDF::Vocab::DC        - [DCMI Metadata Terms](http://purl.org/dc/terms/) (DCMI) - Alias of `RDF::DC`
 * RDF::Vocab::DC11      - [Dublin Core Metadata Element Set](http://purl.org/dc/elements/1.1/) (DCMI) - Alias of `RDF::DC11`
