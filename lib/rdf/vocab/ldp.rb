@@ -149,7 +149,7 @@ module RDF::Vocab
       comment: %(The ascending/descending/etc order used to order the members across pages in a page sequence.).freeze,
       domain: "ldp:PageSortCriterion".freeze,
       label: "pageSortOrder".freeze,
-      range: "rdf:Resource".freeze,
+      range: "rdfs:Resource".freeze,
       "rdfs:isDefinedBy" => %(ldp:).freeze,
       type: "rdf:Property".freeze,
       "vs:term_status" => %(testing).freeze
