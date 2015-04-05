@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-# This file generated automatically using vocab-fetch from http://id.loc.gov/vocabulary/relators.nt
+# This file generated automatically using vocab-fetch from http://id.loc.gov/vocabulary/relators.rdf
 require 'rdf'
 module RDF::Vocab
   class MARCRelators < RDF::StrictVocabulary("http://id.loc.gov/vocabulary/relators/")
@@ -1717,6 +1717,10 @@ module RDF::Vocab
       "skos:prefLabel" => %(Reviewer).freeze,
       subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
       type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
+    property :role,
+      comment: %(This property and its sub-properties are used to associate a Bibliographic Resource with a Resource that played a part in the lifecycle of the Bibliographic Resource.  It is the inverse of relators:roleIn.).freeze,
+      label: "role".freeze,
+      type: "owl:ObjectProperty".freeze
     property :rpc,
       label: "Radio producer".freeze,
       "mads:authoritativeLabel" => %(Radio producer).freeze,
