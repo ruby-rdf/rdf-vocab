@@ -25,7 +25,7 @@
   doap:documenter    <http://greggkellogg.net/foaf#me> ;
   foaf:maker         <http://greggkellogg.net/foaf#me> ;
   dc:title           "RDF::Vocab" ;
-  dc:description     "efines several standard RDF vocabularies"@en ;
+  dc:description     "Defines several standard RDF vocabularies"@en ;
   dc:date            "2015-04-04"^^xsd:date ;
   dc:creator         <http://greggkellogg.net/foaf#me> ;
   dc:isPartOf        <http://rubygems.org/gems/rdf> .
