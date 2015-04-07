@@ -20,7 +20,9 @@
   doap:mailing-list  <http://lists.w3.org/Archives/Public/public-rdf-ruby/> ;
   doap:bug-database  <http://github.com/ruby-rdf/rdf-vocab/issues> ;
   doap:blog          <http://greggkellogg.net/> ;
-  doap:developer     <http://greggkellogg.net/foaf#me> ;
+  doap:developer     <http://greggkellogg.net/foaf#me>,
+                     [ a foaf:Person; foaf:name "David Chandek-Stark"],
+                     [ a foaf:Person; "Aaron Coburn"];
   doap:maintainer    <http://greggkellogg.net/foaf#me> ;
   doap:documenter    <http://greggkellogg.net/foaf#me> ;
   foaf:maker         <http://greggkellogg.net/foaf#me> ;

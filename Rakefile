@@ -58,4 +58,7 @@ RDF::Vocab::VOCABS.each do |id, v|
   end
 end
 
+# Build etc/iana.ttl from etc/iana-metadata.json using the following:
+#     rdf-tabular/script/parse etc/iana-metadata.json --minimal --format ttl -o etc/iana.ttl
+
 task :do_build

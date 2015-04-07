@@ -27,7 +27,7 @@ describe RDF::Vocab do
     end
   end
 
-  context "entailments", focus:true do
+  context "entailments" do
     before(:all) {
       RDF::Reasoner.apply(:rdfs, :owl)
     }
