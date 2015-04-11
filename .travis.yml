@@ -1,0 +1,10 @@
+language: ruby
+script: "bundle exec rspec spec"
+env:
+  - CI=true
+rvm:
+  - 2.0
+  - 2.1
+  - 2.2
+  - jruby
+cache: bundler
