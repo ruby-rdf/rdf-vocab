@@ -66,7 +66,7 @@ then
     
 ## Usage
 
-    require "rdf-vocab"
+    require "rdf/vocab"
     
 This will load all the vocabulary classes in the library.
 
