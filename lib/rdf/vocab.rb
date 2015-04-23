@@ -25,6 +25,10 @@ module RDF
       dc:     {uri: "http://purl.org/dc/terms/", alias: true},
       dc11:   {uri: "http://purl.org/dc/elements/1.1/", alias: true},
       dcat:   {uri: "http://www.w3.org/ns/dcat#", alias: true},
+      dcmitype: {
+          uri: "http://purl.org/dc/dcmitype/",
+          class_name: "DCMIType"
+      },
       doap:   {uri: "http://usefulinc.com/ns/doap#", alias: true},
       dwc: {
         uri: "http://rs.tdwg.org/dwc/terms/",
