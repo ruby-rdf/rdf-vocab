@@ -43,6 +43,7 @@ Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 * RDF::Vocab::RSS       - [RDF Site Summary](http://web.resource.org/rss/1.0/) - Alias of `RDF::RSS`
 * RDF::Vocab::SCHEMA    - [Schema.org](http://schema.org) - Alias of `RDF::SCHEMA`
 * RDF::Vocab::SIOC      - [Semantically-Interlinked Online Communities](http://rdfs.org/sioc/spec/) - Alias of `RDF::SIOC`
+* RDF::Vocab::SiocServices - [SIOC Services](http://rdfs.org/sioc/spec/) (SIOC)
 * RDF::Vocab::SKOS      - [Simple Knowledge Organization System](http://www.w3.org/TR/skos-reference/) (W3C) - Alias of `RDF::SKOS`
 * RDF::Vocab::SKOSXL    - [SKOS eXtension for Labels](http://www.w3.org/TR/skos-reference/skos-xl.html) (W3C) - Alias of `RDF::SKOSXL`
 * RDF::Vocab::V         - [RDF data vocabulary](http://www.data-vocabulary.org) - Alias of `RDF::V`

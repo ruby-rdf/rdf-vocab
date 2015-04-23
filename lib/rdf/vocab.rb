@@ -100,6 +100,10 @@ module RDF
       rss:    {uri: "http://purl.org/rss/1.0/", source: "http://purl.org/rss/1.0/schema.rdf", alias: true},
       schema: {uri: "http://schema.org/", source: "http://schema.org/docs/schema_org_rdfa.html", alias: true},
       sioc:   {uri: "http://rdfs.org/sioc/ns#", alias: true},
+      sioc_services: {
+        uri: "http://rdfs.org/sioc/services#",
+        class_name: "SiocServices"
+      },
       skos:   {uri: "http://www.w3.org/2004/02/skos/core#", alias: true},
       skosxl: {uri: "http://www.w3.org/2008/05/skos-xl#", source: "http://www.w3.org/TR/skos-reference/skos-xl.rdf", alias: true},
       v:      {uri: "http://rdf.data-vocabulary.org/#", source: "etc/rdf.data-vocab.ttl", alias: true},
