@@ -15,7 +15,7 @@ Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 * RDF::Vocab::DC        - [DCMI Metadata Terms](http://purl.org/dc/terms/) (DCMI) - Alias of `RDF::DC`
 * RDF::Vocab::DC11      - [Dublin Core Metadata Element Set](http://purl.org/dc/elements/1.1/) (DCMI) - Alias of `RDF::DC11`
 * RDF::Vocab::DCAT      - [Data Catalog Vocabulary](http://www.w3.org/TR/vocab-dcat/) (DCMI) - Alias of `RDF::DCAT`
-* RDF::Vocab::DCMITypes - [DCMI Type Vocabulary](http://dublincore.org/documents/dcmi-terms/) (DCMI)
+* RDF::Vocab::DCMIType  - [DCMI Type Vocabulary](http://dublincore.org/documents/dcmi-terms/) (DCMI)
 * RDF::Vocab::DOAP      - [Description of a Project (DOAP) vocabulary](https://github.com/edumbill/doap/wiki) - Alias of `RDF::DOAP`
 * RDF::Vocab::DWC       - [Darwin Core](http://rs.tdwg.org/dwc/terms/)
 * RDF::Vocab::EXIF      - [Exif vocabulary workspace](http://www.w3.org/2003/12/exif/) (W3C) - Alias of `RDF::EXIF`
@@ -64,11 +64,11 @@ Add to your Gemfile
 then
 
     bundle install
-    
+
 ## Usage
 
     require "rdf/vocab"
-    
+
 This will load all the vocabulary classes in the library.
 
 ## Authors
