@@ -7,4 +7,10 @@ rvm:
   - 2.1
   - 2.2
   - jruby
+  - rbx
 cache: bundler
+matrix:
+  allow_failures:
+      - rvm: rbx
+      - rvm: jruby
+
