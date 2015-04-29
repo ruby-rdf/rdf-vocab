@@ -6,7 +6,7 @@ module RDF
   module Vocab
     autoload :VERSION,        'rdf/vocab/version'
     VOCABS = {
-      acl: {uri: "http://www.w3.org/ns/auth/acl#"},
+      acl:    {uri: "http://www.w3.org/ns/auth/acl#"},
       bibframe: {
         uri: "http://bibframe.org/vocab/",
         source: "http://bibframe.org/vocab.rdf",
@@ -15,8 +15,8 @@ module RDF
       },
       cc:     {uri: "http://creativecommons.org/ns#", alias: true},
       cert:   {uri: "http://www.w3.org/ns/auth/cert#", alias: true},
-      cnt: {uri: "http://www.w3.org/2011/content#"},
-      crm: {uri: "http://www.cidoc-crm.org/cidoc-crm/", source: "etc/crm.rdf"},
+      cnt:    {uri: "http://www.w3.org/2011/content#"},
+      crm:    {uri: "http://www.cidoc-crm.org/cidoc-crm/", source: "etc/crm.rdf"},
       datacite: {
         uri: "http://purl.org/spar/datacite/",
         source: "http://eelst.cs.unibo.it/apps/LODE/source?url=http://purl.org/spar/datacite",
@@ -59,7 +59,12 @@ module RDF
           }
         }
       },
-      ldp:  {uri: "http://www.w3.org/ns/ldp#", strict: false},
+      iiif: {
+        uri: "http://iiif.io/api/presentation/2#",
+        source: "http://iiif.io/api/presentation/2/ontology.xml",
+        class_name: "IIIF"
+      },
+      ldp:    {uri: "http://www.w3.org/ns/ldp#", strict: false},
       ma:     {uri: "http://www.w3.org/ns/ma-ont#", source: "http://www.w3.org/ns/ma-ont.rdf", strict: false},
       mads: {
         uri: "http://www.loc.gov/mads/rdf/v1#",
@@ -88,14 +93,14 @@ module RDF
       },
       og:     {uri: "http://ogp.me/ns#", strict: false},
       ogc:    {uri: "http://ogp.me/ns/class#", source: "http://ogp.me/ns", strict: false},
-      ore: {uri: "http://www.openarchives.org/ore/terms/"},
+      ore:    {uri: "http://www.openarchives.org/ore/terms/"},
       premis: {uri: "http://www.loc.gov/premis/rdf/v1#", source: "http://www.loc.gov/premis/rdf/v1.rdf"},
       premis_event_type: {
         uri: "http://id.loc.gov/vocabulary/preservation/eventType/",
         source: "http://id.loc.gov/vocabulary/preservation/eventType.nt",
         class_name: "PremisEventType"
       },
-      prov: {uri: "http://www.w3.org/ns/prov#", alias: true},
+      prov:   {uri: "http://www.w3.org/ns/prov#", alias: true},
       rsa:    {uri: "http://www.w3.org/ns/auth/rsa#", alias: true},
       rss:    {uri: "http://purl.org/rss/1.0/", source: "http://purl.org/rss/1.0/schema.rdf", alias: true},
       schema: {uri: "http://schema.org/", source: "http://schema.org/docs/schema_org_rdfa.html", alias: true},

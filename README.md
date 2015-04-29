@@ -26,6 +26,7 @@ Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 * RDF::Vocab::HT        - [HTTP Vocabulary in RDF 1.0](http://www.w3.org/TR/HTTP-in-RDF10/) (W3C) - Alias of `RDF::HT`
 * RDF::Vocab::ICAL      - [iCalendar vocabulary](http://www.w3.org/2002/12/cal/) (W3C) - Alias of `RDF::ICAL`
 * RDF::Vocab::Identifiers - [Standard Identifiers Scheme](http://id.loc.gov/vocabulary/identifiers.html) (LoC)
+* RDF::Vocab::IIIF      - [International Image Interoperability Framework Presentation API](http://iiif.io/api/presentation/2.0/) (IIIF)
 * RDF::Vocab::LDP       - [Linked Data Platform](http://www.w3.org/TR/ldp/) (W3C)
 * RDF::Vocab::MA        - [Ontology for Media Resources](http://www.w3.org/TR/mediaont-10/) (W3C) - Alias of `RDF::MA`
 * RDF::Vocab::MADS      - [Metadata Authority Description Schema](http://www.loc.gov/standards/mads/) (LoC)
