@@ -15,7 +15,7 @@ Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 * RDF::Vocab::DC        - [DCMI Metadata Terms](http://purl.org/dc/terms/) (DCMI) - Alias of `RDF::DC`
 * RDF::Vocab::DC11      - [Dublin Core Metadata Element Set](http://purl.org/dc/elements/1.1/) (DCMI) - Alias of `RDF::DC11`
 * RDF::Vocab::DCAT      - [Data Catalog Vocabulary](http://www.w3.org/TR/vocab-dcat/) (DCMI) - Alias of `RDF::DCAT`
-* RDF::Vocab::DCMITypes - [DCMI Type Vocabulary](http://dublincore.org/documents/dcmi-terms/) (DCMI)
+* RDF::Vocab::DCMIType  - [DCMI Type Vocabulary](http://dublincore.org/documents/dcmi-terms/) (DCMI)
 * RDF::Vocab::DOAP      - [Description of a Project (DOAP) vocabulary](https://github.com/edumbill/doap/wiki) - Alias of `RDF::DOAP`
 * RDF::Vocab::DWC       - [Darwin Core](http://rs.tdwg.org/dwc/terms/)
 * RDF::Vocab::EXIF      - [Exif vocabulary workspace](http://www.w3.org/2003/12/exif/) (W3C) - Alias of `RDF::EXIF`
@@ -26,6 +26,8 @@ Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 * RDF::Vocab::HT        - [HTTP Vocabulary in RDF 1.0](http://www.w3.org/TR/HTTP-in-RDF10/) (W3C) - Alias of `RDF::HT`
 * RDF::Vocab::ICAL      - [iCalendar vocabulary](http://www.w3.org/2002/12/cal/) (W3C) - Alias of `RDF::ICAL`
 * RDF::Vocab::Identifiers - [Standard Identifiers Scheme](http://id.loc.gov/vocabulary/identifiers.html) (LoC)
+* RDF::Vocab::IIIF      - [International Image Interoperability Framework Presentation API](http://iiif.io/api/presentation/2.0/) (IIIF)
+* RDF::Vocab::JSONLD    - [JSON-LD Vocabulary](http://www.w3.org/ns/json-ld)
 * RDF::Vocab::LDP       - [Linked Data Platform](http://www.w3.org/TR/ldp/) (W3C)
 * RDF::Vocab::MA        - [Ontology for Media Resources](http://www.w3.org/TR/mediaont-10/) (W3C) - Alias of `RDF::MA`
 * RDF::Vocab::MADS      - [Metadata Authority Description Schema](http://www.loc.gov/standards/mads/) (LoC)
@@ -43,6 +45,7 @@ Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 * RDF::Vocab::RSS       - [RDF Site Summary](http://web.resource.org/rss/1.0/) - Alias of `RDF::RSS`
 * RDF::Vocab::SCHEMA    - [Schema.org](http://schema.org) - Alias of `RDF::SCHEMA`
 * RDF::Vocab::SIOC      - [Semantically-Interlinked Online Communities](http://rdfs.org/sioc/spec/) - Alias of `RDF::SIOC`
+* RDF::Vocab::SiocServices - [SIOC Services](http://rdfs.org/sioc/spec/) (SIOC)
 * RDF::Vocab::SKOS      - [Simple Knowledge Organization System](http://www.w3.org/TR/skos-reference/) (W3C) - Alias of `RDF::SKOS`
 * RDF::Vocab::SKOSXL    - [SKOS eXtension for Labels](http://www.w3.org/TR/skos-reference/skos-xl.html) (W3C) - Alias of `RDF::SKOSXL`
 * RDF::Vocab::V         - [RDF data vocabulary](http://www.data-vocabulary.org) - Alias of `RDF::V`
@@ -64,11 +67,11 @@ Add to your Gemfile
 then
 
     bundle install
-    
+
 ## Usage
 
     require "rdf/vocab"
-    
+
 This will load all the vocabulary classes in the library.
 
 ## Authors

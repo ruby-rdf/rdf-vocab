@@ -3,7 +3,7 @@ require 'rdf/reasoner'
 
 describe RDF::Vocab do
   describe ".each" do
-    it "inumerates pre-defined vocabularies" do
+    it "enumerates pre-defined vocabularies" do
       expect {|b| RDF::Vocabulary.each(&b)}.to yield_control.at_least(RDF::Vocab::VOCABS.keys.length).times
     end
   end
