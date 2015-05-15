@@ -35,6 +35,11 @@ module RDF
         source: "etc/dwcterms.rdf",
         alt_source: "http://rs.tdwg.org/dwc/rdf/dwcterms.rdf"
       },
+      ebucore: {
+        uri: "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
+        source: "https://www.ebu.ch/metadata/ontologies/ebucore/ebucore.rdf",
+        class_name: "EBUCore"
+      },
       edm: {
         uri: "http://www.europeana.eu/schemas/edm/",
         source: "http://www.europeana.eu/schemas/edm/rdf/edm.owl"
