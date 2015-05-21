@@ -18,6 +18,7 @@ Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 * RDF::Vocab::DCMIType  - [DCMI Type Vocabulary](http://dublincore.org/documents/dcmi-terms/) (DCMI)
 * RDF::Vocab::DOAP      - [Description of a Project (DOAP) vocabulary](https://github.com/edumbill/doap/wiki) - Alias of `RDF::DOAP`
 * RDF::Vocab::DWC       - [Darwin Core](http://rs.tdwg.org/dwc/terms/)
+* RDF::Vocab::EBUCore   - [EBUCore](http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#)
 * RDF::Vocab::EXIF      - [Exif vocabulary workspace](http://www.w3.org/2003/12/exif/) (W3C) - Alias of `RDF::EXIF`
 * RDF::Vocab::Fcrepo4   - [Fedora Commons Repository 4 Ontology](http://fedora.info/definitions/v4/repository)
 * RDF::Vocab::FOAF      - [Friend of a Friend (FOAF) vocabulary](http://xmlns.com/foaf/spec/) - Alias of `RDF::FOAF`
@@ -34,6 +35,7 @@ Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 * RDF::Vocab::MARCRelators - [MARC Code List for Relators](http://id.loc.gov/vocabulary/relators.html) (LoC)
 * RDF::Vocab::MO        - [Music Ontology](http://musicontology.com) - Alias of `RDF::MO`
 * RDF::Vocab::MODS      - [Metadata Object Description Schema](http://www.loc.gov/standards/mods/) (LoC)
+* RDF::Vocab::NFO       - [NEPOMUK File Ontology](http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#) (NFO)
 * RDF::Vocab::OA        - [Open Annotation Data Model](http://www.w3.org/ns/oa) (W3C)
 * RDF::Vocab::OG        - [Open Graph protocol](http://ogp.me) - Alias of `RDF::OG`
 * RDF::Vocab::OGC       - [Open Graph protocol classes](http://ogp.me) - Alias of `RDF::OGC`
