@@ -71,6 +71,7 @@ module RDF
       },
       jsonld: {uri: "http://www.w3.org/ns/json-ld#"},
       ldp:    {uri: "http://www.w3.org/ns/ldp#", strict: false},
+      lrmi:   {uri: "http://purl.org/dcx/lrmi-terms/", strict: false},
       ma:     {uri: "http://www.w3.org/ns/ma-ont#", source: "http://www.w3.org/ns/ma-ont.rdf", strict: false},
       mads: {
         uri: "http://www.loc.gov/mads/rdf/v1#",
