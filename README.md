@@ -30,6 +30,7 @@ Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 * RDF::Vocab::IIIF      - [International Image Interoperability Framework Presentation API](http://iiif.io/api/presentation/2.0/) (IIIF)
 * RDF::Vocab::JSONLD    - [JSON-LD Vocabulary](http://www.w3.org/ns/json-ld)
 * RDF::Vocab::LDP       - [Linked Data Platform](http://www.w3.org/TR/ldp/) (W3C)
+* RDF::Vocab::LRMI      - [Learning Resources Metadata Initiative](http://dublincore.org/dcx/lrmi-terms/1.1/) (DCMI)
 * RDF::Vocab::MA        - [Ontology for Media Resources](http://www.w3.org/TR/mediaont-10/) (W3C) - Alias of `RDF::MA`
 * RDF::Vocab::MADS      - [Metadata Authority Description Schema](http://www.loc.gov/standards/mads/) (LoC)
 * RDF::Vocab::MARCRelators - [MARC Code List for Relators](http://id.loc.gov/vocabulary/relators.html) (LoC)
@@ -75,6 +76,16 @@ then
     require "rdf/vocab"
 
 This will load all the vocabulary classes in the library.
+
+## Adding new vocabularies
+
+* First, add an entry to `lib/rdf/vocab.rb`, the key names contained within
+for guidance. For more information, see the documentation on
+[RDF::Vocabulary](http://www.rubydoc.info/github/ruby-rdf/rdf/RDF/Vocabulary).
+* Next, create an empty file in `lib/rdf/vocab` based on the key name for
+your vocabulary. For example, if you've added the vocabulary `:foo`, create a
+new empty file at `lib/rdf/vocab/foo.rb`.
+* Run `rake gen_vocabs`.
 
 ## Authors
 
