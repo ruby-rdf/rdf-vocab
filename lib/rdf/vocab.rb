@@ -49,7 +49,7 @@ module RDF
       foaf:   {uri: "http://xmlns.com/foaf/0.1/", alias: true},
       geo:    {uri: "http://www.w3.org/2003/01/geo/wgs84_pos#", alias: true},
       geonames: {
-        uri: "http://www.w3.org/2003/01/geo/wgs84_pos#"
+        uri: "http://www.geonames.org/ontology#"
       },
       gr:     {uri: "http://purl.org/goodrelations/v1#", source: "http://www.heppnetz.de/ontologies/goodrelations/v1.owl", alias: true},
       ht:     {uri: "http://www.w3.org/2011/http#", alias: true},
