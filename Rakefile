@@ -34,7 +34,7 @@ RSpec::Core::RakeTask.new("spec:ci") do |spec|
 end
 
 desc "Generate Vocabularies"
-task :gen_vocabs => RDF::Vocab::VOCABS.keys.map {|v| "lib/rdf/vocab/#{v}.rb"}
+task :gen_vocabs => RDF::Vocab::VOCABS.select{|k, v| !v[:alias]}.keys.map {|v| "lib/rdf/vocab/#{v}.rb"}
 
 RDF::Vocab::VOCABS.each do |id, v|
   next if v[:alias]
