@@ -48,6 +48,9 @@ module RDF
       fcrepo4: {uri: "http://fedora.info/definitions/v4/repository#", class_name: "Fcrepo4"},
       foaf:   {uri: "http://xmlns.com/foaf/0.1/", alias: true},
       geo:    {uri: "http://www.w3.org/2003/01/geo/wgs84_pos#", alias: true},
+      geonames: {
+        uri: "http://www.geonames.org/ontology#"
+      },
       gr:     {uri: "http://purl.org/goodrelations/v1#", source: "http://www.heppnetz.de/ontologies/goodrelations/v1.owl", alias: true},
       ht:     {uri: "http://www.w3.org/2011/http#", alias: true},
       iana:   {uri: "http://www.iana.org/assignments/link-relations/", source: File.expand_path("../../../etc/iana.ttl", __FILE__)},
