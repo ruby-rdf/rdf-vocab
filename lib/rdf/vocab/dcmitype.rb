@@ -13,7 +13,7 @@ module RDF::Vocab
       "dc:modified" => %(2008-01-14).freeze,
       "http://purl.org/dc/dcam/memberOf" => %(dc:DCMIType).freeze,
       label: "Collection".freeze,
-      "rdfs:isDefinedBy" => %(http://purl.org/dc/dcmitype/).freeze,
+      "rdfs:isDefinedBy" => %(dcmitype:).freeze,
       type: "rdfs:Class".freeze
     term :Dataset,
       comment: %(Data encoded in a defined structure.).freeze,
@@ -23,7 +23,7 @@ module RDF::Vocab
       "dc:modified" => %(2008-01-14).freeze,
       "http://purl.org/dc/dcam/memberOf" => %(dc:DCMIType).freeze,
       label: "Dataset".freeze,
-      "rdfs:isDefinedBy" => %(http://purl.org/dc/dcmitype/).freeze,
+      "rdfs:isDefinedBy" => %(dcmitype:).freeze,
       type: "rdfs:Class".freeze
     term :Event,
       comment: %(A non-persistent, time-based occurrence.).freeze,
@@ -33,7 +33,7 @@ module RDF::Vocab
       "dc:modified" => %(2008-01-14).freeze,
       "http://purl.org/dc/dcam/memberOf" => %(dc:DCMIType).freeze,
       label: "Event".freeze,
-      "rdfs:isDefinedBy" => %(http://purl.org/dc/dcmitype/).freeze,
+      "rdfs:isDefinedBy" => %(dcmitype:).freeze,
       type: "rdfs:Class".freeze
     term :Image,
       comment: %(A visual representation other than text.).freeze,
@@ -43,7 +43,7 @@ module RDF::Vocab
       "dc:modified" => %(2008-01-14).freeze,
       "http://purl.org/dc/dcam/memberOf" => %(dc:DCMIType).freeze,
       label: "Image".freeze,
-      "rdfs:isDefinedBy" => %(http://purl.org/dc/dcmitype/).freeze,
+      "rdfs:isDefinedBy" => %(dcmitype:).freeze,
       type: "rdfs:Class".freeze
     term :InteractiveResource,
       comment: %(A resource requiring interaction from the user to be understood, executed, or experienced.).freeze,
@@ -53,7 +53,7 @@ module RDF::Vocab
       "dc:modified" => %(2008-01-14).freeze,
       "http://purl.org/dc/dcam/memberOf" => %(dc:DCMIType).freeze,
       label: "Interactive Resource".freeze,
-      "rdfs:isDefinedBy" => %(http://purl.org/dc/dcmitype/).freeze,
+      "rdfs:isDefinedBy" => %(dcmitype:).freeze,
       type: "rdfs:Class".freeze
     term :MovingImage,
       comment: %(A series of visual representations imparting an impression of motion when shown in succession.).freeze,
@@ -63,8 +63,8 @@ module RDF::Vocab
       "dc:modified" => %(2008-01-14).freeze,
       "http://purl.org/dc/dcam/memberOf" => %(dc:DCMIType).freeze,
       label: "Moving Image".freeze,
-      "rdfs:isDefinedBy" => %(http://purl.org/dc/dcmitype/).freeze,
-      subClassOf: "http://purl.org/dc/dcmitype/Image".freeze,
+      "rdfs:isDefinedBy" => %(dcmitype:).freeze,
+      subClassOf: "dcmitype:Image".freeze,
       type: "rdfs:Class".freeze
     term :PhysicalObject,
       comment: %(An inanimate, three-dimensional object or substance.).freeze,
@@ -74,7 +74,7 @@ module RDF::Vocab
       "dc:modified" => %(2008-01-14).freeze,
       "http://purl.org/dc/dcam/memberOf" => %(dc:DCMIType).freeze,
       label: "Physical Object".freeze,
-      "rdfs:isDefinedBy" => %(http://purl.org/dc/dcmitype/).freeze,
+      "rdfs:isDefinedBy" => %(dcmitype:).freeze,
       type: "rdfs:Class".freeze
     term :Service,
       comment: %(A system that provides one or more functions.).freeze,
@@ -84,7 +84,7 @@ module RDF::Vocab
       "dc:modified" => %(2008-01-14).freeze,
       "http://purl.org/dc/dcam/memberOf" => %(dc:DCMIType).freeze,
       label: "Service".freeze,
-      "rdfs:isDefinedBy" => %(http://purl.org/dc/dcmitype/).freeze,
+      "rdfs:isDefinedBy" => %(dcmitype:).freeze,
       type: "rdfs:Class".freeze
     term :Software,
       comment: %(A computer program in source or compiled form.).freeze,
@@ -94,7 +94,7 @@ module RDF::Vocab
       "dc:modified" => %(2008-01-14).freeze,
       "http://purl.org/dc/dcam/memberOf" => %(dc:DCMIType).freeze,
       label: "Software".freeze,
-      "rdfs:isDefinedBy" => %(http://purl.org/dc/dcmitype/).freeze,
+      "rdfs:isDefinedBy" => %(dcmitype:).freeze,
       type: "rdfs:Class".freeze
     term :Sound,
       comment: %(A resource primarily intended to be heard.).freeze,
@@ -104,7 +104,7 @@ module RDF::Vocab
       "dc:modified" => %(2008-01-14).freeze,
       "http://purl.org/dc/dcam/memberOf" => %(dc:DCMIType).freeze,
       label: "Sound".freeze,
-      "rdfs:isDefinedBy" => %(http://purl.org/dc/dcmitype/).freeze,
+      "rdfs:isDefinedBy" => %(dcmitype:).freeze,
       type: "rdfs:Class".freeze
     term :StillImage,
       comment: %(A static visual representation.).freeze,
@@ -114,8 +114,8 @@ module RDF::Vocab
       "dc:modified" => %(2008-01-14).freeze,
       "http://purl.org/dc/dcam/memberOf" => %(dc:DCMIType).freeze,
       label: "Still Image".freeze,
-      "rdfs:isDefinedBy" => %(http://purl.org/dc/dcmitype/).freeze,
-      subClassOf: "http://purl.org/dc/dcmitype/Image".freeze,
+      "rdfs:isDefinedBy" => %(dcmitype:).freeze,
+      subClassOf: "dcmitype:Image".freeze,
       type: "rdfs:Class".freeze
     term :Text,
       comment: %(A resource consisting primarily of words for reading.).freeze,
@@ -125,7 +125,7 @@ module RDF::Vocab
       "dc:modified" => %(2008-01-14).freeze,
       "http://purl.org/dc/dcam/memberOf" => %(dc:DCMIType).freeze,
       label: "Text".freeze,
-      "rdfs:isDefinedBy" => %(http://purl.org/dc/dcmitype/).freeze,
+      "rdfs:isDefinedBy" => %(dcmitype:).freeze,
       type: "rdfs:Class".freeze
 
     # Extra definitions
