@@ -108,6 +108,7 @@ module RDF
       ogc:    {uri: "http://ogp.me/ns/class#", source: "http://ogp.me/ns", strict: false, alias: true},
       ore:    {uri: "http://www.openarchives.org/ore/terms/"},
       org:    {uri: "http://www.w3.org/ns/org#"},
+      pplan:  {uri: "http://purl.org/net/p-plan#"},
       premis: {uri: "http://www.loc.gov/premis/rdf/v1#", source: "http://www.loc.gov/premis/rdf/v1.rdf"},
       premis_event_type: {
         uri: "http://id.loc.gov/vocabulary/preservation/eventType/",

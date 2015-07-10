@@ -43,6 +43,7 @@ Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 * RDF::Vocab::OGC       - [Open Graph protocol classes](http://ogp.me) - Alias of `RDF::OGC`
 * RDF::Vocab::ORE       - [Object Reuse and Exchange Ontology](http://www.openarchives.org/ore/1.0/rdfxml) (OAI)
 * RDF::Vocab::ORG		- [Organization Ontology](http://www.w3.org/TR/vocab-org/) (W3C) 
+* RDF::Vocab::PPLAN		- [P-Plan Ontology](http://www.opmw.org/model/p-plan/)
 * RDF::Vocab::PREMIS    - [Preservation Metadata Implementation Strategies Ontology](http://id.loc.gov/ontologies/premis.html) (LoC)
 * RDF::Vocab::PremisEventType - [PREMIS Event Type](http://id.loc.gov/vocabulary/preservation/eventType.html) (LoC)
 * RDF::Vocab::PROV      - [Provenance Ontology](http://www.w3.org/TR/prov-o/) (W3C)  - Alias of `RDF::PROV`
