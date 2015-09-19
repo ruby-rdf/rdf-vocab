@@ -20,7 +20,12 @@ module RDF
         # empty until each subclass has been touched or require'd.
         RDF::Vocab::VOCABS.each do |n, params|
           class_name = params.fetch(:class_name, n.upcase).to_sym
-          require "rdf/vocab/#{n}"
+          begin
+            require "rdf/vocab/#{n}"
+          rescue LoadError
+            # Transient error
+            warn "Failed to load #{n}"
+          end
         end
         _orig_each(&block)
       end

@@ -16,11 +16,6 @@ module RDF::Vocab
       "owl:disjointWith" => [%(fcrepo4:NonRdfSourceDescription).freeze, %(fcrepo4:Container).freeze],
       subClassOf: "fcrepo4:Resource".freeze,
       type: "owl:Class".freeze
-    term :Blanknode,
-      comment: %(An entity that is a representation of an RDF blank node.).freeze,
-      label: "blank node".freeze,
-      subClassOf: "fcrepo4:Thing".freeze,
-      type: "owl:Class".freeze
     term :Configuration,
       comment: %(A container for transform configuration.).freeze,
       label: "Fedora transform configuration".freeze,
@@ -67,13 +62,14 @@ module RDF::Vocab
       label: "Fedora resource".freeze,
       subClassOf: "fcrepo4:Thing".freeze,
       type: "owl:Class".freeze
-    term :ResourceStatus,
-      comment: %(Values of the status property.  The default values are active and deleted -- but additional values can be created.).freeze,
-      label: "resource status".freeze,
-      type: "owl:Class".freeze
     term :ServerManaged,
       comment: %(The system-generated triples for a given resource \(as opposed to explicity-declared properties\).).freeze,
       label: "server managed".freeze,
+      subClassOf: "fcrepo4:Thing".freeze,
+      type: "owl:Class".freeze
+    term :Skolem,
+      comment: %(An entity that is a representation of an RDF Skolem node.).freeze,
+      label: "skolem".freeze,
       subClassOf: "fcrepo4:Thing".freeze,
       type: "owl:Class".freeze
     term :Thing,
@@ -149,9 +145,6 @@ module RDF::Vocab
     property :createdBy,
       label: "createdBy".freeze,
       subPropertyOf: "owl:topDataProperty".freeze,
-      type: "owl:DatatypeProperty".freeze
-    property :digest,
-      label: "digest".freeze,
       type: "owl:DatatypeProperty".freeze
     property :exportsAs,
       label: "exports as".freeze,
@@ -260,11 +253,6 @@ module RDF::Vocab
       type: "owl:DatatypeProperty".freeze
     property :lastModifiedBy,
       label: "lastModifiedBy".freeze,
-      subPropertyOf: "owl:topDataProperty".freeze,
-      type: "owl:DatatypeProperty".freeze
-    property :mimeType,
-      label: "mimeType".freeze,
-      range: "xsd:string".freeze,
       subPropertyOf: "owl:topDataProperty".freeze,
       type: "owl:DatatypeProperty".freeze
     property :mixinTypes,
@@ -507,12 +495,6 @@ module RDF::Vocab
     property :sparql,
       label: "has sparql service".freeze,
       type: "owl:ObjectProperty".freeze
-    property :status,
-      comment: %(Describes the status of a resource, such as active or deleted.).freeze,
-      domain: "fcrepo4:Resource".freeze,
-      label: "status".freeze,
-      range: "fcrepo4:ResourceStatus".freeze,
-      type: "owl:ObjectProperty".freeze
     property :uuid,
       label: "uuid".freeze,
       subPropertyOf: "owl:topDataProperty".freeze,
@@ -526,14 +508,8 @@ module RDF::Vocab
     term :"",
       comment: %(Ontology for the Fedora data model, intended primarily to make it possible to expose Fedora-curated RDF predicates via de-reference-able URIs.).freeze,
       label: "Fedora Commons Repository Ontology".freeze,
+      "owl:priorVersion" => %(http://fedora.info/definitions/v4/2015/02/04/repository).freeze,
+      "owl:versionInfo" => %(v4/2015/05/15).freeze,
       type: "owl:Ontology".freeze
-    term :active,
-      comment: %(The resource is active.).freeze,
-      label: "active".freeze,
-      type: ["owl:NamedIndividual".freeze, "fcrepo4:ResourceStatus".freeze]
-    term :deleted,
-      comment: %(The resource has been marked for deletion.).freeze,
-      label: "deleted".freeze,
-      type: ["owl:NamedIndividual".freeze, "fcrepo4:ResourceStatus".freeze]
   end
 end
