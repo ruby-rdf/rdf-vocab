@@ -13,6 +13,7 @@ module RDF
         class_name: "Bibframe",
         extra: {hasAccompaniment: {type: "rdf:Property",label: "has accompaniment"}}
       },
+      bibo:   {uri: "http://purl.org/ontology/bibo/"},
       cc:     {uri: "http://creativecommons.org/ns#", alias: true},
       cert:   {uri: "http://www.w3.org/ns/auth/cert#", alias: true},
       cnt:    {uri: "http://www.w3.org/2011/content#"},
@@ -76,7 +77,7 @@ module RDF
       jsonld: {uri: "http://www.w3.org/ns/json-ld#"},
       ldp:    {uri: "http://www.w3.org/ns/ldp#", strict: false},
       lrmi:   {uri: "http://purl.org/dcx/lrmi-terms/", strict: false},
-      ma:     {uri: "http://www.w3.org/ns/ma-ont#", source: "http://www.w3.org/ns/ma-ont.rdf", strict: false},
+      ma:     {uri: "http://www.w3.org/ns/ma-ont#", source: "http://www.w3.org/ns/ma-ont.rdf", strict: false, alias: true},
       mads: {
         uri: "http://www.loc.gov/mads/rdf/v1#",
         source: "http://www.loc.gov/standards/mads/rdf/v1.rdf"
@@ -93,7 +94,7 @@ module RDF
           }
         }
       },
-      mo:     {uri: "http://purl.org/ontology/mo/", strict: false},
+      mo:     {uri: "http://purl.org/ontology/mo/", strict: false, alias: true},
       mods: {
         uri: "http://www.loc.gov/mods/rdf/v1#",
         source: "http://www.loc.gov/standards/mods/modsrdf/v1/modsrdf.owl"
@@ -103,9 +104,11 @@ module RDF
         uri: "http://www.w3.org/ns/oa#",
         source: "http://www.openannotation.org/spec/core/20130208/oa.owl"
       },
-      og:     {uri: "http://ogp.me/ns#", strict: false},
-      ogc:    {uri: "http://ogp.me/ns/class#", source: "http://ogp.me/ns", strict: false},
+      og:     {uri: "http://ogp.me/ns#", strict: false, alias: true},
+      ogc:    {uri: "http://ogp.me/ns/class#", source: "http://ogp.me/ns", strict: false, alias: true},
       ore:    {uri: "http://www.openarchives.org/ore/terms/"},
+      org:    {uri: "http://www.w3.org/ns/org#"},
+      pplan:  {uri: "http://purl.org/net/p-plan#"},
       premis: {uri: "http://www.loc.gov/premis/rdf/v1#", source: "http://www.loc.gov/premis/rdf/v1.rdf"},
       premis_event_type: {
         uri: "http://id.loc.gov/vocabulary/preservation/eventType/",

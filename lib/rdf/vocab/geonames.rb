@@ -8,7 +8,7 @@ module RDF::Vocab
     term :A,
       comment: %(country, state, region ...).freeze,
       label: "A".freeze,
-      type: "http://www.geonames.org/ontology#Class".freeze
+      type: "geonames:Class".freeze
     term :Class,
       comment: %(A class of features.).freeze,
       label: "Class".freeze,
@@ -30,16 +30,16 @@ module RDF::Vocab
       comment: %(A feature described in geonames database, uniquely defined by its geonames identifier).freeze,
       label: "Geonames Feature".freeze,
       "skos:historyNote" => %(Added in version 3.1).freeze,
-      subClassOf: "http://www.geonames.org/ontology#Feature".freeze,
+      subClassOf: "geonames:Feature".freeze,
       type: "owl:Class".freeze
     term :H,
       comment: %(stream, lake, ...).freeze,
       label: "H".freeze,
-      type: "http://www.geonames.org/ontology#Class".freeze
+      type: "geonames:Class".freeze
     term :L,
       comment: %(parks,area, ...).freeze,
       label: "L".freeze,
-      type: "http://www.geonames.org/ontology#Class".freeze
+      type: "geonames:Class".freeze
     term :Map,
       comment: %(A Web page displaying a map).freeze,
       label: "Map".freeze,
@@ -48,11 +48,11 @@ module RDF::Vocab
     term :P,
       comment: %(city, village,...).freeze,
       label: "P".freeze,
-      type: "http://www.geonames.org/ontology#Class".freeze
+      type: "geonames:Class".freeze
     term :R,
       comment: %(road, railroad, ...).freeze,
       label: "R".freeze,
-      type: "http://www.geonames.org/ontology#Class".freeze
+      type: "geonames:Class".freeze
     term :RDFData,
       comment: %(A Document containing RDF description of one or several features.).freeze,
       label: "RDF Data".freeze,
@@ -61,19 +61,19 @@ module RDF::Vocab
     term :S,
       comment: %(spot, building, farm, ...).freeze,
       label: "S".freeze,
-      type: "http://www.geonames.org/ontology#Class".freeze
+      type: "geonames:Class".freeze
     term :T,
       comment: %(mountain, hill, rock, ...).freeze,
       label: "T".freeze,
-      type: "http://www.geonames.org/ontology#Class".freeze
+      type: "geonames:Class".freeze
     term :U,
       comment: %(undersea).freeze,
       label: "U".freeze,
-      type: "http://www.geonames.org/ontology#Class".freeze
+      type: "geonames:Class".freeze
     term :V,
       comment: %(forest, heath, ...).freeze,
       label: "V".freeze,
-      type: "http://www.geonames.org/ontology#Class".freeze
+      type: "geonames:Class".freeze
     term :WikipediaArticle,
       comment: %(A Wikipedia article).freeze,
       label: "Wikipedia Article".freeze,
@@ -82,37 +82,37 @@ module RDF::Vocab
 
     # Property definitions
     property :alternateName,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "alternateName".freeze,
       subPropertyOf: "skos:altLabel".freeze,
       type: "owl:DatatypeProperty".freeze
     property :childrenFeatures,
       comment: %(Links to an RDF document containing the descriptions of children features).freeze,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "children features".freeze,
-      range: "http://www.geonames.org/ontology#RDFData".freeze,
+      range: "geonames:RDFData".freeze,
       type: "owl:ObjectProperty".freeze
     property :colloquialName,
       label: "colloquial name".freeze,
-      subPropertyOf: "http://www.geonames.org/ontology#alternateName".freeze,
+      subPropertyOf: "geonames:alternateName".freeze,
       type: "owl:DatatypeProperty".freeze
     property :countryCode,
       comment: [%(A two letters country code in the ISO 3166 list).freeze, %(The countryCode value for a Geoname Feature is equal to the countryCode value of the parentCountry value.).freeze],
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "ISO country code".freeze,
       type: "owl:DatatypeProperty".freeze
     property :featureClass,
       comment: %(The main category of the feature, as defined in geonames taxonomy.).freeze,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "feature class".freeze,
-      range: "http://www.geonames.org/ontology#Class".freeze,
+      range: "geonames:Class".freeze,
       subPropertyOf: "dc:type".freeze,
       type: "owl:ObjectProperty".freeze
     property :featureCode,
       comment: %(Type of the feature, as defined in geonames taxonomy.).freeze,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "feature code".freeze,
-      range: "http://www.geonames.org/ontology#Code".freeze,
+      range: "geonames:Code".freeze,
       subPropertyOf: "dc:type".freeze,
       type: "owl:ObjectProperty".freeze
     property :geonamesID,
@@ -122,1558 +122,1558 @@ module RDF::Vocab
       type: "owl:DatatypeProperty".freeze
     property :historicalName,
       label: "historical name".freeze,
-      subPropertyOf: "http://www.geonames.org/ontology#alternateName".freeze,
+      subPropertyOf: "geonames:alternateName".freeze,
       type: "owl:DatatypeProperty".freeze
     property :locatedIn,
       comment: %(Indicates that the subject resource is located in the object feature).freeze,
       label: "located in".freeze,
-      range: "http://www.geonames.org/ontology#Feature".freeze,
+      range: "geonames:Feature".freeze,
       type: "owl:ObjectProperty".freeze
     property :locationMap,
       comment: %(A geonames map centered on the feature.).freeze,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "map".freeze,
-      range: "http://www.geonames.org/ontology#Map".freeze,
+      range: "geonames:Map".freeze,
       type: "owl:ObjectProperty".freeze
     property :name,
       comment: %(The main international name of a feature. The value has no xml:lang tag.).freeze,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "name".freeze,
       type: "owl:DatatypeProperty".freeze
     property :nearby,
       comment: %(A feature close to the reference feature).freeze,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "nearby".freeze,
-      range: "http://www.geonames.org/ontology#Feature".freeze,
+      range: "geonames:Feature".freeze,
       type: "owl:ObjectProperty".freeze
     property :nearbyFeatures,
       comment: %(Links to an RDF document containing the descriptions of nearby features).freeze,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "nearby features".freeze,
-      range: "http://www.geonames.org/ontology#RDFData".freeze,
+      range: "geonames:RDFData".freeze,
       type: "owl:ObjectProperty".freeze
     property :neighbour,
       comment: %(A feature sharing a common boarder with the reference feature).freeze,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "neighbour".freeze,
-      range: "http://www.geonames.org/ontology#Feature".freeze,
+      range: "geonames:Feature".freeze,
       type: ["owl:ObjectProperty".freeze, "owl:SymmetricProperty".freeze]
     property :neighbouringFeatures,
       comment: %(Links to an RDF document containing the descriptions of neighbouring features. Applies when the feature has definite boarders.).freeze,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "neighbouring features".freeze,
-      range: "http://www.geonames.org/ontology#RDFData".freeze,
+      range: "geonames:RDFData".freeze,
       type: "owl:ObjectProperty".freeze
     property :officialName,
       comment: %(A name in an official local language).freeze,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "official name".freeze,
       subPropertyOf: "skos:prefLabel".freeze,
       type: "owl:DatatypeProperty".freeze
     property :parentADM1,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "level 1 administrative parent".freeze,
-      subPropertyOf: "http://www.geonames.org/ontology#parentFeature".freeze,
+      subPropertyOf: "geonames:parentFeature".freeze,
       type: "owl:ObjectProperty".freeze
     property :parentADM2,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "level 2 administrative parent".freeze,
-      subPropertyOf: "http://www.geonames.org/ontology#parentFeature".freeze,
+      subPropertyOf: "geonames:parentFeature".freeze,
       type: "owl:ObjectProperty".freeze
     property :parentADM3,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "level 3 administrative parent".freeze,
-      subPropertyOf: "http://www.geonames.org/ontology#parentFeature".freeze,
+      subPropertyOf: "geonames:parentFeature".freeze,
       type: "owl:ObjectProperty".freeze
     property :parentADM4,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "level 4 administrative parent".freeze,
-      subPropertyOf: "http://www.geonames.org/ontology#parentFeature".freeze,
+      subPropertyOf: "geonames:parentFeature".freeze,
       type: "owl:ObjectProperty".freeze
     property :parentCountry,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "parent country".freeze,
-      subPropertyOf: "http://www.geonames.org/ontology#parentFeature".freeze,
+      subPropertyOf: "geonames:parentFeature".freeze,
       type: "owl:ObjectProperty".freeze
     property :parentFeature,
       comment: %(A feature parent of the current one, in either administrative or physical subdivision.).freeze,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "parent feature".freeze,
-      range: "http://www.geonames.org/ontology#Feature".freeze,
+      range: "geonames:Feature".freeze,
       type: ["owl:ObjectProperty".freeze, "owl:TransitiveProperty".freeze]
     property :population,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "population".freeze,
       range: "xsd:integer".freeze,
       type: "owl:DatatypeProperty".freeze
     property :postalCode,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "postal code".freeze,
       type: "owl:DatatypeProperty".freeze
     property :shortName,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "short name".freeze,
-      subPropertyOf: "http://www.geonames.org/ontology#alternateName".freeze,
+      subPropertyOf: "geonames:alternateName".freeze,
       type: "owl:DatatypeProperty".freeze
     property :wikipediaArticle,
       comment: %(A Wikipedia article of which subject is the resource.).freeze,
-      domain: "http://www.geonames.org/ontology#Feature".freeze,
+      domain: "geonames:Feature".freeze,
       label: "wikipedia article".freeze,
-      range: "http://www.geonames.org/ontology#WikipediaArticle".freeze,
+      range: "geonames:WikipediaArticle".freeze,
       type: "owl:ObjectProperty".freeze
 
     # Extra definitions
     term :"A.ADM1",
       label: "A.ADM1".freeze,
       "skos:definition" => %(a primary administrative division of a country, such as a state in the United States).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.ADM1).freeze,
       "skos:prefLabel" => %(first-order administrative division).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.ADM1H",
       label: "A.ADM1H".freeze,
       "skos:historyNote" => %(Added in v3.1).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.ADM1H).freeze,
       "skos:prefLabel" => %(historical first-order administrative division).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.ADM2",
       label: "A.ADM2".freeze,
       "skos:definition" => %(a subdivision of a first-order administrative division).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.ADM2).freeze,
       "skos:prefLabel" => %(second-order administrative division).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.ADM2H",
       label: "A.ADM2H".freeze,
       "skos:historyNote" => %(Added in v3.1).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.ADM2H).freeze,
       "skos:prefLabel" => %(historical second-order administrative division).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.ADM3",
       label: "A.ADM3".freeze,
       "skos:definition" => %(a subdivision of a second-order administrative division).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.ADM3).freeze,
       "skos:prefLabel" => %(third-order administrative division).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.ADM3H",
       label: "A.ADM3H".freeze,
       "skos:historyNote" => %(Added in v3.1).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.ADM3H).freeze,
       "skos:prefLabel" => %(historical third-order administrative division).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.ADM4",
       label: "A.ADM4".freeze,
       "skos:definition" => %(a subdivision of a third-order administrative division).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.ADM4).freeze,
       "skos:prefLabel" => %(fourth-order administrative division).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.ADM4H",
       label: "A.ADM4H".freeze,
       "skos:historyNote" => %(Added in v3.1).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.ADM4H).freeze,
       "skos:prefLabel" => %(historical fourth-order administrative division).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.ADM5",
       label: "A.ADM5".freeze,
       "skos:definition" => %(a subdivision of a fourth-order administrative division).freeze,
       "skos:notation" => %(A.ADM5).freeze,
       "skos:prefLabel" => %(fifth-order administrative division).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.ADMD",
       label: "A.ADMD".freeze,
       "skos:definition" => %(an administrative division of a country, undifferentiated as to administrative level).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.ADMD).freeze,
       "skos:prefLabel" => %(administrative division).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.ADMH",
       label: "A.ADMH".freeze,
       "skos:historyNote" => %(Added in v3.1).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.ADMH).freeze,
       "skos:prefLabel" => %(historical administrative division).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.LTER",
       label: "A.LTER".freeze,
       "skos:definition" => %(a tract of land leased to another country, usually for military installations).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.LTER).freeze,
       "skos:prefLabel" => %(leased area).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.PCL",
       label: "A.PCL".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.PCL).freeze,
       "skos:prefLabel" => %(political entity).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.PCLD",
       label: "A.PCLD".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.PCLD).freeze,
       "skos:prefLabel" => %(dependent political entity).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.PCLF",
       label: "A.PCLF".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.PCLF).freeze,
       "skos:prefLabel" => %(freely associated state).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.PCLH",
       label: "A.PCLH".freeze,
       "skos:historyNote" => %(Added in v3.1).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.PCLH).freeze,
       "skos:prefLabel" => %(historical political entity).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.PCLI",
       label: "A.PCLI".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.PCLI).freeze,
       "skos:prefLabel" => %(independent political entity).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.PCLIX",
       label: "A.PCLIX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.PCLIX).freeze,
       "skos:prefLabel" => %(section of independent political entity).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.PCLS",
       label: "A.PCLS".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.PCLS).freeze,
       "skos:prefLabel" => %(semi-independent political entity).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.PPCLH",
       label: "A.PPCLH".freeze,
       "skos:historyNote" => %(Added in v3.1).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#P).freeze,
+      "skos:inScheme" => %(geonames:P).freeze,
       "skos:notation" => %(A.PPCLH).freeze,
       "skos:prefLabel" => %(historical capital of a political entity).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.PPLH",
       label: "A.PPLH".freeze,
       "skos:historyNote" => %(Added in v3.1).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#P).freeze,
+      "skos:inScheme" => %(geonames:P).freeze,
       "skos:notation" => %(A.PPLH).freeze,
       "skos:prefLabel" => %(historical populated place).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.PRSH",
       label: "A.PRSH".freeze,
       "skos:definition" => %(an ecclesiastical district).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.PRSH).freeze,
       "skos:prefLabel" => %(parish).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.TERR",
       label: "A.TERR".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.TERR).freeze,
       "skos:prefLabel" => %(territory).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.ZN",
       label: "A.ZN".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.ZN).freeze,
       "skos:prefLabel" => %(zone).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"A.ZNB",
       label: "A.ZNB".freeze,
       "skos:definition" => %(a zone recognized as a buffer between two nations in which military presence is minimal or absent).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#A).freeze,
+      "skos:inScheme" => %(geonames:A).freeze,
       "skos:notation" => %(A.ZNB).freeze,
       "skos:prefLabel" => %(buffer zone).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.AIRS",
       label: "H.AIRS".freeze,
       "skos:definition" => %(a place on a waterbody where floatplanes land and take off).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.AIRS).freeze,
       "skos:prefLabel" => %(seaplane landing area).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.ANCH",
       label: "H.ANCH".freeze,
       "skos:definition" => %(an area where vessels may anchor).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.ANCH).freeze,
       "skos:prefLabel" => %(anchorage).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.BAY",
       label: "H.BAY".freeze,
       "skos:definition" => %(a coastal indentation between two capes or headlands, larger than a cove but smaller than a gulf).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.BAY).freeze,
       "skos:prefLabel" => %(bay).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.BAYS",
       label: "H.BAYS".freeze,
       "skos:definition" => %(coastal indentations between two capes or headlands, larger than a cove but smaller than a gulf).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.BAYS).freeze,
       "skos:prefLabel" => %(bays).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.BGHT",
       label: "H.BGHT".freeze,
       "skos:definition" => %(an open body of water forming a slight recession in a coastline).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.BGHT).freeze,
       "skos:prefLabel" => %(bight\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.BNK",
       label: "H.BNK".freeze,
       "skos:definition" => %(an elevation, typically located on a shelf, over which the depth of water is relatively shallow but sufficient for most surface navigation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.BNK).freeze,
       "skos:prefLabel" => %(bank\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.BNKR",
       label: "H.BNKR".freeze,
       "skos:definition" => %(a sloping margin of a stream channel which normally confines the stream to its channel on land).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.BNKR).freeze,
       "skos:prefLabel" => %(stream bank).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.BNKX",
       label: "H.BNKX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.BNKX).freeze,
       "skos:prefLabel" => %(section of bank).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.BOG",
       label: "H.BOG".freeze,
       "skos:definition" => %(a wetland characterized by peat forming sphagnum moss, sedge, and other acid-water plants).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.BOG).freeze,
       "skos:prefLabel" => %(bog\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CAPG",
       label: "H.CAPG".freeze,
       "skos:definition" => %(a dome-shaped mass of glacial ice covering an area of  mountain summits or other high lands; smaller than an ice sheet).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CAPG).freeze,
       "skos:prefLabel" => %(icecap).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CHN",
       label: "H.CHN".freeze,
       "skos:definition" => %(the deepest part of a stream, bay, lagoon, or strait, through which the main current flows).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CHN).freeze,
       "skos:prefLabel" => %(channel).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CHNL",
       label: "H.CHNL".freeze,
       "skos:definition" => %(that part of a lake having water deep enough for navigation between islands, shoals, etc.).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CHNL).freeze,
       "skos:prefLabel" => %(lake channel\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CHNM",
       label: "H.CHNM".freeze,
       "skos:definition" => %(that part of a body of water deep enough for navigation through an area otherwise not suitable).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CHNM).freeze,
       "skos:prefLabel" => %(marine channel).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CHNN",
       label: "H.CHNN".freeze,
       "skos:definition" => %(a buoyed channel of sufficient depth for the safe navigation of vessels).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CHNN).freeze,
       "skos:prefLabel" => %(navigation channel).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CNFL",
       label: "H.CNFL".freeze,
       "skos:definition" => %(a place where two or more streams or intermittent streams flow together).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CNFL).freeze,
       "skos:prefLabel" => %(confluence).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CNL",
       label: "H.CNL".freeze,
       "skos:definition" => %(an artificial watercourse).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CNL).freeze,
       "skos:prefLabel" => %(canal).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CNLA",
       label: "H.CNLA".freeze,
       "skos:definition" => %(a conduit used to carry water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CNLA).freeze,
       "skos:prefLabel" => %(aqueduct).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CNLB",
       label: "H.CNLB".freeze,
       "skos:definition" => %(a conspicuously curved or bent section of a canal).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CNLB).freeze,
       "skos:prefLabel" => %(canal bend).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CNLD",
       label: "H.CNLD".freeze,
       "skos:definition" => %(an artificial waterway carrying water away from a wetland or from drainage ditches).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CNLD).freeze,
       "skos:prefLabel" => %(drainage canal).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CNLI",
       label: "H.CNLI".freeze,
       "skos:definition" => %(a canal which serves as a main conduit for irrigation water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CNLI).freeze,
       "skos:prefLabel" => %(irrigation canal).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CNLN",
       label: "H.CNLN".freeze,
       "skos:definition" => %(a watercourse constructed for navigation of vessels).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CNLN).freeze,
       "skos:prefLabel" => %(navigation canal\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CNLQ",
       label: "H.CNLQ".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CNLQ).freeze,
       "skos:prefLabel" => %(abandoned canal).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CNLSB",
       label: "H.CNLSB".freeze,
       "skos:definition" => %(a gently inclined underground tunnel bringing water for irrigation from aquifers).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CNLSB).freeze,
       "skos:prefLabel" => %(underground irrigation canal\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CNLX",
       label: "H.CNLX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CNLX).freeze,
       "skos:prefLabel" => %(section of canal).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.COVE",
       label: "H.COVE".freeze,
       "skos:definition" => %(a small coastal indentation, smaller than a bay).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.COVE).freeze,
       "skos:prefLabel" => %(cove\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CRKT",
       label: "H.CRKT".freeze,
       "skos:definition" => %(a meandering channel in a coastal wetland subject to bi-directional tidal currents).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CRKT).freeze,
       "skos:prefLabel" => %(tidal creek\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CRNT",
       label: "H.CRNT".freeze,
       "skos:definition" => %(a horizontal flow of water in a given direction with uniform velocity).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CRNT).freeze,
       "skos:prefLabel" => %(current).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.CUTF",
       label: "H.CUTF".freeze,
       "skos:definition" => %(a channel formed as a result of a stream cutting through a meander neck).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.CUTF).freeze,
       "skos:prefLabel" => %(cutoff).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.DCK",
       label: "H.DCK".freeze,
       "skos:definition" => %(a waterway between two piers, or cut into the land for the berthing of ships).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.DCK).freeze,
       "skos:prefLabel" => %(dock\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.DCKB",
       label: "H.DCKB".freeze,
       "skos:definition" => %(a part of a harbor where ships dock).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.DCKB).freeze,
       "skos:prefLabel" => %(docking basin).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.DOMG",
       label: "H.DOMG".freeze,
       "skos:definition" => %(a comparatively elevated area on an icecap).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.DOMG).freeze,
       "skos:prefLabel" => %(icecap dome).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.DPRG",
       label: "H.DPRG".freeze,
       "skos:definition" => %(a comparatively depressed area on an icecap).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.DPRG).freeze,
       "skos:prefLabel" => %(icecap depression).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.DTCH",
       label: "H.DTCH".freeze,
       "skos:definition" => %(a small artificial watercourse dug for draining or irrigating the land).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.DTCH).freeze,
       "skos:prefLabel" => %(ditch).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.DTCHD",
       label: "H.DTCHD".freeze,
       "skos:definition" => %(a ditch which serves to drain the land).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.DTCHD).freeze,
       "skos:prefLabel" => %(drainage ditch).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.DTCHI",
       label: "H.DTCHI".freeze,
       "skos:definition" => %(a ditch which serves to distribute irrigation water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.DTCHI).freeze,
       "skos:prefLabel" => %(irrigation ditch).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.DTCHM",
       label: "H.DTCHM".freeze,
       "skos:definition" => %(an area where a drainage ditch enters a lagoon, lake or bay).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.DTCHM).freeze,
       "skos:prefLabel" => %(ditch mouth\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.ESTY",
       label: "H.ESTY".freeze,
       "skos:definition" => %(a funnel-shaped stream mouth or embayment where fresh water mixes with sea water under tidal influences).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.ESTY).freeze,
       "skos:prefLabel" => %(estuary).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.FISH",
       label: "H.FISH".freeze,
       "skos:definition" => %(a fishing ground, bank or area where fishermen go to catch fish).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.FISH).freeze,
       "skos:prefLabel" => %(fishing area).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.FJD",
       label: "H.FJD".freeze,
       "skos:definition" => %(a long, narrow, steep-walled, deep-water arm of the sea at high latitudes, usually along mountainous coasts).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.FJD).freeze,
       "skos:prefLabel" => %(fjord).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.FJDS",
       label: "H.FJDS".freeze,
       "skos:definition" => %(long, narrow, steep-walled, deep-water arms of the sea at high latitudes, usually along mountainous coasts).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.FJDS).freeze,
       "skos:prefLabel" => %(fjords).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.FLLS",
       label: "H.FLLS".freeze,
       "skos:definition" => %(a perpendicular or very steep descent of the water of a stream).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.FLLS).freeze,
       "skos:prefLabel" => %(waterfall\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.FLLSX",
       label: "H.FLLSX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.FLLSX).freeze,
       "skos:prefLabel" => %(section of waterfall\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.FLTM",
       label: "H.FLTM".freeze,
       "skos:definition" => %(a relatively level area of mud either between high and low tide lines, or subject to flooding).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.FLTM).freeze,
       "skos:prefLabel" => %(mud flat\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.FLTT",
       label: "H.FLTT".freeze,
       "skos:definition" => %(a large flat area of mud or sand attached to the shore and alternately covered and uncovered by the tide).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.FLTT).freeze,
       "skos:prefLabel" => %(tidal flat\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.GLCR",
       label: "H.GLCR".freeze,
       "skos:definition" => %(a mass of ice, usually at high latitudes or high elevations, with sufficient thickness to flow away from the source area in lobes, tongues, or masses).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.GLCR).freeze,
       "skos:prefLabel" => %(glacier\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.GULF",
       label: "H.GULF".freeze,
       "skos:definition" => %(a large recess in the coastline, larger than a bay).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.GULF).freeze,
       "skos:prefLabel" => %(gulf).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.GYSR",
       label: "H.GYSR".freeze,
       "skos:definition" => %(a type of hot spring with intermittent eruptions of jets of hot water and steam).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.GYSR).freeze,
       "skos:prefLabel" => %(geyser).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.HBR",
       label: "H.HBR".freeze,
       "skos:definition" => %(a haven or space of deep water so sheltered by the adjacent land as to afford a safe anchorage for ships).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.HBR).freeze,
       "skos:prefLabel" => %(harbor\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.HBRX",
       label: "H.HBRX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.HBRX).freeze,
       "skos:prefLabel" => %(section of harbor).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.INLT",
       label: "H.INLT".freeze,
       "skos:definition" => %(a narrow waterway extending into the land, or connecting a bay or lagoon with a larger body of water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.INLT).freeze,
       "skos:prefLabel" => %(inlet).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.INLTQ",
       label: "H.INLTQ".freeze,
       "skos:definition" => %(an inlet which has been filled in, or blocked by deposits).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.INLTQ).freeze,
       "skos:prefLabel" => %(former inlet).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LBED",
       label: "H.LBED".freeze,
       "skos:definition" => %(a dried up or drained area of a former lake).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LBED).freeze,
       "skos:prefLabel" => %(lake bed\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LGN",
       label: "H.LGN".freeze,
       "skos:definition" => %(a shallow coastal waterbody, completely or partly separated from a larger body of water by a barrier island, coral reef or other depositional feature).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LGN).freeze,
       "skos:prefLabel" => %(lagoon).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LGNS",
       label: "H.LGNS".freeze,
       "skos:definition" => %(shallow coastal waterbodies, completely or partly separated from a larger body of water by a barrier island, coral reef or other depositional feature).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LGNS).freeze,
       "skos:prefLabel" => %(lagoons).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LGNX",
       label: "H.LGNX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LGNX).freeze,
       "skos:prefLabel" => %(section of lagoon).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LK",
       label: "H.LK".freeze,
       "skos:definition" => %(a large inland body of standing water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LK).freeze,
       "skos:prefLabel" => %(lake).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LKC",
       label: "H.LKC".freeze,
       "skos:definition" => %(a lake in a crater or caldera).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LKC).freeze,
       "skos:prefLabel" => %(crater lake).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LKI",
       label: "H.LKI".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LKI).freeze,
       "skos:prefLabel" => %(intermittent lake).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LKN",
       label: "H.LKN".freeze,
       "skos:definition" => %(an inland body of salt water with no outlet).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LKN).freeze,
       "skos:prefLabel" => %(salt lake).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LKNI",
       label: "H.LKNI".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LKNI).freeze,
       "skos:prefLabel" => %(intermittent salt lake).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LKO",
       label: "H.LKO".freeze,
       "skos:definition" => %(a crescent-shaped lake commonly found adjacent to meandering streams).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LKO).freeze,
       "skos:prefLabel" => %(oxbow lake).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LKOI",
       label: "H.LKOI".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LKOI).freeze,
       "skos:prefLabel" => %(intermittent oxbow lake).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LKS",
       label: "H.LKS".freeze,
       "skos:definition" => %(large inland bodies of standing water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LKS).freeze,
       "skos:prefLabel" => %(lakes).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LKSB",
       label: "H.LKSB".freeze,
       "skos:definition" => %(a standing body of water in a cave).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LKSB).freeze,
       "skos:prefLabel" => %(underground lake).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LKSC",
       label: "H.LKSC".freeze,
       "skos:definition" => %(lakes in a crater or caldera).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LKSC).freeze,
       "skos:prefLabel" => %(crater lakes).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LKSI",
       label: "H.LKSI".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LKSI).freeze,
       "skos:prefLabel" => %(intermittent lakes).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LKSN",
       label: "H.LKSN".freeze,
       "skos:definition" => %(inland bodies of salt water with no outlet).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LKSN).freeze,
       "skos:prefLabel" => %(salt lakes).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LKSNI",
       label: "H.LKSNI".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LKSNI).freeze,
       "skos:prefLabel" => %(intermittent salt lakes).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.LKX",
       label: "H.LKX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.LKX).freeze,
       "skos:prefLabel" => %(section of lake).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.MFGN",
       label: "H.MFGN".freeze,
       "skos:definition" => %(diked salt ponds used in the production of solar evaporated salt).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.MFGN).freeze,
       "skos:prefLabel" => %(salt evaporation ponds).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.MGV",
       label: "H.MGV".freeze,
       "skos:definition" => %(a tropical tidal mud flat characterized by mangrove vegetation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.MGV).freeze,
       "skos:prefLabel" => %(mangrove swamp).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.MOOR",
       label: "H.MOOR".freeze,
       "skos:definition" => %(an area of open ground overlaid with wet peaty soils).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.MOOR).freeze,
       "skos:prefLabel" => %(moor\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.MRSH",
       label: "H.MRSH".freeze,
       "skos:definition" => %(a wetland dominated by grass-like vegetation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.MRSH).freeze,
       "skos:prefLabel" => %(marsh\(es\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.MRSHN",
       label: "H.MRSHN".freeze,
       "skos:definition" => %(a flat area, subject to periodic salt water inundation, dominated by grassy salt-tolerant plants).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.MRSHN).freeze,
       "skos:prefLabel" => %(salt marsh).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.NRWS",
       label: "H.NRWS".freeze,
       "skos:definition" => %(a navigable narrow part of a bay, strait, river, etc.).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.NRWS).freeze,
       "skos:prefLabel" => %(narrows).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.OCN",
       label: "H.OCN".freeze,
       "skos:definition" => %(one of the major divisions of the vast expanse of salt water covering part of the earth).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.OCN).freeze,
       "skos:prefLabel" => %(ocean).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.OVF",
       label: "H.OVF".freeze,
       "skos:definition" => %(an area of breaking waves caused by the meeting of currents or by waves moving against the current).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.OVF).freeze,
       "skos:prefLabel" => %(overfalls).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.PND",
       label: "H.PND".freeze,
       "skos:definition" => %(a small standing waterbody).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.PND).freeze,
       "skos:prefLabel" => %(pond).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.PNDI",
       label: "H.PNDI".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.PNDI).freeze,
       "skos:prefLabel" => %(intermittent pond).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.PNDN",
       label: "H.PNDN".freeze,
       "skos:definition" => %(a small standing body of salt water often in a marsh or swamp, usually along a seacoast).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.PNDN).freeze,
       "skos:prefLabel" => %(salt pond).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.PNDNI",
       label: "H.PNDNI".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.PNDNI).freeze,
       "skos:prefLabel" => %(intermittent salt pond\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.PNDS",
       label: "H.PNDS".freeze,
       "skos:definition" => %(small standing waterbodies).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.PNDS).freeze,
       "skos:prefLabel" => %(ponds).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.PNDSF",
       label: "H.PNDSF".freeze,
       "skos:definition" => %(ponds or enclosures in which fish are kept or raised).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.PNDSF).freeze,
       "skos:prefLabel" => %(fishponds).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.PNDSI",
       label: "H.PNDSI".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.PNDSI).freeze,
       "skos:prefLabel" => %(intermittent ponds).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.PNDSN",
       label: "H.PNDSN".freeze,
       "skos:definition" => %(small standing bodies of salt water often in a marsh or swamp, usually along a seacoast).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.PNDSN).freeze,
       "skos:prefLabel" => %(salt ponds).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.POOL",
       label: "H.POOL".freeze,
       "skos:definition" => %(a small and comparatively still, deep part of a larger body of water such as a stream or harbor; or a small body of standing water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.POOL).freeze,
       "skos:prefLabel" => %(pool\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.POOLI",
       label: "H.POOLI".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.POOLI).freeze,
       "skos:prefLabel" => %(intermittent pool).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.RCH",
       label: "H.RCH".freeze,
       "skos:definition" => %(a straight section of a navigable stream or channel between two bends).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.RCH).freeze,
       "skos:prefLabel" => %(reach).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.RDGG",
       label: "H.RDGG".freeze,
       "skos:definition" => %(a linear elevation on an icecap).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.RDGG).freeze,
       "skos:prefLabel" => %(icecap ridge).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.RDST",
       label: "H.RDST".freeze,
       "skos:definition" => %(an open anchorage affording less protection than a harbor).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.RDST).freeze,
       "skos:prefLabel" => %(roadstead).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.RF",
       label: "H.RF".freeze,
       "skos:definition" => %(a surface-navigation hazard composed of consolidated material).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.RF).freeze,
       "skos:prefLabel" => %(reef\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.RFC",
       label: "H.RFC".freeze,
       "skos:definition" => %(a surface-navigation hazard composed of coral).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.RFC).freeze,
       "skos:prefLabel" => %(coral reef\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.RFX",
       label: "H.RFX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.RFX).freeze,
       "skos:prefLabel" => %(section of reef).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.RPDS",
       label: "H.RPDS".freeze,
       "skos:definition" => %(a turbulent section of a stream associated with a steep, irregular stream bed).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.RPDS).freeze,
       "skos:prefLabel" => %(rapids).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.RSV",
       label: "H.RSV".freeze,
       "skos:definition" => %(an artificial pond or lake).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.RSV).freeze,
       "skos:prefLabel" => %(reservoir\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.RSVI",
       label: "H.RSVI".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.RSVI).freeze,
       "skos:prefLabel" => %(intermittent reservoir).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.RSVT",
       label: "H.RSVT".freeze,
       "skos:definition" => %(a contained pool or tank of water at, below, or above ground level).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.RSVT).freeze,
       "skos:prefLabel" => %(water tank).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.RVN",
       label: "H.RVN".freeze,
       "skos:definition" => %(a small, narrow, deep, steep-sided stream channel, smaller than a gorge).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.RVN).freeze,
       "skos:prefLabel" => %(ravine\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.SBKH",
       label: "H.SBKH".freeze,
       "skos:definition" => %(a salt flat or salt encrusted plain subject to periodic inundation from flooding or high tides).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.SBKH).freeze,
       "skos:prefLabel" => %(sabkha\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.SD",
       label: "H.SD".freeze,
       "skos:definition" => %(a long arm of the sea forming a channel between the mainland and an island or islands; or connecting two larger bodies of water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.SD).freeze,
       "skos:prefLabel" => %(sound).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.SEA",
       label: "H.SEA".freeze,
       "skos:definition" => %(a large body of salt water more or less confined by continuous land or chains of islands forming a subdivision of an ocean).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.SEA).freeze,
       "skos:prefLabel" => %(sea).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.SHOL",
       label: "H.SHOL".freeze,
       "skos:definition" => %(a surface-navigation hazard composed of unconsolidated material).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.SHOL).freeze,
       "skos:prefLabel" => %(shoal\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.SILL",
       label: "H.SILL".freeze,
       "skos:definition" => %(the low part of an underwater gap or saddle separating basins, including a similar feature at the mouth of a fjord).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.SILL).freeze,
       "skos:prefLabel" => %(sill).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.SPNG",
       label: "H.SPNG".freeze,
       "skos:definition" => %(a place where ground water flows naturally out of the ground).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.SPNG).freeze,
       "skos:prefLabel" => %(spring\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.SPNS",
       label: "H.SPNS".freeze,
       "skos:definition" => %(a place where sulphur ground water flows naturally out of the ground).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.SPNS).freeze,
       "skos:prefLabel" => %(sulphur spring\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.SPNT",
       label: "H.SPNT".freeze,
       "skos:definition" => %(a place where hot ground water flows naturally out of the ground).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.SPNT).freeze,
       "skos:prefLabel" => %(hot spring\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.STM",
       label: "H.STM".freeze,
       "skos:definition" => %(a body of running water moving to a lower level in a channel on land).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.STM).freeze,
       "skos:prefLabel" => %(stream).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.STMA",
       label: "H.STMA".freeze,
       "skos:definition" => %(a diverging branch flowing out of a main stream and rejoining it downstream).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.STMA).freeze,
       "skos:prefLabel" => %(anabranch).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.STMB",
       label: "H.STMB".freeze,
       "skos:definition" => %(a conspicuously curved or bent segment of a stream).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.STMB).freeze,
       "skos:prefLabel" => %(stream bend).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.STMC",
       label: "H.STMC".freeze,
       "skos:definition" => %(a stream that has been substantially ditched, diked, or straightened).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.STMC).freeze,
       "skos:prefLabel" => %(canalized stream).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.STMD",
       label: "H.STMD".freeze,
       "skos:definition" => %(a branch which flows away from the main stream, as in a delta or irrigation canal).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.STMD).freeze,
       "skos:prefLabel" => %(distributary\(-ies\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.STMH",
       label: "H.STMH".freeze,
       "skos:definition" => %(the source and upper part of a stream, including the upper drainage basin).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.STMH).freeze,
       "skos:prefLabel" => %(headwaters).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.STMI",
       label: "H.STMI".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.STMI).freeze,
       "skos:prefLabel" => %(intermittent stream).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.STMIX",
       label: "H.STMIX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.STMIX).freeze,
       "skos:prefLabel" => %(section of intermittent stream).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.STMM",
       label: "H.STMM".freeze,
       "skos:definition" => %(a place where a stream discharges into a lagoon, lake, or the sea).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.STMM).freeze,
       "skos:prefLabel" => %(stream mouth\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.STMQ",
       label: "H.STMQ".freeze,
       "skos:definition" => %(a former stream or distributary no longer carrying flowing water, but still evident due to lakes, wetland, topographic or vegetation patterns).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.STMQ).freeze,
       "skos:prefLabel" => %(abandoned watercourse).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.STMS",
       label: "H.STMS".freeze,
       "skos:definition" => %(bodies of running water moving to a lower level in a channel on land).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.STMS).freeze,
       "skos:prefLabel" => %(streams).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.STMSB",
       label: "H.STMSB".freeze,
       "skos:definition" => %(a surface stream that disappears into an underground channel, or dries up in an arid area).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.STMSB).freeze,
       "skos:prefLabel" => %(lost river).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.STMX",
       label: "H.STMX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.STMX).freeze,
       "skos:prefLabel" => %(section of stream).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.STRT",
       label: "H.STRT".freeze,
       "skos:definition" => %(a relatively narrow waterway, usually narrower and less extensive than a sound, connecting two larger bodies of water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.STRT).freeze,
       "skos:prefLabel" => %(strait).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.SWMP",
       label: "H.SWMP".freeze,
       "skos:definition" => %(a wetland dominated by tree vegetation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.SWMP).freeze,
       "skos:prefLabel" => %(swamp).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.SYSI",
       label: "H.SYSI".freeze,
       "skos:definition" => %(a network of ditches and one or more of the following elements: water supply, reservoir, canal, pump, well, drain, etc.).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.SYSI).freeze,
       "skos:prefLabel" => %(irrigation system).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.TNLC",
       label: "H.TNLC".freeze,
       "skos:definition" => %(a tunnel through which a canal passes).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.TNLC).freeze,
       "skos:prefLabel" => %(canal tunnel).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.WAD",
       label: "H.WAD".freeze,
       "skos:definition" => %(a valley or ravine, bounded by relatively steep banks, which in the rainy season becomes a watercourse; found primarily in North Africa and the Middle East).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.WAD).freeze,
       "skos:prefLabel" => %(wadi).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.WADB",
       label: "H.WADB".freeze,
       "skos:definition" => %(a conspicuously curved or bent segment of a wadi).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.WADB).freeze,
       "skos:prefLabel" => %(wadi bend).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.WADJ",
       label: "H.WADJ".freeze,
       "skos:definition" => %(a place where two or more wadies join).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.WADJ).freeze,
       "skos:prefLabel" => %(wadi junction).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.WADM",
       label: "H.WADM".freeze,
       "skos:definition" => %(the lower terminus of a wadi where it widens into an adjoining floodplain, depression, or waterbody).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.WADM).freeze,
       "skos:prefLabel" => %(wadi mouth).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.WADS",
       label: "H.WADS".freeze,
       "skos:definition" => %(valleys or ravines, bounded by relatively steep banks, which in the rainy season become watercourses; found primarily in North Africa and the Middle East).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.WADS).freeze,
       "skos:prefLabel" => %(wadies).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.WADX",
       label: "H.WADX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.WADX).freeze,
       "skos:prefLabel" => %(section of wadi).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.WHRL",
       label: "H.WHRL".freeze,
       "skos:definition" => %(a turbulent, rotating movement of water in a stream).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.WHRL).freeze,
       "skos:prefLabel" => %(whirlpool).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.WLL",
       label: "H.WLL".freeze,
       "skos:definition" => %(a cylindrical hole, pit, or tunnel drilled or dug down to a depth from which water, oil, or gas can be pumped or brought to the surface).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.WLL).freeze,
       "skos:prefLabel" => %(well).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.WLLQ",
       label: "H.WLLQ".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.WLLQ).freeze,
       "skos:prefLabel" => %(abandoned well).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.WLLS",
       label: "H.WLLS".freeze,
       "skos:definition" => %(cylindrical holes, pits, or tunnels drilled or dug down to a depth from which water, oil, or gas can be pumped or brought to the surface).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.WLLS).freeze,
       "skos:prefLabel" => %(wells).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.WTLD",
       label: "H.WTLD".freeze,
       "skos:definition" => %(an area subject to inundation, usually characterized by bog, marsh, or swamp vegetation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.WTLD).freeze,
       "skos:prefLabel" => %(wetland).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.WTLDI",
       label: "H.WTLDI".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.WTLDI).freeze,
       "skos:prefLabel" => %(intermittent wetland).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.WTRC",
       label: "H.WTRC".freeze,
       "skos:definition" => %(a natural, well-defined channel produced by flowing water, or an artificial channel designed to carry flowing water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.WTRC).freeze,
       "skos:prefLabel" => %(watercourse).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"H.WTRH",
       label: "H.WTRH".freeze,
       "skos:definition" => %(a natural hole, hollow, or small depression that contains water, used by man and animals, especially in arid areas).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#H).freeze,
+      "skos:inScheme" => %(geonames:H).freeze,
       "skos:notation" => %(H.WTRH).freeze,
       "skos:prefLabel" => %(waterhole\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.AGRC",
       label: "L.AGRC".freeze,
       "skos:definition" => %(a tract of land set aside for agricultural settlement).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.AGRC).freeze,
       "skos:prefLabel" => %(agricultural colony).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.AMUS",
       label: "L.AMUS".freeze,
       "skos:definition" => %(Amusement Park are theme parks, adventure parks offering entertainment, similar to funfairs but with a fix location).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.AMUS).freeze,
       "skos:prefLabel" => %(amusement park).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.AREA",
       label: "L.AREA".freeze,
       "skos:definition" => %(a tract of land without homogeneous character or boundaries).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.AREA).freeze,
       "skos:prefLabel" => %(area).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.BSND",
       label: "L.BSND".freeze,
       "skos:definition" => %(an area drained by a stream).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.BSND).freeze,
       "skos:prefLabel" => %(drainage basin).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.BSNP",
       label: "L.BSNP".freeze,
       "skos:definition" => %(an area underlain by an oil-rich structural basin).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.BSNP).freeze,
       "skos:prefLabel" => %(petroleum basin).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.BTL",
       label: "L.BTL".freeze,
       "skos:definition" => %(a site of a land battle of historical importance).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.BTL).freeze,
       "skos:prefLabel" => %(battlefield).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.CLG",
       label: "L.CLG".freeze,
       "skos:definition" => %(an area in a forest with trees removed).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.CLG).freeze,
       "skos:prefLabel" => %(clearing).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.CMN",
       label: "L.CMN".freeze,
       "skos:definition" => %(a park or pasture for community use).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.CMN).freeze,
       "skos:prefLabel" => %(common).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.CNS",
       label: "L.CNS".freeze,
       "skos:definition" => %(a lease of land by a government for economic development, e.g., mining, forestry).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.CNS).freeze,
       "skos:prefLabel" => %(concession area).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.COLF",
       label: "L.COLF".freeze,
       "skos:definition" => %(a region in which coal deposits of possible economic value occur).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.COLF).freeze,
       "skos:prefLabel" => %(coalfield).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.CONT",
       label: "L.CONT".freeze,
       "skos:definition" => %(continent : Europe, Africa, Asia, North America, South America, Oceania,Antarctica).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.CONT).freeze,
       "skos:prefLabel" => %(continent).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.CST",
       label: "L.CST".freeze,
       "skos:definition" => %(a zone of variable width straddling the shoreline).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.CST).freeze,
       "skos:prefLabel" => %(coast).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.CTRB",
       label: "L.CTRB".freeze,
       "skos:definition" => %(a place where a number of businesses are located).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.CTRB).freeze,
       "skos:prefLabel" => %(business center).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.DEVH",
       label: "L.DEVH".freeze,
       "skos:definition" => %(a tract of land on which many houses of similar design are built according to a development plan).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.DEVH).freeze,
       "skos:prefLabel" => %(housing development).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.FLD",
       label: "L.FLD".freeze,
       "skos:definition" => %(an open as opposed to wooded area).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.FLD).freeze,
       "skos:prefLabel" => %(field\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.FLDI",
       label: "L.FLDI".freeze,
       "skos:definition" => %(a tract of level or terraced land which is irrigated).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.FLDI).freeze,
       "skos:prefLabel" => %(irrigated field\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.GASF",
       label: "L.GASF".freeze,
       "skos:definition" => %(an area containing a subterranean store of natural gas of economic value).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.GASF).freeze,
       "skos:prefLabel" => %(gasfield).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.GRAZ",
       label: "L.GRAZ".freeze,
       "skos:definition" => %(an area of grasses and shrubs used for grazing).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.GRAZ).freeze,
       "skos:prefLabel" => %(grazing area).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.GVL",
       label: "L.GVL".freeze,
       "skos:definition" => %(an area covered with gravel).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.GVL).freeze,
       "skos:prefLabel" => %(gravel area).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.INDS",
       label: "L.INDS".freeze,
       "skos:definition" => %(an area characterized by industrial activity).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.INDS).freeze,
       "skos:prefLabel" => %(industrial area).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.LAND",
       label: "L.LAND".freeze,
       "skos:definition" => %(a tract of land in the Arctic).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.LAND).freeze,
       "skos:prefLabel" => %(arctic land).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.LCTY",
       label: "L.LCTY".freeze,
       "skos:definition" => %(a minor area or place of unspecified or mixed character and indefinite boundaries).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.LCTY).freeze,
       "skos:prefLabel" => %(locality).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.MILB",
       label: "L.MILB".freeze,
       "skos:definition" => %(a place used by an army or other armed service for storing arms and supplies, and for accommodating and training troops, a base from which operations can be initiated).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.MILB).freeze,
       "skos:prefLabel" => %(military base).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.MNA",
       label: "L.MNA".freeze,
       "skos:definition" => %(an area of mine sites where minerals and ores are extracted).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.MNA).freeze,
       "skos:prefLabel" => %(mining area).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.MVA",
       label: "L.MVA".freeze,
       "skos:definition" => %(a tract of land where military field exercises are carried out).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.MVA).freeze,
       "skos:prefLabel" => %(maneuver area).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.NVB",
       label: "L.NVB".freeze,
       "skos:definition" => %(an area used to store supplies, provide barracks for troops and naval personnel, a port for naval vessels, and from which operations are initiated).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.NVB).freeze,
       "skos:prefLabel" => %(naval base).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.OAS",
       label: "L.OAS".freeze,
       "skos:definition" => %(an area in a desert made productive by the availability of water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.OAS).freeze,
       "skos:prefLabel" => %(oasis\(-es\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.OILF",
       label: "L.OILF".freeze,
       "skos:definition" => %(an area containing a subterranean store of petroleum of economic value).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.OILF).freeze,
       "skos:prefLabel" => %(oilfield).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.PEAT",
       label: "L.PEAT".freeze,
       "skos:definition" => %(an area where peat is harvested).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.PEAT).freeze,
       "skos:prefLabel" => %(peat cutting area).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.PRK",
       label: "L.PRK".freeze,
       "skos:definition" => %(an area, often of forested land, maintained as a place of beauty, or for recreation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.PRK).freeze,
       "skos:prefLabel" => %(park).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.PRT",
       label: "L.PRT".freeze,
       "skos:definition" => %(a place provided with terminal and transfer facilities for loading and discharging waterborne cargo or passengers, usually located in a harbor).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.PRT).freeze,
       "skos:prefLabel" => %(port).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.QCKS",
       label: "L.QCKS".freeze,
       "skos:definition" => %(an area where loose sand with water moving through it may become unstable when heavy objects are placed at the surface, causing them to sink).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.QCKS).freeze,
       "skos:prefLabel" => %(quicksand).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.REP",
       label: "L.REP".freeze,
       "owl:deprecated" => %(true).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.REP).freeze,
       "skos:prefLabel" => %(republic).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.RES",
       label: "L.RES".freeze,
       "skos:definition" => %(a tract of public land reserved for future use or restricted as to use).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.RES).freeze,
       "skos:prefLabel" => %(reserve).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.RESA",
       label: "L.RESA".freeze,
       "skos:definition" => %(a tract of land reserved for agricultural reclamation and/or development).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.RESA).freeze,
       "skos:prefLabel" => %(agricultural reserve).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.RESF",
       label: "L.RESF".freeze,
       "skos:definition" => %(a forested area set aside for preservation or controlled use).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.RESF).freeze,
       "skos:prefLabel" => %(forest reserve).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.RESH",
       label: "L.RESH".freeze,
       "skos:definition" => %(a tract of land used primarily for hunting).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.RESH).freeze,
       "skos:prefLabel" => %(hunting reserve).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.RESN",
       label: "L.RESN".freeze,
       "skos:definition" => %(an area reserved for the maintenance of a natural habitat).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.RESN).freeze,
       "skos:prefLabel" => %(nature reserve).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.RESP",
       label: "L.RESP".freeze,
       "skos:definition" => %(an area of palm trees where use is controlled).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.RESP).freeze,
       "skos:prefLabel" => %(palm tree reserve).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.RESV",
       label: "L.RESV".freeze,
       "skos:definition" => %(a tract of land set aside for aboriginal, tribal, or native populations).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.RESV).freeze,
       "skos:prefLabel" => %(reservation).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.RESW",
       label: "L.RESW".freeze,
       "skos:definition" => %(a tract of public land reserved for the preservation of wildlife).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.RESW).freeze,
       "skos:prefLabel" => %(wildlife reserve).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.RGN",
       label: "L.RGN".freeze,
       "skos:definition" => %(an area distinguished by one or more observable physical or cultural characteristics).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.RGN).freeze,
       "skos:prefLabel" => %(region).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.RGNE",
       label: "L.RGNE".freeze,
       "skos:definition" => %(a region of a country established for economic development or for statistical purposes).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.RGNE).freeze,
       "skos:prefLabel" => %(economic region).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.RGNH",
       label: "L.RGNH".freeze,
       "skos:historyNote" => %(Added in v3.1).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.RGNH).freeze,
       "skos:prefLabel" => %(historical region).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.RGNL",
       label: "L.RGNL".freeze,
       "skos:definition" => %(a tract of land distinguished by numerous lakes).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.RGNL).freeze,
       "skos:prefLabel" => %(lake region).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.RNGA",
       label: "L.RNGA".freeze,
       "skos:definition" => %(a tract of land used for artillery firing practice).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.RNGA).freeze,
       "skos:prefLabel" => %(artillery range).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.SALT",
       label: "L.SALT".freeze,
       "skos:definition" => %(a shallow basin or flat where salt accumulates after periodic inundation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.SALT).freeze,
       "skos:prefLabel" => %(salt area).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.SNOW",
       label: "L.SNOW".freeze,
       "skos:definition" => %(an area of permanent snow and ice forming the accumulation area of a glacier).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.SNOW).freeze,
       "skos:prefLabel" => %(snowfield).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.TRB",
       label: "L.TRB".freeze,
       "skos:definition" => %(a tract of land used by nomadic or other tribes).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.TRB).freeze,
       "skos:prefLabel" => %(tribal area).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"L.ZZZZZ",
       label: "L.ZZZZZ".freeze,
       "owl:deprecated" => %(true).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#L).freeze,
+      "skos:inScheme" => %(geonames:L).freeze,
       "skos:notation" => %(L.ZZZZZ).freeze,
       "skos:prefLabel" => %(master source holdings list).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"Marc-Wick",
       "foaf:name" => %(Marc Wick).freeze,
       label: "Marc-Wick".freeze,
@@ -1681,3353 +1681,3353 @@ module RDF::Vocab
     term :"P.PPL",
       label: "P.PPL".freeze,
       "skos:definition" => %(a city, town, village, or other agglomeration of buildings where people live and work).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#P).freeze,
+      "skos:inScheme" => %(geonames:P).freeze,
       "skos:notation" => %(P.PPL).freeze,
       "skos:prefLabel" => %(populated place).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"P.PPLA",
       label: "P.PPLA".freeze,
       "skos:definition" => %(seat of a first-order administrative division \(PPLC takes precedence over PPLA\)).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#P).freeze,
+      "skos:inScheme" => %(geonames:P).freeze,
       "skos:notation" => %(P.PPLA).freeze,
       "skos:prefLabel" => %(seat of a first-order administrative
             division).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"P.PPLA2",
       label: "P.PPLA2".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#P).freeze,
+      "skos:inScheme" => %(geonames:P).freeze,
       "skos:notation" => %(P.PPLA2).freeze,
       "skos:prefLabel" => %(seat of a second-order administrative division).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"P.PPLA3",
       label: "P.PPLA3".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#P).freeze,
+      "skos:inScheme" => %(geonames:P).freeze,
       "skos:notation" => %(P.PPLA3).freeze,
       "skos:prefLabel" => %(seat of a third-order administrative division).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"P.PPLA4",
       label: "P.PPLA4".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#P).freeze,
+      "skos:inScheme" => %(geonames:P).freeze,
       "skos:notation" => %(P.PPLA4).freeze,
       "skos:prefLabel" => %(seat of a fourth-order administrative division).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"P.PPLC",
       label: "P.PPLC".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#P).freeze,
+      "skos:inScheme" => %(geonames:P).freeze,
       "skos:notation" => %(P.PPLC).freeze,
       "skos:prefLabel" => %(capital of a political entity).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"P.PPLF",
       label: "P.PPLF".freeze,
       "skos:definition" => %(a populated place where the population is largely engaged in agricultural activities).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#P).freeze,
+      "skos:inScheme" => %(geonames:P).freeze,
       "skos:notation" => %(P.PPLF).freeze,
       "skos:prefLabel" => %(farm village).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"P.PPLG",
       label: "P.PPLG".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#P).freeze,
+      "skos:inScheme" => %(geonames:P).freeze,
       "skos:notation" => %(P.PPLG).freeze,
       "skos:prefLabel" => %(seat of government of a political entity).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"P.PPLL",
       label: "P.PPLL".freeze,
       "skos:definition" => %(an area similar to a locality but with a small group of dwellings or other buildings).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#P).freeze,
+      "skos:inScheme" => %(geonames:P).freeze,
       "skos:notation" => %(P.PPLL).freeze,
       "skos:prefLabel" => %(populated locality).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"P.PPLQ",
       label: "P.PPLQ".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#P).freeze,
+      "skos:inScheme" => %(geonames:P).freeze,
       "skos:notation" => %(P.PPLQ).freeze,
       "skos:prefLabel" => %(abandoned populated place).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"P.PPLR",
       label: "P.PPLR".freeze,
       "skos:definition" => %(a populated place whose population is largely engaged in religious occupations).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#P).freeze,
+      "skos:inScheme" => %(geonames:P).freeze,
       "skos:notation" => %(P.PPLR).freeze,
       "skos:prefLabel" => %(religious populated place).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"P.PPLS",
       label: "P.PPLS".freeze,
       "skos:definition" => %(cities, towns, villages, or other agglomerations of buildings where people live and work).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#P).freeze,
+      "skos:inScheme" => %(geonames:P).freeze,
       "skos:notation" => %(P.PPLS).freeze,
       "skos:prefLabel" => %(populated places).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"P.PPLW",
       label: "P.PPLW".freeze,
       "skos:definition" => %(a village, town or city destroyed by a natural disaster, or by war).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#P).freeze,
+      "skos:inScheme" => %(geonames:P).freeze,
       "skos:notation" => %(P.PPLW).freeze,
       "skos:prefLabel" => %(destroyed populated place).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"P.PPLX",
       label: "P.PPLX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#P).freeze,
+      "skos:inScheme" => %(geonames:P).freeze,
       "skos:notation" => %(P.PPLX).freeze,
       "skos:prefLabel" => %(section of populated place).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"P.STLMT",
       label: "P.STLMT".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#P).freeze,
+      "skos:inScheme" => %(geonames:P).freeze,
       "skos:notation" => %(P.STLMT).freeze,
       "skos:prefLabel" => %(israeli settlement).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.CSWY",
       label: "R.CSWY".freeze,
       "skos:definition" => %(a raised roadway across wet ground or shallow water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.CSWY).freeze,
       "skos:prefLabel" => %(causeway).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.CSWYQ",
       label: "R.CSWYQ".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(a causeway no longer used for transportation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.CSWYQ).freeze,
       "skos:prefLabel" => %(former causeway).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.OILP",
       label: "R.OILP".freeze,
       "skos:definition" => %(a pipeline used for transporting oil).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.OILP).freeze,
       "skos:prefLabel" => %(oil pipeline).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.PRMN",
       label: "R.PRMN".freeze,
       "skos:definition" => %(a place for public walking, usually along a beach front).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.PRMN).freeze,
       "skos:prefLabel" => %(promenade).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.PTGE",
       label: "R.PTGE".freeze,
       "skos:definition" => %(a place where boats, goods, etc., are carried overland between navigable waters).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.PTGE).freeze,
       "skos:prefLabel" => %(portage).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.RD",
       label: "R.RD".freeze,
       "skos:definition" => %(an open way with improved surface for transportation of animals, people and vehicles).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.RD).freeze,
       "skos:prefLabel" => %(road).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.RDA",
       label: "R.RDA".freeze,
       "skos:definition" => %(the remains of a road used by ancient cultures).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.RDA).freeze,
       "skos:prefLabel" => %(ancient road).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.RDB",
       label: "R.RDB".freeze,
       "skos:definition" => %(a conspicuously curved or bent section of a road).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.RDB).freeze,
       "skos:prefLabel" => %(road bend).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.RDCUT",
       label: "R.RDCUT".freeze,
       "skos:definition" => %(an excavation cut through a hill or ridge for a road).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.RDCUT).freeze,
       "skos:prefLabel" => %(road cut).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.RDJCT",
       label: "R.RDJCT".freeze,
       "skos:definition" => %(a place where two or more roads join).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.RDJCT).freeze,
       "skos:prefLabel" => %(road junction).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.RJCT",
       label: "R.RJCT".freeze,
       "skos:definition" => %(a place where two or more railroad tracks join).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.RJCT).freeze,
       "skos:prefLabel" => %(railroad junction).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.RR",
       label: "R.RR".freeze,
       "skos:definition" => %(a permanent twin steel-rail track on which freight and passenger cars move long distances).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.RR).freeze,
       "skos:prefLabel" => %(railroad).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.RRQ",
       label: "R.RRQ".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.RRQ).freeze,
       "skos:prefLabel" => %(abandoned railroad).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.RTE",
       label: "R.RTE".freeze,
       "skos:definition" => %(the route taken by caravans).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.RTE).freeze,
       "skos:prefLabel" => %(caravan route).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.RYD",
       label: "R.RYD".freeze,
       "skos:definition" => %(a system of tracks used for the making up of trains, and switching and storing freight cars).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.RYD).freeze,
       "skos:prefLabel" => %(railroad yard).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.ST",
       label: "R.ST".freeze,
       "skos:definition" => %(a paved urban thoroughfare).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.ST).freeze,
       "skos:prefLabel" => %(street).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.STKR",
       label: "R.STKR".freeze,
       "skos:definition" => %(a route taken by livestock herds).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.STKR).freeze,
       "skos:prefLabel" => %(stock route).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.TNL",
       label: "R.TNL".freeze,
       "skos:definition" => %(a subterranean passageway for transportation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.TNL).freeze,
       "skos:prefLabel" => %(tunnel).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.TNLN",
       label: "R.TNLN".freeze,
       "skos:definition" => %(a cave that is open at both ends).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.TNLN).freeze,
       "skos:prefLabel" => %(natural tunnel).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.TNLRD",
       label: "R.TNLRD".freeze,
       "skos:definition" => %(a tunnel through which a road passes).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.TNLRD).freeze,
       "skos:prefLabel" => %(road tunnel).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.TNLRR",
       label: "R.TNLRR".freeze,
       "skos:definition" => %(a tunnel through which a railroad passes).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.TNLRR).freeze,
       "skos:prefLabel" => %(railroad tunnel).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.TNLS",
       label: "R.TNLS".freeze,
       "skos:definition" => %(subterranean passageways for transportation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.TNLS).freeze,
       "skos:prefLabel" => %(tunnels).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"R.TRL",
       label: "R.TRL".freeze,
       "skos:definition" => %(a path, track, or route used by pedestrians, animals, or off-road vehicles).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#R).freeze,
+      "skos:inScheme" => %(geonames:R).freeze,
       "skos:notation" => %(R.TRL).freeze,
       "skos:prefLabel" => %(trail).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ADMF",
       label: "S.ADMF".freeze,
       "skos:definition" => %(a government building).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ADMF).freeze,
       "skos:prefLabel" => %(administrative facility).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.AGRF",
       label: "S.AGRF".freeze,
       "skos:definition" => %(a building and/or tract of land used for improving agriculture).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.AGRF).freeze,
       "skos:prefLabel" => %(agricultural facility).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.AIRB",
       label: "S.AIRB".freeze,
       "skos:definition" => %(an area used to store supplies, provide barracks for air force personnel, hangars and runways for aircraft, and from which operations are initiated).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.AIRB).freeze,
       "skos:prefLabel" => %(airbase).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.AIRF",
       label: "S.AIRF".freeze,
       "skos:definition" => %(a place on land where aircraft land and take off; no facilities provided for the commercial handling of passengers and cargo).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.AIRF).freeze,
       "skos:prefLabel" => %(airfield).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.AIRH",
       label: "S.AIRH".freeze,
       "skos:definition" => %(a place where helicopters land and take off).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.AIRH).freeze,
       "skos:prefLabel" => %(heliport).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.AIRP",
       label: "S.AIRP".freeze,
       "skos:definition" => %(a place where aircraft regularly land and take off, with runways, navigational aids, and major facilities for the commercial handling of passengers and cargo).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.AIRP).freeze,
       "skos:prefLabel" => %(airport).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.AIRQ",
       label: "S.AIRQ".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.AIRQ).freeze,
       "skos:prefLabel" => %(abandoned airfield).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.AMTH",
       label: "S.AMTH".freeze,
       "skos:definition" => %(an oval or circular structure with rising tiers of seats about a stage or open space).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.AMTH).freeze,
       "skos:prefLabel" => %(amphitheater).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ANS",
       label: "S.ANS".freeze,
       "skos:definition" => %(a place where archeological remains, old structures, or cultural artifacts are located).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ANS).freeze,
       "skos:prefLabel" => %(ancient site).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.AQC",
       label: "S.AQC".freeze,
       "skos:definition" => %(facility or area for the cultivation of aquatic animals and plants, especially fish, shellfish, and seaweed, in natural or controlled marine or freshwater environments; underwater agriculture).freeze,
       "skos:historyNote" => %(Added in v3.0).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.AQC).freeze,
       "skos:prefLabel" => %(aquaculture facility).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ARCH",
       label: "S.ARCH".freeze,
       "skos:definition" => %(a natural or man-made structure in the form of an arch).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ARCH).freeze,
       "skos:prefLabel" => %(arch).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ASTR",
       label: "S.ASTR".freeze,
       "skos:definition" => %(a point on the earth whose position has been determined by observations of celestial bodies).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ASTR).freeze,
       "skos:prefLabel" => %(astronomical station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ASYL",
       label: "S.ASYL".freeze,
       "skos:definition" => %(a facility where the insane are cared for and protected).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ASYL).freeze,
       "skos:prefLabel" => %(asylum).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ATHF",
       label: "S.ATHF".freeze,
       "skos:definition" => %(a tract of land used for playing team sports, and athletic track and field events).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ATHF).freeze,
       "skos:prefLabel" => %(athletic field).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ATM",
       label: "S.ATM".freeze,
       "skos:definition" => %(An unattended electronic machine in a public place, connected to a data system and related equipment and activated by a bank customer to obtain cash withdrawals and other banking services.).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ATM).freeze,
       "skos:prefLabel" => %(automatic teller machine).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.BANK",
       label: "S.BANK".freeze,
       "skos:definition" => %(A business establishment in which money is kept for saving or commercial purposes or is invested, supplied for loans, or exchanged.).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.BANK).freeze,
       "skos:prefLabel" => %(bank).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.BCN",
       label: "S.BCN".freeze,
       "skos:definition" => %(a fixed artificial navigation mark).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.BCN).freeze,
       "skos:prefLabel" => %(beacon).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.BDG",
       label: "S.BDG".freeze,
       "skos:definition" => %(a structure erected across an obstacle such as a stream, road, etc., in order to carry roads, railroads, and pedestrians across).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.BDG).freeze,
       "skos:prefLabel" => %(bridge).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.BDGQ",
       label: "S.BDGQ".freeze,
       "skos:definition" => %(a destroyed or decayed bridge which is no longer functional).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.BDGQ).freeze,
       "skos:prefLabel" => %(ruined bridge).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.BLDG",
       label: "S.BLDG".freeze,
       "skos:definition" => %(a structure built for permanent use, as a house, factory, etc.).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.BLDG).freeze,
       "skos:prefLabel" => %(building\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.BLDO",
       label: "S.BLDO".freeze,
       "skos:definition" => %(commercial building where business and/or services are conducted).freeze,
       "skos:historyNote" => %(Added in v3.0).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.BLDO).freeze,
       "skos:prefLabel" => %(office building).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.BP",
       label: "S.BP".freeze,
       "skos:definition" => %(a fixture marking a point along a boundary).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.BP).freeze,
       "skos:prefLabel" => %(boundary marker).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.BRKS",
       label: "S.BRKS".freeze,
       "skos:definition" => %(a building for lodging military personnel).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.BRKS).freeze,
       "skos:prefLabel" => %(barracks).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.BRKW",
       label: "S.BRKW".freeze,
       "skos:definition" => %(a structure erected to break the force of waves at the entrance to a harbor or port).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.BRKW).freeze,
       "skos:prefLabel" => %(breakwater).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.BSTN",
       label: "S.BSTN".freeze,
       "skos:definition" => %(a facility for baling agricultural products).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.BSTN).freeze,
       "skos:prefLabel" => %(baling station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.BTYD",
       label: "S.BTYD".freeze,
       "skos:definition" => %(a waterside facility for servicing, repairing, and building small vessels).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.BTYD).freeze,
       "skos:prefLabel" => %(boatyard).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.BUR",
       label: "S.BUR".freeze,
       "skos:definition" => %(a cave used for human burials).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.BUR).freeze,
       "skos:prefLabel" => %(burial cave\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.BUSTN",
       label: "S.BUSTN".freeze,
       "skos:definition" => %(a facility comprising ticket office, platforms, etc. for loading and unloading passengers).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.BUSTN).freeze,
       "skos:prefLabel" => %(bus station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.BUSTP",
       label: "S.BUSTP".freeze,
       "skos:definition" => %(a place lacking station facilities).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.BUSTP).freeze,
       "skos:prefLabel" => %(bus stop).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CARN",
       label: "S.CARN".freeze,
       "skos:definition" => %(a heap of stones erected as a landmark or for other purposes).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CARN).freeze,
       "skos:prefLabel" => %(cairn).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CAVE",
       label: "S.CAVE".freeze,
       "skos:definition" => %(an underground passageway or chamber, or cavity on the side of a cliff).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CAVE).freeze,
       "skos:prefLabel" => %(cave\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CCL",
       label: "S.CCL".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(Centres for Continuous Learning).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CCL).freeze,
       "skos:prefLabel" => %(Centre Continuous Learning).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CH",
       label: "S.CH".freeze,
       "skos:definition" => %(a building for public Christian worship).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CH).freeze,
       "skos:prefLabel" => %(church).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CMP",
       label: "S.CMP".freeze,
       "skos:definition" => %(a site occupied by tents, huts, or other shelters for temporary use).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CMP).freeze,
       "skos:prefLabel" => %(camp\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CMPL",
       label: "S.CMPL".freeze,
       "skos:definition" => %(a camp used by loggers).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CMPL).freeze,
       "skos:prefLabel" => %(logging camp).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CMPLA",
       label: "S.CMPLA".freeze,
       "skos:definition" => %(a camp used by migrant or temporary laborers).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CMPLA).freeze,
       "skos:prefLabel" => %(labor camp).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CMPMN",
       label: "S.CMPMN".freeze,
       "skos:definition" => %(a camp used by miners).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CMPMN).freeze,
       "skos:prefLabel" => %(mining camp).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CMPO",
       label: "S.CMPO".freeze,
       "skos:definition" => %(a camp used by oilfield workers).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CMPO).freeze,
       "skos:prefLabel" => %(oil camp).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CMPQ",
       label: "S.CMPQ".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CMPQ).freeze,
       "skos:prefLabel" => %(abandoned camp).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CMPRF",
       label: "S.CMPRF".freeze,
       "skos:definition" => %(a camp used by refugees).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CMPRF).freeze,
       "skos:prefLabel" => %(refugee camp).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CMTY",
       label: "S.CMTY".freeze,
       "skos:definition" => %(a burial place or ground).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CMTY).freeze,
       "skos:prefLabel" => %(cemetery).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.COMC",
       label: "S.COMC".freeze,
       "skos:definition" => %(a facility, including buildings, antennae, towers and electronic equipment for receiving and transmitting information).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.COMC).freeze,
       "skos:prefLabel" => %(communication center).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CRRL",
       label: "S.CRRL".freeze,
       "skos:definition" => %(a pen or enclosure for confining or capturing animals).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CRRL).freeze,
       "skos:prefLabel" => %(corral\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CSNO",
       label: "S.CSNO".freeze,
       "skos:definition" => %(a building used for entertainment, especially gambling).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CSNO).freeze,
       "skos:prefLabel" => %(casino).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CSTL",
       label: "S.CSTL".freeze,
       "skos:definition" => %(a large fortified building or set of buildings).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CSTL).freeze,
       "skos:prefLabel" => %(castle).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CSTM",
       label: "S.CSTM".freeze,
       "skos:definition" => %(a building in a port where customs and duties are paid, and where vessels are entered and cleared).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CSTM).freeze,
       "skos:prefLabel" => %(customs house).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CTHSE",
       label: "S.CTHSE".freeze,
       "skos:definition" => %(a building in which courts of law are held).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CTHSE).freeze,
       "skos:prefLabel" => %(courthouse).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CTRA",
       label: "S.CTRA".freeze,
       "skos:definition" => %(a facility where atomic research is carried out).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CTRA).freeze,
       "skos:prefLabel" => %(atomic center).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CTRCM",
       label: "S.CTRCM".freeze,
       "skos:definition" => %(a facility for community recreation and other activities).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CTRCM).freeze,
       "skos:prefLabel" => %(community center).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CTRF",
       label: "S.CTRF".freeze,
       "skos:definition" => %(a place where more than one facility is situated).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CTRF).freeze,
       "skos:prefLabel" => %(facility center).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CTRM",
       label: "S.CTRM".freeze,
       "skos:definition" => %(a complex of health care buildings including two or more of the following: hospital, medical school, clinic, pharmacy, doctor's offices, etc.).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CTRM).freeze,
       "skos:prefLabel" => %(medical center).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CTRR",
       label: "S.CTRR".freeze,
       "skos:definition" => %(a facility where more than one religious activity is carried out, e.g., retreat, school, monastery, worship).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CTRR).freeze,
       "skos:prefLabel" => %(religious center).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CTRS",
       label: "S.CTRS".freeze,
       "skos:definition" => %(a facility for launching, tracking, or controlling satellites and space vehicles).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CTRS).freeze,
       "skos:prefLabel" => %(space center).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.CVNT",
       label: "S.CVNT".freeze,
       "skos:definition" => %(a building where a community of nuns lives in seclusion).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.CVNT).freeze,
       "skos:prefLabel" => %(convent).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.DAM",
       label: "S.DAM".freeze,
       "skos:definition" => %(a barrier constructed across a stream to impound water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.DAM).freeze,
       "skos:prefLabel" => %(dam).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.DAMQ",
       label: "S.DAMQ".freeze,
       "skos:definition" => %(a destroyed or decayed dam which is no longer functional).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.DAMQ).freeze,
       "skos:prefLabel" => %(ruined dam).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.DAMSB",
       label: "S.DAMSB".freeze,
       "skos:definition" => %(a dam put down to bedrock in a sand river).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.DAMSB).freeze,
       "skos:prefLabel" => %(sub-surface dam).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.DARY",
       label: "S.DARY".freeze,
       "skos:definition" => %(a facility for the processing, sale and distribution of milk or milk products).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.DARY).freeze,
       "skos:prefLabel" => %(dairy).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.DCKD",
       label: "S.DCKD".freeze,
       "skos:definition" => %(a dock providing support for a vessel, and means for removing the water so that the bottom of the vessel can be exposed).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.DCKD).freeze,
       "skos:prefLabel" => %(dry dock).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.DCKY",
       label: "S.DCKY".freeze,
       "skos:definition" => %(a facility for servicing, building, or repairing ships).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.DCKY).freeze,
       "skos:prefLabel" => %(dockyard).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.DIKE",
       label: "S.DIKE".freeze,
       "skos:definition" => %(an earth or stone embankment usually constructed for flood or stream control).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.DIKE).freeze,
       "skos:prefLabel" => %(dike).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.DIP",
       label: "S.DIP".freeze,
       "skos:definition" => %(office, residence, or facility of a foreign government, which may include an embassy, consulate, chancery, office of charge d?affaires, or other diplomatic, economic, military, or cultural mission).freeze,
       "skos:historyNote" => %(Added in v3.0).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.DIP).freeze,
       "skos:prefLabel" => %(diplomatic facility).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.DPOF",
       label: "S.DPOF".freeze,
       "skos:definition" => %(an area where fuel is stored).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.DPOF).freeze,
       "skos:prefLabel" => %(fuel depot).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.EST",
       label: "S.EST".freeze,
       "skos:definition" => %(a large commercialized agricultural landholding with associated buildings and other facilities).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.EST).freeze,
       "skos:prefLabel" => %(estate\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ESTB",
       label: "S.ESTB".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(an estate that specializes in the growing of bananas).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ESTB).freeze,
       "skos:prefLabel" => %(banana plantation).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ESTC",
       label: "S.ESTC".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(an estate specializing in the cultivation of cotton).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ESTC).freeze,
       "skos:prefLabel" => %(cotton plantation).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ESTO",
       label: "S.ESTO".freeze,
       "skos:definition" => %(an estate specializing in the cultivation of oil palm trees).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ESTO).freeze,
       "skos:prefLabel" => %(oil palm plantation).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ESTR",
       label: "S.ESTR".freeze,
       "skos:definition" => %(an estate which specializes in growing and tapping rubber trees).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ESTR).freeze,
       "skos:prefLabel" => %(rubber plantation).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ESTSG",
       label: "S.ESTSG".freeze,
       "skos:definition" => %(an estate that specializes in growing sugar cane).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ESTSG).freeze,
       "skos:prefLabel" => %(sugar plantation).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ESTSL",
       label: "S.ESTSL".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(an estate that specializes in growing sisal).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ESTSL).freeze,
       "skos:prefLabel" => %(sisal plantation).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ESTT",
       label: "S.ESTT".freeze,
       "skos:definition" => %(an estate which specializes in growing tea bushes).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ESTT).freeze,
       "skos:prefLabel" => %(tea plantation).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ESTX",
       label: "S.ESTX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ESTX).freeze,
       "skos:prefLabel" => %(section of estate).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.FCL",
       label: "S.FCL".freeze,
       "skos:definition" => %(a building or buildings housing a center, institute, foundation, hospital, prison, mission, courthouse, etc.).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.FCL).freeze,
       "skos:prefLabel" => %(facility).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.FNDY",
       label: "S.FNDY".freeze,
       "skos:definition" => %(a building or works where metal casting is carried out).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.FNDY).freeze,
       "skos:prefLabel" => %(foundry).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.FRM",
       label: "S.FRM".freeze,
       "skos:definition" => %(a tract of land with associated buildings devoted to agriculture).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.FRM).freeze,
       "skos:prefLabel" => %(farm).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.FRMQ",
       label: "S.FRMQ".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.FRMQ).freeze,
       "skos:prefLabel" => %(abandoned farm).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.FRMS",
       label: "S.FRMS".freeze,
       "skos:definition" => %(tracts of land with associated buildings devoted to agriculture).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.FRMS).freeze,
       "skos:prefLabel" => %(farms).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.FRMT",
       label: "S.FRMT".freeze,
       "skos:definition" => %(the buildings and adjacent service areas of a farm).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.FRMT).freeze,
       "skos:prefLabel" => %(farmstead).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.FT",
       label: "S.FT".freeze,
       "skos:definition" => %(a defensive structure or earthworks).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.FT).freeze,
       "skos:prefLabel" => %(fort).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.FY",
       label: "S.FY".freeze,
       "skos:definition" => %(a boat or other floating conveyance and terminal facilities regularly used to transport people and vehicles across a waterbody).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.FY).freeze,
       "skos:prefLabel" => %(ferry).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.GATE",
       label: "S.GATE".freeze,
       "skos:definition" => %(a controlled access entrance or exit).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.GATE).freeze,
       "skos:prefLabel" => %(gate).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.GDN",
       label: "S.GDN".freeze,
       "skos:definition" => %(an enclosure for displaying selected plant or animal life).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.GDN).freeze,
       "skos:prefLabel" => %(garden\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.GHAT",
       label: "S.GHAT".freeze,
       "skos:definition" => %(a set of steps leading to a river, which are of religious significance, and at their base is usually a platform for bathing).freeze,
       "skos:historyNote" => %(Added in v3.0).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.GHAT).freeze,
       "skos:prefLabel" => %(ghat).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.GHSE",
       label: "S.GHSE".freeze,
       "skos:definition" => %(a house used to provide lodging for paying guests).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.GHSE).freeze,
       "skos:prefLabel" => %(guest house).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.GOSP",
       label: "S.GOSP".freeze,
       "skos:definition" => %(a facility for separating gas from oil).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.GOSP).freeze,
       "skos:prefLabel" => %(gas-oil separator plant).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.GOVL",
       label: "S.GOVL".freeze,
       "skos:definition" => %(a facility housing local governmental offices, usually a city, town, or village hall).freeze,
       "skos:historyNote" => %(Added in v3.0).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.GOVL).freeze,
       "skos:prefLabel" => %(local government office).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.GRVE",
       label: "S.GRVE".freeze,
       "skos:definition" => %(a burial site).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.GRVE).freeze,
       "skos:prefLabel" => %(grave).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.HERM",
       label: "S.HERM".freeze,
       "skos:definition" => %(a secluded residence, usually for religious sects).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.HERM).freeze,
       "skos:prefLabel" => %(hermitage).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.HLT",
       label: "S.HLT".freeze,
       "skos:definition" => %(a place where caravans stop for rest).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.HLT).freeze,
       "skos:prefLabel" => %(halting place).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.HMSD",
       label: "S.HMSD".freeze,
       "skos:definition" => %(a residence, owner's or manager's, on a sheep or cattle station, woolshed, outcamp, or Aboriginal outstation, specific to Australia and New Zealand).freeze,
       "skos:historyNote" => %(Added in v3.1).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.HMSD).freeze,
       "skos:prefLabel" => %(homestead).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.HSE",
       label: "S.HSE".freeze,
       "skos:definition" => %(a building used as a human habitation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.HSE).freeze,
       "skos:prefLabel" => %(house\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.HSEC",
       label: "S.HSEC".freeze,
       "skos:definition" => %(a large house, mansion, or chateau, on a large estate).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.HSEC).freeze,
       "skos:prefLabel" => %(country house).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.HSP",
       label: "S.HSP".freeze,
       "skos:definition" => %(a building in which sick or injured, especially those confined to bed, are medically treated).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.HSP).freeze,
       "skos:prefLabel" => %(hospital).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.HSPC",
       label: "S.HSPC".freeze,
       "skos:definition" => %(a medical facility associated with a hospital for outpatients).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.HSPC).freeze,
       "skos:prefLabel" => %(clinic).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.HSPD",
       label: "S.HSPD".freeze,
       "skos:definition" => %(a building where medical or dental aid is dispensed).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.HSPD).freeze,
       "skos:prefLabel" => %(dispensary).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.HSPL",
       label: "S.HSPL".freeze,
       "skos:definition" => %(an asylum or hospital for lepers).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.HSPL).freeze,
       "skos:prefLabel" => %(leprosarium).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.HSTS",
       label: "S.HSTS".freeze,
       "skos:definition" => %(a place of historical importance).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.HSTS).freeze,
       "skos:prefLabel" => %(historical site).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.HTL",
       label: "S.HTL".freeze,
       "skos:definition" => %(a building providing lodging and/or meals for the public).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.HTL).freeze,
       "skos:prefLabel" => %(hotel).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.HUT",
       label: "S.HUT".freeze,
       "skos:definition" => %(a small primitive house).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.HUT).freeze,
       "skos:prefLabel" => %(hut).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.HUTS",
       label: "S.HUTS".freeze,
       "skos:definition" => %(small primitive houses).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.HUTS).freeze,
       "skos:prefLabel" => %(huts).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.INSM",
       label: "S.INSM".freeze,
       "skos:definition" => %(a facility for use of and control by armed forces).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.INSM).freeze,
       "skos:prefLabel" => %(military installation).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ITTR",
       label: "S.ITTR".freeze,
       "skos:definition" => %(a facility where research is carried out).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ITTR).freeze,
       "skos:prefLabel" => %(research institute).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.JTY",
       label: "S.JTY".freeze,
       "skos:definition" => %(a structure built out into the water at a river mouth or harbor entrance to regulate currents and silting).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.JTY).freeze,
       "skos:prefLabel" => %(jetty).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.LDNG",
       label: "S.LDNG".freeze,
       "skos:definition" => %(a place where boats receive or discharge passengers and freight, but lacking most port facilities).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.LDNG).freeze,
       "skos:prefLabel" => %(landing).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.LEPC",
       label: "S.LEPC".freeze,
       "skos:definition" => %(a settled area inhabited by lepers in relative isolation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.LEPC).freeze,
       "skos:prefLabel" => %(leper colony).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.LIBR",
       label: "S.LIBR".freeze,
       "skos:definition" => %(A place in which information resources such as books are kept for reading, reference, or lending.).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.LIBR).freeze,
       "skos:prefLabel" => %(library).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.LNDF",
       label: "S.LNDF".freeze,
       "skos:definition" => %(a place for trash and garbage disposal in which the waste is buried between layers of earth to build up low-lying land).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.LNDF).freeze,
       "skos:prefLabel" => %(landfill).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.LOCK",
       label: "S.LOCK".freeze,
       "skos:definition" => %(a basin in a waterway with gates at each end by means of which vessels are passed from one water level to another).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.LOCK).freeze,
       "skos:prefLabel" => %(lock\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.LTHSE",
       label: "S.LTHSE".freeze,
       "skos:definition" => %(a distinctive structure exhibiting a major navigation light).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.LTHSE).freeze,
       "skos:prefLabel" => %(lighthouse).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MALL",
       label: "S.MALL".freeze,
       "skos:definition" => %(A large, often enclosed shopping complex containing various stores, businesses, and restaurants usually accessible by common passageways.).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MALL).freeze,
       "skos:prefLabel" => %(mall).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MAR",
       label: "S.MAR".freeze,
       "skos:definition" => %(a harbor facility for small boats, yachts, etc.).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MAR).freeze,
       "skos:prefLabel" => %(marina).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MFG",
       label: "S.MFG".freeze,
       "skos:definition" => %(one or more buildings where goods are manufactured, processed or fabricated).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MFG).freeze,
       "skos:prefLabel" => %(factory).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MFGB",
       label: "S.MFGB".freeze,
       "skos:definition" => %(one or more buildings where beer is brewed).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MFGB).freeze,
       "skos:prefLabel" => %(brewery).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MFGC",
       label: "S.MFGC".freeze,
       "skos:definition" => %(a building where food items are canned).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MFGC).freeze,
       "skos:prefLabel" => %(cannery).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MFGCU",
       label: "S.MFGCU".freeze,
       "skos:definition" => %(a facility for processing copper ore).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MFGCU).freeze,
       "skos:prefLabel" => %(copper works).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MFGLM",
       label: "S.MFGLM".freeze,
       "skos:definition" => %(a furnace in which limestone is reduced to lime).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MFGLM).freeze,
       "skos:prefLabel" => %(limekiln).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MFGM",
       label: "S.MFGM".freeze,
       "skos:definition" => %(a factory where ammunition is made).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MFGM).freeze,
       "skos:prefLabel" => %(munitions plant).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MFGPH",
       label: "S.MFGPH".freeze,
       "skos:definition" => %(a facility for producing fertilizer).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MFGPH).freeze,
       "skos:prefLabel" => %(phosphate works).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MFGQ",
       label: "S.MFGQ".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MFGQ).freeze,
       "skos:prefLabel" => %(abandoned factory).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MFGSG",
       label: "S.MFGSG".freeze,
       "skos:definition" => %(a facility for converting raw sugar into refined sugar).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MFGSG).freeze,
       "skos:prefLabel" => %(sugar refinery).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MKT",
       label: "S.MKT".freeze,
       "skos:definition" => %(a place where goods are bought and sold at regular intervals).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MKT).freeze,
       "skos:prefLabel" => %(market).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ML",
       label: "S.ML".freeze,
       "skos:definition" => %(a building housing machines for transforming, shaping, finishing, grinding, or extracting products).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ML).freeze,
       "skos:prefLabel" => %(mill\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MLM",
       label: "S.MLM".freeze,
       "skos:definition" => %(a facility for improving the metal content of ore by concentration).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MLM).freeze,
       "skos:prefLabel" => %(ore treatment plant).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MLO",
       label: "S.MLO".freeze,
       "skos:definition" => %(a mill where oil is extracted from olives).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MLO).freeze,
       "skos:prefLabel" => %(olive oil mill).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MLSG",
       label: "S.MLSG".freeze,
       "skos:definition" => %(a facility where sugar cane is processed into raw sugar).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MLSG).freeze,
       "skos:prefLabel" => %(sugar mill).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MLSGQ",
       label: "S.MLSGQ".freeze,
       "skos:definition" => %(a sugar mill no longer used as a sugar mill).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MLSGQ).freeze,
       "skos:prefLabel" => %(former sugar mill).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MLSW",
       label: "S.MLSW".freeze,
       "skos:definition" => %(a mill where logs or lumber are sawn to specified shapes and sizes).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MLSW).freeze,
       "skos:prefLabel" => %(sawmill).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MLWND",
       label: "S.MLWND".freeze,
       "skos:definition" => %(a mill or water pump powered by wind).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MLWND).freeze,
       "skos:prefLabel" => %(windmill).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MLWTR",
       label: "S.MLWTR".freeze,
       "skos:definition" => %(a mill powered by running water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MLWTR).freeze,
       "skos:prefLabel" => %(water mill).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MN",
       label: "S.MN".freeze,
       "skos:definition" => %(a site where mineral ores are extracted from the ground by excavating surface pits and subterranean passages).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MN).freeze,
       "skos:prefLabel" => %(mine\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MNAU",
       label: "S.MNAU".freeze,
       "skos:definition" => %(a mine where gold ore, or alluvial gold is extracted).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MNAU).freeze,
       "skos:prefLabel" => %(gold mine\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MNC",
       label: "S.MNC".freeze,
       "skos:definition" => %(a mine where coal is extracted).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MNC).freeze,
       "skos:prefLabel" => %(coal mine\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MNCR",
       label: "S.MNCR".freeze,
       "skos:definition" => %(a mine where chrome ore is extracted).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MNCR).freeze,
       "skos:prefLabel" => %(chrome mine\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MNCU",
       label: "S.MNCU".freeze,
       "skos:definition" => %(a mine where copper ore is extracted).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MNCU).freeze,
       "skos:prefLabel" => %(copper mine\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MNDT",
       label: "S.MNDT".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(a place where diatomaceous earth is extracted).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MNDT).freeze,
       "skos:prefLabel" => %(diatomite mine\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MNFE",
       label: "S.MNFE".freeze,
       "skos:definition" => %(a mine where iron ore is extracted).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MNFE).freeze,
       "skos:prefLabel" => %(iron mine\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MNMT",
       label: "S.MNMT".freeze,
       "skos:definition" => %(a commemorative structure or statue).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MNMT).freeze,
       "skos:prefLabel" => %(monument).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MNN",
       label: "S.MNN".freeze,
       "skos:definition" => %(a mine from which salt is extracted).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MNN).freeze,
       "skos:prefLabel" => %(salt mine\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MNNI",
       label: "S.MNNI".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(a mine where nickel ore is extracted).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MNNI).freeze,
       "skos:prefLabel" => %(nickel mine\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MNPB",
       label: "S.MNPB".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(a mine where lead ore is extracted).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MNPB).freeze,
       "skos:prefLabel" => %(lead mine\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MNPL",
       label: "S.MNPL".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(a place where heavy metals are concentrated and running water is used to extract them from unconsolidated sediments).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MNPL).freeze,
       "skos:prefLabel" => %(placer mine\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MNQ",
       label: "S.MNQ".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MNQ).freeze,
       "skos:prefLabel" => %(abandoned mine).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MNQR",
       label: "S.MNQR".freeze,
       "skos:definition" => %(a surface mine where building stone or gravel and sand, etc. are extracted).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MNQR).freeze,
       "skos:prefLabel" => %(quarry\(-ies\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MNSN",
       label: "S.MNSN".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(a mine where tin ore is extracted).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MNSN).freeze,
       "skos:prefLabel" => %(tin mine\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MOLE",
       label: "S.MOLE".freeze,
       "skos:definition" => %(a massive structure of masonry or large stones serving as a pier or breakwater).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MOLE).freeze,
       "skos:prefLabel" => %(mole).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MSQE",
       label: "S.MSQE".freeze,
       "skos:definition" => %(a building for public Islamic worship).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MSQE).freeze,
       "skos:prefLabel" => %(mosque).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MSSN",
       label: "S.MSSN".freeze,
       "skos:definition" => %(a place characterized by dwellings, school, church, hospital and other facilities operated by a religious group for the purpose of providing charitable services and to propagate religion).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MSSN).freeze,
       "skos:prefLabel" => %(mission).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MSSNQ",
       label: "S.MSSNQ".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MSSNQ).freeze,
       "skos:prefLabel" => %(abandoned mission).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MSTY",
       label: "S.MSTY".freeze,
       "skos:definition" => %(a building and grounds where a community of monks lives in seclusion).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MSTY).freeze,
       "skos:prefLabel" => %(monastery).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MTRO",
       label: "S.MTRO".freeze,
       "skos:definition" => %(metro station \(Underground, Tube, or Métro\)).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MTRO).freeze,
       "skos:prefLabel" => %(metro station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.MUS",
       label: "S.MUS".freeze,
       "skos:definition" => %(a building where objects of permanent interest in one or more of the arts and sciences are preserved and exhibited).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.MUS).freeze,
       "skos:prefLabel" => %(museum).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.NOV",
       label: "S.NOV".freeze,
       "skos:definition" => %(a religious house or school where novices are trained).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.NOV).freeze,
       "skos:prefLabel" => %(novitiate).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.NSY",
       label: "S.NSY".freeze,
       "skos:definition" => %(a place where plants are propagated for transplanting or grafting).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.NSY).freeze,
       "skos:prefLabel" => %(nursery\(-ies\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.OBPT",
       label: "S.OBPT".freeze,
       "skos:definition" => %(a wildlife or scenic observation point).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.OBPT).freeze,
       "skos:prefLabel" => %(observation point).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.OBS",
       label: "S.OBS".freeze,
       "skos:definition" => %(a facility equipped for observation of atmospheric or space phenomena).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.OBS).freeze,
       "skos:prefLabel" => %(observatory).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.OBSR",
       label: "S.OBSR".freeze,
       "skos:definition" => %(a facility equipped with an array of antennae for receiving radio waves from space).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.OBSR).freeze,
       "skos:prefLabel" => %(radio observatory).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.OILJ",
       label: "S.OILJ".freeze,
       "skos:definition" => %(a section of an oil pipeline where two or more pipes join together).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.OILJ).freeze,
       "skos:prefLabel" => %(oil pipeline junction).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.OILQ",
       label: "S.OILQ".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.OILQ).freeze,
       "skos:prefLabel" => %(abandoned oil well).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.OILR",
       label: "S.OILR".freeze,
       "skos:definition" => %(a facility for converting crude oil into refined petroleum products).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.OILR).freeze,
       "skos:prefLabel" => %(oil refinery).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.OILT",
       label: "S.OILT".freeze,
       "skos:definition" => %(a tract of land occupied by large, cylindrical, metal tanks in which oil or liquid petrochemicals are stored).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.OILT).freeze,
       "skos:prefLabel" => %(tank farm).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.OILW",
       label: "S.OILW".freeze,
       "skos:definition" => %(a well from which oil may be pumped).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.OILW).freeze,
       "skos:prefLabel" => %(oil well).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.OPRA",
       label: "S.OPRA".freeze,
       "skos:definition" => %(A theater designed chiefly for the performance of operas.).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.OPRA).freeze,
       "skos:prefLabel" => %(opera house).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PAL",
       label: "S.PAL".freeze,
       "skos:definition" => %(a large stately house, often a royal or presidential residence).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PAL).freeze,
       "skos:prefLabel" => %(palace).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PGDA",
       label: "S.PGDA".freeze,
       "skos:definition" => %(a tower-like storied structure, usually a Buddhist shrine).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PGDA).freeze,
       "skos:prefLabel" => %(pagoda).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PIER",
       label: "S.PIER".freeze,
       "skos:definition" => %(a structure built out into navigable water on piles providing berthing for ships and recreation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PIER).freeze,
       "skos:prefLabel" => %(pier).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PKLT",
       label: "S.PKLT".freeze,
       "skos:definition" => %(an area used for parking vehicles).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PKLT).freeze,
       "skos:prefLabel" => %(parking lot).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PMPO",
       label: "S.PMPO".freeze,
       "skos:definition" => %(a facility for pumping oil through a pipeline).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PMPO).freeze,
       "skos:prefLabel" => %(oil pumping station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PMPW",
       label: "S.PMPW".freeze,
       "skos:definition" => %(a facility for pumping water from a major well or through a pipeline).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PMPW).freeze,
       "skos:prefLabel" => %(water pumping station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PO",
       label: "S.PO".freeze,
       "skos:definition" => %(a public building in which mail is received, sorted and distributed).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PO).freeze,
       "skos:prefLabel" => %(post office).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PP",
       label: "S.PP".freeze,
       "skos:definition" => %(a building in which police are stationed).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PP).freeze,
       "skos:prefLabel" => %(police post).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PPQ",
       label: "S.PPQ".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PPQ).freeze,
       "skos:prefLabel" => %(abandoned police post).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PRKGT",
       label: "S.PRKGT".freeze,
       "skos:definition" => %(a controlled access to a park).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PRKGT).freeze,
       "skos:prefLabel" => %(park gate).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PRKHQ",
       label: "S.PRKHQ".freeze,
       "skos:definition" => %(a park administrative facility).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PRKHQ).freeze,
       "skos:prefLabel" => %(park headquarters).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PRN",
       label: "S.PRN".freeze,
       "skos:definition" => %(a facility for confining prisoners).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PRN).freeze,
       "skos:prefLabel" => %(prison).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PRNJ",
       label: "S.PRNJ".freeze,
       "skos:definition" => %(a facility for confining, training, and reforming young law offenders).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PRNJ).freeze,
       "skos:prefLabel" => %(reformatory).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PRNQ",
       label: "S.PRNQ".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PRNQ).freeze,
       "skos:prefLabel" => %(abandoned prison).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PS",
       label: "S.PS".freeze,
       "skos:definition" => %(a facility for generating electric power).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PS).freeze,
       "skos:prefLabel" => %(power station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PSH",
       label: "S.PSH".freeze,
       "skos:definition" => %(a building where electricity is generated from water power).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PSH).freeze,
       "skos:prefLabel" => %(hydroelectric power station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PSTB",
       label: "S.PSTB".freeze,
       "skos:definition" => %(a post or station at an international boundary for the regulation of movement of people and goods).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PSTB).freeze,
       "skos:prefLabel" => %(border post).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PSTC",
       label: "S.PSTC".freeze,
       "skos:definition" => %(a building at an international boundary where customs and duties are paid on goods).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PSTC).freeze,
       "skos:prefLabel" => %(customs post).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PSTP",
       label: "S.PSTP".freeze,
       "skos:definition" => %(a post from which patrols are sent out).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PSTP).freeze,
       "skos:prefLabel" => %(patrol post).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PYR",
       label: "S.PYR".freeze,
       "skos:definition" => %(an ancient massive structure of square ground plan with four triangular faces meeting at a point and used for enclosing tombs).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PYR).freeze,
       "skos:prefLabel" => %(pyramid).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.PYRS",
       label: "S.PYRS".freeze,
       "skos:definition" => %(ancient massive structures of square ground plan with four triangular faces meeting at a point and used for enclosing tombs).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.PYRS).freeze,
       "skos:prefLabel" => %(pyramids).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.QUAY",
       label: "S.QUAY".freeze,
       "skos:definition" => %(a structure of solid construction along a shore or bank which provides berthing for ships and which generally provides cargo handling facilities).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.QUAY).freeze,
       "skos:prefLabel" => %(quay).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.RDCR",
       label: "S.RDCR".freeze,
       "skos:definition" => %(a road junction formed around a central circle about which traffic moves in one direction only).freeze,
       "skos:historyNote" => %(Added in v3.0).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.RDCR).freeze,
       "skos:prefLabel" => %(traffic circle).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.RECG",
       label: "S.RECG".freeze,
       "skos:definition" => %(a recreation field where golf is played).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.RECG).freeze,
       "skos:prefLabel" => %(golf course).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.RECR",
       label: "S.RECR".freeze,
       "skos:definition" => %(a track where races are held).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.RECR).freeze,
       "skos:prefLabel" => %(racetrack).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.REST",
       label: "S.REST".freeze,
       "skos:definition" => %(A place where meals are served to the public).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.REST).freeze,
       "skos:prefLabel" => %(restaurant).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.RET",
       label: "S.RET".freeze,
       "skos:definition" => %(a building where goods and/or services are offered for sale).freeze,
       "skos:historyNote" => %(Added in v3.0).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.RET).freeze,
       "skos:prefLabel" => %(store).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.RHSE",
       label: "S.RHSE".freeze,
       "skos:definition" => %(a structure maintained for the rest and shelter of travelers).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.RHSE).freeze,
       "skos:prefLabel" => %(resthouse).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.RKRY",
       label: "S.RKRY".freeze,
       "skos:definition" => %(a breeding place of a colony of birds or seals).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.RKRY).freeze,
       "skos:prefLabel" => %(rookery).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.RLG",
       label: "S.RLG".freeze,
       "skos:definition" => %(an ancient site of significant religious importance).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.RLG).freeze,
       "skos:prefLabel" => %(religious site).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.RLGR",
       label: "S.RLGR".freeze,
       "skos:definition" => %(a place of temporary seclusion, especially for religious groups).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.RLGR).freeze,
       "skos:prefLabel" => %(retreat).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.RNCH",
       label: "S.RNCH".freeze,
       "skos:definition" => %(a large farm specializing in extensive grazing of livestock).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.RNCH).freeze,
       "skos:prefLabel" => %(ranch\(es\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.RSD",
       label: "S.RSD".freeze,
       "skos:definition" => %(a short track parallel to and joining the main track).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.RSD).freeze,
       "skos:prefLabel" => %(railroad siding).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.RSGNL",
       label: "S.RSGNL".freeze,
       "skos:definition" => %(a signal at the entrance of a particular section of track governing the movement of trains).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.RSGNL).freeze,
       "skos:prefLabel" => %(railroad signal).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.RSRT",
       label: "S.RSRT".freeze,
       "skos:definition" => %(a specialized facility for vacation, health, or participation sports activities).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.RSRT).freeze,
       "skos:prefLabel" => %(resort).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.RSTN",
       label: "S.RSTN".freeze,
       "skos:definition" => %(a facility comprising ticket office, platforms, etc. for loading and unloading train passengers and freight).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.RSTN).freeze,
       "skos:prefLabel" => %(railroad station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.RSTNQ",
       label: "S.RSTNQ".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.RSTNQ).freeze,
       "skos:prefLabel" => %(abandoned railroad station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.RSTP",
       label: "S.RSTP".freeze,
       "skos:definition" => %(a place lacking station facilities where trains stop to pick up and unload passengers and freight).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.RSTP).freeze,
       "skos:prefLabel" => %(railroad stop).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.RSTPQ",
       label: "S.RSTPQ".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.RSTPQ).freeze,
       "skos:prefLabel" => %(abandoned railroad stop).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.RUIN",
       label: "S.RUIN".freeze,
       "skos:definition" => %(a destroyed or decayed structure which is no longer functional).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.RUIN).freeze,
       "skos:prefLabel" => %(ruin\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SCH",
       label: "S.SCH".freeze,
       "skos:definition" => %(building\(s\) where instruction in one or more branches of knowledge takes place).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SCH).freeze,
       "skos:prefLabel" => %(school).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SCHA",
       label: "S.SCHA".freeze,
       "skos:definition" => %(a school with a curriculum focused on agriculture).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SCHA).freeze,
       "skos:prefLabel" => %(agricultural school).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SCHC",
       label: "S.SCHC".freeze,
       "skos:definition" => %(the grounds and buildings of an institution of higher learning).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SCHC).freeze,
       "skos:prefLabel" => %(college).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SCHD",
       label: "S.SCHD".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(Driving School).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SCHD).freeze,
       "skos:prefLabel" => %(Driving School).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SCHL",
       label: "S.SCHL".freeze,
       "skos:definition" => %(Language Schools & Institutions).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SCHL).freeze,
       "skos:prefLabel" => [%(Language School).freeze, %(language school).freeze],
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SCHM",
       label: "S.SCHM".freeze,
       "skos:definition" => %(a school at which military science forms the core of the curriculum).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SCHM).freeze,
       "skos:prefLabel" => %(military school).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SCHN",
       label: "S.SCHN".freeze,
       "skos:definition" => %(a school at which maritime sciences form the core of the curriculum).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SCHN).freeze,
       "skos:prefLabel" => %(maritime school).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SCHT",
       label: "S.SCHT".freeze,
       "skos:definition" => %(post-secondary school with a specifically technical or vocational curriculum).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SCHT).freeze,
       "skos:prefLabel" => %(technical school).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SECP",
       label: "S.SECP".freeze,
       "skos:definition" => %(state exam preparation centres).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SECP).freeze,
       "skos:prefLabel" => %(State Exam Prep Centre).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SHPF",
       label: "S.SHPF".freeze,
       "skos:definition" => %(a fence or wall enclosure for sheep and other small herd animals).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SHPF).freeze,
       "skos:prefLabel" => %(sheepfold).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SHRN",
       label: "S.SHRN".freeze,
       "skos:definition" => %(a structure or place memorializing a person or religious concept).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SHRN).freeze,
       "skos:prefLabel" => %(shrine).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SHSE",
       label: "S.SHSE".freeze,
       "skos:definition" => %(a building for storing goods, especially provisions).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SHSE).freeze,
       "skos:prefLabel" => %(storehouse).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SLCE",
       label: "S.SLCE".freeze,
       "skos:definition" => %(a conduit or passage for carrying off surplus water from a waterbody, usually regulated by means of a sluice gate).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SLCE).freeze,
       "skos:prefLabel" => %(sluice).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SNTR",
       label: "S.SNTR".freeze,
       "skos:definition" => %(a facility where victims of physical or mental disorders are treated).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SNTR).freeze,
       "skos:prefLabel" => %(sanatorium).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SPA",
       label: "S.SPA".freeze,
       "skos:definition" => %(a resort area usually developed around a medicinal spring).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SPA).freeze,
       "skos:prefLabel" => %(spa).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SPLY",
       label: "S.SPLY".freeze,
       "skos:definition" => %(a passage or outlet through which surplus water flows over, around or through a dam).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SPLY).freeze,
       "skos:prefLabel" => %(spillway).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SQR",
       label: "S.SQR".freeze,
       "skos:definition" => %(a broad, open, public area near the center of a town or city).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SQR).freeze,
       "skos:prefLabel" => %(square).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.STBL",
       label: "S.STBL".freeze,
       "skos:definition" => %(a building for the shelter and feeding of farm animals, especially horses).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.STBL).freeze,
       "skos:prefLabel" => %(stable).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.STDM",
       label: "S.STDM".freeze,
       "skos:definition" => %(a structure with an enclosure for athletic games with tiers of seats for spectators).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.STDM).freeze,
       "skos:prefLabel" => %(stadium).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.STNB",
       label: "S.STNB".freeze,
       "skos:definition" => %(a scientific facility used as a base from which research is carried out or monitored).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.STNB).freeze,
       "skos:prefLabel" => %(scientific research base).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.STNC",
       label: "S.STNC".freeze,
       "skos:definition" => %(a facility from which the coast is guarded by armed vessels).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.STNC).freeze,
       "skos:prefLabel" => %(coast guard station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.STNE",
       label: "S.STNE".freeze,
       "skos:definition" => %(a facility for carrying out experiments).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.STNE).freeze,
       "skos:prefLabel" => %(experiment station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.STNF",
       label: "S.STNF".freeze,
       "skos:definition" => %(a collection of buildings and facilities for carrying out forest management).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.STNF).freeze,
       "skos:prefLabel" => %(forest station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.STNI",
       label: "S.STNI".freeze,
       "skos:definition" => %(a station at which vehicles, goods, and people are inspected).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.STNI).freeze,
       "skos:prefLabel" => %(inspection station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.STNM",
       label: "S.STNM".freeze,
       "skos:definition" => %(a station at which weather elements are recorded).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.STNM).freeze,
       "skos:prefLabel" => %(meteorological station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.STNR",
       label: "S.STNR".freeze,
       "skos:definition" => %(a facility for producing and transmitting information by radio waves).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.STNR).freeze,
       "skos:prefLabel" => %(radio station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.STNS",
       label: "S.STNS".freeze,
       "skos:definition" => %(a facility for tracking and communicating with orbiting satellites).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.STNS).freeze,
       "skos:prefLabel" => %(satellite station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.STNW",
       label: "S.STNW".freeze,
       "skos:definition" => %(a facility for butchering whales and processing train oil).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.STNW).freeze,
       "skos:prefLabel" => %(whaling station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.STPS",
       label: "S.STPS".freeze,
       "skos:definition" => %(stones or slabs placed for ease in ascending or descending a steep slope).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.STPS).freeze,
       "skos:prefLabel" => %(steps).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.SWT",
       label: "S.SWT".freeze,
       "skos:definition" => %(facility for the processing of sewage and/or wastewater).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.SWT).freeze,
       "skos:prefLabel" => %(sewage treatment plant).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.THTR",
       label: "S.THTR".freeze,
       "skos:definition" => %(A building, room, or outdoor structure for the presentation of plays, films, or other dramatic performances).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.THTR).freeze,
       "skos:prefLabel" => %(theater).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.TMB",
       label: "S.TMB".freeze,
       "skos:definition" => %(a structure for interring bodies).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.TMB).freeze,
       "skos:prefLabel" => %(tomb\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.TMPL",
       label: "S.TMPL".freeze,
       "skos:definition" => %(an edifice dedicated to religious worship).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.TMPL).freeze,
       "skos:prefLabel" => %(temple\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.TNKD",
       label: "S.TNKD".freeze,
       "skos:definition" => %(a small artificial pond used for immersing cattle in chemically treated water for disease control).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.TNKD).freeze,
       "skos:prefLabel" => %(cattle dipping tank).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.TOWR",
       label: "S.TOWR".freeze,
       "skos:definition" => %(a high conspicuous structure, typically much higher than its diameter).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.TOWR).freeze,
       "skos:prefLabel" => %(tower).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.TRANT",
       label: "S.TRANT".freeze,
       "skos:definition" => %(facilities for the handling of vehicular freight and passengers).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.TRANT).freeze,
       "skos:prefLabel" => %(transit terminal).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.TRIG",
       label: "S.TRIG".freeze,
       "skos:definition" => %(a point on the earth whose position has been determined by triangulation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.TRIG).freeze,
       "skos:prefLabel" => %(triangulation station).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.TRMO",
       label: "S.TRMO".freeze,
       "skos:definition" => %(a tank farm or loading facility at the end of an oil pipeline).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.TRMO).freeze,
       "skos:prefLabel" => %(oil pipeline terminal).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.TWO",
       label: "S.TWO".freeze,
       "skos:definition" => %(Temporary Work Offices).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.TWO).freeze,
       "skos:prefLabel" => %(temp work office).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.UNIO",
       label: "S.UNIO".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(Post Universitary Education Institutes \(post graduate studies and highly specialised master programs\) & MBA).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.UNIO).freeze,
       "skos:prefLabel" => %(postgrad & MBA).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.UNIP",
       label: "S.UNIP".freeze,
       "skos:definition" => %(University Preparation Schools & Institutions).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.UNIP).freeze,
       "skos:prefLabel" => %(university prep school).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.UNIV",
       label: "S.UNIV".freeze,
       "skos:definition" => %(An institution for higher learning with teaching and research facilities constituting a graduate school and professional schools that award master's degrees and doctorates and an undergraduate division that awards bachelor's degrees.).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.UNIV).freeze,
       "skos:prefLabel" => %(university).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.USGE",
       label: "S.USGE".freeze,
       "skos:definition" => %(a facility operated by the United States Government in Panama).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.USGE).freeze,
       "skos:prefLabel" => %(united states government establishment).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.VETF",
       label: "S.VETF".freeze,
       "skos:definition" => %(a building or camp at which veterinary services are available).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.VETF).freeze,
       "skos:prefLabel" => %(veterinary facility).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.WALL",
       label: "S.WALL".freeze,
       "skos:definition" => %(a thick masonry structure, usually enclosing a field or building, or forming the side of a structure).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.WALL).freeze,
       "skos:prefLabel" => %(wall).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.WALLA",
       label: "S.WALLA".freeze,
       "skos:definition" => %(the remains of a linear defensive stone structure).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.WALLA).freeze,
       "skos:prefLabel" => %(ancient wall).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.WEIR",
       label: "S.WEIR".freeze,
       "skos:definition" => %(a small dam in a stream, designed to raise the water level or to divert stream flow through a desired channel).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.WEIR).freeze,
       "skos:prefLabel" => %(weir\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.WHRF",
       label: "S.WHRF".freeze,
       "skos:definition" => %(a structure of open rather than solid construction along a shore or a bank which provides berthing for ships and cargo-handling facilities).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.WHRF).freeze,
       "skos:prefLabel" => %(wharf\(-ves\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.WRCK",
       label: "S.WRCK".freeze,
       "skos:definition" => %(the site of the remains of a wrecked vessel).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.WRCK).freeze,
       "skos:prefLabel" => %(wreck).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.WTRW",
       label: "S.WTRW".freeze,
       "skos:definition" => %(a facility for supplying potable water through a water source and a system of pumps and filtration beds).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.WTRW).freeze,
       "skos:prefLabel" => %(waterworks).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ZNF",
       label: "S.ZNF".freeze,
       "skos:definition" => %(an area, usually a section of a port, where goods may be received and shipped free of customs duty and of most customs regulations).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ZNF).freeze,
       "skos:prefLabel" => %(free trade zone).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"S.ZOO",
       label: "S.ZOO".freeze,
       "skos:definition" => %(a zoological garden or park where wild animals are kept for exhibition).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#S).freeze,
+      "skos:inScheme" => %(geonames:S).freeze,
       "skos:notation" => %(S.ZOO).freeze,
       "skos:prefLabel" => %(zoo).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.ASPH",
       label: "T.ASPH".freeze,
       "skos:definition" => %(a small basin containing naturally occurring asphalt).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.ASPH).freeze,
       "skos:prefLabel" => %(asphalt lake).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.ATOL",
       label: "T.ATOL".freeze,
       "skos:definition" => %(a ring-shaped coral reef which has closely spaced islands on it encircling a lagoon).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.ATOL).freeze,
       "skos:prefLabel" => %(atoll\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.BAR",
       label: "T.BAR".freeze,
       "skos:definition" => %(a shallow ridge or mound of coarse unconsolidated material in a stream channel, at the mouth of a stream, estuary, or lagoon and in the wave-break zone along coasts).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.BAR).freeze,
       "skos:prefLabel" => %(bar).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.BCH",
       label: "T.BCH".freeze,
       "skos:definition" => %(a shore zone of coarse unconsolidated sediment that extends from the low-water line to the highest reach of storm waves).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.BCH).freeze,
       "skos:prefLabel" => %(beach).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.BCHS",
       label: "T.BCHS".freeze,
       "skos:definition" => %(a shore zone of coarse unconsolidated sediment that extends from the low-water line to the highest reach of storm waves).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.BCHS).freeze,
       "skos:prefLabel" => %(beaches).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.BDLD",
       label: "T.BDLD".freeze,
       "skos:definition" => %(an area characterized by a maze of very closely spaced, deep, narrow, steep-sided ravines, and sharp crests and pinnacles).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.BDLD).freeze,
       "skos:prefLabel" => %(badlands).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.BLDR",
       label: "T.BLDR".freeze,
       "skos:definition" => %(a high altitude or high latitude bare, flat area covered with large angular rocks).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.BLDR).freeze,
       "skos:prefLabel" => %(boulder field).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.BLHL",
       label: "T.BLHL".freeze,
       "skos:definition" => %(a hole in coastal rock through which sea water is forced by a rising tide or waves and spurted through an outlet into the air).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.BLHL).freeze,
       "skos:prefLabel" => %(blowhole\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.BLOW",
       label: "T.BLOW".freeze,
       "skos:definition" => %(a small depression in sandy terrain, caused by wind erosion).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.BLOW).freeze,
       "skos:prefLabel" => %(blowout\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.BNCH",
       label: "T.BNCH".freeze,
       "skos:definition" => %(a long, narrow bedrock platform bounded by steeper slopes above and below, usually overlooking a waterbody).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.BNCH).freeze,
       "skos:prefLabel" => %(bench).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.BUTE",
       label: "T.BUTE".freeze,
       "skos:definition" => %(a small, isolated, usually flat-topped hill with steep sides).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.BUTE).freeze,
       "skos:prefLabel" => %(butte\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.CAPE",
       label: "T.CAPE".freeze,
       "skos:definition" => %(a land area, more prominent than a point, projecting into the sea and marking a notable change in coastal direction).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.CAPE).freeze,
       "skos:prefLabel" => %(cape).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.CFT",
       label: "T.CFT".freeze,
       "skos:definition" => %(a deep narrow slot, notch, or groove in a coastal cliff).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.CFT).freeze,
       "skos:prefLabel" => %(cleft\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.CLDA",
       label: "T.CLDA".freeze,
       "skos:definition" => %(a depression measuring kilometers across formed by the collapse of a volcanic mountain).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.CLDA).freeze,
       "skos:prefLabel" => %(caldera).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.CLF",
       label: "T.CLF".freeze,
       "skos:definition" => %(a high, steep to perpendicular slope overlooking a waterbody or lower area).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.CLF).freeze,
       "skos:prefLabel" => %(cliff\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.CNYN",
       label: "T.CNYN".freeze,
       "skos:definition" => %(a deep, narrow valley with steep sides cutting into a plateau or mountainous area).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.CNYN).freeze,
       "skos:prefLabel" => %(canyon).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.CONE",
       label: "T.CONE".freeze,
       "skos:definition" => %(a conical landform composed of mud or volcanic material).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.CONE).freeze,
       "skos:prefLabel" => %(cone\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.CRDR",
       label: "T.CRDR".freeze,
       "skos:definition" => %(a strip or area of land having significance as an access way).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.CRDR).freeze,
       "skos:prefLabel" => %(corridor).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.CRQ",
       label: "T.CRQ".freeze,
       "skos:definition" => %(a bowl-like hollow partially surrounded by cliffs or steep slopes at the head of a glaciated valley).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.CRQ).freeze,
       "skos:prefLabel" => %(cirque).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.CRQS",
       label: "T.CRQS".freeze,
       "skos:definition" => %(bowl-like hollows partially surrounded by cliffs or steep slopes at the head of a glaciated valley).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.CRQS).freeze,
       "skos:prefLabel" => %(cirques).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.CRTR",
       label: "T.CRTR".freeze,
       "skos:definition" => %(a generally circular saucer or bowl-shaped depression caused by volcanic or meteorite explosive action).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.CRTR).freeze,
       "skos:prefLabel" => %(crater\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.CUET",
       label: "T.CUET".freeze,
       "skos:definition" => %(an asymmetric ridge formed on tilted strata).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.CUET).freeze,
       "skos:prefLabel" => %(cuesta\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.DLTA",
       label: "T.DLTA".freeze,
       "skos:definition" => %(a flat plain formed by alluvial deposits at the mouth of a stream).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.DLTA).freeze,
       "skos:prefLabel" => %(delta).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.DPR",
       label: "T.DPR".freeze,
       "skos:definition" => %(a low area surrounded by higher land and usually characterized by interior drainage).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.DPR).freeze,
       "skos:prefLabel" => %(depression\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.DSRT",
       label: "T.DSRT".freeze,
       "skos:definition" => %(a large area with little or no vegetation due to extreme environmental conditions).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.DSRT).freeze,
       "skos:prefLabel" => %(desert).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.DUNE",
       label: "T.DUNE".freeze,
       "skos:definition" => %(a wave form, ridge or star shape feature composed of sand).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.DUNE).freeze,
       "skos:prefLabel" => %(dune\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.DVD",
       label: "T.DVD".freeze,
       "skos:definition" => %(a line separating adjacent drainage basins).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.DVD).freeze,
       "skos:prefLabel" => %(divide).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.ERG",
       label: "T.ERG".freeze,
       "skos:definition" => %(an extensive tract of shifting sand and sand dunes).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.ERG).freeze,
       "skos:prefLabel" => %(sandy desert).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.FAN",
       label: "T.FAN".freeze,
       "skos:definition" => %(a fan-shaped wedge of coarse alluvium with apex merging with a mountain stream bed and the fan spreading out at a low angle slope onto an adjacent plain).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.FAN).freeze,
       "skos:prefLabel" => %(fan\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.FORD",
       label: "T.FORD".freeze,
       "skos:definition" => %(a shallow part of a stream which can be crossed on foot or by land vehicle).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.FORD).freeze,
       "skos:prefLabel" => %(ford).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.FSR",
       label: "T.FSR".freeze,
       "skos:definition" => %(a crack associated with volcanism).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.FSR).freeze,
       "skos:prefLabel" => %(fissure).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.GAP",
       label: "T.GAP".freeze,
       "skos:definition" => %(a low place in a ridge, not used for transportation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.GAP).freeze,
       "skos:prefLabel" => %(gap).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.GRGE",
       label: "T.GRGE".freeze,
       "skos:definition" => %(a short, narrow, steep-sided section of a stream valley).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.GRGE).freeze,
       "skos:prefLabel" => %(gorge\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.HDLD",
       label: "T.HDLD".freeze,
       "skos:definition" => %(a high projection of land extending into a large body of water beyond the line of the coast).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.HDLD).freeze,
       "skos:prefLabel" => %(headland).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.HLL",
       label: "T.HLL".freeze,
       "skos:definition" => %(a rounded elevation of limited extent rising above the surrounding land with local relief of less than 300m).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.HLL).freeze,
       "skos:prefLabel" => %(hill).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.HLLS",
       label: "T.HLLS".freeze,
       "skos:definition" => %(rounded elevations of limited extent rising above the surrounding land with local relief of less than 300m).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.HLLS).freeze,
       "skos:prefLabel" => %(hills).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.HMCK",
       label: "T.HMCK".freeze,
       "skos:definition" => %(a patch of ground, distinct from and slightly above the surrounding plain or wetland. Often occurs in groups).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.HMCK).freeze,
       "skos:prefLabel" => %(hammock\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.HMDA",
       label: "T.HMDA".freeze,
       "skos:definition" => %(a relatively sand-free, high bedrock plateau in a hot desert, with or without a gravel veneer).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.HMDA).freeze,
       "skos:prefLabel" => %(rock desert).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.INTF",
       label: "T.INTF".freeze,
       "skos:definition" => %(a relatively undissected upland between adjacent stream valleys).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.INTF).freeze,
       "skos:prefLabel" => %(interfluve).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.ISL",
       label: "T.ISL".freeze,
       "skos:definition" => %(a tract of land, smaller than a continent, surrounded by water at high water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.ISL).freeze,
       "skos:prefLabel" => %(island).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.ISLET",
       label: "T.ISLET".freeze,
       "skos:definition" => %(small island, bigger than rock, smaller than island.).freeze,
       "skos:historyNote" => %(Added in v3.0).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.ISLET).freeze,
       "skos:prefLabel" => %(islet).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.ISLF",
       label: "T.ISLF".freeze,
       "skos:definition" => %(an island created by landfill or diking and filling in a wetland, bay, or lagoon).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.ISLF).freeze,
       "skos:prefLabel" => %(artificial island).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.ISLM",
       label: "T.ISLM".freeze,
       "skos:definition" => %(a mangrove swamp surrounded by a waterbody).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.ISLM).freeze,
       "skos:prefLabel" => %(mangrove island).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.ISLS",
       label: "T.ISLS".freeze,
       "skos:definition" => %(tracts of land, smaller than a continent, surrounded by water at high water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.ISLS).freeze,
       "skos:prefLabel" => %(islands).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.ISLT",
       label: "T.ISLT".freeze,
       "skos:definition" => %(a coastal island connected to the mainland by barrier beaches, levees or dikes).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.ISLT).freeze,
       "skos:prefLabel" => %(land-tied island).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.ISLX",
       label: "T.ISLX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.ISLX).freeze,
       "skos:prefLabel" => %(section of island).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.ISTH",
       label: "T.ISTH".freeze,
       "skos:definition" => %(a narrow strip of land connecting two larger land masses and bordered by water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.ISTH).freeze,
       "skos:prefLabel" => %(isthmus).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.KRST",
       label: "T.KRST".freeze,
       "skos:definition" => %(a distinctive landscape developed on soluble rock such as limestone characterized by sinkholes, caves, disappearing streams, and underground drainage).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.KRST).freeze,
       "skos:prefLabel" => %(karst area).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.LAVA",
       label: "T.LAVA".freeze,
       "skos:definition" => %(an area of solidified lava).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.LAVA).freeze,
       "skos:prefLabel" => %(lava area).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.LEV",
       label: "T.LEV".freeze,
       "skos:definition" => %(a natural low embankment bordering a distributary or meandering stream; often built up artificially to control floods).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.LEV).freeze,
       "skos:prefLabel" => %(levee).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.MESA",
       label: "T.MESA".freeze,
       "skos:definition" => %(a flat-topped, isolated elevation with steep slopes on all sides, less extensive than a plateau).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.MESA).freeze,
       "skos:prefLabel" => %(mesa\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.MND",
       label: "T.MND".freeze,
       "skos:definition" => %(a low, isolated, rounded hill).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.MND).freeze,
       "skos:prefLabel" => %(mound\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.MRN",
       label: "T.MRN".freeze,
       "skos:definition" => %(a mound, ridge, or other accumulation of glacial till).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.MRN).freeze,
       "skos:prefLabel" => %(moraine).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.MT",
       label: "T.MT".freeze,
       "skos:definition" => %(an elevation standing high above the surrounding area with small summit area, steep slopes and local relief of 300m or more).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.MT).freeze,
       "skos:prefLabel" => %(mountain).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.MTS",
       label: "T.MTS".freeze,
       "skos:definition" => %(a mountain range or a group of mountains or high ridges).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.MTS).freeze,
       "skos:prefLabel" => %(mountains).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.NKM",
       label: "T.NKM".freeze,
       "skos:definition" => %(a narrow strip of land between the two limbs of a meander loop at its narrowest point).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.NKM).freeze,
       "skos:prefLabel" => %(meander neck).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.NTK",
       label: "T.NTK".freeze,
       "skos:definition" => %(a rock or mountain peak protruding through glacial ice).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.NTK).freeze,
       "skos:prefLabel" => %(nunatak).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.NTKS",
       label: "T.NTKS".freeze,
       "skos:definition" => %(rocks or mountain peaks protruding through glacial ice).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.NTKS).freeze,
       "skos:prefLabel" => %(nunataks).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.PAN",
       label: "T.PAN".freeze,
       "skos:definition" => %(a near-level shallow, natural depression or basin, usually containing an intermittent lake, pond, or pool).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.PAN).freeze,
       "skos:prefLabel" => %(pan).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.PANS",
       label: "T.PANS".freeze,
       "skos:definition" => %(a near-level shallow, natural depression or basin, usually containing an intermittent lake, pond, or pool).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.PANS).freeze,
       "skos:prefLabel" => %(pans).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.PASS",
       label: "T.PASS".freeze,
       "skos:definition" => %(a break in a mountain range or other high obstruction, used for transportation from one side to the other [See also gap]).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.PASS).freeze,
       "skos:prefLabel" => %(pass).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.PEN",
       label: "T.PEN".freeze,
       "skos:definition" => %(an elongate area of land projecting into a body of water and nearly surrounded by water).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.PEN).freeze,
       "skos:prefLabel" => %(peninsula).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.PENX",
       label: "T.PENX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.PENX).freeze,
       "skos:prefLabel" => %(section of peninsula).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.PK",
       label: "T.PK".freeze,
       "skos:definition" => %(a pointed elevation atop a mountain, ridge, or other hypsographic feature).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.PK).freeze,
       "skos:prefLabel" => %(peak).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.PKS",
       label: "T.PKS".freeze,
       "skos:definition" => %(pointed elevations atop a mountain, ridge, or other hypsographic features).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.PKS).freeze,
       "skos:prefLabel" => %(peaks).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.PLAT",
       label: "T.PLAT".freeze,
       "skos:definition" => %(an elevated plain with steep slopes on one or more sides, and often with incised streams).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.PLAT).freeze,
       "skos:prefLabel" => %(plateau).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.PLATX",
       label: "T.PLATX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.PLATX).freeze,
       "skos:prefLabel" => %(section of plateau).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.PLDR",
       label: "T.PLDR".freeze,
       "skos:definition" => %(an area reclaimed from the sea by diking and draining).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.PLDR).freeze,
       "skos:prefLabel" => %(polder).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.PLN",
       label: "T.PLN".freeze,
       "skos:definition" => %(an extensive area of comparatively level to gently undulating land, lacking surface irregularities, and usually adjacent to a higher area).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.PLN).freeze,
       "skos:prefLabel" => %(plain\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.PLNX",
       label: "T.PLNX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.PLNX).freeze,
       "skos:prefLabel" => %(section of plain).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.PROM",
       label: "T.PROM".freeze,
       "skos:definition" => %(a bluff or prominent hill overlooking or projecting into a lowland).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.PROM).freeze,
       "skos:prefLabel" => %(promontory\(-ies\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.PT",
       label: "T.PT".freeze,
       "skos:definition" => %(a tapering piece of land projecting into a body of water, less prominent than a cape).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.PT).freeze,
       "skos:prefLabel" => %(point).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.PTS",
       label: "T.PTS".freeze,
       "skos:definition" => %(tapering pieces of land projecting into a body of water, less prominent than a cape).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.PTS).freeze,
       "skos:prefLabel" => %(points).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.RDGB",
       label: "T.RDGB".freeze,
       "skos:definition" => %(a ridge of sand just inland and parallel to the beach, usually in series).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.RDGB).freeze,
       "skos:prefLabel" => %(beach ridge).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.RDGE",
       label: "T.RDGE".freeze,
       "skos:definition" => %(a long narrow elevation with steep sides, and a more or less continuous crest).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.RDGE).freeze,
       "skos:prefLabel" => %(ridge\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.REG",
       label: "T.REG".freeze,
       "skos:definition" => %(a desert plain characterized by a surface veneer of gravel and stones).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.REG).freeze,
       "skos:prefLabel" => %(stony desert).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.RK",
       label: "T.RK".freeze,
       "skos:definition" => %(a conspicuous, isolated rocky mass).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.RK).freeze,
       "skos:prefLabel" => %(rock).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.RKFL",
       label: "T.RKFL".freeze,
       "skos:definition" => %(an irregular mass of fallen rock at the base of a cliff or steep slope).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.RKFL).freeze,
       "skos:prefLabel" => %(rockfall).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.RKS",
       label: "T.RKS".freeze,
       "skos:definition" => %(conspicuous, isolated rocky masses).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.RKS).freeze,
       "skos:prefLabel" => %(rocks).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.SAND",
       label: "T.SAND".freeze,
       "skos:definition" => %(a tract of land covered with sand).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.SAND).freeze,
       "skos:prefLabel" => %(sand area).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.SBED",
       label: "T.SBED".freeze,
       "skos:definition" => %(a channel formerly containing the water of a stream).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.SBED).freeze,
       "skos:prefLabel" => %(dry stream bed).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.SCRP",
       label: "T.SCRP".freeze,
       "skos:definition" => %(a long line of cliffs or steep slopes separating level surfaces above and below).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.SCRP).freeze,
       "skos:prefLabel" => %(escarpment).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.SDL",
       label: "T.SDL".freeze,
       "skos:definition" => %(a broad, open pass crossing a ridge or between hills or mountains).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.SDL).freeze,
       "skos:prefLabel" => %(saddle).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.SHOR",
       label: "T.SHOR".freeze,
       "skos:definition" => %(a narrow zone bordering a waterbody which covers and uncovers at high and low water, respectively).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.SHOR).freeze,
       "skos:prefLabel" => %(shore).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.SINK",
       label: "T.SINK".freeze,
       "skos:definition" => %(a small crater-shape depression in a karst area).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.SINK).freeze,
       "skos:prefLabel" => %(sinkhole).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.SLID",
       label: "T.SLID".freeze,
       "skos:definition" => %(a mound of earth material, at the base of a slope and the associated scoured area).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.SLID).freeze,
       "skos:prefLabel" => %(slide).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.SLP",
       label: "T.SLP".freeze,
       "skos:definition" => %(a surface with a relatively uniform slope angle).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.SLP).freeze,
       "skos:prefLabel" => %(slope\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.SPIT",
       label: "T.SPIT".freeze,
       "skos:definition" => %(a narrow, straight or curved continuation of a beach into a waterbody).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.SPIT).freeze,
       "skos:prefLabel" => %(spit).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.SPUR",
       label: "T.SPUR".freeze,
       "skos:definition" => %(a subordinate ridge projecting outward from a hill, mountain or other elevation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.SPUR).freeze,
       "skos:prefLabel" => %(spur\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.TAL",
       label: "T.TAL".freeze,
       "skos:definition" => %(a steep concave slope formed by an accumulation of loose rock fragments at the base of a cliff or steep slope).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.TAL).freeze,
       "skos:prefLabel" => %(talus slope).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.TRGD",
       label: "T.TRGD".freeze,
       "skos:definition" => %(a long wind-swept trough between parallel longitudinal dunes).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.TRGD).freeze,
       "skos:prefLabel" => %(interdune trough\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.TRR",
       label: "T.TRR".freeze,
       "skos:definition" => %(a long, narrow alluvial platform bounded by steeper slopes above and below, usually overlooking a waterbody).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.TRR).freeze,
       "skos:prefLabel" => %(terrace).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.UPLD",
       label: "T.UPLD".freeze,
       "skos:definition" => %(an extensive interior region of high land with low to moderate surface relief).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.UPLD).freeze,
       "skos:prefLabel" => %(upland).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.VAL",
       label: "T.VAL".freeze,
       "skos:definition" => %(an elongated depression usually traversed by a stream).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.VAL).freeze,
       "skos:prefLabel" => %(valley).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.VALG",
       label: "T.VALG".freeze,
       "skos:definition" => %(a valley the floor of which is notably higher than the valley or shore to which it leads; most common in areas that have been glaciated).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.VALG).freeze,
       "skos:prefLabel" => %(hanging valley).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.VALS",
       label: "T.VALS".freeze,
       "skos:definition" => %(elongated depressions usually traversed by a stream).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.VALS).freeze,
       "skos:prefLabel" => %(valleys).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.VALX",
       label: "T.VALX".freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.VALX).freeze,
       "skos:prefLabel" => %(section of valley).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"T.VLC",
       label: "T.VLC".freeze,
       "skos:definition" => %(a conical elevation composed of volcanic materials with a crater at the top).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#T).freeze,
+      "skos:inScheme" => %(geonames:T).freeze,
       "skos:notation" => %(T.VLC).freeze,
       "skos:prefLabel" => %(volcano).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.APNU",
       label: "U.APNU".freeze,
       "skos:definition" => %(a gentle slope, with a generally smooth surface, particularly found around groups of islands and seamounts).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.APNU).freeze,
       "skos:prefLabel" => %(apron).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.ARCU",
       label: "U.ARCU".freeze,
       "skos:definition" => %(a low bulge around the southeastern end of the island of Hawaii).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.ARCU).freeze,
       "skos:prefLabel" => %(arch).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.ARRU",
       label: "U.ARRU".freeze,
       "skos:definition" => %(an area of subdued corrugations off Baja California).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.ARRU).freeze,
       "skos:prefLabel" => %(arrugado).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.BDLU",
       label: "U.BDLU".freeze,
       "skos:definition" => %(a region adjacent to a continent, normally occupied by or bordering a shelf, that is highly irregular with depths well in excess of those typical of a shelf).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.BDLU).freeze,
       "skos:prefLabel" => %(borderland).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.BKSU",
       label: "U.BKSU".freeze,
       "skos:definition" => %(elevations, typically located on a shelf, over which the depth of water is relatively shallow but sufficient for safe surface navigation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.BKSU).freeze,
       "skos:prefLabel" => %(banks).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.BNCU",
       label: "U.BNCU".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(a small terrace).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.BNCU).freeze,
       "skos:prefLabel" => %(bench).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.BNKU",
       label: "U.BNKU".freeze,
       "skos:definition" => %(an elevation, typically located on a shelf, over which the depth of water is relatively shallow but sufficient for safe surface navigation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.BNKU).freeze,
       "skos:prefLabel" => %(bank).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.BSNU",
       label: "U.BSNU".freeze,
       "skos:definition" => %(a depression more or less equidimensional in plan and of variable extent).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.BSNU).freeze,
       "skos:prefLabel" => %(basin).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.CDAU",
       label: "U.CDAU".freeze,
       "skos:definition" => %(an entire mountain system including the subordinate ranges, interior plateaus, and basins).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.CDAU).freeze,
       "skos:prefLabel" => %(cordillera).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.CNSU",
       label: "U.CNSU".freeze,
       "skos:definition" => %(relatively narrow, deep depressions with steep sides, the bottom of which generally has a continuous slope).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.CNSU).freeze,
       "skos:prefLabel" => %(canyons).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.CNYU",
       label: "U.CNYU".freeze,
       "skos:definition" => %(a relatively narrow, deep depression with steep sides, the bottom of which generally has a continuous slope).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.CNYU).freeze,
       "skos:prefLabel" => %(canyon).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.CRSU",
       label: "U.CRSU".freeze,
       "skos:definition" => %(a gentle slope rising from oceanic depths towards the foot of a continental slope).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.CRSU).freeze,
       "skos:prefLabel" => %(continental rise).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.DEPU",
       label: "U.DEPU".freeze,
       "skos:definition" => %(a localized deep area within the confines of a larger feature, such as a trough, basin or trench).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.DEPU).freeze,
       "skos:prefLabel" => %(deep).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.EDGU",
       label: "U.EDGU".freeze,
       "skos:definition" => %(a line along which there is a marked increase of slope at the outer margin of a continental shelf or island shelf).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.EDGU).freeze,
       "skos:prefLabel" => %(shelf edge).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.ESCU",
       label: "U.ESCU".freeze,
       "skos:definition" => %(an elongated and comparatively steep slope separating flat or gently sloping areas).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.ESCU).freeze,
       "skos:prefLabel" => %(escarpment \(or scarp\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.FANU",
       label: "U.FANU".freeze,
       "skos:definition" => %(a relatively smooth feature normally sloping away from the lower termination of a canyon or canyon system).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.FANU).freeze,
       "skos:prefLabel" => %(fan).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.FLTU",
       label: "U.FLTU".freeze,
       "skos:definition" => %(a small level or nearly level area).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.FLTU).freeze,
       "skos:prefLabel" => %(flat).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.FRKU",
       label: "U.FRKU".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(a branch of a canyon or valley).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.FRKU).freeze,
       "skos:prefLabel" => %(fork).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.FRSU",
       label: "U.FRSU".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(a branch of a canyon or valley).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.FRSU).freeze,
       "skos:prefLabel" => %(forks).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.FRZU",
       label: "U.FRZU".freeze,
       "skos:definition" => %(an extensive linear zone of irregular topography of the sea floor, characterized by steep-sided or asymmetrical ridges, troughs, or escarpments).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.FRZU).freeze,
       "skos:prefLabel" => %(fracture zone).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.FURU",
       label: "U.FURU".freeze,
       "skos:definition" => %(a closed, linear, narrow, shallow depression).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.FURU).freeze,
       "skos:prefLabel" => %(furrow).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.GAPU",
       label: "U.GAPU".freeze,
       "skos:definition" => %(a narrow break in a ridge or rise).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.GAPU).freeze,
       "skos:prefLabel" => %(gap).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.GLYU",
       label: "U.GLYU".freeze,
       "skos:definition" => %(a small valley-like feature).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.GLYU).freeze,
       "skos:prefLabel" => %(gully).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.HLLU",
       label: "U.HLLU".freeze,
       "skos:definition" => %(an elevation rising generally less than 500 meters).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.HLLU).freeze,
       "skos:prefLabel" => %(hill).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.HLSU",
       label: "U.HLSU".freeze,
       "skos:definition" => %(elevations rising generally less than 500 meters).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.HLSU).freeze,
       "skos:prefLabel" => %(hills).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.HOLU",
       label: "U.HOLU".freeze,
       "skos:definition" => %(a small depression of the sea floor).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.HOLU).freeze,
       "skos:prefLabel" => %(hole).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.KNLU",
       label: "U.KNLU".freeze,
       "skos:definition" => %(an elevation rising generally more than 500 meters and less than 1,000 meters and of limited extent across the summit).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.KNLU).freeze,
       "skos:prefLabel" => %(knoll).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.KNSU",
       label: "U.KNSU".freeze,
       "skos:definition" => %(elevations rising generally more than 500 meters and less than 1,000 meters and of limited extent across the summits).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.KNSU).freeze,
       "skos:prefLabel" => %(knolls).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.LDGU",
       label: "U.LDGU".freeze,
       "skos:definition" => %(a rocky projection or outcrop, commonly linear and near shore).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.LDGU).freeze,
       "skos:prefLabel" => %(ledge).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.LEVU",
       label: "U.LEVU".freeze,
       "skos:definition" => %(an embankment bordering a canyon, valley, or seachannel).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.LEVU).freeze,
       "skos:prefLabel" => %(levee).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.MDVU",
       label: "U.MDVU".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(the axial depression of the mid-oceanic ridge system).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.MDVU).freeze,
       "skos:prefLabel" => %(median valley).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.MESU",
       label: "U.MESU".freeze,
       "skos:definition" => %(an isolated, extensive, flat-topped elevation on the shelf, with relatively steep sides).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.MESU).freeze,
       "skos:prefLabel" => %(mesa).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.MNDU",
       label: "U.MNDU".freeze,
       "skos:definition" => %(a low, isolated, rounded hill).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.MNDU).freeze,
       "skos:prefLabel" => %(mound).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.MOTU",
       label: "U.MOTU".freeze,
       "skos:definition" => %(an annular depression that may not be continuous, located at the base of many seamounts, islands, and other isolated elevations).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.MOTU).freeze,
       "skos:prefLabel" => %(moat).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.MTSU",
       label: "U.MTSU".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(well-delineated subdivisions of a large and complex positive feature).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.MTSU).freeze,
       "skos:prefLabel" => %(mountains).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.MTU",
       label: "U.MTU".freeze,
       "skos:definition" => %(a well-delineated subdivision of a large and complex positive feature).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.MTU).freeze,
       "skos:prefLabel" => %(mountain).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.PKSU",
       label: "U.PKSU".freeze,
       "skos:definition" => %(prominent elevations, part of a larger feature, either pointed or of very limited extent across the summit).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.PKSU).freeze,
       "skos:prefLabel" => %(peaks).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.PKU",
       label: "U.PKU".freeze,
       "skos:definition" => %(a prominent elevation, part of a larger feature, either pointed or of very limited extent across the summit).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.PKU).freeze,
       "skos:prefLabel" => %(peak).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.PLFU",
       label: "U.PLFU".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(a flat or gently sloping underwater surface extending seaward from the shore).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.PLFU).freeze,
       "skos:prefLabel" => %(platform).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.PLNU",
       label: "U.PLNU".freeze,
       "skos:definition" => %(a flat, gently sloping or nearly level region).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.PLNU).freeze,
       "skos:prefLabel" => %(plain).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.PLTU",
       label: "U.PLTU".freeze,
       "skos:definition" => %(a comparatively flat-topped feature of considerable extent, dropping off abruptly on one or more sides).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.PLTU).freeze,
       "skos:prefLabel" => %(plateau).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.PNLU",
       label: "U.PNLU".freeze,
       "skos:definition" => %(a high tower or spire-shaped pillar of rock or coral, alone or cresting a summit).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.PNLU).freeze,
       "skos:prefLabel" => %(pinnacle).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.PRVU",
       label: "U.PRVU".freeze,
       "skos:definition" => %(a region identifiable by a group of similar physiographic features whose characteristics are markedly in contrast with surrounding areas).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.PRVU).freeze,
       "skos:prefLabel" => %(province).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.RAVU",
       label: "U.RAVU".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(a small canyon).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.RAVU).freeze,
       "skos:prefLabel" => %(ravine).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.RDGU",
       label: "U.RDGU".freeze,
       "skos:definition" => %(a long narrow elevation with steep sides).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.RDGU).freeze,
       "skos:prefLabel" => %(ridge).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.RDSU",
       label: "U.RDSU".freeze,
       "skos:definition" => %(long narrow elevations with steep sides).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.RDSU).freeze,
       "skos:prefLabel" => %(ridges).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.RFSU",
       label: "U.RFSU".freeze,
       "skos:definition" => %(surface-navigation hazards composed of consolidated material).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.RFSU).freeze,
       "skos:prefLabel" => %(reefs).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.RFU",
       label: "U.RFU".freeze,
       "skos:definition" => %(a surface-navigation hazard composed of consolidated material).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.RFU).freeze,
       "skos:prefLabel" => %(reef).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.RISU",
       label: "U.RISU".freeze,
       "skos:definition" => %(a broad elevation that rises gently, and generally smoothly, from the sea floor).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.RISU).freeze,
       "skos:prefLabel" => %(rise).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.RMPU",
       label: "U.RMPU".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(a gentle slope connecting areas of different elevations).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.RMPU).freeze,
       "skos:prefLabel" => %(ramp).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.RNGU",
       label: "U.RNGU".freeze,
       "owl:deprecated" => %(true).freeze,
       "skos:definition" => %(a series of associated ridges or seamounts).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.RNGU).freeze,
       "skos:prefLabel" => %(range).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.SCNU",
       label: "U.SCNU".freeze,
       "skos:definition" => %(a continuously sloping, elongated depression commonly found in fans or plains and customarily bordered by levees on one or two sides).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.SCNU).freeze,
       "skos:prefLabel" => %(seachannel).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.SCSU",
       label: "U.SCSU".freeze,
       "skos:definition" => %(continuously sloping, elongated depressions commonly found in fans or plains and customarily bordered by levees on one or two sides).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.SCSU).freeze,
       "skos:prefLabel" => %(seachannels).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.SDLU",
       label: "U.SDLU".freeze,
       "skos:definition" => %(a low part, resembling in shape a saddle, in a ridge or between contiguous seamounts).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.SDLU).freeze,
       "skos:prefLabel" => %(saddle).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.SHFU",
       label: "U.SHFU".freeze,
       "skos:definition" => %(a zone adjacent to a continent \(or around an island\) that extends from the low water line to a depth at which there is usually a marked increase of slope towards oceanic depths).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.SHFU).freeze,
       "skos:prefLabel" => %(shelf).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.SHLU",
       label: "U.SHLU".freeze,
       "skos:definition" => %(a surface-navigation hazard composed of unconsolidated material).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.SHLU).freeze,
       "skos:prefLabel" => %(shoal).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.SHSU",
       label: "U.SHSU".freeze,
       "skos:definition" => %(hazards to surface navigation composed of unconsolidated material).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.SHSU).freeze,
       "skos:prefLabel" => %(shoals).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.SHVU",
       label: "U.SHVU".freeze,
       "skos:definition" => %(a valley on the shelf, generally the shoreward extension of a canyon).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.SHVU).freeze,
       "skos:prefLabel" => %(shelf valley).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.SILU",
       label: "U.SILU".freeze,
       "skos:definition" => %(the low part of a gap or saddle separating basins).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.SILU).freeze,
       "skos:prefLabel" => %(sill).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.SLPU",
       label: "U.SLPU".freeze,
       "skos:definition" => %(the slope seaward from the shelf edge to the beginning of a continental rise or the point where there is a general reduction in slope).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.SLPU).freeze,
       "skos:prefLabel" => %(slope).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.SMSU",
       label: "U.SMSU".freeze,
       "skos:definition" => %(elevations rising generally more than 1,000 meters and of limited extent across the summit).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.SMSU).freeze,
       "skos:prefLabel" => %(seamounts).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.SMU",
       label: "U.SMU".freeze,
       "skos:definition" => %(an elevation rising generally more than 1,000 meters and of limited extent across the summit).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.SMU).freeze,
       "skos:prefLabel" => %(seamount).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.SPRU",
       label: "U.SPRU".freeze,
       "skos:definition" => %(a subordinate elevation, ridge, or rise projecting outward from a larger feature).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.SPRU).freeze,
       "skos:prefLabel" => %(spur).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.TERU",
       label: "U.TERU".freeze,
       "skos:definition" => %(a relatively flat horizontal or gently inclined surface, sometimes long and narrow, which is bounded by a steeper ascending slope on one side and by a steep descending slope on the opposite side).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.TERU).freeze,
       "skos:prefLabel" => %(terrace).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.TMSU",
       label: "U.TMSU".freeze,
       "skos:definition" => %(seamounts having a comparatively smooth, flat top).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.TMSU).freeze,
       "skos:prefLabel" => %(tablemounts \(or guyots\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.TMTU",
       label: "U.TMTU".freeze,
       "skos:definition" => %(a seamount having a comparatively smooth, flat top).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.TMTU).freeze,
       "skos:prefLabel" => %(tablemount \(or guyot\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.TNGU",
       label: "U.TNGU".freeze,
       "skos:definition" => %(an elongate \(tongue-like\) extension of a flat sea floor into an adjacent higher feature).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.TNGU).freeze,
       "skos:prefLabel" => %(tongue).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.TRGU",
       label: "U.TRGU".freeze,
       "skos:definition" => %(a long depression of the sea floor characteristically flat bottomed and steep sided, and normally shallower than a trench).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.TRGU).freeze,
       "skos:prefLabel" => %(trough).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.TRNU",
       label: "U.TRNU".freeze,
       "skos:definition" => %(a long, narrow, characteristically very deep and asymmetrical depression of the sea floor, with relatively steep sides).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.TRNU).freeze,
       "skos:prefLabel" => %(trench).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.VALU",
       label: "U.VALU".freeze,
       "skos:definition" => %(a relatively shallow, wide depression, the bottom of which usually has a continuous gradient).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.VALU).freeze,
       "skos:prefLabel" => %(valley).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"U.VLSU",
       label: "U.VLSU".freeze,
       "skos:definition" => %(a relatively shallow, wide depression, the bottom of which usually has a continuous gradient).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#U).freeze,
+      "skos:inScheme" => %(geonames:U).freeze,
       "skos:notation" => %(U.VLSU).freeze,
       "skos:prefLabel" => %(valleys).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"V.BUSH",
       label: "V.BUSH".freeze,
       "skos:definition" => %(a small clump of conspicuous bushes in an otherwise bare area).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#V).freeze,
+      "skos:inScheme" => %(geonames:V).freeze,
       "skos:notation" => %(V.BUSH).freeze,
       "skos:prefLabel" => %(bush\(es\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"V.CULT",
       label: "V.CULT".freeze,
       "skos:definition" => %(an area under cultivation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#V).freeze,
+      "skos:inScheme" => %(geonames:V).freeze,
       "skos:notation" => %(V.CULT).freeze,
       "skos:prefLabel" => %(cultivated area).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"V.FRST",
       label: "V.FRST".freeze,
       "skos:definition" => %(an area dominated by tree vegetation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#V).freeze,
+      "skos:inScheme" => %(geonames:V).freeze,
       "skos:notation" => %(V.FRST).freeze,
       "skos:prefLabel" => %(forest\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"V.FRSTF",
       label: "V.FRSTF".freeze,
       "skos:definition" => %(a forest fossilized by geologic processes and now exposed at the earth's surface).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#V).freeze,
+      "skos:inScheme" => %(geonames:V).freeze,
       "skos:notation" => %(V.FRSTF).freeze,
       "skos:prefLabel" => %(fossilized forest).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"V.GRSLD",
       label: "V.GRSLD".freeze,
       "skos:definition" => %(an area dominated by grass vegetation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#V).freeze,
+      "skos:inScheme" => %(geonames:V).freeze,
       "skos:notation" => %(V.GRSLD).freeze,
       "skos:prefLabel" => %(grassland).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"V.GRVC",
       label: "V.GRVC".freeze,
       "skos:definition" => %(a planting of coconut trees).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#V).freeze,
+      "skos:inScheme" => %(geonames:V).freeze,
       "skos:notation" => %(V.GRVC).freeze,
       "skos:prefLabel" => %(coconut grove).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"V.GRVO",
       label: "V.GRVO".freeze,
       "skos:definition" => %(a planting of olive trees).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#V).freeze,
+      "skos:inScheme" => %(geonames:V).freeze,
       "skos:notation" => %(V.GRVO).freeze,
       "skos:prefLabel" => %(olive grove).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"V.GRVP",
       label: "V.GRVP".freeze,
       "skos:definition" => %(a planting of palm trees).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#V).freeze,
+      "skos:inScheme" => %(geonames:V).freeze,
       "skos:notation" => %(V.GRVP).freeze,
       "skos:prefLabel" => %(palm grove).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"V.GRVPN",
       label: "V.GRVPN".freeze,
       "skos:definition" => %(a planting of pine trees).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#V).freeze,
+      "skos:inScheme" => %(geonames:V).freeze,
       "skos:notation" => %(V.GRVPN).freeze,
       "skos:prefLabel" => %(pine grove).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"V.HTH",
       label: "V.HTH".freeze,
       "skos:definition" => %(an upland moor or sandy area dominated by low shrubby vegetation including heather).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#V).freeze,
+      "skos:inScheme" => %(geonames:V).freeze,
       "skos:notation" => %(V.HTH).freeze,
       "skos:prefLabel" => %(heath).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"V.MDW",
       label: "V.MDW".freeze,
       "skos:definition" => %(a small, poorly drained area dominated by grassy vegetation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#V).freeze,
+      "skos:inScheme" => %(geonames:V).freeze,
       "skos:notation" => %(V.MDW).freeze,
       "skos:prefLabel" => %(meadow).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"V.OCH",
       label: "V.OCH".freeze,
       "skos:definition" => %(a planting of fruit or nut trees).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#V).freeze,
+      "skos:inScheme" => %(geonames:V).freeze,
       "skos:notation" => %(V.OCH).freeze,
       "skos:prefLabel" => %(orchard\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"V.SCRB",
       label: "V.SCRB".freeze,
       "skos:definition" => %(an area of low trees, bushes, and shrubs stunted by some environmental limitation).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#V).freeze,
+      "skos:inScheme" => %(geonames:V).freeze,
       "skos:notation" => %(V.SCRB).freeze,
       "skos:prefLabel" => %(scrubland).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"V.TREE",
       label: "V.TREE".freeze,
       "skos:definition" => %(a conspicuous tree used as a landmark).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#V).freeze,
+      "skos:inScheme" => %(geonames:V).freeze,
       "skos:notation" => %(V.TREE).freeze,
       "skos:prefLabel" => %(tree\(s\)).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"V.TUND",
       label: "V.TUND".freeze,
       "skos:definition" => %(a marshy, treeless, high latitude plain, dominated by mosses, lichens, and low shrub vegetation under permafrost conditions).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#V).freeze,
+      "skos:inScheme" => %(geonames:V).freeze,
       "skos:notation" => %(V.TUND).freeze,
       "skos:prefLabel" => %(tundra).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"V.VIN",
       label: "V.VIN".freeze,
       "skos:definition" => %(a planting of grapevines).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#V).freeze,
+      "skos:inScheme" => %(geonames:V).freeze,
       "skos:notation" => %(V.VIN).freeze,
       "skos:prefLabel" => %(vineyard).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
     term :"V.VINS",
       label: "V.VINS".freeze,
       "skos:definition" => %(plantings of grapevines).freeze,
-      "skos:inScheme" => %(http://www.geonames.org/ontology#V).freeze,
+      "skos:inScheme" => %(geonames:V).freeze,
       "skos:notation" => %(V.VINS).freeze,
       "skos:prefLabel" => %(vineyards).freeze,
-      type: "http://www.geonames.org/ontology#Code".freeze
+      type: "geonames:Code".freeze
   end
 end
