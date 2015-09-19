@@ -14,7 +14,7 @@ module RDF::Vocab
       comment: %(A set of related resources \(Aggregated Resources\), grouped together such that the set can be treated as a single resource. This is the entity described within the ORE interoperability framework by a Resource Map.).freeze,
       label: "Aggregation".freeze,
       "rdfs:isDefinedBy" => %(ore:).freeze,
-      subClassOf: "http://purl.org/dc/dcmitype/Collection".freeze,
+      subClassOf: "dcmitype:Collection".freeze,
       type: "rdfs:Class".freeze
     term :Proxy,
       comment: %(A Proxy represents an Aggregated Resource as it exists in a specific Aggregation. All assertions made about an entity are globally true, not only within the context of the Aggregation. As such, in order to make assertions which are only true of a resource as it exists in an Aggregation, a Proxy object is required. For example, one might want to cite an article as it appears in a specific journal, or assign aggregation-specific metadata to a Resource.).freeze,
