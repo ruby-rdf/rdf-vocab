@@ -10,8 +10,3 @@ rvm:
   - rbx
 cache: bundler
 sudo: false
-matrix:
-  allow_failures:
-      - rvm: rbx
-      - rvm: jruby
-
