@@ -46,7 +46,11 @@ module RDF
         source: "http://www.europeana.eu/schemas/edm/rdf/edm.owl"
       },
       exif:   {uri: "http://www.w3.org/2003/12/exif/ns#", alias: true},
-      fcrepo4: {uri: "http://fedora.info/definitions/v4/repository#", class_name: "Fcrepo4"},
+      fcrepo4: {
+        uri: "http://fedora.info/definitions/v4/repository#",
+        class_name: "Fcrepo4",
+        source: "http://fedora.info/definitions/v4/2015/07/24/repository"
+      },
       foaf:   {uri: "http://xmlns.com/foaf/0.1/", alias: true},
       geo:    {uri: "http://www.w3.org/2003/01/geo/wgs84_pos#", alias: true},
       geonames: {
