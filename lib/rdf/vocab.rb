@@ -120,6 +120,8 @@ module RDF
         class_name: "PremisEventType"
       },
       prov:   {uri: "http://www.w3.org/ns/prov#", alias: true},
+      ptr:    {uri: "http://www.w3.org/2009/pointers#"},
+      rdfs:   {uri: "http://www.w3.org/2000/01/rdf-schema#", alias: true},
       rsa:    {uri: "http://www.w3.org/ns/auth/rsa#", alias: true},
       rss:    {uri: "http://purl.org/rss/1.0/", source: "http://purl.org/rss/1.0/schema.rdf", alias: true},
       schema: {uri: "http://schema.org/", source: "http://schema.org/docs/schema_org_rdfa.html", alias: true},
@@ -139,6 +141,7 @@ module RDF
       wot:    {uri: "http://xmlns.com/wot/0.1/", source: "http://xmlns.com/wot/0.1/index.rdf", alias: true},
       xhtml:  {uri: "http://www.w3.org/1999/xhtml#", strict: false, alias: true},
       xhv:    {uri: "http://www.w3.org/1999/xhtml/vocab#", strict: false, alias: true},
+      xsd:    {uri: "http://www.w3.org/2001/XMLSchema#", strict: false, alias: true},
     }.freeze
 
     # Autoload vocabularies
@@ -166,6 +169,7 @@ module RDF
     OGC    = ::RDF::OGC     if RDF.const_defined?(:OGC)
     OWL    = ::RDF::OWL     if RDF.const_defined?(:OWL)
     PROV   = ::RDF::PROV    if RDF.const_defined?(:PROV)
+    RDFS   = ::RDF::RDFS    if RDF.const_defined?(:RDFS)
     RSA    = ::RDF::RSA     if RDF.const_defined?(:RSA)
     RSS    = ::RDF::RSS     if RDF.const_defined?(:RSS)
     SCHEMA = ::RDF::SCHEMA  if RDF.const_defined?(:SCHEMA)
@@ -181,5 +185,6 @@ module RDF
     WOT    = ::RDF::WOT     if RDF.const_defined?(:WOT)
     XHTML  = ::RDF::XHTML   if RDF.const_defined?(:XHTML)
     XHV    = ::RDF::XHV     if RDF.const_defined?(:XHV)
+    XSD    = ::RDF::XSD     if RDF.const_defined?(:XSD)
   end
 end
