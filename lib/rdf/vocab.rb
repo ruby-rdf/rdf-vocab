@@ -46,7 +46,11 @@ module RDF
         source: "http://www.europeana.eu/schemas/edm/rdf/edm.owl"
       },
       exif:   {uri: "http://www.w3.org/2003/12/exif/ns#", alias: true},
-      fcrepo4: {uri: "http://fedora.info/definitions/v4/repository#", class_name: "Fcrepo4"},
+      fcrepo4: {
+        uri: "http://fedora.info/definitions/v4/repository#",
+        class_name: "Fcrepo4",
+        source: "http://fedora.info/definitions/v4/2015/07/24/repository"
+      },
       foaf:   {uri: "http://xmlns.com/foaf/0.1/", alias: true},
       geo:    {uri: "http://www.w3.org/2003/01/geo/wgs84_pos#", alias: true},
       geonames: {
@@ -116,6 +120,8 @@ module RDF
         class_name: "PremisEventType"
       },
       prov:   {uri: "http://www.w3.org/ns/prov#", alias: true},
+      ptr:    {uri: "http://www.w3.org/2009/pointers#"},
+      rdfs:   {uri: "http://www.w3.org/2000/01/rdf-schema#", alias: true},
       rsa:    {uri: "http://www.w3.org/ns/auth/rsa#", alias: true},
       rss:    {uri: "http://purl.org/rss/1.0/", source: "http://purl.org/rss/1.0/schema.rdf", alias: true},
       schema: {uri: "http://schema.org/", source: "http://schema.org/docs/schema_org_rdfa.html", alias: true},
@@ -135,47 +141,23 @@ module RDF
       wot:    {uri: "http://xmlns.com/wot/0.1/", source: "http://xmlns.com/wot/0.1/index.rdf", alias: true},
       xhtml:  {uri: "http://www.w3.org/1999/xhtml#", strict: false, alias: true},
       xhv:    {uri: "http://www.w3.org/1999/xhtml/vocab#", strict: false, alias: true},
+      xsd:    {uri: "http://www.w3.org/2001/XMLSchema#", strict: false, alias: true},
     }.freeze
 
     # Autoload vocabularies
     VOCABS.each do |id, params|
       v = params.fetch(:class_name, id.to_s.upcase).to_sym
-      autoload v, "rdf/vocab/#{id}"
+      autoload v, "rdf/vocab/#{id}" unless params[:alias]
     end
 
     # Aliases for vocabularies still defined directly in RDF.rb
-    CC     = ::RDF::CC      if RDF.const_defined?(:CC)
-    CERT   = ::RDF::CERT    if RDF.const_defined?(:CERT)
-    DC     = ::RDF::DC      if RDF.const_defined?(:DC)
-    DC11   = ::RDF::DC11    if RDF.const_defined?(:DC11)
-    DCAT   = ::RDF::DCAT    if RDF.const_defined?(:DCAT)
-    DOAP   = ::RDF::DOAP    if RDF.const_defined?(:DOAP)
-    EXIF   = ::RDF::EXIF    if RDF.const_defined?(:EXIF)
-    FOAF   = ::RDF::FOAF    if RDF.const_defined?(:FOAF)
-    GEO    = ::RDF::GEO     if RDF.const_defined?(:GEO)
-    GR     = ::RDF::GR      if RDF.const_defined?(:GR)
-    HT     = ::RDF::HT      if RDF.const_defined?(:HT)
-    ICAL   = ::RDF::ICAL    if RDF.const_defined?(:ICAL)
-    MA     = ::RDF::MA      if RDF.const_defined?(:MA)
-    MO     = ::RDF::MO      if RDF.const_defined?(:MO)
-    OG     = ::RDF::OG      if RDF.const_defined?(:OG)
-    OGC    = ::RDF::OGC     if RDF.const_defined?(:OGC)
-    OWL    = ::RDF::OWL     if RDF.const_defined?(:OWL)
-    PROV   = ::RDF::PROV    if RDF.const_defined?(:PROV)
-    RSA    = ::RDF::RSA     if RDF.const_defined?(:RSA)
-    RSS    = ::RDF::RSS     if RDF.const_defined?(:RSS)
-    SCHEMA = ::RDF::SCHEMA  if RDF.const_defined?(:SCHEMA)
-    SIOC   = ::RDF::SIOC    if RDF.const_defined?(:SIOC)
-    SKOS   = ::RDF::SKOS    if RDF.const_defined?(:SKOS)
-    SKOSXL = ::RDF::SKOSXL  if RDF.const_defined?(:SKOSXL)
-    V      = ::RDF::V       if RDF.const_defined?(:V)
-    VCARD  = ::RDF::VCARD   if RDF.const_defined?(:VCARD)
-    VMD    = ::RDF::VMD     if RDF.const_defined?(:VMD)
-    VOID   = ::RDF::VOID    if RDF.const_defined?(:VOID)
-    VS     = ::RDF::VS      if RDF.const_defined?(:VS)
-    WDRS   = ::RDF::WDRS    if RDF.const_defined?(:WDRS)
-    WOT    = ::RDF::WOT     if RDF.const_defined?(:WOT)
-    XHTML  = ::RDF::XHTML   if RDF.const_defined?(:XHTML)
-    XHV    = ::RDF::XHV     if RDF.const_defined?(:XHV)
+    def self.const_missing(constant)
+      if VOCABS.fetch(constant.to_s.downcase.to_sym, {})[:alias]
+        require "rdf/vocab/#{constant.to_s.downcase}"
+        const_set(constant, RDF.const_get(constant))
+      else
+        super
+      end
+    end
   end
 end

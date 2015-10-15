@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-# This file generated automatically using vocab-fetch from http://fedora.info/definitions/v4/repository#
+# This file generated automatically using vocab-fetch from http://fedora.info/definitions/v4/2015/07/24/repository
 require 'rdf'
 module RDF::Vocab
   class Fcrepo4 < RDF::StrictVocabulary("http://fedora.info/definitions/v4/repository#")
@@ -508,8 +508,8 @@ module RDF::Vocab
     term :"",
       comment: %(Ontology for the Fedora data model, intended primarily to make it possible to expose Fedora-curated RDF predicates via de-reference-able URIs.).freeze,
       label: "Fedora Commons Repository Ontology".freeze,
-      "owl:priorVersion" => %(http://fedora.info/definitions/v4/2015/02/04/repository).freeze,
-      "owl:versionInfo" => %(v4/2015/05/15).freeze,
+      "owl:priorVersion" => %(http://fedora.info/definitions/v4/2015/05/19/repository).freeze,
+      "owl:versionInfo" => %(v4/2015/07/24).freeze,
       type: "owl:Ontology".freeze
   end
 end
