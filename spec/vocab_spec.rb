@@ -23,6 +23,10 @@ describe RDF::Vocab do
         it "represents #{params[:uri]}" do
           expect(RDF::Vocab.const_get(class_name).to_s).to eql params[:uri]
         end
+
+        it "has at least one term", unless: id == :xhtml do
+          expect(RDF::Vocab.const_get(class_name).each.to_a).not_to be_empty
+        end
       end
     end
   end
