@@ -1,5 +1,5 @@
 {
-  "@context": "http://www.w3.org/ns/csvw",
+  "@context": ["http://www.w3.org/ns/csvw", {"@base": "http://www.iana.org/assignments/relation/"}],
   "url": "http://www.iana.org/assignments/link-relations/link-relations-1.csv",
   "tableSchema": {
     "aboutUrl": "{name}",
