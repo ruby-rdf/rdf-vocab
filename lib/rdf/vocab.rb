@@ -59,7 +59,7 @@ module RDF
       gr:     {uri: "http://purl.org/goodrelations/v1#", source: "http://www.heppnetz.de/ontologies/goodrelations/v1.owl", alias: true},
       ht:     {uri: "http://www.w3.org/2011/http#", alias: true},
       hydra:  {uri: "http://www.w3.org/ns/hydra/core#"},
-      iana:   {uri: "http://www.iana.org/assignments/link-relations/", source: File.expand_path("../../../etc/iana.ttl", __FILE__)},
+      iana:   {uri: "http://www.iana.org/assignments/relation/", source: File.expand_path("../../../etc/iana.ttl", __FILE__)},
       ical:   {uri: "http://www.w3.org/2002/12/cal/icaltzd#", alias: true},
       identifiers: {
         uri: "http://id.loc.gov/vocabulary/identifiers/",
