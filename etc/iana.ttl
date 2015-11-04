@@ -1,157 +1,157 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://www.iana.org/assignments/link-relations/about> a rdf:Property;
+<http://www.iana.org/assignments/relation/about> a rdf:Property;
    rdfs:label "about"@en;
    rdfs:comment "Refers to a resource that is the subject of the link's context."@en .
 
-<http://www.iana.org/assignments/link-relations/alternate> a rdf:Property;
+<http://www.iana.org/assignments/relation/alternate> a rdf:Property;
    rdfs:label "alternate"@en;
    rdfs:comment "Refers to a substitute for this context"@en .
 
-<http://www.iana.org/assignments/link-relations/appendix> a rdf:Property;
+<http://www.iana.org/assignments/relation/appendix> a rdf:Property;
    rdfs:label "appendix"@en;
    rdfs:comment "Refers to an appendix."@en .
 
-<http://www.iana.org/assignments/link-relations/archives> a rdf:Property;
+<http://www.iana.org/assignments/relation/archives> a rdf:Property;
    rdfs:label "archives"@en;
    rdfs:comment """Refers to a collection of records, documents, or other
       materials of historical interest."""@en .
 
-<http://www.iana.org/assignments/link-relations/author> a rdf:Property;
+<http://www.iana.org/assignments/relation/author> a rdf:Property;
    rdfs:label "author"@en;
    rdfs:comment "Refers to the context's author."@en .
 
-<http://www.iana.org/assignments/link-relations/bookmark> a rdf:Property;
+<http://www.iana.org/assignments/relation/bookmark> a rdf:Property;
    rdfs:label "bookmark"@en;
    rdfs:comment "Gives a permanent link to use for bookmarking purposes."@en .
 
-<http://www.iana.org/assignments/link-relations/canonical> a rdf:Property;
+<http://www.iana.org/assignments/relation/canonical> a rdf:Property;
    rdfs:label "canonical"@en;
    rdfs:comment "Designates the preferred version of a resource (the IRI and its contents)."@en .
 
-<http://www.iana.org/assignments/link-relations/chapter> a rdf:Property;
+<http://www.iana.org/assignments/relation/chapter> a rdf:Property;
    rdfs:label "chapter"@en;
    rdfs:comment "Refers to a chapter in a collection of resources."@en .
 
-<http://www.iana.org/assignments/link-relations/collection> a rdf:Property;
+<http://www.iana.org/assignments/relation/collection> a rdf:Property;
    rdfs:label "collection"@en;
    rdfs:comment "The target IRI points to a resource which represents the collection resource for the context IRI."@en .
 
-<http://www.iana.org/assignments/link-relations/contents> a rdf:Property;
+<http://www.iana.org/assignments/relation/contents> a rdf:Property;
    rdfs:label "contents"@en;
    rdfs:comment "Refers to a table of contents."@en .
 
-<http://www.iana.org/assignments/link-relations/copyright> a rdf:Property;
+<http://www.iana.org/assignments/relation/copyright> a rdf:Property;
    rdfs:label "copyright"@en;
    rdfs:comment """Refers to a copyright statement that applies to the
     link's context."""@en .
 
-<http://www.iana.org/assignments/link-relations/create-form> a rdf:Property;
+<http://www.iana.org/assignments/relation/create-form> a rdf:Property;
    rdfs:label "create-form"@en;
    rdfs:comment "The target IRI points to a resource where a submission form can be obtained."@en .
 
-<http://www.iana.org/assignments/link-relations/current> a rdf:Property;
+<http://www.iana.org/assignments/relation/current> a rdf:Property;
    rdfs:label "current"@en;
    rdfs:comment """Refers to a resource containing the most recent
       item(s) in a collection of resources."""@en .
 
-<http://www.iana.org/assignments/link-relations/derivedfrom> a rdf:Property;
+<http://www.iana.org/assignments/relation/derivedfrom> a rdf:Property;
    rdfs:label "derivedfrom"@en;
    rdfs:comment "The target IRI points to a resource from which this material was derived."@en .
 
-<http://www.iana.org/assignments/link-relations/describedby> a rdf:Property;
+<http://www.iana.org/assignments/relation/describedby> a rdf:Property;
    rdfs:label "describedby"@en;
    rdfs:comment """Refers to a resource providing information about the
       link's context."""@en .
 
-<http://www.iana.org/assignments/link-relations/describes> a rdf:Property;
+<http://www.iana.org/assignments/relation/describes> a rdf:Property;
    rdfs:label "describes"@en;
    rdfs:comment """The relationship A 'describes' B asserts that
       resource A provides a description of resource B. There are no
       constraints on the format or representation of either A or B,
       neither are there any further constraints on either resource."""@en .
 
-<http://www.iana.org/assignments/link-relations/disclosure> a rdf:Property;
+<http://www.iana.org/assignments/relation/disclosure> a rdf:Property;
    rdfs:label "disclosure"@en;
    rdfs:comment "Refers to a list of patent disclosures made with respect to material for which 'disclosure' relation is specified."@en .
 
-<http://www.iana.org/assignments/link-relations/duplicate> a rdf:Property;
+<http://www.iana.org/assignments/relation/duplicate> a rdf:Property;
    rdfs:label "duplicate"@en;
    rdfs:comment """Refers to a resource whose available representations
       are byte-for-byte identical with the corresponding representations of
       the context IRI."""@en .
 
-<http://www.iana.org/assignments/link-relations/edit> a rdf:Property;
+<http://www.iana.org/assignments/relation/edit> a rdf:Property;
    rdfs:label "edit"@en;
    rdfs:comment """Refers to a resource that can be used to edit the
       link's context."""@en .
 
-<http://www.iana.org/assignments/link-relations/edit-form> a rdf:Property;
+<http://www.iana.org/assignments/relation/edit-form> a rdf:Property;
    rdfs:label "edit-form"@en;
    rdfs:comment """The target IRI points to a resource where a submission form for
       editing associated resource can be obtained."""@en .
 
-<http://www.iana.org/assignments/link-relations/edit-media> a rdf:Property;
+<http://www.iana.org/assignments/relation/edit-media> a rdf:Property;
    rdfs:label "edit-media"@en;
    rdfs:comment """Refers to a resource that can be used to edit media
       associated with the link's context."""@en .
 
-<http://www.iana.org/assignments/link-relations/enclosure> a rdf:Property;
+<http://www.iana.org/assignments/relation/enclosure> a rdf:Property;
    rdfs:label "enclosure"@en;
    rdfs:comment """Identifies a related resource that is potentially
       large and might require special handling."""@en .
 
-<http://www.iana.org/assignments/link-relations/first> a rdf:Property;
+<http://www.iana.org/assignments/relation/first> a rdf:Property;
    rdfs:label "first"@en;
    rdfs:comment """An IRI that refers to the furthest preceding resource
     in a series of resources."""@en .
 
-<http://www.iana.org/assignments/link-relations/glossary> a rdf:Property;
+<http://www.iana.org/assignments/relation/glossary> a rdf:Property;
    rdfs:label "glossary"@en;
    rdfs:comment "Refers to a glossary of terms."@en .
 
-<http://www.iana.org/assignments/link-relations/help> a rdf:Property;
+<http://www.iana.org/assignments/relation/help> a rdf:Property;
    rdfs:label "help"@en;
    rdfs:comment "Refers to context-sensitive help."@en .
 
-<http://www.iana.org/assignments/link-relations/hosts> a rdf:Property;
+<http://www.iana.org/assignments/relation/hosts> a rdf:Property;
    rdfs:label "hosts"@en;
    rdfs:comment """Refers to a resource hosted by the server indicated by
       the link context."""@en .
 
-<http://www.iana.org/assignments/link-relations/hub> a rdf:Property;
+<http://www.iana.org/assignments/relation/hub> a rdf:Property;
    rdfs:label "hub"@en;
    rdfs:comment """Refers to a hub that enables registration for
     notification of updates to the context."""@en .
 
-<http://www.iana.org/assignments/link-relations/icon> a rdf:Property;
+<http://www.iana.org/assignments/relation/icon> a rdf:Property;
    rdfs:label "icon"@en;
    rdfs:comment "Refers to an icon representing the link's context."@en .
 
-<http://www.iana.org/assignments/link-relations/index> a rdf:Property;
+<http://www.iana.org/assignments/relation/index> a rdf:Property;
    rdfs:label "index"@en;
    rdfs:comment "Refers to an index."@en .
 
-<http://www.iana.org/assignments/link-relations/item> a rdf:Property;
+<http://www.iana.org/assignments/relation/item> a rdf:Property;
    rdfs:label "item"@en;
    rdfs:comment "The target IRI points to a resource that is a member of the collection represented by the context IRI."@en .
 
-<http://www.iana.org/assignments/link-relations/last> a rdf:Property;
+<http://www.iana.org/assignments/relation/last> a rdf:Property;
    rdfs:label "last"@en;
    rdfs:comment """An IRI that refers to the furthest following resource
       in a series of resources."""@en .
 
-<http://www.iana.org/assignments/link-relations/latest-version> a rdf:Property;
+<http://www.iana.org/assignments/relation/latest-version> a rdf:Property;
    rdfs:label "latest-version"@en;
    rdfs:comment """Points to a resource containing the latest (e.g.,
       current) version of the context."""@en .
 
-<http://www.iana.org/assignments/link-relations/license> a rdf:Property;
+<http://www.iana.org/assignments/relation/license> a rdf:Property;
    rdfs:label "license"@en;
    rdfs:comment "Refers to a license associated with this context."@en .
 
-<http://www.iana.org/assignments/link-relations/lrdd> a rdf:Property;
+<http://www.iana.org/assignments/relation/lrdd> a rdf:Property;
    rdfs:label "lrdd"@en;
    rdfs:comment """Refers to further information about the link's context,
       expressed as a LRDD ("Link-based Resource Descriptor Document")
@@ -162,167 +162,167 @@
       resources MUST have an "application/xrd+xml" representation, and
       MAY have others."""@en .
 
-<http://www.iana.org/assignments/link-relations/memento> a rdf:Property;
+<http://www.iana.org/assignments/relation/memento> a rdf:Property;
    rdfs:label "memento"@en;
    rdfs:comment "The Target IRI points to a Memento, a fixed resource that will not change state anymore."@en .
 
-<http://www.iana.org/assignments/link-relations/monitor> a rdf:Property;
+<http://www.iana.org/assignments/relation/monitor> a rdf:Property;
    rdfs:label "monitor"@en;
    rdfs:comment "Refers to a resource that can be used to monitor changes in an HTTP resource."@en .
 
-<http://www.iana.org/assignments/link-relations/monitor-group> a rdf:Property;
+<http://www.iana.org/assignments/relation/monitor-group> a rdf:Property;
    rdfs:label "monitor-group"@en;
    rdfs:comment "Refers to a resource that can be used to monitor changes in a specified group of HTTP resources."@en .
 
-<http://www.iana.org/assignments/link-relations/next> a rdf:Property;
+<http://www.iana.org/assignments/relation/next> a rdf:Property;
    rdfs:label "next"@en;
    rdfs:comment """Indicates that the link's context is a part of a series, and
       that the next in the series is the link target."""@en .
 
-<http://www.iana.org/assignments/link-relations/next-archive> a rdf:Property;
+<http://www.iana.org/assignments/relation/next-archive> a rdf:Property;
    rdfs:label "next-archive"@en;
    rdfs:comment "Refers to the immediately following archive resource."@en .
 
-<http://www.iana.org/assignments/link-relations/nofollow> a rdf:Property;
+<http://www.iana.org/assignments/relation/nofollow> a rdf:Property;
    rdfs:label "nofollow"@en;
    rdfs:comment "Indicates that the context’s original author or publisher does not endorse the link target."@en .
 
-<http://www.iana.org/assignments/link-relations/noreferrer> a rdf:Property;
+<http://www.iana.org/assignments/relation/noreferrer> a rdf:Property;
    rdfs:label "noreferrer"@en;
    rdfs:comment "Indicates that no referrer information is to be leaked when following the link."@en .
 
-<http://www.iana.org/assignments/link-relations/original> a rdf:Property;
+<http://www.iana.org/assignments/relation/original> a rdf:Property;
    rdfs:label "original"@en;
    rdfs:comment "The Target IRI points to an Original Resource."@en .
 
-<http://www.iana.org/assignments/link-relations/payment> a rdf:Property;
+<http://www.iana.org/assignments/relation/payment> a rdf:Property;
    rdfs:label "payment"@en;
    rdfs:comment "Indicates a resource where payment is accepted."@en .
 
-<http://www.iana.org/assignments/link-relations/predecessor-version> a rdf:Property;
+<http://www.iana.org/assignments/relation/predecessor-version> a rdf:Property;
    rdfs:label "predecessor-version"@en;
    rdfs:comment """Points to a resource containing the predecessor
       version in the version history."""@en .
 
-<http://www.iana.org/assignments/link-relations/prefetch> a rdf:Property;
+<http://www.iana.org/assignments/relation/prefetch> a rdf:Property;
    rdfs:label "prefetch"@en;
    rdfs:comment "Indicates that the link target should be preemptively cached."@en .
 
-<http://www.iana.org/assignments/link-relations/prev> a rdf:Property;
+<http://www.iana.org/assignments/relation/prev> a rdf:Property;
    rdfs:label "prev"@en;
    rdfs:comment """Indicates that the link's context is a part of a series, and
       that the previous in the series is the link target."""@en .
 
-<http://www.iana.org/assignments/link-relations/prev-archive> a rdf:Property;
+<http://www.iana.org/assignments/relation/prev-archive> a rdf:Property;
    rdfs:label "prev-archive"@en;
    rdfs:comment "Refers to the immediately preceding archive resource."@en .
 
-<http://www.iana.org/assignments/link-relations/preview> a rdf:Property;
+<http://www.iana.org/assignments/relation/preview> a rdf:Property;
    rdfs:label "preview"@en;
    rdfs:comment "Refers to a resource that provides a preview of the link's context."@en .
 
-<http://www.iana.org/assignments/link-relations/previous> a rdf:Property;
+<http://www.iana.org/assignments/relation/previous> a rdf:Property;
    rdfs:label "previous"@en;
    rdfs:comment """Refers to the previous resource in an ordered series
       of resources.  Synonym for "prev"."""@en .
 
-<http://www.iana.org/assignments/link-relations/privacy-policy> a rdf:Property;
+<http://www.iana.org/assignments/relation/privacy-policy> a rdf:Property;
    rdfs:label "privacy-policy"@en;
    rdfs:comment "Refers to a privacy policy associated with the link's context."@en .
 
-<http://www.iana.org/assignments/link-relations/profile> a rdf:Property;
+<http://www.iana.org/assignments/relation/profile> a rdf:Property;
    rdfs:label "profile"@en;
    rdfs:comment """Identifying that a resource representation conforms
 to a certain profile, without affecting the non-profile semantics
 of the resource representation."""@en .
 
-<http://www.iana.org/assignments/link-relations/related> a rdf:Property;
+<http://www.iana.org/assignments/relation/related> a rdf:Property;
    rdfs:label "related"@en;
    rdfs:comment "Identifies a related resource."@en .
 
-<http://www.iana.org/assignments/link-relations/replies> a rdf:Property;
+<http://www.iana.org/assignments/relation/replies> a rdf:Property;
    rdfs:label "replies"@en;
    rdfs:comment """Identifies a resource that is a reply to the context
       of the link."""@en .
 
-<http://www.iana.org/assignments/link-relations/search> a rdf:Property;
+<http://www.iana.org/assignments/relation/search> a rdf:Property;
    rdfs:label "search"@en;
    rdfs:comment """Refers to a resource that can be used to search through
       the link's context and related resources."""@en .
 
-<http://www.iana.org/assignments/link-relations/section> a rdf:Property;
+<http://www.iana.org/assignments/relation/section> a rdf:Property;
    rdfs:label "section"@en;
    rdfs:comment "Refers to a section in a collection of resources."@en .
 
-<http://www.iana.org/assignments/link-relations/self> a rdf:Property;
+<http://www.iana.org/assignments/relation/self> a rdf:Property;
    rdfs:label "self"@en;
    rdfs:comment "Conveys an identifier for the link's context."@en .
 
-<http://www.iana.org/assignments/link-relations/service> a rdf:Property;
+<http://www.iana.org/assignments/relation/service> a rdf:Property;
    rdfs:label "service"@en;
    rdfs:comment """Indicates a URI that can be used to retrieve a
       service document."""@en .
 
-<http://www.iana.org/assignments/link-relations/start> a rdf:Property;
+<http://www.iana.org/assignments/relation/start> a rdf:Property;
    rdfs:label "start"@en;
    rdfs:comment """Refers to the first resource in a collection of
       resources."""@en .
 
-<http://www.iana.org/assignments/link-relations/stylesheet> a rdf:Property;
+<http://www.iana.org/assignments/relation/stylesheet> a rdf:Property;
    rdfs:label "stylesheet"@en;
    rdfs:comment "Refers to a stylesheet."@en .
 
-<http://www.iana.org/assignments/link-relations/subsection> a rdf:Property;
+<http://www.iana.org/assignments/relation/subsection> a rdf:Property;
    rdfs:label "subsection"@en;
    rdfs:comment """Refers to a resource serving as a subsection in a
       collection of resources."""@en .
 
-<http://www.iana.org/assignments/link-relations/successor-version> a rdf:Property;
+<http://www.iana.org/assignments/relation/successor-version> a rdf:Property;
    rdfs:label "successor-version"@en;
    rdfs:comment """Points to a resource containing the successor version
       in the version history."""@en .
 
-<http://www.iana.org/assignments/link-relations/tag> a rdf:Property;
+<http://www.iana.org/assignments/relation/tag> a rdf:Property;
    rdfs:label "tag"@en;
    rdfs:comment """Gives a tag (identified by the given address) that applies to
       the current document."""@en .
 
-<http://www.iana.org/assignments/link-relations/terms-of-service> a rdf:Property;
+<http://www.iana.org/assignments/relation/terms-of-service> a rdf:Property;
    rdfs:label "terms-of-service"@en;
    rdfs:comment "Refers to the terms of service associated with the link's context."@en .
 
-<http://www.iana.org/assignments/link-relations/timegate> a rdf:Property;
+<http://www.iana.org/assignments/relation/timegate> a rdf:Property;
    rdfs:label "timegate"@en;
    rdfs:comment "The Target IRI points to a TimeGate for an Original Resource."@en .
 
-<http://www.iana.org/assignments/link-relations/timemap> a rdf:Property;
+<http://www.iana.org/assignments/relation/timemap> a rdf:Property;
    rdfs:label "timemap"@en;
    rdfs:comment "The Target IRI points to a TimeMap for an Original Resource."@en .
 
-<http://www.iana.org/assignments/link-relations/type> a rdf:Property;
+<http://www.iana.org/assignments/relation/type> a rdf:Property;
    rdfs:label "type"@en;
    rdfs:comment "Refers to a resource identifying the abstract semantic type of which the link's context is considered to be an instance."@en .
 
-<http://www.iana.org/assignments/link-relations/up> a rdf:Property;
+<http://www.iana.org/assignments/relation/up> a rdf:Property;
    rdfs:label "up"@en;
    rdfs:comment """Refers to a parent document in a hierarchy of
       documents."""@en .
 
-<http://www.iana.org/assignments/link-relations/version-history> a rdf:Property;
+<http://www.iana.org/assignments/relation/version-history> a rdf:Property;
    rdfs:label "version-history"@en;
    rdfs:comment """Points to a resource containing the version history
       for the context."""@en .
 
-<http://www.iana.org/assignments/link-relations/via> a rdf:Property;
+<http://www.iana.org/assignments/relation/via> a rdf:Property;
    rdfs:label "via"@en;
    rdfs:comment """Identifies a resource that is the source of the
       information in the link's context."""@en .
 
-<http://www.iana.org/assignments/link-relations/working-copy> a rdf:Property;
+<http://www.iana.org/assignments/relation/working-copy> a rdf:Property;
    rdfs:label "working-copy"@en;
    rdfs:comment "Points to a working copy for this resource."@en .
 
-<http://www.iana.org/assignments/link-relations/working-copy-of> a rdf:Property;
+<http://www.iana.org/assignments/relation/working-copy-of> a rdf:Property;
    rdfs:label "working-copy-of"@en;
    rdfs:comment """Points to the versioned resource from which this
       working copy was obtained."""@en .
