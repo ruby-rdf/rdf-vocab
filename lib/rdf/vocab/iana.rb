@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-# This file generated automatically using vocab-fetch from /Users/gregg/Projects/rdf-vocab/etc/iana.ttl
+# This file generated automatically using vocab-fetch from /Users/acoburn/Projects/rdf-vocab/etc/iana.ttl
 require 'rdf'
 module RDF::Vocab
   class IANA < RDF::StrictVocabulary("http://www.iana.org/assignments/relation/")
