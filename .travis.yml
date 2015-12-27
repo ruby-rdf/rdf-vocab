@@ -5,8 +5,8 @@ env:
 rvm:
   - 2.0
   - 2.1
-  - 2.2
-  - jruby
+  - 2.2.4
+  - jruby-9.0.4.0
   - rbx
 cache: bundler
 sudo: false
