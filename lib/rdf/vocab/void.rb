@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+# frozen_string_literal: true
 # This file generated automatically using vocab-fetch from http://vocab.deri.ie/void.rdf
 require 'rdf'
 module RDF::Vocab

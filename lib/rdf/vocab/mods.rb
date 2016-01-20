@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+# frozen_string_literal: true
 # This file generated automatically using vocab-fetch from http://www.loc.gov/standards/mods/modsrdf/v1/modsrdf.owl
 require 'rdf'
 module RDF::Vocab

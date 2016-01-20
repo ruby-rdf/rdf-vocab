@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+# frozen_string_literal: true
 # This file generated automatically using vocab-fetch from http://purl.org/dc/elements/1.1/
 require 'rdf'
 module RDF::Vocab

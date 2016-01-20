@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+# frozen_string_literal: true
 # This file generated automatically using vocab-fetch from http://www.w3.org/2003/06/sw-vocab-status/ns#
 require 'rdf'
 module RDF::Vocab
