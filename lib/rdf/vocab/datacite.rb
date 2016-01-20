@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+# frozen_string_literal: true
 # This file generated automatically using vocab-fetch from http://eelst.cs.unibo.it/apps/LODE/source?url=http://purl.org/spar/datacite
 require 'rdf'
 module RDF::Vocab

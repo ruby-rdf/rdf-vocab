@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rdf'
 require 'rdf/vocabulary'
 require 'rdf/vocab/extensions'
