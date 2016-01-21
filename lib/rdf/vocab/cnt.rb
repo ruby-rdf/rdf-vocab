@@ -3,32 +3,36 @@
 # This file generated automatically using vocab-fetch from http://www.w3.org/2011/content#
 require 'rdf'
 module RDF::Vocab
+  # @!parse
+  #   # Vocabulary for <http://www.w3.org/2011/content#>
+  #   class CNT < RDF::StrictVocabulary
+  #   end
   class CNT < RDF::StrictVocabulary("http://www.w3.org/2011/content#")
 
     # Class definitions
     term :Content,
       comment: %(The content.).freeze,
       label: "Content".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :ContentAsBase64,
       comment: %(The base64 encoded content \(can be used for binary content\).).freeze,
       label: "Base64 content".freeze,
       subClassOf: "cnt:Content".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :ContentAsText,
       comment: %(The text content \(can be used for text content\).).freeze,
       label: "Text content".freeze,
       subClassOf: "cnt:Content".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :ContentAsXML,
       comment: %(The XML content \(can only be used for XML-wellformed content\).).freeze,
       label: "XML content".freeze,
       subClassOf: "cnt:Content".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :DoctypeDecl,
       comment: %(The document type declaration.).freeze,
       label: "Document type declaration".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
 
     # Property definitions
     property :bytes,

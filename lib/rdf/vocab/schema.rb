@@ -3,6 +3,10 @@
 # This file generated automatically using vocab-fetch from http://schema.org/docs/schema_org_rdfa.html
 require 'rdf'
 module RDF::Vocab
+  # @!parse
+  #   # Vocabulary for <http://schema.org/>
+  #   class SCHEMA < RDF::StrictVocabulary
+  #   end
   class SCHEMA < RDF::StrictVocabulary("http://schema.org/")
 
     # Class definitions
@@ -22,20 +26,25 @@ module RDF::Vocab
       subClassOf: "schema:AllocateAction".freeze,
       type: "rdfs:Class".freeze
     term :AccountingService,
-      comment: %(Accountancy business.).freeze,
+      comment: %(Accountancy business.
+        <br><br>
+        As a <a href="/LocalBusiness">LocalBusiness</a> it can be
+        described as a <a href="/provider">provider</a> of one or more
+        <a href="/Service">Service\(s\)</a>.
+      ).freeze,
       label: "AccountingService".freeze,
-      subClassOf: ["schema:FinancialService".freeze, "schema:ProfessionalService".freeze],
+      subClassOf: "schema:FinancialService".freeze,
       type: "rdfs:Class".freeze
     term :AchieveAction,
-      comment: %(The act of accomplishing something via     previous efforts. It is an instantaneous action rather than an ongoing     process.).freeze,
+      comment: %(The act of accomplishing something via previous efforts. It is an instantaneous action rather than an ongoing process.).freeze,
       label: "AchieveAction".freeze,
       subClassOf: "schema:Action".freeze,
       type: "rdfs:Class".freeze
     term :Action,
-      comment: %(An action performed by a direct agent and indirect     participants upon a direct object. Optionally happens at a location     with the help of an inanimate instrument. The execution of the action     may produce a result. Specific action sub-type documentation specifies     the exact expectation of each argument/role.
+      comment: %(An action performed by a direct agent and indirect participants upon a direct object. Optionally happens at a location with the help of an inanimate instrument. The execution of the action may produce a result. Specific action sub-type documentation specifies the exact expectation of each argument/role.
       <br/><br/>See also <a href="http://blog.schema.org/2014/04/announcing-schemaorg-actions.html">blog post</a>
       and <a href="http://schema.org/docs/actions.html">Actions overview document</a>.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_ActionCollabClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_ActionCollabClass).freeze,
       label: "Action".freeze,
       subClassOf: "schema:Thing".freeze,
       type: "rdfs:Class".freeze
@@ -55,7 +64,7 @@ module RDF::Vocab
       subClassOf: "schema:UpdateAction".freeze,
       type: "rdfs:Class".freeze
     term :AdministrativeArea,
-      comment: %(A geographical region under the jurisdiction of a particular government.).freeze,
+      comment: %(A geographical region, typically under the jurisdiction of a particular government.).freeze,
       label: "AdministrativeArea".freeze,
       subClassOf: "schema:Place".freeze,
       type: "rdfs:Class".freeze
@@ -91,7 +100,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :AlignmentObject,
       comment: %(An intangible item that describes an alignment between a learning resource and a node in an educational framework.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_LRMIClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_LRMIClass).freeze,
       label: "AlignmentObject".freeze,
       subClassOf: "schema:Intangible".freeze,
       type: "rdfs:Class".freeze
@@ -107,13 +116,13 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :AnatomicalStructure,
       comment: %(Any part of the human body, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical structures.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "AnatomicalStructure".freeze,
       subClassOf: "schema:MedicalEntity".freeze,
       type: "rdfs:Class".freeze
     term :AnatomicalSystem,
       comment: %(An anatomical system is a group of anatomical structures that work together to perform a certain task. Anatomical systems, such as organ systems, are one organizing principle of anatomy, and can includes circulatory, digestive, endocrine, integumentary, immune, lymphatic, muscular, nervous, reproductive, respiratory, skeletal, urinary, vestibular, and other systems.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "AnatomicalSystem".freeze,
       subClassOf: "schema:MedicalEntity".freeze,
       type: "rdfs:Class".freeze
@@ -124,7 +133,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Answer,
       comment: %(An answer offered to a question; perhaps correct, perhaps opinionated or wrong.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_QAStackExchange).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_QAStackExchange).freeze,
       label: "Answer".freeze,
       subClassOf: "schema:Comment".freeze,
       type: "rdfs:Class".freeze
@@ -145,7 +154,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :ApprovedIndication,
       comment: %(An indication for a medical therapy that has been formally specified or approved by a regulatory body that regulates use of the therapy; for example, the US FDA approves indications for most drugs in the US.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "ApprovedIndication".freeze,
       subClassOf: "schema:MedicalIndication".freeze,
       type: "rdfs:Class".freeze
@@ -166,7 +175,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Artery,
       comment: %(A type of blood vessel that specifically carries blood away from the heart.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "Artery".freeze,
       subClassOf: "schema:Vessel".freeze,
       type: "rdfs:Class".freeze
@@ -174,7 +183,7 @@ module RDF::Vocab
       comment: %(An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.
 
       <br/><br/>See also <a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog post</a>.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
       label: "Article".freeze,
       subClassOf: "schema:CreativeWork".freeze,
       type: "rdfs:Class".freeze
@@ -194,9 +203,12 @@ module RDF::Vocab
       subClassOf: "schema:AllocateAction".freeze,
       type: "rdfs:Class".freeze
     term :Attorney,
-      comment: %(Professional service: Attorney.).freeze,
+      comment: %(Professional service: Attorney. <br><br>
+        This type is deprecated - <a href="/LegalService">LegalService</a> is more inclusive and less ambiguous.
+
+      ).freeze,
       label: "Attorney".freeze,
-      subClassOf: "schema:ProfessionalService".freeze,
+      subClassOf: "schema:LegalService".freeze,
       type: "rdfs:Class".freeze
     term :Audience,
       comment: %(Intended audience for an item, i.e. the group for whom the item was created.).freeze,
@@ -205,7 +217,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :AudioObject,
       comment: %(An audio file.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
       label: "AudioObject".freeze,
       subClassOf: "schema:MediaObject".freeze,
       type: "rdfs:Class".freeze
@@ -227,7 +239,7 @@ module RDF::Vocab
     term :AutoPartsStore,
       comment: %(An auto parts store.).freeze,
       label: "AutoPartsStore".freeze,
-      subClassOf: ["schema:AutomotiveBusiness".freeze, "schema:Store".freeze],
+      subClassOf: ["schema:Store".freeze, "schema:AutomotiveBusiness".freeze],
       type: "rdfs:Class".freeze
     term :AutoRental,
       comment: %(A car rental business.).freeze,
@@ -273,6 +285,11 @@ module RDF::Vocab
       label: "BarOrPub".freeze,
       subClassOf: "schema:FoodEstablishment".freeze,
       type: "rdfs:Class".freeze
+    term :Barcode,
+      comment: %(An image of a visual machine-readable code such as a barcode or QR code.).freeze,
+      label: "Barcode".freeze,
+      subClassOf: "schema:ImageObject".freeze,
+      type: "rdfs:Class".freeze
     term :Beach,
       comment: %(Beach.).freeze,
       label: "Beach".freeze,
@@ -310,7 +327,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :BloodTest,
       comment: %(A medical test performed on a sample of a patient's blood.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "BloodTest".freeze,
       subClassOf: "schema:MedicalTest".freeze,
       type: "rdfs:Class".freeze
@@ -326,7 +343,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Bone,
       comment: %(Rigid connective tissue that comprises up the skeletal structure of the human body.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "Bone".freeze,
       subClassOf: "schema:AnatomicalStructure".freeze,
       type: "rdfs:Class".freeze
@@ -358,7 +375,7 @@ module RDF::Vocab
     term :Boolean,
       comment: %(Boolean: True or False.).freeze,
       label: "Boolean".freeze,
-      type: ["rdfs:Class".freeze, "schema:DataType".freeze]
+      type: ["schema:DataType".freeze, "rdfs:Class".freeze]
     term :BorrowAction,
       comment: %(The act of obtaining an object under an agreement to return it at a later date. Reciprocal of LendAction.<p>Related actions:</p><ul><li><a href="http://schema.org/LendAction">LendAction</a>: Reciprocal of BorrowAction</li></ul>.).freeze,
       label: "BorrowAction".freeze,
@@ -371,13 +388,13 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :BrainStructure,
       comment: %(Any anatomical structure which pertains to the soft nervous tissue functioning as the coordinating center of sensation and intellectual and nervous activity.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "BrainStructure".freeze,
       subClassOf: "schema:AnatomicalStructure".freeze,
       type: "rdfs:Class".freeze
     term :Brand,
       comment: %(A brand is a name used by an organization or business person for labeling a product, product group, or similar.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "Brand".freeze,
       subClassOf: "schema:Intangible".freeze,
       type: "rdfs:Class".freeze
@@ -461,7 +478,7 @@ module RDF::Vocab
     http://purl.org/goodrelations/v1#Reseller <br />
 
         ).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "BusinessEntityType".freeze,
       subClassOf: "schema:Enumeration".freeze,
       type: "rdfs:Class".freeze
@@ -484,7 +501,7 @@ module RDF::Vocab
     http://purl.org/goodrelations/v1#Sell <br />
     http://purl.org/goodrelations/v1#Buy <br />
         ).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "BusinessFunction".freeze,
       subClassOf: "schema:Enumeration".freeze,
       type: "rdfs:Class".freeze
@@ -520,13 +537,13 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Car,
       comment: %(A car is a wheeled, self-powered motor vehicle used for transportation.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "Car".freeze,
       subClassOf: "schema:Vehicle".freeze,
       type: "rdfs:Class".freeze
     term :CarUsageType,
       comment: %(A value indicating a special usage of a car, e.g. commercial rental, driving school, or as a taxi.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "CarUsageType".freeze,
       subClassOf: "schema:QualitativeValue".freeze,
       type: "rdfs:Class".freeze
@@ -618,7 +635,7 @@ module RDF::Vocab
     term :Code,
       comment: %(Computer programming source code. Example: Full \(compile ready\) solutions, code snippet samples, scripts, templates.).freeze,
       label: "Code".freeze,
-      "schema:supersededBy" => %(schema:SoftwareSourceCode).freeze,
+      :"schema:supersededBy" => %(schema:SoftwareSourceCode).freeze,
       subClassOf: "schema:CreativeWork".freeze,
       type: "rdfs:Class".freeze
     term :CollectionPage,
@@ -708,7 +725,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Corporation,
       comment: %(Organization: A business corporation.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
       label: "Corporation".freeze,
       subClassOf: "schema:Organization".freeze,
       type: "rdfs:Class".freeze
@@ -729,7 +746,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :CreativeWork,
       comment: %(The most generic kind of creative work, including books, movies, photographs, software programs, etc.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
       label: "CreativeWork".freeze,
       subClassOf: "schema:Thing".freeze,
       type: "rdfs:Class".freeze
@@ -777,7 +794,7 @@ module RDF::Vocab
     http://purl.org/goodrelations/v1#MasterCard <br />
     http://purl.org/goodrelations/v1#VISA <br />
         ).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "CreditCard".freeze,
       subClassOf: "schema:PaymentMethod".freeze,
       type: "rdfs:Class".freeze
@@ -788,7 +805,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :DDxElement,
       comment: %(An alternative, closely-related condition typically considered later in the differential diagnosis process along with the signs that are used to distinguish it.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "DDxElement".freeze,
       subClassOf: "schema:MedicalIntangible".freeze,
       type: "rdfs:Class".freeze
@@ -804,17 +821,27 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :DataCatalog,
       comment: %(A collection of datasets.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_DatasetClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_DatasetClass).freeze,
       label: "DataCatalog".freeze,
-      "owl:equivalentClass" => %(dcat:Catalog).freeze,
+      :"owl:equivalentClass" => %(dcat:Catalog).freeze,
       subClassOf: "schema:CreativeWork".freeze,
       type: "rdfs:Class".freeze
     term :DataDownload,
       comment: %(A dataset in downloadable form.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_DatasetClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_DatasetClass).freeze,
       label: "DataDownload".freeze,
-      "owl:equivalentClass" => %(dcat:Distribution).freeze,
+      :"owl:equivalentClass" => %(dcat:Distribution).freeze,
       subClassOf: "schema:MediaObject".freeze,
+      type: "rdfs:Class".freeze
+    term :DataFeed,
+      comment: %(A single feed providing structured information about one or more entities or topics.).freeze,
+      label: "DataFeed".freeze,
+      subClassOf: "schema:Dataset".freeze,
+      type: "rdfs:Class".freeze
+    term :DataFeedItem,
+      comment: %(A single item within a larger data feed.).freeze,
+      label: "DataFeedItem".freeze,
+      subClassOf: "schema:Intangible".freeze,
       type: "rdfs:Class".freeze
     term :DataType,
       comment: %(The basic data types such as Integers, Strings, etc.).freeze,
@@ -823,19 +850,19 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Dataset,
       comment: %(A body of structured information describing some topic\(s\) of interest.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_DatasetClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_DatasetClass).freeze,
       label: "Dataset".freeze,
-      "owl:equivalentClass" => [%(dcat:Dataset).freeze, %(void:Dataset).freeze, %(dcmitype:Dataset).freeze],
+      :"owl:equivalentClass" => [%(void:Dataset).freeze, %(dcat:Dataset).freeze, %(dcmitype:Dataset).freeze],
       subClassOf: "schema:CreativeWork".freeze,
       type: "rdfs:Class".freeze
     term :Date,
       comment: %(A date value in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>.).freeze,
       label: "Date".freeze,
-      type: ["rdfs:Class".freeze, "schema:DataType".freeze]
+      type: ["schema:DataType".freeze, "rdfs:Class".freeze]
     term :DateTime,
       comment: %(A combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|\(+|-\)hh:mm] \(see Chapter 5.4 of ISO 8601\).).freeze,
       label: "DateTime".freeze,
-      type: ["rdfs:Class".freeze, "schema:DataType".freeze]
+      type: ["schema:DataType".freeze, "rdfs:Class".freeze]
     term :DatedMoneySpecification,
       comment: %(A DatedMoneySpecification represents monetary values with optional start and end dates. For example, this could represent an employee's salary over a specific period of time.).freeze,
       label: "DatedMoneySpecification".freeze,
@@ -855,7 +882,7 @@ module RDF::Vocab
     http://purl.org/goodrelations/v1#Sunday <br />
     http://purl.org/goodrelations/v1#PublicHolidays <br />
         ).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "DayOfWeek".freeze,
       subClassOf: "schema:Enumeration".freeze,
       type: "rdfs:Class".freeze
@@ -881,7 +908,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :DeliveryChargeSpecification,
       comment: %(The price for the delivery of an offer using a particular delivery method.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "DeliveryChargeSpecification".freeze,
       subClassOf: "schema:PriceSpecification".freeze,
       type: "rdfs:Class".freeze
@@ -904,20 +931,20 @@ module RDF::Vocab
     http://purl.org/goodrelations/v1#FederalExpress <br />
     http://purl.org/goodrelations/v1#UPS <br />
         ).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "DeliveryMethod".freeze,
       subClassOf: "schema:Enumeration".freeze,
       type: "rdfs:Class".freeze
     term :Demand,
       comment: %(A demand entity represents the public, not necessarily binding, not necessarily exclusive, announcement by an organization or person to seek a certain type of goods or services. For describing demand using this type, the very same properties used for Offer apply.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "Demand".freeze,
       subClassOf: "schema:Intangible".freeze,
       type: "rdfs:Class".freeze
     term :Dentist,
       comment: %(A dentist.).freeze,
       label: "Dentist".freeze,
-      subClassOf: ["schema:MedicalOrganization".freeze, "schema:ProfessionalService".freeze],
+      subClassOf: "schema:MedicalOrganization".freeze,
       type: "rdfs:Class".freeze
     term :DepartAction,
       comment: %(The act of  departing from a place. An agent departs from an fromLocation for a destination, optionally with participants.).freeze,
@@ -936,19 +963,19 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :DiagnosticProcedure,
       comment: %(A medical procedure intended primarily for diagnostic, as opposed to therapeutic, purposes.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "DiagnosticProcedure".freeze,
-      subClassOf: ["schema:MedicalProcedure".freeze, "schema:MedicalTest".freeze],
+      subClassOf: ["schema:MedicalTest".freeze, "schema:MedicalProcedure".freeze],
       type: "rdfs:Class".freeze
     term :Diet,
       comment: %(A strategy of regulating the intake of food to achieve or maintain a specific health-related goal.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "Diet".freeze,
-      subClassOf: ["schema:CreativeWork".freeze, "schema:LifestyleModification".freeze],
+      subClassOf: ["schema:LifestyleModification".freeze, "schema:CreativeWork".freeze],
       type: "rdfs:Class".freeze
     term :DietarySupplement,
       comment: %(A product taken by mouth that contains a dietary ingredient intended to supplement the diet. Dietary ingredients may include vitamins, minerals, herbs or other botanicals, amino acids, and substances such as enzymes, organ tissues, glandulars and metabolites.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "DietarySupplement".freeze,
       subClassOf: "schema:MedicalTherapy".freeze,
       type: "rdfs:Class".freeze
@@ -1004,19 +1031,19 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :DriveWheelConfigurationValue,
       comment: %(A value indicating which roadwheels will receive torque.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "DriveWheelConfigurationValue".freeze,
       subClassOf: "schema:QualitativeValue".freeze,
       type: "rdfs:Class".freeze
     term :Drug,
       comment: %(A chemical or biologic substance, used as a medical therapy, that has a physiological effect on an organism.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "Drug".freeze,
       subClassOf: "schema:MedicalTherapy".freeze,
       type: "rdfs:Class".freeze
     term :DrugClass,
       comment: %(A class of medical drugs, e.g., statins. Classes can represent general pharmacological class, common mechanisms of action, common physiological effects, etc.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "DrugClass".freeze,
       subClassOf: "schema:MedicalTherapy".freeze,
       type: "rdfs:Class".freeze
@@ -1032,7 +1059,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :DrugLegalStatus,
       comment: %(The legal availability status of a medical drug.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "DrugLegalStatus".freeze,
       subClassOf: "schema:MedicalIntangible".freeze,
       type: "rdfs:Class".freeze
@@ -1048,7 +1075,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :DrugStrength,
       comment: %(A specific strength in which a medical drug is available in a specific country.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "DrugStrength".freeze,
       subClassOf: "schema:MedicalIntangible".freeze,
       type: "rdfs:Class".freeze
@@ -1074,7 +1101,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :EducationalAudience,
       comment: %(An EducationalAudience.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_LRMIClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_LRMIClass).freeze,
       label: "EducationalAudience".freeze,
       subClassOf: "schema:Audience".freeze,
       type: "rdfs:Class".freeze
@@ -1086,7 +1113,7 @@ module RDF::Vocab
     term :Electrician,
       comment: %(An electrician.).freeze,
       label: "Electrician".freeze,
-      subClassOf: ["schema:HomeAndConstructionBusiness".freeze, "schema:ProfessionalService".freeze],
+      subClassOf: "schema:HomeAndConstructionBusiness".freeze,
       type: "rdfs:Class".freeze
     term :ElectronicsStore,
       comment: %(An electronics store.).freeze,
@@ -1135,7 +1162,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :EngineSpecification,
       comment: %(Information about the engine of the vehicle. A vehicle can have multiple engines represented by multiple engine specification entities.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "EngineSpecification".freeze,
       subClassOf: "schema:StructuredValue".freeze,
       type: "rdfs:Class".freeze
@@ -1146,7 +1173,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :EntryPoint,
       comment: %(An entry point, within some Web-based protocol.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_ActionCollabClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_ActionCollabClass).freeze,
       label: "EntryPoint".freeze,
       subClassOf: "schema:Intangible".freeze,
       type: "rdfs:Class".freeze
@@ -1163,7 +1190,7 @@ module RDF::Vocab
     term :Event,
       comment: %(An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the 'offers' property. Repeated events may be structured as separate Event objects.).freeze,
       label: "Event".freeze,
-      "owl:equivalentClass" => %(dcmitype:Event).freeze,
+      :"owl:equivalentClass" => %(dcmitype:Event).freeze,
       subClassOf: "schema:Thing".freeze,
       type: "rdfs:Class".freeze
     term :EventReservation,
@@ -1193,9 +1220,14 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :ExercisePlan,
       comment: %(Fitness-related activity designed for a specific health-related purpose, including defined exercise routines as well as activity prescribed by a clinician.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "ExercisePlan".freeze,
-      subClassOf: ["schema:CreativeWork".freeze, "schema:PhysicalActivity".freeze],
+      subClassOf: ["schema:PhysicalActivity".freeze, "schema:CreativeWork".freeze],
+      type: "rdfs:Class".freeze
+    term :ExhibitionEvent,
+      comment: %(Event type: Exhibition event, e.g. at a museum, library, archive, tradeshow, ...).freeze,
+      label: "ExhibitionEvent".freeze,
+      subClassOf: "schema:Event".freeze,
       type: "rdfs:Class".freeze
     term :FastFoodRestaurant,
       comment: %(A fast-food restaurant.).freeze,
@@ -1225,7 +1257,7 @@ module RDF::Vocab
     term :FireStation,
       comment: %(A fire station. With firemen.).freeze,
       label: "FireStation".freeze,
-      subClassOf: ["schema:CivicStructure".freeze, "schema:EmergencyService".freeze],
+      subClassOf: ["schema:EmergencyService".freeze, "schema:CivicStructure".freeze],
       type: "rdfs:Class".freeze
     term :Flight,
       comment: %(An airline flight.).freeze,
@@ -1314,7 +1346,15 @@ module RDF::Vocab
     term :GeneralContractor,
       comment: %(A general contractor.).freeze,
       label: "GeneralContractor".freeze,
-      subClassOf: ["schema:HomeAndConstructionBusiness".freeze, "schema:ProfessionalService".freeze],
+      subClassOf: "schema:HomeAndConstructionBusiness".freeze,
+      type: "rdfs:Class".freeze
+    term :GeoCircle,
+      comment: %(A GeoCircle is a GeoShape representing a circular geographic area. As it is a GeoShape
+          it provides the simple textual property 'circle', but also allows the combination of postalCode alongside geoRadius.
+          The center of the circle can be indicated via the 'geoMidpoint' property, or more approximately using 'address', 'postalCode'.
+       ).freeze,
+      label: "GeoCircle".freeze,
+      subClassOf: "schema:GeoShape".freeze,
       type: "rdfs:Class".freeze
     term :GeoCoordinates,
       comment: %(The geographic coordinates of a place or event.).freeze,
@@ -1323,7 +1363,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :GeoShape,
       comment: %(The geographic shape of a place. A GeoShape can be described using several properties whose values are based on latitude/longitude pairs. Either whitespace or commas can be used to separate latitude and longitude; whitespace should be used when writing a list of several such points.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
       label: "GeoShape".freeze,
       subClassOf: "schema:StructuredValue".freeze,
       type: "rdfs:Class".freeze
@@ -1408,7 +1448,14 @@ module RDF::Vocab
       subClassOf: "schema:Store".freeze,
       type: "rdfs:Class".freeze
     term :HomeAndConstructionBusiness,
-      comment: %(A construction business.).freeze,
+      comment: %(A construction business.
+        <br><br>
+        A HomeAndConstructionBusiness is a LocalBusiness that provides services around homes and buildings.
+          <br><br>
+          As a <a href="/LocalBusiness">LocalBusiness</a> it can be
+          described as a <a href="/provider">provider</a> of one or more
+          <a href="/Service">Service\(s\)</a>.
+      ).freeze,
       label: "HomeAndConstructionBusiness".freeze,
       subClassOf: "schema:LocalBusiness".freeze,
       type: "rdfs:Class".freeze
@@ -1420,7 +1467,7 @@ module RDF::Vocab
     term :Hospital,
       comment: %(A hospital.).freeze,
       label: "Hospital".freeze,
-      subClassOf: ["schema:CivicStructure".freeze, "schema:EmergencyService".freeze, "schema:MedicalOrganization".freeze],
+      subClassOf: ["schema:EmergencyService".freeze, "schema:CivicStructure".freeze, "schema:MedicalOrganization".freeze],
       type: "rdfs:Class".freeze
     term :Hostel,
       comment: %(A hostel - cheap accommodation, often in shared dormitories.).freeze,
@@ -1435,7 +1482,7 @@ module RDF::Vocab
     term :HousePainter,
       comment: %(A house painting service.).freeze,
       label: "HousePainter".freeze,
-      subClassOf: ["schema:HomeAndConstructionBusiness".freeze, "schema:ProfessionalService".freeze],
+      subClassOf: "schema:HomeAndConstructionBusiness".freeze,
       type: "rdfs:Class".freeze
     term :IceCreamShop,
       comment: %(An ice cream shop.).freeze,
@@ -1455,30 +1502,30 @@ module RDF::Vocab
     term :ImageObject,
       comment: %(An image file.).freeze,
       label: "ImageObject".freeze,
-      "owl:equivalentClass" => %(dcmitype:Image).freeze,
+      :"owl:equivalentClass" => %(dcmitype:Image).freeze,
       subClassOf: "schema:MediaObject".freeze,
       type: "rdfs:Class".freeze
     term :ImagingTest,
       comment: %(Any medical imaging modality typically used for diagnostic purposes.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "ImagingTest".freeze,
       subClassOf: "schema:MedicalTest".freeze,
       type: "rdfs:Class".freeze
     term :IndividualProduct,
       comment: %(A single, identifiable product instance \(e.g. a laptop with a particular serial number\).).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "IndividualProduct".freeze,
       subClassOf: "schema:Product".freeze,
       type: "rdfs:Class".freeze
     term :InfectiousAgentClass,
       comment: %(Classes of agents or pathogens that transmit infectious diseases. Enumerated type.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "InfectiousAgentClass".freeze,
       subClassOf: ["schema:MedicalEnumeration".freeze, "schema:Enumeration".freeze],
       type: "rdfs:Class".freeze
     term :InfectiousDisease,
       comment: %(An infectious disease is a clinically evident human disease resulting from the presence of pathogenic microbial agents, like pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and prions. To be considered an infectious disease, such pathogens are known to be able to cause this disease.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "InfectiousDisease".freeze,
       subClassOf: "schema:MedicalCondition".freeze,
       type: "rdfs:Class".freeze
@@ -1574,7 +1621,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Joint,
       comment: %(The anatomical location at which two or more bones make contact.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "Joint".freeze,
       subClassOf: "schema:AnatomicalStructure".freeze,
       type: "rdfs:Class".freeze
@@ -1603,6 +1650,16 @@ module RDF::Vocab
       label: "LeaveAction".freeze,
       subClassOf: "schema:InteractAction".freeze,
       type: "rdfs:Class".freeze
+    term :LegalService,
+      comment: %(A LegalService is a business that provides legally-oriented services, advice and representation, e.g. law firms.
+        <br><br>
+        As a <a href="/LocalBusiness">LocalBusiness</a> it can be
+        described as a <a href="/provider">provider</a> of one or more
+        <a href="/Service">Service\(s\)</a>.
+      ).freeze,
+      label: "LegalService".freeze,
+      subClassOf: "schema:LocalBusiness".freeze,
+      type: "rdfs:Class".freeze
     term :LegislativeBuilding,
       comment: %(A legislative building&#x2014;for example, the state capitol.).freeze,
       label: "LegislativeBuilding".freeze,
@@ -1620,13 +1677,13 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :LifestyleModification,
       comment: %(A process of care involving exercise, changes to diet, fitness routines, and other lifestyle changes aimed at improving a health condition.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "LifestyleModification".freeze,
       subClassOf: "schema:MedicalTherapy".freeze,
       type: "rdfs:Class".freeze
     term :Ligament,
       comment: %(A short band of tough, flexible, fibrous connective tissue that functions to connect multiple bones, cartilages, and structurally support joints.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "Ligament".freeze,
       subClassOf: "schema:AnatomicalStructure".freeze,
       type: "rdfs:Class".freeze
@@ -1663,7 +1720,7 @@ module RDF::Vocab
     term :LocalBusiness,
       comment: %(A particular physical business or branch of an organization. Examples of LocalBusiness include a restaurant, a particular branch of a restaurant chain, a branch of a bank, a medical practice, a club, a bowling alley, etc.).freeze,
       label: "LocalBusiness".freeze,
-      subClassOf: ["schema:Organization".freeze, "schema:Place".freeze],
+      subClassOf: ["schema:Place".freeze, "schema:Organization".freeze],
       type: "rdfs:Class".freeze
     term :LockerDelivery,
       comment: %(A DeliveryMethod in which an item is made available via locker.).freeze,
@@ -1673,7 +1730,7 @@ module RDF::Vocab
     term :Locksmith,
       comment: %(A locksmith.).freeze,
       label: "Locksmith".freeze,
-      subClassOf: ["schema:HomeAndConstructionBusiness".freeze, "schema:ProfessionalService".freeze],
+      subClassOf: "schema:HomeAndConstructionBusiness".freeze,
       type: "rdfs:Class".freeze
     term :LodgingBusiness,
       comment: %(A lodging business, such as a motel, hotel, or inn.).freeze,
@@ -1692,7 +1749,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :LymphaticVessel,
       comment: %(A type of blood vessel that specifically carries lymph fluid unidirectionally toward the heart.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "LymphaticVessel".freeze,
       subClassOf: "schema:Vessel".freeze,
       type: "rdfs:Class".freeze
@@ -1728,13 +1785,13 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :MedicalAudience,
       comment: %(Target audiences for medical web pages. Enumerated type.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalAudience".freeze,
-      subClassOf: ["schema:Audience".freeze, "schema:MedicalEnumeration".freeze, "schema:Enumeration".freeze, "schema:PeopleAudience".freeze],
+      subClassOf: ["schema:MedicalEnumeration".freeze, "schema:PeopleAudience".freeze, "schema:Enumeration".freeze, "schema:Audience".freeze],
       type: "rdfs:Class".freeze
     term :MedicalCause,
       comment: %(The causative agent\(s\) that are responsible for the pathophysiologic process that eventually results in a medical condition, symptom or sign. In this schema, unless otherwise specified this is meant to be the proximate cause of the medical condition, symptom or sign. The proximate cause is defined as the causative agent that most directly results in the medical condition, symptom or sign. For example, the HIV virus could be considered a cause of AIDS. Or in a diagnostic context, if a patient fell and sustained a hip fracture and two days later sustained a pulmonary embolism which eventuated in a cardiac arrest, the cause of the cardiac arrest \(the proximate cause\) would be the pulmonary embolism and not the fall. <p>Medical causes can include cardiovascular, chemical, dermatologic, endocrine, environmental, gastroenterologic, genetic, hematologic, gynecologic, iatrogenic, infectious, musculoskeletal, neurologic, nutritional, obstetric, oncologic, otolaryngologic, pharmacologic, psychiatric, pulmonary, renal, rheumatologic, toxic, traumatic, or urologic causes; medical conditions can be causes as well.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalCause".freeze,
       subClassOf: "schema:MedicalEntity".freeze,
       type: "rdfs:Class".freeze
@@ -1745,43 +1802,43 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :MedicalCode,
       comment: %(A code for a medical entity.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalCode".freeze,
       subClassOf: "schema:MedicalIntangible".freeze,
       type: "rdfs:Class".freeze
     term :MedicalCondition,
       comment: %(Any condition of the human body that affects the normal functioning of a person, whether physically or mentally. Includes diseases, injuries, disabilities, disorders, syndromes, etc.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalCondition".freeze,
       subClassOf: "schema:MedicalEntity".freeze,
       type: "rdfs:Class".freeze
     term :MedicalConditionStage,
       comment: %(A stage of a medical condition, such as 'Stage IIIa'.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalConditionStage".freeze,
       subClassOf: "schema:MedicalIntangible".freeze,
       type: "rdfs:Class".freeze
     term :MedicalContraindication,
       comment: %(A condition or factor that serves as a reason to withhold a certain medical therapy. Contraindications can be absolute \(there are no reasonable circumstances for undertaking a course of action\) or relative \(the patient is at higher risk of complications, but that these risks may be outweighed by other considerations or mitigated by other measures\).).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalContraindication".freeze,
       subClassOf: "schema:MedicalEntity".freeze,
       type: "rdfs:Class".freeze
     term :MedicalDevice,
       comment: %(Any object used in a medical capacity, such as to diagnose or treat a patient.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalDevice".freeze,
       subClassOf: "schema:MedicalEntity".freeze,
       type: "rdfs:Class".freeze
     term :MedicalDevicePurpose,
       comment: %(Categories of medical devices, organized by the purpose or intended use of the device.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalDevicePurpose".freeze,
       subClassOf: ["schema:MedicalEnumeration".freeze, "schema:Enumeration".freeze],
       type: "rdfs:Class".freeze
     term :MedicalEntity,
       comment: %(The most generic type of entity related to health and the practice of medicine.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalEntity".freeze,
       subClassOf: "schema:Thing".freeze,
       type: "rdfs:Class".freeze
@@ -1792,37 +1849,37 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :MedicalEvidenceLevel,
       comment: %(Level of evidence for a medical guideline. Enumerated type.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalEvidenceLevel".freeze,
       subClassOf: ["schema:MedicalEnumeration".freeze, "schema:Enumeration".freeze],
       type: "rdfs:Class".freeze
     term :MedicalGuideline,
       comment: %(Any recommendation made by a standard society \(e.g. ACC/AHA\) or consensus statement that denotes how to diagnose and treat a particular condition. Note: this type should be used to tag the actual guideline recommendation; if the guideline recommendation occurs in a larger scholarly article, use MedicalScholarlyArticle to tag the overall article, not this type. Note also: the organization making the recommendation should be captured in the recognizingAuthority base property of MedicalEntity.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalGuideline".freeze,
       subClassOf: "schema:MedicalEntity".freeze,
       type: "rdfs:Class".freeze
     term :MedicalGuidelineContraindication,
       comment: %(A guideline contraindication that designates a process as harmful and where quality of the data supporting the contraindication is sound.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalGuidelineContraindication".freeze,
       subClassOf: "schema:MedicalGuideline".freeze,
       type: "rdfs:Class".freeze
     term :MedicalGuidelineRecommendation,
       comment: %(A guideline recommendation that is regarded as efficacious and where quality of the data supporting the recommendation is sound.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalGuidelineRecommendation".freeze,
       subClassOf: "schema:MedicalGuideline".freeze,
       type: "rdfs:Class".freeze
     term :MedicalImagingTechnique,
       comment: %(Any medical imaging modality typically used for diagnostic purposes. Enumerated type.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalImagingTechnique".freeze,
       subClassOf: ["schema:MedicalEnumeration".freeze, "schema:Enumeration".freeze],
       type: "rdfs:Class".freeze
     term :MedicalIndication,
       comment: %(A condition or factor that indicates use of a medical therapy, including signs, symptoms, risk factors, anatomical states, etc.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalIndication".freeze,
       subClassOf: "schema:MedicalEntity".freeze,
       type: "rdfs:Class".freeze
@@ -1833,13 +1890,13 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :MedicalObservationalStudy,
       comment: %(An observational study is a type of medical study that attempts to infer the possible effect of a treatment through observation of a cohort of subjects over a period of time. In an observational study, the assignment of subjects into treatment groups versus control groups is outside the control of the investigator. This is in contrast with controlled studies, such as the randomized controlled trials represented by MedicalTrial, where each subject is randomly assigned to a treatment group or a control group before the start of the treatment.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalObservationalStudy".freeze,
       subClassOf: "schema:MedicalStudy".freeze,
       type: "rdfs:Class".freeze
     term :MedicalObservationalStudyDesign,
       comment: %(Design models for observational medical studies. Enumerated type.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalObservationalStudyDesign".freeze,
       subClassOf: ["schema:MedicalEnumeration".freeze, "schema:Enumeration".freeze],
       type: "rdfs:Class".freeze
@@ -1850,37 +1907,37 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :MedicalProcedure,
       comment: %(A process of care used in either a diagnostic, therapeutic, or palliative capacity that relies on invasive \(surgical\), non-invasive, or percutaneous techniques.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalProcedure".freeze,
       subClassOf: "schema:MedicalEntity".freeze,
       type: "rdfs:Class".freeze
     term :MedicalProcedureType,
       comment: %(An enumeration that describes different types of medical procedures.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalProcedureType".freeze,
       subClassOf: ["schema:MedicalEnumeration".freeze, "schema:Enumeration".freeze],
       type: "rdfs:Class".freeze
     term :MedicalRiskCalculator,
       comment: %(A complex mathematical calculation requiring an online calculator, used to assess prognosis. Note: use the url property of Thing to record any URLs for online calculators.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalRiskCalculator".freeze,
       subClassOf: "schema:MedicalRiskEstimator".freeze,
       type: "rdfs:Class".freeze
     term :MedicalRiskEstimator,
       comment: %(Any rule set or interactive tool for estimating the risk of developing a complication or condition.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalRiskEstimator".freeze,
       subClassOf: "schema:MedicalEntity".freeze,
       type: "rdfs:Class".freeze
     term :MedicalRiskFactor,
       comment: %(A risk factor is anything that increases a person's likelihood of developing or contracting a disease, medical condition, or complication.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalRiskFactor".freeze,
       subClassOf: "schema:MedicalEntity".freeze,
       type: "rdfs:Class".freeze
     term :MedicalRiskScore,
       comment: %(A simple system that adds up the number of risk factors to yield a score that is associated with prognosis, e.g. CHAD score, TIMI risk score.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalRiskScore".freeze,
       subClassOf: "schema:MedicalRiskEstimator".freeze,
       type: "rdfs:Class".freeze
@@ -1891,67 +1948,67 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :MedicalSign,
       comment: %(Any physical manifestation of a person's medical condition discoverable by objective diagnostic tests or physical examination.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalSign".freeze,
       subClassOf: "schema:MedicalSignOrSymptom".freeze,
       type: "rdfs:Class".freeze
     term :MedicalSignOrSymptom,
       comment: %(Any indication of the existence of a medical condition or disease.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalSignOrSymptom".freeze,
       subClassOf: "schema:MedicalEntity".freeze,
       type: "rdfs:Class".freeze
     term :MedicalSpecialty,
       comment: %(Any specific branch of medical science or practice. Medical specialities include clinical specialties that pertain to particular organ systems and their respective disease states, as well as allied health specialties. Enumerated type.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalSpecialty".freeze,
       subClassOf: ["schema:MedicalEnumeration".freeze, "schema:Enumeration".freeze, "schema:Specialty".freeze],
       type: "rdfs:Class".freeze
     term :MedicalStudy,
       comment: %(A medical study is an umbrella type covering all kinds of research studies relating to human medicine or health, including observational studies and interventional trials and registries, randomized, controlled or not. When the specific type of study is known, use one of the extensions of this type, such as MedicalTrial or MedicalObservationalStudy. Also, note that this type should be used to mark up data that describes the study itself; to tag an article that publishes the results of a study, use MedicalScholarlyArticle. Note: use the code property of MedicalEntity to store study IDs, e.g. clinicaltrials.gov ID.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalStudy".freeze,
       subClassOf: "schema:MedicalEntity".freeze,
       type: "rdfs:Class".freeze
     term :MedicalStudyStatus,
       comment: %(The status of a medical study. Enumerated type.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalStudyStatus".freeze,
       subClassOf: ["schema:MedicalEnumeration".freeze, "schema:Enumeration".freeze],
       type: "rdfs:Class".freeze
     term :MedicalSymptom,
       comment: %(Any indication of the existence of a medical condition or disease that is apparent to the patient.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalSymptom".freeze,
       subClassOf: "schema:MedicalSignOrSymptom".freeze,
       type: "rdfs:Class".freeze
     term :MedicalTest,
       comment: %(Any medical test, typically performed for diagnostic purposes.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalTest".freeze,
       subClassOf: "schema:MedicalEntity".freeze,
       type: "rdfs:Class".freeze
     term :MedicalTestPanel,
       comment: %(Any collection of tests commonly ordered together.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalTestPanel".freeze,
       subClassOf: "schema:MedicalTest".freeze,
       type: "rdfs:Class".freeze
     term :MedicalTherapy,
       comment: %(Any medical intervention designed to prevent, treat, and cure human diseases and medical conditions, including both curative and palliative therapies. Medical therapies are typically processes of care relying upon pharmacotherapy, behavioral therapy, supportive therapy \(with fluid or nutrition for example\), or detoxification \(e.g. hemodialysis\) aimed at improving or preventing a health condition.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalTherapy".freeze,
       subClassOf: "schema:MedicalEntity".freeze,
       type: "rdfs:Class".freeze
     term :MedicalTrial,
       comment: %(A medical trial is a type of medical study that uses scientific process used to compare the safety and efficacy of medical therapies or medical procedures. In general, medical trials are controlled and subjects are allocated at random to the different treatment and/or control groups.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalTrial".freeze,
       subClassOf: "schema:MedicalStudy".freeze,
       type: "rdfs:Class".freeze
     term :MedicalTrialDesign,
       comment: %(Design models for medical trials. Enumerated type.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "MedicalTrialDesign".freeze,
       subClassOf: ["schema:MedicalEnumeration".freeze, "schema:Enumeration".freeze],
       type: "rdfs:Class".freeze
@@ -2051,7 +2108,7 @@ module RDF::Vocab
       type: "schema:InfectiousAgentClass".freeze
     term :Muscle,
       comment: %(A muscle is an anatomical structure consisting of a contractile form of tissue that animals use to effect movement.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "Muscle".freeze,
       subClassOf: "schema:AnatomicalStructure".freeze,
       type: "rdfs:Class".freeze
@@ -2067,19 +2124,19 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :MusicAlbumProductionType,
       comment: %(Classification of the album by it's type of content: soundtrack, live album, studio album, etc.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "MusicAlbumProductionType".freeze,
       subClassOf: "schema:Enumeration".freeze,
       type: "rdfs:Class".freeze
     term :MusicAlbumReleaseType,
       comment: %(The kind of release which this album is: single, EP or album.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "MusicAlbumReleaseType".freeze,
       subClassOf: "schema:Enumeration".freeze,
       type: "rdfs:Class".freeze
     term :MusicComposition,
       comment: %(A musical composition.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "MusicComposition".freeze,
       subClassOf: "schema:CreativeWork".freeze,
       type: "rdfs:Class".freeze
@@ -2105,13 +2162,13 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :MusicRelease,
       comment: %(A MusicRelease is a specific release of a music album.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "MusicRelease".freeze,
       subClassOf: "schema:MusicPlaylist".freeze,
       type: "rdfs:Class".freeze
     term :MusicReleaseFormatType,
       comment: %(Format of this release \(the type of recording media used, ie. compact disc, digital media, LP, etc.\).).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "MusicReleaseFormatType".freeze,
       subClassOf: "schema:Enumeration".freeze,
       type: "rdfs:Class".freeze
@@ -2142,13 +2199,13 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Nerve,
       comment: %(A common pathway for the electrochemical nerve impulses that are transmitted along each of the axons.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "Nerve".freeze,
       subClassOf: "schema:AnatomicalStructure".freeze,
       type: "rdfs:Class".freeze
     term :NewsArticle,
       comment: %(A news article.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
       label: "NewsArticle".freeze,
       subClassOf: "schema:Article".freeze,
       type: "rdfs:Class".freeze
@@ -2160,12 +2217,12 @@ module RDF::Vocab
     term :Notary,
       comment: %(A notary.).freeze,
       label: "Notary".freeze,
-      subClassOf: "schema:ProfessionalService".freeze,
+      subClassOf: "schema:LegalService".freeze,
       type: "rdfs:Class".freeze
     term :Number,
       comment: %(Data type: Number.).freeze,
       label: "Number".freeze,
-      type: ["rdfs:Class".freeze, "schema:DataType".freeze]
+      type: ["schema:DataType".freeze, "rdfs:Class".freeze]
     term :NutritionInformation,
       comment: %(Nutritional information about the recipe.).freeze,
       label: "NutritionInformation".freeze,
@@ -2183,9 +2240,14 @@ module RDF::Vocab
       <a href="http://www.gs1.org/barcodes/support/check_digit_calculator">Check Digit calculator</a>
       and <a href="http://www.gs1us.org/resources/standards/gtin-validation-guide">validation guide</a>
       from <a href="http://www.gs1.org/">GS1</a>.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsProperties).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsProperties).freeze,
       label: "Offer".freeze,
       subClassOf: "schema:Intangible".freeze,
+      type: "rdfs:Class".freeze
+    term :OfferCatalog,
+      comment: %(An OfferCatalog is an ItemList that contains related Offers and/or further OfferCatalogs that are offeredBy the same provider.).freeze,
+      label: "OfferCatalog".freeze,
+      subClassOf: "schema:ItemList".freeze,
       type: "rdfs:Class".freeze
     term :OfferItemCondition,
       comment: %(A list of possible conditions for the item.).freeze,
@@ -2204,7 +2266,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :OpeningHoursSpecification,
       comment: %(A structured value providing information about the opening hours of a place or a certain service inside a place.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "OpeningHoursSpecification".freeze,
       subClassOf: "schema:StructuredValue".freeze,
       type: "rdfs:Class".freeze
@@ -2255,7 +2317,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :OwnershipInfo,
       comment: %(A structured value providing information about when a certain organization or person owned a certain product.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "OwnershipInfo".freeze,
       subClassOf: "schema:StructuredValue".freeze,
       type: "rdfs:Class".freeze
@@ -2271,9 +2333,9 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :PalliativeProcedure,
       comment: %(A medical procedure intended primarily for palliative purposes, aimed at relieving the symptoms of an underlying health condition.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "PalliativeProcedure".freeze,
-      subClassOf: ["schema:MedicalProcedure".freeze, "schema:MedicalTherapy".freeze],
+      subClassOf: ["schema:MedicalTherapy".freeze, "schema:MedicalProcedure".freeze],
       type: "rdfs:Class".freeze
     term :ParcelDelivery,
       comment: %(The delivery of a parcel either via the postal service or a commercial service.).freeze,
@@ -2289,7 +2351,7 @@ module RDF::Vocab
     http://purl.org/goodrelations/v1#FederalExpress <br />
     http://purl.org/goodrelations/v1#UPS <br />
       ).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "ParcelService".freeze,
       subClassOf: "schema:DeliveryMethod".freeze,
       type: "rdfs:Class".freeze
@@ -2310,7 +2372,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :PathologyTest,
       comment: %(A medical test performed by a laboratory that typically involves examination of a tissue sample by a pathologist.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "PathologyTest".freeze,
       subClassOf: "schema:MedicalTest".freeze,
       type: "rdfs:Class".freeze
@@ -2326,7 +2388,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :PaymentChargeSpecification,
       comment: %(The costs of settling the payment using a particular payment method.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "PaymentChargeSpecification".freeze,
       subClassOf: "schema:PriceSpecification".freeze,
       type: "rdfs:Class".freeze
@@ -2345,7 +2407,7 @@ module RDF::Vocab
     http://purl.org/goodrelations/v1#PayPal <br />
     http://purl.org/goodrelations/v1#PaySwarm <br />
         ).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "PaymentMethod".freeze,
       subClassOf: "schema:Enumeration".freeze,
       type: "rdfs:Class".freeze
@@ -2383,9 +2445,9 @@ module RDF::Vocab
       comment: %(A publication in any medium issued in successive parts bearing numerical or chronological designations and intended, such as a magazine, scholarly journal, or newspaper to continue indefinitely.
 
       <br/><br/>See also <a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog post</a>.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
       label: "Periodical".freeze,
-      "owl:equivalentClass" => %(bibo:Periodical).freeze,
+      :"owl:equivalentClass" => %(bibo:Periodical).freeze,
       subClassOf: "schema:CreativeWorkSeries".freeze,
       type: "rdfs:Class".freeze
     term :Permit,
@@ -2395,9 +2457,9 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Person,
       comment: %(A person \(alive, dead, undead, or fictional\).).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
       label: "Person".freeze,
-      "owl:equivalentClass" => %(foaf:Person).freeze,
+      :"owl:equivalentClass" => %(foaf:Person).freeze,
       subClassOf: "schema:Thing".freeze,
       type: "rdfs:Class".freeze
     term :PetStore,
@@ -2422,25 +2484,25 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :PhysicalActivity,
       comment: %(Any bodily activity that enhances or maintains physical fitness and overall health and wellness. Includes activity that is part of daily living and routine, structured exercise, and exercise prescribed as part of a medical treatment or recovery plan.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "PhysicalActivity".freeze,
       subClassOf: "schema:LifestyleModification".freeze,
       type: "rdfs:Class".freeze
     term :PhysicalActivityCategory,
       comment: %(Categories of physical activity, organized by physiologic classification.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "PhysicalActivityCategory".freeze,
       subClassOf: ["schema:MedicalEnumeration".freeze, "schema:Enumeration".freeze],
       type: "rdfs:Class".freeze
     term :PhysicalExam,
       comment: %(A type of physical examination of a patient performed by a physician. Enumerated type.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "PhysicalExam".freeze,
       subClassOf: ["schema:MedicalEnumeration".freeze, "schema:Enumeration".freeze],
       type: "rdfs:Class".freeze
     term :PhysicalTherapy,
       comment: %(A process of progressive physical care and rehabilitation aimed at improving a health condition.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "PhysicalTherapy".freeze,
       subClassOf: "schema:MedicalTherapy".freeze,
       type: "rdfs:Class".freeze
@@ -2477,12 +2539,12 @@ module RDF::Vocab
     term :Plumber,
       comment: %(A plumbing service.).freeze,
       label: "Plumber".freeze,
-      subClassOf: ["schema:HomeAndConstructionBusiness".freeze, "schema:ProfessionalService".freeze],
+      subClassOf: "schema:HomeAndConstructionBusiness".freeze,
       type: "rdfs:Class".freeze
     term :PoliceStation,
       comment: %(A police station.).freeze,
       label: "PoliceStation".freeze,
-      subClassOf: ["schema:CivicStructure".freeze, "schema:EmergencyService".freeze],
+      subClassOf: ["schema:EmergencyService".freeze, "schema:CivicStructure".freeze],
       type: "rdfs:Class".freeze
     term :Pond,
       comment: %(A pond.).freeze,
@@ -2511,13 +2573,13 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :PreventionIndication,
       comment: %(An indication for preventing an underlying condition, symptom, etc.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "PreventionIndication".freeze,
       subClassOf: "schema:MedicalIndication".freeze,
       type: "rdfs:Class".freeze
     term :PriceSpecification,
       comment: %(A structured value representing a monetary amount. Typically, only the subclasses of this type are used for markup.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "PriceSpecification".freeze,
       subClassOf: "schema:StructuredValue".freeze,
       type: "rdfs:Class".freeze
@@ -2527,18 +2589,36 @@ module RDF::Vocab
       type: "schema:InfectiousAgentClass".freeze
     term :Product,
       comment: %(Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsProperties).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsProperties).freeze,
       label: "Product".freeze,
       subClassOf: "schema:Thing".freeze,
       type: "rdfs:Class".freeze
     term :ProductModel,
       comment: %(A datasheet or vendor specification of a product \(in the sense of a prototypical description\).).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "ProductModel".freeze,
       subClassOf: "schema:Product".freeze,
       type: "rdfs:Class".freeze
     term :ProfessionalService,
-      comment: %(Provider of professional services.).freeze,
+      comment: %(Original definition: "provider of professional services."
+        <br><br>
+        The general <a href="/ProfessionalService">ProfessionalService</a> type
+        for local businesses was deprecated due to confusion with <a href="/Service">Service</a>.
+        For reference, the types that it included were: <a href="/Dentist">Dentist</a>,
+        <a href="/AccountingService">AccountingService</a>,
+        <a href="/Attorney">Attorney</a>,
+        <a href="/Notary">Notary</a>, as well as types for several kinds of
+        <a href="/HomeAndConstructionBusiness">HomeAndConstructionBusiness</a>:
+        <a href="/Electrician">Electrician</a>,
+        <a href="/GeneralContractor">GeneralContractor</a>,
+        <a href="/HousePainter">HousePainter</a>,
+        <a href="/Locksmith">Locksmith</a>,
+        <a href="/Plumber">Plumber</a>,
+        <a href="/Plumber">RoofingContractor</a>.
+        <a href="/LegalService">LegalService</a> was introduced as a more
+        inclusive supertype of <a href="/Attorney">Attorney</a>.
+
+      ).freeze,
       label: "ProfessionalService".freeze,
       subClassOf: "schema:LocalBusiness".freeze,
       type: "rdfs:Class".freeze
@@ -2562,13 +2642,13 @@ module RDF::Vocab
         <br/><br/>
         Always use specific schema.org properties when a\) they exist and b\) you can populate them. Using PropertyValue as a substitute will typically not trigger the same effect as using the original, specific property.
     ).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "PropertyValue".freeze,
       subClassOf: "schema:StructuredValue".freeze,
       type: "rdfs:Class".freeze
     term :PropertyValueSpecification,
       comment: %(A Property value specification.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_ActionCollabClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_ActionCollabClass).freeze,
       label: "PropertyValueSpecification".freeze,
       subClassOf: "schema:Intangible".freeze,
       type: "rdfs:Class".freeze
@@ -2578,7 +2658,7 @@ module RDF::Vocab
       type: "schema:InfectiousAgentClass".freeze
     term :PsychologicalTreatment,
       comment: %(A process of care relying upon counseling, dialogue, communication, verbalization aimed at improving a mental health condition.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "PsychologicalTreatment".freeze,
       subClassOf: "schema:MedicalTherapy".freeze,
       type: "rdfs:Class".freeze
@@ -2596,16 +2676,16 @@ module RDF::Vocab
       comment: %(A part of a successively published publication such as a periodical or publication volume, often numbered, usually containing a grouping of works such as articles.
 
       <br/><br/>See also <a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog post</a>.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
       label: "PublicationIssue".freeze,
-      "owl:equivalentClass" => %(bibo:Issue).freeze,
+      :"owl:equivalentClass" => %(bibo:Issue).freeze,
       subClassOf: "schema:CreativeWork".freeze,
       type: "rdfs:Class".freeze
     term :PublicationVolume,
       comment: %(A part of a successively published publication such as a periodical or multi-volume work, often numbered. It may represent a time span, such as a year.
 
       <br/><br/>See also <a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog post</a>.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
       label: "PublicationVolume".freeze,
       subClassOf: "schema:CreativeWork".freeze,
       type: "rdfs:Class".freeze
@@ -2616,13 +2696,13 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :QualitativeValue,
       comment: %(A predefined value for a product characteristic, e.g. the power cord plug type "US" or the garment sizes "S", "M", "L", and "XL".).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "QualitativeValue".freeze,
       subClassOf: "schema:Enumeration".freeze,
       type: "rdfs:Class".freeze
     term :QuantitativeValue,
       comment: %( A point value or interval for product characteristics and other purposes.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "QuantitativeValue".freeze,
       subClassOf: "schema:StructuredValue".freeze,
       type: "rdfs:Class".freeze
@@ -2633,7 +2713,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Question,
       comment: %(A specific question - e.g. from a user seeking answers online, or collected in a Frequently Asked Questions \(FAQ\) document.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_QAStackExchange).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_QAStackExchange).freeze,
       label: "Question".freeze,
       subClassOf: "schema:CreativeWork".freeze,
       type: "rdfs:Class".freeze
@@ -2649,7 +2729,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :RadiationTherapy,
       comment: %(A process of care using radiation aimed at improving a health condition.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "RadiationTherapy".freeze,
       subClassOf: "schema:MedicalTherapy".freeze,
       type: "rdfs:Class".freeze
@@ -2833,7 +2913,7 @@ module RDF::Vocab
     term :RoofingContractor,
       comment: %(A roofing contractor.).freeze,
       label: "RoofingContractor".freeze,
-      subClassOf: ["schema:HomeAndConstructionBusiness".freeze, "schema:ProfessionalService".freeze],
+      subClassOf: "schema:HomeAndConstructionBusiness".freeze,
       type: "rdfs:Class".freeze
     term :RsvpAction,
       comment: %(The act of notifying an event organizer as to whether you expect to attend the event.).freeze,
@@ -2893,7 +2973,7 @@ module RDF::Vocab
     term :Season,
       comment: %(A media season e.g. tv, radio, video game etc.).freeze,
       label: "Season".freeze,
-      "schema:supersededBy" => %(schema:CreativeWorkSeason).freeze,
+      :"schema:supersededBy" => %(schema:CreativeWorkSeason).freeze,
       subClassOf: "schema:CreativeWork".freeze,
       type: "rdfs:Class".freeze
     term :Seat,
@@ -2920,7 +3000,7 @@ module RDF::Vocab
       comment: %(
           A Series in schema.org is a group of related items, typically but not necessarily of the same kind. ).freeze,
       label: "Series".freeze,
-      "schema:supersededBy" => %(schema:CreativeWorkSeries).freeze,
+      :"schema:supersededBy" => %(schema:CreativeWorkSeries).freeze,
       subClassOf: "schema:CreativeWork".freeze,
       type: "rdfs:Class".freeze
     term :Service,
@@ -2985,7 +3065,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :SomeProducts,
       comment: %(A placeholder for multiple similar products of the same kind.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "SomeProducts".freeze,
       subClassOf: "schema:Product".freeze,
       type: "rdfs:Class".freeze
@@ -3036,7 +3116,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :SteeringPositionValue,
       comment: %(A value indicating a steering position.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "SteeringPositionValue".freeze,
       subClassOf: "schema:QualitativeValue".freeze,
       type: "rdfs:Class".freeze
@@ -3062,7 +3142,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :SuperficialAnatomy,
       comment: %(Anatomical features that can be observed by sight \(without dissection\), including the form and proportions of the human body as well as surface landmarks that correspond to deeper subcutaneous structures. Superficial anatomy plays an important role in sports medicine, phlebotomy, and other medical specialties as underlying anatomical structures can be identified through surface palpation. For example, during back surgery, superficial anatomy can be used to palpate and count vertebrae to find the site of incision. Or in phlebotomy, superficial anatomy can be used to locate an underlying vein; for example, the median cubital vein can be located by palpating the borders of the cubital fossa \(such as the epicondyles of the humerus\) and then looking for the superficial signs of the vein, such as size, prominence, ability to refill after depression, and feel of surrounding tissue support. As another example, in a subluxation \(dislocation\) of the glenohumeral joint, the bony structure becomes pronounced with the deltoid muscle failing to cover the glenohumeral joint allowing the edges of the scapula to be superficially visible. Here, the superficial anatomy is the visible edges of the scapula, implying the underlying dislocation of the joint \(the related anatomical structure\).).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "SuperficialAnatomy".freeze,
       subClassOf: "schema:MedicalEntity".freeze,
       type: "rdfs:Class".freeze
@@ -3089,7 +3169,7 @@ module RDF::Vocab
     term :TVSeason,
       comment: %(Season dedicated to TV broadcast and associated online delivery.).freeze,
       label: "TVSeason".freeze,
-      subClassOf: ["schema:CreativeWork".freeze, "schema:CreativeWorkSeason".freeze],
+      subClassOf: ["schema:CreativeWorkSeason".freeze, "schema:CreativeWork".freeze],
       type: "rdfs:Class".freeze
     term :TVSeries,
       comment: %(CreativeWorkSeries dedicated to TV broadcast and associated online delivery.).freeze,
@@ -3114,7 +3194,7 @@ module RDF::Vocab
     term :Taxi,
       comment: %(A taxi.).freeze,
       label: "Taxi".freeze,
-      "schema:supersededBy" => %(schema:TaxiService).freeze,
+      :"schema:supersededBy" => %(schema:TaxiService).freeze,
       subClassOf: "schema:Service".freeze,
       type: "rdfs:Class".freeze
     term :TaxiReservation,
@@ -3155,7 +3235,7 @@ module RDF::Vocab
     term :Text,
       comment: %(Data type: Text.).freeze,
       label: "Text".freeze,
-      type: ["rdfs:Class".freeze, "schema:DataType".freeze]
+      type: ["schema:DataType".freeze, "rdfs:Class".freeze]
     term :TheaterEvent,
       comment: %(Event type: Theater performance.).freeze,
       label: "TheaterEvent".freeze,
@@ -3168,9 +3248,9 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :TherapeuticProcedure,
       comment: %(A medical procedure intended primarily for therapeutic purposes, aimed at improving a health condition.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "TherapeuticProcedure".freeze,
-      subClassOf: ["schema:MedicalProcedure".freeze, "schema:MedicalTherapy".freeze],
+      subClassOf: ["schema:MedicalTherapy".freeze, "schema:MedicalProcedure".freeze],
       type: "rdfs:Class".freeze
     term :Thing,
       comment: %(The most generic type of item.).freeze,
@@ -3189,7 +3269,7 @@ module RDF::Vocab
     term :Time,
       comment: %(A point in time recurring on multiple days in the form hh:mm:ss[Z|\(+|-\)hh:mm] \(see <a href="http://www.w3.org/TR/xmlschema-2/#time">XML schema for details</a>\).).freeze,
       label: "Time".freeze,
-      type: ["rdfs:Class".freeze, "schema:DataType".freeze]
+      type: ["schema:DataType".freeze, "rdfs:Class".freeze]
     term :TipAction,
       comment: %(The act of giving money voluntarily to a beneficiary in recognition of services rendered.).freeze,
       label: "TipAction".freeze,
@@ -3257,13 +3337,13 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :TreatmentIndication,
       comment: %(An indication for treating an underlying condition, symptom, etc.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "TreatmentIndication".freeze,
       subClassOf: "schema:MedicalIndication".freeze,
       type: "rdfs:Class".freeze
     term :TypeAndQuantityNode,
       comment: %(A structured value indicating the quantity, unit of measurement, and business function of goods included in a bundle offer.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "TypeAndQuantityNode".freeze,
       subClassOf: "schema:StructuredValue".freeze,
       type: "rdfs:Class".freeze
@@ -3279,7 +3359,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :UnitPriceSpecification,
       comment: %(The price asked for a given offer by the respective organization or person.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "UnitPriceSpecification".freeze,
       subClassOf: "schema:PriceSpecification".freeze,
       type: "rdfs:Class".freeze
@@ -3298,7 +3378,7 @@ module RDF::Vocab
           <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.
       ).freeze,
       label: "UserBlocks".freeze,
-      "schema:supersededBy" => %(schema:InteractionCounter).freeze,
+      :"schema:supersededBy" => %(schema:InteractionCounter).freeze,
       subClassOf: "schema:UserInteraction".freeze,
       type: "rdfs:Class".freeze
     term :UserCheckins,
@@ -3306,16 +3386,16 @@ module RDF::Vocab
           <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.
       ).freeze,
       label: "UserCheckins".freeze,
-      "schema:supersededBy" => %(schema:InteractionCounter).freeze,
+      :"schema:supersededBy" => %(schema:InteractionCounter).freeze,
       subClassOf: "schema:UserInteraction".freeze,
       type: "rdfs:Class".freeze
     term :UserComments,
       comment: %(UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use
           <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.
       ).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
       label: "UserComments".freeze,
-      "schema:supersededBy" => %(schema:InteractionCounter).freeze,
+      :"schema:supersededBy" => %(schema:InteractionCounter).freeze,
       subClassOf: "schema:UserInteraction".freeze,
       type: "rdfs:Class".freeze
     term :UserDownloads,
@@ -3323,7 +3403,7 @@ module RDF::Vocab
           <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.
       ).freeze,
       label: "UserDownloads".freeze,
-      "schema:supersededBy" => %(schema:InteractionCounter).freeze,
+      :"schema:supersededBy" => %(schema:InteractionCounter).freeze,
       subClassOf: "schema:UserInteraction".freeze,
       type: "rdfs:Class".freeze
     term :UserInteraction,
@@ -3331,7 +3411,7 @@ module RDF::Vocab
           <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.
       ).freeze,
       label: "UserInteraction".freeze,
-      "schema:supersededBy" => %(schema:InteractionCounter).freeze,
+      :"schema:supersededBy" => %(schema:InteractionCounter).freeze,
       subClassOf: "schema:Event".freeze,
       type: "rdfs:Class".freeze
     term :UserLikes,
@@ -3339,7 +3419,7 @@ module RDF::Vocab
           <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.
       ).freeze,
       label: "UserLikes".freeze,
-      "schema:supersededBy" => %(schema:InteractionCounter).freeze,
+      :"schema:supersededBy" => %(schema:InteractionCounter).freeze,
       subClassOf: "schema:UserInteraction".freeze,
       type: "rdfs:Class".freeze
     term :UserPageVisits,
@@ -3347,7 +3427,7 @@ module RDF::Vocab
           <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.
       ).freeze,
       label: "UserPageVisits".freeze,
-      "schema:supersededBy" => %(schema:InteractionCounter).freeze,
+      :"schema:supersededBy" => %(schema:InteractionCounter).freeze,
       subClassOf: "schema:UserInteraction".freeze,
       type: "rdfs:Class".freeze
     term :UserPlays,
@@ -3355,7 +3435,7 @@ module RDF::Vocab
           <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.
       ).freeze,
       label: "UserPlays".freeze,
-      "schema:supersededBy" => %(schema:InteractionCounter).freeze,
+      :"schema:supersededBy" => %(schema:InteractionCounter).freeze,
       subClassOf: "schema:UserInteraction".freeze,
       type: "rdfs:Class".freeze
     term :UserPlusOnes,
@@ -3363,7 +3443,7 @@ module RDF::Vocab
           <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.
       ).freeze,
       label: "UserPlusOnes".freeze,
-      "schema:supersededBy" => %(schema:InteractionCounter).freeze,
+      :"schema:supersededBy" => %(schema:InteractionCounter).freeze,
       subClassOf: "schema:UserInteraction".freeze,
       type: "rdfs:Class".freeze
     term :UserTweets,
@@ -3371,7 +3451,7 @@ module RDF::Vocab
           <a href="/Action">Action</a>-based vocabulary, alongside types such as <a href="/Comment">Comment</a>.
       ).freeze,
       label: "UserTweets".freeze,
-      "schema:supersededBy" => %(schema:InteractionCounter).freeze,
+      :"schema:supersededBy" => %(schema:InteractionCounter).freeze,
       subClassOf: "schema:UserInteraction".freeze,
       type: "rdfs:Class".freeze
     term :Vehicle,
@@ -3381,13 +3461,13 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Vein,
       comment: %(A type of blood vessel that specifically carries blood to the heart.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "Vein".freeze,
       subClassOf: "schema:Vessel".freeze,
       type: "rdfs:Class".freeze
     term :Vessel,
       comment: %(A component of the human body circulatory system comprised of an intricate network of hollow tubes that transport blood throughout the entire body.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
       label: "Vessel".freeze,
       subClassOf: "schema:AnatomicalStructure".freeze,
       type: "rdfs:Class".freeze
@@ -3404,7 +3484,7 @@ module RDF::Vocab
     term :VideoGame,
       comment: %(A video game is an electronic game that involves human interaction with a user interface to generate visual feedback on a video device.).freeze,
       label: "VideoGame".freeze,
-      subClassOf: ["schema:SoftwareApplication".freeze, "schema:Game".freeze],
+      subClassOf: ["schema:Game".freeze, "schema:SoftwareApplication".freeze],
       type: "rdfs:Class".freeze
     term :VideoGameClip,
       comment: %(A short segment/part of a video game.).freeze,
@@ -3418,7 +3498,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :VideoObject,
       comment: %(A video file.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
       label: "VideoObject".freeze,
       subClassOf: "schema:MediaObject".freeze,
       type: "rdfs:Class".freeze
@@ -3438,7 +3518,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :VisualArtwork,
       comment: %(A work of art that is primarily visual in character.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_VisualArtworkClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_VisualArtworkClass).freeze,
       label: "VisualArtwork".freeze,
       subClassOf: "schema:CreativeWork".freeze,
       type: "rdfs:Class".freeze
@@ -3479,7 +3559,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :WarrantyPromise,
       comment: %(A structured value representing the duration and scope of services that will be provided to a customer free of charge in case of a defect or malfunction of a product.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "WarrantyPromise".freeze,
       subClassOf: "schema:StructuredValue".freeze,
       type: "rdfs:Class".freeze
@@ -3492,7 +3572,7 @@ module RDF::Vocab
     http://purl.org/goodrelations/v1#PartsAndLabor-BringIn <br />
     http://purl.org/goodrelations/v1#PartsAndLabor-PickUp <br />
       ).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "WarrantyScope".freeze,
       subClassOf: "schema:Enumeration".freeze,
       type: "rdfs:Class".freeze
@@ -3587,7 +3667,7 @@ module RDF::Vocab
       comment: %(Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, a URL at which reservations can be made or \(for backwards compatibility\) the strings <code>Yes</code> or <code>No</code>.).freeze,
       domainIncludes: "schema:FoodEstablishment".freeze,
       label: "acceptsReservations".freeze,
-      rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze, "schema:Boolean".freeze],
+      rangeIncludes: ["schema:Boolean".freeze, "schema:Text".freeze, "schema:URL".freeze],
       type: "rdf:Property".freeze
     property :accessCode,
       comment: %(Password, PIN, or access code needed for delivery \(e.g. from a locker\).).freeze,
@@ -3635,14 +3715,14 @@ module RDF::Vocab
       comment: %(The organization or person from which the product was acquired.).freeze,
       domainIncludes: "schema:OwnershipInfo".freeze,
       label: "acquiredFrom".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
     property :action,
       comment: %(The movement the muscle generates.).freeze,
       domainIncludes: "schema:Muscle".freeze,
       label: "action".freeze,
       rangeIncludes: "schema:Text".freeze,
-      "schema:supersededBy" => %(schema:muscleAction).freeze,
+      :"schema:supersededBy" => %(schema:muscleAction).freeze,
       type: "rdf:Property".freeze
     property :actionApplication,
       comment: %(An application that can complete the request.).freeze,
@@ -3654,8 +3734,14 @@ module RDF::Vocab
       comment: %(A sub property of object. The options subject to this action.).freeze,
       domainIncludes: "schema:ChooseAction".freeze,
       label: "actionOption".freeze,
-      rangeIncludes: ["schema:Text".freeze, "schema:Thing".freeze],
+      rangeIncludes: ["schema:Thing".freeze, "schema:Text".freeze],
       subPropertyOf: "schema:object".freeze,
+      type: "rdf:Property".freeze
+    property :actionPlatform,
+      comment: %(The high level platform\(s\) where the Action can be performed for the given URL. To specify a specific application or operating system instance, use actionApplication.).freeze,
+      domainIncludes: "schema:EntryPoint".freeze,
+      label: "actionPlatform".freeze,
+      rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
       type: "rdf:Property".freeze
     property :actionStatus,
       comment: %(Indicates the current disposition of the Action.).freeze,
@@ -3665,7 +3751,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :activeIngredient,
       comment: %(An active ingredient, typically chemical compounds and/or biologic substances.).freeze,
-      domainIncludes: ["schema:DietarySupplement".freeze, "schema:Drug".freeze, "schema:DrugStrength".freeze],
+      domainIncludes: ["schema:DrugStrength".freeze, "schema:DietarySupplement".freeze, "schema:Drug".freeze],
       label: "activeIngredient".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
@@ -3683,16 +3769,16 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :actor,
       comment: %(An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.).freeze,
-      domainIncludes: ["schema:Movie".freeze, "schema:VideoObject".freeze, "schema:VideoGame".freeze, "schema:Episode".freeze, "schema:CreativeWorkSeason".freeze, "schema:RadioSeries".freeze, "schema:MovieSeries".freeze, "schema:VideoGameSeries".freeze, "schema:TVSeries".freeze, "schema:Clip".freeze],
+      domainIncludes: ["schema:VideoObject".freeze, "schema:CreativeWorkSeason".freeze, "schema:TVSeries".freeze, "schema:MovieSeries".freeze, "schema:Movie".freeze, "schema:Episode".freeze, "schema:VideoGame".freeze, "schema:VideoGameSeries".freeze, "schema:RadioSeries".freeze, "schema:Clip".freeze],
       label: "actor".freeze,
       rangeIncludes: "schema:Person".freeze,
       type: "rdf:Property".freeze
     property :actors,
       comment: %(An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.).freeze,
-      domainIncludes: ["schema:Movie".freeze, "schema:VideoObject".freeze, "schema:VideoGame".freeze, "schema:Episode".freeze, "schema:RadioSeries".freeze, "schema:MovieSeries".freeze, "schema:VideoGameSeries".freeze, "schema:TVSeries".freeze, "schema:Clip".freeze],
+      domainIncludes: ["schema:VideoObject".freeze, "schema:RadioSeries".freeze, "schema:TVSeries".freeze, "schema:MovieSeries".freeze, "schema:Movie".freeze, "schema:Episode".freeze, "schema:VideoGame".freeze, "schema:VideoGameSeries".freeze, "schema:Clip".freeze],
       label: "actors".freeze,
       rangeIncludes: "schema:Person".freeze,
-      "schema:supersededBy" => %(schema:actor).freeze,
+      :"schema:supersededBy" => %(schema:actor).freeze,
       type: "rdf:Property".freeze
     property :addOn,
       comment: %(An additional offer that can only be obtained in combination with the first base offer \(e.g. supplements and extensions that are available for a surcharge\).).freeze,
@@ -3717,7 +3803,7 @@ module RDF::Vocab
 
 Note: Publishers should be aware that applications designed to use specific schema.org properties \(e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...\) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
 ).freeze,
-      domainIncludes: ["schema:Product".freeze, "schema:Place".freeze, "schema:QualitativeValue".freeze, "schema:QuantitativeValue".freeze],
+      domainIncludes: ["schema:Place".freeze, "schema:QualitativeValue".freeze, "schema:QuantitativeValue".freeze, "schema:Product".freeze],
       label: "additionalProperty".freeze,
       rangeIncludes: "schema:PropertyValue".freeze,
       type: "rdf:Property".freeze
@@ -3736,15 +3822,15 @@ Note: Publishers should be aware that applications designed to use specific sche
       type: "rdf:Property".freeze
     property :address,
       comment: %(Physical address of the item.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Place".freeze, "schema:Person".freeze],
+      domainIncludes: ["schema:Place".freeze, "schema:Person".freeze, "schema:GeoCoordinates".freeze, "schema:GeoShape".freeze, "schema:Organization".freeze],
       label: "address".freeze,
-      rangeIncludes: "schema:PostalAddress".freeze,
+      rangeIncludes: ["schema:Text".freeze, "schema:PostalAddress".freeze],
       type: "rdf:Property".freeze
     property :addressCountry,
       comment: %(The country. For example, USA. You can also provide the two-letter <a href='http://en.wikipedia.org/wiki/ISO_3166-1'>ISO 3166-1 alpha-2 country code</a>.).freeze,
-      domainIncludes: "schema:PostalAddress".freeze,
+      domainIncludes: ["schema:PostalAddress".freeze, "schema:GeoCoordinates".freeze, "schema:GeoShape".freeze],
       label: "addressCountry".freeze,
-      rangeIncludes: "schema:Country".freeze,
+      rangeIncludes: ["schema:Text".freeze, "schema:Country".freeze],
       type: "rdf:Property".freeze
     property :addressLocality,
       comment: %(The locality. For example, Mountain View.).freeze,
@@ -3772,7 +3858,7 @@ Note: Publishers should be aware that applications designed to use specific sche
       type: "rdf:Property".freeze
     property :adverseOutcome,
       comment: %(A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious \(resulting in death, disability, or permanent damage; requiring hospitalization; or is otherwise life-threatening or requires immediate medical attention\), tag it as a seriouseAdverseOutcome instead.).freeze,
-      domainIncludes: ["schema:MedicalTherapy".freeze, "schema:MedicalDevice".freeze],
+      domainIncludes: ["schema:MedicalDevice".freeze, "schema:MedicalTherapy".freeze],
       label: "adverseOutcome".freeze,
       rangeIncludes: "schema:MedicalEntity".freeze,
       type: "rdf:Property".freeze
@@ -3793,11 +3879,11 @@ Note: Publishers should be aware that applications designed to use specific sche
       comment: %(The direct performer or driver of the action \(animate or inanimate\). e.g. *John* wrote a book.).freeze,
       domainIncludes: "schema:Action".freeze,
       label: "agent".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
     property :aggregateRating,
       comment: %(The overall rating, based on a collection of reviews or ratings, of the item.).freeze,
-      domainIncludes: ["schema:CreativeWork".freeze, "schema:Event".freeze, "schema:Brand".freeze, "schema:Service".freeze, "schema:Organization".freeze, "schema:Place".freeze, "schema:Offer".freeze, "schema:Product".freeze],
+      domainIncludes: ["schema:Place".freeze, "schema:Brand".freeze, "schema:CreativeWork".freeze, "schema:Event".freeze, "schema:Service".freeze, "schema:Product".freeze, "schema:Organization".freeze, "schema:Offer".freeze],
       label: "aggregateRating".freeze,
       rangeIncludes: "schema:AggregateRating".freeze,
       type: "rdf:Property".freeze
@@ -3815,7 +3901,7 @@ Note: Publishers should be aware that applications designed to use specific sche
       type: "rdf:Property".freeze
     property :albumProductionType,
       comment: %(Classification of the album by it's type of content: soundtrack, live album, studio album, etc.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicAlbum".freeze,
       label: "albumProductionType".freeze,
       rangeIncludes: "schema:MusicAlbumProductionType".freeze,
@@ -3829,7 +3915,7 @@ Note: Publishers should be aware that applications designed to use specific sche
       type: "rdf:Property".freeze
     property :albumReleaseType,
       comment: %(The kind of release which this album is: single, EP or album.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicAlbum".freeze,
       label: "albumReleaseType".freeze,
       rangeIncludes: "schema:MusicAlbumReleaseType".freeze,
@@ -3839,7 +3925,7 @@ Note: Publishers should be aware that applications designed to use specific sche
       domainIncludes: "schema:MusicGroup".freeze,
       label: "albums".freeze,
       rangeIncludes: "schema:MusicAlbum".freeze,
-      "schema:supersededBy" => %(schema:album).freeze,
+      :"schema:supersededBy" => %(schema:album).freeze,
       type: "rdf:Property".freeze
     property :alcoholWarning,
       comment: %(Any precaution, guidance, contraindication, etc. related to consumption of alcohol while taking this drug.).freeze,
@@ -3872,18 +3958,18 @@ Note: Publishers should be aware that applications designed to use specific sche
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :alumni,
-      comment: %(Alumni of educational organization.).freeze,
-      domainIncludes: "schema:EducationalOrganization".freeze,
+      comment: %(Alumni of an organization.).freeze,
+      domainIncludes: ["schema:EducationalOrganization".freeze, "schema:Organization".freeze],
       inverseOf: "schema:alumniOf".freeze,
       label: "alumni".freeze,
       rangeIncludes: "schema:Person".freeze,
       type: "rdf:Property".freeze
     property :alumniOf,
-      comment: %(An educational organizations that the person is an alumni of.).freeze,
+      comment: %(An organization that the person is an alumni of.).freeze,
       domainIncludes: "schema:Person".freeze,
       inverseOf: "schema:alumni".freeze,
       label: "alumniOf".freeze,
-      rangeIncludes: "schema:EducationalOrganization".freeze,
+      rangeIncludes: ["schema:EducationalOrganization".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
     property :amount,
       comment: %(The amount of money.).freeze,
@@ -3920,7 +4006,7 @@ Note: Publishers should be aware that applications designed to use specific sche
       domainIncludes: "schema:EntryPoint".freeze,
       label: "application".freeze,
       rangeIncludes: "schema:SoftwareApplication".freeze,
-      "schema:supersededBy" => %(schema:actionApplication).freeze,
+      :"schema:supersededBy" => %(schema:actionApplication).freeze,
       type: "rdf:Property".freeze
     property :applicationCategory,
       comment: %(Type of software application, e.g. "Game, Multimedia".).freeze,
@@ -3957,13 +4043,13 @@ Note: Publishers should be aware that applications designed to use specific sche
       domainIncludes: "schema:BroadcastService".freeze,
       label: "area".freeze,
       rangeIncludes: "schema:Place".freeze,
-      "schema:supersededBy" => %(schema:serviceArea).freeze,
+      :"schema:supersededBy" => %(schema:serviceArea).freeze,
       type: "rdf:Property".freeze
     property :areaServed,
-      comment: %(The location served by this contact point \(e.g., a phone number intended for Europeans vs. North Americans or only within the United States\).).freeze,
-      domainIncludes: "schema:ContactPoint".freeze,
+      comment: %(The geographic area where a service or offered item is provided.).freeze,
+      domainIncludes: ["schema:Offer".freeze, "schema:DeliveryChargeSpecification".freeze, "schema:ContactPoint".freeze, "schema:Service".freeze, "schema:Demand".freeze, "schema:Organization".freeze],
       label: "areaServed".freeze,
-      rangeIncludes: "schema:AdministrativeArea".freeze,
+      rangeIncludes: ["schema:Place".freeze, "schema:Text".freeze, "schema:AdministrativeArea".freeze, "schema:GeoShape".freeze],
       type: "rdf:Property".freeze
     property :arrivalAirport,
       comment: %(The airport where the flight terminates.).freeze,
@@ -4011,7 +4097,7 @@ Note: Publishers should be aware that applications designed to use specific sche
       comment: %(The number of copies when multiple copies of a piece of artwork are produced - e.g. for a limited edition of 20 prints, 'artEdition' refers to the total number of copies \(in this example "20"\).).freeze,
       domainIncludes: "schema:VisualArtwork".freeze,
       label: "artEdition".freeze,
-      rangeIncludes: ["schema:Text".freeze, "schema:Integer".freeze],
+      rangeIncludes: ["schema:Integer".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
     property :artMedium,
       comment: %(The material used. \(e.g. Oil, Watercolour, Acrylic, Linoprint, Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil, Mixed Media, etc.\)).freeze,
@@ -4060,7 +4146,7 @@ Note: Publishers should be aware that applications designed to use specific sche
       domainIncludes: "schema:APIReference".freeze,
       label: "assembly".freeze,
       rangeIncludes: "schema:Text".freeze,
-      "schema:supersededBy" => %(schema:executableLibraryName).freeze,
+      :"schema:supersededBy" => %(schema:executableLibraryName).freeze,
       type: "rdf:Property".freeze
     property :assemblyVersion,
       comment: %(Associated product/technology version. e.g., .NET Framework 4.5.).freeze,
@@ -4102,18 +4188,18 @@ Note: Publishers should be aware that applications designed to use specific sche
       comment: %(A person or organization attending the event.).freeze,
       domainIncludes: "schema:Event".freeze,
       label: "attendee".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
     property :attendees,
       comment: %(A person attending the event.).freeze,
       domainIncludes: "schema:Event".freeze,
       label: "attendees".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
-      "schema:supersededBy" => %(schema:attendee).freeze,
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
+      :"schema:supersededBy" => %(schema:attendee).freeze,
       type: "rdf:Property".freeze
     property :audience,
       comment: %(An intended audience, i.e. a group for whom something was created.).freeze,
-      domainIncludes: ["schema:CreativeWork".freeze, "schema:Product".freeze, "schema:PlayAction".freeze],
+      domainIncludes: ["schema:PlayAction".freeze, "schema:CreativeWork".freeze, "schema:Product".freeze],
       label: "audience".freeze,
       rangeIncludes: "schema:Audience".freeze,
       type: "rdf:Property".freeze
@@ -4133,7 +4219,7 @@ Note: Publishers should be aware that applications designed to use specific sche
       comment: %(The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       label: "author".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
     property :availability,
       comment: %(The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.).freeze,
@@ -4158,6 +4244,7 @@ Note: Publishers should be aware that applications designed to use specific sche
       domainIncludes: ["schema:Offer".freeze, "schema:Demand".freeze],
       label: "availableAtOrFrom".freeze,
       rangeIncludes: "schema:Place".freeze,
+      subPropertyOf: "schema:areaServed".freeze,
       type: "rdf:Property".freeze
     property :availableChannel,
       comment: %(A means of accessing the service \(e.g. a phone bank, a web site, a location, etc.\).).freeze,
@@ -4197,9 +4284,9 @@ Note: Publishers should be aware that applications designed to use specific sche
       type: "rdf:Property".freeze
     property :availableService,
       comment: %(A medical service available from this provider.).freeze,
-      domainIncludes: ["schema:Hospital".freeze, "schema:MedicalClinic".freeze, "schema:Physician".freeze],
+      domainIncludes: ["schema:Hospital".freeze, "schema:Physician".freeze, "schema:MedicalClinic".freeze],
       label: "availableService".freeze,
-      rangeIncludes: ["schema:MedicalProcedure".freeze, "schema:MedicalTest".freeze, "schema:MedicalTherapy".freeze],
+      rangeIncludes: ["schema:MedicalTest".freeze, "schema:MedicalTherapy".freeze, "schema:MedicalProcedure".freeze],
       type: "rdf:Property".freeze
     property :availableStrength,
       comment: %(An available dosage strength for the drug.).freeze,
@@ -4221,16 +4308,16 @@ Note: Publishers should be aware that applications designed to use specific sche
       type: "rdf:Property".freeze
     property :award,
       comment: %(An award won by or for this item.).freeze,
-      domainIncludes: ["schema:CreativeWork".freeze, "schema:Organization".freeze, "schema:Person".freeze, "schema:Product".freeze],
+      domainIncludes: ["schema:Person".freeze, "schema:CreativeWork".freeze, "schema:Service".freeze, "schema:Product".freeze, "schema:Organization".freeze],
       label: "award".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :awards,
       comment: %(Awards won by or for this item.).freeze,
-      domainIncludes: ["schema:CreativeWork".freeze, "schema:Organization".freeze, "schema:Person".freeze, "schema:Product".freeze],
+      domainIncludes: ["schema:Person".freeze, "schema:CreativeWork".freeze, "schema:Product".freeze, "schema:Organization".freeze],
       label: "awards".freeze,
       rangeIncludes: "schema:Text".freeze,
-      "schema:supersededBy" => %(schema:award).freeze,
+      :"schema:supersededBy" => %(schema:award).freeze,
       type: "rdf:Property".freeze
     property :awayTeam,
       comment: %(The away team in a sports event.).freeze,
@@ -4256,13 +4343,13 @@ Note: Publishers should be aware that applications designed to use specific sche
       domainIncludes: "schema:JobPosting".freeze,
       label: "benefits".freeze,
       rangeIncludes: "schema:Text".freeze,
-      "schema:supersededBy" => %(schema:jobBenefits).freeze,
+      :"schema:supersededBy" => %(schema:jobBenefits).freeze,
       type: "rdf:Property".freeze
     property :bestRating,
       comment: %(The highest value allowed in this rating system. If bestRating is omitted, 5 is assumed.).freeze,
       domainIncludes: "schema:Rating".freeze,
       label: "bestRating".freeze,
-      rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:Number".freeze],
       type: "rdf:Property".freeze
     property :billingAddress,
       comment: %(The billing address for the order.).freeze,
@@ -4317,7 +4404,7 @@ Note: Publishers should be aware that applications designed to use specific sche
       domainIncludes: "schema:Blog".freeze,
       label: "blogPosts".freeze,
       rangeIncludes: "schema:BlogPosting".freeze,
-      "schema:supersededBy" => %(schema:blogPost).freeze,
+      :"schema:supersededBy" => %(schema:blogPost).freeze,
       type: "rdf:Property".freeze
     property :bloodSupply,
       comment: %(The blood vessel that carries blood from the heart to the muscle.).freeze,
@@ -4360,7 +4447,7 @@ Note: Publishers should be aware that applications designed to use specific sche
       domainIncludes: "schema:Reservation".freeze,
       label: "bookingAgent".freeze,
       rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
-      "schema:supersededBy" => %(schema:broker).freeze,
+      :"schema:supersededBy" => %(schema:broker).freeze,
       type: "rdf:Property".freeze
     property :bookingTime,
       comment: %(The date and time the reservation was booked.).freeze,
@@ -4387,16 +4474,24 @@ Note: Publishers should be aware that applications designed to use specific sche
       label: "branch".freeze,
       rangeIncludes: "schema:AnatomicalStructure".freeze,
       type: "rdf:Property".freeze
+    property :branchCode,
+      comment: %(A short textual code \(also called "store code"\) that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs.
+<br /><br /> For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.
+      ).freeze,
+      domainIncludes: ["schema:Place".freeze, "schema:LocalBusiness".freeze, "schema:Store".freeze],
+      label: "branchCode".freeze,
+      rangeIncludes: "schema:Text".freeze,
+      type: "rdf:Property".freeze
     property :branchOf,
       comment: %(The larger organization that this local business is a branch of, if any.).freeze,
       domainIncludes: "schema:LocalBusiness".freeze,
       label: "branchOf".freeze,
       rangeIncludes: "schema:Organization".freeze,
-      "schema:supersededBy" => %(schema:parentOrganization).freeze,
+      :"schema:supersededBy" => %(schema:parentOrganization).freeze,
       type: "rdf:Property".freeze
     property :brand,
       comment: %(The brand\(s\) associated with a product or service, or the brand\(s\) maintained by an organization or business person.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Person".freeze, "schema:Product".freeze],
+      domainIncludes: ["schema:Person".freeze, "schema:Product".freeze, "schema:Organization".freeze],
       label: "brand".freeze,
       rangeIncludes: ["schema:Brand".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
@@ -4430,6 +4525,12 @@ Note: Publishers should be aware that applications designed to use specific sche
       label: "broadcastDisplayName".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
+    property :broadcastOfEvent,
+      comment: %(The event being broadcast such as a sporting event or awards ceremony.).freeze,
+      domainIncludes: "schema:BroadcastEvent".freeze,
+      label: "broadcastOfEvent".freeze,
+      rangeIncludes: "schema:Event".freeze,
+      type: "rdf:Property".freeze
     property :broadcastServiceTier,
       comment: %(The type of service required to have access to the channel \(e.g. Standard or Premium\).).freeze,
       domainIncludes: "schema:BroadcastChannel".freeze,
@@ -4450,7 +4551,7 @@ Note: Publishers should be aware that applications designed to use specific sche
       type: "rdf:Property".freeze
     property :broker,
       comment: %(An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.).freeze,
-      domainIncludes: ["schema:Reservation".freeze, "schema:Order".freeze, "schema:Invoice".freeze],
+      domainIncludes: ["schema:Order".freeze, "schema:Reservation".freeze, "schema:Invoice".freeze],
       label: "broker".freeze,
       rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
@@ -4474,7 +4575,7 @@ Note: Publishers should be aware that applications designed to use specific sche
       type: "rdf:Property".freeze
     property :businessFunction,
       comment: %(The business function \(e.g. sell, lease, repair, dispose\) of the offer or component of a bundle \(TypeAndQuantityNode\). The default is http://purl.org/goodrelations/v1#Sell.).freeze,
-      domainIncludes: ["schema:Offer".freeze, "schema:Demand".freeze, "schema:TypeAndQuantityNode".freeze],
+      domainIncludes: ["schema:Offer".freeze, "schema:TypeAndQuantityNode".freeze, "schema:Demand".freeze],
       label: "businessFunction".freeze,
       rangeIncludes: "schema:BusinessFunction".freeze,
       type: "rdf:Property".freeze
@@ -4506,7 +4607,7 @@ Note: Publishers should be aware that applications designed to use specific sche
       type: "rdf:Property".freeze
     property :caption,
       comment: %(The caption for this object.).freeze,
-      domainIncludes: ["schema:ImageObject".freeze, "schema:VideoObject".freeze],
+      domainIncludes: ["schema:VideoObject".freeze, "schema:ImageObject".freeze],
       label: "caption".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
@@ -4521,17 +4622,17 @@ Note: Publishers should be aware that applications designed to use specific sche
 Typical unit code\(s\): LTR for liters, FTQ for cubic foot/feet<br />
 
 Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValue</a> to indicate ranges.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "cargoVolume".freeze,
       rangeIncludes: "schema:QuantitativeValue".freeze,
       type: "rdf:Property".freeze
     property :carrier,
       comment: %('carrier' is an out-dated term indicating the 'provider' for parcel delivery and flights.).freeze,
-      domainIncludes: ["schema:ParcelDelivery".freeze, "schema:Flight".freeze],
+      domainIncludes: ["schema:Flight".freeze, "schema:ParcelDelivery".freeze],
       label: "carrier".freeze,
       rangeIncludes: "schema:Organization".freeze,
-      "schema:supersededBy" => %(schema:provider).freeze,
+      :"schema:supersededBy" => %(schema:provider).freeze,
       type: "rdf:Property".freeze
     property :carrierRequirements,
       comment: %(Specifies specific carrier\(s\) requirements for the application \(e.g. an application may only work on a specific carrier network\).).freeze,
@@ -4544,24 +4645,24 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       domainIncludes: "schema:Dataset".freeze,
       label: "catalog".freeze,
       rangeIncludes: "schema:DataCatalog".freeze,
-      "schema:supersededBy" => %(schema:includedDataCatalog).freeze,
+      :"schema:supersededBy" => %(schema:includedDataCatalog).freeze,
       type: "rdf:Property".freeze
     property :catalogNumber,
       comment: %(The catalog number for the release.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicRelease".freeze,
       label: "catalogNumber".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :category,
       comment: %(A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.).freeze,
-      domainIncludes: ["schema:Product".freeze, "schema:Offer".freeze, "schema:Invoice".freeze, "schema:PhysicalActivity".freeze],
+      domainIncludes: ["schema:Offer".freeze, "schema:PhysicalActivity".freeze, "schema:Invoice".freeze, "schema:Service".freeze, "schema:Product".freeze],
       label: "category".freeze,
-      rangeIncludes: ["schema:PhysicalActivityCategory".freeze, "schema:Text".freeze, "schema:Thing".freeze],
+      rangeIncludes: ["schema:PhysicalActivityCategory".freeze, "schema:Thing".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
     property :cause,
       comment: %(An underlying cause. More specifically, one of the causative agent\(s\) that are most directly responsible for the pathophysiologic process that eventually results in the occurrence.).freeze,
-      domainIncludes: ["schema:MedicalCondition".freeze, "schema:MedicalSignOrSymptom".freeze],
+      domainIncludes: ["schema:MedicalSignOrSymptom".freeze, "schema:MedicalCondition".freeze],
       label: "cause".freeze,
       rangeIncludes: "schema:MedicalCause".freeze,
       type: "rdf:Property".freeze
@@ -4641,14 +4742,14 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       comment: %(A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       label: "citation".freeze,
-      rangeIncludes: ["schema:CreativeWork".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:CreativeWork".freeze],
       type: "rdf:Property".freeze
     property :clincalPharmacology,
       comment: %(Description of the absorption and elimination of drugs, including their concentration \(pharmacokinetics, pK\) and biological effects \(pharmacodynamics, pD\).).freeze,
       domainIncludes: "schema:Drug".freeze,
       label: "clinicalPharmacology".freeze,
       rangeIncludes: "schema:Text".freeze,
-      "schema:supersededBy" => %(schema:clinicalPharmacology).freeze,
+      :"schema:supersededBy" => %(schema:clinicalPharmacology).freeze,
       type: "rdf:Property".freeze
     property :clinicalPharmacology,
       comment: %(Description of the absorption and elimination of drugs, including their concentration \(pharmacokinetics, pK\) and biological effects \(pharmacodynamics, pD\).).freeze,
@@ -4716,14 +4817,14 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       domainIncludes: "schema:Person".freeze,
       label: "colleagues".freeze,
       rangeIncludes: "schema:Person".freeze,
-      "schema:supersededBy" => %(schema:colleague).freeze,
+      :"schema:supersededBy" => %(schema:colleague).freeze,
       type: "rdf:Property".freeze
     property :collection,
       comment: %(A sub property of object. The collection target of the action.).freeze,
       domainIncludes: "schema:UpdateAction".freeze,
       label: "collection".freeze,
       rangeIncludes: "schema:Thing".freeze,
-      "schema:supersededBy" => %(schema:targetCollection).freeze,
+      :"schema:supersededBy" => %(schema:targetCollection).freeze,
       subPropertyOf: "schema:object".freeze,
       type: "rdf:Property".freeze
     property :color,
@@ -4764,7 +4865,7 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       type: "rdf:Property".freeze
     property :composer,
       comment: %(The person or organization who wrote the composition.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicComposition".freeze,
       label: "composer".freeze,
       rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
@@ -4795,16 +4896,16 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       type: "rdf:Property".freeze
     property :contactPoint,
       comment: %(A contact point for a person or organization.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      domainIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       label: "contactPoint".freeze,
       rangeIncludes: "schema:ContactPoint".freeze,
       type: "rdf:Property".freeze
     property :contactPoints,
       comment: %(A contact point for a person or organization.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      domainIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       label: "contactPoints".freeze,
       rangeIncludes: "schema:ContactPoint".freeze,
-      "schema:supersededBy" => %(schema:contactPoint).freeze,
+      :"schema:supersededBy" => %(schema:contactPoint).freeze,
       type: "rdf:Property".freeze
     property :contactType,
       comment: %(A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.).freeze,
@@ -4813,14 +4914,29 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :containedIn,
-      comment: %(The basic containment relation between places.).freeze,
+      comment: %(The basic containment relation between a place and one that contains it.).freeze,
       domainIncludes: "schema:Place".freeze,
       label: "containedIn".freeze,
+      rangeIncludes: "schema:Place".freeze,
+      :"schema:supersededBy" => %(schema:containedInPlace).freeze,
+      type: "rdf:Property".freeze
+    property :containedInPlace,
+      comment: %(The basic containment relation between a place and one that contains it.).freeze,
+      domainIncludes: "schema:Place".freeze,
+      inverseOf: "schema:containsPlace".freeze,
+      label: "containedInPlace".freeze,
+      rangeIncludes: "schema:Place".freeze,
+      type: "rdf:Property".freeze
+    property :containsPlace,
+      comment: %(The basic containment relation between a place and another that it contains.).freeze,
+      domainIncludes: "schema:Place".freeze,
+      inverseOf: "schema:containsPlace".freeze,
+      label: "containsPlace".freeze,
       rangeIncludes: "schema:Place".freeze,
       type: "rdf:Property".freeze
     property :containsSeason,
       comment: %(A season that is part of the media series.).freeze,
-      domainIncludes: ["schema:VideoGameSeries".freeze, "schema:TVSeries".freeze, "schema:RadioSeries".freeze],
+      domainIncludes: ["schema:RadioSeries".freeze, "schema:TVSeries".freeze, "schema:VideoGameSeries".freeze],
       label: "containsSeason".freeze,
       rangeIncludes: "schema:CreativeWorkSeason".freeze,
       subPropertyOf: "schema:hasPart".freeze,
@@ -4857,7 +4973,7 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       type: "rdf:Property".freeze
     property :contraindication,
       comment: %(A contraindication for this therapy.).freeze,
-      domainIncludes: ["schema:MedicalTherapy".freeze, "schema:MedicalDevice".freeze],
+      domainIncludes: ["schema:MedicalDevice".freeze, "schema:MedicalTherapy".freeze],
       label: "contraindication".freeze,
       rangeIncludes: "schema:MedicalContraindication".freeze,
       type: "rdf:Property".freeze
@@ -4865,7 +4981,7 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       comment: %(A secondary contributor to the CreativeWork.).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       label: "contributor".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
     property :cookTime,
       comment: %(The time it takes to actually cook the dish, in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 duration format</a>.).freeze,
@@ -4883,7 +4999,7 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       comment: %(The party holding the legal copyright to the CreativeWork.).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       label: "copyrightHolder".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
     property :copyrightYear,
       comment: %(The year during which the claimed copyright for the CreativeWork was first asserted.).freeze,
@@ -4919,7 +5035,7 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       comment: %(The cost per unit of the drug.).freeze,
       domainIncludes: "schema:DrugCost".freeze,
       label: "costPerUnit".freeze,
-      rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:Number".freeze],
       type: "rdf:Property".freeze
     property :countriesNotSupported,
       comment: %(Countries for which the application is not supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.).freeze,
@@ -4933,12 +5049,18 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       label: "countriesSupported".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
+    property :countryOfOrigin,
+      comment: %(The country of the principal offices of the production company or individual responsible for the movie or program.).freeze,
+      domainIncludes: ["schema:TVSeries".freeze, "schema:Movie".freeze, "schema:TVSeason".freeze, "schema:TVEpisode".freeze],
+      label: "countryOfOrigin".freeze,
+      rangeIncludes: "schema:Country".freeze,
+      type: "rdf:Property".freeze
     property :course,
       comment: %(A sub property of location. The course where this action was taken.).freeze,
       domainIncludes: "schema:ExerciseAction".freeze,
       label: "course".freeze,
       rangeIncludes: "schema:Place".freeze,
-      "schema:supersededBy" => %(schema:exerciseCourse).freeze,
+      :"schema:supersededBy" => %(schema:exerciseCourse).freeze,
       subPropertyOf: "schema:location".freeze,
       type: "rdf:Property".freeze
     property :coverageEndTime,
@@ -4957,11 +5079,11 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       comment: %(The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.).freeze,
       domainIncludes: ["schema:CreativeWork".freeze, "schema:UserComments".freeze],
       label: "creator".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
     property :creditedTo,
       comment: %(The group the release is credited to if different than the byArtist. For example, Red and Blue is credited to "Stefani Germanotta Band", but by Lady Gaga.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicRelease".freeze,
       label: "creditedTo".freeze,
       rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
@@ -4982,7 +5104,13 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       comment: %(Party placing the order or paying the invoice.).freeze,
       domainIncludes: ["schema:Order".freeze, "schema:Invoice".freeze],
       label: "customer".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
+      type: "rdf:Property".freeze
+    property :dataFeedElement,
+      comment: %(An item within in a data feed. Data feeds may have many elements.).freeze,
+      domainIncludes: "schema:DataFeed".freeze,
+      label: "dataFeedElement".freeze,
+      rangeIncludes: ["schema:Thing".freeze, "schema:Text".freeze, "schema:DataFeedItem".freeze],
       type: "rdf:Property".freeze
     property :dataset,
       comment: %(A dataset contained in a catalog.).freeze,
@@ -4997,10 +5125,16 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       rangeIncludes: "schema:DateTime".freeze,
       type: "rdf:Property".freeze
     property :dateCreated,
-      comment: %(The date on which the CreativeWork was created.).freeze,
-      domainIncludes: "schema:CreativeWork".freeze,
+      comment: %(The date on which the CreativeWork was created or the item was added to a DataFeed.).freeze,
+      domainIncludes: ["schema:CreativeWork".freeze, "schema:DataFeedItem".freeze],
       label: "dateCreated".freeze,
-      rangeIncludes: "schema:Date".freeze,
+      rangeIncludes: ["schema:Date".freeze, "schema:DateTime".freeze],
+      type: "rdf:Property".freeze
+    property :dateDeleted,
+      comment: %(The datetime the item was removed from the DataFeed.).freeze,
+      domainIncludes: "schema:DataFeedItem".freeze,
+      label: "dateDeleted".freeze,
+      rangeIncludes: "schema:DateTime".freeze,
       type: "rdf:Property".freeze
     property :dateIssued,
       comment: %(The date the ticket was issued.).freeze,
@@ -5009,10 +5143,10 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       rangeIncludes: "schema:DateTime".freeze,
       type: "rdf:Property".freeze
     property :dateModified,
-      comment: %(The date on which the CreativeWork was most recently modified.).freeze,
-      domainIncludes: "schema:CreativeWork".freeze,
+      comment: %(The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.).freeze,
+      domainIncludes: ["schema:CreativeWork".freeze, "schema:DataFeedItem".freeze],
       label: "dateModified".freeze,
-      rangeIncludes: "schema:Date".freeze,
+      rangeIncludes: ["schema:Date".freeze, "schema:DateTime".freeze],
       type: "rdf:Property".freeze
     property :datePosted,
       comment: %(Publication date for the job posting.).freeze,
@@ -5028,7 +5162,7 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       type: "rdf:Property".freeze
     property :dateVehicleFirstRegistered,
       comment: %(The date of the first registration of the vehicle with the respective public authorities.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "dateVehicleFirstRegistered".freeze,
       rangeIncludes: "schema:Date".freeze,
@@ -5077,7 +5211,7 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       type: "rdf:Property".freeze
     property :deliveryMethod,
       comment: %(A sub property of instrument. The method of delivery.).freeze,
-      domainIncludes: ["schema:OrderAction".freeze, "schema:ReceiveAction".freeze, "schema:SendAction".freeze, "schema:TrackAction".freeze],
+      domainIncludes: ["schema:SendAction".freeze, "schema:ReceiveAction".freeze, "schema:OrderAction".freeze, "schema:TrackAction".freeze],
       label: "deliveryMethod".freeze,
       rangeIncludes: "schema:DeliveryMethod".freeze,
       subPropertyOf: "schema:instrument".freeze,
@@ -5144,15 +5278,15 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       type: "rdf:Property".freeze
     property :depth,
       comment: %(The depth of the item.).freeze,
-      domainIncludes: ["schema:Product".freeze, "schema:VisualArtwork".freeze],
+      domainIncludes: ["schema:VisualArtwork".freeze, "schema:Product".freeze],
       label: "depth".freeze,
-      rangeIncludes: ["schema:Distance".freeze, "schema:QuantitativeValue".freeze],
+      rangeIncludes: ["schema:QuantitativeValue".freeze, "schema:Distance".freeze],
       type: "rdf:Property".freeze
     property :description,
       comment: %(A short description of the item.).freeze,
       domainIncludes: "schema:Thing".freeze,
       label: "description".freeze,
-      "owl:equivalentProperty" => %(dc:description).freeze,
+      :"owl:equivalentProperty" => %(dc:description).freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :device,
@@ -5160,7 +5294,7 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       domainIncludes: "schema:SoftwareApplication".freeze,
       label: "device".freeze,
       rangeIncludes: "schema:Text".freeze,
-      "schema:supersededBy" => %(schema:availableOnDevice).freeze,
+      :"schema:supersededBy" => %(schema:availableOnDevice).freeze,
       type: "rdf:Property".freeze
     property :diagnosis,
       comment: %(One or more alternative conditions considered in the differential diagnosis process.).freeze,
@@ -5179,7 +5313,7 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       domainIncludes: "schema:ExerciseAction".freeze,
       label: "diet".freeze,
       rangeIncludes: "schema:Diet".freeze,
-      "schema:supersededBy" => %(schema:exerciseRelatedDiet).freeze,
+      :"schema:supersededBy" => %(schema:exerciseRelatedDiet).freeze,
       subPropertyOf: "schema:instrument".freeze,
       type: "rdf:Property".freeze
     property :dietFeatures,
@@ -5196,22 +5330,22 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       type: "rdf:Property".freeze
     property :director,
       comment: %(A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.).freeze,
-      domainIncludes: ["schema:Movie".freeze, "schema:VideoObject".freeze, "schema:VideoGame".freeze, "schema:Episode".freeze, "schema:CreativeWorkSeason".freeze, "schema:VideoGameSeries".freeze, "schema:TVSeries".freeze, "schema:RadioSeries".freeze, "schema:MovieSeries".freeze, "schema:Clip".freeze],
+      domainIncludes: ["schema:VideoObject".freeze, "schema:CreativeWorkSeason".freeze, "schema:TVSeries".freeze, "schema:MovieSeries".freeze, "schema:Movie".freeze, "schema:Episode".freeze, "schema:VideoGame".freeze, "schema:VideoGameSeries".freeze, "schema:RadioSeries".freeze, "schema:Clip".freeze],
       label: "director".freeze,
       rangeIncludes: "schema:Person".freeze,
       type: "rdf:Property".freeze
     property :directors,
       comment: %(A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.).freeze,
-      domainIncludes: ["schema:Movie".freeze, "schema:VideoObject".freeze, "schema:VideoGame".freeze, "schema:Episode".freeze, "schema:VideoGameSeries".freeze, "schema:TVSeries".freeze, "schema:RadioSeries".freeze, "schema:MovieSeries".freeze, "schema:Clip".freeze],
+      domainIncludes: ["schema:VideoObject".freeze, "schema:RadioSeries".freeze, "schema:TVSeries".freeze, "schema:MovieSeries".freeze, "schema:Movie".freeze, "schema:Episode".freeze, "schema:VideoGame".freeze, "schema:VideoGameSeries".freeze, "schema:Clip".freeze],
       label: "directors".freeze,
       rangeIncludes: "schema:Person".freeze,
-      "schema:supersededBy" => %(schema:director).freeze,
+      :"schema:supersededBy" => %(schema:director).freeze,
       type: "rdf:Property".freeze
     property :discount,
       comment: %(Any discount applied \(to an Order\).).freeze,
       domainIncludes: "schema:Order".freeze,
       label: "discount".freeze,
-      rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:Number".freeze],
       type: "rdf:Property".freeze
     property :discountCode,
       comment: %(Code used to redeem a discount.).freeze,
@@ -5245,7 +5379,7 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       type: "rdf:Property".freeze
     property :distance,
       comment: %(The distance travelled, e.g. exercising or travelling.).freeze,
-      domainIncludes: ["schema:ExerciseAction".freeze, "schema:TravelAction".freeze],
+      domainIncludes: ["schema:TravelAction".freeze, "schema:ExerciseAction".freeze],
       label: "distance".freeze,
       rangeIncludes: "schema:Distance".freeze,
       type: "rdf:Property".freeze
@@ -5305,7 +5439,7 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       type: "rdf:Property".freeze
     property :downvoteCount,
       comment: %(The number of downvotes this question, answer or comment has received from the community.).freeze,
-      domainIncludes: ["schema:Question".freeze, "schema:Comment".freeze],
+      domainIncludes: ["schema:Comment".freeze, "schema:Question".freeze],
       label: "downvoteCount".freeze,
       rangeIncludes: "schema:Integer".freeze,
       type: "rdf:Property".freeze
@@ -5317,10 +5451,10 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       type: "rdf:Property".freeze
     property :driveWheelConfiguration,
       comment: %(The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle's engine via the drivetrain.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "driveWheelConfiguration".freeze,
-      rangeIncludes: ["schema:DriveWheelConfigurationValue".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:DriveWheelConfigurationValue".freeze],
       type: "rdf:Property".freeze
     property :dropoffLocation,
       comment: %(Where a rental car can be dropped off.).freeze,
@@ -5354,7 +5488,7 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       type: "rdf:Property".freeze
     property :duns,
       comment: %(The Dun & Bradstreet DUNS number for identifying an organization or business person.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      domainIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       label: "duns".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
@@ -5366,7 +5500,7 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       type: "rdf:Property".freeze
     property :duration,
       comment: %(The duration of the item \(movie, audio recording, event, etc.\) in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>.).freeze,
-      domainIncludes: ["schema:MediaObject".freeze, "schema:Event".freeze, "schema:Movie".freeze, "schema:MusicRecording".freeze, "schema:MusicRelease".freeze],
+      domainIncludes: ["schema:MusicRelease".freeze, "schema:MediaObject".freeze, "schema:Event".freeze, "schema:MusicRecording".freeze, "schema:Movie".freeze],
       label: "duration".freeze,
       rangeIncludes: "schema:Duration".freeze,
       type: "rdf:Property".freeze
@@ -5413,10 +5547,10 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :elevation,
-      comment: %(The elevation of a location.).freeze,
+      comment: %(The elevation of a location \(<a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a>\).).freeze,
       domainIncludes: ["schema:GeoCoordinates".freeze, "schema:GeoShape".freeze],
       label: "elevation".freeze,
-      rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:Number".freeze],
       type: "rdf:Property".freeze
     property :eligibleCustomerType,
       comment: %(The type\(s\) of customers for which the given offer is valid.).freeze,
@@ -5437,10 +5571,13 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       rangeIncludes: "schema:QuantitativeValue".freeze,
       type: "rdf:Property".freeze
     property :eligibleRegion,
-      comment: %(The ISO 3166-1 \(ISO 3166-1 alpha-2\) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region\(s\) for which the offer or delivery charge specification is valid.).freeze,
+      comment: %(The ISO 3166-1 \(ISO 3166-1 alpha-2\) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region\(s\) for which the offer or delivery charge specification is valid.
+      <br><br> See also <a href="/ineligibleRegion">ineligibleRegion</a>.
+    ).freeze,
       domainIncludes: ["schema:Offer".freeze, "schema:DeliveryChargeSpecification".freeze, "schema:Demand".freeze],
       label: "eligibleRegion".freeze,
-      rangeIncludes: ["schema:GeoShape".freeze, "schema:Place".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Place".freeze, "schema:Text".freeze, "schema:GeoShape".freeze],
+      subPropertyOf: "schema:areaServed".freeze,
       type: "rdf:Property".freeze
     property :eligibleTransactionVolume,
       comment: %(The transaction volume, in a monetary unit, for which the offer or price specification is valid, e.g. for indicating a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases to a certain minimal amount.).freeze,
@@ -5450,7 +5587,7 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       type: "rdf:Property".freeze
     property :email,
       comment: %(Email address.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:ContactPoint".freeze, "schema:Person".freeze],
+      domainIncludes: ["schema:Person".freeze, "schema:ContactPoint".freeze, "schema:Organization".freeze],
       label: "email".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
@@ -5471,7 +5608,7 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       domainIncludes: "schema:Organization".freeze,
       label: "employees".freeze,
       rangeIncludes: "schema:Person".freeze,
-      "schema:supersededBy" => %(schema:employee).freeze,
+      :"schema:supersededBy" => %(schema:employee).freeze,
       type: "rdf:Property".freeze
     property :employmentType,
       comment: %(Type of employment \(e.g. full-time, part-time, contract, temporary, seasonal, internship\).).freeze,
@@ -5508,11 +5645,11 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       domainIncludes: "schema:CreativeWork".freeze,
       label: "encodings".freeze,
       rangeIncludes: "schema:MediaObject".freeze,
-      "schema:supersededBy" => %(schema:encoding).freeze,
+      :"schema:supersededBy" => %(schema:encoding).freeze,
       type: "rdf:Property".freeze
     property :endDate,
       comment: %(The end date and time of the item \(in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>\).).freeze,
-      domainIncludes: ["schema:Role".freeze, "schema:Event".freeze, "schema:CreativeWorkSeason".freeze, "schema:CreativeWorkSeries".freeze, "schema:DatedMoneySpecification".freeze],
+      domainIncludes: ["schema:CreativeWorkSeason".freeze, "schema:DatedMoneySpecification".freeze, "schema:Event".freeze, "schema:Role".freeze, "schema:CreativeWorkSeries".freeze],
       label: "endDate".freeze,
       rangeIncludes: "schema:Date".freeze,
       type: "rdf:Property".freeze
@@ -5528,14 +5665,14 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       comment: %(A sub property of participant. The person/organization being supported.).freeze,
       domainIncludes: "schema:EndorseAction".freeze,
       label: "endorsee".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       subPropertyOf: "schema:participant".freeze,
       type: "rdf:Property".freeze
     property :endorsers,
       comment: %(People or organizations that endorse the plan.).freeze,
       domainIncludes: "schema:Diet".freeze,
       label: "endorsers".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
     property :entertainmentBusiness,
       comment: %(A sub property of location. The entertainment business where the action occurred.).freeze,
@@ -5552,7 +5689,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :episode,
       comment: %(An episode of a tv, radio or game media within a series or season.).freeze,
-      domainIncludes: ["schema:CreativeWorkSeason".freeze, "schema:RadioSeries".freeze, "schema:VideoGameSeries".freeze, "schema:TVSeries".freeze],
+      domainIncludes: ["schema:CreativeWorkSeason".freeze, "schema:TVSeries".freeze, "schema:VideoGameSeries".freeze, "schema:RadioSeries".freeze],
       label: "episode".freeze,
       rangeIncludes: "schema:Episode".freeze,
       subPropertyOf: "schema:hasPart".freeze,
@@ -5566,10 +5703,10 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :episodes,
       comment: %(An episode of a TV/radio series or season.).freeze,
-      domainIncludes: ["schema:CreativeWorkSeason".freeze, "schema:RadioSeries".freeze, "schema:VideoGameSeries".freeze, "schema:TVSeries".freeze],
+      domainIncludes: ["schema:CreativeWorkSeason".freeze, "schema:TVSeries".freeze, "schema:VideoGameSeries".freeze, "schema:RadioSeries".freeze],
       label: "episodes".freeze,
       rangeIncludes: "schema:Episode".freeze,
-      "schema:supersededBy" => %(schema:episode).freeze,
+      :"schema:supersededBy" => %(schema:episode).freeze,
       type: "rdf:Property".freeze
     property :equal,
       comment: %(This ordering relation for qualitative values indicates that the subject is equal to the object.).freeze,
@@ -5597,7 +5734,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :event,
       comment: %(Upcoming or past event associated with this place, organization, or action.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Place".freeze, "schema:InformAction".freeze, "schema:PlayAction".freeze, "schema:InviteAction".freeze, "schema:JoinAction".freeze, "schema:LeaveAction".freeze],
+      domainIncludes: ["schema:Place".freeze, "schema:InviteAction".freeze, "schema:PlayAction".freeze, "schema:LeaveAction".freeze, "schema:JoinAction".freeze, "schema:InformAction".freeze, "schema:Organization".freeze],
       label: "event".freeze,
       rangeIncludes: "schema:Event".freeze,
       type: "rdf:Property".freeze
@@ -5609,10 +5746,10 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :events,
       comment: %(Upcoming or past events associated with this place or organization.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Place".freeze],
+      domainIncludes: ["schema:Place".freeze, "schema:Organization".freeze],
       label: "events".freeze,
       rangeIncludes: "schema:Event".freeze,
-      "schema:supersededBy" => %(schema:event).freeze,
+      :"schema:supersededBy" => %(schema:event).freeze,
       type: "rdf:Property".freeze
     property :evidenceLevel,
       comment: %(Strength of evidence of the data used to formulate the guideline \(enumerated\).).freeze,
@@ -5628,7 +5765,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :exampleOfWork,
       comment: %(A creative work that this work is an example/instance/realization/derivation of.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       inverseOf: "schema:workExample".freeze,
       label: "exampleOfWork".freeze,
@@ -5663,7 +5800,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :exerciseType,
       comment: %(Type\(s\) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.).freeze,
-      domainIncludes: ["schema:ExercisePlan".freeze, "schema:ExerciseAction".freeze],
+      domainIncludes: ["schema:ExerciseAction".freeze, "schema:ExercisePlan".freeze],
       label: "exerciseType".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
@@ -5729,7 +5866,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :faxNumber,
       comment: %(The fax number.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Place".freeze, "schema:ContactPoint".freeze, "schema:Person".freeze],
+      domainIncludes: ["schema:Place".freeze, "schema:Person".freeze, "schema:ContactPoint".freeze, "schema:Organization".freeze],
       label: "faxNumber".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
@@ -5746,8 +5883,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       rangeIncludes: "schema:Mass".freeze,
       type: "rdf:Property".freeze
     property :fileFormat,
-      comment: %(MIME format of the binary \(e.g. application/zip\).).freeze,
-      domainIncludes: "schema:SoftwareApplication".freeze,
+      comment: %(Media type \(aka MIME format, see <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">IANA site</a>\) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information.).freeze,
+      domainIncludes: "schema:CreativeWork".freeze,
       label: "fileFormat".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
@@ -5759,7 +5896,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :firstPerformance,
       comment: %(The date and place the work was first performed.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicComposition".freeze,
       label: "firstPerformance".freeze,
       rangeIncludes: "schema:Event".freeze,
@@ -5780,7 +5917,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       comment: %(A sub property of object. The person or organization being followed.).freeze,
       domainIncludes: "schema:FollowAction".freeze,
       label: "followee".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       subPropertyOf: "schema:object".freeze,
       type: "rdf:Property".freeze
     property :follows,
@@ -5799,7 +5936,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       comment: %(A sub property of location. The specific food establishment where the action occurred.).freeze,
       domainIncludes: "schema:CookAction".freeze,
       label: "foodEstablishment".freeze,
-      rangeIncludes: ["schema:FoodEstablishment".freeze, "schema:Place".freeze],
+      rangeIncludes: ["schema:Place".freeze, "schema:FoodEstablishment".freeze],
       subPropertyOf: "schema:location".freeze,
       type: "rdf:Property".freeze
     property :foodEvent,
@@ -5826,7 +5963,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       domainIncludes: "schema:Organization".freeze,
       label: "founders".freeze,
       rangeIncludes: "schema:Person".freeze,
-      "schema:supersededBy" => %(schema:founder).freeze,
+      :"schema:supersededBy" => %(schema:founder).freeze,
       type: "rdf:Property".freeze
     property :foundingDate,
       comment: %(The date that this organization was founded.).freeze,
@@ -5845,7 +5982,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       domainIncludes: "schema:PublicationEvent".freeze,
       label: "free".freeze,
       rangeIncludes: "schema:Boolean".freeze,
-      "schema:supersededBy" => %(schema:isAccessibleForFree).freeze,
+      :"schema:supersededBy" => %(schema:isAccessibleForFree).freeze,
       type: "rdf:Property".freeze
     property :frequency,
       comment: %(How often the dose is taken, e.g. 'daily'.).freeze,
@@ -5855,7 +5992,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :fromLocation,
       comment: %(A sub property of location. The original location of the object or the agent before the action.).freeze,
-      domainIncludes: ["schema:MoveAction".freeze, "schema:TransferAction".freeze, "schema:ExerciseAction".freeze],
+      domainIncludes: ["schema:ExerciseAction".freeze, "schema:MoveAction".freeze, "schema:TransferAction".freeze],
       label: "fromLocation".freeze,
       rangeIncludes: "schema:Place".freeze,
       subPropertyOf: "schema:location".freeze,
@@ -5866,7 +6003,7 @@ Note 1: There are unfortunately no standard unit codes for liters per 100 km.<br
 Use <a href="unitText">unitText</a> to indicate the unit of measurement, e.g. L/100 km.
 Note 2: There are two ways of indicating the fuel consumption, <a href="fuelConsumption">fuelConsumption</a> \(e.g. 8 liters per 100 km\) and <a href="fuelEfficiency">fuelEfficiency</a> \(e.g. 30 miles per gallon\). They are reciprocal.<br />
 Note 3: Often, the absolute value is useful only when related to driving speed \("at 80 km/h"\) or usage pattern \("city traffic"\). You can use <a href="valueReference">valueReference</a> to link the value for the fuel consumption to another value.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "fuelConsumption".freeze,
       rangeIncludes: "schema:QuantitativeValue".freeze,
@@ -5877,15 +6014,15 @@ Note 1: There are unfortunately no standard unit codes for miles per gallon or k
 Use <a href="unitText">unitText</a> to indicate the unit of measurement, e.g. mpg or km/L.
 Note 2: There are two ways of indicating the fuel consumption, <a href="fuelConsumption">fuelConsumption</a> \(e.g. 8 liters per 100 km\) and <a href="fuelEfficiency">fuelEfficiency</a> \(e.g. 30 miles per gallon\). They are reciprocal.<br />
 Note 3: Often, the absolute value is useful only when related to driving speed \("at 80 km/h"\) or usage pattern \("city traffic"\). You can use <a href="valueReference">valueReference</a> to link the value for the fuel economy to another value.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "fuelEfficiency".freeze,
       rangeIncludes: "schema:QuantitativeValue".freeze,
       type: "rdf:Property".freeze
     property :fuelType,
       comment: %(The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this property can be attached directly to the vehicle.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
-      domainIncludes: ["schema:Vehicle".freeze, "schema:EngineSpecification".freeze],
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      domainIncludes: ["schema:EngineSpecification".freeze, "schema:Vehicle".freeze],
       label: "fuelType".freeze,
       rangeIncludes: ["schema:Text".freeze, "schema:QualitativeValue".freeze, "schema:URL".freeze],
       type: "rdf:Property".freeze
@@ -5918,13 +6055,13 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       comment: %(Real or fictional location of the game \(or part of game\).).freeze,
       domainIncludes: ["schema:Game".freeze, "schema:VideoGameSeries".freeze],
       label: "gameLocation".freeze,
-      rangeIncludes: ["schema:URL".freeze, "schema:Place".freeze, "schema:PostalAddress".freeze],
+      rangeIncludes: ["schema:Place".freeze, "schema:URL".freeze, "schema:PostalAddress".freeze],
       type: "rdf:Property".freeze
     property :gamePlatform,
       comment: %(The electronic systems used to play <a href="http://en.wikipedia.org/wiki/Category:Video_game_platforms">video games</a>.).freeze,
       domainIncludes: ["schema:VideoGame".freeze, "schema:VideoGameSeries".freeze],
       label: "gamePlatform".freeze,
-      rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze, "schema:Thing".freeze],
+      rangeIncludes: ["schema:Thing".freeze, "schema:Text".freeze, "schema:URL".freeze],
       type: "rdf:Property".freeze
     property :gameServer,
       comment: %(The server on which  it is possible to play the game.).freeze,
@@ -5947,7 +6084,7 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       type: "rdf:Property".freeze
     property :genre,
       comment: %(Genre of the creative work or group.).freeze,
-      domainIncludes: ["schema:CreativeWork".freeze, "schema:MusicGroup".freeze],
+      domainIncludes: ["schema:MusicGroup".freeze, "schema:CreativeWork".freeze],
       label: "genre".freeze,
       rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
       type: "rdf:Property".freeze
@@ -5956,6 +6093,18 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       domainIncludes: "schema:Place".freeze,
       label: "geo".freeze,
       rangeIncludes: ["schema:GeoCoordinates".freeze, "schema:GeoShape".freeze],
+      type: "rdf:Property".freeze
+    property :geoMidpoint,
+      comment: %(Indicates the GeoCoordinates at the centre of a GeoShape e.g. GeoCircle.).freeze,
+      domainIncludes: "schema:GeoCircle".freeze,
+      label: "geoMidpoint".freeze,
+      rangeIncludes: "schema:GeoCoordinates".freeze,
+      type: "rdf:Property".freeze
+    property :geoRadius,
+      comment: %(Indicates the approximate radius of a GeoCircle \(metres unless indicated otherwise via Distance notation\).).freeze,
+      domainIncludes: "schema:GeoCircle".freeze,
+      label: "geoRadius".freeze,
+      rangeIncludes: ["schema:Text".freeze, "schema:Number".freeze, "schema:Distance".freeze],
       type: "rdf:Property".freeze
     property :geographicArea,
       comment: %(The geographic area associated with the audience.).freeze,
@@ -5971,7 +6120,7 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       type: "rdf:Property".freeze
     property :globalLocationNumber,
       comment: %(The <a href="http://www.gs1.org/gln">Global Location Number</a> \(GLN, sometimes also referred to as International Location Number or ILN\) of the respective organization, person, or place. The GLN is a 13-digit number used to identify parties and physical locations.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Place".freeze, "schema:Person".freeze],
+      domainIncludes: ["schema:Place".freeze, "schema:Person".freeze, "schema:Organization".freeze],
       label: "globalLocationNumber".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
@@ -6041,15 +6190,21 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       label: "hasMap".freeze,
       rangeIncludes: ["schema:URL".freeze, "schema:Map".freeze],
       type: "rdf:Property".freeze
+    property :hasOfferCatalog,
+      comment: %(Indicates an OfferCatalog listing for this Organization, Person, or Service.).freeze,
+      domainIncludes: ["schema:Person".freeze, "schema:Service".freeze, "schema:Organization".freeze],
+      label: "hasOfferCatalog".freeze,
+      rangeIncludes: "schema:OfferCatalog".freeze,
+      type: "rdf:Property".freeze
     property :hasPOS,
       comment: %(Points-of-Sales operated by the organization or person.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      domainIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       label: "hasPOS".freeze,
       rangeIncludes: "schema:Place".freeze,
       type: "rdf:Property".freeze
     property :hasPart,
       comment: %(Indicates a CreativeWork that is \(in some sense\) a part of this CreativeWork.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       inverseOf: "schema:isPartOf".freeze,
       label: "hasPart".freeze,
@@ -6069,15 +6224,15 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       type: "rdf:Property".freeze
     property :height,
       comment: %(The height of the item.).freeze,
-      domainIncludes: ["schema:MediaObject".freeze, "schema:Product".freeze, "schema:Person".freeze, "schema:VisualArtwork".freeze],
+      domainIncludes: ["schema:Person".freeze, "schema:VisualArtwork".freeze, "schema:MediaObject".freeze, "schema:Product".freeze],
       label: "height".freeze,
-      rangeIncludes: ["schema:Distance".freeze, "schema:QuantitativeValue".freeze],
+      rangeIncludes: ["schema:QuantitativeValue".freeze, "schema:Distance".freeze],
       type: "rdf:Property".freeze
     property :highPrice,
       comment: %(The highest price of all offers available.).freeze,
       domainIncludes: "schema:AggregateOffer".freeze,
       label: "highPrice".freeze,
-      rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:Number".freeze],
       type: "rdf:Property".freeze
     property :hiringOrganization,
       comment: %(Organization offering the job position.).freeze,
@@ -6089,7 +6244,8 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       comment: %(A contact location for a person's residence.).freeze,
       domainIncludes: "schema:Person".freeze,
       label: "homeLocation".freeze,
-      rangeIncludes: ["schema:ContactPoint".freeze, "schema:Place".freeze],
+      rangeIncludes: ["schema:Place".freeze, "schema:ContactPoint".freeze],
+      subPropertyOf: "schema:location".freeze,
       type: "rdf:Property".freeze
     property :homeTeam,
       comment: %(The home team in a sports event.).freeze,
@@ -6123,8 +6279,8 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       rangeIncludes: "schema:Organization".freeze,
       type: "rdf:Property".freeze
     property :hoursAvailable,
-      comment: %(The hours during which this contact point is available.).freeze,
-      domainIncludes: "schema:ContactPoint".freeze,
+      comment: %(The hours during which this service or contact is available.).freeze,
+      domainIncludes: ["schema:ContactPoint".freeze, "schema:Service".freeze],
       label: "hoursAvailable".freeze,
       rangeIncludes: "schema:OpeningHoursSpecification".freeze,
       type: "rdf:Property".freeze
@@ -6196,9 +6352,9 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       type: "rdf:Property".freeze
     property :inLanguage,
       comment: %(The language of the content or performance or used in an action. Please use one of the language codes from the <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard</a>.).freeze,
-      domainIncludes: ["schema:CreativeWork".freeze, "schema:Event".freeze, "schema:CommunicateAction".freeze, "schema:WriteAction".freeze],
+      domainIncludes: ["schema:CreativeWork".freeze, "schema:Event".freeze, "schema:WriteAction".freeze, "schema:CommunicateAction".freeze],
       label: "inLanguage".freeze,
-      rangeIncludes: ["schema:Text".freeze, "schema:Language".freeze],
+      rangeIncludes: ["schema:Language".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
     property :inPlaylist,
       comment: %(The playlist to which this recording belongs.).freeze,
@@ -6217,11 +6373,11 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       domainIncludes: "schema:JobPosting".freeze,
       label: "incentives".freeze,
       rangeIncludes: "schema:Text".freeze,
-      "schema:supersededBy" => %(schema:incentiveCompensation).freeze,
+      :"schema:supersededBy" => %(schema:incentiveCompensation).freeze,
       type: "rdf:Property".freeze
     property :includedComposition,
       comment: %(Smaller compositions included in this work \(e.g. a movement in a symphony\).).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicComposition".freeze,
       label: "includedComposition".freeze,
       rangeIncludes: "schema:MusicComposition".freeze,
@@ -6252,7 +6408,7 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       type: "rdf:Property".freeze
     property :indication,
       comment: %(A factor that indicates use of this therapy for treatment and/or prevention of a condition, symptom, etc. For therapies such as drugs, indications can include both officially-approved indications as well as off-label uses. These can be distinguished by using the ApprovedIndication subtype of MedicalIndication.).freeze,
-      domainIncludes: ["schema:MedicalTherapy".freeze, "schema:MedicalDevice".freeze],
+      domainIncludes: ["schema:MedicalDevice".freeze, "schema:MedicalTherapy".freeze],
       label: "indication".freeze,
       rangeIncludes: "schema:MedicalIndication".freeze,
       type: "rdf:Property".freeze
@@ -6263,10 +6419,12 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :ineligibleRegion,
-      comment: %(The ISO 3166-1 \(ISO 3166-1 alpha-2\) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region\(s\) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.).freeze,
+      comment: %(The ISO 3166-1 \(ISO 3166-1 alpha-2\) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region\(s\) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.
+      <br><br> See also <a href="/eligibleRegion">eligibleRegion</a>.
+      ).freeze,
       domainIncludes: ["schema:Offer".freeze, "schema:DeliveryChargeSpecification".freeze, "schema:Demand".freeze],
       label: "ineligibleRegion".freeze,
-      rangeIncludes: ["schema:GeoShape".freeze, "schema:Place".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Place".freeze, "schema:Text".freeze, "schema:GeoShape".freeze],
       type: "rdf:Property".freeze
     property :infectiousAgent,
       comment: %(The actual infectious agent, such as a specific bacterium.).freeze,
@@ -6285,7 +6443,7 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       domainIncludes: "schema:Recipe".freeze,
       label: "ingredients".freeze,
       rangeIncludes: "schema:Text".freeze,
-      "schema:supersededBy" => %(schema:recipeIngredient).freeze,
+      :"schema:supersededBy" => %(schema:recipeIngredient).freeze,
       type: "rdf:Property".freeze
     property :insertion,
       comment: %(The place of attachment of a muscle, or what the muscle moves.).freeze,
@@ -6320,13 +6478,13 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
     property :interactionCount,
       comment: %(This property is deprecated, alongside the UserInteraction types on which it depended.).freeze,
       label: "interactionCount".freeze,
-      "schema:supersededBy" => %(schema:interactionStatistic).freeze,
+      :"schema:supersededBy" => %(schema:interactionStatistic).freeze,
       type: "rdf:Property".freeze
     property :interactionService,
       comment: %(The WebSite or SoftwareApplication where the interactions took place.).freeze,
       domainIncludes: "schema:InteractionCounter".freeze,
       label: "interactionService".freeze,
-      rangeIncludes: ["schema:SoftwareApplication".freeze, "schema:WebSite".freeze],
+      rangeIncludes: ["schema:WebSite".freeze, "schema:SoftwareApplication".freeze],
       type: "rdf:Property".freeze
     property :interactionStatistic,
       comment: %(The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used.).freeze,
@@ -6441,36 +6599,36 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       comment: %(The ISBN of the book.).freeze,
       domainIncludes: "schema:Book".freeze,
       label: "isbn".freeze,
-      "owl:equivalentProperty" => %(bibo:isbn).freeze,
+      :"owl:equivalentProperty" => %(bibo:isbn).freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :isicV4,
       comment: %(The International Standard of Industrial Classification of All Economic Activities \(ISIC\), Revision 4 code for a particular organization, business person, or place.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Place".freeze, "schema:Person".freeze],
+      domainIncludes: ["schema:Place".freeze, "schema:Person".freeze, "schema:Organization".freeze],
       label: "isicV4".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :isrcCode,
       comment: %(The International Standard Recording Code for the recording.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicRecording".freeze,
       label: "isrcCode".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :issn,
       comment: %(The International Standard Serial Number \(ISSN\) that identifies this periodical. You can repeat this property to \(for example\) identify different formats of this periodical.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
       domainIncludes: "schema:Periodical".freeze,
       label: "issn".freeze,
-      "owl:equivalentProperty" => %(bibo:issn).freeze,
+      :"owl:equivalentProperty" => %(bibo:issn).freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :issueNumber,
       comment: %(Identifies the issue of publication; for example, "iii" or "2".).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
       domainIncludes: "schema:PublicationIssue".freeze,
       label: "issueNumber".freeze,
-      "owl:equivalentProperty" => %(bibo:issue).freeze,
+      :"owl:equivalentProperty" => %(bibo:issue).freeze,
       rangeIncludes: ["schema:Integer".freeze, "schema:Text".freeze],
       subPropertyOf: "schema:position".freeze,
       type: "rdf:Property".freeze
@@ -6488,14 +6646,14 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       type: "rdf:Property".freeze
     property :iswcCode,
       comment: %(The International Standard Musical Work Code for the composition.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicComposition".freeze,
       label: "iswcCode".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :item,
-      comment: %(An entity represented by an entry in a list \(e.g. an 'artist' in a list of 'artists'\)’.).freeze,
-      domainIncludes: "schema:ListItem".freeze,
+      comment: %(An entity represented by an entry in a list or data feed \(e.g. an 'artist' in a list of 'artists'\)’.).freeze,
+      domainIncludes: ["schema:ListItem".freeze, "schema:DataFeedItem".freeze],
       label: "item".freeze,
       rangeIncludes: "schema:Thing".freeze,
       type: "rdf:Property".freeze
@@ -6513,23 +6671,23 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
     Note: The order of elements in your mark-up is not sufficient for indicating the order or elements.  Use ListItem with a 'position' property in such cases.).freeze,
       domainIncludes: "schema:ItemList".freeze,
       label: "itemListElement".freeze,
-      rangeIncludes: ["schema:Text".freeze, "schema:ListItem".freeze, "schema:Thing".freeze],
+      rangeIncludes: ["schema:Thing".freeze, "schema:Text".freeze, "schema:ListItem".freeze],
       type: "rdf:Property".freeze
     property :itemListOrder,
       comment: %(Type of ordering \(e.g. Ascending, Descending, Unordered\).).freeze,
       domainIncludes: "schema:ItemList".freeze,
       label: "itemListOrder".freeze,
-      rangeIncludes: ["schema:ItemListOrderType".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:ItemListOrderType".freeze],
       type: "rdf:Property".freeze
     property :itemOffered,
       comment: %(The item being offered.).freeze,
       domainIncludes: ["schema:Offer".freeze, "schema:Demand".freeze],
       label: "itemOffered".freeze,
-      rangeIncludes: "schema:Product".freeze,
+      rangeIncludes: ["schema:Service".freeze, "schema:Product".freeze],
       type: "rdf:Property".freeze
     property :itemReviewed,
       comment: %(The item that is being reviewed/rated.).freeze,
-      domainIncludes: ["schema:AggregateRating".freeze, "schema:Review".freeze],
+      domainIncludes: ["schema:Review".freeze, "schema:AggregateRating".freeze],
       label: "itemReviewed".freeze,
       rangeIncludes: "schema:Thing".freeze,
       type: "rdf:Property".freeze
@@ -6565,7 +6723,7 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       type: "rdf:Property".freeze
     property :knownVehicleDamages,
       comment: %(A textual description of known damages, both repaired and unrepaired.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "knownVehicleDamages".freeze,
       rangeIncludes: "schema:Text".freeze,
@@ -6586,15 +6744,15 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       comment: %(A sub property of participant. The owner of the real estate property.).freeze,
       domainIncludes: "schema:RentAction".freeze,
       label: "landlord".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       subPropertyOf: "schema:participant".freeze,
       type: "rdf:Property".freeze
     property :language,
       comment: %(A sub property of instrument. The language used on this action.).freeze,
-      domainIncludes: ["schema:CommunicateAction".freeze, "schema:WriteAction".freeze],
+      domainIncludes: ["schema:WriteAction".freeze, "schema:CommunicateAction".freeze],
       label: "language".freeze,
       rangeIncludes: "schema:Language".freeze,
-      "schema:supersededBy" => %(schema:inLanguage).freeze,
+      :"schema:supersededBy" => %(schema:inLanguage).freeze,
       subPropertyOf: "schema:instrument".freeze,
       type: "rdf:Property".freeze
     property :lastReviewed,
@@ -6604,10 +6762,10 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       rangeIncludes: "schema:Date".freeze,
       type: "rdf:Property".freeze
     property :latitude,
-      comment: %(The latitude of a location. For example <code>37.42242</code>.).freeze,
+      comment: %(The latitude of a location. For example <code>37.42242</code> \(<a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a>\).).freeze,
       domainIncludes: "schema:GeoCoordinates".freeze,
       label: "latitude".freeze,
-      rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:Number".freeze],
       type: "rdf:Property".freeze
     property :learningResourceType,
       comment: %(The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.).freeze,
@@ -6650,7 +6808,7 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       comment: %(A license document that applies to this content, typically indicated by URL.).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       label: "license".freeze,
-      rangeIncludes: ["schema:CreativeWork".freeze, "schema:URL".freeze],
+      rangeIncludes: ["schema:URL".freeze, "schema:CreativeWork".freeze],
       type: "rdf:Property".freeze
     property :line,
       comment: %(A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space.).freeze,
@@ -6665,10 +6823,16 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       rangeIncludes: "schema:BlogPosting".freeze,
       type: "rdf:Property".freeze
     property :location,
-      comment: %(The location of the event, organization or action.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Event".freeze, "schema:Action".freeze],
+      comment: %(The location of for example where the event is happening, an organization is located, or where an action takes place.).freeze,
+      domainIncludes: ["schema:Action".freeze, "schema:Event".freeze, "schema:Organization".freeze],
       label: "location".freeze,
-      rangeIncludes: ["schema:Place".freeze, "schema:PostalAddress".freeze],
+      rangeIncludes: ["schema:Place".freeze, "schema:Text".freeze, "schema:PostalAddress".freeze],
+      type: "rdf:Property".freeze
+    property :locationCreated,
+      comment: %(The location where the CreativeWork was created, which may not be the same as the location depicted in the CreativeWork.).freeze,
+      domainIncludes: "schema:CreativeWork".freeze,
+      label: "locationCreated".freeze,
+      rangeIncludes: "schema:Place".freeze,
       type: "rdf:Property".freeze
     property :lodgingUnitDescription,
       comment: %(A full description of the lodging unit.).freeze,
@@ -6684,16 +6848,16 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       type: "rdf:Property".freeze
     property :logo,
       comment: %(An associated logo.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Place".freeze, "schema:Product".freeze, "schema:Brand".freeze],
+      domainIncludes: ["schema:Place".freeze, "schema:Brand".freeze, "schema:Product".freeze, "schema:Organization".freeze],
       label: "logo".freeze,
-      rangeIncludes: ["schema:ImageObject".freeze, "schema:URL".freeze],
+      rangeIncludes: ["schema:URL".freeze, "schema:ImageObject".freeze],
       subPropertyOf: "schema:image".freeze,
       type: "rdf:Property".freeze
     property :longitude,
-      comment: %(The longitude of a location. For example <code>-122.08585</code>.).freeze,
+      comment: %(The longitude of a location. For example <code>-122.08585</code> \(<a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a>\).).freeze,
       domainIncludes: "schema:GeoCoordinates".freeze,
       label: "longitude".freeze,
-      rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:Number".freeze],
       type: "rdf:Property".freeze
     property :loser,
       comment: %(A sub property of participant. The loser of the action.).freeze,
@@ -6706,18 +6870,18 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       comment: %(The lowest price of all offers available.).freeze,
       domainIncludes: "schema:AggregateOffer".freeze,
       label: "lowPrice".freeze,
-      rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:Number".freeze],
       type: "rdf:Property".freeze
     property :lyricist,
       comment: %(The person who wrote the words.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicComposition".freeze,
       label: "lyricist".freeze,
       rangeIncludes: "schema:Person".freeze,
       type: "rdf:Property".freeze
     property :lyrics,
       comment: %(The words in the song.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicComposition".freeze,
       label: "lyrics".freeze,
       rangeIncludes: "schema:CreativeWork".freeze,
@@ -6743,17 +6907,18 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       domainIncludes: "schema:Thing".freeze,
       inverseOf: "schema:mainEntity".freeze,
       label: "mainEntityOfPage".freeze,
-      rangeIncludes: ["schema:CreativeWork".freeze, "schema:URL".freeze],
+      rangeIncludes: ["schema:URL".freeze, "schema:CreativeWork".freeze],
       type: "rdf:Property".freeze
     property :makesOffer,
       comment: %(A pointer to products or services offered by the organization or person.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      domainIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
+      inverseOf: "schema:offeredBy".freeze,
       label: "makesOffer".freeze,
       rangeIncludes: "schema:Offer".freeze,
       type: "rdf:Property".freeze
     property :manufacturer,
       comment: %(The manufacturer of the product.).freeze,
-      domainIncludes: ["schema:DietarySupplement".freeze, "schema:Drug".freeze, "schema:Product".freeze],
+      domainIncludes: ["schema:DietarySupplement".freeze, "schema:Product".freeze, "schema:Drug".freeze],
       label: "manufacturer".freeze,
       rangeIncludes: "schema:Organization".freeze,
       type: "rdf:Property".freeze
@@ -6762,7 +6927,7 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       domainIncludes: "schema:Place".freeze,
       label: "map".freeze,
       rangeIncludes: "schema:URL".freeze,
-      "schema:supersededBy" => %(schema:hasMap).freeze,
+      :"schema:supersededBy" => %(schema:hasMap).freeze,
       type: "rdf:Property".freeze
     property :mapType,
       comment: %(Indicates the kind of Map, from the MapCategoryType Enumeration.).freeze,
@@ -6775,14 +6940,14 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       domainIncludes: "schema:Place".freeze,
       label: "maps".freeze,
       rangeIncludes: "schema:URL".freeze,
-      "schema:supersededBy" => %(schema:hasMap).freeze,
+      :"schema:supersededBy" => %(schema:hasMap).freeze,
       type: "rdf:Property".freeze
     property :material,
       comment: %(e.g. Oil, Watercolour, Acrylic, Linoprint, Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil, Mixed Media, etc.).freeze,
       domainIncludes: "schema:VisualArtwork".freeze,
       label: "material".freeze,
       rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
-      "schema:supersededBy" => %(schema:artMedium).freeze,
+      :"schema:supersededBy" => %(schema:artMedium).freeze,
       type: "rdf:Property".freeze
     property :maxPrice,
       comment: %(The highest price if the price is a range.).freeze,
@@ -6816,7 +6981,7 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       type: "rdf:Property".freeze
     property :medicalSpecialty,
       comment: %(A medical specialty of the provider.).freeze,
-      domainIncludes: ["schema:Hospital".freeze, "schema:MedicalClinic".freeze, "schema:Physician".freeze],
+      domainIncludes: ["schema:Hospital".freeze, "schema:Physician".freeze, "schema:MedicalClinic".freeze],
       label: "medicalSpecialty".freeze,
       rangeIncludes: "schema:MedicalSpecialty".freeze,
       type: "rdf:Property".freeze
@@ -6828,24 +6993,24 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       type: "rdf:Property".freeze
     property :member,
       comment: %(A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:ProgramMembership".freeze],
+      domainIncludes: ["schema:ProgramMembership".freeze, "schema:Organization".freeze],
       inverseOf: "schema:memberOf".freeze,
       label: "member".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
     property :memberOf,
       comment: %(An Organization \(or ProgramMembership\) to which this Person or Organization belongs.).freeze,
       domainIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       inverseOf: "schema:member".freeze,
       label: "memberOf".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:ProgramMembership".freeze],
+      rangeIncludes: ["schema:ProgramMembership".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
     property :members,
       comment: %(A member of this organization.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:ProgramMembership".freeze],
+      domainIncludes: ["schema:ProgramMembership".freeze, "schema:Organization".freeze],
       label: "members".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
-      "schema:supersededBy" => %(schema:member).freeze,
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
+      :"schema:supersededBy" => %(schema:member).freeze,
       type: "rdf:Property".freeze
     property :membershipNumber,
       comment: %(A unique identifier for the membership.).freeze,
@@ -6875,13 +7040,13 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       comment: %('merchant' is an out-dated term for 'seller'.).freeze,
       domainIncludes: "schema:Order".freeze,
       label: "merchant".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
-      "schema:supersededBy" => %(schema:seller).freeze,
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
+      :"schema:supersededBy" => %(schema:seller).freeze,
       type: "rdf:Property".freeze
     property :mileageFromOdometer,
       comment: %(The total distance travelled by the particular vehicle since its initial production, as read from its odometer.<br />
 Typical unit code\(s\): KMT for kilometers, SMI for statute miles).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "mileageFromOdometer".freeze,
       rangeIncludes: "schema:QuantitativeValue".freeze,
@@ -6908,7 +7073,7 @@ Typical unit code\(s\): KMT for kilometers, SMI for statute miles).freeze,
       comment: %(The model of the product. Use with the URL of a ProductModel or a textual representation of the model identifier. The URL of the ProductModel can be from an external source. It is recommended to additionally provide strong product identifiers via the gtin8/gtin13/gtin14 and mpn properties.).freeze,
       domainIncludes: "schema:Product".freeze,
       label: "model".freeze,
-      rangeIncludes: ["schema:ProductModel".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:ProductModel".freeze],
       type: "rdf:Property".freeze
     property :modifiedTime,
       comment: %(The date and time the reservation was modified.).freeze,
@@ -6936,20 +7101,20 @@ Typical unit code\(s\): KMT for kilometers, SMI for statute miles).freeze,
       type: "rdf:Property".freeze
     property :musicArrangement,
       comment: %(An arrangement derived from the composition.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicComposition".freeze,
       label: "musicArrangement".freeze,
       rangeIncludes: "schema:MusicComposition".freeze,
       type: "rdf:Property".freeze
     property :musicBy,
       comment: %(The composer of the soundtrack.).freeze,
-      domainIncludes: ["schema:Movie".freeze, "schema:Episode".freeze, "schema:TVSeries".freeze, "schema:RadioSeries".freeze, "schema:Clip".freeze, "schema:MovieSeries".freeze, "schema:VideoGame".freeze, "schema:VideoGameSeries".freeze, "schema:VideoObject".freeze],
+      domainIncludes: ["schema:VideoObject".freeze, "schema:RadioSeries".freeze, "schema:TVSeries".freeze, "schema:MovieSeries".freeze, "schema:Movie".freeze, "schema:Episode".freeze, "schema:VideoGame".freeze, "schema:VideoGameSeries".freeze, "schema:Clip".freeze],
       label: "musicBy".freeze,
       rangeIncludes: ["schema:MusicGroup".freeze, "schema:Person".freeze],
       type: "rdf:Property".freeze
     property :musicCompositionForm,
       comment: %(The type of composition \(e.g. overture, sonata, symphony, etc.\).).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicComposition".freeze,
       label: "musicCompositionForm".freeze,
       rangeIncludes: "schema:Text".freeze,
@@ -6959,25 +7124,25 @@ Typical unit code\(s\): KMT for kilometers, SMI for statute miles).freeze,
       domainIncludes: "schema:MusicGroup".freeze,
       label: "musicGroupMember".freeze,
       rangeIncludes: "schema:Person".freeze,
-      "schema:supersededBy" => %(schema:member).freeze,
+      :"schema:supersededBy" => %(schema:member).freeze,
       type: "rdf:Property".freeze
     property :musicReleaseFormat,
       comment: %(Format of this release \(the type of recording media used, ie. compact disc, digital media, LP, etc.\).).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicRelease".freeze,
       label: "musicReleaseFormat".freeze,
       rangeIncludes: "schema:MusicReleaseFormatType".freeze,
       type: "rdf:Property".freeze
     property :musicalKey,
       comment: %(The key, mode, or scale this composition uses.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicComposition".freeze,
       label: "musicalKey".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :naics,
       comment: %(The North American Industry Classification System \(NAICS\) code for a particular organization or business person.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      domainIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       label: "naics".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
@@ -6992,7 +7157,7 @@ Typical unit code\(s\): KMT for kilometers, SMI for statute miles).freeze,
       domainIncludes: "schema:Role".freeze,
       label: "namedPosition".freeze,
       rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
-      "schema:supersededBy" => %(schema:roleName).freeze,
+      :"schema:supersededBy" => %(schema:roleName).freeze,
       type: "rdf:Property".freeze
     property :nationality,
       comment: %(Nationality of the person.).freeze,
@@ -7068,26 +7233,26 @@ Typical unit code\(s\): KMT for kilometers, SMI for statute miles).freeze,
       type: "rdf:Property".freeze
     property :numberOfAirbags,
       comment: %(The number or type of airbags in the vehicle.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "numberOfAirbags".freeze,
-      rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:Number".freeze],
       type: "rdf:Property".freeze
     property :numberOfAxles,
       comment: %(The number of axles.<br />
 Typical unit code\(s\): C62).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "numberOfAxles".freeze,
-      rangeIncludes: ["schema:QuantitativeValue".freeze, "schema:Number".freeze],
+      rangeIncludes: ["schema:Number".freeze, "schema:QuantitativeValue".freeze],
       type: "rdf:Property".freeze
     property :numberOfDoors,
       comment: %(The number of doors.<br />
 Typical unit code\(s\): C62).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "numberOfDoors".freeze,
-      rangeIncludes: ["schema:QuantitativeValue".freeze, "schema:Number".freeze],
+      rangeIncludes: ["schema:Number".freeze, "schema:QuantitativeValue".freeze],
       type: "rdf:Property".freeze
     property :numberOfEmployees,
       comment: %(The number of employees in an organization e.g. business.).freeze,
@@ -7104,10 +7269,10 @@ Typical unit code\(s\): C62).freeze,
     property :numberOfForwardGears,
       comment: %(The total number of forward gears available for the transmission system of the vehicle.<br />
 Typical unit code\(s\): C62).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "numberOfForwardGears".freeze,
-      rangeIncludes: ["schema:QuantitativeValue".freeze, "schema:Number".freeze],
+      rangeIncludes: ["schema:Number".freeze, "schema:QuantitativeValue".freeze],
       type: "rdf:Property".freeze
     property :numberOfItems,
       comment: %(The number of items in an ItemList. Note that some descriptions might not fully describe all items in a list \(e.g., multi-page pagination\); in such cases, the numberOfItems would be for the entire list.).freeze,
@@ -7130,14 +7295,14 @@ Typical unit code\(s\): C62).freeze,
     property :numberOfPreviousOwners,
       comment: %(The number of owners of the vehicle, including the current one.<br />
 Typical unit code\(s\): C62).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "numberOfPreviousOwners".freeze,
-      rangeIncludes: ["schema:QuantitativeValue".freeze, "schema:Number".freeze],
+      rangeIncludes: ["schema:Number".freeze, "schema:QuantitativeValue".freeze],
       type: "rdf:Property".freeze
     property :numberOfSeasons,
       comment: %(The number of seasons in this series.).freeze,
-      domainIncludes: ["schema:TVSeries".freeze, "schema:RadioSeries".freeze, "schema:VideoGameSeries".freeze],
+      domainIncludes: ["schema:RadioSeries".freeze, "schema:TVSeries".freeze, "schema:VideoGameSeries".freeze],
       label: "numberOfSeasons".freeze,
       rangeIncludes: "schema:Integer".freeze,
       type: "rdf:Property".freeze
@@ -7171,9 +7336,16 @@ Typical unit code\(s\): C62).freeze,
       label: "offerCount".freeze,
       rangeIncludes: "schema:Integer".freeze,
       type: "rdf:Property".freeze
+    property :offeredBy,
+      comment: %(A pointer to the organization or person making the offer.).freeze,
+      domainIncludes: "schema:Offer".freeze,
+      inverseOf: "schema:makesOffer".freeze,
+      label: "offeredBy".freeze,
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
+      type: "rdf:Property".freeze
     property :offers,
-      comment: %(An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, or give away tickets to an event.).freeze,
-      domainIncludes: ["schema:CreativeWork".freeze, "schema:Event".freeze, "schema:Product".freeze, "schema:AggregateOffer".freeze],
+      comment: %(An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.).freeze,
+      domainIncludes: ["schema:CreativeWork".freeze, "schema:AggregateOffer".freeze, "schema:Event".freeze, "schema:Service".freeze, "schema:Product".freeze],
       label: "offers".freeze,
       rangeIncludes: "schema:Offer".freeze,
       type: "rdf:Property".freeze
@@ -7212,8 +7384,8 @@ Typical unit code\(s\): C62).freeze,
       comment: %(A sub property of object. The options subject to this action.).freeze,
       domainIncludes: "schema:ChooseAction".freeze,
       label: "option".freeze,
-      rangeIncludes: ["schema:Text".freeze, "schema:Thing".freeze],
-      "schema:supersededBy" => %(schema:actionOption).freeze,
+      rangeIncludes: ["schema:Thing".freeze, "schema:Text".freeze],
+      :"schema:supersededBy" => %(schema:actionOption).freeze,
       subPropertyOf: "schema:object".freeze,
       type: "rdf:Property".freeze
     property :orderDate,
@@ -7262,7 +7434,7 @@ Typical unit code\(s\): C62).freeze,
       comment: %(The item ordered.).freeze,
       domainIncludes: ["schema:Order".freeze, "schema:OrderItem".freeze],
       label: "orderedItem".freeze,
-      rangeIncludes: ["schema:Product".freeze, "schema:OrderItem".freeze],
+      rangeIncludes: ["schema:OrderItem".freeze, "schema:Product".freeze],
       type: "rdf:Property".freeze
     property :organizer,
       comment: %(An organizer of an Event.).freeze,
@@ -7320,32 +7492,32 @@ Typical unit code\(s\): C62).freeze,
       type: "rdf:Property".freeze
     property :owns,
       comment: %(Products owned by the organization or person.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      domainIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       label: "owns".freeze,
       rangeIncludes: ["schema:OwnershipInfo".freeze, "schema:Product".freeze],
       type: "rdf:Property".freeze
     property :pageEnd,
       comment: %(The page on which the work ends; for example "138" or "xvi".).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
-      domainIncludes: ["schema:PublicationVolume".freeze, "schema:PublicationIssue".freeze, "schema:Article".freeze],
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
+      domainIncludes: ["schema:Article".freeze, "schema:PublicationVolume".freeze, "schema:PublicationIssue".freeze],
       label: "pageEnd".freeze,
-      "owl:equivalentProperty" => %(bibo:pageEnd).freeze,
+      :"owl:equivalentProperty" => %(bibo:pageEnd).freeze,
       rangeIncludes: ["schema:Integer".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
     property :pageStart,
       comment: %(The page on which the work starts; for example "135" or "xiii".).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
-      domainIncludes: ["schema:PublicationVolume".freeze, "schema:PublicationIssue".freeze, "schema:Article".freeze],
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
+      domainIncludes: ["schema:Article".freeze, "schema:PublicationVolume".freeze, "schema:PublicationIssue".freeze],
       label: "pageStart".freeze,
-      "owl:equivalentProperty" => %(bibo:pageStart).freeze,
+      :"owl:equivalentProperty" => %(bibo:pageStart).freeze,
       rangeIncludes: ["schema:Integer".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
     property :pagination,
       comment: %(Any description of pages that is not separated into pageStart and pageEnd; for example, "1-6, 9, 55" or "10-12, 46-49".).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
-      domainIncludes: ["schema:PublicationVolume".freeze, "schema:PublicationIssue".freeze, "schema:Article".freeze],
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
+      domainIncludes: ["schema:Article".freeze, "schema:PublicationVolume".freeze, "schema:PublicationIssue".freeze],
       label: "pagination".freeze,
-      "owl:equivalentProperty" => %(bibo:pages).freeze,
+      :"owl:equivalentProperty" => %(bibo:pages).freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :parent,
@@ -7378,7 +7550,7 @@ Typical unit code\(s\): C62).freeze,
       domainIncludes: "schema:Person".freeze,
       label: "parents".freeze,
       rangeIncludes: "schema:Person".freeze,
-      "schema:supersededBy" => %(schema:parent).freeze,
+      :"schema:supersededBy" => %(schema:parent).freeze,
       type: "rdf:Property".freeze
     property :partOfEpisode,
       comment: %(The episode to which this clip belongs.).freeze,
@@ -7409,7 +7581,7 @@ Typical unit code\(s\): C62).freeze,
       type: "rdf:Property".freeze
     property :partOfSeries,
       comment: %(The series to which this episode or season belongs.).freeze,
-      domainIncludes: ["schema:Episode".freeze, "schema:CreativeWorkSeason".freeze, "schema:Clip".freeze],
+      domainIncludes: ["schema:CreativeWorkSeason".freeze, "schema:Episode".freeze, "schema:Clip".freeze],
       label: "partOfSeries".freeze,
       rangeIncludes: "schema:CreativeWorkSeries".freeze,
       subPropertyOf: "schema:isPartOf".freeze,
@@ -7423,21 +7595,21 @@ Typical unit code\(s\): C62).freeze,
       type: "rdf:Property".freeze
     property :partOfTVSeries,
       comment: %(The TV series to which this episode or season belongs.).freeze,
-      domainIncludes: ["schema:TVEpisode".freeze, "schema:TVSeason".freeze, "schema:TVClip".freeze],
+      domainIncludes: ["schema:TVClip".freeze, "schema:TVSeason".freeze, "schema:TVEpisode".freeze],
       label: "partOfTVSeries".freeze,
       rangeIncludes: "schema:TVSeries".freeze,
-      "schema:supersededBy" => %(schema:partOfSeries).freeze,
+      :"schema:supersededBy" => %(schema:partOfSeries).freeze,
       subPropertyOf: "schema:isPartOf".freeze,
       type: "rdf:Property".freeze
     property :participant,
       comment: %(Other co-agents that participated in the action indirectly. e.g. John wrote a book with *Steve*.).freeze,
       domainIncludes: "schema:Action".freeze,
       label: "participant".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
     property :partySize,
       comment: %(Number of people the reservation should accommodate.).freeze,
-      domainIncludes: ["schema:FoodEstablishmentReservation".freeze, "schema:TaxiReservation".freeze],
+      domainIncludes: ["schema:TaxiReservation".freeze, "schema:FoodEstablishmentReservation".freeze],
       label: "partySize".freeze,
       rangeIncludes: ["schema:Integer".freeze, "schema:QuantitativeValue".freeze],
       type: "rdf:Property".freeze
@@ -7470,7 +7642,7 @@ Typical unit code\(s\): C62).freeze,
       domainIncludes: ["schema:Order".freeze, "schema:Invoice".freeze],
       label: "paymentDue".freeze,
       rangeIncludes: "schema:DateTime".freeze,
-      "schema:supersededBy" => %(schema:paymentDueDate).freeze,
+      :"schema:supersededBy" => %(schema:paymentDueDate).freeze,
       type: "rdf:Property".freeze
     property :paymentDueDate,
       comment: %(The date that payment is due.).freeze,
@@ -7506,7 +7678,7 @@ Typical unit code\(s\): C62).freeze,
       comment: %(A performer at the event&#x2014;for example, a presenter, musician, musical group or actor.).freeze,
       domainIncludes: "schema:Event".freeze,
       label: "performer".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
     property :performerIn,
       comment: %(Event that this person is a performer or participant in.).freeze,
@@ -7518,8 +7690,8 @@ Typical unit code\(s\): C62).freeze,
       comment: %(The main performer or performers of the event&#x2014;for example, a presenter, musician, or actor.).freeze,
       domainIncludes: "schema:Event".freeze,
       label: "performers".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
-      "schema:supersededBy" => %(schema:performer).freeze,
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
+      :"schema:supersededBy" => %(schema:performer).freeze,
       type: "rdf:Property".freeze
     property :permissions,
       comment: %(Permission\(s\) required to run the app \(for example, a mobile app may require full internet access or may run only on wifi\).).freeze,
@@ -7543,15 +7715,15 @@ Typical unit code\(s\): C62).freeze,
       comment: %(A photograph of this place.).freeze,
       domainIncludes: "schema:Place".freeze,
       label: "photo".freeze,
-      rangeIncludes: ["schema:ImageObject".freeze, "schema:Photograph".freeze],
+      rangeIncludes: ["schema:Photograph".freeze, "schema:ImageObject".freeze],
       subPropertyOf: "schema:image".freeze,
       type: "rdf:Property".freeze
     property :photos,
       comment: %(Photographs of this place.).freeze,
       domainIncludes: "schema:Place".freeze,
       label: "photos".freeze,
-      rangeIncludes: ["schema:ImageObject".freeze, "schema:Photograph".freeze],
-      "schema:supersededBy" => %(schema:photo).freeze,
+      rangeIncludes: ["schema:Photograph".freeze, "schema:ImageObject".freeze],
+      :"schema:supersededBy" => %(schema:photo).freeze,
       type: "rdf:Property".freeze
     property :physiologicalBenefits,
       comment: %(Specific physiologic benefits associated to the plan.).freeze,
@@ -7603,9 +7775,9 @@ Typical unit code\(s\): C62).freeze,
       type: "rdf:Property".freeze
     property :position,
       comment: %(The position of an item in a series or sequence of items.).freeze,
-      domainIncludes: ["schema:CreativeWork".freeze, "schema:ListItem".freeze],
+      domainIncludes: ["schema:ListItem".freeze, "schema:CreativeWork".freeze],
       label: "position".freeze,
-      rangeIncludes: ["schema:Text".freeze, "schema:Integer".freeze],
+      rangeIncludes: ["schema:Integer".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
     property :possibleComplication,
       comment: %(A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the disease, extension of the condition to other organ systems, etc.).freeze,
@@ -7615,7 +7787,7 @@ Typical unit code\(s\): C62).freeze,
       type: "rdf:Property".freeze
     property :possibleTreatment,
       comment: %(A possible treatment to address this condition, sign or symptom.).freeze,
-      domainIncludes: ["schema:MedicalCondition".freeze, "schema:MedicalSignOrSymptom".freeze],
+      domainIncludes: ["schema:MedicalSignOrSymptom".freeze, "schema:MedicalCondition".freeze],
       label: "possibleTreatment".freeze,
       rangeIncludes: "schema:MedicalTherapy".freeze,
       type: "rdf:Property".freeze
@@ -7633,7 +7805,7 @@ Typical unit code\(s\): C62).freeze,
       type: "rdf:Property".freeze
     property :postalCode,
       comment: %(The postal code. For example, 94043.).freeze,
-      domainIncludes: "schema:PostalAddress".freeze,
+      domainIncludes: ["schema:PostalAddress".freeze, "schema:GeoCoordinates".freeze, "schema:GeoShape".freeze],
       label: "postalCode".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
@@ -7727,11 +7899,11 @@ Typical unit code\(s\): C62).freeze,
       ).freeze,
       domainIncludes: ["schema:Offer".freeze, "schema:PriceSpecification".freeze, "schema:TradeAction".freeze],
       label: "price".freeze,
-      rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:Number".freeze],
       type: "rdf:Property".freeze
     property :priceCurrency,
       comment: %(The currency \(in 3-letter ISO 4217 format\) of the price or a price component, when attached to PriceSpecification and its subtypes.).freeze,
-      domainIncludes: ["schema:Reservation".freeze, "schema:Ticket".freeze, "schema:Offer".freeze, "schema:PriceSpecification".freeze],
+      domainIncludes: ["schema:Offer".freeze, "schema:Ticket".freeze, "schema:Reservation".freeze, "schema:PriceSpecification".freeze],
       label: "priceCurrency".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
@@ -7743,7 +7915,7 @@ Typical unit code\(s\): C62).freeze,
       type: "rdf:Property".freeze
     property :priceSpecification,
       comment: %(One or more detailed price specifications, indicating the unit price and delivery or payment charges.).freeze,
-      domainIncludes: ["schema:Offer".freeze, "schema:Demand".freeze, "schema:TradeAction".freeze],
+      domainIncludes: ["schema:Offer".freeze, "schema:TradeAction".freeze, "schema:Demand".freeze],
       label: "priceSpecification".freeze,
       rangeIncludes: "schema:PriceSpecification".freeze,
       type: "rdf:Property".freeze
@@ -7830,7 +8002,7 @@ Typical unit code\(s\): C62).freeze,
       domainIncludes: "schema:Service".freeze,
       label: "produces".freeze,
       rangeIncludes: "schema:Thing".freeze,
-      "schema:supersededBy" => %(schema:serviceOutput).freeze,
+      :"schema:supersededBy" => %(schema:serviceOutput).freeze,
       type: "rdf:Property".freeze
     property :productID,
       comment: %(The product identifier, such as ISBN. For example: <code>&lt;meta itemprop='productID' content='isbn:123-456-789'/&gt;</code>.).freeze,
@@ -7842,18 +8014,18 @@ Typical unit code\(s\): C62).freeze,
       comment: %(The product or service this support contact point is related to \(such as product support for a particular product line\). This can be a specific product or product line \(e.g. "iPhone"\) or a general category of products or services \(e.g. "smartphones"\).).freeze,
       domainIncludes: "schema:ContactPoint".freeze,
       label: "productSupported".freeze,
-      rangeIncludes: ["schema:Product".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:Product".freeze],
       type: "rdf:Property".freeze
     property :productionCompany,
       comment: %(The production company or studio responsible for the item e.g. series, video game, episode etc.).freeze,
-      domainIncludes: ["schema:MediaObject".freeze, "schema:Movie".freeze, "schema:Episode".freeze, "schema:CreativeWorkSeason".freeze, "schema:TVSeries".freeze, "schema:RadioSeries".freeze, "schema:MovieSeries".freeze, "schema:VideoGameSeries".freeze],
+      domainIncludes: ["schema:CreativeWorkSeason".freeze, "schema:TVSeries".freeze, "schema:MovieSeries".freeze, "schema:MediaObject".freeze, "schema:Episode".freeze, "schema:VideoGameSeries".freeze, "schema:RadioSeries".freeze, "schema:Movie".freeze],
       label: "productionCompany".freeze,
       rangeIncludes: "schema:Organization".freeze,
       type: "rdf:Property".freeze
     property :productionDate,
       comment: %(The date of production of the item, e.g. vehicle.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
-      domainIncludes: ["schema:Vehicle".freeze, "schema:Product".freeze],
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      domainIncludes: ["schema:Product".freeze, "schema:Vehicle".freeze],
       label: "productionDate".freeze,
       rangeIncludes: "schema:Date".freeze,
       type: "rdf:Property".freeze
@@ -7910,9 +8082,15 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       type: "rdf:Property".freeze
     property :provider,
       comment: %(The service provider, service operator, or service performer; the goods producer. Another party \(a seller\) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.).freeze,
-      domainIncludes: ["schema:CreativeWork".freeze, "schema:Service".freeze, "schema:Invoice".freeze, "schema:Reservation".freeze, "schema:Flight".freeze, "schema:ParcelDelivery".freeze, "schema:TrainTrip".freeze, "schema:BusTrip".freeze],
+      domainIncludes: ["schema:BusTrip".freeze, "schema:CreativeWork".freeze, "schema:Flight".freeze, "schema:Invoice".freeze, "schema:Service".freeze, "schema:ParcelDelivery".freeze, "schema:TrainTrip".freeze, "schema:Reservation".freeze],
       label: "provider".freeze,
       rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
+      type: "rdf:Property".freeze
+    property :providerMobility,
+      comment: %(Indicates the mobility of a provided service \(e.g. 'static', 'dynamic'\).).freeze,
+      domainIncludes: "schema:Service".freeze,
+      label: "providerMobility".freeze,
+      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :providesBroadcastService,
       comment: %(The BroadcastService offered on this channel.).freeze,
@@ -7948,7 +8126,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       comment: %(The publisher of the creative work.).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       label: "publisher".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
     property :publishingPrinciples,
       comment: %(Link to page describing the editorial principles of the organization primarily responsible for the creation of the CreativeWork.).freeze,
@@ -7958,16 +8136,16 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       type: "rdf:Property".freeze
     property :purchaseDate,
       comment: %(The date the item e.g. vehicle was purchased by the current owner.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
-      domainIncludes: ["schema:Vehicle".freeze, "schema:Product".freeze],
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      domainIncludes: ["schema:Product".freeze, "schema:Vehicle".freeze],
       label: "purchaseDate".freeze,
       rangeIncludes: "schema:Date".freeze,
       type: "rdf:Property".freeze
     property :purpose,
       comment: %(A goal towards an action is taken. Can be concrete or abstract.).freeze,
-      domainIncludes: ["schema:MedicalDevice".freeze, "schema:AllocateAction".freeze, "schema:PayAction".freeze],
+      domainIncludes: ["schema:AllocateAction".freeze, "schema:MedicalDevice".freeze, "schema:PayAction".freeze],
       label: "purpose".freeze,
-      rangeIncludes: ["schema:MedicalDevicePurpose".freeze, "schema:Thing".freeze],
+      rangeIncludes: ["schema:Thing".freeze, "schema:MedicalDevicePurpose".freeze],
       type: "rdf:Property".freeze
     property :qualifications,
       comment: %(Specific qualifications required for this role.).freeze,
@@ -8055,7 +8233,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       comment: %(A step or instruction involved in making the recipe.).freeze,
       domainIncludes: "schema:Recipe".freeze,
       label: "recipeInstructions".freeze,
-      rangeIncludes: ["schema:Text".freeze, "schema:ItemList".freeze],
+      rangeIncludes: ["schema:ItemList".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
     property :recipeYield,
       comment: %(The quantity produced by the recipe \(for example, number of people served, number of servings, etc\).).freeze,
@@ -8065,9 +8243,9 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       type: "rdf:Property".freeze
     property :recipient,
       comment: %(A sub property of participant. The participant who is at the receiving end of the action.).freeze,
-      domainIncludes: ["schema:CommunicateAction".freeze, "schema:AuthorizeAction".freeze, "schema:DonateAction".freeze, "schema:GiveAction".freeze, "schema:PayAction".freeze, "schema:ReturnAction".freeze, "schema:SendAction".freeze, "schema:TipAction".freeze],
+      domainIncludes: ["schema:ReturnAction".freeze, "schema:SendAction".freeze, "schema:AuthorizeAction".freeze, "schema:GiveAction".freeze, "schema:DonateAction".freeze, "schema:TipAction".freeze, "schema:PayAction".freeze, "schema:CommunicateAction".freeze],
       label: "recipient".freeze,
-      rangeIncludes: ["schema:Audience".freeze, "schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Audience".freeze, "schema:Organization".freeze],
       subPropertyOf: "schema:participant".freeze,
       type: "rdf:Property".freeze
     property :recognizingAuthority,
@@ -8090,15 +8268,15 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       type: "rdf:Property".freeze
     property :recordLabel,
       comment: %(The label that issued the release.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicRelease".freeze,
       label: "recordLabel".freeze,
-      "owl:equivalentProperty" => %(mo:label).freeze,
+      :"owl:equivalentProperty" => %(mo:label).freeze,
       rangeIncludes: "schema:Organization".freeze,
       type: "rdf:Property".freeze
     property :recordedAs,
       comment: %(An audio recording of the work.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicComposition".freeze,
       inverseOf: "schema:recordingOf".freeze,
       label: "recordedAs".freeze,
@@ -8120,7 +8298,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       type: "rdf:Property".freeze
     property :recordingOf,
       comment: %(The composition this track is a recording of.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicRecording".freeze,
       inverseOf: "schema:recordedAs".freeze,
       label: "recordingOf".freeze,
@@ -8200,7 +8378,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       type: "rdf:Property".freeze
     property :releaseOf,
       comment: %(The album this is a release of.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       domainIncludes: "schema:MusicRelease".freeze,
       inverseOf: "schema:albumRelease".freeze,
       label: "releaseOf".freeze,
@@ -8279,7 +8457,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       domainIncludes: "schema:SoftwareApplication".freeze,
       label: "requirements".freeze,
       rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
-      "schema:supersededBy" => %(schema:softwareRequirements).freeze,
+      :"schema:supersededBy" => %(schema:softwareRequirements).freeze,
       type: "rdf:Property".freeze
     property :requiresSubscription,
       comment: %(Indicates if use of the media require a subscription  \(either paid or free\). Allowed values are <code>true</code> or <code>false</code> \(note that an earlier version had 'yes', 'no'\).).freeze,
@@ -8345,7 +8523,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       type: "rdf:Property".freeze
     property :review,
       comment: %(A review of the item.).freeze,
-      domainIncludes: ["schema:CreativeWork".freeze, "schema:Event".freeze, "schema:Brand".freeze, "schema:Service".freeze, "schema:Organization".freeze, "schema:Place".freeze, "schema:Offer".freeze, "schema:Product".freeze],
+      domainIncludes: ["schema:Place".freeze, "schema:Brand".freeze, "schema:CreativeWork".freeze, "schema:Event".freeze, "schema:Service".freeze, "schema:Product".freeze, "schema:Organization".freeze, "schema:Offer".freeze],
       label: "review".freeze,
       rangeIncludes: "schema:Review".freeze,
       type: "rdf:Property".freeze
@@ -8371,14 +8549,14 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       comment: %(People or organizations that have reviewed the content on this web page for accuracy and/or completeness.).freeze,
       domainIncludes: "schema:WebPage".freeze,
       label: "reviewedBy".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
     property :reviews,
       comment: %(Review of the item.).freeze,
-      domainIncludes: ["schema:CreativeWork".freeze, "schema:Organization".freeze, "schema:Place".freeze, "schema:Offer".freeze, "schema:Product".freeze],
+      domainIncludes: ["schema:Place".freeze, "schema:CreativeWork".freeze, "schema:Product".freeze, "schema:Organization".freeze, "schema:Offer".freeze],
       label: "reviews".freeze,
       rangeIncludes: "schema:Review".freeze,
-      "schema:supersededBy" => %(schema:review).freeze,
+      :"schema:supersededBy" => %(schema:review).freeze,
       type: "rdf:Property".freeze
     property :riskFactor,
       comment: %(A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition.).freeze,
@@ -8415,7 +8593,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       domainIncludes: "schema:SoftwareSourceCode".freeze,
       label: "runtime".freeze,
       rangeIncludes: "schema:Text".freeze,
-      "schema:supersededBy" => %(schema:runtimePlatform).freeze,
+      :"schema:supersededBy" => %(schema:runtimePlatform).freeze,
       type: "rdf:Property".freeze
     property :runtimePlatform,
       comment: %(Runtime platform or script interpreter dependencies \(Example - Java v1, Python2.3, .Net Framework 3.0\).).freeze,
@@ -8446,7 +8624,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       domainIncludes: "schema:SoftwareSourceCode".freeze,
       label: "sampleType".freeze,
       rangeIncludes: "schema:Text".freeze,
-      "schema:supersededBy" => %(schema:codeSampleType).freeze,
+      :"schema:supersededBy" => %(schema:codeSampleType).freeze,
       type: "rdf:Property".freeze
     property :saturatedFatContent,
       comment: %(The number of grams of saturated fat.).freeze,
@@ -8470,7 +8648,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       comment: %(Indicates \(by URL or string\) a particular version of a schema used in some CreativeWork. For example, a document could declare a schemaVersion using a URL such as http://schema.org/version/2.0/ if precise indication of schema version was required by some application. ).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       label: "schemaVersion".freeze,
-      rangeIncludes: ["schema:URL".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
       type: "rdf:Property".freeze
     property :screenCount,
       comment: %(The number of screens in the movie theater.).freeze,
@@ -8482,14 +8660,14 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       comment: %(A link to a screenshot image of the app.).freeze,
       domainIncludes: "schema:SoftwareApplication".freeze,
       label: "screenshot".freeze,
-      rangeIncludes: ["schema:ImageObject".freeze, "schema:URL".freeze],
+      rangeIncludes: ["schema:URL".freeze, "schema:ImageObject".freeze],
       type: "rdf:Property".freeze
     property :season,
       comment: %(A season in a media series.).freeze,
-      domainIncludes: ["schema:VideoGameSeries".freeze, "schema:TVSeries".freeze, "schema:RadioSeries".freeze],
+      domainIncludes: ["schema:RadioSeries".freeze, "schema:TVSeries".freeze, "schema:VideoGameSeries".freeze],
       label: "season".freeze,
       rangeIncludes: "schema:CreativeWorkSeason".freeze,
-      "schema:supersededBy" => %(schema:containsSeason).freeze,
+      :"schema:supersededBy" => %(schema:containsSeason).freeze,
       subPropertyOf: "schema:hasPart".freeze,
       type: "rdf:Property".freeze
     property :seasonNumber,
@@ -8501,10 +8679,10 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       type: "rdf:Property".freeze
     property :seasons,
       comment: %(A season in a media series.).freeze,
-      domainIncludes: ["schema:VideoGameSeries".freeze, "schema:TVSeries".freeze, "schema:RadioSeries".freeze],
+      domainIncludes: ["schema:RadioSeries".freeze, "schema:TVSeries".freeze, "schema:VideoGameSeries".freeze],
       label: "seasons".freeze,
       rangeIncludes: "schema:CreativeWorkSeason".freeze,
-      "schema:supersededBy" => %(schema:season).freeze,
+      :"schema:supersededBy" => %(schema:season).freeze,
       type: "rdf:Property".freeze
     property :seatNumber,
       comment: %(The location of the reserved seat \(e.g., 27\).).freeze,
@@ -8544,22 +8722,22 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       type: "rdf:Property".freeze
     property :seeks,
       comment: %(A pointer to products or services sought by the organization or person \(demand\).).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      domainIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       label: "seeks".freeze,
       rangeIncludes: "schema:Demand".freeze,
       type: "rdf:Property".freeze
     property :seller,
       comment: %(An entity which offers \(sells / leases / lends / loans\) the services / goods.  A seller may also be a provider.).freeze,
-      domainIncludes: ["schema:Order".freeze, "schema:BuyAction".freeze, "schema:Offer".freeze, "schema:Demand".freeze, "schema:Flight".freeze],
+      domainIncludes: ["schema:Offer".freeze, "schema:Order".freeze, "schema:Flight".freeze, "schema:Demand".freeze, "schema:BuyAction".freeze],
       label: "seller".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       subPropertyOf: "schema:participant".freeze,
       type: "rdf:Property".freeze
     property :sender,
       comment: %(A sub property of participant. The participant who is at the sending end of the action.).freeze,
       domainIncludes: "schema:ReceiveAction".freeze,
       label: "sender".freeze,
-      rangeIncludes: ["schema:Audience".freeze, "schema:Organization".freeze, "schema:Person".freeze],
+      rangeIncludes: ["schema:Person".freeze, "schema:Audience".freeze, "schema:Organization".freeze],
       subPropertyOf: "schema:participant".freeze,
       type: "rdf:Property".freeze
     property :sensoryUnit,
@@ -8576,7 +8754,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       type: "rdf:Property".freeze
     property :seriousAdverseOutcome,
       comment: %(A possible serious complication and/or serious side effect of this therapy. Serious adverse outcomes include those that are life-threatening; result in death, disability, or permanent damage; require hospitalization or prolong existing hospitalization; cause congenital anomalies or birth defects; or jeopardize the patient and may require medical or surgical intervention to prevent one of the outcomes in this definition.).freeze,
-      domainIncludes: ["schema:MedicalTherapy".freeze, "schema:MedicalDevice".freeze],
+      domainIncludes: ["schema:MedicalDevice".freeze, "schema:MedicalTherapy".freeze],
       label: "seriousAdverseOutcome".freeze,
       rangeIncludes: "schema:MedicalEntity".freeze,
       type: "rdf:Property".freeze
@@ -8594,16 +8772,17 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       type: "rdf:Property".freeze
     property :serviceArea,
       comment: %(The geographic area where the service is provided.).freeze,
-      domainIncludes: "schema:Service".freeze,
+      domainIncludes: ["schema:ContactPoint".freeze, "schema:Service".freeze, "schema:Organization".freeze],
       label: "serviceArea".freeze,
-      rangeIncludes: "schema:AdministrativeArea".freeze,
+      rangeIncludes: ["schema:Place".freeze, "schema:AdministrativeArea".freeze, "schema:GeoShape".freeze],
+      :"schema:supersededBy" => %(schema:areaServed).freeze,
       type: "rdf:Property".freeze
     property :serviceAudience,
       comment: %(The audience eligible for this service.).freeze,
       domainIncludes: "schema:Service".freeze,
       label: "serviceAudience".freeze,
       rangeIncludes: "schema:Audience".freeze,
-      "schema:supersededBy" => %(schema:audience).freeze,
+      :"schema:supersededBy" => %(schema:audience).freeze,
       type: "rdf:Property".freeze
     property :serviceLocation,
       comment: %(The location \(e.g. civic structure, local business, etc.\) where a person can go to access the service.).freeze,
@@ -8660,7 +8839,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :sharedContent,
-      comment: %(A CreativeWork such as an image, video, or audio clip shared as part of this psting.).freeze,
+      comment: %(A CreativeWork such as an image, video, or audio clip shared as part of this posting.).freeze,
       domainIncludes: "schema:SocialMediaPosting".freeze,
       label: "sharedContent".freeze,
       rangeIncludes: "schema:CreativeWork".freeze,
@@ -8676,7 +8855,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       domainIncludes: "schema:Person".freeze,
       label: "siblings".freeze,
       rangeIncludes: "schema:Person".freeze,
-      "schema:supersededBy" => %(schema:sibling).freeze,
+      :"schema:supersededBy" => %(schema:sibling).freeze,
       type: "rdf:Property".freeze
     property :signDetected,
       comment: %(A sign detected by the test.).freeze,
@@ -8707,7 +8886,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       domainIncludes: "schema:WebPage".freeze,
       label: "significantLinks".freeze,
       rangeIncludes: "schema:URL".freeze,
-      "schema:supersededBy" => %(schema:significantLink).freeze,
+      :"schema:supersededBy" => %(schema:significantLink).freeze,
       type: "rdf:Property".freeze
     property :skills,
       comment: %(Skills required to fulfill this role.).freeze,
@@ -8840,7 +9019,7 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       type: "rdf:Property".freeze
     property :startDate,
       comment: %(The start date and time of the item \(in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>\).).freeze,
-      domainIncludes: ["schema:Role".freeze, "schema:Event".freeze, "schema:CreativeWorkSeason".freeze, "schema:CreativeWorkSeries".freeze, "schema:DatedMoneySpecification".freeze],
+      domainIncludes: ["schema:CreativeWorkSeason".freeze, "schema:DatedMoneySpecification".freeze, "schema:Event".freeze, "schema:Role".freeze, "schema:CreativeWorkSeries".freeze],
       label: "startDate".freeze,
       rangeIncludes: "schema:Date".freeze,
       type: "rdf:Property".freeze
@@ -8860,7 +9039,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :steeringPosition,
       comment: %(The position of the steering wheel or similar device \(mostly for cars\).).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "steeringPosition".freeze,
       rangeIncludes: "schema:SteeringPositionValue".freeze,
@@ -8936,7 +9115,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       domainIncludes: "schema:Event".freeze,
       label: "subEvents".freeze,
       rangeIncludes: "schema:Event".freeze,
-      "schema:supersededBy" => %(schema:subEvent).freeze,
+      :"schema:supersededBy" => %(schema:subEvent).freeze,
       type: "rdf:Property".freeze
     property :subOrganization,
       comment: %(A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.).freeze,
@@ -8973,7 +9152,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       comment: %(Languages in which subtitles/captions are available, in <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard format.</a>).freeze,
       domainIncludes: ["schema:Movie".freeze, "schema:ScreeningEvent".freeze, "schema:TVEpisode".freeze],
       label: "subtitleLanguage".freeze,
-      rangeIncludes: ["schema:Text".freeze, "schema:Language".freeze],
+      rangeIncludes: ["schema:Language".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
     property :subtype,
       comment: %(A more specific type of the condition, where applicable, for example 'Type 1 Diabetes', 'Type 2 Diabetes', or 'Gestational Diabetes' for Diabetes.).freeze,
@@ -9035,12 +9214,18 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       label: "supplyTo".freeze,
       rangeIncludes: "schema:AnatomicalStructure".freeze,
       type: "rdf:Property".freeze
+    property :supportingData,
+      comment: %(Supporting data for a SoftwareApplication.).freeze,
+      domainIncludes: "schema:SoftwareApplication".freeze,
+      label: "supportingData".freeze,
+      rangeIncludes: "schema:DataFeed".freeze,
+      type: "rdf:Property".freeze
     property :surface,
       comment: %(e.g. Canvas, Paper, Wood, Board, etc.).freeze,
       domainIncludes: "schema:VisualArtwork".freeze,
       label: "surface".freeze,
       rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
-      "schema:supersededBy" => %(schema:artworkSurface).freeze,
+      :"schema:supersededBy" => %(schema:artworkSurface).freeze,
       type: "rdf:Property".freeze
     property :target,
       comment: %(Indicates a target EntryPoint for an Action.).freeze,
@@ -9093,13 +9278,13 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :taxID,
       comment: %(The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      domainIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       label: "taxID".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :telephone,
       comment: %(The telephone number.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Place".freeze, "schema:ContactPoint".freeze, "schema:Person".freeze],
+      domainIncludes: ["schema:Place".freeze, "schema:Person".freeze, "schema:ContactPoint".freeze, "schema:Organization".freeze],
       label: "telephone".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
@@ -9108,7 +9293,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       domainIncludes: "schema:Dataset".freeze,
       label: "temporal".freeze,
       rangeIncludes: "schema:DateTime".freeze,
-      "schema:supersededBy" => %(schema:datasetTimeInterval).freeze,
+      :"schema:supersededBy" => %(schema:datasetTimeInterval).freeze,
       type: "rdf:Property".freeze
     property :text,
       comment: %(The textual content of this CreativeWork.).freeze,
@@ -9118,7 +9303,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :thumbnail,
       comment: %(Thumbnail image for an image or video.).freeze,
-      domainIncludes: ["schema:ImageObject".freeze, "schema:VideoObject".freeze],
+      domainIncludes: ["schema:VideoObject".freeze, "schema:ImageObject".freeze],
       label: "thumbnail".freeze,
       rangeIncludes: "schema:ImageObject".freeze,
       type: "rdf:Property".freeze
@@ -9172,7 +9357,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :toLocation,
       comment: %(A sub property of location. The final location of the object or the agent after the action.).freeze,
-      domainIncludes: ["schema:InsertAction".freeze, "schema:MoveAction".freeze, "schema:TransferAction".freeze, "schema:ExerciseAction".freeze],
+      domainIncludes: ["schema:ExerciseAction".freeze, "schema:InsertAction".freeze, "schema:MoveAction".freeze, "schema:TransferAction".freeze],
       label: "toLocation".freeze,
       rangeIncludes: "schema:Place".freeze,
       subPropertyOf: "schema:location".freeze,
@@ -9185,9 +9370,9 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :totalPrice,
       comment: %(The total price for the reservation or ticket, including applicable taxes, shipping, etc.).freeze,
-      domainIncludes: ["schema:Reservation".freeze, "schema:Ticket".freeze],
+      domainIncludes: ["schema:Ticket".freeze, "schema:Reservation".freeze],
       label: "totalPrice".freeze,
-      rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze, "schema:PriceSpecification".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:Number".freeze, "schema:PriceSpecification".freeze],
       type: "rdf:Property".freeze
     property :totalTime,
       comment: %(The total time it takes to prepare and cook the recipe, in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 duration format</a>.).freeze,
@@ -9197,8 +9382,8 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :track,
       comment: %(A music recording \(track\)&#x2014;usually a single song. If an ItemList is given, the list should contain items of type MusicRecording.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
-      domainIncludes: ["schema:MusicPlaylist".freeze, "schema:MusicGroup".freeze],
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      domainIncludes: ["schema:MusicGroup".freeze, "schema:MusicPlaylist".freeze],
       label: "track".freeze,
       rangeIncludes: ["schema:ItemList".freeze, "schema:MusicRecording".freeze],
       type: "rdf:Property".freeze
@@ -9216,14 +9401,14 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :tracks,
       comment: %(A music recording \(track\)&#x2014;usually a single song.).freeze,
-      domainIncludes: ["schema:MusicPlaylist".freeze, "schema:MusicGroup".freeze],
+      domainIncludes: ["schema:MusicGroup".freeze, "schema:MusicPlaylist".freeze],
       label: "tracks".freeze,
       rangeIncludes: "schema:MusicRecording".freeze,
-      "schema:supersededBy" => %(schema:track).freeze,
+      :"schema:supersededBy" => %(schema:track).freeze,
       type: "rdf:Property".freeze
     property :trailer,
       comment: %(The trailer of a movie or tv/radio series, season, episode, etc.).freeze,
-      domainIncludes: ["schema:Movie".freeze, "schema:Episode".freeze, "schema:CreativeWorkSeason".freeze, "schema:VideoGame".freeze, "schema:VideoGameSeries".freeze, "schema:MovieSeries".freeze, "schema:RadioSeries".freeze, "schema:TVSeries".freeze],
+      domainIncludes: ["schema:CreativeWorkSeason".freeze, "schema:TVSeries".freeze, "schema:MovieSeries".freeze, "schema:Movie".freeze, "schema:Episode".freeze, "schema:VideoGame".freeze, "schema:VideoGameSeries".freeze, "schema:RadioSeries".freeze],
       label: "trailer".freeze,
       rangeIncludes: "schema:VideoObject".freeze,
       type: "rdf:Property".freeze
@@ -9247,7 +9432,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :transcript,
       comment: %(If this MediaObject is an AudioObject or VideoObject, the transcript of that object.).freeze,
-      domainIncludes: ["schema:AudioObject".freeze, "schema:VideoObject".freeze],
+      domainIncludes: ["schema:VideoObject".freeze, "schema:AudioObject".freeze],
       label: "transcript".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
@@ -9277,7 +9462,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :typeOfGood,
       comment: %(The product that this structured value is referring to.).freeze,
-      domainIncludes: ["schema:OwnershipInfo".freeze, "schema:TypeAndQuantityNode".freeze],
+      domainIncludes: ["schema:TypeAndQuantityNode".freeze, "schema:OwnershipInfo".freeze],
       label: "typeOfGood".freeze,
       rangeIncludes: "schema:Product".freeze,
       type: "rdf:Property".freeze
@@ -9295,20 +9480,20 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :underName,
       comment: %(The person or organization the reservation or ticket is for.).freeze,
-      domainIncludes: ["schema:Reservation".freeze, "schema:Ticket".freeze],
+      domainIncludes: ["schema:Ticket".freeze, "schema:Reservation".freeze],
       label: "underName".freeze,
       rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       type: "rdf:Property".freeze
     property :unitCode,
       comment: %(The unit of measurement given using the UN/CEFACT Common Code \(3 characters\) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.).freeze,
-      domainIncludes: ["schema:QuantitativeValue".freeze, "schema:TypeAndQuantityNode".freeze, "schema:UnitPriceSpecification".freeze, "schema:PropertyValue".freeze],
+      domainIncludes: ["schema:TypeAndQuantityNode".freeze, "schema:QuantitativeValue".freeze, "schema:PropertyValue".freeze, "schema:UnitPriceSpecification".freeze],
       label: "unitCode".freeze,
       rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
       type: "rdf:Property".freeze
     property :unitText,
       comment: %(A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for
 <a href='unitCode'>unitCode</a>.).freeze,
-      domainIncludes: ["schema:PropertyValue".freeze, "schema:QuantitativeValue".freeze, "schema:TypeAndQuantityNode".freeze, "schema:UnitPriceSpecification".freeze],
+      domainIncludes: ["schema:TypeAndQuantityNode".freeze, "schema:QuantitativeValue".freeze, "schema:PropertyValue".freeze, "schema:UnitPriceSpecification".freeze],
       label: "unitText".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
@@ -9326,7 +9511,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :upvoteCount,
       comment: %(The number of upvotes this question, answer or comment has received from the community.).freeze,
-      domainIncludes: ["schema:Question".freeze, "schema:Comment".freeze],
+      domainIncludes: ["schema:Comment".freeze, "schema:Question".freeze],
       label: "upvoteCount".freeze,
       rangeIncludes: "schema:Integer".freeze,
       type: "rdf:Property".freeze
@@ -9368,7 +9553,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :validFrom,
       comment: %(The date when the item becomes valid.).freeze,
-      domainIncludes: ["schema:Offer".freeze, "schema:PriceSpecification".freeze, "schema:Demand".freeze, "schema:OpeningHoursSpecification".freeze, "schema:Permit".freeze],
+      domainIncludes: ["schema:Offer".freeze, "schema:OpeningHoursSpecification".freeze, "schema:PriceSpecification".freeze, "schema:Permit".freeze, "schema:Demand".freeze],
       label: "validFrom".freeze,
       rangeIncludes: "schema:DateTime".freeze,
       type: "rdf:Property".freeze
@@ -9380,7 +9565,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :validThrough,
       comment: %(The end of the validity of offer, price specification, or opening hours data.).freeze,
-      domainIncludes: ["schema:Offer".freeze, "schema:PriceSpecification".freeze, "schema:Demand".freeze, "schema:OpeningHoursSpecification".freeze],
+      domainIncludes: ["schema:Offer".freeze, "schema:OpeningHoursSpecification".freeze, "schema:PriceSpecification".freeze, "schema:Demand".freeze],
       label: "validThrough".freeze,
       rangeIncludes: "schema:DateTime".freeze,
       type: "rdf:Property".freeze
@@ -9394,7 +9579,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       comment: %(The value of the quantitative value or property value node. For QuantitativeValue, the recommended type for values is 'Number'. For PropertyValue, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.).freeze,
       domainIncludes: ["schema:QuantitativeValue".freeze, "schema:PropertyValue".freeze],
       label: "value".freeze,
-      rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze, "schema:Boolean".freeze, "schema:StructuredValue".freeze],
+      rangeIncludes: ["schema:Boolean".freeze, "schema:Text".freeze, "schema:Number".freeze, "schema:StructuredValue".freeze],
       type: "rdf:Property".freeze
     property :valueAddedTaxIncluded,
       comment: %(Specifies whether the applicable value-added tax \(VAT\) is included in the price specification or not.).freeze,
@@ -9430,7 +9615,7 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       comment: %(A pointer to a secondary value that provides additional information on the original value, e.g. a reference temperature.).freeze,
       domainIncludes: ["schema:QualitativeValue".freeze, "schema:QuantitativeValue".freeze, "schema:PropertyValue".freeze],
       label: "valueReference".freeze,
-      rangeIncludes: ["schema:Enumeration".freeze, "schema:StructuredValue".freeze, "schema:PropertyValue".freeze, "schema:QualitativeValue".freeze, "schema:QuantitativeValue".freeze],
+      rangeIncludes: ["schema:QualitativeValue".freeze, "schema:QuantitativeValue".freeze, "schema:StructuredValue".freeze, "schema:Enumeration".freeze, "schema:PropertyValue".freeze],
       type: "rdf:Property".freeze
     property :valueRequired,
       comment: %(Whether the property must be filled in to complete the action.  Default is false.).freeze,
@@ -9440,27 +9625,27 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :vatID,
       comment: %(The Value-added Tax ID of the organization or person.).freeze,
-      domainIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      domainIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
       label: "vatID".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :vehicleConfiguration,
       comment: %(A short text indicating the configuration of the vehicle, e.g. '5dr hatchback ST 2.5 MT 225 hp' or 'limited edition'.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "vehicleConfiguration".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :vehicleEngine,
       comment: %(Information about the engine or engines of the vehicle.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "vehicleEngine".freeze,
       rangeIncludes: "schema:EngineSpecification".freeze,
       type: "rdf:Property".freeze
     property :vehicleIdentificationNumber,
       comment: %(The Vehicle Identification Number \(VIN\) is a unique serial number used by the automotive industry to identify individual motor vehicles.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "vin".freeze,
       rangeIncludes: "schema:Text".freeze,
@@ -9468,32 +9653,32 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :vehicleInteriorColor,
       comment: %(The color or color combination of the interior of the vehicle.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "vehicleInteriorColor".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :vehicleInteriorType,
       comment: %(The type or material of the interior of the vehicle \(e.g. synthetic fabric, leather, wood, etc.\). While most interior types are characterized by the material used, an interior type can also be based on vehicle usage or target audience.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "vehicleInteriorType".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :vehicleModelDate,
       comment: %(The release date of a vehicle model \(often used to differentiate versions of the same make and model\).).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "vehicleModelDate".freeze,
       rangeIncludes: "schema:Date".freeze,
       type: "rdf:Property".freeze
     property :vehicleSeatingCapacity,
       comment: %(The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in terms of limitations set by law.<br />
-Typical unit code\(s\): C62 for persons ).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+Typical unit code\(s\): C62 for persons.).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "vehicleSeatingCapacity".freeze,
-      rangeIncludes: ["schema:QuantitativeValue".freeze, "schema:Number".freeze],
+      rangeIncludes: ["schema:Number".freeze, "schema:QuantitativeValue".freeze],
       type: "rdf:Property".freeze
     property :vehicleSpecialUsage,
       comment: %(Indicates whether the vehicle has been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation in many countries requires this information to be revealed when offering a car for sale.).freeze,
@@ -9501,7 +9686,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "rdf:Property".freeze
     property :vehicleTransmission,
       comment: %(The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component\(s\) \("gearbox" for cars\).).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "vehicleTransmission".freeze,
       rangeIncludes: ["schema:Text".freeze, "schema:QualitativeValue".freeze, "schema:URL".freeze],
@@ -9510,8 +9695,8 @@ Typical unit code\(s\): C62 for persons ).freeze,
       comment: %('vendor' is an earlier term for 'seller'.).freeze,
       domainIncludes: "schema:BuyAction".freeze,
       label: "vendor".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
-      "schema:supersededBy" => %(schema:seller).freeze,
+      rangeIncludes: ["schema:Person".freeze, "schema:Organization".freeze],
+      :"schema:supersededBy" => %(schema:seller).freeze,
       subPropertyOf: "schema:participant".freeze,
       type: "rdf:Property".freeze
     property :version,
@@ -9528,7 +9713,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "rdf:Property".freeze
     property :videoFormat,
       comment: %(The type of screening or video broadcast used \(e.g. IMAX, 3D, SD, HD, etc.\).).freeze,
-      domainIncludes: ["schema:ScreeningEvent".freeze, "schema:BroadcastEvent".freeze, "schema:BroadcastService".freeze],
+      domainIncludes: ["schema:BroadcastEvent".freeze, "schema:ScreeningEvent".freeze, "schema:BroadcastService".freeze],
       label: "videoFormat".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
@@ -9546,10 +9731,10 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "rdf:Property".freeze
     property :volumeNumber,
       comment: %(Identifies the volume of publication or multi-part work; for example, "iii" or "2".).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
       domainIncludes: "schema:PublicationVolume".freeze,
       label: "volumeNumber".freeze,
-      "owl:equivalentProperty" => %(bibo:volume).freeze,
+      :"owl:equivalentProperty" => %(bibo:volume).freeze,
       rangeIncludes: ["schema:Integer".freeze, "schema:Text".freeze],
       subPropertyOf: "schema:position".freeze,
       type: "rdf:Property".freeze
@@ -9567,10 +9752,10 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "rdf:Property".freeze
     property :warrantyPromise,
       comment: %(The warranty promise\(s\) included in the offer.).freeze,
-      domainIncludes: ["schema:BuyAction".freeze, "schema:SellAction".freeze],
+      domainIncludes: ["schema:SellAction".freeze, "schema:BuyAction".freeze],
       label: "warrantyPromise".freeze,
       rangeIncludes: "schema:WarrantyPromise".freeze,
-      "schema:supersededBy" => %(schema:warranty).freeze,
+      :"schema:supersededBy" => %(schema:warranty).freeze,
       type: "rdf:Property".freeze
     property :warrantyScope,
       comment: %(The scope of the warranty promise.).freeze,
@@ -9586,15 +9771,15 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "rdf:Property".freeze
     property :weight,
       comment: %(The weight of the product or person.).freeze,
-      domainIncludes: ["schema:Product".freeze, "schema:Person".freeze],
+      domainIncludes: ["schema:Person".freeze, "schema:Product".freeze],
       label: "weight".freeze,
       rangeIncludes: "schema:QuantitativeValue".freeze,
       type: "rdf:Property".freeze
     property :width,
       comment: %(The width of the item.).freeze,
-      domainIncludes: ["schema:MediaObject".freeze, "schema:Product".freeze, "schema:VisualArtwork".freeze],
+      domainIncludes: ["schema:VisualArtwork".freeze, "schema:MediaObject".freeze, "schema:Product".freeze],
       label: "width".freeze,
-      rangeIncludes: ["schema:Distance".freeze, "schema:QuantitativeValue".freeze],
+      rangeIncludes: ["schema:QuantitativeValue".freeze, "schema:Distance".freeze],
       type: "rdf:Property".freeze
     property :winner,
       comment: %(A sub property of participant. The winner of the action.).freeze,
@@ -9611,10 +9796,17 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "rdf:Property".freeze
     property :workExample,
       comment: %(Example/instance/realization/derivation of the concept of this creative work. eg. The paperback edition, first edition, or eBook.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       inverseOf: "schema:exampleOfWork".freeze,
       label: "workExample".freeze,
+      rangeIncludes: "schema:CreativeWork".freeze,
+      type: "rdf:Property".freeze
+    property :workFeatured,
+      comment: %(A work featured in some event, e.g. exhibited in an ExhibitionEvent.
+       Specific subproperties are available for workPerformed \(e.g. a play\), or a workPresented \(a Movie at a ScreeningEvent\).).freeze,
+      domainIncludes: "schema:Event".freeze,
+      label: "workFeatured".freeze,
       rangeIncludes: "schema:CreativeWork".freeze,
       type: "rdf:Property".freeze
     property :workHours,
@@ -9627,19 +9819,22 @@ Typical unit code\(s\): C62 for persons ).freeze,
       comment: %(A contact location for a person's place of work.).freeze,
       domainIncludes: "schema:Person".freeze,
       label: "workLocation".freeze,
-      rangeIncludes: ["schema:ContactPoint".freeze, "schema:Place".freeze],
+      rangeIncludes: ["schema:Place".freeze, "schema:ContactPoint".freeze],
+      subPropertyOf: "schema:location".freeze,
       type: "rdf:Property".freeze
     property :workPerformed,
       comment: %(A work performed in some event, for example a play performed in a TheaterEvent.).freeze,
       domainIncludes: "schema:Event".freeze,
       label: "workPerformed".freeze,
       rangeIncludes: "schema:CreativeWork".freeze,
+      subPropertyOf: "schema:workFeatured".freeze,
       type: "rdf:Property".freeze
     property :workPresented,
       comment: %(The movie presented during this event.).freeze,
       domainIncludes: "schema:ScreeningEvent".freeze,
       label: "workPresented".freeze,
       rangeIncludes: "schema:Movie".freeze,
+      subPropertyOf: "schema:workFeatured".freeze,
       type: "rdf:Property".freeze
     property :workload,
       comment: %(Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.).freeze,
@@ -9657,7 +9852,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       comment: %(The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed.).freeze,
       domainIncludes: "schema:Rating".freeze,
       label: "worstRating".freeze,
-      rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
+      rangeIncludes: ["schema:Text".freeze, "schema:Number".freeze],
       type: "rdf:Property".freeze
     property :yearlyRevenue,
       comment: %(The size of the business in annual revenue.).freeze,
@@ -9691,12 +9886,12 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:PhysicalActivityCategory".freeze
     term :AlbumRelease,
       comment: %(AlbumRelease.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "AlbumRelease".freeze,
       type: "schema:MusicAlbumReleaseType".freeze
     term :AllWheelDriveConfiguration,
       comment: %(All-wheel Drive is a transmission layout where the engine drives all four wheels.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "AllWheelDriveConfiguration".freeze,
       type: "schema:DriveWheelConfigurationValue".freeze
     term :AnaerobicActivity,
@@ -9721,12 +9916,12 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:PhysicalActivityCategory".freeze
     term :BroadcastRelease,
       comment: %(BroadcastRelease.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "BroadcastRelease".freeze,
       type: "schema:MusicAlbumReleaseType".freeze
     term :CDFormat,
       comment: %(CDFormat.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "CDFormat".freeze,
       type: "schema:MusicReleaseFormatType".freeze
     term :CT,
@@ -9747,7 +9942,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:MedicalObservationalStudyDesign".freeze
     term :CassetteFormat,
       comment: %(CassetteFormat.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "CassetteFormat".freeze,
       type: "schema:MusicReleaseFormatType".freeze
     term :Chiropractic,
@@ -9772,7 +9967,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:MedicalSpecialty".freeze
     term :CompilationAlbum,
       comment: %(CompilationAlbum.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "CompilationAlbum".freeze,
       type: "schema:MusicAlbumProductionType".freeze
     term :Completed,
@@ -9789,12 +9984,12 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:MedicalObservationalStudyDesign".freeze
     term :DJMixAlbum,
       comment: %(DJMixAlbum.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "DJMixAlbum".freeze,
       type: "schema:MusicAlbumProductionType".freeze
     term :DVDFormat,
       comment: %(DVDFormat.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "DVDFormat".freeze,
       type: "schema:MusicReleaseFormatType".freeze
     term :DamagedCondition,
@@ -9803,7 +9998,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:OfferItemCondition".freeze
     term :DemoAlbum,
       comment: %(DemoAlbum.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "DemoAlbum".freeze,
       type: "schema:MusicAlbumProductionType".freeze
     term :Dentistry,
@@ -9824,12 +10019,12 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:MedicalSpecialty".freeze
     term :DigitalAudioTapeFormat,
       comment: %(DigitalAudioTapeFormat.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "DigitalAudioTapeFormat".freeze,
       type: "schema:MusicReleaseFormatType".freeze
     term :DigitalFormat,
       comment: %(DigitalFormat.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "DigitalFormat".freeze,
       type: "schema:MusicReleaseFormatType".freeze
     term :Discontinued,
@@ -9842,7 +10037,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:MedicalTrialDesign".freeze
     term :DrivingSchoolVehicleUsage,
       comment: %(Indicates the usage of the vehicle for driving school.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "DrivingSchoolVehicleUsage".freeze,
       type: "schema:CarUsageType".freeze
     term :EBook,
@@ -9851,7 +10046,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:BookFormatType".freeze
     term :EPRelease,
       comment: %(EPRelease.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "EPRelease".freeze,
       type: "schema:MusicAlbumReleaseType".freeze
     term :Ear,
@@ -9940,12 +10135,12 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:PhysicalActivityCategory".freeze
     term :FourWheelDriveConfiguration,
       comment: %(Four-wheel drive is a transmission layout where the engine primarily drives two wheels with a part-time four-wheel drive capability.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "FourWheelDriveConfiguration".freeze,
       type: "schema:DriveWheelConfigurationValue".freeze
     term :FrontWheelDriveConfiguration,
       comment: %(Front-wheel drive is a transmission layout where the engine drives the front wheels.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "FrontWheelDriveConfiguration".freeze,
       type: "schema:DriveWheelConfigurationValue".freeze
     term :Gastroenterologic,
@@ -10026,12 +10221,12 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:MedicalSpecialty".freeze
     term :LaserDiscFormat,
       comment: %(LaserDiscFormat.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "LaserDiscFormat".freeze,
       type: "schema:MusicReleaseFormatType".freeze
     term :LeftHandDriving,
       comment: %(The steering position is on the left side of the vehicle \(viewed from the main direction of driving\).).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "LeftHandDriving".freeze,
       type: "schema:SteeringPositionValue".freeze
     term :LeisureTimeActivity,
@@ -10044,7 +10239,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:ItemAvailability".freeze
     term :LiveAlbum,
       comment: %(LiveAlbum.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "LiveAlbum".freeze,
       type: "schema:MusicAlbumProductionType".freeze
     term :Longitudinal,
@@ -10069,7 +10264,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:MedicalSpecialty".freeze
     term :MixtapeAlbum,
       comment: %(MixtapeAlbum.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "MixtapeAlbum".freeze,
       type: "schema:MusicAlbumProductionType".freeze
     term :MultiCenterTrial,
@@ -10326,7 +10521,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:MedicalTrialDesign".freeze
     term :RearWheelDriveConfiguration,
       comment: %(Real-wheel drive is a transmission layout where the engine drives the rear wheels.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "RearWheelDriveConfiguration".freeze,
       type: "schema:DriveWheelConfigurationValue".freeze
     term :Recruiting,
@@ -10347,7 +10542,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:DrugCostCategory".freeze
     term :RemixAlbum,
       comment: %(RemixAlbum.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "RemixAlbum".freeze,
       type: "schema:MusicAlbumProductionType".freeze
     term :Renal,
@@ -10356,7 +10551,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:MedicalSpecialty".freeze
     term :RentalVehicleUsage,
       comment: %(Indicates the usage of the vehicle as a rental car.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "RentalVehicleUsage".freeze,
       type: "schema:CarUsageType".freeze
     term :Researcher,
@@ -10401,7 +10596,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:MedicalSpecialty".freeze
     term :RightHandDriving,
       comment: %(The steering position is on the right side of the vehicle \(viewed from the main direction of driving\).).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "RightHandDriving".freeze,
       type: "schema:SteeringPositionValue".freeze
     term :RsvpResponseMaybe,
@@ -10434,7 +10629,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:GamePlayMode".freeze
     term :SingleRelease,
       comment: %(SingleRelease.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "SingleRelease".freeze,
       type: "schema:MusicAlbumReleaseType".freeze
     term :Skin,
@@ -10447,7 +10642,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:ItemAvailability".freeze
     term :SoundtrackAlbum,
       comment: %(SoundtrackAlbum.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "SoundtrackAlbum".freeze,
       type: "schema:MusicAlbumProductionType".freeze
     term :SpeechPathology,
@@ -10456,7 +10651,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:MedicalSpecialty".freeze
     term :SpokenWordAlbum,
       comment: %(SpokenWordAlbum.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "SpokenWordAlbum".freeze,
       type: "schema:MusicAlbumProductionType".freeze
     term :StrengthTraining,
@@ -10465,7 +10660,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:PhysicalActivityCategory".freeze
     term :StudioAlbum,
       comment: %(StudioAlbum.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "StudioAlbum".freeze,
       type: "schema:MusicAlbumProductionType".freeze
     term :Surgical,
@@ -10482,7 +10677,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:MedicalStudyStatus".freeze
     term :TaxiVehicleUsage,
       comment: %(Indicates the usage of the car as a taxi.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "TaxiVehicleUsage".freeze,
       type: "schema:CarUsageType".freeze
     term :Terminated,
@@ -10539,7 +10734,7 @@ Typical unit code\(s\): C62 for persons ).freeze,
       type: "schema:MapCategoryType".freeze
     term :VinylFormat,
       comment: %(VinylFormat.).freeze,
-      "dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
+      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "VinylFormat".freeze,
       type: "schema:MusicReleaseFormatType".freeze
     term :VitalSign,

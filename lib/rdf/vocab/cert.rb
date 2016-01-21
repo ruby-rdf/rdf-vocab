@@ -3,6 +3,10 @@
 # This file generated automatically using vocab-fetch from http://www.w3.org/ns/auth/cert#
 require 'rdf'
 module RDF::Vocab
+  # @!parse
+  #   # Vocabulary for <http://www.w3.org/ns/auth/cert#>
+  #   class CERT < RDF::StrictVocabulary
+  #   end
   class CERT < RDF::StrictVocabulary("http://www.w3.org/ns/auth/cert#")
 
     # Class definitions
@@ -16,72 +20,72 @@ module RDF::Vocab
         * One or more digital signatures.'
     ).freeze,
       label: "Certificate".freeze,
-      "rdfs:isDefinedBy" => %(cert:).freeze,
+      :"rdfs:isDefinedBy" => %(cert:).freeze,
       subClassOf: "foaf:Document".freeze,
       type: "owl:Class".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
     term :Key,
       comment: %(the class of keys).freeze,
       label: "Key".freeze,
-      "rdfs:isDefinedBy" => %(cert:).freeze,
+      :"rdfs:isDefinedBy" => %(cert:).freeze,
       type: "owl:Class".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
     term :PGPCertificate,
       comment: %(the class of PGP Certificates).freeze,
       label: "PGPCertificate".freeze,
-      "owl:equivalentClass" => %(wot:PubKey).freeze,
-      "rdfs:isDefinedBy" => %(cert:).freeze,
+      :"owl:equivalentClass" => %(wot:PubKey).freeze,
+      :"rdfs:isDefinedBy" => %(cert:).freeze,
       subClassOf: "cert:Certificate".freeze,
       type: "owl:Class".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
     term :PrivateKey,
       comment: %(Private Key).freeze,
       label: "PrivateKey".freeze,
-      "rdfs:isDefinedBy" => %(cert:).freeze,
+      :"rdfs:isDefinedBy" => %(cert:).freeze,
       subClassOf: "cert:Key".freeze,
       type: "owl:Class".freeze
     term :PublicKey,
       comment: %(Public Key).freeze,
       label: "PublicKey".freeze,
-      "rdfs:isDefinedBy" => %(cert:).freeze,
+      :"rdfs:isDefinedBy" => %(cert:).freeze,
       subClassOf: "cert:Key".freeze,
       type: "owl:Class".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
     term :RSAKey,
       comment: %(
     The union of the public and private components of an RSAKey.
     Usually those pieces are not kept together
     ).freeze,
       label: "RSA Key".freeze,
-      "rdfs:isDefinedBy" => %(cert:).freeze,
+      :"rdfs:isDefinedBy" => %(cert:).freeze,
       subClassOf: "cert:Key".freeze,
       type: "owl:Class".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
     term :RSAPublicKey,
       comment: %(
     The RSA public key.  Padded message m are encrypted by applying the function
       modulus\(power\(m,exponent\),modulus\)
     ).freeze,
       label: "RSA Public Key".freeze,
-      "rdfs:isDefinedBy" => %(cert:).freeze,
-      "rdfs:seeAlso" => %(http://en.wikipedia.org/wiki/RSA).freeze,
+      :"rdfs:isDefinedBy" => %(cert:).freeze,
+      :"rdfs:seeAlso" => %(http://en.wikipedia.org/wiki/RSA).freeze,
       subClassOf: ["cert:PublicKey".freeze, "cert:RSAKey".freeze],
       type: "owl:Class".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
     term :Signature,
       comment: %(the class of signtatures).freeze,
       label: "Signature".freeze,
-      "rdfs:isDefinedBy" => %(cert:).freeze,
+      :"rdfs:isDefinedBy" => %(cert:).freeze,
       type: "owl:Class".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
     term :X509Certificate,
       comment: %(the class of X509 Certificates).freeze,
       label: "X509Certificate".freeze,
-      "rdfs:isDefinedBy" => %(cert:).freeze,
-      "rdfs:seeAlso" => %(http://en.wikipedia.org/wiki/X509).freeze,
+      :"rdfs:isDefinedBy" => %(cert:).freeze,
+      :"rdfs:seeAlso" => %(http://en.wikipedia.org/wiki/X509).freeze,
       subClassOf: "cert:Certificate".freeze,
       type: "owl:Class".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
 
     # Property definitions
     property :exponent,
@@ -92,9 +96,9 @@ module RDF::Vocab
       domain: "cert:RSAPublicKey".freeze,
       label: "exponent".freeze,
       range: "xsd:nonNegativeInteger".freeze,
-      "rdfs:isDefinedBy" => %(cert:).freeze,
+      :"rdfs:isDefinedBy" => %(cert:).freeze,
       type: "owl:DatatypeProperty".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
     property :identity,
       comment: %(
     the identity of the public key. This is the entity that knows the private key and 
@@ -103,23 +107,23 @@ module RDF::Vocab
     ).freeze,
       domain: "cert:PublicKey".freeze,
       label: "identity".freeze,
-      "owl:inverseOf" => %(cert:key).freeze,
-      "rdfs:isDefinedBy" => %(cert:).freeze,
-      "skos:editorialNote" => %(
+      :"owl:inverseOf" => %(cert:key).freeze,
+      :"rdfs:isDefinedBy" => %(cert:).freeze,
+      :"skos:editorialNote" => %(
          It turns out that this relation is unintuitive to write out and to name.
          One should instead use cert:key
     ).freeze,
       type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze],
-      "vs:term_status" => %(archaic).freeze
+      :"vs:term_status" => %(archaic).freeze
     property :key,
       comment: %(relates an agent to a key - most often the public key.).freeze,
       domain: "foaf:Agent".freeze,
       label: "key".freeze,
-      "owl:inverseOf" => %(cert:identity).freeze,
-      range: ["cert:Key".freeze, "cert:PublicKey".freeze],
-      "rdfs:isDefinedBy" => %(cert:).freeze,
+      :"owl:inverseOf" => %(cert:identity).freeze,
+      range: ["cert:PublicKey".freeze, "cert:Key".freeze],
+      :"rdfs:isDefinedBy" => %(cert:).freeze,
       type: ["rdf:Property".freeze, "owl:InverseFunctionalProperty".freeze, "owl:ObjectProperty".freeze],
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
     property :modulus,
       comment: %(    
    <p>The modulus of an RSA public and private key. 
@@ -136,9 +140,9 @@ module RDF::Vocab
       domain: ["cert:RSAKey".freeze],
       label: "modulus".freeze,
       range: ["xsd:base64Binary".freeze, "xsd:hexBinary".freeze],
-      "rdfs:isDefinedBy" => %(cert:).freeze,
+      :"rdfs:isDefinedBy" => %(cert:).freeze,
       type: "owl:DatatypeProperty".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
     property :privateExponent,
       comment: %(
        The exponent used to decrypt the message
@@ -149,9 +153,9 @@ module RDF::Vocab
       domain: "cert:PrivateKey".freeze,
       label: "private".freeze,
       range: "xsd:nonNegativeInteger".freeze,
-      "rdfs:isDefinedBy" => %(cert:).freeze,
+      :"rdfs:isDefinedBy" => %(cert:).freeze,
       type: "owl:DatatypeProperty".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
 
     # Datatype definitions
     term :hex,
@@ -195,17 +199,17 @@ module RDF::Vocab
    </span>
         ).freeze,
       label: "hexadecimal".freeze,
-      "owl:equivalentClass" => %(xsd:nonNegativeInteger).freeze,
-      "rdfs:isDefinedBy" => %(cert:).freeze,
-      "rdfs:seeAlso" => %(http://en.wikipedia.org/wiki/Hexadecimal).freeze,
-      "skos:editorialNote" => %(<span xmlns="http://www.w3.org/1999/xhtml"><p> 
+      :"owl:equivalentClass" => %(xsd:nonNegativeInteger).freeze,
+      :"rdfs:isDefinedBy" => %(cert:).freeze,
+      :"rdfs:seeAlso" => %(http://en.wikipedia.org/wiki/Hexadecimal).freeze,
+      :"skos:editorialNote" => %(<span xmlns="http://www.w3.org/1999/xhtml"><p> 
      This relation should slowly be transited to just being a datatype.</p>
      <p>Being a datatype and a property is legal as explained here
   <a href="http://lists.w3.org/Archives/Public/semantic-web/2010Mar/0037.html">on the semantic web mailing list in March 2010</a>. 
  But it may be somewhat confusing, especially if it goes against a pattern - still to be set - by the xsd datatypes as the follow up email makes clear. </p></span>
    ).freeze,
       type: "rdfs:Datatype".freeze,
-      "vs:term_status" => %(archaic).freeze
+      :"vs:term_status" => %(archaic).freeze
 
     # Extra definitions
     term :"",
@@ -235,11 +239,11 @@ module RDF::Vocab
      - also create html version of the spec by using this as a template.
      - should comments such as this be in html?
    ).freeze,
-      "dc:created" => %(2008-11-13).freeze,
-      "foaf:maker" => %(http://bblfish.net/people/henry/card#me).freeze,
+      :"dc:created" => %(2008-11-13).freeze,
+      :"foaf:maker" => %(http://bblfish.net/people/henry/card#me).freeze,
       label: "Ontology for Certificates and crypto stuff.".freeze,
-      "rdfs:seeAlso" => [%(http://lists.foaf-project.org/mailman/listinfo/foaf-protocols).freeze, %(http://www.w3.org/ns/auth/X509Uml.svg).freeze, %(http://www.w3.org/ns/auth/rsa).freeze],
+      :"rdfs:seeAlso" => [%(http://lists.foaf-project.org/mailman/listinfo/foaf-protocols).freeze, %(http://www.w3.org/ns/auth/rsa).freeze, %(http://www.w3.org/ns/auth/X509Uml.svg).freeze],
       type: "owl:Ontology".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
   end
 end
