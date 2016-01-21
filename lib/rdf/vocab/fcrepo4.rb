@@ -3,6 +3,10 @@
 # This file generated automatically using vocab-fetch from http://fedora.info/definitions/v4/2015/07/24/repository
 require 'rdf'
 module RDF::Vocab
+  # @!parse
+  #   # Vocabulary for <http://fedora.info/definitions/v4/repository#>
+  #   class Fcrepo4 < RDF::StrictVocabulary
+  #   end
   class Fcrepo4 < RDF::StrictVocabulary("http://fedora.info/definitions/v4/repository#")
 
     # Class definitions
@@ -14,7 +18,7 @@ module RDF::Vocab
     term :Binary,
       comment: %(A bitstream, with no further data properties.).freeze,
       label: "binary".freeze,
-      "owl:disjointWith" => [%(fcrepo4:NonRdfSourceDescription).freeze, %(fcrepo4:Container).freeze],
+      :"owl:disjointWith" => [%(fcrepo4:NonRdfSourceDescription).freeze, %(fcrepo4:Container).freeze],
       subClassOf: "fcrepo4:Resource".freeze,
       type: "owl:Class".freeze
     term :Configuration,
@@ -45,7 +49,7 @@ module RDF::Vocab
     term :NonRdfSourceDescription,
       comment: %(A container for a bitstream and associated properties.).freeze,
       label: "Fedora NonRdfSourceDescription".freeze,
-      "owl:disjointWith" => %(fcrepo4:Container).freeze,
+      :"owl:disjointWith" => %(fcrepo4:Container).freeze,
       subClassOf: "fcrepo4:AnnotatedResource".freeze,
       type: "owl:Class".freeze
     term :Pairtree,
@@ -95,7 +99,7 @@ module RDF::Vocab
       domain: "fcrepo4:Container".freeze,
       label: "base version".freeze,
       range: "fcrepo4:Version".freeze,
-      type: ["owl:ObjectProperty".freeze, "owl:FunctionalProperty".freeze]
+      type: ["owl:FunctionalProperty".freeze, "owl:ObjectProperty".freeze]
     property :clusterCacheMode,
       label: "clusterCacheMode".freeze,
       subPropertyOf: "owl:topDataProperty".freeze,
@@ -169,7 +173,7 @@ module RDF::Vocab
     property :hasChild,
       domain: "fcrepo4:Container".freeze,
       label: "has child".freeze,
-      type: ["owl:ObjectProperty".freeze, "owl:InverseFunctionalProperty".freeze]
+      type: ["owl:InverseFunctionalProperty".freeze, "owl:ObjectProperty".freeze]
     property :hasContent,
       comment: %(Indicates a binary in which content is stored for this datastream.).freeze,
       domain: "fcrepo4:NonRdfSourceDescription".freeze,
@@ -208,7 +212,7 @@ module RDF::Vocab
       domain: "fcrepo4:Resource".freeze,
       label: "has parent".freeze,
       range: "fcrepo4:Container".freeze,
-      type: ["owl:ObjectProperty".freeze, "owl:FunctionalProperty".freeze]
+      type: ["owl:FunctionalProperty".freeze, "owl:ObjectProperty".freeze]
     property :hasResultsMember,
       label: "has results member".freeze,
       range: "fcrepo4:Resource".freeze,
@@ -246,7 +250,7 @@ module RDF::Vocab
       domain: "fcrepo4:Binary".freeze,
       label: "is content of".freeze,
       range: "fcrepo4:NonRdfSourceDescription".freeze,
-      type: ["owl:ObjectProperty".freeze, "owl:InverseFunctionalProperty".freeze]
+      type: ["owl:InverseFunctionalProperty".freeze, "owl:ObjectProperty".freeze]
     property :lastModified,
       label: "lastModified".freeze,
       range: "xsd:dateTime".freeze,
@@ -299,199 +303,199 @@ module RDF::Vocab
       type: "owl:DatatypeProperty".freeze
     property :repositoryCustomRepName,
       label: "repositoryCustomRepName".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryIdentifierStability,
       label: "repositoryIdentifierStability".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryJcrRepositoryName,
       label: "repositoryJcrRepositoryName".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryJcrRepositoryVendor,
       label: "repositoryJcrRepositoryVendor".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryJcrRepositoryVendorUrl,
       label: "repositoryJcrRepositoryVendorUrl".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryJcrRepositoryVersion,
       label: "repositoryJcrRepositoryVersion".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryJcrSpecificationName,
       label: "repositoryJcrSpecificationName".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryJcrSpecificationVersion,
       label: "repositoryJcrSpecificationVersion".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryLevel1Supported,
       label: "repositoryLevel1Supported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryLevel2Supported,
       label: "repositoryLevel2Supported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryNodeTypeManagementAutocreatedDefinitionsSupported,
       label: "repositoryNodeTypeManagementAutocreatedDefinitionsSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryNodeTypeManagementInheritance,
       label: "repositoryNodeTypeManagementInheritance".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryNodeTypeManagementMultipleBinaryPropertiesSupported,
       label: "repositoryNodeTypeManagementMultipleBinaryPropertiesSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryNodeTypeManagementMultivaluedPropertiesSupported,
       label: "repositoryNodeTypeManagementMultivaluedPropertiesSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryNodeTypeManagementOrderableChildNodesSupported,
       label: "repositoryNodeTypeManagementOrderableChildNodesSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryNodeTypeManagementOverridesSupported,
       label: "repositoryNodeTypeManagementOverridesSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryNodeTypeManagementPrimaryItemNameSupported,
       label: "repositoryNodeTypeManagementPrimaryItemNameSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryNodeTypeManagementPropertyTypes,
       label: "repositoryNodeTypeManagementPropertyTypes".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryNodeTypeManagementResidualDefinitionsSupported,
       label: "repositoryNodeTypeManagementResidualDefinitionsSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryNodeTypeManagementSameNameSiblingsSupported,
       label: "repositoryNodeTypeManagementSameNameSiblingsSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryNodeTypeManagementUpdateInUseSupported,
       label: "repositoryNodeTypeManagementUpdateInUseSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryNodeTypeManagementValueConstraintsSupported,
       label: "repositoryNodeTypeManagementValueConstraintsSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionAccessControlSupported,
       label: "repositoryOptionAccessControlSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionActivitiesSupported,
       label: "repositoryOptionActivitiesSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionBaselinesSupported,
       label: "repositoryOptionBaselinesSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionJournaledObservationSupported,
       label: "repositoryOptionJournaledObservationSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionLifecycleSupported,
       label: "repositoryOptionLifecycleSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionLockingSupported,
       label: "repositoryOptionLockingSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionNodeAndPropertyWithSameNameSupported,
       label: "repositoryOptionNodeAndPropertyWithSameNameSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionNodeTypeManagementSupported,
       label: "repositoryOptionNodeTypeManagementSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionObservationSupported,
       label: "repositoryOptionObservationSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionQuerySqlSupported,
       label: "repositoryOptionQuerySqlSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionRetentionSupported,
       label: "repositoryOptionRetentionSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionShareableNodesSupported,
       label: "repositoryOptionShareableNodesSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionSimpleVersioningSupported,
       label: "repositoryOptionSimpleVersioningSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionTransactionsSupported,
       label: "repositoryOptionTransactionsSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionUnfiledContentSupported,
       label: "repositoryOptionUnfiledContentSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionUpdateMixinNodeTypesSupported,
       label: "repositoryOptionUpdateMixinNodeTypesSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionUpdatePrimaryNodeTypeSupported,
       label: "repositoryOptionUpdatePrimaryNodeTypeSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionVersioningSupported,
       label: "repositoryOptionVersioningSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionWorkspaceManagementSupported,
       label: "repositoryOptionWorkspaceManagementSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionXmlExportSupported,
       label: "repositoryOptionXmlExportSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryOptionXmlImportSupported,
       label: "repositoryOptionXmlImportSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryQueryFullTextSearchSupported,
       label: "repositoryQueryFullTextSearchSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryQueryJoins,
       label: "repositoryQueryJoins".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryQueryStoredQueriesSupported,
       label: "repositoryQueryStoredQueriesSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryQueryXpathDocOrder,
       label: "repositoryQueryXpathDocOrder".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryQueryXpathPosIndex,
       label: "repositoryQueryXpathPosIndex".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :repositoryWriteSupported,
       label: "repositoryWriteSupported".freeze,
-      "rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
+      :"rdf:subPropertyOf" => %(owl:topDataProperty).freeze,
       type: "owl:DatatypeProperty".freeze
     property :sparql,
       label: "has sparql service".freeze,
@@ -509,8 +513,8 @@ module RDF::Vocab
     term :"",
       comment: %(Ontology for the Fedora data model, intended primarily to make it possible to expose Fedora-curated RDF predicates via de-reference-able URIs.).freeze,
       label: "Fedora Commons Repository Ontology".freeze,
-      "owl:priorVersion" => %(http://fedora.info/definitions/v4/2015/05/19/repository).freeze,
-      "owl:versionInfo" => %(v4/2015/07/24).freeze,
+      :"owl:priorVersion" => %(http://fedora.info/definitions/v4/2015/05/19/repository).freeze,
+      :"owl:versionInfo" => %(v4/2015/07/24).freeze,
       type: "owl:Ontology".freeze
   end
 end

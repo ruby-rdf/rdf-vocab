@@ -3,27 +3,31 @@
 # This file generated automatically using vocab-fetch from http://vocab.deri.ie/void.rdf
 require 'rdf'
 module RDF::Vocab
+  # @!parse
+  #   # Vocabulary for <http://rdfs.org/ns/void#>
+  #   class VOID < RDF::StrictVocabulary
+  #   end
   class VOID < RDF::StrictVocabulary("http://rdfs.org/ns/void#")
 
     # Class definitions
     term :Dataset,
       comment: %(A set of RDF triples that are published, maintained or aggregated by a single provider.).freeze,
       label: "dataset".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :DatasetDescription,
       comment: %(A web resource whose foaf:primaryTopic or foaf:topics include void:Datasets.).freeze,
       label: "dataset description".freeze,
       subClassOf: "foaf:Document".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Linkset,
       comment: %(A collection of RDF links between two void:Datasets.).freeze,
       label: "linkset".freeze,
       subClassOf: "void:Dataset".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :TechnicalFeature,
       comment: %(A technical feature of a void:Dataset, such as a supported RDF serialization format.).freeze,
       label: "technical feature".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
 
     # Property definitions
     property :class,

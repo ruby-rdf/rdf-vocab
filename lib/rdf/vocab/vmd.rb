@@ -3,6 +3,10 @@
 # This file generated automatically using vocab-fetch from etc/data-vocab.ttl
 require 'rdf'
 module RDF::Vocab
+  # @!parse
+  #   # Vocabulary for <http://data-vocabulary.org/>
+  #   class VMD < RDF::StrictVocabulary
+  #   end
   class VMD < RDF::StrictVocabulary("http://data-vocabulary.org/")
 
     # Class definitions

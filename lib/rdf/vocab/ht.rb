@@ -3,77 +3,81 @@
 # This file generated automatically using vocab-fetch from http://www.w3.org/2011/http#
 require 'rdf'
 module RDF::Vocab
+  # @!parse
+  #   # Vocabulary for <http://www.w3.org/2011/http#>
+  #   class HT < RDF::StrictVocabulary
+  #   end
   class HT < RDF::StrictVocabulary("http://www.w3.org/2011/http#")
 
     # Class definitions
     term :Connection,
       comment: %(A connection used for HTTP transfer.).freeze,
       label: "Connection".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :EntityHeader,
       comment: %(An entity header in an HTTP message.).freeze,
       label: "Entity Header".freeze,
       subClassOf: "ht:MessageHeader".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :GeneralHeader,
       comment: %(A general header in an HTTP message.).freeze,
       label: "General Header".freeze,
       subClassOf: "ht:MessageHeader".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :HeaderElement,
       comment: %(A part of a deconstructed header value.).freeze,
       label: "Header Element".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :HeaderName,
       comment: %(A header name.).freeze,
       label: "Header Name".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Message,
       comment: %(An HTTP message.).freeze,
       label: "Message".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :MessageHeader,
       comment: %(A header in an HTTP message.).freeze,
       label: "Message Header".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Method,
       comment: %(The HTTP method used for the request.).freeze,
       label: "Method".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Parameter,
       comment: %(A parameter for a part of a header value.).freeze,
       label: "Parameter".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Request,
       comment: %(An HTTP request.).freeze,
       label: "Request".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
       subClassOf: "ht:Message".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :RequestHeader,
       comment: %(A header in an HTTP request message.).freeze,
       label: "Request Header".freeze,
       subClassOf: "ht:MessageHeader".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Response,
       comment: %(An HTTP response.).freeze,
       label: "Response".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
       subClassOf: "ht:Message".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :ResponseHeader,
       comment: %(A header in an HTTP response message.).freeze,
       label: "Response Header".freeze,
       subClassOf: "ht:MessageHeader".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :StatusCode,
       comment: %(The status code of an HTTP response.).freeze,
       label: "Status code".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
 
     # Property definitions
     property :absolutePath,
@@ -96,7 +100,7 @@ module RDF::Vocab
       domain: "ht:Message".freeze,
       label: "Entity Body".freeze,
       range: "cnt:ContentAsBase64".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
       type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
     property :connectionAuthority,
       comment: %(The authority of a connection used for the HTTP transfer.).freeze,
@@ -143,28 +147,28 @@ module RDF::Vocab
       comment: %(The headers in an HTTP message.).freeze,
       domain: "ht:Message".freeze,
       label: "Headers".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
       type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
     property :httpVersion,
       comment: %(The HTTP version of an HTTP message.).freeze,
       domain: "ht:Message".freeze,
       label: "HTTP version".freeze,
       range: "rdfs:Literal".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
       type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
     property :methodName,
       comment: %(The HTTP method name used for the HTTP request.).freeze,
       domain: "ht:Request".freeze,
       label: "Method name".freeze,
       range: "rdfs:Literal".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
       type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
     property :mthd,
       comment: %(The HTTP method used for the HTTP request.).freeze,
       domain: "ht:Request".freeze,
       label: "Method".freeze,
       range: "ht:Method".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
       type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
     property :paramName,
       comment: %(The name of a parameter in a part of a deconstructed HTTP header value.).freeze,
@@ -188,41 +192,41 @@ module RDF::Vocab
       domain: "ht:Response".freeze,
       label: "Reason phrase".freeze,
       range: "rdfs:Literal".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
       type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
     property :requestURI,
       comment: %(The request URI of an HTTP request.).freeze,
       domain: "ht:Request".freeze,
       label: "Request URI".freeze,
       range: "rdfs:Literal".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
       type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
     property :requests,
       comment: %(The HTTP requests made via a connection.).freeze,
       domain: "ht:Connection".freeze,
       label: "Requests".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
       type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
     property :resp,
       comment: %(The HTTP response sent in answer to an HTTP request.).freeze,
       domain: "ht:Request".freeze,
       label: "Response".freeze,
       range: "ht:Response".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
       type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
     property :sc,
       comment: %(The status code of an HTTP response.).freeze,
       domain: "ht:Response".freeze,
       label: "Status code".freeze,
       range: "ht:StatusCode".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
       type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
     property :statusCodeNumber,
       comment: %(The status code number.).freeze,
       domain: "ht:StatusCode".freeze,
       label: "Status code".freeze,
       range: "xsd:int".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
       subPropertyOf: "dc:identifier".freeze,
       type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
     property :statusCodeValue,
@@ -230,7 +234,7 @@ module RDF::Vocab
       domain: "ht:Response".freeze,
       label: "Status code".freeze,
       range: "rdfs:Literal".freeze,
-      "rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.ietf.org/rfc/rfc2616.txt).freeze,
       type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
   end
 end

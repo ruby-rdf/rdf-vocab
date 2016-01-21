@@ -3,6 +3,10 @@
 # This file generated automatically using vocab-fetch from http://creativecommons.org/ns#
 require 'rdf'
 module RDF::Vocab
+  # @!parse
+  #   # Vocabulary for <http://creativecommons.org/ns#>
+  #   class CC < RDF::StrictVocabulary
+  #   end
   class CC < RDF::StrictVocabulary("http://creativecommons.org/ns#")
 
     # Class definitions

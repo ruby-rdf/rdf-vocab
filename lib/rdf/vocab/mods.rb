@@ -3,6 +3,10 @@
 # This file generated automatically using vocab-fetch from http://www.loc.gov/standards/mods/modsrdf/v1/modsrdf.owl
 require 'rdf'
 module RDF::Vocab
+  # @!parse
+  #   # Vocabulary for <http://www.loc.gov/mods/rdf/v1#>
+  #   class MODS < RDF::StrictVocabulary
+  #   end
   class MODS < RDF::StrictVocabulary("http://www.loc.gov/mods/rdf/v1#")
 
     # Class definitions
@@ -34,7 +38,7 @@ module RDF::Vocab
 The resource which is the subject of this description.
   ).freeze,
       label: "MODS - A  MODS Resource".freeze,
-      "owl:equivalentClass" => %(http://id.loc.gov/vocabulary/resourceTypes/Res).freeze,
+      :"owl:equivalentClass" => %(http://id.loc.gov/vocabulary/resourceTypes/Res).freeze,
       type: "owl:Class".freeze
     term :NoteGroup,
       comment: %(Aggregates a note with its type.  ).freeze,
@@ -78,12 +82,12 @@ The resource which is the subject of this description.
       domain: "mods:Cartographics".freeze,
       label: "Cartographics - Coordinates".freeze,
       range: "xsd:string".freeze,
-      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
+      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
     property :cartographicsProjection,
       domain: "mods:Cartographics".freeze,
       label: "Cartographics - Projection".freeze,
       range: "xsd:string".freeze,
-      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
+      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
     property :cartographicsScale,
       domain: "mods:Cartographics".freeze,
       label: "Cartographics - Scale".freeze,
@@ -93,7 +97,7 @@ The resource which is the subject of this description.
       comment: %(A designation applied to the resource that indicates the subject by applying a formal system of coding and organizing resources according to subject areas.).freeze,
       domain: "mods:ModsResource".freeze,
       label: "Classification".freeze,
-      "owl:equivalentProperty" => %(http://id.loc.gov/vocabulary/classSchemes/classification).freeze,
+      :"owl:equivalentProperty" => %(http://id.loc.gov/vocabulary/classSchemes/classification).freeze,
       type: "owl:AnnotationProperty".freeze
     property :classificationGroup,
       comment: %(Used when classification scheme is not in controlled vocabulary. Bundles together the classification number with its scheme.).freeze,
@@ -229,7 +233,7 @@ The resource which is the subject of this description.
       comment: %(identifier is a property for which all terms in the "identifier" vocabulary become subproperties.  Thus for example 'identifer:isbn' is a subproperty saying in effect "has this ISBN" where 'isbn' is a term within that vocabulary. \(The prefix 'identifier:' is used to denote the namespace for the "identifier" vocabulary.).freeze,
       domain: "mods:ModsResource".freeze,
       label: "Identifier".freeze,
-      "owl:equivalentProperty" => %(identifiers:id).freeze,
+      :"owl:equivalentProperty" => %(identifiers:id).freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :identifierGroup,
@@ -624,7 +628,7 @@ The resource which is the subject of this description.
 The property 'relator:artist' relates the resource to an artist associated with the resource, represented as a mads name.).freeze,
       domain: "mods:ModsResource".freeze,
       label: "Role (unbound)".freeze,
-      "owl:equivalentProperty" => %(marcrelators:role).freeze,
+      :"owl:equivalentProperty" => %(marcrelators:role).freeze,
       type: "owl:ObjectProperty".freeze
     property :roleRelationship,
       comment: %(Binds a name to the role that the named entity played for the resource. ).freeze,

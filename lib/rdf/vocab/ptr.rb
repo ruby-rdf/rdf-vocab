@@ -3,6 +3,10 @@
 # This file generated automatically using vocab-fetch from http://www.w3.org/2009/pointers#
 require 'rdf'
 module RDF::Vocab
+  # @!parse
+  #   # Vocabulary for <http://www.w3.org/2009/pointers#>
+  #   class PTR < RDF::StrictVocabulary
+  #   end
   class PTR < RDF::StrictVocabulary("http://www.w3.org/2009/pointers#")
 
     # Class definitions

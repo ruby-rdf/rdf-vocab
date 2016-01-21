@@ -3,6 +3,10 @@
 # This file generated automatically using vocab-fetch from http://www.w3.org/1999/xhtml/vocab#
 require 'rdf'
 module RDF::Vocab
+  # @!parse
+  #   # Vocabulary for <http://www.w3.org/1999/xhtml/vocab#>
+  #   class XHV < RDF::Vocabulary
+  #   end
   class XHV < RDF::Vocabulary("http://www.w3.org/1999/xhtml/vocab#")
 
     # Property definitions
@@ -22,13 +26,13 @@ module RDF::Vocab
       comment: %(alternate designates alternate
       versions for a resource.).freeze,
       label: "alternate".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :appendix,
       comment: %(appendix refers to a resource serving
       as an appendix in a collection. ).freeze,
       label: "appendix".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :application,
       comment: %(A
@@ -45,13 +49,13 @@ module RDF::Vocab
       comment: %(banner contains the prime heading or
       internal title of a page. ).freeze,
       label: "banner".freeze,
-      "rdfs:member" => %(xhv:role-properties).freeze,
+      :"rdfs:member" => %(xhv:role-properties).freeze,
       type: "rdf:Property".freeze
     property :bookmark,
       comment: %(bookmark refers to a bookmark - a link
       to a key entry point within an extended document. ).freeze,
       label: "bookmark".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :button,
       comment: %(An input
@@ -62,7 +66,7 @@ module RDF::Vocab
       comment: %(chapter refers to a resource serving
       as a chapter in a collction. ).freeze,
       label: "chapter".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :checkbox,
       comment: %(An
@@ -74,7 +78,7 @@ module RDF::Vocab
       comment: %(cite refers to a resource that defines
       a citation. ).freeze,
       label: "cite".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :columnheader,
       comment: %(A
@@ -92,31 +96,31 @@ module RDF::Vocab
       comment: %(secondary indicates that the section
       supports but is separable from the main content of resource.).freeze,
       label: "complementary".freeze,
-      "rdfs:member" => %(xhv:role-properties).freeze,
+      :"rdfs:member" => %(xhv:role-properties).freeze,
       type: "rdf:Property".freeze
     property :contentinfo,
       comment: %(contentinfo has meta information about
       the content on the page or the page as a whole.).freeze,
       label: "contentinfo".freeze,
-      "rdfs:member" => %(xhv:role-properties).freeze,
+      :"rdfs:member" => %(xhv:role-properties).freeze,
       type: "rdf:Property".freeze
     property :contents,
       comment: %(contents refers to a resource serving
       as a table of contents. ).freeze,
       label: "contents".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :copyright,
       comment: %(copyright refers to a copyright
       statement for the resource. ).freeze,
       label: "copyright".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :definition,
       comment: %(definition indicates the definition of
       a term or concept.).freeze,
       label: "definition".freeze,
-      "rdfs:member" => %(xhv:role-properties).freeze,
+      :"rdfs:member" => %(xhv:role-properties).freeze,
       type: "rdf:Property".freeze
     property :dialog,
       comment: %(A dialog
@@ -141,13 +145,13 @@ module RDF::Vocab
       comment: %(first refers the first item in a
       collection \(see also start and top\).).freeze,
       label: "first".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :glossary,
       comment: %(glossary refers to a resource
       providing a glossary of terms. ).freeze,
       label: "glossary".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :grid,
       comment: %(A grid
@@ -175,13 +179,13 @@ module RDF::Vocab
       comment: %(help refers to a resource offering
       help. ).freeze,
       label: "help".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :icon,
       comment: %(icon refers to a resource that
       represents an icon. ).freeze,
       label: "icon".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :img,
       comment: %(A container
@@ -192,25 +196,25 @@ module RDF::Vocab
       comment: %(index refers to a resource providing
       an index. ).freeze,
       label: "index".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :itsRules,
       comment: %(itsRules indicates that the designated
       resource is an [ITS] rule set.).freeze,
       label: "itsRules".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :last,
       comment: %(last refers to the last resource in a
       collection of resources. ).freeze,
       label: "last".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :license,
       comment: %(license refers to a resource that
       defines the associated license. ).freeze,
       label: "license".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :link,
       comment: %(An
@@ -243,7 +247,7 @@ module RDF::Vocab
       comment: %(main acts as the main content of the
       document. ).freeze,
       label: "main".freeze,
-      "rdfs:member" => %(xhv:role-properties).freeze,
+      :"rdfs:member" => %(xhv:role-properties).freeze,
       type: "rdf:Property".freeze
     property :marquee,
       comment: %(A type
@@ -287,25 +291,25 @@ module RDF::Vocab
       comment: %(meta refers to a resource that
       provides metadata. ).freeze,
       label: "meta".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :navigation,
       comment: %(navigation indicates a collection of
       items suitable for navigating the document or related documents.).freeze,
       label: "navigation".freeze,
-      "rdfs:member" => %(xhv:role-properties).freeze,
+      :"rdfs:member" => %(xhv:role-properties).freeze,
       type: "rdf:Property".freeze
     property :next,
       comment: %(next refers to the next resource
       \(after the current one\) in an ordered collection of resources. ).freeze,
       label: "next".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :note,
       comment: %(note indicates the content is
       parenthetic or ancillary to the main content of the resource. ).freeze,
       label: "note".freeze,
-      "rdfs:member" => %(xhv:role-properties).freeze,
+      :"rdfs:member" => %(xhv:role-properties).freeze,
       type: "rdf:Property".freeze
     property :option,
       comment: %(A
@@ -316,7 +320,7 @@ module RDF::Vocab
       comment: %(p3pv1 refers to a P3P Policy Reference
       File [P3P]. ).freeze,
       label: "p3pv1".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :presentation,
       comment: %(An
@@ -328,7 +332,7 @@ module RDF::Vocab
       comment: %(prev refers to a previous resource
       \(before the current one\) in an ordered collection of resources. ).freeze,
       label: "prev".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :progressbar,
       comment: %(An
@@ -359,8 +363,8 @@ module RDF::Vocab
       Vocabulary for roles in this vocabulary space, and XHTMLROLE for information on extending the
       collection of roles. ).freeze,
       label: "role".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
-      type: ["rdf:Bag".freeze, "rdf:Property".freeze]
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
+      type: ["rdf:Property".freeze, "rdf:Bag".freeze]
     property :row,
       comment: %(A row of
       cells in a grid.).freeze,
@@ -375,13 +379,13 @@ module RDF::Vocab
       comment: %(search indicates that the section
       provides a search facility. ).freeze,
       label: "search".freeze,
-      "rdfs:member" => %(xhv:role-properties).freeze,
+      :"rdfs:member" => %(xhv:role-properties).freeze,
       type: "rdf:Property".freeze
     property :section,
       comment: %(section refers to a resource serving
       as a section in a collection. ).freeze,
       label: "section".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :separator,
       comment: %(A
@@ -404,7 +408,7 @@ module RDF::Vocab
       comment: %(start refers to the first resource in
       a collection of resources. ).freeze,
       label: "start".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :status,
       comment: %(A
@@ -416,13 +420,13 @@ module RDF::Vocab
       comment: %(stylesheet refers to a resource
       serving as a stylesheet for a resource. ).freeze,
       label: "stylesheet".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :subsection,
       comment: %(subsection refers to a resource
       serving as a subsection in a collection. ).freeze,
       label: "subsection".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :tab,
       comment: %(A header for
@@ -466,7 +470,7 @@ module RDF::Vocab
     property :top,
       comment: %(top is a synonym for start. ).freeze,
       label: "top".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
     property :tree,
       comment: %(A type of
@@ -490,16 +494,16 @@ module RDF::Vocab
       comment: %(up refers to a resource "above" in a
       hierarchically structured set. ).freeze,
       label: "up".freeze,
-      "rdfs:member" => %(xhv:relrev-properties).freeze,
+      :"rdfs:member" => %(xhv:relrev-properties).freeze,
       type: "rdf:Property".freeze
 
     # Extra definitions
     term :"relrev-properties",
       label: "relrev-properties".freeze,
-      "rdfs:member" => %(xhv:role-properties).freeze,
+      :"rdfs:member" => %(xhv:role-properties).freeze,
       type: "rdf:Bag".freeze
     term :"role-properties",
       label: "role-properties".freeze,
-      type: ["rdf:Bag".freeze, "rdfs:member".freeze]
+      type: ["rdfs:member".freeze, "rdf:Bag".freeze]
   end
 end

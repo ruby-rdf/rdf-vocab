@@ -3,6 +3,10 @@
 # This file generated automatically using vocab-fetch from http://www.w3.org/ns/auth/rsa#
 require 'rdf'
 module RDF::Vocab
+  # @!parse
+  #   # Vocabulary for <http://www.w3.org/ns/auth/rsa#>
+  #   class RSA < RDF::StrictVocabulary
+  #   end
   class RSA < RDF::StrictVocabulary("http://www.w3.org/ns/auth/rsa#")
 
     # Class definitions
@@ -14,26 +18,26 @@ module RDF::Vocab
       label: "RSA Key".freeze,
       subClassOf: "cert:Key".freeze,
       type: "owl:Class".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
     term :RSAPrivateKey,
       comment: %(
     A Private Key in the RSA framework 
     ).freeze,
       label: "RSA Private Key".freeze,
-      "rdfs:seeAlso" => %(http://en.wikipedia.org/wiki/RSA).freeze,
-      subClassOf: ["cert:PrivateKey".freeze, "rsa:RSAKey".freeze],
+      :"rdfs:seeAlso" => %(http://en.wikipedia.org/wiki/RSA).freeze,
+      subClassOf: ["rsa:RSAKey".freeze, "cert:PrivateKey".freeze],
       type: "owl:Class".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
     term :RSAPublicKey,
       comment: %(
     The RSA public key.  Padded message m are encrypted by applying the function
       modulus\(power\(m,exponent\),modulus\)
     ).freeze,
       label: "RSA Public Key".freeze,
-      "rdfs:seeAlso" => %(http://en.wikipedia.org/wiki/RSA).freeze,
+      :"rdfs:seeAlso" => %(http://en.wikipedia.org/wiki/RSA).freeze,
       subClassOf: ["cert:PublicKey".freeze, "rsa:RSAKey".freeze],
       type: "owl:Class".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
 
     # Property definitions
     property :modulus,
@@ -45,7 +49,7 @@ module RDF::Vocab
       label: "modulus".freeze,
       range: ["xsd:base64Binary".freeze, "xsd:hexBinary".freeze],
       type: "owl:DatatypeProperty".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
     property :private_exponent,
       comment: %(
        The exponent used to decrypt the message
@@ -57,7 +61,7 @@ module RDF::Vocab
       label: "private".freeze,
       range: "xsd:nonNegativeInteger".freeze,
       type: "owl:DatatypeProperty".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
     property :public_exponent,
       comment: %(
        The exponent used to encrypt the message. Number chosen between
@@ -67,6 +71,6 @@ module RDF::Vocab
       label: "public_exponent".freeze,
       range: "xsd:nonNegativeInteger".freeze,
       type: "owl:DatatypeProperty".freeze,
-      "vs:term_status" => %(unstable).freeze
+      :"vs:term_status" => %(unstable).freeze
   end
 end
