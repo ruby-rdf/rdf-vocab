@@ -25,7 +25,7 @@ module RDF::Vocab
     ).freeze,
       label: "RSA Private Key".freeze,
       :"rdfs:seeAlso" => %(http://en.wikipedia.org/wiki/RSA).freeze,
-      subClassOf: ["rsa:RSAKey".freeze, "cert:PrivateKey".freeze],
+      subClassOf: ["cert:PrivateKey".freeze, "rsa:RSAKey".freeze],
       type: "owl:Class".freeze,
       :"vs:term_status" => %(unstable).freeze
     term :RSAPublicKey,

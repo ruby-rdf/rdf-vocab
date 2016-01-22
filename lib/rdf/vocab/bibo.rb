@@ -923,7 +923,7 @@ modern society using the world of Star trek. Los Angeles Times, March
 
     # Extra definitions
     term :"",
-      :"dc:creator" => [%(bibo:fgiasson).freeze, %(bibo:bdarcus).freeze],
+      :"dc:creator" => [%(bibo:bdarcus).freeze, %(bibo:fgiasson).freeze],
       :"dc:description" => %(The Bibliographic Ontology describes
 bibliographic things on the semantic Web in RDF.  This ontology can be
 used as a citation ontology, as a document classification ontology, or
@@ -965,47 +965,47 @@ sources.).freeze,
     term :"status/accepted",
       comment: %(Accepted for publication after peer reviewing.).freeze,
       label: "accepted".freeze,
-      type: ["owl:Thing".freeze, "bibo:DocumentStatus".freeze],
+      type: ["bibo:DocumentStatus".freeze, "owl:Thing".freeze],
       :"vs:term_status" => %(stable).freeze
     term :"status/draft",
       comment: %(Document drafted).freeze,
       label: "draft".freeze,
-      type: ["owl:Thing".freeze, "bibo:DocumentStatus".freeze],
+      type: ["bibo:DocumentStatus".freeze, "owl:Thing".freeze],
       :"vs:term_status" => %(stable).freeze
     term :"status/forthcoming",
       comment: %(Document to be published).freeze,
       label: "forthcoming".freeze,
-      type: ["owl:Thing".freeze, "bibo:DocumentStatus".freeze],
+      type: ["bibo:DocumentStatus".freeze, "owl:Thing".freeze],
       :"vs:term_status" => %(stable).freeze
     term :"status/legal",
       comment: %(Legal document).freeze,
       label: "legal".freeze,
-      type: ["owl:Thing".freeze, "bibo:DocumentStatus".freeze],
+      type: ["bibo:DocumentStatus".freeze, "owl:Thing".freeze],
       :"vs:term_status" => %(stable).freeze
     term :"status/nonPeerReviewed",
       comment: %(A document that is not peer reviewed).freeze,
       label: "non peer reviewed".freeze,
-      type: ["owl:Thing".freeze, "bibo:DocumentStatus".freeze],
+      type: ["bibo:DocumentStatus".freeze, "owl:Thing".freeze],
       :"vs:term_status" => %(stable).freeze
     term :"status/peerReviewed",
       comment: %(The process by which articles are chosen to be included in a refereed journal. An editorial board consisting of experts in the same field as the author review the article and decide if it is authoritative enough for publication.).freeze,
       label: "peer reviewed".freeze,
-      type: ["owl:Thing".freeze, "bibo:DocumentStatus".freeze],
+      type: ["bibo:DocumentStatus".freeze, "owl:Thing".freeze],
       :"vs:term_status" => %(stable).freeze
     term :"status/published",
       comment: %(Published document).freeze,
       label: "published".freeze,
-      type: ["owl:Thing".freeze, "bibo:DocumentStatus".freeze],
+      type: ["bibo:DocumentStatus".freeze, "owl:Thing".freeze],
       :"vs:term_status" => %(stable).freeze
     term :"status/rejected",
       comment: %(Rejected for publication after peer reviewing.).freeze,
       label: "rejected".freeze,
-      type: ["owl:Thing".freeze, "bibo:DocumentStatus".freeze],
+      type: ["bibo:DocumentStatus".freeze, "owl:Thing".freeze],
       :"vs:term_status" => %(stable).freeze
     term :"status/unpublished",
       comment: %(Unpublished document).freeze,
       label: "unpublished".freeze,
-      type: ["owl:Thing".freeze, "bibo:DocumentStatus".freeze],
+      type: ["bibo:DocumentStatus".freeze, "owl:Thing".freeze],
       :"vs:term_status" => %(stable).freeze
   end
 end

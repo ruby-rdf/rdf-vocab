@@ -27,7 +27,7 @@ descriptions about the object that Europeana collects from \(possibly different\
       :"skos:example" => [%(The 56th issue of "Le Temps" is a \(different\) Cultural Heritage Object represented in Europeana by another EuropeanaAggregation instance).freeze, %(The journal "Le Temps" is a Cultural Heritage Object represented in Europeana by one EuropeanaAggregation instance).freeze, %(The painting Mona Lisa is a Cultural Heritage Object represented in Europeana by one EuropeanaAggregation instance).freeze],
       :"skos:note" => %(An instance of EuropeanaAggregation is created at ingestion time for each different Cultural Heritage Object recognized by Europeana. Such instance is associated to the Cultural Heritage Object that it is about, by the property edm:aggregatedCHO).freeze,
       :"skos:scopeNote" => [%(Obligation and Occurence: The relation between the Cultural Heritage Objects represented in Europeana and the instances of the class EuropeanaAggregation is one-to-one, in the data maintained by Europeana: every Cultural Heritage Object is represented by an instance of EuropeanaAggregation, and every instance of EuropeanaAggregation represent a Cultural Heritage Object.).freeze, %(Rationale: This class is used in Europeana to gather in a single conceptual unit all the information about a Cultural Heritage Object, necessary for all operations on these objects.).freeze],
-      subClassOf: ["ore:Aggregation".freeze, "edm:EuropeanaObject".freeze],
+      subClassOf: ["edm:EuropeanaObject".freeze, "ore:Aggregation".freeze],
       type: "owl:Class".freeze
     term :EuropeanaObject,
       label: "Europeana Object".freeze,
@@ -38,12 +38,12 @@ descriptions about the object that Europeana collects from \(possibly different\
       type: "owl:Class".freeze
     term :Event,
       label: "Event".freeze,
-      :"owl:equivalentClass" => [%(http://iflastandards.info/ns/fr/frbr/frbroo/F8_Event).freeze, %(http://metadata.net/harmony/abc#Temporality).freeze, %(http://www.cidoc-crm.org/rdfs/cidoc-crm#E4_Period).freeze, %(http://purl.org/vocab/frbr/core#Event).freeze],
+      :"owl:equivalentClass" => [%(http://iflastandards.info/ns/fr/frbr/frbroo/F8_Event).freeze, %(http://metadata.net/harmony/abc#Temporality).freeze, %(http://purl.org/vocab/frbr/core#Event).freeze, %(http://www.cidoc-crm.org/rdfs/cidoc-crm#E4_Period).freeze],
       :"skos:definition" => %(An event is a change "of states in cultural, social or physical systems,
  regardless of scale, brought about by a series or group of coherent physical,
 cultural, technological or legal phenomena" \(E5 Event in CIDOC CRM\) or a "set of coherent phenomena or cultural manifestations bounded in time and  space" \(E4 Period in CIDOC CRM\)
 ).freeze,
-      :"skos:example" => [%(the change of custody of Mona Lisa).freeze, %(the act of painting Mona Lisa).freeze, %(the 2nd World War).freeze],
+      :"skos:example" => [%(the 2nd World War).freeze, %(the act of painting Mona Lisa).freeze, %(the change of custody of Mona Lisa).freeze],
       :"skos:note" => %(Events are identified either by the content provider or by Europeana enrichment at ingestion time).freeze,
       :"skos:scopeNote" => %(Rationale:This class is a domain of edm:happenedAt and the domain of edm:occurredAt).freeze,
       subClassOf: "edm:NonInformationResource".freeze,
@@ -67,7 +67,7 @@ Persons are not items. This class represents Cultural Heritage Objects known to 
       type: "owl:Class".freeze
     term :Place,
       label: "Place".freeze,
-      :"owl:equivalentClass" => [%(http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#space-region).freeze, %(http://purl.org/vocab/frbr/core#Place).freeze, %(http://www.cidoc-crm.org/rdfs/cidoc-crm#E53_Place).freeze, %(http://iflastandards.info/ns/fr/frbr/frbroo/F9_Place).freeze, %(http://metadata.net/harmony/abc#Place).freeze],
+      :"owl:equivalentClass" => [%(http://iflastandards.info/ns/fr/frbr/frbroo/F9_Place).freeze, %(http://metadata.net/harmony/abc#Place).freeze, %(http://purl.org/vocab/frbr/core#Place).freeze, %(http://www.cidoc-crm.org/rdfs/cidoc-crm#E53_Place).freeze, %(http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#space-region).freeze],
       :"skos:definition" => %(An "extent in space, in particular on the surface of the earth, in the pure sense of physics: independent from temporal phenomena and matter" \(CIDOC CRM\)).freeze,
       subClassOf: "edm:NonInformationResource".freeze,
       type: "owl:Class".freeze
@@ -98,7 +98,7 @@ a URI.).freeze,
       label: "Aggregated Cultural Heritage Object".freeze,
       range: "edm:ProvidedCHO".freeze,
       :"skos:definition" => %(This property associates an ORE aggregation with the cultural heritage object\(s\) \(CHO for short\) it is about.).freeze,
-      subPropertyOf: ["dc11:subject".freeze, "ore:aggregates".freeze, "http://www.cidoc-crm.org/rdfs/cidoc-crm#P129_is_about".freeze],
+      subPropertyOf: ["dc11:subject".freeze, "http://www.cidoc-crm.org/rdfs/cidoc-crm#P129_is_about".freeze, "ore:aggregates".freeze],
       type: "owl:ObjectProperty".freeze
     property :begin,
       label: "Begin".freeze,
@@ -116,7 +116,7 @@ a URI.).freeze,
       type: "rdf:Property".freeze
     property :currentLocation,
       label: "Current Location".freeze,
-      :"owl:equivalentProperty" => [%(http://www.cidoc-crm.org/rdfs/cidoc-crm#P55_has_current_location).freeze, %(geo:location).freeze],
+      :"owl:equivalentProperty" => [%(geo:location).freeze, %(http://www.cidoc-crm.org/rdfs/cidoc-crm#P55_has_current_location).freeze],
       range: "edm:Place".freeze,
       :"skos:definition" => %(The geographic location and/or name of the repository, building, site, or other entity whose boundaries presently include the resource.).freeze,
       subPropertyOf: "dc:spatial".freeze,
@@ -182,7 +182,7 @@ resource. Such resources may be nested, such as performing a theater play text, 
       label: "Is Annotation Of".freeze,
       :"skos:definition" => %(This property relates an annotation \(a Europeana object\) with the resource
 that it annotates.).freeze,
-      subPropertyOf: ["http://www.cidoc-crm.org/rdfs/cidoc-crm#P67_refers_to".freeze, "dc11:subject".freeze],
+      subPropertyOf: ["dc11:subject".freeze, "http://www.cidoc-crm.org/rdfs/cidoc-crm#P67_refers_to".freeze],
       type: "owl:ObjectProperty".freeze
     property :isDerivativeOf,
       label: "Is Derivative Of".freeze,
@@ -320,7 +320,7 @@ born digital object.).freeze,
 
     # Extra definitions
     term :"",
-      :"dc11:contributor" => [%(http://www.ics.forth.gr/isl/people/people_individual.jsp?Person_ID=2).freeze, %(http://www.image.ece.ntua.gr/~ndroso/).freeze, %(http://www.ibi.hu-berlin.de/institut/personen/iwanowa).freeze, %(http://www.image.ntua.gr/~tzouvaras/).freeze],
+      :"dc11:contributor" => [%(http://www.ibi.hu-berlin.de/institut/personen/iwanowa).freeze, %(http://www.ics.forth.gr/isl/people/people_individual.jsp?Person_ID=2).freeze, %(http://www.image.ece.ntua.gr/~ndroso/).freeze, %(http://www.image.ntua.gr/~tzouvaras/).freeze],
       :"dc11:creator" => %(http://data.semanticweb.org/person/antoine-isaac).freeze,
       :"dc11:description" => %(The Europeana Data Model \(EDM\) is aimed at being an integration medium for collecting, connecting and enriching the descriptions provided by Europeana data providers. The RDF vocabulary for http://www.europeana.eu/schemas/edm/ defines the elements introduced by EDM \(as opposed to the ones EDM re-uses from other namespaces\).).freeze,
       :"dc11:modified" => %(2013-05-20).freeze,

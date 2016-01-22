@@ -364,7 +364,7 @@ module RDF::Vocab
       collection of roles. ).freeze,
       label: "role".freeze,
       :"rdfs:member" => %(xhv:relrev-properties).freeze,
-      type: ["rdf:Property".freeze, "rdf:Bag".freeze]
+      type: ["rdf:Bag".freeze, "rdf:Property".freeze]
     property :row,
       comment: %(A row of
       cells in a grid.).freeze,
@@ -504,6 +504,6 @@ module RDF::Vocab
       type: "rdf:Bag".freeze
     term :"role-properties",
       label: "role-properties".freeze,
-      type: ["rdfs:member".freeze, "rdf:Bag".freeze]
+      type: ["rdf:Bag".freeze, "rdfs:member".freeze]
   end
 end

@@ -29,8 +29,8 @@ module RDF::Vocab
       comment: %(A concept with a controlled
       label.).freeze,
       label: "Authority".freeze,
-      :"owl:disjointWith" => [%(mads:MADSScheme).freeze, %(mads:MADSCollection).freeze, %(mads:DeprecatedAuthority).freeze, %(mads:Variant).freeze],
-      subClassOf: ["skos:Concept".freeze, "owl:Thing".freeze],
+      :"owl:disjointWith" => [%(mads:DeprecatedAuthority).freeze, %(mads:MADSCollection).freeze, %(mads:MADSScheme).freeze, %(mads:Variant).freeze],
+      subClassOf: ["owl:Thing".freeze, "skos:Concept".freeze],
       type: "owl:Class".freeze
     term :City,
       comment: %(Describes a resource whose
@@ -104,7 +104,7 @@ module RDF::Vocab
       comment: %(A former
       Authority.).freeze,
       label: "Deprecated\n      Authority".freeze,
-      :"owl:disjointWith" => [%(mads:MADSScheme).freeze, %(mads:MADSCollection).freeze, %(mads:Authority).freeze],
+      :"owl:disjointWith" => [%(mads:Authority).freeze, %(mads:MADSCollection).freeze, %(mads:MADSScheme).freeze],
       subClassOf: "owl:Thing".freeze,
       type: "owl:Class".freeze
     term :Element,
@@ -206,7 +206,7 @@ module RDF::Vocab
       not to the extent that it defines an independent knowledge organization system. It aggregates
       madsrdf:Authority descriptions or other madsrdf:MADSCollection resources.).freeze,
       label: "MADS Collection".freeze,
-      :"owl:disjointWith" => [%(mads:MADSScheme).freeze, %(mads:Authority).freeze, %(mads:Variant).freeze],
+      :"owl:disjointWith" => [%(mads:Authority).freeze, %(mads:MADSScheme).freeze, %(mads:Variant).freeze],
       subClassOf: "skos:Collection".freeze,
       type: "owl:Class".freeze
     term :MADSScheme,
@@ -217,12 +217,12 @@ module RDF::Vocab
       madsrdf:MADSCollection is part of a madsrdf:MADSScheme, then any madsrdf:Authority within that
       madsrdf:MADSCollection is effectively also in the madsrdf:MADSScheme.).freeze,
       label: "MADS Scheme".freeze,
-      :"owl:disjointWith" => [%(mads:Variant).freeze, %(mads:MADSCollection).freeze, %(mads:Authority).freeze],
+      :"owl:disjointWith" => [%(mads:Authority).freeze, %(mads:MADSCollection).freeze, %(mads:Variant).freeze],
       subClassOf: "skos:ConceptScheme".freeze,
       type: "owl:Class".freeze
     term :MADSType,
       label: "MADS Type".freeze,
-      :"owl:disjointWith" => [%(mads:MADSScheme).freeze, %(mads:MADSCollection).freeze],
+      :"owl:disjointWith" => [%(mads:MADSCollection).freeze, %(mads:MADSScheme).freeze],
       type: "owl:Class".freeze
     term :MainTitleElement,
       label: "Main Title\n      Element".freeze,
@@ -359,7 +359,7 @@ module RDF::Vocab
       comment: %(A resource whose label is the alternate form of an Authority or
       Deprecated Authority.).freeze,
       label: "Variant".freeze,
-      :"owl:disjointWith" => [%(mads:MADSScheme).freeze, %(mads:MADSCollection).freeze, %(mads:Authority).freeze],
+      :"owl:disjointWith" => [%(mads:Authority).freeze, %(mads:MADSCollection).freeze, %(mads:MADSScheme).freeze],
       subClassOf: ["owl:Thing".freeze, "skosxl:Label".freeze],
       type: "owl:Class".freeze
 
@@ -369,33 +369,33 @@ module RDF::Vocab
     ).freeze,
       domain: "mads:RWO".freeze,
       label: "Activity End".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :activityStartDate,
       comment: %(Earliest date in a period of activity.
     ).freeze,
       domain: "mads:RWO".freeze,
       label: "Activity Start".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :adminMetadata,
       comment: %(This relates an Authority or Variant to its administrative metadata,
       which is, minimimally, a Class defined outside of the MADS/RDF namespace. The RecordInfo Class
       from the RecordInfo ontology is recommended.).freeze,
       label: "Administrative Metadata".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :affiliationEnd,
       comment: %(The date an individual
       ceased to be affiliated with an organization.).freeze,
       domain: "mads:Affiliation".freeze,
       label: "Affiliation\n      Ended".freeze,
       range: "xsd:date".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :affiliationStart,
       comment: %(The date an individual
       established an affiliation with an organization.).freeze,
       domain: "mads:Affiliation".freeze,
       label: "Affiliation\n      Started".freeze,
       range: "xsd:date".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :associatedLanguage,
       comment: %(Language that a person,
       organization, or family uses for publication, communication, etc., or in which a work is
@@ -403,7 +403,7 @@ module RDF::Vocab
       domain: "mads:RWO".freeze,
       label: "Associated\n      Language".freeze,
       range: "mads:Language".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :associatedLocale,
       comment: %(A town, city, province,
       state, and/or country associated with persons, corporate bodies, families, works, and
@@ -411,46 +411,46 @@ module RDF::Vocab
       domain: "mads:RWO".freeze,
       label: "Associated Locale".freeze,
       range: "mads:Geographic".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :authoritativeLabel,
       comment: %(A lexical string representing a controlled, curated label for the
       Authority.).freeze,
       domain: "mads:Authority".freeze,
       label: "Authoritative Label".freeze,
       subPropertyOf: ["rdfs:label".freeze, "skos:prefLabel".freeze],
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :birthDate,
       comment: %(The year a person was born.
       Date of birth may also include the month and day of the person’s birth. \(RDA
       9.3.2.1\)).freeze,
       domain: "mads:RWO".freeze,
       label: "Birth Date".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :birthPlace,
       comment: %(The town, city, province,
       state, and/or country in which a person was born.).freeze,
       domain: "mads:RWO".freeze,
       label: "Place of Birth".freeze,
       range: "mads:Geographic".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :changeNote,
       comment: %(A note detailing a modification to an Authority or
       Variant.).freeze,
       label: "Change Note".freeze,
       :"owl:equivalentProperty" => %(skos:changeNote).freeze,
       subPropertyOf: "mads:note".freeze,
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :citationNote,
       comment: %(A note about how the madsrdf:Source relates to the resource about
       which the madsrdf:Source is the information source.).freeze,
       domain: "mads:Source".freeze,
       label: "Citation Note".freeze,
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :citationSource,
       comment: %(The cited resource.).freeze,
       domain: "mads:Source".freeze,
       label: "Citation Source".freeze,
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :citationStatus,
       comment: %(Should use a standard term - such as 'found' or 'not found' - to
       indicate whether the cited resource yielded information about the resource related to the
@@ -458,102 +458,102 @@ module RDF::Vocab
       domain: "mads:Source".freeze,
       label: "Citation Status".freeze,
       range: "xsd:string".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :city,
       comment: %(The city component of an address.).freeze,
       domain: "mads:Address".freeze,
       label: "City".freeze,
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :classification,
       comment: %(The classification code associated with a
       madsrdf:Authority.).freeze,
       domain: "mads:Authority".freeze,
       label: "Classification".freeze,
       subPropertyOf: "skos:semanticRelation".freeze,
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :code,
       comment: %(A code is a string of
       characters associated with a the authoritative or deprecated label. It may record an
       historical notation once used to uniquely identify a concept.).freeze,
       label: "Code".freeze,
       subPropertyOf: "skos:notation".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :componentList,
       comment: %(madsrdf:componentList
       organizes the madsrdf:SimpleType resources whose labels are represented in the label of the
       associated madsrdf:ComplexType resource.).freeze,
       domain: "mads:ComplexType".freeze,
       label: "Component List".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :country,
       comment: %(Country associated with an
       address.).freeze,
       domain: "mads:Address".freeze,
       label: "Country".freeze,
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :creationDateEnd,
       comment: %(Ending date of the date range for which the beginning date is recorded in madsrdf:creationDateStart.).freeze,
       label: "".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :creationDateStart,
       comment: %(For a work, earliest date \(normally the year\) associated with a work; that date may be the date the work was created or first published or released. For an expression, the earliest date \(normally the year\) associated with an expression; that date may be the date of the earliest known manifestation of that expression. In both cases the date may be the starting date of a range or a single date.).freeze,
       label: "Work begun".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :deathDate,
       comment: %(The year a person died.
       Date of death may also include the month and day of the person’s death. \(RDA
       9.3.3.1\)).freeze,
       domain: "mads:RWO".freeze,
       label: "Death Date".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :deathPlace,
       comment: %(The town, city, province,
       state, and/or country in which a person died.).freeze,
       domain: "mads:RWO".freeze,
       label: "Place of Death".freeze,
       range: "mads:Geographic".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :definitionNote,
       comment: %(An explanation of the meaning of an Authority, DeprecatedAuthority,
       or Variant description.).freeze,
       label: "Definition Note".freeze,
       :"owl:equivalentProperty" => %(skos:definition).freeze,
       subPropertyOf: "mads:note".freeze,
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :deletionNote,
       comment: %(A note pertaining to the
       deletion of a resource.).freeze,
       label: "Deletion Note".freeze,
       subPropertyOf: "mads:changeNote".freeze,
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :deprecatedLabel,
       comment: %(A label once considered
       authoritative \(controlled and curated\) but which is no longer.).freeze,
       domain: "mads:DeprecatedAuthority".freeze,
       label: "Deprecated Label".freeze,
-      subPropertyOf: ["skos:hiddenLabel".freeze, "rdfs:label".freeze],
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      subPropertyOf: ["rdfs:label".freeze, "skos:hiddenLabel".freeze],
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :editorialNote,
       comment: %(A note pertaining to the
       management of the label associated with the resource.).freeze,
       label: "Editorial Note".freeze,
       :"owl:equivalentProperty" => %(skos:editorialNote).freeze,
       subPropertyOf: "mads:note".freeze,
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :elementList,
       comment: %(The madsrdf:elementList property is used to organize the various
       parts of labels.).freeze,
       label: "Element List".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :elementValue,
       domain: "mads:Element".freeze,
       label: "Element Value".freeze,
       range: "xsd:string".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :email,
       domain: "mads:Affiliation".freeze,
       label: "Email".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :entityDescriptor,
       comment: %(Any attribute that serves
       to characterize a person, family or corporate body or that may be needed for differentiation
@@ -561,54 +561,60 @@ module RDF::Vocab
       not already defined.Or ).freeze,
       domain: "mads:RWO".freeze,
       label: "Entity\n      Descriptor".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :establishDate,
       comment: %(The year a corporate body was established. Date of establishment may also include the month and day of the corporate body’s establishment.
     ).freeze,
       domain: "mads:RWO".freeze,
       label: "Established".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :exampleNote,
       comment: %(A example of how the
       resource might be used.).freeze,
       label: "Example Note".freeze,
       :"owl:equivalentProperty" => %(skos:example).freeze,
       subPropertyOf: "mads:note".freeze,
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :extendedAddress,
       comment: %(The second address line, if
       needed.).freeze,
       domain: "mads:Address".freeze,
       label: "Extended Address".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :extension,
       label: "Extension".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :fax,
       comment: %(Fax number).freeze,
       domain: "mads:Affiliation".freeze,
       label: "Fax".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :fieldOfActivity,
       comment: %(The field of activity
       associated with an individual.).freeze,
       domain: "mads:RWO".freeze,
       label: "Field of\n      Activity".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :fullerName,
       comment: %(Full form of name needed to
       distinguish a person from another person with the same preferred name.).freeze,
       label: "Fuller Name".freeze,
       range: "mads:PersonalName".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
+    property :gender,
+      comment: %(The gender with which a
+      person identifies. ).freeze,
+      domain: "mads:RWO".freeze,
+      label: "Gender".freeze,
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :hasAbbreviationVariant,
       label: "Has Abbreviation\n      Variant".freeze,
       subPropertyOf: "mads:hasVariant".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasAcronymVariant,
       label: "Has Acronym\n      Variant".freeze,
       subPropertyOf: "mads:hasVariant".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasAffiliation,
       comment: %(Property to associate an
       individual, such as a foaf:Agent, to a group or organization with which an individual is or
@@ -616,38 +622,38 @@ module RDF::Vocab
       domain: "mads:RWO".freeze,
       label: "Has Affiliation".freeze,
       range: "mads:Affiliation".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasAffiliationAddress,
       comment: %(The address of the group or
       organization with which an individual is associated.).freeze,
       domain: "mads:Affiliation".freeze,
       label: "Has Affiliation\n      Address".freeze,
       range: "mads:Address".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasBroaderAuthority,
       label: "Has Broader\n      Authority".freeze,
       :"owl:inverseOf" => %(mads:hasNarrowerAuthority).freeze,
       subPropertyOf: ["mads:hasRelatedAuthority".freeze, "skos:broader".freeze],
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasBroaderExternalAuthority,
       comment: %(Creates a direct
       relationship between an Authority and a more broadly defined Authority from a different MADS
       Scheme.).freeze,
       label: "Has Broader External\n      Authority".freeze,
       subPropertyOf: ["mads:hasBroaderAuthority".freeze, "skos:broadMatch".freeze],
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasChararacteristic,
       comment: %(A term that specifies a characteristic that differentiates a work or expression from another one.
     ).freeze,
       label: "Other characteristic".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasCloseExternalAuthority,
       comment: %(Records a relationship
       between an Authority and one that is closely related from a different MADS
       Scheme.).freeze,
       label: "Has Close External\n      Authority".freeze,
       subPropertyOf: ["mads:hasRelatedAuthority".freeze, "skos:closeMatch".freeze],
-      type: ["rdf:Property".freeze, "owl:SymmetricProperty".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "owl:SymmetricProperty".freeze, "rdf:Property".freeze]
     property :hasCorporateParentAuthority,
       comment: %(Establishes a relationship
       between a CorporateName Authority and one of the same that is more broadly
@@ -656,7 +662,7 @@ module RDF::Vocab
       label: "Has Parent\n      Organization".freeze,
       range: "mads:CorporateName".freeze,
       subPropertyOf: "mads:hasRelatedAuthority".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasCorporateSubsidiaryAuthority,
       comment: %(Establishes a relationship
       between a CorporateName Authority and one of the same that is more narrowly
@@ -666,25 +672,25 @@ module RDF::Vocab
       :"owl:inverseOf" => %(mads:hasCorporateParentAuthority).freeze,
       range: "mads:CorporateName".freeze,
       subPropertyOf: "mads:hasRelatedAuthority".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasEarlierEstablishedForm,
       comment: %(Used to reference a resource that was an earlier form. This is
       Related type='earlier' in MADS XML.).freeze,
       label: "Has Earlier Established\n      Form".freeze,
       :"owl:inverseOf" => %(mads:hasLaterEstablishedForm).freeze,
       subPropertyOf: "mads:see".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasExactExternalAuthority,
       comment: %(Records a relationship
       between an Authority and one to which it matches exactly but from a different MADS
       Scheme.).freeze,
       label: "Has Exact External\n      Authority".freeze,
-      subPropertyOf: ["skos:exactMatch".freeze, "mads:hasCloseExternalAuthority".freeze],
-      type: ["rdf:Property".freeze, "owl:SymmetricProperty".freeze, "owl:ObjectProperty".freeze, "owl:TransitiveProperty".freeze]
+      subPropertyOf: ["mads:hasCloseExternalAuthority".freeze, "skos:exactMatch".freeze],
+      type: ["owl:ObjectProperty".freeze, "owl:SymmetricProperty".freeze, "owl:TransitiveProperty".freeze, "rdf:Property".freeze]
     property :hasExpansionVariant,
       label: "Has Expansion\n      Variant".freeze,
       subPropertyOf: "mads:hasVariant".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasHiddenVariant,
       comment: %(Use for variants that are searchable, but not necessarily for
       display.).freeze,
@@ -692,20 +698,20 @@ module RDF::Vocab
       label: "Has Hidden Variant".freeze,
       range: "mads:Variant".freeze,
       subPropertyOf: "skosxl:hiddenLabel".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasIdentifier,
       comment: %(Associates a resource with
       a madsrdf:Identifier.).freeze,
       label: "Has Identifier".freeze,
       range: "mads:Identifier".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasLaterEstablishedForm,
       comment: %(Use to reference the later form of a resource. This is Related
       type='later' in MADS XML.).freeze,
       label: "Has Later Established\n      Form".freeze,
       :"owl:inverseOf" => %(mads:hasEarlierEstablishedForm).freeze,
       subPropertyOf: "mads:see".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasMADSCollectionMember,
       comment: %(Associates an Authority or other Collection with a
       madsrdf:MADSCollection.).freeze,
@@ -713,42 +719,42 @@ module RDF::Vocab
       label: "Has MADSCollection Member".freeze,
       :"owl:inverseOf" => %(mads:isMemberOfMADSCollection).freeze,
       subPropertyOf: "skos:member".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasMADSSchemeMember,
       comment: %(Associates an Authority or Collection with a
       madsrdf:MADSScheme.).freeze,
       domain: "mads:MADSScheme".freeze,
       label: "Has MADS Scheme\n      Member".freeze,
       :"owl:inverseOf" => %(mads:isMemberOfMADSScheme).freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasNarrowerAuthority,
       comment: %(Creates a direct
       relationship between an Authority and one that is more narrowly defined.).freeze,
       label: "Has Narrower\n      Authority".freeze,
       :"owl:inverseOf" => %(mads:hasBroaderAuthority).freeze,
-      subPropertyOf: ["skos:narrower".freeze, "mads:hasRelatedAuthority".freeze],
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      subPropertyOf: ["mads:hasRelatedAuthority".freeze, "skos:narrower".freeze],
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasNarrowerExternalAuthority,
       comment: %(Creates a direct
       relationship between an Authority and a more narrowly defined Authority from a different MADS
       Scheme.).freeze,
       label: "Has Narrower External\n      Authority".freeze,
-      subPropertyOf: ["skos:narrowMatch".freeze, "mads:hasNarrowerAuthority".freeze],
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      subPropertyOf: ["mads:hasNarrowerAuthority".freeze, "skos:narrowMatch".freeze],
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasReciprocalAuthority,
       comment: %(Establishes a relationship between two Authority resources. It is
       reciprocal, so the relationship must be shared. This is Related type='equivalent' in MADS
       XML.).freeze,
       label: "Has Reciprocal\n      Authority".freeze,
       subPropertyOf: ["mads:hasRelatedAuthority".freeze, "skos:related".freeze],
-      type: ["rdf:Property".freeze, "owl:SymmetricProperty".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "owl:SymmetricProperty".freeze, "rdf:Property".freeze]
     property :hasReciprocalExternalAuthority,
       comment: %(Establishes a relationship
       between an Authority and one from a different MADS Scheme. It is reciprocal, so the
       relationship must be shared.).freeze,
       label: "Has Reciprocal External\n      Authority".freeze,
       subPropertyOf: ["mads:hasReciprocalAuthority".freeze, "skos:relatedMatch".freeze],
-      type: ["rdf:Property".freeze, "owl:SymmetricProperty".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "owl:SymmetricProperty".freeze, "rdf:Property".freeze]
     property :hasRelatedAuthority,
       comment: %(Unless the relationship can be more specifically identified, use
       'hasRelatedAuthority.').freeze,
@@ -756,12 +762,12 @@ module RDF::Vocab
       label: "Has Related Authority".freeze,
       range: "mads:Authority".freeze,
       subPropertyOf: "skos:semanticRelation".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasSource,
       comment: %(Associates a resource description with its Source.).freeze,
       label: "Has Source".freeze,
       range: "mads:Source".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasTopMemberOfMADSScheme,
       comment: %(Identifies an Authority
       that is at the top of the hierarchy of authorities within the MADS Scheme.).freeze,
@@ -769,13 +775,13 @@ module RDF::Vocab
       label: "Has Top Member of MADS\n      Scheme".freeze,
       range: "mads:Authority".freeze,
       subPropertyOf: ["mads:hasMADSSchemeMember".freeze, "skos:hasTopConcept".freeze],
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasTranslationVariant,
       comment: %(A Variant whose label
       represents a translation of that of the authoritative label.).freeze,
       label: "Has Translation\n      Variant".freeze,
       subPropertyOf: "mads:hasVariant".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasVariant,
       comment: %(Associates a Variant with an Authority or Deprecrated Authority.
       Unless the variant type can be more specifically identified, use 'hasVariant.').freeze,
@@ -783,14 +789,14 @@ module RDF::Vocab
       label: "Has Variant".freeze,
       range: "mads:Variant".freeze,
       subPropertyOf: "skosxl:altLabel".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hiddenLabel,
       comment: %(A label entered for
       discovery purposes but not shown.).freeze,
       domain: "mads:Variant".freeze,
       label: "Hidden Label".freeze,
       subPropertyOf: "skosxl:literalForm".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :historyNote,
       comment: %(A note pertaining to the
       history of the resource.).freeze,
@@ -804,25 +810,25 @@ module RDF::Vocab
       religious vocation.).freeze,
       domain: "mads:RWO".freeze,
       label: "Honorary Title".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :hours,
       domain: "mads:Affiliation".freeze,
       label: "Hours".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :idScheme,
       comment: %(The scheme associated with
       the identifier. For example, "LCCN" would be used when the Identifier Value \(madsrdf:idValue\)
       is a LC Control Number.).freeze,
       domain: "mads:Identifier".freeze,
       label: "Identifier\n      Scheme".freeze,
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :idValue,
       comment: %(The value of the identifier
       conforming to the Identifier Scheme syntax.).freeze,
       domain: "mads:Identifier".freeze,
       label: "Identifier Value".freeze,
       range: "xsd:string".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :identifiesRWO,
       comment: %(Associates a
       madsrdf:Authority with the Real World Object that is the subject of the authority's
@@ -832,7 +838,7 @@ module RDF::Vocab
       :"owl:inverseOf" => %(mads:isIdentifiedByAuthority).freeze,
       range: "mads:RWO".freeze,
       subPropertyOf: "foaf:focus".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :isIdentifiedByAuthority,
       comment: %(Associates a Real World
       Object with its Authority description.).freeze,
@@ -840,73 +846,73 @@ module RDF::Vocab
       label: "Is Identified By\n      Authority".freeze,
       :"owl:inverseOf" => %(mads:identifiesRWO).freeze,
       range: "mads:Authority".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :isMemberOfMADSCollection,
       comment: %(Associates a Collection with a madsrdf:Authority or another
       madsrdf:MADSCollection.).freeze,
       label: "Is Member Of MADSCollection".freeze,
       :"owl:inverseOf" => %(mads:hasMADSCollectionMember).freeze,
       range: "mads:MADSCollection".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :isMemberOfMADSScheme,
       label: "Is Member of MADS\n      Scheme".freeze,
       :"owl:inverseOf" => %(mads:hasMADSSchemeMember).freeze,
       range: "mads:MADSScheme".freeze,
       subPropertyOf: "skos:inScheme".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :isTopMemberOfMADSScheme,
       comment: %(Identifies a MADS Scheme in
       which the Authority is at the top of the hierarchy.).freeze,
       label: "Is Top Member of MADS\n      Scheme".freeze,
       :"owl:inverseOf" => %(mads:hasTopMemberOfMADSScheme).freeze,
       range: "mads:MADSScheme".freeze,
-      subPropertyOf: ["skos:topConceptOf".freeze, "mads:isMemberOfMADSScheme".freeze],
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      subPropertyOf: ["mads:isMemberOfMADSScheme".freeze, "skos:topConceptOf".freeze],
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :natureOfAffiliation,
       comment: %(Records the individual's
       role or position in the organization with which the individual is affiliated. A "job title"
       might be appropriate.).freeze,
       domain: "mads:Affiliation".freeze,
       label: "Nature of\n      Affiliation".freeze,
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :note,
       comment: %(A note about the
       resource.).freeze,
       label: "Note".freeze,
       :"owl:equivalentProperty" => %(skos:note).freeze,
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :occupation,
       comment: %(A profession or occupation
       in which the person works or has worked.).freeze,
       domain: "mads:RWO".freeze,
       label: "Occupation".freeze,
       range: "mads:Occupation".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :organization,
       comment: %(The group or organization
       with which an individual is associated.).freeze,
       domain: "mads:Affiliation".freeze,
       label: "Organization or\n      Group".freeze,
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :phone,
       domain: "mads:Affiliation".freeze,
       label: "Phone".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :postcode,
       domain: "mads:Address".freeze,
       label: "Post Code / Zip\n      Code".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :prominentFamilyMember,
       comment: %(A well-known individual who
       is a member of the family.).freeze,
       domain: "mads:RWO".freeze,
       label: "Prominent Family\n      Member".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :scopeNote,
       label: "Scope Note".freeze,
       :"owl:equivalentProperty" => %(skos:scopeNote).freeze,
       subPropertyOf: "mads:note".freeze,
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :see,
       comment: %(Denotes a relationship
       between an Authority and/or DeprecatedAuthority. The relationship may or may or may not be
@@ -920,51 +926,43 @@ module RDF::Vocab
       an address.).freeze,
       domain: "mads:Address".freeze,
       label: "State".freeze,
-      type: ["rdf:Property".freeze, "owl:AnnotationProperty".freeze]
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :streetAddress,
       comment: %(First line of address. For
       second line, use madsrdf:extendedAddress.).freeze,
       domain: "mads:Address".freeze,
       label: "Street Address".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :terminateDate,
       comment: %(The year a corporate body was terminated. Date of termination may also include the month and day of the corporate body’s termination. 
     ).freeze,
       domain: "mads:RWO".freeze,
       label: "Terminated".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :useFor,
       comment: %("Use [This Resource] For."
       Traditional "USE FOR" reference.).freeze,
       label: "Use For".freeze,
       :"owl:inverseOf" => %(mads:useInstead).freeze,
       subPropertyOf: "mads:see".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :useInstead,
       comment: %("Use [This Other Resource]
       Instead." Traditional "USE" reference.).freeze,
       label: "Use Instead".freeze,
       subPropertyOf: "mads:see".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :variantLabel,
       comment: %(The lexical, variant form
       of an authoritative label.).freeze,
       domain: "mads:Variant".freeze,
       label: "Variant Label".freeze,
       subPropertyOf: "skosxl:literalForm".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :workOrigin,
       comment: %(The country or other territorial jurisdiction from which a work originated.).freeze,
       label: "Work locale".freeze,
       range: "mads:Geographic".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
-
-    # Extra definitions
-    term :gender,
-      comment: %(The gender with which a
-      person identifies. ).freeze,
-      domain: "mads:RWO".freeze,
-      label: "Gender".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
   end
 end

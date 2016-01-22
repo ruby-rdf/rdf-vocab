@@ -287,7 +287,7 @@ pause between them.
       label: "music group".freeze,
       :"mo:level" => %(1).freeze,
       :"rdfs:isDefinedBy" => %(mo:).freeze,
-      subClassOf: ["mo:MusicArtist".freeze, "foaf:Group".freeze],
+      subClassOf: ["foaf:Group".freeze, "mo:MusicArtist".freeze],
       type: "owl:Class".freeze,
       :"vs:term_status" => %(stable).freeze
     term :MusicalExpression,
@@ -562,7 +562,7 @@ work #1 J. S. Bach's The art of the fugue
       label: "sound".freeze,
       :"mo:level" => %(2).freeze,
       :"rdfs:isDefinedBy" => %(mo:).freeze,
-      subClassOf: ["mo:MusicalExpression".freeze, "http://purl.org/NET/c4dm/event.owl#Event".freeze],
+      subClassOf: ["http://purl.org/NET/c4dm/event.owl#Event".freeze, "mo:MusicalExpression".freeze],
       type: "owl:Class".freeze,
       :"vs:term_status" => %(stable).freeze
     term :SoundEngineer,
@@ -726,7 +726,7 @@ work #1 J. S. Bach's The art of the fugue
       :"mo:level" => %(1).freeze,
       range: "xsd:int".freeze,
       :"rdfs:isDefinedBy" => %(mo:).freeze,
-      type: ["owl:FunctionalProperty".freeze, "owl:DatatypeProperty".freeze],
+      type: ["owl:DatatypeProperty".freeze, "owl:FunctionalProperty".freeze],
       :"vs:term_status" => %(stable).freeze
     property :bpm,
       comment: %(
@@ -758,7 +758,7 @@ work #1 J. S. Bach's The art of the fugue
       :"mo:level" => %(1).freeze,
       range: "xsd:int".freeze,
       :"rdfs:isDefinedBy" => %(mo:).freeze,
-      type: ["owl:FunctionalProperty".freeze, "owl:DatatypeProperty".freeze],
+      type: ["owl:DatatypeProperty".freeze, "owl:FunctionalProperty".freeze],
       :"vs:term_status" => %(stable).freeze
     property :collaborated_with,
       comment: %(Used to relate two collaborating people on a work.).freeze,
@@ -767,7 +767,7 @@ work #1 J. S. Bach's The art of the fugue
       :"mo:level" => %(1).freeze,
       range: "foaf:Agent".freeze,
       :"rdfs:isDefinedBy" => %(mo:).freeze,
-      type: ["owl:SymmetricProperty".freeze, "owl:ObjectProperty".freeze],
+      type: ["owl:ObjectProperty".freeze, "owl:SymmetricProperty".freeze],
       :"vs:term_status" => %(unstable).freeze
     property :compilation_of,
       comment: %(Indicates that a musical manifestation is a compilation of several Signals.).freeze,
@@ -1054,7 +1054,7 @@ The artist usually selected the tracks, chose their sequence, and slightly chang
       :"mo:level" => %(1).freeze,
       range: "foaf:Document".freeze,
       :"rdfs:isDefinedBy" => %(mo:).freeze,
-      subPropertyOf: ["mo:download".freeze, "foaf:isPrimaryTopicOf".freeze],
+      subPropertyOf: ["foaf:isPrimaryTopicOf".freeze, "mo:download".freeze],
       type: "owl:ObjectProperty".freeze,
       :"vs:term_status" => %(stable).freeze
     property :freedownload,
@@ -1486,7 +1486,7 @@ This means that the orignial musical expression were rearranged to create a new 
       :"mo:level" => %(1).freeze,
       range: "mo:MusicalManifestation".freeze,
       :"rdfs:isDefinedBy" => %(mo:).freeze,
-      type: ["owl:SymmetricProperty".freeze, "owl:ObjectProperty".freeze],
+      type: ["owl:ObjectProperty".freeze, "owl:SymmetricProperty".freeze],
       :"vs:term_status" => %(unstable).freeze
     property :paid_download,
       comment: %(
@@ -1497,7 +1497,7 @@ This means that the orignial musical expression were rearranged to create a new 
       :"mo:level" => %(1).freeze,
       range: "foaf:Document".freeze,
       :"rdfs:isDefinedBy" => %(mo:).freeze,
-      subPropertyOf: ["mo:download".freeze, "foaf:isPrimaryTopicOf".freeze],
+      subPropertyOf: ["foaf:isPrimaryTopicOf".freeze, "mo:download".freeze],
       type: "owl:ObjectProperty".freeze,
       :"vs:term_status" => %(stable).freeze
     property :paiddownload,
@@ -1592,7 +1592,7 @@ This means that the orignial musical expression were rearranged to create a new 
       :"mo:level" => %(1).freeze,
       range: "foaf:Document".freeze,
       :"rdfs:isDefinedBy" => %(mo:).freeze,
-      subPropertyOf: ["mo:download".freeze, "foaf:isPrimaryTopicOf".freeze],
+      subPropertyOf: ["foaf:isPrimaryTopicOf".freeze, "mo:download".freeze],
       type: "owl:ObjectProperty".freeze,
       :"vs:term_status" => %(stable).freeze
     property :primary_instrument,
@@ -2004,7 +2004,7 @@ The review does not have to be open content, as long as it is accessible to the 
       :"mo:level" => %(1).freeze,
       range: "xsd:float".freeze,
       :"rdfs:isDefinedBy" => %(mo:).freeze,
-      type: ["owl:FunctionalProperty".freeze, "owl:DatatypeProperty".freeze],
+      type: ["owl:DatatypeProperty".freeze, "owl:FunctionalProperty".freeze],
       :"vs:term_status" => %(stable).freeze
     property :sampled,
       comment: %(Used to relate an artist who sampled a Signal.).freeze,
@@ -2290,9 +2290,9 @@ The review does not have to be open content, as long as it is accessible to the 
         on the Semantic Web. 
     ).freeze,
       :"dc11:title" => %(The Music Ontology).freeze,
-      :"foaf:maker" => [%(http://kurtisrandom.com/foaf.rdf#kurtjx).freeze, %(http://www.talkdigger.com/foaf/fgiasson).freeze, %(http://raimond.me.uk/foaf.rdf#moustaki).freeze, %(http://foaf.me/zazi#me).freeze],
+      :"foaf:maker" => [%(http://foaf.me/zazi#me).freeze, %(http://kurtisrandom.com/foaf.rdf#kurtjx).freeze, %(http://raimond.me.uk/foaf.rdf#moustaki).freeze, %(http://www.talkdigger.com/foaf/fgiasson).freeze],
       label: "".freeze,
-      :"owl:imports" => [%(http://purl.org/ontology/ao/core).freeze, %(foaf:).freeze, %(http://purl.org/NET/c4dm/event.owl).freeze, %(http://purl.org/NET/c4dm/keys.owl).freeze, %(http://www.w3.org/2006/time).freeze, %(http://purl.org/vocab/frbr/core).freeze, %(http://purl.org/vocab/bio/0.1/).freeze, %(dc:).freeze],
+      :"owl:imports" => [%(dc:).freeze, %(foaf:).freeze, %(http://purl.org/NET/c4dm/event.owl).freeze, %(http://purl.org/NET/c4dm/keys.owl).freeze, %(http://purl.org/ontology/ao/core).freeze, %(http://purl.org/vocab/bio/0.1/).freeze, %(http://purl.org/vocab/frbr/core).freeze, %(http://www.w3.org/2006/time).freeze],
       :"owl:versionInfo" => %(Revision: 2.1.5).freeze,
       type: "owl:Ontology".freeze
     term :album,

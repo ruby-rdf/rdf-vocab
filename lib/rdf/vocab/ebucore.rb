@@ -120,11 +120,11 @@ module RDF::Vocab
       subClassOf: "ebucore:AudioFormat".freeze,
       type: "rdfs:Class".freeze
     term :AudioTrack,
-      comment: [%(Represents a physical container or carrier to hold an audio stream. This
+      comment: [%(An audioTrack is the basic audio data container of a medium. Attribute is
+				an unambiguous reference to this container in a given medium.).freeze, %(An audioTrack object defines a component of an audioStream.
+				A single set of samples or data in the storage medium.).freeze, %(Represents a physical container or carrier to hold an audio stream. This
 				should be usually defined by many attributes such as ID, format \(e.g. 48 kHz/24
-				bits\), linkage information \(e.g. odd/even\)…).freeze, %(An audioTrack object defines a component of an audioStream.
-				A single set of samples or data in the storage medium.).freeze, %(An audioTrack is the basic audio data container of a medium. Attribute is
-				an unambiguous reference to this container in a given medium.).freeze],
+				bits\), linkage information \(e.g. odd/even\)…).freeze],
       label: "Audio track".freeze,
       subClassOf: "ebucore:Track".freeze,
       type: "rdfs:Class".freeze
@@ -451,9 +451,9 @@ module RDF::Vocab
     term :Location,
       comment: [%(A location related to the media resource, e.g.
             depicted in the resource \(possibly fictional\) or where the resource was created
-            \(shooting location\), etc.).freeze, %(This is provided as free text in an annotation
-            label or as an identifier pointing to a term in a classification scheme.).freeze, %(A type of location is defined as a sub-class of 
-            location.).freeze],
+            \(shooting location\), etc.).freeze, %(A type of location is defined as a sub-class of 
+            location.).freeze, %(This is provided as free text in an annotation
+            label or as an identifier pointing to a term in a classification scheme.).freeze],
       label: "Location".freeze,
       subClassOf: "owl:Thing".freeze,
       type: "rdfs:Class".freeze
@@ -535,12 +535,12 @@ module RDF::Vocab
       subClassOf: "ebucore:Language".freeze,
       type: "rdfs:Class".freeze
     term :Part,
-      comment: [%(One of more media fragment \(audio, video, data\)
+      comment: [%(A Fragment is a particular section of a
+            MediaResource identified by a start and end time or duration. Fragment can also be
+            called segment or part.).freeze, %(One of more media fragment \(audio, video, data\)
             composing an audiovisual media resource. In other ontolgies fragment is often referred
             to e.g. as a 'part' or 'segment' or
-            'fragment'.).freeze, %(A Fragment is a particular section of a
-            MediaResource identified by a start and end time or duration. Fragment can also be
-            called segment or part.).freeze],
+            'fragment'.).freeze],
       label: "Part, Fragment, Segment".freeze,
       subClassOf: "ebucore:EditorialObject".freeze,
       type: "rdfs:Class".freeze
@@ -592,10 +592,10 @@ module RDF::Vocab
       subClassOf: "ebucore:Programme".freeze,
       type: "rdfs:Class".freeze
     term :Rating,
-      comment: [%(This is provided as free text in an annotation
-            label or as an identifier pointing to a term in a classification scheme.).freeze, %(All the information about the rating/evaluation
+      comment: [%(All the information about the rating/evaluation
             given to a media resource by an Agent i.e. a person/Contact or
-            Organisation.).freeze],
+            Organisation.).freeze, %(This is provided as free text in an annotation
+            label or as an identifier pointing to a term in a classification scheme.).freeze],
       label: "Rating".freeze,
       subClassOf: "owl:Thing".freeze,
       type: "rdfs:Class".freeze
@@ -785,10 +785,10 @@ module RDF::Vocab
       subClassOf: "ebucore:MediaResource".freeze,
       type: "rdfs:Class".freeze
     term :audienceLevel,
-      comment: [%(This is provided as free text in an annotation
-            label or as an identifier pointing to a term in a classification scheme.).freeze, %(The target audience \(target region, target
+      comment: [%(The target audience \(target region, target
             audience category but also parental guidance recommendation\) for which the media
-            resource is intended.).freeze],
+            resource is intended.).freeze, %(This is provided as free text in an annotation
+            label or as an identifier pointing to a term in a classification scheme.).freeze],
       label: "Target audience".freeze,
       subClassOf: "ebucore:Type".freeze,
       type: "rdfs:Class".freeze
@@ -1965,13 +1965,13 @@ module RDF::Vocab
       label: "Asset, resource, object".freeze,
       type: "rdf:Property".freeze
     property :identifier,
-      comment: [%(This property is intended to provide an
-            alternative identifier for the resource, which has no URI counterpart. In the case where
-            the alternative identifier can be expressed as a URI, it is recommended to use
-            owl:sameAs instead.).freeze, %(Corresponds to 'identifier'
+      comment: [%(Corresponds to 'identifier'
             in the W3C Ontology for Media Annotation. The URI may be used to express an alternative
             identifier of the resource, or to share an identifier used by other instances of the
-            same resource \(equivalent to the fucntionality owl:sameAs\).).freeze],
+            same resource \(equivalent to the fucntionality owl:sameAs\).).freeze, %(This property is intended to provide an
+            alternative identifier for the resource, which has no URI counterpart. In the case where
+            the alternative identifier can be expressed as a URI, it is recommended to use
+            owl:sameAs instead.).freeze],
       label: "Identifier".freeze,
       subPropertyOf: "dc11:identifier".freeze,
       type: "rdf:Property".freeze
@@ -2017,7 +2017,7 @@ module RDF::Vocab
       comment: %(The Rights or policy applicable to the
             BusinessObject, Asset, Resource or PublicationEvent.).freeze,
       label: "Rights".freeze,
-      :"owl:equivalentProperty" => [%(ma:hasPolicy).freeze, %(ma:hasPermissions).freeze],
+      :"owl:equivalentProperty" => [%(ma:hasPermissions).freeze, %(ma:hasPolicy).freeze],
       subPropertyOf: "ebucore:hasRights".freeze,
       type: "rdf:Property".freeze
     property :isDerivedFrom,
@@ -2826,13 +2826,13 @@ module RDF::Vocab
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :title,
-      comment: [%(Specifies the title or name given to the
-            resource.  A root for the definition of subproperties defining ebucore titles of different types. The ebucore title type can be used to define sub-properties to optionally refine the category of
-            the title.).freeze, %(All value of the EBU title status
+      comment: [%(All value of the EBU title status
             classification scheme
             \(http://www.ebu.ch/metadata/cs/web/ebu_TitleStatusCodeCS_p.xml.htm\) are candidates
             subproperties of the title property as implemented for an example with
-            alternativeTitle.).freeze],
+            alternativeTitle.).freeze, %(Specifies the title or name given to the
+            resource.  A root for the definition of subproperties defining ebucore titles of different types. The ebucore title type can be used to define sub-properties to optionally refine the category of
+            the title.).freeze],
       label: "Title".freeze,
       :"owl:equivalentProperty" => %(ma:title).freeze,
       subPropertyOf: "dc11:title".freeze,

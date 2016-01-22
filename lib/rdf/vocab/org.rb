@@ -15,57 +15,57 @@ module RDF::Vocab
       label: "Change Event".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/org).freeze,
       subClassOf: "prov:Activity".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :FormalOrganization,
       comment: %(An Organization which is recognized in the world at large, in particular in legal jurisdictions, with associated rights and responsibilities. Examples include a Corporation, Charity, Government or Church. Note that this is a super class of `gr:BusinessEntity` and it is recommended to use the GoodRelations vocabulary to denote Business classifications such as DUNS or NAICS.).freeze,
       label: "Formal Organization".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/org).freeze,
-      subClassOf: ["org:Organization".freeze, "foaf:Organization".freeze],
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      subClassOf: ["foaf:Organization".freeze, "org:Organization".freeze],
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Membership,
       comment: %(Indicates the nature of an Agent's membership of an organization. Represents an n-ary relation between an Agent, an Organization and a Role. It is possible to directly indicate membership, independent of the specific Role, through use of the `org:memberOf` property.).freeze,
       label: "Membership".freeze,
       :"owl:disjointWith" => [%(org:ChangeEvent).freeze, %(org:Site).freeze],
       :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/org).freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Organization,
       comment: %(Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.  It is recommended that SKOS lexical labels should be used to label the Organization. In particular `skos:prefLabel` for the primary \(possibly legally recognized name\), `skos:altLabel` for alternative names \(trading names, colloquial names\) and `skos:notation` to denote a code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_).freeze,
       label: "Organization".freeze,
-      :"owl:disjointWith" => [%(org:Role).freeze, %(org:ChangeEvent).freeze, %(org:Membership).freeze, %(org:Site).freeze],
+      :"owl:disjointWith" => [%(org:ChangeEvent).freeze, %(org:Membership).freeze, %(org:Role).freeze, %(org:Site).freeze],
       :"owl:equivalentClass" => %(foaf:Organization).freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/org).freeze,
       subClassOf: "foaf:Agent".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :OrganizationalCollaboration,
       comment: %(A collaboration between two or more Organizations such as a project. It meets the criteria for being an Organization in that it has an identity and defining purpose independent of its particular members but is neither a formally recognized legal entity nor a sub-unit within some larger organization. Might typically have a shorter lifetime than the Organizations within it, but not necessarily. All members are `org:Organization`s rather than individuals and those Organizations can play particular roles within the venture. Alternative names: _Project_ _Venture_  _Endeavour_ _Consortium_ _Endeavour_).freeze,
       label: "Endeavour".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/org).freeze,
       subClassOf: "org:Organization".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :OrganizationalUnit,
       comment: %(An Organization such as a University Support Unit which is part of some larger FormalOrganization and only has full recognition within the context of that FormalOrganization, it is not a Legal Entity in its own right. Units can be large and complex containing other Units and even FormalOrganizations. Alternative names: _OU_ _Unit_ _Department_).freeze,
       label: "OrganizationalUnit".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/org).freeze,
       subClassOf: "org:Organization".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Post,
       comment: %(A Post represents some position within an organization that exists independently of the person or persons filling it. Posts may be used to represent situations where a person is a member of an organization ex officio \(for example the Secretary of State for Scotland is part of UK Cabinet by virtue of being Secretary of State for Scotland, not as an individual person\). A post can be held by multiple people and hence can be treated as a organization in its own right.).freeze,
       label: "Post".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/org).freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Role,
       comment: %(Denotes a role that a Person or other Agent can take in an organization. Instances of this class describe the abstract role; to denote a specific instance of a person playing that role in a specific organization use an instance of `org:Membership`. It is common for roles to be arranged in some taxonomic structure and we use SKOS to represent that. The normal SKOS lexical properties should be used when labelling the Role. Additional descriptive properties for the Role, such as a Salary band, may be added by extension vocabularies.).freeze,
       label: "Role".freeze,
       :"owl:disjointWith" => [%(org:ChangeEvent).freeze, %(org:Membership).freeze, %(org:Site).freeze],
       :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/org).freeze,
       subClassOf: "skos:Concept".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Site,
       comment: %(An office or other premise at which the organization is located. Many organizations are spread across multiple sites and many sites will host multiple locations. In most cases a Site will be a physical location. However, we don't exclude the possibility of non-physical sites such as a virtual office with an associated post box and phone reception service. Extensions may provide subclasses to denote particular types of site.).freeze,
       label: "Site".freeze,
       :"owl:disjointWith" => %(org:ChangeEvent).freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/org).freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
 
     # Property definitions
     property :basedAt,
@@ -184,7 +184,7 @@ module RDF::Vocab
       label: "identifier".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/org).freeze,
       subPropertyOf: "skos:notation".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :linkedTo,
       comment: %(Indicates an arbitrary relationship between two organizations. Specializations of this can be used to, for example, denote funding or supply chain relationships.).freeze,
       domain: "org:Organization".freeze,
@@ -206,7 +206,7 @@ module RDF::Vocab
       :"owl:inverseOf" => %(org:hasMembership).freeze,
       range: "foaf:Agent".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/org).freeze,
-      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze, "owl:FunctionalProperty".freeze]
+      type: ["owl:FunctionalProperty".freeze, "owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :memberDuring,
       comment: %(Optional property to indicate the interval for which the membership is/was valid.).freeze,
       domain: "org:Membership".freeze,
@@ -227,7 +227,7 @@ module RDF::Vocab
       label: "organization".freeze,
       range: "org:Organization".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/org).freeze,
-      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze, "owl:FunctionalProperty".freeze]
+      type: ["owl:FunctionalProperty".freeze, "owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :originalOrganization,
       comment: %(Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Inverse of `org:changedBy`.).freeze,
       domain: "org:ChangeEvent".freeze,
@@ -321,7 +321,7 @@ module RDF::Vocab
       label: "transitive sub-organization".freeze,
       range: "org:Organization".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/org).freeze,
-      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze, "owl:TransitiveProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "owl:TransitiveProperty".freeze, "rdf:Property".freeze]
     property :unitOf,
       comment: %(Indicates an Organization of which this Unit is a part, e.g. a Department within a larger FormalOrganization. This is the inverse of `org:hasUnit`.).freeze,
       domain: "org:OrganizationalUnit".freeze,
@@ -337,7 +337,7 @@ module RDF::Vocab
       comment: %(Vocabulary for describing organizational structures, specializable to a broad variety of types of organization.).freeze,
       :"dc:created" => %(2010-05-28).freeze,
       :"dc:license" => %(http://www.opendatacommons.org/licenses/pddl/1.0/).freeze,
-      :"dc:modified" => [%(2014-01-02).freeze, %(2010-10-08).freeze, %(2014-01-25).freeze, %(2012-09-30).freeze, %(2012-10-06).freeze, %(2013-12-16).freeze, %(2010-06-09).freeze, %(2013-02-15).freeze, %(2014-04-12).freeze, %(2014-02-05).freeze],
+      :"dc:modified" => [%(2010-06-09).freeze, %(2010-10-08).freeze, %(2012-09-30).freeze, %(2012-10-06).freeze, %(2013-02-15).freeze, %(2013-12-16).freeze, %(2014-01-02).freeze, %(2014-01-25).freeze, %(2014-02-05).freeze, %(2014-04-12).freeze],
       :"dc:title" => %(Core organization ontology).freeze,
       label: "Core organization ontology".freeze,
       :"owl:versionInfo" => %(0.8).freeze,

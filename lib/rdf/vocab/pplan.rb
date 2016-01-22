@@ -32,13 +32,13 @@ module RDF::Vocab
       label: "MultiStep".freeze,
       :"prov:definition" => %(A multi step is the representation of a plan that appears as a step of another plan.).freeze,
       :"rdfs:isDefinedBy" => %(pplan:).freeze,
-      subClassOf: ["pplan:Step".freeze, "pplan:Plan".freeze],
+      subClassOf: ["pplan:Plan".freeze, "pplan:Step".freeze],
       type: "owl:Class".freeze
     term :Plan,
       label: "Plan".freeze,
       :"prov:definition" => %(A p-plan:Plan is a specific type of prov:Plan. It is composed of smaller steps that use and produce Variables.).freeze,
       :"rdfs:isDefinedBy" => %(pplan:).freeze,
-      subClassOf: ["prov:Plan".freeze, "pplan:Entity".freeze],
+      subClassOf: ["pplan:Entity".freeze, "prov:Plan".freeze],
       type: "owl:Class".freeze
     term :Step,
       label: "Step".freeze,
@@ -146,6 +146,6 @@ module RDF::Vocab
       :"http://purl.org/vocab/vann/preferredNamespaceUri" => %(http://purl.org/net/p-plan#).freeze,
       label: "".freeze,
       :"owl:versionInfo" => %(1.3).freeze,
-      type: ["owl:Ontology".freeze, "owl:NamedIndividual".freeze, "owl:Thing".freeze]
+      type: ["owl:NamedIndividual".freeze, "owl:Ontology".freeze, "owl:Thing".freeze]
   end
 end

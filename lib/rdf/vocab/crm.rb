@@ -40,7 +40,7 @@ This entity can be collective: the printing of a thousand books, for example, wo
 An event should also be documented using E81 Transformation if it results in the destruction of one or more objects and the simultaneous production of others using parts or material from the originals. In this case, the new items have separate identities and matter is preserved, but identity is not.
 ).freeze,
       label: "Production".freeze,
-      subClassOf: ["crm:E63_Beginning_of_Existence".freeze, "crm:E11_Modification".freeze],
+      subClassOf: ["crm:E11_Modification".freeze, "crm:E63_Beginning_of_Existence".freeze],
       type: "rdfs:Class".freeze
     term :E13_Attribute_Assignment,
       comment: %(This class comprises the actions of making assertions about properties of an object or any relation between two items or concepts. 
@@ -119,14 +119,14 @@ Artificial objects that incorporate biological elements, such as Victorian butte
 Legendary figures that may have existed, such as Ulysses and King Arthur, fall into this class if the documentation refers to them as historical figures. In cases where doubt exists as to whether several persons are in fact identical, multiple instances can be created and linked to indicate their relationship. The CRM does not propose a specific form to support reasoning about possible identity.
 ).freeze,
       label: "Person".freeze,
-      subClassOf: ["crm:E39_Actor".freeze, "crm:E20_Biological_Object".freeze],
+      subClassOf: ["crm:E20_Biological_Object".freeze, "crm:E39_Actor".freeze],
       type: "rdfs:Class".freeze
     term :"E22_Man-Made_Object",
       comment: %(This class comprises physical objects purposely created by human activity.
 No assumptions are made as to the extent of modification required to justify regarding an object as man-made. For example, an inscribed piece of rock or a preserved butterfly are both regarded as instances of E22 Man-Made Object.
 ).freeze,
       label: "Man-Made Object".freeze,
-      subClassOf: ["crm:E24_Physical_Man-Made_Thing".freeze, "crm:E19_Physical_Object".freeze],
+      subClassOf: ["crm:E19_Physical_Object".freeze, "crm:E24_Physical_Man-Made_Thing".freeze],
       type: "rdfs:Class".freeze
     term :"E24_Physical_Man-Made_Thing",
       comment: %(This class comprises all persistent physical items that are purposely created by human activity.
@@ -140,7 +140,7 @@ This class comprises man-made objects, such as a swords, and man-made features, 
 No assumptions are made as to the extent of modification required to justify regarding a feature as man-made. For example, rock art or even “cup and ring” carvings on bedrock a regarded as types of E25 Man-Made Feature.
 ).freeze,
       label: "Man-Made Feature".freeze,
-      subClassOf: ["crm:E26_Physical_Feature".freeze, "crm:E24_Physical_Man-Made_Thing".freeze],
+      subClassOf: ["crm:E24_Physical_Man-Made_Thing".freeze, "crm:E26_Physical_Feature".freeze],
       type: "rdfs:Class".freeze
     term :E26_Physical_Feature,
       comment: %(This class comprises identifiable features that are physically attached in an integral way to particular physical objects. 
@@ -503,7 +503,7 @@ An E73 Information Object does not depend on a specific physical carrier, which 
 Instances of E73 Information Object of a linguistic nature should be declared as instances of the E33 Linguistic Object subclass. Instances of E73 Information Object of a documentary nature should be declared as instances of the E31 Document subclass. Conceptual items such as types and classes are not instances of E73 Information Object, nor are ideas without a reproducible expression. 
 ).freeze,
       label: "Information Object".freeze,
-      subClassOf: ["crm:E90_Symbolic_Object".freeze, "crm:E89_Propositional_Object".freeze],
+      subClassOf: ["crm:E89_Propositional_Object".freeze, "crm:E90_Symbolic_Object".freeze],
       type: "rdfs:Class".freeze
     term :E74_Group,
       comment: %(This class comprises any gatherings or organizations of E39 Actors that act collectively or in a similar way due to any form of unifying relationship. In the wider sense this class also comprises official positions which used to be regarded in certain contexts as one actor, independent of the current holder of the office, such as the president of a country. In such cases, it may happen that the Group never had more than one member. A joint pseudonym \(i.e., a name that seems indicative of an individual but that is actually used as a persona by two or more people\) is a particular case of E74 Group.
@@ -631,7 +631,7 @@ It may also describe events where a collector appropriates legal title, for exam
 	In some cases, the content of an instance of E90 Symbolic Object may completely be represented by a serialized content model, such.. as the property P3 has note allows for describing this content model…P3.1 has type: E55 Type to specify the encoding..
 ).freeze,
       label: "Symbolic Object".freeze,
-      subClassOf: ["crm:E72_Legal_Object".freeze, "crm:E28_Conceptual_Object".freeze],
+      subClassOf: ["crm:E28_Conceptual_Object".freeze, "crm:E72_Legal_Object".freeze],
       type: "rdfs:Class".freeze
     term :"E91_Co-Reference_Assignment",
       comment: %(This class comprises actions of making the assertion whether two or more particular instances of E89 Propositional Object refer to the same instance of E1 CRM Entity. The assertion is based on the assumption that this was an implicit fact being made explicit by this assignment. Use of this class allows for the full description of the context of this assignment. The Actor making the assertion may have different kinds of confidence in the truth of the asserted fact of co-reference, because it may imply an interpretation of the \(past\) knowledge behind the propositional objects assumed to be co-referring. This kind of confidence can be described by using the property P2 has type \(is type of\). In case different propositional attitudes should be expressed per asserted propositional object, the assertion has accordingly to be divided into one instance of E91 Co-Reference Assignment for each kind of confidence.
@@ -781,7 +781,7 @@ The identity of an instance of E24 Physical Man-Made Thing is not defined by its
       domain: "crm:E12_Production".freeze,
       label: "has produced".freeze,
       range: "crm:E24_Physical_Man-Made_Thing".freeze,
-      subPropertyOf: ["crm:P92_brought_into_existence".freeze, "crm:P31_has_modified".freeze],
+      subPropertyOf: ["crm:P31_has_modified".freeze, "crm:P92_brought_into_existence".freeze],
       type: "rdf:Property".freeze
     property :P108i_was_produced_by,
       domain: "crm:E24_Physical_Man-Made_Thing".freeze,
@@ -1579,7 +1579,7 @@ Another example is the use of a particular name by a particular group of people 
       domain: "crm:E70_Thing".freeze,
       label: "was used for".freeze,
       range: "crm:E7_Activity".freeze,
-      subPropertyOf: ["crm:P15i_influenced".freeze, "crm:P12i_was_present_at".freeze],
+      subPropertyOf: ["crm:P12i_was_present_at".freeze, "crm:P15i_influenced".freeze],
       type: "rdf:Property".freeze
     property :P17_was_motivated_by,
       comment: %(This property describes an item or items that are regarded as a reason for carrying out the E7 Activity. 
@@ -2109,13 +2109,13 @@ P52 has current owner \(is current owner of\) is a shortcut for the more detaile
       domain: "crm:E18_Physical_Thing".freeze,
       label: "has current owner".freeze,
       range: "crm:E39_Actor".freeze,
-      subPropertyOf: ["crm:P51_has_former_or_current_owner".freeze, "crm:P105_right_held_by".freeze],
+      subPropertyOf: ["crm:P105_right_held_by".freeze, "crm:P51_has_former_or_current_owner".freeze],
       type: "rdf:Property".freeze
     property :P52i_is_current_owner_of,
       domain: "crm:E39_Actor".freeze,
       label: "is current owner of".freeze,
       range: "crm:E18_Physical_Thing".freeze,
-      subPropertyOf: ["crm:P51i_is_former_or_current_owner_of".freeze, "crm:P105i_has_right_on".freeze],
+      subPropertyOf: ["crm:P105i_has_right_on".freeze, "crm:P51i_is_former_or_current_owner_of".freeze],
       type: "rdf:Property".freeze
     property :P53_has_former_or_current_location,
       comment: %(This property allows an instance of E53 Place to be associated as the former or current location of an instance of E18 Physical Thing.

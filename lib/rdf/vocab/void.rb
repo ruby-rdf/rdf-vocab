@@ -35,7 +35,7 @@ module RDF::Vocab
       domain: "void:Dataset".freeze,
       label: "class".freeze,
       range: "rdfs:Class".freeze,
-      type: ["rdf:Property".freeze, "owl:FunctionalProperty".freeze]
+      type: ["owl:FunctionalProperty".freeze, "rdf:Property".freeze]
     property :classPartition,
       comment: %(A subset of a void:Dataset that contains only the entities of a certain rdfs:Class.).freeze,
       domain: "void:Dataset".freeze,
@@ -48,7 +48,7 @@ module RDF::Vocab
       domain: "void:Dataset".freeze,
       label: "classes".freeze,
       range: "xsd:integer".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :dataDump,
       comment: %(An RDF dump, partial or complete, of a void:Dataset.).freeze,
       domain: "void:Dataset".freeze,
@@ -60,25 +60,25 @@ module RDF::Vocab
       domain: "void:Dataset".freeze,
       label: "distinct objects".freeze,
       range: "xsd:integer".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :distinctSubjects,
       comment: %(The total number of distinct subjects in a void:Dataset. In other words, the number of distinct resources that occur in the subject position of triples in the dataset.).freeze,
       domain: "void:Dataset".freeze,
       label: "distinct subjects".freeze,
       range: "xsd:integer".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :documents,
       comment: %(The total number of documents, for datasets that are published as a set of individual documents, such as RDF/XML documents or RDFa-annotated web pages. Non-RDF documents, such as web pages in HTML or images, are usually not included in this count. This property is intended for datasets where the total number of triples or entities is hard to determine. void:triples or void:entities should be preferred where practical.).freeze,
       domain: "void:Dataset".freeze,
       label: "number of documents".freeze,
       range: "xsd:integer".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :entities,
       comment: %(The total number of entities that are described in a void:Dataset.).freeze,
       domain: "void:Dataset".freeze,
       label: "number of entities".freeze,
       range: "xsd:integer".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :exampleResource,
       domain: "void:Dataset".freeze,
       label: "example resource of dataset".freeze,
@@ -106,7 +106,7 @@ module RDF::Vocab
       label: "Objects Target".freeze,
       range: "void:Dataset".freeze,
       subPropertyOf: "void:target".freeze,
-      type: ["rdf:Property".freeze, "owl:FunctionalProperty".freeze]
+      type: ["owl:FunctionalProperty".freeze, "rdf:Property".freeze]
     property :openSearchDescription,
       comment: %(An OpenSearch description document for a free-text search service over a void:Dataset.).freeze,
       domain: "void:Dataset".freeze,
@@ -118,13 +118,13 @@ module RDF::Vocab
       domain: "void:Dataset".freeze,
       label: "number of properties".freeze,
       range: "xsd:integer".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :property,
       comment: %(The rdf:Property that is the predicate of all triples in a property-based partition.).freeze,
       domain: "void:Dataset".freeze,
       label: "property".freeze,
       range: "rdf:Property".freeze,
-      type: ["rdf:Property".freeze, "owl:FunctionalProperty".freeze]
+      type: ["owl:FunctionalProperty".freeze, "rdf:Property".freeze]
     property :propertyPartition,
       comment: %(A subset of a void:Dataset that contains only the triples of a certain rdf:Property.).freeze,
       domain: "void:Dataset".freeze,
@@ -147,7 +147,7 @@ module RDF::Vocab
       label: "Subjects Target".freeze,
       range: "void:Dataset".freeze,
       subPropertyOf: "void:target".freeze,
-      type: ["rdf:Property".freeze, "owl:FunctionalProperty".freeze]
+      type: ["owl:FunctionalProperty".freeze, "rdf:Property".freeze]
     property :subset,
       domain: "void:Dataset".freeze,
       label: "has subset".freeze,
@@ -164,7 +164,7 @@ module RDF::Vocab
       domain: "void:Dataset".freeze,
       label: "number of triples".freeze,
       range: "xsd:integer".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :uriLookupEndpoint,
       comment: %(Defines a simple URI look-up protocol for accessing a dataset.).freeze,
       domain: "void:Dataset".freeze,
@@ -180,7 +180,7 @@ module RDF::Vocab
       domain: "void:Dataset".freeze,
       label: "URI space".freeze,
       range: "rdfs:Literal".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :vocabulary,
       comment: %(A vocabulary that is used in the dataset.).freeze,
       domain: "void:Dataset".freeze,

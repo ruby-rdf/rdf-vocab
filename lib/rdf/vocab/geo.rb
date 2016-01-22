@@ -11,14 +11,14 @@ module RDF::Vocab
 
     # Class definitions
     term :Point,
-      comment: [%(A point, typically described using a coordinate system relative to Earth, such as WGS84.
-  ).freeze, %( 
+      comment: [%( 
 Uniquely identified by lat/long/alt. i.e.
 
 spaciallyIntersects\(P1, P2\) :- lat\(P1, LAT\), long\(P1, LONG\), alt\(P1, ALT\),
   lat\(P2, LAT\), long\(P2, LONG\), alt\(P2, ALT\).
 
 sameThing\(P1, P2\) :- type\(P1, Point\), type\(P2, Point\), spaciallyIntersects\(P1, P2\).
+  ).freeze, %(A point, typically described using a coordinate system relative to Earth, such as WGS84.
   ).freeze],
       label: "point".freeze,
       subClassOf: "geo:SpatialThing".freeze,

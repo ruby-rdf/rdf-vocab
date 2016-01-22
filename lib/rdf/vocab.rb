@@ -16,8 +16,36 @@ module RDF
       },
       bibo:   {uri: "http://purl.org/ontology/bibo/"},
       cc:     {uri: "http://creativecommons.org/ns#"},
-      cert:   {uri: "http://www.w3.org/ns/auth/cert#"},
-      cnt:    {uri: "http://www.w3.org/2011/content#"},
+      cert:   {
+        uri: "http://www.w3.org/ns/auth/cert#",
+        patch: %{
+          @prefix cert: <http://www.w3.org/ns/auth/cert#> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          DeleteExisting {
+            cert:modulus rdfs:domain cert:DSAKey .
+            cert:privateExponent rdfs:domain cert:RSAPrivateKey .
+          } .
+          AddNew {
+            cert:privateExponent rdfs:domain cert:PrivateKey .
+          } .
+        }
+      },
+      cnt:    {
+        uri: "http://www.w3.org/2011/content#",
+        patch: %{
+          @prefix cnt: <http://www.w3.org/2011/content#> .
+          @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          DeleteExisting {
+            cnt:leadingMisc rdfs:range rdfs:XMLLiteral .
+            cnt:rest rdfs:range rdfs:XMLLiteral .
+          } .
+          AddNew {
+            cnt:leadingMisc rdfs:range rdf:XMLLiteral .
+            cnt:rest rdfs:range rdf:XMLLiteral .
+          } .
+        }
+      },
       crm:    {uri: "http://www.cidoc-crm.org/cidoc-crm/", source: "etc/crm.rdf"},
       datacite: {
         uri: "http://purl.org/spar/datacite/",
@@ -26,12 +54,34 @@ module RDF
       },
       dc:     {uri: "http://purl.org/dc/terms/"},
       dc11:   {uri: "http://purl.org/dc/elements/1.1/"},
-      dcat:   {uri: "http://www.w3.org/ns/dcat#"},
+      dcat:   {
+        uri: "http://www.w3.org/ns/dcat#",
+        patch: %{
+          @prefix dcat: <http://www.w3.org/ns/dcat#> .
+          @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          DeleteExisting {
+            dcat:landingPage rdfs:subPropertyOf foaf:Page .
+          } .
+          AddNew {
+            dcat:landingPage rdfs:subPropertyOf foaf:page .
+          } .
+        }
+      },
       dcmitype: {
           uri: "http://purl.org/dc/dcmitype/",
           class_name: "DCMIType"
       },
-      doap:   {uri: "http://usefulinc.com/ns/doap#"},
+      doap:   {
+        uri: "http://usefulinc.com/ns/doap#",
+        patch: %{
+          @prefix : <http://usefulinc.com/ns/doap#> .
+          @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+          @prefix owl: <http://www.w3.org/2002/07/owl#>.
+          DeleteExisting {: owl:imports foaf:index.rdf .} .
+          AddNew {: owl:imports foaf: .} .
+        }
+      },
       dwc: {
         uri: "http://rs.tdwg.org/dwc/terms/",
         source: "etc/dwcterms.rdf",
@@ -46,7 +96,23 @@ module RDF
         uri: "http://www.europeana.eu/schemas/edm/",
         source: "http://www.europeana.eu/schemas/edm/rdf/edm.owl"
       },
-      exif:   {uri: "http://www.w3.org/2003/12/exif/ns#"},
+      exif:   {
+        uri: "http://www.w3.org/2003/12/exif/ns#",
+        patch: %{
+          @prefix exif: <http://www.w3.org/2003/12/exif/ns#> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          DeleteExisting {
+            exif:subSecTime rdfs:subPropertyOf exif:subsecond .
+            exif:subSecTimeDigitized rdfs:subPropertyOf exif:subsecond .
+            exif:subSecTimeOriginal rdfs:subPropertyOf exif:subsecond .
+          } .
+          AddNew {
+            exif:subSecTime rdfs:subPropertyOf exif:subseconds .
+            exif:subSecTimeDigitized rdfs:subPropertyOf exif:subseconds .
+            exif:subSecTimeOriginal rdfs:subPropertyOf exif:subseconds .
+          } .
+        }
+      },
       fcrepo4: {
         uri: "http://fedora.info/definitions/v4/repository#",
         class_name: "Fcrepo4",
@@ -80,23 +146,63 @@ module RDF
         class_name: "IIIF"
       },
       jsonld: {uri: "http://www.w3.org/ns/json-ld#"},
-      ldp:    {uri: "http://www.w3.org/ns/ldp#", strict: false},
+      ldp:    {
+        uri: "http://www.w3.org/ns/ldp#",
+        strict: false,
+        patch: %{
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+          @prefix owl: <http://www.w3.org/2002/07/owl#>.
+          @prefix : <http://www.w3.org/ns/ldp#>.
+          DeleteExisting {
+            :pageSortOrder rdfs:range rdf:Resource .
+            :Ascending a owl:Individual .
+            :Descending a owl:Individual .
+            :MemberSubject a owl:Individual .
+            :PreferContainment a owl:Individual .
+            :PreferEmptyContainer a owl:Individual .
+            :PreferMembership a owl:Individual .
+            :PreferMinimalContainer a owl:Individual .
+          } .
+          AddNew {
+            :pageSortOrder rdfs:range rdfs:Resource .
+            :Ascending a owl:NamedIndividual .
+            :Descending a owl:NamedIndividual .
+            :MemberSubject a owl:NamedIndividual .
+            :PreferContainment a owl:NamedIndividual .
+            :PreferEmptyContainer a owl:NamedIndividual .
+            :PreferMembership a owl:NamedIndividual .
+            :PreferMinimalContainer a owl:NamedIndividual .
+          } .
+        }
+      },
       lrmi:   {uri: "http://purl.org/dcx/lrmi-terms/", strict: false},
       ma:     {uri: "http://www.w3.org/ns/ma-ont#", source: "http://www.w3.org/ns/ma-ont.rdf", strict: false},
       mads: {
         uri: "http://www.loc.gov/mads/rdf/v1#",
-        source: "http://www.loc.gov/standards/mads/rdf/v1.rdf"
+        source: "http://www.loc.gov/standards/mads/rdf/v1.rdf",
+        patch: %{
+          @prefix : <http://www.loc.gov/mads/rdf/v1#> .
+          @prefix owl: <http://www.w3.org/2002/07/owl#>.
+          DeleteExisting {:gender a owl:DataTypeProperty .} .
+          AddNew {:gender a owl:DatatypeProperty .} .
+        }
       },
       marc_relators: {
         uri: "http://id.loc.gov/vocabulary/relators/",
         source: "http://id.loc.gov/vocabulary/relators.rdf",
         class_name: "MARCRelators",
-        extra: {
-          role: {
-            label: "role",
-            type: "owl:ObjectProperty",
-            comment: "This property and its sub-properties are used to associate a Bibliographic Resource with a Resource that played a part in the lifecycle of the Bibliographic Resource.  It is the inverse of relators:roleIn."
-          }
+        patch: %{
+          @prefix marcrelators: <http://id.loc.gov/vocabulary/relators/> .
+          @prefix owl: <http://www.w3.org/2002/07/owl#>.
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          DeleteExisting {
+            marcrelators:lee rdfs:subPropertyOf marcrelators:lei .
+          } .
+          AddNew {
+            marcrelators:role a owl:ObjectProperty;
+               rdfs:comment "This property and its sub-properties are used to associate a Bibliographic Resource with a Resource that played a part in the lifecycle of the Bibliographic Resource.  It is the inverse of relators:roleIn.".
+          } .
         }
       },
       mo:     {uri: "http://purl.org/ontology/mo/", strict: false},
@@ -124,7 +230,25 @@ module RDF
       prov:   {uri: "http://www.w3.org/ns/prov#"},
       ptr:    {uri: "http://www.w3.org/2009/pointers#"},
       rdfs:   {uri: "http://www.w3.org/2000/01/rdf-schema#", alias: true},
-      rsa:    {uri: "http://www.w3.org/ns/auth/rsa#"},
+      rsa:    {
+        uri: "http://www.w3.org/ns/auth/rsa#",
+        patch: %{
+          @prefix cert: <http://www.w3.org/ns/auth/cert#> .
+          @prefix rsa: <http://www.w3.org/ns/auth/rsa#> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+          DeleteExisting {
+            rsa:modulus rdfs:range cert:int .
+            rsa:private_exponent rdfs:range cert:int .
+            rsa:public_exponent rdfs:range cert:int .
+          } .
+          AddNew {
+            rsa:modulus rdfs:range xsd:base64Binary, xsd:hexBinary .
+            rsa:private_exponent rdfs:range xsd:nonNegativeInteger .
+            rsa:public_exponent rdfs:range xsd:nonNegativeInteger .
+          } .
+        }
+      },
       rss:    {uri: "http://purl.org/rss/1.0/", source: "http://purl.org/rss/1.0/schema.rdf"},
       schema: {uri: "http://schema.org/", source: "http://schema.org/docs/schema_org_rdfa.html"},
       sioc:   {uri: "http://rdfs.org/sioc/ns#"},

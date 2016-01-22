@@ -173,7 +173,7 @@ module RDF::Vocab
       :"dc:description" => %(Vocabulary URIs defined in the Linked Data Platform \(LDP\) namespace.).freeze,
       :"dc:title" => %(The W3C Linked Data Platform \(LDP\) Vocabulary).freeze,
       label: "W3C Linked Data Platform (LDP)".freeze,
-      :"rdfs:seeAlso" => [%(http://www.w3.org/TR/ldp/).freeze, %(http://www.w3.org/2011/09/LinkedData/).freeze, %(http://www.w3.org/TR/ldp-ucr/).freeze, %(http://www.w3.org/2012/ldp).freeze, %(http://www.w3.org/TR/ldp-paging/).freeze],
+      :"rdfs:seeAlso" => [%(http://www.w3.org/2011/09/LinkedData/).freeze, %(http://www.w3.org/2012/ldp).freeze, %(http://www.w3.org/TR/ldp-paging/).freeze, %(http://www.w3.org/TR/ldp-ucr/).freeze, %(http://www.w3.org/TR/ldp/).freeze],
       type: "owl:Ontology".freeze
     term :Ascending,
       comment: %(Ascending order.).freeze,

@@ -82,12 +82,12 @@ The resource which is the subject of this description.
       domain: "mods:Cartographics".freeze,
       label: "Cartographics - Coordinates".freeze,
       range: "xsd:string".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :cartographicsProjection,
       domain: "mods:Cartographics".freeze,
       label: "Cartographics - Projection".freeze,
       range: "xsd:string".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :cartographicsScale,
       domain: "mods:Cartographics".freeze,
       label: "Cartographics - Scale".freeze,
@@ -588,7 +588,7 @@ The resource which is the subject of this description.
       subPropertyOf: "mods:relatedItem".freeze,
       type: "owl:ObjectProperty".freeze
     property :relatedReferencedBy,
-      comment: [%(Relates the described MODS resource to another MODS resource which references the described resource.).freeze, %().freeze],
+      comment: [%().freeze, %(Relates the described MODS resource to another MODS resource which references the described resource.).freeze],
       domain: "mods:ModsResource".freeze,
       label: "Related item - Referenced By".freeze,
       range: "mods:ModsResource".freeze,
@@ -765,28 +765,28 @@ The property 'relator:artist' relates the resource to an artist associated with 
     # Extra definitions
     term :access,
       label: "access".freeze,
-      type: ["owl:NamedIndividual".freeze, "http://www.loc.gov/mods/rdf/ReformattingQuality".freeze]
+      type: ["http://www.loc.gov/mods/rdf/ReformattingQuality".freeze, "owl:NamedIndividual".freeze]
     term :date,
       comment: %(An abstract property for which date properties in general are subproperties.).freeze,
       domain: "mods:ModsResource".freeze,
       label: "Date".freeze
     term :digitizedAnalog,
       label: "digitizedAnalog".freeze,
-      type: ["owl:NamedIndividual".freeze, "http://www.loc.gov/mods/rdf/DigitalOrigin".freeze]
+      type: ["http://www.loc.gov/mods/rdf/DigitalOrigin".freeze, "owl:NamedIndividual".freeze]
     term :digitizedMicrofilm,
       label: "digitizedMicrofilm".freeze,
-      type: ["owl:NamedIndividual".freeze, "http://www.loc.gov/mods/rdf/DigitalOrigin".freeze]
+      type: ["http://www.loc.gov/mods/rdf/DigitalOrigin".freeze, "owl:NamedIndividual".freeze]
     term :integratingResource,
       label: "integratingResource".freeze,
-      type: ["owl:NamedIndividual".freeze, "http://www.loc.gov/mods/rdf/Issuance".freeze]
+      type: ["http://www.loc.gov/mods/rdf/Issuance".freeze, "owl:NamedIndividual".freeze]
     term :monographic,
       label: "monographic".freeze,
-      type: ["owl:NamedIndividual".freeze, "http://www.loc.gov/mods/rdf/Issuance".freeze]
+      type: ["http://www.loc.gov/mods/rdf/Issuance".freeze, "owl:NamedIndividual".freeze]
     term :reformattedDigital,
       label: "reformattedDigital".freeze,
-      type: ["owl:NamedIndividual".freeze, "http://www.loc.gov/mods/rdf/DigitalOrigin".freeze]
+      type: ["http://www.loc.gov/mods/rdf/DigitalOrigin".freeze, "owl:NamedIndividual".freeze]
     term :serial,
       label: "serial".freeze,
-      type: ["owl:NamedIndividual".freeze, "http://www.loc.gov/mods/rdf/Issuance".freeze]
+      type: ["http://www.loc.gov/mods/rdf/Issuance".freeze, "owl:NamedIndividual".freeze]
   end
 end

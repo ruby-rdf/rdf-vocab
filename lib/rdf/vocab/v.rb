@@ -17,7 +17,7 @@ module RDF::Vocab
     term :Breadcrumb,
       comment: %(Represents a single Breadcrumb in a Breadcrumb trail.).freeze,
       label: "Breadcrumb".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Instructions,
       comment: %(Represents the steps to make a dish.).freeze,
       label: "Instructions".freeze,
@@ -29,31 +29,31 @@ module RDF::Vocab
     term :Offer,
       comment: %(Represents an offer to sell a product.).freeze,
       label: "Offer".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :OfferAggregate,
       comment: %(Represents a collection of offers to sell a product.).freeze,
       label: "OfferAggregate".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Organization,
       comment: %(An Organization is a business, agency, school, etc.).freeze,
       label: "Organization".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Person,
       comment: %(Represents a Person, living/dead/fictional.).freeze,
       label: "Person".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Product,
       comment: %(Represents a product or service in a Review or Review-aggregate.).freeze,
       label: "Product".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Rating,
       comment: %(Represents a rating in a Review or Review-aggregate.).freeze,
       label: "Rating".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Recipe,
       comment: %(A single instance of a Recipe.).freeze,
       label: "Recipe".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :RecipeIngredient,
       comment: %(Represents ingredients used in a recipe.).freeze,
       label: "RecipeIngredient".freeze,
@@ -61,7 +61,7 @@ module RDF::Vocab
     term :Review,
       comment: %(A single instance of a Review.).freeze,
       label: "Review".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :"Review-aggregate",
       comment: %(Represents data from a collection of reviews.
     Can be used whether or not there is instance-level Review data on the page.
@@ -72,7 +72,7 @@ module RDF::Vocab
     term :TimeRange,
       comment: %(Represents the length of time it takes to prepare a recipe.).freeze,
       label: "TimeRange".freeze,
-      type: ["rdfs:Class".freeze, "owl:Class".freeze]
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
 
     # Property definitions
     property :acquaintance,

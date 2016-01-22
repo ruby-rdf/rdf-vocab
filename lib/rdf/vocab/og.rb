@@ -190,7 +190,7 @@ module RDF::Vocab
       label: "url".freeze,
       range: "ogc:url".freeze,
       :"rdfs:isDefinedBy" => %(og:).freeze,
-      :"rdfs:seeAlso" => [%(foaf:homepage).freeze, %(dc11:identifier).freeze],
+      :"rdfs:seeAlso" => [%(dc11:identifier).freeze, %(foaf:homepage).freeze],
       type: "rdf:Property".freeze
     property :video,
       comment: %(A relevant video URL for your object.).freeze,
