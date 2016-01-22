@@ -23,7 +23,7 @@ module RDF::Vocab
 
 \(Source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Brand\)).freeze,
       label: "Brand".freeze,
-      :"owl:disjointWith" => [%(gr:PaymentMethod).freeze, %(gr:QuantitativeValue).freeze, %(gr:BusinessEntityType).freeze, %(gr:PriceSpecification).freeze, %(gr:Location).freeze, %(gr:BusinessFunction).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:Offering).freeze, %(gr:DeliveryMethod).freeze, %(gr:DayOfWeek).freeze, %(gr:WarrantyScope).freeze, %(gr:WarrantyPromise).freeze, %(gr:BusinessEntity).freeze],
+      :"owl:disjointWith" => [%(gr:BusinessEntity).freeze, %(gr:BusinessEntityType).freeze, %(gr:BusinessFunction).freeze, %(gr:DayOfWeek).freeze, %(gr:DeliveryMethod).freeze, %(gr:Location).freeze, %(gr:Offering).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:PaymentMethod).freeze, %(gr:PriceSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:QuantitativeValue).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:WarrantyPromise).freeze, %(gr:WarrantyScope).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       type: "owl:Class".freeze
     term :BusinessEntity,
@@ -34,7 +34,7 @@ Example: Siemens Austria AG, Volkswagen Ltd., Peter Miller's Cell phone Shop LLC
 Compatibility with schema.org: This class is equivalent to the union of http://schema.org/Person and http://schema.org/Organization.		
 ).freeze,
       label: "Business entity".freeze,
-      :"owl:disjointWith" => [%(gr:PaymentMethod).freeze, %(gr:QuantitativeValue).freeze, %(gr:BusinessEntityType).freeze, %(gr:PriceSpecification).freeze, %(gr:Location).freeze, %(gr:BusinessFunction).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:Offering).freeze, %(gr:DeliveryMethod).freeze, %(gr:DayOfWeek).freeze, %(gr:Brand).freeze, %(gr:WarrantyScope).freeze, %(gr:WarrantyPromise).freeze],
+      :"owl:disjointWith" => [%(gr:Brand).freeze, %(gr:BusinessEntityType).freeze, %(gr:BusinessFunction).freeze, %(gr:DayOfWeek).freeze, %(gr:DeliveryMethod).freeze, %(gr:Location).freeze, %(gr:Offering).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:PaymentMethod).freeze, %(gr:PriceSpecification).freeze, %(gr:QuantitativeValue).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:WarrantyPromise).freeze, %(gr:WarrantyScope).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       type: "owl:Class".freeze
     term :BusinessEntityType,
@@ -42,7 +42,7 @@ Compatibility with schema.org: This class is equivalent to the union of http://s
 
 Examples: Consumers, Retailers, Wholesalers, or Public Institutions).freeze,
       label: "Business entity type".freeze,
-      :"owl:disjointWith" => [%(gr:PaymentMethod).freeze, %(gr:QuantitativeValue).freeze, %(gr:DayOfWeek).freeze, %(gr:PriceSpecification).freeze, %(gr:Location).freeze, %(gr:BusinessFunction).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:Offering).freeze, %(gr:DeliveryMethod).freeze, %(gr:Brand).freeze, %(gr:WarrantyScope).freeze, %(gr:WarrantyPromise).freeze, %(gr:BusinessEntity).freeze],
+      :"owl:disjointWith" => [%(gr:Brand).freeze, %(gr:BusinessEntity).freeze, %(gr:BusinessFunction).freeze, %(gr:DayOfWeek).freeze, %(gr:DeliveryMethod).freeze, %(gr:Location).freeze, %(gr:Offering).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:PaymentMethod).freeze, %(gr:PriceSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:QuantitativeValue).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:WarrantyPromise).freeze, %(gr:WarrantyScope).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       type: "owl:Class".freeze
     term :BusinessFunction,
@@ -52,7 +52,7 @@ Licenses and other proprietary specifications of access rights are also instance
 
 Examples: A particular offering made by Miller Rentals Ltd. says that they \(1\) sell Volkswagen Golf convertibles, \(2\) lease out a particular Ford pick-up truck, and \(3\) dispose car wrecks of any make and model.).freeze,
       label: "Business function".freeze,
-      :"owl:disjointWith" => [%(gr:PaymentMethod).freeze, %(gr:QuantitativeValue).freeze, %(gr:BusinessEntityType).freeze, %(gr:PriceSpecification).freeze, %(gr:Location).freeze, %(gr:WarrantyPromise).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:Offering).freeze, %(gr:DeliveryMethod).freeze, %(gr:DayOfWeek).freeze, %(gr:Brand).freeze, %(gr:WarrantyScope).freeze, %(gr:BusinessEntity).freeze],
+      :"owl:disjointWith" => [%(gr:Brand).freeze, %(gr:BusinessEntity).freeze, %(gr:BusinessEntityType).freeze, %(gr:DayOfWeek).freeze, %(gr:DeliveryMethod).freeze, %(gr:Location).freeze, %(gr:Offering).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:PaymentMethod).freeze, %(gr:PriceSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:QuantitativeValue).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:WarrantyPromise).freeze, %(gr:WarrantyScope).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       type: "owl:Class".freeze
     term :DayOfWeek,
@@ -60,7 +60,7 @@ Examples: A particular offering made by Miller Rentals Ltd. says that they \(1\)
 
 Examples: Monday, Tuesday, Wednesday,...).freeze,
       label: "Day of week".freeze,
-      :"owl:disjointWith" => [%(gr:PaymentMethod).freeze, %(gr:QuantitativeValue).freeze, %(gr:BusinessEntityType).freeze, %(gr:PriceSpecification).freeze, %(gr:Location).freeze, %(gr:BusinessFunction).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:Offering).freeze, %(gr:DeliveryMethod).freeze, %(gr:Brand).freeze, %(gr:WarrantyScope).freeze, %(gr:WarrantyPromise).freeze, %(gr:BusinessEntity).freeze],
+      :"owl:disjointWith" => [%(gr:Brand).freeze, %(gr:BusinessEntity).freeze, %(gr:BusinessEntityType).freeze, %(gr:BusinessFunction).freeze, %(gr:DeliveryMethod).freeze, %(gr:Location).freeze, %(gr:Offering).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:PaymentMethod).freeze, %(gr:PriceSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:QuantitativeValue).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:WarrantyPromise).freeze, %(gr:WarrantyScope).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       type: "owl:Class".freeze
     term :DeliveryChargeSpecification,
@@ -84,7 +84,7 @@ Important: When querying for the price, always use gr:hasMaxCurrencyValue and gr
 
 Examples: Delivery by mail, delivery by direct download, delivery by UPS).freeze,
       label: "Delivery method".freeze,
-      :"owl:disjointWith" => [%(gr:PaymentMethod).freeze, %(gr:QuantitativeValue).freeze, %(gr:BusinessEntityType).freeze, %(gr:PriceSpecification).freeze, %(gr:Location).freeze, %(gr:BusinessFunction).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:Offering).freeze, %(gr:DayOfWeek).freeze, %(gr:Brand).freeze, %(gr:WarrantyScope).freeze, %(gr:WarrantyPromise).freeze, %(gr:BusinessEntity).freeze],
+      :"owl:disjointWith" => [%(gr:Brand).freeze, %(gr:BusinessEntity).freeze, %(gr:BusinessEntityType).freeze, %(gr:BusinessFunction).freeze, %(gr:DayOfWeek).freeze, %(gr:Location).freeze, %(gr:Offering).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:PaymentMethod).freeze, %(gr:PriceSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:QuantitativeValue).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:WarrantyPromise).freeze, %(gr:WarrantyScope).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       type: "owl:Class".freeze
     term :DeliveryModeParcelService,
@@ -108,7 +108,7 @@ Compatibility with schema.org: This class is a subclass of http://schema.org/Pro
       :"owl:disjointWith" => [%(gr:ProductOrServiceModel).freeze, %(gr:SomeItems).freeze],
       :"owl:equivalentClass" => %(gr:ActualProductOrServiceInstance).freeze,
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
-      subClassOf: ["schema:Product".freeze, "gr:ProductOrService".freeze],
+      subClassOf: ["gr:ProductOrService".freeze, "schema:Product".freeze],
       type: "owl:Class".freeze
     term :License,
       comment: %(A license is the specification of a bundle of rights that determines the type of activity or access offered by the gr:BusinessEntity on the gr:ProductOrService through the gr:Offering.
@@ -127,7 +127,7 @@ Note: Typical address standards \(vcard\) and location data \(geo, WGC84\) shoul
 		
 Compatibility with schema.org: This class is equivalent to http://schema.org/Place.).freeze,
       label: "Location".freeze,
-      :"owl:disjointWith" => [%(gr:PaymentMethod).freeze, %(gr:QuantitativeValue).freeze, %(gr:BusinessEntityType).freeze, %(gr:PriceSpecification).freeze, %(gr:Brand).freeze, %(gr:BusinessFunction).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:BusinessEntity).freeze, %(gr:Offering).freeze, %(gr:DeliveryMethod).freeze, %(gr:DayOfWeek).freeze, %(gr:WarrantyScope).freeze, %(gr:WarrantyPromise).freeze],
+      :"owl:disjointWith" => [%(gr:Brand).freeze, %(gr:BusinessEntity).freeze, %(gr:BusinessEntityType).freeze, %(gr:BusinessFunction).freeze, %(gr:DayOfWeek).freeze, %(gr:DeliveryMethod).freeze, %(gr:Offering).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:PaymentMethod).freeze, %(gr:PriceSpecification).freeze, %(gr:QuantitativeValue).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:WarrantyPromise).freeze, %(gr:WarrantyScope).freeze],
       :"owl:equivalentClass" => %(gr:LocationOfSalesOrServiceProvisioning).freeze,
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       type: "owl:Class".freeze
@@ -157,13 +157,13 @@ Example: Peter Miller offers to repair TV sets made by Siemens, Volkswagen Innsb
 
 Compatibility with schema.org: This class is a superclass to http://schema.org/Offer, since gr:Offering can also represent demand.).freeze,
       label: "Offering".freeze,
-      :"owl:disjointWith" => [%(gr:PaymentMethod).freeze, %(gr:QuantitativeValue).freeze, %(gr:BusinessEntityType).freeze, %(gr:PriceSpecification).freeze, %(gr:Location).freeze, %(gr:BusinessFunction).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:DeliveryMethod).freeze, %(gr:QualitativeValue).freeze, %(gr:DayOfWeek).freeze, %(gr:Brand).freeze, %(gr:WarrantyScope).freeze, %(gr:WarrantyPromise).freeze, %(gr:BusinessEntity).freeze],
+      :"owl:disjointWith" => [%(gr:Brand).freeze, %(gr:BusinessEntity).freeze, %(gr:BusinessEntityType).freeze, %(gr:BusinessFunction).freeze, %(gr:DayOfWeek).freeze, %(gr:DeliveryMethod).freeze, %(gr:Location).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:PaymentMethod).freeze, %(gr:PriceSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:QualitativeValue).freeze, %(gr:QuantitativeValue).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:WarrantyPromise).freeze, %(gr:WarrantyScope).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       type: "owl:Class".freeze
     term :OpeningHoursSpecification,
       comment: %(This is a conceptual entity that holds together all information about the opening hours on a given day \(gr:DayOfWeek\).).freeze,
       label: "Opening hours specification".freeze,
-      :"owl:disjointWith" => [%(gr:PaymentMethod).freeze, %(gr:QuantitativeValue).freeze, %(gr:BusinessEntityType).freeze, %(gr:PriceSpecification).freeze, %(gr:Location).freeze, %(gr:BusinessFunction).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:ProductOrService).freeze, %(gr:Offering).freeze, %(gr:DeliveryMethod).freeze, %(gr:DayOfWeek).freeze, %(gr:Brand).freeze, %(gr:WarrantyScope).freeze, %(gr:WarrantyPromise).freeze, %(gr:BusinessEntity).freeze],
+      :"owl:disjointWith" => [%(gr:Brand).freeze, %(gr:BusinessEntity).freeze, %(gr:BusinessEntityType).freeze, %(gr:BusinessFunction).freeze, %(gr:DayOfWeek).freeze, %(gr:DeliveryMethod).freeze, %(gr:Location).freeze, %(gr:Offering).freeze, %(gr:PaymentMethod).freeze, %(gr:PriceSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:QuantitativeValue).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:WarrantyPromise).freeze, %(gr:WarrantyScope).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       type: "owl:Class".freeze
     term :PaymentChargeSpecification,
@@ -187,7 +187,7 @@ Important: When querying for the price, always use gr:hasMaxCurrencyValue and gr
 
 Examples: VISA, MasterCard, Diners, cash, or bank transfer in advance.).freeze,
       label: "Payment method".freeze,
-      :"owl:disjointWith" => [%(gr:QuantitativeValue).freeze, %(gr:BusinessEntityType).freeze, %(gr:PriceSpecification).freeze, %(gr:Location).freeze, %(gr:BusinessFunction).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:BusinessEntity).freeze, %(gr:Offering).freeze, %(gr:DeliveryMethod).freeze, %(gr:DayOfWeek).freeze, %(gr:Brand).freeze, %(gr:WarrantyScope).freeze, %(gr:WarrantyPromise).freeze],
+      :"owl:disjointWith" => [%(gr:Brand).freeze, %(gr:BusinessEntity).freeze, %(gr:BusinessEntityType).freeze, %(gr:BusinessFunction).freeze, %(gr:DayOfWeek).freeze, %(gr:DeliveryMethod).freeze, %(gr:Location).freeze, %(gr:Offering).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:PriceSpecification).freeze, %(gr:QuantitativeValue).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:WarrantyPromise).freeze, %(gr:WarrantyScope).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       type: "owl:Class".freeze
     term :PaymentMethodCreditCard,
@@ -201,7 +201,7 @@ Examples: VISA, MasterCard, or American Express.).freeze,
     term :PriceSpecification,
       comment: %(The superclass of all price specifications.).freeze,
       label: "Price specification".freeze,
-      :"owl:disjointWith" => [%(gr:PaymentMethod).freeze, %(gr:QuantitativeValue).freeze, %(gr:BusinessEntityType).freeze, %(gr:Location).freeze, %(gr:BusinessFunction).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:Offering).freeze, %(gr:DeliveryMethod).freeze, %(gr:DayOfWeek).freeze, %(gr:Brand).freeze, %(gr:WarrantyScope).freeze, %(gr:WarrantyPromise).freeze, %(gr:BusinessEntity).freeze],
+      :"owl:disjointWith" => [%(gr:Brand).freeze, %(gr:BusinessEntity).freeze, %(gr:BusinessEntityType).freeze, %(gr:BusinessFunction).freeze, %(gr:DayOfWeek).freeze, %(gr:DeliveryMethod).freeze, %(gr:Location).freeze, %(gr:Offering).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:PaymentMethod).freeze, %(gr:ProductOrService).freeze, %(gr:QuantitativeValue).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:WarrantyPromise).freeze, %(gr:WarrantyScope).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       type: "owl:Class".freeze
     term :ProductOrService,
@@ -216,7 +216,7 @@ Note: Your first choice for specializations of gr:ProductOrService should be htt
 
 Compatibility with schema.org: This class is \(approximately\) equivalent to http://schema.org/Product.).freeze,
       label: "Product or service".freeze,
-      :"owl:disjointWith" => [%(gr:QuantitativeValue).freeze, %(gr:BusinessEntityType).freeze, %(gr:PriceSpecification).freeze, %(gr:Brand).freeze, %(gr:BusinessFunction).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:Offering).freeze, %(gr:DeliveryMethod).freeze, %(gr:DayOfWeek).freeze, %(gr:WarrantyScope).freeze, %(gr:WarrantyPromise).freeze],
+      :"owl:disjointWith" => [%(gr:Brand).freeze, %(gr:BusinessEntityType).freeze, %(gr:BusinessFunction).freeze, %(gr:DayOfWeek).freeze, %(gr:DeliveryMethod).freeze, %(gr:Offering).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:PriceSpecification).freeze, %(gr:QuantitativeValue).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:WarrantyPromise).freeze, %(gr:WarrantyScope).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       type: "owl:Class".freeze
     term :ProductOrServiceModel,
@@ -228,9 +228,9 @@ Note: An actual product or service \(gr:Individual\) by default shares the featu
 	
 Compatibility with schema.org: This class is \(approximately\) a subclass of http://schema.org/Product.).freeze,
       label: "Product or service model".freeze,
-      :"owl:disjointWith" => [%(gr:Brand).freeze, %(gr:SomeItems).freeze, %(gr:Individual).freeze, %(gr:BusinessEntity).freeze],
+      :"owl:disjointWith" => [%(gr:Brand).freeze, %(gr:BusinessEntity).freeze, %(gr:Individual).freeze, %(gr:SomeItems).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
-      subClassOf: ["schema:Product".freeze, "gr:ProductOrService".freeze],
+      subClassOf: ["gr:ProductOrService".freeze, "schema:Product".freeze],
       type: "owl:Class".freeze
     term :ProductOrServicesSomeInstancesPlaceholder,
       comment: %(DEPRECATED - This class is superseded by gr:SomeItems. Replace all occurrences of gr:ProductOrServicesSomeInstancesPlaceholder by gr:SomeItems, if possible.).freeze,
@@ -249,7 +249,7 @@ Note: Value sets are supported by creating subclasses of this class. Ordinal rel
 
 Compatibility with schema.org: This class is equivalent to http://schema.org/Enumeration.).freeze,
       label: "Qualitative value".freeze,
-      :"owl:disjointWith" => [%(gr:QuantitativeValue).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:Offering).freeze],
+      :"owl:disjointWith" => [%(gr:Offering).freeze, %(gr:QuantitativeValue).freeze, %(gr:TypeAndQuantityNode).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       type: "owl:Class".freeze
     term :QuantitativeValue,
@@ -259,7 +259,7 @@ Example: a weight between 10 and 25 kilogramms, a length between 10 and 15 milim
 
 Compatibility with schema.org: This class is equivalent to http://schema.org/Quantity.).freeze,
       label: "Quantitative value".freeze,
-      :"owl:disjointWith" => [%(gr:PaymentMethod).freeze, %(gr:BusinessEntityType).freeze, %(gr:PriceSpecification).freeze, %(gr:Location).freeze, %(gr:BusinessFunction).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:Offering).freeze, %(gr:DeliveryMethod).freeze, %(gr:QualitativeValue).freeze, %(gr:DayOfWeek).freeze, %(gr:Brand).freeze, %(gr:WarrantyScope).freeze, %(gr:WarrantyPromise).freeze, %(gr:BusinessEntity).freeze],
+      :"owl:disjointWith" => [%(gr:Brand).freeze, %(gr:BusinessEntity).freeze, %(gr:BusinessEntityType).freeze, %(gr:BusinessFunction).freeze, %(gr:DayOfWeek).freeze, %(gr:DeliveryMethod).freeze, %(gr:Location).freeze, %(gr:Offering).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:PaymentMethod).freeze, %(gr:PriceSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:QualitativeValue).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:WarrantyPromise).freeze, %(gr:WarrantyScope).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       type: "owl:Class".freeze
     term :QuantitativeValueFloat,
@@ -295,17 +295,17 @@ Note: This class is the new, shorter form of the former gr:ProductOrServicesSome
 		
 Compatibility with schema.org: This class is \(approximately\) a subclass of http://schema.org/Product.).freeze,
       label: "Some items".freeze,
-      :"owl:disjointWith" => [%(gr:ProductOrServiceModel).freeze, %(gr:Individual).freeze],
+      :"owl:disjointWith" => [%(gr:Individual).freeze, %(gr:ProductOrServiceModel).freeze],
       :"owl:equivalentClass" => %(gr:ProductOrServicesSomeInstancesPlaceholder).freeze,
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
-      subClassOf: ["schema:Product".freeze, "gr:ProductOrService".freeze],
+      subClassOf: ["gr:ProductOrService".freeze, "schema:Product".freeze],
       type: "owl:Class".freeze
     term :TypeAndQuantityNode,
       comment: %(This class collates all the information about a gr:ProductOrService included in a bundle. If a gr:Offering contains just one item, you can directly link from the gr:Offering to the gr:ProductOrService using gr:includes. If the offering contains multiple items, use an instance of this class for each component to indicate the quantity, unit of measurement, and type of product, and link from the gr:Offering via gr:includesObject.
 
 Example: An offering may include of 100g of Butter and 1 kg of potatoes, or 1 cell phone and 2 headsets.).freeze,
       label: "Type and quantity node".freeze,
-      :"owl:disjointWith" => [%(gr:PaymentMethod).freeze, %(gr:QuantitativeValue).freeze, %(gr:BusinessEntityType).freeze, %(gr:PriceSpecification).freeze, %(gr:Location).freeze, %(gr:BusinessFunction).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:Offering).freeze, %(gr:DeliveryMethod).freeze, %(gr:QualitativeValue).freeze, %(gr:DayOfWeek).freeze, %(gr:Brand).freeze, %(gr:WarrantyScope).freeze, %(gr:WarrantyPromise).freeze, %(gr:BusinessEntity).freeze],
+      :"owl:disjointWith" => [%(gr:Brand).freeze, %(gr:BusinessEntity).freeze, %(gr:BusinessEntityType).freeze, %(gr:BusinessFunction).freeze, %(gr:DayOfWeek).freeze, %(gr:DeliveryMethod).freeze, %(gr:Location).freeze, %(gr:Offering).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:PaymentMethod).freeze, %(gr:PriceSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:QualitativeValue).freeze, %(gr:QuantitativeValue).freeze, %(gr:WarrantyPromise).freeze, %(gr:WarrantyScope).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       type: "owl:Class".freeze
     term :UnitPriceSpecification,
@@ -336,7 +336,7 @@ Note 1: Due to the complexity of pricing scenarios in various industries, it may
 Note 2: For Google, attaching a gr:validThrough statement to a gr:UnitPriceSpecification is mandatory. 
 ).freeze,
       label: "Unit price specification".freeze,
-      :"owl:disjointWith" => [%(gr:PaymentChargeSpecification).freeze, %(gr:DeliveryChargeSpecification).freeze],
+      :"owl:disjointWith" => [%(gr:DeliveryChargeSpecification).freeze, %(gr:PaymentChargeSpecification).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       subClassOf: "gr:PriceSpecification".freeze,
       type: "owl:Class".freeze
@@ -347,7 +347,7 @@ A Warranty promise is an entity representing the duration and scope of services 
 
 Examples: 12 months parts and labor, 36 months parts).freeze,
       label: "Warranty promise".freeze,
-      :"owl:disjointWith" => [%(gr:PaymentMethod).freeze, %(gr:QuantitativeValue).freeze, %(gr:BusinessEntityType).freeze, %(gr:PriceSpecification).freeze, %(gr:Location).freeze, %(gr:BusinessFunction).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:Offering).freeze, %(gr:DeliveryMethod).freeze, %(gr:DayOfWeek).freeze, %(gr:Brand).freeze, %(gr:WarrantyScope).freeze, %(gr:BusinessEntity).freeze],
+      :"owl:disjointWith" => [%(gr:Brand).freeze, %(gr:BusinessEntity).freeze, %(gr:BusinessEntityType).freeze, %(gr:BusinessFunction).freeze, %(gr:DayOfWeek).freeze, %(gr:DeliveryMethod).freeze, %(gr:Location).freeze, %(gr:Offering).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:PaymentMethod).freeze, %(gr:PriceSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:QuantitativeValue).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:WarrantyScope).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       type: "owl:Class".freeze
     term :WarrantyScope,
@@ -355,7 +355,7 @@ Examples: 12 months parts and labor, 36 months parts).freeze,
 
 Examples: Parts and Labor, Parts).freeze,
       label: "Warranty scope".freeze,
-      :"owl:disjointWith" => [%(gr:PaymentMethod).freeze, %(gr:QuantitativeValue).freeze, %(gr:BusinessEntityType).freeze, %(gr:PriceSpecification).freeze, %(gr:Location).freeze, %(gr:BusinessFunction).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:Offering).freeze, %(gr:DeliveryMethod).freeze, %(gr:DayOfWeek).freeze, %(gr:Brand).freeze, %(gr:WarrantyPromise).freeze, %(gr:BusinessEntity).freeze],
+      :"owl:disjointWith" => [%(gr:Brand).freeze, %(gr:BusinessEntity).freeze, %(gr:BusinessEntityType).freeze, %(gr:BusinessFunction).freeze, %(gr:DayOfWeek).freeze, %(gr:DeliveryMethod).freeze, %(gr:Location).freeze, %(gr:Offering).freeze, %(gr:OpeningHoursSpecification).freeze, %(gr:PaymentMethod).freeze, %(gr:PriceSpecification).freeze, %(gr:ProductOrService).freeze, %(gr:QuantitativeValue).freeze, %(gr:TypeAndQuantityNode).freeze, %(gr:WarrantyPromise).freeze],
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
       type: "owl:Class".freeze
 
@@ -602,7 +602,7 @@ The object is a gr:PriceSpecification that uses the properties gr:hasMaxCurrency
       :"owl:inverseOf" => %(gr:equal).freeze,
       range: "gr:QualitativeValue".freeze,
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
-      type: ["owl:SymmetricProperty".freeze, "owl:ObjectProperty".freeze, "owl:TransitiveProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "owl:SymmetricProperty".freeze, "owl:TransitiveProperty".freeze]
     property :greater,
       comment: %(This ordering relation for qualitative values indicates that the subject is greater than the object.).freeze,
       domain: "gr:QualitativeValue".freeze,
@@ -899,7 +899,7 @@ See also http://en.wikipedia.org/wiki/Stock_Keeping_Unit.).freeze,
       label: "has value (0..1)".freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
-      subPropertyOf: ["gr:hasMinValue".freeze, "gr:hasMaxValue".freeze],
+      subPropertyOf: ["gr:hasMaxValue".freeze, "gr:hasMinValue".freeze],
       type: "owl:DatatypeProperty".freeze
     property :hasValueFloat,
       comment: %(This subproperty specifies that the upper and lower limit of the given gr:QuantitativeValueFloat are identical and have the respective float value. It is a shortcut for such cases where a quantitative property is \(at least practically\) a single point value and not an interval.).freeze,
@@ -1032,7 +1032,7 @@ This property is semantically equivalent to dcterms:title and rdfs:label and jus
       :"owl:inverseOf" => %(gr:nonEqual).freeze,
       range: "gr:QualitativeValue".freeze,
       :"rdfs:isDefinedBy" => %(http://purl.org/goodrelations/v1).freeze,
-      type: ["owl:SymmetricProperty".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "owl:SymmetricProperty".freeze]
     property :offers,
       comment: %(This links a gr:BusinessEntity to the offers \(gr:Offering\) it makes. If you want to express interest in receiving offers, use gr:seeks instead.).freeze,
       label: "offers (0..*)".freeze,

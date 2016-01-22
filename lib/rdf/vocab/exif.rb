@@ -84,7 +84,7 @@ module RDF::Vocab
       comment: %(Copyright information. In this standard the tag is used to indicate both the photographer and editor copyrights. It is the copyright notice of the person or organization claiming rights to the image.).freeze,
       :"exif:tagNumber" => %(33432).freeze,
       label: "Copyright".freeze,
-      subPropertyOf: ["exif:exifAttribute".freeze, "dc11:rights".freeze],
+      subPropertyOf: ["dc11:rights".freeze, "exif:exifAttribute".freeze],
       type: "rdf:Property".freeze
     property :customRendered,
       comment: %(The use of special processing on image data, such as rendering geared to output. When special processing is performed, the reader is expected to disable or minimize any further processing.).freeze,
@@ -117,13 +117,13 @@ module RDF::Vocab
       comment: %(The date and time when the image was stored as digital data. If, for example, an image was captured by DSC and at the same time the file was recorded, then the DateTimeOriginal and DateTimeDigitized will have the same contents.).freeze,
       :"exif:tagNumber" => %(36868).freeze,
       label: "DateTimeDigitized".freeze,
-      subPropertyOf: ["exif:dateAndOrTime".freeze, "exif:date".freeze],
+      subPropertyOf: ["exif:date".freeze, "exif:dateAndOrTime".freeze],
       type: "rdf:Property".freeze
     property :dateTimeOriginal,
       comment: %(The date and time when the original image data was generated. For a DSC the date and time the picture was taken are recorded.).freeze,
       :"exif:tagNumber" => %(36867).freeze,
       label: "DateTimeOriginal".freeze,
-      subPropertyOf: ["exif:dateAndOrTime".freeze, "exif:date".freeze],
+      subPropertyOf: ["exif:date".freeze, "exif:dateAndOrTime".freeze],
       type: "rdf:Property".freeze
     property :deviceSettingDescription,
       comment: %(Information on the picture-taking conditions of a particular camera model. The tag is used only to indicate the picture-taking conditions in the reader.).freeze,
@@ -222,13 +222,13 @@ module RDF::Vocab
       comment: %(The actual focal length of the lens, in mm. Conversion is not made to the focal length of a 35 mm film camera.).freeze,
       :"exif:tagNumber" => %(37386).freeze,
       label: "FocalLength".freeze,
-      subPropertyOf: ["exif:pictTaking".freeze, "exif:mm".freeze],
+      subPropertyOf: ["exif:mm".freeze, "exif:pictTaking".freeze],
       type: "rdf:Property".freeze
     property :focalLengthIn35mmFilm,
       comment: %(The equivalent focal length assuming a 35mm film camera, in mm. A value of 0 means the focal length is unknown. Note that this tag differs from the FocalLength tag.).freeze,
       :"exif:tagNumber" => %(41989).freeze,
       label: "FocalLengthIn35mmFilm".freeze,
-      subPropertyOf: ["exif:pictTaking".freeze, "exif:length".freeze],
+      subPropertyOf: ["exif:length".freeze, "exif:pictTaking".freeze],
       type: "rdf:Property".freeze
     property :focalPlaneResolutionUnit,
       comment: %(The unit for measuring FocalPlaneXResolution and FocalPlaneYResolution. This value is the same as the ResolutionUnit.).freeze,
@@ -262,7 +262,7 @@ module RDF::Vocab
       comment: %(The altitude based on the reference in GPSAltitudeRef. Altitude is expressed as one RATIONAL value. The reference unit is meters.).freeze,
       :"exif:tagNumber" => %(6).freeze,
       label: "GPSAltitude".freeze,
-      subPropertyOf: ["exif:gpsInfo".freeze, "exif:geo".freeze],
+      subPropertyOf: ["exif:geo".freeze, "exif:gpsInfo".freeze],
       type: "rdf:Property".freeze
     property :gpsAltitudeRef,
       comment: %(Indicates the altitude used as the reference altitude. If the reference is sea level and the altitude is above sea level, 0 is given. If the altitude is below sea level, a value of 1 is given and the altitude is indicated as an absolute value in the GPSAltitude tag. The reference unit is meters.).freeze,
@@ -286,7 +286,7 @@ module RDF::Vocab
       comment: %(date and time information relative to UTC \(Coordinated Universal Time\). The record format is "YYYY:MM:DD" while converted to W3C-DTF to use in RDF).freeze,
       :"exif:tagNumber" => %(29).freeze,
       label: "GPSDateStamp".freeze,
-      subPropertyOf: ["exif:gpsInfo".freeze, "exif:date".freeze],
+      subPropertyOf: ["exif:date".freeze, "exif:gpsInfo".freeze],
       type: "rdf:Property".freeze
     property :gpsDestBearing,
       comment: %(The bearing to the destination point. The range of values is from 0.00 to 359.99.).freeze,
@@ -316,7 +316,7 @@ module RDF::Vocab
       comment: %(Latitude of destination, expressed as three values giving the degrees, minutes, and seconds, respectively.).freeze,
       :"exif:tagNumber" => %(20).freeze,
       label: "GPSDestLatitude".freeze,
-      subPropertyOf: ["exif:gpsInfo".freeze, "exif:geo".freeze],
+      subPropertyOf: ["exif:geo".freeze, "exif:gpsInfo".freeze],
       type: "rdf:Property".freeze
     property :gpsDestLatitudeRef,
       comment: %(Reference for latitude of destination).freeze,
@@ -328,7 +328,7 @@ module RDF::Vocab
       comment: %(Longitude of destination, expressed as three values giving the degrees, minutes, and seconds, respectively.).freeze,
       :"exif:tagNumber" => %(22).freeze,
       label: "GPSDestLongitude".freeze,
-      subPropertyOf: ["exif:gpsInfo".freeze, "exif:geo".freeze],
+      subPropertyOf: ["exif:geo".freeze, "exif:gpsInfo".freeze],
       type: "rdf:Property".freeze
     property :gpsDestLongitudeRef,
       comment: %(Reference for longitude of destination).freeze,
@@ -369,7 +369,7 @@ module RDF::Vocab
       comment: %(The latitude, expressed as three values giving the degrees, minutes, and seconds, respectively.).freeze,
       :"exif:tagNumber" => %(2).freeze,
       label: "GPSLatitude".freeze,
-      subPropertyOf: ["exif:gpsInfo".freeze, "exif:geo".freeze],
+      subPropertyOf: ["exif:geo".freeze, "exif:gpsInfo".freeze],
       type: "rdf:Property".freeze
     property :gpsLatitudeRef,
       comment: %(Indicates whether the latitude is north or south latitude. The ASCII value 'N' indicates north latitude, and 'S' is south latitude.).freeze,
@@ -381,7 +381,7 @@ module RDF::Vocab
       comment: %(The longitude, expressed as three values giving the degrees, minutes, and seconds, respectively.).freeze,
       :"exif:tagNumber" => %(4).freeze,
       label: "GPSLongitude".freeze,
-      subPropertyOf: ["exif:gpsInfo".freeze, "exif:geo".freeze],
+      subPropertyOf: ["exif:geo".freeze, "exif:gpsInfo".freeze],
       type: "rdf:Property".freeze
     property :gpsLongitudeRef,
       comment: %(Indicates whether the longitude is east or west longitude. ASCII 'E' indicates east longitude, and 'W' is west longitude.).freeze,
@@ -484,7 +484,7 @@ module RDF::Vocab
       comment: %(A character string giving the title of the image. It may be a comment such as "1988 company picnic" or the like. Two-byte character codes cannot be used. When a 2-byte code is necessary, the Exif Private tag UserComment is to be used.).freeze,
       :"exif:tagNumber" => %(270).freeze,
       label: "ImageDescription".freeze,
-      subPropertyOf: ["exif:exifAttribute".freeze, "dc11:title".freeze],
+      subPropertyOf: ["dc11:title".freeze, "exif:exifAttribute".freeze],
       type: "rdf:Property".freeze
     property :imageLength,
       comment: %(Image height. The number of rows of image data. In JPEG compressed data a JPEG marker is used.).freeze,
@@ -664,7 +664,7 @@ Interoperability IFD may be defined dependently to each Interoperability rule.).
       comment: %(Information specific to compressed data. When a compressed file is recorded, the valid height of the meaningful image shall be recorded in this tag, whether or not there is padding data or a restart marker. This tag should not exist in an uncompressed file. Since data padding is unnecessary in the vertical direction, the number of lines recorded in this valid image height tag will in fact be the same as that recorded in the SOF.).freeze,
       :"exif:tagNumber" => %(40963).freeze,
       label: "PixelYDimension".freeze,
-      subPropertyOf: ["exif:imageConfig".freeze, "exif:height".freeze],
+      subPropertyOf: ["exif:height".freeze, "exif:imageConfig".freeze],
       type: "rdf:Property".freeze
     property :planarConfiguration,
       comment: %(Indicates whether pixel components are recorded in chunky or planar format. In JPEG compressed files a JPEG marker is used instead of this tag. If this field does not exist, the TIFF default of 1 \(chunky\) is assumed.).freeze,
@@ -710,7 +710,7 @@ Interoperability IFD may be defined dependently to each Interoperability rule.).
       comment: %(Related image length).freeze,
       :"exif:tagNumber" => %(4098).freeze,
       label: "RelatedImageLength".freeze,
-      subPropertyOf: ["exif:interopInfo".freeze, "exif:height".freeze],
+      subPropertyOf: ["exif:height".freeze, "exif:interopInfo".freeze],
       type: "rdf:Property".freeze
     property :relatedImageWidth,
       comment: %(Related image width).freeze,
@@ -844,7 +844,7 @@ Interoperability IFD may be defined dependently to each Interoperability rule.).
       comment: %(The distance to the subject, given in meters. Note that if the numerator of the recorded value is FFFFFFFF.H, Infinity shall be indicated; and if the numerator is 0, Distance unknown shall be indicated.).freeze,
       :"exif:tagNumber" => %(37382).freeze,
       label: "SubjectDistance".freeze,
-      subPropertyOf: ["exif:pictTaking".freeze, "exif:meter".freeze],
+      subPropertyOf: ["exif:meter".freeze, "exif:pictTaking".freeze],
       type: "rdf:Property".freeze
     property :subjectDistanceRange,
       comment: %(The distance to the subject, such as Macro, Close View or Distant View.).freeze,

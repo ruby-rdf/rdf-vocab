@@ -121,7 +121,7 @@ module RDF::Vocab
     term :Group,
       comment: %(Object representing a group of persons or entities.  A group object will usually contain hasMember properties to specify the members of the group.).freeze,
       label: "Group".freeze,
-      :"owl:disjointWith" => [%(vcard:Individual).freeze, %(vcard:Organization).freeze, %(vcard:Location).freeze],
+      :"owl:disjointWith" => [%(vcard:Individual).freeze, %(vcard:Location).freeze, %(vcard:Organization).freeze],
       :"rdfs:isDefinedBy" => %(http://www.w3.org/2006/vcard/ns).freeze,
       subClassOf: "vcard:Kind".freeze,
       type: "owl:Class".freeze
@@ -141,7 +141,7 @@ module RDF::Vocab
     term :Individual,
       comment: %(An object representing a single person or entity).freeze,
       label: "Individual".freeze,
-      :"owl:disjointWith" => [%(vcard:Organization).freeze, %(vcard:Location).freeze],
+      :"owl:disjointWith" => [%(vcard:Location).freeze, %(vcard:Organization).freeze],
       :"rdfs:isDefinedBy" => %(http://www.w3.org/2006/vcard/ns).freeze,
       subClassOf: "vcard:Kind".freeze,
       type: "owl:Class".freeze

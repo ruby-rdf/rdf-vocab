@@ -61,8 +61,8 @@ module RDF::Vocab
 
     # Property definitions
     property :"X-",
-      comment: [%(This class of property provides a framework for defining non-standard properties.).freeze, %(
-	    value type: TEXT).freeze],
+      comment: [%(
+	    value type: TEXT).freeze, %(This class of property provides a framework for defining non-standard properties.).freeze],
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(TEXT).freeze,
       label: "X-".freeze,
       range: "xsd:string".freeze,
@@ -79,8 +79,8 @@ module RDF::Vocab
       label: "altrep".freeze,
       type: "owl:DatatypeProperty".freeze
     property :attach,
-      comment: [%(The property provides the capability to associate a document object with a calendar component.).freeze, %(
-	    default value type: URI).freeze],
+      comment: [%(
+	    default value type: URI).freeze, %(The property provides the capability to associate a document object with a calendar component.).freeze],
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(URI).freeze,
       label: "attach".freeze,
       type: "owl:ObjectProperty".freeze
@@ -194,8 +194,8 @@ module RDF::Vocab
       label: "delegatedTo".freeze,
       type: "owl:DatatypeProperty".freeze
     property :description,
-      comment: [%(This property provides a more complete description of the calendar component, than that provided by the "SUMMARY" property.).freeze, %(
-	    value type: TEXT).freeze],
+      comment: [%(
+	    value type: TEXT).freeze, %(This property provides a more complete description of the calendar component, than that provided by the "SUMMARY" property.).freeze],
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(TEXT).freeze,
       label: "description".freeze,
       range: "xsd:string".freeze,
@@ -205,14 +205,14 @@ module RDF::Vocab
       label: "dir".freeze,
       type: "owl:DatatypeProperty".freeze
     property :dtend,
-      comment: [%(This property specifies the date and time that a calendar component ends.).freeze, %(
-	    default value type: DATE-TIME).freeze],
+      comment: [%(
+	    default value type: DATE-TIME).freeze, %(This property specifies the date and time that a calendar component ends.).freeze],
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(DATE-TIME).freeze,
       label: "end".freeze,
       type: "owl:DatatypeProperty".freeze
     property :dtstamp,
-      comment: [%(The property indicates the date/time that the instance of the iCalendar object was created.).freeze, %(
-	    value type: DATE-TIME).freeze],
+      comment: [%(
+	    value type: DATE-TIME).freeze, %(The property indicates the date/time that the instance of the iCalendar object was created.).freeze],
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(DATE-TIME).freeze,
       label: "dtstamp".freeze,
       range: "ical:Value_DATE-TIME".freeze,
@@ -224,15 +224,15 @@ module RDF::Vocab
       label: "start".freeze,
       type: "owl:DatatypeProperty".freeze
     property :due,
-      comment: [%(This property defines the date and time that a to-do is expected to be completed.).freeze, %(
-	    default value type: DATE-TIME).freeze],
+      comment: [%(
+	    default value type: DATE-TIME).freeze, %(This property defines the date and time that a to-do is expected to be completed.).freeze],
       domain: "ical:Vtodo".freeze,
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(DATE-TIME).freeze,
       label: "due".freeze,
       type: "owl:DatatypeProperty".freeze
     property :duration,
-      comment: [%(The property specifies a positive duration of time.).freeze, %(
-	    value type: DURATION).freeze],
+      comment: [%(
+	    value type: DURATION).freeze, %(The property specifies a positive duration of time.).freeze],
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(DURATION).freeze,
       label: "duration".freeze,
       range: "ical:Value_DURATION".freeze,
@@ -264,8 +264,8 @@ module RDF::Vocab
       label: "fmttype".freeze,
       type: "owl:DatatypeProperty".freeze
     property :freebusy,
-      comment: [%(The property defines one or more free or busy time intervals.).freeze, %(
-	    value type: PERIOD).freeze],
+      comment: [%(
+	    value type: PERIOD).freeze, %(The property defines one or more free or busy time intervals.).freeze],
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(PERIOD).freeze,
       label: "freebusy".freeze,
       range: "ical:Value_PERIOD".freeze,
@@ -274,8 +274,8 @@ module RDF::Vocab
       label: "FREQ".freeze,
       type: "owl:DatatypeProperty".freeze
     property :geo,
-      comment: [%(This property specifies information related to the global position for the activity specified by a calendar component.).freeze, %(
-	    value type: list of FLOAT).freeze],
+      comment: [%(
+	    value type: list of FLOAT).freeze, %(This property specifies information related to the global position for the activity specified by a calendar component.).freeze],
       :"http://www.w3.org/2002/12/cal/icalSpec#valueListType" => %(FLOAT).freeze,
       label: "geo".freeze,
       range: "ical:List_of_Float".freeze,
@@ -288,8 +288,8 @@ module RDF::Vocab
       label: "language".freeze,
       type: "owl:DatatypeProperty".freeze
     property :lastModified,
-      comment: [%(The property specifies the date and time that the information associated with the calendar component was last revised in the calendar store. Note: This is analogous to the modification date and time for a file in the file system.).freeze, %(
-	    value type: DATE-TIME).freeze],
+      comment: [%(
+	    value type: DATE-TIME).freeze, %(The property specifies the date and time that the information associated with the calendar component was last revised in the calendar store. Note: This is analogous to the modification date and time for a file in the file system.).freeze],
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(DATE-TIME).freeze,
       label: "lastModified".freeze,
       range: "ical:Value_DATE-TIME".freeze,
@@ -306,8 +306,8 @@ module RDF::Vocab
       label: "member".freeze,
       type: "owl:DatatypeProperty".freeze
     property :method,
-      comment: [%(This property defines the iCalendar object method associated with the calendar object.).freeze, %(
-	    value type: TEXT).freeze],
+      comment: [%(
+	    value type: TEXT).freeze, %(This property defines the iCalendar object method associated with the calendar object.).freeze],
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(TEXT).freeze,
       label: "method".freeze,
       range: "xsd:string".freeze,
@@ -324,16 +324,16 @@ module RDF::Vocab
       label: "partstat".freeze,
       type: "owl:DatatypeProperty".freeze
     property :percentComplete,
-      comment: [%(This property is used by an assignee or delegatee of a to-do to convey the percent completion of a to-do to the Organizer.).freeze, %(
-	    value type: INTEGER).freeze],
+      comment: [%(
+	    value type: INTEGER).freeze, %(This property is used by an assignee or delegatee of a to-do to convey the percent completion of a to-do to the Organizer.).freeze],
       domain: "ical:Vtodo".freeze,
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(INTEGER).freeze,
       label: "percentComplete".freeze,
       range: "xsd:integer".freeze,
       type: "owl:DatatypeProperty".freeze
     property :priority,
-      comment: [%(The property defines the relative priority for a calendar component.).freeze, %(
-	    value type: INTEGER).freeze],
+      comment: [%(
+	    value type: INTEGER).freeze, %(The property defines the relative priority for a calendar component.).freeze],
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(INTEGER).freeze,
       label: "priority".freeze,
       range: "xsd:integer".freeze,
@@ -378,23 +378,23 @@ module RDF::Vocab
       label: "reltype".freeze,
       type: "owl:DatatypeProperty".freeze
     property :repeat,
-      comment: [%(This property defines the number of time the alarm should be repeated, after the initial trigger.).freeze, %(
-	    value type: INTEGER).freeze],
+      comment: [%(
+	    value type: INTEGER).freeze, %(This property defines the number of time the alarm should be repeated, after the initial trigger.).freeze],
       domain: "ical:Valarm".freeze,
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(INTEGER).freeze,
       label: "repeat".freeze,
       range: "xsd:integer".freeze,
       type: "owl:DatatypeProperty".freeze
     property :requestStatus,
-      comment: [%(This property defines the status code returned for a scheduling request.).freeze, %(
-	    value type: TEXT).freeze],
+      comment: [%(
+	    value type: TEXT).freeze, %(This property defines the status code returned for a scheduling request.).freeze],
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(TEXT).freeze,
       label: "requestStatus".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :resources,
-      comment: [%(This property defines the equipment or resources anticipated for an activity specified by a calendar entity..).freeze, %(
-	    value type: TEXT).freeze],
+      comment: [%(
+	    value type: TEXT).freeze, %(This property defines the equipment or resources anticipated for an activity specified by a calendar entity..).freeze],
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(TEXT).freeze,
       label: "resources".freeze,
       range: "xsd:string".freeze,
@@ -404,8 +404,8 @@ module RDF::Vocab
       label: "role".freeze,
       type: "owl:DatatypeProperty".freeze
     property :rrule,
-      comment: [%(This property defines a rule or repeating pattern for recurring events, to-dos, or time zone definitions.).freeze, %(
-	    value type: RECUR).freeze],
+      comment: [%(
+	    value type: RECUR).freeze, %(This property defines a rule or repeating pattern for recurring events, to-dos, or time zone definitions.).freeze],
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(RECUR).freeze,
       label: "rrule".freeze,
       range: "ical:Value_RECUR".freeze,
@@ -429,8 +429,8 @@ module RDF::Vocab
       label: "STANDARD".freeze,
       type: "owl:ObjectProperty".freeze
     property :status,
-      comment: [%(This property defines the overall status or confirmation for the calendar component.).freeze, %(
-	    value type: TEXT).freeze],
+      comment: [%(
+	    value type: TEXT).freeze, %(This property defines the overall status or confirmation for the calendar component.).freeze],
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(TEXT).freeze,
       label: "status".freeze,
       range: "xsd:string".freeze,
@@ -444,8 +444,8 @@ module RDF::Vocab
       subPropertyOf: "rdfs:label".freeze,
       type: "owl:DatatypeProperty".freeze
     property :transp,
-      comment: [%(This property defines whether an event is transparent or not to busy time searches.).freeze, %(
-	    value type: TEXT).freeze],
+      comment: [%(
+	    value type: TEXT).freeze, %(This property defines whether an event is transparent or not to busy time searches.).freeze],
       domain: "ical:Vevent".freeze,
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(TEXT).freeze,
       label: "transp".freeze,
@@ -458,31 +458,31 @@ module RDF::Vocab
       label: "trigger".freeze,
       type: "owl:ObjectProperty".freeze
     property :tzid,
-      comment: [%(This property specifies the text value that uniquely identifies the "VTIMEZONE" calendar component.).freeze, %(
-	    value type: TEXT).freeze, %(To specify the identifier for the time zone definition for a time component in the property value.).freeze],
+      comment: [%(
+	    value type: TEXT).freeze, %(This property specifies the text value that uniquely identifies the "VTIMEZONE" calendar component.).freeze, %(To specify the identifier for the time zone definition for a time component in the property value.).freeze],
       domain: "ical:Vtimezone".freeze,
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(TEXT).freeze,
       label: "tzid".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :tzname,
-      comment: [%(This property specifies the customary designation for a time zone description.).freeze, %(
-	    value type: TEXT).freeze],
+      comment: [%(
+	    value type: TEXT).freeze, %(This property specifies the customary designation for a time zone description.).freeze],
       domain: "ical:Vtimezone".freeze,
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(TEXT).freeze,
       label: "tzname".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :tzoffsetfrom,
-      comment: [%(This property specifies the offset which is in use prior to this time zone observance.).freeze, %(
-	    value type: UTC-OFFSET).freeze],
+      comment: [%(
+	    value type: UTC-OFFSET).freeze, %(This property specifies the offset which is in use prior to this time zone observance.).freeze],
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(UTC-OFFSET).freeze,
       label: "tzoffsetfrom".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :tzoffsetto,
-      comment: [%(This property specifies the offset which is in use in this time zone observance.).freeze, %(
-	    value type: UTC-OFFSET).freeze],
+      comment: [%(
+	    value type: UTC-OFFSET).freeze, %(This property specifies the offset which is in use in this time zone observance.).freeze],
       domain: "ical:Vtimezone".freeze,
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(UTC-OFFSET).freeze,
       label: "tzoffsetto".freeze,
@@ -505,8 +505,8 @@ module RDF::Vocab
       label: "UNTIL".freeze,
       type: "owl:DatatypeProperty".freeze
     property :url,
-      comment: [%(This property defines a Uniform Resource Locator \(URL\) associated with the iCalendar object.).freeze, %(
-	    value type: URI).freeze],
+      comment: [%(
+	    value type: URI).freeze, %(This property defines a Uniform Resource Locator \(URL\) associated with the iCalendar object.).freeze],
       :"http://www.w3.org/2002/12/cal/icalSpec#valueType" => %(URI).freeze,
       label: "see also".freeze,
       type: "owl:ObjectProperty".freeze

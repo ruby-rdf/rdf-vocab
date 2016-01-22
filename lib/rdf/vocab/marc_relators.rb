@@ -17,7 +17,7 @@ module RDF::Vocab
       :"skos:notation" => %(abr).freeze,
       :"skos:prefLabel" => %(Abridger).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :acp,
       label: "Art copyist".freeze,
       :"mads:authoritativeLabel" => %(Art copyist).freeze,
@@ -25,39 +25,39 @@ module RDF::Vocab
       :"skos:notation" => %(acp).freeze,
       :"skos:prefLabel" => %(Art copyist).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :act,
       label: "Actor".freeze,
       :"mads:authoritativeLabel" => %(Actor).freeze,
       :"mads:code" => %(act).freeze,
       :"skos:notation" => %(act).freeze,
       :"skos:prefLabel" => %(Actor).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:prf".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:prf".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :adi,
       label: "Art director".freeze,
       :"mads:authoritativeLabel" => %(Art director).freeze,
       :"mads:code" => %(adi).freeze,
       :"skos:notation" => %(adi).freeze,
       :"skos:prefLabel" => %(Art director).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :adp,
       label: "Adapter".freeze,
       :"mads:authoritativeLabel" => %(Adapter).freeze,
       :"mads:code" => %(adp).freeze,
       :"skos:notation" => %(adp).freeze,
       :"skos:prefLabel" => %(Adapter).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :aft,
       label: "Author of afterword, colophon, etc.".freeze,
       :"mads:authoritativeLabel" => %(Author of afterword, colophon, etc.).freeze,
       :"mads:code" => %(aft).freeze,
       :"skos:notation" => %(aft).freeze,
       :"skos:prefLabel" => %(Author of afterword, colophon, etc.).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:aut".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:aut".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :anl,
       label: "Analyst".freeze,
       :"mads:authoritativeLabel" => %(Analyst).freeze,
@@ -65,23 +65,23 @@ module RDF::Vocab
       :"skos:notation" => %(anl).freeze,
       :"skos:prefLabel" => %(Analyst).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :anm,
       label: "Animator".freeze,
       :"mads:authoritativeLabel" => %(Animator).freeze,
       :"mads:code" => %(anm).freeze,
       :"skos:notation" => %(anm).freeze,
       :"skos:prefLabel" => %(Animator).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ann,
       label: "Annotator".freeze,
       :"mads:authoritativeLabel" => %(Annotator).freeze,
       :"mads:code" => %(ann).freeze,
       :"skos:notation" => %(ann).freeze,
       :"skos:prefLabel" => %(Annotator).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ant,
       label: "Bibliographic antecedent".freeze,
       :"mads:authoritativeLabel" => %(Bibliographic antecedent).freeze,
@@ -89,23 +89,23 @@ module RDF::Vocab
       :"skos:notation" => %(ant).freeze,
       :"skos:prefLabel" => %(Bibliographic antecedent).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ape,
       label: "Appellee".freeze,
       :"mads:authoritativeLabel" => %(Appellee).freeze,
       :"mads:code" => %(ape).freeze,
       :"skos:notation" => %(ape).freeze,
       :"skos:prefLabel" => %(Appellee).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :apl,
       label: "Appellant".freeze,
       :"mads:authoritativeLabel" => %(Appellant).freeze,
       :"mads:code" => %(apl).freeze,
       :"skos:notation" => %(apl).freeze,
       :"skos:prefLabel" => %(Appellant).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :app,
       label: "Applicant".freeze,
       :"mads:authoritativeLabel" => %(Applicant).freeze,
@@ -113,23 +113,23 @@ module RDF::Vocab
       :"skos:notation" => %(app).freeze,
       :"skos:prefLabel" => %(Applicant).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :aqt,
       label: "Author in quotations or text abstracts".freeze,
       :"mads:authoritativeLabel" => %(Author in quotations or text abstracts).freeze,
       :"mads:code" => %(aqt).freeze,
       :"skos:notation" => %(aqt).freeze,
       :"skos:prefLabel" => %(Author in quotations or text abstracts).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:aut".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:aut".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :arc,
       label: "Architect".freeze,
       :"mads:authoritativeLabel" => %(Architect).freeze,
       :"mads:code" => %(arc).freeze,
       :"skos:notation" => %(arc).freeze,
       :"skos:prefLabel" => %(Architect).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ard,
       label: "Artistic director".freeze,
       :"mads:authoritativeLabel" => %(Artistic director).freeze,
@@ -137,23 +137,23 @@ module RDF::Vocab
       :"skos:notation" => %(ard).freeze,
       :"skos:prefLabel" => %(Artistic director).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :arr,
       label: "Arranger".freeze,
       :"mads:authoritativeLabel" => %(Arranger).freeze,
       :"mads:code" => %(arr).freeze,
       :"skos:notation" => %(arr).freeze,
       :"skos:prefLabel" => %(Arranger).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :art,
       label: "Artist".freeze,
       :"mads:authoritativeLabel" => %(Artist).freeze,
       :"mads:code" => %(art).freeze,
       :"skos:notation" => %(art).freeze,
       :"skos:prefLabel" => %(Artist).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :asg,
       label: "Assignee".freeze,
       :"mads:authoritativeLabel" => %(Assignee).freeze,
@@ -161,7 +161,7 @@ module RDF::Vocab
       :"skos:notation" => %(asg).freeze,
       :"skos:prefLabel" => %(Assignee).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :asn,
       label: "Associated name".freeze,
       :"mads:authoritativeLabel" => %(Associated name).freeze,
@@ -169,15 +169,15 @@ module RDF::Vocab
       :"skos:notation" => %(asn).freeze,
       :"skos:prefLabel" => %(Associated name).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ato,
       label: "Autographer".freeze,
       :"mads:authoritativeLabel" => %(Autographer).freeze,
       :"mads:code" => %(ato).freeze,
       :"skos:notation" => %(ato).freeze,
       :"skos:prefLabel" => %(Autographer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :att,
       label: "Attributed name".freeze,
       :"mads:authoritativeLabel" => %(Attributed name).freeze,
@@ -185,7 +185,7 @@ module RDF::Vocab
       :"skos:notation" => %(att).freeze,
       :"skos:prefLabel" => %(Attributed name).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :auc,
       label: "Auctioneer".freeze,
       :"mads:authoritativeLabel" => %(Auctioneer).freeze,
@@ -193,39 +193,39 @@ module RDF::Vocab
       :"skos:notation" => %(auc).freeze,
       :"skos:prefLabel" => %(Auctioneer).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :aud,
       label: "Author of dialog".freeze,
       :"mads:authoritativeLabel" => %(Author of dialog).freeze,
       :"mads:code" => %(aud).freeze,
       :"skos:notation" => %(aud).freeze,
       :"skos:prefLabel" => %(Author of dialog).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:aut".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:aut".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :aui,
       label: "Author of introduction, etc.".freeze,
       :"mads:authoritativeLabel" => %(Author of introduction, etc.).freeze,
       :"mads:code" => %(aui).freeze,
       :"skos:notation" => %(aui).freeze,
       :"skos:prefLabel" => %(Author of introduction, etc.).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:aut".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:aut".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :aus,
       label: "Screenwriter".freeze,
       :"mads:authoritativeLabel" => %(Screenwriter).freeze,
       :"mads:code" => %(aus).freeze,
       :"skos:notation" => %(aus).freeze,
       :"skos:prefLabel" => %(Screenwriter).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:aut".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:aut".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :aut,
       label: "Author".freeze,
       :"mads:authoritativeLabel" => %(Author).freeze,
       :"mads:code" => %(aut).freeze,
       :"skos:notation" => %(aut).freeze,
       :"skos:prefLabel" => %(Author).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :bdd,
       label: "Binding designer".freeze,
       :"mads:authoritativeLabel" => %(Binding designer).freeze,
@@ -233,7 +233,7 @@ module RDF::Vocab
       :"skos:notation" => %(bdd).freeze,
       :"skos:prefLabel" => %(Binding designer).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :bjd,
       label: "Bookjacket designer".freeze,
       :"mads:authoritativeLabel" => %(Bookjacket designer).freeze,
@@ -241,7 +241,7 @@ module RDF::Vocab
       :"skos:notation" => %(bjd).freeze,
       :"skos:prefLabel" => %(Bookjacket designer).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :bkd,
       label: "Book designer".freeze,
       :"mads:authoritativeLabel" => %(Book designer).freeze,
@@ -249,7 +249,7 @@ module RDF::Vocab
       :"skos:notation" => %(bkd).freeze,
       :"skos:prefLabel" => %(Book designer).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :bkp,
       label: "Book producer".freeze,
       :"mads:authoritativeLabel" => %(Book producer).freeze,
@@ -257,7 +257,7 @@ module RDF::Vocab
       :"skos:notation" => %(bkp).freeze,
       :"skos:prefLabel" => %(Book producer).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :blw,
       label: "Blurb writer".freeze,
       :"mads:authoritativeLabel" => %(Blurb writer).freeze,
@@ -265,7 +265,7 @@ module RDF::Vocab
       :"skos:notation" => %(blw).freeze,
       :"skos:prefLabel" => %(Blurb writer).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :bnd,
       label: "Binder".freeze,
       :"mads:authoritativeLabel" => %(Binder).freeze,
@@ -273,7 +273,7 @@ module RDF::Vocab
       :"skos:notation" => %(bnd).freeze,
       :"skos:prefLabel" => %(Binder).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :bpd,
       label: "Bookplate designer".freeze,
       :"mads:authoritativeLabel" => %(Bookplate designer).freeze,
@@ -281,23 +281,23 @@ module RDF::Vocab
       :"skos:notation" => %(bpd).freeze,
       :"skos:prefLabel" => %(Bookplate designer).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :brd,
       label: "Broadcaster".freeze,
       :"mads:authoritativeLabel" => %(Broadcaster).freeze,
       :"mads:code" => %(brd).freeze,
       :"skos:notation" => %(brd).freeze,
       :"skos:prefLabel" => %(Broadcaster).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :brl,
       label: "Braille embosser".freeze,
       :"mads:authoritativeLabel" => %(Braille embosser).freeze,
       :"mads:code" => %(brl).freeze,
       :"skos:notation" => %(brl).freeze,
       :"skos:prefLabel" => %(Braille embosser).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :bsl,
       label: "Bookseller".freeze,
       :"mads:authoritativeLabel" => %(Bookseller).freeze,
@@ -305,31 +305,31 @@ module RDF::Vocab
       :"skos:notation" => %(bsl).freeze,
       :"skos:prefLabel" => %(Bookseller).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cas,
       label: "Caster".freeze,
       :"mads:authoritativeLabel" => %(Caster).freeze,
       :"mads:code" => %(cas).freeze,
       :"skos:notation" => %(cas).freeze,
       :"skos:prefLabel" => %(Caster).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ccp,
       label: "Conceptor".freeze,
       :"mads:authoritativeLabel" => %(Conceptor).freeze,
       :"mads:code" => %(ccp).freeze,
       :"skos:notation" => %(ccp).freeze,
       :"skos:prefLabel" => %(Conceptor).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :chr,
       label: "Choreographer".freeze,
       :"mads:authoritativeLabel" => %(Choreographer).freeze,
       :"mads:code" => %(chr).freeze,
       :"skos:notation" => %(chr).freeze,
       :"skos:prefLabel" => %(Choreographer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cli,
       label: "Client".freeze,
       :"mads:authoritativeLabel" => %(Client).freeze,
@@ -337,15 +337,15 @@ module RDF::Vocab
       :"skos:notation" => %(cli).freeze,
       :"skos:prefLabel" => %(Client).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cll,
       label: "Calligrapher".freeze,
       :"mads:authoritativeLabel" => %(Calligrapher).freeze,
       :"mads:code" => %(cll).freeze,
       :"skos:notation" => %(cll).freeze,
       :"skos:prefLabel" => %(Calligrapher).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :clr,
       label: "Colorist".freeze,
       :"mads:authoritativeLabel" => %(Colorist).freeze,
@@ -353,31 +353,31 @@ module RDF::Vocab
       :"skos:notation" => %(clr).freeze,
       :"skos:prefLabel" => %(Colorist).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :clt,
       label: "Collotyper".freeze,
       :"mads:authoritativeLabel" => %(Collotyper).freeze,
       :"mads:code" => %(clt).freeze,
       :"skos:notation" => %(clt).freeze,
       :"skos:prefLabel" => %(Collotyper).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cmm,
       label: "Commentator".freeze,
       :"mads:authoritativeLabel" => %(Commentator).freeze,
       :"mads:code" => %(cmm).freeze,
       :"skos:notation" => %(cmm).freeze,
       :"skos:prefLabel" => %(Commentator).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:prf".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:prf".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cmp,
       label: "Composer".freeze,
       :"mads:authoritativeLabel" => %(Composer).freeze,
       :"mads:code" => %(cmp).freeze,
       :"skos:notation" => %(cmp).freeze,
       :"skos:prefLabel" => %(Composer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cmt,
       label: "Compositor".freeze,
       :"mads:authoritativeLabel" => %(Compositor).freeze,
@@ -385,23 +385,23 @@ module RDF::Vocab
       :"skos:notation" => %(cmt).freeze,
       :"skos:prefLabel" => %(Compositor).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cnd,
       label: "Conductor".freeze,
       :"mads:authoritativeLabel" => %(Conductor).freeze,
       :"mads:code" => %(cnd).freeze,
       :"skos:notation" => %(cnd).freeze,
       :"skos:prefLabel" => %(Conductor).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:prf".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:prf".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cng,
       label: "Cinematographer".freeze,
       :"mads:authoritativeLabel" => %(Cinematographer).freeze,
       :"mads:code" => %(cng).freeze,
       :"skos:notation" => %(cng).freeze,
       :"skos:prefLabel" => %(Cinematographer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cns,
       label: "Censor".freeze,
       :"mads:authoritativeLabel" => %(Censor).freeze,
@@ -409,7 +409,7 @@ module RDF::Vocab
       :"skos:notation" => %(cns).freeze,
       :"skos:prefLabel" => %(Censor).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :coe,
       label: "Contestant-appellee".freeze,
       :"mads:authoritativeLabel" => %(Contestant-appellee).freeze,
@@ -417,23 +417,23 @@ module RDF::Vocab
       :"skos:notation" => %(coe).freeze,
       :"skos:prefLabel" => %(Contestant-appellee).freeze,
       subPropertyOf: ["marcrelators:cos".freeze, "marcrelators:role".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :col,
       label: "Collector".freeze,
       :"mads:authoritativeLabel" => %(Collector).freeze,
       :"mads:code" => %(col).freeze,
       :"skos:notation" => %(col).freeze,
       :"skos:prefLabel" => %(Collector).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "marcrelators:cur".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["marcrelators:cur".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :com,
       label: "Compiler".freeze,
       :"mads:authoritativeLabel" => %(Compiler).freeze,
       :"mads:code" => %(com).freeze,
       :"skos:notation" => %(com).freeze,
       :"skos:prefLabel" => %(Compiler).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :con,
       label: "Conservator".freeze,
       :"mads:authoritativeLabel" => %(Conservator).freeze,
@@ -441,15 +441,15 @@ module RDF::Vocab
       :"skos:notation" => %(con).freeze,
       :"skos:prefLabel" => %(Conservator).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cor,
       label: "Collection registrar".freeze,
       :"mads:authoritativeLabel" => %(Collection registrar).freeze,
       :"mads:code" => %(cor).freeze,
       :"skos:notation" => %(cor).freeze,
       :"skos:prefLabel" => %(Collection registrar).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:cur".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:cur".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cos,
       label: "Contestant".freeze,
       :"mads:authoritativeLabel" => %(Contestant).freeze,
@@ -457,7 +457,7 @@ module RDF::Vocab
       :"skos:notation" => %(cos).freeze,
       :"skos:prefLabel" => %(Contestant).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cot,
       label: "Contestant-appellant".freeze,
       :"mads:authoritativeLabel" => %(Contestant-appellant).freeze,
@@ -465,15 +465,15 @@ module RDF::Vocab
       :"skos:notation" => %(cot).freeze,
       :"skos:prefLabel" => %(Contestant-appellant).freeze,
       subPropertyOf: ["marcrelators:cos".freeze, "marcrelators:role".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cou,
       label: "Court governed".freeze,
       :"mads:authoritativeLabel" => %(Court governed).freeze,
       :"mads:code" => %(cou).freeze,
       :"skos:notation" => %(cou).freeze,
       :"skos:prefLabel" => %(Court governed).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cov,
       label: "Cover designer".freeze,
       :"mads:authoritativeLabel" => %(Cover designer).freeze,
@@ -481,7 +481,7 @@ module RDF::Vocab
       :"skos:notation" => %(cov).freeze,
       :"skos:prefLabel" => %(Cover designer).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cpc,
       label: "Copyright claimant".freeze,
       :"mads:authoritativeLabel" => %(Copyright claimant).freeze,
@@ -489,15 +489,15 @@ module RDF::Vocab
       :"skos:notation" => %(cpc).freeze,
       :"skos:prefLabel" => %(Copyright claimant).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cpe,
       label: "Complainant-appellee".freeze,
       :"mads:authoritativeLabel" => %(Complainant-appellee).freeze,
       :"mads:code" => %(cpe).freeze,
       :"skos:notation" => %(cpe).freeze,
       :"skos:prefLabel" => %(Complainant-appellee).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "marcrelators:cpl".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["marcrelators:cpl".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cph,
       label: "Copyright holder".freeze,
       :"mads:authoritativeLabel" => %(Copyright holder).freeze,
@@ -505,7 +505,7 @@ module RDF::Vocab
       :"skos:notation" => %(cph).freeze,
       :"skos:prefLabel" => %(Copyright holder).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cpl,
       label: "Complainant".freeze,
       :"mads:authoritativeLabel" => %(Complainant).freeze,
@@ -513,31 +513,31 @@ module RDF::Vocab
       :"skos:notation" => %(cpl).freeze,
       :"skos:prefLabel" => %(Complainant).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cpt,
       label: "Complainant-appellant".freeze,
       :"mads:authoritativeLabel" => %(Complainant-appellant).freeze,
       :"mads:code" => %(cpt).freeze,
       :"skos:notation" => %(cpt).freeze,
       :"skos:prefLabel" => %(Complainant-appellant).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "marcrelators:cpl".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["marcrelators:cpl".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cre,
       label: "Creator".freeze,
       :"mads:authoritativeLabel" => %(Creator).freeze,
       :"mads:code" => %(cre).freeze,
       :"skos:notation" => %(cre).freeze,
       :"skos:prefLabel" => %(Creator).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "dc11:creator".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "dc11:creator".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :crp,
       label: "Correspondent".freeze,
       :"mads:authoritativeLabel" => %(Correspondent).freeze,
       :"mads:code" => %(crp).freeze,
       :"skos:notation" => %(crp).freeze,
       :"skos:prefLabel" => %(Correspondent).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :crr,
       label: "Corrector".freeze,
       :"mads:authoritativeLabel" => %(Corrector).freeze,
@@ -545,71 +545,71 @@ module RDF::Vocab
       :"skos:notation" => %(crr).freeze,
       :"skos:prefLabel" => %(Corrector).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :crt,
       label: "Court reporter".freeze,
       :"mads:authoritativeLabel" => %(Court reporter).freeze,
       :"mads:code" => %(crt).freeze,
       :"skos:notation" => %(crt).freeze,
       :"skos:prefLabel" => %(Court reporter).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :csl,
       label: "Consultant".freeze,
       :"mads:authoritativeLabel" => %(Consultant).freeze,
       :"mads:code" => %(csl).freeze,
       :"skos:notation" => %(csl).freeze,
       :"skos:prefLabel" => %(Consultant).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :csp,
       label: "Consultant to a project".freeze,
       :"mads:authoritativeLabel" => %(Consultant to a project).freeze,
       :"mads:code" => %(csp).freeze,
       :"skos:notation" => %(csp).freeze,
       :"skos:prefLabel" => %(Consultant to a project).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cst,
       label: "Costume designer".freeze,
       :"mads:authoritativeLabel" => %(Costume designer).freeze,
       :"mads:code" => %(cst).freeze,
       :"skos:notation" => %(cst).freeze,
       :"skos:prefLabel" => %(Costume designer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ctb,
       label: "Contributor".freeze,
       :"mads:authoritativeLabel" => %(Contributor).freeze,
       :"mads:code" => %(ctb).freeze,
       :"skos:notation" => %(ctb).freeze,
       :"skos:prefLabel" => %(Contributor).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cte,
       label: "Contestee-appellee".freeze,
       :"mads:authoritativeLabel" => %(Contestee-appellee).freeze,
       :"mads:code" => %(cte).freeze,
       :"skos:notation" => %(cte).freeze,
       :"skos:prefLabel" => %(Contestee-appellee).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "marcrelators:cts".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["marcrelators:cts".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ctg,
       label: "Cartographer".freeze,
       :"mads:authoritativeLabel" => %(Cartographer).freeze,
       :"mads:code" => %(ctg).freeze,
       :"skos:notation" => %(ctg).freeze,
       :"skos:prefLabel" => %(Cartographer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ctr,
       label: "Contractor".freeze,
       :"mads:authoritativeLabel" => %(Contractor).freeze,
       :"mads:code" => %(ctr).freeze,
       :"skos:notation" => %(ctr).freeze,
       :"skos:prefLabel" => %(Contractor).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cts,
       label: "Contestee".freeze,
       :"mads:authoritativeLabel" => %(Contestee).freeze,
@@ -617,31 +617,31 @@ module RDF::Vocab
       :"skos:notation" => %(cts).freeze,
       :"skos:prefLabel" => %(Contestee).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ctt,
       label: "Contestee-appellant".freeze,
       :"mads:authoritativeLabel" => %(Contestee-appellant).freeze,
       :"mads:code" => %(ctt).freeze,
       :"skos:notation" => %(ctt).freeze,
       :"skos:prefLabel" => %(Contestee-appellant).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "marcrelators:cts".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["marcrelators:cts".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cur,
       label: "Curator".freeze,
       :"mads:authoritativeLabel" => %(Curator).freeze,
       :"mads:code" => %(cur).freeze,
       :"skos:notation" => %(cur).freeze,
       :"skos:prefLabel" => %(Curator).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :cwt,
       label: "Commentator for written text".freeze,
       :"mads:authoritativeLabel" => %(Commentator for written text).freeze,
       :"mads:code" => %(cwt).freeze,
       :"skos:notation" => %(cwt).freeze,
       :"skos:prefLabel" => %(Commentator for written text).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dbp,
       label: "Distribution place".freeze,
       :"mads:authoritativeLabel" => %(Distribution place).freeze,
@@ -649,7 +649,7 @@ module RDF::Vocab
       :"skos:notation" => %(dbp).freeze,
       :"skos:prefLabel" => %(Distribution place).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dfd,
       label: "Defendant".freeze,
       :"mads:authoritativeLabel" => %(Defendant).freeze,
@@ -657,23 +657,23 @@ module RDF::Vocab
       :"skos:notation" => %(dfd).freeze,
       :"skos:prefLabel" => %(Defendant).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dfe,
       label: "Defendant-appellee".freeze,
       :"mads:authoritativeLabel" => %(Defendant-appellee).freeze,
       :"mads:code" => %(dfe).freeze,
       :"skos:notation" => %(dfe).freeze,
       :"skos:prefLabel" => %(Defendant-appellee).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "marcrelators:dfd".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["marcrelators:dfd".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dft,
       label: "Defendant-appellant".freeze,
       :"mads:authoritativeLabel" => %(Defendant-appellant).freeze,
       :"mads:code" => %(dft).freeze,
       :"skos:notation" => %(dft).freeze,
       :"skos:prefLabel" => %(Defendant-appellant).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "marcrelators:dfd".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["marcrelators:dfd".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dgg,
       label: "Degree granting institution".freeze,
       :"mads:authoritativeLabel" => %(Degree granting institution).freeze,
@@ -681,95 +681,95 @@ module RDF::Vocab
       :"skos:notation" => %(dgg).freeze,
       :"skos:prefLabel" => %(Degree granting institution).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dgs,
       label: "Degree supervisor".freeze,
       :"mads:authoritativeLabel" => %(Degree supervisor).freeze,
       :"mads:code" => %(dgs).freeze,
       :"skos:notation" => %(dgs).freeze,
       :"skos:prefLabel" => %(Degree supervisor).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dis,
       label: "Dissertant".freeze,
       :"mads:authoritativeLabel" => %(Dissertant).freeze,
       :"mads:code" => %(dis).freeze,
       :"skos:notation" => %(dis).freeze,
       :"skos:prefLabel" => %(Dissertant).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dln,
       label: "Delineator".freeze,
       :"mads:authoritativeLabel" => %(Delineator).freeze,
       :"mads:code" => %(dln).freeze,
       :"skos:notation" => %(dln).freeze,
       :"skos:prefLabel" => %(Delineator).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dnc,
       label: "Dancer".freeze,
       :"mads:authoritativeLabel" => %(Dancer).freeze,
       :"mads:code" => %(dnc).freeze,
       :"skos:notation" => %(dnc).freeze,
       :"skos:prefLabel" => %(Dancer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:prf".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:prf".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dnr,
       label: "Donor".freeze,
       :"mads:authoritativeLabel" => %(Donor).freeze,
       :"mads:code" => %(dnr).freeze,
       :"skos:notation" => %(dnr).freeze,
       :"skos:prefLabel" => %(Donor).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "marcrelators:fmo".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["marcrelators:fmo".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dpc,
       label: "Depicted".freeze,
       :"mads:authoritativeLabel" => %(Depicted).freeze,
       :"mads:code" => %(dpc).freeze,
       :"skos:notation" => %(dpc).freeze,
       :"skos:prefLabel" => %(Depicted).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:subject".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:subject".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dpt,
       label: "Depositor".freeze,
       :"mads:authoritativeLabel" => %(Depositor).freeze,
       :"mads:code" => %(dpt).freeze,
       :"skos:notation" => %(dpt).freeze,
       :"skos:prefLabel" => %(Depositor).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "marcrelators:own".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["marcrelators:own".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :drm,
       label: "Draftsman".freeze,
       :"mads:authoritativeLabel" => %(Draftsman).freeze,
       :"mads:code" => %(drm).freeze,
       :"skos:notation" => %(drm).freeze,
       :"skos:prefLabel" => %(Draftsman).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :drt,
       label: "Director".freeze,
       :"mads:authoritativeLabel" => %(Director).freeze,
       :"mads:code" => %(drt).freeze,
       :"skos:notation" => %(drt).freeze,
       :"skos:prefLabel" => %(Director).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dsr,
       label: "Designer".freeze,
       :"mads:authoritativeLabel" => %(Designer).freeze,
       :"mads:code" => %(dsr).freeze,
       :"skos:notation" => %(dsr).freeze,
       :"skos:prefLabel" => %(Designer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dst,
       label: "Distributor".freeze,
       :"mads:authoritativeLabel" => %(Distributor).freeze,
       :"mads:code" => %(dst).freeze,
       :"skos:notation" => %(dst).freeze,
       :"skos:prefLabel" => %(Distributor).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:publisher".freeze, "marcrelators:prv".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:publisher".freeze, "marcrelators:prv".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dtc,
       label: "Data contributor".freeze,
       :"mads:authoritativeLabel" => %(Data contributor).freeze,
@@ -777,7 +777,7 @@ module RDF::Vocab
       :"skos:notation" => %(dtc).freeze,
       :"skos:prefLabel" => %(Data contributor).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dte,
       label: "Dedicatee".freeze,
       :"mads:authoritativeLabel" => %(Dedicatee).freeze,
@@ -785,7 +785,7 @@ module RDF::Vocab
       :"skos:notation" => %(dte).freeze,
       :"skos:prefLabel" => %(Dedicatee).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dtm,
       label: "Data manager".freeze,
       :"mads:authoritativeLabel" => %(Data manager).freeze,
@@ -793,7 +793,7 @@ module RDF::Vocab
       :"skos:notation" => %(dtm).freeze,
       :"skos:prefLabel" => %(Data manager).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dto,
       label: "Dedicator".freeze,
       :"mads:authoritativeLabel" => %(Dedicator).freeze,
@@ -801,7 +801,7 @@ module RDF::Vocab
       :"skos:notation" => %(dto).freeze,
       :"skos:prefLabel" => %(Dedicator).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :dub,
       label: "Dubious author".freeze,
       :"mads:authoritativeLabel" => %(Dubious author).freeze,
@@ -809,39 +809,39 @@ module RDF::Vocab
       :"skos:notation" => %(dub).freeze,
       :"skos:prefLabel" => %(Dubious author).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :edc,
       label: "Editor of compilation".freeze,
       :"mads:authoritativeLabel" => %(Editor of compilation).freeze,
       :"mads:code" => %(edc).freeze,
       :"skos:notation" => %(edc).freeze,
       :"skos:prefLabel" => %(Editor of compilation).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :edm,
       label: "Editor of moving image work".freeze,
       :"mads:authoritativeLabel" => %(Editor of moving image work).freeze,
       :"mads:code" => %(edm).freeze,
       :"skos:notation" => %(edm).freeze,
       :"skos:prefLabel" => %(Editor of moving image work).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :edt,
       label: "Editor".freeze,
       :"mads:authoritativeLabel" => %(Editor).freeze,
       :"mads:code" => %(edt).freeze,
       :"skos:notation" => %(edt).freeze,
       :"skos:prefLabel" => %(Editor).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :egr,
       label: "Engraver".freeze,
       :"mads:authoritativeLabel" => %(Engraver).freeze,
       :"mads:code" => %(egr).freeze,
       :"skos:notation" => %(egr).freeze,
       :"skos:prefLabel" => %(Engraver).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :elg,
       label: "Electrician".freeze,
       :"mads:authoritativeLabel" => %(Electrician).freeze,
@@ -849,7 +849,7 @@ module RDF::Vocab
       :"skos:notation" => %(elg).freeze,
       :"skos:prefLabel" => %(Electrician).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :elt,
       label: "Electrotyper".freeze,
       :"mads:authoritativeLabel" => %(Electrotyper).freeze,
@@ -857,31 +857,31 @@ module RDF::Vocab
       :"skos:notation" => %(elt).freeze,
       :"skos:prefLabel" => %(Electrotyper).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :eng,
       label: "Engineer".freeze,
       :"mads:authoritativeLabel" => %(Engineer).freeze,
       :"mads:code" => %(eng).freeze,
       :"skos:notation" => %(eng).freeze,
       :"skos:prefLabel" => %(Engineer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :enj,
       label: "Enacting jurisdiction".freeze,
       :"mads:authoritativeLabel" => %(Enacting jurisdiction).freeze,
       :"mads:code" => %(enj).freeze,
       :"skos:notation" => %(enj).freeze,
       :"skos:prefLabel" => %(Enacting jurisdiction).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :etr,
       label: "Etcher".freeze,
       :"mads:authoritativeLabel" => %(Etcher).freeze,
       :"mads:code" => %(etr).freeze,
       :"skos:notation" => %(etr).freeze,
       :"skos:prefLabel" => %(Etcher).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :evp,
       label: "Event place".freeze,
       :"mads:authoritativeLabel" => %(Event place).freeze,
@@ -889,7 +889,7 @@ module RDF::Vocab
       :"skos:notation" => %(evp).freeze,
       :"skos:prefLabel" => %(Event place).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :exp,
       label: "Expert".freeze,
       :"mads:authoritativeLabel" => %(Expert).freeze,
@@ -897,23 +897,23 @@ module RDF::Vocab
       :"skos:notation" => %(exp).freeze,
       :"skos:prefLabel" => %(Expert).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :fac,
       label: "Facsimilist".freeze,
       :"mads:authoritativeLabel" => %(Facsimilist).freeze,
       :"mads:code" => %(fac).freeze,
       :"skos:notation" => %(fac).freeze,
       :"skos:prefLabel" => %(Facsimilist).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :fds,
       label: "Film distributor".freeze,
       :"mads:authoritativeLabel" => %(Film distributor).freeze,
       :"mads:code" => %(fds).freeze,
       :"skos:notation" => %(fds).freeze,
       :"skos:prefLabel" => %(Film distributor).freeze,
-      subPropertyOf: ["marcrelators:dst".freeze, "marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:dst".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :fld,
       label: "Field director".freeze,
       :"mads:authoritativeLabel" => %(Field director).freeze,
@@ -921,31 +921,31 @@ module RDF::Vocab
       :"skos:notation" => %(fld).freeze,
       :"skos:prefLabel" => %(Field director).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :flm,
       label: "Film editor".freeze,
       :"mads:authoritativeLabel" => %(Film editor).freeze,
       :"mads:code" => %(flm).freeze,
       :"skos:notation" => %(flm).freeze,
       :"skos:prefLabel" => %(Film editor).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:edm".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:edm".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :fmd,
       label: "Film director".freeze,
       :"mads:authoritativeLabel" => %(Film director).freeze,
       :"mads:code" => %(fmd).freeze,
       :"skos:notation" => %(fmd).freeze,
       :"skos:prefLabel" => %(Film director).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:drt".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:drt".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :fmk,
       label: "Filmmaker".freeze,
       :"mads:authoritativeLabel" => %(Filmmaker).freeze,
       :"mads:code" => %(fmk).freeze,
       :"skos:notation" => %(fmk).freeze,
       :"skos:prefLabel" => %(Filmmaker).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:drt".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:drt".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :fmo,
       label: "Former owner".freeze,
       :"mads:authoritativeLabel" => %(Former owner).freeze,
@@ -953,15 +953,15 @@ module RDF::Vocab
       :"skos:notation" => %(fmo).freeze,
       :"skos:prefLabel" => %(Former owner).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :fmp,
       label: "Film producer".freeze,
       :"mads:authoritativeLabel" => %(Film producer).freeze,
       :"mads:code" => %(fmp).freeze,
       :"skos:notation" => %(fmp).freeze,
       :"skos:prefLabel" => %(Film producer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:pro".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:pro".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :fnd,
       label: "Funder".freeze,
       :"mads:authoritativeLabel" => %(Funder).freeze,
@@ -969,7 +969,7 @@ module RDF::Vocab
       :"skos:notation" => %(fnd).freeze,
       :"skos:prefLabel" => %(Funder).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :fpy,
       label: "First party".freeze,
       :"mads:authoritativeLabel" => %(First party).freeze,
@@ -977,15 +977,15 @@ module RDF::Vocab
       :"skos:notation" => %(fpy).freeze,
       :"skos:prefLabel" => %(First party).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :frg,
       label: "Forger".freeze,
       :"mads:authoritativeLabel" => %(Forger).freeze,
       :"mads:code" => %(frg).freeze,
       :"skos:notation" => %(frg).freeze,
       :"skos:prefLabel" => %(Forger).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :gis,
       label: "Geographic information specialist".freeze,
       :"mads:authoritativeLabel" => %(Geographic information specialist).freeze,
@@ -993,15 +993,15 @@ module RDF::Vocab
       :"skos:notation" => %(gis).freeze,
       :"skos:prefLabel" => %(Geographic information specialist).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :his,
       label: "Host institution".freeze,
       :"mads:authoritativeLabel" => %(Host institution).freeze,
       :"mads:code" => %(his).freeze,
       :"skos:notation" => %(his).freeze,
       :"skos:prefLabel" => %(Host institution).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:hst".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:hst".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :hnr,
       label: "Honoree".freeze,
       :"mads:authoritativeLabel" => %(Honoree).freeze,
@@ -1009,31 +1009,31 @@ module RDF::Vocab
       :"skos:notation" => %(hnr).freeze,
       :"skos:prefLabel" => %(Honoree).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :hst,
       label: "Host".freeze,
       :"mads:authoritativeLabel" => %(Host).freeze,
       :"mads:code" => %(hst).freeze,
       :"skos:notation" => %(hst).freeze,
       :"skos:prefLabel" => %(Host).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:prf".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:prf".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ill,
       label: "Illustrator".freeze,
       :"mads:authoritativeLabel" => %(Illustrator).freeze,
       :"mads:code" => %(ill).freeze,
       :"skos:notation" => %(ill).freeze,
       :"skos:prefLabel" => %(Illustrator).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ilu,
       label: "Illuminator".freeze,
       :"mads:authoritativeLabel" => %(Illuminator).freeze,
       :"mads:code" => %(ilu).freeze,
       :"skos:notation" => %(ilu).freeze,
       :"skos:prefLabel" => %(Illuminator).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ins,
       label: "Inscriber".freeze,
       :"mads:authoritativeLabel" => %(Inscriber).freeze,
@@ -1041,63 +1041,63 @@ module RDF::Vocab
       :"skos:notation" => %(ins).freeze,
       :"skos:prefLabel" => %(Inscriber).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :inv,
       label: "Inventor".freeze,
       :"mads:authoritativeLabel" => %(Inventor).freeze,
       :"mads:code" => %(inv).freeze,
       :"skos:notation" => %(inv).freeze,
       :"skos:prefLabel" => %(Inventor).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :isb,
       label: "Issuing body".freeze,
       :"mads:authoritativeLabel" => %(Issuing body).freeze,
       :"mads:code" => %(isb).freeze,
       :"skos:notation" => %(isb).freeze,
       :"skos:prefLabel" => %(Issuing body).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :itr,
       label: "Instrumentalist".freeze,
       :"mads:authoritativeLabel" => %(Instrumentalist).freeze,
       :"mads:code" => %(itr).freeze,
       :"skos:notation" => %(itr).freeze,
       :"skos:prefLabel" => %(Instrumentalist).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:prf".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:prf".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ive,
       label: "Interviewee".freeze,
       :"mads:authoritativeLabel" => %(Interviewee).freeze,
       :"mads:code" => %(ive).freeze,
       :"skos:notation" => %(ive).freeze,
       :"skos:prefLabel" => %(Interviewee).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ivr,
       label: "Interviewer".freeze,
       :"mads:authoritativeLabel" => %(Interviewer).freeze,
       :"mads:code" => %(ivr).freeze,
       :"skos:notation" => %(ivr).freeze,
       :"skos:prefLabel" => %(Interviewer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :jud,
       label: "Judge".freeze,
       :"mads:authoritativeLabel" => %(Judge).freeze,
       :"mads:code" => %(jud).freeze,
       :"skos:notation" => %(jud).freeze,
       :"skos:prefLabel" => %(Judge).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :jug,
       label: "Jurisdiction governed".freeze,
       :"mads:authoritativeLabel" => %(Jurisdiction governed).freeze,
       :"mads:code" => %(jug).freeze,
       :"skos:notation" => %(jug).freeze,
       :"skos:prefLabel" => %(Jurisdiction governed).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :lbr,
       label: "Laboratory".freeze,
       :"mads:authoritativeLabel" => %(Laboratory).freeze,
@@ -1105,15 +1105,15 @@ module RDF::Vocab
       :"skos:notation" => %(lbr).freeze,
       :"skos:prefLabel" => %(Laboratory).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :lbt,
       label: "Librettist".freeze,
       :"mads:authoritativeLabel" => %(Librettist).freeze,
       :"mads:code" => %(lbt).freeze,
       :"skos:notation" => %(lbt).freeze,
       :"skos:prefLabel" => %(Librettist).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:aut".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:aut".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ldr,
       label: "Laboratory director".freeze,
       :"mads:authoritativeLabel" => %(Laboratory director).freeze,
@@ -1121,7 +1121,7 @@ module RDF::Vocab
       :"skos:notation" => %(ldr).freeze,
       :"skos:prefLabel" => %(Laboratory director).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :led,
       label: "Lead".freeze,
       :"mads:authoritativeLabel" => %(Lead).freeze,
@@ -1129,15 +1129,15 @@ module RDF::Vocab
       :"skos:notation" => %(led).freeze,
       :"skos:prefLabel" => %(Lead).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :lee,
       label: "Libelee-appellee".freeze,
       :"mads:authoritativeLabel" => %(Libelee-appellee).freeze,
       :"mads:code" => %(lee).freeze,
       :"skos:notation" => %(lee).freeze,
       :"skos:prefLabel" => %(Libelee-appellee).freeze,
-      subPropertyOf: ["marcrelators:role".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: "marcrelators:role".freeze,
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :lel,
       label: "Libelee".freeze,
       :"mads:authoritativeLabel" => %(Libelee).freeze,
@@ -1145,7 +1145,7 @@ module RDF::Vocab
       :"skos:notation" => %(lel).freeze,
       :"skos:prefLabel" => %(Libelee).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :len,
       label: "Lender".freeze,
       :"mads:authoritativeLabel" => %(Lender).freeze,
@@ -1153,31 +1153,31 @@ module RDF::Vocab
       :"skos:notation" => %(len).freeze,
       :"skos:prefLabel" => %(Lender).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :let,
       label: "Libelee-appellant".freeze,
       :"mads:authoritativeLabel" => %(Libelee-appellant).freeze,
       :"mads:code" => %(let).freeze,
       :"skos:notation" => %(let).freeze,
       :"skos:prefLabel" => %(Libelee-appellant).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "marcrelators:lel".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["marcrelators:lel".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :lgd,
       label: "Lighting designer".freeze,
       :"mads:authoritativeLabel" => %(Lighting designer).freeze,
       :"mads:code" => %(lgd).freeze,
       :"skos:notation" => %(lgd).freeze,
       :"skos:prefLabel" => %(Lighting designer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :lie,
       label: "Libelant-appellee".freeze,
       :"mads:authoritativeLabel" => %(Libelant-appellee).freeze,
       :"mads:code" => %(lie).freeze,
       :"skos:notation" => %(lie).freeze,
       :"skos:prefLabel" => %(Libelant-appellee).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "marcrelators:lil".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["marcrelators:lil".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :lil,
       label: "Libelant".freeze,
       :"mads:authoritativeLabel" => %(Libelant).freeze,
@@ -1185,23 +1185,23 @@ module RDF::Vocab
       :"skos:notation" => %(lil).freeze,
       :"skos:prefLabel" => %(Libelant).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :lit,
       label: "Libelant-appellant".freeze,
       :"mads:authoritativeLabel" => %(Libelant-appellant).freeze,
       :"mads:code" => %(lit).freeze,
       :"skos:notation" => %(lit).freeze,
       :"skos:prefLabel" => %(Libelant-appellant).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "marcrelators:lil".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["marcrelators:lil".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :lsa,
       label: "Landscape architect".freeze,
       :"mads:authoritativeLabel" => %(Landscape architect).freeze,
       :"mads:code" => %(lsa).freeze,
       :"skos:notation" => %(lsa).freeze,
       :"skos:prefLabel" => %(Landscape architect).freeze,
-      subPropertyOf: ["marcrelators:arc".freeze, "marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:arc".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :lse,
       label: "Licensee".freeze,
       :"mads:authoritativeLabel" => %(Licensee).freeze,
@@ -1209,7 +1209,7 @@ module RDF::Vocab
       :"skos:notation" => %(lse).freeze,
       :"skos:prefLabel" => %(Licensee).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :lso,
       label: "Licensor".freeze,
       :"mads:authoritativeLabel" => %(Licensor).freeze,
@@ -1217,23 +1217,23 @@ module RDF::Vocab
       :"skos:notation" => %(lso).freeze,
       :"skos:prefLabel" => %(Licensor).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ltg,
       label: "Lithographer".freeze,
       :"mads:authoritativeLabel" => %(Lithographer).freeze,
       :"mads:code" => %(ltg).freeze,
       :"skos:notation" => %(ltg).freeze,
       :"skos:prefLabel" => %(Lithographer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :lyr,
       label: "Lyricist".freeze,
       :"mads:authoritativeLabel" => %(Lyricist).freeze,
       :"mads:code" => %(lyr).freeze,
       :"skos:notation" => %(lyr).freeze,
       :"skos:prefLabel" => %(Lyricist).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:aut".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:aut".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :mcp,
       label: "Music copyist".freeze,
       :"mads:authoritativeLabel" => %(Music copyist).freeze,
@@ -1241,7 +1241,7 @@ module RDF::Vocab
       :"skos:notation" => %(mcp).freeze,
       :"skos:prefLabel" => %(Music copyist).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :mdc,
       label: "Metadata contact".freeze,
       :"mads:authoritativeLabel" => %(Metadata contact).freeze,
@@ -1249,15 +1249,15 @@ module RDF::Vocab
       :"skos:notation" => %(mdc).freeze,
       :"skos:prefLabel" => %(Metadata contact).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :med,
       label: "Medium".freeze,
       :"mads:authoritativeLabel" => %(Medium).freeze,
       :"mads:code" => %(med).freeze,
       :"skos:notation" => %(med).freeze,
       :"skos:prefLabel" => %(Medium).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :mfp,
       label: "Manufacture place".freeze,
       :"mads:authoritativeLabel" => %(Manufacture place).freeze,
@@ -1265,23 +1265,23 @@ module RDF::Vocab
       :"skos:notation" => %(mfp).freeze,
       :"skos:prefLabel" => %(Manufacture place).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :mfr,
       label: "Manufacturer".freeze,
       :"mads:authoritativeLabel" => %(Manufacturer).freeze,
       :"mads:code" => %(mfr).freeze,
       :"skos:notation" => %(mfr).freeze,
       :"skos:prefLabel" => %(Manufacturer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:prv".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:prv".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :mod,
       label: "Moderator".freeze,
       :"mads:authoritativeLabel" => %(Moderator).freeze,
       :"mads:code" => %(mod).freeze,
       :"skos:notation" => %(mod).freeze,
       :"skos:prefLabel" => %(Moderator).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:prf".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:prf".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :mon,
       label: "Monitor".freeze,
       :"mads:authoritativeLabel" => %(Monitor).freeze,
@@ -1289,7 +1289,7 @@ module RDF::Vocab
       :"skos:notation" => %(mon).freeze,
       :"skos:prefLabel" => %(Monitor).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :mrb,
       label: "Marbler".freeze,
       :"mads:authoritativeLabel" => %(Marbler).freeze,
@@ -1297,7 +1297,7 @@ module RDF::Vocab
       :"skos:notation" => %(mrb).freeze,
       :"skos:prefLabel" => %(Marbler).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :mrk,
       label: "Markup editor".freeze,
       :"mads:authoritativeLabel" => %(Markup editor).freeze,
@@ -1305,7 +1305,7 @@ module RDF::Vocab
       :"skos:notation" => %(mrk).freeze,
       :"skos:prefLabel" => %(Markup editor).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :msd,
       label: "Musical director".freeze,
       :"mads:authoritativeLabel" => %(Musical director).freeze,
@@ -1313,39 +1313,39 @@ module RDF::Vocab
       :"skos:notation" => %(msd).freeze,
       :"skos:prefLabel" => %(Musical director).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :mte,
       label: "Metal-engraver".freeze,
       :"mads:authoritativeLabel" => %(Metal-engraver).freeze,
       :"mads:code" => %(mte).freeze,
       :"skos:notation" => %(mte).freeze,
       :"skos:prefLabel" => %(Metal-engraver).freeze,
-      subPropertyOf: ["marcrelators:egr".freeze, "marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:egr".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :mtk,
       label: "Minute taker".freeze,
       :"mads:authoritativeLabel" => %(Minute taker).freeze,
       :"mads:code" => %(mtk).freeze,
       :"skos:notation" => %(mtk).freeze,
       :"skos:prefLabel" => %(Minute taker).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :mus,
       label: "Musician".freeze,
       :"mads:authoritativeLabel" => %(Musician).freeze,
       :"mads:code" => %(mus).freeze,
       :"skos:notation" => %(mus).freeze,
       :"skos:prefLabel" => %(Musician).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :nrt,
       label: "Narrator".freeze,
       :"mads:authoritativeLabel" => %(Narrator).freeze,
       :"mads:code" => %(nrt).freeze,
       :"skos:notation" => %(nrt).freeze,
       :"skos:prefLabel" => %(Narrator).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:prf".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:prf".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :opn,
       label: "Opponent".freeze,
       :"mads:authoritativeLabel" => %(Opponent).freeze,
@@ -1353,31 +1353,31 @@ module RDF::Vocab
       :"skos:notation" => %(opn).freeze,
       :"skos:prefLabel" => %(Opponent).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :org,
       label: "Originator".freeze,
       :"mads:authoritativeLabel" => %(Originator).freeze,
       :"mads:code" => %(org).freeze,
       :"skos:notation" => %(org).freeze,
       :"skos:prefLabel" => %(Originator).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :orm,
       label: "Organizer".freeze,
       :"mads:authoritativeLabel" => %(Organizer).freeze,
       :"mads:code" => %(orm).freeze,
       :"skos:notation" => %(orm).freeze,
       :"skos:prefLabel" => %(Organizer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :osp,
       label: "Onscreen presenter".freeze,
       :"mads:authoritativeLabel" => %(Onscreen presenter).freeze,
       :"mads:code" => %(osp).freeze,
       :"skos:notation" => %(osp).freeze,
       :"skos:prefLabel" => %(Onscreen presenter).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:prf".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:prf".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :oth,
       label: "Other".freeze,
       :"mads:authoritativeLabel" => %(Other).freeze,
@@ -1385,7 +1385,7 @@ module RDF::Vocab
       :"skos:notation" => %(oth).freeze,
       :"skos:prefLabel" => %(Other).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :own,
       label: "Owner".freeze,
       :"mads:authoritativeLabel" => %(Owner).freeze,
@@ -1393,15 +1393,15 @@ module RDF::Vocab
       :"skos:notation" => %(own).freeze,
       :"skos:prefLabel" => %(Owner).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :pan,
       label: "Panelist".freeze,
       :"mads:authoritativeLabel" => %(Panelist).freeze,
       :"mads:code" => %(pan).freeze,
       :"skos:notation" => %(pan).freeze,
       :"skos:prefLabel" => %(Panelist).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:prf".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:prf".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :pat,
       label: "Patron".freeze,
       :"mads:authoritativeLabel" => %(Patron).freeze,
@@ -1409,7 +1409,7 @@ module RDF::Vocab
       :"skos:notation" => %(pat).freeze,
       :"skos:prefLabel" => %(Patron).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :pbd,
       label: "Publishing director".freeze,
       :"mads:authoritativeLabel" => %(Publishing director).freeze,
@@ -1417,15 +1417,15 @@ module RDF::Vocab
       :"skos:notation" => %(pbd).freeze,
       :"skos:prefLabel" => %(Publishing director).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :pbl,
       label: "Publisher".freeze,
       :"mads:authoritativeLabel" => %(Publisher).freeze,
       :"mads:code" => %(pbl).freeze,
       :"skos:notation" => %(pbl).freeze,
       :"skos:prefLabel" => %(Publisher).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:publisher".freeze, "marcrelators:prv".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:publisher".freeze, "marcrelators:prv".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :pdr,
       label: "Project director".freeze,
       :"mads:authoritativeLabel" => %(Project director).freeze,
@@ -1433,7 +1433,7 @@ module RDF::Vocab
       :"skos:notation" => %(pdr).freeze,
       :"skos:prefLabel" => %(Project director).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :pfr,
       label: "Proofreader".freeze,
       :"mads:authoritativeLabel" => %(Proofreader).freeze,
@@ -1441,23 +1441,23 @@ module RDF::Vocab
       :"skos:notation" => %(pfr).freeze,
       :"skos:prefLabel" => %(Proofreader).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :pht,
       label: "Photographer".freeze,
       :"mads:authoritativeLabel" => %(Photographer).freeze,
       :"mads:code" => %(pht).freeze,
       :"skos:notation" => %(pht).freeze,
       :"skos:prefLabel" => %(Photographer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :plt,
       label: "Platemaker".freeze,
       :"mads:authoritativeLabel" => %(Platemaker).freeze,
       :"mads:code" => %(plt).freeze,
       :"skos:notation" => %(plt).freeze,
       :"skos:prefLabel" => %(Platemaker).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :pma,
       label: "Permitting agency".freeze,
       :"mads:authoritativeLabel" => %(Permitting agency).freeze,
@@ -1465,7 +1465,7 @@ module RDF::Vocab
       :"skos:notation" => %(pma).freeze,
       :"skos:prefLabel" => %(Permitting agency).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :pmn,
       label: "Production manager".freeze,
       :"mads:authoritativeLabel" => %(Production manager).freeze,
@@ -1473,7 +1473,7 @@ module RDF::Vocab
       :"skos:notation" => %(pmn).freeze,
       :"skos:prefLabel" => %(Production manager).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :pop,
       label: "Printer of plates".freeze,
       :"mads:authoritativeLabel" => %(Printer of plates).freeze,
@@ -1481,7 +1481,7 @@ module RDF::Vocab
       :"skos:notation" => %(pop).freeze,
       :"skos:prefLabel" => %(Printer of plates).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ppm,
       label: "Papermaker".freeze,
       :"mads:authoritativeLabel" => %(Papermaker).freeze,
@@ -1489,23 +1489,23 @@ module RDF::Vocab
       :"skos:notation" => %(ppm).freeze,
       :"skos:prefLabel" => %(Papermaker).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ppt,
       label: "Puppeteer".freeze,
       :"mads:authoritativeLabel" => %(Puppeteer).freeze,
       :"mads:code" => %(ppt).freeze,
       :"skos:notation" => %(ppt).freeze,
       :"skos:prefLabel" => %(Puppeteer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:prf".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:prf".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :pra,
       label: "Praeses".freeze,
       :"mads:authoritativeLabel" => %(Praeses).freeze,
       :"mads:code" => %(pra).freeze,
       :"skos:notation" => %(pra).freeze,
       :"skos:prefLabel" => %(Praeses).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :prc,
       label: "Process contact".freeze,
       :"mads:authoritativeLabel" => %(Process contact).freeze,
@@ -1513,63 +1513,63 @@ module RDF::Vocab
       :"skos:notation" => %(prc).freeze,
       :"skos:prefLabel" => %(Process contact).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :prd,
       label: "Production personnel".freeze,
       :"mads:authoritativeLabel" => %(Production personnel).freeze,
       :"mads:code" => %(prd).freeze,
       :"skos:notation" => %(prd).freeze,
       :"skos:prefLabel" => %(Production personnel).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :pre,
       label: "Presenter".freeze,
       :"mads:authoritativeLabel" => %(Presenter).freeze,
       :"mads:code" => %(pre).freeze,
       :"skos:notation" => %(pre).freeze,
       :"skos:prefLabel" => %(Presenter).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :prf,
       label: "Performer".freeze,
       :"mads:authoritativeLabel" => %(Performer).freeze,
       :"mads:code" => %(prf).freeze,
       :"skos:notation" => %(prf).freeze,
       :"skos:prefLabel" => %(Performer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :prg,
       label: "Programmer".freeze,
       :"mads:authoritativeLabel" => %(Programmer).freeze,
       :"mads:code" => %(prg).freeze,
       :"skos:notation" => %(prg).freeze,
       :"skos:prefLabel" => %(Programmer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :prm,
       label: "Printmaker".freeze,
       :"mads:authoritativeLabel" => %(Printmaker).freeze,
       :"mads:code" => %(prm).freeze,
       :"skos:notation" => %(prm).freeze,
       :"skos:prefLabel" => %(Printmaker).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :prn,
       label: "Production company".freeze,
       :"mads:authoritativeLabel" => %(Production company).freeze,
       :"mads:code" => %(prn).freeze,
       :"skos:notation" => %(prn).freeze,
       :"skos:prefLabel" => %(Production company).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :pro,
       label: "Producer".freeze,
       :"mads:authoritativeLabel" => %(Producer).freeze,
       :"mads:code" => %(pro).freeze,
       :"skos:notation" => %(pro).freeze,
       :"skos:prefLabel" => %(Producer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:prv".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:prv".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :prp,
       label: "Production place".freeze,
       :"mads:authoritativeLabel" => %(Production place).freeze,
@@ -1577,15 +1577,15 @@ module RDF::Vocab
       :"skos:notation" => %(prp).freeze,
       :"skos:prefLabel" => %(Production place).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :prs,
       label: "Production designer".freeze,
       :"mads:authoritativeLabel" => %(Production designer).freeze,
       :"mads:code" => %(prs).freeze,
       :"skos:notation" => %(prs).freeze,
       :"skos:prefLabel" => %(Production designer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :prt,
       label: "Printer".freeze,
       :"mads:authoritativeLabel" => %(Printer).freeze,
@@ -1593,7 +1593,7 @@ module RDF::Vocab
       :"skos:notation" => %(prt).freeze,
       :"skos:prefLabel" => %(Printer).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :prv,
       label: "Provider".freeze,
       :"mads:authoritativeLabel" => %(Provider).freeze,
@@ -1601,7 +1601,7 @@ module RDF::Vocab
       :"skos:notation" => %(prv).freeze,
       :"skos:prefLabel" => %(Provider).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :pta,
       label: "Patent applicant".freeze,
       :"mads:authoritativeLabel" => %(Patent applicant).freeze,
@@ -1609,15 +1609,15 @@ module RDF::Vocab
       :"skos:notation" => %(pta).freeze,
       :"skos:prefLabel" => %(Patent applicant).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :pte,
       label: "Plaintiff-appellee".freeze,
       :"mads:authoritativeLabel" => %(Plaintiff-appellee).freeze,
       :"mads:code" => %(pte).freeze,
       :"skos:notation" => %(pte).freeze,
       :"skos:prefLabel" => %(Plaintiff-appellee).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "marcrelators:ptf".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["marcrelators:ptf".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ptf,
       label: "Plaintiff".freeze,
       :"mads:authoritativeLabel" => %(Plaintiff).freeze,
@@ -1625,7 +1625,7 @@ module RDF::Vocab
       :"skos:notation" => %(ptf).freeze,
       :"skos:prefLabel" => %(Plaintiff).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :pth,
       label: "Patent holder".freeze,
       :"mads:authoritativeLabel" => %(Patent holder).freeze,
@@ -1633,15 +1633,15 @@ module RDF::Vocab
       :"skos:notation" => %(pth).freeze,
       :"skos:prefLabel" => %(Patent holder).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ptt,
       label: "Plaintiff-appellant".freeze,
       :"mads:authoritativeLabel" => %(Plaintiff-appellant).freeze,
       :"mads:code" => %(ptt).freeze,
       :"skos:notation" => %(ptt).freeze,
       :"skos:prefLabel" => %(Plaintiff-appellant).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "marcrelators:ptf".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["marcrelators:ptf".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :pup,
       label: "Publication place".freeze,
       :"mads:authoritativeLabel" => %(Publication place).freeze,
@@ -1649,7 +1649,7 @@ module RDF::Vocab
       :"skos:notation" => %(pup).freeze,
       :"skos:prefLabel" => %(Publication place).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :rbr,
       label: "Rubricator".freeze,
       :"mads:authoritativeLabel" => %(Rubricator).freeze,
@@ -1657,7 +1657,7 @@ module RDF::Vocab
       :"skos:notation" => %(rbr).freeze,
       :"skos:prefLabel" => %(Rubricator).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :rcd,
       label: "Recordist".freeze,
       :"mads:authoritativeLabel" => %(Recordist).freeze,
@@ -1665,15 +1665,15 @@ module RDF::Vocab
       :"skos:notation" => %(rcd).freeze,
       :"skos:prefLabel" => %(Recordist).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :rce,
       label: "Recording engineer".freeze,
       :"mads:authoritativeLabel" => %(Recording engineer).freeze,
       :"mads:code" => %(rce).freeze,
       :"skos:notation" => %(rce).freeze,
       :"skos:prefLabel" => %(Recording engineer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :rcp,
       label: "Addressee".freeze,
       :"mads:authoritativeLabel" => %(Addressee).freeze,
@@ -1681,15 +1681,15 @@ module RDF::Vocab
       :"skos:notation" => %(rcp).freeze,
       :"skos:prefLabel" => %(Addressee).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :rdd,
       label: "Radio director".freeze,
       :"mads:authoritativeLabel" => %(Radio director).freeze,
       :"mads:code" => %(rdd).freeze,
       :"skos:notation" => %(rdd).freeze,
       :"skos:prefLabel" => %(Radio director).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:drt".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:drt".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :red,
       label: "Redaktor".freeze,
       :"mads:authoritativeLabel" => %(Redaktor).freeze,
@@ -1697,31 +1697,31 @@ module RDF::Vocab
       :"skos:notation" => %(red).freeze,
       :"skos:prefLabel" => %(Redaktor).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ren,
       label: "Renderer".freeze,
       :"mads:authoritativeLabel" => %(Renderer).freeze,
       :"mads:code" => %(ren).freeze,
       :"skos:notation" => %(ren).freeze,
       :"skos:prefLabel" => %(Renderer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :res,
       label: "Researcher".freeze,
       :"mads:authoritativeLabel" => %(Researcher).freeze,
       :"mads:code" => %(res).freeze,
       :"skos:notation" => %(res).freeze,
       :"skos:prefLabel" => %(Researcher).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :rev,
       label: "Reviewer".freeze,
       :"mads:authoritativeLabel" => %(Reviewer).freeze,
       :"mads:code" => %(rev).freeze,
       :"skos:notation" => %(rev).freeze,
       :"skos:prefLabel" => %(Reviewer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :role,
       comment: %(This property and its sub-properties are used to associate a Bibliographic Resource with a Resource that played a part in the lifecycle of the Bibliographic Resource.  It is the inverse of relators:roleIn.).freeze,
       label: "role".freeze,
@@ -1732,8 +1732,8 @@ module RDF::Vocab
       :"mads:code" => %(rpc).freeze,
       :"skos:notation" => %(rpc).freeze,
       :"skos:prefLabel" => %(Radio producer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:pro".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:pro".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :rps,
       label: "Repository".freeze,
       :"mads:authoritativeLabel" => %(Repository).freeze,
@@ -1741,23 +1741,23 @@ module RDF::Vocab
       :"skos:notation" => %(rps).freeze,
       :"skos:prefLabel" => %(Repository).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :rpt,
       label: "Reporter".freeze,
       :"mads:authoritativeLabel" => %(Reporter).freeze,
       :"mads:code" => %(rpt).freeze,
       :"skos:notation" => %(rpt).freeze,
       :"skos:prefLabel" => %(Reporter).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :rpy,
       label: "Responsible party".freeze,
       :"mads:authoritativeLabel" => %(Responsible party).freeze,
       :"mads:code" => %(rpy).freeze,
       :"skos:notation" => %(rpy).freeze,
       :"skos:prefLabel" => %(Responsible party).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :rse,
       label: "Respondent-appellee".freeze,
       :"mads:authoritativeLabel" => %(Respondent-appellee).freeze,
@@ -1765,15 +1765,15 @@ module RDF::Vocab
       :"skos:notation" => %(rse).freeze,
       :"skos:prefLabel" => %(Respondent-appellee).freeze,
       subPropertyOf: ["marcrelators:role".freeze, "marcrelators:rsp".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :rsg,
       label: "Restager".freeze,
       :"mads:authoritativeLabel" => %(Restager).freeze,
       :"mads:code" => %(rsg).freeze,
       :"skos:notation" => %(rsg).freeze,
       :"skos:prefLabel" => %(Restager).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :rsp,
       label: "Respondent".freeze,
       :"mads:authoritativeLabel" => %(Respondent).freeze,
@@ -1781,15 +1781,15 @@ module RDF::Vocab
       :"skos:notation" => %(rsp).freeze,
       :"skos:prefLabel" => %(Respondent).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :rsr,
       label: "Restorationist".freeze,
       :"mads:authoritativeLabel" => %(Restorationist).freeze,
       :"mads:code" => %(rsr).freeze,
       :"skos:notation" => %(rsr).freeze,
       :"skos:prefLabel" => %(Restorationist).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :rst,
       label: "Respondent-appellant".freeze,
       :"mads:authoritativeLabel" => %(Respondent-appellant).freeze,
@@ -1797,55 +1797,55 @@ module RDF::Vocab
       :"skos:notation" => %(rst).freeze,
       :"skos:prefLabel" => %(Respondent-appellant).freeze,
       subPropertyOf: ["marcrelators:role".freeze, "marcrelators:rsp".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :rth,
       label: "Research team head".freeze,
       :"mads:authoritativeLabel" => %(Research team head).freeze,
       :"mads:code" => %(rth).freeze,
       :"skos:notation" => %(rth).freeze,
       :"skos:prefLabel" => %(Research team head).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :rtm,
       label: "Research team member".freeze,
       :"mads:authoritativeLabel" => %(Research team member).freeze,
       :"mads:code" => %(rtm).freeze,
       :"skos:notation" => %(rtm).freeze,
       :"skos:prefLabel" => %(Research team member).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :sad,
       label: "Scientific advisor".freeze,
       :"mads:authoritativeLabel" => %(Scientific advisor).freeze,
       :"mads:code" => %(sad).freeze,
       :"skos:notation" => %(sad).freeze,
       :"skos:prefLabel" => %(Scientific advisor).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :sce,
       label: "Scenarist".freeze,
       :"mads:authoritativeLabel" => %(Scenarist).freeze,
       :"mads:code" => %(sce).freeze,
       :"skos:notation" => %(sce).freeze,
       :"skos:prefLabel" => %(Scenarist).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :scl,
       label: "Sculptor".freeze,
       :"mads:authoritativeLabel" => %(Sculptor).freeze,
       :"mads:code" => %(scl).freeze,
       :"skos:notation" => %(scl).freeze,
       :"skos:prefLabel" => %(Sculptor).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:aut".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:aut".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :scr,
       label: "Scribe".freeze,
       :"mads:authoritativeLabel" => %(Scribe).freeze,
       :"mads:code" => %(scr).freeze,
       :"skos:notation" => %(scr).freeze,
       :"skos:prefLabel" => %(Scribe).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :sds,
       label: "Sound designer".freeze,
       :"mads:authoritativeLabel" => %(Sound designer).freeze,
@@ -1853,23 +1853,23 @@ module RDF::Vocab
       :"skos:notation" => %(sds).freeze,
       :"skos:prefLabel" => %(Sound designer).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :sec,
       label: "Secretary".freeze,
       :"mads:authoritativeLabel" => %(Secretary).freeze,
       :"mads:code" => %(sec).freeze,
       :"skos:notation" => %(sec).freeze,
       :"skos:prefLabel" => %(Secretary).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :sgd,
       label: "Stage director".freeze,
       :"mads:authoritativeLabel" => %(Stage director).freeze,
       :"mads:code" => %(sgd).freeze,
       :"skos:notation" => %(sgd).freeze,
       :"skos:prefLabel" => %(Stage director).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :sgn,
       label: "Signer".freeze,
       :"mads:authoritativeLabel" => %(Signer).freeze,
@@ -1877,7 +1877,7 @@ module RDF::Vocab
       :"skos:notation" => %(sgn).freeze,
       :"skos:prefLabel" => %(Signer).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :sht,
       label: "Supporting host".freeze,
       :"mads:authoritativeLabel" => %(Supporting host).freeze,
@@ -1885,31 +1885,31 @@ module RDF::Vocab
       :"skos:notation" => %(sht).freeze,
       :"skos:prefLabel" => %(Supporting host).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :sll,
       label: "Seller".freeze,
       :"mads:authoritativeLabel" => %(Seller).freeze,
       :"mads:code" => %(sll).freeze,
       :"skos:notation" => %(sll).freeze,
       :"skos:prefLabel" => %(Seller).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:fmo".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:fmo".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :sng,
       label: "Singer".freeze,
       :"mads:authoritativeLabel" => %(Singer).freeze,
       :"mads:code" => %(sng).freeze,
       :"skos:notation" => %(sng).freeze,
       :"skos:prefLabel" => %(Singer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:prf".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:prf".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :spk,
       label: "Speaker".freeze,
       :"mads:authoritativeLabel" => %(Speaker).freeze,
       :"mads:code" => %(spk).freeze,
       :"skos:notation" => %(spk).freeze,
       :"skos:prefLabel" => %(Speaker).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:prf".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:prf".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :spn,
       label: "Sponsor".freeze,
       :"mads:authoritativeLabel" => %(Sponsor).freeze,
@@ -1917,7 +1917,7 @@ module RDF::Vocab
       :"skos:notation" => %(spn).freeze,
       :"skos:prefLabel" => %(Sponsor).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :spy,
       label: "Second party".freeze,
       :"mads:authoritativeLabel" => %(Second party).freeze,
@@ -1925,23 +1925,23 @@ module RDF::Vocab
       :"skos:notation" => %(spy).freeze,
       :"skos:prefLabel" => %(Second party).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :srv,
       label: "Surveyor".freeze,
       :"mads:authoritativeLabel" => %(Surveyor).freeze,
       :"mads:code" => %(srv).freeze,
       :"skos:notation" => %(srv).freeze,
       :"skos:prefLabel" => %(Surveyor).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :std,
       label: "Set designer".freeze,
       :"mads:authoritativeLabel" => %(Set designer).freeze,
       :"mads:code" => %(std).freeze,
       :"skos:notation" => %(std).freeze,
       :"skos:prefLabel" => %(Set designer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :stg,
       label: "Setting".freeze,
       :"mads:authoritativeLabel" => %(Setting).freeze,
@@ -1949,15 +1949,15 @@ module RDF::Vocab
       :"skos:notation" => %(stg).freeze,
       :"skos:prefLabel" => %(Setting).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :stl,
       label: "Storyteller".freeze,
       :"mads:authoritativeLabel" => %(Storyteller).freeze,
       :"mads:code" => %(stl).freeze,
       :"skos:notation" => %(stl).freeze,
       :"skos:prefLabel" => %(Storyteller).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:prf".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:prf".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :stm,
       label: "Stage manager".freeze,
       :"mads:authoritativeLabel" => %(Stage manager).freeze,
@@ -1965,15 +1965,15 @@ module RDF::Vocab
       :"skos:notation" => %(stm).freeze,
       :"skos:prefLabel" => %(Stage manager).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :stn,
       label: "Standards body".freeze,
       :"mads:authoritativeLabel" => %(Standards body).freeze,
       :"mads:code" => %(stn).freeze,
       :"skos:notation" => %(stn).freeze,
       :"skos:prefLabel" => %(Standards body).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :str,
       label: "Stereotyper".freeze,
       :"mads:authoritativeLabel" => %(Stereotyper).freeze,
@@ -1981,7 +1981,7 @@ module RDF::Vocab
       :"skos:notation" => %(str).freeze,
       :"skos:prefLabel" => %(Stereotyper).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :tcd,
       label: "Technical director".freeze,
       :"mads:authoritativeLabel" => %(Technical director).freeze,
@@ -1989,15 +1989,15 @@ module RDF::Vocab
       :"skos:notation" => %(tcd).freeze,
       :"skos:prefLabel" => %(Technical director).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :tch,
       label: "Teacher".freeze,
       :"mads:authoritativeLabel" => %(Teacher).freeze,
       :"mads:code" => %(tch).freeze,
       :"skos:notation" => %(tch).freeze,
       :"skos:prefLabel" => %(Teacher).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:prf".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:prf".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :ths,
       label: "Thesis advisor".freeze,
       :"mads:authoritativeLabel" => %(Thesis advisor).freeze,
@@ -2005,39 +2005,39 @@ module RDF::Vocab
       :"skos:notation" => %(ths).freeze,
       :"skos:prefLabel" => %(Thesis advisor).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :tld,
       label: "Television director".freeze,
       :"mads:authoritativeLabel" => %(Television director).freeze,
       :"mads:code" => %(tld).freeze,
       :"skos:notation" => %(tld).freeze,
       :"skos:prefLabel" => %(Television director).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:drt".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:drt".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :tlp,
       label: "Television producer".freeze,
       :"mads:authoritativeLabel" => %(Television producer).freeze,
       :"mads:code" => %(tlp).freeze,
       :"skos:notation" => %(tlp).freeze,
       :"skos:prefLabel" => %(Television producer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:pro".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:pro".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :trc,
       label: "Transcriber".freeze,
       :"mads:authoritativeLabel" => %(Transcriber).freeze,
       :"mads:code" => %(trc).freeze,
       :"skos:notation" => %(trc).freeze,
       :"skos:prefLabel" => %(Transcriber).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :trl,
       label: "Translator".freeze,
       :"mads:authoritativeLabel" => %(Translator).freeze,
       :"mads:code" => %(trl).freeze,
       :"skos:notation" => %(trl).freeze,
       :"skos:prefLabel" => %(Translator).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :tyd,
       label: "Type designer".freeze,
       :"mads:authoritativeLabel" => %(Type designer).freeze,
@@ -2045,7 +2045,7 @@ module RDF::Vocab
       :"skos:notation" => %(tyd).freeze,
       :"skos:prefLabel" => %(Type designer).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :tyg,
       label: "Typographer".freeze,
       :"mads:authoritativeLabel" => %(Typographer).freeze,
@@ -2053,7 +2053,7 @@ module RDF::Vocab
       :"skos:notation" => %(tyg).freeze,
       :"skos:prefLabel" => %(Typographer).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :uvp,
       label: "University place".freeze,
       :"mads:authoritativeLabel" => %(University place).freeze,
@@ -2061,79 +2061,79 @@ module RDF::Vocab
       :"skos:notation" => %(uvp).freeze,
       :"skos:prefLabel" => %(University place).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :vac,
       label: "Voice actor".freeze,
       :"mads:authoritativeLabel" => %(Voice actor).freeze,
       :"mads:code" => %(vac).freeze,
       :"skos:notation" => %(vac).freeze,
       :"skos:prefLabel" => %(Voice actor).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:act".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:act".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :vdg,
       label: "Videographer".freeze,
       :"mads:authoritativeLabel" => %(Videographer).freeze,
       :"mads:code" => %(vdg).freeze,
       :"skos:notation" => %(vdg).freeze,
       :"skos:prefLabel" => %(Videographer).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :wac,
       label: "Writer of added commentary".freeze,
       :"mads:authoritativeLabel" => %(Writer of added commentary).freeze,
       :"mads:code" => %(wac).freeze,
       :"skos:notation" => %(wac).freeze,
       :"skos:prefLabel" => %(Writer of added commentary).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:wst".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze, "marcrelators:wst".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :wal,
       label: "Writer of added lyrics".freeze,
       :"mads:authoritativeLabel" => %(Writer of added lyrics).freeze,
       :"mads:code" => %(wal).freeze,
       :"skos:notation" => %(wal).freeze,
       :"skos:prefLabel" => %(Writer of added lyrics).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:wst".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze, "marcrelators:wst".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :wam,
       label: "Writer of accompanying material".freeze,
       :"mads:authoritativeLabel" => %(Writer of accompanying material).freeze,
       :"mads:code" => %(wam).freeze,
       :"skos:notation" => %(wam).freeze,
       :"skos:prefLabel" => %(Writer of accompanying material).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :wat,
       label: "Writer of added text".freeze,
       :"mads:authoritativeLabel" => %(Writer of added text).freeze,
       :"mads:code" => %(wat).freeze,
       :"skos:notation" => %(wat).freeze,
       :"skos:prefLabel" => %(Writer of added text).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze, "marcrelators:wst".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze, "marcrelators:wst".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :wdc,
       label: "Woodcutter".freeze,
       :"mads:authoritativeLabel" => %(Woodcutter).freeze,
       :"mads:code" => %(wdc).freeze,
       :"skos:notation" => %(wdc).freeze,
       :"skos:prefLabel" => %(Woodcutter).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :wde,
       label: "Wood engraver".freeze,
       :"mads:authoritativeLabel" => %(Wood engraver).freeze,
       :"mads:code" => %(wde).freeze,
       :"skos:notation" => %(wde).freeze,
       :"skos:prefLabel" => %(Wood engraver).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :win,
       label: "Writer of introduction".freeze,
       :"mads:authoritativeLabel" => %(Writer of introduction).freeze,
       :"mads:code" => %(win).freeze,
       :"skos:notation" => %(win).freeze,
       :"skos:prefLabel" => %(Writer of introduction).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :wit,
       label: "Witness".freeze,
       :"mads:authoritativeLabel" => %(Witness).freeze,
@@ -2141,23 +2141,23 @@ module RDF::Vocab
       :"skos:notation" => %(wit).freeze,
       :"skos:prefLabel" => %(Witness).freeze,
       subPropertyOf: "marcrelators:role".freeze,
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :wpr,
       label: "Writer of preface".freeze,
       :"mads:authoritativeLabel" => %(Writer of preface).freeze,
       :"mads:code" => %(wpr).freeze,
       :"skos:notation" => %(wpr).freeze,
       :"skos:prefLabel" => %(Writer of preface).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
     property :wst,
       label: "Writer of supplementary textual content".freeze,
       :"mads:authoritativeLabel" => %(Writer of supplementary textual content).freeze,
       :"mads:code" => %(wst).freeze,
       :"skos:notation" => %(wst).freeze,
       :"skos:prefLabel" => %(Writer of supplementary textual content).freeze,
-      subPropertyOf: ["marcrelators:role".freeze, "dc11:contributor".freeze],
-      type: ["skos:Concept".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "mads:Authority".freeze]
+      subPropertyOf: ["dc11:contributor".freeze, "marcrelators:role".freeze],
+      type: ["mads:Authority".freeze, "mads:Topic".freeze, "owl:ObjectProperty".freeze, "skos:Concept".freeze]
 
     # Extra definitions
     term :collection_BIBFRAMEInstance,

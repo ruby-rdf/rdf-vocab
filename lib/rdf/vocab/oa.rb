@@ -458,55 +458,55 @@ An Annotation is considered to be a set of connected resources, typically includ
       label: "bookmarking".freeze,
       :"skos:inScheme" => %(oa:motivationScheme).freeze,
       :"skos:prefLabel" => %(bookmarking).freeze,
-      type: ["owl:NamedIndividual".freeze, "oa:Motivation".freeze]
+      type: ["oa:Motivation".freeze, "owl:NamedIndividual".freeze]
     term :classifying,
       comment: %(The motivation that represents the assignment of a classification type, typically from a controlled vocabulary, to the target resource\(s\). For example to classify an Image resource as a Portrait.).freeze,
       label: "classifying".freeze,
       :"skos:inScheme" => %(oa:motivationScheme).freeze,
       :"skos:prefLabel" => %(classifying).freeze,
-      type: ["owl:NamedIndividual".freeze, "oa:Motivation".freeze]
+      type: ["oa:Motivation".freeze, "owl:NamedIndividual".freeze]
     term :commenting,
       comment: %(The motivation that represents a commentary about or review of the target resource\(s\). For example to provide a commentary about a particular PDF.).freeze,
       label: "commenting".freeze,
       :"skos:inScheme" => %(oa:motivationScheme).freeze,
       :"skos:prefLabel" => %(commenting).freeze,
-      type: ["owl:NamedIndividual".freeze, "oa:Motivation".freeze]
+      type: ["oa:Motivation".freeze, "owl:NamedIndividual".freeze]
     term :describing,
       comment: %(The motivation that represents a description of the target resource\(s\), as opposed to a comment about them. For example describing the above PDF's contents, rather than commenting on their accuracy.).freeze,
       label: "describing".freeze,
       :"skos:inScheme" => %(oa:motivationScheme).freeze,
       :"skos:prefLabel" => %(describing).freeze,
-      type: ["owl:NamedIndividual".freeze, "oa:Motivation".freeze]
+      type: ["oa:Motivation".freeze, "owl:NamedIndividual".freeze]
     term :editing,
       comment: %(The motivation that represents a request for a modification or edit to the target resource. For example, an Annotation that requests a typo to be corrected.).freeze,
       label: "editing".freeze,
       :"skos:inScheme" => %(oa:motivationScheme).freeze,
       :"skos:prefLabel" => %(editing).freeze,
-      type: ["owl:NamedIndividual".freeze, "oa:Motivation".freeze]
+      type: ["oa:Motivation".freeze, "owl:NamedIndividual".freeze]
     term :highlighting,
       comment: %(The motivation that represents a highlighted section of the target resource or segment. For example to draw attention to the selected text that the annotator disagrees with. A Highlight may or may not have a Body resource).freeze,
       label: "highlighting".freeze,
       :"skos:inScheme" => %(oa:motivationScheme).freeze,
       :"skos:prefLabel" => %(highlighting).freeze,
-      type: ["owl:NamedIndividual".freeze, "oa:Motivation".freeze]
+      type: ["oa:Motivation".freeze, "owl:NamedIndividual".freeze]
     term :identifying,
       comment: %(The motivation that represents the assignment of an identity to the target resource\(s\). For example, annotating the name of a city in a string of text with the URI that identifies it.).freeze,
       label: "identifying".freeze,
       :"skos:inScheme" => %(oa:motivationScheme).freeze,
       :"skos:prefLabel" => %(identifying).freeze,
-      type: ["owl:NamedIndividual".freeze, "oa:Motivation".freeze]
+      type: ["oa:Motivation".freeze, "owl:NamedIndividual".freeze]
     term :linking,
       comment: %(The motivation that represents an untyped link to a resource related to the target.).freeze,
       label: "linking".freeze,
       :"skos:inScheme" => %(oa:motivationScheme).freeze,
       :"skos:prefLabel" => %(linking).freeze,
-      type: ["owl:NamedIndividual".freeze, "oa:Motivation".freeze]
+      type: ["oa:Motivation".freeze, "owl:NamedIndividual".freeze]
     term :moderating,
       comment: %(The motivation that represents an assignment of value or quality to the target resource\(s\). For example annotating an Annotation to moderate it up in a trust network or threaded discussion.).freeze,
       label: "moderating".freeze,
       :"skos:inScheme" => %(oa:motivationScheme).freeze,
       :"skos:prefLabel" => %(moderating).freeze,
-      type: ["owl:NamedIndividual".freeze, "oa:Motivation".freeze]
+      type: ["oa:Motivation".freeze, "owl:NamedIndividual".freeze]
     term :motivationScheme,
       comment: %(The concept scheme for Open Annotation Motivations).freeze,
       label: "motivationScheme".freeze,
@@ -516,18 +516,18 @@ An Annotation is considered to be a set of connected resources, typically includ
       label: "questioning".freeze,
       :"skos:inScheme" => %(oa:motivationScheme).freeze,
       :"skos:prefLabel" => %(questioning).freeze,
-      type: ["owl:NamedIndividual".freeze, "oa:Motivation".freeze]
+      type: ["oa:Motivation".freeze, "owl:NamedIndividual".freeze]
     term :replying,
       comment: %(The motivation that represents a reply to a previous statement, either an Annotation or another resource. For example providing the assistance requested in the above.).freeze,
       label: "replying".freeze,
       :"skos:inScheme" => %(oa:motivationScheme).freeze,
       :"skos:prefLabel" => %(replying).freeze,
-      type: ["owl:NamedIndividual".freeze, "oa:Motivation".freeze]
+      type: ["oa:Motivation".freeze, "owl:NamedIndividual".freeze]
     term :tagging,
       comment: %(The motivation that represents adding a Tag on the target resource\(s\). One or more of the bodies of the annotation should be typed as a oa:Tag or oa:SemanticTag.).freeze,
       label: "tagging".freeze,
       :"skos:inScheme" => %(oa:motivationScheme).freeze,
       :"skos:prefLabel" => %(tagging).freeze,
-      type: ["owl:NamedIndividual".freeze, "oa:Motivation".freeze]
+      type: ["oa:Motivation".freeze, "owl:NamedIndividual".freeze]
   end
 end

@@ -585,7 +585,7 @@ module RDF::Vocab
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nao#userVisible" => %(false).freeze,
       label: "hasHash".freeze,
       range: "nfo:FileHash".freeze,
-      type: ["rdf:Property".freeze, "http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#DefiningProperty".freeze]
+      type: ["http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#DefiningProperty".freeze, "rdf:Property".freeze]
     property :hasMediaFileListEntry,
       comment: %(This property is intended to point to an RDF list of MediaFiles.).freeze,
       domain: "nfo:MediaList".freeze,

@@ -85,7 +85,7 @@ module RDF::Vocab
       label: "access URL".freeze,
       range: "rdfs:Resource".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/TR/vocab-dcat/).freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :byteSize,
       comment: %(The size of a distribution in bytes.).freeze,
       domain: "dcat:Distribution".freeze,
@@ -94,7 +94,7 @@ module RDF::Vocab
       label: "byte size".freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/TR/vocab-dcat/).freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :bytes,
       comment: %(describe size of resource in bytes. This term has been deprecated).freeze,
       domain: "dcat:Distribution".freeze,
@@ -102,14 +102,14 @@ module RDF::Vocab
       :"owl:deprecated" => %(true).freeze,
       range: "xsd:integer".freeze,
       :"rdfs:isDefinedBy" => %(dcat:).freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :contactPoint,
       comment: %(Links a dataset to relevant contact information which is provided using VCard.).freeze,
       domain: "dcat:Dataset".freeze,
       label: "contact point".freeze,
       range: "vcard:Kind".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/TR/vocab-dcat/).freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :dataDictionary,
       comment: %(links a dataset to a dictionary that helps interpreting the data. This term has been deprecated).freeze,
       domain: "dcat:Dataset".freeze,
@@ -131,14 +131,14 @@ module RDF::Vocab
       range: "dcat:Dataset".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/TR/vocab-dcat/).freeze,
       subPropertyOf: "dc:hasPart".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :distribution,
       comment: %(Connects a dataset to one of its available distributions.).freeze,
       domain: "dcat:Dataset".freeze,
       label: "distribution".freeze,
       range: "dcat:Distribution".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/TR/vocab-dcat/).freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :downloadURL,
       comment: %(This is a direct link to a downloadable file in a given format. E.g. CSV file or RDF file. The 
           format is described by the distribution's dc:format and/or dcat:mediaType).freeze,
@@ -147,7 +147,7 @@ module RDF::Vocab
       label: "download URL".freeze,
       range: "rdfs:Resource".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/TR/vocab-dcat/).freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :granularity,
       comment: %(describes the level of granularity of data in a dataset. The granularity can be in time, place etc. This term has been deprecated).freeze,
       domain: "dcat:Dataset".freeze,
@@ -162,7 +162,7 @@ module RDF::Vocab
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/TR/vocab-dcat/).freeze,
       subPropertyOf: "dc:subject".freeze,
-      type: ["rdf:Property".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :landingPage,
       comment: %(A Web page that can be navigated to in a Web browser to gain access to the dataset, its distributions and/or additional information.).freeze,
       domain: "dcat:Dataset".freeze,
@@ -172,7 +172,7 @@ module RDF::Vocab
       range: "foaf:Document".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/TR/vocab-dcat/).freeze,
       subPropertyOf: "foaf:page".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :mediaType,
       comment: %(This property SHOULD be used when the media type of the distribution is defined 
           in IANA, otherwise dct:format MAY be used with different values.).freeze,
@@ -181,14 +181,14 @@ module RDF::Vocab
       range: "dc:MediaTypeOrExtent".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/TR/vocab-dcat/).freeze,
       subPropertyOf: "dc:format".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :record,
       comment: %(Links a catalog to its records.).freeze,
       domain: "dcat:Catalog".freeze,
       label: "record".freeze,
       range: "dcat:CatalogRecord".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/TR/vocab-dcat/).freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :size,
       comment: %(the size of a distribution. This term has been deprecated).freeze,
       domain: "dcat:Distribution".freeze,
@@ -206,13 +206,13 @@ module RDF::Vocab
       range: "skos:Concept".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/TR/vocab-dcat/).freeze,
       subPropertyOf: "dc:subject".freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :themeTaxonomy,
       comment: %(The knowledge organization system \(KOS\) used to classify catalog's datasets.).freeze,
       domain: "dcat:Catalog".freeze,
       label: "theme taxonomy".freeze,
       range: "skos:ConceptScheme".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/TR/vocab-dcat/).freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
   end
 end

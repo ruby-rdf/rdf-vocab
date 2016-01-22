@@ -17,7 +17,7 @@ module RDF::Vocab
       :"dc:issued" => %(2008-01-14).freeze,
       label: "Agent".freeze,
       :"rdfs:isDefinedBy" => %(dc:).freeze,
-      type: ["rdfs:Class".freeze, "dc:AgentClass".freeze]
+      type: ["dc:AgentClass".freeze, "rdfs:Class".freeze]
     term :AgentClass,
       comment: %(A group of agents.).freeze,
       :"dc:description" => %(Examples of Agent Class include groups seen as classes, such as students, women, charities, lecturers.).freeze,
@@ -189,7 +189,7 @@ module RDF::Vocab
       :"dc:modified" => %(2008-01-14).freeze,
       label: "Abstract".freeze,
       :"rdfs:isDefinedBy" => %(dc:).freeze,
-      subPropertyOf: ["dc:description".freeze, "dc11:description".freeze],
+      subPropertyOf: ["dc11:description".freeze, "dc:description".freeze],
       type: "rdf:Property".freeze
     property :accessRights,
       comment: %(Information about who can access the resource or an indication of its security status.).freeze,
@@ -200,7 +200,7 @@ module RDF::Vocab
       label: "Access Rights".freeze,
       range: "dc:RightsStatement".freeze,
       :"rdfs:isDefinedBy" => %(dc:).freeze,
-      subPropertyOf: ["dc:rights".freeze, "dc11:rights".freeze],
+      subPropertyOf: ["dc11:rights".freeze, "dc:rights".freeze],
       type: "rdf:Property".freeze
     property :accrualMethod,
       comment: %(The method by which items are added to a collection.).freeze,
@@ -241,7 +241,7 @@ module RDF::Vocab
       label: "Alternative Title".freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(dc:).freeze,
-      subPropertyOf: ["dc:title".freeze, "dc11:title".freeze],
+      subPropertyOf: ["dc11:title".freeze, "dc:title".freeze],
       type: "rdf:Property".freeze
     property :audience,
       comment: %(A class of entity for whom the resource is intended or useful.).freeze,
@@ -260,7 +260,7 @@ module RDF::Vocab
       label: "Date Available".freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(dc:).freeze,
-      subPropertyOf: ["dc:date".freeze, "dc11:date".freeze],
+      subPropertyOf: ["dc11:date".freeze, "dc:date".freeze],
       type: "rdf:Property".freeze
     property :bibliographicCitation,
       comment: %(A bibliographic reference for the resource.).freeze,
@@ -272,7 +272,7 @@ module RDF::Vocab
       label: "Bibliographic Citation".freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(dc:).freeze,
-      subPropertyOf: ["dc:identifier".freeze, "dc11:identifier".freeze],
+      subPropertyOf: ["dc11:identifier".freeze, "dc:identifier".freeze],
       type: "rdf:Property".freeze
     property :conformsTo,
       comment: %(An established standard to which the described resource conforms.).freeze,
@@ -314,7 +314,7 @@ module RDF::Vocab
       label: "Date Created".freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(dc:).freeze,
-      subPropertyOf: ["dc:date".freeze, "dc11:date".freeze],
+      subPropertyOf: ["dc11:date".freeze, "dc:date".freeze],
       type: "rdf:Property".freeze
     property :creator,
       comment: %(An entity primarily responsible for making the resource.).freeze,
@@ -326,7 +326,7 @@ module RDF::Vocab
       :"owl:equivalentProperty" => %(foaf:maker).freeze,
       range: "dc:Agent".freeze,
       :"rdfs:isDefinedBy" => %(dc:).freeze,
-      subPropertyOf: ["dc:contributor".freeze, "dc11:creator".freeze],
+      subPropertyOf: ["dc11:creator".freeze, "dc:contributor".freeze],
       type: "rdf:Property".freeze
     property :date,
       comment: %(A point or period of time associated with an event in the lifecycle of the resource.).freeze,
@@ -348,7 +348,7 @@ module RDF::Vocab
       label: "Date Accepted".freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(dc:).freeze,
-      subPropertyOf: ["dc:date".freeze, "dc11:date".freeze],
+      subPropertyOf: ["dc11:date".freeze, "dc:date".freeze],
       type: "rdf:Property".freeze
     property :dateCopyrighted,
       comment: %(Date of copyright.).freeze,
@@ -358,7 +358,7 @@ module RDF::Vocab
       label: "Date Copyrighted".freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(dc:).freeze,
-      subPropertyOf: ["dc:date".freeze, "dc11:date".freeze],
+      subPropertyOf: ["dc11:date".freeze, "dc:date".freeze],
       type: "rdf:Property".freeze
     property :dateSubmitted,
       comment: %(Date of submission of the resource.).freeze,
@@ -369,7 +369,7 @@ module RDF::Vocab
       label: "Date Submitted".freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(dc:).freeze,
-      subPropertyOf: ["dc:date".freeze, "dc11:date".freeze],
+      subPropertyOf: ["dc11:date".freeze, "dc:date".freeze],
       type: "rdf:Property".freeze
     property :description,
       comment: %(An account of the resource.).freeze,
@@ -532,7 +532,7 @@ module RDF::Vocab
       label: "Date Issued".freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(dc:).freeze,
-      subPropertyOf: ["dc:date".freeze, "dc11:date".freeze],
+      subPropertyOf: ["dc11:date".freeze, "dc:date".freeze],
       type: "rdf:Property".freeze
     property :language,
       comment: %(A language of the resource.).freeze,
@@ -553,7 +553,7 @@ module RDF::Vocab
       label: "License".freeze,
       range: "dc:LicenseDocument".freeze,
       :"rdfs:isDefinedBy" => %(dc:).freeze,
-      subPropertyOf: ["dc:rights".freeze, "dc11:rights".freeze],
+      subPropertyOf: ["dc11:rights".freeze, "dc:rights".freeze],
       type: "rdf:Property".freeze
     property :mediator,
       comment: %(An entity that mediates access to the resource and for whom the resource is intended or useful.).freeze,
@@ -585,7 +585,7 @@ module RDF::Vocab
       label: "Date Modified".freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(dc:).freeze,
-      subPropertyOf: ["dc:date".freeze, "dc11:date".freeze],
+      subPropertyOf: ["dc11:date".freeze, "dc:date".freeze],
       type: "rdf:Property".freeze
     property :provenance,
       comment: %(A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation.).freeze,
@@ -708,7 +708,7 @@ module RDF::Vocab
       :"dc:modified" => %(2008-01-14).freeze,
       label: "Table Of Contents".freeze,
       :"rdfs:isDefinedBy" => %(dc:).freeze,
-      subPropertyOf: ["dc:description".freeze, "dc11:description".freeze],
+      subPropertyOf: ["dc11:description".freeze, "dc:description".freeze],
       type: "rdf:Property".freeze
     property :temporal,
       comment: %(Temporal characteristics of the resource.).freeze,
@@ -749,7 +749,7 @@ module RDF::Vocab
       label: "Date Valid".freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(dc:).freeze,
-      subPropertyOf: ["dc:date".freeze, "dc11:date".freeze],
+      subPropertyOf: ["dc11:date".freeze, "dc:date".freeze],
       type: "rdf:Property".freeze
 
     # Datatype definitions

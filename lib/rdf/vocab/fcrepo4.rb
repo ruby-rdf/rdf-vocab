@@ -18,7 +18,7 @@ module RDF::Vocab
     term :Binary,
       comment: %(A bitstream, with no further data properties.).freeze,
       label: "binary".freeze,
-      :"owl:disjointWith" => [%(fcrepo4:NonRdfSourceDescription).freeze, %(fcrepo4:Container).freeze],
+      :"owl:disjointWith" => [%(fcrepo4:Container).freeze, %(fcrepo4:NonRdfSourceDescription).freeze],
       subClassOf: "fcrepo4:Resource".freeze,
       type: "owl:Class".freeze
     term :Configuration,

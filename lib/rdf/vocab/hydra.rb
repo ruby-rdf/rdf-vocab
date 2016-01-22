@@ -21,8 +21,8 @@ module RDF::Vocab
       comment: %(The class of Hydra classes. Hydra classes and their instances are dereferenceable resources.).freeze,
       label: "Hydra Class".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
-      subClassOf: ["rdfs:Class".freeze, "hydra:Resource".freeze],
-      type: ["rdfs:Class".freeze, "hydra:Resource".freeze],
+      subClassOf: ["hydra:Resource".freeze, "rdfs:Class".freeze],
+      type: ["hydra:Resource".freeze, "rdfs:Class".freeze],
       :"vs:term_status" => %(testing).freeze
     term :Collection,
       comment: %(A collection holding references to a number of related resources.).freeze,
@@ -70,7 +70,7 @@ module RDF::Vocab
       comment: %(The class of properties representing links.).freeze,
       label: "Link".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
-      subClassOf: ["rdf:Property".freeze, "hydra:Resource".freeze],
+      subClassOf: ["hydra:Resource".freeze, "rdf:Property".freeze],
       type: "hydra:Class".freeze,
       :"vs:term_status" => %(testing).freeze
     term :Operation,
@@ -119,7 +119,7 @@ module RDF::Vocab
       comment: %(A templated link.).freeze,
       label: "Templated Link".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
-      subClassOf: ["rdf:Property".freeze, "hydra:Resource".freeze],
+      subClassOf: ["hydra:Resource".freeze, "rdf:Property".freeze],
       type: "hydra:Class".freeze,
       :"vs:term_status" => %(testing).freeze
 

@@ -179,7 +179,7 @@ module RDF::Vocab
       label: "homepage".freeze,
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       subPropertyOf: "foaf:homepage".freeze,
-      type: ["rdf:Property".freeze, "owl:InverseFunctionalProperty".freeze]
+      type: ["owl:InverseFunctionalProperty".freeze, "rdf:Property".freeze]
     property :implements,
       comment: %(A specification that a project implements. Could be a standard, API or legally defined level of conformance.).freeze,
       domain: "doap:Project".freeze,
@@ -237,7 +237,7 @@ module RDF::Vocab
       label: "old homepage".freeze,
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       subPropertyOf: "foaf:homepage".freeze,
-      type: ["rdf:Property".freeze, "owl:InverseFunctionalProperty".freeze]
+      type: ["owl:InverseFunctionalProperty".freeze, "rdf:Property".freeze]
     property :os,
       comment: %(Operating system that a project is limited to.  Omit this property if the project is not OS-specific.).freeze,
       domain: ["doap:Project".freeze, "doap:Version".freeze],
@@ -335,7 +335,7 @@ module RDF::Vocab
       :"dc11:rights" => %(Copyright © 2004-2009 Edd Dumbill).freeze,
       :"dc11:title" => %(Description of a Project \(DOAP\) vocabulary).freeze,
       label: "".freeze,
-      :"owl:imports" => %(foaf).freeze,
+      :"owl:imports" => %(foaf:).freeze,
       type: "owl:Ontology".freeze
   end
 end

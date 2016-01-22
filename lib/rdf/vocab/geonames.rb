@@ -27,9 +27,9 @@ module RDF::Vocab
     term :Feature,
       comment: %(A geographical feature).freeze,
       label: "Feature".freeze,
-      :"owl:equivalentClass" => [%(http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl#GeographicFeature).freeze, %(http://geovocab.org/spatial#Feature).freeze],
+      :"owl:equivalentClass" => [%(http://geovocab.org/spatial#Feature).freeze, %(http://www.mindswap.org/2003/owl/geo/geoFeatures20040307.owl#GeographicFeature).freeze],
       :"skos:historyNote" => %(Modified in version 3.1 : The cardinality constraints on feature code, feature class are relaxed on this class, and put on the specific subclass Geonames Feature. This class and attached properties can therefore be used for features not necessarily identified in the Geoanmes data base).freeze,
-      subClassOf: ["schema:Place".freeze, "geo:SpatialThing".freeze],
+      subClassOf: ["geo:SpatialThing".freeze, "schema:Place".freeze],
       type: "owl:Class".freeze
     term :GeonamesFeature,
       comment: %(A feature described in geonames database, uniquely defined by its geonames identifier).freeze,
@@ -162,7 +162,7 @@ module RDF::Vocab
       domain: "geonames:Feature".freeze,
       label: "neighbour".freeze,
       range: "geonames:Feature".freeze,
-      type: ["owl:SymmetricProperty".freeze, "owl:ObjectProperty".freeze]
+      type: ["owl:ObjectProperty".freeze, "owl:SymmetricProperty".freeze]
     property :neighbouringFeatures,
       comment: %(Links to an RDF document containing the descriptions of neighbouring features. Applies when the feature has definite boarders.).freeze,
       domain: "geonames:Feature".freeze,

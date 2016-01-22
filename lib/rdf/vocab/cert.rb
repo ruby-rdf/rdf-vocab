@@ -4,7 +4,7 @@
 require 'rdf'
 module RDF::Vocab
   # @!parse
-  #   # Vocabulary for <http://www.w3.org/ns/auth/cert#>
+  #   # Vocabulary for <http>
   #   class CERT < RDF::StrictVocabulary
   #   end
   class CERT < RDF::StrictVocabulary("http://www.w3.org/ns/auth/cert#")
@@ -113,16 +113,16 @@ module RDF::Vocab
          It turns out that this relation is unintuitive to write out and to name.
          One should instead use cert:key
     ).freeze,
-      type: ["rdf:Property".freeze, "owl:ObjectProperty".freeze],
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze],
       :"vs:term_status" => %(archaic).freeze
     property :key,
       comment: %(relates an agent to a key - most often the public key.).freeze,
       domain: "foaf:Agent".freeze,
       label: "key".freeze,
       :"owl:inverseOf" => %(cert:identity).freeze,
-      range: ["cert:PublicKey".freeze, "cert:Key".freeze],
+      range: ["cert:Key".freeze, "cert:PublicKey".freeze],
       :"rdfs:isDefinedBy" => %(cert:).freeze,
-      type: ["rdf:Property".freeze, "owl:InverseFunctionalProperty".freeze, "owl:ObjectProperty".freeze],
+      type: ["owl:InverseFunctionalProperty".freeze, "owl:ObjectProperty".freeze, "rdf:Property".freeze],
       :"vs:term_status" => %(unstable).freeze
     property :modulus,
       comment: %(    
@@ -137,7 +137,7 @@ module RDF::Vocab
  <p>The only difference is that the octet string is then encoded using either xsd:base64Binary or xsd:hexBinary. Currently for all usages of this relation, the xsd:hexBinary datatype should be used until the SPARQL working group specifies specifies in its <a href="http://www.w3.org/TR/sparql11-entailment/#DEntRegime">D-Entailment</a> that those two types are equivalent.</p>
  <p>It would have been better had there been a hexInteger datatype that was standard and supported by all tools.</p>
    ).freeze,
-      domain: ["cert:RSAKey".freeze],
+      domain: "cert:RSAKey".freeze,
       label: "modulus".freeze,
       range: ["xsd:base64Binary".freeze, "xsd:hexBinary".freeze],
       :"rdfs:isDefinedBy" => %(cert:).freeze,
@@ -242,7 +242,7 @@ module RDF::Vocab
       :"dc:created" => %(2008-11-13).freeze,
       :"foaf:maker" => %(http://bblfish.net/people/henry/card#me).freeze,
       label: "Ontology for Certificates and crypto stuff.".freeze,
-      :"rdfs:seeAlso" => [%(http://lists.foaf-project.org/mailman/listinfo/foaf-protocols).freeze, %(http://www.w3.org/ns/auth/rsa).freeze, %(http://www.w3.org/ns/auth/X509Uml.svg).freeze],
+      :"rdfs:seeAlso" => [%(http://lists.foaf-project.org/mailman/listinfo/foaf-protocols).freeze, %(http://www.w3.org/ns/auth/X509Uml.svg).freeze, %(http://www.w3.org/ns/auth/rsa).freeze],
       type: "owl:Ontology".freeze,
       :"vs:term_status" => %(unstable).freeze
   end

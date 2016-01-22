@@ -48,6 +48,7 @@ RDF::Vocab::VOCABS.each do |id, v|
       loader.module_name = v.fetch(:module_name, "RDF::Vocab")
       loader.strict = v.fetch(:strict, true)
       loader.extra = v[:extra] if v[:extra]
+      loader.patch = v[:patch] if v[:patch]
       loader.output = out
       loader.run
       out.rewind

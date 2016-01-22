@@ -13,13 +13,13 @@ module RDF::Vocab
     term :Community,
       comment: %(Community is a high-level concept that defines an online community and what it consists of.).freeze,
       label: "Community".freeze,
-      :"owl:disjointWith" => [%(sioc:UserAccount).freeze, %(sioc:Role).freeze, %(sioc:Item).freeze],
+      :"owl:disjointWith" => [%(sioc:Item).freeze, %(sioc:Role).freeze, %(sioc:UserAccount).freeze],
       :"rdfs:isDefinedBy" => %(sioc:).freeze,
       type: "owl:Class".freeze
     term :Container,
       comment: %(An area in which content Items are contained.).freeze,
       label: "Container".freeze,
-      :"owl:disjointWith" => [%(sioc:UserAccount).freeze, %(sioc:Role).freeze, %(sioc:Item).freeze, %(sioc:Usergroup).freeze],
+      :"owl:disjointWith" => [%(sioc:Item).freeze, %(sioc:Role).freeze, %(sioc:UserAccount).freeze, %(sioc:Usergroup).freeze],
       :"rdfs:isDefinedBy" => %(sioc:).freeze,
       type: "owl:Class".freeze
     term :Forum,
@@ -31,19 +31,19 @@ module RDF::Vocab
     term :Item,
       comment: %(An Item is something which can be in a Container.).freeze,
       label: "Item".freeze,
-      :"owl:disjointWith" => [%(sioc:UserAccount).freeze, %(sioc:Role).freeze, %(sioc:Container).freeze, %(sioc:Space).freeze, %(sioc:Usergroup).freeze],
+      :"owl:disjointWith" => [%(sioc:Container).freeze, %(sioc:Role).freeze, %(sioc:Space).freeze, %(sioc:UserAccount).freeze, %(sioc:Usergroup).freeze],
       :"rdfs:isDefinedBy" => %(sioc:).freeze,
       type: "owl:Class".freeze
     term :Post,
       comment: %(An article or message that can be posted to a Forum.).freeze,
       label: "Post".freeze,
       :"rdfs:isDefinedBy" => %(sioc:).freeze,
-      subClassOf: ["sioc:Item".freeze, "foaf:Document".freeze],
+      subClassOf: ["foaf:Document".freeze, "sioc:Item".freeze],
       type: "owl:Class".freeze
     term :Role,
       comment: %(A Role is a function of a UserAccount within a scope of a particular Forum, Site, etc.).freeze,
       label: "Role".freeze,
-      :"owl:disjointWith" => [%(sioc:UserAccount).freeze, %(sioc:Container).freeze, %(sioc:Space).freeze, %(sioc:Usergroup).freeze, %(sioc:Item).freeze],
+      :"owl:disjointWith" => [%(sioc:Container).freeze, %(sioc:Item).freeze, %(sioc:Space).freeze, %(sioc:UserAccount).freeze, %(sioc:Usergroup).freeze],
       :"rdfs:isDefinedBy" => %(sioc:).freeze,
       type: "owl:Class".freeze
     term :Site,
@@ -55,7 +55,7 @@ module RDF::Vocab
     term :Space,
       comment: %(A Space is a place where data resides, e.g. on a website, desktop, fileshare, etc.).freeze,
       label: "Space".freeze,
-      :"owl:disjointWith" => [%(sioc:UserAccount).freeze, %(sioc:Role).freeze, %(sioc:Item).freeze, %(sioc:Usergroup).freeze],
+      :"owl:disjointWith" => [%(sioc:Item).freeze, %(sioc:Role).freeze, %(sioc:UserAccount).freeze, %(sioc:Usergroup).freeze],
       :"rdfs:isDefinedBy" => %(sioc:).freeze,
       type: "owl:Class".freeze
     term :Thread,
@@ -67,7 +67,7 @@ module RDF::Vocab
     term :User,
       comment: %(UserAccount is now preferred. This is a deprecated class for a User in an online community site.).freeze,
       label: "User".freeze,
-      :"owl:disjointWith" => [%(sioc:Role).freeze, %(sioc:Container).freeze, %(sioc:Space).freeze, %(sioc:Usergroup).freeze, %(sioc:Item).freeze],
+      :"owl:disjointWith" => [%(sioc:Container).freeze, %(sioc:Item).freeze, %(sioc:Role).freeze, %(sioc:Space).freeze, %(sioc:Usergroup).freeze],
       :"owl:equivalentClass" => %(sioc:UserAccount).freeze,
       :"owl:versionInfo" => %(This class is deprecated. Use sioc:UserAccount from the SIOC ontology instead.).freeze,
       :"rdfs:isDefinedBy" => %(sioc:).freeze,
@@ -76,14 +76,14 @@ module RDF::Vocab
     term :UserAccount,
       comment: %(A user account in an online community site.).freeze,
       label: "User Account".freeze,
-      :"owl:disjointWith" => [%(sioc:Role).freeze, %(sioc:Container).freeze, %(sioc:Space).freeze, %(sioc:Usergroup).freeze, %(sioc:Item).freeze],
+      :"owl:disjointWith" => [%(sioc:Container).freeze, %(sioc:Item).freeze, %(sioc:Role).freeze, %(sioc:Space).freeze, %(sioc:Usergroup).freeze],
       :"rdfs:isDefinedBy" => %(sioc:).freeze,
       subClassOf: "foaf:OnlineAccount".freeze,
       type: "owl:Class".freeze
     term :Usergroup,
       comment: %(A set of UserAccounts whose owners have a common purpose or interest. Can be used for access control purposes.).freeze,
       label: "Usergroup".freeze,
-      :"owl:disjointWith" => [%(sioc:UserAccount).freeze, %(sioc:Role).freeze, %(sioc:Container).freeze, %(sioc:Space).freeze, %(sioc:Item).freeze],
+      :"owl:disjointWith" => [%(sioc:Container).freeze, %(sioc:Item).freeze, %(sioc:Role).freeze, %(sioc:Space).freeze, %(sioc:UserAccount).freeze],
       :"rdfs:isDefinedBy" => %(sioc:).freeze,
       type: "owl:Class".freeze
 
@@ -151,7 +151,7 @@ module RDF::Vocab
       :"owl:versionInfo" => %(This property is deprecated. Use content:encoded from the RSS 1.0 content module instead.).freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(sioc:).freeze,
-      type: ["owl:DeprecatedProperty".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "owl:DeprecatedProperty".freeze]
     property :created_at,
       comment: %(When this was created, in ISO 8601 format.).freeze,
       domain: "sioc:Post".freeze,
@@ -159,7 +159,7 @@ module RDF::Vocab
       :"owl:versionInfo" => %(This property is deprecated. Use dcterms:created from the Dublin Core ontology instead.).freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(sioc:).freeze,
-      type: ["owl:DeprecatedProperty".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "owl:DeprecatedProperty".freeze]
     property :creator_of,
       comment: %(A resource that the UserAccount is a creator of.).freeze,
       domain: "sioc:UserAccount".freeze,
@@ -174,7 +174,7 @@ module RDF::Vocab
       :"owl:versionInfo" => %(This property is deprecated. Use sioc:content or other methods \(AtomOwl, content:encoded from RSS 1.0, etc.\) instead.).freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(sioc:).freeze,
-      type: ["owl:DeprecatedProperty".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "owl:DeprecatedProperty".freeze]
     property :earlier_version,
       comment: %(Links to a previous \(older\) revision of this Item or Post.).freeze,
       domain: "sioc:Item".freeze,
@@ -215,7 +215,7 @@ module RDF::Vocab
       :"owl:versionInfo" => %(This property is deprecated. Use foaf:name or foaf:firstName from the FOAF vocabulary instead.).freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(sioc:).freeze,
-      type: ["owl:DeprecatedProperty".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "owl:DeprecatedProperty".freeze]
     property :follows,
       comment: %(Indicates that one UserAccount follows another UserAccount \(e.g. for microblog posts or other content item updates\).).freeze,
       domain: "sioc:UserAccount".freeze,
@@ -412,7 +412,7 @@ module RDF::Vocab
       :"owl:versionInfo" => %(This property is deprecated. Use foaf:name or foaf:surname from the FOAF vocabulary instead.).freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(sioc:).freeze,
-      type: ["owl:DeprecatedProperty".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "owl:DeprecatedProperty".freeze]
     property :last_reply_date,
       comment: %(The date and time of the last reply Post or Comment, which could be associated with a starter Item or Post or with a Thread, and expressed in ISO 8601 format.).freeze,
       label: "last reply date".freeze,
@@ -469,7 +469,7 @@ module RDF::Vocab
       :"owl:versionInfo" => %(This property is deprecated. Use dcterms:modified from the Dublin Core ontology instead.).freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(sioc:).freeze,
-      type: ["owl:DeprecatedProperty".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "owl:DeprecatedProperty".freeze]
     property :modifier_of,
       comment: %(An Item that this UserAccount has modified.).freeze,
       domain: "sioc:UserAccount".freeze,
@@ -627,7 +627,7 @@ module RDF::Vocab
       :"owl:versionInfo" => %(This property is deprecated. Use dcterms:subject from the Dublin Core ontology for text keywords and sioc:topic if the subject can be represented by a URI instead.).freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(sioc:).freeze,
-      type: ["owl:DeprecatedProperty".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "owl:DeprecatedProperty".freeze]
     property :subscriber_of,
       comment: %(A Container that a UserAccount is subscribed to.).freeze,
       domain: "sioc:UserAccount".freeze,
@@ -644,7 +644,7 @@ module RDF::Vocab
       :"owl:versionInfo" => %(This property is deprecated. Use dcterms:title from the Dublin Core ontology instead.).freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(sioc:).freeze,
-      type: ["owl:DeprecatedProperty".freeze, "owl:DatatypeProperty".freeze]
+      type: ["owl:DatatypeProperty".freeze, "owl:DeprecatedProperty".freeze]
     property :topic,
       comment: %(A topic of interest, linking to the appropriate URI, e.g. in the Open Directory Project or of a SKOS category.).freeze,
       label: "topic".freeze,
