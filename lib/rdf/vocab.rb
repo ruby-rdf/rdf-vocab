@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'rdf'
 require 'rdf/vocabulary'
 require 'rdf/vocab/extensions'
@@ -14,23 +15,73 @@ module RDF
         extra: {hasAccompaniment: {type: "rdf:Property",label: "has accompaniment"}}
       },
       bibo:   {uri: "http://purl.org/ontology/bibo/"},
-      cc:     {uri: "http://creativecommons.org/ns#", alias: true},
-      cert:   {uri: "http://www.w3.org/ns/auth/cert#", alias: true},
-      cnt:    {uri: "http://www.w3.org/2011/content#"},
+      cc:     {uri: "http://creativecommons.org/ns#"},
+      cert:   {
+        uri: "http://www.w3.org/ns/auth/cert#",
+        patch: %{
+          @prefix cert: <http://www.w3.org/ns/auth/cert#> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          DeleteExisting {
+            cert:modulus rdfs:domain cert:DSAKey .
+            cert:privateExponent rdfs:domain cert:RSAPrivateKey .
+          } .
+          AddNew {
+            cert:privateExponent rdfs:domain cert:PrivateKey .
+          } .
+        }
+      },
+      cnt:    {
+        uri: "http://www.w3.org/2011/content#",
+        patch: %{
+          @prefix cnt: <http://www.w3.org/2011/content#> .
+          @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          DeleteExisting {
+            cnt:leadingMisc rdfs:range rdfs:XMLLiteral .
+            cnt:rest rdfs:range rdfs:XMLLiteral .
+          } .
+          AddNew {
+            cnt:leadingMisc rdfs:range rdf:XMLLiteral .
+            cnt:rest rdfs:range rdf:XMLLiteral .
+          } .
+        }
+      },
       crm:    {uri: "http://www.cidoc-crm.org/cidoc-crm/", source: "etc/crm.rdf"},
       datacite: {
         uri: "http://purl.org/spar/datacite/",
         source: "http://eelst.cs.unibo.it/apps/LODE/source?url=http://purl.org/spar/datacite",
         class_name: "DataCite"
       },
-      dc:     {uri: "http://purl.org/dc/terms/", alias: true},
-      dc11:   {uri: "http://purl.org/dc/elements/1.1/", alias: true},
-      dcat:   {uri: "http://www.w3.org/ns/dcat#", alias: true},
+      dc:     {uri: "http://purl.org/dc/terms/"},
+      dc11:   {uri: "http://purl.org/dc/elements/1.1/"},
+      dcat:   {
+        uri: "http://www.w3.org/ns/dcat#",
+        patch: %{
+          @prefix dcat: <http://www.w3.org/ns/dcat#> .
+          @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          DeleteExisting {
+            dcat:landingPage rdfs:subPropertyOf foaf:Page .
+          } .
+          AddNew {
+            dcat:landingPage rdfs:subPropertyOf foaf:page .
+          } .
+        }
+      },
       dcmitype: {
           uri: "http://purl.org/dc/dcmitype/",
           class_name: "DCMIType"
       },
-      doap:   {uri: "http://usefulinc.com/ns/doap#", alias: true},
+      doap:   {
+        uri: "http://usefulinc.com/ns/doap#",
+        patch: %{
+          @prefix : <http://usefulinc.com/ns/doap#> .
+          @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+          @prefix owl: <http://www.w3.org/2002/07/owl#>.
+          DeleteExisting {: owl:imports foaf:index.rdf .} .
+          AddNew {: owl:imports foaf: .} .
+        }
+      },
       dwc: {
         uri: "http://rs.tdwg.org/dwc/terms/",
         source: "etc/dwcterms.rdf",
@@ -45,22 +96,38 @@ module RDF
         uri: "http://www.europeana.eu/schemas/edm/",
         source: "http://www.europeana.eu/schemas/edm/rdf/edm.owl"
       },
-      exif:   {uri: "http://www.w3.org/2003/12/exif/ns#", alias: true},
+      exif:   {
+        uri: "http://www.w3.org/2003/12/exif/ns#",
+        patch: %{
+          @prefix exif: <http://www.w3.org/2003/12/exif/ns#> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          DeleteExisting {
+            exif:subSecTime rdfs:subPropertyOf exif:subsecond .
+            exif:subSecTimeDigitized rdfs:subPropertyOf exif:subsecond .
+            exif:subSecTimeOriginal rdfs:subPropertyOf exif:subsecond .
+          } .
+          AddNew {
+            exif:subSecTime rdfs:subPropertyOf exif:subseconds .
+            exif:subSecTimeDigitized rdfs:subPropertyOf exif:subseconds .
+            exif:subSecTimeOriginal rdfs:subPropertyOf exif:subseconds .
+          } .
+        }
+      },
       fcrepo4: {
         uri: "http://fedora.info/definitions/v4/repository#",
         class_name: "Fcrepo4",
         source: "http://fedora.info/definitions/v4/2015/07/24/repository"
       },
-      foaf:   {uri: "http://xmlns.com/foaf/0.1/", alias: true},
-      geo:    {uri: "http://www.w3.org/2003/01/geo/wgs84_pos#", alias: true},
+      foaf:   {uri: "http://xmlns.com/foaf/0.1/"},
+      geo:    {uri: "http://www.w3.org/2003/01/geo/wgs84_pos#"},
       geonames: {
         uri: "http://www.geonames.org/ontology#"
       },
-      gr:     {uri: "http://purl.org/goodrelations/v1#", source: "http://www.heppnetz.de/ontologies/goodrelations/v1.owl", alias: true},
-      ht:     {uri: "http://www.w3.org/2011/http#", alias: true},
+      gr:     {uri: "http://purl.org/goodrelations/v1#", source: "http://www.heppnetz.de/ontologies/goodrelations/v1.owl"},
+      ht:     {uri: "http://www.w3.org/2011/http#"},
       hydra:  {uri: "http://www.w3.org/ns/hydra/core#"},
       iana:   {uri: "http://www.iana.org/assignments/relation/", source: File.expand_path("../../../etc/iana.ttl", __FILE__)},
-      ical:   {uri: "http://www.w3.org/2002/12/cal/icaltzd#", alias: true},
+      ical:   {uri: "http://www.w3.org/2002/12/cal/icaltzd#"},
       identifiers: {
         uri: "http://id.loc.gov/vocabulary/identifiers/",
         source: "http://id.loc.gov/vocabulary/identifiers.rdf",
@@ -79,26 +146,66 @@ module RDF
         class_name: "IIIF"
       },
       jsonld: {uri: "http://www.w3.org/ns/json-ld#"},
-      ldp:    {uri: "http://www.w3.org/ns/ldp#", strict: false},
+      ldp:    {
+        uri: "http://www.w3.org/ns/ldp#",
+        strict: false,
+        patch: %{
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+          @prefix owl: <http://www.w3.org/2002/07/owl#>.
+          @prefix : <http://www.w3.org/ns/ldp#>.
+          DeleteExisting {
+            :pageSortOrder rdfs:range rdf:Resource .
+            :Ascending a owl:Individual .
+            :Descending a owl:Individual .
+            :MemberSubject a owl:Individual .
+            :PreferContainment a owl:Individual .
+            :PreferEmptyContainer a owl:Individual .
+            :PreferMembership a owl:Individual .
+            :PreferMinimalContainer a owl:Individual .
+          } .
+          AddNew {
+            :pageSortOrder rdfs:range rdfs:Resource .
+            :Ascending a owl:NamedIndividual .
+            :Descending a owl:NamedIndividual .
+            :MemberSubject a owl:NamedIndividual .
+            :PreferContainment a owl:NamedIndividual .
+            :PreferEmptyContainer a owl:NamedIndividual .
+            :PreferMembership a owl:NamedIndividual .
+            :PreferMinimalContainer a owl:NamedIndividual .
+          } .
+        }
+      },
       lrmi:   {uri: "http://purl.org/dcx/lrmi-terms/", strict: false},
-      ma:     {uri: "http://www.w3.org/ns/ma-ont#", source: "http://www.w3.org/ns/ma-ont.rdf", strict: false, alias: true},
+      ma:     {uri: "http://www.w3.org/ns/ma-ont#", source: "http://www.w3.org/ns/ma-ont.rdf", strict: false},
       mads: {
         uri: "http://www.loc.gov/mads/rdf/v1#",
-        source: "http://www.loc.gov/standards/mads/rdf/v1.rdf"
+        source: "http://www.loc.gov/standards/mads/rdf/v1.rdf",
+        patch: %{
+          @prefix : <http://www.loc.gov/mads/rdf/v1#> .
+          @prefix owl: <http://www.w3.org/2002/07/owl#>.
+          DeleteExisting {:gender a owl:DataTypeProperty .} .
+          AddNew {:gender a owl:DatatypeProperty .} .
+        }
       },
       marc_relators: {
         uri: "http://id.loc.gov/vocabulary/relators/",
         source: "http://id.loc.gov/vocabulary/relators.rdf",
         class_name: "MARCRelators",
-        extra: {
-          role: {
-            label: "role",
-            type: "owl:ObjectProperty",
-            comment: "This property and its sub-properties are used to associate a Bibliographic Resource with a Resource that played a part in the lifecycle of the Bibliographic Resource.  It is the inverse of relators:roleIn."
-          }
+        patch: %{
+          @prefix marcrelators: <http://id.loc.gov/vocabulary/relators/> .
+          @prefix owl: <http://www.w3.org/2002/07/owl#>.
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          DeleteExisting {
+            marcrelators:lee rdfs:subPropertyOf marcrelators:lei .
+          } .
+          AddNew {
+            marcrelators:role a owl:ObjectProperty;
+               rdfs:comment "This property and its sub-properties are used to associate a Bibliographic Resource with a Resource that played a part in the lifecycle of the Bibliographic Resource.  It is the inverse of relators:roleIn.".
+          } .
         }
       },
-      mo:     {uri: "http://purl.org/ontology/mo/", strict: false, alias: true},
+      mo:     {uri: "http://purl.org/ontology/mo/", strict: false},
       mods: {
         uri: "http://www.loc.gov/mods/rdf/v1#",
         source: "http://www.loc.gov/standards/mods/modsrdf/v1/modsrdf.owl"
@@ -108,10 +215,11 @@ module RDF
         uri: "http://www.w3.org/ns/oa#",
         source: "http://www.openannotation.org/spec/core/20130208/oa.owl"
       },
-      og:     {uri: "http://ogp.me/ns#", strict: false, alias: true},
-      ogc:    {uri: "http://ogp.me/ns/class#", source: "http://ogp.me/ns", strict: false, alias: true},
+      og:     {uri: "http://ogp.me/ns#", strict: false},
+      ogc:    {uri: "http://ogp.me/ns/class#", source: "http://ogp.me/ns", strict: false},
       ore:    {uri: "http://www.openarchives.org/ore/terms/"},
       org:    {uri: "http://www.w3.org/ns/org#"},
+      owl:    {uri: "http://www.w3.org/2002/07/owl#", alias: true},
       pplan:  {uri: "http://purl.org/net/p-plan#"},
       premis: {uri: "http://www.loc.gov/premis/rdf/v1#", source: "http://www.loc.gov/premis/rdf/v1.rdf"},
       premis_event_type: {
@@ -119,28 +227,46 @@ module RDF
         source: "http://id.loc.gov/vocabulary/preservation/eventType.nt",
         class_name: "PremisEventType"
       },
-      prov:   {uri: "http://www.w3.org/ns/prov#", alias: true},
+      prov:   {uri: "http://www.w3.org/ns/prov#"},
       ptr:    {uri: "http://www.w3.org/2009/pointers#"},
       rdfs:   {uri: "http://www.w3.org/2000/01/rdf-schema#", alias: true},
-      rsa:    {uri: "http://www.w3.org/ns/auth/rsa#", alias: true},
-      rss:    {uri: "http://purl.org/rss/1.0/", source: "http://purl.org/rss/1.0/schema.rdf", alias: true},
-      schema: {uri: "http://schema.org/", source: "http://schema.org/docs/schema_org_rdfa.html", alias: true},
-      sioc:   {uri: "http://rdfs.org/sioc/ns#", alias: true},
+      rsa:    {
+        uri: "http://www.w3.org/ns/auth/rsa#",
+        patch: %{
+          @prefix cert: <http://www.w3.org/ns/auth/cert#> .
+          @prefix rsa: <http://www.w3.org/ns/auth/rsa#> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+          DeleteExisting {
+            rsa:modulus rdfs:range cert:int .
+            rsa:private_exponent rdfs:range cert:int .
+            rsa:public_exponent rdfs:range cert:int .
+          } .
+          AddNew {
+            rsa:modulus rdfs:range xsd:base64Binary, xsd:hexBinary .
+            rsa:private_exponent rdfs:range xsd:nonNegativeInteger .
+            rsa:public_exponent rdfs:range xsd:nonNegativeInteger .
+          } .
+        }
+      },
+      rss:    {uri: "http://purl.org/rss/1.0/", source: "http://purl.org/rss/1.0/schema.rdf"},
+      schema: {uri: "http://schema.org/", source: "http://schema.org/docs/schema_org_rdfa.html"},
+      sioc:   {uri: "http://rdfs.org/sioc/ns#"},
       sioc_services: {
         uri: "http://rdfs.org/sioc/services#",
         class_name: "SiocServices"
       },
-      skos:   {uri: "http://www.w3.org/2004/02/skos/core#", alias: true},
-      skosxl: {uri: "http://www.w3.org/2008/05/skos-xl#", source: "http://www.w3.org/TR/skos-reference/skos-xl.rdf", alias: true},
-      v:      {uri: "http://rdf.data-vocabulary.org/#", source: "etc/rdf.data-vocab.ttl", alias: true},
-      vmd:    {uri: "http://data-vocabulary.org/", source: "etc/data-vocab.ttl", alias: true},
-      vcard:  {uri: "http://www.w3.org/2006/vcard/ns#", alias: true},
-      void:   {uri: "http://rdfs.org/ns/void#", source: "http://vocab.deri.ie/void.rdf", alias: true},
-      vs:     {uri: "http://www.w3.org/2003/06/sw-vocab-status/ns#", alias: true},
-      wdrs:   {uri: "http://www.w3.org/2007/05/powder-s#", alias: true},
-      wot:    {uri: "http://xmlns.com/wot/0.1/", source: "http://xmlns.com/wot/0.1/index.rdf", alias: true},
-      xhtml:  {uri: "http://www.w3.org/1999/xhtml#", strict: false, alias: true},
-      xhv:    {uri: "http://www.w3.org/1999/xhtml/vocab#", strict: false, alias: true},
+      skos:   {uri: "http://www.w3.org/2004/02/skos/core#"},
+      skosxl: {uri: "http://www.w3.org/2008/05/skos-xl#", source: "http://www.w3.org/TR/skos-reference/skos-xl.rdf"},
+      v:      {uri: "http://rdf.data-vocabulary.org/#", source: "etc/rdf.data-vocab.ttl"},
+      vmd:    {uri: "http://data-vocabulary.org/", source: "etc/data-vocab.ttl"},
+      vcard:  {uri: "http://www.w3.org/2006/vcard/ns#"},
+      void:   {uri: "http://rdfs.org/ns/void#", source: "http://vocab.deri.ie/void.rdf"},
+      vs:     {uri: "http://www.w3.org/2003/06/sw-vocab-status/ns#"},
+      wdrs:   {uri: "http://www.w3.org/2007/05/powder-s#"},
+      wot:    {uri: "http://xmlns.com/wot/0.1/", source: "http://xmlns.com/wot/0.1/index.rdf"},
+      xhtml:  {uri: "http://www.w3.org/1999/xhtml#", strict: false},
+      xhv:    {uri: "http://www.w3.org/1999/xhtml/vocab#", strict: false},
       xsd:    {uri: "http://www.w3.org/2001/XMLSchema#", strict: false, alias: true},
     }.freeze
 

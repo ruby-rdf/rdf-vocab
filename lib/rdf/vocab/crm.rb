@@ -1,7 +1,12 @@
 # -*- encoding: utf-8 -*-
+# frozen_string_literal: true
 # This file generated automatically using vocab-fetch from etc/crm.rdf
 require 'rdf'
 module RDF::Vocab
+  # @!parse
+  #   # Vocabulary for <http://www.cidoc-crm.org/cidoc-crm/>
+  #   class CRM < RDF::StrictVocabulary
+  #   end
   class CRM < RDF::StrictVocabulary("http://www.cidoc-crm.org/cidoc-crm/")
 
     # Class definitions
@@ -429,7 +434,7 @@ It may be used for temporal reasoning about things \(physical items, groups of p
       comment: %(This class comprises events that result in the creation of conceptual items or immaterial products, such as legends, poems, texts, music, images, movies, laws, types etc.
 ).freeze,
       label: "Creation".freeze,
-      subClassOf: ["crm:E7_Activity".freeze, "crm:E63_Beginning_of_Existence".freeze],
+      subClassOf: ["crm:E63_Beginning_of_Existence".freeze, "crm:E7_Activity".freeze],
       type: "rdfs:Class".freeze
     term :E66_Formation,
       comment: %(This class comprises events that result in the formation of a formal or informal E74 Group of people, such as a club, society, association, corporation or nation. 
@@ -437,7 +442,7 @@ E66 Formation does not include the arbitrary aggregation of people who do not ac
 The formation of an instance of E74 Group does not mean that the group is populated with members at the time of formation. In order to express the joining of members at the time of formation, the respective activity should be simultaneously an instance of both E66 Formation and E85 Joining. 
 ).freeze,
       label: "Formation".freeze,
-      subClassOf: ["crm:E7_Activity".freeze, "crm:E63_Beginning_of_Existence".freeze],
+      subClassOf: ["crm:E63_Beginning_of_Existence".freeze, "crm:E7_Activity".freeze],
       type: "rdfs:Class".freeze
     term :E67_Birth,
       comment: %(This class comprises the births of human beings. E67 Birth is a biological event focussing on the context of people coming into life. \(E63 Beginning of Existence comprises the coming into life of any living beings\). 
@@ -833,13 +838,13 @@ Although a Part Addition event normally concerns only one item of Physical Man-M
       domain: "crm:E79_Part_Addition".freeze,
       label: "added".freeze,
       range: "crm:E18_Physical_Thing".freeze,
-      subPropertyOf: ["crm:P16_used_specific_object".freeze, "crm:P12_occurred_in_the_presence_of".freeze],
+      subPropertyOf: ["crm:P12_occurred_in_the_presence_of".freeze, "crm:P16_used_specific_object".freeze],
       type: "rdf:Property".freeze
     property :P111i_was_added_by,
       domain: "crm:E18_Physical_Thing".freeze,
       label: "was added by".freeze,
       range: "crm:E79_Part_Addition".freeze,
-      subPropertyOf: ["crm:P16i_was_used_for".freeze, "crm:P12i_was_present_at".freeze],
+      subPropertyOf: ["crm:P12i_was_present_at".freeze, "crm:P16i_was_used_for".freeze],
       type: "rdf:Property".freeze
     property :P112_diminished,
       comment: %(This property identifies the E24 Physical Man-Made Thing that was diminished by E80 Part Removal.
@@ -2104,13 +2109,13 @@ P52 has current owner \(is current owner of\) is a shortcut for the more detaile
       domain: "crm:E18_Physical_Thing".freeze,
       label: "has current owner".freeze,
       range: "crm:E39_Actor".freeze,
-      subPropertyOf: ["crm:P51_has_former_or_current_owner".freeze, "crm:P105_right_held_by".freeze],
+      subPropertyOf: ["crm:P105_right_held_by".freeze, "crm:P51_has_former_or_current_owner".freeze],
       type: "rdf:Property".freeze
     property :P52i_is_current_owner_of,
       domain: "crm:E39_Actor".freeze,
       label: "is current owner of".freeze,
       range: "crm:E18_Physical_Thing".freeze,
-      subPropertyOf: ["crm:P51i_is_former_or_current_owner_of".freeze, "crm:P105i_has_right_on".freeze],
+      subPropertyOf: ["crm:P105i_has_right_on".freeze, "crm:P51i_is_former_or_current_owner_of".freeze],
       type: "rdf:Property".freeze
     property :P53_has_former_or_current_location,
       comment: %(This property allows an instance of E53 Place to be associated as the former or current location of an instance of E18 Physical Thing.
@@ -2497,7 +2502,7 @@ It allows an E52 Time-Span to be associated with an E54 Dimension representing i
       type: "rdf:Property".freeze
     property :P84i_was_maximum_duration_of,
       domain: "crm:E54_Dimension".freeze,
-      label: ["was maximum duration of".freeze, "".freeze],
+      label: ["".freeze, "was maximum duration of".freeze],
       range: "crm:E52_Time-Span".freeze,
       type: "rdf:Property".freeze
     property :P86_falls_within,

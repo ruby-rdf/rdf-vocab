@@ -1,12 +1,17 @@
 # -*- encoding: utf-8 -*-
+# frozen_string_literal: true
 # This file generated automatically using vocab-fetch from http://www.w3.org/ns/auth/acl#
 require 'rdf'
 module RDF::Vocab
+  # @!parse
+  #   # Vocabulary for <http://www.w3.org/ns/auth/acl#>
+  #   class ACL < RDF::StrictVocabulary
+  #   end
   class ACL < RDF::StrictVocabulary("http://www.w3.org/ns/auth/acl#")
 
     # Class definitions
     term :Access,
-      "acl:label" => %(access).freeze,
+      :"acl:label" => %(access).freeze,
       comment: %(Any kind of access to a resource. Don't use this, use R W and RW).freeze,
       label: "Access".freeze,
       type: "rdfs:Class".freeze
