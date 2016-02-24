@@ -8,6 +8,7 @@ gem 'ld-patch', github: "ruby-rdf/ld-patch",  branch: "develop"
 group :development, :test do
   gem 'ebnf',               github: "gkellogg/ebnf",                branch: "develop"
   gem 'json-ld',            github: "ruby-rdf/json-ld",             branch: "develop"
+  gem 'linkeddata',         github: "ruby-rdf/linkeddata",          branch: "develop"
   gem 'rdf-aggregate-repo', github: "ruby-rdf/rdf-aggregate-repo",  branch: "develop"
   gem 'rdf-isomorphic',     github: "ruby-rdf/rdf-isomorphic",      branch: "develop"
   gem 'rdf-reasoner',       github: "ruby-rdf/rdf-reasoner",        branch: "develop"
