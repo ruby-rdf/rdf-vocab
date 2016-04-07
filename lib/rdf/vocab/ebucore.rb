@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 # frozen_string_literal: true
-# This file generated automatically using vocab-fetch from https://www.ebu.ch/metadata/ontologies/ebucore/ebucore.rdf
+# This file generated automatically using rdf vocabulary format from http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#
 require 'rdf'
 module RDF::Vocab
   # @!parse

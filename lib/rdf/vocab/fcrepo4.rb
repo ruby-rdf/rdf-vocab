@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 # frozen_string_literal: true
-# This file generated automatically using vocab-fetch from http://fedora.info/definitions/v4/2015/07/24/repository
+# This file generated automatically using rdf vocabulary format from http://fedora.info/definitions/v4/repository#
 require 'rdf'
 module RDF::Vocab
   # @!parse

@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 # frozen_string_literal: true
-# This file generated automatically using vocab-fetch from http://rdfs.org/sioc/ns#
+# This file generated automatically using rdf vocabulary format from http://rdfs.org/sioc/ns#
 require 'rdf'
 module RDF::Vocab
   # @!parse

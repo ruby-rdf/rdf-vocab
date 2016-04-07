@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 # frozen_string_literal: true
-# This file generated automatically using vocab-fetch from http://www.w3.org/2007/05/powder-s#
+# This file generated automatically using rdf vocabulary format from http://www.w3.org/2007/05/powder-s#
 require 'rdf'
 module RDF::Vocab
   # @!parse

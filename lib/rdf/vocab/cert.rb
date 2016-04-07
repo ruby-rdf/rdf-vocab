@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 # frozen_string_literal: true
-# This file generated automatically using vocab-fetch from http://www.w3.org/ns/auth/cert#
+# This file generated automatically using rdf vocabulary format from http://www.w3.org/ns/auth/cert#
 require 'rdf'
 module RDF::Vocab
   # @!parse
-  #   # Vocabulary for <http>
+  #   # Vocabulary for <http://www.w3.org/ns/auth/cert#>
   #   class CERT < RDF::StrictVocabulary
   #   end
   class CERT < RDF::StrictVocabulary("http://www.w3.org/ns/auth/cert#")

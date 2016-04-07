@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 # frozen_string_literal: true
-# This file generated automatically using vocab-fetch from http://www.loc.gov/premis/rdf/v1.rdf
+# This file generated automatically using rdf vocabulary format from http://www.loc.gov/premis/rdf/v1#
 require 'rdf'
 module RDF::Vocab
   # @!parse
@@ -345,7 +345,7 @@ The object class has three subclasses: Representation, File, and Bitstream.).fre
       type: ["owl:FunctionalProperty".freeze, "owl:ObjectProperty".freeze],
       :"vs:term_status" => %(stable).freeze
     property :hasContentLocationValue,
-      comment: %(Examples: http://wwasearch.loc.gov/107th/200212107035/http://house.gov/langevin/ \(file\), c:\apache2\htdocs\index.html \(file\), 64 [offset from start of file c:\apache2\htdocs\image\logo.gif] \(bitstream\)).freeze,
+      comment: %(Examples: http://wwasearch.loc.gov/107th/200212107035/http://house.gov/langevin/ \(file\), c:pache2htdocsindex.html \(file\), 64 [offset from start of file c:pache2htdocsimagelogo.gif] \(bitstream\)).freeze,
       domain: "premis:ContentLocation".freeze,
       label: "hasContentLocationValue".freeze,
       range: "xsd:string".freeze,

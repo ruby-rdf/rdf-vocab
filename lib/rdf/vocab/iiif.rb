@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 # frozen_string_literal: true
-# This file generated automatically using vocab-fetch from http://iiif.io/api/presentation/2/ontology.xml
+# This file generated automatically using rdf vocabulary format from http://iiif.io/api/presentation/2#
 require 'rdf'
 module RDF::Vocab
   # @!parse

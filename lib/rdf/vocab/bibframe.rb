@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 # frozen_string_literal: true
-# This file generated automatically using vocab-fetch from http://bibframe.org/vocab.rdf
+# This file generated automatically using rdf vocabulary format from http://bibframe.org/vocab/
 require 'rdf'
 module RDF::Vocab
   # @!parse

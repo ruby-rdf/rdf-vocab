@@ -4,7 +4,6 @@ require 'rdf'
 require 'rdf/vocab'
 require 'linkeddata'
 require 'rake/testtask'
-require 'rdf/cli/vocab-loader'
 
 namespace :gem do
   desc "Build the rdf-vocab-#{RDF::Vocab::VERSION}.gem file"
@@ -40,21 +39,25 @@ RDF::Vocab::VOCABS.each do |id, v|
   next if v[:alias]
   file "lib/rdf/vocab/#{id}.rb" => :do_build do
     puts "Generate lib/rdf/vocab/#{id}.rb"
+    cmd = "bundle exec rdf"
+    if v[:patch]
+      File.open("lib/rdf/vocab/#{id}.rb_p", "w") {|f| f.write v[:patch]}
+      cmd += " patch --patch-file lib/rdf/vocab/#{id}.rb_p"
+    end
+    cmd += " serialize --uri '#{v[:uri]}' --output-format vocabulary"
+    cmd += " --module-name #{v.fetch(:module_name, "RDF::Vocab")}"
+    cmd += " --class-name #{v[:class_name] ? v[:class_name] : id.to_s.upcase}"
+    cmd += " --strict" if v.fetch(:strict, true)
+    cmd += " --extra #{URI.encode v[:extra].to_json}" if v[:extra]
+    cmd += " -o lib/rdf/vocab/#{id}.rb_t"
+    cmd += " '" + v.fetch(:source, v[:uri]) + "'"
+    puts "  #{cmd}"
     begin
-      out = StringIO.new
-      loader = RDF::VocabularyLoader.new(v[:class_name] ? v[:class_name] : id.to_s.upcase)
-      loader.uri = v[:uri]
-      loader.source = v[:source] if v[:source]
-      loader.module_name = v.fetch(:module_name, "RDF::Vocab")
-      loader.strict = v.fetch(:strict, true)
-      loader.extra = v[:extra] if v[:extra]
-      loader.patch = v[:patch] if v[:patch]
-      loader.output = out
-      loader.run
-      out.rewind
-      File.open("lib/rdf/vocab/#{id}.rb", "w") {|f| f.write out.read}
+      %x{#{cmd} && mv lib/rdf/vocab/#{id}.rb_t lib/rdf/vocab/#{id}.rb}
     rescue
       puts "Failed to load #{id}: #{$!.message}"
+    ensure
+      %x{rm -f lib/rdf/vocab/#{id}.rb_t lib/rdf/vocab/#{id}.rb_p}
     end
   end
 end

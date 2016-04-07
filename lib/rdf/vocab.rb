@@ -15,7 +15,7 @@ module RDF
         extra: {hasAccompaniment: {type: "rdf:Property",label: "has accompaniment"}}
       },
       bibo:   {uri: "http://purl.org/ontology/bibo/"},
-      cc:     {uri: "http://creativecommons.org/ns#"},
+      cc:     {uri: "https://creativecommons.org/ns#"},
       cert:   {
         uri: "http://www.w3.org/ns/auth/cert#",
         patch: %{
@@ -71,6 +71,23 @@ module RDF
       dcmitype: {
           uri: "http://purl.org/dc/dcmitype/",
           class_name: "DCMIType"
+      },
+      disco: {
+        uri: "http://rdf-vocabulary.ddialliance.org/discovery#",
+        source: "https://raw.githubusercontent.com/linked-statistics/disco-spec/master/discovery.ttl",
+        patch: %{
+          @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+          @prefix dcterms: <http://purl.org/dc/terms/> .
+          @prefix disco: <http://rdf-vocabulary.ddialliance.org/discovery#> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          DeleteExisting {
+            disco:DataFile rdfs:subClassOf dcterms:Dataset .
+          } .
+          AddNew {
+            disco:DataFile rdfs:subClassOf dcmitype:Dataset .
+            disco:Representation a rdfs:Class .
+          } .
+        }
       },
       doap:   {
         uri: "http://usefulinc.com/ns/doap#",
