@@ -30,7 +30,20 @@ module RDF
           uri: "http://purl.org/dc/dcmitype/",
           class_name: "DCMIType"
       },
-      doap:   {uri: "http://usefulinc.com/ns/doap#", alias: true},
+      disco: {
+        uri: "http://rdf-vocabulary.ddialliance.org/discovery#",
+        source: "https://raw.githubusercontent.com/linked-statistics/disco-spec/master/discovery.ttl"
+      },
+      doap:   {
+        uri: "http://usefulinc.com/ns/doap#",
+        patch: %{
+          @prefix : <http://usefulinc.com/ns/doap#> .
+          @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+          @prefix owl: <http://www.w3.org/2002/07/owl#>.
+          DeleteExisting {: owl:imports foaf:index.rdf .} .
+          AddNew {: owl:imports foaf: .} .
+        }
+      },
       dwc: {
         uri: "http://rs.tdwg.org/dwc/terms/",
         source: "etc/dwcterms.rdf",
