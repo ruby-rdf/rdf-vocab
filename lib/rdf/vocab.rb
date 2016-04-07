@@ -15,7 +15,10 @@ module RDF
         extra: {hasAccompaniment: {type: "rdf:Property",label: "has accompaniment"}}
       },
       bibo:   {uri: "http://purl.org/ontology/bibo/"},
-      cc:     {uri: "https://creativecommons.org/ns#"},
+      cc:     {
+        uri: "http://creativecommons.org/ns#",
+        source: "etc/cc.ttl"  # Source incorrectly uses https identifiers
+      },
       cert:   {
         uri: "http://www.w3.org/ns/auth/cert#",
         patch: %{
