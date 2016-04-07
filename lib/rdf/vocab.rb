@@ -32,7 +32,20 @@ module RDF
       },
       disco: {
         uri: "http://rdf-vocabulary.ddialliance.org/discovery#",
-        source: "https://raw.githubusercontent.com/linked-statistics/disco-spec/master/discovery.ttl"
+        source: "https://raw.githubusercontent.com/linked-statistics/disco-spec/master/discovery.ttl",
+        patch: %{
+          @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+          @prefix dcterms: <http://purl.org/dc/terms/> .
+          @prefix disco: <http://rdf-vocabulary.ddialliance.org/discovery#> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          DeleteExisting {
+            disco:DataFile rdfs:subClassOf dcterms:Dataset .
+          } .
+          AddNew {
+            disco:DataFile rdfs:subClassOf dcmitype:Dataset .
+            disco:Representation a rdfs:Class .
+          } .
+        }
       },
       doap:   {
         uri: "http://usefulinc.com/ns/doap#",

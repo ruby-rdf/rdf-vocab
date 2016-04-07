@@ -26,7 +26,7 @@ module RDF::Vocab
       comment: %(The class DataFile, which is also a dcterms:Dataset, represents all the data files containing the microdata datasets.).freeze,
       label: "Data file".freeze,
       :"rdfs:isDefinedBy" => [],
-      subClassOf: ["dc:Dataset".freeze, "dcat:Distribution".freeze],
+      subClassOf: ["dcat:Distribution".freeze, "dcmitype:Dataset".freeze],
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :DescriptiveStatistics,
       comment: %(SummaryStatistics pointing to variables and CategoryStatistics pointing to categories and codes are both DescriptiveStatistics.).freeze,
@@ -61,6 +61,9 @@ module RDF::Vocab
       :"rdfs:isDefinedBy" => [],
       subClassOf: "disco:Instrument".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
+    term :Representation,
+      label: "Representation".freeze,
+      type: "rdfs:Class".freeze
     term :RepresentedVariable,
       comment: %(RepresentedVariables encompasse study-independent, re-usable parts of variables like occupation classification.).freeze,
       label: "Data element".freeze,
