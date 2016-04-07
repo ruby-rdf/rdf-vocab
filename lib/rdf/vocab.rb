@@ -15,7 +15,7 @@ module RDF
         extra: {hasAccompaniment: {type: "rdf:Property",label: "has accompaniment"}}
       },
       bibo:   {uri: "http://purl.org/ontology/bibo/"},
-      cc:     {uri: "http://creativecommons.org/ns#"},
+      cc:     {uri: "https://creativecommons.org/ns#"},
       cert:   {
         uri: "http://www.w3.org/ns/auth/cert#",
         patch: %{

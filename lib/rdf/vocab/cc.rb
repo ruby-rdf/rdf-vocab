@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 # frozen_string_literal: true
-# This file generated automatically using vocab-fetch from https://creativecommons.org/ns#
+# This file generated automatically using rdf vocabulary format from https://creativecommons.org/ns#
 require 'rdf'
 module RDF::Vocab
   # @!parse

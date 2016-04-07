@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 # frozen_string_literal: true
-# This file generated automatically using vocab-fetch from /Users/gregg/Projects/rdf-vocab/etc/iana.ttl
+# This file generated automatically using rdf vocabulary format from http://www.iana.org/assignments/relation/
 require 'rdf'
 module RDF::Vocab
   # @!parse
