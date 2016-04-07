@@ -72,7 +72,7 @@ copyrightable work"""@en-us .
 
 <http://web.resource.org/cc/requires> owl:equivalentProperty <http://creativecommons.org/ns#requires> .
 
-<https://creativecommons.org/ns> xhv:license <https://creativecommons.org/licenses/by/4.0/>;
+<http://creativecommons.org/ns> xhv:license <https://creativecommons.org/licenses/by/4.0/>;
    xhv:stylesheet <https://creativecommons.org/includes/bootstrap.min.css> .
 
 <http://creativecommons.org/ns#Copyleft> a cc:Requirement;
@@ -107,13 +107,13 @@ distribution"""@en-us .
 
 <http://creativecommons.org/ns#attributionURL> a rdf:Property;
    rdfs:domain <http://creativecommons.org/ns#Work>;
-   rdfs:range <https://www.w3.org/2000/01/rdf-schema#Resource> .
+   rdfs:range <http://www.w3.org/2000/01/rdf-schema#Resource> .
 
 <http://creativecommons.org/ns#deprecatedOn> a rdf:Property;
    rdfs:label """deprecated
 on"""@en-us;
    rdfs:domain <http://creativecommons.org/ns#License>;
-   rdfs:range <https://www.w3.org/2001/XMLSchema-datatypes#date> .
+   rdfs:range <http://www.w3.org/2001/XMLSchema-datatypes#date> .
 
 <http://creativecommons.org/ns#jurisdiction> a rdf:Property;
    rdfs:label "jurisdiction"@en-us;
@@ -122,7 +122,7 @@ on"""@en-us;
 
 <http://creativecommons.org/ns#legalcode> a rdf:Property;
    rdfs:domain <http://creativecommons.org/ns#License>;
-   rdfs:range <https://www.w3.org/2000/01/rdf-schema#Resource> .
+   rdfs:range <http://www.w3.org/2000/01/rdf-schema#Resource> .
 
 <http://creativecommons.org/ns#morePermissions> a rdf:Property;
    rdfs:domain <http://creativecommons.org/ns#Work>;
@@ -182,8 +182,8 @@ the license."""@en-us .
 license"""@en-us;
    rdfs:domain <http://creativecommons.org/ns#Work>;
    rdfs:range <http://creativecommons.org/ns#License>;
-   rdfs:subPropertyOf <https://purl.org/dc/terms/license>;
-   owl:sameAs <https://www.w3.org/1999/xhtml/vocab#license> .
+   rdfs:subPropertyOf <http://purl.org/dc/terms/license>;
+   owl:sameAs <http://www.w3.org/1999/xhtml/vocab#license> .
 
 <http://creativecommons.org/ns#permits> a rdf:Property;
    rdfs:label "permits"@en-us;
