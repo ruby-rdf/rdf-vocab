@@ -1,13 +1,13 @@
 # -*- encoding: utf-8 -*-
 # frozen_string_literal: true
-# This file generated automatically using rdf vocabulary format from https://creativecommons.org/ns#
+# This file generated automatically using rdf vocabulary format from http://creativecommons.org/ns#
 require 'rdf'
 module RDF::Vocab
   # @!parse
-  #   # Vocabulary for <https://creativecommons.org/ns#>
+  #   # Vocabulary for <http://creativecommons.org/ns#>
   #   class CC < RDF::StrictVocabulary
   #   end
-  class CC < RDF::StrictVocabulary("https://creativecommons.org/ns#")
+  class CC < RDF::StrictVocabulary("http://creativecommons.org/ns#")
 
     # Class definitions
     term :Jurisdiction,
