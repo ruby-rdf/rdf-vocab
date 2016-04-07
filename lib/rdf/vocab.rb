@@ -49,13 +49,14 @@ module RDF
       },
       doap:   {
         uri: "http://usefulinc.com/ns/doap#",
-        patch: %{
-          @prefix : <http://usefulinc.com/ns/doap#> .
-          @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-          @prefix owl: <http://www.w3.org/2002/07/owl#>.
-          DeleteExisting {: owl:imports foaf:index.rdf .} .
-          AddNew {: owl:imports foaf: .} .
-        }
+        #patch: %{
+        #  @prefix : <http://usefulinc.com/ns/doap#> .
+        #  @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+        #  @prefix owl: <http://www.w3.org/2002/07/owl#>.
+        #  DeleteExisting {: owl:imports foaf:index.rdf .} .
+        #  AddNew {: owl:imports foaf: .} .
+        #},
+        alias: true
       },
       dwc: {
         uri: "http://rs.tdwg.org/dwc/terms/",
