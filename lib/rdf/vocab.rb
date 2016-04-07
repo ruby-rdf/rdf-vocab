@@ -72,6 +72,10 @@ module RDF
           uri: "http://purl.org/dc/dcmitype/",
           class_name: "DCMIType"
       },
+      disco: {
+        uri: "http://rdf-vocabulary.ddialliance.org/discovery#",
+        source: "https://raw.githubusercontent.com/linked-statistics/disco-spec/master/discovery.ttl"
+      },
       doap:   {
         uri: "http://usefulinc.com/ns/doap#",
         patch: %{
