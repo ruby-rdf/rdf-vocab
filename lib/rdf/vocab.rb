@@ -230,11 +230,8 @@ module RDF
         uri: "http://www.loc.gov/mods/rdf/v1#",
         source: "http://www.loc.gov/standards/mods/modsrdf/v1/modsrdf.owl"
       },
-      nfo: {uri: 'http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#'},
-      oa: {
-        uri: "http://www.w3.org/ns/oa#",
-        source: "http://www.openannotation.org/spec/core/20130208/oa.owl"
-      },
+      nfo:    {uri: 'http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#'},
+      oa:     {uri: "http://www.w3.org/ns/oa#"},
       og:     {uri: "http://ogp.me/ns#", strict: false},
       ogc:    {uri: "http://ogp.me/ns/class#", source: "http://ogp.me/ns", strict: false},
       ore:    {uri: "http://www.openarchives.org/ore/terms/"},

@@ -404,7 +404,7 @@ There MAY be 0 or more styleClass properties on a Specific Resource.
 
 See oa:CssStyle.).freeze,
       domain: "oa:SpecificResource".freeze,
-      label: "annotatedAt".freeze,
+      label: "styleClass".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
       type: "owl:DatatypeProperty".freeze
     property :styledBy,
