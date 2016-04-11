@@ -21,10 +21,10 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version      = '>= 2.0'
 
-  spec.add_runtime_dependency     "rdf",          '>= 2.0.0.beta', '< 3'
+  spec.add_runtime_dependency     "rdf",          '~> 2.0'
 
-  spec.add_development_dependency "ld-patch",     '>= 0.3.0.beta', '< 1'
-  spec.add_development_dependency "rdf-reasoner", '>= 0.3.0.beta', '< 1'
+  spec.add_development_dependency "ld-patch",     '~> 0.3'
+  spec.add_development_dependency "rdf-reasoner", '~> 0.4'
   spec.add_development_dependency "bundler",      "~> 1.7"
   spec.add_development_dependency "rake",         "~> 10.0"
   spec.add_development_dependency "rspec",        "~> 3.4"
