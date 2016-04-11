@@ -2,7 +2,10 @@
 $:.unshift(File.expand_path(File.join(File.dirname(__FILE__), 'lib')))
 require 'rdf'
 require 'rdf/vocab'
-require 'linkeddata'
+begin
+  require 'linkeddata'
+rescue LoadError
+end
 require 'rake/testtask'
 
 namespace :gem do
