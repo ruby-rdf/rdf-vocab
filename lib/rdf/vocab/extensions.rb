@@ -48,6 +48,7 @@ module RDF
           map(&:vocab).
           uniq.
           sort_by(&:__prefix__)
+        vocabs << RDF::XSD  # incase we need it for a literal
 
         # Generate prefix definitions
         pfx_width = vocabs.map(&:__prefix__).map(&:length).max
@@ -77,7 +78,7 @@ module RDF
             heading:  "# Datatype definitions\n"
           },
           other: {
-            selector: lambda {|term| term.other? && !term == (self[""] rescue nil)},
+            selector: lambda {|term| term.other? && term != (self[""] rescue term)},
             heading:  "# Other definitions\n"
           }
         }.each do |key, hash|
@@ -86,7 +87,7 @@ module RDF
           properties.select {|t| hash[:selector].call(t)}.each do |term|
             po_list = []
             attributes = term.attributes
-            types = Array(attributes[:type]) rescue []
+            types = Array(attributes[:type]).dup rescue []
             attributes.delete(:type) rescue nil
             po_list << "a #{types.join(', ')}" unless types.empty?
 
