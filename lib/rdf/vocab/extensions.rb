@@ -82,13 +82,13 @@ module RDF
             heading:  "# Other definitions\n"
           }
         }.each do |key, hash|
-          next unless properties.any? {|term| hash[:selector].call(term)}
+          next unless __properties__.any? {|term| hash[:selector].call(term)}
           output << "\n\n#{hash[:heading]}"
-          properties.select {|t| hash[:selector].call(t)}.each do |term|
+          __properties__.select {|t| hash[:selector].call(t)}.each do |term|
             po_list = []
-            attributes = term.attributes
-            types = Array(attributes[:type]).dup rescue []
-            attributes.delete(:type) rescue nil
+            attributes = term.attributes.dup
+            types = Array(attributes[:type])
+            attributes.delete(:type)
             po_list << "a #{types.join(', ')}" unless types.empty?
 
             attributes.each do |pred, values|
