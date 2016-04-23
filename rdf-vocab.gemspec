@@ -24,11 +24,15 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency     "rdf",          '~> 2.0'
 
   spec.add_development_dependency "ld-patch",     '~> 0.3'
+  spec.add_development_dependency "json-ld",      '~> 2.0'
+  spec.add_development_dependency "rdf-turtle",   '~> 2.0'
   spec.add_development_dependency "rdf-reasoner", '~> 0.4'
   spec.add_development_dependency "bundler",      "~> 1.7"
   spec.add_development_dependency "rake",         "~> 10.0"
   spec.add_development_dependency "rspec",        "~> 3.4"
   spec.add_development_dependency "rspec-its",    "~> 1.2"
+  spec.add_development_dependency "jsonpath",     "~> 0.5"
+  spec.add_development_dependency "json-schema",  "~> 2.0"
   spec.add_development_dependency "yard",         "~> 0.8"
 
   spec.extra_rdoc_files = %w(LICENSE README.md)
