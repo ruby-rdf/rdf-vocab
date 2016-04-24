@@ -20,7 +20,6 @@ module RDF
         # Ruby's autoloading facility, meaning that `@@subclasses` will be
         # empty until each subclass has been touched or require'd.
         RDF::Vocab::VOCABS.each do |n, params|
-          class_name = params.fetch(:class_name, n.upcase).to_sym
           begin
             require "rdf/vocab/#{n}"
           rescue LoadError
@@ -36,104 +35,72 @@ module RDF
         ##
         # Generate Turtle representation, specific to vocabularies
         #
+        # @param [RDF::Queryable] :graph Optional graph, otherwise uses statements from vocabulary.
+        # @param [Hash{#to_sym => String}] Prefixes to add to output
         # @return [String]
-        def to_ttl
+        def to_ttl(graph: nil, prefixes: nil)
           output = []
 
           # Find namespaces used in the vocabulary
-          graph = RDF::Graph.new {|g| each_statement {|s| g << s}}
-          vocabs = graph.
-            terms.
-            select {|t| t.is_a?(RDF::Vocabulary::Term)}.
-            map(&:vocab).
-            uniq.
-            sort_by(&:__prefix__)
-          vocabs << RDF::XSD  # incase we need it for a literal
+          graph ||= RDF::Graph.new {|g| each_statement {|s| g << s}}
 
-          # Generate prefix definitions
-          pfx_width = vocabs.map(&:__prefix__).map(&:length).max
-          prefixes = {}
-          vocabs.each do |v|
-            prefixes[v.__prefix__] = v.to_uri
-            output << "@prefix %*s: <%s> .\n" % [pfx_width, v.__prefix__, v.to_uri]
+          prefixes = vocab_prefixes(graph).merge(prefixes || {})
+          pfx_width = prefixes.keys.map(&:to_s).map(&:length).max
+          prefixes.each do |pfx, uri|
+            output << "@prefix %*s: <%s> .\n" % [pfx_width, pfx, uri]
           end
+
+          # Determine the category for each subject in the vocabulary graph
+          cats = subject_categories(graph)
 
           writer = RDF::Turtle::Writer.new(StringIO.new, prefixes: prefixes)
 
           {
             ont: {
-              selector: lambda {|term| term == (self[""] rescue nil)},
               heading:  "# #{__name__.split('::').last} Vocabulary definition\n"
             },
             classes: {
-              selector: lambda {|term| term.class?},
               heading:  "# Class definitions\n"
             },
             properties: {
-              selector: lambda {|term| term.property?},
               heading:  "# Property definitions\n"
             },
             datatypes: {
-              selector: lambda {|term| term.datatype?},
               heading:  "# Datatype definitions\n"
             },
             other: {
-              selector: lambda {|term| term.other? && term != (self[""] rescue term)},
               heading:  "# Other definitions\n"
             }
           }.each do |key, hash|
-            next unless __properties__.any? {|term| hash[:selector].call(term)}
+            next unless cats[key]
+
             output << "\n\n#{hash[:heading]}"
-            __properties__.select {|t| hash[:selector].call(t)}.each do |term|
-              po_list = []
-              attributes = term.attributes.dup
-              types = Array(attributes[:type])
-              attributes.delete(:type)
-              po_list << "a #{types.join(', ')}" unless types.empty?
 
-              attributes.each do |pred, values|
-                next if pred == :vocab
-                ol = Array(values).map do |v|
-                  case
-                  when v =~ /^#{RDF::Turtle::Terminals::PNAME_NS}$/
-                    v
-                  when v =~ /^#{RDF::Turtle::Terminals::PNAME_LN}$/
-                    v
-                  when (u = RDF::URI(v)) && u.valid?
-                    writer.format_uri(u)
-                  else
-                    # Case as most appropriate literal
-                    lit = [
-                      RDF::Literal::Date,
-                      RDF::Literal::DateTime,
-                      RDF::Literal::Boolean,
-                      RDF::Literal::Integer,
-                      RDF::Literal::Decimal,
-                      RDF::Literal::Double,
-                      RDF::Literal
-                    ].inject(nil) do |memo, klass|
-                      l = klass.new(v)
-                      memo || (l if l.valid?)
-                    end
-                    ll = writer.format_literal(lit)
-                    ll
-                  end
-                end.join(", ")
+            cats[key].each do |subject|
+              po = {}
 
+              # Group predicates with their values
+              graph.query(subject: subject) do |statement|
                 # Sanity check this, as these are set to an empty string if not defined.
-                next if [:label, :comment].include?(pred) && ol == %("")
-                predicate = case pred
-                when :type, :subClassOf, :subPropertyOf, :domain, :range, :label, :comment
-                  RDF::RDFS[pred].pname
-                when :inverseOf, :domainIncludes, :rangeIncludes
-                  RDF::Vocab::SCHEMA[pred].pname
-                else
-                  pred.to_s
-                end
-                po_list << "#{predicate} #{ol}"
+                next if [RDF::RDFS.label, RDF::RDFS.comment].include?(statement.predicate) && statement.object.to_s.empty?
+                po[statement.predicate] ||= []
+                po[statement.predicate] << statement.object
               end
-              next if po_list.empty?
-              output << "#{term.pname} " + po_list.join(";\n  ") + "\n  .\n"
+
+              next if po.empty?
+
+              po_list = []
+              unless (types = po.delete(RDF.type)).empty?
+                po_list << 'a ' + types.map {|o| writer.format_term(o)}.join(", ")
+              end
+
+              # Serialize other predicate/objects
+              po.each do |predicate, objects|
+                po_list << predicate.pname + ' ' + objects.map {|o| writer.format_term(o)}.join(", ")
+              end
+
+              # Output statements for this subject
+              output << "#{subject.pname} " + po_list.join(";\n  ") + "\n  .\n"
             end
           end
 
@@ -149,8 +116,10 @@ module RDF
         ##
         # Generate JSON-LD representation, specific to vocabularies
         #
+        # @param [RDF::Queryable] :graph Optional graph, otherwise uses statements from vocabulary.
+        # @param [Hash{#to_sym => String}] Prefixes to add to output
         # @return [String]
-        def to_jsonld
+        def to_jsonld(graph: nil, prefixes: nil)
           context = {}
           rdfs_context = ::JSON.parse %({
             "id": "@id",
@@ -184,24 +153,19 @@ module RDF
             "id" => to_uri.to_s
           }
 
-          # Find namespaces used in the vocabulary
-          graph = RDF::Graph.new {|g| each_statement {|s| g << s}}
-          vocabs = graph.
-            terms.
-            select {|t| t.is_a?(RDF::Vocabulary::Term)}.
-            map(&:vocab).
-            uniq.
-            sort_by(&:__prefix__)
-          vocabs << RDF::XSD  # incase we need it for a literal
 
-          # Generate prefix definitions
-          vocabs.each do |v|
-            context[v.__prefix__.to_s] = v.to_uri.to_s unless v.__prefix__.to_s.empty?
+          # Find namespaces used in the vocabulary
+          graph ||= RDF::Graph.new {|g| each_statement {|s| g << s}}
+
+          prefixes = vocab_prefixes(graph).merge(prefixes || {})
+          prefixes.each do |pfx, uri|
+            context[pfx.to_s] = uri.to_s unless pfx.to_s.empty?
           end
 
-          # Generate term definitions
-          __properties__.each do |term|
-            context[term.qname.last.to_s] = term.to_uri.to_s if term.qname
+          # Generate term definitions from graph subjects
+          graph.each_subject do |term|
+            next unless RDF::Vocabulary.find(term) == self
+            context[term.qname.last.to_s] = term.to_uri.to_s
           end
 
           # Parse the two contexts so we know what terms are in scope
@@ -318,6 +282,73 @@ module RDF
         end
       rescue LoadError
         # No JSON-LD serialization unless gem loaded
+      end
+
+    private
+
+      ##
+      # Prefixes used in this vocabulary
+      #
+      # @param [RDF::Graph] graph
+      # @return [Hash{Symbol => RDF::URI}]
+      def vocab_prefixes(graph)
+        vocabs = graph.
+          terms.
+          select {|t| t.is_a?(RDF::Vocabulary::Term)}.
+          map(&:vocab).
+          uniq.
+          sort_by(&:__prefix__)
+        vocabs << RDF::XSD  # incase we need it for a literal
+
+        # Generate prefix definitions
+        vocabs.inject({}) do |memo, v|
+          memo.merge(v.__prefix__ => v.to_uri)
+        end
+      end
+
+      ##
+      # Categorize each subject in the graph
+      #
+      # @param [RDF::Graph] graph
+      # @return [Hash{RDF::URI => Symbol}]
+      def subject_categories(graph)
+        cats = {}
+        categorized = {}
+        uncategorized = {}
+        graph.query(predicate: RDF.type) do |statement|
+          case statement.object
+          when RDF.Property,
+               RDF::OWL.AnnotationProperty,
+               RDF::OWL.DatatypeProperty,
+               RDF::OWL.FunctionalProperty,
+               RDF::OWL.ObjectProperty,
+               RDF::OWL.OntologyProperty
+            (cats[:properties] ||= []) << statement.subject unless categorized[statement.subject]
+            categorized[statement.subject] = true
+          when RDF::RDFS.Class, RDF::OWL.Class
+            (cats[:classes] ||= []) << statement.subject unless categorized[statement.subject]
+            categorized[statement.subject] = true
+          when RDF::RDFS.Datatype, RDF::OWL.DataRange
+            (cats[:datatypes] ||= []) << statement.subject unless categorized[statement.subject]
+            categorized[statement.subject] = true
+          when RDF::OWL.Ontology
+            (cats[:ont] ||= []) << statement.subject unless categorized[statement.subject]
+            categorized[statement.subject] = true
+          else
+            if statement.subject == self.to_uri
+              (cats[:ont] ||= []) << statement.subject unless categorized[statement.subject]
+              categorized[statement.subject] = true
+            else
+              uncategorized[statement.subject] = true
+            end
+          end
+        end
+
+        # Add all uncategorized subjects as :other
+        uncat = (uncategorized.keys - categorized.keys)
+        cats[:other] = uncat unless uncat.empty?
+
+        cats
       end
     end
   end

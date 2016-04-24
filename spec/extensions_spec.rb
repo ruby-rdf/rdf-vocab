@@ -29,12 +29,13 @@ describe RDF::Vocabulary do
 
     it "Creates Classes" do
       expect(foaf).to include "Class definitions"
-      expect(foaf).to include "foaf:Agent a owl:Class"
+      expect(foaf).to match /foaf:Agent a .*owl:Class/
     end
 
     it "Creates Properties" do
       expect(foaf).to include "Property definitions"
-      expect(foaf).to include "foaf:account a owl:ObjectProperty"
+      expect(foaf).to match /foaf:account a .*rdf:Property/
+      expect(foaf).to match /foaf:account a .*owl:ObjectProperty/
     end
 
     it "Creates Datatypes" do
@@ -44,7 +45,7 @@ describe RDF::Vocabulary do
 
     it "Creates Other definitions" do
       expect(bibo).to include "Other definitions"
-      expect(bibo).to include "bdarcus a foaf:Person"
+      expect(bibo).to match /bdarcus a .*foaf:Person/
     end
 
     it "Serializes dates" do
@@ -60,11 +61,11 @@ describe RDF::Vocabulary do
     end
 
     it "Serializes PNAME_LN" do
-      expect(foaf).to include "rdfs:subClassOf foaf:Document;"
+      expect(foaf).to match /rdfs:subClassOf .*foaf:Document;/
     end
 
     it "Serializes URIs" do
-      expect(foaf).to match %r(rdfs:subClassOf .* <http:)
+      expect(foaf).to match %r(rdfs:subClassOf .*<http:)
     end
   end
 
