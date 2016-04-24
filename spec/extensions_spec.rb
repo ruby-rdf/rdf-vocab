@@ -3,7 +3,7 @@ require File.expand_path("../spec_helper", __FILE__)
 require 'json-schema'
 
 describe RDF::Vocabulary do
-  describe ".to_ttl" do
+  describe ".to_ttl", skip: ("Rubinius issues in RDF.rb" if RUBY_ENGINE == "rbx") do
     before(:all) do
       @acl  = RDF::Vocab::ACL.to_ttl
       @bibo = RDF::Vocab::BIBO.to_ttl
@@ -68,7 +68,7 @@ describe RDF::Vocabulary do
     end
   end
 
-  describe ".to_jsonld" do
+  describe ".to_jsonld", skip: ("Rubinius issues in RDF.rb" if RUBY_ENGINE == "rbx") do
     before(:all) do
       @acl  = RDF::Vocab::ACL.to_jsonld
       @bibo = RDF::Vocab::BIBO.to_jsonld
