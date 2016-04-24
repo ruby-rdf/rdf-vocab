@@ -57,15 +57,23 @@ describe RDF::Vocabulary do
     end
 
     it "Serializes PNAME_NS" do
-      expect(foaf).to include "rdfs:isDefinedBy foaf:;"
+      expect(foaf).to include "rdfs:isDefinedBy foaf:"
     end
 
     it "Serializes PNAME_LN" do
-      expect(foaf).to match /rdfs:subClassOf .*foaf:Document;/
+      expect(foaf).to match /rdfs:subClassOf .*foaf:Document/
     end
 
     it "Serializes URIs" do
       expect(foaf).to match %r(rdfs:subClassOf .*<http:)
+    end
+
+    context "smoke test" do
+      RDF::Vocabulary.each do |vocab|
+        it "serializes #{vocab.__name__} without raising exception" do
+          expect {vocab.to_ttl}.not_to raise_error
+        end
+      end
     end
   end
 
@@ -220,6 +228,14 @@ describe RDF::Vocabulary do
       }
       expect(bibo).to match_json_schema(schema)
       expect(bibo).to match_json_path "$..rdfs_instances[?(@.id='bdarcus')]"
+    end
+
+    context "smoke test" do
+      RDF::Vocabulary.each do |vocab|
+        it "serializes #{vocab.__name__} without raising exception" do
+          expect {vocab.to_jsonld}.not_to raise_error
+        end
+      end
     end
   end
 end

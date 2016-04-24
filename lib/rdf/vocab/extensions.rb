@@ -153,7 +153,6 @@ module RDF
             "id" => to_uri.to_s
           }
 
-
           # Find namespaces used in the vocabulary
           graph ||= RDF::Graph.new {|g| each_statement {|s| g << s}}
 
@@ -162,9 +161,12 @@ module RDF
             context[pfx.to_s] = uri.to_s unless pfx.to_s.empty?
           end
 
+          # Determine the category for each subject in the vocabulary graph
+          cats = subject_categories(graph)
+
           # Generate term definitions from graph subjects
-          graph.each_subject do |term|
-            next unless RDF::Vocabulary.find(term) == self
+          cats.values.flatten.each do |term|
+            next unless Array(term.qname).length == 2
             context[term.qname.last.to_s] = term.to_uri.to_s
           end
 
@@ -173,88 +175,54 @@ module RDF
 
           {
             ont: {
-              selector: lambda {|term| term == (self[""] rescue nil)},
               heading:  "# #{__name__.split('::').last} Vocabulary definition\n",
               bucket:   ontology,
             },
             classes: {
-              selector: lambda {|term| term.class?},
               heading:  "# Class definitions\n",
               bucket:   rdfs_classes,
               rev_prop: "rdfs_classes"
             },
             properties: {
-              selector: lambda {|term| term.property?},
               heading:  "# Property definitions\n",
               bucket:   rdfs_properties,
               rev_prop: "rdfs_properties"
             },
             datatypes: {
-              selector: lambda {|term| term.datatype?},
               heading:  "# Datatype definitions\n",
               bucket:   rdfs_datatypes,
               rev_prop: "rdfs_datatypes"
             },
             other: {
-              selector: lambda {|term| term.other? && term != (self[""] rescue term)},
               heading:  "# Other definitions\n",
               bucket:   rdfs_instances,
               rev_prop: "rdfs_instances"
             }
           }.each do |key, hash|
-            next unless __properties__.any? {|term| hash[:selector].call(term)}
-            __properties__.select {|t| hash[:selector].call(t)}.each do |term|
-              attributes = term.attributes.dup
-              types = Array(attributes[:type])
-              attributes.delete(:type)
-              node = {"id" => term.pname}
-              node['type'] = types unless types.empty?
-              node['type'] = types.first if types.length == 1
+            next unless cats[key]
 
-              attributes.each do |pred, values|
-                next if [:vocab, :"rdfs:isDefinedBy"].include?(pred)
-                property = case pred
-                when :type, :subClassOf, :subPropertyOf, :domain, :range, :label, :comment
-                  RDF::RDFS[pred].pname
-                when :inverseOf, :domainIncludes, :rangeIncludes
-                  RDF::Vocab::SCHEMA[pred].pname
-                else
-                  pred.to_s
+            cats[key].each do |subject|
+              node = {"id" => subject.pname}
+              po = {}
+
+              # Group predicates with their values
+              graph.query(subject: subject) do |statement|
+                # Sanity check this, as these are set to an empty string if not defined.
+                next if [RDF::RDFS.label, RDF::RDFS.comment].include?(statement.predicate) && statement.object.to_s.empty?
+                po[statement.predicate] ||= []
+                po[statement.predicate] << statement.object
+              end
+
+              next if po.empty?
+
+              node['type'] = po.delete(RDF.type).map {|t| jld_context.compact_iri(t, vocab: true)}
+
+              po.each do |predicate, objects|
+                term = jld_context.compact_iri(predicate, vocab: true)
+                node[term] = objects.map do |o|
+                  expanded_value = jld_context.expand_value(term, o)
+                  jld_context.compact_value(term, expanded_value)
                 end
-
-                Array(values).each do |v|
-                  node[property] ||= []
-
-                  rdf_val = case
-                  when v =~ /^#{RDF::Turtle::Terminals::PNAME_NS}$/
-                    jld_context.expand_iri(v)
-                  when v =~ /^#{RDF::Turtle::Terminals::PNAME_LN}$/
-                    jld_context.expand_iri(v)
-                  when (u = RDF::URI(v)) && u.valid?
-                    u
-                  else
-                    # Case as most appropriate literal
-                    [
-                      RDF::Literal::Date,
-                      RDF::Literal::DateTime,
-                      RDF::Literal::Boolean,
-                      RDF::Literal::Integer,
-                      RDF::Literal::Decimal,
-                      RDF::Literal::Double,
-                      RDF::Literal
-                    ].inject(nil) do |memo, klass|
-                      l = klass.new(v)
-                      memo || (l if l.valid?)
-                    end
-                  end
-
-                  # Add compacted value to node definition
-                  node[property] << jld_context.compact_value(property, jld_context.expand_value(property, rdf_val))
-                end
-
-                # Remove empty label an comment, which may be phantom
-                node['rdfs:label'].reject! {|v| v == ""} if node['rdfs:label']
-                node['rdfs:comment'].reject! {|v| v == ""} if node['rdfs:comment']
               end
 
               node.each do |property, values|
@@ -316,6 +284,7 @@ module RDF
         categorized = {}
         uncategorized = {}
         graph.query(predicate: RDF.type) do |statement|
+          next unless RDF::Vocabulary.find(statement.subject) == self
           case statement.object
           when RDF.Property,
                RDF::OWL.AnnotationProperty,
