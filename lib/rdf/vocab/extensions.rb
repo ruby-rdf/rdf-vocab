@@ -264,9 +264,10 @@ module RDF
       def vocab_prefixes(graph)
         vocabs = graph.
           terms.
-          select {|t| t.is_a?(RDF::Vocabulary::Term)}.
-          map(&:vocab).
+          select(&:uri?).
+          map {|u| RDF::Vocabulary.find(u)}.
           uniq.
+          compact.
           sort_by(&:__prefix__)
         vocabs << RDF::XSD  # incase we need it for a literal
 
@@ -286,7 +287,8 @@ module RDF
         categorized = {}
         uncategorized = {}
         graph.query(predicate: RDF.type) do |statement|
-          next unless RDF::Vocabulary.find(statement.subject) == self
+          # Only serialize statements that are in the defined vocabulary
+          next unless statement.subject.start_with?(self.to_uri)
           case statement.object
           when RDF.Property,
                RDF::OWL.AnnotationProperty,
