@@ -42,7 +42,7 @@ module RDF
           output = []
 
           # Find namespaces used in the vocabulary
-          graph ||= RDF::Graph.new {|g| each_statement {|s| g << s}}
+          graph = RDF::Graph.new {|g| each_statement {|s| g << s}} if graph.nil? || graph.empty?
 
           prefixes = vocab_prefixes(graph).merge(prefixes || {})
           pfx_width = prefixes.keys.map(&:to_s).map(&:length).max
@@ -154,7 +154,7 @@ module RDF
           }
 
           # Find namespaces used in the vocabulary
-          graph ||= RDF::Graph.new {|g| each_statement {|s| g << s}}
+          graph = RDF::Graph.new {|g| each_statement {|s| g << s}} if graph.nil? || graph.empty?
 
           prefixes = vocab_prefixes(graph).merge(prefixes || {})
           prefixes.each do |pfx, uri|
