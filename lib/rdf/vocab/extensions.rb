@@ -383,6 +383,7 @@ module RDF
     end
 
     # Add cli_commands as class method to RDF::Vocabulary::Format
-    Format.singleton_class.prepend VocabFormatExtensions
+    # TODO: in Ruby 2.0, `prepend` seems to be a private method of the class singleton; works okay elsewhere.
+    Format.singleton_class.send(:prepend, VocabFormatExtensions)
   end
 end

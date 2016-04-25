@@ -239,7 +239,7 @@ describe RDF::Vocabulary do
     end
   end
 
-  describe RDF::Vocabulary::Format do
+  describe RDF::Vocabulary::Format, skip: RDF::Vocabulary.each.to_a.last.to_uri.to_s do
     describe ".cli_commands" do
       require 'rdf/cli'
       describe "gen-vocab" do
