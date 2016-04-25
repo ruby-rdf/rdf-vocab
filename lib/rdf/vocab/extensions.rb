@@ -134,6 +134,8 @@ module RDF
             "rdfs:seeAlso": {"@type": "@id"},
             "rdfs:subClassOf": {"@type": "@vocab"},
             "rdfs:subPropertyOf": {"@type": "@vocab"},
+            "schema:domainIncludes": {"@type": "@vocab"},
+            "schema:rangeIncludes": {"@type": "@vocab"},
             "owl:equivalentClass": {"@type": "@vocab"},
             "owl:equivalentProperty": {"@type": "@vocab"},
             "owl:oneOf": {"@container": "@list", "@type": "@vocab"},
