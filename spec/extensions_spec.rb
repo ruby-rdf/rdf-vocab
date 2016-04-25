@@ -238,4 +238,43 @@ describe RDF::Vocabulary do
       end
     end
   end
+
+  describe RDF::Vocabulary::Format do
+    describe ".cli_commands" do
+      require 'rdf/cli'
+      describe "gen-vocab" do
+        let(:vocab) {RDF::Vocab::IANA}
+
+        it "generates Turtle by default" do
+          stringio = StringIO.new
+          RDF::CLI.exec(["gen-vocab"], base_uri: vocab.to_uri, output: stringio)
+          expect(stringio.string).not_to be_empty
+          graph = RDF::Graph.new
+          RDF::Turtle::Reader.new(stringio.string, validate: true) {|r| graph << r}
+          expect(graph).not_to be_empty
+          expect(graph).to be_valid
+        end
+
+        it "generates Turtle explictly" do
+          stringio = StringIO.new
+          RDF::CLI.exec(["gen-vocab"], base_uri: vocab.to_uri, output_format: :ttl, output: stringio)
+          expect(stringio.string).not_to be_empty
+          graph = RDF::Graph.new
+          RDF::Turtle::Reader.new(stringio.string, validate: true) {|r| graph << r}
+          expect(graph).not_to be_empty
+          expect(graph).to be_valid
+        end
+
+        it "generates JSON-LD" do
+          stringio = StringIO.new
+          RDF::CLI.exec(["gen-vocab"], base_uri: vocab.to_uri, output_format: :jsonld, output: stringio)
+          expect(stringio.string).not_to be_empty
+          graph = RDF::Graph.new
+          JSON::LD::Reader.new(stringio.string, validate: true) {|r| graph << r}
+          expect(graph).not_to be_empty
+          expect(graph).to be_valid
+        end
+      end
+    end
+  end
 end

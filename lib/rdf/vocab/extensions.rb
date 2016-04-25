@@ -324,5 +324,65 @@ module RDF
         cats
       end
     end
+
+    module VocabFormatExtensions
+      ##
+      # Hash of CLI commands appropriate for this format
+      # @return [Hash{Symbol => Lambda(Array, Hash)}]
+      def cli_commands
+        super.merge({
+          :"gen-vocab" => {
+            description: "Generate a vocabulary using a special serialization. Accepts an input graph, or serializes built-in vocabulary",
+            parse: false,  # Only parse if there are input files, otherwise, uses vocabulary
+            help: "gen-vocab --uri <vocabulary-URI> [--output format ttl|jsonld|html] [options] [files]",
+            lambda: ->(files, options) do
+              $stdout.puts "Generate Vocabulary"
+              raise ArgumentError, "Must specify vocabulary URI" unless options[:base_uri]
+
+              # Parse input graphs, if repository is not already created
+              if RDF::CLI.repository.empty? && !files.empty?
+                RDF::CLI.parse(files, options) do |reader|
+                  RDF::CLI.repository << reader
+                end
+              end
+
+              # Lookup vocabulary, or generate a new vocabulary from this URI
+              vocab = RDF::Vocabulary.find(options[:base_uri]) || begin
+                raise ArgumentError, "Must specify vocabulary prefix if vocabulary not built-in" unless options[:prefix]
+                RDF::Vocabulary.from_graph(RDF::CLI.repository, url: options[:base_uri], class_name: options[:prefix].to_s.upcase)
+              end
+
+              prefixes = {}
+              prefixes[options[:prefix]] = options[:base_uri] if options[:prefix]
+              out = options[:output] || $stdout
+              case options[:output_format]
+              when :ttl, nil then out.write vocab.to_ttl(graph: RDF::CLI.repository, prefixes: prefixes)
+              when :jsonld then out.write vocab.to_jsonld(graph: RDF::CLI.repository, prefixes: prefixes)
+              else
+                # Use whatever writer we find
+                writer = RDF::Writer.for(options[:output_format]) || RDF::NTriples::Writer
+                writer.new(out, options) do |w|
+                  if RDF::CLI.repository.empty?
+                    vocab.each_statement {|s| w << s}
+                  else
+                    w << RDF::CLI.repository
+                  end
+                end
+              end
+            end,
+            options: [
+              RDF::CLI::Option.new(
+                symbol: :prefix,
+                datatype: String,
+                on: ["--prefix PREFIX"],
+                description: "Prefix associated with vocabulary, if not built-in."),
+            ]
+          }
+        })
+      end
+    end
+
+    # Add cli_commands as class method to RDF::Vocabulary::Format
+    Format.singleton_class.prepend VocabFormatExtensions
   end
 end
