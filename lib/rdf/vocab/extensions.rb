@@ -221,9 +221,19 @@ module RDF
 
               po.each do |predicate, objects|
                 term = jld_context.compact_iri(predicate, vocab: true)
-                node[term] = objects.map do |o|
-                  expanded_value = jld_context.expand_value(term, o)
-                  jld_context.compact_value(term, expanded_value)
+                node[term] = if jld_context.container(term) == '@language'
+                  lang_map = objects.inject({}) do |memo, o|
+                    raise "Language-mapped term #{term} with non plain-literal #{o.inspect}" unless o.literal? && o.plain?
+                    memo.merge(o.language.to_s => o.value)
+                  end
+                  # Don't use language map if there's only one entry with no language
+                  lang_map = lang_map[""] if lang_map.keys == [""]
+                  [lang_map]
+                else
+                  objects.map do |o|
+                    expanded_value = jld_context.expand_value(term, o)
+                    jld_context.compact_value(term, expanded_value)
+                  end
                 end
               end
 
