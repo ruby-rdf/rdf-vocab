@@ -122,8 +122,6 @@ module RDF
         def to_jsonld(graph: nil, prefixes: nil)
           context = {}
           rdfs_context = ::JSON.parse %({
-            "id": "@id",
-            "type": "@type",
             "dc:title": {"@container": "@language"},
             "dc:description": {"@container": "@language"},
             "dc:date": {"@type": "xsd:date"},
@@ -152,7 +150,7 @@ module RDF
 
           ontology = {
             "@context" => rdfs_context,
-            "id" => to_uri.to_s
+            "@id" => to_uri.to_s
           }
 
           # Find namespaces used in the vocabulary
@@ -204,7 +202,7 @@ module RDF
             next unless cats[key]
 
             cats[key].each do |subject|
-              node = {"id" => subject.pname}
+              node = {"@id" => subject.pname}
               po = {}
 
               # Group predicates with their values
@@ -217,7 +215,7 @@ module RDF
 
               next if po.empty?
 
-              node['type'] = po.delete(RDF.type).map {|t| jld_context.compact_iri(t, vocab: true)}
+              node['@type'] = po.delete(RDF.type).map {|t| jld_context.compact_iri(t, vocab: true)}
 
               po.each do |predicate, objects|
                 term = jld_context.compact_iri(predicate, vocab: true)
@@ -264,6 +262,108 @@ module RDF
         # No JSON-LD serialization unless gem loaded
       end
 
+      ##
+      # Generate HTML+RDFa representation, specific to vocabularies. This uses generated JSON-LD and a Haml template.
+      #
+      # @param [RDF::Queryable] :graph Optional graph, otherwise uses statements from vocabulary.
+      # @param [Hash{#to_sym => String}] Prefixes to add to output
+      # @param [String, Hash] jsonld
+      #   If not provided, the `to_jsonld` method is used to generate it.
+      # @param [String] template The path to a Haml or ERB template used to generate the output using the JSON-LD serialization
+      # @return [String]
+      def to_html(graph: nil, prefixes: nil, jsonld: nil, template: nil)
+        # Find namespaces used in the vocabulary
+        graph = RDF::Graph.new {|g| each_statement {|s| g << s}} if graph.nil? || graph.empty?
+
+        # Get JSON as an object
+        json = case jsonld
+        when String then JSON.parse(File.read jsonld)
+        when Hash   then jsonld
+        else
+          JSON.parse(to_jsonld(graph: graph, prefixes: prefixes))
+        end
+        raise "Expected JSON-LD data within the '@graph' key" unless json.has_key?('@graph')
+
+        template ||= File.expand_path("../../../../etc/template.erb", __FILE__)
+
+        prefixes = vocab_prefixes(graph).merge(prefixes || {})
+        prefixes[:owl] = RDF::OWL.to_uri.to_s
+
+        # Make sure ontology is typed
+        json['@graph']['@type'] ||= ['owl:Ontology']
+
+        jld_context = JSON::LD::Context.new.parse([json['@context'], json['@graph']['@context']])
+
+        # Expand the JSON-LD to normalize accesses
+        expanded = JSON::LD::API.expand(json).first
+        expanded.delete('@reverse')
+
+        # Re-compact keys
+        expanded = expanded.inject({}) do |memo, (k, v)|
+          term = RDF::Vocabulary.find_term(k)
+          k = term.pname if term
+          memo.merge(k => v)
+        end
+
+        # Normalize label accessors
+        expanded['rdfs:label'] ||= %w(dc:title dc11:title skos:prefLabel).inject(nil) do |memo, key|
+          memo || expanded[key]
+        end || [{'@value' => json['@graph']['@id']}]
+        %w(rdfs_classes rdfs_properties rdfs_datatypes rdfs_instances).each do |section|
+          next unless json['@graph'][section]
+          json['@graph'][section].each do |node|
+            node['rdfs:label'] ||= %w(dc:title dc11:title skos:prefLabel).inject do |memo, key|
+              memo || node[key]
+            end || [{'@value' => node['@id']}]
+          end
+        end
+
+        # Expand each part separately, as well.
+        %w(rdfs_classes rdfs_properties rdfs_datatypes rdfs_instances).each do |section|
+          next unless json['@graph'][section]
+          expanded_section = JSON::LD::API.expand(json['@graph'][section], expandContext: jld_context)
+          # Re-compact keys
+          expanded[section] = expanded_section.map do |node|
+            node.inject({}) do |memo, (k, v)|
+              term = RDF::Vocabulary.find_term(k)
+              k = term.pname if term
+              memo.merge(k => v)
+            end
+          end
+        end
+
+        # Template invoked with expanded JSON-LD with outer object including `rdfs_classes`, `rdfs_properties`, and `rdf_instances` sections.
+        case template
+        when /.haml$/
+          require 'haml'
+          haml = Haml::Engine.new(template)
+          haml.render(self, ont: expanded, context: json['@context'], prefixes: prefixes)
+        when /.erb$/
+          require 'erubis'
+          eruby = Erubis::Eruby.new(File.read(template))
+          eruby.result(binding: self, ont: expanded, context: json['@context'], prefixes: prefixes)
+        else
+          raise "Unknown template type #{template}. Should have '.erb' or '.haml' extension"
+        end
+      end
+
+      ##
+      # Create HTML for values (Helper method, needs to be public)
+      def value_to_html(property, value, tag)
+        value.map do |v|
+          %(<#{tag} property="#{property}") +
+          if v['@value']
+            (v['@language'] ? %( language="#{v['@language']}") : "") +
+            (v['@type'] ? %( datatype="#{RDF::Vocabulary.find_term(v['@type']).pname}") : "") +
+            %(>#{v['@value']})
+          elsif v['@id']
+            %( resource="#{v['@id']}">#{v['@id']})
+          else
+            raise "Unknown value type: #{v.inspect}, #{property}"
+          end +
+          %(</#{tag}>)
+        end.join("\n")
+      end
     private
 
       ##
@@ -344,7 +444,7 @@ module RDF
           :"gen-vocab" => {
             description: "Generate a vocabulary using a special serialization. Accepts an input graph, or serializes built-in vocabulary",
             parse: false,  # Only parse if there are input files, otherwise, uses vocabulary
-            help: "gen-vocab --uri <vocabulary-URI> [--output format ttl|jsonld|html] [options] [files]",
+            help: "gen-vocab --uri <vocabulary-URI> [--output format ttl|jsonld|html] [options] [files]\n",
             lambda: ->(files, options) do
               $stdout.puts "Generate Vocabulary"
               raise ArgumentError, "Must specify vocabulary URI" unless options[:base_uri]
@@ -368,6 +468,7 @@ module RDF
               case options[:output_format]
               when :ttl, nil then out.write vocab.to_ttl(graph: RDF::CLI.repository, prefixes: prefixes)
               when :jsonld then out.write vocab.to_jsonld(graph: RDF::CLI.repository, prefixes: prefixes)
+              when :html then out.write vocab.to_html(graph: RDF::CLI.repository, prefixes: prefixes)
               else
                 # Use whatever writer we find
                 writer = RDF::Writer.for(options[:output_format]) || RDF::NTriples::Writer

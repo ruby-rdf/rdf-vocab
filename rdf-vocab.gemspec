@@ -23,9 +23,14 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency     "rdf",          '~> 2.0'
 
+  # Either of these are required for HTML vocabulary generation
+  spec.add_development_dependency "haml",         '~> 4.0'
+  spec.add_development_dependency "erubis",       '~> 2.7'
+
   spec.add_development_dependency "ld-patch",     '~> 0.3'
   spec.add_development_dependency "json-ld",      '~> 2.0'
   spec.add_development_dependency "rdf-turtle",   '~> 2.0'
+  spec.add_development_dependency "rdf-rdfa",     '~> 2.0'
   spec.add_development_dependency "rdf-reasoner", '~> 0.4'
   spec.add_development_dependency "bundler",      "~> 1.7"
   spec.add_development_dependency "rake",         "~> 10.0"
