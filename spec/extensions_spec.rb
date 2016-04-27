@@ -236,7 +236,10 @@ describe RDF::Vocabulary do
     context "smoke test" do
       RDF::Vocabulary.each do |vocab|
         it "serializes #{vocab.__name__} without raising exception" do
-          expect {vocab.to_jsonld}.not_to raise_error
+          expect do
+            jsonld = vocab.to_jsonld
+            JSON::LD::Reader.new(jsonld, validate: true).each_statement {}
+          end.not_to raise_error
         end
       end
     end
