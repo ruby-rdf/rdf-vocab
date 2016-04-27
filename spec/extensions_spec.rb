@@ -71,7 +71,10 @@ describe RDF::Vocabulary do
     context "smoke test" do
       RDF::Vocabulary.each do |vocab|
         it "serializes #{vocab.__name__} without raising exception" do
-          expect {vocab.to_ttl}.not_to raise_error
+          expect do
+            ttl = vocab.to_ttl
+            RDF::Turtle::Reader.new(ttl, validate: true).each_statement {}
+          end.not_to raise_error
         end
       end
     end

@@ -96,11 +96,13 @@ module RDF
 
               # Serialize other predicate/objects
               po.each do |predicate, objects|
-                po_list << predicate.pname + ' ' + objects.map {|o| writer.format_term(o)}.join(", ")
+                resource = predicate.qname ? predicate.pname : "<#{predicate}>"
+                po_list << resource + ' ' + objects.map {|o| writer.format_term(o)}.join(", ")
               end
 
               # Output statements for this subject
-              output << "#{subject.pname} " + po_list.join(";\n  ") + "\n  .\n"
+              subj = subject.qname ? subject.pname : "<#{subject}>"
+              output << "#{subj} " + po_list.join(";\n  ") + "\n  .\n"
             end
           end
 
