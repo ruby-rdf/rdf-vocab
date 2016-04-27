@@ -264,20 +264,33 @@ describe RDF::Vocabulary do
       end
     end
 
-    it "Does not generate an ontology if missing"
+    it "Creates Classes" do
+      expect(foaf.xpath('//section/h2').to_s).to include("Class Definitions")
+      expect(foaf.at_xpath('//td[@resource="foaf:Group"]')).not_to be_nil
+    end
 
-    it "Creates Classes"
+    it "Creates Properties" do
+      expect(foaf.xpath('//section/h2').to_s).to include("Property Definitions")
+      expect(foaf.at_xpath('//td[@resource="foaf:isPrimaryTopicOf"]')).not_to be_nil
+    end
 
-    it "Creates Properties"
+    it "Creates Datatypes" do
+      expect(dc.xpath('//section/h2').to_s).to include("Datatype Definitions")
+      expect(dc.at_xpath('//td[@resource="dc:RFC1766"]')).not_to be_nil
+    end
 
-    it "Creates Datatypes"
+    it "Creates Other definitions" do
+      expect(dc.xpath('//section/h2').to_s).to include("Instance Definitions")
+      expect(dc.at_xpath('//td[@resource="dc:NLM"]')).not_to be_nil
+    end
 
-    it "Creates Other definitions"
-
-    context "smoke test" do
+    context "smoke test", pending: true do
       RDF::Vocabulary.each do |vocab|
         it "serializes #{vocab.__name__} without raising exception" do
-          expect {vocab.to_html}.not_to raise_error
+          expect do
+            rdfa = vocab.to_html
+            RDF::RDFa::Reader.new(rdfa, validate: true).each_statement {}
+          end.not_to raise_error
         end
       end
     end
