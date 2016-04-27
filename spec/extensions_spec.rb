@@ -247,12 +247,16 @@ describe RDF::Vocabulary do
       @foaf = RDF::Vocab::FOAF.to_html
     end
 
-    let(:acl) {@acl}
-    let(:bibo) {@bibo}
-    let(:dc) {@dc}
-    let(:foaf) {@foaf}
+    let(:acl) {Nokogiri::HTML.parse @acl}
+    let(:bibo) {Nokogiri::HTML.parse @bibo}
+    let(:dc) {Nokogiri::HTML.parse @dc}
+    let(:foaf) {Nokogiri::HTML.parse @foaf}
 
-    it "defines prefixes used in vocabulary"
+    it "defines prefixes used in vocabulary" do
+      %w(dc dc11 foaf geo owl rdf rdfs skos vs).each do |pfx|
+        expect(foaf.at_xpath('/html/body/@prefix').to_s).to include("#{pfx}: ")
+      end
+    end
 
     it "Does not generate an ontology if missing"
 
@@ -264,7 +268,7 @@ describe RDF::Vocabulary do
 
     it "Creates Other definitions"
 
-    context "smoke test", pending: true do
+    context "smoke test" do
       RDF::Vocabulary.each do |vocab|
         it "serializes #{vocab.__name__} without raising exception" do
           expect {vocab.to_html}.not_to raise_error

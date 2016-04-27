@@ -340,8 +340,8 @@ module RDF
           haml.render(self, ont: expanded, context: json['@context'], prefixes: prefixes)
         when /.erb$/
           require 'erubis'
-          eruby = Erubis::Eruby.new(File.read(template))
-          eruby.result(binding: self, ont: expanded, context: json['@context'], prefixes: prefixes)
+          eruby = Erubis::FastEruby.new(File.read(template))
+          result = eruby.evaluate(binding: self, ont: expanded, context: json['@context'], prefixes: prefixes)
         else
           raise "Unknown template type #{template}. Should have '.erb' or '.haml' extension"
         end
