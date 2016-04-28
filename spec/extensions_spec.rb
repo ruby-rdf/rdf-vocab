@@ -68,7 +68,7 @@ describe RDF::Vocabulary do
       expect(foaf).to match %r(rdfs:subClassOf .*<http:)
     end
 
-    context "smoke test" do
+    context "smoke test", slow: true do
       RDF::Vocabulary.each do |vocab|
         it "serializes #{vocab.__name__} without raising exception" do
           expect do
@@ -233,7 +233,7 @@ describe RDF::Vocabulary do
       #expect(bibo).to match_json_path "$..rdfs_instances[?(@.@id='bdarcus')]"
     end
 
-    context "smoke test" do
+    context "smoke test", slow: true do
       RDF::Vocabulary.each do |vocab|
         it "serializes #{vocab.__name__} without raising exception" do
           expect do
@@ -284,7 +284,7 @@ describe RDF::Vocabulary do
       expect(dc.at_xpath('//td[@resource="dc:NLM"]')).not_to be_nil
     end
 
-    context "smoke test" do
+    context "smoke test", slow: true do
       skips = [
         RDF::Vocab::Bibframe,
         RDF::Vocab::EBUCore,
