@@ -338,7 +338,7 @@ module RDF
         case template
         when /.haml$/
           require 'haml'
-          haml = Haml::Engine.new(template)
+          haml = Haml::Engine.new(File.read(template))
           haml.render(self, ont: expanded, context: json['@context'], prefixes: prefixes)
         when /.erb$/
           require 'erubis'
@@ -356,10 +356,10 @@ module RDF
           %(<#{tag} property="#{property}") +
           if v['@value']
             (v['@language'] ? %( language="#{v['@language']}") : "") +
-            (v['@type'] ? %( datatype="#{RDF::Vocabulary.find_term(v['@type']).pname}") : "") +
+            (v['@type'] ? %( datatype="#{RDF::URI(v['@type']).pname}") : "") +
             %(>#{v['@value']})
           elsif v['@id']
-            %( resource="#{v['@id']}">#{v['@id']})
+            %( resource="#{RDF::URI(v['@id']).pname}">#{RDF::URI(v['@id']).pname})
           else
             raise "Unknown value type: #{v.inspect}, #{property}"
           end +
@@ -470,7 +470,7 @@ module RDF
               case options[:output_format]
               when :ttl, nil then out.write vocab.to_ttl(graph: RDF::CLI.repository, prefixes: prefixes)
               when :jsonld then out.write vocab.to_jsonld(graph: RDF::CLI.repository, prefixes: prefixes)
-              when :html then out.write vocab.to_html(graph: RDF::CLI.repository, prefixes: prefixes)
+              when :html then out.write vocab.to_html(graph: RDF::CLI.repository, prefixes: prefixes, template: options[:template])
               else
                 # Use whatever writer we find
                 writer = RDF::Writer.for(options[:output_format]) || RDF::NTriples::Writer
@@ -489,6 +489,12 @@ module RDF
                 datatype: String,
                 on: ["--prefix PREFIX"],
                 description: "Prefix associated with vocabulary, if not built-in."),
+              RDF::CLI::Option.new(
+                symbol: :template,
+                datatype: String,
+                on: ["--template TEMPLATE"],
+                description: "Path to local template for generating HTML, either Haml or ERB, depending on file extension.\n" +
+                            "See https://github.com/ruby-rdf/rdf-vocab/tree/develop/etc for built-in templates."),
             ]
           }
         })

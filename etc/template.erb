@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8'/>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title><%= @ont["rdfs:label"].first %></title>
+    <title><%= @ont["rdfs:label"].first['@value'] %></title>
     <style type="text/css">
       dl.terms dt {
         float: left;
@@ -114,9 +114,9 @@
         <dd>
           <% if defn.is_a?(String) %>
             <%= defn %>
-          <% elsif defn['@id'] %>
+          <% elsif defn.is_a?(Hash) && defn['@id'] %>
             <%= defn['@id'] %>
-          <% elsif defn['@reverse'] %>
+          <% elsif defn.is_a?(Hash) && defn['@reverse'] %>
             reverse of <%= defn['@reverse'] %>
           <% else %>
             <%= term %>

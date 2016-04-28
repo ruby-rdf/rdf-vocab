@@ -284,19 +284,19 @@ describe RDF::Vocabulary do
       expect(dc.at_xpath('//td[@resource="dc:NLM"]')).not_to be_nil
     end
 
-    context "smoke test", pending: true do
+    context "smoke test" do
       RDF::Vocabulary.each do |vocab|
-        it "serializes #{vocab.__name__} without raising exception" do
+        it "serializes #{vocab.__name__} without raising exception", skip: (vocab == RDF::Vocab::Bibframe) do
           expect do
             rdfa = vocab.to_html
-            RDF::RDFa::Reader.new(rdfa, validate: true).each_statement {}
+            RDF::RDFa::Reader.new(rdfa, validate: true, base_uri: vocab.to_uri).each_statement {}
           end.not_to raise_error
         end
       end
     end
   end
 
-  describe RDF::Vocabulary::Format, skip: RDF::Vocabulary.each.to_a.last.to_uri.to_s do
+  describe RDF::Vocabulary::Format do
     describe ".cli_commands" do
       require 'rdf/cli'
       describe "gen-vocab" do
@@ -328,6 +328,16 @@ describe RDF::Vocabulary do
           expect(stringio.string).not_to be_empty
           graph = RDF::Graph.new
           JSON::LD::Reader.new(stringio.string, validate: true) {|r| graph << r}
+          expect(graph).not_to be_empty
+          expect(graph).to be_valid
+        end
+
+        it "generates HTML" do
+          stringio = StringIO.new
+          RDF::CLI.exec(["gen-vocab"], base_uri: vocab.to_uri, output_format: :html, output: stringio)
+          expect(stringio.string).not_to be_empty
+          graph = RDF::Graph.new
+          RDF::RDFa::Reader.new(stringio.string, validate: true, base_uri: vocab.to_uri) {|r| graph << r}
           expect(graph).not_to be_empty
           expect(graph).to be_valid
         end

@@ -1,0 +1,122 @@
+-# This template is used for generating RDFS/OWL Vocabulary documents in HTML+RDFa.
+-# It expects to be called with the following variables:
+-# * _ont_ - The ontology node, with compact keys and expanded values,
+-# * _prefixes_ - A hash of prefix to expanded URI,
+-# * _context_ - The JSON-LD context associated with _ont_.
+- require 'cgi'
+
+!!! 5
+%html
+  %head
+    %meta{"http-equiv" => "Content-Type", :content => "text/html;charset=utf-8"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0"}
+    %title
+      = ont["rdfs:label"].first['@value']
+    :css
+      dl.terms dt {
+        float: left;
+        clear: left;
+        width: 17vw;
+      }
+      dl.terms dd:after {
+          content: '';
+          display: block;
+          clear: both;
+          margin-bottom: 5px;
+      }
+      table.rdfs-definition td {vertical-align: top;}
+      .bold {font-weight: bold;}
+  - pfx = RDF::Vocabulary.find(ont['@id']).__name__.split(':').last.downcase
+  - pfxs = prefixes.inject([]) {|m, (k,v)| m << "#{k}: #{v}"}.join(' ')
+  - typeof = ont['@type'].map {|t| RDF::URI(t).pname}.join(' ')
+  %body{resource: ont['@id'], typeof: typeof, prefix: pfxs}
+    %section#abstract
+      %h2="Abstract"
+      %p
+        This document describes
+        != value_to_html('rdfs:label', ont['rdfs:label'], 'span')
+      %p
+        Alternate versions of the vocabulary definition exist in
+        %a{rel: :alternate, href: "#{pfx}.ttl"}="Turtle"
+        and
+        %a{rel: :alternate, href: "#{pfx}.jsonld"}="JSON-LD"
+        which also includes the
+        %code
+          @context
+        required for metadata descriptions.
+    %section
+      %h2="Introduction"
+      - %w(rdfs:comment dc:description dc11:description).each do |prop|
+        - next unless ont[prop]
+        = value_to_html(prop, ont[prop], 'p')
+      %dl
+        - ont.keys.sort.each do |key|
+          - next if %(@id @type rdfs:label rdfs:comment dc:description dc11:description rdfs_classes rdfs_properties rdfs_datatypes rdfs_instances).include?(key)
+          - term = RDF::Vocabulary.expand_pname(key)
+          - next unless term
+          %dt= term.label rescue term.to_s
+          = value_to_html(key, ont[key], 'dd')
+      %p
+        This specification makes use of the following namespaces:
+      %dl.terms
+        - prefixes.keys.sort_by(&:to_s).each do |pfx|
+          %dt
+            %code=pfx
+          %dd
+            %code= prefixes[pfx]
+    - [{ heading: "Class Definitions", key: "rdfs_classes"},
+       { heading: "Property Definitions", key: "rdfs_properties"},
+       { heading: "Datatype Definitions", key: "rdfs_datatypes"},
+       { heading: "Instance Definitions", key: "rdfs_instances"}].each do |sect|
+      - next unless ont[sect[:key]]
+      %section
+        %h2= sect[:heading]
+        %p
+          The following are
+          = sect[:heading].downcase
+          in the
+          %code=pfx
+          namespace:
+        %table.rdfs-definition
+          - ont[sect[:key]].each do |defn|
+            - pname = RDF::URI(defn['@id']).pname
+            %tr
+              %td.bold= pname
+              - typeof = defn['@type'].map {|t| RDF::URI(t).pname}.join(' ')
+              %td{resource: RDF::URI(defn['@id']).pname, typeof: typeof}
+                != value_to_html('rdfs:label', defn['rdfs:label'], 'em')
+                - %w(rdfs:comment dc:description dc11:description).each do |prop|
+                  - next unless ont[prop]
+                  != value_to_html(prop, ont[prop], 'p')
+                %dl.terms
+                  - defn.keys.sort.each do |key|
+                    - next if %(@id @type rdfs:label rdfs:comment dc:description dc11:description).include?(key)
+                    - term = RDF::Vocabulary.expand_pname(key)
+                    - next unless term
+                    %dt= term.label rescue term.to_s
+                    != value_to_html(key, defn[key], 'dd')
+    %section
+      %h2="Term Definitions"
+      %dl.terms
+        - context.keys.sort.each do |term|
+          - next if term.to_s.empty?
+          - defn = context[term]
+          %dt=term
+          %dd
+            - if defn.is_a?(String)
+              = defn
+            - elsif defn['@id']
+              = defn['@id']
+            - elsif defn['@reverse']
+              reverse of
+              = defn['@reverse']
+            - else
+              = term
+            - if defn.is_a?(Hash) && defn['@type']
+              - if defn['@container'] == '@language'
+                with object values interpreted as language-specific, indexed by language
+              - elsif defn['@container'] == '@index'
+                with object values interpreted indexed by index
+              - else
+                with array values interpreted as
+                = defn['@container']
