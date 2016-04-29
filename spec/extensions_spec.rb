@@ -245,12 +245,12 @@ describe RDF::Vocabulary do
     end
   end
 
-  describe ".to_html", skip: ("Rubinius issues" if RUBY_ENGINE == "rbx") do
+  describe ".to_html" do
     before(:all) do
-      @acl  = RDF::Vocab::ACL.to_html unless RUBY_ENGINE == "rbx"
-      @bibo = RDF::Vocab::BIBO.to_html unless RUBY_ENGINE == "rbx"
-      @dc   = RDF::Vocab::DC.to_html unless RUBY_ENGINE == "rbx"
-      @foaf = RDF::Vocab::FOAF.to_html unless RUBY_ENGINE == "rbx"
+      @acl  = RDF::Vocab::ACL.to_html
+      @bibo = RDF::Vocab::BIBO.to_html
+      @dc   = RDF::Vocab::DC.to_html
+      @foaf = RDF::Vocab::FOAF.to_html
     end
 
     let(:acl) {Nokogiri::HTML.parse @acl}
