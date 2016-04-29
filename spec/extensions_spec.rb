@@ -3,7 +3,7 @@ require File.expand_path("../spec_helper", __FILE__)
 require 'json-schema'
 
 describe RDF::Vocabulary do
-  describe ".to_ttl", skip: ("Rubinius issues in RDF.rb" if RUBY_ENGINE == "rbx") do
+  describe ".to_ttl" do
     before(:all) do
       @acl  = RDF::Vocab::ACL.to_ttl
       @bibo = RDF::Vocab::BIBO.to_ttl
@@ -80,7 +80,7 @@ describe RDF::Vocabulary do
     end
   end
 
-  describe ".to_jsonld", skip: ("Rubinius issues in RDF.rb" if RUBY_ENGINE == "rbx") do
+  describe ".to_jsonld" do
     before(:all) do
       @acl  = RDF::Vocab::ACL.to_jsonld
       @bibo = RDF::Vocab::BIBO.to_jsonld
@@ -245,12 +245,12 @@ describe RDF::Vocabulary do
     end
   end
 
-  describe ".to_html", skip: ("Rubinius issues in RDF.rb" if RUBY_ENGINE == "rbx") do
+  describe ".to_html", skip: ("Rubinius issues" if RUBY_ENGINE == "rbx") do
     before(:all) do
-      @acl  = RDF::Vocab::ACL.to_html
-      @bibo = RDF::Vocab::BIBO.to_html
-      @dc   = RDF::Vocab::DC.to_html
-      @foaf = RDF::Vocab::FOAF.to_html
+      @acl  = RDF::Vocab::ACL.to_html unless RUBY_ENGINE == "rbx"
+      @bibo = RDF::Vocab::BIBO.to_html unless RUBY_ENGINE == "rbx"
+      @dc   = RDF::Vocab::DC.to_html unless RUBY_ENGINE == "rbx"
+      @foaf = RDF::Vocab::FOAF.to_html unless RUBY_ENGINE == "rbx"
     end
 
     let(:acl) {Nokogiri::HTML.parse @acl}
@@ -306,7 +306,7 @@ describe RDF::Vocabulary do
   end
 
   describe RDF::Vocabulary::Format do
-    describe ".cli_commands" do
+    describe ".cli_commands", skip: ("Rubinius issues in RDF.rb" if RUBY_ENGINE == "rbx") do
       require 'rdf/cli'
       describe "gen-vocab" do
         let(:vocab) {RDF::Vocab::IANA}

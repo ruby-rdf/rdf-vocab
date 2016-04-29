@@ -21,6 +21,7 @@ end
 
 group :debug do
   gem "byebug", platform: :mri
+  gem "rubinius-debugger", platform: :rbx
 end
 
 platforms :rbx do
