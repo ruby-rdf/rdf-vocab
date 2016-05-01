@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'/>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title><%= @ont["rdfs:label"].first['@value'] %></title>
+    <style type="text/css">
+      dl.terms dt {
+        float: left;
+        clear: left;
+        width: 17vw;
+      }
+      dl.terms dd:after {
+          content: '';
+          display: block;
+          clear: both;
+          margin-bottom: 5px;
+      }
+      table.rdfs-definition td {vertical-align: top;}
+      .bold {font-weight: bold;}
+    </style>
+  </head>
+  <% pfx = RDF::Vocabulary.find(@ont['@id']).__name__.split(':').last.downcase %>
+  <% pfxs = @prefixes.inject([]) {|m, (k,v)| m << "#{k}: #{v}"}.join(' ')%>
+  <% typeof = @ont['@type'].map {|t| RDF::URI(t).pname}.join(' ') %>
+  <body resource="<%=@ont['@id']%>" typeof="<%=typeof%>" prefix="<%=pfxs%>">
+    <section id="abstract">
+      <h2>Abstract</h2>
+      <p>This document describes
+        <%= @binding.value_to_html('rdfs:label', @ont['rdfs:label'], 'span')%>.</p>
+      <p>Alternate versions of the vocabulary definition exist in
+        <a rel="alternate" href="<%=pfx%>.ttl">Turtle</a> and
+        <a rel="alternate" href="<%=pfx%>.jsonld">JSON-LD</a>,
+        which also includes the <code>@context</code> required for metadata descriptions.
+      </p>
+    </section>
+    <section>
+      <h2>Introduction</h2>
+      <% %w(rdfs:comment dc:description dc11:description).each do |prop| -%>
+        <% next unless @ont[prop] -%>
+        <%= @binding.value_to_html(prop, @ont[prop], 'p')%>
+      <% end -%>
+      <dl>
+        <% @ont.keys.sort.each do |key| -%>
+          <% next if %(@id @type rdfs:label rdfs:comment dc:description dc11:description rdfs_classes rdfs_properties rdfs_datatypes rdfs_instances).include?(key) -%>
+          <% term = RDF::Vocabulary.expand_pname(key) -%>
+          <% next unless term -%>
+          <% label = term.label rescue term.to_s -%>
+          <dt><%= label %>:</dt>
+          <%= @binding.value_to_html(key, @ont[key], 'dd')%>
+        <% end -%>
+      </dl>
+      <p>This specification makes use of the following namespaces:</p>
+      <dl class="terms">
+        <% @prefixes.keys.sort_by(&:to_s).each do |pfx| -%>
+          <dt><code><%=pfx%></code>:</dt>
+          <dd><code><%=@prefixes[pfx]%></code></dd>
+        <% end -%>
+      </dl>
+    </section>
+    <%
+      [{
+        heading: "Class Definitions",
+        key: "rdfs_classes"
+      }, {
+        heading: "Property Definitions",
+        key: "rdfs_properties"
+      }, {
+        heading: "Datatype Definitions",
+        key: "rdfs_datatypes"
+      }, {
+        heading: "Instance Definitions",
+        key: "rdfs_instances"
+      }].each do |sect|
+    -%>
+      <% next unless @ont[sect[:key]] -%>
+      <section>
+        <h2><%= sect[:heading] %></h2>
+        <p>The following are <%= sect[:heading].downcase %> in the <code><%=pfx%></code> namespace:</p>
+        <table class="rdfs-definition">
+          <% @ont[sect[:key]].each do |defn| -%>
+          <% pname = RDF::URI(defn['@id']).pname -%>
+          <tr><td class="bold"><%= pname %></td>
+            <% typeof = defn['@type'].map {|t| RDF::URI(t).pname}.join(' ') %>
+            <td resource="<%= RDF::URI(defn['@id']).pname %>" typeof="<%=typeof%>">
+              <%= @binding.value_to_html('rdfs:label', defn['rdfs:label'], 'em')%>
+              <% %w(rdfs:comment dc:description dc11:description).each do |prop| -%>
+                <% next unless @ont[prop] -%>
+                <%= @binding.value_to_html(prop, @ont[prop], 'p')%>
+              <% end -%>
+              <dl class="terms">
+                <% defn.keys.sort.each do |key| -%>
+                  <% next if %(@id @type rdfs:label rdfs:comment dc:description dc11:description).include?(key) -%>
+                  <% term = RDF::Vocabulary.expand_pname(key) -%>
+                  <% next unless term -%>
+                  <% label = term.label rescue term.to_s -%>
+                  <dt><%= label %>:</dt>
+                  <%= @binding.value_to_html(key, defn[key], 'dd')%>
+                <% end -%>
+              </dl>
+            </td>
+          </tr>
+          <% end -%>
+        </table>
+      </section>
+    <% end -%>
+    <section>
+      <h2>Term Definitions</h2>
+      <dl class="terms">
+        <% @context.keys.sort.each do |term|%>
+        <% next if term.to_s.empty? -%>
+        <% defn = @context[term] %>
+        <dt><%= term %></dt>
+        <dd>
+          <% if defn.is_a?(String) %>
+            <%= defn %>
+          <% elsif defn.is_a?(Hash) && defn['@id'] %>
+            <%= defn['@id'] %>
+          <% elsif defn.is_a?(Hash) && defn['@reverse'] %>
+            reverse of <%= defn['@reverse'] %>
+          <% else %>
+            <%= term %>
+          <% end %>
+          <% if defn.is_a?(Hash) && defn['@type'] %>
+            with string values interpreted as <%= defn['@type'] %>
+          <% end%>
+          <% if defn.is_a?(Hash) && defn['@container'] %>
+            <% if defn['@container'] == '@language' %>
+              with object values interpreted as language-specific, indexed by language
+            <% elsif defn['@container'] == '@index' %>
+              with object values interpreted indexed by index
+            <% else %>
+              with array values interpreted as <%= defn['@container'] %>
+            <% end %>
+          <% end%>
+        </dd>
+        <% end %>
+      </dl>
+    </section>
+  </body>
+</html>
