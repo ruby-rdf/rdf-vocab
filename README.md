@@ -4,7 +4,12 @@ Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 [![Gem Version](https://badge.fury.io/rb/rdf-vocab.png)](http://badge.fury.io/rb/rdf-vocab)
 [![Build Status](https://travis-ci.org/ruby-rdf/rdf-vocab.png?branch=master)](http://travis-ci.org/ruby-rdf/rdf-vocab)
 
-##Vocabularies
+## Extensions
+This gem extends `RDF::Vocabulary` with `#to_ttl`, `#to_jsonld`, and `#to_html` methods to create special-purpose vocabulary serializations. The HTML version is templated using a Haml template to allow output to be customized.
+
+Also extends `RDF::Vocabulary::Format` with the `gen-vocab` command extension to the `rdf` executable.
+
+## Vocabularies
 
 * RDF::Vocab::ACL       - [Web Access Control](http://www.w3.org/wiki/WebAccessControl) (W3C)
 * RDF::Vocab::Bibframe  - [Bibliographic Framework Initiaitive](http://bibframe.org/vocab/) (LoC)
@@ -79,6 +84,8 @@ then
     require "rdf/vocab"
 
 This will load all the vocabulary classes in the library.
+
+Also adds the `gen-vocab` command to the `rdf` command-line executable to generate specifically generated output in Turtle, JSON-LD, and HTML+RDFa for either built-in or arbitrary vocabularies.
 
 ## Adding new vocabularies
 
