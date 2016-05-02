@@ -173,7 +173,7 @@ module RDF
           end
 
           # Parse the two contexts so we know what terms are in scope
-          jld_context = JSON::LD::Context.new.parse([context, rdfs_context])
+          jld_context = ::JSON::LD::Context.new.parse([context, rdfs_context])
 
           {
             ont: {
@@ -258,7 +258,7 @@ module RDF
           {
             "@context" => context,
             "@graph" => ontology
-          }.to_json(JSON::LD::JSON_STATE)
+          }.to_json(::JSON::LD::JSON_STATE)
         end
       rescue LoadError
         # No JSON-LD serialization unless gem loaded
@@ -279,10 +279,10 @@ module RDF
 
         # Get JSON as an object
         json = case jsonld
-        when String then JSON.parse(File.read jsonld)
+        when String then ::JSON.parse(File.read jsonld)
         when Hash   then jsonld
         else
-          JSON.parse(to_jsonld(graph: graph, prefixes: prefixes))
+          ::JSON.parse(to_jsonld(graph: graph, prefixes: prefixes))
         end
         raise "Expected JSON-LD data within the '@graph' key" unless json.has_key?('@graph')
 
@@ -294,10 +294,10 @@ module RDF
         # Make sure ontology is typed
         json['@graph']['@type'] ||= ['owl:Ontology']
 
-        jld_context = JSON::LD::Context.new.parse([json['@context'], json['@graph']['@context']])
+        jld_context = ::JSON::LD::Context.new.parse([json['@context'], json['@graph']['@context']])
 
         # Expand the JSON-LD to normalize accesses
-        expanded = JSON::LD::API.expand(json).first
+        expanded = ::JSON::LD::API.expand(json).first
         expanded.delete('@reverse')
 
         # Re-compact keys
@@ -323,7 +323,7 @@ module RDF
         # Expand each part separately, as well.
         %w(rdfs_classes rdfs_properties rdfs_datatypes rdfs_instances).each do |section|
           next unless json['@graph'][section]
-          expanded_section = JSON::LD::API.expand(json['@graph'][section], expandContext: jld_context)
+          expanded_section = ::JSON::LD::API.expand(json['@graph'][section], expandContext: jld_context)
           # Re-compact keys
           expanded[section] = expanded_section.map do |node|
             node.inject({}) do |memo, (k, v)|
