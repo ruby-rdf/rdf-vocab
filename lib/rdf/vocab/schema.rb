@@ -114,18 +114,6 @@ module RDF::Vocab
       label: "AmusementPark".freeze,
       subClassOf: "schema:EntertainmentBusiness".freeze,
       type: "rdfs:Class".freeze
-    term :AnatomicalStructure,
-      comment: %(Any part of the human body, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical structures.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "AnatomicalStructure".freeze,
-      subClassOf: "schema:MedicalEntity".freeze,
-      type: "rdfs:Class".freeze
-    term :AnatomicalSystem,
-      comment: %(An anatomical system is a group of anatomical structures that work together to perform a certain task. Anatomical systems, such as organ systems, are one organizing principle of anatomy, and can includes circulatory, digestive, endocrine, integumentary, immune, lymphatic, muscular, nervous, reproductive, respiratory, skeletal, urinary, vestibular, and other systems.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "AnatomicalSystem".freeze,
-      subClassOf: "schema:MedicalEntity".freeze,
-      type: "rdfs:Class".freeze
     term :AnimalShelter,
       comment: %(Animal shelter.).freeze,
       label: "AnimalShelter".freeze,
@@ -152,12 +140,6 @@ module RDF::Vocab
       label: "ApplyAction".freeze,
       subClassOf: "schema:OrganizeAction".freeze,
       type: "rdfs:Class".freeze
-    term :ApprovedIndication,
-      comment: %(An indication for a medical therapy that has been formally specified or approved by a regulatory body that regulates use of the therapy; for example, the US FDA approves indications for most drugs in the US.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "ApprovedIndication".freeze,
-      subClassOf: "schema:MedicalIndication".freeze,
-      type: "rdfs:Class".freeze
     term :Aquarium,
       comment: %(Aquarium.).freeze,
       label: "Aquarium".freeze,
@@ -172,12 +154,6 @@ module RDF::Vocab
       comment: %(An art gallery.).freeze,
       label: "ArtGallery".freeze,
       subClassOf: "schema:EntertainmentBusiness".freeze,
-      type: "rdfs:Class".freeze
-    term :Artery,
-      comment: %(A type of blood vessel that specifically carries blood away from the heart.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "Artery".freeze,
-      subClassOf: "schema:Vessel".freeze,
       type: "rdfs:Class".freeze
     term :Article,
       comment: %(An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.
@@ -266,14 +242,16 @@ module RDF::Vocab
       label: "AutomotiveBusiness".freeze,
       subClassOf: "schema:LocalBusiness".freeze,
       type: "rdfs:Class".freeze
-    term :Bacteria,
-      comment: %(Pathogenic bacteria that cause bacterial infection.).freeze,
-      label: "Bacteria".freeze,
-      type: "schema:InfectiousAgentClass".freeze
     term :Bakery,
       comment: %(A bakery.).freeze,
       label: "Bakery".freeze,
       subClassOf: "schema:FoodEstablishment".freeze,
+      type: "rdfs:Class".freeze
+    term :BankAccount,
+      comment: %(A product or service offered by a bank whereby one may deposit, withdraw or transfer money and in some cases be paid interest.).freeze,
+      :"dc:source" => [],
+      label: "BankAccount".freeze,
+      subClassOf: "schema:FinancialProduct".freeze,
       type: "rdfs:Class".freeze
     term :BankOrCreditUnion,
       comment: %(Bank or credit union.).freeze,
@@ -325,12 +303,6 @@ module RDF::Vocab
       label: "BlogPosting".freeze,
       subClassOf: "schema:SocialMediaPosting".freeze,
       type: "rdfs:Class".freeze
-    term :BloodTest,
-      comment: %(A medical test performed on a sample of a patient's blood.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "BloodTest".freeze,
-      subClassOf: "schema:MedicalTest".freeze,
-      type: "rdfs:Class".freeze
     term :BoardingPolicyType,
       comment: %(A type of boarding policy used by an airline.).freeze,
       label: "BoardingPolicyType".freeze,
@@ -340,12 +312,6 @@ module RDF::Vocab
       comment: %(A body of water, such as a sea, ocean, or lake.).freeze,
       label: "BodyOfWater".freeze,
       subClassOf: "schema:Landform".freeze,
-      type: "rdfs:Class".freeze
-    term :Bone,
-      comment: %(Rigid connective tissue that comprises up the skeletal structure of the human body.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "Bone".freeze,
-      subClassOf: "schema:AnatomicalStructure".freeze,
       type: "rdfs:Class".freeze
     term :Book,
       comment: %(A book.).freeze,
@@ -385,12 +351,6 @@ module RDF::Vocab
       comment: %(A bowling alley.).freeze,
       label: "BowlingAlley".freeze,
       subClassOf: "schema:SportsActivityLocation".freeze,
-      type: "rdfs:Class".freeze
-    term :BrainStructure,
-      comment: %(Any anatomical structure which pertains to the soft nervous tissue functioning as the coordinating center of sensation and intellectual and nervous activity.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "BrainStructure".freeze,
-      subClassOf: "schema:AnatomicalStructure".freeze,
       type: "rdfs:Class".freeze
     term :Brand,
       comment: %(A brand is a name used by an organization or business person for labeling a product, product group, or similar.).freeze,
@@ -541,12 +501,6 @@ module RDF::Vocab
       label: "Car".freeze,
       subClassOf: "schema:Vehicle".freeze,
       type: "rdfs:Class".freeze
-    term :CarUsageType,
-      comment: %(A value indicating a special usage of a car, e.g. commercial rental, driving school, or as a taxi.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
-      label: "CarUsageType".freeze,
-      subClassOf: "schema:QualitativeValue".freeze,
-      type: "rdfs:Class".freeze
     term :Casino,
       comment: %(A casino.).freeze,
       label: "Casino".freeze,
@@ -617,11 +571,6 @@ module RDF::Vocab
       label: "CivicStructure".freeze,
       subClassOf: "schema:Place".freeze,
       type: "rdfs:Class".freeze
-    term :Class,
-      comment: %(A class, also often called a 'Type'; equivalent to rdfs:Class.).freeze,
-      label: "Class".freeze,
-      subClassOf: "schema:Intangible".freeze,
-      type: "rdfs:Class".freeze
     term :Clip,
       comment: %(A short TV or radio program or a segment/part of a program.).freeze,
       label: "Clip".freeze,
@@ -673,6 +622,17 @@ module RDF::Vocab
       label: "CommunicateAction".freeze,
       subClassOf: "schema:InteractAction".freeze,
       type: "rdfs:Class".freeze
+    term :CompoundPriceSpecification,
+      comment: %(A compound price specification is one that bundles multiple prices that all apply in combination for different dimensions of consumption. Use the name property of the attached unit price specification for indicating the dimension of a price component \(e.g. "electricity" or "final cleaning"\).).freeze,
+      :"dc:source" => [],
+      label: "CompoundPriceSpecification".freeze,
+      subClassOf: "schema:PriceSpecification".freeze,
+      type: "rdfs:Class".freeze
+    term :ComputerLanguage,
+      comment: %(This type covers computer programming languages such as Scheme and Lisp, as well as other language-like computer representations. Natural languages are best represented with the [[Language]] type.).freeze,
+      label: "ComputerLanguageLanguage".freeze,
+      subClassOf: "schema:Intangible".freeze,
+      type: "rdfs:Class".freeze
     term :ComputerStore,
       comment: %(A computer store.).freeze,
       label: "ComputerStore".freeze,
@@ -717,6 +677,11 @@ module RDF::Vocab
       comment: %(A convenience store.).freeze,
       label: "ConvenienceStore".freeze,
       subClassOf: "schema:Store".freeze,
+      type: "rdfs:Class".freeze
+    term :Conversation,
+      comment: %(One or more messages between organizations or people on a particular topic. Individual messages can be linked to the conversation with isPartOf or hasPart properties.).freeze,
+      label: "Conversation".freeze,
+      subClassOf: "schema:CreativeWork".freeze,
       type: "rdfs:Class".freeze
     term :CookAction,
       comment: %(The act of producing/preparing food.).freeze,
@@ -803,11 +768,11 @@ module RDF::Vocab
       label: "Crematorium".freeze,
       subClassOf: "schema:CivicStructure".freeze,
       type: "rdfs:Class".freeze
-    term :DDxElement,
-      comment: %(An alternative, closely-related condition typically considered later in the differential diagnosis process along with the signs that are used to distinguish it.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "DDxElement".freeze,
-      subClassOf: "schema:MedicalIntangible".freeze,
+    term :CurrencyConversionService,
+      comment: %(A service to convert funds from one currency to another currency.).freeze,
+      :"dc:source" => [],
+      label: "CurrencyConversionService".freeze,
+      subClassOf: "schema:FinancialProduct".freeze,
       type: "rdfs:Class".freeze
     term :DanceEvent,
       comment: %(Event type: A social dance.).freeze,
@@ -956,28 +921,26 @@ module RDF::Vocab
       label: "DepartmentStore".freeze,
       subClassOf: "schema:Store".freeze,
       type: "rdfs:Class".freeze
-    term :DiagnosticLab,
-      comment: %(A medical laboratory that offers on-site or off-site diagnostic services.).freeze,
-      label: "DiagnosticLab".freeze,
-      subClassOf: "schema:MedicalOrganization".freeze,
+    term :DepositAccount,
+      comment: %(A type of Bank Account with a main purpose of depositing funds to gain interest or other benefits.).freeze,
+      :"dc:source" => [],
+      label: "DepositAccount".freeze,
+      subClassOf: ["schema:BankAccount".freeze, "schema:InvestmentOrDeposit".freeze],
       type: "rdfs:Class".freeze
-    term :DiagnosticProcedure,
-      comment: %(A medical procedure intended primarily for diagnostic, as opposed to therapeutic, purposes.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "DiagnosticProcedure".freeze,
-      subClassOf: ["schema:MedicalProcedure".freeze, "schema:MedicalTest".freeze],
+    term :DigitalDocument,
+      comment: %(An electronic file or document.).freeze,
+      label: "DigitalDocument".freeze,
+      subClassOf: "schema:CreativeWork".freeze,
       type: "rdfs:Class".freeze
-    term :Diet,
-      comment: %(A strategy of regulating the intake of food to achieve or maintain a specific health-related goal.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "Diet".freeze,
-      subClassOf: ["schema:CreativeWork".freeze, "schema:LifestyleModification".freeze],
+    term :DigitalDocumentPermission,
+      comment: %(A permission for a particular person or group to access a particular file.).freeze,
+      label: "DigitalDocumentPermission".freeze,
+      subClassOf: "schema:Intangible".freeze,
       type: "rdfs:Class".freeze
-    term :DietarySupplement,
-      comment: %(A product taken by mouth that contains a dietary ingredient intended to supplement the diet. Dietary ingredients may include vitamins, minerals, herbs or other botanicals, amino acids, and substances such as enzymes, organ tissues, glandulars and metabolites.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "DietarySupplement".freeze,
-      subClassOf: "schema:MedicalTherapy".freeze,
+    term :DigitalDocumentPermissionType,
+      comment: %(A type of permission which can be granted for accessing a digital document.).freeze,
+      label: "DigitalDocumentPermissionType".freeze,
+      subClassOf: "schema:Enumeration".freeze,
       type: "rdfs:Class".freeze
     term :DisagreeAction,
       comment: %(The act of expressing a difference of opinion with the object. An agent disagrees to/about an object \(a proposition, topic or theme\) with participants.).freeze,
@@ -1009,11 +972,6 @@ module RDF::Vocab
       label: "DonateAction".freeze,
       subClassOf: "schema:TradeAction".freeze,
       type: "rdfs:Class".freeze
-    term :DoseSchedule,
-      comment: %(A specific dosing schedule for a drug or supplement.).freeze,
-      label: "DoseSchedule".freeze,
-      subClassOf: "schema:MedicalIntangible".freeze,
-      type: "rdfs:Class".freeze
     term :DownloadAction,
       comment: %(The act of downloading an object.).freeze,
       label: "DownloadAction".freeze,
@@ -1034,50 +992,6 @@ module RDF::Vocab
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "DriveWheelConfigurationValue".freeze,
       subClassOf: "schema:QualitativeValue".freeze,
-      type: "rdfs:Class".freeze
-    term :Drug,
-      comment: %(A chemical or biologic substance, used as a medical therapy, that has a physiological effect on an organism.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "Drug".freeze,
-      subClassOf: "schema:MedicalTherapy".freeze,
-      type: "rdfs:Class".freeze
-    term :DrugClass,
-      comment: %(A class of medical drugs, e.g., statins. Classes can represent general pharmacological class, common mechanisms of action, common physiological effects, etc.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "DrugClass".freeze,
-      subClassOf: "schema:MedicalTherapy".freeze,
-      type: "rdfs:Class".freeze
-    term :DrugCost,
-      comment: %(The cost per unit of a medical drug. Note that this type is not meant to represent the price in an offer of a drug for sale; see the Offer type for that. This type will typically be used to tag wholesale or average retail cost of a drug, or maximum reimbursable cost. Costs of medical drugs vary widely depending on how and where they are paid for, so while this type captures some of the variables, costs should be used with caution by consumers of this schema's markup.).freeze,
-      label: "DrugCost".freeze,
-      subClassOf: "schema:MedicalIntangible".freeze,
-      type: "rdfs:Class".freeze
-    term :DrugCostCategory,
-      comment: %(Enumerated categories of medical drug costs.).freeze,
-      label: "DrugCostCategory".freeze,
-      subClassOf: ["schema:Enumeration".freeze, "schema:MedicalEnumeration".freeze],
-      type: "rdfs:Class".freeze
-    term :DrugLegalStatus,
-      comment: %(The legal availability status of a medical drug.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "DrugLegalStatus".freeze,
-      subClassOf: "schema:MedicalIntangible".freeze,
-      type: "rdfs:Class".freeze
-    term :DrugPregnancyCategory,
-      comment: %(Categories that represent an assessment of the risk of fetal injury due to a drug or pharmaceutical used as directed by the mother during pregnancy.).freeze,
-      label: "DrugPregnancyCategory".freeze,
-      subClassOf: ["schema:Enumeration".freeze, "schema:MedicalEnumeration".freeze],
-      type: "rdfs:Class".freeze
-    term :DrugPrescriptionStatus,
-      comment: %(Indicates whether this drug is available by prescription or over-the-counter.).freeze,
-      label: "DrugPrescriptionStatus".freeze,
-      subClassOf: ["schema:Enumeration".freeze, "schema:MedicalEnumeration".freeze],
-      type: "rdfs:Class".freeze
-    term :DrugStrength,
-      comment: %(A specific strength in which a medical drug is available in a specific country.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "DrugStrength".freeze,
-      subClassOf: "schema:MedicalIntangible".freeze,
       type: "rdfs:Class".freeze
     term :DryCleaningOrLaundry,
       comment: %(A dry-cleaning business.).freeze,
@@ -1218,12 +1132,6 @@ module RDF::Vocab
       label: "ExerciseGym".freeze,
       subClassOf: "schema:SportsActivityLocation".freeze,
       type: "rdfs:Class".freeze
-    term :ExercisePlan,
-      comment: %(Fitness-related activity designed for a specific health-related purpose, including defined exercise routines as well as activity prescribed by a clinician.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "ExercisePlan".freeze,
-      subClassOf: ["schema:CreativeWork".freeze, "schema:PhysicalActivity".freeze],
-      type: "rdfs:Class".freeze
     term :ExhibitionEvent,
       comment: %(Event type: Exhibition event, e.g. at a museum, library, archive, tradeshow, ...).freeze,
       label: "ExhibitionEvent".freeze,
@@ -1243,6 +1151,12 @@ module RDF::Vocab
       comment: %(The act of capturing sound and moving images on film, video, or digitally.).freeze,
       label: "FilmAction".freeze,
       subClassOf: "schema:CreateAction".freeze,
+      type: "rdfs:Class".freeze
+    term :FinancialProduct,
+      comment: %(A product provided to consumers and businesses by financial institutions such as banks, insurance companies, brokerage firms, consumer finance companies, and investment companies which comprise the financial services industry.).freeze,
+      :"dc:source" => [],
+      label: "FinancialProduct".freeze,
+      subClassOf: "schema:Service".freeze,
       type: "rdfs:Class".freeze
     term :FinancialService,
       comment: %(Financial services business.).freeze,
@@ -1299,10 +1213,6 @@ module RDF::Vocab
       label: "FoodEvent".freeze,
       subClassOf: "schema:Event".freeze,
       type: "rdfs:Class".freeze
-    term :Fungus,
-      comment: %(Pathogenic fungus.).freeze,
-      label: "Fungus".freeze,
-      type: "schema:InfectiousAgentClass".freeze
     term :FurnitureStore,
       comment: %(A furniture store.).freeze,
       label: "FurnitureStore".freeze,
@@ -1342,6 +1252,11 @@ module RDF::Vocab
       comment: %(Residence type: Gated community.).freeze,
       label: "GatedResidenceCommunity".freeze,
       subClassOf: "schema:Residence".freeze,
+      type: "rdfs:Class".freeze
+    term :GenderType,
+      comment: %(An enumeration of genders.).freeze,
+      label: "GenderType".freeze,
+      subClassOf: "schema:Enumeration".freeze,
       type: "rdfs:Class".freeze
     term :GeneralContractor,
       comment: %(A general contractor.).freeze,
@@ -1505,29 +1420,11 @@ module RDF::Vocab
       :"owl:equivalentClass" => %(dcmitype:Image).freeze,
       subClassOf: "schema:MediaObject".freeze,
       type: "rdfs:Class".freeze
-    term :ImagingTest,
-      comment: %(Any medical imaging modality typically used for diagnostic purposes.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "ImagingTest".freeze,
-      subClassOf: "schema:MedicalTest".freeze,
-      type: "rdfs:Class".freeze
     term :IndividualProduct,
       comment: %(A single, identifiable product instance \(e.g. a laptop with a particular serial number\).).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "IndividualProduct".freeze,
       subClassOf: "schema:Product".freeze,
-      type: "rdfs:Class".freeze
-    term :InfectiousAgentClass,
-      comment: %(Classes of agents or pathogens that transmit infectious diseases. Enumerated type.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "InfectiousAgentClass".freeze,
-      subClassOf: ["schema:Enumeration".freeze, "schema:MedicalEnumeration".freeze],
-      type: "rdfs:Class".freeze
-    term :InfectiousDisease,
-      comment: %(An infectious disease is a clinically evident human disease resulting from the presence of pathogenic microbial agents, like pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and prions. To be considered an infectious disease, such pathogens are known to be able to cause this disease.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "InfectiousDisease".freeze,
-      subClassOf: "schema:MedicalCondition".freeze,
       type: "rdfs:Class".freeze
     term :InformAction,
       comment: %(The act of notifying someone of information pertinent to them, with no expectation of a response.).freeze,
@@ -1574,6 +1471,12 @@ module RDF::Vocab
       label: "InternetCafe".freeze,
       subClassOf: "schema:LocalBusiness".freeze,
       type: "rdfs:Class".freeze
+    term :InvestmentOrDeposit,
+      comment: %(A type of financial product that typically requires the client to transfer funds to a financial service in return for potential beneficial financial return.).freeze,
+      :"dc:source" => [],
+      label: "InvestmentOrDeposit".freeze,
+      subClassOf: "schema:FinancialProduct".freeze,
+      type: "rdfs:Class".freeze
     term :InviteAction,
       comment: %(The act of asking someone to attend an event. Reciprocal of RsvpAction.).freeze,
       label: "InviteAction".freeze,
@@ -1618,12 +1521,6 @@ module RDF::Vocab
       comment: %(An agent joins an event/group with participants/friends at a location.<p>Related actions:</p><ul><li><a href="http://schema.org/RegisterAction">RegisterAction</a>: Unlike RegisterAction, JoinAction refers to joining a group/team of people.</li><li><a href="http://schema.org/SubscribeAction">SubscribeAction</a>: Unlike SubscribeAction, JoinAction does not imply that you'll be receiving updates.</li><li><a href="http://schema.org/FollowAction">FollowAction</a>: Unlike FollowAction, JoinAction does not imply that you'll be polling for updates</li></ul>.).freeze,
       label: "JoinAction".freeze,
       subClassOf: "schema:InteractAction".freeze,
-      type: "rdfs:Class".freeze
-    term :Joint,
-      comment: %(The anatomical location at which two or more bones make contact.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "Joint".freeze,
-      subClassOf: "schema:AnatomicalStructure".freeze,
       type: "rdfs:Class".freeze
     term :LakeBodyOfWater,
       comment: %(A lake \(for example, Lake Pontrachain\).).freeze,
@@ -1675,18 +1572,6 @@ module RDF::Vocab
       label: "Library".freeze,
       subClassOf: "schema:LocalBusiness".freeze,
       type: "rdfs:Class".freeze
-    term :LifestyleModification,
-      comment: %(A process of care involving exercise, changes to diet, fitness routines, and other lifestyle changes aimed at improving a health condition.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "LifestyleModification".freeze,
-      subClassOf: "schema:MedicalTherapy".freeze,
-      type: "rdfs:Class".freeze
-    term :Ligament,
-      comment: %(A short band of tough, flexible, fibrous connective tissue that functions to connect multiple bones, cartilages, and structurally support joints.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "Ligament".freeze,
-      subClassOf: "schema:AnatomicalStructure".freeze,
-      type: "rdfs:Class".freeze
     term :LikeAction,
       comment: %(The act of expressing a positive sentiment about the object. An agent likes an object \(a proposition, topic or theme\) with participants.).freeze,
       label: "LikeAction".freeze,
@@ -1716,6 +1601,12 @@ module RDF::Vocab
       comment: %(A blog post intended to provide a rolling textual coverage of an ongoing event through continuous updates.).freeze,
       label: "LiveBlog".freeze,
       subClassOf: "schema:BlogPosting".freeze,
+      type: "rdfs:Class".freeze
+    term :LoanOrCredit,
+      comment: %(A financial product for the loaning of an amount of money under agreed terms and charges.).freeze,
+      :"dc:source" => [],
+      label: "LoanOrCredit".freeze,
+      subClassOf: "schema:FinancialProduct".freeze,
       type: "rdfs:Class".freeze
     term :LocalBusiness,
       comment: %(A particular physical business or branch of an organization. Examples of LocalBusiness include a restaurant, a particular branch of a restaurant chain, a branch of a bank, a medical practice, a club, a bowling alley, etc.).freeze,
@@ -1747,12 +1638,6 @@ module RDF::Vocab
       label: "LoseAction".freeze,
       subClassOf: "schema:AchieveAction".freeze,
       type: "rdfs:Class".freeze
-    term :LymphaticVessel,
-      comment: %(A type of blood vessel that specifically carries lymph fluid unidirectionally toward the heart.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "LymphaticVessel".freeze,
-      subClassOf: "schema:Vessel".freeze,
-      type: "rdfs:Class".freeze
     term :Map,
       comment: %(A map.).freeze,
       label: "Map".freeze,
@@ -1773,259 +1658,25 @@ module RDF::Vocab
       label: "Mass".freeze,
       subClassOf: "schema:Quantity".freeze,
       type: "rdfs:Class".freeze
-    term :MaximumDoseSchedule,
-      comment: %(The maximum dosing schedule considered safe for a drug or supplement as recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.).freeze,
-      label: "MaximumDoseSchedule".freeze,
-      subClassOf: "schema:DoseSchedule".freeze,
-      type: "rdfs:Class".freeze
     term :MediaObject,
       comment: %(An image, video, or audio object embedded in a web page. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song \(MusicRecording\) may have a music video \(VideoObject\), and a high and low bandwidth audio stream \(2 AudioObject's\).).freeze,
       label: "MediaObject".freeze,
       subClassOf: "schema:CreativeWork".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalAudience,
-      comment: %(Target audiences for medical web pages. Enumerated type.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalAudience".freeze,
-      subClassOf: ["schema:Audience".freeze, "schema:Enumeration".freeze, "schema:MedicalEnumeration".freeze, "schema:PeopleAudience".freeze],
-      type: "rdfs:Class".freeze
-    term :MedicalCause,
-      comment: %(The causative agent\(s\) that are responsible for the pathophysiologic process that eventually results in a medical condition, symptom or sign. In this schema, unless otherwise specified this is meant to be the proximate cause of the medical condition, symptom or sign. The proximate cause is defined as the causative agent that most directly results in the medical condition, symptom or sign. For example, the HIV virus could be considered a cause of AIDS. Or in a diagnostic context, if a patient fell and sustained a hip fracture and two days later sustained a pulmonary embolism which eventuated in a cardiac arrest, the cause of the cardiac arrest \(the proximate cause\) would be the pulmonary embolism and not the fall. <p>Medical causes can include cardiovascular, chemical, dermatologic, endocrine, environmental, gastroenterologic, genetic, hematologic, gynecologic, iatrogenic, infectious, musculoskeletal, neurologic, nutritional, obstetric, oncologic, otolaryngologic, pharmacologic, psychiatric, pulmonary, renal, rheumatologic, toxic, traumatic, or urologic causes; medical conditions can be causes as well.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalCause".freeze,
-      subClassOf: "schema:MedicalEntity".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalClinic,
-      comment: %(A medical clinic.).freeze,
-      label: "MedicalClinic".freeze,
-      subClassOf: "schema:MedicalOrganization".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalCode,
-      comment: %(A code for a medical entity.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalCode".freeze,
-      subClassOf: "schema:MedicalIntangible".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalCondition,
-      comment: %(Any condition of the human body that affects the normal functioning of a person, whether physically or mentally. Includes diseases, injuries, disabilities, disorders, syndromes, etc.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalCondition".freeze,
-      subClassOf: "schema:MedicalEntity".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalConditionStage,
-      comment: %(A stage of a medical condition, such as 'Stage IIIa'.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalConditionStage".freeze,
-      subClassOf: "schema:MedicalIntangible".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalContraindication,
-      comment: %(A condition or factor that serves as a reason to withhold a certain medical therapy. Contraindications can be absolute \(there are no reasonable circumstances for undertaking a course of action\) or relative \(the patient is at higher risk of complications, but that these risks may be outweighed by other considerations or mitigated by other measures\).).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalContraindication".freeze,
-      subClassOf: "schema:MedicalEntity".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalDevice,
-      comment: %(Any object used in a medical capacity, such as to diagnose or treat a patient.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalDevice".freeze,
-      subClassOf: "schema:MedicalEntity".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalDevicePurpose,
-      comment: %(Categories of medical devices, organized by the purpose or intended use of the device.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalDevicePurpose".freeze,
-      subClassOf: ["schema:Enumeration".freeze, "schema:MedicalEnumeration".freeze],
-      type: "rdfs:Class".freeze
-    term :MedicalEntity,
-      comment: %(The most generic type of entity related to health and the practice of medicine.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalEntity".freeze,
-      subClassOf: "schema:Thing".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalEnumeration,
-      comment: %(Enumerations related to health and the practice of medicine.).freeze,
-      label: "MedicalEnumeration".freeze,
-      subClassOf: ["schema:Enumeration".freeze, "schema:MedicalIntangible".freeze],
-      type: "rdfs:Class".freeze
-    term :MedicalEvidenceLevel,
-      comment: %(Level of evidence for a medical guideline. Enumerated type.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalEvidenceLevel".freeze,
-      subClassOf: ["schema:Enumeration".freeze, "schema:MedicalEnumeration".freeze],
-      type: "rdfs:Class".freeze
-    term :MedicalGuideline,
-      comment: %(Any recommendation made by a standard society \(e.g. ACC/AHA\) or consensus statement that denotes how to diagnose and treat a particular condition. Note: this type should be used to tag the actual guideline recommendation; if the guideline recommendation occurs in a larger scholarly article, use MedicalScholarlyArticle to tag the overall article, not this type. Note also: the organization making the recommendation should be captured in the recognizingAuthority base property of MedicalEntity.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalGuideline".freeze,
-      subClassOf: "schema:MedicalEntity".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalGuidelineContraindication,
-      comment: %(A guideline contraindication that designates a process as harmful and where quality of the data supporting the contraindication is sound.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalGuidelineContraindication".freeze,
-      subClassOf: "schema:MedicalGuideline".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalGuidelineRecommendation,
-      comment: %(A guideline recommendation that is regarded as efficacious and where quality of the data supporting the recommendation is sound.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalGuidelineRecommendation".freeze,
-      subClassOf: "schema:MedicalGuideline".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalImagingTechnique,
-      comment: %(Any medical imaging modality typically used for diagnostic purposes. Enumerated type.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalImagingTechnique".freeze,
-      subClassOf: ["schema:Enumeration".freeze, "schema:MedicalEnumeration".freeze],
-      type: "rdfs:Class".freeze
-    term :MedicalIndication,
-      comment: %(A condition or factor that indicates use of a medical therapy, including signs, symptoms, risk factors, anatomical states, etc.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalIndication".freeze,
-      subClassOf: "schema:MedicalEntity".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalIntangible,
-      comment: %(A utility class that serves as the umbrella for a number of 'intangible' things in the medical space.).freeze,
-      label: "MedicalIntangible".freeze,
-      subClassOf: "schema:MedicalEntity".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalObservationalStudy,
-      comment: %(An observational study is a type of medical study that attempts to infer the possible effect of a treatment through observation of a cohort of subjects over a period of time. In an observational study, the assignment of subjects into treatment groups versus control groups is outside the control of the investigator. This is in contrast with controlled studies, such as the randomized controlled trials represented by MedicalTrial, where each subject is randomly assigned to a treatment group or a control group before the start of the treatment.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalObservationalStudy".freeze,
-      subClassOf: "schema:MedicalStudy".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalObservationalStudyDesign,
-      comment: %(Design models for observational medical studies. Enumerated type.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalObservationalStudyDesign".freeze,
-      subClassOf: ["schema:Enumeration".freeze, "schema:MedicalEnumeration".freeze],
       type: "rdfs:Class".freeze
     term :MedicalOrganization,
       comment: %(A medical organization, such as a doctor's office or clinic.).freeze,
       label: "MedicalOrganization".freeze,
       subClassOf: "schema:LocalBusiness".freeze,
       type: "rdfs:Class".freeze
-    term :MedicalProcedure,
-      comment: %(A process of care used in either a diagnostic, therapeutic, or palliative capacity that relies on invasive \(surgical\), non-invasive, or percutaneous techniques.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalProcedure".freeze,
-      subClassOf: "schema:MedicalEntity".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalProcedureType,
-      comment: %(An enumeration that describes different types of medical procedures.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalProcedureType".freeze,
-      subClassOf: ["schema:Enumeration".freeze, "schema:MedicalEnumeration".freeze],
-      type: "rdfs:Class".freeze
-    term :MedicalRiskCalculator,
-      comment: %(A complex mathematical calculation requiring an online calculator, used to assess prognosis. Note: use the url property of Thing to record any URLs for online calculators.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalRiskCalculator".freeze,
-      subClassOf: "schema:MedicalRiskEstimator".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalRiskEstimator,
-      comment: %(Any rule set or interactive tool for estimating the risk of developing a complication or condition.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalRiskEstimator".freeze,
-      subClassOf: "schema:MedicalEntity".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalRiskFactor,
-      comment: %(A risk factor is anything that increases a person's likelihood of developing or contracting a disease, medical condition, or complication.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalRiskFactor".freeze,
-      subClassOf: "schema:MedicalEntity".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalRiskScore,
-      comment: %(A simple system that adds up the number of risk factors to yield a score that is associated with prognosis, e.g. CHAD score, TIMI risk score.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalRiskScore".freeze,
-      subClassOf: "schema:MedicalRiskEstimator".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalScholarlyArticle,
-      comment: %(A scholarly article in the medical domain.).freeze,
-      label: "MedicalScholarlyArticle".freeze,
-      subClassOf: "schema:ScholarlyArticle".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalSign,
-      comment: %(Any physical manifestation of a person's medical condition discoverable by objective diagnostic tests or physical examination.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalSign".freeze,
-      subClassOf: "schema:MedicalSignOrSymptom".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalSignOrSymptom,
-      comment: %(Any indication of the existence of a medical condition or disease.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalSignOrSymptom".freeze,
-      subClassOf: "schema:MedicalEntity".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalSpecialty,
-      comment: %(Any specific branch of medical science or practice. Medical specialities include clinical specialties that pertain to particular organ systems and their respective disease states, as well as allied health specialties. Enumerated type.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalSpecialty".freeze,
-      subClassOf: ["schema:Enumeration".freeze, "schema:MedicalEnumeration".freeze, "schema:Specialty".freeze],
-      type: "rdfs:Class".freeze
-    term :MedicalStudy,
-      comment: %(A medical study is an umbrella type covering all kinds of research studies relating to human medicine or health, including observational studies and interventional trials and registries, randomized, controlled or not. When the specific type of study is known, use one of the extensions of this type, such as MedicalTrial or MedicalObservationalStudy. Also, note that this type should be used to mark up data that describes the study itself; to tag an article that publishes the results of a study, use MedicalScholarlyArticle. Note: use the code property of MedicalEntity to store study IDs, e.g. clinicaltrials.gov ID.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalStudy".freeze,
-      subClassOf: "schema:MedicalEntity".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalStudyStatus,
-      comment: %(The status of a medical study. Enumerated type.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalStudyStatus".freeze,
-      subClassOf: ["schema:Enumeration".freeze, "schema:MedicalEnumeration".freeze],
-      type: "rdfs:Class".freeze
-    term :MedicalSymptom,
-      comment: %(Any indication of the existence of a medical condition or disease that is apparent to the patient.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalSymptom".freeze,
-      subClassOf: "schema:MedicalSignOrSymptom".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalTest,
-      comment: %(Any medical test, typically performed for diagnostic purposes.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalTest".freeze,
-      subClassOf: "schema:MedicalEntity".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalTestPanel,
-      comment: %(Any collection of tests commonly ordered together.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalTestPanel".freeze,
-      subClassOf: "schema:MedicalTest".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalTherapy,
-      comment: %(Any medical intervention designed to prevent, treat, and cure human diseases and medical conditions, including both curative and palliative therapies. Medical therapies are typically processes of care relying upon pharmacotherapy, behavioral therapy, supportive therapy \(with fluid or nutrition for example\), or detoxification \(e.g. hemodialysis\) aimed at improving or preventing a health condition.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalTherapy".freeze,
-      subClassOf: "schema:MedicalEntity".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalTrial,
-      comment: %(A medical trial is a type of medical study that uses scientific process used to compare the safety and efficacy of medical therapies or medical procedures. In general, medical trials are controlled and subjects are allocated at random to the different treatment and/or control groups.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalTrial".freeze,
-      subClassOf: "schema:MedicalStudy".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicalTrialDesign,
-      comment: %(Design models for medical trials. Enumerated type.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "MedicalTrialDesign".freeze,
-      subClassOf: ["schema:Enumeration".freeze, "schema:MedicalEnumeration".freeze],
-      type: "rdfs:Class".freeze
-    term :MedicalWebPage,
-      comment: %(A web page that provides medical information.).freeze,
-      label: "MedicalWebPage".freeze,
-      subClassOf: "schema:WebPage".freeze,
-      type: "rdfs:Class".freeze
-    term :MedicineSystem,
-      comment: %(Systems of medical practice.).freeze,
-      label: "MedicineSystem".freeze,
-      subClassOf: ["schema:Enumeration".freeze, "schema:MedicalEnumeration".freeze],
-      type: "rdfs:Class".freeze
     term :MensClothingStore,
       comment: %(A men's clothing store.).freeze,
       label: "MensClothingStore".freeze,
       subClassOf: "schema:Store".freeze,
+      type: "rdfs:Class".freeze
+    term :Message,
+      comment: %(A single message from a sender to one or more organizations or people.).freeze,
+      label: "Message".freeze,
+      subClassOf: "schema:CreativeWork".freeze,
       type: "rdfs:Class".freeze
     term :MiddleSchool,
       comment: %(A middle school \(typically for children aged around 11-14, although this varies somewhat\).).freeze,
@@ -2041,6 +1692,12 @@ module RDF::Vocab
       comment: %(A store that sells mobile phones and related accessories.).freeze,
       label: "MobilePhoneStore".freeze,
       subClassOf: "schema:Store".freeze,
+      type: "rdfs:Class".freeze
+    term :MonetaryAmount,
+      comment: %(A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. It is recommended to use [[PriceSpecification]] Types to describe the price of an Offer, Invoice, etc.).freeze,
+      :"dc:source" => [],
+      label: "MonetaryAmount".freeze,
+      subClassOf: "schema:StructuredValue".freeze,
       type: "rdfs:Class".freeze
     term :Mosque,
       comment: %(A mosque.).freeze,
@@ -2101,16 +1758,6 @@ module RDF::Vocab
       comment: %(A moving company.).freeze,
       label: "MovingCompany".freeze,
       subClassOf: "schema:HomeAndConstructionBusiness".freeze,
-      type: "rdfs:Class".freeze
-    term :MulticellularParasite,
-      comment: %(Multicellular parasite that causes an infection.).freeze,
-      label: "MulticellularParasite".freeze,
-      type: "schema:InfectiousAgentClass".freeze
-    term :Muscle,
-      comment: %(A muscle is an anatomical structure consisting of a contractile form of tissue that animals use to effect movement.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "Muscle".freeze,
-      subClassOf: "schema:AnatomicalStructure".freeze,
       type: "rdfs:Class".freeze
     term :Museum,
       comment: %(A museum.).freeze,
@@ -2197,12 +1844,6 @@ module RDF::Vocab
       label: "NailSalon".freeze,
       subClassOf: "schema:HealthAndBeautyBusiness".freeze,
       type: "rdfs:Class".freeze
-    term :Nerve,
-      comment: %(A common pathway for the electrochemical nerve impulses that are transmitted along each of the axons.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "Nerve".freeze,
-      subClassOf: "schema:AnatomicalStructure".freeze,
-      type: "rdfs:Class".freeze
     term :NewsArticle,
       comment: %(A news article.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews).freeze,
@@ -2218,6 +1859,11 @@ module RDF::Vocab
       comment: %(A notary.).freeze,
       label: "Notary".freeze,
       subClassOf: "schema:LegalService".freeze,
+      type: "rdfs:Class".freeze
+    term :NoteDigitalDocument,
+      comment: %(A file containing a note, primarily for the author.).freeze,
+      label: "NoteDigitalDocument".freeze,
+      subClassOf: "schema:DigitalDocument".freeze,
       type: "rdfs:Class".freeze
     term :Number,
       comment: %(Data type: Number.).freeze,
@@ -2269,11 +1915,6 @@ module RDF::Vocab
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "OpeningHoursSpecification".freeze,
       subClassOf: "schema:StructuredValue".freeze,
-      type: "rdfs:Class".freeze
-    term :Optician,
-      comment: %(A store that sells reading glasses and similar devices for improving vision.).freeze,
-      label: "Optician".freeze,
-      subClassOf: "schema:MedicalOrganization".freeze,
       type: "rdfs:Class".freeze
     term :Order,
       comment: %(An order is a confirmation of a transaction \(a receipt\), which can contain multiple line items, each represented by an Offer that has been accepted by the customer.).freeze,
@@ -2331,12 +1972,6 @@ module RDF::Vocab
       label: "Painting".freeze,
       subClassOf: "schema:CreativeWork".freeze,
       type: "rdfs:Class".freeze
-    term :PalliativeProcedure,
-      comment: %(A medical procedure intended primarily for palliative purposes, aimed at relieving the symptoms of an underlying health condition.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "PalliativeProcedure".freeze,
-      subClassOf: ["schema:MedicalProcedure".freeze, "schema:MedicalTherapy".freeze],
-      type: "rdfs:Class".freeze
     term :ParcelDelivery,
       comment: %(The delivery of a parcel either via the postal service or a commercial service.).freeze,
       label: "ParcelDelivery".freeze,
@@ -2370,12 +2005,6 @@ module RDF::Vocab
       label: "ParkingFacility".freeze,
       subClassOf: "schema:CivicStructure".freeze,
       type: "rdfs:Class".freeze
-    term :PathologyTest,
-      comment: %(A medical test performed by a laboratory that typically involves examination of a tissue sample by a pathologist.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "PathologyTest".freeze,
-      subClassOf: "schema:MedicalTest".freeze,
-      type: "rdfs:Class".freeze
     term :PawnShop,
       comment: %(A shop that will buy, or lend money against the security of, personal possessions.).freeze,
       label: "PawnShop".freeze,
@@ -2385,6 +2014,12 @@ module RDF::Vocab
       comment: %(An agent pays a price to a participant.).freeze,
       label: "PayAction".freeze,
       subClassOf: "schema:TradeAction".freeze,
+      type: "rdfs:Class".freeze
+    term :PaymentCard,
+      comment: %(A payment method using a credit, debit, store or other card to associate the payment with an account.).freeze,
+      :"dc:source" => [],
+      label: "PaymentCard".freeze,
+      subClassOf: ["schema:FinancialProduct".freeze, "schema:PaymentMethod".freeze],
       type: "rdfs:Class".freeze
     term :PaymentChargeSpecification,
       comment: %(The costs of settling the payment using a particular payment method.).freeze,
@@ -2410,6 +2045,12 @@ module RDF::Vocab
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass).freeze,
       label: "PaymentMethod".freeze,
       subClassOf: "schema:Enumeration".freeze,
+      type: "rdfs:Class".freeze
+    term :PaymentService,
+      comment: %(A Service to transfer funds from a person or organization to a beneficiary person or organization.).freeze,
+      :"dc:source" => [],
+      label: "PaymentService".freeze,
+      subClassOf: "schema:FinancialProduct".freeze,
       type: "rdfs:Class".freeze
     term :PaymentStatusType,
       comment: %(A specific payment status. For example, PaymentDue, PaymentComplete, etc.).freeze,
@@ -2482,30 +2123,6 @@ module RDF::Vocab
       label: "PhotographAction".freeze,
       subClassOf: "schema:CreateAction".freeze,
       type: "rdfs:Class".freeze
-    term :PhysicalActivity,
-      comment: %(Any bodily activity that enhances or maintains physical fitness and overall health and wellness. Includes activity that is part of daily living and routine, structured exercise, and exercise prescribed as part of a medical treatment or recovery plan.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "PhysicalActivity".freeze,
-      subClassOf: "schema:LifestyleModification".freeze,
-      type: "rdfs:Class".freeze
-    term :PhysicalActivityCategory,
-      comment: %(Categories of physical activity, organized by physiologic classification.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "PhysicalActivityCategory".freeze,
-      subClassOf: ["schema:Enumeration".freeze, "schema:MedicalEnumeration".freeze],
-      type: "rdfs:Class".freeze
-    term :PhysicalExam,
-      comment: %(A type of physical examination of a patient performed by a physician. Enumerated type.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "PhysicalExam".freeze,
-      subClassOf: ["schema:Enumeration".freeze, "schema:MedicalEnumeration".freeze],
-      type: "rdfs:Class".freeze
-    term :PhysicalTherapy,
-      comment: %(A process of progressive physical care and rehabilitation aimed at improving a health condition.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "PhysicalTherapy".freeze,
-      subClassOf: "schema:MedicalTherapy".freeze,
-      type: "rdfs:Class".freeze
     term :Physician,
       comment: %(A doctor's office.).freeze,
       label: "Physician".freeze,
@@ -2571,11 +2188,10 @@ module RDF::Vocab
       label: "Preschool".freeze,
       subClassOf: "schema:EducationalOrganization".freeze,
       type: "rdfs:Class".freeze
-    term :PreventionIndication,
-      comment: %(An indication for preventing an underlying condition, symptom, etc.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "PreventionIndication".freeze,
-      subClassOf: "schema:MedicalIndication".freeze,
+    term :PresentationDigitalDocument,
+      comment: %(A file containing slides or used for a presentation.).freeze,
+      label: "PresentationDigitalDocument".freeze,
+      subClassOf: "schema:DigitalDocument".freeze,
       type: "rdfs:Class".freeze
     term :PriceSpecification,
       comment: %(A structured value representing a monetary amount. Typically, only the subclasses of this type are used for markup.).freeze,
@@ -2583,10 +2199,6 @@ module RDF::Vocab
       label: "PriceSpecification".freeze,
       subClassOf: "schema:StructuredValue".freeze,
       type: "rdfs:Class".freeze
-    term :Prion,
-      comment: %(A prion is an infectious agent composed of protein in a misfolded form.).freeze,
-      label: "Prion".freeze,
-      type: "schema:InfectiousAgentClass".freeze
     term :Product,
       comment: %(Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsProperties).freeze,
@@ -2632,11 +2244,6 @@ module RDF::Vocab
       label: "ProgramMembership".freeze,
       subClassOf: "schema:Intangible".freeze,
       type: "rdfs:Class".freeze
-    term :Property,
-      comment: %(A property, used to indicate attributes and relationships of some Thing; equivalent to rdf:Property.).freeze,
-      label: "Property".freeze,
-      subClassOf: "schema:Intangible".freeze,
-      type: "rdfs:Class".freeze
     term :PropertyValue,
       comment: %(A property-value pair, e.g. representing a feature of a product or place. Use the 'name' property for the name of the property. If there is an additional human-readable version of the value, put that into the 'description' property.
         <br/><br/>
@@ -2651,16 +2258,6 @@ module RDF::Vocab
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_ActionCollabClass).freeze,
       label: "PropertyValueSpecification".freeze,
       subClassOf: "schema:Intangible".freeze,
-      type: "rdfs:Class".freeze
-    term :Protozoa,
-      comment: %(Single-celled organism that causes an infection.).freeze,
-      label: "Protozoa".freeze,
-      type: "schema:InfectiousAgentClass".freeze
-    term :PsychologicalTreatment,
-      comment: %(A process of care relying upon counseling, dialogue, communication, verbalization aimed at improving a mental health condition.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "PsychologicalTreatment".freeze,
-      subClassOf: "schema:MedicalTherapy".freeze,
       type: "rdfs:Class".freeze
     term :PublicSwimmingPool,
       comment: %(A public swimming pool.).freeze,
@@ -2727,12 +2324,6 @@ module RDF::Vocab
       label: "RVPark".freeze,
       subClassOf: "schema:CivicStructure".freeze,
       type: "rdfs:Class".freeze
-    term :RadiationTherapy,
-      comment: %(A process of care using radiation aimed at improving a health condition.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "RadiationTherapy".freeze,
-      subClassOf: "schema:MedicalTherapy".freeze,
-      type: "rdfs:Class".freeze
     term :RadioChannel,
       comment: %(A unique instance of a radio BroadcastService on a CableOrSatelliteService lineup.).freeze,
       label: "RadioChannel".freeze,
@@ -2793,11 +2384,6 @@ module RDF::Vocab
       label: "Recipe".freeze,
       subClassOf: "schema:CreativeWork".freeze,
       type: "rdfs:Class".freeze
-    term :RecommendedDoseSchedule,
-      comment: %(A recommended dosing schedule for a drug or supplement as prescribed or recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.).freeze,
-      label: "RecommendedDoseSchedule".freeze,
-      subClassOf: "schema:DoseSchedule".freeze,
-      type: "rdfs:Class".freeze
     term :RecyclingCenter,
       comment: %(A recycling center.).freeze,
       label: "RecyclingCenter".freeze,
@@ -2838,11 +2424,6 @@ module RDF::Vocab
       label: "Report".freeze,
       subClassOf: "schema:Article".freeze,
       type: "rdfs:Class".freeze
-    term :ReportedDoseSchedule,
-      comment: %(A patient-reported or observed dosing schedule for a drug or supplement.).freeze,
-      label: "ReportedDoseSchedule".freeze,
-      subClassOf: "schema:DoseSchedule".freeze,
-      type: "rdfs:Class".freeze
     term :Reservation,
       comment: %(Describes a reservation for travel, dining or an event. Some reservations require tickets.Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, restaurant reservations, flights, or rental cars, use http://schema.org/Offer.).freeze,
       label: "Reservation".freeze,
@@ -2877,6 +2458,11 @@ module RDF::Vocab
       comment: %(A restaurant.).freeze,
       label: "Restaurant".freeze,
       subClassOf: "schema:FoodEstablishment".freeze,
+      type: "rdfs:Class".freeze
+    term :RestrictedDiet,
+      comment: %(A diet restricted to certain foods or preparations for cultural, religious, health or lifestyle reasons. ).freeze,
+      label: "RestrictedDiet".freeze,
+      subClassOf: "schema:Enumeration".freeze,
       type: "rdfs:Class".freeze
     term :ResumeAction,
       comment: %(The act of resuming a device or application which was formerly paused \(e.g. resume music playback or resume a timer\).).freeze,
@@ -3104,6 +2690,11 @@ module RDF::Vocab
       label: "SportsTeam".freeze,
       subClassOf: "schema:SportsOrganization".freeze,
       type: "rdfs:Class".freeze
+    term :SpreadsheetDigitalDocument,
+      comment: %(A spreadsheet file.).freeze,
+      label: "SpreadsheetDigitalDocument".freeze,
+      subClassOf: "schema:DigitalDocument".freeze,
+      type: "rdfs:Class".freeze
     term :StadiumOrArena,
       comment: %(A stadium.).freeze,
       label: "StadiumOrArena".freeze,
@@ -3139,12 +2730,6 @@ module RDF::Vocab
       comment: %(A subway station.).freeze,
       label: "SubwayStation".freeze,
       subClassOf: "schema:CivicStructure".freeze,
-      type: "rdfs:Class".freeze
-    term :SuperficialAnatomy,
-      comment: %(Anatomical features that can be observed by sight \(without dissection\), including the form and proportions of the human body as well as surface landmarks that correspond to deeper subcutaneous structures. Superficial anatomy plays an important role in sports medicine, phlebotomy, and other medical specialties as underlying anatomical structures can be identified through surface palpation. For example, during back surgery, superficial anatomy can be used to palpate and count vertebrae to find the site of incision. Or in phlebotomy, superficial anatomy can be used to locate an underlying vein; for example, the median cubital vein can be located by palpating the borders of the cubital fossa \(such as the epicondyles of the humerus\) and then looking for the superficial signs of the vein, such as size, prominence, ability to refill after depression, and feel of surrounding tissue support. As another example, in a subluxation \(dislocation\) of the glenohumeral joint, the bony structure becomes pronounced with the deltoid muscle failing to cover the glenohumeral joint allowing the edges of the scapula to be superficially visible. Here, the superficial anatomy is the visible edges of the scapula, implying the underlying dislocation of the joint \(the related anatomical structure\).).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "SuperficialAnatomy".freeze,
-      subClassOf: "schema:MedicalEntity".freeze,
       type: "rdfs:Class".freeze
     term :SuspendAction,
       comment: %(The act of momentarily pausing a device or application \(e.g. pause music playback or pause a timer\).).freeze,
@@ -3236,6 +2821,11 @@ module RDF::Vocab
       comment: %(Data type: Text.).freeze,
       label: "Text".freeze,
       type: ["rdfs:Class".freeze, "schema:DataType".freeze]
+    term :TextDigitalDocument,
+      comment: %(A file composed primarily of text.).freeze,
+      label: "TextDigitalDocument".freeze,
+      subClassOf: "schema:DigitalDocument".freeze,
+      type: "rdfs:Class".freeze
     term :TheaterEvent,
       comment: %(Event type: Theater performance.).freeze,
       label: "TheaterEvent".freeze,
@@ -3245,12 +2835,6 @@ module RDF::Vocab
       comment: %(A theater group or company, for example, the Royal Shakespeare Company or Druid Theatre.).freeze,
       label: "TheaterGroup".freeze,
       subClassOf: "schema:PerformingGroup".freeze,
-      type: "rdfs:Class".freeze
-    term :TherapeuticProcedure,
-      comment: %(A medical procedure intended primarily for therapeutic purposes, aimed at improving a health condition.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "TherapeuticProcedure".freeze,
-      subClassOf: ["schema:MedicalProcedure".freeze, "schema:MedicalTherapy".freeze],
       type: "rdfs:Class".freeze
     term :Thing,
       comment: %(The most generic type of item.).freeze,
@@ -3334,12 +2918,6 @@ module RDF::Vocab
       comment: %(A travel agency.).freeze,
       label: "TravelAgency".freeze,
       subClassOf: "schema:LocalBusiness".freeze,
-      type: "rdfs:Class".freeze
-    term :TreatmentIndication,
-      comment: %(An indication for treating an underlying condition, symptom, etc.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "TreatmentIndication".freeze,
-      subClassOf: "schema:MedicalIndication".freeze,
       type: "rdfs:Class".freeze
     term :TypeAndQuantityNode,
       comment: %(A structured value indicating the quantity, unit of measurement, and business function of goods included in a bundle offer.).freeze,
@@ -3459,23 +3037,6 @@ module RDF::Vocab
       label: "Vehicle".freeze,
       subClassOf: "schema:Product".freeze,
       type: "rdfs:Class".freeze
-    term :Vein,
-      comment: %(A type of blood vessel that specifically carries blood to the heart.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "Vein".freeze,
-      subClassOf: "schema:Vessel".freeze,
-      type: "rdfs:Class".freeze
-    term :Vessel,
-      comment: %(A component of the human body circulatory system comprised of an intricate network of hollow tubes that transport blood throughout the entire body.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_WikiDoc).freeze,
-      label: "Vessel".freeze,
-      subClassOf: "schema:AnatomicalStructure".freeze,
-      type: "rdfs:Class".freeze
-    term :VeterinaryCare,
-      comment: %(A vet's office.).freeze,
-      label: "VeterinaryCare".freeze,
-      subClassOf: "schema:MedicalOrganization".freeze,
-      type: "rdfs:Class".freeze
     term :VideoGallery,
       comment: %(Web page type: Video gallery page.).freeze,
       label: "VideoGallery".freeze,
@@ -3507,10 +3068,6 @@ module RDF::Vocab
       label: "ViewAction".freeze,
       subClassOf: "schema:ConsumeAction".freeze,
       type: "rdfs:Class".freeze
-    term :Virus,
-      comment: %(Pathogenic virus that causes viral infection.).freeze,
-      label: "Virus".freeze,
-      type: "schema:InfectiousAgentClass".freeze
     term :VisualArtsEvent,
       comment: %(Event type: Visual arts event.).freeze,
       label: "VisualArtsEvent".freeze,
@@ -3717,13 +3274,6 @@ module RDF::Vocab
       label: "acquiredFrom".freeze,
       rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
       type: "rdf:Property".freeze
-    property :action,
-      comment: %(The movement the muscle generates.).freeze,
-      domainIncludes: "schema:Muscle".freeze,
-      label: "action".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      :"schema:supersededBy" => %(schema:muscleAction).freeze,
-      type: "rdf:Property".freeze
     property :actionApplication,
       comment: %(An application that can complete the request.).freeze,
       domainIncludes: "schema:EntryPoint".freeze,
@@ -3748,24 +3298,6 @@ module RDF::Vocab
       domainIncludes: "schema:Action".freeze,
       label: "actionStatus".freeze,
       rangeIncludes: "schema:ActionStatusType".freeze,
-      type: "rdf:Property".freeze
-    property :activeIngredient,
-      comment: %(An active ingredient, typically chemical compounds and/or biologic substances.).freeze,
-      domainIncludes: ["schema:DietarySupplement".freeze, "schema:Drug".freeze, "schema:DrugStrength".freeze],
-      label: "activeIngredient".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :activityDuration,
-      comment: %(Length of time to engage in the activity.).freeze,
-      domainIncludes: "schema:ExercisePlan".freeze,
-      label: "activityDuration".freeze,
-      rangeIncludes: "schema:Duration".freeze,
-      type: "rdf:Property".freeze
-    property :activityFrequency,
-      comment: %(How often one should engage in the activity.).freeze,
-      domainIncludes: "schema:ExercisePlan".freeze,
-      label: "activityFrequency".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :actor,
       comment: %(An actor, e.g. in tv, radio, movie, video games etc. Actors can be associated with individual items or with a series, episode, clip.).freeze,
@@ -3814,12 +3346,6 @@ Note: Publishers should be aware that applications designed to use specific sche
       rangeIncludes: "schema:URL".freeze,
       subPropertyOf: "rdf:type".freeze,
       type: "rdf:Property".freeze
-    property :additionalVariable,
-      comment: %(Any additional component of the exercise prescription that may need to be articulated to the patient. This may include the order of exercises, the number of repetitions of movement, quantitative distance, progressions over time, etc.).freeze,
-      domainIncludes: "schema:ExercisePlan".freeze,
-      label: "additionalVariable".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :address,
       comment: %(Physical address of the item.).freeze,
       domainIncludes: ["schema:GeoCoordinates".freeze, "schema:GeoShape".freeze, "schema:Organization".freeze, "schema:Person".freeze, "schema:Place".freeze],
@@ -3844,29 +3370,11 @@ Note: Publishers should be aware that applications designed to use specific sche
       label: "addressRegion".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
-    property :administrationRoute,
-      comment: %(A route by which this drug may be administered, e.g. 'oral'.).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "administrationRoute".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :advanceBookingRequirement,
       comment: %(The amount of time that is required between accepting the offer and the actual usage of the resource or service.).freeze,
       domainIncludes: ["schema:Demand".freeze, "schema:Offer".freeze],
       label: "advanceBookingRequirement".freeze,
       rangeIncludes: "schema:QuantitativeValue".freeze,
-      type: "rdf:Property".freeze
-    property :adverseOutcome,
-      comment: %(A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious \(resulting in death, disability, or permanent damage; requiring hospitalization; or is otherwise life-threatening or requires immediate medical attention\), tag it as a seriouseAdverseOutcome instead.).freeze,
-      domainIncludes: ["schema:MedicalDevice".freeze, "schema:MedicalTherapy".freeze],
-      label: "adverseOutcome".freeze,
-      rangeIncludes: "schema:MedicalEntity".freeze,
-      type: "rdf:Property".freeze
-    property :affectedBy,
-      comment: %(Drugs that affect the test's results.).freeze,
-      domainIncludes: "schema:MedicalTest".freeze,
-      label: "affectedBy".freeze,
-      rangeIncludes: "schema:Drug".freeze,
       type: "rdf:Property".freeze
     property :affiliation,
       comment: %(An organization that this person is affiliated with. For example, a school/university, a club, or a team.).freeze,
@@ -3927,18 +3435,6 @@ Note: Publishers should be aware that applications designed to use specific sche
       rangeIncludes: "schema:MusicAlbum".freeze,
       :"schema:supersededBy" => %(schema:album).freeze,
       type: "rdf:Property".freeze
-    property :alcoholWarning,
-      comment: %(Any precaution, guidance, contraindication, etc. related to consumption of alcohol while taking this drug.).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "alcoholWarning".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :algorithm,
-      comment: %(The algorithm or rules to follow to compute the score.).freeze,
-      domainIncludes: "schema:MedicalRiskScore".freeze,
-      label: "algorithm".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :alignmentType,
       comment: %(A category of alignment between the learning resource and the framework node. Recommended values include: 'assesses', 'teaches', 'requires', 'textComplexity', 'readingLevel', 'educationalSubject', and 'educationLevel'.).freeze,
       domainIncludes: "schema:AlignmentObject".freeze,
@@ -3983,23 +3479,18 @@ Note: Publishers should be aware that applications designed to use specific sche
       label: "amountOfThisGood".freeze,
       rangeIncludes: "schema:Number".freeze,
       type: "rdf:Property".freeze
+    property :annualPercentageRate,
+      comment: %(The annual rate that is charged for borrowing \(or made by investing\), expressed as a single percentage number that represents the actual yearly cost of funds over the term of a loan. This includes any fees or additional costs associated with the transaction.).freeze,
+      :"dc:source" => [],
+      domainIncludes: "schema:FinancialProduct".freeze,
+      label: "annualPercentageRate".freeze,
+      rangeIncludes: ["schema:Number".freeze, "schema:QuantitativeValue".freeze],
+      type: "rdf:Property".freeze
     property :answerCount,
       comment: %(The number of answers this question has received.).freeze,
       domainIncludes: "schema:Question".freeze,
       label: "answerCount".freeze,
       rangeIncludes: "schema:Integer".freeze,
-      type: "rdf:Property".freeze
-    property :antagonist,
-      comment: %(The muscle whose action counteracts the specified muscle.).freeze,
-      domainIncludes: "schema:Muscle".freeze,
-      label: "antagonist".freeze,
-      rangeIncludes: "schema:Muscle".freeze,
-      type: "rdf:Property".freeze
-    property :applicableLocation,
-      comment: %(The location in which the status applies.).freeze,
-      domainIncludes: ["schema:DrugCost".freeze, "schema:DrugLegalStatus".freeze],
-      label: "applicableLocation".freeze,
-      rangeIncludes: "schema:AdministrativeArea".freeze,
       type: "rdf:Property".freeze
     property :application,
       comment: %(An application that can complete the request.).freeze,
@@ -4105,12 +3596,6 @@ Note: Publishers should be aware that applications designed to use specific sche
       label: "artMedium".freeze,
       rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
       type: "rdf:Property".freeze
-    property :arterialBranch,
-      comment: %(The branches that comprise the arterial structure.).freeze,
-      domainIncludes: "schema:Artery".freeze,
-      label: "arterialBranch".freeze,
-      rangeIncludes: "schema:AnatomicalStructure".freeze,
-      type: "rdf:Property".freeze
     property :artform,
       comment: %(e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage, Collage, etc.).freeze,
       domainIncludes: "schema:VisualArtwork".freeze,
@@ -4135,12 +3620,6 @@ Note: Publishers should be aware that applications designed to use specific sche
       label: "artworkSurface".freeze,
       rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
       type: "rdf:Property".freeze
-    property :aspect,
-      comment: %(An aspect of medical practice that is considered on the page, such as 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology', etc.).freeze,
-      domainIncludes: "schema:MedicalWebPage".freeze,
-      label: "aspect".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :assembly,
       comment: %(Library file name e.g., mscorlib.dll, system.web.dll.).freeze,
       domainIncludes: "schema:APIReference".freeze,
@@ -4154,12 +3633,6 @@ Note: Publishers should be aware that applications designed to use specific sche
       label: "assemblyVersion".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
-    property :associatedAnatomy,
-      comment: %(The anatomy of the underlying organ system or structures associated with this entity.).freeze,
-      domainIncludes: ["schema:MedicalCondition".freeze, "schema:PhysicalActivity".freeze],
-      label: "associatedAnatomy".freeze,
-      rangeIncludes: ["schema:AnatomicalStructure".freeze, "schema:AnatomicalSystem".freeze, "schema:SuperficialAnatomy".freeze],
-      type: "rdf:Property".freeze
     property :associatedArticle,
       comment: %(A NewsArticle associated with the Media Object.).freeze,
       domainIncludes: "schema:MediaObject".freeze,
@@ -4171,12 +3644,6 @@ Note: Publishers should be aware that applications designed to use specific sche
       domainIncludes: "schema:CreativeWork".freeze,
       label: "associatedMedia".freeze,
       rangeIncludes: "schema:MediaObject".freeze,
-      type: "rdf:Property".freeze
-    property :associatedPathophysiology,
-      comment: %(If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.).freeze,
-      domainIncludes: ["schema:AnatomicalStructure".freeze, "schema:AnatomicalSystem".freeze, "schema:SuperficialAnatomy".freeze],
-      label: "associatedPathophysiology".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :athlete,
       comment: %(A person that acts as performing member of a sports team; a player as opposed to a coach.).freeze,
@@ -4264,12 +3731,6 @@ Note: Publishers should be aware that applications designed to use specific sche
       label: "availableFrom".freeze,
       rangeIncludes: "schema:DateTime".freeze,
       type: "rdf:Property".freeze
-    property :availableIn,
-      comment: %(The location in which the strength is available.).freeze,
-      domainIncludes: "schema:DrugStrength".freeze,
-      label: "availableIn".freeze,
-      rangeIncludes: "schema:AdministrativeArea".freeze,
-      type: "rdf:Property".freeze
     property :availableLanguage,
       comment: %(A language someone may use with the item.).freeze,
       domainIncludes: ["schema:ContactPoint".freeze, "schema:ServiceChannel".freeze],
@@ -4281,24 +3742,6 @@ Note: Publishers should be aware that applications designed to use specific sche
       domainIncludes: "schema:SoftwareApplication".freeze,
       label: "availableOnDevice".freeze,
       rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :availableService,
-      comment: %(A medical service available from this provider.).freeze,
-      domainIncludes: ["schema:Hospital".freeze, "schema:MedicalClinic".freeze, "schema:Physician".freeze],
-      label: "availableService".freeze,
-      rangeIncludes: ["schema:MedicalProcedure".freeze, "schema:MedicalTest".freeze, "schema:MedicalTherapy".freeze],
-      type: "rdf:Property".freeze
-    property :availableStrength,
-      comment: %(An available dosage strength for the drug.).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "availableStrength".freeze,
-      rangeIncludes: "schema:DrugStrength".freeze,
-      type: "rdf:Property".freeze
-    property :availableTest,
-      comment: %(A diagnostic test or procedure offered by this lab.).freeze,
-      domainIncludes: "schema:DiagnosticLab".freeze,
-      label: "availableTest".freeze,
-      rangeIncludes: "schema:MedicalTest".freeze,
       type: "rdf:Property".freeze
     property :availableThrough,
       comment: %(After this date, the item will no longer be available for pickup.).freeze,
@@ -4325,12 +3768,6 @@ Note: Publishers should be aware that applications designed to use specific sche
       label: "awayTeam".freeze,
       rangeIncludes: ["schema:Person".freeze, "schema:SportsTeam".freeze],
       subPropertyOf: "schema:competitor".freeze,
-      type: "rdf:Property".freeze
-    property :background,
-      comment: %(Descriptive information establishing a historical perspective on the supplement. May include the rationale for the name, the population where the supplement first came to prominence, etc.).freeze,
-      domainIncludes: "schema:DietarySupplement".freeze,
-      label: "background".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :baseSalary,
       comment: %(The base salary of the job or of an employee in an EmployeeRole.).freeze,
@@ -4369,12 +3806,6 @@ Note: Publishers should be aware that applications designed to use specific sche
       label: "billingPeriod".freeze,
       rangeIncludes: "schema:Duration".freeze,
       type: "rdf:Property".freeze
-    property :biomechnicalClass,
-      comment: %(The biomechanical properties of the bone.).freeze,
-      domainIncludes: "schema:Joint".freeze,
-      label: "biomechnicalClass".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :birthDate,
       comment: %(Date of birth.).freeze,
       domainIncludes: "schema:Person".freeze,
@@ -4406,12 +3837,6 @@ Note: Publishers should be aware that applications designed to use specific sche
       rangeIncludes: "schema:BlogPosting".freeze,
       :"schema:supersededBy" => %(schema:blogPost).freeze,
       type: "rdf:Property".freeze
-    property :bloodSupply,
-      comment: %(The blood vessel that carries blood from the heart to the muscle.).freeze,
-      domainIncludes: "schema:Muscle".freeze,
-      label: "bloodSupply".freeze,
-      rangeIncludes: "schema:Vessel".freeze,
-      type: "rdf:Property".freeze
     property :boardingGroup,
       comment: %(The airline-specific indicator of boarding order / preference.).freeze,
       domainIncludes: "schema:FlightReservation".freeze,
@@ -4423,12 +3848,6 @@ Note: Publishers should be aware that applications designed to use specific sche
       domainIncludes: ["schema:Airline".freeze, "schema:Flight".freeze],
       label: "boardingPolicy".freeze,
       rangeIncludes: "schema:BoardingPolicyType".freeze,
-      type: "rdf:Property".freeze
-    property :bodyLocation,
-      comment: %(Location in the body of the anatomical structure.).freeze,
-      domainIncludes: "schema:AnatomicalStructure".freeze,
-      label: "bodyLocation".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :bookEdition,
       comment: %(The edition of the book.).freeze,
@@ -4468,12 +3887,6 @@ Note: Publishers should be aware that applications designed to use specific sche
       label: "box".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
-    property :branch,
-      comment: %(The branches that delineate from the nerve bundle.).freeze,
-      domainIncludes: "schema:Nerve".freeze,
-      label: "branch".freeze,
-      rangeIncludes: "schema:AnatomicalStructure".freeze,
-      type: "rdf:Property".freeze
     property :branchCode,
       comment: %(A short textual code \(also called "store code"\) that uniquely identifies a place of business. The code is typically assigned by the parentOrganization and used in structured URLs.
 <br /><br /> For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047" is a branchCode for a particular branch.
@@ -4500,12 +3913,6 @@ Note: Publishers should be aware that applications designed to use specific sche
       domainIncludes: "schema:WebPage".freeze,
       label: "breadcrumb".freeze,
       rangeIncludes: ["schema:BreadcrumbList".freeze, "schema:Text".freeze],
-      type: "rdf:Property".freeze
-    property :breastfeedingWarning,
-      comment: %(Any precaution, guidance, contraindication, etc. related to this drug's use by breastfeeding mothers.).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "breastfeedingWarning".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :broadcastAffiliateOf,
       comment: %(The media network\(s\) whose content is broadcast on this station.).freeze,
@@ -4660,18 +4067,6 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       label: "category".freeze,
       rangeIncludes: ["schema:PhysicalActivityCategory".freeze, "schema:Text".freeze, "schema:Thing".freeze],
       type: "rdf:Property".freeze
-    property :cause,
-      comment: %(An underlying cause. More specifically, one of the causative agent\(s\) that are most directly responsible for the pathophysiologic process that eventually results in the occurrence.).freeze,
-      domainIncludes: ["schema:MedicalCondition".freeze, "schema:MedicalSignOrSymptom".freeze],
-      label: "cause".freeze,
-      rangeIncludes: "schema:MedicalCause".freeze,
-      type: "rdf:Property".freeze
-    property :causeOf,
-      comment: %(The condition, complication, symptom, sign, etc. caused.).freeze,
-      domainIncludes: "schema:MedicalCause".freeze,
-      label: "causeOf".freeze,
-      rangeIncludes: "schema:MedicalEntity".freeze,
-      type: "rdf:Property".freeze
     property :character,
       comment: %(Fictional person connected with a creative work.).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
@@ -4744,19 +4139,6 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       label: "citation".freeze,
       rangeIncludes: ["schema:CreativeWork".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
-    property :clincalPharmacology,
-      comment: %(Description of the absorption and elimination of drugs, including their concentration \(pharmacokinetics, pK\) and biological effects \(pharmacodynamics, pD\).).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "clinicalPharmacology".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      :"schema:supersededBy" => %(schema:clinicalPharmacology).freeze,
-      type: "rdf:Property".freeze
-    property :clinicalPharmacology,
-      comment: %(Description of the absorption and elimination of drugs, including their concentration \(pharmacokinetics, pK\) and biological effects \(pharmacodynamics, pD\).).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "clinicalPharmacology".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :clipNumber,
       comment: %(Position of the clip within an ordered group of clips.).freeze,
       domainIncludes: "schema:Clip".freeze,
@@ -4776,12 +4158,6 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       label: "coach".freeze,
       rangeIncludes: "schema:Person".freeze,
       type: "rdf:Property".freeze
-    property :code,
-      comment: %(A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.).freeze,
-      domainIncludes: "schema:MedicalEntity".freeze,
-      label: "code".freeze,
-      rangeIncludes: "schema:MedicalCode".freeze,
-      type: "rdf:Property".freeze
     property :codeRepository,
       comment: %(Link to the repository where the un-compiled, human readable code and related code is located \(SVN, github, CodePlex\).).freeze,
       domainIncludes: "schema:SoftwareSourceCode".freeze,
@@ -4792,18 +4168,6 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       comment: %(What type of code sample: full \(compile ready\) solution, code snippet, inline code, scripts, template.).freeze,
       domainIncludes: "schema:SoftwareSourceCode".freeze,
       label: "codeSampleType".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :codeValue,
-      comment: %(The actual code.).freeze,
-      domainIncludes: "schema:MedicalCode".freeze,
-      label: "codeValue".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :codingSystem,
-      comment: %(The coding system, e.g. 'ICD-10'.).freeze,
-      domainIncludes: "schema:MedicalCode".freeze,
-      label: "codingSystem".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :colleague,
@@ -4870,23 +4234,11 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       label: "composer".freeze,
       rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
       type: "rdf:Property".freeze
-    property :comprisedOf,
-      comment: %(The underlying anatomical structures, such as organs, that comprise the anatomical system.).freeze,
-      domainIncludes: "schema:AnatomicalSystem".freeze,
-      label: "comprisedOf".freeze,
-      rangeIncludes: ["schema:AnatomicalStructure".freeze, "schema:AnatomicalSystem".freeze],
-      type: "rdf:Property".freeze
     property :confirmationNumber,
       comment: %(A number that confirms the given order or payment has been received.).freeze,
       domainIncludes: ["schema:Invoice".freeze, "schema:Order".freeze],
       label: "confirmationNumber".freeze,
       rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :connectedTo,
-      comment: %(Other anatomical structures to which this structure is connected.).freeze,
-      domainIncludes: "schema:AnatomicalStructure".freeze,
-      label: "connectedTo".freeze,
-      rangeIncludes: "schema:AnatomicalStructure".freeze,
       type: "rdf:Property".freeze
     property :contactOption,
       comment: %(An option available on this contact point \(e.g. a toll-free number or support for hearing-impaired callers\).).freeze,
@@ -4971,12 +4323,6 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       label: "contentUrl".freeze,
       rangeIncludes: "schema:URL".freeze,
       type: "rdf:Property".freeze
-    property :contraindication,
-      comment: %(A contraindication for this therapy.).freeze,
-      domainIncludes: ["schema:MedicalDevice".freeze, "schema:MedicalTherapy".freeze],
-      label: "contraindication".freeze,
-      rangeIncludes: "schema:MedicalContraindication".freeze,
-      type: "rdf:Property".freeze
     property :contributor,
       comment: %(A secondary contributor to the CreativeWork.).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
@@ -5006,36 +4352,6 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       domainIncludes: "schema:CreativeWork".freeze,
       label: "copyrightYear".freeze,
       rangeIncludes: "schema:Number".freeze,
-      type: "rdf:Property".freeze
-    property :cost,
-      comment: %(Cost per unit of the drug, as reported by the source being tagged.).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "cost".freeze,
-      rangeIncludes: "schema:DrugCost".freeze,
-      type: "rdf:Property".freeze
-    property :costCategory,
-      comment: %(The category of cost, such as wholesale, retail, reimbursement cap, etc.).freeze,
-      domainIncludes: "schema:DrugCost".freeze,
-      label: "costCategory".freeze,
-      rangeIncludes: "schema:DrugCostCategory".freeze,
-      type: "rdf:Property".freeze
-    property :costCurrency,
-      comment: %(The currency \(in 3-letter <a href=http://en.wikipedia.org/wiki/ISO_4217>ISO 4217 format</a>\) of the drug cost.).freeze,
-      domainIncludes: "schema:DrugCost".freeze,
-      label: "costCurrency".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :costOrigin,
-      comment: %(Additional details to capture the origin of the cost data. For example, 'Medicare Part B'.).freeze,
-      domainIncludes: "schema:DrugCost".freeze,
-      label: "costOrigin".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :costPerUnit,
-      comment: %(The cost per unit of the drug.).freeze,
-      domainIncludes: "schema:DrugCost".freeze,
-      label: "costPerUnit".freeze,
-      rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
     property :countriesNotSupported,
       comment: %(Countries for which the application is not supported. You can also provide the two-letter ISO 3166-1 alpha-2 country code.).freeze,
@@ -5159,6 +4475,24 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       domainIncludes: "schema:CreativeWork".freeze,
       label: "datePublished".freeze,
       rangeIncludes: "schema:Date".freeze,
+      type: "rdf:Property".freeze
+    property :dateRead,
+      comment: %(The date/time at which the message has been read by the recipient if a single recipient exists.).freeze,
+      domainIncludes: "schema:Message".freeze,
+      label: "dateRead".freeze,
+      rangeIncludes: "schema:DateTime".freeze,
+      type: "rdf:Property".freeze
+    property :dateReceived,
+      comment: %(The date/time the message was received if a single recipient exists.).freeze,
+      domainIncludes: "schema:Message".freeze,
+      label: "dateReceived".freeze,
+      rangeIncludes: "schema:DateTime".freeze,
+      type: "rdf:Property".freeze
+    property :dateSent,
+      comment: %(The date/time at which the message was sent.).freeze,
+      domainIncludes: "schema:Message".freeze,
+      label: "dateSent".freeze,
+      rangeIncludes: "schema:DateTime".freeze,
       type: "rdf:Property".freeze
     property :dateVehicleFirstRegistered,
       comment: %(The date of the first registration of the vehicle with the respective public authorities.).freeze,
@@ -5296,38 +4630,6 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       rangeIncludes: "schema:Text".freeze,
       :"schema:supersededBy" => %(schema:availableOnDevice).freeze,
       type: "rdf:Property".freeze
-    property :diagnosis,
-      comment: %(One or more alternative conditions considered in the differential diagnosis process.).freeze,
-      domainIncludes: "schema:DDxElement".freeze,
-      label: "diagnosis".freeze,
-      rangeIncludes: "schema:MedicalCondition".freeze,
-      type: "rdf:Property".freeze
-    property :diagram,
-      comment: %(An image containing a diagram that illustrates the structure and/or its component substructures and/or connections with other structures.).freeze,
-      domainIncludes: "schema:AnatomicalStructure".freeze,
-      label: "diagram".freeze,
-      rangeIncludes: "schema:ImageObject".freeze,
-      type: "rdf:Property".freeze
-    property :diet,
-      comment: %(A sub property of instrument. The diet used in this action.).freeze,
-      domainIncludes: "schema:ExerciseAction".freeze,
-      label: "diet".freeze,
-      rangeIncludes: "schema:Diet".freeze,
-      :"schema:supersededBy" => %(schema:exerciseRelatedDiet).freeze,
-      subPropertyOf: "schema:instrument".freeze,
-      type: "rdf:Property".freeze
-    property :dietFeatures,
-      comment: %(Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.).freeze,
-      domainIncludes: "schema:Diet".freeze,
-      label: "dietFeatures".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :differentialDiagnosis,
-      comment: %(One of a set of differential diagnoses for the condition. Specifically, a closely-related or competing diagnosis typically considered later in the cognitive process whereby this medical condition is distinguished from others most likely responsible for a similar collection of signs and symptoms to reach the most parsimonious diagnosis or diagnoses in a patient.).freeze,
-      domainIncludes: "schema:MedicalCondition".freeze,
-      label: "differentialDiagnosis".freeze,
-      rangeIncludes: "schema:DDxElement".freeze,
-      type: "rdf:Property".freeze
     property :director,
       comment: %(A director of e.g. tv, radio, movie, video games etc. content. Directors can be associated with individual items or with a series, episode, clip.).freeze,
       domainIncludes: ["schema:Clip".freeze, "schema:CreativeWorkSeason".freeze, "schema:Episode".freeze, "schema:Movie".freeze, "schema:MovieSeries".freeze, "schema:RadioSeries".freeze, "schema:TVSeries".freeze, "schema:VideoGame".freeze, "schema:VideoGameSeries".freeze, "schema:VideoObject".freeze],
@@ -5340,6 +4642,13 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       label: "directors".freeze,
       rangeIncludes: "schema:Person".freeze,
       :"schema:supersededBy" => %(schema:director).freeze,
+      type: "rdf:Property".freeze
+    property :disambiguatingDescription,
+      comment: %(A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties \(in particular, name\) may be necessary for the description to be useful for disambiguation.).freeze,
+      domainIncludes: "schema:Thing".freeze,
+      label: "disambiguatingDescription".freeze,
+      rangeIncludes: "schema:Text".freeze,
+      subPropertyOf: "schema:description".freeze,
       type: "rdf:Property".freeze
     property :discount,
       comment: %(Any discount applied \(to an Order\).).freeze,
@@ -5383,53 +4692,17 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       label: "distance".freeze,
       rangeIncludes: "schema:Distance".freeze,
       type: "rdf:Property".freeze
-    property :distinguishingSign,
-      comment: %(One of a set of signs and symptoms that can be used to distinguish this diagnosis from others in the differential diagnosis.).freeze,
-      domainIncludes: "schema:DDxElement".freeze,
-      label: "distinguishingSign".freeze,
-      rangeIncludes: "schema:MedicalSignOrSymptom".freeze,
-      type: "rdf:Property".freeze
     property :distribution,
       comment: %(A downloadable form of this dataset, at a specific location, in a specific format.).freeze,
       domainIncludes: "schema:Dataset".freeze,
       label: "distribution".freeze,
       rangeIncludes: "schema:DataDownload".freeze,
       type: "rdf:Property".freeze
-    property :domainIncludes,
-      comment: %(Relates a property to a class that is \(one of\) the type\(s\) the property is expected to be used on.).freeze,
-      domainIncludes: "schema:Property".freeze,
-      label: "domainIncludes".freeze,
-      rangeIncludes: "schema:Class".freeze,
-      type: "rdf:Property".freeze
     property :doorTime,
       comment: %(The time admission will commence.).freeze,
       domainIncludes: "schema:Event".freeze,
       label: "doorTime".freeze,
       rangeIncludes: "schema:DateTime".freeze,
-      type: "rdf:Property".freeze
-    property :dosageForm,
-      comment: %(A dosage form in which this drug/supplement is available, e.g. 'tablet', 'suspension', 'injection'.).freeze,
-      domainIncludes: ["schema:DietarySupplement".freeze, "schema:Drug".freeze],
-      label: "dosageForm".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :doseSchedule,
-      comment: %(A dosing schedule for the drug for a given population, either observed, recommended, or maximum dose based on the type used.).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "doseSchedule".freeze,
-      rangeIncludes: "schema:DoseSchedule".freeze,
-      type: "rdf:Property".freeze
-    property :doseUnit,
-      comment: %(The unit of the dose, e.g. 'mg'.).freeze,
-      domainIncludes: "schema:DoseSchedule".freeze,
-      label: "doseUnit".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :doseValue,
-      comment: %(The value of the dose, e.g. 500.).freeze,
-      domainIncludes: "schema:DoseSchedule".freeze,
-      label: "doseValue".freeze,
-      rangeIncludes: "schema:Number".freeze,
       type: "rdf:Property".freeze
     property :downloadUrl,
       comment: %(If the file can be downloaded, URL to download the binary.).freeze,
@@ -5442,12 +4715,6 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       domainIncludes: ["schema:Comment".freeze, "schema:Question".freeze],
       label: "downvoteCount".freeze,
       rangeIncludes: "schema:Integer".freeze,
-      type: "rdf:Property".freeze
-    property :drainsTo,
-      comment: %(The vasculature that the vein drains into.).freeze,
-      domainIncludes: "schema:Vein".freeze,
-      label: "drainsTo".freeze,
-      rangeIncludes: "schema:Vessel".freeze,
       type: "rdf:Property".freeze
     property :driveWheelConfiguration,
       comment: %(The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle's engine via the drivetrain.).freeze,
@@ -5468,35 +4735,11 @@ Note: You can use <a href="minValue">minValue</a> and <a href="maxValue">maxValu
       label: "dropoffTime".freeze,
       rangeIncludes: "schema:DateTime".freeze,
       type: "rdf:Property".freeze
-    property :drug,
-      comment: %(A drug in this drug class.).freeze,
-      domainIncludes: "schema:DrugClass".freeze,
-      label: "drug".freeze,
-      rangeIncludes: "schema:Drug".freeze,
-      type: "rdf:Property".freeze
-    property :drugClass,
-      comment: %(The class of drug this belongs to \(e.g., statins\).).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "drugClass".freeze,
-      rangeIncludes: "schema:DrugClass".freeze,
-      type: "rdf:Property".freeze
-    property :drugUnit,
-      comment: %(The unit in which the drug is measured, e.g. '5 mg tablet'.).freeze,
-      domainIncludes: "schema:DrugCost".freeze,
-      label: "drugUnit".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :duns,
       comment: %(The Dun & Bradstreet DUNS number for identifying an organization or business person.).freeze,
       domainIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
       label: "duns".freeze,
       rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :duplicateTherapy,
-      comment: %(A therapy that duplicates or overlaps this one.).freeze,
-      domainIncludes: "schema:MedicalTherapy".freeze,
-      label: "duplicateTherapy".freeze,
-      rangeIncludes: "schema:MedicalTherapy".freeze,
       type: "rdf:Property".freeze
     property :duration,
       comment: %(The duration of the item \(movie, audio recording, event, etc.\) in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>.).freeze,
@@ -5668,24 +4911,12 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
       subPropertyOf: "schema:participant".freeze,
       type: "rdf:Property".freeze
-    property :endorsers,
-      comment: %(People or organizations that endorse the plan.).freeze,
-      domainIncludes: "schema:Diet".freeze,
-      label: "endorsers".freeze,
-      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
-      type: "rdf:Property".freeze
     property :entertainmentBusiness,
       comment: %(A sub property of location. The entertainment business where the action occurred.).freeze,
       domainIncludes: "schema:PerformAction".freeze,
       label: "entertainmentBusiness".freeze,
       rangeIncludes: "schema:EntertainmentBusiness".freeze,
       subPropertyOf: "schema:location".freeze,
-      type: "rdf:Property".freeze
-    property :epidemiology,
-      comment: %(The characteristics of associated patients, such as age, gender, race etc.).freeze,
-      domainIncludes: ["schema:MedicalCondition".freeze, "schema:PhysicalActivity".freeze],
-      label: "epidemiology".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :episode,
       comment: %(An episode of a tv, radio or game media within a series or season.).freeze,
@@ -5726,12 +4957,6 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       label: "estimatedFlightDuration".freeze,
       rangeIncludes: ["schema:Duration".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
-    property :estimatesRiskOf,
-      comment: %(The condition, complication, or symptom whose risk is being estimated.).freeze,
-      domainIncludes: "schema:MedicalRiskEstimator".freeze,
-      label: "estimatesRiskOf".freeze,
-      rangeIncludes: "schema:MedicalEntity".freeze,
-      type: "rdf:Property".freeze
     property :event,
       comment: %(Upcoming or past event associated with this place, organization, or action.).freeze,
       domainIncludes: ["schema:InformAction".freeze, "schema:InviteAction".freeze, "schema:JoinAction".freeze, "schema:LeaveAction".freeze, "schema:Organization".freeze, "schema:Place".freeze, "schema:PlayAction".freeze],
@@ -5750,18 +4975,6 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       label: "events".freeze,
       rangeIncludes: "schema:Event".freeze,
       :"schema:supersededBy" => %(schema:event).freeze,
-      type: "rdf:Property".freeze
-    property :evidenceLevel,
-      comment: %(Strength of evidence of the data used to formulate the guideline \(enumerated\).).freeze,
-      domainIncludes: "schema:MedicalGuideline".freeze,
-      label: "evidenceLevel".freeze,
-      rangeIncludes: "schema:MedicalEvidenceLevel".freeze,
-      type: "rdf:Property".freeze
-    property :evidenceOrigin,
-      comment: %(Source of the data used to formulate the guidance, e.g. RCT, consensus opinion, etc.).freeze,
-      domainIncludes: "schema:MedicalGuideline".freeze,
-      label: "evidenceOrigin".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :exampleOfWork,
       comment: %(A creative work that this work is an example/instance/realization/derivation of.).freeze,
@@ -5784,26 +4997,6 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       rangeIncludes: "schema:Place".freeze,
       subPropertyOf: "schema:location".freeze,
       type: "rdf:Property".freeze
-    property :exercisePlan,
-      comment: %(A sub property of instrument. The exercise plan used on this action.).freeze,
-      domainIncludes: "schema:ExerciseAction".freeze,
-      label: "exercisePlan".freeze,
-      rangeIncludes: "schema:ExercisePlan".freeze,
-      subPropertyOf: "schema:instrument".freeze,
-      type: "rdf:Property".freeze
-    property :exerciseRelatedDiet,
-      comment: %(A sub property of instrument. The diet used in this action.).freeze,
-      domainIncludes: "schema:ExerciseAction".freeze,
-      label: "exerciseRelatedDiet".freeze,
-      rangeIncludes: "schema:Diet".freeze,
-      subPropertyOf: "schema:instrument".freeze,
-      type: "rdf:Property".freeze
-    property :exerciseType,
-      comment: %(Type\(s\) of exercise or activity, such as strength training, flexibility training, aerobics, cardiac rehabilitation, etc.).freeze,
-      domainIncludes: ["schema:ExerciseAction".freeze, "schema:ExercisePlan".freeze],
-      label: "exerciseType".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :exifData,
       comment: %(exif data for this object.).freeze,
       domainIncludes: "schema:ImageObject".freeze,
@@ -5822,12 +5015,6 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       label: "expectedArrivalUntil".freeze,
       rangeIncludes: "schema:DateTime".freeze,
       type: "rdf:Property".freeze
-    property :expectedPrognosis,
-      comment: %(The likely outcome in either the short term or long term of the medical condition.).freeze,
-      domainIncludes: "schema:MedicalCondition".freeze,
-      label: "expectedPrognosis".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :expectsAcceptanceOf,
       comment: %(An Offer which must be accepted before the user can perform the Action. For example, the user may need to buy a movie before being able to watch it.).freeze,
       domainIncludes: "schema:ConsumeAction".freeze,
@@ -5838,12 +5025,6 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       comment: %(Description of skills and experience needed for the position.).freeze,
       domainIncludes: "schema:JobPosting".freeze,
       label: "experienceRequirements".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :expertConsiderations,
-      comment: %(Medical expert advice related to the plan.).freeze,
-      domainIncludes: "schema:Diet".freeze,
-      label: "expertConsiderations".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :expires,
@@ -5874,6 +5055,13 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       comment: %(Features or modules provided by this application \(and possibly required by other applications\).).freeze,
       domainIncludes: "schema:SoftwareApplication".freeze,
       label: "featureList".freeze,
+      rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
+      type: "rdf:Property".freeze
+    property :feesAndCommissionsSpecification,
+      comment: %(Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.).freeze,
+      :"dc:source" => [],
+      domainIncludes: ["schema:FinancialProduct".freeze, "schema:FinancialService".freeze],
+      label: "feesAndCommissionsSpecification".freeze,
       rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
       type: "rdf:Property".freeze
     property :fiberContent,
@@ -5926,12 +5114,6 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       label: "follows".freeze,
       rangeIncludes: "schema:Person".freeze,
       type: "rdf:Property".freeze
-    property :followup,
-      comment: %(Typical or recommended followup care after the procedure is performed.).freeze,
-      domainIncludes: "schema:MedicalProcedure".freeze,
-      label: "followup".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :foodEstablishment,
       comment: %(A sub property of location. The specific food establishment where the action occurred.).freeze,
       domainIncludes: "schema:CookAction".freeze,
@@ -5945,12 +5127,6 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       label: "foodEvent".freeze,
       rangeIncludes: "schema:FoodEvent".freeze,
       subPropertyOf: "schema:location".freeze,
-      type: "rdf:Property".freeze
-    property :foodWarning,
-      comment: %(Any precaution, guidance, contraindication, etc. related to consumption of specific foods while taking this drug.).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "foodWarning".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :founder,
       comment: %(A person who founded this organization.).freeze,
@@ -5983,12 +5159,6 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       label: "free".freeze,
       rangeIncludes: "schema:Boolean".freeze,
       :"schema:supersededBy" => %(schema:isAccessibleForFree).freeze,
-      type: "rdf:Property".freeze
-    property :frequency,
-      comment: %(How often the dose is taken, e.g. 'daily'.).freeze,
-      domainIncludes: "schema:DoseSchedule".freeze,
-      label: "frequency".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :fromLocation,
       comment: %(A sub property of location. The original location of the object or the agent before the action.).freeze,
@@ -6025,18 +5195,6 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       domainIncludes: ["schema:EngineSpecification".freeze, "schema:Vehicle".freeze],
       label: "fuelType".freeze,
       rangeIncludes: ["schema:QualitativeValue".freeze, "schema:Text".freeze, "schema:URL".freeze],
-      type: "rdf:Property".freeze
-    property :function,
-      comment: %(Function of the anatomical structure.).freeze,
-      domainIncludes: "schema:AnatomicalStructure".freeze,
-      label: "function".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :functionalClass,
-      comment: %(The degree of mobility the joint allows.).freeze,
-      domainIncludes: "schema:Joint".freeze,
-      label: "functionalClass".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :game,
       comment: %(Video game which is played on this server.).freeze,
@@ -6124,6 +5282,12 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       label: "globalLocationNumber".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
+    property :grantee,
+      comment: %(The person, organization, contact point, or audience that has been granted this permission.).freeze,
+      domainIncludes: "schema:DigitalDocumentPermission".freeze,
+      label: "grantee".freeze,
+      rangeIncludes: ["schema:Audience".freeze, "schema:ContactPoint".freeze, "schema:Organization".freeze, "schema:Person".freeze],
+      type: "rdf:Property".freeze
     property :greater,
       comment: %(This ordering relation for qualitative values indicates that the subject is greater than the object.).freeze,
       domainIncludes: "schema:QualitativeValue".freeze,
@@ -6160,29 +5324,17 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       label: "gtin8".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
-    property :guideline,
-      comment: %(A medical guideline related to this entity.).freeze,
-      domainIncludes: "schema:MedicalEntity".freeze,
-      label: "guideline".freeze,
-      rangeIncludes: "schema:MedicalGuideline".freeze,
-      type: "rdf:Property".freeze
-    property :guidelineDate,
-      comment: %(Date on which this guideline's recommendation was made.).freeze,
-      domainIncludes: "schema:MedicalGuideline".freeze,
-      label: "guidelineDate".freeze,
-      rangeIncludes: "schema:Date".freeze,
-      type: "rdf:Property".freeze
-    property :guidelineSubject,
-      comment: %(The medical conditions, treatments, etc. that are the subject of the guideline.).freeze,
-      domainIncludes: "schema:MedicalGuideline".freeze,
-      label: "guidelineSubject".freeze,
-      rangeIncludes: "schema:MedicalEntity".freeze,
-      type: "rdf:Property".freeze
     property :hasDeliveryMethod,
       comment: %(Method used for delivery or shipping.).freeze,
       domainIncludes: ["schema:DeliveryEvent".freeze, "schema:ParcelDelivery".freeze],
       label: "hasDeliveryMethod".freeze,
       rangeIncludes: "schema:DeliveryMethod".freeze,
+      type: "rdf:Property".freeze
+    property :hasDigitalDocumentPermission,
+      comment: %(A permission related to the access to this document \(e.g. permission to read or write an electronic document\). For a public document, specify a grantee with an Audience with audienceType equal to "public".).freeze,
+      domainIncludes: "schema:DigitalDocument".freeze,
+      label: "hasDigitalDocumentPermission".freeze,
+      rangeIncludes: "schema:DigitalDocumentPermission".freeze,
       type: "rdf:Property".freeze
     property :hasMap,
       comment: %(A URL to a map of the place.).freeze,
@@ -6215,12 +5367,6 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       domainIncludes: "schema:CreativeWork".freeze,
       label: "headline".freeze,
       rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :healthCondition,
-      comment: %(Expectations for health conditions of target audience.).freeze,
-      domainIncludes: "schema:PeopleAudience".freeze,
-      label: "healthCondition".freeze,
-      rangeIncludes: "schema:MedicalCondition".freeze,
       type: "rdf:Property".freeze
     property :height,
       comment: %(The height of the item.).freeze,
@@ -6266,12 +5412,6 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       label: "honorificSuffix".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
-    property :hospitalAffiliation,
-      comment: %(A hospital with which the physician or office is affiliated.).freeze,
-      domainIncludes: "schema:Physician".freeze,
-      label: "hospitalAffiliation".freeze,
-      rangeIncludes: "schema:Hospital".freeze,
-      type: "rdf:Property".freeze
     property :hostingOrganization,
       comment: %(The organization \(airline, travelers' club, etc.\) the membership is made with.).freeze,
       domainIncludes: "schema:ProgramMembership".freeze,
@@ -6283,12 +5423,6 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       domainIncludes: ["schema:ContactPoint".freeze, "schema:Service".freeze],
       label: "hoursAvailable".freeze,
       rangeIncludes: "schema:OpeningHoursSpecification".freeze,
-      type: "rdf:Property".freeze
-    property :howPerformed,
-      comment: %(How the procedure is performed.).freeze,
-      domainIncludes: "schema:MedicalProcedure".freeze,
-      label: "howPerformed".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :httpMethod,
       comment: %(An HTTP method that specifies the appropriate HTTP method for a request to an HTTP EntryPoint. Values are capitalized strings as used in HTTP.).freeze,
@@ -6308,18 +5442,6 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       label: "iacoCode".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
-    property :identifyingExam,
-      comment: %(A physical examination that can identify this sign.).freeze,
-      domainIncludes: "schema:MedicalSign".freeze,
-      label: "identifyingExam".freeze,
-      rangeIncludes: "schema:PhysicalExam".freeze,
-      type: "rdf:Property".freeze
-    property :identifyingTest,
-      comment: %(A diagnostic test that can identify this sign.).freeze,
-      domainIncludes: "schema:MedicalSign".freeze,
-      label: "identifyingTest".freeze,
-      rangeIncludes: "schema:MedicalTest".freeze,
-      type: "rdf:Property".freeze
     property :illustrator,
       comment: %(The illustrator of the book.).freeze,
       domainIncludes: "schema:Book".freeze,
@@ -6331,12 +5453,6 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       domainIncludes: "schema:Thing".freeze,
       label: "image".freeze,
       rangeIncludes: ["schema:ImageObject".freeze, "schema:URL".freeze],
-      type: "rdf:Property".freeze
-    property :imagingTechnique,
-      comment: %(Imaging technique used.).freeze,
-      domainIncludes: "schema:ImagingTest".freeze,
-      label: "imagingTechnique".freeze,
-      rangeIncludes: "schema:MedicalImagingTechnique".freeze,
       type: "rdf:Property".freeze
     property :inAlbum,
       comment: %(The album to which this recording belongs.).freeze,
@@ -6388,29 +5504,18 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       label: "includedDataCatalog".freeze,
       rangeIncludes: "schema:DataCatalog".freeze,
       type: "rdf:Property".freeze
-    property :includedRiskFactor,
-      comment: %(A modifiable or non-modifiable risk factor included in the calculation, e.g. age, coexisting condition.).freeze,
-      domainIncludes: "schema:MedicalRiskEstimator".freeze,
-      label: "includedRiskFactor".freeze,
-      rangeIncludes: "schema:MedicalRiskFactor".freeze,
+    property :includedInDataCatalog,
+      comment: %(A data catalog which contains this dataset.).freeze,
+      domainIncludes: "schema:Dataset".freeze,
+      inverseOf: "schema:dataset".freeze,
+      label: "includedInDataCatalog".freeze,
+      rangeIncludes: "schema:DataCatalog".freeze,
       type: "rdf:Property".freeze
     property :includesObject,
       comment: %(This links to a node or nodes indicating the exact quantity of the products included in the offer.).freeze,
       domainIncludes: ["schema:Demand".freeze, "schema:Offer".freeze],
       label: "includesObject".freeze,
       rangeIncludes: "schema:TypeAndQuantityNode".freeze,
-      type: "rdf:Property".freeze
-    property :increasesRiskOf,
-      comment: %(The condition, complication, etc. influenced by this factor.).freeze,
-      domainIncludes: "schema:MedicalRiskFactor".freeze,
-      label: "increasesRiskOf".freeze,
-      rangeIncludes: "schema:MedicalEntity".freeze,
-      type: "rdf:Property".freeze
-    property :indication,
-      comment: %(A factor that indicates use of this therapy for treatment and/or prevention of a condition, symptom, etc. For therapies such as drugs, indications can include both officially-approved indications as well as off-label uses. These can be distinguished by using the ApprovedIndication subtype of MedicalIndication.).freeze,
-      domainIncludes: ["schema:MedicalDevice".freeze, "schema:MedicalTherapy".freeze],
-      label: "indication".freeze,
-      rangeIncludes: "schema:MedicalIndication".freeze,
       type: "rdf:Property".freeze
     property :industry,
       comment: %(The industry associated with the job position.).freeze,
@@ -6426,30 +5531,12 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       label: "ineligibleRegion".freeze,
       rangeIncludes: ["schema:GeoShape".freeze, "schema:Place".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
-    property :infectiousAgent,
-      comment: %(The actual infectious agent, such as a specific bacterium.).freeze,
-      domainIncludes: "schema:InfectiousDisease".freeze,
-      label: "infectiousAgent".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :infectiousAgentClass,
-      comment: %(The class of infectious agent \(bacteria, prion, etc.\) that causes the disease.).freeze,
-      domainIncludes: "schema:InfectiousDisease".freeze,
-      label: "infectiousAgentClass".freeze,
-      rangeIncludes: "schema:InfectiousAgentClass".freeze,
-      type: "rdf:Property".freeze
     property :ingredients,
       comment: %(A single ingredient used in the recipe, e.g. sugar, flour or garlic.).freeze,
       domainIncludes: "schema:Recipe".freeze,
       label: "ingredients".freeze,
       rangeIncludes: "schema:Text".freeze,
       :"schema:supersededBy" => %(schema:recipeIngredient).freeze,
-      type: "rdf:Property".freeze
-    property :insertion,
-      comment: %(The place of attachment of a muscle, or what the muscle moves.).freeze,
-      domainIncludes: "schema:Muscle".freeze,
-      label: "insertion".freeze,
-      rangeIncludes: "schema:AnatomicalStructure".freeze,
       type: "rdf:Property".freeze
     property :installUrl,
       comment: %(URL at which the app may be installed, if different from the URL of the item.).freeze,
@@ -6462,18 +5549,6 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       domainIncludes: "schema:Action".freeze,
       label: "instrument".freeze,
       rangeIncludes: "schema:Thing".freeze,
-      type: "rdf:Property".freeze
-    property :intensity,
-      comment: %(Quantitative measure gauging the degree of force involved in the exercise, for example, heartbeats per minute. May include the velocity of the movement.).freeze,
-      domainIncludes: "schema:ExercisePlan".freeze,
-      label: "intensity".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :interactingDrug,
-      comment: %(Another drug that is known to interact with this drug in a way that impacts the effect of this drug or causes a risk to the patient. Note: disease interactions are typically captured as contraindications.).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "interactingDrug".freeze,
-      rangeIncludes: "schema:Drug".freeze,
       type: "rdf:Property".freeze
     property :interactionCount,
       comment: %(This property is deprecated, alongside the UserInteraction types on which it depended.).freeze,
@@ -6504,17 +5579,18 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       label: "interactivityType".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
+    property :interestRate,
+      comment: %(The interest rate, charged or paid, applicable to the financial product. Note: This is different from the calculated annualPercentageRate.).freeze,
+      :"dc:source" => [],
+      domainIncludes: "schema:FinancialProduct".freeze,
+      label: "interestRate".freeze,
+      rangeIncludes: ["schema:Number".freeze, "schema:QuantitativeValue".freeze],
+      type: "rdf:Property".freeze
     property :inventoryLevel,
       comment: %(The current approximate inventory level for the item or items.).freeze,
       domainIncludes: ["schema:Demand".freeze, "schema:Offer".freeze, "schema:SomeProducts".freeze],
       label: "inventoryLevel".freeze,
       rangeIncludes: "schema:QuantitativeValue".freeze,
-      type: "rdf:Property".freeze
-    property :inverseOf,
-      comment: %(Relates a property to a property that is its inverse. Inverse properties relate the same pairs of items to each other, but in reversed direction. For example, the 'alumni' and 'alumniOf' properties are inverseOf each other. Some properties don't have explicit inverses; in these situations RDFa and JSON-LD syntax for reverse properties can be used.).freeze,
-      domainIncludes: "schema:Property".freeze,
-      label: "inverseOf".freeze,
-      rangeIncludes: "schema:Property".freeze,
       type: "rdf:Property".freeze
     property :isAccessibleForFree,
       comment: %(A flag to signal that the publication is accessible for free.).freeze,
@@ -6528,11 +5604,11 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       label: "isAccessoryOrSparePartFor".freeze,
       rangeIncludes: "schema:Product".freeze,
       type: "rdf:Property".freeze
-    property :isAvailableGenerically,
-      comment: %(True if the drug is available in a generic form \(regardless of name\).).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "isAvailableGenerically".freeze,
-      rangeIncludes: "schema:Boolean".freeze,
+    property :isBasedOn,
+      comment: %(A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.).freeze,
+      domainIncludes: "schema:CreativeWork".freeze,
+      label: "isBasedOnUrl".freeze,
+      rangeIncludes: ["schema:CreativeWork".freeze, "schema:Product".freeze, "schema:URL".freeze],
       type: "rdf:Property".freeze
     property :isBasedOnUrl,
       comment: %(A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.).freeze,
@@ -6570,12 +5646,6 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       inverseOf: "schema:hasPart".freeze,
       label: "isPartOf".freeze,
       rangeIncludes: "schema:CreativeWork".freeze,
-      type: "rdf:Property".freeze
-    property :isProprietary,
-      comment: %(True if this item's name is a proprietary/brand name \(vs. generic name\).).freeze,
-      domainIncludes: ["schema:DietarySupplement".freeze, "schema:Drug".freeze],
-      label: "isProprietary".freeze,
-      rangeIncludes: "schema:Boolean".freeze,
       type: "rdf:Property".freeze
     property :isRelatedTo,
       comment: %(A pointer to another, somehow related product \(or multiple products\).).freeze,
@@ -6734,12 +5804,6 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       label: "knows".freeze,
       rangeIncludes: "schema:Person".freeze,
       type: "rdf:Property".freeze
-    property :labelDetails,
-      comment: %(Link to the drug's label details.).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "labelDetails".freeze,
-      rangeIncludes: "schema:URL".freeze,
-      type: "rdf:Property".freeze
     property :landlord,
       comment: %(A sub property of participant. The owner of the real estate property.).freeze,
       domainIncludes: "schema:RentAction".freeze,
@@ -6779,11 +5843,12 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       label: "legalName".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
-    property :legalStatus,
-      comment: %(The drug or supplement's legal status, including any controlled substance schedules that apply.).freeze,
-      domainIncludes: ["schema:DietarySupplement".freeze, "schema:Drug".freeze],
-      label: "legalStatus".freeze,
-      rangeIncludes: "schema:DrugLegalStatus".freeze,
+    property :leiCode,
+      comment: %(An organization identifier that uniquely identifies a legal entity as defined in ISO 17442.).freeze,
+      :"dc:source" => [],
+      domainIncludes: "schema:Organization".freeze,
+      label: "leiCode".freeze,
+      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :lender,
       comment: %(A sub property of participant. The person that lends the object being borrowed.).freeze,
@@ -6821,6 +5886,14 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       domainIncludes: "schema:LiveBlogPosting".freeze,
       label: "liveBlogUpdate".freeze,
       rangeIncludes: "schema:BlogPosting".freeze,
+      type: "rdf:Property".freeze
+    property :loanTerm,
+      comment: %(The duration of the loan or credit agreement.).freeze,
+      :"dc:source" => [],
+      domainIncludes: "schema:LoanOrCredit".freeze,
+      label: "loanTerm".freeze,
+      rangeIncludes: "schema:QuantitativeValue".freeze,
+      subPropertyOf: "schema:duration".freeze,
       type: "rdf:Property".freeze
     property :location,
       comment: %(The location of for example where the event is happening, an organization is located, or where an action takes place.).freeze,
@@ -6961,35 +6034,11 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       label: "maxValue".freeze,
       rangeIncludes: "schema:Number".freeze,
       type: "rdf:Property".freeze
-    property :maximumIntake,
-      comment: %(Recommended intake of this supplement for a given population as defined by a specific recommending authority.).freeze,
-      domainIncludes: "schema:DietarySupplement".freeze,
-      label: "maximumIntake".freeze,
-      rangeIncludes: "schema:MaximumDoseSchedule".freeze,
-      type: "rdf:Property".freeze
     property :mealService,
       comment: %(Description of the meals that will be provided or available for purchase.).freeze,
       domainIncludes: "schema:Flight".freeze,
       label: "mealService".freeze,
       rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :mechanismOfAction,
-      comment: %(The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.).freeze,
-      domainIncludes: ["schema:DietarySupplement".freeze, "schema:Drug".freeze],
-      label: "mechanismOfAction".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :medicalSpecialty,
-      comment: %(A medical specialty of the provider.).freeze,
-      domainIncludes: ["schema:Hospital".freeze, "schema:MedicalClinic".freeze, "schema:Physician".freeze],
-      label: "medicalSpecialty".freeze,
-      rangeIncludes: "schema:MedicalSpecialty".freeze,
-      type: "rdf:Property".freeze
-    property :medicineSystem,
-      comment: %(The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.).freeze,
-      domainIncludes: "schema:MedicalEntity".freeze,
-      label: "medicineSystem".freeze,
-      rangeIncludes: "schema:MedicineSystem".freeze,
       type: "rdf:Property".freeze
     property :member,
       comment: %(A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals.).freeze,
@@ -7043,6 +6092,12 @@ Note 3: Often, the absolute value is useful only when related to driving speed \
       rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
       :"schema:supersededBy" => %(schema:seller).freeze,
       type: "rdf:Property".freeze
+    property :messageAttachment,
+      comment: %(A CreativeWork attached to the message.).freeze,
+      domainIncludes: "schema:Message".freeze,
+      label: "messageAttachment".freeze,
+      rangeIncludes: "schema:CreativeWork".freeze,
+      type: "rdf:Property".freeze
     property :mileageFromOdometer,
       comment: %(The total distance travelled by the particular vehicle since its initial production, as read from its odometer.<br />
 Typical unit code\(s\): KMT for kilometers, SMI for statute miles).freeze,
@@ -7092,12 +6147,6 @@ Typical unit code\(s\): KMT for kilometers, SMI for statute miles).freeze,
       domainIncludes: "schema:PropertyValueSpecification".freeze,
       label: "multipleValues".freeze,
       rangeIncludes: "schema:Boolean".freeze,
-      type: "rdf:Property".freeze
-    property :muscleAction,
-      comment: %(The movement the muscle generates.).freeze,
-      domainIncludes: "schema:Muscle".freeze,
-      label: "muscleAction".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :musicArrangement,
       comment: %(An arrangement derived from the composition.).freeze,
@@ -7165,24 +6214,6 @@ Typical unit code\(s\): KMT for kilometers, SMI for statute miles).freeze,
       label: "nationality".freeze,
       rangeIncludes: "schema:Country".freeze,
       type: "rdf:Property".freeze
-    property :naturalProgression,
-      comment: %(The expected progression of the condition if it is not treated and allowed to progress naturally.).freeze,
-      domainIncludes: "schema:MedicalCondition".freeze,
-      label: "naturalProgression".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :nerve,
-      comment: %(The underlying innervation associated with the muscle.).freeze,
-      domainIncludes: "schema:Muscle".freeze,
-      label: "nerve".freeze,
-      rangeIncludes: "schema:Nerve".freeze,
-      type: "rdf:Property".freeze
-    property :nerveMotor,
-      comment: %(The neurological pathway extension that involves muscle control.).freeze,
-      domainIncludes: "schema:Nerve".freeze,
-      label: "nerveMotor".freeze,
-      rangeIncludes: "schema:Muscle".freeze,
-      type: "rdf:Property".freeze
     property :netWorth,
       comment: %(The total financial value of the person as calculated by subtracting assets from liabilities.).freeze,
       domainIncludes: "schema:Person".freeze,
@@ -7200,18 +6231,6 @@ Typical unit code\(s\): KMT for kilometers, SMI for statute miles).freeze,
       domainIncludes: "schema:QualitativeValue".freeze,
       label: "nonEqual".freeze,
       rangeIncludes: "schema:QualitativeValue".freeze,
-      type: "rdf:Property".freeze
-    property :nonProprietaryName,
-      comment: %(The generic name of this drug or supplement.).freeze,
-      domainIncludes: ["schema:DietarySupplement".freeze, "schema:Drug".freeze],
-      label: "nonProprietaryName".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :normalRange,
-      comment: %(Range of acceptable values for a typical patient, when applicable.).freeze,
-      domainIncludes: "schema:MedicalTest".freeze,
-      label: "normalRange".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :numAdults,
       comment: %(The number of adults staying in the unit.).freeze,
@@ -7442,41 +6461,11 @@ Typical unit code\(s\): C62).freeze,
       label: "organizer".freeze,
       rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
       type: "rdf:Property".freeze
-    property :origin,
-      comment: %(The place or point where a muscle arises.).freeze,
-      domainIncludes: "schema:Muscle".freeze,
-      label: "origin".freeze,
-      rangeIncludes: "schema:AnatomicalStructure".freeze,
-      type: "rdf:Property".freeze
     property :originAddress,
       comment: %(Shipper's address.).freeze,
       domainIncludes: "schema:ParcelDelivery".freeze,
       label: "originAddress".freeze,
       rangeIncludes: "schema:PostalAddress".freeze,
-      type: "rdf:Property".freeze
-    property :originatesFrom,
-      comment: %(The vasculature the lymphatic structure originates, or afferents, from.).freeze,
-      domainIncludes: "schema:LymphaticVessel".freeze,
-      label: "originatesFrom".freeze,
-      rangeIncludes: "schema:Vessel".freeze,
-      type: "rdf:Property".freeze
-    property :outcome,
-      comment: %(Expected or actual outcomes of the study.).freeze,
-      domainIncludes: "schema:MedicalStudy".freeze,
-      label: "outcome".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :overdosage,
-      comment: %(Any information related to overdose on a drug, including signs or symptoms, treatments, contact information for emergency response.).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "overdosage".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :overview,
-      comment: %(Descriptive information establishing the overarching theory/philosophy of the plan. May include the rationale for the name, the population where the plan first came to prominence, etc.).freeze,
-      domainIncludes: "schema:Diet".freeze,
-      label: "overview".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :ownedFrom,
       comment: %(The date and time of obtaining the product.).freeze,
@@ -7586,13 +6575,6 @@ Typical unit code\(s\): C62).freeze,
       rangeIncludes: "schema:CreativeWorkSeries".freeze,
       subPropertyOf: "schema:isPartOf".freeze,
       type: "rdf:Property".freeze
-    property :partOfSystem,
-      comment: %(The anatomical or organ system that this structure is part of.).freeze,
-      domainIncludes: "schema:AnatomicalStructure".freeze,
-      label: "partOfSystem".freeze,
-      rangeIncludes: "schema:AnatomicalSystem".freeze,
-      subPropertyOf: "schema:isPartOf".freeze,
-      type: "rdf:Property".freeze
     property :partOfTVSeries,
       comment: %(The TV series to which this episode or season belongs.).freeze,
       domainIncludes: ["schema:TVClip".freeze, "schema:TVEpisode".freeze, "schema:TVSeason".freeze],
@@ -7623,12 +6605,6 @@ Typical unit code\(s\): C62).freeze,
       comment: %(The passenger's sequence number as assigned by the airline.).freeze,
       domainIncludes: "schema:FlightReservation".freeze,
       label: "passengerSequenceNumber".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :pathophysiology,
-      comment: %(Changes in the normal mechanical, physical, and biochemical functions that are associated with this activity or condition.).freeze,
-      domainIncludes: ["schema:MedicalCondition".freeze, "schema:PhysicalActivity".freeze],
-      label: "pathophysiology".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :paymentAccepted,
@@ -7693,6 +6669,12 @@ Typical unit code\(s\): C62).freeze,
       rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
       :"schema:supersededBy" => %(schema:performer).freeze,
       type: "rdf:Property".freeze
+    property :permissionType,
+      comment: %(The type of permission granted the person, organization, or audience.).freeze,
+      domainIncludes: "schema:DigitalDocumentPermission".freeze,
+      label: "permissionType".freeze,
+      rangeIncludes: "schema:DigitalDocumentPermissionType".freeze,
+      type: "rdf:Property".freeze
     property :permissions,
       comment: %(Permission\(s\) required to run the app \(for example, a mobile app may require full internet access or may run only on wifi\).).freeze,
       domainIncludes: "schema:SoftwareApplication".freeze,
@@ -7704,12 +6686,6 @@ Typical unit code\(s\): C62).freeze,
       domainIncludes: "schema:Permit".freeze,
       label: "permitAudience".freeze,
       rangeIncludes: "schema:Audience".freeze,
-      type: "rdf:Property".freeze
-    property :phase,
-      comment: %(The phase of the trial.).freeze,
-      domainIncludes: "schema:MedicalTrial".freeze,
-      label: "phase".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :photo,
       comment: %(A photograph of this place.).freeze,
@@ -7724,12 +6700,6 @@ Typical unit code\(s\): C62).freeze,
       label: "photos".freeze,
       rangeIncludes: ["schema:ImageObject".freeze, "schema:Photograph".freeze],
       :"schema:supersededBy" => %(schema:photo).freeze,
-      type: "rdf:Property".freeze
-    property :physiologicalBenefits,
-      comment: %(Specific physiologic benefits associated to the plan.).freeze,
-      domainIncludes: "schema:Diet".freeze,
-      label: "physiologicalBenefits".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :pickupLocation,
       comment: %(Where a taxi will pick up a passenger or a rental car can be picked up.).freeze,
@@ -7767,40 +6737,16 @@ Typical unit code\(s\): C62).freeze,
       label: "polygon".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
-    property :population,
-      comment: %(Any characteristics of the population used in the study, e.g. 'males under 65'.).freeze,
-      domainIncludes: "schema:MedicalStudy".freeze,
-      label: "population".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :position,
       comment: %(The position of an item in a series or sequence of items.).freeze,
       domainIncludes: ["schema:CreativeWork".freeze, "schema:ListItem".freeze],
       label: "position".freeze,
       rangeIncludes: ["schema:Integer".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
-    property :possibleComplication,
-      comment: %(A possible unexpected and unfavorable evolution of a medical condition. Complications may include worsening of the signs or symptoms of the disease, extension of the condition to other organ systems, etc.).freeze,
-      domainIncludes: "schema:MedicalCondition".freeze,
-      label: "possibleComplication".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :possibleTreatment,
-      comment: %(A possible treatment to address this condition, sign or symptom.).freeze,
-      domainIncludes: ["schema:MedicalCondition".freeze, "schema:MedicalSignOrSymptom".freeze],
-      label: "possibleTreatment".freeze,
-      rangeIncludes: "schema:MedicalTherapy".freeze,
-      type: "rdf:Property".freeze
     property :postOfficeBoxNumber,
       comment: %(The post office box number for PO box addresses.).freeze,
       domainIncludes: "schema:PostalAddress".freeze,
       label: "postOfficeBoxNumber".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :postOp,
-      comment: %(A description of the postoperative procedures, care, and/or followups for this device.).freeze,
-      domainIncludes: "schema:MedicalDevice".freeze,
-      label: "postOp".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :postalCode,
@@ -7815,53 +6761,17 @@ Typical unit code\(s\): C62).freeze,
       label: "potentialAction".freeze,
       rangeIncludes: "schema:Action".freeze,
       type: "rdf:Property".freeze
-    property :preOp,
-      comment: %(A description of the workup, testing, and other preparations required before implanting this device.).freeze,
-      domainIncludes: "schema:MedicalDevice".freeze,
-      label: "preOp".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :predecessorOf,
       comment: %(A pointer from a previous, often discontinued variant of the product to its newer variant.).freeze,
       domainIncludes: "schema:ProductModel".freeze,
       label: "predecessorOf".freeze,
       rangeIncludes: "schema:ProductModel".freeze,
       type: "rdf:Property".freeze
-    property :pregnancyCategory,
-      comment: %(Pregnancy category of this drug.).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "pregnancyCategory".freeze,
-      rangeIncludes: "schema:DrugPregnancyCategory".freeze,
-      type: "rdf:Property".freeze
-    property :pregnancyWarning,
-      comment: %(Any precaution, guidance, contraindication, etc. related to this drug's use during pregnancy.).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "pregnancyWarning".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :prepTime,
       comment: %(The length of time it takes to prepare the recipe, in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 duration format</a>.).freeze,
       domainIncludes: "schema:Recipe".freeze,
       label: "prepTime".freeze,
       rangeIncludes: "schema:Duration".freeze,
-      type: "rdf:Property".freeze
-    property :preparation,
-      comment: %(Typical preparation that a patient must undergo before having the procedure performed.).freeze,
-      domainIncludes: "schema:MedicalProcedure".freeze,
-      label: "preparation".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :prescribingInfo,
-      comment: %(Link to prescribing information for the drug.).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "prescribingInfo".freeze,
-      rangeIncludes: "schema:URL".freeze,
-      type: "rdf:Property".freeze
-    property :prescriptionStatus,
-      comment: %(Indicates whether this drug is available by prescription or over-the-counter.).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "prescriptionStatus".freeze,
-      rangeIncludes: "schema:DrugPrescriptionStatus".freeze,
       type: "rdf:Property".freeze
     property :previousItem,
       comment: %(A link to the ListItem that preceeds the current one.).freeze,
@@ -7901,6 +6811,13 @@ Typical unit code\(s\): C62).freeze,
       label: "price".freeze,
       rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
+    property :priceComponent,
+      comment: %(This property links to all UnitPriceSpecification nodes that apply in parallel for the CompoundPriceSpecification node.).freeze,
+      :"dc:source" => [],
+      domainIncludes: "schema:CompoundPriceSpecification".freeze,
+      label: "priceComponent".freeze,
+      rangeIncludes: "schema:UnitPriceSpecification".freeze,
+      type: "rdf:Property".freeze
     property :priceCurrency,
       comment: %(The currency \(in 3-letter ISO 4217 format\) of the price or a price component, when attached to PriceSpecification and its subtypes.).freeze,
       domainIncludes: ["schema:Offer".freeze, "schema:PriceSpecification".freeze, "schema:Reservation".freeze, "schema:Ticket".freeze],
@@ -7937,12 +6854,6 @@ Typical unit code\(s\): C62).freeze,
       label: "primaryImageOfPage".freeze,
       rangeIncludes: "schema:ImageObject".freeze,
       type: "rdf:Property".freeze
-    property :primaryPrevention,
-      comment: %(A preventative therapy used to prevent an initial occurrence of the medical condition, such as vaccination.).freeze,
-      domainIncludes: "schema:MedicalCondition".freeze,
-      label: "primaryPrevention".freeze,
-      rangeIncludes: "schema:MedicalTherapy".freeze,
-      type: "rdf:Property".freeze
     property :printColumn,
       comment: %(The number of the column in which the NewsArticle appears in the print edition.).freeze,
       domainIncludes: "schema:NewsArticle".freeze,
@@ -7966,18 +6877,6 @@ Typical unit code\(s\): C62).freeze,
       domainIncludes: "schema:NewsArticle".freeze,
       label: "printSection".freeze,
       rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :procedure,
-      comment: %(A description of the procedure involved in setting up, using, and/or installing the device.).freeze,
-      domainIncludes: "schema:MedicalDevice".freeze,
-      label: "procedure".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :procedureType,
-      comment: %(The type of procedure, for example Surgical, Noninvasive, or Percutaneous.).freeze,
-      domainIncludes: "schema:MedicalProcedure".freeze,
-      label: "procedureType".freeze,
-      rangeIncludes: "schema:MedicalProcedureType".freeze,
       type: "rdf:Property".freeze
     property :processingTime,
       comment: %(Estimated processing time for the service using this channel.).freeze,
@@ -8068,12 +6967,6 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       label: "propertyID".freeze,
       rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
       type: "rdf:Property".freeze
-    property :proprietaryName,
-      comment: %(Proprietary name given to the diet plan, typically by its originator or creator.).freeze,
-      domainIncludes: "schema:Diet".freeze,
-      label: "proprietaryName".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :proteinContent,
       comment: %(The number of grams of protein.).freeze,
       domainIncludes: "schema:NutritionInformation".freeze,
@@ -8110,12 +7003,6 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       label: "publication".freeze,
       rangeIncludes: "schema:PublicationEvent".freeze,
       type: "rdf:Property".freeze
-    property :publicationType,
-      comment: %(The type of the medical article, taken from the US NLM MeSH <a href=http://www.nlm.nih.gov/mesh/pubtypes.html>publication type catalog.).freeze,
-      domainIncludes: "schema:MedicalScholarlyArticle".freeze,
-      label: "publicationType".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :publishedOn,
       comment: %(A broadcast service associated with the publication event.).freeze,
       domainIncludes: "schema:PublicationEvent".freeze,
@@ -8140,12 +7027,6 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       domainIncludes: ["schema:Product".freeze, "schema:Vehicle".freeze],
       label: "purchaseDate".freeze,
       rangeIncludes: "schema:Date".freeze,
-      type: "rdf:Property".freeze
-    property :purpose,
-      comment: %(A goal towards an action is taken. Can be concrete or abstract.).freeze,
-      domainIncludes: ["schema:AllocateAction".freeze, "schema:MedicalDevice".freeze, "schema:PayAction".freeze],
-      label: "purpose".freeze,
-      rangeIncludes: ["schema:MedicalDevicePurpose".freeze, "schema:Thing".freeze],
       type: "rdf:Property".freeze
     property :qualifications,
       comment: %(Specific qualifications required for this role.).freeze,
@@ -8172,12 +7053,6 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       label: "question".freeze,
       rangeIncludes: "schema:Question".freeze,
       subPropertyOf: "schema:object".freeze,
-      type: "rdf:Property".freeze
-    property :rangeIncludes,
-      comment: %(Relates a property to a class that constitutes \(one of\) the expected type\(s\) for values of the property.).freeze,
-      domainIncludes: "schema:Property".freeze,
-      label: "rangeIncludes".freeze,
-      rangeIncludes: "schema:Class".freeze,
       type: "rdf:Property".freeze
     property :ratingCount,
       comment: %(The count of total number of ratings.).freeze,
@@ -8248,24 +7123,6 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       rangeIncludes: ["schema:Audience".freeze, "schema:Organization".freeze, "schema:Person".freeze],
       subPropertyOf: "schema:participant".freeze,
       type: "rdf:Property".freeze
-    property :recognizingAuthority,
-      comment: %(If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.).freeze,
-      domainIncludes: "schema:MedicalEntity".freeze,
-      label: "recognizingAuthority".freeze,
-      rangeIncludes: "schema:Organization".freeze,
-      type: "rdf:Property".freeze
-    property :recommendationStrength,
-      comment: %(Strength of the guideline's recommendation \(e.g. 'class I'\).).freeze,
-      domainIncludes: "schema:MedicalGuidelineRecommendation".freeze,
-      label: "recommendationStrength".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :recommendedIntake,
-      comment: %(Recommended intake of this supplement for a given population as defined by a specific recommending authority.).freeze,
-      domainIncludes: "schema:DietarySupplement".freeze,
-      label: "recommendedIntake".freeze,
-      rangeIncludes: "schema:RecommendedDoseSchedule".freeze,
-      type: "rdf:Property".freeze
     property :recordLabel,
       comment: %(The label that issued the release.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
@@ -8304,17 +7161,18 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       label: "recordingOf".freeze,
       rangeIncludes: "schema:MusicComposition".freeze,
       type: "rdf:Property".freeze
+    property :referenceQuantity,
+      comment: %(The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh of electricity. This property is a replacement for unitOfMeasurement for the advanced cases where the price does not relate to a standard unit.).freeze,
+      :"dc:source" => [],
+      domainIncludes: "schema:UnitPriceSpecification".freeze,
+      label: "referenceQuantity".freeze,
+      rangeIncludes: "schema:QuantitativeValue".freeze,
+      type: "rdf:Property".freeze
     property :referencesOrder,
       comment: %(The Order\(s\) related to this Invoice. One or more Orders may be combined into a single Invoice.).freeze,
       domainIncludes: "schema:Invoice".freeze,
       label: "referencesOrder".freeze,
       rangeIncludes: "schema:Order".freeze,
-      type: "rdf:Property".freeze
-    property :regionDrained,
-      comment: %(The anatomical or organ system drained by this vessel; generally refers to a specific part of an organ.).freeze,
-      domainIncludes: ["schema:LymphaticVessel".freeze, "schema:Vein".freeze],
-      label: "regionDrained".freeze,
-      rangeIncludes: ["schema:AnatomicalStructure".freeze, "schema:AnatomicalSystem".freeze],
       type: "rdf:Property".freeze
     property :regionsAllowed,
       comment: %(The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in <a href='http://en.wikipedia.org/wiki/ISO_3166'>ISO 3166 format</a>.).freeze,
@@ -8322,41 +7180,11 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       label: "regionsAllowed".freeze,
       rangeIncludes: "schema:Place".freeze,
       type: "rdf:Property".freeze
-    property :relatedAnatomy,
-      comment: %(Anatomical systems or structures that relate to the superficial anatomy.).freeze,
-      domainIncludes: "schema:SuperficialAnatomy".freeze,
-      label: "relatedAnatomy".freeze,
-      rangeIncludes: ["schema:AnatomicalStructure".freeze, "schema:AnatomicalSystem".freeze],
-      type: "rdf:Property".freeze
-    property :relatedCondition,
-      comment: %(A medical condition associated with this anatomy.).freeze,
-      domainIncludes: ["schema:AnatomicalStructure".freeze, "schema:AnatomicalSystem".freeze, "schema:SuperficialAnatomy".freeze],
-      label: "relatedCondition".freeze,
-      rangeIncludes: "schema:MedicalCondition".freeze,
-      type: "rdf:Property".freeze
-    property :relatedDrug,
-      comment: %(Any other drug related to this one, for example commonly-prescribed alternatives.).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "relatedDrug".freeze,
-      rangeIncludes: "schema:Drug".freeze,
-      type: "rdf:Property".freeze
     property :relatedLink,
       comment: %(A link related to this web page, for example to other related web pages.).freeze,
       domainIncludes: "schema:WebPage".freeze,
       label: "relatedLink".freeze,
       rangeIncludes: "schema:URL".freeze,
-      type: "rdf:Property".freeze
-    property :relatedStructure,
-      comment: %(Related anatomical structure\(s\) that are not part of the system but relate or connect to it, such as vascular bundles associated with an organ system.).freeze,
-      domainIncludes: "schema:AnatomicalSystem".freeze,
-      label: "relatedStructure".freeze,
-      rangeIncludes: "schema:AnatomicalStructure".freeze,
-      type: "rdf:Property".freeze
-    property :relatedTherapy,
-      comment: %(A medical therapy related to this anatomy.).freeze,
-      domainIncludes: ["schema:AnatomicalStructure".freeze, "schema:AnatomicalSystem".freeze, "schema:SuperficialAnatomy".freeze],
-      label: "relatedTherapy".freeze,
-      rangeIncludes: "schema:MedicalTherapy".freeze,
       type: "rdf:Property".freeze
     property :relatedTo,
       comment: %(The most generic familial relation.).freeze,
@@ -8390,18 +7218,6 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       label: "releasedEvent".freeze,
       rangeIncludes: "schema:PublicationEvent".freeze,
       type: "rdf:Property".freeze
-    property :relevantSpecialty,
-      comment: %(If applicable, a medical specialty in which this entity is relevant.).freeze,
-      domainIncludes: "schema:MedicalEntity".freeze,
-      label: "relevantSpecialty".freeze,
-      rangeIncludes: "schema:MedicalSpecialty".freeze,
-      type: "rdf:Property".freeze
-    property :repetitions,
-      comment: %(Number of times one should repeat the activity.).freeze,
-      domainIncludes: "schema:ExercisePlan".freeze,
-      label: "repetitions".freeze,
-      rangeIncludes: "schema:Number".freeze,
-      type: "rdf:Property".freeze
     property :replacee,
       comment: %(A sub property of object. The object that is being replaced.).freeze,
       domainIncludes: "schema:ReplaceAction".freeze,
@@ -8433,6 +7249,13 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       domainIncludes: "schema:ImageObject".freeze,
       label: "representativeOfPage".freeze,
       rangeIncludes: "schema:Boolean".freeze,
+      type: "rdf:Property".freeze
+    property :requiredCollateral,
+      comment: %(Assets required to secure loan or credit repayments. It may take form of third party pledge, goods, financial instruments \(cash, securities, etc.\)).freeze,
+      :"dc:source" => [],
+      domainIncludes: "schema:LoanOrCredit".freeze,
+      label: "requiredCollateral".freeze,
+      rangeIncludes: ["schema:Text".freeze, "schema:Thing".freeze],
       type: "rdf:Property".freeze
     property :requiredGender,
       comment: %(Audiences defined by a person's gender.).freeze,
@@ -8495,12 +7318,6 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       label: "responsibilities".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
-    property :restPeriods,
-      comment: %(How often one should break from the activity.).freeze,
-      domainIncludes: "schema:ExercisePlan".freeze,
-      label: "restPeriods".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :result,
       comment: %(The result produced in the action. e.g. John wrote *a book*.).freeze,
       domainIncludes: "schema:Action".freeze,
@@ -8558,18 +7375,6 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       rangeIncludes: "schema:Review".freeze,
       :"schema:supersededBy" => %(schema:review).freeze,
       type: "rdf:Property".freeze
-    property :riskFactor,
-      comment: %(A modifiable or non-modifiable factor that increases the risk of a patient contracting this condition, e.g. age,  coexisting condition.).freeze,
-      domainIncludes: "schema:MedicalCondition".freeze,
-      label: "riskFactor".freeze,
-      rangeIncludes: "schema:MedicalRiskFactor".freeze,
-      type: "rdf:Property".freeze
-    property :risks,
-      comment: %(Specific physiologic risks associated to the plan.).freeze,
-      domainIncludes: "schema:Diet".freeze,
-      label: "risks".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :roleName,
       comment: %(A role played, performed or filled by a person or organization. For example, the team of creators for a comic book might fill the roles named 'inker', 'penciller', and 'letterer'; or an athlete in a SportsTeam might play in the position named 'Quarterback'.).freeze,
       domainIncludes: "schema:Role".freeze,
@@ -8582,12 +7387,6 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       label: "rsvpResponse".freeze,
       rangeIncludes: "schema:RsvpResponseType".freeze,
       type: "rdf:Property".freeze
-    property :runsTo,
-      comment: %(The vasculature the lymphatic structure runs, or efferents, to.).freeze,
-      domainIncludes: "schema:LymphaticVessel".freeze,
-      label: "runsTo".freeze,
-      rangeIncludes: "schema:Vessel".freeze,
-      type: "rdf:Property".freeze
     property :runtime,
       comment: %(Runtime platform or script interpreter dependencies \(Example - Java v1, Python2.3, .Net Framework 3.0\).).freeze,
       domainIncludes: "schema:SoftwareSourceCode".freeze,
@@ -8599,12 +7398,6 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       comment: %(Runtime platform or script interpreter dependencies \(Example - Java v1, Python2.3, .Net Framework 3.0\).).freeze,
       domainIncludes: "schema:SoftwareSourceCode".freeze,
       label: "runtimePlatform".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :safetyConsideration,
-      comment: %(Any potential safety concern associated with the supplement. May include interactions with other drugs and foods, pregnancy, breastfeeding, known adverse reactions, and documented efficacy of the supplement.).freeze,
-      domainIncludes: "schema:DietarySupplement".freeze,
-      label: "safetyConsideration".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :salaryCurrency,
@@ -8708,12 +7501,6 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       label: "seatingType".freeze,
       rangeIncludes: ["schema:QualitativeValue".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
-    property :secondaryPrevention,
-      comment: %(A preventative therapy used to prevent reoccurrence of the medical condition after an initial episode of the condition.).freeze,
-      domainIncludes: "schema:MedicalCondition".freeze,
-      label: "secondaryPrevention".freeze,
-      rangeIncludes: "schema:MedicalTherapy".freeze,
-      type: "rdf:Property".freeze
     property :securityScreening,
       comment: %(The type of security screening the passenger is subject to.).freeze,
       domainIncludes: "schema:FlightReservation".freeze,
@@ -8740,23 +7527,11 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       rangeIncludes: ["schema:Audience".freeze, "schema:Organization".freeze, "schema:Person".freeze],
       subPropertyOf: "schema:participant".freeze,
       type: "rdf:Property".freeze
-    property :sensoryUnit,
-      comment: %(The neurological pathway extension that inputs and sends information to the brain or spinal cord.).freeze,
-      domainIncludes: "schema:Nerve".freeze,
-      label: "sensoryUnit".freeze,
-      rangeIncludes: ["schema:AnatomicalStructure".freeze, "schema:SuperficialAnatomy".freeze],
-      type: "rdf:Property".freeze
     property :serialNumber,
       comment: %(The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.).freeze,
       domainIncludes: ["schema:Demand".freeze, "schema:IndividualProduct".freeze, "schema:Offer".freeze],
       label: "serialNumber".freeze,
       rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :seriousAdverseOutcome,
-      comment: %(A possible serious complication and/or serious side effect of this therapy. Serious adverse outcomes include those that are life-threatening; result in death, disability, or permanent damage; require hospitalization or prolong existing hospitalization; cause congenital anomalies or birth defects; or jeopardize the patient and may require medical or surgical intervention to prevent one of the outcomes in this definition.).freeze,
-      domainIncludes: ["schema:MedicalDevice".freeze, "schema:MedicalTherapy".freeze],
-      label: "seriousAdverseOutcome".freeze,
-      rangeIncludes: "schema:MedicalEntity".freeze,
       type: "rdf:Property".freeze
     property :serverStatus,
       comment: %(Status of a game server.).freeze,
@@ -8857,24 +7632,6 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       rangeIncludes: "schema:Person".freeze,
       :"schema:supersededBy" => %(schema:sibling).freeze,
       type: "rdf:Property".freeze
-    property :signDetected,
-      comment: %(A sign detected by the test.).freeze,
-      domainIncludes: "schema:MedicalTest".freeze,
-      label: "signDetected".freeze,
-      rangeIncludes: "schema:MedicalSign".freeze,
-      type: "rdf:Property".freeze
-    property :signOrSymptom,
-      comment: %(A sign or symptom of this condition. Signs are objective or physically observable manifestations of the medical condition while symptoms are the subjective experience of the medical condition.).freeze,
-      domainIncludes: "schema:MedicalCondition".freeze,
-      label: "signOrSymptom".freeze,
-      rangeIncludes: "schema:MedicalSignOrSymptom".freeze,
-      type: "rdf:Property".freeze
-    property :significance,
-      comment: %(The significance associated with the superficial anatomy; as an example, how characteristics of the superficial anatomy can suggest underlying medical conditions or courses of treatment.).freeze,
-      domainIncludes: "schema:SuperficialAnatomy".freeze,
-      label: "significance".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
     property :significantLink,
       comment: %(One of the more significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.).freeze,
       domainIncludes: "schema:WebPage".freeze,
@@ -8930,23 +7687,11 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       label: "softwareVersion".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
-    property :source,
-      comment: %(The anatomical or organ system that the artery originates from.).freeze,
-      domainIncludes: "schema:Artery".freeze,
-      label: "source".freeze,
-      rangeIncludes: "schema:AnatomicalStructure".freeze,
-      type: "rdf:Property".freeze
     property :sourceOrganization,
       comment: %(The Organization on whose behalf the creator was working.).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       label: "sourceOrganization".freeze,
       rangeIncludes: "schema:Organization".freeze,
-      type: "rdf:Property".freeze
-    property :sourcedFrom,
-      comment: %(The neurological pathway that originates the neurons.).freeze,
-      domainIncludes: "schema:Nerve".freeze,
-      label: "sourcedFrom".freeze,
-      rangeIncludes: "schema:BrainStructure".freeze,
       type: "rdf:Property".freeze
     property :spatial,
       comment: %(The range of spatial applicability of a dataset, e.g. for a dataset of New York weather, the state of New York.).freeze,
@@ -8959,6 +7704,15 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       domainIncludes: "schema:JobPosting".freeze,
       label: "specialCommitments".freeze,
       rangeIncludes: "schema:Text".freeze,
+      type: "rdf:Property".freeze
+    property :specialOpeningHoursSpecification,
+      comment: %(The special opening hours of a certain place.
+<br />
+Use this to explicitly override general opening hours brought in scope by <a href="/openingHoursSpecification">openingHoursSpecification</a> or <a href="/openingHours">openingHours</a>.
+      ).freeze,
+      domainIncludes: "schema:Place".freeze,
+      label: "specialOpeningHoursSpecification".freeze,
+      rangeIncludes: "schema:OpeningHoursSpecification".freeze,
       type: "rdf:Property".freeze
     property :specialty,
       comment: %(One of the domain specialities to which this web page's content applies.).freeze,
@@ -9005,18 +7759,6 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       label: "spouse".freeze,
       rangeIncludes: "schema:Person".freeze,
       type: "rdf:Property".freeze
-    property :stage,
-      comment: %(The stage of the condition, if applicable.).freeze,
-      domainIncludes: "schema:MedicalCondition".freeze,
-      label: "stage".freeze,
-      rangeIncludes: "schema:MedicalConditionStage".freeze,
-      type: "rdf:Property".freeze
-    property :stageAsNumber,
-      comment: %(The stage represented as a number, e.g. 3.).freeze,
-      domainIncludes: "schema:MedicalConditionStage".freeze,
-      label: "stageAsNumber".freeze,
-      rangeIncludes: "schema:Number".freeze,
-      type: "rdf:Property".freeze
     property :startDate,
       comment: %(The start date and time of the item \(in <a href='http://en.wikipedia.org/wiki/ISO_8601'>ISO 8601 date format</a>\).).freeze,
       domainIncludes: ["schema:CreativeWorkSeason".freeze, "schema:CreativeWorkSeries".freeze, "schema:DatedMoneySpecification".freeze, "schema:Event".freeze, "schema:Role".freeze],
@@ -9030,12 +7772,6 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       domainIncludes: ["schema:Action".freeze, "schema:FoodEstablishmentReservation".freeze],
       label: "startTime".freeze,
       rangeIncludes: "schema:DateTime".freeze,
-      type: "rdf:Property".freeze
-    property :status,
-      comment: %(The status of the study \(enumerated\).).freeze,
-      domainIncludes: "schema:MedicalStudy".freeze,
-      label: "status".freeze,
-      rangeIncludes: "schema:MedicalStudyStatus".freeze,
       type: "rdf:Property".freeze
     property :steeringPosition,
       comment: %(The position of the steering wheel or similar device \(mostly for cars\).).freeze,
@@ -9061,48 +7797,6 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       domainIncludes: "schema:PostalAddress".freeze,
       label: "streetAddress".freeze,
       rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :strengthUnit,
-      comment: %(The units of an active ingredient's strength, e.g. mg.).freeze,
-      domainIncludes: "schema:DrugStrength".freeze,
-      label: "strengthUnit".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :strengthValue,
-      comment: %(The value of an active ingredient's strength, e.g. 325.).freeze,
-      domainIncludes: "schema:DrugStrength".freeze,
-      label: "strengthValue".freeze,
-      rangeIncludes: "schema:Number".freeze,
-      type: "rdf:Property".freeze
-    property :structuralClass,
-      comment: %(The name given to how bone physically connects to each other.).freeze,
-      domainIncludes: "schema:Joint".freeze,
-      label: "structuralClass".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :study,
-      comment: %(A medical study or trial related to this entity.).freeze,
-      domainIncludes: "schema:MedicalEntity".freeze,
-      label: "study".freeze,
-      rangeIncludes: "schema:MedicalStudy".freeze,
-      type: "rdf:Property".freeze
-    property :studyDesign,
-      comment: %(Specifics about the observational study design \(enumerated\).).freeze,
-      domainIncludes: "schema:MedicalObservationalStudy".freeze,
-      label: "studyDesign".freeze,
-      rangeIncludes: "schema:MedicalObservationalStudyDesign".freeze,
-      type: "rdf:Property".freeze
-    property :studyLocation,
-      comment: %(The location in which the study is taking/took place.).freeze,
-      domainIncludes: "schema:MedicalStudy".freeze,
-      label: "studyLocation".freeze,
-      rangeIncludes: "schema:AdministrativeArea".freeze,
-      type: "rdf:Property".freeze
-    property :studySubject,
-      comment: %(A subject of the study, i.e. one of the medical conditions, therapies, devices, drugs, etc. investigated by the study.).freeze,
-      domainIncludes: "schema:MedicalStudy".freeze,
-      label: "studySubject".freeze,
-      rangeIncludes: "schema:MedicalEntity".freeze,
       type: "rdf:Property".freeze
     property :subEvent,
       comment: %(An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference.).freeze,
@@ -9130,35 +7824,11 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       label: "subReservation".freeze,
       rangeIncludes: "schema:Reservation".freeze,
       type: "rdf:Property".freeze
-    property :subStageSuffix,
-      comment: %(The substage, e.g. 'a' for Stage IIIa.).freeze,
-      domainIncludes: "schema:MedicalConditionStage".freeze,
-      label: "subStageSuffix".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :subStructure,
-      comment: %(Component \(sub-\)structure\(s\) that comprise this anatomical structure.).freeze,
-      domainIncludes: "schema:AnatomicalStructure".freeze,
-      label: "subStructure".freeze,
-      rangeIncludes: "schema:AnatomicalStructure".freeze,
-      type: "rdf:Property".freeze
-    property :subTest,
-      comment: %(A component test of the panel.).freeze,
-      domainIncludes: "schema:MedicalTestPanel".freeze,
-      label: "subTest".freeze,
-      rangeIncludes: "schema:MedicalTest".freeze,
-      type: "rdf:Property".freeze
     property :subtitleLanguage,
       comment: %(Languages in which subtitles/captions are available, in <a href='http://tools.ietf.org/html/bcp47'>IETF BCP 47 standard format.</a>).freeze,
       domainIncludes: ["schema:Movie".freeze, "schema:ScreeningEvent".freeze, "schema:TVEpisode".freeze],
       label: "subtitleLanguage".freeze,
       rangeIncludes: ["schema:Language".freeze, "schema:Text".freeze],
-      type: "rdf:Property".freeze
-    property :subtype,
-      comment: %(A more specific type of the condition, where applicable, for example 'Type 1 Diabetes', 'Type 2 Diabetes', or 'Gestational Diabetes' for Diabetes.).freeze,
-      domainIncludes: "schema:MedicalCondition".freeze,
-      label: "subtype".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :successorOf,
       comment: %(A pointer from a newer variant of a product  to its previous, often discontinued predecessor.).freeze,
@@ -9196,23 +7866,17 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       label: "suggestedMinAge".freeze,
       rangeIncludes: "schema:Number".freeze,
       type: "rdf:Property".freeze
+    property :suitableForDiet,
+      comment: %(Indicates a dietary restriction or guideline for which this recipe is suitable, e.g. diabetic, halal etc.).freeze,
+      domainIncludes: "schema:Recipe".freeze,
+      label: "suitableForDiet".freeze,
+      rangeIncludes: "schema:RestrictedDiet".freeze,
+      type: "rdf:Property".freeze
     property :superEvent,
       comment: %(An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.).freeze,
       domainIncludes: "schema:Event".freeze,
       label: "superEvent".freeze,
       rangeIncludes: "schema:Event".freeze,
-      type: "rdf:Property".freeze
-    property :supersededBy,
-      comment: %(Relates a term \(i.e. a property, class or enumeration\) to one that supersedes it.).freeze,
-      domainIncludes: ["schema:Class".freeze, "schema:Enumeration".freeze, "schema:Property".freeze],
-      label: "supersededBy".freeze,
-      rangeIncludes: ["schema:Class".freeze, "schema:Enumeration".freeze, "schema:Property".freeze],
-      type: "rdf:Property".freeze
-    property :supplyTo,
-      comment: %(The area to which the artery supplies blood.).freeze,
-      domainIncludes: "schema:Artery".freeze,
-      label: "supplyTo".freeze,
-      rangeIncludes: "schema:AnatomicalStructure".freeze,
       type: "rdf:Property".freeze
     property :supportingData,
       comment: %(Supporting data for a SoftwareApplication.).freeze,
@@ -9256,12 +7920,6 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       comment: %(Type of app development: phone, Metro style, desktop, XBox, etc.).freeze,
       domainIncludes: "schema:APIReference".freeze,
       label: "targetPlatform".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :targetPopulation,
-      comment: %(Characteristics of the population for which this is intended, or which typically uses it, e.g. 'adults'.).freeze,
-      domainIncludes: ["schema:DietarySupplement".freeze, "schema:DoseSchedule".freeze],
-      label: "targetPopulation".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :targetProduct,
@@ -9342,12 +8000,6 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       domainIncludes: "schema:CreativeWork".freeze,
       label: "timeRequired".freeze,
       rangeIncludes: "schema:Duration".freeze,
-      type: "rdf:Property".freeze
-    property :tissueSample,
-      comment: %(The type of tissue sample required for the test.).freeze,
-      domainIncludes: "schema:PathologyTest".freeze,
-      label: "tissueSample".freeze,
-      rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :title,
       comment: %(The title of the job.).freeze,
@@ -9442,24 +8094,6 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       label: "translator".freeze,
       rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
       type: "rdf:Property".freeze
-    property :transmissionMethod,
-      comment: %(How the disease spreads, either as a route or vector, for example 'direct contact', 'Aedes aegypti', etc.).freeze,
-      domainIncludes: "schema:InfectiousDisease".freeze,
-      label: "transmissionMethod".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :trialDesign,
-      comment: %(Specifics about the trial design \(enumerated\).).freeze,
-      domainIncludes: "schema:MedicalTrial".freeze,
-      label: "trialDesign".freeze,
-      rangeIncludes: "schema:MedicalTrialDesign".freeze,
-      type: "rdf:Property".freeze
-    property :tributary,
-      comment: %(The anatomical or organ system that the vein flows into; a larger structure that the vein connects to.).freeze,
-      domainIncludes: "schema:Vein".freeze,
-      label: "tributary".freeze,
-      rangeIncludes: "schema:AnatomicalStructure".freeze,
-      type: "rdf:Property".freeze
     property :typeOfGood,
       comment: %(The product that this structured value is referring to.).freeze,
       domainIncludes: ["schema:OwnershipInfo".freeze, "schema:TypeAndQuantityNode".freeze],
@@ -9471,12 +8105,6 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       domainIncludes: ["schema:CreativeWork".freeze, "schema:Event".freeze],
       label: "typicalAgeRange".freeze,
       rangeIncludes: "schema:Text".freeze,
-      type: "rdf:Property".freeze
-    property :typicalTest,
-      comment: %(A medical test typically performed given this condition.).freeze,
-      domainIncludes: "schema:MedicalCondition".freeze,
-      label: "typicalTest".freeze,
-      rangeIncludes: "schema:MedicalTest".freeze,
       type: "rdf:Property".freeze
     property :underName,
       comment: %(The person or organization the reservation or ticket is for.).freeze,
@@ -9527,23 +8155,11 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       label: "urlTemplate".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
-    property :usedToDiagnose,
-      comment: %(A condition the test is used to diagnose.).freeze,
-      domainIncludes: "schema:MedicalTest".freeze,
-      label: "usedToDiagnose".freeze,
-      rangeIncludes: "schema:MedicalCondition".freeze,
-      type: "rdf:Property".freeze
     property :userInteractionCount,
       comment: %(The number of interactions for the CreativeWork using the WebSite or SoftwareApplication.).freeze,
       domainIncludes: "schema:InteractionCounter".freeze,
       label: "userInteractionCount".freeze,
       rangeIncludes: "schema:Integer".freeze,
-      type: "rdf:Property".freeze
-    property :usesDevice,
-      comment: %(Device used to perform the test.).freeze,
-      domainIncludes: "schema:MedicalTest".freeze,
-      label: "usesDevice".freeze,
-      rangeIncludes: "schema:MedicalDevice".freeze,
       type: "rdf:Property".freeze
     property :validFor,
       comment: %(The time validity of the permit.).freeze,
@@ -9738,12 +8354,6 @@ Typical unit code\(s\): C62 for persons.).freeze,
       rangeIncludes: ["schema:Integer".freeze, "schema:Text".freeze],
       subPropertyOf: "schema:position".freeze,
       type: "rdf:Property".freeze
-    property :warning,
-      comment: %(Any FDA or other warnings about the drug \(text or URL\).).freeze,
-      domainIncludes: "schema:Drug".freeze,
-      label: "warning".freeze,
-      rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
-      type: "rdf:Property".freeze
     property :warranty,
       comment: %(The warranty promise\(s\) included in the offer.).freeze,
       domainIncludes: ["schema:Demand".freeze, "schema:Offer".freeze],
@@ -9836,12 +8446,6 @@ Typical unit code\(s\): C62 for persons.).freeze,
       rangeIncludes: "schema:Movie".freeze,
       subPropertyOf: "schema:workFeatured".freeze,
       type: "rdf:Property".freeze
-    property :workload,
-      comment: %(Quantitative measure of the physiologic output of the exercise; also referred to as energy expenditure.).freeze,
-      domainIncludes: "schema:ExercisePlan".freeze,
-      label: "workload".freeze,
-      rangeIncludes: "schema:Energy".freeze,
-      type: "rdf:Property".freeze
     property :worksFor,
       comment: %(Organizations that the person works for.).freeze,
       domainIncludes: "schema:Person".freeze,
@@ -9868,22 +8472,10 @@ Typical unit code\(s\): C62 for persons.).freeze,
       type: "rdf:Property".freeze
 
     # Extra definitions
-    term :Abdomen,
-      comment: %(Abdomen.).freeze,
-      label: "Abdomen".freeze,
-      type: "schema:PhysicalExam".freeze
     term :ActiveActionStatus,
       comment: %(An in-progress action \(e.g, while watching the movie, or driving to a location\).).freeze,
       label: "ActiveActionStatus".freeze,
       type: "schema:ActionStatusType".freeze
-    term :ActiveNotRecruiting,
-      comment: %(Active, but not recruiting new participants.).freeze,
-      label: "ActiveNotRecruiting".freeze,
-      type: "schema:MedicalStudyStatus".freeze
-    term :AerobicActivity,
-      comment: %(Physical activity of relatively low intensity that depends primarily on the aerobic energy-generating process; during activity, the aerobic metabolism uses oxygen to adequately meet energy demands during exercise.).freeze,
-      label: "AerobicActivity".freeze,
-      type: "schema:PhysicalActivityCategory".freeze
     term :AlbumRelease,
       comment: %(AlbumRelease.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
@@ -9894,26 +8486,10 @@ Typical unit code\(s\): C62 for persons.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "AllWheelDriveConfiguration".freeze,
       type: "schema:DriveWheelConfigurationValue".freeze
-    term :AnaerobicActivity,
-      comment: %(Physical activity that is of high-intensity which utilizes the anaerobic metabolism of the body.).freeze,
-      label: "AnaerobicActivity".freeze,
-      type: "schema:PhysicalActivityCategory".freeze
-    term :Anesthesia,
-      comment: %(A specific branch of medical science that pertains to study of anesthetics and their application.).freeze,
-      label: "Anesthesia".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :Appearance,
-      comment: %(Appearance.).freeze,
-      label: "Appearance".freeze,
-      type: "schema:PhysicalExam".freeze
-    term :Ayurvedic,
-      comment: %(A system of medicine that originated in India over thousands of years and that focuses on integrating and balancing the body, mind, and spirit.).freeze,
-      label: "Ayurvedic".freeze,
-      type: "schema:MedicineSystem".freeze
-    term :Balance,
-      comment: %(Physical activity that is engaged to help maintain posture and balance.).freeze,
-      label: "Balance".freeze,
-      type: "schema:PhysicalActivityCategory".freeze
+    term :AudiobookFormat,
+      comment: %(Book format: Audiobook. This is an enumerated value for use with the bookFormat property. There is also a type 'Audiobook' in the bib extension which includes Audiobook specific properties.).freeze,
+      label: "AudiobookFormat".freeze,
+      type: "schema:BookFormatType".freeze
     term :BroadcastRelease,
       comment: %(BroadcastRelease.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
@@ -9924,64 +8500,28 @@ Typical unit code\(s\): C62 for persons.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "CDFormat".freeze,
       type: "schema:MusicReleaseFormatType".freeze
-    term :CT,
-      comment: %(X-ray computed tomography imaging.).freeze,
-      label: "CT".freeze,
-      type: "schema:MedicalImagingTechnique".freeze
-    term :Cardiovascular,
-      comment: %(A specific branch of medical science that pertains to diagnosis and treatment of disorders of heart and vasculature.).freeze,
-      label: "Cardiovascular".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :CardiovascularExam,
-      comment: %(Cardiovascular.).freeze,
-      label: "CardiovascularExam".freeze,
-      type: "schema:PhysicalExam".freeze
-    term :CaseSeries,
-      comment: %(A case series \(also known as a clinical series\) is a medical research study that tracks patients with a known exposure given similar treatment or examines their medical records for exposure and outcome. A case series can be retrospective or prospective and usually involves a smaller number of patients than the more powerful case-control studies or randomized controlled trials. Case series may be consecutive or non-consecutive, depending on whether all cases presenting to the reporting authors over a period of time were included, or only a selection.).freeze,
-      label: "CaseSeries".freeze,
-      type: "schema:MedicalObservationalStudyDesign".freeze
     term :CassetteFormat,
       comment: %(CassetteFormat.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "CassetteFormat".freeze,
       type: "schema:MusicReleaseFormatType".freeze
-    term :Chiropractic,
-      comment: %(A system of medicine focused on the relationship between the body's structure, mainly the spine, and its functioning.).freeze,
-      label: "Chiropractic".freeze,
-      type: "schema:MedicineSystem".freeze
-    term :Clinician,
-      comment: %(Medical clinicians, including practicing physicians and other medical professionals involved in clinical practice.).freeze,
-      label: "Clinician".freeze,
-      type: "schema:MedicalAudience".freeze
     term :CoOp,
       comment: %(Play mode: CoOp. Co-operative games, where you play on the same team with friends.).freeze,
       label: "CoOp".freeze,
       type: "schema:GamePlayMode".freeze
-    term :CohortStudy,
-      comment: %(Also known as a panel study. A cohort study is a form of longitudinal study used in medicine and social science. It is one type of study design and should be compared with a cross-sectional study.  A cohort is a group of people who share a common characteristic or experience within a defined period \(e.g., are born, leave school, lose their job, are exposed to a drug or a vaccine, etc.\). The comparison group may be the general population from which the cohort is drawn, or it may be another cohort of persons thought to have had little or no exposure to the substance under investigation, but otherwise similar. Alternatively, subgroups within the cohort may be compared with each other.).freeze,
-      label: "CohortStudy".freeze,
-      type: "schema:MedicalObservationalStudyDesign".freeze
-    term :CommunityHealth,
-      comment: %(Community health.).freeze,
-      label: "CommunityHealth".freeze,
-      type: "schema:MedicalSpecialty".freeze
+    term :CommentPermission,
+      comment: %(Permission to add comments to the document.).freeze,
+      label: "CommentPermission".freeze,
+      type: "schema:DigitalDocumentPermissionType".freeze
     term :CompilationAlbum,
       comment: %(CompilationAlbum.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "CompilationAlbum".freeze,
       type: "schema:MusicAlbumProductionType".freeze
-    term :Completed,
-      comment: %(Completed.).freeze,
-      label: "Completed".freeze,
-      type: "schema:MedicalStudyStatus".freeze
     term :CompletedActionStatus,
       comment: %(An action that has already taken place.).freeze,
       label: "CompletedActionStatus".freeze,
       type: "schema:ActionStatusType".freeze
-    term :CrossSectional,
-      comment: %(Studies carried out on pre-existing data \(usually from 'snapshot' surveys\), such as that collected by the Census Bureau. Sometimes called Prevalence Studies.).freeze,
-      label: "CrossSectional".freeze,
-      type: "schema:MedicalObservationalStudyDesign".freeze
     term :DJMixAlbum,
       comment: %(DJMixAlbum.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
@@ -10001,22 +8541,10 @@ Typical unit code\(s\): C62 for persons.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "DemoAlbum".freeze,
       type: "schema:MusicAlbumProductionType".freeze
-    term :Dentistry,
-      comment: %(Dentistry.).freeze,
-      label: "Dentistry".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :Dermatologic,
-      comment: %(A specific branch of medical science that pertains to diagnosis and treatment of disorders of skin.).freeze,
-      label: "Dermatologic".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :Diagnostic,
-      comment: %(A medical device used for diagnostic purposes.).freeze,
-      label: "Diagnostic".freeze,
-      type: "schema:MedicalDevicePurpose".freeze
-    term :DietNutrition,
-      comment: %(Diet and nutrition.).freeze,
-      label: "DietNutrition".freeze,
-      type: "schema:MedicalSpecialty".freeze
+    term :DiabeticDiet,
+      comment: %(A diet appropriate for people with diabetes.).freeze,
+      label: "DiabeticDiet".freeze,
+      type: "schema:RestrictedDiet".freeze
     term :DigitalAudioTapeFormat,
       comment: %(DigitalAudioTapeFormat.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
@@ -10031,15 +8559,6 @@ Typical unit code\(s\): C62 for persons.).freeze,
       comment: %(Indicates that the item has been discontinued.).freeze,
       label: "Discontinued".freeze,
       type: "schema:ItemAvailability".freeze
-    term :DoubleBlindedTrial,
-      comment: %(A trial design in which neither the researcher nor the patient knows the details of the treatment the patient was randomly assigned to.).freeze,
-      label: "DoubleBlindedTrial".freeze,
-      type: "schema:MedicalTrialDesign".freeze
-    term :DrivingSchoolVehicleUsage,
-      comment: %(Indicates the usage of the vehicle for driving school.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
-      label: "DrivingSchoolVehicleUsage".freeze,
-      type: "schema:CarUsageType".freeze
     term :EBook,
       comment: %(Book format: Ebook.).freeze,
       label: "EBook".freeze,
@@ -10049,22 +8568,6 @@ Typical unit code\(s\): C62 for persons.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "EPRelease".freeze,
       type: "schema:MusicAlbumReleaseType".freeze
-    term :Ear,
-      comment: %(Ear.).freeze,
-      label: "Ear".freeze,
-      type: "schema:PhysicalExam".freeze
-    term :Emergency,
-      comment: %(A specific branch of medical science that is deals with the evaluation and initial treatment of medical conditions caused by trauma or sudden illness.).freeze,
-      label: "Emergency".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :Endocrine,
-      comment: %(A specific branch of medical science that pertains to diagnosis and treatment of disorders of endocrine glands and their secretions.).freeze,
-      label: "Endocrine".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :EnrollingByInvitation,
-      comment: %(Enrolling participants by invitation only.).freeze,
-      label: "EnrollingByInvitation".freeze,
-      type: "schema:MedicalStudyStatus".freeze
     term :EventCancelled,
       comment: %(The event has been cancelled. If the event has multiple startDate values, all are assumed to be cancelled. Either startDate or previousStartDate may be used to specify the event's cancelled date\(s\).).freeze,
       label: "EventCancelled".freeze,
@@ -10081,46 +8584,6 @@ Typical unit code\(s\): C62 for persons.).freeze,
       comment: %(The event is taking place or has taken place on the startDate as scheduled. Use of this value is optional, as it is assumed by default.).freeze,
       label: "EventScheduled".freeze,
       type: "schema:EventStatusType".freeze
-    term :EvidenceLevelA,
-      comment: %(Data derived from multiple randomized clinical trials or meta-analyses.).freeze,
-      label: "EvidenceLevelA".freeze,
-      type: "schema:MedicalEvidenceLevel".freeze
-    term :EvidenceLevelB,
-      comment: %(Data derived from a single randomized trial, or nonrandomized studies.).freeze,
-      label: "EvidenceLevelB".freeze,
-      type: "schema:MedicalEvidenceLevel".freeze
-    term :EvidenceLevelC,
-      comment: %(Only consensus opinion of experts, case studies, or standard-of-care.).freeze,
-      label: "EvidenceLevelC".freeze,
-      type: "schema:MedicalEvidenceLevel".freeze
-    term :Eye,
-      comment: %(Eye.).freeze,
-      label: "Eye".freeze,
-      type: "schema:PhysicalExam".freeze
-    term :FDAcategoryA,
-      comment: %(A designation by the US FDA signifying that adequate and well-controlled studies have failed to demonstrate a risk to the fetus in the first trimester of pregnancy \(and there is no evidence of risk in later trimesters\).).freeze,
-      label: "FDAcategoryA".freeze,
-      type: "schema:DrugPregnancyCategory".freeze
-    term :FDAcategoryB,
-      comment: %(A designation by the US FDA signifying that animal reproduction studies have failed to demonstrate a risk to the fetus and there are no adequate and well-controlled studies in pregnant women.).freeze,
-      label: "FDAcategoryB".freeze,
-      type: "schema:DrugPregnancyCategory".freeze
-    term :FDAcategoryC,
-      comment: %(A designation by the US FDA signifying that animal reproduction studies have shown an adverse effect on the fetus and there are no adequate and well-controlled studies in humans, but potential benefits may warrant use of the drug in pregnant women despite potential risks.).freeze,
-      label: "FDAcategoryC".freeze,
-      type: "schema:DrugPregnancyCategory".freeze
-    term :FDAcategoryD,
-      comment: %(A designation by the US FDA signifying that there is positive evidence of human fetal risk based on adverse reaction data from investigational or marketing experience or studies in humans, but potential benefits may warrant use of the drug in pregnant women despite potential risks.).freeze,
-      label: "FDAcategoryD".freeze,
-      type: "schema:DrugPregnancyCategory".freeze
-    term :FDAcategoryX,
-      comment: %(A designation by the US FDA signifying that studies in animals or humans have demonstrated fetal abnormalities and/or there is positive evidence of human fetal risk based on adverse reaction data from investigational or marketing experience, and the risks involved in use of the drug in pregnant women clearly outweigh potential benefits.).freeze,
-      label: "FDAcategoryX".freeze,
-      type: "schema:DrugPregnancyCategory".freeze
-    term :FDAnotEvaluated,
-      comment: %(A designation that the drug in question has not been assigned a pregnancy category designation by the US FDA.).freeze,
-      label: "FDAnotEvaluated".freeze,
-      type: "schema:DrugPregnancyCategory".freeze
     term :FailedActionStatus,
       comment: %(An action that failed to complete. The action's error property and the HTTP return code contain more information about the failure.).freeze,
       label: "FailedActionStatus".freeze,
@@ -10129,64 +8592,49 @@ Typical unit code\(s\): C62 for persons.).freeze,
       comment: %(The boolean value false.).freeze,
       label: "False".freeze,
       type: "schema:Boolean".freeze
-    term :Flexibility,
-      comment: %(Physical activity that is engaged in to improve joint and muscle flexibility.).freeze,
-      label: "Flexibility".freeze,
-      type: "schema:PhysicalActivityCategory".freeze
+    term :Female,
+      comment: %(The female gender.).freeze,
+      label: "Female".freeze,
+      type: "schema:GenderType".freeze
     term :FourWheelDriveConfiguration,
       comment: %(Four-wheel drive is a transmission layout where the engine primarily drives two wheels with a part-time four-wheel drive capability.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "FourWheelDriveConfiguration".freeze,
       type: "schema:DriveWheelConfigurationValue".freeze
+    term :Friday,
+      comment: %(The day of the week between Thursday and Saturday.).freeze,
+      label: "Friday".freeze,
+      :"schema:sameAs" => [],
+      type: "schema:DayOfWeek".freeze
     term :FrontWheelDriveConfiguration,
       comment: %(Front-wheel drive is a transmission layout where the engine drives the front wheels.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "FrontWheelDriveConfiguration".freeze,
       type: "schema:DriveWheelConfigurationValue".freeze
-    term :Gastroenterologic,
-      comment: %(A specific branch of medical science that pertains to diagnosis and treatment of disorders of digestive system.).freeze,
-      label: "Gastroenterologic".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :Genetic,
-      comment: %(A specific branch of medical science that pertains to hereditary transmission and the variation of inherited characteristics and disorders.).freeze,
-      label: "Genetic".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :Genitourinary,
-      comment: %(Genitourinary.).freeze,
-      label: "Genitourinary".freeze,
-      type: "schema:PhysicalExam".freeze
-    term :Geriatric,
-      comment: %(A specific branch of medical science that is concerned with the diagnosis and treatment of diseases, debilities and provision of care to the aged.).freeze,
-      label: "Geriatric".freeze,
-      type: "schema:MedicalSpecialty".freeze
+    term :GlutenFreeDiet,
+      comment: %(A diet exclusive of gluten.).freeze,
+      label: "GlutenFreeDiet".freeze,
+      type: "schema:RestrictedDiet".freeze
     term :GroupBoardingPolicy,
       comment: %(The airline boards by groups based on check-in time, priority, etc.).freeze,
       label: "GroupBoardingPolicy".freeze,
       type: "schema:BoardingPolicyType".freeze
-    term :Gynecologic,
-      comment: %(A specific branch of medical science that pertains to the health care of women, particularly in the diagnosis and treatment of disorders affecting the female reproductive system.).freeze,
-      label: "Gynecologic".freeze,
-      type: "schema:MedicalSpecialty".freeze
+    term :HalalDiet,
+      comment: %(A diet conforming to Islamic dietary practices.).freeze,
+      label: "HalalDiet".freeze,
+      type: "schema:RestrictedDiet".freeze
     term :Hardcover,
       comment: %(Book format: Hardcover.).freeze,
       label: "Hardcover".freeze,
       type: "schema:BookFormatType".freeze
-    term :Head,
-      comment: %(Head.).freeze,
-      label: "Head".freeze,
-      type: "schema:PhysicalExam".freeze
     term :HearingImpairedSupported,
       comment: %(Uses devices to support users with hearing impairments.).freeze,
       label: "HearingImpairedSupported".freeze,
       type: "schema:ContactPointOption".freeze
-    term :Hematologic,
-      comment: %(A specific branch of medical science that pertains to diagnosis and treatment of disorders of blood and blood producing organs.).freeze,
-      label: "Hematologic".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :Homeopathic,
-      comment: %(A system of medicine based on the principle that a disease can be cured by a substance that produces similar symptoms in healthy people.).freeze,
-      label: "Homeopathic".freeze,
-      type: "schema:MedicineSystem".freeze
+    term :HinduDiet,
+      comment: %(A diet conforming to Hindu dietary practices, in particular, beef-free.).freeze,
+      label: "HinduDiet".freeze,
+      type: "schema:RestrictedDiet".freeze
     term :InStock,
       comment: %(Indicates that the item is in stock.).freeze,
       label: "InStock".freeze,
@@ -10195,14 +8643,6 @@ Typical unit code\(s\): C62 for persons.).freeze,
       comment: %(Indicates that the item is available only at physical locations.).freeze,
       label: "InStoreOnly".freeze,
       type: "schema:ItemAvailability".freeze
-    term :Infectious,
-      comment: %(A specific branch of medical science that pertains to diagnosis and treatment of bacterial, viral, fungal and parasitic infections.).freeze,
-      label: "Infectious".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :InternationalTrial,
-      comment: %(An international trial.).freeze,
-      label: "InternationalTrial".freeze,
-      type: "schema:MedicalTrialDesign".freeze
     term :ItemListOrderAscending,
       comment: %(An ItemList ordered with lower values listed first.).freeze,
       label: "ItemListOrderAscending".freeze,
@@ -10215,10 +8655,10 @@ Typical unit code\(s\): C62 for persons.).freeze,
       comment: %(An ItemList ordered with no explicit order.).freeze,
       label: "ItemListUnordered".freeze,
       type: "schema:ItemListOrderType".freeze
-    term :LaboratoryScience,
-      comment: %(Laboratory science.).freeze,
-      label: "LaboratoryScience".freeze,
-      type: "schema:MedicalSpecialty".freeze
+    term :KosherDiet,
+      comment: %(A diet conforming to Jewish dietary practices.).freeze,
+      label: "KosherDiet".freeze,
+      type: "schema:RestrictedDiet".freeze
     term :LaserDiscFormat,
       comment: %(LaserDiscFormat.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
@@ -10229,10 +8669,6 @@ Typical unit code\(s\): C62 for persons.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "LeftHandDriving".freeze,
       type: "schema:SteeringPositionValue".freeze
-    term :LeisureTimeActivity,
-      comment: %(Any physical activity engaged in for recreational purposes. Examples may include ballroom dancing, roller skating, canoeing, fishing, etc.).freeze,
-      label: "LeisureTimeActivity".freeze,
-      type: "schema:PhysicalActivityCategory".freeze
     term :LimitedAvailability,
       comment: %(Indicates that the item has limited availability.).freeze,
       label: "LimitedAvailability".freeze,
@@ -10242,99 +8678,44 @@ Typical unit code\(s\): C62 for persons.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "LiveAlbum".freeze,
       type: "schema:MusicAlbumProductionType".freeze
-    term :Longitudinal,
-      comment: %(Unlike cross-sectional studies, longitudinal studies track the same people, and therefore the differences observed in those people are less likely to be the result of cultural differences across generations. Longitudinal studies are also used in medicine to uncover predictors of certain diseases.).freeze,
-      label: "Longitudinal".freeze,
-      type: "schema:MedicalObservationalStudyDesign".freeze
-    term :Lung,
-      comment: %(Lung.).freeze,
-      label: "Lung".freeze,
-      type: "schema:PhysicalExam".freeze
-    term :MRI,
-      comment: %(Magnetic resonance imaging.).freeze,
-      label: "MRI".freeze,
-      type: "schema:MedicalImagingTechnique".freeze
-    term :MedicalResearcher,
-      comment: %(Medical researchers.).freeze,
-      label: "MedicalResearcher".freeze,
-      type: "schema:MedicalAudience".freeze
-    term :Midwifery,
-      comment: %(Midwifery.).freeze,
-      label: "Midwifery".freeze,
-      type: "schema:MedicalSpecialty".freeze
+    term :LowCalorieDiet,
+      comment: %(A diet focused on reduced calorie intake.).freeze,
+      label: "LowCalorieDiet".freeze,
+      type: "schema:RestrictedDiet".freeze
+    term :LowFatDiet,
+      comment: %(A diet focused on reduced fat and cholesterol intake.).freeze,
+      label: "LowFatDiet".freeze,
+      type: "schema:RestrictedDiet".freeze
+    term :LowLactoseDiet,
+      comment: %(A diet appropriate for people with lactose intolerance.).freeze,
+      label: "LowLactoseDiet".freeze,
+      type: "schema:RestrictedDiet".freeze
+    term :LowSaltDiet,
+      comment: %(A diet focused on reduced sodium intake.).freeze,
+      label: "LowSaltDiet".freeze,
+      type: "schema:RestrictedDiet".freeze
+    term :Male,
+      comment: %(The male gender.).freeze,
+      label: "Male".freeze,
+      type: "schema:GenderType".freeze
     term :MixtapeAlbum,
       comment: %(MixtapeAlbum.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "MixtapeAlbum".freeze,
       type: "schema:MusicAlbumProductionType".freeze
-    term :MultiCenterTrial,
-      comment: %(A trial that takes place at multiple centers.).freeze,
-      label: "MultiCenterTrial".freeze,
-      type: "schema:MedicalTrialDesign".freeze
+    term :Monday,
+      comment: %(The day of the week between Sunday and Tuesday.).freeze,
+      label: "Monday".freeze,
+      :"schema:sameAs" => [],
+      type: "schema:DayOfWeek".freeze
     term :MultiPlayer,
       comment: %(Play mode: MultiPlayer. Requiring or allowing multiple human players to play simultaneously.).freeze,
       label: "MultiPlayer".freeze,
       type: "schema:GamePlayMode".freeze
-    term :Musculoskeletal,
-      comment: %(A specific branch of medical science that pertains to diagnosis and treatment of disorders of muscles, ligaments and skeletal system.).freeze,
-      label: "Musculoskeletal.".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :MusculoskeletalExam,
-      comment: %(Musculoskeletal.).freeze,
-      label: "MusculoskeletalExam".freeze,
-      type: "schema:PhysicalExam".freeze
-    term :Neck,
-      comment: %(Neck.).freeze,
-      label: "Neck".freeze,
-      type: "schema:PhysicalExam".freeze
-    term :Neuro,
-      comment: %(Neuro.).freeze,
-      label: "Neuro".freeze,
-      type: "schema:PhysicalExam".freeze
-    term :Neurologic,
-      comment: %(A specific branch of medical science that studies the nerves and nervous system and its respective disease states.).freeze,
-      label: "Neurologic.".freeze,
-      type: "schema:MedicalSpecialty".freeze
     term :NewCondition,
       comment: %(Indicates that the item is new.).freeze,
       label: "NewCondition".freeze,
       type: "schema:OfferItemCondition".freeze
-    term :NoninvasiveProcedure,
-      comment: %(A type of medical procedure that involves noninvasive techniques.).freeze,
-      label: "NoninvasiveProcedure".freeze,
-      type: "schema:MedicalProcedureType".freeze
-    term :Nose,
-      comment: %(Nose.).freeze,
-      label: "Nose".freeze,
-      type: "schema:PhysicalExam".freeze
-    term :NotYetRecruiting,
-      comment: %(Not yet recruiting.).freeze,
-      label: "NotYetRecruiting".freeze,
-      type: "schema:MedicalStudyStatus".freeze
-    term :Nursing,
-      comment: %(Nursing.).freeze,
-      label: "Nursing".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :OTC,
-      comment: %(Available over the counter.).freeze,
-      label: "OTC".freeze,
-      type: "schema:DrugPrescriptionStatus".freeze
-    term :Observational,
-      comment: %(An observational study design.).freeze,
-      label: "Observational".freeze,
-      type: "schema:MedicalObservationalStudyDesign".freeze
-    term :Obstetric,
-      comment: %(A specific branch of medical science that specializes in the care of women during the prenatal and postnatal care and with the delivery of the child.).freeze,
-      label: "Obstetric".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :OccupationalActivity,
-      comment: %(Any physical activity engaged in for job-related purposes. Examples may include waiting tables, maid service, carrying a mailbag, picking fruits or vegetables, construction work, etc.).freeze,
-      label: "OccupationalActivity".freeze,
-      type: "schema:PhysicalActivityCategory".freeze
-    term :OccupationalTherapy,
-      comment: %(Occupational therapy.).freeze,
-      label: "OccupationalTherapy".freeze,
-      type: "schema:MedicalSpecialty".freeze
     term :OfflinePermanently,
       comment: %(Game server status: OfflinePermanently. Server is offline and not available.).freeze,
       label: "OfflinePermanently ".freeze,
@@ -10347,10 +8728,6 @@ Typical unit code\(s\): C62 for persons.).freeze,
       comment: %(A DeliveryMethod in which an item is collected on site, e.g. in a store or at a box office.).freeze,
       label: "OnSitePickup".freeze,
       type: "schema:DeliveryMethod".freeze
-    term :Oncologic,
-      comment: %(A specific branch of medical science that deals with benign and malignant tumors, including the study of their development, diagnosis, treatment and prevention.).freeze,
-      label: "Oncologic".freeze,
-      type: "schema:MedicalSpecialty".freeze
     term :Online,
       comment: %(Game server status: Online. Server is available.).freeze,
       label: "Online".freeze,
@@ -10363,14 +8740,6 @@ Typical unit code\(s\): C62 for persons.).freeze,
       comment: %(Indicates that the item is available only online.).freeze,
       label: "OnlineOnly".freeze,
       type: "schema:ItemAvailability".freeze
-    term :OpenTrial,
-      comment: %(A trial design in which the researcher knows the full details of the treatment, and so does the patient.).freeze,
-      label: "OpenTrial".freeze,
-      type: "schema:MedicalTrialDesign".freeze
-    term :Optometic,
-      comment: %(Optometry.).freeze,
-      label: "Optometic".freeze,
-      type: "schema:MedicalSpecialty".freeze
     term :OrderCancelled,
       comment: %(OrderStatus representing cancellation of an order.).freeze,
       label: "OrderCancelled".freeze,
@@ -10403,22 +8772,10 @@ Typical unit code\(s\): C62 for persons.).freeze,
       comment: %(OrderStatus representing that an order has been returned.).freeze,
       label: "OrderReturned".freeze,
       type: "schema:OrderStatus".freeze
-    term :Osteopathic,
-      comment: %(A system of medicine focused on promoting the body's innate ability to heal itself.).freeze,
-      label: "Osteopathic".freeze,
-      type: "schema:MedicineSystem".freeze
-    term :Otolaryngologic,
-      comment: %(A specific branch of medical science that is concerned with the ear, nose and throat and their respective disease states.).freeze,
-      label: "Otolaryngologic".freeze,
-      type: "schema:MedicalSpecialty".freeze
     term :OutOfStock,
       comment: %(Indicates that the item is out of stock.).freeze,
       label: "OutOfStock".freeze,
       type: "schema:ItemAvailability".freeze
-    term :PET,
-      comment: %(Positron emission tomography imaging.).freeze,
-      label: "PET".freeze,
-      type: "schema:MedicalImagingTechnique".freeze
     term :Paperback,
       comment: %(Book format: Paperback.).freeze,
       label: "Paperback".freeze,
@@ -10427,14 +8784,6 @@ Typical unit code\(s\): C62 for persons.).freeze,
       comment: %(A parking map.).freeze,
       label: "ParkingMap".freeze,
       type: "schema:MapCategoryType".freeze
-    term :Pathology,
-      comment: %(A specific branch of medical science that is concerned with the study of the cause, origin and nature of a disease state, including its consequences as a result of manifestation of the disease. In clinical care, the term is used to designate a branch of medicine using laboratory tests to diagnose and determine the prognostic significance of illness.).freeze,
-      label: "Pathology".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :Patient,
-      comment: %(Patients.).freeze,
-      label: "Patient".freeze,
-      type: "schema:MedicalAudience".freeze
     term :PaymentAutomaticallyApplied,
       comment: %(An automatic payment system is in place and will be used.).freeze,
       label: "PaymentAutomaticallyApplied".freeze,
@@ -10455,34 +8804,6 @@ Typical unit code\(s\): C62 for persons.).freeze,
       comment: %(The payment is due and considered late.).freeze,
       label: "PaymentPastDue".freeze,
       type: "schema:PaymentStatusType".freeze
-    term :Pediatric,
-      comment: %(A specific branch of medical science that specializes in the care of infants, children and adolescents.).freeze,
-      label: "Pediatric".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :PercutaneousProcedure,
-      comment: %(A type of medical procedure that involves percutaneous techniques, where access to organs or tissue is achieved via needle-puncture of the skin. For example, catheter-based procedures like stent delivery.).freeze,
-      label: "PercutaneousProcedure".freeze,
-      type: "schema:MedicalProcedureType".freeze
-    term :PharmacySpecialty,
-      comment: %(Pharmacy.).freeze,
-      label: "PharmacySpecialty".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :Physiotherapy,
-      comment: %(Physiotherapy.).freeze,
-      label: "Physiotherapy".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :PlaceboControlledTrial,
-      comment: %(A placebo-controlled trial design.).freeze,
-      label: "PlaceboControlledTrial".freeze,
-      type: "schema:MedicalTrialDesign".freeze
-    term :PlasticSurgery,
-      comment: %(A specific branch of medical science that pertains to therapeutic or cosmetic repair or re-formation of missing, injured or malformed tissues or body parts by manual and instrumental means.).freeze,
-      label: "PlasticSurgery".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :Podiatric,
-      comment: %(Podiatry.).freeze,
-      label: "Podiatric".freeze,
-      type: "schema:MedicalSpecialty".freeze
     term :PotentialActionStatus,
       comment: %(A description of an action that is supported.).freeze,
       label: "PotentialActionStatus".freeze,
@@ -10491,69 +8812,33 @@ Typical unit code\(s\): C62 for persons.).freeze,
       comment: %(Indicates that the item is available for pre-order.).freeze,
       label: "PreOrder".freeze,
       type: "schema:ItemAvailability".freeze
-    term :PrescriptionOnly,
-      comment: %(Available by prescription only.).freeze,
-      label: "PrescriptionOnly".freeze,
-      type: "schema:DrugPrescriptionStatus".freeze
-    term :PrimaryCare,
-      comment: %(Primary care.).freeze,
-      label: "PrimaryCare".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :Psychiatric,
-      comment: %(A specific branch of medical science that is concerned with the study, treatment, and prevention of mental illness, using both medical and psychological therapies.).freeze,
-      label: "Psychiatric".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :PublicHealth,
-      comment: %(Environment and public health.).freeze,
-      label: "PublicHealth".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :Pulmonary,
-      comment: %(A specific branch of medical science that pertains to the study of the respiratory system and its respective disease states.).freeze,
-      label: "Pulmonary".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :Radiograpy,
-      comment: %(Radiography.).freeze,
-      label: "Radiograpy".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :RandomizedTrial,
-      comment: %(A randomized trial design.).freeze,
-      label: "RandomizedTrial".freeze,
-      type: "schema:MedicalTrialDesign".freeze
+    term :PreSale,
+      comment: %(Indicates that the item is available for ordering and delivery before general availability.).freeze,
+      label: "PreSale".freeze,
+      type: "schema:ItemAvailability".freeze
+    term :PublicHolidays,
+      comment: %(This stands for any day that is a public holiday; it is a placeholder for all official public holidays in some particular location. While not technically a "day of the week", it can be used with [[OpeningHoursSpecification]]. In the context of an opening hours specification it can be used to indicate opening hours on public holidays, overriding general opening hours for the day of the week on which a public holiday occurs.).freeze,
+      :"dc:source" => [],
+      label: "PublicHolidays".freeze,
+      type: "schema:DayOfWeek".freeze
+    term :ReadPermission,
+      comment: %(Permission to read or view the document.).freeze,
+      label: "ReadPermission".freeze,
+      type: "schema:DigitalDocumentPermissionType".freeze
     term :RearWheelDriveConfiguration,
       comment: %(Real-wheel drive is a transmission layout where the engine drives the rear wheels.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
       label: "RearWheelDriveConfiguration".freeze,
       type: "schema:DriveWheelConfigurationValue".freeze
-    term :Recruiting,
-      comment: %(Recruiting participants.).freeze,
-      label: "Recruiting".freeze,
-      type: "schema:MedicalStudyStatus".freeze
     term :RefurbishedCondition,
       comment: %(Indicates that the item is refurbished.).freeze,
       label: "RefurbishedCondition".freeze,
       type: "schema:OfferItemCondition".freeze
-    term :Registry,
-      comment: %(A registry-based study design.).freeze,
-      label: "Registry".freeze,
-      type: "schema:MedicalObservationalStudyDesign".freeze
-    term :ReimbursementCap,
-      comment: %(The drug's cost represents the maximum reimbursement paid by an insurer for the drug.).freeze,
-      label: "ReimbursementCap".freeze,
-      type: "schema:DrugCostCategory".freeze
     term :RemixAlbum,
       comment: %(RemixAlbum.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "RemixAlbum".freeze,
       type: "schema:MusicAlbumProductionType".freeze
-    term :Renal,
-      comment: %(A specific branch of medical science that pertains to the study of the kidneys and its respective disease states.).freeze,
-      label: "Renal".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :RentalVehicleUsage,
-      comment: %(Indicates the usage of the vehicle as a rental car.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
-      label: "RentalVehicleUsage".freeze,
-      type: "schema:CarUsageType".freeze
     term :Researcher,
       comment: %(Researchers.).freeze,
       label: "Researcher".freeze,
@@ -10574,26 +8859,6 @@ Typical unit code\(s\): C62 for persons.).freeze,
       comment: %(The status of a reservation when a request has been sent, but not confirmed.).freeze,
       label: "ReservationPending".freeze,
       type: "schema:ReservationStatusType".freeze
-    term :RespiratoryTherapy,
-      comment: %(Respiratory therapy.).freeze,
-      label: "RespiratoryTherapy".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :ResultsAvailable,
-      comment: %(Results are available.).freeze,
-      label: "ResultsAvailable".freeze,
-      type: "schema:MedicalStudyStatus".freeze
-    term :ResultsNotAvailable,
-      comment: %(Results are not available.).freeze,
-      label: "ResultsNotAvailable".freeze,
-      type: "schema:MedicalStudyStatus".freeze
-    term :Retail,
-      comment: %(The drug's cost represents the retail cost of the drug.).freeze,
-      label: "Retail".freeze,
-      type: "schema:DrugCostCategory".freeze
-    term :Rheumatologic,
-      comment: %(A specific branch of medical science that deals with the study and treatment of rheumatic, autoimmune or joint diseases.).freeze,
-      label: "Rheumatologic".freeze,
-      type: "schema:MedicalSpecialty".freeze
     term :RightHandDriving,
       comment: %(The steering position is on the right side of the vehicle \(viewed from the main direction of driving\).).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
@@ -10611,18 +8876,15 @@ Typical unit code\(s\): C62 for persons.).freeze,
       comment: %(The invitee will attend.).freeze,
       label: "RsvpResponseYes".freeze,
       type: "schema:RsvpResponseType".freeze
+    term :Saturday,
+      comment: %(The day of the week between Friday and Sunday.).freeze,
+      label: "Saturday".freeze,
+      :"schema:sameAs" => [],
+      type: "schema:DayOfWeek".freeze
     term :SeatingMap,
       comment: %(A seating map.).freeze,
       label: "SeatingMap".freeze,
       type: "schema:MapCategoryType".freeze
-    term :SingleBlindedTrial,
-      comment: %(A trial design in which the researcher knows which treatment the patient was randomly assigned to but the patient does not.).freeze,
-      label: "SingleBlindedTrial".freeze,
-      type: "schema:MedicalTrialDesign".freeze
-    term :SingleCenterTrial,
-      comment: %(A trial that takes place at a single center.).freeze,
-      label: "SingleCenterTrial".freeze,
-      type: "schema:MedicalTrialDesign".freeze
     term :SinglePlayer,
       comment: %(Play mode: SinglePlayer. Which is played by a lone player.).freeze,
       label: "SinglePlayer".freeze,
@@ -10632,10 +8894,6 @@ Typical unit code\(s\): C62 for persons.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "SingleRelease".freeze,
       type: "schema:MusicAlbumReleaseType".freeze
-    term :Skin,
-      comment: %(Skin.).freeze,
-      label: "Skin".freeze,
-      type: "schema:PhysicalExam".freeze
     term :SoldOut,
       comment: %(Indicates that the item has sold out.).freeze,
       label: "SoldOut".freeze,
@@ -10645,89 +8903,55 @@ Typical unit code\(s\): C62 for persons.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "SoundtrackAlbum".freeze,
       type: "schema:MusicAlbumProductionType".freeze
-    term :SpeechPathology,
-      comment: %(Speech pathology.).freeze,
-      label: "SpeechPathology".freeze,
-      type: "schema:MedicalSpecialty".freeze
     term :SpokenWordAlbum,
       comment: %(SpokenWordAlbum.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "SpokenWordAlbum".freeze,
       type: "schema:MusicAlbumProductionType".freeze
-    term :StrengthTraining,
-      comment: %(Physical activity that is engaged in to improve muscle and bone strength. Also referred to as resistance training.).freeze,
-      label: "StrengthTraining".freeze,
-      type: "schema:PhysicalActivityCategory".freeze
     term :StudioAlbum,
       comment: %(StudioAlbum.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "StudioAlbum".freeze,
       type: "schema:MusicAlbumProductionType".freeze
-    term :Surgical,
-      comment: %(A specific branch of medical science that pertains to treating diseases, injuries and deformities by manual and instrumental means.).freeze,
-      label: "Surgical".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :SurgicalProcedure,
-      comment: %(A type of medical procedure that involves invasive surgical techniques.).freeze,
-      label: "SurgicalProcedure".freeze,
-      type: "schema:MedicalProcedureType".freeze
-    term :Suspended,
-      comment: %(Suspended.).freeze,
-      label: "Suspended".freeze,
-      type: "schema:MedicalStudyStatus".freeze
-    term :TaxiVehicleUsage,
-      comment: %(Indicates the usage of the car as a taxi.).freeze,
-      :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group).freeze,
-      label: "TaxiVehicleUsage".freeze,
-      type: "schema:CarUsageType".freeze
-    term :Terminated,
-      comment: %(Terminated.).freeze,
-      label: "Terminated".freeze,
-      type: "schema:MedicalStudyStatus".freeze
-    term :Therapeutic,
-      comment: %(A medical device used for therapeutic purposes.).freeze,
-      label: "Therapeutic".freeze,
-      type: "schema:MedicalDevicePurpose".freeze
-    term :Throat,
-      comment: %(Throat.).freeze,
-      label: "Throat".freeze,
-      type: "schema:PhysicalExam".freeze
+    term :Sunday,
+      comment: %(The day of the week between Saturday and Monday.).freeze,
+      label: "Sunday".freeze,
+      :"schema:sameAs" => [],
+      type: "schema:DayOfWeek".freeze
+    term :Thursday,
+      comment: %(The day of the week between Wednesday and Friday.).freeze,
+      label: "Thursday".freeze,
+      :"schema:sameAs" => [],
+      type: "schema:DayOfWeek".freeze
     term :TollFree,
       comment: %(The associated telephone number is toll free.).freeze,
       label: "TollFree".freeze,
       type: "schema:ContactPointOption".freeze
-    term :Toxicologic,
-      comment: %(A specific branch of medical science that is concerned with poisons, their nature, effects and detection and involved in the treatment of poisoning.).freeze,
-      label: "Toxicologic".freeze,
-      type: "schema:MedicalSpecialty".freeze
-    term :TraditionalChinese,
-      comment: %(A system of medicine based on common theoretical concepts that originated in China and evolved over thousands of years, that uses herbs, acupuncture, exercise, massage, dietary therapy, and other methods to treat a wide range of conditions.).freeze,
-      label: "TraditionalChinese".freeze,
-      type: "schema:MedicineSystem".freeze
     term :TransitMap,
       comment: %(A transit map.).freeze,
       label: "TransitMap".freeze,
       type: "schema:MapCategoryType".freeze
-    term :TripleBlindedTrial,
-      comment: %(A trial design in which neither the researcher, the person administering the therapy nor the patient knows the details of the treatment the patient was randomly assigned to.).freeze,
-      label: "TripleBlindedTrial".freeze,
-      type: "schema:MedicalTrialDesign".freeze
     term :True,
       comment: %(The boolean value true.).freeze,
       label: "True".freeze,
       type: "schema:Boolean".freeze
-    term :Ultrasound,
-      comment: %(Ultrasound imaging.).freeze,
-      label: "Ultrasound".freeze,
-      type: "schema:MedicalImagingTechnique".freeze
-    term :Urologic,
-      comment: %(A specific branch of medical science that is concerned with the diagnosis and treatment of diseases pertaining to the urinary tract and the urogenital system.).freeze,
-      label: "Urologic".freeze,
-      type: "schema:MedicalSpecialty".freeze
+    term :Tuesday,
+      comment: %(The day of the week between Monday and Wednesday.).freeze,
+      label: "Tuesday".freeze,
+      :"schema:sameAs" => [],
+      type: "schema:DayOfWeek".freeze
     term :UsedCondition,
       comment: %(Indicates that the item is used.).freeze,
       label: "UsedCondition".freeze,
       type: "schema:OfferItemCondition".freeze
+    term :VeganDiet,
+      comment: %(A diet exclusive of all animal products.).freeze,
+      label: "VeganDiet".freeze,
+      type: "schema:RestrictedDiet".freeze
+    term :VegetarianDiet,
+      comment: %(A diet exclusive of animal meat.).freeze,
+      label: "VegetarianDiet".freeze,
+      type: "schema:RestrictedDiet".freeze
     term :VenueMap,
       comment: %(A venue map \(e.g. for malls, auditoriums, museums, etc.\).).freeze,
       label: "VenueMap".freeze,
@@ -10737,26 +8961,15 @@ Typical unit code\(s\): C62 for persons.).freeze,
       :"dc:source" => %(http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ).freeze,
       label: "VinylFormat".freeze,
       type: "schema:MusicReleaseFormatType".freeze
-    term :VitalSign,
-      comment: %(VitalSign.).freeze,
-      label: "VitalSign".freeze,
-      type: "schema:PhysicalExam".freeze
-    term :WesternConventional,
-      comment: %(The conventional Western system of medicine, that aims to apply the best available evidence gained from the scientific method to clinical decision making. Also known as conventional or Western medicine.).freeze,
-      label: "WesternConventional".freeze,
-      type: "schema:MedicineSystem".freeze
-    term :Wholesale,
-      comment: %(The drug's cost represents the wholesale acquisition cost of the drug.).freeze,
-      label: "Wholesale".freeze,
-      type: "schema:DrugCostCategory".freeze
-    term :Withdrawn,
-      comment: %(Withdrawn.).freeze,
-      label: "Withdrawn".freeze,
-      type: "schema:MedicalStudyStatus".freeze
-    term :XRay,
-      comment: %(X-ray imaging.).freeze,
-      label: "XRay".freeze,
-      type: "schema:MedicalImagingTechnique".freeze
+    term :Wednesday,
+      comment: %(The day of the week between Tuesday and Thursday.).freeze,
+      label: "Wednesday".freeze,
+      :"schema:sameAs" => [],
+      type: "schema:DayOfWeek".freeze
+    term :WritePermission,
+      comment: %(Permission to write or edit the document.).freeze,
+      label: "WritePermission".freeze,
+      type: "schema:DigitalDocumentPermissionType".freeze
     term :ZoneBoardingPolicy,
       comment: %(The airline boards by zones of the plane.).freeze,
       label: "ZoneBoardingPolicy".freeze,

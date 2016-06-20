@@ -150,7 +150,7 @@ module RDF
       ical:   {uri: "http://www.w3.org/2002/12/cal/icaltzd#"},
       identifiers: {
         uri: "http://id.loc.gov/vocabulary/identifiers/",
-        source: "http://id.loc.gov/vocabulary/identifiers.rdf",
+        source: "http://id.loc.gov/vocabulary/identifiers",
         class_name: "Identifiers",
         extra: {
           id: {
