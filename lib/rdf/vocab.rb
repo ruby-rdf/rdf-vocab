@@ -267,7 +267,7 @@ module RDF
         }
       },
       rss:    {uri: "http://purl.org/rss/1.0/", source: "http://purl.org/rss/1.0/schema.rdf"},
-      schema: {uri: "http://schema.org/", source: "http://schema.org/docs/schema_org_rdfa.html"},
+      schema: {uri: "http://schema.org/", source: "https://raw.githubusercontent.com/schemaorg/schemaorg/sdo-makemake/data/releases/3.0/all-layers.nq"},
       sioc:   {uri: "http://rdfs.org/sioc/ns#"},
       sioc_services: {
         uri: "http://rdfs.org/sioc/services#",
