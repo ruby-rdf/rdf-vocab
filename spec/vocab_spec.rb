@@ -9,6 +9,14 @@ describe RDF::Vocab do
     end
   end
 
+  context "schema.org" do
+    %w(domainIncludes rangeIncludes inverseOf).each do |prop|
+      it "defines schema:#{prop}" do
+        expect {RDF::Vocab::SCHEMA[prop]}.not_to raise_error
+      end
+    end
+  end
+
   context "pre-defined vocabularies" do
     RDF::Vocab::VOCABS.each do |id, params|
       class_name = params.fetch(:class_name, id.to_s.upcase).to_sym

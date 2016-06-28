@@ -150,7 +150,7 @@ module RDF
       ical:   {uri: "http://www.w3.org/2002/12/cal/icaltzd#"},
       identifiers: {
         uri: "http://id.loc.gov/vocabulary/identifiers/",
-        source: "http://id.loc.gov/vocabulary/identifiers.rdf",
+        source: "http://id.loc.gov/vocabulary/identifiers",
         class_name: "Identifiers",
         extra: {
           id: {
@@ -267,7 +267,7 @@ module RDF
         }
       },
       rss:    {uri: "http://purl.org/rss/1.0/", source: "http://purl.org/rss/1.0/schema.rdf"},
-      schema: {uri: "http://schema.org/", source: "http://schema.org/docs/schema_org_rdfa.html"},
+      schema: {uri: "http://schema.org/", source: "https://raw.githubusercontent.com/schemaorg/schemaorg/sdo-makemake/data/releases/3.0/all-layers.nq"},
       sioc:   {uri: "http://rdfs.org/sioc/ns#"},
       sioc_services: {
         uri: "http://rdfs.org/sioc/services#",
