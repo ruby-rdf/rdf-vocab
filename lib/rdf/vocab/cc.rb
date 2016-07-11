@@ -73,7 +73,7 @@ copyrightable work).freeze,
     property :license,
       domain: "cc:Work".freeze,
       label: "has\nlicense".freeze,
-      :"owl:sameAs" => [],
+      :"owl:sameAs" => %(xhv:license).freeze,
       range: "cc:License".freeze,
       subPropertyOf: "dc:license".freeze,
       type: "rdf:Property".freeze

@@ -170,8 +170,12 @@ module RDF::Vocab
     # Extra definitions
     term :"",
       comment: %(This ontology provides an informal representation of the concepts and terms as defined in the LDP specification.  Consult the LDP specification for normative reference.).freeze,
+      :"dc:created" => %(2015-02-26).freeze,
       :"dc:description" => %(Vocabulary URIs defined in the Linked Data Platform \(LDP\) namespace.).freeze,
+      :"dc:publisher" => %(http://www.w3.org/data#W3C).freeze,
       :"dc:title" => %(The W3C Linked Data Platform \(LDP\) Vocabulary).freeze,
+      :"http://purl.org/vocab/vann/preferredNamespacePrefix" => %(ldp).freeze,
+      :"http://purl.org/vocab/vann/preferredNamespaceUri" => %(http://www.w3.org/ns/ldp#).freeze,
       label: "W3C Linked Data Platform (LDP)".freeze,
       :"rdfs:seeAlso" => [%(http://www.w3.org/2011/09/LinkedData/).freeze, %(http://www.w3.org/2012/ldp).freeze, %(http://www.w3.org/TR/ldp-paging/).freeze, %(http://www.w3.org/TR/ldp-ucr/).freeze, %(http://www.w3.org/TR/ldp/).freeze],
       type: "owl:Ontology".freeze
