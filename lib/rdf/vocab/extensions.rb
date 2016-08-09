@@ -400,7 +400,7 @@ module RDF
         uncategorized = {}
         graph.query(predicate: RDF.type) do |statement|
           # Only serialize statements that are in the defined vocabulary
-          next unless statement.subject.start_with?(self.to_uri)
+          next unless statement.subject.uri? && statement.subject.start_with?(self.to_uri)
           case statement.object
           when RDF.Property,
                RDF::OWL.AnnotationProperty,
