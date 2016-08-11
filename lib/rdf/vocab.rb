@@ -269,7 +269,7 @@ module RDF
       rss:    {uri: "http://purl.org/rss/1.0/", source: "http://purl.org/rss/1.0/schema.rdf"},
       schema: {
         uri: "http://schema.org/",
-        source: "https://raw.githubusercontent.com/schemaorg/schemaorg/sdo-makemake/data/releases/3.1/all-layers.nq",
+        source: "http://schema.org/version/latest/all-layers.nq",
         patch: %{
           @prefix schema: <http://schema.org/> .
           @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
