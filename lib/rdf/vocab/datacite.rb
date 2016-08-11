@@ -13,7 +13,7 @@ module RDF::Vocab
     term :AgentIdentifier,
       comment: %(An identifier that uniquely identities an individual agent, belonging to a particular identifier scheme specified by an individual within the class datacite:AgentIdentifierScheme \(or any of its subclasses\).).freeze,
       label: "agent identifier".freeze,
-      :"owl:disjointWith" => [],
+      :"owl:disjointWith" => %(datacite:ResourceIdentifier).freeze,
       subClassOf: "datacite:Identifier".freeze,
       type: "owl:Class".freeze
     term :AgentIndetifierScheme,
@@ -28,19 +28,25 @@ module RDF::Vocab
       subClassOf: "datacite:ResourceIdentifier".freeze,
       type: "owl:Class".freeze
     term :DescriptionType,
-      comment: %(This class permits classification of the type of description given to a resource described by the DataCite Metadata schema.  Individual members of the class conform to the four values allowed in the DataCite controlled list, namely Abstract, SeriesInformation, TableOfContent, and Other.).freeze,
+      comment: %(This class permits classification of the type of description given to a resource described by the DataCite Metadata schema.  Individual members of the class conform to the five values allowed in the DataCite controlled list, namely: 
+
+* abstract;
+* methods;
+* series-information;
+* table-of-content;
+* other.).freeze,
       label: "description type".freeze,
-      subClassOf: "owl:Thing".freeze,
+      subClassOf: "skos:Concept".freeze,
       type: "owl:Class".freeze
     term :FunderIdentifier,
       comment: %(An identifier that uniquely identities a funding agency, belonging to a particular scheme such as FundRef specified by an individual within the class datacite:FunderIdentifierScheme.).freeze,
       label: "funder identifier".freeze,
-      subClassOf: "datacite:Identifier".freeze,
+      subClassOf: "datacite:AgentIdentifier".freeze,
       type: "owl:Class".freeze
     term :FunderIdentifierScheme,
-      comment: %(The identifier scheme used to identify a funding agency.  Individual schemes are defines as members of this class.  At present, the only individual of this class is datacite:FundRef.).freeze,
+      comment: %(The identifier scheme used to identify a funding agency. Individual schemes are defines as members of this class. At present, the only individual of this class is datacite:fundref.).freeze,
       label: "funder identifier scheme".freeze,
-      subClassOf: "datacite:IdentifierScheme".freeze,
+      subClassOf: "datacite:AgentIndetifierScheme".freeze,
       type: "owl:Class".freeze
     term :Identifier,
       comment: %(An identifier that uniquely identities an entity – such as a funding agency, a person and a resource – belonging to a particular scheme such as those specified by individuals of the class datacite:IdentifierScheme.).freeze,
@@ -63,7 +69,7 @@ Neither a class for metadata documents nor a property linking a resource to its 
 
 In addition, if needed, it is possible to use the dataproperty fabio:hasURL \(not included in this ontology as well\) for defining the actual URL of a certain metadata scheme.).freeze,
       label: "metadata scheme".freeze,
-      :"rdfs:seeAlso" => [],
+      :"rdfs:seeAlso" => [%(http://purl.org/spar/cito/citesAsMetadataDocument).freeze, %(http://purl.org/spar/fabio/MetadataDocument).freeze],
       type: "owl:Class".freeze
     term :OrganizationIdentifier,
       comment: %(An identifier that uniquely identities an individual organization, belonging to a particular identifier scheme such as ISNI specified by an individual within the class datacite:OrganizationIdentifierScheme.).freeze,
@@ -78,15 +84,15 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL \(no
     term :PersonalIdentifier,
       comment: %(An identifier that uniquely identities an individual person, belonging to a particular identifier scheme such as ORCID specified by an individual within the class datacite:PersonalIdentifierScheme.).freeze,
       label: "personal identifier".freeze,
-      subClassOf: "datacite:Identifier".freeze,
+      subClassOf: "datacite:AgentIdentifier".freeze,
       type: "owl:Class".freeze
     term :PersonalIdentifierScheme,
       comment: %(The identifier scheme used to identify a person.  Individual schemes are defines as members of this class.).freeze,
       label: "personal identifier scheme".freeze,
-      subClassOf: "datacite:IdentifierScheme".freeze,
+      subClassOf: "datacite:AgentIndetifierScheme".freeze,
       type: "owl:Class".freeze
     term :PrimaryResourceIdentifier,
-      comment: %(An identifier that is used as the primary identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record.  Within the DataCite metadata record, a Digital Object Identifier is the only permitted primary resource identifier scheme, specified by the individual datacite:DOI, that is a member of the class datacite:ResourceIdentifierScheme. ).freeze,
+      comment: %(An identifier that is used as the primary identifier to uniquely identifies the primary resource that is the subject of the DataCite metadata record.  Within the DataCite metadata record, a Digital Object Identifier is the only permitted primary resource identifier scheme, specified by the individual datacite:doi, that is a member of the class datacite:ResourceIdentifierScheme.).freeze,
       label: "primary resource identifier".freeze,
       subClassOf: "datacite:ResourceIdentifier".freeze,
       type: "owl:Class".freeze
@@ -114,26 +120,31 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL \(no
     property :hasDescriptionType,
       comment: %(An object property permitting specification of the type of description used to describe a resource, defined as an individual of the class datacite:DescriptionType from the DataCite controlled list of Abstract, SeriesInformation, TableOfContent and Other.).freeze,
       label: "has description type".freeze,
+      range: "datacite:DescriptionType".freeze,
+      subPropertyOf: "dc:type".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasGeneralResourceType,
-      comment: %(An object property permitting specification of the general type of a resource, defined from the DataCite controlled list of Collection, Dataset, Event, Film, Image, InteractiveResource, Model, PhysicalObject, Service, Software, Sound and Text.
+      comment: %(An object property permitting specification of the general type of a resource, defined from the DataCite controlled list, namely: 
 
-All DataCite-required general resource type terms with the exception of Model are defined by classes in the Dublin Core Metadata Initiative Type Vocabulary \(http://purl.org/dc/dcmitype/\).  One of the following should be used as the range for the object property datacite:hasGeneralResourceType: 
-   dcmitype:Collection
-   dcmitype:Dataset
-   dcmitype:Event
-   dcmitype:MovingImage	
-   dcmitype:Image
-   dcmitype:InteractiveResource
-   fabio:Model
-   dcmitype:PhysicalObject
-   dcmitype:Service
-   dcmitype:Software
-   dcmitype:Sound
-   dcmitype:StillImage
-   dcmitype:Text
-).freeze,
+* dcmitype:MovingImage;
+* dcmitype:Collection;
+* dcmitype:Dataset;
+* dcmitype:Event;
+* dcmitype:dcmitype:StillImage;
+* dcmitype:InteractiveResource;
+* fabio:Model;
+* dcmitype:PhysicalObject;
+* dcmitype:Service;
+* dcmitype:Software;
+* dcmitype:Sound;
+* dcmitype:Text;
+* fabio:Workflow;
+* frbr:Endeavour.
+
+All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms \(dcmitype: http://purl.org/dc/dcmitype/\), FaBiO \(fabio: http://purl.org/spar/fabio/\), and FRBR \(frbr: http://purl.org/vocab/frbr/core#\).).freeze,
       label: "has general resource type".freeze,
+      range: "skos:Concept".freeze,
+      subPropertyOf: "dc:type".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasIdentifier,
       comment: %(An object property specifying a datacite:Identifier that provides a unique identifer for the entity \(either a funder, a person or a resource\).).freeze,
@@ -155,18 +166,18 @@ All DataCite-required general resource type terms with the exception of Model ar
     # Extra definitions
     term :"",
       comment: %(This ontology is available at http://purl.org/spar/datacite/, and uses the namespace prefix datacite.).freeze,
+      :"dc11:contributor" => [%(Amy J. Barton).freeze, %(Egbert Gramsbergen).freeze, %(Jan Ashton).freeze, %(Marie-Christine Jacquemot).freeze],
       :"dc11:creator" => [%(David Shotton).freeze, %(Silvio Peroni).freeze],
-      :"dc11:date" => %(2014-05-21).freeze,
-      :"dc11:description" => [%(The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the DataCite Metadata Kernel Specification version 2.2 \(http://test.datacite.org/schema/meta/kernel-2.2/index.html\) to be described in RDF.  This version of the DataCite Ontology has been completely revised and significantly expanded to permit accurate mapping of this new version of the DataCite Metadata Kernel Specification to RDF. Documents introducing the mapping and additional examples are available at [1] and [2].
+      :"dc11:date" => %(2016-01-21).freeze,
+      :"dc11:description" => [%(The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1]\(https://www.datacite.org/sites/default/files/document/DataCite-MetadataSchema_V31_Final_8-24-2015_0.pdf\) to be described in RDF.  
 
-[1] - http://sempublishing.svn.sourceforge.net/viewvc/sempublishing/DataCite/DataCiteMetadata2.2_mapping_to_RDF_06-07-2012.docx
-[2] - http://sempublishing.svn.sourceforge.net/viewvc/sempublishing/DataCite/RDF_mapping-of-DataCitev2.2-XML_example.docx).freeze, %(https://svn.code.sf.net/p/sempublishing/code/DataCite/datacite.png).freeze],
-      :"dc11:rights" => %(This work is distributed under a Creative Commons Attribution License \(http://creativecommons.org/licenses/by/3.0/\).).freeze,
+This version of the DataCite Ontology has been completely revised and significantly expanded to permit accurate mapping of this new version of the DataCite Metadata Kernel Specification to RDF.).freeze, %(https://svn.code.sf.net/p/sempublishing/code/DataCite/datacite.png).freeze],
+      :"dc11:rights" => %(This work is distributed under a Creative Commons Attribution License \(http://creativecommons.org/licenses/by/4.0/\).).freeze,
       :"dc11:title" => %(The DataCite Ontology).freeze,
       label: "".freeze,
-      :"owl:imports" => %(http://www.essepuntato.it/2010/06/literalreification).freeze,
-      :"owl:priorVersion" => %(https://svn.code.sf.net/p/sempublishing/code/DataCite/2013-03-23-datacite-0_6_4.owl).freeze,
-      :"owl:versionInfo" => %(0.6.4.1).freeze,
+      :"owl:imports" => [%(http://purl.org/co).freeze, %(http://www.essepuntato.it/2010/06/literalreification).freeze],
+      :"owl:priorVersion" => %(http://svn.code.sf.net/p/sempublishing/code/DataCite/2014-05-21-datacite-0_6_4_1.owl).freeze,
+      :"owl:versionInfo" => %(1.0).freeze,
       type: "owl:Ontology".freeze
     term :abstract,
       comment: %(A brief summary of a textual work, appearing at the beginning of the work and designed to act as the point-of-entry that will help the reader quickly to obtain an overview of the work's contents.).freeze,
@@ -175,13 +186,13 @@ All DataCite-required general resource type terms with the exception of Model ar
       type: ["datacite:DescriptionType".freeze, "owl:NamedIndividual".freeze]
     term :ark,
       comment: %(Archival Resource Key.).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(https://confluence.ucop.edu/display/Curation/ARK).freeze,
       label: "ark".freeze,
-      :"rdfs:isDefinedBy" => %(https://confluence.ucop.edu/display/Curation/ARK).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :arxiv,
       comment: %(Identifier for ArXiv \(http://arxiv.org/\), a open access repository of preprints, having the format arXiv:1207.2147.).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://arxiv.org/).freeze,
       label: "arxiv".freeze,
-      :"rdfs:isDefinedBy" => %(http://arxiv.org/).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :bibcode,
       comment: %(It is the Astrophysics Data System bibliographic codes, a standardized 19 character identifier according to the syntax "yyyyjjjjjvvvvmppppa".).freeze,
@@ -189,59 +200,59 @@ All DataCite-required general resource type terms with the exception of Model ar
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :dia,
       comment: %(The Digital Author Identification system assigns a unique number to all authors in the Netherlands research system.).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://www.surf.nl/en/themas/openonderzoek/infrastructuur/Pages/digitalauthoridentifierdai.aspx).freeze,
       label: "dia".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.surf.nl/en/themas/openonderzoek/infrastructuur/Pages/digitalauthoridentifierdai.aspx).freeze,
       type: ["datacite:PersonalIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :doi,
       comment: %(Digital Object Identier.).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://www.doi.org/).freeze,
       label: "doi".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.doi.org/).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :ean13,
       comment: %(International Article Number).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://www.gs1.org/).freeze,
       label: "ean13".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.gs1.org/).freeze,
       :"rdfs:seeAlso" => %(http://en.wikipedia.org/wiki/EAN13).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :eissn,
       comment: %(Electronic International Standard Serial Number).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://www.issn.org/).freeze,
       label: "eissn".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.issn.org/).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :fundref,
       comment: %(FundRef is a collaborative pilot project of scholarly publishers and funding agencies, facilitated by CrossRef, to provide a standard way of identifying and reporting funding sources for published scholarly research. ).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://www.crossref.org/fundref/index.html).freeze,
       label: "fundref".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.crossref.org/fundref/index.html).freeze,
       type: ["datacite:FunderIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :handle,
       comment: %(The Handle system).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://www.handle.net/).freeze,
       label: "handle".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.handle.net/).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :infouri,
       comment: %(Info URI scheme).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://info-uri.info/registry/docs/misc/faq.html).freeze,
       label: "infouri".freeze,
-      :"rdfs:isDefinedBy" => %(http://info-uri.info/registry/docs/misc/faq.html).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :isbn,
       comment: %(International Standard Book Number).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://www.isbn-international.org/).freeze,
       label: "isbn".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.isbn-international.org/).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :isni,
       comment: %(International Standard Name Identifier scheme.).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://www.isni.org/).freeze,
       label: "isni".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.isni.org/).freeze,
-      type: ["datacite:PersonalIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
+      type: ["datacite:OrganizationIdentifierScheme".freeze, "datacite:PersonalIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :issn,
       comment: %(International Standard Serial Number).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://www.issn.org/).freeze,
       label: "issn".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.issn.org/).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :istc,
       comment: %(International Standard Text Code).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://www.istc-international.org/html/).freeze,
       label: "istc".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.istc-international.org/html/).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :jst,
       comment: %(Japanese Science and Technology Agency identifier scheme).freeze,
@@ -249,7 +260,7 @@ All DataCite-required general resource type terms with the exception of Model ar
       type: ["datacite:PersonalIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :lissn,
       comment: %(Linking International Standard Serial Number).freeze,
-      :"http://purl.org/spar/fabio/hasURL" => [],
+      :"http://purl.org/spar/fabio/hasURL" => %(http://www.issn.org/).freeze,
       label: "lissn".freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :"local-funder-identifier-scheme",
@@ -270,8 +281,8 @@ All DataCite-required general resource type terms with the exception of Model ar
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :lsid,
       comment: %(Life Science Identifier).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://www.ibm.com/developerworks/opensource/library/os-lsidbp/).freeze,
       label: "lsid".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.ibm.com/developerworks/opensource/library/os-lsidbp/).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :methods,
       comment: %(A description in a research paper documenting the specialized methods used in the work described.).freeze,
@@ -283,21 +294,22 @@ All DataCite-required general resource type terms with the exception of Model ar
       type: ["datacite:PersonalIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :nihmsid,
       comment: %(NIH Manuscript Submission Identifier).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://nexus.od.nih.gov/all/2009/09/01/nih-public-access-update-clarifying-use-of-the-nih-manuscript-submission-id-nihmsid/).freeze,
       label: "nihmsid".freeze,
-      :"rdfs:isDefinedBy" => %(http://nexus.od.nih.gov/all/2009/09/01/nih-public-access-update-clarifying-use-of-the-nih-manuscript-submission-id-nihmsid/).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :nii,
-      label: ["National Individual Identifier scheme".freeze, "nii".freeze],
+      comment: %(National Individual Identifier scheme.).freeze,
+      label: "nii".freeze,
       type: ["datacite:PersonalIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :openid,
       comment: %(OpenID is an open standard that describes how users can be authenticated in a decentralized manner, eliminating the need for centralized registration services. ).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://openid.net/foundation/).freeze,
       label: "openid".freeze,
-      :"rdfs:isDefinedBy" => %(http://openid.net/foundation/).freeze,
       type: ["datacite:PersonalIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :orcid,
       comment: %(Open Researcher and Contributor Identifier.).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://orcid.org/).freeze,
       label: "orcid".freeze,
-      :"rdfs:isDefinedBy" => %(http://about.orcid.org/).freeze,
       type: ["datacite:PersonalIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :other,
       comment: %(A catch-all description type required by the DataCite Metadata Schema to characterize description types that are not abstracts, series information or tables of content.).freeze,
@@ -310,23 +322,23 @@ All DataCite-required general resource type terms with the exception of Model ar
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :pmcid,
       comment: %(PubMed Central Identifier).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://www.ncbi.nlm.nih.gov/pmc/).freeze,
       label: "pmcid".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.ncbi.nlm.nih.gov/pmc/).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :pmid,
       comment: %(PubMed Identifier).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://www.ncbi.nlm.nih.gov/pubmed/).freeze,
       label: "pmid".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.ncbi.nlm.nih.gov/pubmed/).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :purl,
       comment: %(Persistent Uniform Resource Locator).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://purl.org/).freeze,
       label: "purl".freeze,
-      :"rdfs:isDefinedBy" => %(http://purl.org/).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :researcherid,
       comment: %(ResearcherID is an identifying system for scientific authors created and owned by Thomson Reuters.).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://www.researcherid.com/).freeze,
       label: "researcherid".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.researcherid.com/).freeze,
       type: ["datacite:PersonalIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :"series-information",
       comment: %(Used to charactierize a description of a resource that is part of a series.).freeze,
@@ -335,8 +347,8 @@ All DataCite-required general resource type terms with the exception of Model ar
       type: ["datacite:DescriptionType".freeze, "owl:NamedIndividual".freeze]
     term :sici,
       comment: %(Serial Item and Contribution Identifier).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://en.wikipedia.org/wiki/Serial_Item_and_Contribution_Identifier).freeze,
       label: "sici".freeze,
-      :"rdfs:isDefinedBy" => %(http://en.wikipedia.org/wiki/Serial_Item_and_Contribution_Identifier).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :"social-security-number",
       comment: %(United States of America social security number scheme).freeze,
@@ -344,7 +356,7 @@ All DataCite-required general resource type terms with the exception of Model ar
       type: ["datacite:PersonalIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :spar,
       comment: %(The Semantic Publishing and Referencing Ontologies, a.k.a. SPAR Ontologies, form a suite of orthogonal and complementary OWL 2 DL ontology modules for the creation of comprehensive machine-readable RDF metadata for every aspect of semantic publishing and referencing: document description, bibliographic resource identifiers, types of citations and related contexts, bibliographic references, document parts and status, agents' roles and contributions, bibliometric data and workflow processes.).freeze,
-      :"http://purl.org/spar/fabio/hasURL" => [],
+      :"http://purl.org/spar/fabio/hasURL" => %(http://www.sparontologies.net).freeze,
       label: "SPAR Ontologies".freeze,
       type: ["datacite:MetadataScheme".freeze, "owl:NamedIndividual".freeze]
     term :"table-of-content",
@@ -355,27 +367,25 @@ All DataCite-required general resource type terms with the exception of Model ar
     term :upc,
       comment: %(Universal Product Code).freeze,
       label: "upc".freeze,
-      :"rdfs:isDefinedBy" => %(http://en.wikipedia.org/wiki/Universal_Product_Code).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :uri,
       comment: %(Uniform Resource Identifier).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://tools.ietf.org/html/rfc3986).freeze,
       label: "uri".freeze,
-      :"rdfs:isDefinedBy" => %(http://tools.ietf.org/html/rfc3986).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :url,
       comment: %(Uniform Resource Locator.).freeze,
       label: "url".freeze,
-      :"rdfs:isDefinedBy" => %(http://en.wikipedia.org/wiki/Uniform_resource_locator).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :urn,
       comment: %(Uniform Resource Name.).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://datatracker.ietf.org/wg/urn/charter/).freeze,
       label: "urn".freeze,
-      :"rdfs:isDefinedBy" => %(http://datatracker.ietf.org/wg/urn/charter/).freeze,
       type: ["datacite:ResourceIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
     term :viaf,
       comment: %(The Virtual International Authority File is an international authority file created by amalagamating the national authority files of several national libraries and operated by the Online Computer Library Center \(OCLC\).  It contains information about many topics including personal names.).freeze,
+      :"http://purl.org/spar/fabio/hasURL" => %(http://viaf.org/).freeze,
       label: "viaf".freeze,
-      :"rdfs:isDefinedBy" => %(http://viaf.org/).freeze,
       type: ["datacite:PersonalIdentifierScheme".freeze, "owl:NamedIndividual".freeze]
   end
 end

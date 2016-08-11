@@ -3,6 +3,9 @@ require File.expand_path("../spec_helper", __FILE__)
 require 'rdf/reasoner'
 
 describe RDF::Vocab do
+  before(:all) {
+    RDF::Reasoner.apply(:rdfs, :owl)
+  }
   describe ".each" do
     it "enumerates pre-defined vocabularies" do
       expect {|b| RDF::Vocabulary.each(&b)}.to yield_control.at_least(RDF::Vocab::VOCABS.keys.length).times
@@ -13,6 +16,25 @@ describe RDF::Vocab do
     %w(domainIncludes rangeIncludes inverseOf).each do |prop|
       it "defines schema:#{prop}" do
         expect {RDF::Vocab::SCHEMA[prop]}.not_to raise_error
+      end
+    end
+
+    context "detects superseded terms" do
+      {
+        "members superseded by member" => [
+          %(
+            @prefix schema: <http://schema.org/> .
+            <foo> a schema:Organization; schema:members "Manny" .
+          ),
+          {
+            property: {"schema:members" => ["Term is superseded by schema:member"]},
+          }
+        ],
+      }.each do |name, (input, errors)|
+        it name do
+          graph = RDF::Graph.new << RDF::Turtle::Reader.new(input)
+          expect(graph.lint).to have_errors errors
+        end
       end
     end
   end
@@ -41,9 +63,6 @@ describe RDF::Vocab do
   end
 
   context "entailments" do
-    before(:all) {
-      RDF::Reasoner.apply(:rdfs, :owl)
-    }
     RDF::Vocabulary.each do |vocab|
       vocab.each do |term|
         if term.type.to_s =~ /Class/

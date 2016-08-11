@@ -198,7 +198,7 @@ module RDF::Vocab
       label: "location".freeze,
       range: "xsd:string".freeze,
       :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/org).freeze,
-      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :member,
       comment: %(Indicates the Person \(or other Agent including Organization\) involved in the Membership relationship. Inverse of `org:hasMembership`).freeze,
       domain: "org:Membership".freeze,
