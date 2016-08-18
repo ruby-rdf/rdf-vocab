@@ -14,7 +14,7 @@ module RDF
         class_name: "Bibframe",
         extra: {hasAccompaniment: {type: "rdf:Property",label: "has accompaniment"}}
       },
-      bibo:   {uri: "http://purl.org/ontology/bibo/"},
+      bibo:   {uri: "http://purl.org/ontology/bibo/", source: "etc/bibo.ttl"},
       cc:     {
         uri: "http://creativecommons.org/ns#",
         source: "etc/cc.ttl"  # Source incorrectly uses https identifiers
