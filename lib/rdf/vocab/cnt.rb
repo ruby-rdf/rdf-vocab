@@ -9,6 +9,16 @@ module RDF::Vocab
   #   end
   class CNT < RDF::StrictVocabulary("http://www.w3.org/2011/content#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/2011/content",
+      comment: %(Representing Content in RDF as defined by http://www.w3.org/TR/Content-in-RDF/).freeze,
+      label: "Representing Content in RDF".freeze,
+      :"owl:imports" => %(dc:).freeze,
+      :"owl:versionInfo" => %(Working Draft 29 April 2011).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.w3.org/TR/Content-in-RDF/).freeze,
+      :"rdfs:seeAlso" => %(http://www.w3.org/WAI/intro/earl).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :Content,
       comment: %(The content.).freeze,

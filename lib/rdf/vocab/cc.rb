@@ -9,6 +9,11 @@ module RDF::Vocab
   #   end
   class CC < RDF::StrictVocabulary("http://creativecommons.org/ns#")
 
+    # Ontology definition
+    ontology :"http://creativecommons.org/ns",
+      :"xhv:license" => %(https://creativecommons.org/licenses/by/4.0/).freeze,
+      :"xhv:stylesheet" => %(https://creativecommons.org/includes/bootstrap.min.css).freeze
+
     # Class definitions
     term :Jurisdiction,
       comment: %(the legal jurisdiction

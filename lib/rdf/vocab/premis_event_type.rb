@@ -9,6 +9,16 @@ module RDF::Vocab
   #   end
   class PremisEventType < RDF::StrictVocabulary("http://id.loc.gov/vocabulary/preservation/eventType/")
 
+    # Ontology definition
+    ontology :"http://id.loc.gov/vocabulary/preservation/eventType",
+      comment: %(Event types are actions performed on digital objects within a preservation repository.).freeze,
+      label: "Event Type".freeze,
+      :"mads:hasMADSSchemeMember" => %(premiseventtype:collection_PREMIS).freeze,
+      :"mads:hasTopMemberOfMADSScheme" => [%(premiseventtype:cap).freeze, %(premiseventtype:com).freeze, %(premiseventtype:cre).freeze, %(premiseventtype:dea).freeze, %(premiseventtype:dec).freeze, %(premiseventtype:del).freeze, %(premiseventtype:der).freeze, %(premiseventtype:dig).freeze, %(premiseventtype:fix).freeze, %(premiseventtype:ing).freeze, %(premiseventtype:mes).freeze, %(premiseventtype:mig).freeze, %(premiseventtype:nor).freeze, %(premiseventtype:rep).freeze, %(premiseventtype:val).freeze, %(premiseventtype:vir).freeze],
+      :"owl:sameAs" => %(http://id.loc.gov/vocabulary/preservationEvents).freeze,
+      :"skos:hasTopConcept" => [%(premiseventtype:cap).freeze, %(premiseventtype:com).freeze, %(premiseventtype:cre).freeze, %(premiseventtype:dea).freeze, %(premiseventtype:dec).freeze, %(premiseventtype:del).freeze, %(premiseventtype:der).freeze, %(premiseventtype:dig).freeze, %(premiseventtype:fix).freeze, %(premiseventtype:ing).freeze, %(premiseventtype:mes).freeze, %(premiseventtype:mig).freeze, %(premiseventtype:nor).freeze, %(premiseventtype:rep).freeze, %(premiseventtype:val).freeze, %(premiseventtype:vir).freeze],
+      type: ["mads:MADSScheme".freeze, "skos:ConceptScheme".freeze]
+
     # Extra definitions
     term :cap,
       label: "capture".freeze,

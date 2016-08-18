@@ -9,6 +9,17 @@ module RDF::Vocab
   #   end
   class OA < RDF::StrictVocabulary("http://www.w3.org/ns/oa#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/ns/oa#",
+      comment: %(The Web Annotation ontology defines the terms of the Web Annotation vocabulary).freeze,
+      :"dc11:title" => %(Web Annotation Ontology).freeze,
+      :"dc:creator" => [%(Benjamin Young).freeze, %(Paolo Ciccarese).freeze, %(Robert Sanderson).freeze],
+      :"dc:modified" => %(2016-06-03T14:54:43Z).freeze,
+      :"owl:previousVersionURI" => %(http://www.openannotation.org/spec/core/20130208/oa.owl).freeze,
+      :"owl:versionInfo" => %(2016-06-03T14:54:43Z).freeze,
+      :"rdfs:seeAlso" => %(http://www.w3.org/TR/annotation-vocab/).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :Annotation,
       comment: %(The class for Web Annotations.).freeze,
@@ -337,16 +348,6 @@ module RDF::Vocab
       type: "rdf:Property".freeze
 
     # Extra definitions
-    term :"",
-      comment: %(The Web Annotation ontology defines the terms of the Web Annotation vocabulary).freeze,
-      :"dc11:title" => %(Web Annotation Ontology).freeze,
-      :"dc:creator" => [%(Benjamin Young).freeze, %(Paolo Ciccarese).freeze, %(Robert Sanderson).freeze],
-      :"dc:modified" => %(2016-06-03T14:54:43Z).freeze,
-      label: "".freeze,
-      :"owl:previousVersionURI" => %(http://www.openannotation.org/spec/core/20130208/oa.owl).freeze,
-      :"owl:versionInfo" => %(2016-06-03T14:54:43Z).freeze,
-      :"rdfs:seeAlso" => %(http://www.w3.org/TR/annotation-vocab/).freeze,
-      type: "owl:Ontology".freeze
     term :PreferContainedDescriptions,
       comment: %(An IRI to signal the client prefers to receive full descriptions of the Annotations from a container, not just their IRIs.).freeze,
       label: "PreferContainedDescriptions".freeze,

@@ -9,6 +9,41 @@ module RDF::Vocab
   #   end
   class CERT < RDF::StrictVocabulary("http://www.w3.org/ns/auth/cert#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/ns/auth/cert#",
+      comment: %(
+   Ontology for Certificates and crypto stuff.
+   This is in development. 
+   Some other ontologies to look at:
+     * http://www.w3.org/2000/10/swap/crypto
+        + has cwm builtins: http://www.w3.org/2000/10/swap/doc/Trust
+        - a bit old perhaps. It imports daml+oil
+        - would help to be more completely specified
+        - uses literals as subjects a little liberally, which makes this a 
+        bit difficult to work with frameworks that don't permit this
+     * http://xmlns.com/wot/0.1/
+        - limited very much to PGP \(though on can map PGP to X509\)
+        - a little coarse grained, mixes up the PGP certificate with the PGP
+          public key
+     *
+   Todo: 
+     - add some classes and relations for DSA
+     - should this all be in one file? Or should this be cut up a little? Say one file for the general CERT ontology, and then files for RSA, DSA, PGP, etc... Or perhaps it does not really matter?
+     - expand more on the certification side of things
+     - verify this by security experts
+     - owl2 has some constructs for combined inverse functional properties. 
+       This may be useful to use in defining an RSA key which is identified
+       by two numbers.
+     - also create html version of the spec by using this as a template.
+     - should comments such as this be in html?
+   ).freeze,
+      :"dc:created" => %(2008-11-13).freeze,
+      :"foaf:maker" => %(http://bblfish.net/people/henry/card#me).freeze,
+      label: "Ontology for Certificates and crypto stuff.".freeze,
+      :"rdfs:seeAlso" => [%(http://lists.foaf-project.org/mailman/listinfo/foaf-protocols).freeze, %(http://www.w3.org/ns/auth/X509Uml.svg).freeze, %(http://www.w3.org/ns/auth/rsa).freeze],
+      type: "owl:Ontology".freeze,
+      :"vs:term_status" => %(unstable).freeze
+
     # Class definitions
     term :Certificate,
       comment: %(A certificate is a Document that is signed.
@@ -210,40 +245,5 @@ module RDF::Vocab
    ).freeze,
       type: "rdfs:Datatype".freeze,
       :"vs:term_status" => %(archaic).freeze
-
-    # Extra definitions
-    term :"",
-      comment: %(
-   Ontology for Certificates and crypto stuff.
-   This is in development. 
-   Some other ontologies to look at:
-     * http://www.w3.org/2000/10/swap/crypto
-        + has cwm builtins: http://www.w3.org/2000/10/swap/doc/Trust
-        - a bit old perhaps. It imports daml+oil
-        - would help to be more completely specified
-        - uses literals as subjects a little liberally, which makes this a 
-        bit difficult to work with frameworks that don't permit this
-     * http://xmlns.com/wot/0.1/
-        - limited very much to PGP \(though on can map PGP to X509\)
-        - a little coarse grained, mixes up the PGP certificate with the PGP
-          public key
-     *
-   Todo: 
-     - add some classes and relations for DSA
-     - should this all be in one file? Or should this be cut up a little? Say one file for the general CERT ontology, and then files for RSA, DSA, PGP, etc... Or perhaps it does not really matter?
-     - expand more on the certification side of things
-     - verify this by security experts
-     - owl2 has some constructs for combined inverse functional properties. 
-       This may be useful to use in defining an RSA key which is identified
-       by two numbers.
-     - also create html version of the spec by using this as a template.
-     - should comments such as this be in html?
-   ).freeze,
-      :"dc:created" => %(2008-11-13).freeze,
-      :"foaf:maker" => %(http://bblfish.net/people/henry/card#me).freeze,
-      label: "Ontology for Certificates and crypto stuff.".freeze,
-      :"rdfs:seeAlso" => [%(http://lists.foaf-project.org/mailman/listinfo/foaf-protocols).freeze, %(http://www.w3.org/ns/auth/X509Uml.svg).freeze, %(http://www.w3.org/ns/auth/rsa).freeze],
-      type: "owl:Ontology".freeze,
-      :"vs:term_status" => %(unstable).freeze
   end
 end

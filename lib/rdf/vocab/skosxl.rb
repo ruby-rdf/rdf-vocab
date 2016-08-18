@@ -9,6 +9,16 @@ module RDF::Vocab
   #   end
   class SKOSXL < RDF::StrictVocabulary("http://www.w3.org/2008/05/skos-xl#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/2008/05/skos-xl",
+      :"dc:contributor" => %(Participants in W3C's Semantic Web Deployment Working Group.).freeze,
+      :"dc:creator" => [%(Alistair Miles).freeze, %(Sean Bechhofer).freeze],
+      :"dc:description" => %(An RDF vocabulary extending SKOS and allowing the description and linking of lexical entities.).freeze,
+      :"dc:title" => %(SKOS XL Vocabulary).freeze,
+      :"owl:imports" => %(http://www.w3.org/2004/02/skos/core).freeze,
+      :"rdfs:seeAlso" => %(http://www.w3.org/2008/05/skos).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :Label,
       label: "Label".freeze,

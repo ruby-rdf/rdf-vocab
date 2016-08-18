@@ -9,6 +9,15 @@ module RDF::Vocab
   #   end
   class RSA < RDF::StrictVocabulary("http://www.w3.org/ns/auth/rsa#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/ns/auth/rsa",
+      comment: %(ontology for the RSA public private keys ).freeze,
+      :"dc:created" => %(2008-11-13).freeze,
+      :"foaf:maker" => %(http://bblfish.net/people/henry/card#me).freeze,
+      :"rdfs:seeAlso" => [%(http://en.wikipedia.org/wiki/RSA).freeze, %(http://lists.foaf-project.org/mailman/listinfo/foaf-protocols).freeze, %(http://www.w3.org/ns/auth/X509Uml.svg).freeze],
+      type: "owl:Ontology".freeze,
+      :"vs:term_status" => %(unstable).freeze
+
     # Class definitions
     term :RSAKey,
       comment: %(

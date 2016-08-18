@@ -9,6 +9,18 @@ module RDF::Vocab
   #   end
   class ORG < RDF::StrictVocabulary("http://www.w3.org/ns/org#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/ns/org#",
+      comment: %(Vocabulary for describing organizational structures, specializable to a broad variety of types of organization.).freeze,
+      :"dc:created" => %(2010-05-28).freeze,
+      :"dc:license" => %(http://www.opendatacommons.org/licenses/pddl/1.0/).freeze,
+      :"dc:modified" => [%(2010-06-09).freeze, %(2010-10-08).freeze, %(2012-09-30).freeze, %(2012-10-06).freeze, %(2013-02-15).freeze, %(2013-12-16).freeze, %(2014-01-02).freeze, %(2014-01-25).freeze, %(2014-02-05).freeze, %(2014-04-12).freeze],
+      :"dc:title" => %(Core organization ontology).freeze,
+      label: "Core organization ontology".freeze,
+      :"owl:versionInfo" => %(0.8).freeze,
+      :"rdfs:seeAlso" => %(http://www.w3.org/TR/vocab-org/).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :ChangeEvent,
       comment: %(Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `prov:startAtTime` and `prov:endedAtTime`, a description should be given by `dct:description`. ).freeze,
@@ -333,16 +345,6 @@ module RDF::Vocab
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
 
     # Extra definitions
-    term :"",
-      comment: %(Vocabulary for describing organizational structures, specializable to a broad variety of types of organization.).freeze,
-      :"dc:created" => %(2010-05-28).freeze,
-      :"dc:license" => %(http://www.opendatacommons.org/licenses/pddl/1.0/).freeze,
-      :"dc:modified" => [%(2010-06-09).freeze, %(2010-10-08).freeze, %(2012-09-30).freeze, %(2012-10-06).freeze, %(2013-02-15).freeze, %(2013-12-16).freeze, %(2014-01-02).freeze, %(2014-01-25).freeze, %(2014-02-05).freeze, %(2014-04-12).freeze],
-      :"dc:title" => %(Core organization ontology).freeze,
-      label: "Core organization ontology".freeze,
-      :"owl:versionInfo" => %(0.8).freeze,
-      :"rdfs:seeAlso" => %(http://www.w3.org/TR/vocab-org/).freeze,
-      type: "owl:Ontology".freeze
     term :Head,
       comment: %(A role corresponding to the `org:headOf` property).freeze,
       label: "head".freeze,

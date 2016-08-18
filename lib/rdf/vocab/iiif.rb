@@ -9,6 +9,11 @@ module RDF::Vocab
   #   end
   class IIIF < RDF::StrictVocabulary("http://iiif.io/api/presentation/2#")
 
+    # Ontology definition
+    ontology :"http://iiif.io/api/presentation/2#",
+      :"owl:versionInfo" => %(2015-12-13 23:00:00Z).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :AnnotationList,
       comment: %(AnnotationLists are an ordered list of Annotation objects. Typically all Annnotations in a list target the same Canvas).freeze,
@@ -143,10 +148,6 @@ module RDF::Vocab
       type: "rdf:Property".freeze
 
     # Extra definitions
-    term :"",
-      label: "".freeze,
-      :"owl:versionInfo" => %(2015-12-13 23:00:00Z).freeze,
-      type: "owl:Ontology".freeze
     term :bottomToTopDirection,
       comment: %(Bottom-to-Top Viewing Direction).freeze,
       label: "bottomToTopDirection".freeze,

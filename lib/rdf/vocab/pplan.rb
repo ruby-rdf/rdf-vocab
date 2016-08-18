@@ -9,6 +9,20 @@ module RDF::Vocab
   #   end
   class PPLAN < RDF::StrictVocabulary("http://purl.org/net/p-plan#")
 
+    # Ontology definition
+    ontology :"http://purl.org/net/p-plan#",
+      comment: %(PROV extension for linking Plans and parts of plans to their respective executions. Created by Daniel Garijo and Yolanda Gil).freeze,
+      :"dc:created" => %(2012-11-10).freeze,
+      :"dc:creator" => [%(http://delicias.dia.fi.upm.es/members/DGarijo#me).freeze, %(http://www.isi.edu/~gil/).freeze],
+      :"dc:description" => %(PROV extension for linking Plans and parts of plans to their respective executions.).freeze,
+      :"dc:license" => %(http://creativecommons.org/licenses/by-nc-sa/2.0/).freeze,
+      :"dc:modified" => %(2014-03-12).freeze,
+      :"dc:title" => %(The P-Plan ontology).freeze,
+      :"http://purl.org/vocab/vann/preferredNamespacePrefix" => %(p-plan).freeze,
+      :"http://purl.org/vocab/vann/preferredNamespaceUri" => %(http://purl.org/net/p-plan#).freeze,
+      :"owl:versionInfo" => %(1.3).freeze,
+      type: ["owl:NamedIndividual".freeze, "owl:Ontology".freeze, "owl:Thing".freeze]
+
     # Class definitions
     term :Activity,
       comment: %(A p-plan:Activity represents the execution process planned in a p-plan:Step).freeze,
@@ -132,20 +146,5 @@ module RDF::Vocab
       range: "pplan:Plan".freeze,
       :"rdfs:isDefinedBy" => %(pplan:).freeze,
       type: "owl:ObjectProperty".freeze
-
-    # Extra definitions
-    term :"",
-      comment: %(PROV extension for linking Plans and parts of plans to their respective executions. Created by Daniel Garijo and Yolanda Gil).freeze,
-      :"dc:created" => %(2012-11-10).freeze,
-      :"dc:creator" => [%(http://delicias.dia.fi.upm.es/members/DGarijo#me).freeze, %(http://www.isi.edu/~gil/).freeze],
-      :"dc:description" => %(PROV extension for linking Plans and parts of plans to their respective executions.).freeze,
-      :"dc:license" => %(http://creativecommons.org/licenses/by-nc-sa/2.0/).freeze,
-      :"dc:modified" => %(2014-03-12).freeze,
-      :"dc:title" => %(The P-Plan ontology).freeze,
-      :"http://purl.org/vocab/vann/preferredNamespacePrefix" => %(p-plan).freeze,
-      :"http://purl.org/vocab/vann/preferredNamespaceUri" => %(http://purl.org/net/p-plan#).freeze,
-      label: "".freeze,
-      :"owl:versionInfo" => %(1.3).freeze,
-      type: ["owl:NamedIndividual".freeze, "owl:Ontology".freeze, "owl:Thing".freeze]
   end
 end

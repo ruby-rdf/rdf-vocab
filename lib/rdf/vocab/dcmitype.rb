@@ -9,6 +9,12 @@ module RDF::Vocab
   #   end
   class DCMIType < RDF::StrictVocabulary("http://purl.org/dc/dcmitype/")
 
+    # Ontology definition
+    ontology :"http://purl.org/dc/dcmitype/",
+      :"dc:modified" => %(2012-06-14).freeze,
+      :"dc:publisher" => %(http://purl.org/dc/aboutdcmi#DCMI).freeze,
+      :"dc:title" => %(DCMI Type Vocabulary).freeze
+
     # Class definitions
     term :Collection,
       comment: %(An aggregation of resources.).freeze,
@@ -132,12 +138,5 @@ module RDF::Vocab
       label: "Text".freeze,
       :"rdfs:isDefinedBy" => %(dcmitype:).freeze,
       type: "rdfs:Class".freeze
-
-    # Extra definitions
-    term :"",
-      :"dc:modified" => %(2012-06-14).freeze,
-      :"dc:publisher" => %(http://purl.org/dc/aboutdcmi#DCMI).freeze,
-      :"dc:title" => %(DCMI Type Vocabulary).freeze,
-      label: "".freeze
   end
 end

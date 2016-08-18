@@ -9,6 +9,16 @@ module RDF::Vocab
   #   end
   class DOAP < RDF::StrictVocabulary("http://usefulinc.com/ns/doap#")
 
+    # Ontology definition
+    ontology :"http://usefulinc.com/ns/doap#",
+      :"dc11:creator" => %(Edd Dumbill).freeze,
+      :"dc11:description" => %(The Description of a Project \(DOAP\) vocabulary, described using W3C RDF Schema and the Web Ontology Language.).freeze,
+      :"dc11:format" => %(application/rdf+xml).freeze,
+      :"dc11:rights" => %(Copyright © 2004-2009 Edd Dumbill).freeze,
+      :"dc11:title" => %(Description of a Project \(DOAP\) vocabulary).freeze,
+      :"owl:imports" => %(foaf:).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :ArchRepository,
       comment: %(GNU Arch source code repository.).freeze,
@@ -326,16 +336,5 @@ module RDF::Vocab
       label: "wiki".freeze,
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       type: "rdf:Property".freeze
-
-    # Extra definitions
-    term :"",
-      :"dc11:creator" => %(Edd Dumbill).freeze,
-      :"dc11:description" => %(The Description of a Project \(DOAP\) vocabulary, described using W3C RDF Schema and the Web Ontology Language.).freeze,
-      :"dc11:format" => %(application/rdf+xml).freeze,
-      :"dc11:rights" => %(Copyright © 2004-2009 Edd Dumbill).freeze,
-      :"dc11:title" => %(Description of a Project \(DOAP\) vocabulary).freeze,
-      label: "".freeze,
-      :"owl:imports" => %(foaf:).freeze,
-      type: "owl:Ontology".freeze
   end
 end

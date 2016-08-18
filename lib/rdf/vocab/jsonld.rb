@@ -9,6 +9,12 @@ module RDF::Vocab
   #   end
   class JSONLD < RDF::StrictVocabulary("http://www.w3.org/ns/json-ld#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/ns/json-ld",
+      comment: %(This is a vocabulary document and is used to achieve certain features of the JSON-LD language.).freeze,
+      label: "The JSON-LD Vocabulary".freeze,
+      type: "owl:Ontology".freeze
+
     # Property definitions
     property :context,
       comment: %(This link relation is used to reference a JSON-LD context from a JSON document so that it can be interpreted as JSON-LD.).freeze,

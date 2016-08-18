@@ -9,6 +9,12 @@ module RDF::Vocab
   #   end
   class ACL < RDF::StrictVocabulary("http://www.w3.org/ns/auth/acl#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/ns/auth/acl",
+      comment: %(Defines the element of Authorization and its essential properties,
+    and also some classes of access such as read and write. ).freeze,
+      :"dc11:title" => %(Basic Access Control ontology).freeze
+
     # Class definitions
     term :Access,
       :"acl:label" => %(access).freeze,

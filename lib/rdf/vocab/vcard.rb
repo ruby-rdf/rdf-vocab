@@ -9,6 +9,13 @@ module RDF::Vocab
   #   end
   class VCARD < RDF::StrictVocabulary("http://www.w3.org/2006/vcard/ns#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/2006/vcard/ns",
+      comment: %(Ontology for vCard based on RFC6350).freeze,
+      label: "Ontology for vCard".freeze,
+      :"owl:versionInfo" => %(Final).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :Acquaintance,
       label: "Acquaintance".freeze,

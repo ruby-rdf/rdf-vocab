@@ -9,6 +9,23 @@ module RDF::Vocab
   #   end
   class EBUCore < RDF::StrictVocabulary("http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#")
 
+    # Ontology definition
+    ontology :"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore",
+      :"cc:licence" => %(http://creativecommons.org/licenses/by-sa/3.0/).freeze,
+      :"dc11:contributor" => [%(Adam Wead, Penn State University).freeze, %(Casey Davis, WGBH).freeze, %(Chuck McCallum, WGBH).freeze, %(Cliff Ingham, City of Bloomington).freeze, %(Drew Myers, WGBH).freeze, %(Glenn Clatworthy, PBS).freeze, %(Jack Brighton, WILL Public Media).freeze, %(Julie Hardesty, Indian University Library).freeze, %(Kara vam Malssen, AV Preserve).freeze, %(Karen Cariani, WGBH).freeze, %(Laurence Cook, metaCirque).freeze, %(Michael J. Giarlo, Penn State University).freeze, %(Peggy Griesinger, George Mason University Libraries).freeze, %(Rebecca Fraimow, WGBH).freeze, %(Rebecca Guenther, Rebecca Guenther Consulting).freeze, %(Sadie Roosa, WGBH).freeze, %(Valerie J. Miller, PBS).freeze],
+      :"dc11:description" => [%(Guidelines: for the purpose of flexibility and interoperability with a wider range of implementations, some properties purposefully do not have a range and accept either a resource or a literal.  When a resource is used, it is recommended to reuse objects defined in the model \(e.g. pair hasEvent/Event or hasRole/Role\). Example 1: x hasRole 'actor'. Example 2: x hasRole _:Role_1 \(a reference to the Concept Id from a SKOS Role vocabulary defined in the ontology\).).freeze, %(Note to implementers: The EBUCore ontology is used by a variety of users with different needs. Several EBUCore properties have no range to allow different implementations using entities or literals. As an implementer, it is your choice to go for one or the other for each property to have consistent expectations when parsing individuals. EBUCore also provides different classes defined as subclasses of skos:Concept. You can use these classes as entities in range of several properties currently left without range. EBUCore is expressed in RDF in order to facilitate such modelling and flexibility. As a consequence, propoerties appear in the documentation as annotation properties.).freeze, %(The EBUCore has been designed to make users benefit from the flexibility of RDF to adapt the names of Classes and properties to their respective needs. This means users are welcome to add their own subclasses \(e.g. to define the most appropriate BusinessObjects or Resources or Agents\) and subproperties.).freeze, %(The development of the EBUCore ontology is now a joint effort of the EBUCore and PBCore communities.).freeze],
+      :"dc11:rights" => %(Copyright 2015 EBU).freeze,
+      :"dc11:title" => %(EBUCore - the Dublin Core for media).freeze,
+      :"dc:issued" => %(2013-01-01).freeze,
+      :"dc:modified" => %(2015-08-04).freeze,
+      :"http://purl.org/vocab/vann/preferredNamespaceUri" => %(http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#).freeze,
+      :"owl:backwardCompatibleWith" => %(http://www.ebu.ch/metadata/ontologies/ebucore/20150122/ebucore_2015_05_20.rdf).freeze,
+      :"owl:imports" => %(http://www.w3.org/2004/02/skos/core).freeze,
+      :"owl:priorVersion" => %(http://www.ebu.ch/metadata/ontologies/ebucore/20150122/ebucore_2015_05_20.rdf).freeze,
+      :"owl:versionInfo" => [%(Add "Feature" as sub-class of EditorialObject).freeze, %(Added eventPeriod property.).freeze, %(EBUCore based on Dublin Core + SKOS + some BBC Core Concepts + basic FOAF properties  + equivalences to W3C MA-ONT).freeze, %(Improve the relations around the notions of "hasContributor", "Character", "Cast".).freeze, %(Leftovers from object audio components removed.).freeze, %(More consistency on opening property ranges to allow resources or literals.).freeze, %(New hasAudioDescription property pointing to a resource \(new AudioDescription as subclass of audioTrack\) or a presence flag).freeze, %(PBCore updates:  dateBroadcast, dateLicenced, endLicencedate, dateDistributed, dateDeleted, dateIngested, dateMigrated, dateNormalized, dateTransferred, dateValidated, shotlog, folksonomy, clonedTo/isClonedFrom, dubbedTo/isDubbedfrom, derivedTo/isDerivedFrom, playbackSpeed, framesPerSecond, inchesPerSecond, hasGeneration, hasStandard, dimensions.).freeze, %(Version 1.6).freeze, %(hasCaptioning, hasSigning, hasSubtitling: the range is either a resource or a literal/boolean indicating the presence/absence thereof).freeze],
+      type: "owl:Ontology".freeze,
+      :"vs:term_status" => %(stable).freeze
+
     # Class definitions
     term :AccessConditions,
       comment: %(The conditions under which content can be accessed.).freeze,

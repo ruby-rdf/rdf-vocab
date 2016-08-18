@@ -258,7 +258,7 @@ module RDF
       premis: {uri: "http://www.loc.gov/premis/rdf/v1#", source: "http://www.loc.gov/premis/rdf/v1.rdf"},
       premis_event_type: {
         uri: "http://id.loc.gov/vocabulary/preservation/eventType/",
-        source: "http://id.loc.gov/vocabulary/preservation/eventType.nt",
+        source: "http://id.loc.gov/vocabulary/preservation/eventType",
         class_name: "PremisEventType"
       },
       prov:   {uri: "http://www.w3.org/ns/prov#"},

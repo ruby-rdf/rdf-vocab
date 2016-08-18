@@ -9,6 +9,15 @@ module RDF::Vocab
   #   end
   class SKOS < RDF::StrictVocabulary("http://www.w3.org/2004/02/skos/core#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/2004/02/skos/core",
+      :"dc:contributor" => [%(Dave Beckett).freeze, %(Nikki Rogers).freeze, %(Participants in W3C's Semantic Web Deployment Working Group.).freeze],
+      :"dc:creator" => [%(Alistair Miles).freeze, %(Sean Bechhofer).freeze],
+      :"dc:description" => %(An RDF vocabulary for describing the basic structure and content of concept schemes such as thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', other types of controlled vocabulary, and also concept schemes embedded in glossaries and terminologies.).freeze,
+      :"dc:title" => %(SKOS Vocabulary).freeze,
+      :"rdfs:seeAlso" => %(http://www.w3.org/TR/skos-reference/).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :Collection,
       label: "Collection".freeze,
