@@ -12,7 +12,7 @@ module RDF
         uri: "http://bibframe.org/vocab/",
         source: "http://bibframe.org/vocab.rdf",
         class_name: "Bibframe",
-        extra: {hasAccompaniment: {type: "rdf:Property",label: "has accompaniment"}}
+        extra: {hasAccompaniment: {type: "rdf:Property", label: "has accompaniment"}}
       },
       bibo:   {uri: "http://purl.org/ontology/bibo/", source: "etc/bibo.ttl"},
       cc:     {
@@ -23,7 +23,7 @@ module RDF
         uri: "http://www.w3.org/ns/auth/cert#",
         patch: %{
           @prefix cert: <http://www.w3.org/ns/auth/cert#> .
-          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
           DeleteExisting {
             cert:modulus rdfs:domain cert:DSAKey .
             cert:privateExponent rdfs:domain cert:RSAPrivateKey .
@@ -231,7 +231,24 @@ module RDF
         source: "http://www.loc.gov/standards/mods/modsrdf/v1/modsrdf.owl"
       },
       nfo:    {uri: 'http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#'},
-      oa:     {uri: "http://www.w3.org/ns/oa#"},
+      oa:     {
+        uri: "http://www.w3.org/ns/oa#",
+        patch: %{
+          @prefix oa: <http://www.w3.org/ns/oa#> .
+          @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          DeleteExisting {
+            oa:renderedVia rdfs:range rdf:Resource .
+            oa:PreferContainedDescriptions a oa:rdf:Resource .
+            oa:PreferContainedIRIs a oa:rdf:Resource .
+          } .
+          AddNew {
+            oa:renderedVia rdfs:range rdfs:Resource .
+            oa:PreferContainedDescriptions a rdfs:Resource .
+            oa:PreferContainedIRIs a rdfs:Resource .
+          } .
+        }
+      },
       og:     {uri: "http://ogp.me/ns#", strict: false},
       ogc:    {uri: "http://ogp.me/ns/class#", source: "http://ogp.me/ns", strict: false},
       ore:    {uri: "http://www.openarchives.org/ore/terms/"},
