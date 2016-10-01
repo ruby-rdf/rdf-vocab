@@ -11,12 +11,12 @@ module RDF::Vocab
 
     # Ontology definition
     ontology :"http://www.w3.org/ns/oa#",
-      comment: %(The Web Annotation ontology defines the terms of the Web Annotation vocabulary).freeze,
+      comment: %(The Web Annotation ontology defines the terms of the Web Annotation vocabulary. Any changes to this document MUST be from a Working Group in the W3C that has established expertise in the area.).freeze,
       :"dc11:title" => %(Web Annotation Ontology).freeze,
       :"dc:creator" => [%(Benjamin Young).freeze, %(Paolo Ciccarese).freeze, %(Robert Sanderson).freeze],
-      :"dc:modified" => %(2016-06-03T14:54:43Z).freeze,
+      :"dc:modified" => %(2016-09-30T16:51:18Z).freeze,
       :"owl:previousVersionURI" => %(http://www.openannotation.org/spec/core/20130208/oa.owl).freeze,
-      :"owl:versionInfo" => %(2016-06-03T14:54:43Z).freeze,
+      :"owl:versionInfo" => %(2016-09-30T16:51:18Z).freeze,
       :"rdfs:seeAlso" => %(http://www.w3.org/TR/annotation-vocab/).freeze,
       type: "owl:Ontology".freeze
 
@@ -30,13 +30,13 @@ module RDF::Vocab
       comment: %(A subClass of  as:OrderedCollection  that conveys to a consuming application that it should select one of the resources in the  as:items  list to use, rather than all of them.  This is typically used to provide a choice of resources to render to the user, based on further supplied properties.  If the consuming application cannot determine the user's preference, then it should use the first in the list.).freeze,
       label: "Choice".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
-      subClassOf: "http://www.w3.org/ns/activitystreams#OrderedCollection".freeze,
+      subClassOf: "http://www.w3.org/ns/oa#as:OrderedCollection".freeze,
       type: "rdfs:Class".freeze
     term :Composite,
       comment: %(A subClass of  as:OrderedCollection  that conveys to a consuming application that it should use all of the resources in the  as:items  list, but that order is not important. This class is at-risk.).freeze,
       label: "Composite".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
-      subClassOf: "http://www.w3.org/ns/activitystreams#OrderedCollection".freeze,
+      subClassOf: "http://www.w3.org/ns/oa#as:OrderedCollection".freeze,
       type: "rdfs:Class".freeze
     term :CssSelector,
       comment: %(A CssSelector describes a Segment of interest in a representation that conforms to the Document Object Model through the use of the CSS selector specification.).freeze,
@@ -77,13 +77,13 @@ module RDF::Vocab
       comment: %(A subClass of  as:OrderedCollection  that conveys to a consuming application that each of the resources in the  as:items  list are independently associated with all of the other bodies or targets. This class is at-risk.).freeze,
       label: "Independents".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
-      subClassOf: "http://www.w3.org/ns/activitystreams#OrderedCollection".freeze,
+      subClassOf: "http://www.w3.org/ns/oa#as:OrderedCollection".freeze,
       type: "rdfs:Class".freeze
     term :List,
       comment: %(A subClass of  as:OrderedCollection  that conveys to a consuming application that it should use each of the resources in the  as:items  list, and that their order is important. This class is at-risk.).freeze,
       label: "List".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
-      subClassOf: "http://www.w3.org/ns/activitystreams#OrderedCollection".freeze,
+      subClassOf: "http://www.w3.org/ns/oa#as:OrderedCollection".freeze,
       type: "rdfs:Class".freeze
     term :Motivation,
       comment: %(The Motivation class is used to record the user's intent or motivation for the creation of the Annotation, or the inclusion of the body or target, that it is associated with.).freeze,
@@ -158,6 +158,61 @@ module RDF::Vocab
       :"rdfs:isDefinedBy" => %(oa:).freeze,
       subClassOf: "oa:Selector".freeze,
       type: "rdfs:Class".freeze
+    term :"as:Application",
+      comment: %().freeze,
+      label: "as:Application".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdfs:Class".freeze
+    term :"as:OrderedCollection",
+      comment: %().freeze,
+      label: "as:OrderedCollection".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdfs:Class".freeze
+    term :"as:OrderedCollectionPage",
+      comment: %().freeze,
+      label: "as:OrderedCollectionPage".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdfs:Class".freeze
+    term :"dctypes:Dataset",
+      comment: %().freeze,
+      label: "dctypes:Dataset".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdfs:Class".freeze
+    term :"dctypes:MovingImage",
+      comment: %().freeze,
+      label: "dctypes:MovingImage".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdfs:Class".freeze
+    term :"dctypes:Sound",
+      comment: %().freeze,
+      label: "dctypes:Sound".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdfs:Class".freeze
+    term :"dctypes:StillImage",
+      comment: %().freeze,
+      label: "dctypes:StillImage".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdfs:Class".freeze
+    term :"dctypes:Text",
+      comment: %().freeze,
+      label: "dctypes:Text".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdfs:Class".freeze
+    term :"foaf:Organization",
+      comment: %().freeze,
+      label: "foaf:Organization".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdfs:Class".freeze
+    term :"foaf:Person",
+      comment: %().freeze,
+      label: "foaf:Person".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdfs:Class".freeze
+    term :"schema:Audience",
+      comment: %().freeze,
+      label: "schema:Audience".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdfs:Class".freeze
 
     # Property definitions
     property :annotationService,
@@ -166,6 +221,67 @@ module RDF::Vocab
   This relationship is intended to be used both within Linked Data descriptions and as the  rel  type of a Link, via HTTP Link Headers rfc5988 for binary resources and in HTML <link> elements.  For more information about these, please see the Annotation Protocol specification annotation-protocol.
   ).freeze,
       label: "annotationService".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdf:Property".freeze
+    property :"as:first",
+      comment: %().freeze,
+      domain: "http://www.w3.org/ns/oa#as:OrderedCollection".freeze,
+      label: "as:first".freeze,
+      range: "http://www.w3.org/ns/activitystreams#OrderedCollectionPage".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdf:Property".freeze
+    property :"as:generator",
+      comment: %().freeze,
+      label: "as:generator".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdf:Property".freeze
+    property :"as:items",
+      comment: %().freeze,
+      domain: "http://www.w3.org/ns/activitystreams#OrderedCollectionPage".freeze,
+      label: "as:items".freeze,
+      range: "rdf:List".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdf:Property".freeze
+    property :"as:last",
+      comment: %().freeze,
+      domain: "http://www.w3.org/ns/oa#as:OrderedCollection".freeze,
+      label: "as:last".freeze,
+      range: "http://www.w3.org/ns/activitystreams#OrderedCollectionPage".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdf:Property".freeze
+    property :"as:next",
+      comment: %().freeze,
+      domain: "http://www.w3.org/ns/activitystreams#OrderedCollectionPage".freeze,
+      label: "as:next".freeze,
+      range: "http://www.w3.org/ns/activitystreams#OrderedCollectionPage".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdf:Property".freeze
+    property :"as:partOf",
+      comment: %().freeze,
+      domain: "http://www.w3.org/ns/activitystreams#OrderedCollectionPage".freeze,
+      label: "as:partOf".freeze,
+      range: "http://www.w3.org/ns/activitystreams#OrderedCollection".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdf:Property".freeze
+    property :"as:prev",
+      comment: %().freeze,
+      domain: "http://www.w3.org/ns/activitystreams#OrderedCollectionPage".freeze,
+      label: "as:prev".freeze,
+      range: "http://www.w3.org/ns/activitystreams#OrderedCollectionPage".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdf:Property".freeze
+    property :"as:startIndex",
+      comment: %().freeze,
+      domain: "http://www.w3.org/ns/activitystreams#OrderedCollectionPage".freeze,
+      label: "as:startIndex".freeze,
+      range: "xsd:nonNegativeInteger".freeze,
+      :"rdfs:isDefinedBy" => %(oa:).freeze,
+      type: "rdf:Property".freeze
+    property :"as:totalItems",
+      comment: %().freeze,
+      domain: "http://www.w3.org/ns/activitystreams#OrderedCollection".freeze,
+      label: "as:totalItems".freeze,
+      range: "xsd:nonNegativeInteger".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
       type: "rdf:Property".freeze
     property :bodyValue,
@@ -281,71 +397,6 @@ module RDF::Vocab
       label: "refinedBy".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
       type: "rdf:Property".freeze
-    property :renderedVia,
-      comment: %(A system that was used by the application that created the Annotation to render the resource.).freeze,
-      domain: "oa:SpecificResource".freeze,
-      label: "renderedVia".freeze,
-      range: "rdfs:Resource".freeze,
-      :"rdfs:isDefinedBy" => %(oa:).freeze,
-      type: "rdf:Property".freeze
-    property :sourceDate,
-      comment: %(The timestamp at which the Source resource should be interpreted as being applicable to the Annotation.).freeze,
-      domain: "oa:TimeState".freeze,
-      label: "sourceDate".freeze,
-      range: "xsd:dateTime".freeze,
-      :"rdfs:isDefinedBy" => %(oa:).freeze,
-      type: "rdf:Property".freeze
-    property :sourceDateEnd,
-      comment: %(The end timestamp of the interval over which the Source resource should be interpreted as being applicable to the Annotation.).freeze,
-      domain: "oa:TimeState".freeze,
-      label: "sourceDateEnd".freeze,
-      range: "xsd:dateTime".freeze,
-      :"rdfs:isDefinedBy" => %(oa:).freeze,
-      type: "rdf:Property".freeze
-    property :sourceDateStart,
-      comment: %(The start timestamp of the interval over which the Source resource should be interpreted as being applicable to the Annotation.).freeze,
-      domain: "oa:TimeState".freeze,
-      label: "sourceDateStart".freeze,
-      range: "xsd:dateTime".freeze,
-      :"rdfs:isDefinedBy" => %(oa:).freeze,
-      type: "rdf:Property".freeze
-    property :start,
-      comment: %(The start position in a 0-based index at which a range of content is selected from the data in the source resource.).freeze,
-      label: "start".freeze,
-      range: "xsd:nonNegativeInteger".freeze,
-      :"rdfs:isDefinedBy" => %(oa:).freeze,
-      type: "rdf:Property".freeze
-    property :styleClass,
-      comment: %(The name of the class used in the CSS description referenced from the Annotation that should be applied to the Specific Resource.).freeze,
-      domain: "oa:SpecificResource".freeze,
-      label: "styleClass".freeze,
-      range: "xsd:string".freeze,
-      :"rdfs:isDefinedBy" => %(oa:).freeze,
-      type: "rdf:Property".freeze
-    property :styledBy,
-      comment: %(A reference to a Stylesheet that should be used to apply styles to the Annotation rendering.).freeze,
-      domain: "oa:Annotation".freeze,
-      label: "styledBy".freeze,
-      range: "oa:Style".freeze,
-      :"rdfs:isDefinedBy" => %(oa:).freeze,
-      type: "rdf:Property".freeze
-    property :suffix,
-      comment: %(The snippet of text that occurs immediately after the text which is being selected.).freeze,
-      label: "suffix".freeze,
-      range: "xsd:string".freeze,
-      :"rdfs:isDefinedBy" => %(oa:).freeze,
-      type: "rdf:Property".freeze
-    property :textDirection,
-      comment: %(The direction of the text of the subject resource. There MUST only be one text direction associated with any given resource.).freeze,
-      label: "textDirection".freeze,
-      range: "oa:Direction".freeze,
-      :"rdfs:isDefinedBy" => %(oa:).freeze,
-      type: "rdf:Property".freeze
-    property :via,
-      comment: %(A object of the relationship is a resource from which the source resource was retrieved by the providing system.).freeze,
-      label: "via".freeze,
-      :"rdfs:isDefinedBy" => %(oa:).freeze,
-      type: "rdf:Property".freeze
 
     # Extra definitions
     term :PreferContainedDescriptions,
@@ -403,9 +454,9 @@ module RDF::Vocab
       label: "linking".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
       type: "oa:Motivation".freeze
-    term :ltr,
+    term :ltrDirection,
       comment: %(The direction of text that is read from left to right.).freeze,
-      label: "ltr".freeze,
+      label: "ltrDirection".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
       type: "oa:Direction".freeze
     term :moderating,
@@ -423,9 +474,9 @@ module RDF::Vocab
       label: "replying".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
       type: "oa:Motivation".freeze
-    term :rtl,
+    term :rtlDirection,
       comment: %(The direction of text that is read from right to left.).freeze,
-      label: "rtl".freeze,
+      label: "rtlDirection".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
       type: "oa:Direction".freeze
     term :tagging,

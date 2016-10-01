@@ -230,24 +230,7 @@ module RDF
         source: "http://www.loc.gov/standards/mods/modsrdf/v1/modsrdf.owl"
       },
       nfo:    {uri: 'http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#'},
-      oa:     {
-        uri: "http://www.w3.org/ns/oa#",
-        patch: %{
-          @prefix oa: <http://www.w3.org/ns/oa#> .
-          @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-          DeleteExisting {
-            oa:renderedVia rdfs:range rdf:Resource .
-            oa:PreferContainedDescriptions a oa:rdf:Resource .
-            oa:PreferContainedIRIs a oa:rdf:Resource .
-          } .
-          AddNew {
-            oa:renderedVia rdfs:range rdfs:Resource .
-            oa:PreferContainedDescriptions a rdfs:Resource .
-            oa:PreferContainedIRIs a rdfs:Resource .
-          } .
-        }
-      },
+      oa:     {uri: "http://www.w3.org/ns/oa#"},
       og:     {uri: "http://ogp.me/ns#", strict: false},
       ogc:    {uri: "http://ogp.me/ns/class#", source: "http://ogp.me/ns", strict: false},
       ore:    {uri: "http://www.openarchives.org/ore/terms/"},
