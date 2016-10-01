@@ -72,8 +72,10 @@ module RDF::Vocab
       subClassOf: "disco:Instrument".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Representation,
-      label: "Representation".freeze,
-      type: "rdfs:Class".freeze
+      comment: %(Representation of a variable, question, or variable definition.).freeze,
+      label: "Representation of a variable, question, or variable definition.".freeze,
+      :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/discovery).freeze,
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :RepresentedVariable,
       comment: %(RepresentedVariables encompasse study-independent, re-usable parts of variables like occupation classification.).freeze,
       label: "Data element".freeze,

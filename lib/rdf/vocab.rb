@@ -88,7 +88,6 @@ module RDF
           } .
           AddNew {
             disco:DataFile rdfs:subClassOf dcmitype:Dataset .
-            disco:Representation a rdfs:Class .
           } .
         }
       },
