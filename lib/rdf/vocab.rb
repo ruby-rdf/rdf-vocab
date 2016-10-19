@@ -298,6 +298,7 @@ module RDF
       vs:     {uri: "http://www.w3.org/2003/06/sw-vocab-status/ns#"},
       wdrs:   {uri: "http://www.w3.org/2007/05/powder-s#"},
       wot:    {uri: "http://xmlns.com/wot/0.1/", source: "http://xmlns.com/wot/0.1/index.rdf"},
+      xkos:   {uri: "http://rdf-vocabulary.ddialliance.org/xkos#", source: "http://rdf-vocabulary.ddialliance.org/xkos.ttl"},
       xhtml:  {uri: "http://www.w3.org/1999/xhtml#", strict: false},
       xhv:    {uri: "http://www.w3.org/1999/xhtml/vocab#", strict: false},
       xsd:    {uri: "http://www.w3.org/2001/XMLSchema#", strict: false, alias: true},
