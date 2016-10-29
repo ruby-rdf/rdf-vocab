@@ -305,6 +305,14 @@ describe RDF::Vocabulary do
     end
   end
 
+  context ".value_to_html helper method" do
+    let(:value) { [{ '@value' => 'Test string', '@language' => 'en', '@type' => 'rdf:langString' }] }
+
+    it "creates a HTML lang attribute for values that are language-tagged" do
+      expect(RDF::Vocabulary.value_to_html('rdfs:label', value, 'span')).to include(" lang=\"en\"")
+    end
+  end
+
   describe RDF::Vocabulary::Format do
     describe ".cli_commands", skip: ("Rubinius issues in RDF.rb" if RUBY_ENGINE == "rbx") do
       require 'rdf/cli'
