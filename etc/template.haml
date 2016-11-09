@@ -86,8 +86,8 @@
               %td{resource: RDF::URI(defn['@id']).pname, typeof: typeof}
                 != value_to_html('rdfs:label', defn['rdfs:label'], 'em')
                 - %w(rdfs:comment dc:description dc11:description).each do |prop|
-                  - next unless ont[prop]
-                  != value_to_html(prop, ont[prop], 'p')
+                  - next unless defn[prop]
+                  != value_to_html(prop, defn[prop], 'p')
                 %dl.terms
                   - defn.keys.sort.each do |key|
                     - next if %(@id @type rdfs:label rdfs:comment dc:description dc11:description).include?(key)

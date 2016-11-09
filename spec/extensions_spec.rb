@@ -284,6 +284,10 @@ describe RDF::Vocabulary do
       expect(dc.at_xpath('//td[@resource="dc:NLM"]')).not_to be_nil
     end
 
+    it "Describes terms" do
+      expect(foaf.xpath('//td[@resource="foaf:Group"]/p[@property="rdfs:comment"]').to_s).to include("A class of Agents")
+    end
+
     context "smoke test", slow: true do
       skips = [
         RDF::Vocab::Bibframe,
