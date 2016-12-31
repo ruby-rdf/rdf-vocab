@@ -9,6 +9,13 @@ module RDF::Vocab
   #   end
   class DWC < RDF::StrictVocabulary("http://rs.tdwg.org/dwc/terms/")
 
+    # Ontology definition
+    ontology :"http://rs.tdwg.org/dwc/terms/",
+      comment: %(This document contains a list of Darwin Core terms that have the dwcattributes:status equal to "recommended". For the full normative RDF document of all Darwin Core terms, see dwctermshistory.rdf. To comment on this schema, please create a new issue in https://github.com/tdwg/dwc/issues).freeze,
+      :"dc:modified" => %(2014-12-05).freeze,
+      :"dc:publisher" => %(Biodiversity Information Standards \(TDWG\)).freeze,
+      :"dc:title" => %(Darwin Core Recommended Terms).freeze
+
     # Class definitions
     term :Event,
       comment: %(An action that occurs at some location during some time.).freeze,
@@ -2437,13 +2444,5 @@ module RDF::Vocab
       label: "Year".freeze,
       :"rdfs:isDefinedBy" => %(dwc:).freeze,
       type: "rdf:Property".freeze
-
-    # Extra definitions
-    term :"",
-      comment: %(This document contains a list of Darwin Core terms that have the dwcattributes:status equal to "recommended". For the full normative RDF document of all Darwin Core terms, see dwctermshistory.rdf. To comment on this schema, please create a new issue in https://github.com/tdwg/dwc/issues).freeze,
-      :"dc:modified" => %(2014-12-05).freeze,
-      :"dc:publisher" => %(Biodiversity Information Standards \(TDWG\)).freeze,
-      :"dc:title" => %(Darwin Core Recommended Terms).freeze,
-      label: "".freeze
   end
 end

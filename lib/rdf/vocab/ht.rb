@@ -9,6 +9,16 @@ module RDF::Vocab
   #   end
   class HT < RDF::StrictVocabulary("http://www.w3.org/2011/http#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/2011/http",
+      comment: %(A namespace for describing HTTP messages \(http://www.w3.org/Protocols/rfc2616/rfc2616.html\)).freeze,
+      label: "HTTP in RDF".freeze,
+      :"owl:imports" => [%(cnt:).freeze, %(dc:).freeze],
+      :"owl:versionInfo" => %(Working Draft 29 April 2011).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.w3.org/TR/HTTP-in-RDF/).freeze,
+      :"rdfs:seeAlso" => [%(http://www.w3.org/TR/Content-in-RDF/).freeze, %(http://www.w3.org/WAI/intro/earl).freeze],
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :Connection,
       comment: %(A connection used for HTTP transfer.).freeze,

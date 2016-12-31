@@ -9,6 +9,11 @@ module RDF::Vocab
   #   end
   class MODS < RDF::StrictVocabulary("http://www.loc.gov/mods/rdf/v1#")
 
+    # Ontology definition
+    ontology :"http://www.loc.gov/mods/rdf/v1",
+      :"owl:imports" => [%(dc11:).freeze, %(dcmitype:).freeze, %(foaf:).freeze, %(http://id.loc.gov/ontologies/ClassificationSchemes).freeze, %(http://id.loc.gov/ontologies/Identifiers).freeze, %(http://id.loc.gov/ontologies/ResourceTypes).freeze, %(http://id.loc.gov/ontologies/Roles).freeze, %(http://id.loc.gov/ontologies/TargetAudiences).freeze, %(http://purl.org/vocab/changeset/schema).freeze, %(http://purl.org/vocab/vann/).freeze, %(http://vocab.org/changeset/).freeze, %(http://www.loc.gov/mads/rdf/v1).freeze, %(http://www.loc.gov/standards/mads/rdf/v1.rdf).freeze, %(http://www.w3.org/2004/02/skos/core).freeze, %(http://www.w3.org/2008/05/skos-xl).freeze],
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :Cartographics,
       comment: %(Aggregates cartographic properties.).freeze,

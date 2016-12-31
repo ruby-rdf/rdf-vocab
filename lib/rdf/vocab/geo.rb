@@ -9,64 +9,8 @@ module RDF::Vocab
   #   end
   class GEO < RDF::StrictVocabulary("http://www.w3.org/2003/01/geo/wgs84_pos#")
 
-    # Class definitions
-    term :Point,
-      comment: [%( 
-Uniquely identified by lat/long/alt. i.e.
-
-spaciallyIntersects\(P1, P2\) :- lat\(P1, LAT\), long\(P1, LONG\), alt\(P1, ALT\),
-  lat\(P2, LAT\), long\(P2, LONG\), alt\(P2, ALT\).
-
-sameThing\(P1, P2\) :- type\(P1, Point\), type\(P2, Point\), spaciallyIntersects\(P1, P2\).
-  ).freeze, %(A point, typically described using a coordinate system relative to Earth, such as WGS84.
-  ).freeze],
-      label: "point".freeze,
-      subClassOf: "geo:SpatialThing".freeze,
-      type: "rdfs:Class".freeze
-    term :SpatialThing,
-      comment: %(Anything with spatial extent, i.e. size, shape, or position.
- e.g. people, places, bowling balls, as well as abstract areas like cubes.
-).freeze,
-      label: "SpatialThing".freeze,
-      type: "rdfs:Class".freeze
-
-    # Property definitions
-    property :alt,
-      comment: %(The WGS84 altitude of a SpatialThing \(decimal meters 
-above the local reference ellipsoid\).).freeze,
-      domain: "geo:SpatialThing".freeze,
-      label: "altitude".freeze,
-      type: "rdf:Property".freeze
-    property :lat,
-      comment: %(The WGS84 latitude of a SpatialThing \(decimal degrees\).).freeze,
-      domain: "geo:SpatialThing".freeze,
-      label: "latitude".freeze,
-      type: "rdf:Property".freeze
-    property :lat_long,
-      comment: %(A comma-separated representation of a latitude, longitude coordinate.).freeze,
-      label: "lat/long".freeze,
-      type: "rdf:Property".freeze
-    property :location,
-      comment: %(The relation between something and the point, 
- or other geometrical thing in space, where it is.  For example, the realtionship between
- a radio tower and a Point with a given lat and long.
- Or a relationship between a park and its outline as a closed arc of points, or a road and
- its location as a arc \(a sequence of points\).
- Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
- an accuracy appropriate for the size of the object and uses such as mapping .
- ).freeze,
-      label: "location".freeze,
-      range: "geo:SpatialThing".freeze,
-      subPropertyOf: "foaf:based_near".freeze,
-      type: "rdf:Property".freeze
-    property :long,
-      comment: %(The WGS84 longitude of a SpatialThing \(decimal degrees\).).freeze,
-      domain: "geo:SpatialThing".freeze,
-      label: "longitude".freeze,
-      type: "rdf:Property".freeze
-
-    # Extra definitions
-    term :"",
+    # Ontology definition
+    ontology :"http://www.w3.org/2003/01/geo/wgs84_pos#",
       comment: %(
 Recent changes to this namespace:
 $Log: wgs84_pos.rdf,v $
@@ -157,5 +101,61 @@ basic geo vocab
  Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details.).freeze,
       :"dc11:title" => %(WGS84 Geo Positioning: an RDF vocabulary).freeze,
       label: "geo".freeze
+
+    # Class definitions
+    term :Point,
+      comment: [%( 
+Uniquely identified by lat/long/alt. i.e.
+
+spaciallyIntersects\(P1, P2\) :- lat\(P1, LAT\), long\(P1, LONG\), alt\(P1, ALT\),
+  lat\(P2, LAT\), long\(P2, LONG\), alt\(P2, ALT\).
+
+sameThing\(P1, P2\) :- type\(P1, Point\), type\(P2, Point\), spaciallyIntersects\(P1, P2\).
+  ).freeze, %(A point, typically described using a coordinate system relative to Earth, such as WGS84.
+  ).freeze],
+      label: "point".freeze,
+      subClassOf: "geo:SpatialThing".freeze,
+      type: "rdfs:Class".freeze
+    term :SpatialThing,
+      comment: %(Anything with spatial extent, i.e. size, shape, or position.
+ e.g. people, places, bowling balls, as well as abstract areas like cubes.
+).freeze,
+      label: "SpatialThing".freeze,
+      type: "rdfs:Class".freeze
+
+    # Property definitions
+    property :alt,
+      comment: %(The WGS84 altitude of a SpatialThing \(decimal meters 
+above the local reference ellipsoid\).).freeze,
+      domain: "geo:SpatialThing".freeze,
+      label: "altitude".freeze,
+      type: "rdf:Property".freeze
+    property :lat,
+      comment: %(The WGS84 latitude of a SpatialThing \(decimal degrees\).).freeze,
+      domain: "geo:SpatialThing".freeze,
+      label: "latitude".freeze,
+      type: "rdf:Property".freeze
+    property :lat_long,
+      comment: %(A comma-separated representation of a latitude, longitude coordinate.).freeze,
+      label: "lat/long".freeze,
+      type: "rdf:Property".freeze
+    property :location,
+      comment: %(The relation between something and the point, 
+ or other geometrical thing in space, where it is.  For example, the realtionship between
+ a radio tower and a Point with a given lat and long.
+ Or a relationship between a park and its outline as a closed arc of points, or a road and
+ its location as a arc \(a sequence of points\).
+ Clearly in practice there will be limit to the accuracy of any such statement, but one would expect
+ an accuracy appropriate for the size of the object and uses such as mapping .
+ ).freeze,
+      label: "location".freeze,
+      range: "geo:SpatialThing".freeze,
+      subPropertyOf: "foaf:based_near".freeze,
+      type: "rdf:Property".freeze
+    property :long,
+      comment: %(The WGS84 longitude of a SpatialThing \(decimal degrees\).).freeze,
+      domain: "geo:SpatialThing".freeze,
+      label: "longitude".freeze,
+      type: "rdf:Property".freeze
   end
 end

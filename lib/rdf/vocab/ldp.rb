@@ -9,6 +9,19 @@ module RDF::Vocab
   #   end
   class LDP < RDF::Vocabulary("http://www.w3.org/ns/ldp#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/ns/ldp#",
+      comment: %(This ontology provides an informal representation of the concepts and terms as defined in the LDP specification.  Consult the LDP specification for normative reference.).freeze,
+      :"dc:created" => %(2015-02-26).freeze,
+      :"dc:description" => %(Vocabulary URIs defined in the Linked Data Platform \(LDP\) namespace.).freeze,
+      :"dc:publisher" => %(http://www.w3.org/data#W3C).freeze,
+      :"dc:title" => %(The W3C Linked Data Platform \(LDP\) Vocabulary).freeze,
+      :"http://purl.org/vocab/vann/preferredNamespacePrefix" => %(ldp).freeze,
+      :"http://purl.org/vocab/vann/preferredNamespaceUri" => %(http://www.w3.org/ns/ldp#).freeze,
+      label: "W3C Linked Data Platform (LDP)".freeze,
+      :"rdfs:seeAlso" => [%(http://www.w3.org/2011/09/LinkedData/).freeze, %(http://www.w3.org/2012/ldp).freeze, %(http://www.w3.org/TR/ldp-paging/).freeze, %(http://www.w3.org/TR/ldp-ucr/).freeze, %(http://www.w3.org/TR/ldp/).freeze],
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :BasicContainer,
       comment: %(An LDPC that uses a predefined predicate to simply link to its contained resources.).freeze,
@@ -96,6 +109,14 @@ module RDF::Vocab
       :"rdfs:isDefinedBy" => %(ldp:).freeze,
       type: "rdf:Property".freeze,
       :"vs:term_status" => %(stable).freeze
+    property :inbox,
+      comment: %(Links a resource to a container where notifications for the resource can be created and discovered.).freeze,
+      :"dc:creator" => [%(http://csarven.ca/#i).freeze, %(https://rhiaro.co.uk/#me).freeze],
+      :"dc:issued" => %(2016-09-29).freeze,
+      label: "inbox".freeze,
+      :"rdfs:isDefinedBy" => %(https://www.w3.org/TR/ldn/).freeze,
+      type: "rdf:Property".freeze,
+      :"vs:term_status" => %(working-draft).freeze
     property :insertedContentRelation,
       comment: %(Indicates which triple in a creation request should be used as the member-URI value in the membership triple added when the creation request is successful.).freeze,
       domain: "ldp:Container".freeze,
@@ -124,7 +145,7 @@ module RDF::Vocab
       comment: %(Indicates the membership-constant-URI in a membership triple.  Depending upon the membership triple pattern a container uses, as indicated by the presence of ldp:hasMemberRelation or ldp:isMemberOfRelation, the membership-constant-URI might occupy either the subject or object position in membership triples.).freeze,
       domain: "ldp:Container".freeze,
       label: "membershipResource".freeze,
-      range: "rdf:Property".freeze,
+      range: "rdfs:Resource".freeze,
       :"rdfs:isDefinedBy" => %(ldp:).freeze,
       type: "rdf:Property".freeze,
       :"vs:term_status" => %(stable).freeze
@@ -168,17 +189,6 @@ module RDF::Vocab
       :"vs:term_status" => %(testing).freeze
 
     # Extra definitions
-    term :"",
-      comment: %(This ontology provides an informal representation of the concepts and terms as defined in the LDP specification.  Consult the LDP specification for normative reference.).freeze,
-      :"dc:created" => %(2015-02-26).freeze,
-      :"dc:description" => %(Vocabulary URIs defined in the Linked Data Platform \(LDP\) namespace.).freeze,
-      :"dc:publisher" => %(http://www.w3.org/data#W3C).freeze,
-      :"dc:title" => %(The W3C Linked Data Platform \(LDP\) Vocabulary).freeze,
-      :"http://purl.org/vocab/vann/preferredNamespacePrefix" => %(ldp).freeze,
-      :"http://purl.org/vocab/vann/preferredNamespaceUri" => %(http://www.w3.org/ns/ldp#).freeze,
-      label: "W3C Linked Data Platform (LDP)".freeze,
-      :"rdfs:seeAlso" => [%(http://www.w3.org/2011/09/LinkedData/).freeze, %(http://www.w3.org/2012/ldp).freeze, %(http://www.w3.org/TR/ldp-paging/).freeze, %(http://www.w3.org/TR/ldp-ucr/).freeze, %(http://www.w3.org/TR/ldp/).freeze],
-      type: "owl:Ontology".freeze
     term :Ascending,
       comment: %(Ascending order.).freeze,
       label: "Ascending".freeze,

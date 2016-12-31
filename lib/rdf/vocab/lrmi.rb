@@ -9,6 +9,16 @@ module RDF::Vocab
   #   end
   class LRMI < RDF::Vocabulary("http://purl.org/dcx/lrmi-terms/")
 
+    # Ontology definition
+    ontology :"http://purl.org/dcx/lrmi-terms/",
+      :"dc:creator" => %(LRMI Task Group).freeze,
+      :"dc:description" => %(The LRMI specification is a collection of classes and properties for markup and description of educational resources. The specification builds on the extensive vocabulary provided by Schema.org and other standards.).freeze,
+      :"dc:identifier" => %(http://dublincore.org/dcx/lrmi-terms/).freeze,
+      :"dc:isVersionOf" => %(http://purl.org/dcx/lrmi-terms/1.1/).freeze,
+      :"dc:issued" => %(2015-02-09).freeze,
+      :"dc:license" => %(https://creativecommons.org/licenses/by/4.0/).freeze,
+      :"dc:title" => %(LRMI RDF Specification).freeze
+
     # Class definitions
     term :AlignmentObject,
       comment: %(An intangible item that describes an alignment between a learning resource and a node in an educational framework.).freeze,
@@ -163,16 +173,5 @@ module RDF::Vocab
       :"rdfs:isDefinedBy" => %(lrmi:).freeze,
       subPropertyOf: "schema:license".freeze,
       type: "rdf:Property".freeze
-
-    # Extra definitions
-    term :"",
-      :"dc:creator" => %(LRMI Task Group).freeze,
-      :"dc:description" => %(The LRMI specification is a collection of classes and properties for markup and description of educational resources. The specification builds on the extensive vocabulary provided by Schema.org and other standards.).freeze,
-      :"dc:identifier" => %(http://dublincore.org/dcx/lrmi-terms/).freeze,
-      :"dc:isVersionOf" => %(http://purl.org/dcx/lrmi-terms/1.1/).freeze,
-      :"dc:issued" => %(2015-02-09).freeze,
-      :"dc:license" => %(https://creativecommons.org/licenses/by/4.0/).freeze,
-      :"dc:title" => %(LRMI RDF Specification).freeze,
-      label: "".freeze
   end
 end

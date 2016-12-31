@@ -9,6 +9,32 @@ module RDF::Vocab
   #   end
   class GR < RDF::StrictVocabulary("http://purl.org/goodrelations/v1#")
 
+    # Ontology definition
+    ontology :"http://purl.org/goodrelations/v1",
+      comment: %(The GoodRelations ontology provides the vocabulary for annotating e-commerce offerings \(1\) to sell, lease, repair, dispose, or maintain commodity products and \(2\) to provide commodity services.
+
+GoodRelations allows describing the relationship between \(1\) Web resources, \(2\) offerings made by those Web resources, \(3\) legal entities, \(4\) prices, \(5\) terms and conditions, and the aforementioned ontologies for products and services \(6\).
+ 
+For more information, see http://purl.org/goodrelations/
+
+Note: The base URI of GoodRelations is http://purl.org/goodrelations/v1. Please make sure you are only using element identifiers in this namespace, e.g. http://purl.org/goodrelations/v1#BusinessEntity. There may be copies of the ontology file on the Web which can be retrieved from other locations, BUT THOSE LOCATIONS MUST NOT BE USED AS THE BASIS OF IDENTIFIERS.
+
+If you use GoodRelations for scientific purposes, please cite our paper:
+
+Hepp, Martin: GoodRelations: An Ontology for Describing Products and Services Offers on the Web, Proceedings of the 16th International Conference on Knowledge Engineering and Knowledge Management \(EKAW2008\), September 29 - October 3, 2008, Acitrezza, Italy, Springer LNCS, Vol. 5268, pp. 332-347.
+
+PDF at http://www.heppnetz.de/publications/).freeze,
+      :"dc11:contributor" => %(Work on the GoodRelations ontology and related research and development has been partly supported by the Austrian BMVIT/FFG under the FIT-IT Semantic Systems project myOntology \(grant no. 812515/9284\), by a Young Researcher's Grant \(Nachwuchsfoerderung 2005-2006\) from the Leopold-Franzens-Universitaet Innsbruck, by the European Commission under the project SUPER \(FP6-026850\), and by the German Federal Ministry of Research \(BMBF\) by a grant under the KMU Innovativ program as part of the Intelligent Match project \(FKZ 01IS10022B\). The).freeze,
+      :"dc11:creator" => %(Martin Hepp).freeze,
+      :"dc11:rights" => %(The GoodRelations ontology is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. In a nutshell, you are free to copy, distribute and transmit the work; to remix/adapt the work \(e.g. to import the ontology and create specializations of its elements\), as long as you attribute the work in the manner specified by the author or licensor \(but not in any way that suggests that they endorse you or your use of the work\). Proper Attribution: Simply include the statement "This work is based on the GoodRelations ontology, developed by Martin Hepp" and link back to http://purl.org/goodrelations/).freeze,
+      :"dc11:subject" => %(E-Commerce, E-Business, GoodRelations, Microdata, Ontology, Semantic SEO, RDFa, Linked Data, RDF, Semantic Web, Recommender Systems).freeze,
+      :"dc11:title" => %(The GoodRelations Vocabulary for Semantic Web-based E-Commerce).freeze,
+      :"dc:license" => %(http://creativecommons.org/licenses/by/3.0/).freeze,
+      :"foaf:homepage" => %(http://purl.org/goodrelations/).freeze,
+      label: "GoodRelations Ontology".freeze,
+      :"owl:versionInfo" => %(V 1.0, Release 2011-10-01).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :ActualProductOrServiceInstance,
       comment: %(DEPRECATED - This class is superseded by gr:Individual. Replace all occurrences of gr:ActualProductOrServiceInstance by gr:Individual, if possible.).freeze,

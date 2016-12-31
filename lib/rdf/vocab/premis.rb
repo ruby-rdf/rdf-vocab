@@ -9,6 +9,17 @@ module RDF::Vocab
   #   end
   class PREMIS < RDF::StrictVocabulary("http://www.loc.gov/premis/rdf/v1#")
 
+    # Ontology definition
+    ontology :"http://www.loc.gov/premis/rdf/v1",
+      comment: %(This ontology identifies the classes and properties used to describe preservation metadata in RDF.).freeze,
+      :"dc:modified" => %(2012-09-14T00:00:00Z).freeze,
+      label: "Preservation Metadata: Implementation Strategies (PREMIS) Ontology".freeze,
+      :"owl:imports" => [%(http://id.loc.gov/vocabulary/preservation/actionsGranted).freeze, %(http://id.loc.gov/vocabulary/preservation/agentType).freeze, %(http://id.loc.gov/vocabulary/preservation/contentLocationType).freeze, %(http://id.loc.gov/vocabulary/preservation/copyrightStatus).freeze, %(http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions).freeze, %(http://id.loc.gov/vocabulary/preservation/environmentCharacteristic).freeze, %(http://id.loc.gov/vocabulary/preservation/environmentPurpose).freeze, %(http://id.loc.gov/vocabulary/preservation/eventRelatedAgentRole).freeze, %(http://id.loc.gov/vocabulary/preservation/eventRelatedObjectRole).freeze, %(http://id.loc.gov/vocabulary/preservation/eventType).freeze, %(http://id.loc.gov/vocabulary/preservation/formatRegistryRole).freeze, %(http://id.loc.gov/vocabulary/preservation/hardwareType).freeze, %(http://id.loc.gov/vocabulary/preservation/inhibitorTarget).freeze, %(http://id.loc.gov/vocabulary/preservation/inhibitorType).freeze, %(http://id.loc.gov/vocabulary/preservation/objectCategory).freeze, %(http://id.loc.gov/vocabulary/preservation/preservationLevelRole).freeze, %(http://id.loc.gov/vocabulary/preservation/relationshipSubType).freeze, %(http://id.loc.gov/vocabulary/preservation/relationshipType).freeze, %(http://id.loc.gov/vocabulary/preservation/rightsBasis).freeze, %(http://id.loc.gov/vocabulary/preservation/rightsRelatedAgentRole).freeze, %(http://id.loc.gov/vocabulary/preservation/signatureEncoding).freeze, %(http://id.loc.gov/vocabulary/preservation/signatureMethod).freeze, %(http://id.loc.gov/vocabulary/preservation/softwareType).freeze, %(http://id.loc.gov/vocabulary/preservation/storageMedium).freeze],
+      :"owl:versionInfo" => %(version 2.2.1).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.loc.gov/standards/premis/v2/premis-2-2.pdf).freeze,
+      :"rdfs:seeAlso" => %(http://multimedialab.elis.ugent.be/users/samcoppe/ontologies/Premis/index.html for the OWL Documentation of the ontology.).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :Agent,
       comment: %(The Agent entity aggregates information about attributes or characteristics of agents \(persons, organizations, or software\) associated with rights management and preservation events in the life of a data object. Agent information serves to identify an agent unambiguously from all other

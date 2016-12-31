@@ -9,6 +9,14 @@ module RDF::Vocab
   #   end
   class WDRS < RDF::StrictVocabulary("http://www.w3.org/2007/05/powder-s#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/2007/05/powder-s",
+      comment: %(This file specifies the set of classes and properties used in the RDF/OWL version of POWDER documents.).freeze,
+      label: "POWDER-S Vocabulary".freeze,
+      :"owl:priorVersion" => %(http://www.w3.org/2007/05/powder-s).freeze,
+      :"owl:versionInfo" => %(8 November 2010).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :Document,
       comment: %(A POWDER document.).freeze,

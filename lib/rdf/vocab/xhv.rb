@@ -9,6 +9,10 @@ module RDF::Vocab
   #   end
   class XHV < RDF::Vocabulary("http://www.w3.org/1999/xhtml/vocab#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/1999/xhtml/vocab",
+      :"xhv:stylesheet" => %(http://www.w3.org/StyleSheets/TR/base.css).freeze
+
     # Property definitions
     property :alert,
       comment: %(A message

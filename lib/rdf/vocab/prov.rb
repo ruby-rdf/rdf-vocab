@@ -9,6 +9,22 @@ module RDF::Vocab
   #   end
   class PROV < RDF::StrictVocabulary("http://www.w3.org/ns/prov#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/ns/prov#",
+      comment: %(This document is published by the Provenance Working Group \(http://www.w3.org/2011/prov/wiki/Main_Page\).
+
+If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org \(subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/
+Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
+      label: "W3C PROVenance Interchange".freeze,
+      :"owl:imports" => [%(http://www.w3.org/ns/prov-aq#).freeze, %(http://www.w3.org/ns/prov-dc#).freeze, %(http://www.w3.org/ns/prov-dictionary#).freeze, %(http://www.w3.org/ns/prov-links#).freeze, %(http://www.w3.org/ns/prov-o#).freeze, %(http://www.w3.org/ns/prov-o-inverses#).freeze],
+      :"owl:versionIRI" => [%(http://www.w3.org/ns/prov-20130430).freeze, %(http://www.w3.org/ns/prov-o-inverses-20130430).freeze],
+      :"prov:specializationOf" => %(http://www.w3.org/ns/prov-o-inverses).freeze,
+      :"prov:wasDerivedFrom" => [%(http://www.w3.org/ns/prov-aq#).freeze, %(http://www.w3.org/ns/prov-dc#).freeze, %(http://www.w3.org/ns/prov-dictionary#).freeze, %(http://www.w3.org/ns/prov-links#).freeze, %(http://www.w3.org/ns/prov-o#).freeze, %(http://www.w3.org/ns/prov-o-20130430).freeze, %(http://www.w3.org/ns/prov-o-inverses#).freeze],
+      :"prov:wasRevisionOf" => [%(http://www.w3.org/ns/prov-20130312).freeze, %(http://www.w3.org/ns/prov-o-inverses-20120312).freeze],
+      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/prov).freeze,
+      :"rdfs:seeAlso" => [%(http://www.w3.org/TR/prov-o/#names-of-inverse-properties).freeze, %(http://www.w3.org/TR/prov-overview/).freeze],
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :Accept,
       label: "Accept".freeze,
@@ -1388,20 +1404,6 @@ prov:wasInfluencedBy should not be used without also using one of its subpropert
       type: "owl:ObjectProperty".freeze
 
     # Extra definitions
-    term :"",
-      comment: %(This document is published by the Provenance Working Group \(http://www.w3.org/2011/prov/wiki/Main_Page\).
-
-If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org \(subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/
-Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
-      label: "W3C PROVenance Interchange".freeze,
-      :"owl:imports" => [%(http://www.w3.org/ns/prov-aq#).freeze, %(http://www.w3.org/ns/prov-dc#).freeze, %(http://www.w3.org/ns/prov-dictionary#).freeze, %(http://www.w3.org/ns/prov-links#).freeze, %(http://www.w3.org/ns/prov-o#).freeze, %(http://www.w3.org/ns/prov-o-inverses#).freeze],
-      :"owl:versionIRI" => [%(http://www.w3.org/ns/prov-20130430).freeze, %(http://www.w3.org/ns/prov-o-inverses-20130430).freeze],
-      :"prov:specializationOf" => %(http://www.w3.org/ns/prov-o-inverses).freeze,
-      :"prov:wasDerivedFrom" => [%(http://www.w3.org/ns/prov-aq#).freeze, %(http://www.w3.org/ns/prov-dc#).freeze, %(http://www.w3.org/ns/prov-dictionary#).freeze, %(http://www.w3.org/ns/prov-links#).freeze, %(http://www.w3.org/ns/prov-o#).freeze, %(http://www.w3.org/ns/prov-o-20130430).freeze, %(http://www.w3.org/ns/prov-o-inverses#).freeze],
-      :"prov:wasRevisionOf" => [%(http://www.w3.org/ns/prov-20130312).freeze, %(http://www.w3.org/ns/prov-o-inverses-20120312).freeze],
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/prov).freeze,
-      :"rdfs:seeAlso" => [%(http://www.w3.org/TR/prov-o/#names-of-inverse-properties).freeze, %(http://www.w3.org/TR/prov-overview/).freeze],
-      type: "owl:Ontology".freeze
     term :activityOfInfluence,
       label: "activityOfInfluence".freeze,
       :"owl:inverseOf" => %(prov:activity).freeze,

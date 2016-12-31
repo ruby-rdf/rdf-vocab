@@ -9,6 +9,12 @@ module RDF::Vocab
   #   end
   class DC11 < RDF::StrictVocabulary("http://purl.org/dc/elements/1.1/")
 
+    # Ontology definition
+    ontology :"http://purl.org/dc/elements/1.1/",
+      :"dc:modified" => %(2012-06-14).freeze,
+      :"dc:publisher" => %(http://purl.org/dc/aboutdcmi#DCMI).freeze,
+      :"dc:title" => %(Dublin Core Metadata Element Set, Version 1.1).freeze
+
     # Property definitions
     property :contributor,
       comment: %(An entity responsible for making contributions to the resource.).freeze,
@@ -160,12 +166,5 @@ module RDF::Vocab
       :"rdfs:isDefinedBy" => %(dc11:).freeze,
       :"skos:note" => %(A second property with the same name as this property has been declared in the dcterms: namespace \(http://purl.org/dc/terms/\).  See the Introduction to the document "DCMI Metadata Terms" \(http://dublincore.org/documents/dcmi-terms/\) for an explanation.).freeze,
       type: "rdf:Property".freeze
-
-    # Extra definitions
-    term :"",
-      :"dc:modified" => %(2012-06-14).freeze,
-      :"dc:publisher" => %(http://purl.org/dc/aboutdcmi#DCMI).freeze,
-      :"dc:title" => %(Dublin Core Metadata Element Set, Version 1.1).freeze,
-      label: "".freeze
   end
 end

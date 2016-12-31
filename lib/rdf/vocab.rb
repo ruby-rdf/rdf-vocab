@@ -12,9 +12,9 @@ module RDF
         uri: "http://bibframe.org/vocab/",
         source: "http://bibframe.org/vocab.rdf",
         class_name: "Bibframe",
-        extra: {hasAccompaniment: {type: "rdf:Property",label: "has accompaniment"}}
+        extra: {hasAccompaniment: {type: "rdf:Property", label: "has accompaniment"}}
       },
-      bibo:   {uri: "http://purl.org/ontology/bibo/"},
+      bibo:   {uri: "http://purl.org/ontology/bibo/", source: "etc/bibo.ttl"},
       cc:     {
         uri: "http://creativecommons.org/ns#",
         source: "etc/cc.ttl"  # Source incorrectly uses https identifiers
@@ -23,7 +23,7 @@ module RDF
         uri: "http://www.w3.org/ns/auth/cert#",
         patch: %{
           @prefix cert: <http://www.w3.org/ns/auth/cert#> .
-          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
           DeleteExisting {
             cert:modulus rdfs:domain cert:DSAKey .
             cert:privateExponent rdfs:domain cert:RSAPrivateKey .
@@ -88,7 +88,6 @@ module RDF
           } .
           AddNew {
             disco:DataFile rdfs:subClassOf dcmitype:Dataset .
-            disco:Representation a rdfs:Class .
           } .
         }
       },
@@ -241,12 +240,18 @@ module RDF
       premis: {uri: "http://www.loc.gov/premis/rdf/v1#", source: "http://www.loc.gov/premis/rdf/v1.rdf"},
       premis_event_type: {
         uri: "http://id.loc.gov/vocabulary/preservation/eventType/",
-        source: "http://id.loc.gov/vocabulary/preservation/eventType.nt",
+        source: "http://id.loc.gov/vocabulary/preservation/eventType",
         class_name: "PremisEventType"
       },
       prov:   {uri: "http://www.w3.org/ns/prov#"},
       ptr:    {uri: "http://www.w3.org/2009/pointers#"},
       rdfs:   {uri: "http://www.w3.org/2000/01/rdf-schema#", alias: true},
+      rightsstatements: {
+        uri: 'http://rightsstatements.org/vocab/',
+        source: 'https://raw.githubusercontent.com/rightsstatements/data-model/master/rights-statements.ttl',
+        class_name: 'RightsStatements'
+      },
+
       rsa:    {
         uri: "http://www.w3.org/ns/auth/rsa#",
         patch: %{
@@ -293,6 +298,7 @@ module RDF
       vs:     {uri: "http://www.w3.org/2003/06/sw-vocab-status/ns#"},
       wdrs:   {uri: "http://www.w3.org/2007/05/powder-s#"},
       wot:    {uri: "http://xmlns.com/wot/0.1/", source: "http://xmlns.com/wot/0.1/index.rdf"},
+      xkos:   {uri: "http://rdf-vocabulary.ddialliance.org/xkos#", source: "http://rdf-vocabulary.ddialliance.org/xkos.ttl"},
       xhtml:  {uri: "http://www.w3.org/1999/xhtml#", strict: false},
       xhv:    {uri: "http://www.w3.org/1999/xhtml/vocab#", strict: false},
       xsd:    {uri: "http://www.w3.org/2001/XMLSchema#", strict: false, alias: true},

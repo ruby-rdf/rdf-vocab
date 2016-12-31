@@ -9,6 +9,19 @@ module RDF::Vocab
   #   end
   class HYDRA < RDF::StrictVocabulary("http://www.w3.org/ns/hydra/core#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/ns/hydra/core",
+      :"cc:attributionName" => %(Hydra W3C Community Group).freeze,
+      :"cc:attributionURL" => %(http://www.hydra-cg.com/).freeze,
+      :"cc:license" => %(http://creativecommons.org/licenses/by/4.0/).freeze,
+      comment: %(A lightweight vocabulary for hypermedia-driven Web APIs).freeze,
+      :"dc:description" => %(The Hydra Core Vocabulary is a lightweight vocabulary to create hypermedia-driven Web APIs. By specifying a number of concepts commonly used in Web APIs it enables the creation of generic API clients.).freeze,
+      :"dc:publisher" => %(Hydra W3C Community Group).freeze,
+      :"dc:rights" => %(Copyright © 2012-2014 the Contributors to the Hydra Core Vocabulary Specification).freeze,
+      :"http://purl.org/vocab/vann/preferredNamespacePrefix" => %(hydra).freeze,
+      label: "The Hydra Core Vocabulary".freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :ApiDocumentation,
       comment: %(The Hydra API documentation class).freeze,

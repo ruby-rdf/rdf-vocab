@@ -9,6 +9,13 @@ module RDF::Vocab
   #   end
   class ICAL < RDF::StrictVocabulary("http://www.w3.org/2002/12/cal/icaltzd#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/2002/12/cal/icaltzd",
+      :"dc11:source" => %(http://www.ietf.org/rfc/rfc2445.txt).freeze,
+      :"owl:versionInfo" => [%($Id: icaltzd.rdf,v 1.6 2007/06/28 18:22:09 connolly Exp $).freeze, %(subject to change with notice to www-rdf-calendar@w3.org).freeze],
+      :"rdfs:seeAlso" => [%(http://esw.w3.org/topic/RdfCalendar).freeze, %(http://lists.w3.org/Archives/Public/www-rdf-calendar/).freeze, %(http://www.w3.org/2002/12/cal/).freeze],
+      type: "owl:Thing".freeze
+
     # Class definitions
     term :DomainOf_rrule,
       label: "DomainOf_rrule".freeze,

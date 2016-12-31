@@ -9,6 +9,14 @@ module RDF::Vocab
   #   end
   class SiocServices < RDF::StrictVocabulary("http://rdfs.org/sioc/services#")
 
+    # Ontology definition
+    ontology :"http://rdfs.org/sioc/services#",
+      :"dc:description" => %(Extends the SIOC Core Ontology \(Semantically-Interlinked Online Communities\) by defining basic information on community-related web services.).freeze,
+      :"dc:title" => %(SIOC Services Ontology Module Namespace).freeze,
+      :"owl:imports" => %(sioc:).freeze,
+      :"rdfs:seeAlso" => %(http://rdfs.org/sioc/spec/#sec-modules).freeze,
+      type: ["owl:Ontology".freeze, "owl:Thing".freeze]
+
     # Class definitions
     term :Service,
       comment: %(A Service is web service associated with a Site or part of it.).freeze,
@@ -62,14 +70,5 @@ module RDF::Vocab
       label: "service protocol".freeze,
       :"rdfs:isDefinedBy" => %(siocservices:).freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
-
-    # Extra definitions
-    term :"",
-      :"dc:description" => %(Extends the SIOC Core Ontology \(Semantically-Interlinked Online Communities\) by defining basic information on community-related web services.).freeze,
-      :"dc:title" => %(SIOC Services Ontology Module Namespace).freeze,
-      label: "".freeze,
-      :"owl:imports" => %(sioc:).freeze,
-      :"rdfs:seeAlso" => %(http://rdfs.org/sioc/spec/#sec-modules).freeze,
-      type: ["owl:Ontology".freeze, "owl:Thing".freeze]
   end
 end

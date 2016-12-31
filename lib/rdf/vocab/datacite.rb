@@ -9,6 +9,22 @@ module RDF::Vocab
   #   end
   class DataCite < RDF::StrictVocabulary("http://purl.org/spar/datacite/")
 
+    # Ontology definition
+    ontology :"http://purl.org/spar/datacite/",
+      comment: %(This ontology is available at http://purl.org/spar/datacite/, and uses the namespace prefix datacite.).freeze,
+      :"dc11:contributor" => [%(Amy J. Barton).freeze, %(Egbert Gramsbergen).freeze, %(Jan Ashton).freeze, %(Marie-Christine Jacquemot).freeze],
+      :"dc11:creator" => [%(David Shotton).freeze, %(Silvio Peroni).freeze],
+      :"dc11:date" => %(2016-01-21).freeze,
+      :"dc11:description" => [%(The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1]\(https://www.datacite.org/sites/default/files/document/DataCite-MetadataSchema_V31_Final_8-24-2015_0.pdf\) to be described in RDF.  
+
+This version of the DataCite Ontology has been completely revised and significantly expanded to permit accurate mapping of this new version of the DataCite Metadata Kernel Specification to RDF.).freeze, %(https://svn.code.sf.net/p/sempublishing/code/DataCite/datacite.png).freeze],
+      :"dc11:rights" => %(This work is distributed under a Creative Commons Attribution License \(http://creativecommons.org/licenses/by/4.0/\).).freeze,
+      :"dc11:title" => %(The DataCite Ontology).freeze,
+      :"owl:imports" => [%(http://purl.org/co).freeze, %(http://www.essepuntato.it/2010/06/literalreification).freeze],
+      :"owl:priorVersion" => %(http://svn.code.sf.net/p/sempublishing/code/DataCite/2014-05-21-datacite-0_6_4_1.owl).freeze,
+      :"owl:versionInfo" => %(1.0).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :AgentIdentifier,
       comment: %(An identifier that uniquely identities an individual agent, belonging to a particular identifier scheme specified by an individual within the class datacite:AgentIdentifierScheme \(or any of its subclasses\).).freeze,
@@ -164,21 +180,6 @@ All the prefixes used here refer to external ontologies, i.e., DC Metadata Terms
       type: "owl:ObjectProperty".freeze
 
     # Extra definitions
-    term :"",
-      comment: %(This ontology is available at http://purl.org/spar/datacite/, and uses the namespace prefix datacite.).freeze,
-      :"dc11:contributor" => [%(Amy J. Barton).freeze, %(Egbert Gramsbergen).freeze, %(Jan Ashton).freeze, %(Marie-Christine Jacquemot).freeze],
-      :"dc11:creator" => [%(David Shotton).freeze, %(Silvio Peroni).freeze],
-      :"dc11:date" => %(2016-01-21).freeze,
-      :"dc11:description" => [%(The DataCite Ontology is an ontology written in OWL 2 DL to enable the metadata properties of the [DataCite Metadata Kernel Specification version 3.1]\(https://www.datacite.org/sites/default/files/document/DataCite-MetadataSchema_V31_Final_8-24-2015_0.pdf\) to be described in RDF.  
-
-This version of the DataCite Ontology has been completely revised and significantly expanded to permit accurate mapping of this new version of the DataCite Metadata Kernel Specification to RDF.).freeze, %(https://svn.code.sf.net/p/sempublishing/code/DataCite/datacite.png).freeze],
-      :"dc11:rights" => %(This work is distributed under a Creative Commons Attribution License \(http://creativecommons.org/licenses/by/4.0/\).).freeze,
-      :"dc11:title" => %(The DataCite Ontology).freeze,
-      label: "".freeze,
-      :"owl:imports" => [%(http://purl.org/co).freeze, %(http://www.essepuntato.it/2010/06/literalreification).freeze],
-      :"owl:priorVersion" => %(http://svn.code.sf.net/p/sempublishing/code/DataCite/2014-05-21-datacite-0_6_4_1.owl).freeze,
-      :"owl:versionInfo" => %(1.0).freeze,
-      type: "owl:Ontology".freeze
     term :abstract,
       comment: %(A brief summary of a textual work, appearing at the beginning of the work and designed to act as the point-of-entry that will help the reader quickly to obtain an overview of the work's contents.).freeze,
       label: "abstract".freeze,

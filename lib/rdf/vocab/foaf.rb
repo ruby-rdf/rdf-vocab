@@ -9,6 +9,12 @@ module RDF::Vocab
   #   end
   class FOAF < RDF::StrictVocabulary("http://xmlns.com/foaf/0.1/")
 
+    # Ontology definition
+    ontology :"http://xmlns.com/foaf/0.1/",
+      :"dc11:description" => %(The Friend of a Friend \(FOAF\) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language.).freeze,
+      :"dc11:title" => %(Friend of a Friend \(FOAF\) vocabulary).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :Agent,
       comment: %(An agent \(eg. person, group, software or physical artifact\).).freeze,
@@ -607,12 +613,5 @@ module RDF::Vocab
       subPropertyOf: "foaf:nick".freeze,
       type: ["owl:DatatypeProperty".freeze, "owl:InverseFunctionalProperty".freeze, "rdf:Property".freeze],
       :"vs:term_status" => %(testing).freeze
-
-    # Extra definitions
-    term :"",
-      :"dc11:description" => %(The Friend of a Friend \(FOAF\) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language.).freeze,
-      :"dc11:title" => %(Friend of a Friend \(FOAF\) vocabulary).freeze,
-      label: "".freeze,
-      type: "owl:Ontology".freeze
   end
 end

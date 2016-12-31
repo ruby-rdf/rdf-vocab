@@ -9,6 +9,15 @@ module RDF::Vocab
   #   end
   class WOT < RDF::StrictVocabulary("http://xmlns.com/wot/0.1/")
 
+    # Ontology definition
+    ontology :"http://xmlns.com/wot/0.1/",
+      :"dc11:date" => %(2004-02-23).freeze,
+      :"dc11:description" => %(Web Of Trust \(wot\) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language.).freeze,
+      :"dc11:title" => %(Web Of Trust vocabulary).freeze,
+      :"owl:imports" => [%(http://www.w3.org/2000/01/rdf-schema).freeze, %(http://www.w3.org/2002/07/owl).freeze],
+      :"rdfs:seeAlso" => %(foaf:).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :EncryptedDocument,
       comment: %(An encrypted document intended for a set of recipients.).freeze,
@@ -157,15 +166,5 @@ module RDF::Vocab
       :"rdfs:isDefinedBy" => %(wot:).freeze,
       type: "owl:DatatypeProperty".freeze,
       :"vs:term_status" => %(unstable).freeze
-
-    # Extra definitions
-    term :"",
-      :"dc11:date" => %(2004-02-23).freeze,
-      :"dc11:description" => %(Web Of Trust \(wot\) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language.).freeze,
-      :"dc11:title" => %(Web Of Trust vocabulary).freeze,
-      label: "".freeze,
-      :"owl:imports" => [%(http://www.w3.org/2000/01/rdf-schema).freeze, %(http://www.w3.org/2002/07/owl).freeze],
-      :"rdfs:seeAlso" => %(foaf:).freeze,
-      type: "owl:Ontology".freeze
   end
 end

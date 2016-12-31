@@ -9,6 +9,14 @@ module RDF::Vocab
   #   end
   class MA < RDF::Vocabulary("http://www.w3.org/ns/ma-ont#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/ns/ma-ont",
+      comment: [%(Created by Tobias Buerger, Jean Pierre Evain and Pierre-Antoine Champin with the RDFS Taskforce within the W3C Media Annotation Working Group.).freeze, %(THE CONTENT OF THIS MA-ONT.RDF AND DERIVED MA-ONT.TTL FILES PREVAIL OVER THE SPECIFICATION.).freeze],
+      :"dc11:date" => %(2013-03-20).freeze,
+      :"owl:imports" => %(http://dublincore.org/2008/01/14/dcelements.rdf).freeze,
+      :"owl:versionInfo" => %(R36).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :Agent,
       comment: %(A person or organisation contributing to the media resource.).freeze,

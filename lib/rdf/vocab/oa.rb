@@ -9,6 +9,16 @@ module RDF::Vocab
   #   end
   class OA < RDF::StrictVocabulary("http://www.w3.org/ns/oa#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/ns/oa#",
+      comment: %(The Web Annotation ontology defines the terms of the Web Annotation vocabulary. Any changes to this document MUST be from a Working Group in the W3C that has established expertise in the area.).freeze,
+      :"dc11:title" => %(Web Annotation Ontology).freeze,
+      :"dc:modified" => %(2016-11-12T21:28:11Z).freeze,
+      :"owl:versionInfo" => %(2016-11-12T21:28:11Z).freeze,
+      :"prov:wasRevisionOf" => %(http://www.openannotation.org/spec/core/20130208/oa.owl).freeze,
+      :"rdfs:seeAlso" => %(http://www.w3.org/TR/annotation-vocab/).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :Annotation,
       comment: %(The class for Web Annotations.).freeze,
@@ -18,12 +28,6 @@ module RDF::Vocab
     term :Choice,
       comment: %(A subClass of  as:OrderedCollection  that conveys to a consuming application that it should select one of the resources in the  as:items  list to use, rather than all of them.  This is typically used to provide a choice of resources to render to the user, based on further supplied properties.  If the consuming application cannot determine the user's preference, then it should use the first in the list.).freeze,
       label: "Choice".freeze,
-      :"rdfs:isDefinedBy" => %(oa:).freeze,
-      subClassOf: "http://www.w3.org/ns/activitystreams#OrderedCollection".freeze,
-      type: "rdfs:Class".freeze
-    term :Composite,
-      comment: %(A subClass of  as:OrderedCollection  that conveys to a consuming application that it should use all of the resources in the  as:items  list, but that order is not important. This class is at-risk.).freeze,
-      label: "Composite".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
       subClassOf: "http://www.w3.org/ns/activitystreams#OrderedCollection".freeze,
       type: "rdfs:Class".freeze
@@ -61,18 +65,6 @@ module RDF::Vocab
       label: "HttpRequestState".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
       subClassOf: "oa:State".freeze,
-      type: "rdfs:Class".freeze
-    term :Independents,
-      comment: %(A subClass of  as:OrderedCollection  that conveys to a consuming application that each of the resources in the  as:items  list are independently associated with all of the other bodies or targets. This class is at-risk.).freeze,
-      label: "Independents".freeze,
-      :"rdfs:isDefinedBy" => %(oa:).freeze,
-      subClassOf: "http://www.w3.org/ns/activitystreams#OrderedCollection".freeze,
-      type: "rdfs:Class".freeze
-    term :List,
-      comment: %(A subClass of  as:OrderedCollection  that conveys to a consuming application that it should use each of the resources in the  as:items  list, and that their order is important. This class is at-risk.).freeze,
-      label: "List".freeze,
-      :"rdfs:isDefinedBy" => %(oa:).freeze,
-      subClassOf: "http://www.w3.org/ns/activitystreams#OrderedCollection".freeze,
       type: "rdfs:Class".freeze
     term :Motivation,
       comment: %(The Motivation class is used to record the user's intent or motivation for the creation of the Annotation, or the inclusion of the body or target, that it is associated with.).freeze,
@@ -151,7 +143,7 @@ module RDF::Vocab
     # Property definitions
     property :annotationService,
       comment: %(The object of the relationship is the end point of a service that conforms to the annotation-protocol, and it may be associated with any resource.  The expectation of asserting the relationship is that the object is the preferred service for maintaining annotations about the subject resource, according to the publisher of the relationship.
-   
+
   This relationship is intended to be used both within Linked Data descriptions and as the  rel  type of a Link, via HTTP Link Headers rfc5988 for binary resources and in HTML <link> elements.  For more information about these, please see the Annotation Protocol specification annotation-protocol.
   ).freeze,
       label: "annotationService".freeze,
@@ -274,7 +266,6 @@ module RDF::Vocab
       comment: %(A system that was used by the application that created the Annotation to render the resource.).freeze,
       domain: "oa:SpecificResource".freeze,
       label: "renderedVia".freeze,
-      range: "rdfs:Resource".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
       type: "rdf:Property".freeze
     property :sourceDate,
@@ -337,16 +328,6 @@ module RDF::Vocab
       type: "rdf:Property".freeze
 
     # Extra definitions
-    term :"",
-      comment: %(The Web Annotation ontology defines the terms of the Web Annotation vocabulary).freeze,
-      :"dc11:title" => %(Web Annotation Ontology).freeze,
-      :"dc:creator" => [%(Benjamin Young).freeze, %(Paolo Ciccarese).freeze, %(Robert Sanderson).freeze],
-      :"dc:modified" => %(2016-06-03T14:54:43Z).freeze,
-      label: "".freeze,
-      :"owl:previousVersionURI" => %(http://www.openannotation.org/spec/core/20130208/oa.owl).freeze,
-      :"owl:versionInfo" => %(2016-06-03T14:54:43Z).freeze,
-      :"rdfs:seeAlso" => %(http://www.w3.org/TR/annotation-vocab/).freeze,
-      type: "owl:Ontology".freeze
     term :PreferContainedDescriptions,
       comment: %(An IRI to signal the client prefers to receive full descriptions of the Annotations from a container, not just their IRIs.).freeze,
       label: "PreferContainedDescriptions".freeze,
@@ -402,9 +383,9 @@ module RDF::Vocab
       label: "linking".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
       type: "oa:Motivation".freeze
-    term :ltr,
+    term :ltrDirection,
       comment: %(The direction of text that is read from left to right.).freeze,
-      label: "ltr".freeze,
+      label: "ltrDirection".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
       type: "oa:Direction".freeze
     term :moderating,
@@ -422,9 +403,9 @@ module RDF::Vocab
       label: "replying".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
       type: "oa:Motivation".freeze
-    term :rtl,
+    term :rtlDirection,
       comment: %(The direction of text that is read from right to left.).freeze,
-      label: "rtl".freeze,
+      label: "rtlDirection".freeze,
       :"rdfs:isDefinedBy" => %(oa:).freeze,
       type: "oa:Direction".freeze
     term :tagging,

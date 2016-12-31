@@ -284,6 +284,10 @@ describe RDF::Vocabulary do
       expect(dc.at_xpath('//td[@resource="dc:NLM"]')).not_to be_nil
     end
 
+    it "Describes terms" do
+      expect(foaf.xpath('//td[@resource="foaf:Group"]/p[@property="rdfs:comment"]').to_s).to include("A class of Agents")
+    end
+
     context "smoke test", slow: true do
       skips = [
         RDF::Vocab::Bibframe,
@@ -302,6 +306,14 @@ describe RDF::Vocabulary do
           end.not_to raise_error
         end
       end
+    end
+  end
+
+  context ".value_to_html helper method" do
+    let(:value) { [{ '@value' => 'Test string', '@language' => 'en', '@type' => 'rdf:langString' }] }
+
+    it "creates a HTML lang attribute for values that are language-tagged" do
+      expect(RDF::Vocabulary.value_to_html('rdfs:label', value, 'span')).to include(" lang=\"en\"")
     end
   end
 

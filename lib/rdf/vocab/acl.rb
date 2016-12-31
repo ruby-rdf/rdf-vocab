@@ -9,6 +9,12 @@ module RDF::Vocab
   #   end
   class ACL < RDF::StrictVocabulary("http://www.w3.org/ns/auth/acl#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/ns/auth/acl",
+      comment: %(Defines the class Authorization and its essential properties,
+    and also some classes of access such as read and write. ).freeze,
+      :"dc11:title" => %(Basic Access Control ontology).freeze
+
     # Class definitions
     term :Access,
       :"acl:label" => %(access).freeze,
@@ -80,13 +86,19 @@ module RDF::Vocab
       label: "agent class".freeze,
       range: "rdfs:Class".freeze,
       type: "rdf:Property".freeze
+    property :agentGroup,
+      comment: %(A group of persons or social entities to being given the right).freeze,
+      domain: "acl:Authorization".freeze,
+      label: "agent group".freeze,
+      range: "vcard:Group".freeze,
+      type: "rdf:Property".freeze
     property :defaultForNew,
       comment: %(A directory for which this authorization is used for new files in the directory.).freeze,
       domain: "acl:Authorization".freeze,
       label: "default access for new things in".freeze,
       type: "rdf:Property".freeze
     property :delegates,
-      comment: %(Delegates a person or another agent to act on behalf of the user.
+      comment: %(Delegates a person or another agent to act on behalf of the agent.
     For example, Alice delegates Bob to act on behalf of Alice for ACL purposes.).freeze,
       label: "delegates".freeze,
       range: "foaf:Agent".freeze,
@@ -98,9 +110,9 @@ module RDF::Vocab
       range: "rdfs:Class".freeze,
       type: "rdf:Property".freeze
     property :owner,
-      comment: %(The person or other agent which owns this. 
+      comment: %(The person or other agent which owns this.
     For example, the owner of a file in a filesystem.
-    There is a sense of right to control.   Typically defaults to the agent who created
+    There is a sense of right to control.   Typically defaults to the agent who craeted
     something but can be changed.).freeze,
       label: "owner".freeze,
       range: "foaf:Agent".freeze,

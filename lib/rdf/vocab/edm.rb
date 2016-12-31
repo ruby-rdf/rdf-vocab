@@ -9,6 +9,50 @@ module RDF::Vocab
   #   end
   class EDM < RDF::StrictVocabulary("http://www.europeana.eu/schemas/edm/")
 
+    # Ontology definition
+    ontology :"http://www.europeana.eu/schemas/edm/",
+      :"dc11:contributor" => [%(http://www.ibi.hu-berlin.de/institut/personen/iwanowa).freeze, %(http://www.ics.forth.gr/isl/people/people_individual.jsp?Person_ID=2).freeze, %(http://www.image.ece.ntua.gr/~ndroso/).freeze, %(http://www.image.ntua.gr/~tzouvaras/).freeze],
+      :"dc11:creator" => %(http://data.semanticweb.org/person/antoine-isaac).freeze,
+      :"dc11:description" => %(The Europeana Data Model \(EDM\) is aimed at being an integration medium for collecting, connecting and enriching the descriptions provided by Europeana data providers. The RDF vocabulary for http://www.europeana.eu/schemas/edm/ defines the elements introduced by EDM \(as opposed to the ones EDM re-uses from other namespaces\).).freeze,
+      :"dc11:modified" => %(2013-05-20).freeze,
+      :"dc11:publisher" => %(http://europeana.eu).freeze,
+      :"dc11:title" => %(Europeana Data Model \(EDM\) vocabulary).freeze,
+      :"dc:issued" => %(2010-03-25).freeze,
+      :"foaf:homepage" => %(http://pro.europeana.eu/edm-documentation).freeze,
+      :"http://purl.org/vocab/vann/changes" => %(
+=======
+Changes between ontology file EDM version 5.2.4 \(edm, was once EDM-v524-120820\)
+and ontology file EDM version 5.2.3 \(EDM-v523-120123\)
+=======
+1. edm:isShownAt made a sub-property of edm:hasView
+2. added edm:begin and edm:end and their mappings to CRM
+3. added owl:Class declarations added for compatibility with some OWL-DL reasoners \(feedback from Pedro Szekely, ISI\)
+4. added "of" at the end of the label for edm:isNextInSequence
+5. added vocabulary metadata to follow Linked Open Vocabularies \(http://lov.okfn.org/\) and ADMS \(https://joinup.ec.europa.eu/asset/adms/release/100\) guidelines
+6. removed a domain axiom on edm:hasMet
+7. added edm:collectionName and edm:europeanaProxy
+8. removed version number from file name
+9. generalisation of Country, DataProvider and Provider
+10. updated CRM namespace and CRM class and property identifiers
+11. added FRBRoo mappings
+      ).freeze,
+      :"http://purl.org/vocab/vann/example" => [%(http://data.europeana.eu).freeze, %(http://pro.europeana.eu/case-studies-edm).freeze],
+      :"http://purl.org/vocab/vann/preferredNamespacePrefix" => %(edm).freeze,
+      :"http://purl.org/vocab/vann/preferredNamespaceUri" => %(http://www.europeana.eu/schemas/edm/).freeze,
+      :"http://purl.org/vocommons/voaf#toDoList" => %(
+=======
+Remaining TODOs for ontology file EDM version 5.2.4
+=======
+- finish and check FRBRoo mappings according to the recommendations of the EDM-FRBRoo task force. Also include implicit mappings and mappings for elements outside the EDM namespace?
+- try to capture formal cardinality constraints resulting from "Obligation and Occurrence" documentation, which should be attached to non-EDM constructs \(esp. ore:Aggregation\)
+- continue adding documentation values \(skos:scopeNote, skos:example, etc, according to 1.\), starting from edm:InformationResource. Add all Europeana examples and rationale notes for non-EDM constructs
+- use specific EDM-doc properties for "rationale" and "obligation and occurrence". Use skos:definition for "Europeana definition", skos:example for "Example", skos:note for "Europeana note"
+      ).freeze,
+      :"http://www.w3.org/ns/adms#relatedWebPage" => %(http://europeanalabs.eu/wiki/EDMPrototypingTask11).freeze,
+      :"http://www.w3.org/ns/radion#versionNotes" => %(The present specification is based on the document "Definition of the Europeana Data Model elements", originally edited by Carlo Meghini. It is aligned with the version 5.2.4 of these EDM Definitions.).freeze,
+      :"owl:versionInfo" => %(5.2.4).freeze,
+      type: ["http://purl.org/vocommons/voaf#Vocabulary".freeze, "owl:Ontology".freeze]
+
     # Class definitions
     term :Agent,
       label: "Agent".freeze,
@@ -317,50 +361,5 @@ otherwise cannot be mapped to another element in the ESE.).freeze,
 born digital object.).freeze,
       subPropertyOf: "dc:temporal".freeze,
       type: "rdf:Property".freeze
-
-    # Extra definitions
-    term :"",
-      :"dc11:contributor" => [%(http://www.ibi.hu-berlin.de/institut/personen/iwanowa).freeze, %(http://www.ics.forth.gr/isl/people/people_individual.jsp?Person_ID=2).freeze, %(http://www.image.ece.ntua.gr/~ndroso/).freeze, %(http://www.image.ntua.gr/~tzouvaras/).freeze],
-      :"dc11:creator" => %(http://data.semanticweb.org/person/antoine-isaac).freeze,
-      :"dc11:description" => %(The Europeana Data Model \(EDM\) is aimed at being an integration medium for collecting, connecting and enriching the descriptions provided by Europeana data providers. The RDF vocabulary for http://www.europeana.eu/schemas/edm/ defines the elements introduced by EDM \(as opposed to the ones EDM re-uses from other namespaces\).).freeze,
-      :"dc11:modified" => %(2013-05-20).freeze,
-      :"dc11:publisher" => %(http://europeana.eu).freeze,
-      :"dc11:title" => %(Europeana Data Model \(EDM\) vocabulary).freeze,
-      :"dc:issued" => %(2010-03-25).freeze,
-      :"foaf:homepage" => %(http://pro.europeana.eu/edm-documentation).freeze,
-      :"http://purl.org/vocab/vann/changes" => %(
-=======
-Changes between ontology file EDM version 5.2.4 \(edm, was once EDM-v524-120820\)
-and ontology file EDM version 5.2.3 \(EDM-v523-120123\)
-=======
-1. edm:isShownAt made a sub-property of edm:hasView
-2. added edm:begin and edm:end and their mappings to CRM
-3. added owl:Class declarations added for compatibility with some OWL-DL reasoners \(feedback from Pedro Szekely, ISI\)
-4. added "of" at the end of the label for edm:isNextInSequence
-5. added vocabulary metadata to follow Linked Open Vocabularies \(http://lov.okfn.org/\) and ADMS \(https://joinup.ec.europa.eu/asset/adms/release/100\) guidelines
-6. removed a domain axiom on edm:hasMet
-7. added edm:collectionName and edm:europeanaProxy
-8. removed version number from file name
-9. generalisation of Country, DataProvider and Provider
-10. updated CRM namespace and CRM class and property identifiers
-11. added FRBRoo mappings
-      ).freeze,
-      :"http://purl.org/vocab/vann/example" => [%(http://data.europeana.eu).freeze, %(http://pro.europeana.eu/case-studies-edm).freeze],
-      :"http://purl.org/vocab/vann/preferredNamespacePrefix" => %(edm).freeze,
-      :"http://purl.org/vocab/vann/preferredNamespaceUri" => %(http://www.europeana.eu/schemas/edm/).freeze,
-      :"http://purl.org/vocommons/voaf#toDoList" => %(
-=======
-Remaining TODOs for ontology file EDM version 5.2.4
-=======
-- finish and check FRBRoo mappings according to the recommendations of the EDM-FRBRoo task force. Also include implicit mappings and mappings for elements outside the EDM namespace?
-- try to capture formal cardinality constraints resulting from "Obligation and Occurrence" documentation, which should be attached to non-EDM constructs \(esp. ore:Aggregation\)
-- continue adding documentation values \(skos:scopeNote, skos:example, etc, according to 1.\), starting from edm:InformationResource. Add all Europeana examples and rationale notes for non-EDM constructs
-- use specific EDM-doc properties for "rationale" and "obligation and occurrence". Use skos:definition for "Europeana definition", skos:example for "Example", skos:note for "Europeana note"
-      ).freeze,
-      :"http://www.w3.org/ns/adms#relatedWebPage" => %(http://europeanalabs.eu/wiki/EDMPrototypingTask11).freeze,
-      :"http://www.w3.org/ns/radion#versionNotes" => %(The present specification is based on the document "Definition of the Europeana Data Model elements", originally edited by Carlo Meghini. It is aligned with the version 5.2.4 of these EDM Definitions.).freeze,
-      label: "".freeze,
-      :"owl:versionInfo" => %(5.2.4).freeze,
-      type: ["http://purl.org/vocommons/voaf#Vocabulary".freeze, "owl:Ontology".freeze]
   end
 end

@@ -9,6 +9,12 @@ module RDF::Vocab
   #   end
   class Bibframe < RDF::StrictVocabulary("http://bibframe.org/vocab/")
 
+    # Ontology definition
+    ontology :"http://bibframe.org/vocab/",
+      :"dc:modified" => %(2014-12-10T20:23:05.638677Z).freeze,
+      :"owl:versionInfo" => %(Initially automatically generated.).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :Agent,
       comment: %(Entity having a role in a resource \(Person, Organization, etc.\).).freeze,
@@ -2053,12 +2059,5 @@ module RDF::Vocab
       label: "Work title".freeze,
       range: "bibframe:Title".freeze,
       type: "rdf:Property".freeze
-
-    # Extra definitions
-    term :"",
-      :"dc:modified" => %(2014-12-10T20:23:05.638677Z).freeze,
-      label: "".freeze,
-      :"owl:versionInfo" => %(Initially automatically generated.).freeze,
-      type: "owl:Ontology".freeze
   end
 end

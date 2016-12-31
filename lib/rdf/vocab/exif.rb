@@ -9,6 +9,17 @@ module RDF::Vocab
   #   end
   class EXIF < RDF::StrictVocabulary("http://www.w3.org/2003/12/exif/ns#")
 
+    # Ontology definition
+    ontology :"http://www.w3.org/2003/12/exif/ns",
+      :"dc11:description" => %(Vocabulary to describe an Exif format picture data. All Exif 2.2 tags are defined as RDF properties, as well as several terms to help this schema.).freeze,
+      :"dc11:source" => %(http://tsc.jeita.or.jp/avs/data/cp3451.pdf).freeze,
+      :"dc11:title" => %(Exif data description vocabulary).freeze,
+      :"dc:created" => %(2003-07-18).freeze,
+      :"dc:modified" => %(2003-08-19).freeze,
+      :"foaf:maker" => %(urn:pin:MK705).freeze,
+      :"owl:versionInfo" => %(Experimental version.).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :IFD,
       comment: %(An Image File Directory).freeze,

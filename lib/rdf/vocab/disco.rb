@@ -9,6 +9,16 @@ module RDF::Vocab
   #   end
   class DISCO < RDF::StrictVocabulary("http://rdf-vocabulary.ddialliance.org/discovery#")
 
+    # Ontology definition
+    ontology :"http://rdf-vocabulary.ddialliance.org/discovery",
+      comment: %(This specification defines the DDI Discovery Vocabulary, an RDF Schema vocabulary that enables discovery of research and survey data on the Web. It is based on DDI \(Data Documentation Initiative\) XML formats.).freeze,
+      :"dc11:contributor" => [%(Benjamin Zapilko).freeze, %(Joachim Wackerow).freeze, %(Richard Cyganiak).freeze, %(Thomas Bosch).freeze],
+      :"dc11:creator" => [%(Arofan Gregory).freeze, %(Benedikt Kämpgen).freeze, %(Benjamin Zapilko).freeze, %(Franck Cotton).freeze, %(Heiko Paulheim).freeze, %(Joachim Wackerow).freeze, %(Olof Olsson).freeze, %(Richard Cyganiak).freeze, %(Sarven Capadisli).freeze, %(Thomas Bosch).freeze],
+      :"dc11:description" => %(This specification defines the DDI Discovery Vocabulary, an RDF Schema vocabulary that enables discovery of research and survey data on the Web. It is based on DDI \(Data Documentation Initiative\) XML formats.).freeze,
+      :"dc11:title" => %(DDI-RDF Discovery Vocabulary).freeze,
+      :"owl:versionInfo" => %(Version 0.6 - 2013-09-30).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :AnalysisUnit,
       comment: %(The process collecting data is focusing on the analysis of a particular type of subject. If, for example, the adult population of Finland is being studied, the AnalysisUnit would be individuals or persons.).freeze,
@@ -62,8 +72,10 @@ module RDF::Vocab
       subClassOf: "disco:Instrument".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Representation,
-      label: "Representation".freeze,
-      type: "rdfs:Class".freeze
+      comment: %(Representation of a variable, question, or variable definition.).freeze,
+      label: "Representation of a variable, question, or variable definition.".freeze,
+      :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/discovery).freeze,
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :RepresentedVariable,
       comment: %(RepresentedVariables encompasse study-independent, re-usable parts of variables like occupation classification.).freeze,
       label: "Data element".freeze,

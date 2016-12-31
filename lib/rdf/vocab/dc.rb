@@ -9,6 +9,12 @@ module RDF::Vocab
   #   end
   class DC < RDF::StrictVocabulary("http://purl.org/dc/terms/")
 
+    # Ontology definition
+    ontology :"http://purl.org/dc/terms/",
+      :"dc:modified" => %(2012-06-14).freeze,
+      :"dc:publisher" => %(http://purl.org/dc/aboutdcmi#DCMI).freeze,
+      :"dc:title" => %(DCMI Metadata Terms - other).freeze
+
     # Class definitions
     term :Agent,
       comment: %(A resource that acts or has the power to act.).freeze,
@@ -863,11 +869,6 @@ module RDF::Vocab
       type: "rdfs:Datatype".freeze
 
     # Extra definitions
-    term :"",
-      :"dc:modified" => %(2012-06-14).freeze,
-      :"dc:publisher" => %(http://purl.org/dc/aboutdcmi#DCMI).freeze,
-      :"dc:title" => %(DCMI Metadata Terms - other).freeze,
-      label: "".freeze
     term :DCMIType,
       comment: %(The set of classes specified by the DCMI Type Vocabulary, used to categorize the nature or genre of the resource.).freeze,
       :"dc:hasVersion" => %(http://dublincore.org/usage/terms/history/#DCMIType-005).freeze,

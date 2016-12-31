@@ -9,6 +9,14 @@ module RDF::Vocab
   #   end
   class ORE < RDF::StrictVocabulary("http://www.openarchives.org/ore/terms/")
 
+    # Ontology definition
+    ontology :"http://www.openarchives.org/ore/terms/",
+      comment: %(The set of terms provided by the OAI ORE initiative).freeze,
+      :"dc:license" => %(http://creativecommons.org/licenses/by-sa/3.0/).freeze,
+      :"dc:title" => %(The OAI ORE terms vocabulary).freeze,
+      label: "The OAI ORE terms vocabulary".freeze,
+      :"rdfs:seeAlso" => %(http://www.openarchives.org/ore/toc).freeze
+
     # Class definitions
     term :AggregatedResource,
       comment: %(A resource which is included in an Aggregation. Note that asserting that a resource is a member of the class of Aggregated Resources does not imply anything other than that it is aggregated by at least one Aggregation.).freeze,
@@ -95,13 +103,5 @@ module RDF::Vocab
       label: "Similar To".freeze,
       :"rdfs:isDefinedBy" => %(ore:).freeze,
       type: "rdf:Property".freeze
-
-    # Extra definitions
-    term :"",
-      comment: %(The set of terms provided by the OAI ORE initiative).freeze,
-      :"dc:license" => %(http://creativecommons.org/licenses/by-sa/3.0/).freeze,
-      :"dc:title" => %(The OAI ORE terms vocabulary).freeze,
-      label: "The OAI ORE terms vocabulary".freeze,
-      :"rdfs:seeAlso" => %(http://www.openarchives.org/ore/toc).freeze
   end
 end

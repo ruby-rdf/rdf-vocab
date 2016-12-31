@@ -9,6 +9,34 @@ module RDF::Vocab
   #   end
   class GEONAMES < RDF::StrictVocabulary("http://www.geonames.org/ontology#")
 
+    # Ontology definition
+    ontology :"http://www.geonames.org/ontology",
+      :"cc:license" => %(http://creativecommons.org/licenses/by/3.0/).freeze,
+      comment: %(Modifications from version 3.01 :
+            Added : gn:GeonamesFeature, subclass of gn:Feature.
+            Added : explicit property gn:geonamesID, mandatory and unique for each gn:GeonamesFeature instance.
+            Deleted : owl:FunctionalProperty declarations for properties attached to gn:Feature, replaced by local cardinality restrictions on gn:GeonamesFeature
+            The gn:Feature class and attached properties can therefore be used in the open world for features not necessarily identified in the Geonames data base, or with partial descriptions.
+            Modified : Equivalent classes and superclasses of geonames:Feature in other vocabularies.
+            Added : new feature codes for historical features.
+            Improved metadata.
+      ).freeze,
+      :"dc:contributor" => [%(Erik Bolstad \(norwegian and swedish translations\)).freeze, %(Roman Rachkov \(bulgarian translation\)).freeze, %(Valery Hronusov \(russian translation\)).freeze],
+      :"dc:creator" => %(http://data.semanticweb.org/person/bernard-vatant).freeze,
+      :"dc:description" => %(The Geonames ontologies provides elements of description for geographical features, in particular those defined in the geonames.org data base).freeze,
+      :"dc:issued" => %(2006-10-14).freeze,
+      :"dc:modified" => %(2012-10-29).freeze,
+      :"dc:publisher" => %(http://dbpedia.org/resource/GeoNames).freeze,
+      :"dc:title" => %(The Geonames ontology).freeze,
+      :"foaf:homepage" => %(http://www.geonames.org/ontology/documentation.html).freeze,
+      :"http://purl.org/vocab/vann/preferredNamespacePrefix" => %(gn).freeze,
+      :"http://purl.org/vocab/vann/preferredNamespaceUri" => %(http://www.geonames.org/ontology#).freeze,
+      :"http://www.w3.org/ns/adms#relatedDocumentation" => %(http://www.geonames.org/ontology/documentation.html).freeze,
+      :"owl:priorVersion" => %(http://www.geonames.org/ontology/ontology_v3.0.1.rdf).freeze,
+      :"owl:versionInfo" => %(Version 3.1 - 2012-10-29).freeze,
+      :"rdfs:isDefinedBy" => %(http://www.geonames.org/ontology/ontology_v3.1.rdf).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :A,
       comment: %(country, state, region ...).freeze,

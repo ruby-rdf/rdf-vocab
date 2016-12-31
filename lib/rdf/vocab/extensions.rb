@@ -355,7 +355,7 @@ module RDF
         value.map do |v|
           %(<#{tag} property="#{property}") +
           if v['@value']
-            (v['@language'] ? %( language="#{v['@language']}") : "") +
+            (v['@language'] ? %( lang="#{v['@language']}") : "") +
             (v['@type'] ? %( datatype="#{RDF::URI(v['@type']).pname}") : "") +
             %(>#{v['@value']})
           elsif v['@id']

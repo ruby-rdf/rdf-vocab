@@ -9,6 +9,14 @@ module RDF::Vocab
   #   end
   class Fcrepo4 < RDF::StrictVocabulary("http://fedora.info/definitions/v4/repository#")
 
+    # Ontology definition
+    ontology :"http://fedora.info/definitions/v4/repository#",
+      comment: %(Ontology for the Fedora data model, intended primarily to make it possible to expose Fedora-curated RDF predicates via de-reference-able URIs.).freeze,
+      label: "Fedora Commons Repository Ontology".freeze,
+      :"owl:priorVersion" => %(http://fedora.info/definitions/v4/2015/05/19/repository).freeze,
+      :"owl:versionInfo" => %(v4/2015/07/24).freeze,
+      type: "owl:Ontology".freeze
+
     # Class definitions
     term :AnnotatedResource,
       comment: %(A Resource that maintains properties in its own right.).freeze,
@@ -508,13 +516,5 @@ module RDF::Vocab
       label: "writable".freeze,
       range: "xsd:boolean".freeze,
       type: "owl:DatatypeProperty".freeze
-
-    # Extra definitions
-    term :"",
-      comment: %(Ontology for the Fedora data model, intended primarily to make it possible to expose Fedora-curated RDF predicates via de-reference-able URIs.).freeze,
-      label: "Fedora Commons Repository Ontology".freeze,
-      :"owl:priorVersion" => %(http://fedora.info/definitions/v4/2015/05/19/repository).freeze,
-      :"owl:versionInfo" => %(v4/2015/07/24).freeze,
-      type: "owl:Ontology".freeze
   end
 end
