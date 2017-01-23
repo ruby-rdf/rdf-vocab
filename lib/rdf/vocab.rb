@@ -139,9 +139,11 @@ module RDF
       },
       foaf:   {uri: "http://xmlns.com/foaf/0.1/"},
       geo:    {uri: "http://www.w3.org/2003/01/geo/wgs84_pos#"},
-      geonames: {
-        uri: "http://www.geonames.org/ontology#"
+      geojson:{
+        uri: "https://purl.org/geojson/vocab#",
+        source: "http://geojson.org/geojson-ld/vocab.rdf"
       },
+      geonames: {uri: "http://www.geonames.org/ontology#"},
       gr:     {uri: "http://purl.org/goodrelations/v1#", source: "http://www.heppnetz.de/ontologies/goodrelations/v1.owl"},
       ht:     {uri: "http://www.w3.org/2011/http#"},
       hydra:  {uri: "http://www.w3.org/ns/hydra/core#"},
@@ -298,7 +300,21 @@ module RDF
       vs:     {uri: "http://www.w3.org/2003/06/sw-vocab-status/ns#"},
       wdrs:   {uri: "http://www.w3.org/2007/05/powder-s#"},
       wot:    {uri: "http://xmlns.com/wot/0.1/", source: "http://xmlns.com/wot/0.1/index.rdf"},
-      xkos:   {uri: "http://rdf-vocabulary.ddialliance.org/xkos#", source: "http://rdf-vocabulary.ddialliance.org/xkos.ttl"},
+      xkos:   {
+        uri: "http://rdf-vocabulary.ddialliance.org/xkos#",
+        source: "http://rdf-vocabulary.ddialliance.org/xkos.ttl",
+        patch: %{
+          @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+          @prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          DeleteExisting {
+            xkos:compares rdfs:range xkos:ConceptScheme .
+          } .
+          AddNew {
+            xkos:compares rdfs:range skos:ConceptScheme .
+          } .
+        }
+      },
       xhtml:  {uri: "http://www.w3.org/1999/xhtml#", strict: false},
       xhv:    {uri: "http://www.w3.org/1999/xhtml/vocab#", strict: false},
       xsd:    {uri: "http://www.w3.org/2001/XMLSchema#", strict: false, alias: true},

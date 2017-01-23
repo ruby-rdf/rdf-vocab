@@ -11,18 +11,18 @@ module RDF::Vocab
 
     # Ontology definition
     ontology :"http://rdf-vocabulary.ddialliance.org/xkos",
-      :"cc:license" => %(http://creativecommons.org/licenses/by-nc-sa/3.0/us/).freeze,
-      comment: [%(Cette ontologie est basée sur le travail commencé à Dagstuhl Schloss en septembre 2011).freeze, %(This ontology is based on work initiated at Dagstuhl Schloss in September 2011).freeze],
+      :"cc:license" => %(http://creativecommons.org/licenses/by/4.0/).freeze,
+      comment: %(This ontology is based on work initiated at Dagstuhl Schloss in September 2011).freeze,
       :"dc11:contributor" => [%(Daniel Gillman).freeze, %(Jannik Jensen).freeze, %(R.T.A.M. Grim).freeze, %(Richard Cyganiak).freeze, %(Thomas Bosch).freeze, %(Wendy L. Thomas).freeze, %(Yves Jaques).freeze],
       :"dc11:creator" => %(Franck Cotton).freeze,
-      :"dc11:rights" => %(Copyright © 2012-2014 The DDI Alliance).freeze,
+      :"dc11:rights" => %(Copyright © 2016 The DDI Alliance).freeze,
       :"dc11:title" => %(XKOS: an SKOS extension for representing statistical classifications).freeze,
       :"http://purl.org/vocab/vann/preferredNamespacePrefix" => %(xkos).freeze,
       :"http://purl.org/vocab/vann/preferredNamespaceUri" => %(xkos:).freeze,
-      :"http://purl.org/vocommons/voaf#classNumber" => %(3).freeze,
+      :"http://purl.org/vocommons/voaf#classNumber" => %(4).freeze,
       :"http://purl.org/vocommons/voaf#extends" => %(http://www.w3.org/2004/02/skos/core).freeze,
-      :"http://purl.org/vocommons/voaf#propertyNumber" => %(36).freeze,
-      :"owl:versionInfo" => %(Version 1.0 - 2014-05-20).freeze,
+      :"http://purl.org/vocommons/voaf#propertyNumber" => %(40).freeze,
+      :"owl:versionInfo" => [%(Version 1.0.1 - 2014-11-26).freeze, %(Version 1.0.2 - 2016-03-15).freeze, %(Version 1.0.3 - 2016-03-15).freeze, %(Version 1.1 - 2016-03-20).freeze],
       type: ["http://purl.org/vocommons/voaf#Vocabulary".freeze, "owl:Ontology".freeze]
 
     # Class definitions
@@ -37,6 +37,10 @@ module RDF::Vocab
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Correspondence,
       label: "Correspondence".freeze,
+      :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/xkos).freeze,
+      type: ["owl:Class".freeze, "rdfs:Class".freeze]
+    term :ExplanatoryNote,
+      label: "Explanatory note".freeze,
       :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/xkos).freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
 
@@ -62,6 +66,11 @@ module RDF::Vocab
       range: "skos:Concept".freeze,
       :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/xkos).freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
+    property :caseLaw,
+      label: "case law".freeze,
+      :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/xkos).freeze,
+      subPropertyOf: "skos:note".freeze,
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :causal,
       label: "has causal".freeze,
       :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/xkos).freeze,
@@ -81,6 +90,12 @@ module RDF::Vocab
       domain: "rdfs:Resource".freeze,
       label: "classified under".freeze,
       range: "skos:Concept".freeze,
+      :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/xkos).freeze,
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
+    property :compares,
+      domain: "xkos:Correspondence".freeze,
+      label: "compares".freeze,
+      range: "skos:ConceptScheme".freeze,
       :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/xkos).freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :coreContentNote,
@@ -129,13 +144,13 @@ module RDF::Vocab
       label: "generalizes".freeze,
       :"owl:inverseOf" => %(xkos:specializes).freeze,
       :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/xkos).freeze,
-      subPropertyOf: "skos:broader".freeze,
+      subPropertyOf: "skos:narrower".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasPart,
       label: "has part".freeze,
       :"owl:inverseOf" => %(xkos:isPartOf).freeze,
       :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/xkos).freeze,
-      subPropertyOf: "skos:broader".freeze,
+      subPropertyOf: ["dc:hasPart".freeze, "skos:narrower".freeze],
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :inclusionNote,
       label: "inclusions".freeze,
@@ -146,7 +161,7 @@ module RDF::Vocab
       label: "is a part of".freeze,
       :"owl:inverseOf" => %(xkos:hasPart).freeze,
       :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/xkos).freeze,
-      subPropertyOf: "skos:narrower".freeze,
+      subPropertyOf: ["dc:isPartOf".freeze, "skos:broader".freeze],
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :levels,
       domain: "skos:ConceptScheme".freeze,
@@ -172,6 +187,12 @@ module RDF::Vocab
       :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/xkos).freeze,
       subPropertyOf: "xkos:succeeds".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
+    property :notationPattern,
+      domain: "xkos:ClassificationLevel".freeze,
+      label: "code pattern".freeze,
+      range: "xsd:string".freeze,
+      :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/xkos).freeze,
+      type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :numberOfLevels,
       domain: "skos:ConceptScheme".freeze,
       label: "number of levels".freeze,
@@ -184,6 +205,12 @@ module RDF::Vocab
       range: "skos:Concept".freeze,
       :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/xkos).freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
+    property :plainText,
+      domain: "xkos:ExplanatoryNote".freeze,
+      label: "plain text".freeze,
+      range: "rdf:PlainLiteral".freeze,
+      :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/xkos).freeze,
+      type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :precedes,
       comment: %(predecessor in the sequence).freeze,
       label: "precedes".freeze,
@@ -211,7 +238,7 @@ module RDF::Vocab
       label: "specializes".freeze,
       :"owl:inverseOf" => %(xkos:generalizes).freeze,
       :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/xkos).freeze,
-      subPropertyOf: "skos:narrower".freeze,
+      subPropertyOf: "skos:broader".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :succeeds,
       comment: [%(successeur dans la séquence).freeze, %(successor in the sequence).freeze],
@@ -222,7 +249,7 @@ module RDF::Vocab
     property :supersedes,
       label: "supersedes".freeze,
       :"rdfs:isDefinedBy" => %(http://rdf-vocabulary.ddialliance.org/xkos).freeze,
-      subPropertyOf: "xkos:follows".freeze,
+      subPropertyOf: ["dc:replaces".freeze, "xkos:follows".freeze],
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :targetConcept,
       domain: "xkos:ConceptAssociation".freeze,
