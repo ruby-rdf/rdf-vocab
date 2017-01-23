@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version      = '>= 2.2.2'
 
-  spec.add_runtime_dependency     "rdf",          '~> 2.s'
+  spec.add_runtime_dependency     "rdf",          '~> 2.2'
 
   # Either of these are required for HTML vocabulary generation
   spec.add_development_dependency "haml",         '~> 4.0'
