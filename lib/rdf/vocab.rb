@@ -164,7 +164,6 @@ module RDF
       },
       iiif: {
         uri: "http://iiif.io/api/presentation/2#",
-        source: "http://iiif.io/api/presentation/2/ontology.xml",
         class_name: "IIIF"
       },
       jsonld: {uri: "http://www.w3.org/ns/json-ld#"},
