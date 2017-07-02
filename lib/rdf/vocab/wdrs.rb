@@ -12,10 +12,14 @@ module RDF::Vocab
     # Ontology definition
     ontology :"http://www.w3.org/2007/05/powder-s",
       comment: %(This file specifies the set of classes and properties used in the RDF/OWL version of POWDER documents.).freeze,
+      :"dc:issued" => %(2009-09-01).freeze,
+      :"dc:modified" => [%(2010-11-08).freeze, %(2017-06-02).freeze],
+      :"http://purl.org/vocab/vann/preferredNamespacePrefix" => %(wdrs).freeze,
+      :"http://purl.org/vocab/vann/preferredNamespaceUri" => %(http://www.w3.org/2007/05/powder-s#).freeze,
       label: "POWDER-S Vocabulary".freeze,
       :"owl:priorVersion" => %(http://www.w3.org/2007/05/powder-s).freeze,
-      :"owl:versionInfo" => %(8 November 2010).freeze,
-      type: "owl:Ontology".freeze
+      :"owl:versionInfo" => %(2 June 2017).freeze,
+      type: ["http://purl.org/vocommons/voaf#Vocabulary".freeze, "owl:Ontology".freeze]
 
     # Class definitions
     term :Document,

@@ -217,13 +217,13 @@ module RDF
           @prefix marcrelators: <http://id.loc.gov/vocabulary/relators/> .
           @prefix owl: <http://www.w3.org/2002/07/owl#>.
           @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-          DeleteExisting {
-            marcrelators:lee rdfs:subPropertyOf marcrelators:lei .
-          } .
-          AddNew {
-            marcrelators:role a owl:ObjectProperty;
-               rdfs:comment "This property and its sub-properties are used to associate a Bibliographic Resource with a Resource that played a part in the lifecycle of the Bibliographic Resource.  It is the inverse of relators:roleIn.".
-          } .
+          #DeleteExisting {
+          #  marcrelators:lee rdfs:subPropertyOf marcrelators:lei .
+          #} .
+          #AddNew {
+          #  marcrelators:role a owl:ObjectProperty;
+          #     rdfs:comment "This property and its sub-properties are used to associate a Bibliographic Resource with a Resource that played a part in the lifecycle of the Bibliographic Resource.  It is the inverse of relators:roleIn.".
+          #} .
         }
       },
       mo:     {uri: "http://purl.org/ontology/mo/", strict: false},

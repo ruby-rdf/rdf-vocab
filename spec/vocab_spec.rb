@@ -24,7 +24,7 @@ describe RDF::Vocab do
         "members superseded by member" => [
           %(
             @prefix schema: <http://schema.org/> .
-            <foo> a schema:Organization; schema:members "Manny" .
+            <http://example/foo> a schema:Organization; schema:members "Manny" .
           ),
           {
             property: {"schema:members" => ["Term is superseded by schema:member"]},
