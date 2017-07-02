@@ -11,9 +11,9 @@ module RDF::Vocab
 
     # Ontology definition
     ontology :"http://id.loc.gov/ontologies/bibframe/",
-      :"dc:modified" => %(2017-03-15T16:23:59.852-04:00).freeze,
+      :"dc:modified" => %(2017-05-04T14:49:12.796-04:00).freeze,
       label: "BIBFRAME vocabulary".freeze,
-      :"owl:versionInfo" => %(2017-03-15T16:23:59.852-04:00).freeze,
+      :"owl:versionInfo" => %(2017-05-04T14:49:12.796-04:00).freeze,
       type: "owl:Ontology".freeze
 
     # Class definitions
@@ -700,7 +700,7 @@ module RDF::Vocab
       :"dc:modified" => %(2016-04-21 \(New\)).freeze,
       label: "Person".freeze,
       :"skos:definition" => %(Individual or identity established by an individual \(either alone or in collaboration with one or more other individuals\).).freeze,
-      subClassOf: "foaf:Person".freeze,
+      subClassOf: ["bf2:Agent".freeze, "foaf:Person".freeze],
       type: "owl:Class".freeze
     term :Place,
       :"dc:modified" => %(2016-04-21 \(New\)).freeze,
@@ -1463,7 +1463,6 @@ module RDF::Vocab
       :"dc:modified" => %(2016-04-21 \(New\)).freeze,
       domain: "bf2:Item".freeze,
       label: "Electronic location".freeze,
-      range: "rdfs:Resource".freeze,
       :"skos:definition" => %(Electronic location from which the resource is available.).freeze,
       type: "owl:ObjectProperty".freeze
     property :emulsion,
@@ -1720,8 +1719,9 @@ module RDF::Vocab
       type: "owl:DatatypeProperty".freeze
     property :identifiedBy,
       comment: %(Used with Unspecified).freeze,
-      :"dc:modified" => %(2016-04-21 \(New\)).freeze,
+      :"dc:modified" => [%(2016-04-21 \(New\)).freeze, %(2017-05-04 \(New inverse\)).freeze],
       label: "Identifier".freeze,
+      :"owl:inverseOf" => %(bf2:identifies).freeze,
       range: "bf2:Identifier".freeze,
       :"skos:definition" => %(Character string associated with a resource that serves to differentiate that resource from other resources, i.e., that uniquely identifies an entity.).freeze,
       type: "owl:ObjectProperty".freeze
@@ -1730,7 +1730,6 @@ module RDF::Vocab
       domain: "bf2:Identifier".freeze,
       label: "Resouce identified".freeze,
       :"owl:inverseOf" => %(bf2:identifiedBy).freeze,
-      range: "rdfs:Resource".freeze,
       :"skos:definition" => %(Resource that is associated with a character string that serves to differentiate one resource from another.).freeze,
       type: "owl:ObjectProperty".freeze
     property :illustrativeContent,
@@ -2160,9 +2159,7 @@ module RDF::Vocab
       type: "owl:ObjectProperty".freeze
     property :relatedTo,
       :"dc:modified" => %(2016-04-21 \(New\)).freeze,
-      domain: "rdfs:Resource".freeze,
       label: "Related resource".freeze,
-      range: "rdfs:Resource".freeze,
       :"skos:definition" => %(Any relationship between Work, Instance, and Item resources.).freeze,
       type: "owl:SymmetricProperty".freeze
     property :replacedBy,
@@ -2309,7 +2306,6 @@ module RDF::Vocab
       comment: %(Used with Work, Instance or Item).freeze,
       :"dc:modified" => %(2016-04-21 \(New\)).freeze,
       label: "Subject".freeze,
-      range: "rdfs:Resource".freeze,
       :"skos:definition" => %(Subject term\(s\) describing a resource.).freeze,
       type: "owl:ObjectProperty".freeze
     property :sublocation,
