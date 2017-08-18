@@ -146,6 +146,7 @@ module RDF
       },
       geonames: {uri: "http://www.geonames.org/ontology#"},
       gr:     {uri: "http://purl.org/goodrelations/v1#", source: "http://www.heppnetz.de/ontologies/goodrelations/v1.owl"},
+      gs1:    {uri: "http://gs1.org/voc/", source: "https://www.gs1.org/docs/gs1-smartsearch/gs1voc.ttl"},
       ht:     {uri: "http://www.w3.org/2011/http#"},
       hydra:  {uri: "http://www.w3.org/ns/hydra/core#"},
       iana:   {uri: "http://www.iana.org/assignments/relation/", source: File.expand_path("../../../etc/iana.ttl", __FILE__)},
