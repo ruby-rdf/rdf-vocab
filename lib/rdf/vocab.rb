@@ -277,15 +277,7 @@ module RDF
       rss:    {uri: "http://purl.org/rss/1.0/", source: "http://purl.org/rss/1.0/schema.rdf"},
       schema: {
         uri: "http://schema.org/",
-        source: "http://schema.org/version/latest/all-layers.nq",
-        patch: %{
-          @prefix schema: <http://schema.org/> .
-          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-          AddNew {
-            schema:treatment rdfs:subPropertyOf schema:availableService .
-            schema:preventiveProcedure rdfs:subPropertyOf schema:availableService .
-          } .
-        }
+        source: "http://schema.org/version/latest/all-layers.nq"
       },
       sioc:   {uri: "http://rdfs.org/sioc/ns#"},
       sioc_services: {
