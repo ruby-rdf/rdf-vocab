@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.license       = "Unlicense"
 
   spec.platform      = Gem::Platform::RUBY
-  spec.files         = %w(README.md LICENSE) + Dir.glob('lib/**/*.rb')
+  spec.files         = %w(README.md LICENSE VERSION) + Dir.glob('lib/**/*.rb')
   spec.test_files    = Dir.glob('spec/*.rb')
   spec.require_paths = %w(lib)
   spec.has_rdoc      = false
