@@ -443,10 +443,10 @@ module RDF
       # @return [Hash{Symbol => Lambda(Array, Hash)}]
       def cli_commands
         super.merge({
-          :"gen-vocab" => {
-            description: "Generate a vocabulary using a special serialization. Accepts an input graph, or serializes built-in vocabulary",
+          "gen-vocab": {
+            description: "Generate a vocabulary using a special serialization.",
             parse: false,  # Only parse if there are input files, otherwise, uses vocabulary
-            help: "gen-vocab --uri <vocabulary-URI> [--output format ttl|jsonld|html] [options] [files]\n",
+            help: "gen-vocab --uri <vocabulary-URI> [--output format ttl|jsonld|html] [options] [files]\nGenerate a vocabulary from repository using a special serialization.",
             lambda: ->(files, options) do
               $stdout.puts "Generate Vocabulary"
               raise ArgumentError, "Must specify vocabulary URI" unless options[:base_uri]
