@@ -1,31 +1,36 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 gemspec
 
-gem 'rdf',      github: "ruby-rdf/rdf",       branch: "develop"
-gem 'ld-patch', github: "ruby-rdf/ld-patch",  branch: "develop"
+gem 'ld-patch',
+    git: 'https://github.com/ruby-rdf/ld-patch.git',
+    branch: 'develop'
+
+gem 'rdf',
+    git: 'https://github.com/ruby-rdf/rdf.git',
+    branch: 'develop'
 
 group :development, :test do
-  gem 'ebnf',               github: "gkellogg/ebnf",                branch: "develop"
-  gem 'json-ld',            github: "ruby-rdf/json-ld",             branch: "develop"
-  gem 'linkeddata',         github: "ruby-rdf/linkeddata",          branch: "develop"
-  gem 'rdf-aggregate-repo', github: "ruby-rdf/rdf-aggregate-repo",  branch: "develop"
-  gem 'rdf-isomorphic',     github: "ruby-rdf/rdf-isomorphic",      branch: "develop"
-  gem 'rdf-reasoner',       github: "ruby-rdf/rdf-reasoner",        branch: "develop"
-  gem 'rdf-spec',           github: "ruby-rdf/rdf-spec",            branch: "develop"
-  gem 'rdf-turtle',         github: "ruby-rdf/rdf-turtle",          branch: "develop"
-  gem 'rdf-xsd',            github: "ruby-rdf/rdf-xsd",             branch: "develop"
-  gem 'sparql',             github: "ruby-rdf/sparql",              branch: "develop"
-  gem 'sparql-client',      github: "ruby-rdf/sparql-client",       branch: "develop"
-  gem 'sxp',                github: "dryruby/sxp.rb",               branch: "develop"
+  gem 'ebnf',               git: 'https://github.com/gkellogg/ebnf.git',                branch: 'develop'
+  gem 'json-ld',            git: 'https://github.com/ruby-rdf/json-ld.git',             branch: 'develop'
+  gem 'linkeddata',         git: 'https://github.com/ruby-rdf/linkeddata.git',          branch: 'develop'
+  gem 'rdf-aggregate-repo', git: 'https://github.com/ruby-rdf/rdf-aggregate-repo.git',  branch: 'develop'
+  gem 'rdf-isomorphic',     git: 'https://github.com/ruby-rdf/rdf-isomorphic.git',      branch: 'develop'
+  gem 'rdf-reasoner',       git: 'https://github.com/ruby-rdf/rdf-reasoner.git',        branch: 'develop'
+  gem 'rdf-spec',           git: 'https://github.com/ruby-rdf/rdf-spec.git',            branch: 'develop'
+  gem 'rdf-turtle',         git: 'https://github.com/ruby-rdf/rdf-turtle.git',          branch: 'develop'
+  gem 'rdf-xsd',            git: 'https://github.com/ruby-rdf/rdf-xsd.git',             branch: 'develop'
+  gem 'sparql',             git: 'https://github.com/ruby-rdf/sparql.git',              branch: 'develop'
+  gem 'sparql-client',      git: 'https://github.com/ruby-rdf/sparql-client.git',       branch: 'develop'
+  gem 'sxp',                git: 'https://github.com/dryruby/sxp.rb.git',               branch: 'develop'
 end
 
 group :debug do
-  gem "byebug", platform: :mri
-  gem "rubinius-debugger", platform: :rbx
+  gem 'byebug', platform: :mri
+  gem 'rubinius-debugger', platform: :rbx
 end
 
 platforms :rbx do
-  gem 'rubysl', '~> 2.0'
   gem 'rubinius', '~> 2.0'
+  gem 'rubysl', '~> 2.0'
 end
