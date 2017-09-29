@@ -116,7 +116,7 @@ module RDF::Vocab
       label: "inbox".freeze,
       :"rdfs:isDefinedBy" => %(https://www.w3.org/TR/ldn/).freeze,
       type: "rdf:Property".freeze,
-      :"vs:term_status" => %(working-draft).freeze
+      :"vs:term_status" => %(stable).freeze
     property :insertedContentRelation,
       comment: %(Indicates which triple in a creation request should be used as the member-URI value in the membership triple added when the creation request is successful.).freeze,
       domain: "ldp:Container".freeze,

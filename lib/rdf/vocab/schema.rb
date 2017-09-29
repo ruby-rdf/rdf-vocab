@@ -5,9 +5,9 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://schema.org/>
-  #   class SCHEMA < RDF::Vocabulary
+  #   class SCHEMA < RDF::StrictVocabulary
   #   end
-  class SCHEMA < RDF::Vocabulary("http://schema.org/")
+  class SCHEMA < RDF::StrictVocabulary("http://schema.org/")
 
     # Class definitions
     term :AMRadioChannel,
