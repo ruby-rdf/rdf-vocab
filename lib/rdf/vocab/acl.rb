@@ -92,10 +92,16 @@ module RDF::Vocab
       label: "agent group".freeze,
       range: "vcard:Group".freeze,
       type: "rdf:Property".freeze
-    property :defaultForNew,
+    property :default,
       comment: %(A directory for which this authorization is used for new files in the directory.).freeze,
       domain: "acl:Authorization".freeze,
-      label: "default access for new things in".freeze,
+      label: "default access for things in this".freeze,
+      type: "rdf:Property".freeze
+    property :defaultForNew,
+      comment: %(THIS IS OBSOLETE AS OF 2017-08-01.   See 'default'.
+        Was: A directory for which this authorization is used for new files in the directory.).freeze,
+      domain: "acl:Authorization".freeze,
+      label: "default access for new things in the object".freeze,
       type: "rdf:Property".freeze
     property :delegates,
       comment: %(Delegates a person or another agent to act on behalf of the agent.

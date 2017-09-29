@@ -11,10 +11,10 @@ module RDF::Vocab
 
     # Ontology definition
     ontology :"http://usefulinc.com/ns/doap#",
-      :"dc11:creator" => %(Edd Dumbill).freeze,
+      :"dc11:creator" => %(Edd Wilder-James).freeze,
       :"dc11:description" => %(The Description of a Project \(DOAP\) vocabulary, described using W3C RDF Schema and the Web Ontology Language.).freeze,
       :"dc11:format" => %(application/rdf+xml).freeze,
-      :"dc11:rights" => %(Copyright © 2004-2009 Edd Dumbill).freeze,
+      :"dc11:rights" => %(Copyright © 2004-20017 Edd Dumbill, Edd Wilder-James).freeze,
       :"dc11:title" => %(Description of a Project \(DOAP\) vocabulary).freeze,
       :"owl:imports" => %(foaf:).freeze,
       type: "owl:Ontology".freeze
@@ -47,6 +47,12 @@ module RDF::Vocab
     term :DarcsRepository,
       comment: %(darcs source code repository.).freeze,
       label: "darcs Repository".freeze,
+      :"rdfs:isDefinedBy" => %(doap:).freeze,
+      subClassOf: "doap:Repository".freeze,
+      type: "rdfs:Class".freeze
+    term :GitBranch,
+      comment: %(Git source code branch.).freeze,
+      label: "Git Branch".freeze,
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       subClassOf: "doap:Repository".freeze,
       type: "rdfs:Class".freeze
@@ -110,7 +116,7 @@ module RDF::Vocab
       comment: %(URI of a blog related to a project).freeze,
       domain: "doap:Project".freeze,
       label: "blog".freeze,
-      range: "rdfs:Resource".freeze,
+      range: ["http://rdfs.org/sioc/types#Weblog".freeze, "rdfs:Resource".freeze],
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       type: "rdf:Property".freeze
     property :browse,
@@ -148,6 +154,13 @@ module RDF::Vocab
       domain: "doap:Project".freeze,
       label: "developer".freeze,
       range: "foaf:Person".freeze,
+      :"rdfs:isDefinedBy" => %(doap:).freeze,
+      type: "rdf:Property".freeze
+    property :"developer-forum",
+      comment: %(A forum or community for developers of this project.).freeze,
+      domain: "doap:Project".freeze,
+      label: "developer forum".freeze,
+      range: "sioc:Container".freeze,
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       type: "rdf:Property".freeze
     property :documenter,
@@ -198,14 +211,14 @@ module RDF::Vocab
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       type: "rdf:Property".freeze
     property :language,
-      comment: [%(ISO language code a project has been translated into).freeze, %(このプロジェクトの翻訳された言語のISO言語コート).freeze],
+      comment: %(ISO language code a project has been translated into).freeze,
       domain: "doap:Project".freeze,
       label: "language".freeze,
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       type: "rdf:Property".freeze
     property :license,
-      comment: %(The URI of an RDF description of the license the software is distributed under.).freeze,
+      comment: %(The URI of an RDF description of the license the software is distributed under. E.g. a SPDX reference).freeze,
       label: "license".freeze,
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       type: "rdf:Property".freeze
@@ -219,6 +232,7 @@ module RDF::Vocab
       comment: %(Mailing list home page or email address.).freeze,
       domain: "doap:Project".freeze,
       label: "mailing list".freeze,
+      range: "http://rdfs.org/sioc/types#MailingList".freeze,
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       type: "rdf:Property".freeze
     property :maintainer,
@@ -229,7 +243,7 @@ module RDF::Vocab
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       type: "rdf:Property".freeze
     property :module,
-      comment: %(Module name of a repository.).freeze,
+      comment: %(Module name of a Subversion, CVS, BitKeeper or Arch repository.).freeze,
       label: "module".freeze,
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       type: "rdf:Property".freeze
@@ -249,7 +263,7 @@ module RDF::Vocab
       subPropertyOf: "foaf:homepage".freeze,
       type: ["owl:InverseFunctionalProperty".freeze, "rdf:Property".freeze]
     property :os,
-      comment: %(Operating system that a project is limited to.  Omit this property if the project is not OS-specific.).freeze,
+      comment: [%(Operating system that a project is limited to.  Omit this property if the project is not OS-specific.).freeze, %(Sistema operativo a que o projeto está limitado. Omita esta propriedade se o projeto não é condicionado pelo SO usado.).freeze],
       domain: ["doap:Project".freeze, "doap:Version".freeze],
       label: "operating system".freeze,
       range: "rdfs:Literal".freeze,
@@ -265,7 +279,7 @@ module RDF::Vocab
     property :"programming-language",
       comment: %(Programming language a project is implemented in or intended for use with.).freeze,
       domain: "doap:Project".freeze,
-      label: "programming language".freeze,
+      label: ["linguagem de programação".freeze, "programming language".freeze],
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       type: "rdf:Property".freeze
@@ -280,7 +294,16 @@ module RDF::Vocab
       comment: %(Source code repository.).freeze,
       domain: "doap:Project".freeze,
       label: "repository".freeze,
+      :"owl:inverseOf" => %(doap:repositoryOf).freeze,
       range: "doap:Repository".freeze,
+      :"rdfs:isDefinedBy" => %(doap:).freeze,
+      type: "rdf:Property".freeze
+    property :repositoryOf,
+      comment: %(The project that uses a repository.).freeze,
+      domain: "doap:Repository".freeze,
+      label: "repository of".freeze,
+      :"owl:inverseOf" => %(doap:repository).freeze,
+      range: "doap:Project".freeze,
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       type: "rdf:Property".freeze
     property :revision,
@@ -309,8 +332,15 @@ module RDF::Vocab
       range: "rdfs:Literal".freeze,
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       type: "rdf:Property".freeze
+    property :"support-forum",
+      comment: %(A forum or community that supports this project.).freeze,
+      domain: "doap:Project".freeze,
+      label: "supporting forum".freeze,
+      range: "sioc:Container".freeze,
+      :"rdfs:isDefinedBy" => %(doap:).freeze,
+      type: "rdf:Property".freeze
     property :tester,
-      comment: [%(A tester or other quality control contributor.).freeze, %(このプロジェクトのため、試験をする人や品質メンテナー。).freeze],
+      comment: %(A tester or other quality control contributor.).freeze,
       domain: "doap:Project".freeze,
       label: "tester".freeze,
       range: "foaf:Person".freeze,
@@ -334,6 +364,7 @@ module RDF::Vocab
       comment: %(URL of Wiki for collaborative discussion of project.).freeze,
       domain: "doap:Project".freeze,
       label: "wiki".freeze,
+      range: "http://rdfs.org/sioc/types#Wiki".freeze,
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       type: "rdf:Property".freeze
   end

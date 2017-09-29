@@ -316,7 +316,7 @@ module RDF
     # Autoload vocabularies
     VOCABS.each do |id, params|
       v = params.fetch(:class_name, id.to_s.upcase).to_sym
-      autoload v, "rdf/vocab/#{id}" unless params[:alias]
+      autoload v, File.expand_path("../vocab/#{id}", __FILE__) unless params[:alias]
     end
 
     # Aliases for vocabularies still defined directly in RDF.rb
