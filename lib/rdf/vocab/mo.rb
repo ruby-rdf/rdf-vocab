@@ -20,6 +20,8 @@ module RDF::Vocab
     ).freeze,
       :"dc11:title" => %(The Music Ontology).freeze,
       :"foaf:maker" => [%(http://foaf.me/zazi#me).freeze, %(http://kurtisrandom.com/foaf.rdf#kurtjx).freeze, %(http://raimond.me.uk/foaf.rdf#moustaki).freeze, %(http://www.talkdigger.com/foaf/fgiasson).freeze],
+      :"http://purl.org/vocab/vann/preferredNamespacePrefix" => %(mo).freeze,
+      :"http://purl.org/vocab/vann/preferredNamespaceUri" => %(http://purl.org/ontology/mo/).freeze,
       :"owl:imports" => [%(dc:).freeze, %(foaf:).freeze, %(http://purl.org/NET/c4dm/event.owl).freeze, %(http://purl.org/NET/c4dm/keys.owl).freeze, %(http://purl.org/ontology/ao/core).freeze, %(http://purl.org/vocab/bio/0.1/).freeze, %(http://purl.org/vocab/frbr/core).freeze, %(http://www.w3.org/2006/time).freeze],
       :"owl:versionInfo" => %(Revision: 2.1.5).freeze,
       type: "owl:Ontology".freeze

@@ -110,7 +110,19 @@ module RDF
       ebucore: {
         uri: "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
         source: "https://www.ebu.ch/metadata/ontologies/ebucore/ebucore.rdf",
-        class_name: "EBUCore"
+        class_name: "EBUCore",
+        patch: %{
+          @prefix ebucore: <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#> .
+          @prefix dc: <http://purl.org/dc/terms/> .
+          @prefix dc11: <http://purl.org/dc/elements/1.1/> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          DeleteExisting {
+            ebucore:Agent rdfs:subClassOf dc11:Agent .
+          } .
+          AddNew {
+            ebucore:Agent rdfs:subClassOf dc:Agent .
+          } .
+        }
       },
       edm: {
         uri: "http://www.europeana.eu/schemas/edm/",

@@ -32,6 +32,18 @@ module RDF::Vocab
       label: "append".freeze,
       subClassOf: ["acl:Access".freeze, "acl:Write".freeze],
       type: "rdfs:Class".freeze
+    term :AuthenticatedAgent,
+      comment: %(A class of agents who have been authenticated.
+In other words, anyone can access this resource, but not anonymously.
+The social expectation is that the authentication process will provide an
+identify and a name, or pseudonym.
+\(A new ID should not be minted for every access: the intent is that the user
+is able to continue to use the ID for continues interactions with peers,
+and for example to develop a reputation\)
+).freeze,
+      label: "Anyone authenticated".freeze,
+      subClassOf: "foaf:Agent".freeze,
+      type: "rdfs:Class".freeze
     term :Authorization,
       comment: %(An element of access control,
     allowing agent to agents access of some kind to resources or classes of resources).freeze,
