@@ -284,6 +284,7 @@ module RDF
         uri: "http://rdfs.org/sioc/services#",
         class_name: "SiocServices"
       },
+      sioct:  {uri: "http://rdfs.org/sioc/types#", class_name: "SiocTypes"},
       skos:   {uri: "http://www.w3.org/2004/02/skos/core#"},
       skosxl: {uri: "http://www.w3.org/2008/05/skos-xl#", source: "http://www.w3.org/TR/skos-reference/skos-xl.rdf"},
       v:      {uri: "http://rdf.data-vocabulary.org/#", source: "etc/rdf.data-vocab.ttl"},
