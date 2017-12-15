@@ -5,9 +5,9 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://gs1.org/voc/>
-  #   class GS1 < RDF::Vocabulary
+  #   class GS1 < RDF::StrictVocabulary
   #   end
-  class GS1 < RDF::Vocabulary("http://gs1.org/voc/")
+  class GS1 < RDF::StrictVocabulary("http://gs1.org/voc/")
 
     # Ontology definition
     ontology :"http://gs1.org/voc/",
