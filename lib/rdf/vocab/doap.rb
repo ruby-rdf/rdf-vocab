@@ -116,7 +116,7 @@ module RDF::Vocab
       comment: %(URI of a blog related to a project).freeze,
       domain: "doap:Project".freeze,
       label: "blog".freeze,
-      range: ["http://rdfs.org/sioc/types#Weblog".freeze, "rdfs:Resource".freeze],
+      range: ["rdfs:Resource".freeze, "sioctypes:Weblog".freeze],
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       type: "rdf:Property".freeze
     property :browse,
@@ -232,7 +232,7 @@ module RDF::Vocab
       comment: %(Mailing list home page or email address.).freeze,
       domain: "doap:Project".freeze,
       label: "mailing list".freeze,
-      range: "http://rdfs.org/sioc/types#MailingList".freeze,
+      range: "sioctypes:MailingList".freeze,
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       type: "rdf:Property".freeze
     property :maintainer,
@@ -364,7 +364,7 @@ module RDF::Vocab
       comment: %(URL of Wiki for collaborative discussion of project.).freeze,
       domain: "doap:Project".freeze,
       label: "wiki".freeze,
-      range: "http://rdfs.org/sioc/types#Wiki".freeze,
+      range: "sioctypes:Wiki".freeze,
       :"rdfs:isDefinedBy" => %(doap:).freeze,
       type: "rdf:Property".freeze
   end
