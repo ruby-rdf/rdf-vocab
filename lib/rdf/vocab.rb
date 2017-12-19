@@ -158,7 +158,25 @@ module RDF
       },
       geonames: {uri: "http://www.geonames.org/ontology#"},
       gr:     {uri: "http://purl.org/goodrelations/v1#", source: "http://www.heppnetz.de/ontologies/goodrelations/v1.owl"},
-      gs1:    {uri: "http://gs1.org/voc/", source: "https://www.gs1.org/docs/gs1-smartsearch/gs1voc.ttl"},
+      gs1:    {
+        uri: "http://gs1.org/voc/",
+        source: "https://www.gs1.org/docs/gs1-smartsearch/gs1voc.ttl",
+        patch: %{
+          @prefix gs1: <http://gs1.org/voc/> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          DeleteExisting {
+            gs1:MeasurementPrecisionCode-LESS_THAN a gs1:MeasurementPrecisionTypeCode .
+            gs1:PreservationTechniqueCode-COLD_SMOKE_CURING a gs1:PreservationTechniqueTypeCode .
+          } .
+          AddNew {
+            gs1:MeasurementPrecisionCode-LESS_THAN a gs1:MeasurementPrecisionCode .
+            gs1:PreservationTechniqueCode-COLD_SMOKE_CURING a gs1:PreservationTechniqueCode .
+            gs1:ReturnablePackageDepositDetails a rdfs:Class .
+            gs1:Place a rdfs:Class .
+            gs1:PackagingMaterialDetails a rdfs:Class .
+          } .
+        }
+      },
       ht:     {uri: "http://www.w3.org/2011/http#"},
       hydra:  {uri: "http://www.w3.org/ns/hydra/core#"},
       iana:   {uri: "http://www.iana.org/assignments/relation/", source: File.expand_path("../../../etc/iana.ttl", __FILE__)},

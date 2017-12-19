@@ -182,6 +182,12 @@ module RDF::Vocab
       :"rdfs:isDefinedBy" => %(gs1:).freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze],
       :"vs:term_status" => %(testing).freeze
+    term :PackagingMaterialDetails,
+      label: "PackagingMaterialDetails".freeze,
+      type: "rdfs:Class".freeze
+    term :Place,
+      label: "Place".freeze,
+      type: "rdfs:Class".freeze
     term :PostalAddress,
       comment: %(The location at which a particular organization or person may be found or reached.).freeze,
       label: "Address".freeze,
@@ -224,6 +230,9 @@ module RDF::Vocab
       subClassOf: ["owl:Thing".freeze, "schema:MediaObject".freeze],
       type: ["owl:Class".freeze, "rdfs:Class".freeze],
       :"vs:term_status" => %(testing).freeze
+    term :ReturnablePackageDepositDetails,
+      label: "ReturnablePackageDepositDetails".freeze,
+      type: "rdfs:Class".freeze
     term :Seafood,
       comment: %(Seafood Products including fish and shellfish.).freeze,
       label: "Seafood".freeze,
@@ -3992,7 +4001,7 @@ module RDF::Vocab
       comment: %(To indicate presence when the measurement value is too small to be measured precisely \(rule states less than 0.5\).).freeze,
       label: "Less Than".freeze,
       :"skos:prefLabel" => %(LESS_THAN).freeze,
-      type: "gs1:MeasurementPrecisionTypeCode".freeze
+      type: "gs1:MeasurementPrecisionCode".freeze
     term :NonbinaryLogicCode,
       label: "Nonbinary Logic Code".freeze,
       :"rdfs:isDefinedBy" => %(http://apps.gs1.org/GDD/Pages/clDetails.aspx?semanticURN=urn:gs1:gdd:cl:NonBinaryLogicEnumeration&release=1).freeze,
@@ -6304,7 +6313,7 @@ module RDF::Vocab
       comment: %(To smoke the food at between 70 degrees to 90 degrees F.).freeze,
       label: "Cold Smoke Curing".freeze,
       :"skos:prefLabel" => %(COLD_SMOKE_CURING).freeze,
-      type: "gs1:PreservationTechniqueTypeCode".freeze
+      type: "gs1:PreservationTechniqueCode".freeze
     term :"PreservationTechniqueCode-CONSERVE",
       comment: %(Keep from harm or damage).freeze,
       label: "Conserve".freeze,
