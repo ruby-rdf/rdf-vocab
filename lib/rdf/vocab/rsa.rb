@@ -10,13 +10,16 @@ module RDF::Vocab
   class RSA < RDF::StrictVocabulary("http://www.w3.org/ns/auth/rsa#")
 
     # Ontology definition
-    ontology :"http://www.w3.org/ns/auth/rsa",
+    ontology :"http://www.w3.org/ns/auth/rsa#",
       comment: %(ontology for the RSA public private keys ).freeze,
-      :"dc:created" => %(2008-11-13).freeze,
-      :"foaf:maker" => %(http://bblfish.net/people/henry/card#me).freeze,
-      :"rdfs:seeAlso" => [%(http://en.wikipedia.org/wiki/RSA).freeze, %(http://lists.foaf-project.org/mailman/listinfo/foaf-protocols).freeze, %(http://www.w3.org/ns/auth/X509Uml.svg).freeze],
+      "dc:contributor": term(
+          "foaf:homepage": "http://ii.uwb.edu.pl/~dtomaszuk/card".freeze
+        ),
+      "dc:created": "2008-11-13".freeze,
+      "foaf:maker": "http://bblfish.net/people/henry/card#me".freeze,
+      "rdfs:seeAlso": ["http://en.wikipedia.org/wiki/RSA".freeze, "http://lists.foaf-project.org/mailman/listinfo/foaf-protocols".freeze, "http://www.w3.org/ns/auth/X509Uml.svg".freeze],
       type: "owl:Ontology".freeze,
-      :"vs:term_status" => %(unstable).freeze
+      "vs:term_status": "unstable".freeze
 
     # Class definitions
     term :RSAKey,
@@ -27,26 +30,26 @@ module RDF::Vocab
       label: "RSA Key".freeze,
       subClassOf: "cert:Key".freeze,
       type: "owl:Class".freeze,
-      :"vs:term_status" => %(unstable).freeze
+      "vs:term_status": "unstable".freeze
     term :RSAPrivateKey,
       comment: %(
     A Private Key in the RSA framework 
     ).freeze,
       label: "RSA Private Key".freeze,
-      :"rdfs:seeAlso" => %(http://en.wikipedia.org/wiki/RSA).freeze,
+      "rdfs:seeAlso": "http://en.wikipedia.org/wiki/RSA".freeze,
       subClassOf: ["cert:PrivateKey".freeze, "rsa:RSAKey".freeze],
       type: "owl:Class".freeze,
-      :"vs:term_status" => %(unstable).freeze
+      "vs:term_status": "unstable".freeze
     term :RSAPublicKey,
       comment: %(
     The RSA public key.  Padded message m are encrypted by applying the function
       modulus\(power\(m,exponent\),modulus\)
     ).freeze,
       label: "RSA Public Key".freeze,
-      :"rdfs:seeAlso" => %(http://en.wikipedia.org/wiki/RSA).freeze,
+      "rdfs:seeAlso": "http://en.wikipedia.org/wiki/RSA".freeze,
       subClassOf: ["cert:PublicKey".freeze, "rsa:RSAKey".freeze],
       type: "owl:Class".freeze,
-      :"vs:term_status" => %(unstable).freeze
+      "vs:term_status": "unstable".freeze
 
     # Property definitions
     property :modulus,
@@ -58,7 +61,7 @@ module RDF::Vocab
       label: "modulus".freeze,
       range: ["xsd:base64Binary".freeze, "xsd:hexBinary".freeze],
       type: "owl:DatatypeProperty".freeze,
-      :"vs:term_status" => %(unstable).freeze
+      "vs:term_status": "unstable".freeze
     property :private_exponent,
       comment: %(
        The exponent used to decrypt the message
@@ -70,7 +73,7 @@ module RDF::Vocab
       label: "private".freeze,
       range: "xsd:nonNegativeInteger".freeze,
       type: "owl:DatatypeProperty".freeze,
-      :"vs:term_status" => %(unstable).freeze
+      "vs:term_status": "unstable".freeze
     property :public_exponent,
       comment: %(
        The exponent used to encrypt the message. Number chosen between
@@ -80,6 +83,6 @@ module RDF::Vocab
       label: "public_exponent".freeze,
       range: "xsd:nonNegativeInteger".freeze,
       type: "owl:DatatypeProperty".freeze,
-      :"vs:term_status" => %(unstable).freeze
+      "vs:term_status": "unstable".freeze
   end
 end

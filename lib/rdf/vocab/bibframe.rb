@@ -11,8 +11,8 @@ module RDF::Vocab
 
     # Ontology definition
     ontology :"http://bibframe.org/vocab/",
-      :"dc:modified" => %(2014-12-10T20:23:05.638677Z).freeze,
-      :"owl:versionInfo" => %(Initially automatically generated.).freeze,
+      "dc:modified": "2014-12-10T20:23:05.638677Z".freeze,
+      "owl:versionInfo": "Initially automatically generated.".freeze,
       type: "owl:Ontology".freeze
 
     # Class definitions
@@ -28,7 +28,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Archival,
       comment: %(Resources organically created, accumulated, and/or used by a person, family, or organization in the course of conduct of affairs and preserved because of their continuing value.).freeze,
-      :"dc:modified" => %(2014-10-28 \(Updated\)).freeze,
+      "dc:modified": "2014-10-28 (Updated)".freeze,
       label: "Archival controlled".freeze,
       subClassOf: "bibframe:Instance".freeze,
       type: "rdfs:Class".freeze
@@ -54,7 +54,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Category,
       comment: %(Generic list of values information.).freeze,
-      :"dc:modified" => %(2014-03-21 \(Definition Updated\)).freeze,
+      "dc:modified": "2014-03-21 (Definition Updated)".freeze,
       label: "Category".freeze,
       subClassOf: "bibframe:Resource".freeze,
       type: "rdfs:Class".freeze
@@ -80,19 +80,19 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :DescriptionAdminInfo,
       comment: %(Administrative metadata associated with the graph.).freeze,
-      :"dc:modified" => %(2014-03-21 \(Definition Updated\)).freeze,
+      "dc:modified": "2014-03-21 (Definition Updated)".freeze,
       label: "Administrative metadata".freeze,
       subClassOf: "bibframe:Resource".freeze,
       type: "rdfs:Class".freeze
     term :Electronic,
       comment: %(Resource that is intended for manipulation by a computer, residing in a carrier accessed either directly or remotely.).freeze,
-      :"dc:modified" => %(2014-10-28 \(Updated\)).freeze,
+      "dc:modified": "2014-10-28 (Updated)".freeze,
       label: "Electronic".freeze,
       subClassOf: "bibframe:Instance".freeze,
       type: "rdfs:Class".freeze
     term :Event,
       comment: %(Time or place of an event.).freeze,
-      :"dc:modified" => %(2014-03-21 \(Definition Updated\)).freeze,
+      "dc:modified": "2014-03-21 (Definition Updated)".freeze,
       label: "Event Entity".freeze,
       subClassOf: "bibframe:Resource".freeze,
       type: "rdfs:Class".freeze
@@ -103,13 +103,13 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :HeldItem,
       comment: %(Item holding information.).freeze,
-      :"dc:modified" => %(2014-03-21 \(Label Updated\)).freeze,
+      "dc:modified": "2014-03-21 (Label Updated)".freeze,
       label: "Item held".freeze,
       subClassOf: "bibframe:HeldMaterial".freeze,
       type: "rdfs:Class".freeze
     term :HeldMaterial,
       comment: %(Summary holdings information.).freeze,
-      :"dc:modified" => %(2014-03-21 \(Label Updated\)).freeze,
+      "dc:modified": "2014-03-21 (Label Updated)".freeze,
       label: "Material held".freeze,
       subClassOf: "bibframe:Annotation".freeze,
       type: "rdfs:Class".freeze
@@ -215,7 +215,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Relator,
       comment: %(How an agent is related to a resource.).freeze,
-      :"dc:modified" => %(2014-04-30 \(New\)).freeze,
+      "dc:modified": "2014-04-30 (New)".freeze,
       label: "Relationship".freeze,
       subClassOf: "bibframe:Resource".freeze,
       type: "rdfs:Class".freeze
@@ -245,7 +245,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :TableOfContents,
       comment: %(Table of Contents information for a resource.).freeze,
-      :"dc:modified" => %(2014-03-21 \(Label Updated\)).freeze,
+      "dc:modified": "2014-03-21 (Label Updated)".freeze,
       label: "Table of Contents Annotation".freeze,
       subClassOf: "bibframe:Annotation".freeze,
       type: "rdfs:Class".freeze
@@ -295,7 +295,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :absorbed,
       comment: %(Work that has been incorporated into another Work).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Absorbed".freeze,
       range: "bibframe:Work".freeze,
@@ -303,7 +303,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :absorbedBy,
       comment: %(Work that incorporates another work.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Absorbed by".freeze,
       range: "bibframe:Work".freeze,
@@ -311,7 +311,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :absorbedInPart,
       comment: %(Work that has been partially incorporated into another work.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Absorbed in part".freeze,
       range: "bibframe:Work".freeze,
@@ -319,7 +319,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :absorbedInPartBy,
       comment: %(Work that incorporates part of the content of another work.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Absorbed in part by".freeze,
       range: "bibframe:Work".freeze,
@@ -333,13 +333,13 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :accompaniedBy,
       comment: %(Resource that has an accompanying resource which adds to it).freeze,
-      :"dc:modified" => %(2014-04-10 \(Range updated\)).freeze,
+      "dc:modified": "2014-04-10 (Range updated)".freeze,
       label: "Accompanied by".freeze,
       subPropertyOf: "bibframe:relatedTo".freeze,
       type: "rdf:Property".freeze
     property :accompanies,
       comment: %(Resource that adds to or is issued with the described resource).freeze,
-      :"dc:modified" => %(2014-04-10 \(Range updated\)).freeze,
+      "dc:modified": "2014-04-10 (Range updated)".freeze,
       label: "Accompanies".freeze,
       subPropertyOf: "bibframe:relatedTo".freeze,
       type: "rdf:Property".freeze
@@ -489,7 +489,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :cartography,
       comment: %(Cartographic data that identifies scale, coordinates, etc.).freeze,
-      :"dc:modified" => %(2014-03-27 \(Updated\)).freeze,
+      "dc:modified": "2014-03-27 (Updated)".freeze,
       label: "Cartographic data".freeze,
       range: "bibframe:Cartography".freeze,
       type: "rdf:Property".freeze
@@ -549,7 +549,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :classificationEdition,
       comment: %(Edition of the classification scheme, such as full, abridged or a number, when a classification scheme designates editions.).freeze,
-      :"dc:modified" => %(2014-10-09 \(Updated\)).freeze,
+      "dc:modified": "2014-10-09 (Updated)".freeze,
       domain: "bibframe:Classification".freeze,
       label: "Classification scheme edition".freeze,
       range: "rdfs:Literal".freeze,
@@ -632,7 +632,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :colorContent,
       comment: %(Color characteristics, e.g. black and white, multicolored, etc.).freeze,
-      :"dc:modified" => %(2014-10-14 \(Updated\)).freeze,
+      "dc:modified": "2014-10-14 (Updated)".freeze,
       domain: "bibframe:Instance".freeze,
       label: "Color content".freeze,
       range: "rdfs:Literal".freeze,
@@ -663,7 +663,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :continuedBy,
       comment: %(Work whose content continues an earlier work under a new title.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Continued by".freeze,
       range: "bibframe:Work".freeze,
@@ -671,7 +671,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :continuedInPartBy,
       comment: %(Work part of whose content separated from an earlier work to form a new work.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Continued in part by".freeze,
       range: "bibframe:Work".freeze,
@@ -679,7 +679,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :continues,
       comment: %(Work that is continued by the content of a later work under a new title.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Continues".freeze,
       range: "bibframe:Work".freeze,
@@ -687,7 +687,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :continuesInPart,
       comment: %(Work that split into two or more separate works with new titles.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Continues in part".freeze,
       range: "bibframe:Work".freeze,
@@ -761,7 +761,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :derivativeOf,
       comment: %(Work is a modification of a source work.).freeze,
-      :"dc:modified" => %(2014-04-30 \(New\)).freeze,
+      "dc:modified": "2014-04-30 (New)".freeze,
       label: "Is derivative of".freeze,
       subPropertyOf: "bibframe:relatedTo".freeze,
       type: "rdf:Property".freeze
@@ -772,13 +772,13 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :descriptionAuthentication,
       comment: %(Indication of specific types of reviews of description information.).freeze,
-      :"dc:modified" => %(2014-10-27 \(Updated\)).freeze,
+      "dc:modified": "2014-10-27 (Updated)".freeze,
       label: "Description authentication".freeze,
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
     property :descriptionConventions,
       comment: %(Rules used for the descriptive content of the description.).freeze,
-      :"dc:modified" => %(2014-05-13 \(updated\)).freeze,
+      "dc:modified": "2014-05-13 (updated)".freeze,
       label: "Description conventions".freeze,
       range: "rdfs:Resource".freeze,
       type: "rdf:Property".freeze
@@ -789,13 +789,13 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :descriptionModifier,
       comment: %(Agency that modified a description.).freeze,
-      :"dc:modified" => %(2014-10-27 \(Updated\)).freeze,
+      "dc:modified": "2014-10-27 (Updated)".freeze,
       label: "Description modifier".freeze,
       range: "rdfs:Resource".freeze,
       type: "rdf:Property".freeze
     property :descriptionOf,
       comment: %(Related resource that is analyzed, commented upon, critiqued, evaluated, reviewed, or otherwise described by the resource.).freeze,
-      :"dc:modified" => %(2014-04-30 \(New\)).freeze,
+      "dc:modified": "2014-04-30 (New)".freeze,
       label: "Is description of".freeze,
       subPropertyOf: "bibframe:relatedTo".freeze,
       type: "rdf:Property".freeze
@@ -806,7 +806,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :descriptionStatus,
       comment: %(Indicaton of whether the description is new or revised or in other states.).freeze,
-      :"dc:modified" => %(2014-10-27 \(Updated\)).freeze,
+      "dc:modified": "2014-10-27 (Updated)".freeze,
       label: "Description status".freeze,
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
@@ -888,7 +888,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :electronicLocator,
       comment: %(Electronic location from which the resource is available.).freeze,
-      :"dc:modified" => %(2014-04-28 \(New\)).freeze,
+      "dc:modified": "2014-04-28 (New)".freeze,
       domain: "bibframe:HeldMaterial".freeze,
       label: "Electronic location".freeze,
       range: "rdfs:Resource".freeze,
@@ -901,21 +901,21 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :event,
       comment: %(Information about the geographic area/or time period covered by an event \(e.g., a report\).).freeze,
-      :"dc:modified" => %(2014-05-16 \(Updated\)).freeze,
+      "dc:modified": "2014-05-16 (Updated)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Event associated with content".freeze,
       range: "bibframe:Event".freeze,
       type: "rdf:Property".freeze
     property :eventAgent,
       comment: %(Person or organization associated with event.).freeze,
-      :"dc:modified" => %(2014-05-16 \(Updated\)).freeze,
+      "dc:modified": "2014-05-16 (Updated)".freeze,
       domain: "bibframe:Event".freeze,
       label: "Agent for event".freeze,
       range: "bibframe:Agent".freeze,
       type: "rdf:Property".freeze
     property :eventDate,
       comment: %(Date, time or period of event.).freeze,
-      :"dc:modified" => %(2014-05-16 \(Updated\)).freeze,
+      "dc:modified": "2014-05-16 (Updated)".freeze,
       domain: "bibframe:Event".freeze,
       label: "Date(s) of event".freeze,
       range: "rdfs:Literal".freeze,
@@ -928,7 +928,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :expressionOf,
       comment: %(Expression has a related work. For use to connect Works under FRBR/RDA rules.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Expression of".freeze,
       range: "bibframe:Work".freeze,
@@ -961,14 +961,14 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :formDesignation,
       comment: %(Class or genre to which a Work or Instance belongs.).freeze,
-      :"dc:modified" => %(2014-03-21 \(Range updated\)).freeze,
+      "dc:modified": "2014-03-21 (Range updated)".freeze,
       domain: "bibframe:Title".freeze,
       label: "Form designation".freeze,
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
     property :format,
       comment: %(File format or physical medium of an instance.).freeze,
-      :"dc:modified" => %(2014-10-27 \(Updated\)).freeze,
+      "dc:modified": "2014-10-27 (Updated)".freeze,
       domain: "bibframe:Instance".freeze,
       label: "Format".freeze,
       range: "rdfs:Literal".freeze,
@@ -993,19 +993,19 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :generationDate,
       comment: %(Date of conversion of the data from another format.).freeze,
-      :"dc:modified" => %(2014-10-27 \(Updated\)).freeze,
+      "dc:modified": "2014-10-27 (Updated)".freeze,
       label: "Date generated".freeze,
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
     property :generationProcess,
       comment: %(Indication of the program or process used to generate the description by application of a particular transformation.).freeze,
-      :"dc:modified" => %(2014-10-27 \(Updated\)).freeze,
+      "dc:modified": "2014-10-27 (Updated)".freeze,
       label: "Description generation".freeze,
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
     property :genre,
       comment: %(Genre and other general characteristics associated with genre and form.).freeze,
-      :"dc:modified" => %(2014-03-21 \(New\)).freeze,
+      "dc:modified": "2014-03-21 (New)".freeze,
       label: "Genre".freeze,
       range: "bibframe:Category".freeze,
       type: "rdf:Property".freeze
@@ -1031,32 +1031,32 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :hasAuthority,
       comment: %(Link to controlled form of name or subject and other information about.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated range\)).freeze,
+      "dc:modified": "2014-04-10 (Updated range)".freeze,
       domain: "bibframe:Authority".freeze,
       label: "Authority information".freeze,
       range: "bibframe:Resource".freeze,
       type: "rdf:Property".freeze
     property :hasDerivative,
       comment: %(Work has a modification for which it is the source.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Range updated\)).freeze,
+      "dc:modified": "2014-04-10 (Range updated)".freeze,
       label: "Has derivative".freeze,
       subPropertyOf: "bibframe:relatedTo".freeze,
       type: "rdf:Property".freeze
     property :hasDescription,
       comment: %(Related resource that analyzes, comments on, critiques, evaluates, reviews, or otherwise describes the resource.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Range updated\)).freeze,
+      "dc:modified": "2014-04-10 (Range updated)".freeze,
       label: "Has description".freeze,
       subPropertyOf: "bibframe:relatedTo".freeze,
       type: "rdf:Property".freeze
     property :hasEquivalent,
       comment: %(Instance embodies the same expression of a work as the resource being described.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Range updated\)).freeze,
+      "dc:modified": "2014-04-10 (Range updated)".freeze,
       label: "Equivalence".freeze,
       subPropertyOf: "bibframe:relatedTo".freeze,
       type: "rdf:Property".freeze
     property :hasExpression,
       comment: %(Work has a related expression. For use to connect Works under FRBR/RDA rules.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Expressed as".freeze,
       range: "bibframe:Work".freeze,
@@ -1064,7 +1064,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :hasInstance,
       comment: %(Work has a related Instance/manifestation. For use to connect Works to Instances in the BIBFRAME structure.).freeze,
-      :"dc:modified" => %(2014--03-21 \(Updated definition\)).freeze,
+      "dc:modified": "2014--03-21 (Updated definition)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Instance of Work".freeze,
       range: "bibframe:Instance".freeze,
@@ -1072,7 +1072,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :hasPart,
       comment: %(Resource that is included either physically or logically contained in the described resource).freeze,
-      :"dc:modified" => %(2014-04-10 \(Range updated\)).freeze,
+      "dc:modified": "2014-04-10 (Range updated)".freeze,
       label: "Has part".freeze,
       subPropertyOf: "bibframe:relatedTo".freeze,
       type: "rdf:Property".freeze
@@ -1116,7 +1116,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :identifierScheme,
       comment: %(Scheme within which the identifier is unique.).freeze,
-      :"dc:modified" => [%('2014-06-04 \(Updated range\)).freeze, %(2014-06-04 \(Updated mapping\)).freeze],
+      "dc:modified": ["'2014-06-04 (Updated range)".freeze, "2014-06-04 (Updated mapping)".freeze],
       domain: "bibframe:Identifier".freeze,
       label: "Identifier scheme".freeze,
       range: "rdfs:Resource".freeze,
@@ -1153,7 +1153,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :instanceOf,
       comment: %(Work this resource instantiates or manifests. For use to connect Instances to Works in the BIBFRAME structure.).freeze,
-      :"dc:modified" => %(2014--03-21 \(Updated definition\)).freeze,
+      "dc:modified": "2014--03-21 (Updated definition)".freeze,
       domain: "bibframe:Instance".freeze,
       label: "Instance of".freeze,
       range: "bibframe:Work".freeze,
@@ -1242,7 +1242,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :istc,
       comment: %(International Standard Text code, a numbering system developed to enable the unique identification of textual works.).freeze,
-      :"dc:modified" => %(a,z).freeze,
+      "dc:modified": "a,z".freeze,
       domain: "bibframe:Work".freeze,
       label: "ISTC".freeze,
       range: "bibframe:Identifier".freeze,
@@ -1387,7 +1387,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :mergedToForm,
       comment: %(One of two or more works that come together to form a new work.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Merged to form".freeze,
       range: "bibframe:Work".freeze,
@@ -1435,7 +1435,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :musicVersion,
       comment: %(Versions such as arrangements, transcriptions, etc. of music.).freeze,
-      :"dc:modified" => %(2014-06-19 \(Example Added\)).freeze,
+      "dc:modified": "2014-06-19 (Example Added)".freeze,
       label: "Music version".freeze,
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
@@ -1461,13 +1461,13 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :note,
       comment: %(General textual information relating to a resource.).freeze,
-      :"dc:modified" => %(2014-10-14 \(Updated\)).freeze,
+      "dc:modified": "2014-10-14 (Updated)".freeze,
       label: "Note".freeze,
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
     property :originDate,
       comment: %(Date or date range associated with the creation of the work.).freeze,
-      :"dc:modified" => %(2014-07-23 \(Example added\)).freeze,
+      "dc:modified": "2014-07-23 (Example added)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Associated title date".freeze,
       range: "rdfs:Literal".freeze,
@@ -1494,7 +1494,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :otherPhysicalFormat,
       comment: %(Resource that is manifested in another physical carrier.).freeze,
-      :"dc:modified" => %(2014-10-14 \(Updated\)).freeze,
+      "dc:modified": "2014-10-14 (Updated)".freeze,
       domain: "bibframe:Instance".freeze,
       label: "Has other physical format".freeze,
       range: "bibframe:Instance".freeze,
@@ -1508,7 +1508,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :partOf,
       comment: %(Resource in which the described resource is physically or logically contained.).freeze,
-      :"dc:modified" => %(2014-04-30 \(New\)).freeze,
+      "dc:modified": "2014-04-30 (New)".freeze,
       label: "Is part of".freeze,
       subPropertyOf: "bibframe:relatedTo".freeze,
       type: "rdf:Property".freeze
@@ -1532,7 +1532,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :precededBy,
       comment: %(Resource that precedes the resource being described \(e.g., is earlier in time or before in narrative\).).freeze,
-      :"dc:modified" => %(2014-04-10 \(Renamed\)).freeze,
+      "dc:modified": "2014-04-10 (Renamed)".freeze,
       label: "Preceded By".freeze,
       subPropertyOf: "bibframe:relatedTo".freeze,
       type: "rdf:Property".freeze
@@ -1601,7 +1601,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :referenceAuthority,
       comment: %(Link to authority information).freeze,
-      :"dc:modified" => %(2014-03-27 \(Updated\)).freeze,
+      "dc:modified": "2014-03-27 (Updated)".freeze,
       domain: "bibframe:Authority".freeze,
       label: "Other authority information".freeze,
       range: "bibframe:Resource".freeze,
@@ -1615,7 +1615,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :relatedTo,
       comment: %(Any relationship between work or instance resources.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Range updated\)).freeze,
+      "dc:modified": "2014-04-10 (Range updated)".freeze,
       domain: "bibframe:Resource".freeze,
       label: "Related resource".freeze,
       range: "bibframe:Resource".freeze,
@@ -1629,13 +1629,13 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :relator,
       comment: %(link to role and agent information.).freeze,
-      :"dc:modified" => %(2014-04-30 \(New\)).freeze,
+      "dc:modified": "2014-04-30 (New)".freeze,
       label: "Relationship of agent".freeze,
       range: "bibframe:Relator".freeze,
       type: "rdf:Property".freeze
     property :relatorRole,
       comment: %(Specific role of agent.).freeze,
-      :"dc:modified" => %(2014-04-30 \(New\)).freeze,
+      "dc:modified": "2014-04-30 (New)".freeze,
       domain: "bibframe:Relator".freeze,
       label: "Agent role".freeze,
       range: "rdfs:Literal".freeze,
@@ -1656,7 +1656,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :reproductionPolicy,
       comment: %(Policy statement about whether reproductions of the holding can be made).freeze,
-      :"dc:modified" => %(2014-10-21 \(Added\)).freeze,
+      "dc:modified": "2014-10-21 (Added)".freeze,
       domain: "bibframe:HeldMaterial".freeze,
       label: "Reproduction policy".freeze,
       range: "rdfs:Literal".freeze,
@@ -1675,7 +1675,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :retentionPolicy,
       comment: %(Policy statement about how many and/or how long the holdings are retained).freeze,
-      :"dc:modified" => %(2014-10-21 \(Added\)).freeze,
+      "dc:modified": "2014-10-21 (Added)".freeze,
       domain: "bibframe:HeldMaterial".freeze,
       label: "Retention policy".freeze,
       range: "rdfs:Literal".freeze,
@@ -1696,7 +1696,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :separatedFrom,
       comment: %(Work that spun off a part of its content to form a new work.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Separated from".freeze,
       range: "bibframe:Work".freeze,
@@ -1716,7 +1716,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :series,
       comment: %(Work in which the part has been issued; the title of the larger work appears on the part.).freeze,
-      :"dc:modified" => %(2014-10-14 \(Updated\)).freeze,
+      "dc:modified": "2014-10-14 (Updated)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Has series".freeze,
       range: "bibframe:Work".freeze,
@@ -1773,7 +1773,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :splitInto,
       comment: %(One of two or more works resulting from the division of an earlier work into separate works.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Split into".freeze,
       range: "bibframe:Work".freeze,
@@ -1814,7 +1814,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :subLocation,
       comment: %(Specific place within the holding entity where the item is located or made available).freeze,
-      :"dc:modified" => %(2014-04-28 \(Updated Mapping\)).freeze,
+      "dc:modified": "2014-04-28 (Updated Mapping)".freeze,
       domain: "bibframe:HeldMaterial".freeze,
       label: "Held in sublocation".freeze,
       range: "rdfs:Literal".freeze,
@@ -1827,7 +1827,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :subseries,
       comment: %(Work, which is part of another series, in which the part has been issued.).freeze,
-      :"dc:modified" => %(2014-10-14 \(Updated\)).freeze,
+      "dc:modified": "2014-10-14 (Updated)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Has subseries".freeze,
       range: "bibframe:Work".freeze,
@@ -1835,7 +1835,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :subseriesOf,
       comment: %(Work in which the part consistently appears; the title of the larger work appears on all issues or parts of the subseries\).).freeze,
-      :"dc:modified" => %(2014-10-14 \(Updated\)).freeze,
+      "dc:modified": "2014-10-14 (Updated)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Subseries of".freeze,
       range: "bibframe:Work".freeze,
@@ -1849,7 +1849,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :succeededBy,
       comment: %(Resource that succeeds the resource being described \(e.g., later in time or after in a narrative\).).freeze,
-      :"dc:modified" => %(2014-04-10 \(Renamed\)).freeze,
+      "dc:modified": "2014-04-10 (Renamed)".freeze,
       label: "Succeeded By".freeze,
       subPropertyOf: "bibframe:relatedTo".freeze,
       type: "rdf:Property".freeze
@@ -1868,7 +1868,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :supersededBy,
       comment: %(Later Work used in place of an earlier work, usually because the later work contains updated or new information.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Superseded by".freeze,
       range: "bibframe:Work".freeze,
@@ -1876,7 +1876,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :supersededInPartBy,
       comment: %(Later Work used in part in place of an earlier work, usually because the later work contains updated or new information.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Superseded in part by".freeze,
       range: "bibframe:Work".freeze,
@@ -1884,7 +1884,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :supersedes,
       comment: %(Earlier work whose content has been replaced by a later work, usually because the later work contains updated or new information.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Supersedes".freeze,
       range: "bibframe:Work".freeze,
@@ -1892,7 +1892,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :supersedesInPart,
       comment: %(Earlier work whose content has been partially replaced by a later work, usually because the later work contains updated or new information.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Supersedes in part".freeze,
       range: "bibframe:Work".freeze,
@@ -1969,14 +1969,14 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :titleStatement,
       comment: %(Title transcribed from an instance.).freeze,
-      :"dc:modified" => %(2014-09-03 \(Updated\)).freeze,
+      "dc:modified": "2014-09-03 (Updated)".freeze,
       domain: "bibframe:Instance".freeze,
       label: "Transcribed title".freeze,
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
     property :titleType,
       comment: %(Type of title variation, e.g., acronym, cover, spine. .).freeze,
-      :"dc:modified" => %(2014-08-07 \(Example added\)).freeze,
+      "dc:modified": "2014-08-07 (Example added)".freeze,
       domain: "bibframe:Title".freeze,
       label: "Variant title type".freeze,
       range: "rdfs:Literal".freeze,
@@ -2014,13 +2014,13 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :treatySignator,
       comment: %(Government of other party that has formally signed a treaty.).freeze,
-      :"dc:modified" => %(2014-03-21 \(Range updated\)).freeze,
+      "dc:modified": "2014-03-21 (Range updated)".freeze,
       label: "Signatory to a treaty".freeze,
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
     property :unionOf,
       comment: %(One of two or more works which came together to form a new work.).freeze,
-      :"dc:modified" => %(2014-04-10 \(Updated subproperty\)).freeze,
+      "dc:modified": "2014-04-10 (Updated subproperty)".freeze,
       domain: "bibframe:Work".freeze,
       label: "Union of".freeze,
       range: "bibframe:Work".freeze,

@@ -95,11 +95,9 @@ date: 2003/01/10 10:53:23;  author: danbri;  state: Exp;
 basic geo vocab
 
 ).freeze,
-      :"dc11:date" => %($Date: 2009/04/20 15:00:30 $).freeze,
-      :"dc11:description" => %(A vocabulary for representing latitude, longitude and 
- altitude information in the WGS84 geodetic reference datum. 
- Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details.).freeze,
-      :"dc11:title" => %(WGS84 Geo Positioning: an RDF vocabulary).freeze,
+      "dc11:date": "$Date: 2009/04/20 15:00:30 $".freeze,
+      "dc11:description": "A vocabulary for representing latitude, longitude and \n altitude information in the WGS84 geodetic reference datum. \n Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details.".freeze,
+      "dc11:title": "WGS84 Geo Positioning: an RDF vocabulary".freeze,
       label: "geo".freeze
 
     # Class definitions

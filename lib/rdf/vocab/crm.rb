@@ -21,7 +21,7 @@ The recording of the donor and/or recipient is optional. It is possible that in 
 The distinction between the legal responsibility for custody and the actual physical possession of the object should be expressed using the property P2 has type \(is type of\). A specific case of transfer of custody is theft.
 The interpretation of the museum notion of "accession" differs between institutions. The CRM therefore models legal ownership and physical custody separately. Institutions will then model their specific notions of accession and deaccession as combinations of these.
 ).freeze,
-      label: "Transfer of Custody".freeze,
+      label: ["Changement de détenteur".freeze, "Transfer of Custody".freeze, "Transferência de Custódia".freeze, "Übertragung des Gewahrsams".freeze, "Μεταβίβαση  Κατοχής".freeze, "Передача Опеки".freeze, "保管作业转移".freeze],
       subClassOf: "crm:E7_Activity".freeze,
       type: "rdfs:Class".freeze
     term :E11_Modification,
@@ -30,7 +30,7 @@ This class includes the production of an item from raw materials, and other so f
 Since the distinction between modification and production is not always clear, modification is regarded as the more generally applicable concept. This implies that some items may be consumed or destroyed in a Modification, and that others may be produced as a result of it. An event should also be documented using E81 Transformation if it results in the destruction of one or more objects and the simultaneous production of others using parts or material from the originals. In this case, the new items have separate identities. 
 If the instance of the E29 Design or Procedure utilized for the modification prescribes the use of specific materials, they should be documented using property P68 foresees use of \(use foreseen by\): E57 Material of E29 Design or Procedure, rather than via P126 employed \(was employed in\): E57 Material.
 ).freeze,
-      label: "Modification".freeze,
+      label: ["Bearbeitung".freeze, "Modification".freeze, "Modification".freeze, "Modificação".freeze, "Τροποποίηση".freeze, "Событие Изменения".freeze, "修改".freeze],
       subClassOf: "crm:E7_Activity".freeze,
       type: "rdfs:Class".freeze
     term :E12_Production,
@@ -39,7 +39,7 @@ It specializes the notion of modification into production. The decision as to wh
 This entity can be collective: the printing of a thousand books, for example, would normally be considered a single event. 
 An event should also be documented using E81 Transformation if it results in the destruction of one or more objects and the simultaneous production of others using parts or material from the originals. In this case, the new items have separate identities and matter is preserved, but identity is not.
 ).freeze,
-      label: "Production".freeze,
+      label: ["Herstellung".freeze, "Production".freeze, "Production".freeze, "Produção".freeze, "Παραγωγή".freeze, "Событие Производства".freeze, "生产".freeze],
       subClassOf: ["crm:E11_Modification".freeze, "crm:E63_Beginning_of_Existence".freeze],
       type: "rdfs:Class".freeze
     term :E13_Attribute_Assignment,
@@ -47,14 +47,14 @@ An event should also be documented using E81 Transformation if it results in the
 This class allows the documentation of how the respective assignment came about, and whose opinion it was. All the attributes or properties assigned in such an action can also be seen as directly attached to the respective item or concept, possibly as a collection of contradictory values. All cases of properties in this model that are also described indirectly through an action are characterised as "short cuts" of this action. This redundant modelling of two alternative views is preferred because many implementations may have good reasons to model either the action or the short cut, and the relation between both alternatives can be captured by simple rules. 
 In particular, the class describes the actions of people making propositions and statements during certain museum procedures, e.g. the person and date when a condition statement was made, an identifier was assigned, the museum object was measured, etc. Which kinds of such assignments and statements need to be documented explicitly in structures of a schema rather than free text, depends on if this information should be accessible by structured queries. 
 ).freeze,
-      label: "Attribute Assignment".freeze,
+      label: ["Affectation d'attribut".freeze, "Atribuição de Característica".freeze, "Attribute Assignment".freeze, "Merkmalszuweisung".freeze, "Απόδοση Ιδιοτήτων".freeze, "Присвоение Атрибута".freeze, "屬性指定".freeze],
       subClassOf: "crm:E7_Activity".freeze,
       type: "rdfs:Class".freeze
     term :E14_Condition_Assessment,
       comment: %(This class describes the act of assessing the state of preservation of an object during a particular period. 
 The condition assessment may be carried out by inspection, measurement or through historical research. This class is used to document circumstances of the respective assessment that may be relevant to interpret its quality at a later stage, or to continue research on related documents. 
 ).freeze,
-      label: "Condition Assessment".freeze,
+      label: ["Avaliação do Estado Material".freeze, "Condition Assessment".freeze, "Expertise de l'état matériel".freeze, "Zustandsfeststellung".freeze, "Εκτίμηση Κατάστασης".freeze, "Оценка Состояния".freeze, "状态评估".freeze],
       subClassOf: "crm:E13_Attribute_Assignment".freeze,
       type: "rdfs:Class".freeze
     term :E15_Identifier_Assignment,
@@ -62,7 +62,7 @@ The condition assessment may be carried out by inspection, measurement or throug
 Examples of such identifiers include Find Numbers, Inventory Numbers, uniform titles in the sense of librarianship and Digital Object Identifiers \(DOI\). Documenting the act of identifier assignment and deassignment is especially useful when objects change custody or the identification system of an organization is changed. In order to keep track of the identity of things in such cases, it is important to document by whom, when and for what purpose an identifier is assigned to an item.
 The fact that an identifier is a preferred one for an organisation can be expressed by using the property E1 CRM Entity. P48 has preferred identifier \(is preferred identifier of\): E42 Identifier. It can better be expressed in a context independent form by assigning a suitable E55 Type, such as “preferred identifier assignment”, to the respective instance of E15 Identifier Assignment via the P2 has type property.
 ).freeze,
-      label: "Identifier Assignment".freeze,
+      label: ["Atribuição de Identificador".freeze, "Attribution d’identificateur".freeze, "Identifier Assignment".freeze, "Kennzeichenzuweisung".freeze, "Απόδοση Αναγνωριστικού".freeze, "Назначение Идентификатора".freeze, "标识符指定".freeze],
       subClassOf: "crm:E13_Attribute_Assignment".freeze,
       type: "rdfs:Class".freeze
     term :E16_Measurement,
@@ -70,14 +70,14 @@ The fact that an identifier is a preferred one for an organisation can be expres
 Examples include measuring the monetary value of a collection of coins or the running time of a specific video cassette. 
 The E16 Measurement may use simple counting or tools, such as yardsticks or radiation detection devices. The interest is in the method and care applied, so that the reliability of the result may be judged at a later stage, or research continued on the associated documents. The date of the event is important for dimensions, which may change value over time, such as the length of an object subject to shrinkage. Details of methods and devices are best handled as free text, whereas basic techniques such as "carbon 14 dating" should be encoded using P2 has type \(is type of:\) E55 Type.
 ).freeze,
-      label: "Measurement".freeze,
+      label: ["Measurement".freeze, "Medição".freeze, "Messung".freeze, "Mesurage".freeze, "Μέτρηση".freeze, "Событие Измерения".freeze, "测量".freeze],
       subClassOf: "crm:E13_Attribute_Assignment".freeze,
       type: "rdfs:Class".freeze
     term :E17_Type_Assignment,
       comment: %(This class comprises the actions of classifying items of whatever kind. Such items include objects, specimens, people, actions and concepts. 
 This class allows for the documentation of the context of classification acts in cases where the value of the classification depends on the personal opinion of the classifier, and the date that the classification was made. This class also encompasses the notion of "determination," i.e. the systematic and molecular identification of a specimen in biology. 
 ).freeze,
-      label: "Type Assignment".freeze,
+      label: ["Atribuição de Tipo".freeze, "Attribution de type".freeze, "Type Assignment".freeze, "Typuszuweisung".freeze, "Απόδοση Τύπου".freeze, "Присвоение Типа".freeze, "类型指定".freeze],
       subClassOf: "crm:E13_Attribute_Assignment".freeze,
       type: "rdfs:Class".freeze
     term :E18_Physical_Thing,
@@ -85,7 +85,7 @@ This class allows for the documentation of the context of classification acts in
 Depending on the existence of natural boundaries of such things, the CRM distinguishes the instances of E19 Physical Object from instances of E26 Physical Feature, such as holes, rivers, pieces of land etc. Most instances of E19 Physical Object can be moved \(if not too heavy\), whereas features are integral to the surrounding matter. 
 The CRM is generally not concerned with amounts of matter in fluid or gaseous states. 
 ).freeze,
-      label: "Physical Thing".freeze,
+      label: ["Chose matérielle".freeze, "Coisa Material".freeze, "Materielles".freeze, "Physical Thing".freeze, "Υλικό Πράγμα".freeze, "Физическая Вещь".freeze, "实体物".freeze],
       subClassOf: "crm:E72_Legal_Object".freeze,
       type: "rdfs:Class".freeze
     term :E19_Physical_Object,
@@ -94,7 +94,7 @@ The class also includes all aggregates of objects made for functional purposes o
 In some contexts, such objects, except for aggregates, are also called “bona fide objects” \(Smith & Varzi, 2000, pp.401-420\), i.e. naturally defined objects. 
 The decision as to what is documented as a complete item, rather than by its parts or components, may be a purely administrative decision or may be a result of the order in which the item was acquired.
 ).freeze,
-      label: "Physical Object".freeze,
+      label: ["Materieller Gegenstand".freeze, "Objet matériel".freeze, "Objeto Material".freeze, "Physical Object".freeze, "Υλικό Αντικείμενο".freeze, "Физический Объект".freeze, "实体物件".freeze],
       subClassOf: "crm:E18_Physical_Thing".freeze,
       type: "rdfs:Class".freeze
     term :E1_CRM_Entity,
@@ -105,41 +105,41 @@ It is an abstract concept providing for three general properties:
 3.	Attachment of free text for the expression of anything not captured by formal properties
 With the exception of E59 Primitive Value, all other classes within the CRM are directly or indirectly specialisations of E1 CRM Entity. 
 ).freeze,
-      label: "CRM Entity".freeze,
+      label: ["CRM Entity".freeze, "CRM Entität".freeze, "CRM Сущность".freeze, "CRM实体".freeze, "Entidade CRM".freeze, "Entité CRM".freeze, "Οντότητα CIDOC CRM".freeze],
       type: "rdfs:Class".freeze
     term :E20_Biological_Object,
       comment: %(This class comprises individual items of a material nature, which live, have lived or are natural products of or from living organisms. 
 Artificial objects that incorporate biological elements, such as Victorian butterfly frames, can be documented as both instances of E20 Biological Object and E22 Man-Made Object. 
 ).freeze,
-      label: "Biological Object".freeze,
+      label: ["Biological Object".freeze, "Biologischer Gegenstand".freeze, "Objet biologique".freeze, "Objeto Biológico".freeze, "Βιολογικό Ακτικείμενο".freeze, "Биологический Объект".freeze, "生物体".freeze],
       subClassOf: "crm:E19_Physical_Object".freeze,
       type: "rdfs:Class".freeze
     term :E21_Person,
       comment: %(This class comprises real persons who live or are assumed to have lived. 
 Legendary figures that may have existed, such as Ulysses and King Arthur, fall into this class if the documentation refers to them as historical figures. In cases where doubt exists as to whether several persons are in fact identical, multiple instances can be created and linked to indicate their relationship. The CRM does not propose a specific form to support reasoning about possible identity.
 ).freeze,
-      label: "Person".freeze,
+      label: ["Person".freeze, "Person".freeze, "Personne".freeze, "Pessoa".freeze, "Πρόσωπο".freeze, "Личность".freeze, "人物".freeze],
       subClassOf: ["crm:E20_Biological_Object".freeze, "crm:E39_Actor".freeze],
       type: "rdfs:Class".freeze
     term :"E22_Man-Made_Object",
       comment: %(This class comprises physical objects purposely created by human activity.
 No assumptions are made as to the extent of modification required to justify regarding an object as man-made. For example, an inscribed piece of rock or a preserved butterfly are both regarded as instances of E22 Man-Made Object.
 ).freeze,
-      label: "Man-Made Object".freeze,
+      label: ["Künstlicher Gegenstand".freeze, "Man-Made Object".freeze, "Objet fabriqué".freeze, "Objeto Fabricado".freeze, "Ανθρωπογενές Αντικείμενο".freeze, "Рукотворный Объект".freeze, "人造物件".freeze],
       subClassOf: ["crm:E19_Physical_Object".freeze, "crm:E24_Physical_Man-Made_Thing".freeze],
       type: "rdfs:Class".freeze
     term :"E24_Physical_Man-Made_Thing",
       comment: %(This class comprises all persistent physical items that are purposely created by human activity.
 This class comprises man-made objects, such as a swords, and man-made features, such as rock art. No assumptions are made as to the extent of modification required to justify regarding an object as man-made. For example, a “cup and ring” carving on bedrock is regarded as instance of E24 Physical Man-Made Thing. 
 ).freeze,
-      label: "Physical Man-Made Thing".freeze,
+      label: ["Chose matérielle fabriquée".freeze, "Coisa Material Fabricada".freeze, "Hergestelltes".freeze, "Physical Man-Made Thing".freeze, "Ανθρωπογενές Υλικό Πράγμα".freeze, "Физическая Рукотворная Вещь".freeze, "人造实体物".freeze],
       subClassOf: ["crm:E18_Physical_Thing".freeze, "crm:E71_Man-Made_Thing".freeze],
       type: "rdfs:Class".freeze
     term :"E25_Man-Made_Feature",
       comment: %(This class comprises physical features that are purposely created by human activity, such as scratches, artificial caves, artificial water channels, etc. 
 No assumptions are made as to the extent of modification required to justify regarding a feature as man-made. For example, rock art or even “cup and ring” carvings on bedrock a regarded as types of E25 Man-Made Feature.
 ).freeze,
-      label: "Man-Made Feature".freeze,
+      label: ["Característica Fabricada".freeze, "Caractéristique fabriquée".freeze, "Hergestelltes Merkmal".freeze, "Man-Made Feature".freeze, "Ανθρωπογενές Μόρφωμα".freeze, "Искусственный Признак".freeze, "人造外貌表征".freeze],
       subClassOf: ["crm:E24_Physical_Man-Made_Thing".freeze, "crm:E26_Physical_Feature".freeze],
       type: "rdfs:Class".freeze
     term :E26_Physical_Feature,
@@ -148,14 +148,14 @@ Instances of E26 Physical Feature share many of the attributes of instances of E
 Instances of E26 Physical Feature can be features in a narrower sense, such as scratches, holes, reliefs, surface colours, reflection zones in an opal crystal or a density change in a piece of wood. In the wider sense, they are portions of particular objects with partially imaginary borders, such as the core of the Earth, an area of property on the surface of the Earth, a landscape or the head of a contiguous marble statue. They can be measured and dated, and it is sometimes possible to state who or what is or was responsible for them. They cannot be separated from the carrier object, but a segment of the carrier object may be identified \(or sometimes removed\) carrying the complete feature. 
 This definition coincides with the definition of "fiat objects" \(Smith & Varzi, 2000, pp.401-420\), with the exception of aggregates of “bona fide objects”. 
 ).freeze,
-      label: "Physical Feature".freeze,
+      label: ["Característica Material".freeze, "Caractéristique matérielle".freeze, "Materielles Merkmal".freeze, "Physical Feature".freeze, "Υλικό Μόρφωμα".freeze, "Физический Признак".freeze, "实体外貌表征".freeze],
       subClassOf: "crm:E18_Physical_Thing".freeze,
       type: "rdfs:Class".freeze
     term :E27_Site,
       comment: %(This class comprises pieces of land or sea floor. 
 In contrast to the purely geometric notion of E53 Place, this class describes constellations of matter on the surface of the Earth or other celestial body, which can be represented by photographs, paintings and maps.
  Instances of E27 Site are composed of relatively immobile material items and features in a particular configuration at a particular location).freeze,
-      label: "Site".freeze,
+      label: ["Gelände".freeze, "Lugar".freeze, "Site".freeze, "Site".freeze, "Φυσικός Χώρος".freeze, "Участок".freeze, "场地".freeze],
       subClassOf: "crm:E26_Physical_Feature".freeze,
       type: "rdfs:Class".freeze
     term :E28_Conceptual_Object,
@@ -163,7 +163,7 @@ In contrast to the purely geometric notion of E53 Place, this class describes co
 Characteristically, instances of this class are created, invented or thought by someone, and then may be documented or communicated between persons. Instances of E28 Conceptual Object have the ability to exist on more than one particular carrier at the same time, such as paper, electronic signals, marks, audio media, paintings, photos, human memories, etc.
 They cannot be destroyed. They exist as long as they can be found on at least one carrier or in at least one human memory. Their existence ends when the last carrier and the last memory are lost. 
 ).freeze,
-      label: "Conceptual Object".freeze,
+      label: ["Begrifflicher Gegenstand".freeze, "Conceptual Object".freeze, "Objet conceptuel".freeze, "Objeto Conceitual".freeze, "Νοητικό Αντικείμενο".freeze, "Концептуальный Объект".freeze, "概念物件".freeze],
       subClassOf: "crm:E71_Man-Made_Thing".freeze,
       type: "rdfs:Class".freeze
     term :E29_Design_or_Procedure,
@@ -175,33 +175,33 @@ Designs or procedures can be seen as one of the following:
 3.	An independent intellectual product that may have never been applied, such as Leonardo da Vinci’s famous plans for flying machines.
 Because designs or procedures may never be applied or only partially executed, the CRM models a loose relationship between the plan and the respective product.
 ).freeze,
-      label: "Design or Procedure".freeze,
+      label: ["Conception ou procédure".freeze, "Design or Procedure".freeze, "Entwurf oder Verfahren".freeze, "Projeto ou Procedimento".freeze, "Σχέδιο".freeze, "Проект или Процедура".freeze, "设计或程序".freeze],
       subClassOf: "crm:E73_Information_Object".freeze,
       type: "rdfs:Class".freeze
     term :E2_Temporal_Entity,
       comment: %(This class comprises all phenomena, such as the instances of E4 Periods, E5 Events and states, which happen over a limited extent in time. 
 	In some contexts, these are also called perdurants. This class is disjoint from E77 Persistent Item. This is an abstract class and has no direct instances. E2 Temporal Entity is specialized into E4 Period, which applies to a particular geographic area \(defined with a greater or lesser degree of precision\), and E3 Condition State, which applies to instances of E18 Physical Thing.
 ).freeze,
-      label: "Temporal Entity".freeze,
+      label: ["Entidade Temporal".freeze, "Entité temporelle".freeze, "Geschehendes".freeze, "Temporal Entity".freeze, "Έγχρονη  Οντότητα".freeze, "Временная Сущность".freeze, "时间实体".freeze],
       subClassOf: "crm:E1_CRM_Entity".freeze,
       type: "rdfs:Class".freeze
     term :E30_Right,
       comment: %(This class comprises legal privileges concerning material and immaterial things or their derivatives. 
 These include reproduction and property rights).freeze,
-      label: "Right".freeze,
+      label: ["Direitos".freeze, "Droit".freeze, "Recht".freeze, "Right".freeze, "Δικαίωμα".freeze, "Право".freeze, "权限".freeze],
       subClassOf: "crm:E89_Propositional_Object".freeze,
       type: "rdfs:Class".freeze
     term :E31_Document,
       comment: %(This class comprises identifiable immaterial items that make propositions about reality.
 These propositions may be expressed in text, graphics, images, audiograms, videograms or by other similar means. Documentation databases are regarded as a special case of E31 Document. This class should not be confused with the term “document” in Information Technology, which is compatible with E73 Information Object.
 ).freeze,
-      label: "Document".freeze,
+      label: ["Document".freeze, "Document".freeze, "Documento".freeze, "Dokument".freeze, "Τεκμήριο".freeze, "Документ".freeze, "文献".freeze],
       subClassOf: "crm:E73_Information_Object".freeze,
       type: "rdfs:Class".freeze
     term :E32_Authority_Document,
       comment: %(This class comprises encyclopaedia, thesauri, authority lists and other documents that define terminology or conceptual systems for consistent use.
 ).freeze,
-      label: "Authority Document".freeze,
+      label: ["Authority Document".freeze, "Document de référence".freeze, "Documento de Referência".freeze, "Referenzdokument".freeze, "Πηγή Καθιερωμένων Όρων".freeze, "Официальный Документ".freeze, "权威文献".freeze],
       subClassOf: "crm:E31_Document".freeze,
       type: "rdfs:Class".freeze
     term :E33_Linguistic_Object,
@@ -209,7 +209,7 @@ These propositions may be expressed in text, graphics, images, audiograms, video
 Instances of E33 Linguistic Object can be expressed in many ways: e.g. as written texts, recorded speech or sign language. However, the CRM treats instances of E33 Linguistic Object independently from the medium or method by which they are expressed. Expressions in formal languages, such as computer code or mathematical formulae, are not treated as instances of E33 Linguistic Object by the CRM. These should be modelled as instances of E73 Information Object.
 The text of an instance of E33 Linguistic Object can be documented in a note by P3 has note: E62 String
 ).freeze,
-      label: "Linguistic Object".freeze,
+      label: ["Linguistic Object".freeze, "Objet linguistique".freeze, "Objeto Lingüístico".freeze, "Sprachlicher Gegenstand".freeze, "Γλωσσικό Αντικείμενο".freeze, "Линвистический Объект".freeze, "语言物件".freeze],
       subClassOf: "crm:E73_Information_Object".freeze,
       type: "rdfs:Class".freeze
     term :E34_Inscription,
@@ -217,7 +217,7 @@ The text of an instance of E33 Linguistic Object can be documented in a note by 
 The transcription of the text can be documented in a note by P3 has note: E62 String. The alphabet used can be documented by P2 has type: E55 Type. This class does not intend to describe the idiosyncratic characteristics of an individual physical embodiment of an inscription, but the underlying prototype. The physical embodiment is modelled in the CRM as E24 Physical Man-Made Thing.
 The relationship of a physical copy of a book to the text it contains is modelled using E84 Information Carrier. P128 carries \(is carried by\): E33 Linguistic Object. 
 ).freeze,
-      label: "Inscription".freeze,
+      label: ["Inschrift".freeze, "Inscription".freeze, "Inscription".freeze, "Inscrição".freeze, "Επιγραφή".freeze, "Надпись".freeze, "题字".freeze],
       subClassOf: ["crm:E33_Linguistic_Object".freeze, "crm:E37_Mark".freeze],
       type: "rdfs:Class".freeze
     term :E35_Title,
@@ -225,7 +225,7 @@ The relationship of a physical copy of a book to the text it contains is modelle
 Titles are proper noun phrases or verbal phrases, and should not be confused with generic object names such as “chair”, “painting” or “book” \(the latter are common nouns that stand for instances of E55 Type\). Titles may be assigned by the creator of the work itself, or by a social group. 
 This class also comprises the translations of titles that are used as surrogates for the original titles in different social contexts.
 ).freeze,
-      label: "Title".freeze,
+      label: [" Τίτλος".freeze, "Titel".freeze, "Title".freeze, "Titre".freeze, "Título".freeze, "Заголовок".freeze, "题目".freeze],
       subClassOf: ["crm:E33_Linguistic_Object".freeze, "crm:E41_Appellation".freeze],
       type: "rdfs:Class".freeze
     term :E36_Visual_Item,
@@ -233,28 +233,28 @@ This class also comprises the translations of titles that are used as surrogates
 This class does not intend to describe the idiosyncratic characteristics of an individual physical embodiment of a visual item, but the underlying prototype. For example, a mark such as the ICOM logo is generally considered to be the same logo when used on any number of publications. The size, orientation and colour may change, but the logo remains uniquely identifiable. The same is true of images that are reproduced many times. This means that visual items are independent of their physical support. 
 The class E36 Visual Item provides a means of identifying and linking together instances of E24 Physical Man-Made Thing that carry the same visual symbols, marks or images etc. The property P62 depicts \(is depicted by\) between E24 Physical Man-Made Thing and depicted subjects \(E1 CRM Entity\) can be regarded as a short-cut of the more fully developed path from E24 Physical Man-Made Thing through P65 shows visual item \(is shown by\), E36 Visual Item, P138 represents \(has representation\) to E1CRM Entity, which in addition captures the optical features of the depiction.  
 ).freeze,
-      label: "Visual Item".freeze,
+      label: ["Bildliches".freeze, "Item Visual".freeze, "Item visuel".freeze, "Visual Item".freeze, "Οπτικό Στοιχείο".freeze, "Визуальный Предмет".freeze, "视觉项目".freeze],
       subClassOf: "crm:E73_Information_Object".freeze,
       type: "rdfs:Class".freeze
     term :E37_Mark,
       comment: %(This class comprises symbols, signs, signatures or short texts applied to instances of E24 Physical Man-Made Thing by arbitrary techniques in order to indicate the creator, owner, dedications, purpose, etc. 
 This class specifically excludes features that have no semantic significance, such as scratches or tool marks. These should be documented as instances of E25 Man-Made Feature. 
 ).freeze,
-      label: "Mark".freeze,
+      label: ["Marca".freeze, "Mark".freeze, "Marke".freeze, "Marque".freeze, "Σήμανση".freeze, "Пометка".freeze, "标志".freeze],
       subClassOf: "crm:E36_Visual_Item".freeze,
       type: "rdfs:Class".freeze
     term :E38_Image,
       comment: %(This class comprises distributions of form, tone and colour that may be found on surfaces such as photos, paintings, prints and sculptures or directly on electronic media. 
 The degree to which variations in the distribution of form and colour affect the identity of an instance of E38 Image depends on a given purpose. The original painting of the Mona Lisa in the Louvre may be said to bear the same instance of E38 Image as reproductions in the form of transparencies, postcards, posters or T-shirts, even though they may differ in size and carrier and may vary in tone and colour. The images in a “spot the difference” competition are not the same with respect to their context, however similar they may at first appear.
 ).freeze,
-      label: "Image".freeze,
+      label: ["Bild".freeze, "Image".freeze, "Image".freeze, "Imagem".freeze, "Εικόνα".freeze, "Изображение".freeze, "图像".freeze],
       subClassOf: "crm:E36_Visual_Item".freeze,
       type: "rdfs:Class".freeze
     term :E39_Actor,
       comment: %(This class comprises people, either individually or in groups, who have the potential to perform intentional actions of kinds for which someone may be held responsible.
 The CRM does not attempt to model the inadvertent actions of such actors. Individual people should be documented as instances of E21 Person, whereas groups should be documented as instances of either E74 Group or its subclass E40 Legal Body.
 ).freeze,
-      label: "Actor".freeze,
+      label: ["Actor".freeze, "Agent".freeze, "Agente".freeze, "Akteur".freeze, "Δράστης".freeze, "Агент".freeze, "角色".freeze],
       subClassOf: "crm:E77_Persistent_Item".freeze,
       type: "rdfs:Class".freeze
     term :E3_Condition_State,
@@ -262,14 +262,14 @@ The CRM does not attempt to model the inadvertent actions of such actors. Indivi
 An instance of this class describes the prevailing physical condition of any material object or feature during a specific E52 Time Span. In general, the time-span for which a certain condition can be asserted may be shorter than the real time-span, for which this condition held.
  The nature of that condition can be described using P2 has type. For example, the E3 Condition State “condition of the SS Great Britain between 22 September 1846 and 27 August 1847” can be characterized as E55 Type “wrecked”. 
 ).freeze,
-      label: "Condition State".freeze,
+      label: ["Condition State".freeze, "Estado Material".freeze, "Zustandsphase".freeze, "État matériel".freeze, "Κατάσταση".freeze, "Состояние".freeze, "状态".freeze],
       subClassOf: "crm:E2_Temporal_Entity".freeze,
       type: "rdfs:Class".freeze
     term :E40_Legal_Body,
       comment: %(This class comprises institutions or groups of people that have obtained a legal recognition as a group and can act collectively as agents.  
 This means that they can perform actions, own property, create or destroy things and can be held collectively responsible for their actions like individual people. The term 'personne morale' is often used for this in French. 
 ).freeze,
-      label: "Legal Body".freeze,
+      label: ["Collectivité".freeze, "Juristische Person".freeze, "Legal Body".freeze, "Pessoa Jurídica".freeze, "Νομικό Πρόσωπο".freeze, "Юридическое Лицо".freeze, "法律组织".freeze],
       subClassOf: "crm:E74_Group".freeze,
       type: "rdfs:Class".freeze
     term :E41_Appellation,
@@ -278,33 +278,33 @@ Instances of E41 Appellation do not identify things by their meaning, even if th
 Specific subclasses of E41 Appellation should be used when instances of E41 Appellation of a characteristic form are used for particular objects. Instances of E49 Time Appellation, for example, which take the form of instances of E50 Date, can be easily recognised.
 E41 Appellation should not be confused with the act of naming something. Cf. E15 Identifier Assignment
 ).freeze,
-      label: "Appellation".freeze,
+      label: ["Appellation".freeze, "Appellation".freeze, "Benennung".freeze, "Designação".freeze, "Ονομασία".freeze, "Обозначение".freeze, "称号".freeze],
       subClassOf: "crm:E90_Symbolic_Object".freeze,
       type: "rdfs:Class".freeze
     term :E42_Identifier,
       comment: %(This class comprises strings or codes assigned to instances of E1 CRM Entity in order to identify them uniquely and permanently within the context of one or more organisations. Such codes are often known as inventory numbers, registration codes, etc. and are typically composed of alphanumeric sequences. The class E42 Identifier is not normally used for machine-generated identifiers used for automated processing unless these are also used by human agents.).freeze,
-      label: "Identifier".freeze,
+      label: ["Identificador de Objeto".freeze, "Identificateur d'objet".freeze, "Identifier".freeze, "Kennung".freeze, "Κωδικός Αναγνώρισης".freeze, "Идентификатор Объекта".freeze, "标识符".freeze],
       subClassOf: "crm:E41_Appellation".freeze,
       type: "rdfs:Class".freeze
     term :E44_Place_Appellation,
       comment: %(This class comprises any sort of identifier characteristically used to refer to an E53 Place. 
 Instances of E44 Place Appellation may vary in their degree of precision and their meaning may vary over time - the same instance of E44 Place Appellation may be used to refer to several places, either because of cultural shifts, or because objects used as reference points have moved around. Instances of E44 Place Appellation can be extremely varied in form: postal addresses, instances of E47 Spatial Coordinate, and parts of buildings can all be considered as instances of E44 Place Appellation.
 ).freeze,
-      label: "Place Appellation".freeze,
+      label: ["Appellation de lieu".freeze, "Designação de Local".freeze, "Ortsbenennung".freeze, "Place Appellation".freeze, "Ονομασία Τόπου".freeze, "Обозначение Места".freeze, "地点称号".freeze],
       subClassOf: "crm:E41_Appellation".freeze,
       type: "rdfs:Class".freeze
     term :E45_Address,
       comment: %(This class comprises identifiers expressed in coding systems for places, such as postal addresses used for mailing.
 An E45 Address can be considered both as the name of an E53 Place and as an E51 Contact Point for an E39 Actor. This dual aspect is reflected in the multiple inheritance. However, some forms of mailing addresses, such as a postal box, are only instances of E51 Contact Point, since they do not identify any particular Place. These should not be documented as instances of E45 Address.
 ).freeze,
-      label: "Address".freeze,
+      label: ["Address".freeze, "Adresse".freeze, "Adresse".freeze, "Endereço".freeze, "Διεύθυνση".freeze, "Адрес".freeze, "地址".freeze],
       subClassOf: ["crm:E44_Place_Appellation".freeze, "crm:E51_Contact_Point".freeze],
       type: "rdfs:Class".freeze
     term :E46_Section_Definition,
       comment: %(This class comprises areas of objects referred to in terms specific to the general geometry or structure of its kind. 
 The 'prow' of the boat, the 'frame' of the picture, the 'front' of the building are all instances of E46 Section Definition. The class highlights the fact that parts of objects can be treated as locations. This holds in particular for features without natural boundaries, such as the “head” of a marble statue made out of one block \(cf. E53 Place\). In answer to the question 'where is the signature?' one might reply 'on the lower left corner'. \(Section Definition is closely related to the term “segment” in Gerstl, P.& Pribbenow, S, 1996 “ A conceptual theory of part – whole relations and its applications”, Data & Knowledge 	Engineering 20 305-322, North Holland- Elsevier \).
 ).freeze,
-      label: "Section Definition".freeze,
+      label: ["Abschnittsdefinition".freeze, "Designação de Seção".freeze, "Désignation de section".freeze, "Section Definition".freeze, "Ονομασία Τμήματος".freeze, "Определение Района".freeze, "区域定义".freeze],
       subClassOf: "crm:E44_Place_Appellation".freeze,
       type: "rdfs:Class".freeze
     term :E47_Spatial_Coordinates,
@@ -312,19 +312,19 @@ The 'prow' of the boat, the 'frame' of the picture, the 'front' of the building 
 
 Coordinates are a specific form of E44 Place Appellation, that is, a means of referring to a particular E53 Place. Coordinates are not restricted to longitude, latitude and altitude. Any regular system of reference that maps onto an E19 Physical Object can be used to generate coordinates.
 ).freeze,
-      label: "Spatial Coordinates".freeze,
+      label: ["Coordenadas Espaciais".freeze, "Coordonnées spatiales".freeze, "Raumkoordinaten".freeze, "Spatial Coordinates".freeze, "Χωρικές Συντεταγμένες".freeze, "Пространственные Координаты".freeze, "空间坐标".freeze],
       subClassOf: "crm:E44_Place_Appellation".freeze,
       type: "rdfs:Class".freeze
     term :E48_Place_Name,
       comment: %(This class comprises particular and common forms of E44 Place Appellation. 
 Place Names may change their application over time: the name of an E53 Place may change, and a name may be reused for a different E53 Place. Instances of E48 Place Name are typically subject to place name gazetteers.).freeze,
-      label: "Place Name".freeze,
+      label: ["Nome de Local".freeze, "Orts- oder Flurname".freeze, "Place Name".freeze, "Toponyme".freeze, "Τοπωνύμιο".freeze, "Название Места".freeze, "地名".freeze],
       subClassOf: "crm:E44_Place_Appellation".freeze,
       type: "rdfs:Class".freeze
     term :E49_Time_Appellation,
       comment: %(This class comprises all forms of names or codes, such as historical periods, and dates, which are characteristically used to refer to a specific E52 Time-Span. 
 The instances of E49 Time Appellation may vary in their degree of precision, and they may be relative to other time frames, “Before Christ” for example. Instances of E52 Time-Span are often defined by reference to a cultural period or an event e.g. ‘the duration of the Ming Dynasty’.).freeze,
-      label: "Time Appellation".freeze,
+      label: ["Appellation temporelle".freeze, "Designação de Tempo".freeze, "Time Appellation".freeze, "Zeitbenennung".freeze, "Ονομασία Χρόνου".freeze, "Обозначение Времени".freeze, "时间称号".freeze],
       subClassOf: "crm:E41_Appellation".freeze,
       type: "rdfs:Class".freeze
     term :E4_Period,
@@ -339,19 +339,19 @@ There are no assumptions about the scale of the associated phenomena. In particu
 There are two different conceptualisations of ‘artistic style’, defined either by physical features or by historical context. For example, “Impressionism” can be viewed as a period lasting from approximately 1870 to 1905 during which paintings with particular characteristics were produced by a group of artists that included \(among others\) Monet, Renoir, Pissarro, Sisley and Degas. Alternatively, it can be regarded as a style applicable to all paintings sharing the characteristics of the works produced by the Impressionist painters, regardless of historical context. The first interpretation is an E4 Period, and the second defines morphological object types that fall under E55 Type.
 Another specific case of an E4 Period is the set of activities and phenomena associated with a settlement, such as the populated period of Nineveh.
 ).freeze,
-      label: "Period".freeze,
+      label: ["Period".freeze, "Período".freeze, "Phase".freeze, "Période".freeze, "Περίοδος".freeze, "Период".freeze, "期间".freeze],
       subClassOf: "crm:E2_Temporal_Entity".freeze,
       type: "rdfs:Class".freeze
     term :E50_Date,
       comment: %(This class comprises specific forms of E49 Time Appellation.).freeze,
-      label: "Date".freeze,
+      label: ["Data".freeze, "Date".freeze, "Date".freeze, "Datum".freeze, "Ημερομηνία".freeze, "Дата".freeze, "日期".freeze],
       subClassOf: "crm:E49_Time_Appellation".freeze,
       type: "rdfs:Class".freeze
     term :E51_Contact_Point,
       comment: %(This class comprises identifiers employed, or understood, by communication services to direct communications to an instance of E39 Actor. These include E-mail addresses, telephone numbers, post office boxes, Fax numbers, URLs etc. Most postal addresses can be considered both as instances of E44 Place Appellation and E51 Contact Point. In such cases the subclass E45 Address should be used. 
 URLs are addresses used by machines to access another machine through an http request. Since the accessed machine acts on behalf of the E39 Actor providing the machine, URLs are considered as instances of E51 Contact Point to that E39 Actor.
 ).freeze,
-      label: "Contact Point".freeze,
+      label: ["Contact Point".freeze, "Coordonnées individuelles".freeze, "Kontaktpunkt".freeze, "Ponto de Contato".freeze, "Στοιχείο Επικοινωνίας".freeze, "Контакт".freeze, "联系方式".freeze],
       subClassOf: "crm:E41_Appellation".freeze,
       type: "rdfs:Class".freeze
     term :"E52_Time-Span",
@@ -360,7 +360,7 @@ Time Span has no other semantic connotations. Time-Spans are used to define the 
 Since our knowledge of history is imperfect, instances of E52 Time-Span can best be considered as approximations of the actual Time-Spans of temporal entities. The properties of E52 Time-Span are intended to allow these approximations to be expressed precisely.  An extreme case of approximation, might, for example, define an E52 Time-Span having unknown beginning, end and duration. Used as a common E52 Time-Span for two events, it would nevertheless define them as being simultaneous, even if nothing else was known. 
 	Automatic processing and querying of instances of E52 Time-Span is facilitated if data can be parsed into an E61 Time Primitive.
 ).freeze,
-      label: "Time-Span".freeze,
+      label: ["Durée".freeze, "Período de Tempo".freeze, "Time-Span".freeze, "Zeitspanne".freeze, "Χρονικό Διάστημα".freeze, "Интервал Времени".freeze, "时段".freeze],
       subClassOf: "crm:E1_CRM_Entity".freeze,
       type: "rdfs:Class".freeze
     term :E53_Place,
@@ -368,7 +368,7 @@ Since our knowledge of history is imperfect, instances of E52 Time-Span can best
 The instances of E53 Place are usually determined by reference to the position of “immobile” objects such as buildings, cities, mountains, rivers, or dedicated geodetic marks. A Place can be determined by combining a frame of reference and a location with respect to this frame. It may be identified by one or more instances of E44 Place Appellation.
  It is sometimes argued that instances of E53 Place are best identified by global coordinates or absolute reference systems. However, relative references are often more relevant in the context of cultural documentation and tend to be more precise. In particular, we are often interested in position in relation to large, mobile objects, such as ships. For example, the Place at which Nelson died is known with reference to a large mobile object – H.M.S Victory. A resolution of this Place in terms of absolute coordinates would require knowledge of the movements of the vessel and the precise time of death, either of which may be revised, and the result would lack historical and cultural relevance.
 Any object can serve as a frame of reference for E53 Place determination. The model foresees the notion of a "section" of an E19 Physical Object as a valid E53 Place determination.).freeze,
-      label: "Place".freeze,
+      label: ["Lieu".freeze, "Local".freeze, "Ort".freeze, "Place".freeze, "Τόπος".freeze, "Место".freeze, "地点".freeze],
       subClassOf: "crm:E1_CRM_Entity".freeze,
       type: "rdfs:Class".freeze
     term :E54_Dimension,
@@ -376,14 +376,14 @@ Any object can serve as a frame of reference for E53 Place determination. The mo
 An instance of E54 Dimension represents the true quantity, independent from its numerical approximation, e.g. in inches or in cm. The properties of the class E54 Dimension allow for expressing the numerical approximation of the values of an instance of E54 Dimension. If the true values belong to a non-discrete space, such as spatial distances, it is recommended to record them as approximations by intervals or regions of indeterminacy enclosing the assumed true values. For instance, a length of 5 cm may be recorded as 4.5-5.5 cm, according to the precision of the respective observation. Note, that interoperability of values described in different units depends critically on the representation as value regions.
 Numerical approximations in archaic instances of E58 Measurement Unit used in historical records should be preserved. Equivalents corresponding to current knowledge should be recorded as additional instances of E54 Dimension as appropriate.
 ).freeze,
-      label: "Dimension".freeze,
+      label: ["Dimension".freeze, "Dimensions".freeze, "Dimensão".freeze, "Maß".freeze, "Μέγεθος".freeze, "Величина".freeze, "规模数量".freeze],
       subClassOf: "crm:E1_CRM_Entity".freeze,
       type: "rdfs:Class".freeze
     term :E55_Type,
       comment: %(This class comprises concepts denoted by terms from thesauri and controlled vocabularies used to characterize and classify instances of CRM classes. Instances of E55 Type represent concepts  in contrast to instances of E41 Appellation which are used to name instances of CRM classes. 
 E55 Type is the CRM’s interface to domain specific ontologies and thesauri. These can be represented in the CRM as subclasses of E55 Type, forming hierarchies of terms, i.e. instances of E55 Type linked via P127 has broader  term \(has narrower term\). Such hierarchies may be extended with additional properties. 
 ).freeze,
-      label: "Type".freeze,
+      label: ["Tipo".freeze, "Type".freeze, "Type".freeze, "Typus".freeze, "Τύπος".freeze, "Тип".freeze, "类型".freeze],
       subClassOf: "crm:E28_Conceptual_Object".freeze,
       type: "rdfs:Class".freeze
     term :E56_Language,
@@ -391,7 +391,7 @@ E55 Type is the CRM’s interface to domain specific ontologies and thesauri. Th
 This type is used categorically in the model without reference to instances of it, i.e. the Model does not foresee the description of instances of instances of E56 Language, e.g.: “instances of  Mandarin Chinese”.
 It is recommended that internationally or nationally agreed codes and terminology are used to denote instances of E56 Language, such as those defined in ISO 639:1988. 
 ).freeze,
-      label: "Language".freeze,
+      label: ["Language".freeze, "Langue".freeze, "Língua".freeze, "Sprache".freeze, "Γλώσσα".freeze, "Язык".freeze, "语言".freeze],
       subClassOf: "crm:E55_Type".freeze,
       type: "rdfs:Class".freeze
     term :E57_Material,
@@ -399,7 +399,7 @@ It is recommended that internationally or nationally agreed codes and terminolog
 Instances of E57 Material may denote properties of matter before its use, during its use, and as incorporated in an object, such as ultramarine powder, tempera paste, reinforced concrete. Discrete pieces of raw-materials kept in museums, such as bricks, sheets of fabric, pieces of metal, should be modelled individually in the same way as other objects. Discrete used or processed pieces, such as the stones from Nefer Titi's temple, should be modelled as parts \(cf. P46 is composed of\).
 This type is used categorically in the model without reference to instances of it, i.e. the Model does not foresee the description of instances of instances of E57 Material, e.g.: “instances of  gold”.
 It is recommended that internationally or nationally agreed codes and terminology are used.).freeze,
-      label: "Material".freeze,
+      label: ["Material".freeze, "Material".freeze, "Material".freeze, "Matériau".freeze, "Υλικό".freeze, "Материал".freeze, "材料".freeze],
       subClassOf: "crm:E55_Type".freeze,
       type: "rdfs:Class".freeze
     term :E58_Measurement_Unit,
@@ -407,33 +407,33 @@ It is recommended that internationally or nationally agreed codes and terminolog
 This type is used categorically in the model without reference to instances of it, i.e. the Model does not foresee the description of instances of instances of E58 Measurement Unit, e.g.: “instances of cm”.
 Syst?me International \(SI\) units or internationally recognized non-SI terms should be used whenever possible. \(ISO 1000:1992\). Archaic Measurement Units used in historical records should be preserved.
 ).freeze,
-      label: "Measurement Unit".freeze,
+      label: ["Maßeinheit".freeze, "Measurement Unit".freeze, "Unidade de Medida".freeze, "Unité de mesure".freeze, "Μονάδα Μέτρησης".freeze, "Единица Измерения".freeze, "测量单位".freeze],
       subClassOf: "crm:E55_Type".freeze,
       type: "rdfs:Class".freeze
     term :E5_Event,
       comment: %(This class comprises changes of states in cultural, social or physical systems, regardless of scale, brought about by a series or group of coherent physical, cultural, technological or legal phenomena. Such changes of state will affect instances of E77 Persistent Item or its subclasses.
 The distinction between an E5 Event and an E4 Period is partly a question of the scale of observation. Viewed at a coarse level of detail, an E5 Event is an ‘instantaneous’ change of state. At a fine level, the E5 Event can be analysed into its component phenomena within a space and time frame, and as such can be seen as an E4 Period. The reverse is not necessarily the case: not all instances of E4 Period give rise to a noteworthy change of state.
 ).freeze,
-      label: "Event".freeze,
+      label: ["Ereignis".freeze, "Event".freeze, "Evento".freeze, "Événement".freeze, "Συμβάν".freeze, "Событие".freeze, "事件".freeze],
       subClassOf: "crm:E4_Period".freeze,
       type: "rdfs:Class".freeze
     term :E63_Beginning_of_Existence,
       comment: %(This class comprises events that bring into existence any E77 Persistent Item. 
 It may be used for temporal reasoning about things \(intellectual products, physical items, groups of people, living beings\) beginning to exist; it serves as a hook for determination of a terminus post quem and ante quem. ).freeze,
-      label: "Beginning of Existence".freeze,
+      label: ["Beginning of Existence".freeze, "Daseinsbeginn".freeze, "Début d'existence".freeze, "Início da Existência".freeze, "Αρχή Ύπαρξης".freeze, "Начало Существования".freeze, "存在开始".freeze],
       subClassOf: "crm:E5_Event".freeze,
       type: "rdfs:Class".freeze
     term :E64_End_of_Existence,
       comment: %(This class comprises events that end the existence of any E77 Persistent Item. 
 It may be used for temporal reasoning about things \(physical items, groups of people, living beings\) ceasing to exist; it serves as a hook for determination of a terminus postquem and antequem. In cases where substance from a Persistent Item continues to exist in a new form, the process would be documented by E81 Transformation.
 ).freeze,
-      label: "End of Existence".freeze,
+      label: ["Daseinsende".freeze, "End of Existence".freeze, "Fim da Existência".freeze, "Fin d'existence".freeze, "Τέλος Ύπαρξης".freeze, "Конец Существования".freeze, "存在结束".freeze],
       subClassOf: "crm:E5_Event".freeze,
       type: "rdfs:Class".freeze
     term :E65_Creation,
       comment: %(This class comprises events that result in the creation of conceptual items or immaterial products, such as legends, poems, texts, music, images, movies, laws, types etc.
 ).freeze,
-      label: "Creation".freeze,
+      label: ["Begriffliche Schöpfung".freeze, "Creation".freeze, "Criação".freeze, "Création".freeze, "Δημιουργία".freeze, "Событие Творения".freeze, "创造".freeze],
       subClassOf: ["crm:E63_Beginning_of_Existence".freeze, "crm:E7_Activity".freeze],
       type: "rdfs:Class".freeze
     term :E66_Formation,
@@ -441,28 +441,28 @@ It may be used for temporal reasoning about things \(physical items, groups of p
 E66 Formation does not include the arbitrary aggregation of people who do not act as a collective.
 The formation of an instance of E74 Group does not mean that the group is populated with members at the time of formation. In order to express the joining of members at the time of formation, the respective activity should be simultaneously an instance of both E66 Formation and E85 Joining. 
 ).freeze,
-      label: "Formation".freeze,
+      label: ["Formation".freeze, "Formation".freeze, "Formação".freeze, "Gruppenbildung".freeze, "Συγκρότηση Ομάδας".freeze, "Событие Формирования".freeze, "组成".freeze],
       subClassOf: ["crm:E63_Beginning_of_Existence".freeze, "crm:E7_Activity".freeze],
       type: "rdfs:Class".freeze
     term :E67_Birth,
       comment: %(This class comprises the births of human beings. E67 Birth is a biological event focussing on the context of people coming into life. \(E63 Beginning of Existence comprises the coming into life of any living beings\). 
 Twins, triplets etc. are brought into life by the same E67 Birth event. The introduction of the E67 Birth event as a documentation element allows the description of a range of family relationships in a simple model. Suitable extensions may describe more details and the complexity of motherhood with the intervention of modern medicine. In this model, the biological father is not seen as a necessary participant in the E67 Birth event.
 ).freeze,
-      label: "Birth".freeze,
+      label: ["Birth".freeze, "Geburt".freeze, "Naissance".freeze, "Nascimento".freeze, "Γέννηση".freeze, "Рождение".freeze, "诞生".freeze],
       subClassOf: "crm:E63_Beginning_of_Existence".freeze,
       type: "rdfs:Class".freeze
     term :E68_Dissolution,
       comment: %(This class comprises the events that result in the formal or informal termination of an E74 Group of people. 
 If the dissolution was deliberate, the Dissolution event should also be instantiated as an E7 Activity.
 ).freeze,
-      label: "Dissolution".freeze,
+      label: ["Dissolution".freeze, "Dissolution".freeze, "Dissolução".freeze, "Gruppenauflösung".freeze, "Διάλυση Ομάδας".freeze, "Роспуск".freeze, "解散".freeze],
       subClassOf: "crm:E64_End_of_Existence".freeze,
       type: "rdfs:Class".freeze
     term :E69_Death,
       comment: %(This class comprises the deaths of human beings. 
 If a person is killed, their death should be instantiated as E69 Death and as E7 Activity. The death or perishing of other living beings should be documented using E64 End of Existence.
 ).freeze,
-      label: "Death".freeze,
+      label: ["Death".freeze, "Mort".freeze, "Morte".freeze, "Tod".freeze, "Θάνατος".freeze, "Смерть".freeze, "死亡".freeze],
       subClassOf: "crm:E64_End_of_Existence".freeze,
       type: "rdfs:Class".freeze
     term :E6_Destruction,
@@ -473,28 +473,28 @@ The decision to document an object as destroyed, transformed or modified is cont
 2. An event should also be documented using E81 Transformation if it results in the destruction of one or more objects and the simultaneous production of others using parts or material from the original. In this case, the new items have separate identities. Matter is preserved, but identity is not.
 3. When the initial identity of the changed instance of E18 Physical Thing is preserved, the event should be documented as E11 Modification. 
 ).freeze,
-      label: "Destruction".freeze,
+      label: ["Destruction".freeze, "Destruction".freeze, "Destruição".freeze, "Zerstörung".freeze, "Καταστροφή".freeze, "Разрушение".freeze, "摧毁".freeze],
       subClassOf: "crm:E64_End_of_Existence".freeze,
       type: "rdfs:Class".freeze
     term :E70_Thing,
       comment: %(This general class comprises discrete, identifiable, instances of E77 Persistent Item that are documented as single units, that either consist of matter or depend on being carried by matter and are characterized by relative stability.
 They may be intellectual products or physical things. They may for instance have a solid physical form, an electronic encoding, or they may be a logical concept or structure.
 ).freeze,
-      label: ["".freeze, "Thing".freeze],
+      label: ["".freeze, "Chose".freeze, "Coisa".freeze, "Sache".freeze, "Thing".freeze, "Πράγμα".freeze, "万物".freeze],
       subClassOf: "crm:E77_Persistent_Item".freeze,
       type: "rdfs:Class".freeze
     term :"E71_Man-Made_Thing",
       comment: %(This class comprises discrete, identifiable man-made items that are documented as single units. 
 These items are either intellectual products or man-made physical things, and are characterized by relative stability. They may for instance have a solid physical form, an electronic encoding, or they may be logical concepts or structures.
 ).freeze,
-      label: "Man-Made Thing".freeze,
+      label: ["Chose fabriquée".freeze, "Coisa Fabricada".freeze, "Künstliches".freeze, "Man-Made Thing".freeze, "Ανθρώπινο Δημιούργημα".freeze, "Рукотворная Вещь".freeze, "人造物".freeze],
       subClassOf: "crm:E70_Thing".freeze,
       type: "rdfs:Class".freeze
     term :E72_Legal_Object,
       comment: %(This class comprises those material or immaterial items to which instances of E30 Right, such as the right of ownership or use, can be applied. 
 This is true for all E18 Physical Thing. In the case of instances of E28 Conceptual Object, however, the identity of the E28 Conceptual Object or the method of its use may be too ambiguous to reliably establish instances of E30 Right, as in the case of taxa and inspirations. Ownership of corporations is currently regarded as out of scope of the CRM. 
 ).freeze,
-      label: "Legal Object".freeze,
+      label: ["Legal Object".freeze, "Objet juridique".freeze, "Objeto Jurídico".freeze, "Rechtsobjekt".freeze, "Νομικό Αντικείμενο".freeze, "Объект Права".freeze, "法律物件".freeze],
       subClassOf: "crm:E70_Thing".freeze,
       type: "rdfs:Class".freeze
     term :E73_Information_Object,
@@ -502,19 +502,19 @@ This is true for all E18 Physical Thing. In the case of instances of E28 Concept
 An E73 Information Object does not depend on a specific physical carrier, which can include human memory, and it can exist on one or more carriers simultaneously.
 Instances of E73 Information Object of a linguistic nature should be declared as instances of the E33 Linguistic Object subclass. Instances of E73 Information Object of a documentary nature should be declared as instances of the E31 Document subclass. Conceptual items such as types and classes are not instances of E73 Information Object, nor are ideas without a reproducible expression. 
 ).freeze,
-      label: "Information Object".freeze,
+      label: ["Information Object".freeze, "Informationsgegenstand".freeze, "Objet d'information".freeze, "Objeto de Informação".freeze, "Πληροφοριακό Αντικείμενο".freeze, "Информационный Объект".freeze, "信息物件".freeze],
       subClassOf: ["crm:E89_Propositional_Object".freeze, "crm:E90_Symbolic_Object".freeze],
       type: "rdfs:Class".freeze
     term :E74_Group,
       comment: %(This class comprises any gatherings or organizations of E39 Actors that act collectively or in a similar way due to any form of unifying relationship. In the wider sense this class also comprises official positions which used to be regarded in certain contexts as one actor, independent of the current holder of the office, such as the president of a country. In such cases, it may happen that the Group never had more than one member. A joint pseudonym \(i.e., a name that seems indicative of an individual but that is actually used as a persona by two or more people\) is a particular case of E74 Group.
 A gathering of people becomes an E74 Group when it exhibits organizational characteristics usually typified by a set of ideas or beliefs held in common, or actions performed together. These might be communication, creating some common artifact, a common purpose such as study, worship, business, sports, etc. Nationality can be modeled as membership in an E74 Group \(cf. HumanML markup\). Married couples and other concepts of family are regarded as particular examples of E74 Group.
 ).freeze,
-      label: "Group".freeze,
+      label: ["Group".freeze, "Groupe".freeze, "Grupo".freeze, "Menschliche Gruppe".freeze, "Ομάδα".freeze, "Группа".freeze, "群组".freeze],
       subClassOf: "crm:E39_Actor".freeze,
       type: "rdfs:Class".freeze
     term :E75_Conceptual_Object_Appellation,
       comment: %(This class comprises appellations that are by their form or syntax specific to identifying instances of E28 Conceptual Object, such as intellectual products, standardized patterns etc.).freeze,
-      label: "Conceptual Object Appellation".freeze,
+      label: ["Appellation d'objet conceptuel".freeze, "Begriff- oder Konzeptbenennung ".freeze, "Conceptual Object Appellation".freeze, "Designação de Objeto Conceitual".freeze, "Ονομασία Νοητικού Αντικειμένου".freeze, "Обозначение Концептуального Объекта".freeze, "概念物件称号".freeze],
       subClassOf: "crm:E41_Appellation".freeze,
       type: "rdfs:Class".freeze
     term :E77_Persistent_Item,
@@ -522,7 +522,7 @@ A gathering of people becomes an E74 Group when it exhibits organizational chara
 They can be repeatedly recognized within the duration of their existence by identity criteria rather than by continuity or observation. Persistent Items can be either physical entities, such as people, animals or things, or conceptual entities such as ideas, concepts, products of the imagination or common names.
 The criteria that determine the identity of an item are often difficult to establish -; the decision depends largely on the judgement of the observer. For example, a building is regarded as no longer existing if it is dismantled and the materials reused in a different configuration. On the other hand, human beings go through radical and profound changes during their life-span, affecting both material composition and form, yet preserve their identity by other criteria. Similarly, inanimate objects may be subject to exchange of parts and matter. The class E77 Persistent Item does not take any position about the nature of the applicable identity criteria and if actual knowledge about identity of an instance of this class exists. There may be cases, where the identity of an E77 Persistent Item is not decidable by a certain state of knowledge.
 The main classes of objects that fall outside the scope the E77 Persistent Item class are temporal objects such as periods, events and acts, and descriptive properties. ).freeze,
-      label: "Persistent Item".freeze,
+      label: ["Entidade Persistente".freeze, "Entité persistante".freeze, "Persistent Item".freeze, "Seiendes".freeze, "Ον".freeze, "Постоянная Сущность".freeze, "持续性项目".freeze],
       subClassOf: "crm:E1_CRM_Entity".freeze,
       type: "rdfs:Class".freeze
     term :E78_Collection,
@@ -530,69 +530,69 @@ The main classes of objects that fall outside the scope the E77 Persistent Item 
 Items may be added or removed from an E78 Collection in pursuit of this plan. This class should not be confused with the E39 Actor maintaining the E78 Collection often referred to with the name of the E78 Collection \(e.g. “The Wallace Collection decided…”\).
 Collective objects in the general sense, like a tomb full of gifts, a folder with stamps or a set of chessmen, should be documented as instances of E19 Physical Object, and not as instances of E78 Collection. This is because they form wholes either because they are physically bound together or because they are kept together for their functionality.
 ).freeze,
-      label: "Collection".freeze,
+      label: ["Coleção".freeze, "Collection".freeze, "Collection".freeze, "Sammlung".freeze, "Συλλογή".freeze, "Коллекция".freeze, "收藏".freeze],
       subClassOf: "crm:E24_Physical_Man-Made_Thing".freeze,
       type: "rdfs:Class".freeze
     term :E79_Part_Addition,
       comment: %(This class comprises activities that result in an instance of E24 Physical Man-Made Thing being increased, enlarged or augmented by the addition of a part. 
 Typical scenarios include the attachment of an accessory, the integration of a component, the addition of an element to an aggregate object, or the accessioning of an object into a curated E78 Collection. Objects to which parts are added are, by definition, man-made, since the addition of a part implies a human activity. Following the addition of parts, the resulting man-made assemblages are treated objectively as single identifiable wholes, made up of constituent or component parts bound together either physically \(for example the engine becoming a part of the car\), or by sharing a common purpose \(such as the 32 chess pieces that make up a chess set\). This class of activities forms a basis for reasoning about the history and continuity of identity of objects that are integrated into other objects over time, such as precious gemstones being repeatedly incorporated into different items of jewellery, or cultural artifacts being added to different museum instances of E78 Collection over their lifespan.
 ).freeze,
-      label: "Part Addition".freeze,
+      label: ["Addition d'élément".freeze, "Adição de Parte".freeze, "Part Addition".freeze, "Teilhinzufügung".freeze, "Προσθήκη Μερών".freeze, "Добавление Части".freeze, "部件增加".freeze],
       subClassOf: "crm:E11_Modification".freeze,
       type: "rdfs:Class".freeze
     term :E7_Activity,
       comment: %(This class comprises actions intentionally carried out by instances of E39 Actor that result in changes of state in the cultural, social, or physical systems documented. 
 This notion includes complex, composite and long-lasting actions such as the building of a settlement or a war, as well as simple, short-lived actions such as the opening of a door.
 ).freeze,
-      label: "Activity".freeze,
+      label: ["Activity".freeze, "Activité".freeze, "Atividade".freeze, "Handlung".freeze, "Δράση".freeze, "Деятельность".freeze, "活动".freeze],
       subClassOf: "crm:E5_Event".freeze,
       type: "rdfs:Class".freeze
     term :E80_Part_Removal,
       comment: %(This class comprises the activities that result in an instance of E18 Physical Thing being decreased by the removal of a part.
 Typical scenarios include the detachment of an accessory, the removal of a component or part of a composite object, or the deaccessioning of an object from a curated E78 Collection. If the E80 Part Removal results in the total decomposition of the original object into pieces, such that the whole ceases to exist, the activity should instead be modelled as an E81 Transformation, i.e. a simultaneous destruction and production. In cases where the part removed has no discernible identity prior to its removal but does have an identity subsequent to its removal, the activity should be regarded as both E80 Part Removal and E12 Production. This class of activities forms a basis for reasoning about the history, and continuity of identity over time, of objects that are removed from other objects, such as precious gemstones being extracted from different items of jewelry, or cultural artifacts being deaccessioned from different museum collections over their lifespan.
 ).freeze,
-      label: "Part Removal".freeze,
+      label: ["Part Removal".freeze, "Remoção de Parte".freeze, "Soustraction d'élément".freeze, "Teilentfernung".freeze, "Αφαίρεση Μερών".freeze, "Удаление Части".freeze, "部件删除".freeze],
       subClassOf: "crm:E11_Modification".freeze,
       type: "rdfs:Class".freeze
     term :E81_Transformation,
       comment: %(This class comprises the events that result in the simultaneous destruction of one or more than one E77 Persistent Item and the creation of one or more than one E77 Persistent Item that preserves recognizable substance from the first one\(s\) but has fundamentally different nature and identity. 
 Although the old and the new instances of E77 Persistent Item are treated as discrete entities having separate, unique identities, they are causally connected through the E81 Transformation; the destruction of the old E77 Persistent Item\(s\) directly causes the creation of the new one\(s\) using or preserving some relevant substance. Instances of E81 Transformation are therefore distinct from re-classifications \(documented using E17 Type Assignment\) or modifications \(documented using E11 Modification\) of objects that do not fundamentally change their nature or identity. Characteristic cases are reconstructions and repurposing of historical buildings or ruins, fires leaving buildings in ruins, taxidermy of specimen in natural history and the reorganization of a corporate body into a new one.
 ).freeze,
-      label: "Transformation".freeze,
+      label: ["Transformation".freeze, "Transformation".freeze, "Transformação".freeze, "Umwandlung".freeze, "Μετατροπή".freeze, "Трансформация".freeze, "转变".freeze],
       subClassOf: ["crm:E63_Beginning_of_Existence".freeze, "crm:E64_End_of_Existence".freeze],
       type: "rdfs:Class".freeze
     term :E82_Actor_Appellation,
       comment: %(This class comprises any sort of name, number, code or symbol characteristically used to identify an E39 Actor. 
 An E39 Actor will typically have more than one E82 Actor Appellation, and instances of E82 Actor Appellation in turn may have alternative representations. The distinction between corporate and personal names, which is particularly important in library applications, should be made by explicitly linking the E82 Actor Appellation to an instance of either E21 Person or E74 Group/E40 Legal Body. If this is not possible, the distinction can be made through the use of the P2 has type mechanism. 
 ).freeze,
-      label: "Actor Appellation".freeze,
+      label: ["Actor Appellation".freeze, "Akteurbenennung".freeze, "Appellation d'agent".freeze, "Designação de Agente".freeze, "Ονομασία Δράστη".freeze, "Обозначение Агента".freeze, "角色称号".freeze],
       subClassOf: "crm:E41_Appellation".freeze,
       type: "rdfs:Class".freeze
     term :E83_Type_Creation,
       comment: %(This class comprises activities formally defining new types of items. 
 It is typically a rigorous scholarly or scientific process that ensures a type is exhaustively described and appropriately named. In some cases, particularly in archaeology and the life sciences, E83 Type Creation requires the identification of an exemplary specimen and the publication of the type definition in an appropriate scholarly forum. The activity of E83 Type Creation is central to research in the life sciences, where a type would be referred to as a “taxon,” the type description as a “protologue,” and the exemplary specimens as “orgininal element” or “holotype”.
 ).freeze,
-      label: "Type Creation".freeze,
+      label: ["Criação de Tipo".freeze, "Création de type".freeze, "Type Creation".freeze, "Typuserfindung".freeze, "Δημιουργία Τύπου".freeze, "Создание Типа".freeze, "类型创造".freeze],
       subClassOf: "crm:E65_Creation".freeze,
       type: "rdfs:Class".freeze
     term :E84_Information_Carrier,
       comment: %(This class comprises all instances of E22 Man-Made Object that are explicitly designed to act as persistent physical carriers for instances of E73 Information Object.
 An E84 Information Carrier may or may not contain information, e.g., a diskette. Note that any E18 Physical Thing may carry information, such as an E34 Inscription. However, unless it was specifically designed for this purpose, it is not an Information Carrier. Therefore the property P128 carries \(is carried by\) applies to E18 Physical Thing in general.
 	).freeze,
-      label: "Information Carrier".freeze,
+      label: ["Information Carrier".freeze, "Informationsträger".freeze, "Suporte de Informação".freeze, "Support d'information".freeze, "Φορέας Πληροφορίας".freeze, "Носитель Информации".freeze, "信息载体".freeze],
       subClassOf: "crm:E22_Man-Made_Object".freeze,
       type: "rdfs:Class".freeze
     term :E85_Joining,
       comment: %(This class comprises the activities that result in an instance of E39 Actor becoming a member of an instance of E74 Group. This class does not imply initiative by either party.
 Typical scenarios include becoming a member of a social organisation, becoming employee of a company, marriage, the adoption of a child by a family and the inauguration of somebody into an official position. 
 ).freeze,
-      label: "Joining".freeze,
+      label: ["Beitritt".freeze, "Joining".freeze, "加入".freeze],
       subClassOf: "crm:E7_Activity".freeze,
       type: "rdfs:Class".freeze
     term :E86_Leaving,
       comment: %(This class comprises the activities that result in an instance of E39 Actor to be disassociated from an instance of E74 Group. This class does not imply initiative by either party. 
 Typical scenarios include the termination of membership in a social organisation, ending the employment at a company, divorce, and the end of tenure of somebody in an official position.).freeze,
-      label: "Leaving".freeze,
+      label: ["Austritt".freeze, "Leaving".freeze, "脱离".freeze],
       subClassOf: "crm:E7_Activity".freeze,
       type: "rdfs:Class".freeze
     term :E87_Curation_Activity,
@@ -600,7 +600,7 @@ Typical scenarios include the termination of membership in a social organisation
 It specializes the notion of activity into the curation of a collection and allows the history of curation to be recorded.
 Items are accumulated and organized following criteria like subject, chronological period, material type, style of art etc. and can be added or removed from an E78 Collection for a specific purpose and/or audience. The initial aggregation of items of a collection is regarded as an instance of E12 Production Event while the activity of evolving, preserving and promoting a collection is regarded as an instance of E87 Curation Activity.
 ).freeze,
-      label: "Curation Activity".freeze,
+      label: ["Curation Activity".freeze, "Kuratorische Tätigkeit".freeze, "典藏管理".freeze],
       subClassOf: "crm:E7_Activity".freeze,
       type: "rdfs:Class".freeze
     term :E89_Propositional_Object,
@@ -608,7 +608,7 @@ Items are accumulated and organized following criteria like subject, chronologic
 	
 This class also comprises items that are “about” something in the sense of a subject. In the wider sense, this class includes expressions of psychological value such as non-figural art and musical themes. However, conceptual items such as types and classes are not instances of E89 Propositional Object. This should not be confused with the definition of a type, which is indeed an instance of E89 Propositional Object.
 ).freeze,
-      label: "Propositional Object".freeze,
+      label: ["Aussagenobjekt".freeze, "Propositional Object".freeze, "陈述性物件".freeze],
       subClassOf: "crm:E28_Conceptual_Object".freeze,
       type: "rdfs:Class".freeze
     term :E8_Acquisition,
@@ -621,7 +621,7 @@ The class also applies to the establishment or loss of ownership of instances of
 5.	the loss of title due to destruction of the item
 It may also describe events where a collector appropriates legal title, for example by annexation or field collection. The interpretation of the museum notion of "accession" differs between institutions. The CRM therefore models legal ownership \(E8 Acquisition\) and physical custody \(E10 Transfer of Custody\) separately. Institutions will then model their specific notions of accession and deaccession as combinations of these.
 ).freeze,
-      label: "Acquisition".freeze,
+      label: ["Acquisition".freeze, "Acquisition".freeze, "Aquisição".freeze, "Erwerb".freeze, "Απόκτηση".freeze, "Событие Приобретения".freeze, "征集取得".freeze],
       subClassOf: "crm:E7_Activity".freeze,
       type: "rdfs:Class".freeze
     term :E90_Symbolic_Object,
@@ -630,7 +630,7 @@ It may also describe events where a collector appropriates legal title, for exam
 	An instance of E90 Symbolic Object does not depend on a specific physical carrier, which can include human memory, and it can exist on one or more carriers simultaneously. An instance of E90 Symbolic Object may or may not have a specific meaning, for example an arbitrary character string.
 	In some cases, the content of an instance of E90 Symbolic Object may completely be represented by a serialized content model, such.. as the property P3 has note allows for describing this content model…P3.1 has type: E55 Type to specify the encoding..
 ).freeze,
-      label: "Symbolic Object".freeze,
+      label: ["Symbolic Object".freeze, "Symbolisches Objekt".freeze, "符号物件".freeze],
       subClassOf: ["crm:E28_Conceptual_Object".freeze, "crm:E72_Legal_Object".freeze],
       type: "rdfs:Class".freeze
     term :"E91_Co-Reference_Assignment",
@@ -661,7 +661,7 @@ This class can be used to define temporal snapshots at a particular time-span, s
       comment: %(This class comprises changes of the physical location of the instances of E19 Physical Object. 
 Note, that the class E9 Move inherits the property P7 took place at \(witnessed\): E53 Place. This property should be used to describe the trajectory or a larger area within which a move takes place, whereas the properties P26 moved to \(was destination of\), P27 moved from \(was origin of\) describe the start and end points only. Moves may also be documented to consist of other moves \(via P9 consists of \(forms part of\)\), in order to describe intermediate stages on a trajectory. In that case, start and end points of the partial moves should match appropriately between each other and with the overall event.
 ).freeze,
-      label: "Move".freeze,
+      label: ["Déplacement".freeze, "Locomoção".freeze, "Move".freeze, "Objektbewegung".freeze, "Μετακίνηση".freeze, "Перемещение".freeze, "移动".freeze],
       subClassOf: "crm:E7_Activity".freeze,
       type: "rdfs:Class".freeze
 
@@ -669,13 +669,13 @@ Note, that the class E9 Move inherits the property P7 took place at \(witnessed\
     property :P100_was_death_of,
       comment: %(This property property links an E69 Death event to the E21 Person that died.).freeze,
       domain: "crm:E69_Death".freeze,
-      label: "was death of".freeze,
+      label: ["Tod von".freeze, "a été la mort de".freeze, "foi a morte para ".freeze, "was death of".freeze, "ήταν θάνατος του/της".freeze, "был смертью для".freeze, "灭亡了".freeze],
       range: "crm:E21_Person".freeze,
       subPropertyOf: "crm:P93_took_out_of_existence".freeze,
       type: "rdf:Property".freeze
     property :P100i_died_in,
       domain: "crm:E21_Person".freeze,
-      label: "died in".freeze,
+      label: ["died in".freeze, "est mort par".freeze, "morreu em".freeze, "starb in".freeze, "πέθανε σε".freeze, "умер в".freeze, "死亡於".freeze],
       range: "crm:E69_Death".freeze,
       subPropertyOf: "crm:P93i_was_taken_out_of_existence_by".freeze,
       type: "rdf:Property".freeze
@@ -684,12 +684,12 @@ Note, that the class E9 Move inherits the property P7 took place at \(witnessed\
 It allows the relationship between particular things, both physical and immaterial, and general methods and techniques of use to be documented. Thus it can be asserted that a baseball bat had a general use for sport and a specific use for threatening people during the Great Train Robbery.
 ).freeze,
       domain: "crm:E70_Thing".freeze,
-      label: "had as general use".freeze,
+      label: ["avait comme utilisation générale".freeze, "had as general use".freeze, "hatte die allgemeine Verwendung".freeze, "tem como uso geral".freeze, "είχε ως γενική χρήση".freeze, "имел основное применение".freeze, "被惯用於".freeze],
       range: "crm:E55_Type".freeze,
       type: "rdf:Property".freeze
     property :P101i_was_use_of,
       domain: "crm:E55_Type".freeze,
-      label: "was use of".freeze,
+      label: ["foi uso de".freeze, "war die Verwendung von".freeze, "was use of".freeze, "était l’utilisation de".freeze, "ήταν χρήση του/της".freeze, "был применением для".freeze, "可使用".freeze],
       range: "crm:E70_Thing".freeze,
       type: "rdf:Property".freeze
     property :P102_has_title,
@@ -698,13 +698,13 @@ The P102.1 has type property of the P102 has title \(is title of\) property enab
 It allows any man-made material or immaterial thing to be given a Title. It is possible to imagine a Title being created without a specific object in mind.
 ).freeze,
       domain: "crm:E71_Man-Made_Thing".freeze,
-      label: "has title".freeze,
+      label: ["a pour titre".freeze, "has title".freeze, "tem título".freeze, "trägt den Titel".freeze, "έχει τίτλο".freeze, "имеет заголовок".freeze, "有标题".freeze],
       range: "crm:E35_Title".freeze,
       subPropertyOf: "crm:P1_is_identified_by".freeze,
       type: "rdf:Property".freeze
     property :P102i_is_title_of,
       domain: "crm:E35_Title".freeze,
-      label: "is title of".freeze,
+      label: ["est le titre de".freeze, "is title of".freeze, "ist der Titel von".freeze, "é título de".freeze, "είναι τίτλος του/της".freeze, "является заголовком для".freeze, "被用为标题来称呼".freeze],
       range: "crm:E71_Man-Made_Thing".freeze,
       subPropertyOf: "crm:P1i_identifies".freeze,
       type: "rdf:Property".freeze
@@ -712,12 +712,12 @@ It allows any man-made material or immaterial thing to be given a Title. It is p
       comment: %(This property links an instance of E71 Man-Made Thing to an E55 Type of usage. 
 It creates a property between specific man-made things, both physical and immaterial, to Types of intended methods and techniques of use. Note: A link between specific man-made things and a specific use activity should be expressed using P19 was intended use of \(was made for\).).freeze,
       domain: "crm:E71_Man-Made_Thing".freeze,
-      label: "was intended for".freeze,
+      label: ["bestimmt für".freeze, "era destinado à".freeze, "was intended for".freeze, "était destiné à".freeze, "προοριζόταν για".freeze, "был задуман для".freeze, "被制作来用於".freeze],
       range: "crm:E55_Type".freeze,
       type: "rdf:Property".freeze
     property :P103i_was_intention_of,
       domain: "crm:E55_Type".freeze,
-      label: "was intention of".freeze,
+      label: ["era a destinação de".freeze, "war Bestimmung von".freeze, "was intention of".freeze, "était la raison d'être de".freeze, "ήταν προορισμός του".freeze, "был интенцией для".freeze],
       range: "crm:E71_Man-Made_Thing".freeze,
       type: "rdf:Property".freeze
     property :P104_is_subject_to,
@@ -725,12 +725,12 @@ It creates a property between specific man-made things, both physical and immate
 The Right is held by an E39 Actor as described by P75 possesses \(is possessed by\).
 ).freeze,
       domain: "crm:E72_Legal_Object".freeze,
-      label: "is subject to".freeze,
+      label: ["Gegenstand von".freeze, "est sujet à".freeze, "está sujeito à".freeze, "is subject to".freeze, "υπόκειται σε".freeze, "является объектом для".freeze, "受制於".freeze],
       range: "crm:E30_Right".freeze,
       type: "rdf:Property".freeze
     property :P104i_applies_to,
       domain: "crm:E30_Right".freeze,
-      label: "applies to".freeze,
+      label: ["applies to".freeze, "findet Anwendung auf".freeze, "se aplicam à".freeze, "s’applique à".freeze, "ισχύει για".freeze, "применяется к".freeze, "被应用於".freeze],
       range: "crm:E72_Legal_Object".freeze,
       type: "rdf:Property".freeze
     property :P105_right_held_by,
@@ -739,24 +739,24 @@ The Right is held by an E39 Actor as described by P75 possesses \(is possessed b
 P105 right held by \(has right on\) is a shortcut of the fully developed path from E72 Legal Object through P104 is subject to \(applies to\), E30 Right, P75 possesses \(is possessed by\) to E39 Actor.
 ).freeze,
       domain: "crm:E72_Legal_Object".freeze,
-      label: "right held by".freeze,
+      label: ["Rechte stehen zu".freeze, "droit détenu par".freeze, "right held by".freeze, "são direitos de ".freeze, "δικαίωμα κατέχεται από".freeze, "право принадлежит".freeze, "有权限持有者".freeze],
       range: "crm:E39_Actor".freeze,
       type: "rdf:Property".freeze
     property :P105i_has_right_on,
       domain: "crm:E39_Actor".freeze,
-      label: "has right on".freeze,
+      label: ["détient un droit sur".freeze, "has right on".freeze, "hat Rechte an".freeze, "possui direitos sobre".freeze, "έχει δικαίωμα σε".freeze, "владеет правом на".freeze, "持有权限来管制".freeze],
       range: "crm:E72_Legal_Object".freeze,
       type: "rdf:Property".freeze
     property :P106_is_composed_of,
       comment: %(This property associates an instance of E90 Symbolic Object with a part of it that is by itself an instance of E90 Symbolic Object, such as fragments of texts or clippings from an image.
 ).freeze,
       domain: "crm:E90_Symbolic_Object".freeze,
-      label: "is composed of".freeze,
+      label: [" ist zusammengesetzt aus".freeze, "est composé de".freeze, "is composed of".freeze, "é composto de".freeze, "αποτελείται από".freeze, "составлен из".freeze, "有组成元素".freeze],
       range: "crm:E90_Symbolic_Object".freeze,
       type: "rdf:Property".freeze
     property :P106i_forms_part_of,
       domain: "crm:E90_Symbolic_Object".freeze,
-      label: "forms part of".freeze,
+      label: ["bildet Teil von".freeze, "fait partie de".freeze, "faz parte de".freeze, "forms part of".freeze, "αποτελεί μέρος του/της".freeze, "формирует часть".freeze, "组成了".freeze],
       range: "crm:E90_Symbolic_Object".freeze,
       type: "rdf:Property".freeze
     property :P107_has_current_or_former_member,
@@ -766,12 +766,12 @@ This property is a shortcut of the more fully developed path from E74 Group thro
 The property P107.1 kind of member can be used to specify the type of membership or the role the member has in the group. 
 ).freeze,
       domain: "crm:E74_Group".freeze,
-      label: "has current or former member".freeze,
+      label: ["a pour membre actuel ou ancien".freeze, "has current or former member".freeze, "hat derzeitiges oder früheres Mitglied".freeze, "tem ou teve membro".freeze, "έχει ή είχε μέλος".freeze, "имеет действующего или бывшего члена".freeze, "有现任或前任成员".freeze],
       range: "crm:E39_Actor".freeze,
       type: "rdf:Property".freeze
     property :P107i_is_current_or_former_member_of,
       domain: "crm:E39_Actor".freeze,
-      label: "is current or former member of".freeze,
+      label: ["est actuel ou ancien membre de".freeze, "is current or former member of".freeze, "ist derzeitiges oder früheres Mitglied von".freeze, "é ou foi membro de".freeze, "είναι ή ήταν μέλος του/της".freeze, "является действующим или бывшим членом".freeze, "目前或曾经加入群组".freeze],
       range: "crm:E74_Group".freeze,
       type: "rdf:Property".freeze
     property :P108_has_produced,
@@ -779,13 +779,13 @@ The property P107.1 kind of member can be used to specify the type of membership
 The identity of an instance of E24 Physical Man-Made Thing is not defined by its matter, but by its existence as a subject of documentation. An E12 Production can result in the creation of multiple instances of E24 Physical Man-Made Thing.
 ).freeze,
       domain: "crm:E12_Production".freeze,
-      label: "has produced".freeze,
+      label: ["a produit".freeze, "has produced".freeze, "hat hergestellt".freeze, "produziu".freeze, "παρήγαγε".freeze, "произвел".freeze, "有产出物".freeze],
       range: "crm:E24_Physical_Man-Made_Thing".freeze,
       subPropertyOf: ["crm:P31_has_modified".freeze, "crm:P92_brought_into_existence".freeze],
       type: "rdf:Property".freeze
     property :P108i_was_produced_by,
       domain: "crm:E24_Physical_Man-Made_Thing".freeze,
-      label: "was produced by".freeze,
+      label: ["a été produit par".freeze, "foi produzido por".freeze, "was produced by".freeze, "wurde hergestellt durch".freeze, "παρήχθη από".freeze, "был произведен посредством".freeze, "被制作於".freeze],
       range: "crm:E12_Production".freeze,
       subPropertyOf: ["crm:P31i_was_modified_by".freeze, "crm:P92i_was_brought_into_existence_by".freeze],
       type: "rdf:Property".freeze
@@ -794,13 +794,13 @@ The identity of an instance of E24 Physical Man-Made Thing is not defined by its
 This property is effectively a short-cut. It does not allow a history of curation to be recorded. This would require use of an Event assigning responsibility for a Collection to a curator.
 ).freeze,
       domain: "crm:E78_Collection".freeze,
-      label: "has current or former curator".freeze,
+      label: ["a pour conservateur actuel ou ancien".freeze, "has current or former curator".freeze, "hat derzeitigen oder früheren Kurator".freeze, "tem ou teve curador".freeze, "έχει ή είχε επιμελητή".freeze, "имеет действующего или бывшего хранителя".freeze, "有现任或前任典藏管理员".freeze],
       range: "crm:E39_Actor".freeze,
       subPropertyOf: "crm:P49_has_former_or_current_keeper".freeze,
       type: "rdf:Property".freeze
     property :P109i_is_current_or_former_curator_of,
       domain: "crm:E39_Actor".freeze,
-      label: "is current or former curator of".freeze,
+      label: ["est ou a été le conservateur de".freeze, "is current or former curator of".freeze, "ist derzeitiger oder früherer Kurator von".freeze, "é ou foi curador de".freeze, "είναι ή ήταν επιμελητής του/της".freeze, "является действующим или бывшим хранителем".freeze, "目前或曾经典藏管理".freeze],
       range: "crm:E78_Collection".freeze,
       subPropertyOf: "crm:P49i_is_former_or_current_keeper_of".freeze,
       type: "rdf:Property".freeze
@@ -809,12 +809,12 @@ This property is effectively a short-cut. It does not allow a history of curatio
 The difference with P9 consists of \(forms part of\) is subtle. Unlike P9 consists of \(forms part of\), P10 falls within \(contains\) does not imply any logical connection between the two periods and it may refer to a period of a completely different type.
 ).freeze,
       domain: "crm:E4_Period".freeze,
-      label: "falls within".freeze,
+      label: ["está contido em".freeze, "falls within".freeze, "fällt in".freeze, "s’insère dans le cours de".freeze, "εμπίπτει".freeze, "находится в пределах".freeze, "发生时间涵盖於".freeze],
       range: "crm:E4_Period".freeze,
       type: "rdf:Property".freeze
     property :P10i_contains,
       domain: "crm:E4_Period".freeze,
-      label: "contains".freeze,
+      label: ["contains".freeze, "contient".freeze, "contém".freeze, "enthält".freeze, "περιλαμβάνει".freeze, "содержит".freeze, "时间上涵盖".freeze],
       range: "crm:E4_Period".freeze,
       type: "rdf:Property".freeze
     property :P110_augmented,
@@ -822,13 +822,13 @@ The difference with P9 consists of \(forms part of\) is subtle. Unlike P9 consis
 Although a Part Addition event normally concerns only one item of Physical Man-Made Thing, it is possible to imagine circumstances under which more than one item might be added to \(augmented\). For example, the artist Jackson Pollock trailing paint onto multiple canvasses.
 ).freeze,
       domain: "crm:E79_Part_Addition".freeze,
-      label: "augmented".freeze,
+      label: ["a augmenté".freeze, "augmented".freeze, "aumentou".freeze, "erweiterte".freeze, "επαύξησε".freeze, "увеличил".freeze, "扩增了".freeze],
       range: "crm:E24_Physical_Man-Made_Thing".freeze,
       subPropertyOf: "crm:P31_has_modified".freeze,
       type: "rdf:Property".freeze
     property :P110i_was_augmented_by,
       domain: "crm:E24_Physical_Man-Made_Thing".freeze,
-      label: "was augmented by".freeze,
+      label: ["a été augmenté par".freeze, "foi aumentada por".freeze, "was augmented by".freeze, "wurde erweitert durch".freeze, "επαυξήθηκε από".freeze, "был увеличен посредством".freeze, "被扩增於".freeze],
       range: "crm:E79_Part_Addition".freeze,
       subPropertyOf: "crm:P31i_was_modified_by".freeze,
       type: "rdf:Property".freeze
@@ -836,13 +836,13 @@ Although a Part Addition event normally concerns only one item of Physical Man-M
       comment: %(This property identifies the E18 Physical Thing that is added during an E79 Part Addition activity
 ).freeze,
       domain: "crm:E79_Part_Addition".freeze,
-      label: "added".freeze,
+      label: ["a ajouté".freeze, "added".freeze, "adicionou".freeze, "fügte hinzu".freeze, "προσέθεσε".freeze, "добавил".freeze, "附加上部件".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       subPropertyOf: ["crm:P12_occurred_in_the_presence_of".freeze, "crm:P16_used_specific_object".freeze],
       type: "rdf:Property".freeze
     property :P111i_was_added_by,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "was added by".freeze,
+      label: ["a été ajouté par".freeze, "foi adicionado por".freeze, "was added by".freeze, "wurde hinzugefügt durch".freeze, "προστέθηκε από".freeze, "был добавлен посредством".freeze, "被附加於".freeze],
       range: "crm:E79_Part_Addition".freeze,
       subPropertyOf: ["crm:P12i_was_present_at".freeze, "crm:P16i_was_used_for".freeze],
       type: "rdf:Property".freeze
@@ -851,26 +851,26 @@ Although a Part Addition event normally concerns only one item of Physical Man-M
 Although a Part removal activity normally concerns only one item of Physical Man-Made Thing, it is possible to imagine circumstances under which more than one item might be diminished by a single Part Removal activity. 
 ).freeze,
       domain: "crm:E80_Part_Removal".freeze,
-      label: "diminished".freeze,
+      label: ["a diminué".freeze, "diminished".freeze, "diminuiu".freeze, "verminderte".freeze, "εξάλειψε".freeze, "уменьшил".freeze, "缩减了".freeze],
       range: "crm:E24_Physical_Man-Made_Thing".freeze,
       subPropertyOf: "crm:P31_has_modified".freeze,
       type: "rdf:Property".freeze
     property :P112i_was_diminished_by,
       domain: "crm:E24_Physical_Man-Made_Thing".freeze,
-      label: "was diminished by".freeze,
+      label: ["a été diminué par".freeze, "foi diminuído por".freeze, "was diminished by".freeze, "wurde vermindert durch".freeze, "εξαλείφθηκε από".freeze, "был уменьшен посредством".freeze, "被缩减於".freeze],
       range: "crm:E80_Part_Removal".freeze,
       subPropertyOf: "crm:P31i_was_modified_by".freeze,
       type: "rdf:Property".freeze
     property :P113_removed,
       comment: %(This property identifies the E18 Physical Thing that is removed during an E80 Part Removal activity.).freeze,
       domain: "crm:E80_Part_Removal".freeze,
-      label: "removed".freeze,
+      label: ["a enlevé".freeze, "entfernte".freeze, "removed".freeze, "removeu".freeze, "αφαίρεσε".freeze, "удален".freeze, "移除了".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       subPropertyOf: "crm:P12_occurred_in_the_presence_of".freeze,
       type: "rdf:Property".freeze
     property :P113i_was_removed_by,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "was removed by".freeze,
+      label: ["a été enlevée par".freeze, "foi removido por".freeze, "was removed by".freeze, "wurde entfernt durch".freeze, "αφαιρέθηκε από".freeze, "был удален посредством".freeze, "被移除於".freeze],
       range: "crm:E80_Part_Removal".freeze,
       subPropertyOf: "crm:P12i_was_present_at".freeze,
       type: "rdf:Property".freeze
@@ -880,7 +880,7 @@ This property is only necessary if the time span is unknown \(otherwise the equi
 This property is the same as the "equal" relationship of Allen’s temporal logic \(Allen, 1983, pp. 832-843\).
 ).freeze,
       domain: "crm:E2_Temporal_Entity".freeze,
-      label: "is equal in time to".freeze,
+      label: ["est temporellement égale à".freeze, "is equal in time to".freeze, "zeitgleich zu".freeze, "é temporalmente igual a".freeze, "συμπίπτει χρονικά με".freeze, "равен по времени".freeze, "时段相同於".freeze],
       range: "crm:E2_Temporal_Entity".freeze,
       type: "rdf:Property".freeze
     property :P115_finishes,
@@ -888,12 +888,12 @@ This property is the same as the "equal" relationship of Allen’s temporal logi
 This property is only necessary if the time span is unknown \(otherwise the relationship can be calculated\). This property is the same as the "finishes / finished-by" relationships of Allen’s temporal logic \(Allen, 1983, pp. 832-843\).
 ).freeze,
       domain: "crm:E2_Temporal_Entity".freeze,
-      label: "finishes".freeze,
+      label: ["beendet".freeze, "finaliza".freeze, "finishes".freeze, "termine".freeze, "περατώνει".freeze, "заканчивает".freeze, "结束了".freeze],
       range: "crm:E2_Temporal_Entity".freeze,
       type: "rdf:Property".freeze
     property :P115i_is_finished_by,
       domain: "crm:E2_Temporal_Entity".freeze,
-      label: "is finished by".freeze,
+      label: ["est terminée par".freeze, "is finished by".freeze, "wurde beendet mit".freeze, "é finalizada por".freeze, "περατώνεται με".freeze, "заканчивается".freeze, "被结束于".freeze],
       range: "crm:E2_Temporal_Entity".freeze,
       type: "rdf:Property".freeze
     property :P116_starts,
@@ -901,12 +901,12 @@ This property is only necessary if the time span is unknown \(otherwise the rela
 This property is only necessary if the time span is unknown \(otherwise the relationship can be calculated\). This property is the same as the "starts / started-by" relationships of Allen’s temporal logic \(Allen, 1983, pp. 832-843\).
 ).freeze,
       domain: "crm:E2_Temporal_Entity".freeze,
-      label: "starts".freeze,
+      label: ["beginnt".freeze, "commence".freeze, "inicia".freeze, "starts".freeze, "αρχίζει".freeze, "начинает".freeze, "开始了".freeze],
       range: "crm:E2_Temporal_Entity".freeze,
       type: "rdf:Property".freeze
     property :P116i_is_started_by,
       domain: "crm:E2_Temporal_Entity".freeze,
-      label: "is started by".freeze,
+      label: ["est commencée par".freeze, "is started by".freeze, "wurde begonnen mit".freeze, "é iniciada por".freeze, "αρχίζει με".freeze, "начинается".freeze, "被开始于".freeze],
       range: "crm:E2_Temporal_Entity".freeze,
       type: "rdf:Property".freeze
     property :P117_occurs_during,
@@ -914,12 +914,12 @@ This property is only necessary if the time span is unknown \(otherwise the rela
 This property is only necessary if the time span is unknown \(otherwise the relationship can be calculated\). This property is the same as the "during / includes" relationships of Allen’s temporal logic \(Allen, 1983, pp. 832-843\).
 ).freeze,
       domain: "crm:E2_Temporal_Entity".freeze,
-      label: "occurs during".freeze,
+      label: ["a lieu pendant".freeze, "fällt in".freeze, "occurs during".freeze, "ocorre durante".freeze, "εμφανίζεται κατά τη διάρκεια".freeze, "появляется во течение".freeze, "时段被涵盖於".freeze],
       range: "crm:E2_Temporal_Entity".freeze,
       type: "rdf:Property".freeze
     property :P117i_includes,
       domain: "crm:E2_Temporal_Entity".freeze,
-      label: "includes".freeze,
+      label: ["beinhaltet".freeze, "comporte".freeze, "includes".freeze, "inclui".freeze, "περιλαμβάνει".freeze, "включает".freeze, "时段涵盖了".freeze],
       range: "crm:E2_Temporal_Entity".freeze,
       type: "rdf:Property".freeze
     property :P118_overlaps_in_time_with,
@@ -928,12 +928,12 @@ It implies a temporal order between the two entities: if A overlaps in time B, t
 This property is the same as the "overlaps / overlapped-by" relationships of Allen’s temporal logic \(Allen, 1983, pp. 832-843\).
 ).freeze,
       domain: "crm:E2_Temporal_Entity".freeze,
-      label: "overlaps in time with".freeze,
+      label: ["est partiellement recouverte dans le temps par".freeze, "overlaps in time with".freeze, "sobrepõe temporalmente".freeze, "überlappt zeitlich mit".freeze, "προηγείται μερικώς επικαλύπτοντας".freeze, "перекрывает во времени".freeze, "时段重叠了".freeze],
       range: "crm:E2_Temporal_Entity".freeze,
       type: "rdf:Property".freeze
     property :P118i_is_overlapped_in_time_by,
       domain: "crm:E2_Temporal_Entity".freeze,
-      label: "is overlapped in time by".freeze,
+      label: ["is overlapped in time by".freeze, "recouvre partiellement dans le temps".freeze, "wird zeitlich überlappt von".freeze, "é sobreposto temporalmente por".freeze, "έπεται μερικώς επικαλυπτόμενο".freeze, "перекрывается во времени".freeze, "时段被重叠于".freeze],
       range: "crm:E2_Temporal_Entity".freeze,
       type: "rdf:Property".freeze
     property :P119_meets_in_time_with,
@@ -942,12 +942,12 @@ It implies a particular order between the two entities: if A meets in time with 
 This property is the same as the "meets / met-by" relationships of Allen’s temporal logic \(Allen, 1983, pp. 832-843\).
 ).freeze,
       domain: "crm:E2_Temporal_Entity".freeze,
-      label: "meets in time with".freeze,
+      label: ["est temporellement contiguë avec".freeze, "meets in time with".freeze, "trifft zeitlich auf".freeze, "é temporalmente contíguo com".freeze, "προηγείται".freeze, "следует во времени за".freeze, "紧接续了".freeze],
       range: "crm:E2_Temporal_Entity".freeze,
       type: "rdf:Property".freeze
     property :P119i_is_met_in_time_by,
       domain: "crm:E2_Temporal_Entity".freeze,
-      label: "is met in time by".freeze,
+      label: ["est immédiatement précédé par".freeze, "is met in time by".freeze, "wird zeitlich getroffen von".freeze, "é imediatamente precedido por".freeze, "έπεται".freeze, "предшествует во времени".freeze, "紧接续於".freeze],
       range: "crm:E2_Temporal_Entity".freeze,
       type: "rdf:Property".freeze
     property :P11_had_participant,
@@ -955,13 +955,13 @@ This property is the same as the "meets / met-by" relationships of Allen’s tem
 It connects the life-line of the related E39 Actor with the E53 Place and E50 Date of the event. The property implies that the Actor was involved in the event but does not imply any causal relationship. The subject of a portrait can be said to have participated in the creation of the portrait.
 ).freeze,
       domain: "crm:E5_Event".freeze,
-      label: "had participant".freeze,
+      label: ["a eu pour participant".freeze, "had participant".freeze, "hatte Teilnehmer".freeze, "tem participante".freeze, "είχε συμμέτοχο".freeze, "имел участника".freeze, "有参与者".freeze],
       range: "crm:E39_Actor".freeze,
       subPropertyOf: "crm:P12_occurred_in_the_presence_of".freeze,
       type: "rdf:Property".freeze
     property :P11i_participated_in,
       domain: "crm:E39_Actor".freeze,
-      label: "participated in".freeze,
+      label: ["a participé à".freeze, "nahm Teil an".freeze, "participa em".freeze, "participated in".freeze, "συμμετείχε σε".freeze, "участвовал в".freeze, "参与了".freeze],
       range: "crm:E5_Event".freeze,
       subPropertyOf: "crm:P12i_was_present_at".freeze,
       type: "rdf:Property".freeze
@@ -971,12 +971,12 @@ It implies that a temporal gap exists between the end of A and the start of B. T
 This property is the same as the "before / after" relationships of Allen’s temporal logic \(Allen, 1983, pp. 832-843\).
 ).freeze,
       domain: "crm:E2_Temporal_Entity".freeze,
-      label: "occurs before".freeze,
+      label: ["a lieu avant".freeze, "kommt vor".freeze, "occurs before".freeze, "ocorre antes".freeze, "εμφανίζεται πριν".freeze, "появляется до".freeze, "发生时段先於".freeze],
       range: "crm:E2_Temporal_Entity".freeze,
       type: "rdf:Property".freeze
     property :P120i_occurs_after,
       domain: "crm:E2_Temporal_Entity".freeze,
-      label: "occurs after".freeze,
+      label: ["a lieu après".freeze, "kommt nach".freeze, "occurs after".freeze, "ocorre depois".freeze, "εμφανίζεται μετά".freeze, "появляется после".freeze, "发生时段后於".freeze],
       range: "crm:E2_Temporal_Entity".freeze,
       type: "rdf:Property".freeze
     property :P121_overlaps_with,
@@ -984,7 +984,7 @@ This property is the same as the "before / after" relationships of Allen’s tem
 It does not specify anything about the shared area. This property is purely spatial, in contrast to Allen operators, which are purely temporal.
 ).freeze,
       domain: "crm:E53_Place".freeze,
-      label: "overlaps with".freeze,
+      label: ["chevauche".freeze, "overlaps with".freeze, "sobrepõe com".freeze, "überlappt mit".freeze, "επικαλύπτεται με".freeze, "пересекается с".freeze, "空间重叠于".freeze],
       range: "crm:E53_Place".freeze,
       type: "rdf:Property".freeze
     property :P122_borders_with,
@@ -992,7 +992,7 @@ It does not specify anything about the shared area. This property is purely spat
 This property is purely spatial, in contrast to Allen operators, which are purely temporal.
 ).freeze,
       domain: "crm:E53_Place".freeze,
-      label: "borders with".freeze,
+      label: ["borders with".freeze, "fronteira com".freeze, "grenzt an".freeze, "jouxte".freeze, "συνορεύει με".freeze, "граничит с".freeze, "接壤于".freeze],
       range: "crm:E53_Place".freeze,
       type: "rdf:Property".freeze
     property :P123_resulted_in,
@@ -1000,13 +1000,13 @@ This property is purely spatial, in contrast to Allen operators, which are purel
 New items replace the transformed item or items, which cease to exist as units of documentation. The physical continuity between the old and the new is expressed by the link to the common Transformation.
 ).freeze,
       domain: "crm:E81_Transformation".freeze,
-      label: "resulted in".freeze,
+      label: ["a eu pour résultat".freeze, "ergab".freeze, "resulted in".freeze, "resultou em".freeze, "είχε ως αποτέλεσμα".freeze, "повлек появление".freeze, "转变出".freeze],
       range: "crm:E77_Persistent_Item".freeze,
       subPropertyOf: "crm:P92_brought_into_existence".freeze,
       type: "rdf:Property".freeze
     property :P123i_resulted_from,
       domain: "crm:E77_Persistent_Item".freeze,
-      label: "resulted from".freeze,
+      label: ["ergab sich aus".freeze, "est le résultat de".freeze, "resultado de".freeze, "resulted from".freeze, "προέκυψε από".freeze, "был результатом".freeze, "肇因於".freeze],
       range: "crm:E81_Transformation".freeze,
       subPropertyOf: "crm:P92i_was_brought_into_existence_by".freeze,
       type: "rdf:Property".freeze
@@ -1015,13 +1015,13 @@ New items replace the transformed item or items, which cease to exist as units o
 It is replaced by the result of the Transformation, which becomes a new unit of documentation. The continuity between both items, the new and the old, is expressed by the link to the common Transformation.
 ).freeze,
       domain: "crm:E81_Transformation".freeze,
-      label: "transformed".freeze,
+      label: ["a transformé".freeze, "transformed".freeze, "transformou".freeze, "wandelte um".freeze, "μετέτρεψε".freeze, "трансформировал".freeze, "转变了".freeze],
       range: "crm:E77_Persistent_Item".freeze,
       subPropertyOf: "crm:P93_took_out_of_existence".freeze,
       type: "rdf:Property".freeze
     property :P124i_was_transformed_by,
       domain: "crm:E77_Persistent_Item".freeze,
-      label: "was transformed by".freeze,
+      label: ["a été transformé par".freeze, "foi transformado por".freeze, "was transformed by".freeze, "wurde umgewandelt durch".freeze, "μετατράπηκε από".freeze, "был трансформирован посредством".freeze, "被转变於".freeze],
       range: "crm:E81_Transformation".freeze,
       subPropertyOf: "crm:P93i_was_taken_out_of_existence_by".freeze,
       type: "rdf:Property".freeze
@@ -1029,12 +1029,12 @@ It is replaced by the result of the Transformation, which becomes a new unit of 
       comment: %(This property defines the kind of objects used in an E7 Activity, when the specific instance is either unknown or not of interest, such as use of "a hammer".
 ).freeze,
       domain: "crm:E7_Activity".freeze,
-      label: "used object of type".freeze,
+      label: ["a employé un objet du type".freeze, "benutzte Objekt des Typus".freeze, "used object of type".freeze, "usou objeto do tipo".freeze, "χρησιμοποίησε αντικείμενο τύπου".freeze, "использовал объект типа".freeze, "有使用物件类型".freeze],
       range: "crm:E55_Type".freeze,
       type: "rdf:Property".freeze
     property :P125i_was_type_of_object_used_in,
       domain: "crm:E55_Type".freeze,
-      label: "was type of object used in".freeze,
+      label: ["Objekt des Typus ... wurde benutzt in".freeze, "foi tipo do objeto usado em".freeze, "was type of object used in".freeze, "était le type d’objet employé par".freeze, "ήταν o τύπος αντικείμενου που χρησιμοποιήθηκε σε".freeze, "был типом объекта использованного в".freeze, "被使用於".freeze],
       range: "crm:E7_Activity".freeze,
       type: "rdf:Property".freeze
     property :P126_employed,
@@ -1042,12 +1042,12 @@ It is replaced by the result of the Transformation, which becomes a new unit of 
 The E57 Material used during the E11 Modification does not necessarily become incorporated into the E24 Physical Man-Made Thing that forms the subject of the E11 Modification.
 ).freeze,
       domain: "crm:E11_Modification".freeze,
-      label: "employed".freeze,
+      label: ["a employé".freeze, "employed".freeze, "empregou".freeze, "verwendete".freeze, "χρησιμοποίησε".freeze, "использовал".freeze, "采用了材料".freeze],
       range: "crm:E57_Material".freeze,
       type: "rdf:Property".freeze
     property :P126i_was_employed_in,
       domain: "crm:E57_Material".freeze,
-      label: "was employed in".freeze,
+      label: ["a été employé dans".freeze, "foi empregado em".freeze, "was employed in".freeze, "wurde verwendet bei".freeze, "χρησιμοποιήθηκε σε".freeze, "использовался в".freeze, "被使用於".freeze],
       range: "crm:E11_Modification".freeze,
       type: "rdf:Property".freeze
     property :P127_has_broader_term,
@@ -1055,25 +1055,25 @@ The E57 Material used during the E11 Modification does not necessarily become in
 		It allows Types to be organised into hierarchies. This is the sense of "broader term generic  		\(BTG\)" as defined in ISO 2788
 ).freeze,
       domain: "crm:E55_Type".freeze,
-      label: "has broader term".freeze,
+      label: ["a pour terme générique".freeze, "has broader term".freeze, "hat den Oberbegriff".freeze, "tem termo genérico".freeze, "έχει ευρύτερο όρο".freeze, "имеет вышестоящий термин".freeze, "有广义术语".freeze],
       range: "crm:E55_Type".freeze,
       type: "rdf:Property".freeze
     property :P127i_has_narrower_term,
       domain: "crm:E55_Type".freeze,
-      label: "has narrower term".freeze,
+      label: ["a pour terme spécifique".freeze, "has narrower term".freeze, "hat den Unterbegriff".freeze, "tem termo específico".freeze, "έχει στενότερο όρο".freeze, "有狭义术语".freeze],
       range: "crm:E55_Type".freeze,
       type: "rdf:Property".freeze
     property :P128_carries,
       comment: %(This property identifies an E90 Symbolic Object carried by an instance of E18 Physical Thing.
 ).freeze,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "carries".freeze,
+      label: ["carries".freeze, "est le support de".freeze, "trägt".freeze, "é o suporte de".freeze, "φέρει".freeze, "несет".freeze, "承载信息".freeze],
       range: "crm:E90_Symbolic_Object".freeze,
       subPropertyOf: "crm:P130_shows_features_of".freeze,
       type: "rdf:Property".freeze
     property :P128i_is_carried_by,
       domain: "crm:E90_Symbolic_Object".freeze,
-      label: "is carried by".freeze,
+      label: ["a pour support".freeze, "is carried by".freeze, "wird getragen von".freeze, "é suportado por".freeze, "φέρεται από".freeze, "переносится посредством".freeze, "被承载于".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       subPropertyOf: "crm:P130i_features_are_also_found_on".freeze,
       type: "rdf:Property".freeze
@@ -1081,13 +1081,13 @@ The E57 Material used during the E11 Modification does not necessarily become in
       comment: %(This property documents that an E89 Propositional Object has as subject an instance of E1 CRM Entity. 
 ).freeze,
       domain: "crm:E89_Propositional_Object".freeze,
-      label: "is about".freeze,
+      label: ["est au sujet de".freeze, "handelt über".freeze, "is about".freeze, "é sobre".freeze, "έχει ως θέμα".freeze, "касается".freeze, "陈述关於".freeze],
       range: "crm:E1_CRM_Entity".freeze,
       subPropertyOf: "crm:P67_refers_to".freeze,
       type: "rdf:Property".freeze
     property :P129i_is_subject_of,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "is subject of".freeze,
+      label: ["est le sujet de".freeze, "is subject of".freeze, "wird behandelt in".freeze, "é assunto de".freeze, "είναι θέμα  του/της".freeze, "является предметом для".freeze, "被陈述於".freeze],
       range: "crm:E89_Propositional_Object".freeze,
       subPropertyOf: "crm:P67i_is_referred_to_by".freeze,
       type: "rdf:Property".freeze
@@ -1096,12 +1096,12 @@ The E57 Material used during the E11 Modification does not necessarily become in
 It connects the history of a thing with the E53 Place and E50 Date of an event. For example, an object may be the desk, now in a museum on which a treaty was signed. The presence of an immaterial thing implies the presence of at least one of its carriers.
 ).freeze,
       domain: "crm:E5_Event".freeze,
-      label: "occurred in the presence of".freeze,
+      label: ["est arrivé en présence de".freeze, "fand statt im Beisein von".freeze, "occurred in the presence of".freeze, "ocorreu na presença de".freeze, "συνέβη παρουσία του/της".freeze, "появился в присутствии".freeze, "发生现场存在".freeze],
       range: "crm:E77_Persistent_Item".freeze,
       type: "rdf:Property".freeze
     property :P12i_was_present_at,
       domain: "crm:E77_Persistent_Item".freeze,
-      label: "was present at".freeze,
+      label: ["estava presente no".freeze, "war anwesend bei".freeze, "was present at".freeze, "était présent à".freeze, "ήταν παρών/παρούσα/παρόν σε".freeze, "присутствовал при".freeze, "当时在场於".freeze],
       range: "crm:E5_Event".freeze,
       type: "rdf:Property".freeze
     property :P130_shows_features_of,
@@ -1109,13 +1109,13 @@ It connects the history of a thing with the E53 Place and E50 Date of an event. 
 Otherwise, the relationship is symmetric. It is a short-cut of P15 was influenced by \(influenced\) in a creation or production, if such a reason for the similarity can be verified. Moreover it expresses similarity in cases that can be stated between two objects only, without historical knowledge about its reasons.
 ).freeze,
       domain: "crm:E70_Thing".freeze,
-      label: "shows features of".freeze,
+      label: ["apresenta características de".freeze, "présente des caractéristiques de".freeze, "shows features of".freeze, "zeigt Merkmale von".freeze, "παρουσιάζει χαρακτηριστικά του/της".freeze, "демонстрирует признаки".freeze, "外观特征原出现於".freeze],
       range: "crm:E70_Thing".freeze,
       subPropertyOf: "crm:P73i_is_translation_of".freeze,
       type: "rdf:Property".freeze
     property :P130i_features_are_also_found_on,
       domain: "crm:E70_Thing".freeze,
-      label: "features are also found on".freeze,
+      label: ["Merkmale auch auf".freeze, "a des caractéristiques se trouvant aussi sur".freeze, "características são também encontradas em".freeze, "features are also found on".freeze, "χαρακτηριστικά του βρίσκονται επίσης σε".freeze, "признаки также найдены на".freeze, "外观特征被复制於".freeze],
       range: "crm:E70_Thing".freeze,
       type: "rdf:Property".freeze
     property :P131_is_identified_by,
@@ -1123,13 +1123,13 @@ Otherwise, the relationship is symmetric. It is a short-cut of P15 was influence
 This property is a specialisation of P1 is identified by \(identifies\) is identified by.
 ).freeze,
       domain: "crm:E39_Actor".freeze,
-      label: "is identified by".freeze,
+      label: ["est identifié par".freeze, "is identified by".freeze, "wird identifziert durch".freeze, "é identificado por".freeze, "αναγνωρίζεται ως".freeze, "идентифицируется посредством".freeze, "有称号".freeze],
       range: "crm:E82_Actor_Appellation".freeze,
       subPropertyOf: "crm:P1_is_identified_by".freeze,
       type: "rdf:Property".freeze
     property :P131i_identifies,
       domain: "crm:E82_Actor_Appellation".freeze,
-      label: "identifies".freeze,
+      label: ["identifica".freeze, "identifie".freeze, "identifies".freeze, "identifiziert".freeze, "είναι αναγνωριστικό".freeze, "идентифицирует".freeze, "被用来识别".freeze],
       range: "crm:E39_Actor".freeze,
       subPropertyOf: "crm:P1i_identifies".freeze,
       type: "rdf:Property".freeze
@@ -1138,7 +1138,7 @@ This property is a specialisation of P1 is identified by \(identifies\) is ident
 This property does not imply any ordering or sequence between the two periods, either spatial or temporal.
 ).freeze,
       domain: "crm:E4_Period".freeze,
-      label: "overlaps with".freeze,
+      label: ["chevauche".freeze, "overlaps with".freeze, "sobrepõe".freeze, "überlappt mit".freeze, "επικαλύπτεται με".freeze, "пересекается с".freeze, "时空重叠于".freeze],
       range: "crm:E4_Period".freeze,
       type: "rdf:Property".freeze
     property :P133_is_separated_from,
@@ -1146,33 +1146,33 @@ This property does not imply any ordering or sequence between the two periods, e
 This property does not imply any ordering or sequence between the two periods either spatial or temporal.
 ).freeze,
       domain: "crm:E4_Period".freeze,
-      label: "is separated from".freeze,
+      label: ["est séparée de".freeze, "getrennt von".freeze, "is separated from".freeze, "é separado de".freeze, "διαχωρίζεται από".freeze, "отделен от".freeze, "时空不重叠于".freeze],
       range: "crm:E4_Period".freeze,
       type: "rdf:Property".freeze
     property :P134_continued,
       comment: %(This property associates two instances of E7 Activity, where the domain is considered as an intentional continuation of the range. A continuation of an activity may happen when the continued activity is still ongoing or after the continued activity has completely ended. The continuing activity may have started already before it decided to continue the other one. Continuation implies a coherence of intentions and outcomes of the involved activities.
 ).freeze,
       domain: "crm:E7_Activity".freeze,
-      label: "continued".freeze,
+      label: ["continued".freeze, "continuou".freeze, "est la suite de".freeze, "setzte sich fort in".freeze, "συνέχισε".freeze, "продолжил".freeze, "延续了".freeze],
       range: "crm:E7_Activity".freeze,
       subPropertyOf: "crm:P15_was_influenced_by".freeze,
       type: "rdf:Property".freeze
     property :P134i_was_continued_by,
       domain: "crm:E7_Activity".freeze,
-      label: "was continued by".freeze,
+      label: ["a été continuée par".freeze, "foi continuada por".freeze, "was continued by".freeze, "wurde fortgesetzt durch".freeze, "συνεχίστηκε από".freeze, "был продолжен".freeze, "有延续活动".freeze],
       range: "crm:E7_Activity".freeze,
       subPropertyOf: "crm:P15i_influenced".freeze,
       type: "rdf:Property".freeze
     property :P135_created_type,
       comment: %(This property identifies the E55 Type, which is created in an E83Type Creation activity.).freeze,
       domain: "crm:E83_Type_Creation".freeze,
-      label: "created type".freeze,
+      label: ["a créé le type".freeze, "created type".freeze, "criou tipo".freeze, "erschuf Typus".freeze, "δημιούργησε τύπο".freeze, "создал тип".freeze, "创造了类型".freeze],
       range: "crm:E55_Type".freeze,
       subPropertyOf: "crm:P94_has_created".freeze,
       type: "rdf:Property".freeze
     property :P135i_was_created_by,
       domain: "crm:E55_Type".freeze,
-      label: "was created by".freeze,
+      label: ["a été créé par".freeze, "foi criado por".freeze, "was created by".freeze, "wurde geschaffen durch".freeze, "δημιουργήθηκε από".freeze, "был создан посредством".freeze, "被创造於".freeze],
       range: "crm:E83_Type_Creation".freeze,
       subPropertyOf: "crm:P94i_was_created_by".freeze,
       type: "rdf:Property".freeze
@@ -1181,13 +1181,13 @@ This property does not imply any ordering or sequence between the two periods ei
 The examination of these items is often the only objective way to understand the precise characteristics of a new Type. Such items should be deposited in a museum or similar institution for that reason. The taxonomic role renders the specific relationship of each item to the Type, such as "holotype" or "original element".
 ).freeze,
       domain: "crm:E83_Type_Creation".freeze,
-      label: "was based on".freeze,
+      label: ["foi baseado em".freeze, "stützte sich auf".freeze, "s’est fondée sur".freeze, "was based on".freeze, "βασίστηκε σε".freeze, "был основан на".freeze, "根据了".freeze],
       range: "crm:E1_CRM_Entity".freeze,
       subPropertyOf: "crm:P15_was_influenced_by".freeze,
       type: "rdf:Property".freeze
     property :P136i_supported_type_creation,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "supported type creation".freeze,
+      label: ["a justifié la création de type".freeze, "belegte".freeze, "suportou a criação de tipo".freeze, "supported type creation".freeze, "υποστήριξε τη δημιουργία τύπου".freeze, "поддержал создание типа".freeze, "提供證據给类型创造".freeze],
       range: "crm:E83_Type_Creation".freeze,
       subPropertyOf: "crm:P15i_influenced".freeze,
       type: "rdf:Property".freeze
@@ -1196,13 +1196,13 @@ The examination of these items is often the only objective way to understand the
 	The P137.1 in the taxonomic role property of P137 exemplifies \(is exemplified by\) allows differentiation of taxonomic roles. The taxonomic role renders the specific relationship of this example to the Type, such as "prototypical", "archetypical", "lectotype", etc. The taxonomic role "lectotype" is not associated with the Type Creation \(E83\) itself, but selected in a later phase.
 ).freeze,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "exemplifies".freeze,
+      label: ["erläutert".freeze, "exemplifie".freeze, "exemplifies".freeze, "é exemplificado por".freeze, "δειγματίζει".freeze, "поясняет".freeze, "例示了".freeze],
       range: "crm:E55_Type".freeze,
       subPropertyOf: "crm:P2_has_type".freeze,
       type: "rdf:Property".freeze
     property :P137i_is_exemplified_by,
       domain: "crm:E55_Type".freeze,
-      label: "is exemplified by".freeze,
+      label: ["erläutert durch Beispiel".freeze, "est exemplifié par".freeze, "exemplifica".freeze, "is exemplified by".freeze, "δειγματίζεται από".freeze, "поясняется посредством".freeze, "有例示".freeze],
       range: "crm:E1_CRM_Entity".freeze,
       subPropertyOf: "crm:P2i_is_type_of".freeze,
       type: "rdf:Property".freeze
@@ -1212,13 +1212,13 @@ Any entity may be represented visually. This property is part of the fully devel
 This property is also used for the relationship between an original and a digitisation of the original by the use of techniques such as digital photography, flatbed or infrared scanning. Digitisation is here seen as a process with a mechanical, causal component rendering the spatial distribution of structural and optical properties of the original and does not necessarily include any visual similarity identifiable by human observation.
 ).freeze,
       domain: "crm:E36_Visual_Item".freeze,
-      label: "represents".freeze,
+      label: ["representa".freeze, "represents".freeze, "représente".freeze, "stellt dar".freeze, "παριστάνει".freeze, "представляет".freeze, "描绘了".freeze],
       range: "crm:E1_CRM_Entity".freeze,
       subPropertyOf: "crm:P67_refers_to".freeze,
       type: "rdf:Property".freeze
     property :P138i_has_representation,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "has representation".freeze,
+      label: ["est représentée par".freeze, "has representation".freeze, "tem representação".freeze, "wird dargestellt durch".freeze, "παριστάνεται από".freeze, "имеет представление".freeze, "有图像描绘".freeze],
       range: "crm:E36_Visual_Item".freeze,
       subPropertyOf: "crm:P67i_is_referred_to_by".freeze,
       type: "rdf:Property".freeze
@@ -1228,7 +1228,7 @@ The equivalence applies to all cases of use of an instance of E41 Appellation. M
 P139.1 has type allows the type of derivation, such as “transliteration from Latin 1 to ASCII” be refined..
 ).freeze,
       domain: "crm:E41_Appellation".freeze,
-      label: "has alternative form".freeze,
+      label: ["a pour autre forme".freeze, "has alternative form".freeze, "hat alternative Form".freeze, "tem forma alternativa".freeze, "έχει εναλλακτική μορφή".freeze, "имеет альтернативную форму".freeze, "有替代称号".freeze],
       range: "crm:E41_Appellation".freeze,
       type: "rdf:Property".freeze
     property :P13_destroyed,
@@ -1236,50 +1236,50 @@ P139.1 has type allows the type of derivation, such as “transliteration from L
 Destruction implies the end of an item’s life as a subject of cultural documentation – the physical matter of which the item was composed may in fact continue to exist. A destruction event may be contiguous with a Production that brings into existence a derived object composed partly of matter from the destroyed object.
 ).freeze,
       domain: "crm:E6_Destruction".freeze,
-      label: "destroyed".freeze,
+      label: ["a détruit".freeze, "destroyed".freeze, "destruiu".freeze, "zerstörte".freeze, "κατέστρεψε".freeze, "уничтожил".freeze, "毁灭了".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       subPropertyOf: "crm:P93_took_out_of_existence".freeze,
       type: "rdf:Property".freeze
     property :P13i_was_destroyed_by,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "was destroyed by".freeze,
+      label: ["a été détruite par".freeze, "foi destruído por".freeze, "was destroyed by".freeze, "wurde zerstört durch".freeze, "καταστράφηκε από".freeze, "был уничтожен посредством".freeze, "被毁灭於".freeze],
       range: "crm:E6_Destruction".freeze,
       subPropertyOf: "crm:P93i_was_taken_out_of_existence_by".freeze,
       type: "rdf:Property".freeze
     property :P140_assigned_attribute_to,
       comment: %(This property indicates the item to which an attribute or relation is assigned. ).freeze,
       domain: "crm:E13_Attribute_Assignment".freeze,
-      label: "assigned attribute to".freeze,
+      label: ["a affecté un attribut à".freeze, "assigned attribute to".freeze, "atribuiu atributo para".freeze, "wies Merkmal zu".freeze, "απέδωσε ιδιότητα σε".freeze, "присвоил атрибут для".freeze, "指定属性给".freeze],
       range: "crm:E1_CRM_Entity".freeze,
       type: "rdf:Property".freeze
     property :P140i_was_attributed_by,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "was attributed by".freeze,
+      label: ["a reçu un attribut par".freeze, "bekam Merkmal zugewiesen durch".freeze, "foi atribuído por".freeze, "was attributed by".freeze, "χαρακτηρίστηκε από".freeze, "получил атрибут посредством".freeze, "被指定属性於".freeze],
       range: "crm:E13_Attribute_Assignment".freeze,
       type: "rdf:Property".freeze
     property :P141_assigned,
       comment: %(This property indicates the attribute that was assigned or the item that was related to the item denoted by a property P140 assigned attribute to in an Attribute assignment action.
 ).freeze,
       domain: "crm:E13_Attribute_Assignment".freeze,
-      label: "assigned".freeze,
+      label: ["a attribué".freeze, "assigned".freeze, "atribuiu".freeze, "wies zu".freeze, "απέδωσε".freeze, "присвоил".freeze, "指定了属性值".freeze],
       range: "crm:E1_CRM_Entity".freeze,
       type: "rdf:Property".freeze
     property :P141i_was_assigned_by,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "was assigned by".freeze,
+      label: ["a été attribué par".freeze, "foi atribuído por".freeze, "was assigned by".freeze, "wurde zugewiesen durch".freeze, "αποδόθηκε από".freeze, "был присвоен посредством".freeze, "被指定了属性值於".freeze],
       range: "crm:E13_Attribute_Assignment".freeze,
       type: "rdf:Property".freeze
     property :P142_used_constituent,
       comment: %(This property associates the event of assigning an instance of E42 Identifier to an entity, with  the instances of E41 Appellation that were used as elements of the identifier.
 ).freeze,
       domain: "crm:E15_Identifier_Assignment".freeze,
-      label: "used constituent".freeze,
+      label: ["benutzte Bestandteil".freeze, "used constituent".freeze, "使用称号构成部分".freeze],
       range: "crm:E90_Symbolic_Object".freeze,
       subPropertyOf: "crm:P16_used_specific_object".freeze,
       type: "rdf:Property".freeze
     property :P142i_was_used_in,
       domain: "crm:E90_Symbolic_Object".freeze,
-      label: "was used in".freeze,
+      label: ["was used in".freeze, "wurde benutzt in".freeze, "被用来构成称号於".freeze],
       range: "crm:E15_Identifier_Assignment".freeze,
       subPropertyOf: "crm:P16i_was_used_for".freeze,
       type: "rdf:Property".freeze
@@ -1288,13 +1288,13 @@ Destruction implies the end of an item’s life as a subject of cultural documen
  	Joining events allow for describing people becoming members of a group with a more detailed path from E74 Group through P144 joined with \(gained member by\), E85 Joining, P143 joined \(was joined by\) to E39 Actor, compared to the shortcut offered by P107 has current or former member \(is current or former member of\).
 ).freeze,
       domain: "crm:E85_Joining".freeze,
-      label: "joined".freeze,
+      label: ["joined".freeze, "verband".freeze, "加入了成员".freeze],
       range: "crm:E39_Actor".freeze,
       subPropertyOf: "crm:P11_had_participant".freeze,
       type: "rdf:Property".freeze
     property :P143i_was_joined_by,
       domain: "crm:E39_Actor".freeze,
-      label: "was joined by".freeze,
+      label: ["was joined by".freeze, "wurde verbunden durch".freeze, "被加入为成员於".freeze],
       range: "crm:E85_Joining".freeze,
       subPropertyOf: "crm:P11i_participated_in".freeze,
       type: "rdf:Property".freeze
@@ -1305,26 +1305,26 @@ Joining events allow for describing people becoming members of a group with a mo
 The property P144.1 kind of member can be used to specify the type of membership or the role the member has in the group. 
 ).freeze,
       domain: "crm:E85_Joining".freeze,
-      label: "joined with".freeze,
+      label: ["joined with".freeze, "verband mit".freeze, "加入成员到".freeze],
       range: "crm:E74_Group".freeze,
       subPropertyOf: "crm:P11_had_participant".freeze,
       type: "rdf:Property".freeze
     property :P144i_gained_member_by,
       domain: "crm:E74_Group".freeze,
-      label: "gained member by".freeze,
+      label: ["erwarb Mitglied durch".freeze, "gained member by".freeze, "获得成员於".freeze],
       range: "crm:E85_Joining".freeze,
       subPropertyOf: "crm:P11i_participated_in".freeze,
       type: "rdf:Property".freeze
     property :P145_separated,
       comment: %(This property identifies the instance of E39 Actor that leaves an instance of E74 Group through an instance of E86 Leaving.).freeze,
       domain: "crm:E86_Leaving".freeze,
-      label: "separated".freeze,
+      label: ["entließ".freeze, "separated".freeze, "分离了成员".freeze],
       range: "crm:E39_Actor".freeze,
       subPropertyOf: "crm:P11_had_participant".freeze,
       type: "rdf:Property".freeze
     property :P145i_left_by,
       domain: "crm:E39_Actor".freeze,
-      label: "left by".freeze,
+      label: ["left by".freeze, "wurde entlassen durch".freeze, "脱离群组於".freeze],
       range: "crm:E86_Leaving".freeze,
       subPropertyOf: "crm:P11i_participated_in".freeze,
       type: "rdf:Property".freeze
@@ -1333,13 +1333,13 @@ The property P144.1 kind of member can be used to specify the type of membership
 Although a Leaving activity normally concerns only one instance of E74 Group, it is possible to imagine circumstances under which leaving one E74 Group implies leaving another E74 Group as well.
 ).freeze,
       domain: "crm:E86_Leaving".freeze,
-      label: "separated from".freeze,
+      label: ["entließ von".freeze, "separated from".freeze, "脱离了群组".freeze],
       range: "crm:E74_Group".freeze,
       subPropertyOf: "crm:P11_had_participant".freeze,
       type: "rdf:Property".freeze
     property :P146i_lost_member_by,
       domain: "crm:E74_Group".freeze,
-      label: "lost member by".freeze,
+      label: ["lost member by".freeze, "verlor Mitglied durch".freeze, "失去成员於".freeze],
       range: "crm:E86_Leaving".freeze,
       subPropertyOf: "crm:P11i_participated_in".freeze,
       type: "rdf:Property".freeze
@@ -1347,23 +1347,23 @@ Although a Leaving activity normally concerns only one instance of E74 Group, it
       comment: %(This property associates an instance of E87 Curation Activity with the instance of E78 Collection that is subject of that  curation activity.
 ).freeze,
       domain: "crm:E87_Curation_Activity".freeze,
-      label: "curated".freeze,
+      label: ["betreute kuratorisch".freeze, "curated".freeze, "典藏管理了".freeze],
       range: "crm:E78_Collection".freeze,
       type: "rdf:Property".freeze
     property :P147i_was_curated_by,
       domain: "crm:E78_Collection".freeze,
-      label: "was curated by".freeze,
+      label: ["was curated by".freeze, "wurde kuratorisch betreut durch".freeze, "被典藏管理於".freeze],
       range: "crm:E87_Curation_Activity".freeze,
       type: "rdf:Property".freeze
     property :P148_has_component,
       comment: %(This property associates an instance of E89 Propositional Object with a structural part of it that is by itself an instance of E89 Propositional Object.).freeze,
       domain: "crm:E89_Propositional_Object".freeze,
-      label: "has component".freeze,
+      label: ["has component".freeze, "hat Bestandteil".freeze, "有组件".freeze],
       range: "crm:E89_Propositional_Object".freeze,
       type: "rdf:Property".freeze
     property :P148i_is_component_of,
       domain: "crm:E89_Propositional_Object".freeze,
-      label: "is component of".freeze,
+      label: ["is component of".freeze, "ist Bestandteil von".freeze, "被用来组成".freeze],
       range: "crm:E89_Propositional_Object".freeze,
       type: "rdf:Property".freeze
     property :P149_is_identified_by,
@@ -1384,13 +1384,13 @@ Although a Leaving activity normally concerns only one instance of E74 Group, it
 It implies causal or legal responsibility. The P14.1 in the role of property of the property allows the nature of an Actor’s participation to be specified.
 ).freeze,
       domain: "crm:E7_Activity".freeze,
-      label: "carried out by".freeze,
+      label: ["carried out by".freeze, "realizada por".freeze, "réalisée par".freeze, "wurde ausgeführt von".freeze, "πραγματοποιήθηκε από".freeze, "выполнялся".freeze, "有执行者".freeze],
       range: "crm:E39_Actor".freeze,
       subPropertyOf: "crm:P11_had_participant".freeze,
       type: "rdf:Property".freeze
     property :P14i_performed,
       domain: "crm:E39_Actor".freeze,
-      label: "performed".freeze,
+      label: ["a exécuté".freeze, "executou".freeze, "führte aus".freeze, "performed".freeze, "πραγματοποίησε".freeze, "выполнял".freeze, "执行了".freeze],
       range: "crm:E7_Activity".freeze,
       subPropertyOf: "crm:P11i_participated_in".freeze,
       type: "rdf:Property".freeze
@@ -1521,12 +1521,12 @@ Therefore it cannot be verified, if two different instances of E4 Period occupy 
 The property has more specific sub properties.
 ).freeze,
       domain: "crm:E7_Activity".freeze,
-      label: "was influenced by".freeze,
+      label: ["a été influencée par".freeze, "foi influenciado por ".freeze, "was influenced by".freeze, "wurde beeinflußt durch".freeze, "επηρεάστηκε από".freeze, "находился под влиянием".freeze, "有影响事物".freeze],
       range: "crm:E1_CRM_Entity".freeze,
       type: "rdf:Property".freeze
     property :P15i_influenced,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "influenced".freeze,
+      label: ["a influencé".freeze, "beeinflußte".freeze, "influenced".freeze, "influenciou".freeze, "επηρέασε".freeze, "оказал влияние на".freeze, "影响了".freeze],
       range: "crm:E7_Activity".freeze,
       type: "rdf:Property".freeze
     property :P160_has_temporal_projection,
@@ -1571,13 +1571,13 @@ This property typically applies to tools, instruments, moulds, raw materials and
 Another example is the use of a particular name by a particular group of people over some span to identify a thing, such as a settlement. In this case, the physical carriers of this name are at least the people understanding its use.
 ).freeze,
       domain: "crm:E7_Activity".freeze,
-      label: "used specific object".freeze,
+      label: ["a utilisé l'objet spécifique".freeze, "benutzte das bestimmte Objekt".freeze, "used specific object".freeze, "usou objeto específico".freeze, "χρησιμοποίησε αντικείμενο".freeze, "использовал особый объект".freeze, "使用特定物".freeze],
       range: "crm:E70_Thing".freeze,
       subPropertyOf: ["crm:P12_occurred_in_the_presence_of".freeze, "crm:P15_was_influenced_by".freeze],
       type: "rdf:Property".freeze
     property :P16i_was_used_for,
       domain: "crm:E70_Thing".freeze,
-      label: "was used for".freeze,
+      label: ["a été utilisé pour".freeze, "foi usado por".freeze, "was used for".freeze, "wurde benutzt für".freeze, "χρησιμοποιήθηκε για".freeze, "был использован для".freeze, "被用於".freeze],
       range: "crm:E7_Activity".freeze,
       subPropertyOf: ["crm:P12i_was_present_at".freeze, "crm:P15i_influenced".freeze],
       type: "rdf:Property".freeze
@@ -1586,13 +1586,13 @@ Another example is the use of a particular name by a particular group of people 
 For example, the discovery of a large hoard of treasure may call for a celebration, an order from head quarters can start a military manoeuvre. 
 ).freeze,
       domain: "crm:E7_Activity".freeze,
-      label: "was motivated by".freeze,
+      label: ["a été motivée par".freeze, "foi motivado por".freeze, "was motivated by".freeze, "wurde angeregt durch".freeze, "είχε ως αφορμή".freeze, "был обусловлен посредством".freeze, "有促动事物".freeze],
       range: "crm:E1_CRM_Entity".freeze,
       subPropertyOf: "crm:P15_was_influenced_by".freeze,
       type: "rdf:Property".freeze
     property :P17i_motivated,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "motivated".freeze,
+      label: ["a motivé".freeze, "motivated".freeze, "motivou".freeze, "regte an".freeze, "ήταν αφορμή".freeze, "обусловил".freeze, "促动了".freeze],
       range: "crm:E7_Activity".freeze,
       subPropertyOf: "crm:P15i_influenced".freeze,
       type: "rdf:Property".freeze
@@ -1600,12 +1600,12 @@ For example, the discovery of a large hoard of treasure may call for a celebrati
       comment: %(This property relates an E7 Activity with objects created specifically for use in the activity. 
 This is distinct from the intended use of an item in some general type of activity such as the book of common prayer which was intended for use in Church of England services \(see P101 had as general use \(was use of\)\).).freeze,
       domain: "crm:E7_Activity".freeze,
-      label: "was intended use of".freeze,
+      label: ["era prevista a utilização de".freeze, "war beabsichtigteter Gebrauch von ".freeze, "was intended use of".freeze, "était l'utilisation prévue de".freeze, "ήταν προορισμένη χρήση του".freeze, "был предполагаемым использованием для".freeze, "特别使用了".freeze],
       range: "crm:E71_Man-Made_Thing".freeze,
       type: "rdf:Property".freeze
     property :P19i_was_made_for,
       domain: "crm:E71_Man-Made_Thing".freeze,
-      label: "was made for".freeze,
+      label: ["a été fabriquée pour".freeze, "foi feito para".freeze, "was made for".freeze, "wurde hergestellt für".freeze, "έγινε για".freeze, "был создан для".freeze, "被制造来用於".freeze],
       range: "crm:E7_Activity".freeze,
       type: "rdf:Property".freeze
     property :P1_is_identified_by,
@@ -1613,12 +1613,12 @@ This is distinct from the intended use of an item in some general type of activi
 This property is intended for identifiers in general use, which form part of the world the model intends to describe, and not merely for internal database identifiers which are specific to a technical system, unless these latter also have a more general use outside the technical context. This property includes in particular identification by mathematical expressions such as coordinate systems used for the identification of instances of E53 Place. The property does not reveal anything about when, where and by whom this identifier was used. A more detailed representation can be made using the fully developed \(i.e. indirect\) path through E15 Identifier Assignment.
 ).freeze,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "is identified by".freeze,
+      label: ["est identifiée par".freeze, "is identified by".freeze, "wird bezeichnet als".freeze, "é identificado por".freeze, "αναγνωρίζεται ως".freeze, "идентифицируется посредством".freeze, "有识别称号".freeze],
       range: "crm:E41_Appellation".freeze,
       type: "rdf:Property".freeze
     property :P1i_identifies,
       domain: "crm:E41_Appellation".freeze,
-      label: "identifies".freeze,
+      label: ["bezeichnet".freeze, "identifica".freeze, "identifie".freeze, "identifies".freeze, "είναι αναγνωριστικό".freeze, "идентифицирует".freeze, "被用来识别".freeze],
       range: "crm:E1_CRM_Entity".freeze,
       type: "rdf:Property".freeze
     property :P20_had_specific_purpose,
@@ -1626,12 +1626,12 @@ This property is intended for identifiers in general use, which form part of the
 This includes activities, orders and other organisational actions, taken in preparation for other activities or events. 
 P20 had specific purpose \(was purpose of\) implies that an activity succeeded in achieving its aim. If it does not succeed, such as the setting of a trap that did not catch anything, one may document the unrealized intention using P21 had general purpose \(was purpose of\):E55 Type and/or  P33 used specific technique \(was used by\): E29 Design or Procedure.).freeze,
       domain: "crm:E7_Activity".freeze,
-      label: "had specific purpose".freeze,
+      label: ["avait pour but spécifique".freeze, "had specific purpose".freeze, "hatte den bestimmten Zweck".freeze, "tinha propósito específico".freeze, "είχε συγκεκριμένο σκοπό".freeze, "имел конкретную цель".freeze, "有特定目地".freeze],
       range: "crm:E5_Event".freeze,
       type: "rdf:Property".freeze
     property :P20i_was_purpose_of,
       domain: "crm:E5_Event".freeze,
-      label: "was purpose of".freeze,
+      label: ["era o propósito de".freeze, "war Zweck von".freeze, "was purpose of".freeze, "était le but de".freeze, "ήταν σκοπός του/της".freeze, "был целью для".freeze, "之準備活動是".freeze],
       range: "crm:E7_Activity".freeze,
       type: "rdf:Property".freeze
     property :P21_had_general_purpose,
@@ -1639,12 +1639,12 @@ P20 had specific purpose \(was purpose of\) implies that an activity succeeded i
 This may involve activities intended as preparation for some type of activity or event. P21had general purpose \(was purpose of\) differs from P20 had specific purpose \(was purpose of\) in that no occurrence of an event is implied as the purpose. 
 ).freeze,
       domain: "crm:E7_Activity".freeze,
-      label: "had general purpose".freeze,
+      label: ["avait pour but général".freeze, "had general purpose".freeze, "hatte den allgemeinen Zweck".freeze, "tinha propósito geral".freeze, "είχε γενικό σκοπό".freeze, "имел общую цель".freeze, "有通用目地".freeze],
       range: "crm:E55_Type".freeze,
       type: "rdf:Property".freeze
     property :P21i_was_purpose_of,
       domain: "crm:E55_Type".freeze,
-      label: "was purpose of".freeze,
+      label: ["era o propósito de".freeze, "war Zweck von".freeze, "was purpose of".freeze, "était le but de".freeze, "ήταν σκοπός του/της".freeze, "был целью для".freeze, "可利用".freeze],
       range: "crm:E7_Activity".freeze,
       type: "rdf:Property".freeze
     property :P22_transferred_title_to,
@@ -1653,13 +1653,13 @@ The property will typically describe an Actor purchasing or otherwise acquiring 
 In reality the title is either transferred to or from someone, or both.
 ).freeze,
       domain: "crm:E8_Acquisition".freeze,
-      label: "transferred title to".freeze,
+      label: ["a fait passer le droit de propriété à".freeze, "transferiu os direitos de propriedade para".freeze, "transferred title to".freeze, "übertrug Besitztitel auf".freeze, "μετεβίβασε τον τίτλο σε".freeze, "передал право собственности".freeze, "转交所有权给".freeze],
       range: "crm:E39_Actor".freeze,
       subPropertyOf: "crm:P14_carried_out_by".freeze,
       type: "rdf:Property".freeze
     property :P22i_acquired_title_through,
       domain: "crm:E39_Actor".freeze,
-      label: "acquired title through".freeze,
+      label: ["a acquis le droit de propriété du fait de".freeze, "acquired title through".freeze, "adquiriu os direitos de propriedade por meio da".freeze, "erwarb Besitztitel durch".freeze, "απέκτησε τον τίτλο μέσω".freeze, "получил право собственности через".freeze, "获取所有权於".freeze],
       range: "crm:E8_Acquisition".freeze,
       subPropertyOf: "crm:P14i_performed".freeze,
       type: "rdf:Property".freeze
@@ -1668,13 +1668,13 @@ In reality the title is either transferred to or from someone, or both.
 The property will typically be used to describe a person donating or selling an object to a museum. In reality title is either transferred to or from someone, or both.
 ).freeze,
       domain: "crm:E8_Acquisition".freeze,
-      label: "transferred title from".freeze,
+      label: ["a fait passer le droit de propriété de".freeze, "transferiu os direitos de propriedade de".freeze, "transferred title from".freeze, "übertrug Besitztitel von".freeze, "μετεβίβασε τον τίτλο από".freeze, "передал право собственности от".freeze, "原所有权者是".freeze],
       range: "crm:E39_Actor".freeze,
       subPropertyOf: "crm:P14_carried_out_by".freeze,
       type: "rdf:Property".freeze
     property :P23i_surrendered_title_through,
       domain: "crm:E39_Actor".freeze,
-      label: "surrendered title through".freeze,
+      label: ["a perdu le droit de propriété du fait de".freeze, "perdeu os direitos de propriedade por meio da".freeze, "surrendered title through".freeze, "trat Besitztitel ab in".freeze, "παρέδωσε τον τίτλο μέσω".freeze, "право собственности отдано через".freeze, "交出所有权於".freeze],
       range: "crm:E8_Acquisition".freeze,
       subPropertyOf: "crm:P14i_performed".freeze,
       type: "rdf:Property".freeze
@@ -1683,12 +1683,12 @@ The property will typically be used to describe a person donating or selling an 
 In reality, an acquisition must refer to at least one transferred item.
 ).freeze,
       domain: "crm:E8_Acquisition".freeze,
-      label: "transferred title of".freeze,
+      label: ["a fait passer le droit de propriété sur".freeze, "transferiu os direitos de propriedade sobre o".freeze, "transferred title of".freeze, "übertrug Besitz über".freeze, "μετεβίβασε τον τίτλο του/της".freeze, "передал право собственности на".freeze, "转移所有权的标的物是".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       type: "rdf:Property".freeze
     property :P24i_changed_ownership_through,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "changed ownership through".freeze,
+      label: ["a changé de mains du fait de".freeze, "changed ownership through".freeze, "ging über in Besitz durch".freeze, "mudou de proprietário por meio de".freeze, "άλλαξε ιδιοκτησία μέσω".freeze, "сменил владельца через".freeze, "转移了所有权於".freeze],
       range: "crm:E8_Acquisition".freeze,
       type: "rdf:Property".freeze
     property :P25_moved,
@@ -1697,13 +1697,13 @@ The property implies the object’s passive participation. For example, Monet’
 In reality, a move must concern at least one object.
 ).freeze,
       domain: "crm:E9_Move".freeze,
-      label: "moved".freeze,
+      label: ["a déplacé".freeze, "bewegte".freeze, "locomoveu".freeze, "moved".freeze, "μετεκίνησε".freeze, "переместил".freeze, "移动了".freeze],
       range: "crm:E19_Physical_Object".freeze,
       subPropertyOf: "crm:P12_occurred_in_the_presence_of".freeze,
       type: "rdf:Property".freeze
     property :P25i_moved_by,
       domain: "crm:E19_Physical_Object".freeze,
-      label: "moved by".freeze,
+      label: ["a été déplacé par".freeze, "foi locomovido por".freeze, "moved by".freeze, "wurde bewegt durch".freeze, "μετακινήθηκε από".freeze, "перемещен посредством".freeze, "被移动於".freeze],
       range: "crm:E9_Move".freeze,
       subPropertyOf: "crm:P12i_was_present_at".freeze,
       type: "rdf:Property".freeze
@@ -1712,13 +1712,13 @@ In reality, a move must concern at least one object.
 A move will be linked to a destination, such as the move of an artefact from storage to display. A move may be linked to many terminal instances of E53 Places. In this case the move describes a distribution of a set of objects. The area of the move includes the origin, route and destination.
 ).freeze,
       domain: "crm:E9_Move".freeze,
-      label: "moved to".freeze,
+      label: ["a déplacé vers".freeze, "bewegte bis zu".freeze, "locomoveu para".freeze, "moved to".freeze, "μετακινήθηκε προς".freeze, "перемещен в".freeze, "移入物件至".freeze],
       range: "crm:E53_Place".freeze,
       subPropertyOf: "crm:P7_took_place_at".freeze,
       type: "rdf:Property".freeze
     property :P26i_was_destination_of,
       domain: "crm:E53_Place".freeze,
-      label: "was destination of".freeze,
+      label: ["a été la destination de".freeze, "era destinação de".freeze, "war Zielort von".freeze, "was destination of".freeze, "ήταν προορισμός του/της".freeze, "был пунктом назначения для".freeze, "被作为移入地於".freeze],
       range: "crm:E9_Move".freeze,
       subPropertyOf: "crm:P7i_witnessed".freeze,
       type: "rdf:Property".freeze
@@ -1727,13 +1727,13 @@ A move will be linked to a destination, such as the move of an artefact from sto
 A move will be linked to an origin, such as the move of an artefact from storage to display. A move may be linked to many origins. In this case the move describes the picking up of a set of objects. The area of the move includes the origin, route and destination.
 ).freeze,
       domain: "crm:E9_Move".freeze,
-      label: "moved from".freeze,
+      label: ["a retiré de".freeze, "bewegte weg von".freeze, "locomoveu de".freeze, "moved from".freeze, "μετακινήθηκε από".freeze, "перемещен из".freeze, "有移出地".freeze],
       range: "crm:E53_Place".freeze,
       subPropertyOf: "crm:P7_took_place_at".freeze,
       type: "rdf:Property".freeze
     property :P27i_was_origin_of,
       domain: "crm:E53_Place".freeze,
-      label: "was origin of".freeze,
+      label: ["a été l'origine de".freeze, "era origem de".freeze, "war Ausgangsort von".freeze, "was origin of".freeze, "ήταν αφετηρία του/της".freeze, "был исходной точкой для".freeze, "被作为移出地於".freeze],
       range: "crm:E9_Move".freeze,
       subPropertyOf: "crm:P7i_witnessed".freeze,
       type: "rdf:Property".freeze
@@ -1743,13 +1743,13 @@ The property will typically describe an Actor surrendering custody of an object 
 In reality, custody is either transferred to someone or from someone, or both.
 ).freeze,
       domain: "crm:E10_Transfer_of_Custody".freeze,
-      label: "custody surrendered by".freeze,
+      label: ["changement de détenteur au détriment de".freeze, "custody surrendered by".freeze, "custódia concedida por".freeze, "übergab Gewahrsam an".freeze, "μετεβίβασε κατοχή από".freeze, "опека отдана".freeze, "有原保管人".freeze],
       range: "crm:E39_Actor".freeze,
       subPropertyOf: "crm:P14_carried_out_by".freeze,
       type: "rdf:Property".freeze
     property :P28i_surrendered_custody_through,
       domain: "crm:E39_Actor".freeze,
-      label: "surrendered custody through".freeze,
+      label: ["a cessé d’être détenteur à cause de".freeze, "final da custódia por meio de".freeze, "surrendered custody through".freeze, "wurde Gewahrsam übergeben durch".freeze, "παρέδωσε κατοχή μέσω".freeze, "опека отдана через".freeze, "交出保管作业於".freeze],
       range: "crm:E10_Transfer_of_Custody".freeze,
       subPropertyOf: "crm:P14i_performed".freeze,
       type: "rdf:Property".freeze
@@ -1759,13 +1759,13 @@ The property will typically describe Actors receiving custody of an object when 
 In reality, custody is either transferred to someone or from someone, or both.
 ).freeze,
       domain: "crm:E10_Transfer_of_Custody".freeze,
-      label: "custody received by".freeze,
+      label: ["changement de détenteur au profit de".freeze, "custody received by".freeze, "custódia recebida por".freeze, "übertrug Gewahrsam auf".freeze, "μετεβίβασε κατοχή σε".freeze, "опека получена".freeze, "移转保管作业给".freeze],
       range: "crm:E39_Actor".freeze,
       subPropertyOf: "crm:P14_carried_out_by".freeze,
       type: "rdf:Property".freeze
     property :P29i_received_custody_through,
       domain: "crm:E39_Actor".freeze,
-      label: "received custody through".freeze,
+      label: ["erhielt Gewahrsam durch".freeze, "est devenu détenteur grâce à".freeze, "início da custódia por meio de".freeze, "received custody through".freeze, "παρέλαβε κατοχή μέσω".freeze, "получил опеку через".freeze, "取得保管作业於".freeze],
       range: "crm:E10_Transfer_of_Custody".freeze,
       subPropertyOf: "crm:P14i_performed".freeze,
       type: "rdf:Property".freeze
@@ -1774,12 +1774,12 @@ In reality, custody is either transferred to someone or from someone, or both.
 The CRM is intended to focus on the high-level entities and relationships needed to describe data structures. Consequently, it does not specialise entities any further than is required for this immediate purpose. However, entities in the isA hierarchy of the CRM may by specialised into any number of sub entities, which can be defined in the E55 Type hierarchy. E51 Contact Point, for example, may be specialised into “e-mail address”, “telephone number”, “post office box”, “URL” etc. none of which figures explicitly in the CRM hierarchy. Sub typing obviously requires consistency between the meaning of the terms assigned and the more general intent of the CRM entity in question.
 ).freeze,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "has type".freeze,
+      label: ["est de type".freeze, "has type".freeze, "hat den Typus".freeze, "é do tipo".freeze, "έχει τύπο".freeze, "имеет тип".freeze, "有类型".freeze],
       range: "crm:E55_Type".freeze,
       type: "rdf:Property".freeze
     property :P2i_is_type_of,
       domain: "crm:E55_Type".freeze,
-      label: "is type of".freeze,
+      label: ["est le type de".freeze, "is type of".freeze, "ist Typus von".freeze, "é o tipo de".freeze, "είναι ο τύπος του/της".freeze, "является типом для".freeze, "被用来分类".freeze],
       range: "crm:E1_CRM_Entity".freeze,
       type: "rdf:Property".freeze
     property :P30_transferred_custody_of,
@@ -1787,12 +1787,12 @@ The CRM is intended to focus on the high-level entities and relationships needed
 The property will typically describe the object that is handed over by an E39 Actor to another Actor’s custody. On occasion, physical custody may be transferred involuntarily or illegally – through accident, unsolicited donation, or theft.
 ).freeze,
       domain: "crm:E10_Transfer_of_Custody".freeze,
-      label: "transferred custody of".freeze,
+      label: ["changement de détenteur concernant".freeze, "transferida custódia de".freeze, "transferred custody of".freeze, "übertrug Gewahrsam über".freeze, "μετεβίβασε κατοχή του/της/των".freeze, "передало опеку на".freeze, "有保管标的物".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       type: "rdf:Property".freeze
     property :P30i_custody_transferred_through,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "custody transferred through".freeze,
+      label: ["a changé de détenteur du fait de".freeze, "custody transferred through".freeze, "custódia transferida por meio de".freeze, "wechselte Gewahrsam durch".freeze, "άλλαξε κατοχή μέσω".freeze, "опека передана через".freeze, "被移转了保管作业於".freeze],
       range: "crm:E10_Transfer_of_Custody".freeze,
       type: "rdf:Property".freeze
     property :P31_has_modified,
@@ -1800,13 +1800,13 @@ The property will typically describe the object that is handed over by an E39 Ac
 If a modification is applied to a non-man-made object, it is regarded as an E22 Man-Made Object from that time onwards. 
 ).freeze,
       domain: "crm:E11_Modification".freeze,
-      label: "has modified".freeze,
+      label: ["a modifié".freeze, "has modified".freeze, "modificou".freeze, "veränderte".freeze, "τροποποίησε".freeze, "изменил".freeze, "修改了".freeze],
       range: "crm:E24_Physical_Man-Made_Thing".freeze,
       subPropertyOf: "crm:P12_occurred_in_the_presence_of".freeze,
       type: "rdf:Property".freeze
     property :P31i_was_modified_by,
       domain: "crm:E24_Physical_Man-Made_Thing".freeze,
-      label: "was modified by".freeze,
+      label: ["a été modifié par".freeze, "foi modificada por".freeze, "was modified by".freeze, "wurde verändert durch".freeze, "τροποποιήθηκε από".freeze, "был изменен посредством".freeze, "被修改於".freeze],
       range: "crm:E11_Modification".freeze,
       subPropertyOf: "crm:P12i_was_present_at".freeze,
       type: "rdf:Property".freeze
@@ -1815,13 +1815,13 @@ If a modification is applied to a non-man-made object, it is regarded as an E22 
 These techniques should be drawn from an external E55 Type hierarchy of consistent terminology of general techniques or methods such as embroidery, oil-painting, carbon dating, etc. Specific documented techniques should be described as instances of E29 Design or Procedure. This property identifies the technique that was employed in an act of modification.
 ).freeze,
       domain: "crm:E7_Activity".freeze,
-      label: "used general technique".freeze,
+      label: ["a employé comme technique générique".freeze, "benutzte das allgemeine Verfahren".freeze, "used general technique".freeze, "usou técnica geral".freeze, "χρησιμοποίησε γενική τεχνική".freeze, "использовал общую технику".freeze, "使用通用技术".freeze],
       range: "crm:E55_Type".freeze,
       subPropertyOf: "crm:P125_used_object_of_type".freeze,
       type: "rdf:Property".freeze
     property :P32i_was_technique_of,
       domain: "crm:E55_Type".freeze,
-      label: "was technique of".freeze,
+      label: ["a été la technique mise en œuvre dans".freeze, "foi técnica da".freeze, "war Verfahren von".freeze, "was technique of".freeze, "ήταν τεχνική του/της".freeze, "был техникой для".freeze, "被使用於".freeze],
       range: "crm:E7_Activity".freeze,
       subPropertyOf: "crm:P125i_was_type_of_object_used_in".freeze,
       type: "rdf:Property".freeze
@@ -1831,13 +1831,13 @@ The property differs from P32 used general technique \(was technique of\) in tha
 Typical examples would include intervention plans for conservation or the construction plans of a building.
 ).freeze,
       domain: "crm:E7_Activity".freeze,
-      label: "used specific technique".freeze,
+      label: ["a employé comme technique spécifique".freeze, "benutzte das bestimmte Verfahren".freeze, "used specific technique".freeze, "usou técnica específica".freeze, "χρησιμοποίησε συγκεκριμένη τεχνική".freeze, "использовал особую технику".freeze, "使用特定技术".freeze],
       range: "crm:E29_Design_or_Procedure".freeze,
       subPropertyOf: "crm:P16_used_specific_object".freeze,
       type: "rdf:Property".freeze
     property :P33i_was_used_by,
       domain: "crm:E29_Design_or_Procedure".freeze,
-      label: "was used by".freeze,
+      label: ["a été employée par".freeze, "foi usada por".freeze, "was used by".freeze, "wurde benutzt von".freeze, "χρησιμοποιήθηκε για".freeze, "был использован посредством".freeze, "被特别使用於".freeze],
       range: "crm:E7_Activity".freeze,
       subPropertyOf: "crm:P16i_was_used_for".freeze,
       type: "rdf:Property".freeze
@@ -1846,26 +1846,26 @@ Typical examples would include intervention plans for conservation or the constr
 Conditions may be assessed either by direct observation or using recorded evidence. In the latter case the E18 Physical Thing does not need to be present or extant.
 ).freeze,
       domain: "crm:E14_Condition_Assessment".freeze,
-      label: "concerned".freeze,
+      label: ["a concerné".freeze, "betraf".freeze, "concerned".freeze, "interessada".freeze, "αφορούσε σε".freeze, "имел дело с".freeze, "评估了".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       subPropertyOf: "crm:P140_assigned_attribute_to".freeze,
       type: "rdf:Property".freeze
     property :P34i_was_assessed_by,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "was assessed by".freeze,
+      label: ["expertisé par le biais de".freeze, "foi avaliada por".freeze, "was assessed by".freeze, "wurde beurteilt durch".freeze, "εκτιμήθηκε από".freeze, "был оценен посредством".freeze, "被评估於".freeze],
       range: "crm:E14_Condition_Assessment".freeze,
       subPropertyOf: "crm:P140i_was_attributed_by".freeze,
       type: "rdf:Property".freeze
     property :P35_has_identified,
       comment: %(This property identifies the E3 Condition State that was observed in an E14 Condition Assessment activity.).freeze,
       domain: "crm:E14_Condition_Assessment".freeze,
-      label: "has identified".freeze,
+      label: ["a identifié".freeze, "has identified".freeze, "hat identifiziert".freeze, "identificou".freeze, "έχει διαπιστώσει".freeze, "идентифицировал".freeze, "评估认定了".freeze],
       range: "crm:E3_Condition_State".freeze,
       subPropertyOf: "crm:P141_assigned".freeze,
       type: "rdf:Property".freeze
     property :P35i_was_identified_by,
       domain: "crm:E3_Condition_State".freeze,
-      label: "was identified by".freeze,
+      label: ["est identifié par".freeze, "foi identificado por".freeze, "was identified by".freeze, "wurde identifiziert durch".freeze, "έχει διαπιστωθεί από".freeze, "идентифицирован посредством".freeze, "被评估认定於".freeze],
       range: "crm:E14_Condition_Assessment".freeze,
       subPropertyOf: "crm:P141i_was_assigned_by".freeze,
       type: "rdf:Property".freeze
@@ -1875,13 +1875,13 @@ The same identifier may be assigned on more than one occasion.
 An Identifier might be created prior to an assignment.
 ).freeze,
       domain: "crm:E15_Identifier_Assignment".freeze,
-      label: "assigned".freeze,
+      label: ["a attribué".freeze, "assigned".freeze, "atribuiu".freeze, "wies zu".freeze, "απέδωσε".freeze, "назначил".freeze, "指定标识符为".freeze],
       range: "crm:E42_Identifier".freeze,
       subPropertyOf: "crm:P141_assigned".freeze,
       type: "rdf:Property".freeze
     property :P37i_was_assigned_by,
       domain: "crm:E42_Identifier".freeze,
-      label: "was assigned by".freeze,
+      label: ["a été attribuée par".freeze, "foi atribuído por".freeze, "was assigned by".freeze, "wurde zugewiesen durch".freeze, "αποδόθηκε ως ιδιότητα από".freeze, "был присвоен посредством".freeze, "被指定为标识符於".freeze],
       range: "crm:E15_Identifier_Assignment".freeze,
       subPropertyOf: "crm:P141i_was_assigned_by".freeze,
       type: "rdf:Property".freeze
@@ -1891,13 +1891,13 @@ Deassignment of an identifier may be necessary when an item is taken out of an i
 The same identifier may be deassigned on more than one occasion.
 ).freeze,
       domain: "crm:E15_Identifier_Assignment".freeze,
-      label: "deassigned".freeze,
+      label: [" hob Zuweisung auf von".freeze, "a désattribué".freeze, "deassigned".freeze, "retirou a atribuição do".freeze, "ακύρωσε".freeze, "отменил назначение".freeze, "取消标识符".freeze],
       range: "crm:E42_Identifier".freeze,
       subPropertyOf: "crm:P141_assigned".freeze,
       type: "rdf:Property".freeze
     property :P38i_was_deassigned_by,
       domain: "crm:E42_Identifier".freeze,
-      label: "was deassigned by".freeze,
+      label: ["a été désattribué par".freeze, "foi retirada a atribuição por".freeze, "was deassigned by".freeze, "wurde aufgehoben durch".freeze, "ακυρώθηκε από".freeze, "был отменен посредством".freeze, "被取消标识符於".freeze],
       range: "crm:E15_Identifier_Assignment".freeze,
       subPropertyOf: "crm:P141i_was_assigned_by".freeze,
       type: "rdf:Property".freeze
@@ -1905,13 +1905,13 @@ The same identifier may be deassigned on more than one occasion.
       comment: %(This property associates an instance of E16 Measurement with the instance of E1 CRM Entity to which it applied. An instance of E1 CRM Entity may be measured more than once. Material and immaterial things and processes may be measured, e.g. the number of words in a text, or the duration of an event.
 ).freeze,
       domain: "crm:E16_Measurement".freeze,
-      label: "measured".freeze,
+      label: ["a mesuré".freeze, "measured".freeze, "mediu".freeze, "vermaß".freeze, "μέτρησε".freeze, "измерил".freeze, "测量了".freeze],
       range: "crm:E1_CRM_Entity".freeze,
       subPropertyOf: "crm:P140_assigned_attribute_to".freeze,
       type: "rdf:Property".freeze
     property :P39i_was_measured_by,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "was measured by".freeze,
+      label: ["a été mesuré par".freeze, "foi medida por".freeze, "was measured by".freeze, "wurde vermessen durch".freeze, "μετρήθηκε από".freeze, "был измерен посредством".freeze, "被测量於".freeze],
       range: "crm:E16_Measurement".freeze,
       subPropertyOf: "crm:P140i_was_attributed_by".freeze,
       type: "rdf:Property".freeze
@@ -1922,7 +1922,7 @@ Like property P2 has type \(is type of\), this property is a consequence of the 
 An item may have many notes, but a note is attached to a specific item.
 ).freeze,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "has note".freeze,
+      label: ["a pour note".freeze, "has note".freeze, "hat Anmerkung".freeze, "tem nota".freeze, "έχει επεξήγηση".freeze, "имеет примечание".freeze, "有说明".freeze],
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
     property :P40_observed_dimension,
@@ -1932,13 +1932,13 @@ Dimensions may be determined either by direct observation or using recorded evid
 Even though knowledge of the value of a dimension requires measurement, the dimension may be an object of discourse prior to, or even without, any measurement being made.
 ).freeze,
       domain: "crm:E16_Measurement".freeze,
-      label: "observed dimension".freeze,
+      label: ["a relevé comme dimension".freeze, "beobachtete Dimension".freeze, "observed dimension".freeze, "verificou a dimensão".freeze, "παρατήρησε".freeze, "определил величину".freeze, "观察认定的规模是".freeze],
       range: "crm:E54_Dimension".freeze,
       subPropertyOf: "crm:P141_assigned".freeze,
       type: "rdf:Property".freeze
     property :P40i_was_observed_in,
       domain: "crm:E54_Dimension".freeze,
-      label: "was observed in".freeze,
+      label: ["a été relevée au cours de".freeze, "foi verificada durante".freeze, "was observed in".freeze, "wurde beobachtet in".freeze, "παρατηρήθηκε από".freeze, "наблюдался в".freeze, "被观察认定於".freeze],
       range: "crm:E16_Measurement".freeze,
       subPropertyOf: "crm:P141i_was_assigned_by".freeze,
       type: "rdf:Property".freeze
@@ -1947,13 +1947,13 @@ Even though knowledge of the value of a dimension requires measurement, the dime
 Any instance of a CRM entity may be assigned a type through type assignment. Type assignment events allow a more detailed path from E1 CRM Entity through P41 classified \(was classified\), E17 Type Assignment, P42 assigned \(was assigned by\) to E55 Type for assigning types to objects compared to the shortcut offered by P2 has type \(is type of\).
 ).freeze,
       domain: "crm:E17_Type_Assignment".freeze,
-      label: "classified".freeze,
+      label: ["a classifié".freeze, "classificou".freeze, "classified".freeze, "klassifizierte".freeze, "χαρακτήρισε".freeze, "классифицировал".freeze, "分类了".freeze],
       range: "crm:E1_CRM_Entity".freeze,
       subPropertyOf: "crm:P140_assigned_attribute_to".freeze,
       type: "rdf:Property".freeze
     property :P41i_was_classified_by,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "was classified by".freeze,
+      label: ["a été classifiée par le biais de".freeze, "foi classificada por".freeze, "was classified by".freeze, "wurde klassifiziert durch".freeze, "χαρακτηρίσθηκε από".freeze, "был классифицирован посредством".freeze, "被分类於".freeze],
       range: "crm:E17_Type_Assignment".freeze,
       subPropertyOf: "crm:P140i_was_attributed_by".freeze,
       type: "rdf:Property".freeze
@@ -1964,13 +1964,13 @@ For example, a fragment of an antique vessel could be assigned the type “attic
 A Type may be intellectually constructed independent from assigning an instance of it.
 ).freeze,
       domain: "crm:E17_Type_Assignment".freeze,
-      label: "assigned".freeze,
+      label: ["a attribué".freeze, "assigned".freeze, "atribuiu".freeze, "wies zu".freeze, "απέδωσε ως ιδιότητα".freeze, "назначил".freeze, "指定类型为".freeze],
       range: "crm:E55_Type".freeze,
       subPropertyOf: "crm:P141_assigned".freeze,
       type: "rdf:Property".freeze
     property :P42i_was_assigned_by,
       domain: "crm:E55_Type".freeze,
-      label: "was assigned by".freeze,
+      label: ["a été attribué par".freeze, "foi atribuído por".freeze, "was assigned by".freeze, "wurde zugewiesen durch".freeze, "αποδόθηκε από".freeze, "был присвоен посредством".freeze, "被指定类型於".freeze],
       range: "crm:E17_Type_Assignment".freeze,
       subPropertyOf: "crm:P141i_was_assigned_by".freeze,
       type: "rdf:Property".freeze
@@ -1980,12 +1980,12 @@ It is a shortcut of the more fully developed path from E70 Thing through P39 mea
 An instance of E54 Dimension is specific to an instance of E70 Thing.
 ).freeze,
       domain: "crm:E70_Thing".freeze,
-      label: "has dimension".freeze,
+      label: ["a pour dimension".freeze, "has dimension".freeze, "hat Dimension".freeze, "tem dimensão".freeze, "έχει μέγεθος".freeze, "имеет величину".freeze, "有规模数量".freeze],
       range: "crm:E54_Dimension".freeze,
       type: "rdf:Property".freeze
     property :P43i_is_dimension_of,
       domain: "crm:E54_Dimension".freeze,
-      label: "is dimension of".freeze,
+      label: ["est dimension de".freeze, "is dimension of".freeze, "ist Dimension von".freeze, "é dimensão de".freeze, "είναι μέγεθος του".freeze, "является величиной для".freeze, "估量的标的物是".freeze],
       range: "crm:E70_Thing".freeze,
       type: "rdf:Property".freeze
     property :P44_has_condition,
@@ -1994,12 +1994,12 @@ It is a shortcut of the more fully developed path from E18 Physical Thing throug
 An instance of Condition State is specific to an instance of Physical Thing.
 ).freeze,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "has condition".freeze,
+      label: ["a pour état matériel".freeze, "has condition".freeze, "hat Zustand".freeze, "tem estado material ".freeze, "έχει κατάσταση".freeze, "имеет условие".freeze, "有状态".freeze],
       range: "crm:E3_Condition_State".freeze,
       type: "rdf:Property".freeze
     property :P44i_is_condition_of,
       domain: "crm:E3_Condition_State".freeze,
-      label: "is condition of".freeze,
+      label: ["estado material de".freeze, "is condition of".freeze, "ist Zustand von".freeze, "état matériel de".freeze, "είναι κατάσταση του".freeze, "является условием для".freeze, "描述的标的物是".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       type: "rdf:Property".freeze
     property :P45_consists_of,
@@ -2007,12 +2007,12 @@ An instance of Condition State is specific to an instance of Physical Thing.
 All physical things consist of physical materials. P45 consists of \(is incorporated in\) allows the different Materials to be recorded. P45 consists of \(is incorporated in\) refers here to observed Material as opposed to the consumed raw material.
 A Material, such as a theoretical alloy, may not have any physical instances).freeze,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "consists of".freeze,
+      label: ["besteht aus".freeze, "consiste de".freeze, "consiste en".freeze, "consists of".freeze, "αποτελείται από".freeze, "составлен из".freeze, "有构成材料".freeze],
       range: "crm:E57_Material".freeze,
       type: "rdf:Property".freeze
     property :P45i_is_incorporated_in,
       domain: "crm:E57_Material".freeze,
-      label: "is incorporated in".freeze,
+      label: ["est présent dans".freeze, "está presente em".freeze, "is incorporated in".freeze, "ist enthalten in".freeze, "είναι ενσωματωμένος/η/ο σε".freeze, "входит в состав".freeze, "被用来构成".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       type: "rdf:Property".freeze
     property :P46_is_composed_of,
@@ -2022,12 +2022,12 @@ This property is intended to describe specific components that are individually 
 The instances of E57 Materials of which an item of E18 Physical Thing is composed should be documented using P45 consists of \(is incorporated in\).
 ).freeze,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "is composed of".freeze,
+      label: ["est composée de".freeze, "is composed of".freeze, "ist zusammengesetzt aus".freeze, "é composto de".freeze, "αποτελείται από".freeze, "составлен из".freeze, "有组件".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       type: "rdf:Property".freeze
     property :P46i_forms_part_of,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "forms part of".freeze,
+      label: ["bildet Teil von".freeze, "fait partie de".freeze, "faz parte de".freeze, "forms part of".freeze, "αποτελεί μέρος του/της".freeze, "формирует часть".freeze, "被用来组成".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       type: "rdf:Property".freeze
     property :P48_has_preferred_identifier,
@@ -2037,13 +2037,13 @@ Use of this property requires an external mechanism for assigning temporal valid
 P48 has preferred identifier \(is preferred identifier of\), is a shortcut for the path from E1 CRM Entity through P140 assigned attribute to \(was attributed by\), E15 Identifier Assignment, P37 assigned \(was assigned by\) to E42 Identifier. The fact that an identifier is a preferred one for an organisation can be better expressed in a context independent form by assigning a suitable E55 Type to the respective instance of E15 Identifier Assignment using the P2 has type property.
 ).freeze,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "has preferred identifier".freeze,
+      label: ["a pour identificateur retenu".freeze, "has preferred identifier".freeze, "hat bevorzugtes Kennzeichen".freeze, "tem identificador preferido".freeze, "έχει προτιμώμενο αναγνωριστικό".freeze, "имеет предпочтительный идентификатор".freeze, "有首选标识符".freeze],
       range: "crm:E42_Identifier".freeze,
       subPropertyOf: "crm:P1_is_identified_by".freeze,
       type: "rdf:Property".freeze
     property :P48i_is_preferred_identifier_of,
       domain: "crm:E42_Identifier".freeze,
-      label: "is preferred identifier of".freeze,
+      label: ["est l’identificateur retenu de".freeze, "is preferred identifier of".freeze, "ist bevorzugtes Kennzeichen für".freeze, "é o identificador preferido de".freeze, "είναι προτιμώμενο αναγνωριστικό".freeze, "является предпочтительным идентификатором для".freeze, "首选标识符的标的物是".freeze],
       range: "crm:E1_CRM_Entity".freeze,
       subPropertyOf: "crm:P1i_identifies".freeze,
       type: "rdf:Property".freeze
@@ -2053,12 +2053,12 @@ The distinction with P50 has current keeper \(is current keeper of\) is that P49
 P49 has former or current keeper \(is former or current keeper of\) is a shortcut for the more detailed path from E18 Physical Thing through P30 transferred custody of \(custody transferred through\), E10 Transfer of Custody, P28 custody surrendered by \(surrendered custody through\) or P29 custody received by \(received custody through\) to E39 Actor.
 ).freeze,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "has former or current keeper".freeze,
+      label: ["est ou a été détenu par".freeze, "has former or current keeper".freeze, "hat früheren oder derzeitigen Betreuer".freeze, "é ou foi guardada por".freeze, "είναι ή ήταν στην κατοχή του".freeze, "имеет бывшего или текущего смотрителя".freeze, "有前任或现任保管者".freeze],
       range: "crm:E39_Actor".freeze,
       type: "rdf:Property".freeze
     property :P49i_is_former_or_current_keeper_of,
       domain: "crm:E39_Actor".freeze,
-      label: "is former or current keeper of".freeze,
+      label: ["est ou a été détenteur de".freeze, "is former or current keeper of".freeze, "ist früherer oder derzeitiger Betreuer von".freeze, "é ou foi guardador de".freeze, "κατέχει ή κατείχε".freeze, "является бывшим или текущим смотрителем для".freeze, "目前或曾经保管".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       type: "rdf:Property".freeze
     property :"P4_has_time-span",
@@ -2066,12 +2066,12 @@ P49 has former or current keeper \(is former or current keeper of\) is a shortcu
 The related E52 Time-Span is understood as the real Time-Span during which the phenomena were active, which make up the temporal entity instance. It does not convey any other meaning than a positioning on the “time-line” of chronology. The Time-Span in turn is approximated by a set of dates \(E61 Time Primitive\). A temporal entity can have in reality only one Time-Span, but there may exist alternative opinions about it, which we would express by assigning multiple Time-Spans. Related temporal entities may share a Time-Span. Time-Spans may have completely unknown dates but other descriptions by which we can infer knowledge.
 ).freeze,
       domain: "crm:E2_Temporal_Entity".freeze,
-      label: "has time-span".freeze,
+      label: ["a pour durée".freeze, "has time-span".freeze, "hat Zeitspanne".freeze, "tem período de tempo".freeze, "βρισκόταν σε εξέλιξη".freeze, "имеет временной отрезок".freeze, "发生时段是".freeze],
       range: "crm:E52_Time-Span".freeze,
       type: "rdf:Property".freeze
     property :"P4i_is_time-span_of",
       domain: "crm:E52_Time-Span".freeze,
-      label: "is time-span of".freeze,
+      label: ["est la durée de".freeze, "is time-span of".freeze, "ist Zeitspanne von".freeze, "é o período de tempo de".freeze, "είναι χρονικό διάστημα του/της".freeze, "является временным отрезком для".freeze, "开始并完成了".freeze],
       range: "crm:E2_Temporal_Entity".freeze,
       type: "rdf:Property".freeze
     property :P50_has_current_keeper,
@@ -2079,13 +2079,13 @@ The related E52 Time-Span is understood as the real Time-Span during which the p
 	P50 has current keeper \(is current keeper of\) is a shortcut for the more detailed path from E18 Physical Thing through P30 transferred custody of \(custody transferred through\), E10 Transfer of Custody, P29 custody received by \(received custody through\) to E39 Actor.
 ).freeze,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "has current keeper".freeze,
+      label: ["est actuellement détenu par".freeze, "has current keeper".freeze, "hat derzeitigen Betreuer".freeze, "é guardada por".freeze, "είναι στην κατοχή του".freeze, "имеет текущего смотрителя".freeze, "有现任保管者".freeze],
       range: "crm:E39_Actor".freeze,
       subPropertyOf: "crm:P49_has_former_or_current_keeper".freeze,
       type: "rdf:Property".freeze
     property :P50i_is_current_keeper_of,
       domain: "crm:E39_Actor".freeze,
-      label: "is current keeper of".freeze,
+      label: ["est actuel détenteur de".freeze, "is current keeper of".freeze, "ist derzeitiger Betreuer von".freeze, "é guardador de".freeze, "κατέχει".freeze, "является текущим смотрителем для".freeze, "目前保管".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       subPropertyOf: "crm:P49i_is_former_or_current_keeper_of".freeze,
       type: "rdf:Property".freeze
@@ -2094,12 +2094,12 @@ The related E52 Time-Span is understood as the real Time-Span during which the p
 The distinction with P52 has current owner \(is current owner of\) is that P51 has former or current owner \(is former or current owner of\) does not indicate whether the specified owners are current. P51 has former or current owner \(is former or current owner of\) is a shortcut for the more detailed path from E18 Physical Thing through P24 transferred title of \(changed ownership through\), E8 Acquisition, P23 transferred title from \(surrendered title through\), or P22 transferred title to \(acquired title through\) to E39 Actor.
 ).freeze,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "has former or current owner".freeze,
+      label: ["est ou a été possédée par".freeze, "has former or current owner".freeze, "hat früheren oder derzeitigen Besitzer ".freeze, "é ou foi propriedade de".freeze, "έχει ή είχε ιδιοκτήτη".freeze, "имеет бывшего или текущего владельца".freeze, "有前任或现任物主".freeze],
       range: "crm:E39_Actor".freeze,
       type: "rdf:Property".freeze
     property :P51i_is_former_or_current_owner_of,
       domain: "crm:E39_Actor".freeze,
-      label: "is former or current owner of".freeze,
+      label: ["est ou a été propriétaire de".freeze, "is former or current owner of".freeze, "ist früherer oder derzeitiger Besitzer von".freeze, "é ou foi proprietário de".freeze, "είναι ή ήταν ιδιοκτήτης του/της".freeze, "является бывшим или текущим владельцем для".freeze, "目前或曾经拥有".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       type: "rdf:Property".freeze
     property :P52_has_current_owner,
@@ -2107,13 +2107,13 @@ The distinction with P52 has current owner \(is current owner of\) is that P51 h
 P52 has current owner \(is current owner of\) is a shortcut for the more detailed path from E18 Physical Thing through P24 transferred title of \(changed ownership through\), E8 Acquisition, P22 transferred title to \(acquired title through\) to E39 Actor, if and only if this acquisition event is the most recent.
 ).freeze,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "has current owner".freeze,
+      label: ["est actuellement possédée par".freeze, "has current owner".freeze, "hat derzeitigen Besitzer".freeze, "é propriedade de".freeze, "έχει ιδιοκτήτη".freeze, "имеет текущего владельца".freeze, "有现任物主".freeze],
       range: "crm:E39_Actor".freeze,
       subPropertyOf: ["crm:P105_right_held_by".freeze, "crm:P51_has_former_or_current_owner".freeze],
       type: "rdf:Property".freeze
     property :P52i_is_current_owner_of,
       domain: "crm:E39_Actor".freeze,
-      label: "is current owner of".freeze,
+      label: ["est le propriétaire actuel de".freeze, "is current owner of".freeze, "ist derzeitiger Besitzer von".freeze, "é proprietário de".freeze, "είναι ιδιοκτήτης του".freeze, "является текущим владельцем для".freeze, "目前拥有".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       subPropertyOf: ["crm:P105i_has_right_on".freeze, "crm:P51i_is_former_or_current_owner_of".freeze],
       type: "rdf:Property".freeze
@@ -2124,12 +2124,12 @@ In the case of immobile objects, the Place would normally correspond to the Plac
 P53 has former or current location \(is former or current location of\) is a shortcut. A more detailed representation can make use of the fully developed \(i.e. indirect\) path from E19 Physical Object through P25 moved \(moved by\), E9 Move, P26 moved to \(was destination of\) or P27 moved from \(was origin of\) to E53 Place.
 ).freeze,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "has former or current location".freeze,
+      label: ["a ou a eu pour localisation".freeze, "has former or current location".freeze, "hat früheren oder derzeitigen Standort".freeze, "é ou foi localizada em".freeze, "βρίσκεται ή βρισκόταν σε".freeze, "имеет текущее или бывшее местоположение".freeze, "目前或曾经被置放於".freeze],
       range: "crm:E53_Place".freeze,
       type: "rdf:Property".freeze
     property :P53i_is_former_or_current_location_of,
       domain: "crm:E53_Place".freeze,
-      label: "is former or current location of".freeze,
+      label: ["est ou a été localisation de".freeze, "is former or current location of".freeze, "ist früherer oder derzeitiger Standort von".freeze, "é ou foi localização de".freeze, "είναι ή ήταν θέση του".freeze, "является текущим или бывшим местоположением для".freeze, "目前或曾经被置放了".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       type: "rdf:Property".freeze
     property :P54_has_current_permanent_location,
@@ -2137,12 +2137,12 @@ P53 has former or current location \(is former or current location of\) is a sho
 P54 has current permanent location \(is current permanent location of\) is similar to P55 has current location \(currently holds\). However, it indicates the E53 Place currently reserved for an object, such as the permanent storage location or a permanent exhibit location. The object may be temporarily removed from the permanent location, for example when used in temporary exhibitions or loaned to another institution. The object may never actually be located at its permanent location.
 ).freeze,
       domain: "crm:E19_Physical_Object".freeze,
-      label: "has current permanent location".freeze,
+      label: ["a actuellement pour localisation à demeure".freeze, "has current permanent location".freeze, "hat derzeitigen permanenten Standort".freeze, "é localizado permanentemente em".freeze, "έχει μόνιμη θέση".freeze, "имеет текущее постоянное местоположение".freeze, "目前的永久位置位於".freeze],
       range: "crm:E53_Place".freeze,
       type: "rdf:Property".freeze
     property :P54i_is_current_permanent_location_of,
       domain: "crm:E53_Place".freeze,
-      label: "is current permanent location of".freeze,
+      label: ["est actuellement localisation à demeure de".freeze, "is current permanent location of".freeze, "ist derzeitiger permanenter Standort von".freeze, "é localização permanente de".freeze, "είναι μόνιμη θέση του/της".freeze, "является текущим постоянным местоположением для".freeze, "目前被用来永久置放".freeze],
       range: "crm:E19_Physical_Object".freeze,
       type: "rdf:Property".freeze
     property :P55_has_current_location,
@@ -2151,13 +2151,13 @@ P54 has current permanent location \(is current permanent location of\) is simil
 P55 has current location \(currently holds\) is a shortcut. A more detailed representation can make use of the fully developed \(i.e. indirect\) path from E19 Physical Object through P25 moved \(moved by\), E9 Move P26 moved to \(was destination of\) to E53 Place if and only if this Move is the most recent.
 ).freeze,
       domain: "crm:E19_Physical_Object".freeze,
-      label: "has current location".freeze,
+      label: ["a pour localisation actuelle".freeze, "has current location".freeze, "hat derzeitigen Standort".freeze, "é localizado em".freeze, "βρίσκεται σε".freeze, "в данный момент находится в".freeze, "目前被置放於".freeze],
       range: "crm:E53_Place".freeze,
       subPropertyOf: "crm:P53_has_former_or_current_location".freeze,
       type: "rdf:Property".freeze
     property :P55i_currently_holds,
       domain: "crm:E53_Place".freeze,
-      label: "currently holds".freeze,
+      label: ["currently holds".freeze, "est localisation actuelle de".freeze, "hält derzeitig".freeze, "é localização atual de".freeze, "είναι θέση του".freeze, "в данный момент содержит".freeze, "目前置放了".freeze],
       range: "crm:E19_Physical_Object".freeze,
       subPropertyOf: "crm:P53i_is_former_or_current_location_of".freeze,
       type: "rdf:Property".freeze
@@ -2169,13 +2169,13 @@ P56 bears feature \(is found on\) is a shortcut. A more detailed representation 
 Definition of the CIDOC Conceptual Reference Model 149 within\), E53 Place, P53 has former or current location \(is former or current location of\) to E26 Physical Feature.
 ).freeze,
       domain: "crm:E19_Physical_Object".freeze,
-      label: "bears feature".freeze,
+      label: ["bears feature".freeze, "possui característica".freeze, "présente pour caractéristique".freeze, "trägt Merkmal".freeze, "φέρει μόρφωμα".freeze, "несет признак".freeze, "有外貌表征".freeze],
       range: "crm:E26_Physical_Feature".freeze,
       subPropertyOf: "crm:P46_is_composed_of".freeze,
       type: "rdf:Property".freeze
     property :P56i_is_found_on,
       domain: "crm:E26_Physical_Feature".freeze,
-      label: "is found on".freeze,
+      label: ["is found on".freeze, "se trouve sur".freeze, "wird gefunden auf".freeze, "é encontrada em".freeze, "βρίσκεται σε".freeze, "найден на".freeze, "被见於".freeze],
       range: "crm:E19_Physical_Object".freeze,
       subPropertyOf: "crm:P46i_forms_part_of".freeze,
       type: "rdf:Property".freeze
@@ -2185,7 +2185,7 @@ This may be used as a method of checking inventory counts with regard to aggrega
 For a more complete description, objects may be decomposed into their components and constituents using P46 is composed of \(forms parts of\) and P45 consists of \(is incorporated in\). This allows each element to be described individually.
 ).freeze,
       domain: "crm:E19_Physical_Object".freeze,
-      label: "has number of parts".freeze,
+      label: ["a pour nombre de parties".freeze, "has number of parts".freeze, "hat Anzahl Teile".freeze, "tem número de partes".freeze, "έχει αριθμό μερών".freeze, "имеет число частей".freeze, "有组件数目".freeze],
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
     property :P58_has_section_definition,
@@ -2194,12 +2194,12 @@ The CRM handles sections as locations \(instances of E53 Place\) within or on E1
 This is part of a more developed path from E18 Physical Thing through P58, E46 Section Definition, P87 is identified by \(identifies\) that allows a more precise definition of a location found on an object than the shortcut P59 has section \(is located on or within\).
 A particular instance of a Section Definition only applies to one instance of Physical Thing.).freeze,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "has section definition".freeze,
+      label: ["a pour désignation de section".freeze, "has section definition".freeze, "hat Abschittsdefinition".freeze, "tem designação de seção".freeze, "έχει ορισμό τμήματος".freeze, "имеет определение района".freeze, "有区域定义".freeze],
       range: "crm:E46_Section_Definition".freeze,
       type: "rdf:Property".freeze
     property :P58i_defines_section,
       domain: "crm:E46_Section_Definition".freeze,
-      label: "defines section".freeze,
+      label: ["define uma seção de".freeze, "defines section".freeze, "definiert Abschitt auf oder von".freeze, "définit une section de".freeze, "ορίζει τμήμα σε".freeze, "определяет район".freeze, "界定了区域於".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       type: "rdf:Property".freeze
     property :P59_has_section,
@@ -2209,24 +2209,24 @@ E18 Physical Thing may be subdivided into arbitrary regions.
 P59 has section \(is located on or within\) is a shortcut. If the E53 Place is identified by a Section Definition, a more detailed representation can make use of the fully developed \(i.e. indirect\) path from E18 Physical Thing through P58 has section definition \(defines section\), E46 Section Definition, P87 is identified by \(identifies\) to E53 Place. A Place can only be located on or within one Physical Object.
 ).freeze,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "has section".freeze,
+      label: ["a pour section".freeze, "has section".freeze, "hat Bereich".freeze, "tem seção".freeze, "έχει τομέα".freeze, "имеет район".freeze, "有区域".freeze],
       range: "crm:E53_Place".freeze,
       type: "rdf:Property".freeze
     property :P59i_is_located_on_or_within,
       domain: "crm:E53_Place".freeze,
-      label: "is located on or within".freeze,
+      label: ["befindet sich auf oder in".freeze, "está localizada sobre ou dentro de".freeze, "is located on or within".freeze, "se situe sur ou dans".freeze, "βρίσκεται σε ή εντός".freeze, "находится на или внутри".freeze, "位於".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       type: "rdf:Property".freeze
     property :P5_consists_of,
       comment: %(This property describes the decomposition of an E3 Condition State into discrete, subsidiary states. 
 It is assumed that the sub-states into which the condition state is analysed form a logical whole - although the entire story may not be completely known – and that the sub-states are in fact constitutive of the general condition state. For example, a general condition state of “in ruins” may be decomposed into the individual stages of decay).freeze,
       domain: "crm:E3_Condition_State".freeze,
-      label: "consists of".freeze,
+      label: ["besteht aus".freeze, "consiste de".freeze, "consiste en".freeze, "consists of".freeze, "αποτελείται από".freeze, "состоит из".freeze, "包含".freeze],
       range: "crm:E3_Condition_State".freeze,
       type: "rdf:Property".freeze
     property :P5i_forms_part_of,
       domain: "crm:E3_Condition_State".freeze,
-      label: "forms part of".freeze,
+      label: ["bildet Teil von".freeze, "fait partie de".freeze, "faz parte de".freeze, "forms part of".freeze, "αποτελεί μέρος του/της".freeze, "формирует часть".freeze, "组成了".freeze],
       range: "crm:E3_Condition_State".freeze,
       type: "rdf:Property".freeze
     property :P62_depicts,
@@ -2234,12 +2234,12 @@ It is assumed that the sub-states into which the condition state is analysed for
 This property is a shortcut of the more fully developed path from E24 Physical Man-Made Thing through P65 shows visual item \(is shown by\), E36 Visual Item, P138 represents \(has representation\) to E1CRM Entity. P62.1 mode of depiction allows the nature of the depiction to be refined.
 ).freeze,
       domain: "crm:E24_Physical_Man-Made_Thing".freeze,
-      label: "depicts".freeze,
+      label: ["bildet ab".freeze, "depicts".freeze, "figure".freeze, "retrata".freeze, "απεικονίζει".freeze, "описывает".freeze, "描绘".freeze],
       range: "crm:E1_CRM_Entity".freeze,
       type: "rdf:Property".freeze
     property :P62i_is_depicted_by,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "is depicted by".freeze,
+      label: ["est figurée sur".freeze, "is depicted by".freeze, "wird abgebildet durch".freeze, "é retratada por".freeze, "απεικονίζεται σε".freeze, "описан посредством".freeze, "被描绘於".freeze],
       range: "crm:E24_Physical_Man-Made_Thing".freeze,
       type: "rdf:Property".freeze
     property :P65_shows_visual_item,
@@ -2250,13 +2250,13 @@ P65 shows visual item \(is shown by\) may also be used for Visual Items such as 
 This property is part of the fully developed path from E24 Physical Man-Made Thing through P65 shows visual item \(is shown by\), E36 Visual Item, P138 represents \(has representation\) to E1 CRM Entity which is shortcut by, P62 depicts \(is depicted by\).
 ).freeze,
       domain: "crm:E24_Physical_Man-Made_Thing".freeze,
-      label: "shows visual item".freeze,
+      label: ["apresenta item visual".freeze, "présente l'item visuel".freeze, "shows visual item".freeze, "zeigt Bildliches".freeze, "εμφανίζει οπτικό στοιχείο".freeze, "показывает визуальный предмет".freeze, "显示视觉项目".freeze],
       range: "crm:E36_Visual_Item".freeze,
       subPropertyOf: "crm:P128_carries".freeze,
       type: "rdf:Property".freeze
     property :P65i_is_shown_by,
       domain: "crm:E36_Visual_Item".freeze,
-      label: "is shown by".freeze,
+      label: ["est présenté par".freeze, "is shown by".freeze, "wird gezeigt durch".freeze, "é apresentado por".freeze, "εμφανίζεται σε".freeze, "показан посредством".freeze, "被显示於".freeze],
       range: "crm:E24_Physical_Man-Made_Thing".freeze,
       subPropertyOf: "crm:P128i_is_carried_by".freeze,
       type: "rdf:Property".freeze
@@ -2264,12 +2264,12 @@ This property is part of the fully developed path from E24 Physical Man-Made Thi
       comment: %(This property documents that an E89 Propositional Object makes a statement about an instance of E1 CRM Entity. P67 refers to \(is referred to by\) has the P67.1 has type link to an instance of E55 Type. This is intended to allow a more detailed description of the type of reference. This differs from P129 is about \(is subject of\), which describes the primary subject or subjects of the E89 Propositional Object.
 ).freeze,
       domain: "crm:E89_Propositional_Object".freeze,
-      label: "refers to".freeze,
+      label: ["fait référence à".freeze, "referencia".freeze, "refers to".freeze, "verweist auf".freeze, "αναφέρεται σε".freeze, "ссылается на".freeze, "论及".freeze],
       range: "crm:E1_CRM_Entity".freeze,
       type: "rdf:Property".freeze
     property :P67i_is_referred_to_by,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "is referred to by".freeze,
+      label: ["est référencé par".freeze, "is referred to by".freeze, "wird angeführt von".freeze, "é referenciado por".freeze, "αναφέρεται από".freeze, "имеет ссылку на себя от".freeze, "被论及於".freeze],
       range: "crm:E89_Propositional_Object".freeze,
       type: "rdf:Property".freeze
     property :P68_foresees_use_of,
@@ -2278,13 +2278,13 @@ E29 Designs and procedures commonly foresee the use of particular E57 Materials.
 This property is not intended for the documentation of E57 Materials that were used on a particular occasion when an instance of E29 Design or Procedure was executed.
 ).freeze,
       domain: "crm:E29_Design_or_Procedure".freeze,
-      label: "foresees use of".freeze,
+      label: [" sieht den Gebrauch vor von".freeze, "foresees use of".freeze, "normalmente emprega".freeze, "utilise habituellement".freeze, "συνήθως χρησιμοποιεί".freeze, "обычно применяет".freeze, "指定使用材料".freeze],
       range: "crm:E57_Material".freeze,
       subPropertyOf: "crm:P67_refers_to".freeze,
       type: "rdf:Property".freeze
     property :P68i_use_foreseen_by,
       domain: "crm:E57_Material".freeze,
-      label: "use foreseen by".freeze,
+      label: ["est habituellement utilisé par".freeze, "use foreseen by".freeze, "vorgesehen für Gebrauch durch defined".freeze, "é empregado por".freeze, "συνήθως χρησιμοποιείται από".freeze, "обычно используется посредством".freeze, "被指定使用於".freeze],
       range: "crm:E29_Design_or_Procedure".freeze,
       subPropertyOf: "crm:P67i_is_referred_to_by".freeze,
       type: "rdf:Property".freeze
@@ -2294,7 +2294,7 @@ The P69.1 has type property of P69 has association with allows the nature of the
 The property can typically be used to model the decomposition of the description of a complete workflow into a series of separate procedures.
 ).freeze,
       domain: "crm:E29_Design_or_Procedure".freeze,
-      label: "is associated with".freeze,
+      label: ["est associée à".freeze, "is associated with".freeze, "ist verbunden mit".freeze, "é associado com".freeze, "σχετίζεται με".freeze, "ассоциирован с".freeze, "相关於".freeze],
       range: "crm:E29_Design_or_Procedure".freeze,
       type: "rdf:Property".freeze
     property :P70_documents,
@@ -2302,13 +2302,13 @@ The property can typically be used to model the decomposition of the description
 Documents may describe any conceivable entity, hence the link to the highest-level entity in the CRM hierarchy. This property is intended for cases where a reference is regarded as being of a documentary character, in the scholarly or scientific sense.
 ).freeze,
       domain: "crm:E31_Document".freeze,
-      label: "documents".freeze,
+      label: ["belegt".freeze, "documenta".freeze, "documents".freeze, "mentionne".freeze, "τεκμηριώνει".freeze, "документирует".freeze, "记录了".freeze],
       range: "crm:E1_CRM_Entity".freeze,
       subPropertyOf: "crm:P67_refers_to".freeze,
       type: "rdf:Property".freeze
     property :P70i_is_documented_in,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "is documented in".freeze,
+      label: ["est mentionnée dans".freeze, "is documented in".freeze, "wird belegt in".freeze, "é documentado em".freeze, "τεκμηριώνεται σε".freeze, "документирован в".freeze, "被记录於".freeze],
       range: "crm:E31_Document".freeze,
       subPropertyOf: "crm:P67i_is_referred_to_by".freeze,
       type: "rdf:Property".freeze
@@ -2316,13 +2316,13 @@ Documents may describe any conceivable entity, hence the link to the highest-lev
       comment: %(This property documents a source E32 Authority Document for an instance of an E1 CRM Entity.
 ).freeze,
       domain: "crm:E32_Authority_Document".freeze,
-      label: "lists".freeze,
+      label: ["define".freeze, "définit".freeze, "listet".freeze, "lists".freeze, "περιλαμβάνει".freeze, "перечисляет".freeze, "条列出".freeze],
       range: "crm:E1_CRM_Entity".freeze,
       subPropertyOf: "crm:P67_refers_to".freeze,
       type: "rdf:Property".freeze
     property :P71i_is_listed_in,
       domain: "crm:E1_CRM_Entity".freeze,
-      label: "is listed in".freeze,
+      label: ["est défini par".freeze, "is listed in".freeze, "wird aufgelistet in".freeze, "é definido por".freeze, "περιλαμβάνεται σε".freeze, "перечислен в".freeze, "被条列於".freeze],
       range: "crm:E32_Authority_Document".freeze,
       subPropertyOf: "crm:P67i_is_referred_to_by".freeze,
       type: "rdf:Property".freeze
@@ -2331,12 +2331,12 @@ Documents may describe any conceivable entity, hence the link to the highest-lev
 Linguistic Objects are composed in one or more human Languages. This property allows these languages to be documented.
 ).freeze,
       domain: "crm:E33_Linguistic_Object".freeze,
-      label: "has language".freeze,
+      label: ["est en langue".freeze, "has language".freeze, "hat Sprache".freeze, "é da língua ".freeze, "έχει γλώσσα".freeze, "имеет язык".freeze, "使用语言".freeze],
       range: "crm:E56_Language".freeze,
       type: "rdf:Property".freeze
     property :P72i_is_language_of,
       domain: "crm:E56_Language".freeze,
-      label: "is language of".freeze,
+      label: ["est la langue de".freeze, "is language of".freeze, "ist Sprache von".freeze, "é a língua de".freeze, "είναι γλώσσα του/της".freeze, "является языком для".freeze, "被用来撰写".freeze],
       range: "crm:E33_Linguistic_Object".freeze,
       type: "rdf:Property".freeze
     property :P73_has_translation,
@@ -2344,13 +2344,13 @@ Linguistic Objects are composed in one or more human Languages. This property al
 When a Linguistic Object is translated into a new language it becomes a new Linguistic Object, despite being conceptually similar to the source object.
 ).freeze,
       domain: "crm:E33_Linguistic_Object".freeze,
-      label: "has translation".freeze,
+      label: ["a pour traduction".freeze, "has translation".freeze, "hat Übersetzung".freeze, "tem tradução".freeze, "έχει μετάφραση".freeze, "имеет перевод".freeze, "有译文".freeze],
       range: "crm:E33_Linguistic_Object".freeze,
       subPropertyOf: "crm:P130_shows_features_of".freeze,
       type: "rdf:Property".freeze
     property :P73i_is_translation_of,
       domain: "crm:E33_Linguistic_Object".freeze,
-      label: "is translation of".freeze,
+      label: ["est la traduction de".freeze, "is translation of".freeze, "ist Übersetzung von".freeze, "é tradução de".freeze, "είναι μετάφραση του/της".freeze, "является переводом".freeze, "翻译自".freeze],
       range: "crm:E33_Linguistic_Object".freeze,
       subPropertyOf: "crm:P130i_features_are_also_found_on".freeze,
       type: "rdf:Property".freeze
@@ -2359,47 +2359,47 @@ When a Linguistic Object is translated into a new language it becomes a new Ling
 The residence may be either the Place where the Actor resides, or a legally registered address of any kind.
 ).freeze,
       domain: "crm:E39_Actor".freeze,
-      label: "has current or former residence".freeze,
+      label: ["has current or former residence".freeze, "hat derzeitigen oder früheren Sitz".freeze, "reside ou residiu em".freeze, "réside ou a résidé à".freeze, "έχει ή είχε κατοικία".freeze, "имеет текущее или бывшее местожительства".freeze, "目前或曾经居住於".freeze],
       range: "crm:E53_Place".freeze,
       type: "rdf:Property".freeze
     property :P74i_is_current_or_former_residence_of,
       domain: "crm:E53_Place".freeze,
-      label: "is current or former residence of".freeze,
+      label: ["est ou a été la résidence de".freeze, "is current or former residence of".freeze, "ist derzeitiger oder früherer Sitz von".freeze, "é ou foi residência de".freeze, "είναι ή ήταν κατοικία του/της".freeze, "является текущим или бывшим местом жительства для".freeze, "历年来的居住者包括".freeze],
       range: "crm:E39_Actor".freeze,
       type: "rdf:Property".freeze
     property :P75_possesses,
       comment: %(This property identifies former or current instances of E30 Rights held by an E39 Actor.).freeze,
       domain: "crm:E39_Actor".freeze,
-      label: "possesses".freeze,
+      label: ["besitzt".freeze, "est détenteur de".freeze, "possesses".freeze, "é detentor de".freeze, "κατέχει".freeze, "владеет".freeze, "拥有".freeze],
       range: "crm:E30_Right".freeze,
       type: "rdf:Property".freeze
     property :P75i_is_possessed_by,
       domain: "crm:E30_Right".freeze,
-      label: "is possessed by".freeze,
+      label: ["est détenu par".freeze, "is possessed by".freeze, "sind im Besitz von".freeze, "são detidos por".freeze, "κατέχεται από".freeze, "принадлежит".freeze, "有拥有者".freeze],
       range: "crm:E39_Actor".freeze,
       type: "rdf:Property".freeze
     property :P76_has_contact_point,
       comment: %(This property identifies an E51 Contact Point of any type that provides access to an E39 Actor by any communication method, such as e-mail or fax.
 ).freeze,
       domain: "crm:E39_Actor".freeze,
-      label: "has contact point".freeze,
+      label: ["a pour coordonnées individuelles".freeze, "has contact point".freeze, "hat Kontaktpunkt".freeze, "possui ponto de contato".freeze, "έχει σημείο επικοινωνίας".freeze, "имеет контакт".freeze, "有联系方式".freeze],
       range: "crm:E51_Contact_Point".freeze,
       type: "rdf:Property".freeze
     property :P76i_provides_access_to,
       domain: "crm:E51_Contact_Point".freeze,
-      label: "provides access to".freeze,
+      label: ["bietet Zugang zu".freeze, "permettent de contacter".freeze, "provides access to".freeze, "é ponto de contado de".freeze, "παρέχει πρόσβαση σε".freeze, "предоставляет доступ к".freeze, "被用来联系".freeze],
       range: "crm:E39_Actor".freeze,
       type: "rdf:Property".freeze
     property :P78_is_identified_by,
       comment: %(This property identifies an E52 Time-Span using an E49Time Appellation.).freeze,
       domain: "crm:E52_Time-Span".freeze,
-      label: "is identified by".freeze,
+      label: ["est identifiée par".freeze, "is identified by".freeze, "wird bezeichnet als".freeze, "é identificado por ".freeze, "αναγνωρίζεται ως".freeze, "идентифицируется посредством".freeze, "有识别称号".freeze],
       range: "crm:E49_Time_Appellation".freeze,
       subPropertyOf: "crm:P1_is_identified_by".freeze,
       type: "rdf:Property".freeze
     property :P78i_identifies,
       domain: "crm:E49_Time_Appellation".freeze,
-      label: "identifies".freeze,
+      label: ["bezeichnet".freeze, "identifica".freeze, "identifie".freeze, "identifies".freeze, "είναι αναγνωριστικό".freeze, "идентифицирует".freeze, "被用来识别".freeze],
       range: "crm:E52_Time-Span".freeze,
       subPropertyOf: "crm:P1i_identifies".freeze,
       type: "rdf:Property".freeze
@@ -2408,7 +2408,7 @@ The residence may be either the Place where the Actor resides, or a legally regi
 The nature of the qualification may be certainty, precision, source etc.
 ).freeze,
       domain: "crm:E52_Time-Span".freeze,
-      label: "beginning is qualified by".freeze,
+      label: ["beginning is qualified by".freeze, "début est qualifié par".freeze, "hat Anfangsbegründung".freeze, "início é qualificado por".freeze, "αρχή προσδιορίζεται από".freeze, "начало ограничено".freeze, "起点认定的性质是".freeze],
       range: "rdfs:Literal".freeze,
       subPropertyOf: "crm:P3_has_note".freeze,
       type: "rdf:Property".freeze
@@ -2418,12 +2418,12 @@ The related E53 Place should be seen as an approximation of the geographical are
 A period can take place at multiple locations.
 ).freeze,
       domain: "crm:E4_Period".freeze,
-      label: "took place at".freeze,
+      label: ["a eu lieu dans".freeze, "fand statt in".freeze, "ocorreu em".freeze, "took place at".freeze, "έλαβε χώρα σε".freeze, "совершался на".freeze, "发生地在".freeze],
       range: "crm:E53_Place".freeze,
       type: "rdf:Property".freeze
     property :P7i_witnessed,
       domain: "crm:E53_Place".freeze,
-      label: "witnessed".freeze,
+      label: ["a été témoin de".freeze, "bezeugte".freeze, "testemunhou".freeze, "witnessed".freeze, "υπήρξε τόπος του".freeze, "был местом совершения".freeze, "发生过".freeze],
       range: "crm:E4_Period".freeze,
       type: "rdf:Property".freeze
     property :P80_end_is_qualified_by,
@@ -2431,7 +2431,7 @@ A period can take place at multiple locations.
 The nature of the qualification may be certainty, precision, source etc.
 ).freeze,
       domain: "crm:E52_Time-Span".freeze,
-      label: "end is qualified by".freeze,
+      label: ["end is qualified by".freeze, "fin est qualifiée par".freeze, "final é qualificado por".freeze, "hat Begründung des Endes".freeze, "τέλος προσδιορίζεται από".freeze, "конец ограничен".freeze, "终点认定的性质是".freeze],
       range: "rdfs:Literal".freeze,
       subPropertyOf: "crm:P3_has_note".freeze,
       type: "rdf:Property".freeze
@@ -2440,20 +2440,20 @@ The nature of the qualification may be certainty, precision, source etc.
 Since Time-Spans may not have precisely known temporal extents, the CRM supports statements about the minimum and maximum temporal extents of Time-Spans. This property allows a Time-Span’s minimum temporal extent \(i.e. its inner boundary\) to be assigned an E61 Time Primitive value. Time Primitives are treated by the CRM as application or system specific date intervals, and are not further analysed.
 ).freeze,
       domain: "crm:E52_Time-Span".freeze,
-      label: "ongoing throughout".freeze,
+      label: ["abrange no mínimo".freeze, "andauernd während".freeze, "couvre au moins".freeze, "ongoing throughout".freeze, "καθόλη τη διάρκεια του/της".freeze, "длится в течение".freeze, "时段的数值至少涵盖".freeze],
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
     property :P81a_end_of_the_begin,
       comment: %(This is defined as the first boundary of the property P81).freeze,
       domain: "crm:E52_Time-Span".freeze,
-      label: "end of the begin".freeze,
+      label: ["Ende des Anfangs".freeze, "end of the begin".freeze, "fim do início".freeze, "fin du début".freeze, "τέλος της αρχής".freeze, "конец начала".freeze],
       range: "xsd:dateTime".freeze,
       subPropertyOf: "crm:P81_ongoing_throughout".freeze,
       type: "rdf:Property".freeze
     property :P81b_begin_of_the_end,
       comment: %(This is defined as the second boundary of the property P81).freeze,
       domain: "crm:E52_Time-Span".freeze,
-      label: "begin of the end".freeze,
+      label: ["Anfang vom Ende".freeze, "begin of the end".freeze, "começar do fim".freeze, "début de la fin".freeze, "αρχή του τέλους".freeze, "начать в конце".freeze],
       range: "xsd:dateTime".freeze,
       subPropertyOf: "crm:P81_ongoing_throughout".freeze,
       type: "rdf:Property".freeze
@@ -2462,20 +2462,20 @@ Since Time-Spans may not have precisely known temporal extents, the CRM supports
 Since Time-Spans may not have precisely known temporal extents, the CRM supports statements about the minimum and maximum temporal extents of Time-Spans. This property allows a Time-Span’s maximum temporal extent \(i.e. its outer boundary\) to be assigned an E61 Time Primitive value. Time Primitives are treated by the CRM as application or system specific date intervals, and are not further analysed.
 ).freeze,
       domain: "crm:E52_Time-Span".freeze,
-      label: "at some time within".freeze,
+      label: ["abrange no máximo".freeze, "at some time within".freeze, "couvre au plus".freeze, "irgendwann innerhalb von".freeze, "κάποτε εντός".freeze, "некоторое время в течение".freeze, "时段的数值不会超越".freeze],
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
     property :P82a_begin_of_the_begin,
       comment: %(This is defined as the first boundary of the property P82).freeze,
       domain: "crm:E52_Time-Span".freeze,
-      label: "begin of the begin".freeze,
+      label: ["Anfang des Anfangs".freeze, "begin of the begin".freeze, "começar do início".freeze, "début du début".freeze, "αρχή της αρχής".freeze, "начать с начала".freeze],
       range: "xsd:dateTime".freeze,
       subPropertyOf: "crm:P82_at_some_time_within".freeze,
       type: "rdf:Property".freeze
     property :P82b_end_of_the_end,
       comment: %(This is defined as the second boundary of the property P82).freeze,
       domain: "crm:E52_Time-Span".freeze,
-      label: "end of the end".freeze,
+      label: ["Ende vom Ende".freeze, "end of the end".freeze, "fim do fim".freeze, "fin de la fin".freeze, "τέλος του τέλους".freeze, "конец конец".freeze],
       range: "xsd:dateTime".freeze,
       subPropertyOf: "crm:P82_at_some_time_within".freeze,
       type: "rdf:Property".freeze
@@ -2484,12 +2484,12 @@ Since Time-Spans may not have precisely known temporal extents, the CRM supports
 It allows an E52 Time-Span to be associated with an E54 Dimension representing it’s minimum duration \(i.e. it’s inner boundary\) independent from the actual beginning and end.
 ).freeze,
       domain: "crm:E52_Time-Span".freeze,
-      label: "had at least duration".freeze,
+      label: ["a duré au moins".freeze, "durou no mínimo".freeze, "had at least duration".freeze, "hatte Mindestdauer".freeze, "είχε ελάχιστη διάρκεια".freeze, "имеет длительность по крайней мере больше чем".freeze, "时间最少持续了".freeze],
       range: "crm:E54_Dimension".freeze,
       type: "rdf:Property".freeze
     property :P83i_was_minimum_duration_of,
       domain: "crm:E54_Dimension".freeze,
-      label: "was minimum duration of".freeze,
+      label: ["a été la durée minimum de".freeze, "foi a duração mínima de".freeze, "war Mindestdauer von".freeze, "was minimum duration of".freeze, "είναι ελάχιστη διάρκεια του/της".freeze, "был минимальной длительностью для".freeze],
       range: "crm:E52_Time-Span".freeze,
       type: "rdf:Property".freeze
     property :P84_had_at_most_duration,
@@ -2497,12 +2497,12 @@ It allows an E52 Time-Span to be associated with an E54 Dimension representing i
 It allows an E52 Time-Span to be associated with an E54 Dimension representing it’s maximum duration \(i.e. it’s outer boundary\) independent from the actual beginning and end.
 ).freeze,
       domain: "crm:E52_Time-Span".freeze,
-      label: "had at most duration".freeze,
+      label: ["a duré au plus".freeze, "durou no máximo".freeze, "had at most duration".freeze, "hatte Höchstdauer".freeze, "είχε μέγιστη διάρκεια".freeze, "имеет длительность меньше чем".freeze, "时间最多持续了".freeze],
       range: "crm:E54_Dimension".freeze,
       type: "rdf:Property".freeze
     property :P84i_was_maximum_duration_of,
       domain: "crm:E54_Dimension".freeze,
-      label: ["".freeze, "was maximum duration of".freeze],
+      label: ["".freeze, "a été la durée maximum de".freeze, "foi a duração máxima de".freeze, "war längste Dauer von".freeze, "was maximum duration of".freeze, "είναι μέγιστη διάρκεια του/της".freeze, "был максимальной длительностью для".freeze],
       range: "crm:E52_Time-Span".freeze,
       type: "rdf:Property".freeze
     property :P86_falls_within,
@@ -2510,12 +2510,12 @@ It allows an E52 Time-Span to be associated with an E54 Dimension representing i
 This property supports the notion that a Time-Span’s temporal extent falls within the temporal extent of another Time-Span. It addresses temporal containment only, and no contextual link between the two instances of Time-Span is implied.
 ).freeze,
       domain: "crm:E52_Time-Span".freeze,
-      label: "falls within".freeze,
+      label: ["está contido em".freeze, "falls within".freeze, "fällt in".freeze, "s’insère dans".freeze, "περιέχεται σε".freeze, "содержится в".freeze, "时间上被涵盖於".freeze],
       range: "crm:E52_Time-Span".freeze,
       type: "rdf:Property".freeze
     property :P86i_contains,
       domain: "crm:E52_Time-Span".freeze,
-      label: "contains".freeze,
+      label: ["contains".freeze, "contém".freeze, "enthält".freeze, "inclut".freeze, "περιέχει".freeze, "содержит".freeze, "时间上涵盖了".freeze],
       range: "crm:E52_Time-Span".freeze,
       type: "rdf:Property".freeze
     property :P87_is_identified_by,
@@ -2523,13 +2523,13 @@ This property supports the notion that a Time-Span’s temporal extent falls wit
 Examples of Place Appellations used to identify Places include instances of E48 Place Name, addresses, E47 Spatial Coordinates etc.
 ).freeze,
       domain: "crm:E53_Place".freeze,
-      label: "is identified by".freeze,
+      label: ["est identifié par".freeze, "is identified by".freeze, "wird bezeichnet als".freeze, "é identificado por".freeze, "αναγνωρίζεται ως".freeze, "идентифицируется посредством".freeze, "有辨认码".freeze],
       range: "crm:E44_Place_Appellation".freeze,
       subPropertyOf: "crm:P1_is_identified_by".freeze,
       type: "rdf:Property".freeze
     property :P87i_identifies,
       domain: "crm:E44_Place_Appellation".freeze,
-      label: "identifies".freeze,
+      label: ["bezeichnet".freeze, "identifica".freeze, "identifie".freeze, "identifies".freeze, "είναι αναγνωριστικό".freeze, "идентифицирует".freeze, "被用来辨认".freeze],
       range: "crm:E53_Place".freeze,
       subPropertyOf: "crm:P1i_identifies".freeze,
       type: "rdf:Property".freeze
@@ -2538,12 +2538,12 @@ Examples of Place Appellations used to identify Places include instances of E48 
 It addresses spatial containment only, and does not imply any relationship between things or phenomena occupying these places.
 ).freeze,
       domain: "crm:E53_Place".freeze,
-      label: "falls within".freeze,
+      label: ["está contido em".freeze, "falls within".freeze, "fällt in".freeze, "s’insère dans".freeze, "περιέχεται σε".freeze, "содержится в".freeze, "空间上被包围於".freeze],
       range: "crm:E53_Place".freeze,
       type: "rdf:Property".freeze
     property :P89i_contains,
       domain: "crm:E53_Place".freeze,
-      label: "contains".freeze,
+      label: ["contains".freeze, "contém".freeze, "enthält".freeze, "inclut".freeze, "περιέχει".freeze, "содержит".freeze, "空间上包含了".freeze],
       range: "crm:E53_Place".freeze,
       type: "rdf:Property".freeze
     property :P8_took_place_on_or_within,
@@ -2553,42 +2553,42 @@ This property is in effect a special case of P7 took place at. It describes a pe
 For example, the French and German armistice of 22 June 1940 was signed in the same railway carriage as the armistice of 11 November 1918.
 ).freeze,
       domain: "crm:E4_Period".freeze,
-      label: "took place on or within".freeze,
+      label: ["a eu lieu sur ou dans".freeze, "fand statt auf oder innerhalb von ".freeze, "ocorreu em ou dentro".freeze, "took place on or within".freeze, "έλαβε χώρα σε ή εντός".freeze, "имел место на или в".freeze, "发生所在物件是".freeze],
       range: "crm:E18_Physical_Thing".freeze,
       type: "rdf:Property".freeze
     property :P8i_witnessed,
       domain: "crm:E18_Physical_Thing".freeze,
-      label: "witnessed".freeze,
+      label: ["a été témoin de".freeze, "bezeugte".freeze, "testemunhou".freeze, "witnessed".freeze, "υπήρξε τόπος του".freeze, "являлся местом для".freeze, "发生过".freeze],
       range: "crm:E4_Period".freeze,
       type: "rdf:Property".freeze
     property :P90_has_value,
       comment: %(This property allows an E54 Dimension to be approximated by an E60 Number primitive.).freeze,
       domain: "crm:E54_Dimension".freeze,
-      label: "has value".freeze,
+      label: ["a la valeur".freeze, "has value".freeze, "hat Wert".freeze, "tem valor".freeze, "έχει τιμή".freeze, "имеет значение".freeze, "有数值".freeze],
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
     property :P91_has_unit,
       comment: %(This property shows the type of unit an E54 Dimension was expressed in.).freeze,
       domain: "crm:E54_Dimension".freeze,
-      label: "has unit".freeze,
+      label: ["a pour unité".freeze, "has unit".freeze, "hat Einheit".freeze, "tem unidade".freeze, "έχει μονάδα μέτρησης".freeze, "имеет единицу".freeze, "有单位".freeze],
       range: "crm:E58_Measurement_Unit".freeze,
       type: "rdf:Property".freeze
     property :P91i_is_unit_of,
       domain: "crm:E58_Measurement_Unit".freeze,
-      label: "is unit of".freeze,
+      label: ["est l'unité de".freeze, "is unit of".freeze, "ist Einheit von".freeze, "é unidade de".freeze, "αποτελεί μονάδα μέτρησης του/της".freeze, "является единицей для".freeze, "被当做单位来表示".freeze],
       range: "crm:E54_Dimension".freeze,
       type: "rdf:Property".freeze
     property :P92_brought_into_existence,
       comment: %(This property allows an E63 Beginning of Existence event to be linked to the E77 Persistent Item brought into existence by it.
 It allows a “start” to be attached to any Persistent Item being documented i.e. E70 Thing, E72 Legal Object, E39 Actor, E41 Appellation, E51 Contact Point and E55 Type).freeze,
       domain: "crm:E63_Beginning_of_Existence".freeze,
-      label: "brought into existence".freeze,
+      label: ["a fait exister".freeze, "brachte in Existenz".freeze, "brought into existence".freeze, "trouxe à existência".freeze, "γέννησε".freeze, "создал".freeze, "开始了".freeze],
       range: "crm:E77_Persistent_Item".freeze,
       subPropertyOf: "crm:P12_occurred_in_the_presence_of".freeze,
       type: "rdf:Property".freeze
     property :P92i_was_brought_into_existence_by,
       domain: "crm:E77_Persistent_Item".freeze,
-      label: "was brought into existence by".freeze,
+      label: ["a commencé à exister du fait de".freeze, "passou a existir por".freeze, "was brought into existence by".freeze, "wurde in Existenz gebracht durch".freeze, "γεννήθηκε από".freeze, "был создан посредством".freeze, "被开始於".freeze],
       range: "crm:E63_Beginning_of_Existence".freeze,
       subPropertyOf: "crm:P12i_was_present_at".freeze,
       type: "rdf:Property".freeze
@@ -2598,13 +2598,13 @@ In the case of immaterial things, the E64 End of Existence is considered to take
 This allows an “end” to be attached to any Persistent Item being documented i.e. E70 Thing, E72 Legal Object, E39 Actor, E41 Appellation, E51 Contact Point and E55 Type. For many Persistent Items we know the maximum life-span and can infer, that they must have ended to exist. We assume in that case an End of Existence, which may be as unnoticeable as forgetting the secret knowledge by the last representative of some indigenous nation.
 ).freeze,
       domain: "crm:E64_End_of_Existence".freeze,
-      label: "took out of existence".freeze,
+      label: ["a fait cesser d’exister".freeze, "beendete die Existenz von".freeze, "cessou a existência de".freeze, "took out of existence".freeze, "αναίρεσε".freeze, "положил конец существованию".freeze, "结束了".freeze],
       range: "crm:E77_Persistent_Item".freeze,
       subPropertyOf: "crm:P12_occurred_in_the_presence_of".freeze,
       type: "rdf:Property".freeze
     property :P93i_was_taken_out_of_existence_by,
       domain: "crm:E77_Persistent_Item".freeze,
-      label: "was taken out of existence by".freeze,
+      label: ["a cessé d’exister du fait de".freeze, "deixou de existir".freeze, "was taken out of existence by".freeze, "wurde seiner Existenz beraubt durch".freeze, "αναιρέθηκε από".freeze, "прекратил существование посредством".freeze, "被结束於".freeze],
       range: "crm:E64_End_of_Existence".freeze,
       subPropertyOf: "crm:P12i_was_present_at".freeze,
       type: "rdf:Property".freeze
@@ -2613,26 +2613,26 @@ This allows an “end” to be attached to any Persistent Item being documented 
 It represents the act of conceiving the intellectual content of the E28 Conceptual Object. It does not represent the act of creating the first physical carrier of the E28 Conceptual Object. As an example, this is the composition of a poem, not its commitment to paper.
 ).freeze,
       domain: "crm:E65_Creation".freeze,
-      label: "has created".freeze,
+      label: ["a créé".freeze, "criou".freeze, "has created".freeze, "hat erschaffen".freeze, "δημιούργησε".freeze, "создал".freeze, "创造了".freeze],
       range: "crm:E28_Conceptual_Object".freeze,
       subPropertyOf: "crm:P92_brought_into_existence".freeze,
       type: "rdf:Property".freeze
     property :P94i_was_created_by,
       domain: "crm:E28_Conceptual_Object".freeze,
-      label: "was created by".freeze,
+      label: ["a été créé par".freeze, "foi criado por".freeze, "was created by".freeze, "wurde erschaffen durch".freeze, "δημιουργήθηκε από".freeze, "был создан посредством".freeze, "被创造於".freeze],
       range: "crm:E65_Creation".freeze,
       subPropertyOf: "crm:P92i_was_brought_into_existence_by".freeze,
       type: "rdf:Property".freeze
     property :P95_has_formed,
       comment: %(This property links the founding or E66 Formation for an E74 Group with the Group itself.).freeze,
       domain: "crm:E66_Formation".freeze,
-      label: "has formed".freeze,
+      label: ["a fondé".freeze, "formou".freeze, "has formed".freeze, "hat gebildet".freeze, "σχημάτισε".freeze, "сформировал".freeze, "组成了".freeze],
       range: "crm:E74_Group".freeze,
       subPropertyOf: "crm:P92_brought_into_existence".freeze,
       type: "rdf:Property".freeze
     property :P95i_was_formed_by,
       domain: "crm:E74_Group".freeze,
-      label: "was formed by".freeze,
+      label: ["a été fondé par".freeze, "foi formado por".freeze, "was formed by".freeze, "wurde gebildet von".freeze, "σχηματίστηκε από".freeze, "была сформирована посредством".freeze, "被组成於".freeze],
       range: "crm:E66_Formation".freeze,
       subPropertyOf: "crm:P92i_was_brought_into_existence_by".freeze,
       type: "rdf:Property".freeze
@@ -2642,13 +2642,13 @@ It represents the act of conceiving the intellectual content of the E28 Conceptu
 Note that biological fathers are not necessarily participants in the Birth \(see P97 from father \(was father for\)\). The Person being born is linked to the Birth with the property P98 brought into life \(was born\). This is not intended for use with general natural history material, only people. There is no explicit method for modelling conception and gestation except by using extensions. This is a sub-property of P11 had participant \(participated in\).
 ).freeze,
       domain: "crm:E67_Birth".freeze,
-      label: "by mother".freeze,
+      label: ["by mother".freeze, "de mère".freeze, "durch Mutter".freeze, "pela mãe".freeze, "είχε μητέρα".freeze, "посредством матери".freeze, "来自生母".freeze],
       range: "crm:E21_Person".freeze,
       subPropertyOf: "crm:P11_had_participant".freeze,
       type: "rdf:Property".freeze
     property :P96i_gave_birth,
       domain: "crm:E21_Person".freeze,
-      label: "gave birth".freeze,
+      label: ["a donné naissance à".freeze, "deu nascimento".freeze, "gave birth".freeze, "gebar".freeze, "ήταν μητέρα του/της".freeze, "дал рождение".freeze, "成为生母於".freeze],
       range: "crm:E67_Birth".freeze,
       subPropertyOf: "crm:P11i_participated_in".freeze,
       type: "rdf:Property".freeze
@@ -2659,12 +2659,12 @@ This is not intended for use with general natural history material, only people.
 A Birth event is normally \(but not always\) associated with one biological father.
 ).freeze,
       domain: "crm:E67_Birth".freeze,
-      label: "from father".freeze,
+      label: ["de père".freeze, "from father".freeze, "gab Vaterschaft".freeze, "pelo pai".freeze, "είχε πατέρα".freeze, "от отца".freeze, "来自父亲".freeze],
       range: "crm:E21_Person".freeze,
       type: "rdf:Property".freeze
     property :P97i_was_father_for,
       domain: "crm:E21_Person".freeze,
-      label: "was father for".freeze,
+      label: ["a été père dans".freeze, "foi pai para".freeze, "war Vater für".freeze, "was father for".freeze, "ήταν πατέρας του/της".freeze, "был отцом для".freeze, "成为生父於".freeze],
       range: "crm:E67_Birth".freeze,
       type: "rdf:Property".freeze
     property :P98_brought_into_life,
@@ -2672,26 +2672,26 @@ A Birth event is normally \(but not always\) associated with one biological fath
 Twins, triplets etc. are brought into life by the same Birth event. This is not intended for use with general Natural History material, only people. There is no explicit method for modelling conception and gestation except by using extensions.
 ).freeze,
       domain: "crm:E67_Birth".freeze,
-      label: "brought into life".freeze,
+      label: ["a donné vie à".freeze, "brachte zur Welt".freeze, "brought into life".freeze, "trouxe à vida".freeze, "έφερε στη ζωή".freeze, "породил".freeze, "诞生了".freeze],
       range: "crm:E21_Person".freeze,
       subPropertyOf: "crm:P92_brought_into_existence".freeze,
       type: "rdf:Property".freeze
     property :P98i_was_born,
       domain: "crm:E21_Person".freeze,
-      label: "was born".freeze,
+      label: ["est né".freeze, "veio à vida pelo".freeze, "was born".freeze, "wurde geboren durch".freeze, "γεννήθηκε".freeze, "был рожден".freeze, "诞生於".freeze],
       range: "crm:E67_Birth".freeze,
       subPropertyOf: "crm:P92i_was_brought_into_existence_by".freeze,
       type: "rdf:Property".freeze
     property :P99_dissolved,
       comment: %(This property links the disbanding or E68 Dissolution of an E74 Group to the Group itself.).freeze,
       domain: "crm:E68_Dissolution".freeze,
-      label: "dissolved".freeze,
+      label: ["a dissous".freeze, "dissolved".freeze, "dissolveu".freeze, "löste auf".freeze, "διέλυσε".freeze, "распустил".freeze, "解散了".freeze],
       range: "crm:E74_Group".freeze,
       subPropertyOf: ["crm:P11_had_participant".freeze, "crm:P93_took_out_of_existence".freeze],
       type: "rdf:Property".freeze
     property :P99i_was_dissolved_by,
       domain: "crm:E74_Group".freeze,
-      label: "was dissolved by".freeze,
+      label: ["a été dissous par".freeze, "foi dissolvido por".freeze, "was dissolved by".freeze, "wurde aufgelöst durch".freeze, "διαλύθηκε από".freeze, "был распущен посредством".freeze, "被解散於".freeze],
       range: "crm:E68_Dissolution".freeze,
       subPropertyOf: ["crm:P11i_participated_in".freeze, "crm:P93i_was_taken_out_of_existence_by".freeze],
       type: "rdf:Property".freeze
@@ -2699,13 +2699,13 @@ Twins, triplets etc. are brought into life by the same Birth event. This is not 
       comment: %(This property associates an instance of E4 Period with another instance of E4 Period that falls within the spacetime volumes occupied by the former and which is defined by phenomena that form part of or are refinements of the phenomena that define the former.
 ).freeze,
       domain: "crm:E4_Period".freeze,
-      label: "consists of".freeze,
+      label: ["consiste de".freeze, "consiste en".freeze, "consists of".freeze, "setzt sich zusammen aus".freeze, "αποτελείται από".freeze, "состоит из".freeze, "包含子时期".freeze],
       range: "crm:E4_Period".freeze,
       subPropertyOf: "crm:P10i_contains".freeze,
       type: "rdf:Property".freeze
     property :P9i_forms_part_of,
       domain: "crm:E4_Period".freeze,
-      label: "forms part of".freeze,
+      label: ["bildet Teil von".freeze, "fait partie de".freeze, "faz parte de".freeze, "forms part of".freeze, "αποτελεί μέρος του/της".freeze, "формирует часть".freeze, "附属於".freeze],
       range: "crm:E4_Period".freeze,
       subPropertyOf: "crm:P10_falls_within".freeze,
       type: "rdf:Property".freeze

@@ -10,9 +10,9 @@ module RDF::Vocab
   class CC < RDF::StrictVocabulary("http://creativecommons.org/ns#")
 
     # Ontology definition
-    ontology :"http://creativecommons.org/ns",
-      :"xhv:license" => %(https://creativecommons.org/licenses/by/4.0/).freeze,
-      :"xhv:stylesheet" => %(https://creativecommons.org/includes/bootstrap.min.css).freeze
+    ontology :"http://creativecommons.org/ns#",
+      "xhv:license": "https://creativecommons.org/licenses/by/4.0/".freeze,
+      "xhv:stylesheet": "https://creativecommons.org/includes/bootstrap.min.css".freeze
 
     # Class definitions
     term :Jurisdiction,
@@ -52,12 +52,10 @@ copyrightable work).freeze,
     # Property definitions
     property :attributionName,
       domain: "cc:Work".freeze,
-      label: "attributionName".freeze,
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
     property :attributionURL,
       domain: "cc:Work".freeze,
-      label: "attributionURL".freeze,
       range: "rdfs:Resource".freeze,
       type: "rdf:Property".freeze
     property :deprecatedOn,
@@ -72,19 +70,17 @@ copyrightable work).freeze,
       type: "rdf:Property".freeze
     property :legalcode,
       domain: "cc:License".freeze,
-      label: "legalcode".freeze,
       range: "rdfs:Resource".freeze,
       type: "rdf:Property".freeze
     property :license,
       domain: "cc:Work".freeze,
       label: "has\nlicense".freeze,
-      :"owl:sameAs" => %(xhv:license).freeze,
+      "owl:sameAs": "xhv:license".freeze,
       range: "cc:License".freeze,
       subPropertyOf: "dc:license".freeze,
       type: "rdf:Property".freeze
     property :morePermissions,
       domain: "cc:Work".freeze,
-      label: "morePermissions".freeze,
       range: "rdfs:Resource".freeze,
       subPropertyOf: "dc:relation".freeze,
       type: "rdf:Property".freeze
@@ -105,7 +101,6 @@ copyrightable work).freeze,
       type: "rdf:Property".freeze
     property :useGuidelines,
       domain: "cc:Work".freeze,
-      label: "useGuidelines".freeze,
       range: "rdfs:Resource".freeze,
       subPropertyOf: "dc:relation".freeze,
       type: "rdf:Property".freeze

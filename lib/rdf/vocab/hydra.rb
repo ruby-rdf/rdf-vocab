@@ -10,373 +10,373 @@ module RDF::Vocab
   class HYDRA < RDF::StrictVocabulary("http://www.w3.org/ns/hydra/core#")
 
     # Ontology definition
-    ontology :"http://www.w3.org/ns/hydra/core",
-      :"cc:attributionName" => %(Hydra W3C Community Group).freeze,
-      :"cc:attributionURL" => %(http://www.hydra-cg.com/).freeze,
-      :"cc:license" => %(http://creativecommons.org/licenses/by/4.0/).freeze,
+    ontology :"http://www.w3.org/ns/hydra/core#",
+      "cc:attributionName": "Hydra W3C Community Group".freeze,
+      "cc:attributionURL": "http://www.hydra-cg.com/".freeze,
+      "cc:license": "http://creativecommons.org/licenses/by/4.0/".freeze,
       comment: %(A lightweight vocabulary for hypermedia-driven Web APIs).freeze,
-      :"dc:description" => %(The Hydra Core Vocabulary is a lightweight vocabulary to create hypermedia-driven Web APIs. By specifying a number of concepts commonly used in Web APIs it enables the creation of generic API clients.).freeze,
-      :"dc:publisher" => %(Hydra W3C Community Group).freeze,
-      :"dc:rights" => %(Copyright © 2012-2014 the Contributors to the Hydra Core Vocabulary Specification).freeze,
-      :"http://purl.org/vocab/vann/preferredNamespacePrefix" => %(hydra).freeze,
+      "dc:description": "The Hydra Core Vocabulary is a lightweight vocabulary to create hypermedia-driven Web APIs. By specifying a number of concepts commonly used in Web APIs it enables the creation of generic API clients.".freeze,
+      "dc:publisher": "Hydra W3C Community Group".freeze,
+      "dc:rights": "Copyright © 2012-2014 the Contributors to the Hydra Core Vocabulary Specification".freeze,
+      "http://purl.org/vocab/vann/preferredNamespacePrefix": "hydra".freeze,
       label: "The Hydra Core Vocabulary".freeze,
       type: "owl:Ontology".freeze
 
     # Class definitions
     term :ApiDocumentation,
       comment: %(The Hydra API documentation class).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "ApiDocumentation".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       subClassOf: "hydra:Resource".freeze,
       type: "hydra:Class".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :Class,
       comment: %(The class of Hydra classes. Hydra classes and their instances are dereferenceable resources.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "Hydra Class".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       subClassOf: ["hydra:Resource".freeze, "rdfs:Class".freeze],
       type: ["hydra:Resource".freeze, "rdfs:Class".freeze],
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :Collection,
       comment: %(A collection holding references to a number of related resources.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "Collection".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       subClassOf: "hydra:Resource".freeze,
       type: "hydra:Class".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :Error,
       comment: %(A runtime error, used to report information beyond the returned status code.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "Error".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       subClassOf: "hydra:Status".freeze,
       type: "hydra:Class".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :IriTemplate,
       comment: %(The class of IRI templates.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "IRI Template".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       subClassOf: "hydra:Resource".freeze,
       type: "hydra:Class".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :IriTemplateMapping,
       comment: %(A mapping from an IRI template variable to a property.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "IriTemplateMapping".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       subClassOf: "hydra:Resource".freeze,
       type: "hydra:Class".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :Link,
       comment: %(The class of properties representing links.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "Link".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       subClassOf: ["hydra:Resource".freeze, "rdf:Property".freeze],
       type: "hydra:Class".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :Operation,
       comment: %(An operation.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "Operation".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       subClassOf: "hydra:Resource".freeze,
       type: "hydra:Class".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :PartialCollectionView,
       comment: %(A PartialCollectionView describes a partial view of a Collection. Multiple PartialCollectionViews can be connected with the the next/previous properties to allow a client to retrieve all members of the collection.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "PartialCollectionView".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       subClassOf: "hydra:Resource".freeze,
       type: "hydra:Class".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :Resource,
       comment: %(The class of dereferenceable resources.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "Hydra Resource".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       subClassOf: "rdfs:Resource".freeze,
       type: "hydra:Class".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :Status,
       comment: %(Additional information about a status code that might be returned.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "Status code description".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       subClassOf: "hydra:Resource".freeze,
       type: "hydra:Class".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :SupportedProperty,
       comment: %(A property known to be supported by a Hydra class.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "Supported Property".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       subClassOf: "hydra:Resource".freeze,
       type: "hydra:Class".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :TemplatedLink,
       comment: %(A templated link.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "Templated Link".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       subClassOf: ["hydra:Resource".freeze, "rdf:Property".freeze],
       type: "hydra:Class".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :VariableRepresentation,
       comment: %(A representation specifies how to serialize variable values into strings.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "VariableRepresentation".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       subClassOf: "hydra:Resource".freeze,
       type: "hydra:Class".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
 
     # Property definitions
     property :description,
       comment: %(A description.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "description".freeze,
       range: "xsd:string".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       subPropertyOf: "rdfs:comment".freeze,
       type: "rdf:Property".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     property :freetextQuery,
       comment: %(A property representing a freetext query.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "freetext query".freeze,
       range: "xsd:string".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "rdf:Property".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     property :mapping,
       comment: %(A variable-to-property mapping of the IRI template.).freeze,
       domain: "hydra:IriTemplate".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "mapping".freeze,
       range: "hydra:IriTemplateMapping".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "rdf:Property".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     property :method,
       comment: %(The HTTP method.).freeze,
       domain: "hydra:Operation".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "method".freeze,
       range: "xsd:string".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "rdf:Property".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     property :property,
       comment: %(A property).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "property".freeze,
       range: "rdf:Property".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "rdf:Property".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     property :readable,
       comment: %(True if the client can retrieve the property's value, false otherwise.).freeze,
       domain: "hydra:SupportedProperty".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "readable".freeze,
       range: "xsd:boolean".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "rdf:Property".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     property :required,
       comment: %(True if the property is required, false otherwise.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "required".freeze,
       range: "xsd:boolean".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "rdf:Property".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     property :statusCode,
       comment: %(The HTTP status code).freeze,
       domain: "hydra:Status".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "status code".freeze,
       range: "xsd:integer".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "rdf:Property".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     property :template,
       comment: %(A templated string with placeholders. The literal's datatype indicates the template syntax; if not specified, hydra:Rfc6570Template is assumed.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "template".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
-      :"rdfs:seeAlso" => %(hydra:Rfc6570Template).freeze,
+      "rdfs:seeAlso": "hydra:Rfc6570Template".freeze,
       type: "rdf:Property".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     property :title,
       comment: %(A title, often used along with a description.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "title".freeze,
       range: "xsd:string".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       subPropertyOf: "rdfs:label".freeze,
       type: "rdf:Property".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     property :totalItems,
       comment: %(The total number of items referenced by a collection.).freeze,
       domain: "hydra:Collection".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "total items".freeze,
       range: "xsd:integer".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "rdf:Property".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     property :variable,
       comment: %(An IRI template variable).freeze,
       domain: "hydra:IriTemplateMapping".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "variable".freeze,
       range: "xsd:string".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "rdf:Property".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     property :variableRepresentation,
       comment: %(The representation format to use when expanding the IRI template.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "variable representation".freeze,
       range: "hydra:VariableRepresentation".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "rdf:Property".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     property :writeable,
       comment: %(True if the client can change the property's value, false otherwise.).freeze,
       domain: "hydra:SupportedProperty".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "writeable".freeze,
       range: "xsd:boolean".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "rdf:Property".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
 
     # Datatype definitions
     term :Rfc6570Template,
       comment: %(An IRI template as defined by RFC6570.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "RFC6570 IRI template".freeze,
       range: "xsd:string".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
-      :"rdfs:seeAlso" => %(http://tools.ietf.org/html/rfc6570).freeze,
+      "rdfs:seeAlso": "http://tools.ietf.org/html/rfc6570".freeze,
       type: "rdfs:Datatype".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
 
     # Extra definitions
     term :BasicRepresentation,
       comment: %(A representation that serializes just the lexical form of a variable value, but omits language and type information.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "BasicRepresentation".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:VariableRepresentation".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :ExplicitRepresentation,
       comment: %(A representation that serializes a variable value including its language and type information and thus differentiating between IRIs and literals.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "ExplicitRepresentation".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:VariableRepresentation".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :apiDocumentation,
       comment: %(A link to the API documentation).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "apiDocumentation".freeze,
       range: "hydra:ApiDocumentation".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:Link".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :entrypoint,
       comment: %(A link to main entry point of the Web API).freeze,
       domain: "hydra:ApiDocumentation".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "entrypoint".freeze,
       range: "hydra:Resource".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:Link".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :expects,
       comment: %(The information expected by the Web API.).freeze,
       domain: "hydra:Operation".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "expects".freeze,
       range: "hydra:Class".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:Link".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :first,
       comment: %(The first resource of an interlinked set of resources.).freeze,
       domain: "hydra:Resource".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "first".freeze,
       range: "hydra:Resource".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:Link".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :last,
       comment: %(The last resource of an interlinked set of resources.).freeze,
       domain: "hydra:Resource".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "last".freeze,
       range: "hydra:Resource".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:Link".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :member,
       comment: %(A member of the collection).freeze,
       domain: "hydra:Collection".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "member".freeze,
       range: "hydra:Resource".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:Link".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :next,
       comment: %(The resource following the current instance in an interlinked set of resources.).freeze,
       domain: "hydra:Resource".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "next".freeze,
       range: "hydra:Resource".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:Link".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :operation,
       comment: %(An operation supported by the Hydra resource).freeze,
       domain: "hydra:Resource".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "operation".freeze,
       range: "hydra:Operation".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:Link".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :possibleStatus,
       comment: %(A status that might be returned by the Web API \(other statuses should be expected and properly handled as well\)).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "possible status".freeze,
       range: "hydra:Status".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:Link".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :previous,
       comment: %(The resource preceding the current instance in an interlinked set of resources.).freeze,
       domain: "hydra:Resource".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "previous".freeze,
       range: "hydra:Resource".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:Link".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :returns,
       comment: %(The information returned by the Web API on success).freeze,
       domain: "hydra:Operation".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "returns".freeze,
       range: "hydra:Class".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:Link".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :search,
       comment: %(A IRI template that can be used to query a collection.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "search".freeze,
       range: "hydra:IriTemplate".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:TemplatedLink".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :supportedClass,
       comment: %(A class known to be supported by the Web API).freeze,
       domain: "hydra:ApiDocumentation".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "supported classes".freeze,
       range: "hydra:Class".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:Link".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :supportedOperation,
       comment: %(An operation supported by instances of the specific Hydra class or the target of the Hydra link).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "supported operation".freeze,
       range: "hydra:Operation".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:Link".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :supportedProperty,
       comment: %(The properties known to be supported by a Hydra class).freeze,
       domain: "hydra:Class".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "supported properties".freeze,
       range: "hydra:SupportedProperty".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:Link".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
     term :view,
       comment: %(A specific view of a resource.).freeze,
       domain: "hydra:Resource".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "view".freeze,
       range: "hydra:Resource".freeze,
-      :"rdfs:isDefinedBy" => %(http://www.w3.org/ns/hydra/core).freeze,
       type: "hydra:Link".freeze,
-      :"vs:term_status" => %(testing).freeze
+      "vs:term_status": "testing".freeze
   end
 end

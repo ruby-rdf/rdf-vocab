@@ -10,8 +10,8 @@ module RDF::Vocab
   class MODS < RDF::StrictVocabulary("http://www.loc.gov/mods/rdf/v1#")
 
     # Ontology definition
-    ontology :"http://www.loc.gov/mods/rdf/v1",
-      :"owl:imports" => [%(dc11:).freeze, %(dcmitype:).freeze, %(foaf:).freeze, %(http://id.loc.gov/ontologies/ClassificationSchemes).freeze, %(http://id.loc.gov/ontologies/Identifiers).freeze, %(http://id.loc.gov/ontologies/ResourceTypes).freeze, %(http://id.loc.gov/ontologies/Roles).freeze, %(http://id.loc.gov/ontologies/TargetAudiences).freeze, %(http://purl.org/vocab/changeset/schema).freeze, %(http://purl.org/vocab/vann/).freeze, %(http://vocab.org/changeset/).freeze, %(http://www.loc.gov/mads/rdf/v1).freeze, %(http://www.loc.gov/standards/mads/rdf/v1.rdf).freeze, %(http://www.w3.org/2004/02/skos/core).freeze, %(http://www.w3.org/2008/05/skos-xl).freeze],
+    ontology :"http://www.loc.gov/mods/rdf/v1#",
+      "owl:imports": ["dc11:".freeze, "dcmitype:".freeze, "foaf:".freeze, "http://id.loc.gov/ontologies/ClassificationSchemes".freeze, "http://id.loc.gov/ontologies/Identifiers".freeze, "http://id.loc.gov/ontologies/ResourceTypes".freeze, "http://id.loc.gov/ontologies/Roles".freeze, "http://id.loc.gov/ontologies/TargetAudiences".freeze, "http://purl.org/vocab/changeset/schema".freeze, "http://purl.org/vocab/vann/".freeze, "http://vocab.org/changeset/".freeze, "http://www.loc.gov/mads/rdf/v1".freeze, "http://www.loc.gov/standards/mads/rdf/v1.rdf".freeze, "http://www.w3.org/2004/02/skos/core".freeze, "http://www.w3.org/2008/05/skos-xl".freeze],
       type: "owl:Ontology".freeze
 
     # Class definitions
@@ -42,8 +42,8 @@ module RDF::Vocab
       comment: %(
 The resource which is the subject of this description.
   ).freeze,
+      equivalentClass: "http://id.loc.gov/vocabulary/resourceTypes/Res".freeze,
       label: "MODS - A  MODS Resource".freeze,
-      :"owl:equivalentClass" => %(http://id.loc.gov/vocabulary/resourceTypes/Res).freeze,
       type: "owl:Class".freeze
     term :NoteGroup,
       comment: %(Aggregates a note with its type.  ).freeze,
@@ -101,8 +101,8 @@ The resource which is the subject of this description.
     property :classification,
       comment: %(A designation applied to the resource that indicates the subject by applying a formal system of coding and organizing resources according to subject areas.).freeze,
       domain: "mods:ModsResource".freeze,
+      equivalentProperty: "http://id.loc.gov/vocabulary/classSchemes/classification".freeze,
       label: "Classification".freeze,
-      :"owl:equivalentProperty" => %(http://id.loc.gov/vocabulary/classSchemes/classification).freeze,
       type: "owl:AnnotationProperty".freeze
     property :classificationGroup,
       comment: %(Used when classification scheme is not in controlled vocabulary. Bundles together the classification number with its scheme.).freeze,
@@ -237,8 +237,8 @@ The resource which is the subject of this description.
     property :identifier,
       comment: %(identifier is a property for which all terms in the "identifier" vocabulary become subproperties.  Thus for example 'identifer:isbn' is a subproperty saying in effect "has this ISBN" where 'isbn' is a term within that vocabulary. \(The prefix 'identifier:' is used to denote the namespace for the "identifier" vocabulary.).freeze,
       domain: "mods:ModsResource".freeze,
+      equivalentProperty: "identifiers:id".freeze,
       label: "Identifier".freeze,
-      :"owl:equivalentProperty" => %(identifiers:id).freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :identifierGroup,
@@ -632,8 +632,8 @@ The resource which is the subject of this description.
 
 The property 'relator:artist' relates the resource to an artist associated with the resource, represented as a mads name.).freeze,
       domain: "mods:ModsResource".freeze,
+      equivalentProperty: "marcrelators:role".freeze,
       label: "Role (unbound)".freeze,
-      :"owl:equivalentProperty" => %(marcrelators:role).freeze,
       type: "owl:ObjectProperty".freeze
     property :roleRelationship,
       comment: %(Binds a name to the role that the named entity played for the resource. ).freeze,
@@ -769,29 +769,22 @@ The property 'relator:artist' relates the resource to an artist associated with 
 
     # Extra definitions
     term :access,
-      label: "access".freeze,
       type: ["http://www.loc.gov/mods/rdf/ReformattingQuality".freeze, "owl:NamedIndividual".freeze]
     term :date,
       comment: %(An abstract property for which date properties in general are subproperties.).freeze,
       domain: "mods:ModsResource".freeze,
       label: "Date".freeze
     term :digitizedAnalog,
-      label: "digitizedAnalog".freeze,
       type: ["http://www.loc.gov/mods/rdf/DigitalOrigin".freeze, "owl:NamedIndividual".freeze]
     term :digitizedMicrofilm,
-      label: "digitizedMicrofilm".freeze,
       type: ["http://www.loc.gov/mods/rdf/DigitalOrigin".freeze, "owl:NamedIndividual".freeze]
     term :integratingResource,
-      label: "integratingResource".freeze,
       type: ["http://www.loc.gov/mods/rdf/Issuance".freeze, "owl:NamedIndividual".freeze]
     term :monographic,
-      label: "monographic".freeze,
       type: ["http://www.loc.gov/mods/rdf/Issuance".freeze, "owl:NamedIndividual".freeze]
     term :reformattedDigital,
-      label: "reformattedDigital".freeze,
       type: ["http://www.loc.gov/mods/rdf/DigitalOrigin".freeze, "owl:NamedIndividual".freeze]
     term :serial,
-      label: "serial".freeze,
       type: ["http://www.loc.gov/mods/rdf/Issuance".freeze, "owl:NamedIndividual".freeze]
   end
 end
