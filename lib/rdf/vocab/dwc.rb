@@ -5,9 +5,9 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://rs.tdwg.org/dwc/terms/>
-  #   class DWC < RDF::StrictVocabulary
+  #   class DWC < RDF::Vocabulary
   #   end
-  class DWC < RDF::StrictVocabulary("http://rs.tdwg.org/dwc/terms/")
+  class DWC < RDF::Vocabulary("http://rs.tdwg.org/dwc/terms/")
 
     # Ontology definition
     ontology :"http://rs.tdwg.org/dwc/terms/",

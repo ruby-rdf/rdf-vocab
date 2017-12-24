@@ -105,7 +105,8 @@ module RDF
       dwc: {
         uri: "http://rs.tdwg.org/dwc/terms/",
         source: "etc/dwcterms.rdf",
-        alt_source: "http://rs.tdwg.org/dwc/rdf/dwcterms.rdf"
+        alt_source: "http://rs.tdwg.org/dwc/rdf/dwcterms.rdf",
+        strict: false,
       },
       ebucore: {
         uri: "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
