@@ -10,16 +10,15 @@ module RDF::Vocab
   class ACL < RDF::StrictVocabulary("http://www.w3.org/ns/auth/acl#")
 
     # Ontology definition
-    ontology :"http://www.w3.org/ns/auth/acl",
+    ontology :"http://www.w3.org/ns/auth/acl#",
       comment: %(Defines the class Authorization and its essential properties,
     and also some classes of access such as read and write. ).freeze,
-      :"dc11:title" => %(Basic Access Control ontology).freeze
+      "dc11:title": "Basic Access Control ontology".freeze
 
     # Class definitions
     term :Access,
-      :"acl:label" => %(access).freeze,
+      "acl:label": "access".freeze,
       comment: %(Any kind of access to a resource. Don't use this, use R W and RW).freeze,
-      label: "Access".freeze,
       type: "rdfs:Class".freeze
     term :Append,
       comment: %(Append accesses are specific write access which only add information, and do not remove information.
@@ -54,6 +53,15 @@ and for example to develop a reputation\)
       label: "control".freeze,
       subClassOf: "acl:Access".freeze,
       type: "rdfs:Class".freeze
+    term :Origin,
+      comment: %(An Origin is basically a web site
+        \(Note WITHOUT the trailing slash after the domain name and port in its URI\)
+        and is the basis for controlling access to data by web apps
+        in the Same Origin Model of web security.
+        All scripts from the same origin are given the same right.).freeze,
+      label: "Origin".freeze,
+      "rdfs:seeAlso": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin".freeze,
+      type: "rdfs:Class".freeze
     term :Read,
       comment: %(The class of read operations).freeze,
       label: "read".freeze,
@@ -67,7 +75,7 @@ and for example to develop a reputation\)
     # Property definitions
     property :accessControl,
       comment: %(The Access Control file for this information resource.
-        This may of course be a virtual resorce implemented by the access control system.
+        This may of course be a virtual resource implemented by the access control system.
         Note also HTTP's header  Link:  foo.meta ;rel=meta can be used for this.).freeze,
       domain: "http://www.w3.org/2006/gen/ont#InformationResource".freeze,
       label: "access control".freeze,
@@ -126,6 +134,14 @@ and for example to develop a reputation\)
       domain: "acl:Authorization".freeze,
       label: "access mode".freeze,
       range: "rdfs:Class".freeze,
+      type: "rdf:Property".freeze
+    property :origin,
+      comment: %(A web application, identified by its Origin, such as
+        <https://scripts.example.com>, being given the right.).freeze,
+      domain: "acl:Authorization".freeze,
+      label: "origin".freeze,
+      range: "acl:Origin".freeze,
+      "rdfs:seeAlso": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin".freeze,
       type: "rdf:Property".freeze
     property :owner,
       comment: %(The person or other agent which owns this.

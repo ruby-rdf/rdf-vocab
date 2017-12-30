@@ -10,95 +10,173 @@ module RDF::Vocab
   class PremisEventType < RDF::StrictVocabulary("http://id.loc.gov/vocabulary/preservation/eventType/")
 
     # Ontology definition
-    ontology :"http://id.loc.gov/vocabulary/preservation/eventType",
-      comment: %(Event types are actions performed on digital objects within a preservation repository.).freeze,
+    ontology :"http://id.loc.gov/vocabulary/preservation/eventType/",
+      comment: %(                                       Event types are actions performed on digital objects within a                         preservation repository.                                   ).freeze,
       label: "Event Type".freeze,
-      :"mads:hasMADSSchemeMember" => %(premiseventtype:collection_PREMIS).freeze,
-      :"mads:hasTopMemberOfMADSScheme" => [%(premiseventtype:cap).freeze, %(premiseventtype:com).freeze, %(premiseventtype:cre).freeze, %(premiseventtype:dea).freeze, %(premiseventtype:dec).freeze, %(premiseventtype:del).freeze, %(premiseventtype:der).freeze, %(premiseventtype:dig).freeze, %(premiseventtype:fix).freeze, %(premiseventtype:ing).freeze, %(premiseventtype:mes).freeze, %(premiseventtype:mig).freeze, %(premiseventtype:nor).freeze, %(premiseventtype:rep).freeze, %(premiseventtype:val).freeze, %(premiseventtype:vir).freeze],
-      :"owl:sameAs" => %(http://id.loc.gov/vocabulary/preservationEvents).freeze,
-      :"skos:hasTopConcept" => [%(premiseventtype:cap).freeze, %(premiseventtype:com).freeze, %(premiseventtype:cre).freeze, %(premiseventtype:dea).freeze, %(premiseventtype:dec).freeze, %(premiseventtype:del).freeze, %(premiseventtype:der).freeze, %(premiseventtype:dig).freeze, %(premiseventtype:fix).freeze, %(premiseventtype:ing).freeze, %(premiseventtype:mes).freeze, %(premiseventtype:mig).freeze, %(premiseventtype:nor).freeze, %(premiseventtype:rep).freeze, %(premiseventtype:val).freeze, %(premiseventtype:vir).freeze],
+      "mads:adminMetadata": [term(
+          "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2010-06-01T00:00:00".freeze,
+          type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze,
+          "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "premiseventtype:dlc".freeze,
+          "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "new".freeze
+        ), term(
+          "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2012-06-01T00:00:00".freeze,
+          type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze,
+          "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "premiseventtype:dlc".freeze,
+          "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "modified".freeze
+        ), term(
+          "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2017-12-01T00:00:00".freeze,
+          type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze,
+          "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "premiseventtype:dlc".freeze,
+          "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "modified".freeze
+        )],
+      "mads:hasMADSSchemeMember": ["premiseventtype:acc".freeze, "premiseventtype:app".freeze, "premiseventtype:cap".freeze, "premiseventtype:com".freeze, "premiseventtype:cre".freeze, "premiseventtype:dea".freeze, "premiseventtype:dec".freeze, "premiseventtype:del".freeze, "premiseventtype:der".freeze, "premiseventtype:dig".freeze, "premiseventtype:dis".freeze, "premiseventtype:dsg".freeze, "premiseventtype:enc".freeze, "premiseventtype:ffa".freeze, "premiseventtype:fil".freeze, "premiseventtype:fix".freeze, "premiseventtype:for".freeze, "premiseventtype:ima".freeze, "premiseventtype:ine".freeze, "premiseventtype:ing".freeze, "premiseventtype:ins".freeze, "premiseventtype:ipc".freeze, "premiseventtype:ipm".freeze, "premiseventtype:ips".freeze, "premiseventtype:mee".freeze, "premiseventtype:mem".freeze, "premiseventtype:mes".freeze, "premiseventtype:mig".freeze, "premiseventtype:mod".freeze, "premiseventtype:nor".freeze, "premiseventtype:pac".freeze, "premiseventtype:poa".freeze, "premiseventtype:qua".freeze, "premiseventtype:rec".freeze, "premiseventtype:red".freeze, "premiseventtype:ref".freeze, "premiseventtype:rep".freeze, "premiseventtype:tra".freeze, "premiseventtype:unp".freeze, "premiseventtype:unq".freeze, "premiseventtype:val".freeze, "premiseventtype:vir".freeze],
+      "skos:changeNote": [term(
+          "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType".freeze,
+          "http://purl.org/vocab/changeset/schema#creatorName": "premiseventtype:dlc".freeze,
+          type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze,
+          "http://purl.org/vocab/changeset/schema#createdDate": "2010-06-01T00:00:00".freeze,
+          "http://purl.org/vocab/changeset/schema#changeReason": "new".freeze
+        ), term(
+          "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType".freeze,
+          "http://purl.org/vocab/changeset/schema#creatorName": "premiseventtype:dlc".freeze,
+          type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze,
+          "http://purl.org/vocab/changeset/schema#createdDate": "2012-06-01T00:00:00".freeze,
+          "http://purl.org/vocab/changeset/schema#changeReason": "modified".freeze
+        ), term(
+          "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType".freeze,
+          "http://purl.org/vocab/changeset/schema#creatorName": "premiseventtype:dlc".freeze,
+          type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze,
+          "http://purl.org/vocab/changeset/schema#createdDate": "2017-12-01T00:00:00".freeze,
+          "http://purl.org/vocab/changeset/schema#changeReason": "modified".freeze
+        )],
       type: ["mads:MADSScheme".freeze, "skos:ConceptScheme".freeze]
 
     # Extra definitions
+    term :acc,
+      "mads:authoritativeLabel": "accession".freeze,
+      type: "mads:Authority".freeze
+    term :app,
+      "mads:authoritativeLabel": "appraisal".freeze,
+      type: "mads:Authority".freeze
     term :cap,
-      label: "cap".freeze,
-      :"mads:authoritativeLabel" => %(capture).freeze,
-      :"skos:prefLabel" => %(capture).freeze,
-      type: ["mads:Authority".freeze, "skos:Concept".freeze]
+      "mads:authoritativeLabel": "capture".freeze,
+      type: "mads:Authority".freeze
     term :com,
-      label: "com".freeze,
-      :"mads:authoritativeLabel" => %(compression).freeze,
-      :"skos:prefLabel" => %(compression).freeze,
-      type: ["mads:Authority".freeze, "skos:Concept".freeze]
+      "mads:authoritativeLabel": "compression".freeze,
+      type: "mads:Authority".freeze
     term :cre,
-      label: "cre".freeze,
-      :"mads:authoritativeLabel" => %(creation).freeze,
-      :"skos:prefLabel" => %(creation).freeze,
-      type: ["mads:Authority".freeze, "skos:Concept".freeze]
+      "mads:authoritativeLabel": "creation".freeze,
+      type: "mads:Authority".freeze
     term :dea,
-      label: "dea".freeze,
-      :"mads:authoritativeLabel" => %(deaccession).freeze,
-      :"skos:prefLabel" => %(deaccession).freeze,
-      type: ["mads:Authority".freeze, "skos:Concept".freeze]
+      "mads:authoritativeLabel": "deaccession".freeze,
+      type: "mads:Authority".freeze
     term :dec,
-      label: "dec".freeze,
-      :"mads:authoritativeLabel" => %(decompression).freeze,
-      :"skos:prefLabel" => %(decompression).freeze,
-      type: ["mads:Authority".freeze, "skos:Concept".freeze]
+      "mads:authoritativeLabel": "decompression".freeze,
+      type: "mads:Authority".freeze
     term :del,
-      label: "del".freeze,
-      :"mads:authoritativeLabel" => %(deletion).freeze,
-      :"skos:prefLabel" => %(deletion).freeze,
-      type: ["mads:Authority".freeze, "skos:Concept".freeze]
+      "mads:authoritativeLabel": "deletion".freeze,
+      type: "mads:Authority".freeze
     term :der,
-      label: "der".freeze,
-      :"mads:authoritativeLabel" => %(decryption).freeze,
-      :"skos:prefLabel" => %(decryption).freeze,
-      type: ["mads:Authority".freeze, "skos:Concept".freeze]
+      "mads:authoritativeLabel": "decryption".freeze,
+      type: "mads:Authority".freeze
     term :dig,
-      label: "dig".freeze,
-      :"mads:authoritativeLabel" => %(digital signature validation).freeze,
-      :"skos:prefLabel" => %(digital signature validation).freeze,
-      type: ["mads:Authority".freeze, "skos:Concept".freeze]
+      "mads:authoritativeLabel": "digital signature validation".freeze,
+      type: "mads:Authority".freeze
+    term :dis,
+      "mads:authoritativeLabel": "dissemination".freeze,
+      type: "mads:Authority".freeze
+    term :dsg,
+      "mads:authoritativeLabel": "digital signature generation".freeze,
+      type: "mads:Authority".freeze
+    term :enc,
+      "mads:authoritativeLabel": "encryption".freeze,
+      type: "mads:Authority".freeze
+    term :ffa,
+      "mads:authoritativeLabel": "forensic feature analysis".freeze,
+      type: "mads:Authority".freeze
+    term :fil,
+      "mads:authoritativeLabel": "filename change".freeze,
+      type: "mads:Authority".freeze
     term :fix,
-      label: "fix".freeze,
-      :"mads:authoritativeLabel" => %(fixity check).freeze,
-      :"skos:prefLabel" => %(fixity check).freeze,
-      type: ["mads:Authority".freeze, "skos:Concept".freeze]
+      "mads:authoritativeLabel": "fixity check".freeze,
+      type: "mads:Authority".freeze
+    term :for,
+      "mads:authoritativeLabel": "format identification".freeze,
+      type: "mads:Authority".freeze
+    term :ima,
+      "mads:authoritativeLabel": "imaging".freeze,
+      type: "mads:Authority".freeze
+    term :ine,
+      "mads:authoritativeLabel": "ingestion end".freeze,
+      type: "mads:Authority".freeze
     term :ing,
-      label: "ing".freeze,
-      :"mads:authoritativeLabel" => %(ingestion).freeze,
-      :"skos:prefLabel" => %(ingestion).freeze,
-      type: ["mads:Authority".freeze, "skos:Concept".freeze]
+      "mads:authoritativeLabel": "ingestion".freeze,
+      type: "mads:Authority".freeze
+    term :ins,
+      "mads:authoritativeLabel": "ingestion start".freeze,
+      type: "mads:Authority".freeze
+    term :ipc,
+      "mads:authoritativeLabel": "information package creation".freeze,
+      type: "mads:Authority".freeze
+    term :ipm,
+      "mads:authoritativeLabel": "information package merging".freeze,
+      type: "mads:Authority".freeze
+    term :ips,
+      "mads:authoritativeLabel": "information package splitting".freeze,
+      type: "mads:Authority".freeze
+    term :mee,
+      "mads:authoritativeLabel": "metadata extraction".freeze,
+      type: "mads:Authority".freeze
+    term :mem,
+      "mads:authoritativeLabel": "metadata modification".freeze,
+      type: "mads:Authority".freeze
     term :mes,
-      label: "mes".freeze,
-      :"mads:authoritativeLabel" => %(message digest calculation).freeze,
-      :"skos:prefLabel" => %(message digest calculation).freeze,
-      type: ["mads:Authority".freeze, "skos:Concept".freeze]
+      "mads:authoritativeLabel": "message digest calculation".freeze,
+      type: "mads:Authority".freeze
     term :mig,
-      label: "mig".freeze,
-      :"mads:authoritativeLabel" => %(migration).freeze,
-      :"skos:prefLabel" => %(migration).freeze,
-      type: ["mads:Authority".freeze, "skos:Concept".freeze]
+      "mads:authoritativeLabel": "migration".freeze,
+      type: "mads:Authority".freeze
+    term :mod,
+      "mads:authoritativeLabel": "modification".freeze,
+      type: "mads:Authority".freeze
     term :nor,
-      label: "nor".freeze,
-      :"mads:authoritativeLabel" => %(normalization).freeze,
-      :"skos:prefLabel" => %(normalization).freeze,
-      type: ["mads:Authority".freeze, "skos:Concept".freeze]
+      "mads:authoritativeLabel": "normalization".freeze,
+      type: "mads:Authority".freeze
+    term :pac,
+      "mads:authoritativeLabel": "packing".freeze,
+      type: "mads:Authority".freeze
+    term :poa,
+      "mads:authoritativeLabel": "policy assignment".freeze,
+      type: "mads:Authority".freeze
+    term :qua,
+      "mads:authoritativeLabel": "quarantine".freeze,
+      type: "mads:Authority".freeze
+    term :rec,
+      "mads:authoritativeLabel": "recovery".freeze,
+      type: "mads:Authority".freeze
+    term :red,
+      "mads:authoritativeLabel": "redaction".freeze,
+      type: "mads:Authority".freeze
+    term :ref,
+      "mads:authoritativeLabel": "refreshment".freeze,
+      type: "mads:Authority".freeze
     term :rep,
-      label: "rep".freeze,
-      :"mads:authoritativeLabel" => %(replication).freeze,
-      :"skos:prefLabel" => %(replication).freeze,
-      type: ["mads:Authority".freeze, "skos:Concept".freeze]
+      "mads:authoritativeLabel": "replication".freeze,
+      type: "mads:Authority".freeze
+    term :tra,
+      "mads:authoritativeLabel": "transfer".freeze,
+      type: "mads:Authority".freeze
+    term :unp,
+      "mads:authoritativeLabel": "unpacking".freeze,
+      type: "mads:Authority".freeze
+    term :unq,
+      "mads:authoritativeLabel": "unquarantine".freeze,
+      type: "mads:Authority".freeze
     term :val,
-      label: "val".freeze,
-      :"mads:authoritativeLabel" => %(validation).freeze,
-      :"skos:prefLabel" => %(validation).freeze,
-      type: ["mads:Authority".freeze, "skos:Concept".freeze]
+      "mads:authoritativeLabel": "validation".freeze,
+      type: "mads:Authority".freeze
     term :vir,
-      label: "vir".freeze,
-      :"mads:authoritativeLabel" => %(virus check).freeze,
-      :"skos:prefLabel" => %(virus check).freeze,
-      type: ["mads:Authority".freeze, "skos:Concept".freeze]
+      "mads:authoritativeLabel": "virus check".freeze,
+      type: "mads:Authority".freeze
   end
 end

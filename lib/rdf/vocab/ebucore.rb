@@ -10,19 +10,21 @@ module RDF::Vocab
   class EBUCore < RDF::StrictVocabulary("http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#")
 
     # Ontology definition
-    ontology :"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore",
-      :"cc:licence" => %(http://creativecommons.org/licenses/by-sa/3.0/).freeze,
-      :"dc11:contributor" => [%(Adam Wead, Penn State University).freeze, %(Casey Davis, WGBH).freeze, %(Chuck McCallum, WGBH).freeze, %(Cliff Ingham, City of Bloomington).freeze, %(Dalia R. Levine, HBO).freeze, %(Drew Myers, WGBH).freeze, %(Glenn Clatworthy, PBS).freeze, %(Jack Brighton, WILL Public Media).freeze, %(Julie Hardesty, Indian University Library).freeze, %(Kara van Malssen, AV Preserve).freeze, %(Karen Cariani, WGBH).freeze, %(Laurence Cook, metaCirque).freeze, %(Michael J. Giarlo, Penn State University).freeze, %(Peggy Griesinger, George Mason University Libraries).freeze, %(Rebecca Fraimow, WGBH).freeze, %(Rebecca Guenther, Rebecca Guenther Consulting).freeze, %(Sadie Roosa, WGBH).freeze, %(Valerie J. Miller, PBS).freeze],
-      :"dc11:description" => [%(Guidelines: for the purpose of flexibility and interoperability with a wider range of implementations, some properties purposefully do not have a range and accept either a resource or a literal.  When a resource is used, it is recommended to reuse objects defined in the model \(e.g. pair hasEvent/Event or hasRole/Role\). Example 1: x hasRole 'actor'. Example 2: x hasRole _:Role_1 \(a reference to the Concept Id from a SKOS Role vocabulary defined in the ontology\).).freeze, %(Note to implementers: The EBUCore ontology is used by a variety of users with different needs. Several EBUCore properties have no range to allow different implementations using entities or literals. As an implementer, it is your choice to go for one or the other for each property to have consistent expectations when parsing individuals. EBUCore also provides different classes defined as subclasses of skos:Concept. You can use these classes as entities in range of several properties currently left without range. EBUCore is expressed in RDF in order to facilitate such modelling and flexibility. As a consequence, propoerties appear in the documentation as annotation properties.).freeze, %(The EBUCore has been designed to make users benefit from the flexibility of RDF to adapt the names of Classes and properties to their respective needs. This means users are welcome to add their own subclasses \(e.g. to define the most appropriate BusinessObjects or Resources or Agents\) and subproperties.).freeze, %(The development of the EBUCore ontology is a joint effort of the EBUCore and PBCore communities.).freeze],
-      :"dc11:rights" => %(Copyright 2015 EBU).freeze,
-      :"dc11:title" => %(EBUCore - the Dublin Core for media).freeze,
-      :"http://purl.org/vocab/vann/preferredNamespaceUri" => %(http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#).freeze,
-      :"http://spinrdf.org/spin#imports" => %(http://topbraid.org/spin/owlrl-all).freeze,
-      :"owl:imports" => %(http://www.w3.org/2004/02/skos/core).freeze,
-      :"owl:priorVersion" => %(http://www.ebu.ch/metadata/ontologies/ebucore/20150804/ebucore_2015_08_04.rdf).freeze,
-      :"owl:versionInfo" => [%(Add CreativeCommons subclass to Rights.).freeze, %(Add FIMS Classes: BMContent, BMEssence, BMTemplate, etc.).freeze, %(Add Identifier as a class.).freeze, %(Add event start and end times and dateTimes).freeze, %(Add for each class an ids, a name a description when missing).freeze, %(Add frameHeight and frameHeightUnit).freeze, %(Add hasAudioCodec and hasVideoCodec).freeze, %(Add hasAudioTrack and hasVideoTrack).freeze, %(Add numberOfAudioTracks and numberOfVideoTracks).freeze, %(Add resourceType property.).freeze, %(Add videoEncodingLevel and audioEncodingLevel properties as subproperties of encodingLevel).freeze, %(Add videoEncodingProfile and audioEncodingProfile properties as subproperties of encodingProfile).freeze, %(Added eventPeriod property.).freeze, %(Added locationCode and hasLocationPicture).freeze, %(Added social medias: agentFacebook, agentTwitter, agentInstagram).freeze, %(Added two Classes: Action and Emotion.).freeze, %(Align with CCDM properties touching EBUCore classes).freeze, %(Alignment with EBUCore schema: add missing rightsClearanceFlag).freeze, %(CORRECTION: change PublicationPlanning into PublicationPlan).freeze, %(Clean the definition of equivalent classes and properties from external vocabularies like foaf: and core:).freeze, %(Extend bitRate properties with audio and video bitRate properties).freeze, %(Harmonisation with EBU CCDM: businessObjectId, businessObjectType, editorialObjectId, editorialObjectType, storageId, storageType .).freeze, %(Improved the relations around the notions of "hasContributor", "Character", "Cast".).freeze, %(Introduce Person as a superClass of Contact and rename Contact properties accordingly).freeze, %(Introduce new classes Artefact/Props/Food...).freeze, %(Introduced new TextLine Class and associated properties for timed text, annotation, etc.).freeze, %(Manage addresses as locations).freeze, %(Sanity check on property domain and ranges and definitions or labels).freeze, %(Support of specific timecode drop frame).freeze, %(Version 1.8).freeze, %(seasonNumber, Episode and episodeNumber.).freeze],
+    ontology :"http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
+      "cc:licence": "http://creativecommons.org/licenses/by-sa/3.0/".freeze,
+      "dc11:contributor": ["Adam Wead, Penn State University".freeze, "Are Tverberg, TV2".freeze, "Casey Davis, WGBH".freeze, "Cedric Klein, Perfect Memory".freeze, "Christophe Debruyne, RIA".freeze, "Chuck McCallum, WGBH".freeze, "Cliff Ingham, City of Bloomington".freeze, "Dalia R. Levine, HBO".freeze, "Drew Myers, WGBH".freeze, "Glenn Clatworthy, PBS".freeze, "Guillaume Rachez, Perfect Memory".freeze, "Hugo Cordier, SetKeeper".freeze, "Hugo Manguinhas, Europeana".freeze, "Jack Brighton, WILL Public Media".freeze, "Julie Hardesty, Indian University Library".freeze, "Jürgen Grupp, SRG".freeze, "Kara van Malssen, AV Preserve".freeze, "Karen Cariani, WGBH".freeze, "Kim Viljanen, YLE".freeze, "Knut-Olav Hoven, NRK".freeze, "Laurence Cook, metaCirque".freeze, "Mark Guelbahar, IRT".freeze, "Matthieu Parmentier, francetelevisions".freeze, "Michael J. Giarlo, Penn State University".freeze, "Peggy Griesinger, George Mason University Libraries".freeze, "Rebecca Fraimow, WGBH".freeze, "Rebecca Guenther, Rebecca Guenther Consulting".freeze, "Robert Engels, NRK".freeze, "Sadie Roosa, WGBH".freeze, "Tormod Vaervagen, NRK".freeze, "Valentine Charles, Europeana".freeze, "Valerie J. Miller, PBS".freeze, "Vincent Dabouineau, francetelevisions".freeze],
+      "dc11:creator": "Jean Pierre Evain, EBU".freeze,
+      "dc11:description": ["Guidelines: for the purpose of flexibility and interoperability with a wider range of implementations, some properties purposefully do not have a range and accept either a resource or a literal.  When a resource is used, it is recommended to reuse objects defined in the model (e.g. pair hasEvent/Event or hasRole/Role). Example 1: x hasRole 'actor'. Example 2: x hasRole _:Role_1 (a reference to the Concept Id from a SKOS Role vocabulary defined in the ontology).".freeze, "Note to implementers: The EBUCore ontology is used by a variety of users with different needs. Several EBUCore properties have no range to allow different implementations using entities or literals. As an implementer, it is your choice to go for one or the other for each property to have consistent expectations when parsing individuals. EBUCore also provides different classes defined as subclasses of skos:Concept. You can use these classes as entities in range of several properties currently left without range. EBUCore is expressed in RDF in order to facilitate such modelling and flexibility. As a consequence, propoerties appear in the documentation as annotation properties.".freeze, "The EBUCore has been designed to make users benefit from the flexibility of RDF to adapt the names of Classes and properties to their respective needs. This means users are welcome to add their own subclasses (e.g. to define the most appropriate BusinessObjects or Resources or Agents) and subproperties.".freeze, "The development of the EBUCore ontology is a joint effort of the EBUCore and PBCore communities.".freeze],
+      "dc11:publisher": "European Broadcasting Union (EBU)".freeze,
+      "dc11:rights": "Copyright 2015 EBU".freeze,
+      "dc11:title": "EBUCore - the Dublin Core for media".freeze,
+      "http://purl.org/vocab/vann/preferredNamespaceUri": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#".freeze,
+      "http://spinrdf.org/spin#imports": "http://topbraid.org/spin/owlrl-all".freeze,
+      "owl:imports": "http://www.w3.org/2004/02/skos/core".freeze,
+      "owl:priorVersion": "http://www.ebu.ch/metadata/ontologies/ebucore/20150804/ebucore_2015_08_04.rdf".freeze,
+      "owl:versionInfo": ["Add CreativeCommons subclass to Rights.".freeze, "Add FIMS Classes: BMContent, BMEssence, BMTemplate, etc.".freeze, "Add Identifier as a class.".freeze, "Add event start and end times and dateTimes".freeze, "Add for each class an ids, a name a description when missing".freeze, "Add frameHeight and frameHeightUnit".freeze, "Add hasAudioCodec and hasVideoCodec".freeze, "Add hasAudioTrack and hasVideoTrack".freeze, "Add numberOfAudioTracks and numberOfVideoTracks".freeze, "Add resourceType property.".freeze, "Add videoEncodingLevel and audioEncodingLevel properties as subproperties of encodingLevel".freeze, "Add videoEncodingProfile and audioEncodingProfile properties as subproperties of encodingProfile".freeze, "Added eventPeriod property.".freeze, "Added locationCode and hasLocationPicture".freeze, "Added social medias: agentFacebook, agentTwitter, agentInstagram".freeze, "Added two Classes: Action and Emotion.".freeze, "Align with CCDM properties touching EBUCore classes".freeze, "Alignment with EBUCore schema: add missing rightsClearanceFlag".freeze, "CORRECTION: change PublicationPlanning into PublicationPlan".freeze, "Clean the definition of equivalent classes and properties from external vocabularies like foaf: and core:".freeze, "Extend bitRate properties with audio and video bitRate properties".freeze, "Harmonisation with EBU CCDM: businessObjectId, businessObjectType, editorialObjectId, editorialObjectType, storageId, storageType .".freeze, "Improved the relations around the notions of \"hasContributor\", \"Character\", \"Cast\".".freeze, "Introduce Person as a superClass of Contact and rename Contact properties accordingly".freeze, "Introduce new classes Artefact/Props/Food...".freeze, "Introduced new TextLine Class and associated properties for timed text, annotation, etc.".freeze, "Manage addresses as locations".freeze, "Sanity check on property domain and ranges and definitions or labels".freeze, "Support of specific timecode drop frame".freeze, "Version 1.8".freeze, "seasonNumber, Episode and episodeNumber.".freeze],
       type: "owl:Ontology".freeze,
-      :"vs:term_status" => %(stable).freeze
+      "vs:term_status": "stable".freeze
 
     # Class definitions
     term :AccessConditions,
@@ -186,7 +188,7 @@ module RDF::Vocab
             fragment / part and / or audio, video data tracks\). Other types of BusinessObjects may
             be defined as subclasses.).freeze,
       label: "Business Object".freeze,
-      :"owl:disjointWith" => %(ebucore:Resource).freeze,
+      "owl:disjointWith": "ebucore:Resource".freeze,
       subClassOf: "owl:Thing".freeze,
       type: "rdfs:Class".freeze
     term :Captioning,
@@ -414,8 +416,8 @@ module RDF::Vocab
       comment: [%(Additional types of event shall be defined as
             new sub-classes of event.).freeze, %(An event related to the media resource, e.g.
             depicted in the resource \(possibly fictional\), etc.).freeze],
+      equivalentClass: "http://www.bbc.co.uk/ontologies/coreconcepts/Event".freeze,
       label: "Event".freeze,
-      :"owl:equivalentClass" => %(http://www.bbc.co.uk/ontologies/coreconcepts/Event).freeze,
       subClassOf: "owl:Thing".freeze,
       type: "rdfs:Class".freeze
     term :ExploitationIssues,
@@ -573,8 +575,8 @@ module RDF::Vocab
             \(shooting location\), etc.).freeze, %(A type of location is defined as a sub-class of 
             location.).freeze, %(This is provided as free text in an annotation
             label or as an identifier pointing to a term in a classification scheme.).freeze],
+      equivalentClass: "http://www.bbc.co.uk/ontologies/coreconcepts/Place".freeze,
       label: "Location".freeze,
-      :"owl:equivalentClass" => %(http://www.bbc.co.uk/ontologies/coreconcepts/Place).freeze,
       subClassOf: "owl:Thing".freeze,
       type: "rdfs:Class".freeze
     term :Logo,
@@ -648,8 +650,8 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Organisation,
       comment: %(An organisation \(business, corporation, federation, etc.\) or moral agent \(gvernment body\).).freeze,
+      equivalentClass: ["foaf:Organization".freeze, "http://www.bbc.co.uk/ontologies/coreconcepts/Organisation".freeze],
       label: "Organisation".freeze,
-      :"owl:equivalentClass" => [%(foaf:Organization).freeze, %(http://www.bbc.co.uk/ontologies/coreconcepts/Organisation).freeze],
       subClassOf: "ebucore:Agent".freeze,
       type: "rdfs:Class".freeze
     term :OriginalLanguage,
@@ -677,8 +679,8 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Person,
       comment: %(To describe a Person.).freeze,
+      equivalentClass: ["foaf:Person".freeze, "http://www.bbc.co.uk/ontologies/coreconcepts/Person".freeze],
       label: "Person".freeze,
-      :"owl:equivalentClass" => [%(foaf:Person).freeze, %(http://www.bbc.co.uk/ontologies/coreconcepts/Person).freeze],
       subClassOf: "ebucore:Agent".freeze,
       type: "rdfs:Class".freeze
     term :Pictogram,
@@ -688,8 +690,8 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Picture,
       comment: %(A photography, a logo, a pictogram, etc.).freeze,
+      equivalentClass: "foaf:img".freeze,
       label: "Picture".freeze,
-      :"owl:equivalentClass" => %(foaf:img).freeze,
       subClassOf: "ebucore:Resource".freeze,
       type: "rdfs:Class".freeze
     term :PictureDisplayFormat,
@@ -704,8 +706,8 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Props,
       comment: %(To identify and describe Props used in productions \(e.g. vehicles, objects of various shapes and brand and purpose, etc.\).).freeze,
+      equivalentClass: "foaf:Agent".freeze,
       label: "Props".freeze,
-      :"owl:equivalentClass" => %(foaf:Agent).freeze,
       subClassOf: "ebucore:Artefact".freeze,
       type: "rdfs:Class".freeze
     term :PublicationChannel,
@@ -749,14 +751,14 @@ module RDF::Vocab
             Organisation.).freeze, %(This is provided as free text in an annotation
             label or as an identifier pointing to a term in a classification scheme.).freeze],
       label: "Rating".freeze,
-      :"owl:disjointWith" => [%(ebucore:Asset).freeze, %(ebucore:BusinessObject).freeze, %(ebucore:PublicationEvent).freeze, %(ebucore:Resource).freeze],
+      "owl:disjointWith": ["ebucore:Asset".freeze, "ebucore:BusinessObject".freeze, "ebucore:PublicationEvent".freeze, "ebucore:Resource".freeze],
       subClassOf: "owl:Thing".freeze,
       type: "rdfs:Class".freeze
     term :Resource,
       comment: %(A manifestation of a
             BusinessObject.).freeze,
       label: "Resource".freeze,
-      :"owl:disjointWith" => %(ebucore:BusinessObject).freeze,
+      "owl:disjointWith": "ebucore:BusinessObject".freeze,
       subClassOf: "owl:Thing".freeze,
       type: "rdfs:Class".freeze
     term :Rights,
@@ -768,7 +770,6 @@ module RDF::Vocab
     term :RightsClearance,
       comment: %(To signal that rights have been cleared \(or
             not\)).freeze,
-      label: "RightsClearance".freeze,
       subClassOf: "ebucore:Rights".freeze,
       type: "rdfs:Class".freeze
     term :Role,
@@ -887,8 +888,8 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :Team,
       comment: %(To define a Team.).freeze,
+      equivalentClass: "foaf:Group".freeze,
       label: "Team".freeze,
-      :"owl:equivalentClass" => %(foaf:Group).freeze,
       subClassOf: "ebucore:Agent".freeze,
       type: "rdfs:Class".freeze
     term :Template,
@@ -1084,6 +1085,10 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :adultContent,
       comment: %(A flag to signal adult content.).freeze,
+      domain: term(
+          unionOf: list("ebucore:EditorialObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "adult content".freeze,
       range: "xsd:boolean".freeze,
       type: "rdf:Property".freeze
@@ -1120,8 +1125,8 @@ module RDF::Vocab
       comment: %(To provide the email address of an agent
             \(Contact/person or organisation\).).freeze,
       domain: "ebucore:Agent".freeze,
+      equivalentProperty: "foaf:mbox".freeze,
       label: "Email".freeze,
-      :"owl:equivalentProperty" => %(foaf:mbox).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :agentFacebook,
@@ -1206,8 +1211,8 @@ module RDF::Vocab
       comment: %(To provide the address of the webpage of an
             Agent \(Contact/person or Organisation\).).freeze,
       domain: "ebucore:Agent".freeze,
+      equivalentProperty: "foaf:homepage".freeze,
       label: "Homepage".freeze,
-      :"owl:equivalentProperty" => %(foaf:homepage).freeze,
       range: "xsd:anyURI".freeze,
       type: "rdf:Property".freeze
     property :agentWikidata,
@@ -1223,8 +1228,8 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :alternativeTitle,
       comment: %(To provide an alternative title.).freeze,
+      equivalentProperty: "ma:alternativeTitle".freeze,
       label: "Alternative title".freeze,
-      :"owl:equivalentProperty" => %(ma:alternativeTitle).freeze,
       subPropertyOf: "dc:alternative".freeze,
       type: "rdf:Property".freeze
     property :appliesOutOf,
@@ -1343,6 +1348,10 @@ module RDF::Vocab
       comment: %(To provide the aspect ratio of a video frame or
             image. Several types of different aspect ration can apply to the same video image. If
             necessary, specialised aspect ratios can be defined as subproperties.).freeze,
+      domain: term(
+          unionOf: list("ebucore:MediaResource".freeze, "ebucore:Picture".freeze, "ebucore:VideoTrack".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Aspect ratio".freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
@@ -1417,8 +1426,8 @@ module RDF::Vocab
       comment: %(To provide the bitrate at which the
             MediaResource can be played in bits/second. Current bitrate if constant, and average bitrate if variable.).freeze,
       domain: "ebucore:MediaResource".freeze,
+      equivalentProperty: "ma:averageBitRate".freeze,
       label: "Bitrate".freeze,
-      :"owl:equivalentProperty" => %(ma:averageBitRate).freeze,
       range: "xsd:nonNegativeInteger".freeze,
       type: "rdf:Property".freeze
     property :bitRateMax,
@@ -1438,8 +1447,8 @@ module RDF::Vocab
       comment: %(To provide the overall bitrate at which the
             MediaResource can be played in bits/second. Current bitrate if constant, and average bitrate if variable.).freeze,
       domain: "ebucore:MediaResource".freeze,
+      equivalentProperty: "ma:averageBitRate".freeze,
       label: "Overall bitrate".freeze,
-      :"owl:equivalentProperty" => %(ma:averageBitRate).freeze,
       range: "xsd:nonNegativeInteger".freeze,
       type: "rdf:Property".freeze
     property :bookmark,
@@ -1485,8 +1494,12 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :clonedTo,
       comment: %(Identifies relationship between a digital instantiation of a resource and its direct copy, with no generational loss.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
+      inverseOf: "ebucore:isClonedFrom".freeze,
       label: "Cloned to".freeze,
-      :"owl:inverseOf" => %(ebucore:isClonedFrom).freeze,
       range: "ebucore:Resource".freeze,
       type: "rdf:Property".freeze
     property :codecFamily,
@@ -1561,26 +1574,42 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :dateArchived,
       comment: %(The date when the BusinessObject or Resource was archived.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
+      equivalentProperty: "ma:creationDate".freeze,
       label: "Archiving date".freeze,
-      :"owl:equivalentProperty" => %(ma:creationDate).freeze,
       subPropertyOf: "ebucore:date".freeze,
       type: "rdf:Property".freeze
     property :dateBroadcast,
       comment: %(The date when the Resource was first broadcast publicly on television or radio or via streaming.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
+      equivalentProperty: "ma:creationDate".freeze,
       label: "Broadcast date".freeze,
-      :"owl:equivalentProperty" => %(ma:creationDate).freeze,
       subPropertyOf: "ebucore:date".freeze,
       type: "rdf:Property".freeze
     property :dateCreated,
       comment: %(The date of creation of the Resource or BusinessObject.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
+      equivalentProperty: "ma:creationDate".freeze,
       label: "Creation date/time".freeze,
-      :"owl:equivalentProperty" => %(ma:creationDate).freeze,
       subPropertyOf: "ebucore:date".freeze,
       type: "rdf:Property".freeze
     property :dateDeleted,
       comment: %(The date when the BusinessObject or Resource was removed/deleted from institutional holdings.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
+      equivalentProperty: "ma:creationDate".freeze,
       label: "Deletion date".freeze,
-      :"owl:equivalentProperty" => %(ma:creationDate).freeze,
       subPropertyOf: "ebucore:date".freeze,
       type: "rdf:Property".freeze
     property :dateDigitised,
@@ -1592,88 +1621,104 @@ module RDF::Vocab
     property :dateDistributed,
       comment: %(The date when the Resource was first made available to the public for purchase, download, or online access.).freeze,
       domain: "ebucore:Resource".freeze,
+      equivalentProperty: "ma:creationDate".freeze,
       label: "Distribution date".freeze,
-      :"owl:equivalentProperty" => %(ma:creationDate).freeze,
       subPropertyOf: "ebucore:date".freeze,
       type: "rdf:Property".freeze
     property :dateIngested,
       comment: %(The date when the Resource was ingested/acquired in institutional holdings.).freeze,
       domain: "ebucore:Resource".freeze,
+      equivalentProperty: "ma:creationDate".freeze,
       label: "Ingest date".freeze,
-      :"owl:equivalentProperty" => %(ma:creationDate).freeze,
       subPropertyOf: "ebucore:date".freeze,
       type: "rdf:Property".freeze
     property :dateIssued,
       comment: %(To provide the date of release of the Resource.).freeze,
       domain: "ebucore:Resource".freeze,
+      equivalentProperty: "ma:releaseDate".freeze,
       label: "Publication date/time".freeze,
-      :"owl:equivalentProperty" => %(ma:releaseDate).freeze,
       subPropertyOf: "ebucore:date".freeze,
       type: "rdf:Property".freeze
     property :dateMigrated,
       comment: %(The date when the resource was copied or converted from an obsolete or endangered original format to a more updated format for preservation.).freeze,
       domain: "ebucore:Resource".freeze,
+      equivalentProperty: "ma:creationDate".freeze,
       label: "Migration date".freeze,
-      :"owl:equivalentProperty" => %(ma:creationDate).freeze,
       subPropertyOf: "ebucore:date".freeze,
       type: "rdf:Property".freeze
     property :dateModified,
       comment: %(To indicate the date at which the Resource or BusinessObject has been modified.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Modification date/time".freeze,
       subPropertyOf: "ebucore:date".freeze,
       type: "rdf:Property".freeze
     property :dateNormalized,
       comment: %(The date when the Resource was converted from its original format into a format pre-selected by the institution for preservation.).freeze,
       domain: "ebucore:Resource".freeze,
+      equivalentProperty: "ma:creationDate".freeze,
       label: "Normalization date".freeze,
-      :"owl:equivalentProperty" => %(ma:creationDate).freeze,
       subPropertyOf: "ebucore:date".freeze,
       type: "rdf:Property".freeze
     property :dateOfBirth,
       comment: %(The date when a Contact/Person is born.).freeze,
       domain: "ebucore:Person".freeze,
+      equivalentProperty: "http://www.bbc.co.uk/ontologies/coreconcepts/dateOfBirth".freeze,
       label: "Date of birth".freeze,
-      :"owl:equivalentProperty" => %(http://www.bbc.co.uk/ontologies/coreconcepts/dateOfBirth).freeze,
       range: "xsd:date".freeze,
       type: "rdf:Property".freeze
     property :dateOfDeath,
       comment: %(The date when a Contact/Person has passed away.).freeze,
       domain: "ebucore:Person".freeze,
+      equivalentProperty: "http://www.bbc.co.uk/ontologies/coreconcepts/dateOfDeath".freeze,
       label: "Date of death".freeze,
-      :"owl:equivalentProperty" => %(http://www.bbc.co.uk/ontologies/coreconcepts/dateOfDeath).freeze,
       range: "xsd:date".freeze,
       type: "rdf:Property".freeze
     property :dateReleased,
       comment: %(The date when the Resource was first made available to the public for purchase, download, or online access.).freeze,
       domain: "ebucore:Resource".freeze,
+      equivalentProperty: "ma:creationDate".freeze,
       label: "Release date".freeze,
-      :"owl:equivalentProperty" => %(ma:creationDate).freeze,
       subPropertyOf: "ebucore:date".freeze,
       type: "rdf:Property".freeze
     property :dateTransferred,
       comment: %(The date when the Resource or BusinessObject was moved from one digital or physical location to another.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
+      equivalentProperty: "ma:creationDate".freeze,
       label: "Transfer date".freeze,
-      :"owl:equivalentProperty" => %(ma:creationDate).freeze,
       subPropertyOf: "ebucore:date".freeze,
       type: "rdf:Property".freeze
     property :dateValidated,
       comment: %(The most recent date when the Resource was confirmed to be valid through manual or digital QC.).freeze,
       domain: "ebucore:Resource".freeze,
+      equivalentProperty: "ma:creationDate".freeze,
       label: "Validation date".freeze,
-      :"owl:equivalentProperty" => %(ma:creationDate).freeze,
       subPropertyOf: "ebucore:date".freeze,
       type: "rdf:Property".freeze
     property :datelicensed,
       comment: %(The date when the licence for the Resource begins.).freeze,
       domain: "ebucore:Resource".freeze,
+      equivalentProperty: "ma:creationDate".freeze,
       label: "Licence start date".freeze,
-      :"owl:equivalentProperty" => %(ma:creationDate).freeze,
       subPropertyOf: "ebucore:date".freeze,
       type: "rdf:Property".freeze
     property :derivedTo,
       comment: %(Identifies a content-based relationship between two resources.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
+      inverseOf: "ebucore:isDerivedFrom".freeze,
       label: "Derived to".freeze,
-      :"owl:inverseOf" => %(ebucore:isDerivedFrom).freeze,
+      range: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       type: "rdf:Property".freeze
     property :description,
       comment: %(This can be specialised by using sub-properties
@@ -1681,8 +1726,8 @@ module RDF::Vocab
             implemented as examples as e.g. 'summary' or
             'script'.).freeze,
       domain: "ebucore:BusinessObject".freeze,
+      equivalentProperty: "ma:description".freeze,
       label: "Description".freeze,
-      :"owl:equivalentProperty" => %(ma:description).freeze,
       range: "xsd:string".freeze,
       subPropertyOf: "dc11:description".freeze,
       type: "rdf:Property".freeze
@@ -1720,14 +1765,26 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :dubbedTo,
       comment: %(Identifies relationship between a physical instantiation of a resource and a duplicate physical copy that may involve generational loss.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
+      inverseOf: "ebucore:isDubbedFrom".freeze,
       label: "Dubbed to".freeze,
-      :"owl:inverseOf" => %(ebucore:isDubbedFrom).freeze,
+      range: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       type: "rdf:Property".freeze
     property :duration,
       comment: %(To provide information on the duration of a MediaResource. It corresponds to 'duration' in the
             Ontology for Media Resources.).freeze,
+      domain: term(
+          unionOf: list("ebucore:MediaResource".freeze, "ebucore:EditorialObject".freeze),
+          type: "owl:Class".freeze
+        ),
+      equivalentProperty: "ma:duration".freeze,
       label: "Duration".freeze,
-      :"owl:equivalentProperty" => %(ma:duration).freeze,
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
     property :durationNormalPlayTime,
@@ -1797,6 +1854,10 @@ module RDF::Vocab
     property :editUnit,
       comment: %(The edit unit is e.g. the inverse of the audio
             sample rate or video frame rate.).freeze,
+      domain: term(
+          unionOf: list("ebucore:MediaResource".freeze, "ebucore:EditorialObject".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Edit unit".freeze,
       range: "xsd:float".freeze,
       type: "rdf:Property".freeze
@@ -1899,8 +1960,8 @@ module RDF::Vocab
     property :endLicenceDate,
       comment: %(The date on which the licence for the resource expires.).freeze,
       domain: "ebucore:Resource".freeze,
+      equivalentProperty: "ma:creationDate".freeze,
       label: "Licence expiration date".freeze,
-      :"owl:equivalentProperty" => %(ma:creationDate).freeze,
       subPropertyOf: "ebucore:date".freeze,
       type: "rdf:Property".freeze
     property :endNormalPlayTime,
@@ -2023,8 +2084,8 @@ module RDF::Vocab
     property :familyName,
       comment: %(To provide a family name / last name.).freeze,
       domain: "ebucore:Person".freeze,
+      equivalentProperty: "foaf:familyName".freeze,
       label: "Family name".freeze,
-      :"owl:equivalentProperty" => %(foaf:familyName).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :fileSize,
@@ -2054,7 +2115,15 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :followsInSequence,
       comment: %(A link to a an BusinessObject or a Resource preceding the current BusinessObject or Resource in an ordered sequence.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Previous".freeze,
+      range: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       type: "rdf:Property".freeze
     property :foodCategory,
       comment: %(To define a category of Food/cuisine.).freeze,
@@ -2094,16 +2163,16 @@ module RDF::Vocab
     property :frameRate,
       comment: %(The frame rate of the video signal in frame per second.).freeze,
       domain: "ebucore:MediaResource".freeze,
+      equivalentProperty: "ma:frameRate".freeze,
       label: "Frame rate".freeze,
-      :"owl:equivalentProperty" => %(ma:frameRate).freeze,
       range: "xsd:double".freeze,
       type: "rdf:Property".freeze
     property :frameSizeUnit,
       comment: %(The unit used to express the frame width or
             height. The unit by default is 'pixel'.).freeze,
       domain: "ebucore:MediaResource".freeze,
+      equivalentProperty: "ma:frameSizeUnit".freeze,
       label: "Frame size unit".freeze,
-      :"owl:equivalentProperty" => %(ma:frameSizeUnit).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :frameWidth,
@@ -2119,8 +2188,8 @@ module RDF::Vocab
     property :framesPerSecond,
       comment: %(Identifies the frames per second at which a visual resource should be played back for human consumption.).freeze,
       domain: "ebucore:Resource".freeze,
+      equivalentProperty: "ma:frameRate".freeze,
       label: "Frames per second".freeze,
-      :"owl:equivalentProperty" => %(ma:frameRate).freeze,
       range: "xsd:double".freeze,
       subPropertyOf: "ebucore:playbackSpeed".freeze,
       type: "rdf:Property".freeze
@@ -2133,15 +2202,15 @@ module RDF::Vocab
     property :gender,
       comment: %(The gender of a person e.g. male or female.).freeze,
       domain: "ebucore:Person".freeze,
+      equivalentProperty: "http://www.bbc.co.uk/ontologies/coreconcepts/gender".freeze,
       label: "Gender".freeze,
-      :"owl:equivalentProperty" => %(http://www.bbc.co.uk/ontologies/coreconcepts/gender).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :givenName,
       comment: %(To provide one or more given names.).freeze,
       domain: "ebucore:Person".freeze,
+      equivalentProperty: "foaf:givenName".freeze,
       label: "Given name".freeze,
-      :"owl:equivalentProperty" => %(foaf:givenName).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :groupDescription,
@@ -2181,7 +2250,7 @@ module RDF::Vocab
       label: "Affiliation".freeze,
       type: "rdf:Property".freeze
     property :hasAgentRelatedPicture,
-      :"dc11:description" => %(A link/locator to a picture related to an Agent.).freeze,
+      "dc11:description": "A link/locator to a picture related to an Agent.".freeze,
       domain: "ebucore:Agent".freeze,
       label: "Related picture".freeze,
       range: "ebucore:Picture".freeze,
@@ -2189,6 +2258,10 @@ module RDF::Vocab
     property :hasAncillaryData,
       comment: %(A property to signal the presence of
             AncillaryData associated with the EditorialObject and / or MediaResource.).freeze,
+      domain: term(
+          unionOf: list("ebucore:EditorialObject".freeze, "ebucore:MediaResource".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Ancillary data".freeze,
       range: "ebucore:AncillaryData".freeze,
       type: "rdf:Property".freeze
@@ -2269,6 +2342,10 @@ module RDF::Vocab
     property :hasAudioDescription,
       comment: %(To signal the presence of
             AudioDescription.).freeze,
+      domain: term(
+          unionOf: list("ebucore:EditorialObject".freeze, "ebucore:MediaResource".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Audio description".freeze,
       range: "ebucore:AudioDescription".freeze,
       type: "rdf:Property".freeze
@@ -2286,6 +2363,10 @@ module RDF::Vocab
     property :hasCaptioning,
       comment: %(To signal the presence of
             Captioning.).freeze,
+      domain: term(
+          unionOf: list("ebucore:EditorialObject".freeze, "ebucore:MediaResource".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Captioning".freeze,
       range: "ebucore:Captioning".freeze,
       subPropertyOf: "ebucore:hasDataTrack".freeze,
@@ -2319,8 +2400,8 @@ module RDF::Vocab
     property :hasCodec,
       comment: [%(Range: a string or a Codec).freeze, %(To identify the Codec with which the Resource has been encoded.).freeze],
       domain: "ebucore:Resource".freeze,
+      equivalentProperty: "ma:hasCompression".freeze,
       label: "Encoder / Codec".freeze,
-      :"owl:equivalentProperty" => %(ma:hasCompression).freeze,
       type: "rdf:Property".freeze
     property :hasColourSpace,
       comment: %(To describe the colou space.).freeze,
@@ -2351,16 +2432,16 @@ module RDF::Vocab
     property :hasContributor,
       comment: %(To provide information on Contacts/persons or
             Organisations who have contributed to the BusinessObject and associated Resource.).freeze,
+      equivalentProperty: "ma:hasContributor".freeze,
       label: "Contributor".freeze,
-      :"owl:equivalentProperty" => %(ma:hasContributor).freeze,
       subPropertyOf: "dc11:contributor".freeze,
       type: "rdf:Property".freeze
     property :hasCoverage,
       comment: %(A property to identify the Events and or
             Locations, all real or fictional, covered by the 
             BusinessObject.).freeze,
+      equivalentProperty: "ma:hasRelatedLocation".freeze,
       label: "Coverage".freeze,
-      :"owl:equivalentProperty" => %(ma:hasRelatedLocation).freeze,
       subPropertyOf: "dc11:coverage".freeze,
       type: "rdf:Property".freeze
     property :hasCreationLocation,
@@ -2370,8 +2451,8 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :hasCreator,
       comment: %(To identify an Agent involved in the creation of the Resource or BusinessObject.).freeze,
+      equivalentProperty: "ma:hasCreator".freeze,
       label: "Creator".freeze,
-      :"owl:equivalentProperty" => %(ma:hasCreator).freeze,
       subPropertyOf: "dc11:creator".freeze,
       type: "rdf:Property".freeze
     property :hasCrewMember,
@@ -2443,8 +2524,12 @@ module RDF::Vocab
     property :hasEpisode,
       comment: %(To identify an episode of a
             Series or a Season.).freeze,
+      domain: term(
+          unionOf: list("ebucore:Season".freeze, "ebucore:Series".freeze),
+          type: "owl:Class".freeze
+        ),
+      inverseOf: "ebucore:isEpisodeOf".freeze,
       label: "Episode".freeze,
-      :"owl:inverseOf" => %(ebucore:isEpisodeOf).freeze,
       range: "ebucore:Programme".freeze,
       subPropertyOf: "ebucore:hasRelatedBusinessObject".freeze,
       type: "rdf:Property".freeze
@@ -2460,8 +2545,8 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :hasFormat,
       comment: %(A property to define the Format of a Resource.).freeze,
+      equivalentProperty: "ma:hasFormat".freeze,
       label: "Format".freeze,
-      :"owl:equivalentProperty" => %(ma:hasFormat).freeze,
       subPropertyOf: "dc11:format".freeze,
       type: "rdf:Property".freeze
     property :hasGeneration,
@@ -2472,8 +2557,8 @@ module RDF::Vocab
     property :hasGenre,
       comment: %(To define a Genre/category associated to the
             BusinesssObject.).freeze,
+      equivalentProperty: "ma:hasGenre".freeze,
       label: "Genre".freeze,
-      :"owl:equivalentProperty" => %(ma:hasGenre).freeze,
       subPropertyOf: "ebucore:hasType".freeze,
       type: "rdf:Property".freeze
     property :hasIdPicture,
@@ -2484,6 +2569,10 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :hasIdentifier,
       comment: %(To provide an alternative Identifier.).freeze,
+      domain: term(
+          unionOf: list("ebucore:Resource".freeze, "ebucore:BusinessObject".freeze),
+          type: "owl:Class".freeze
+        ),
       label: ["Identifier".freeze, "Range: Identifier or string or anyURI".freeze],
       type: "rdf:Property".freeze
     property :hasIdentifierType,
@@ -2512,8 +2601,8 @@ module RDF::Vocab
       comment: [%(Range: keyword or string).freeze, %(To associate a concept, descriptive phrase or
             Keyword that specifies the topic of the BusinessObject or Annotation.).freeze],
       domain: "ebucore:EditorialObject".freeze,
+      equivalentProperty: "ma:hasKeyword".freeze,
       label: "Keyword".freeze,
-      :"owl:equivalentProperty" => %(ma:hasKeyword).freeze,
       type: "rdf:Property".freeze
     property :hasLanguage,
       comment: %(To associate a Language to a Resource or
@@ -2523,8 +2612,12 @@ module RDF::Vocab
             Fragment / Track levels at which the usage is being defined. Best practice recommends to
             use to best possible level of granularity fo describe the usage of language within a
             MediaResource including at Fragment and Track levels.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
+      equivalentProperty: "ma:hasLanguage".freeze,
       label: "Language".freeze,
-      :"owl:equivalentProperty" => %(ma:hasLanguage).freeze,
       subPropertyOf: "dc11:language".freeze,
       type: "rdf:Property".freeze
     property :hasLocationPicture,
@@ -2555,9 +2648,9 @@ module RDF::Vocab
       comment: %(To define relation to MediaFragments
             withiin a MediaResource.).freeze,
       domain: "ebucore:MediaResource".freeze,
+      equivalentProperty: "ma:hasFragment".freeze,
+      inverseOf: "ebucore:isMediaFragmentOf".freeze,
       label: "Fragment".freeze,
-      :"owl:equivalentProperty" => %(ma:hasFragment).freeze,
-      :"owl:inverseOf" => %(ebucore:isMediaFragmentOf).freeze,
       range: "ebucore:MediaFragment".freeze,
       subPropertyOf: "ebucore:hasRelatedResource".freeze,
       type: "rdf:Property".freeze
@@ -2631,14 +2724,14 @@ module RDF::Vocab
     property :hasPlaceOfBirth,
       comment: [%(Range: Location or string).freeze, %(The place where a person is born.).freeze],
       domain: "ebucore:Person".freeze,
+      equivalentProperty: "http://www.bbc.co.uk/ontologies/coreconcepts/placeOfBirth".freeze,
       label: "Place of birth".freeze,
-      :"owl:equivalentProperty" => %(http://www.bbc.co.uk/ontologies/coreconcepts/placeOfBirth).freeze,
       type: "rdf:Property".freeze
     property :hasPlaceOfDeath,
       comment: [%(Range: a Location or a string).freeze, %(The place where a person has passed away.).freeze],
       domain: "ebucore:Person".freeze,
+      equivalentProperty: "http://www.bbc.co.uk/ontologies/coreconcepts/placeOfDeath".freeze,
       label: "Place of death".freeze,
-      :"owl:equivalentProperty" => %(http://www.bbc.co.uk/ontologies/coreconcepts/placeOfDeath).freeze,
       type: "rdf:Property".freeze
     property :hasProductionLocation,
       comment: [%(Range: a location or string).freeze, %(To identify the Location of a production).freeze],
@@ -2648,11 +2741,19 @@ module RDF::Vocab
     property :hasPublicationEvent,
       comment: %(To associate PublicationEvents with
             PublicationChannels or as elements of a PublicationHistory or PublicationPlanning.).freeze,
+      domain: term(
+          unionOf: list("ebucore:PublicationChannel".freeze, "ebucore:PublicationHistory".freeze, "ebucore:PublicationPlan".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Publication event".freeze,
       range: "ebucore:PublicationEvent".freeze,
       type: "rdf:Property".freeze
     property :hasPublicationHistory,
       comment: %(To provide the history of publication of an EditorailObject or MediaResource.).freeze,
+      domain: term(
+          unionOf: list("ebucore:EditorialObject".freeze, "ebucore:MediaResource".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Publication history".freeze,
       range: "ebucore:PublicationHistory".freeze,
       type: "rdf:Property".freeze
@@ -2668,15 +2769,19 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :hasPublisher,
       comment: %(To identify an Agent involved in the publication of the Resource or BusinessObject.).freeze,
+      equivalentProperty: "ma:hasPublisher".freeze,
       label: "Publisher".freeze,
-      :"owl:equivalentProperty" => %(ma:hasPublisher).freeze,
       subPropertyOf: "dc11:publisher".freeze,
       type: "rdf:Property".freeze
     property :hasRating,
       comment: [%(Range: a string or a Rating.).freeze, %(To identify the presence of Rating attributed
             to a Resource or BusinessObject.).freeze],
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
+      equivalentProperty: "ma:hasRating".freeze,
       label: "Rating".freeze,
-      :"owl:equivalentProperty" => %(ma:hasRating).freeze,
       type: "rdf:Property".freeze
     property :hasRatingSource,
       comment: [%(Range: a string or an Agent.).freeze, %(To identify an Agent \(Contact/person or
@@ -2686,6 +2791,10 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :hasRelatedArtefact,
       comment: %(To identify and Artefact related to EditorialObject or a resource.).freeze,
+      domain: term(
+          unionOf: list("ebucore:EditorialObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Related artefact".freeze,
       range: "ebucore:Artefact".freeze,
       type: "rdf:Property".freeze
@@ -2741,8 +2850,8 @@ module RDF::Vocab
             Locations, all real or fictional, covered by the 
             BusinessObject.).freeze,
       domain: "ebucore:BusinessObject".freeze,
+      equivalentProperty: "ma:hasRelatedLocation".freeze,
       label: "Location".freeze,
-      :"owl:equivalentProperty" => %(ma:hasRelatedLocation).freeze,
       range: "ebucore:Location".freeze,
       subPropertyOf: "ebucore:hasCoverage".freeze,
       type: "rdf:Property".freeze
@@ -2756,8 +2865,8 @@ module RDF::Vocab
     property :hasRelatedPicture,
       comment: %(To associate a Picture with a BusinessObject or a Resource.).freeze,
       domain: "ebucore:Resource".freeze,
+      equivalentProperty: "ma:hasRelatedImage".freeze,
       label: "Picture".freeze,
-      :"owl:equivalentProperty" => %(ma:hasRelatedImage).freeze,
       range: "ebucore:Picture".freeze,
       subPropertyOf: "ebucore:hasRelatedResource".freeze,
       type: "rdf:Property".freeze
@@ -2769,8 +2878,8 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :hasRelatedResource,
       comment: %(To identify a Resource associated with an Asset or a BusinessObject or a PublicationEvent or another Resource.).freeze,
+      equivalentProperty: "ma:hasRelatedResource".freeze,
       label: "Related resource".freeze,
-      :"owl:equivalentProperty" => %(ma:hasRelatedResource).freeze,
       type: "rdf:Property".freeze
     property :hasRelatedService,
       comment: %(To identify associated Services.).freeze,
@@ -2803,15 +2912,23 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :hasSeason,
       comment: %(The Season of a Series.).freeze,
+      domain: term(
+          unionOf: list("ebucore:Series".freeze, "ebucore:Brand".freeze),
+          type: "owl:Class".freeze
+        ),
+      inverseOf: "ebucore:isSeasonOf".freeze,
       label: "Season".freeze,
-      :"owl:inverseOf" => %(ebucore:isSeasonOf).freeze,
       range: "ebucore:Season".freeze,
       subPropertyOf: "ebucore:hasRelatedBusinessObject".freeze,
       type: "rdf:Property".freeze
     property :hasSeries,
       comment: %(A Series.).freeze,
+      domain: term(
+          unionOf: list("ebucore:Brand".freeze, "ebucore:Season".freeze),
+          type: "owl:Class".freeze
+        ),
+      inverseOf: "ebucore:isSeasonOf".freeze,
       label: "Series".freeze,
-      :"owl:inverseOf" => %(ebucore:isSeasonOf).freeze,
       range: "ebucore:Series".freeze,
       subPropertyOf: "ebucore:hasRelatedBusinessObject".freeze,
       type: "rdf:Property".freeze
@@ -2828,8 +2945,12 @@ module RDF::Vocab
     property :hasSigning,
       comment: [%(A locator/URI to a resource or a Signing resource.).freeze, %(To identify the presence of Signing associated
             to the BusinessObject/Resource.).freeze],
+      domain: term(
+          unionOf: list("ebucore:EditorialObject".freeze, "ebucore:MediaResource".freeze),
+          type: "owl:Class".freeze
+        ),
+      equivalentProperty: "ma:hasSigning".freeze,
       label: "Accessibility - signing".freeze,
-      :"owl:equivalentProperty" => %(ma:hasSigning).freeze,
       range: "ebucore:Signing".freeze,
       subPropertyOf: "ebucore:hasVideoTrack".freeze,
       type: "rdf:Property".freeze
@@ -2841,8 +2962,8 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :hasSource,
       comment: %(To identify a Resource as the source of another Resource.).freeze,
+      equivalentProperty: "ma:hasSource".freeze,
       label: "Source".freeze,
-      :"owl:equivalentProperty" => %(ma:hasSource).freeze,
       range: "ebucore:Resource".freeze,
       subPropertyOf: "dc11:source".freeze,
       type: "rdf:Property".freeze
@@ -2883,8 +3004,12 @@ module RDF::Vocab
     property :hasSubtitling,
       comment: [%(A locator to a resource or a Signing resource.).freeze, %(To signal the presence of Subtitling associated
             with the EditorialObject or MediaResource.).freeze],
+      domain: term(
+          unionOf: list("ebucore:EditorialObject".freeze, "ebucore:MediaResource".freeze),
+          type: "owl:Class".freeze
+        ),
+      equivalentProperty: "ma:hasSubtitling".freeze,
       label: "Subtitling".freeze,
-      :"owl:equivalentProperty" => %(ma:hasSubtitling).freeze,
       range: "ebucore:Subtitling".freeze,
       subPropertyOf: "ebucore:hasDataTrack".freeze,
       type: "rdf:Property".freeze
@@ -2897,8 +3022,8 @@ module RDF::Vocab
       comment: %(To associate a TargetAudience \(e.g. for
             parental guiddance or targeting a particular social group\) with a
             BusinessObject/Resource.).freeze,
+      equivalentProperty: "ma:hasTargetAudience".freeze,
       label: "Target audience".freeze,
-      :"owl:equivalentProperty" => %(ma:hasTargetAudience).freeze,
       subPropertyOf: "ebucore:hasType".freeze,
       type: "rdf:Property".freeze
     property :hasTeamMember,
@@ -2929,8 +3054,8 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :hasTimecodeTrack,
       comment: %(To identify a timecode track with a MediaResource.).freeze,
+      equivalentProperty: "ma:hasTrack".freeze,
       label: "Timecode track".freeze,
-      :"owl:equivalentProperty" => %(ma:hasTrack).freeze,
       range: "ebucore:TimecodeTrack".freeze,
       subPropertyOf: "ebucore:hasTrack".freeze,
       type: "rdf:Property".freeze
@@ -2954,8 +3079,8 @@ module RDF::Vocab
     property :hasTrack,
       comment: %(To associate audio/data/video tracks with a MediaResource.).freeze,
       domain: "ebucore:MediaResource".freeze,
+      equivalentProperty: "ma:hasTrack".freeze,
       label: "Track".freeze,
-      :"owl:equivalentProperty" => %(ma:hasTrack).freeze,
       range: "ebucore:Track".freeze,
       subPropertyOf: "ebucore:hasRelatedResource".freeze,
       type: "rdf:Property".freeze
@@ -2966,8 +3091,16 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :hasVersion,
       comment: %(To identify another version of an Asset, BusinessObject or Resource.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
+      inverseOf: "ebucore:isVersionOf".freeze,
       label: "Version".freeze,
-      :"owl:inverseOf" => %(ebucore:isVersionOf).freeze,
+      range: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       type: "rdf:Property".freeze
     property :hasVideoCodec,
       label: "has video codec".freeze,
@@ -2997,8 +3130,8 @@ module RDF::Vocab
             expressed as a number of lines or the height of a picture/image expressed in millimeters
             or else.).freeze,
       domain: "ebucore:Resource".freeze,
+      equivalentProperty: "ma:frameHeight".freeze,
       label: "Height".freeze,
-      :"owl:equivalentProperty" => %(ma:frameHeight).freeze,
       range: "xsd:integer".freeze,
       type: "rdf:Property".freeze
     property :heightUnit,
@@ -3033,8 +3166,8 @@ module RDF::Vocab
     property :inchesPerSecond,
       comment: %(Identifies the inches per second at which an analog audio tape should be played back for human consumption.).freeze,
       domain: "ebucore:Resource".freeze,
+      equivalentProperty: "ma:frameRate".freeze,
       label: "Inches per second".freeze,
-      :"owl:equivalentProperty" => %(ma:frameRate).freeze,
       range: "xsd:double".freeze,
       subPropertyOf: "ebucore:playbackSpeed".freeze,
       type: "rdf:Property".freeze
@@ -3054,8 +3187,8 @@ module RDF::Vocab
     property :isBrand,
       comment: %(To identify a Brand.).freeze,
       domain: "ebucore:EditorialObject".freeze,
+      inverseOf: "ebucore:hasEpisode".freeze,
       label: "Brand".freeze,
-      :"owl:inverseOf" => %(ebucore:hasEpisode).freeze,
       range: "ebucore:Brand".freeze,
       subPropertyOf: "ebucore:hasRelatedBusinessObject".freeze,
       type: "rdf:Property".freeze
@@ -3066,8 +3199,16 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :isClonedFrom,
       comment: %(Identifies relationship between a digital instantiation of a resource and its direct copy, with no generational loss.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
+      inverseOf: "ebucore:clonedTo".freeze,
       label: "Cloned from".freeze,
-      :"owl:inverseOf" => %(ebucore:clonedTo).freeze,
+      range: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       type: "rdf:Property".freeze
     property :isComposedOf,
       comment: %(To identify mediaResources used to compose an Essence.).freeze,
@@ -3079,27 +3220,39 @@ module RDF::Vocab
       comment: [%(Range: a link to Rights or open text \(string\).).freeze, %(The Rights or policy applicable to the
             BusinessObject, Asset, Resource or PublicationEvent.).freeze],
       domain: "ebucore:Asset".freeze,
+      equivalentProperty: ["ma:hasPermissions".freeze, "ma:hasPolicy".freeze],
       label: "Rights".freeze,
-      :"owl:equivalentProperty" => [%(ma:hasPermissions).freeze, %(ma:hasPolicy).freeze],
       subPropertyOf: "dc11:rights".freeze,
       type: "rdf:Property".freeze
     property :isDerivedFrom,
       comment: %(Identifies a content-based relationship between two resources.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
+      inverseOf: "ebucore:derivedTo".freeze,
       label: "Derived from".freeze,
-      :"owl:inverseOf" => %(ebucore:derivedTo).freeze,
+      range: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       type: "rdf:Property".freeze
     property :isDubbedFrom,
       comment: %(Identifies relationship between a physical instantiation of a resource and a duplicate physical copy that may involve generational loss.).freeze,
       domain: "ebucore:Resource".freeze,
+      inverseOf: "ebucore:dubbedTo".freeze,
       label: "Dubbed from".freeze,
-      :"owl:inverseOf" => %(ebucore:dubbedTo).freeze,
       range: "ebucore:Resource".freeze,
       type: "rdf:Property".freeze
     property :isEpisodeOf,
       comment: %(The Episode of a Series or a Season.).freeze,
       domain: "ebucore:Programme".freeze,
+      inverseOf: "ebucore:hasEpisode".freeze,
       label: "Parent season / series".freeze,
-      :"owl:inverseOf" => %(ebucore:hasEpisode).freeze,
+      range: term(
+          unionOf: list("ebucore:Season".freeze, "ebucore:Series".freeze),
+          type: "owl:Class".freeze
+        ),
       subPropertyOf: "ebucore:hasRelatedBusinessObject".freeze,
       type: "rdf:Property".freeze
     property :isFictitiousPerson,
@@ -3121,17 +3274,17 @@ module RDF::Vocab
     property :isMediaFragmentOf,
       comment: %(To identify the MediaResource to which the MediaFragment belongs to.).freeze,
       domain: "ebucore:MediaFragment".freeze,
+      equivalentProperty: "ma:isFragmentOf".freeze,
+      inverseOf: "ebucore:hasMediaFragment".freeze,
       label: "Source".freeze,
-      :"owl:equivalentProperty" => %(ma:isFragmentOf).freeze,
-      :"owl:inverseOf" => %(ebucore:hasMediaFragment).freeze,
       range: "ebucore:MediaResource".freeze,
       subPropertyOf: "ebucore:hasRelatedResource".freeze,
       type: "rdf:Property".freeze
     property :isMemberOf,
       comment: %(To identify a Group to which an EidtorialObject is a member of.).freeze,
       domain: "ebucore:EditorialObject".freeze,
+      inverseOf: "ebucore:hasMember".freeze,
       label: "Member of".freeze,
-      :"owl:inverseOf" => %(ebucore:hasMember).freeze,
       range: "ebucore:Group".freeze,
       type: "rdf:Property".freeze
     property :isMemberOfPublicationPlan,
@@ -3141,7 +3294,15 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :isNextInSequence,
       comment: %(A link to a an BusinessObject or a Resource following the current BusinessObject or Resource in an ordered sequence.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Next".freeze,
+      range: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       type: "rdf:Property".freeze
     property :isOperatedBy,
       comment: %(To identify the Service that operates the
@@ -3159,7 +3320,15 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :isReferencedBy,
       comment: %(To express references across Assets, BusinessObjects or Resources.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Related object, resource".freeze,
+      range: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       type: "rdf:Property".freeze
     property :isRelatedToBusinessObject,
       comment: %(To identify the BusinessObject associated with a Rating.).freeze,
@@ -3180,17 +3349,33 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :isReplacedBy,
       comment: %(To identify substitutions.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Replacement".freeze,
+      range: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       type: "rdf:Property".freeze
     property :isRequiredBy,
       comment: %(To express strong relations between Assets, BusinessObjects or Resources.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Required".freeze,
+      range: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       type: "rdf:Property".freeze
     property :isSeasonOf,
       comment: %(The Season of a Series.).freeze,
       domain: "ebucore:Season".freeze,
+      inverseOf: "ebucore:hasSeason".freeze,
       label: "Parent Series".freeze,
-      :"owl:inverseOf" => %(ebucore:hasSeason).freeze,
       range: "ebucore:Series".freeze,
       subPropertyOf: "ebucore:hasRelatedBusinessObject".freeze,
       type: "rdf:Property".freeze
@@ -3198,12 +3383,16 @@ module RDF::Vocab
       comment: %(To identify a Brand or Season associated with a Series.).freeze,
       domain: "ebucore:Series".freeze,
       label: "Parent Brand or Series".freeze,
+      range: term(
+          unionOf: list("ebucore:Brand".freeze, "ebucore:Season".freeze),
+          type: "owl:Class".freeze
+        ),
       type: "rdf:Property".freeze
     property :isVersionOf,
       comment: %(To identify related versions.).freeze,
       domain: "ebucore:BusinessObject".freeze,
+      inverseOf: "ebucore:hasVersion".freeze,
       label: "Version of".freeze,
-      :"owl:inverseOf" => %(ebucore:hasVersion).freeze,
       range: "ebucore:BusinessObject".freeze,
       type: "rdf:Property".freeze
     property :lineNumber,
@@ -3284,15 +3473,15 @@ module RDF::Vocab
       comment: %(To define the altitude of a Location in
             meters.).freeze,
       domain: "ebucore:Location".freeze,
+      equivalentProperty: "ma:locationAltitude".freeze,
       label: "Altitude".freeze,
-      :"owl:equivalentProperty" => %(ma:locationAltitude).freeze,
       range: "xsd:float".freeze,
       type: "rdf:Property".freeze
     property :locationCode,
       comment: %(A code attributed to a Location.).freeze,
       domain: "ebucore:Location".freeze,
+      equivalentProperty: "ma:locationAltitude".freeze,
       label: "Code".freeze,
-      :"owl:equivalentProperty" => %(ma:locationAltitude).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :locationCoordinateSystemName,
@@ -3316,24 +3505,24 @@ module RDF::Vocab
     property :locationLatitude,
       comment: %(The latitude of the Location.).freeze,
       domain: "ebucore:Location".freeze,
+      equivalentProperty: ["geo:lat".freeze, "ma:locationLatitude".freeze],
       label: "Latitude".freeze,
-      :"owl:equivalentProperty" => [%(geo:lat).freeze, %(ma:locationLatitude).freeze],
       range: "xsd:double".freeze,
       type: "rdf:Property".freeze
     property :locationLongitude,
       comment: %(To define the longitude of the
             Location.).freeze,
       domain: "ebucore:Location".freeze,
+      equivalentProperty: ["geo:long".freeze, "ma:locationLongitude".freeze],
       label: "Longitude".freeze,
-      :"owl:equivalentProperty" => [%(geo:long).freeze, %(ma:locationLongitude).freeze],
       range: "xsd:double".freeze,
       type: "rdf:Property".freeze
     property :locationName,
       comment: %(The name by which a Location is
             known.).freeze,
       domain: "ebucore:Location".freeze,
+      equivalentProperty: "ma:locationName".freeze,
       label: "Location name".freeze,
-      :"owl:equivalentProperty" => %(ma:locationName).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :locationRegion,
@@ -3344,14 +3533,14 @@ module RDF::Vocab
     property :locationType,
       comment: [%(A type of Location.).freeze, %(Note: a type can be defined by a subClass of Location).freeze, %(Range: string or code/Concept).freeze],
       domain: "ebucore:Location".freeze,
+      equivalentProperty: "ma:locationName".freeze,
       label: "Location type".freeze,
-      :"owl:equivalentProperty" => %(ma:locationName).freeze,
       type: "rdf:Property".freeze
     property :locator,
       comment: %(A locator from where the Resource can be accessed.).freeze,
       domain: "ebucore:Resource".freeze,
+      equivalentProperty: "ma:locator".freeze,
       label: "Locator".freeze,
-      :"owl:equivalentProperty" => %(ma:locator).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :locatorTargetInformation,
@@ -3362,24 +3551,40 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :loudnessIntegratedLoudness,
       comment: %(The value for integrated loudness measured at AudioProgramme or AudioContent level.).freeze,
+      domain: term(
+          unionOf: list("ebucore:AudioProgramme".freeze, "ebucore:AudioContent".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Integrated loudness".freeze,
       range: "xsd:float".freeze,
       subPropertyOf: "ebucore:loudnessParameters".freeze,
       type: "rdf:Property".freeze
     property :loudnessMaxMomentary,
       comment: %(The value for maximum momentary loudness measured at AudioProgramme or AudioContent level.).freeze,
+      domain: term(
+          unionOf: list("ebucore:AudioContent".freeze, "ebucore:AudioProgramme".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Max momentary loudness".freeze,
       range: "xsd:float".freeze,
       subPropertyOf: "ebucore:loudnessParameters".freeze,
       type: "rdf:Property".freeze
     property :loudnessMaxTruepeak,
       comment: %(The value for maximum true peak loudness measured at AudioProgramme or AudioContent level.).freeze,
+      domain: term(
+          unionOf: list("ebucore:AudioContent".freeze, "ebucore:AudioProgramme".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Max true peak loudness".freeze,
       range: "xsd:float".freeze,
       subPropertyOf: "ebucore:loudnessParameters".freeze,
       type: "rdf:Property".freeze
     property :loudnessMethod,
       comment: %(The method for loudness measurement at AudioProgramme or AudioContent level.).freeze,
+      domain: term(
+          unionOf: list("ebucore:AudioContent".freeze, "ebucore:AudioProgramme".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Loudness method".freeze,
       range: "xsd:float".freeze,
       subPropertyOf: "ebucore:loudnessParameters".freeze,
@@ -3392,12 +3597,20 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :loudnessRange,
       comment: %(The loudness range measured at AudioProgramme or AudioContent level.).freeze,
+      domain: term(
+          unionOf: list("ebucore:AudioContent".freeze, "ebucore:AudioProgramme".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Loudness range".freeze,
       range: "xsd:float".freeze,
       subPropertyOf: "ebucore:loudnessParameters".freeze,
       type: "rdf:Property".freeze
     property :lounessMaxShortTerm,
       comment: %(The maximum short term loudness measured at AudioProgramme or AudioContent level.).freeze,
+      domain: term(
+          unionOf: list("ebucore:AudioContent".freeze, "ebucore:AudioProgramme".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Max short term loudness".freeze,
       range: "xsd:float".freeze,
       subPropertyOf: "ebucore:loudnessParameters".freeze,
@@ -3468,8 +3681,8 @@ module RDF::Vocab
     property :numberOfTracks,
       comment: %(The number of Tracks composing the MediaResource.).freeze,
       domain: "ebucore:MediaResource".freeze,
+      equivalentProperty: "ma:numberOfTracks".freeze,
       label: "Number of tracks".freeze,
-      :"owl:equivalentProperty" => %(ma:numberOfTracks).freeze,
       range: "xsd:integer".freeze,
       type: "rdf:Property".freeze
     property :numberOfVideoTracks,
@@ -3537,22 +3750,26 @@ module RDF::Vocab
     property :orientation,
       comment: %(The orientation of a Document or an Image i.e. landscape or
             portrait.).freeze,
+      domain: term(
+          unionOf: list("ebucore:Document".freeze, "ebucore:Image".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Orientation".freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :originalTitle,
       comment: %(To provide the original title attributed to the
             media resource e.g. in its original language.).freeze,
+      equivalentProperty: "ma:mainOriginalTitle".freeze,
       label: "Original title".freeze,
-      :"owl:equivalentProperty" => %(ma:mainOriginalTitle).freeze,
       subPropertyOf: "ebucore:title".freeze,
       type: "rdf:Property".freeze
     property :owns,
       comment: %(To identify the service \(s\) that an Agent
             \(Contact/person or Organisation\) owns.).freeze,
       domain: "ebucore:Agent".freeze,
+      inverseOf: "ebucore:isOwnedBy".freeze,
       label: "Owns".freeze,
-      :"owl:inverseOf" => %(ebucore:isOwnedBy).freeze,
       range: "ebucore:Service".freeze,
       type: "rdf:Property".freeze
     property :packageByteSize,
@@ -3614,8 +3831,8 @@ module RDF::Vocab
     property :playbackSpeed,
       comment: %(Identifies the rate of units against time at which the resource should be played back for human consumption.  If the unit of measure is known, use sub-properties framesPerSecond or inchesPerSecond.).freeze,
       domain: "ebucore:Resource".freeze,
+      equivalentProperty: "ma:frameRate".freeze,
       label: "Playback speed".freeze,
-      :"owl:equivalentProperty" => %(ma:frameRate).freeze,
       range: "xsd:double".freeze,
       type: "rdf:Property".freeze
     property :playlist,
@@ -3646,8 +3863,8 @@ module RDF::Vocab
       comment: %(To provide an private web homepage of an Agent
             \(Contact/person\).).freeze,
       domain: "ebucore:Person".freeze,
+      equivalentProperty: "foaf:homepage".freeze,
       label: "Homepage (private)".freeze,
-      :"owl:equivalentProperty" => %(foaf:homepage).freeze,
       range: "xsd:anyURI".freeze,
       subPropertyOf: "ebucore:agentWebHomepage".freeze,
       type: "rdf:Property".freeze
@@ -3798,38 +4015,38 @@ module RDF::Vocab
       comment: %(The maximum value of the scale used for rating
             a media resource.).freeze,
       domain: "ebucore:Rating".freeze,
+      equivalentProperty: "ma:ratingScaleMax".freeze,
       label: "Rating scale (top value)".freeze,
-      :"owl:equivalentProperty" => %(ma:ratingScaleMax).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :ratingScaleMin,
       comment: %(The minimum value of the scale used for rating
             a Resource.).freeze,
       domain: "ebucore:Rating".freeze,
+      equivalentProperty: "ma:ratingScaleMin".freeze,
       label: "Rating scale (min. value)".freeze,
-      :"owl:equivalentProperty" => %(ma:ratingScaleMin).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :ratingSystemEnvironment,
       comment: %(To identify the environment in which rating applies.).freeze,
       domain: "ebucore:Rating".freeze,
+      equivalentProperty: "ma:hasRatingSystem".freeze,
       label: "Rating environment".freeze,
-      :"owl:equivalentProperty" => %(ma:hasRatingSystem).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :ratingSystemName,
       comment: %(To identify a rating system by its name.).freeze,
       domain: "ebucore:Rating".freeze,
+      equivalentProperty: "ma:hasRatingSystem".freeze,
       label: "Rating system".freeze,
-      :"owl:equivalentProperty" => %(ma:hasRatingSystem).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :ratingValue,
       comment: %(To express a free text rating value defined in
             a rating classification scheme.).freeze,
       domain: "ebucore:Rating".freeze,
+      equivalentProperty: "ma:ratingValue".freeze,
       label: "Rating".freeze,
-      :"owl:equivalentProperty" => %(ma:ratingValue).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :readyForPublication,
@@ -3846,7 +4063,15 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :references,
       comment: %(To express a reference between Assets, BusinessObjects or Resources.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "References".freeze,
+      range: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       type: "rdf:Property".freeze
     property :regionDelimX,
       comment: %(To define the bottom right corner of a zone on
@@ -3866,7 +4091,15 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :replaces,
       comment: %(To identify substitution.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Replaces".freeze,
+      range: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       type: "rdf:Property".freeze
     property :represents,
       comment: %(To establish a relation between a BusinessObject and an Asset.).freeze,
@@ -3876,7 +4109,15 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :requires,
       comment: %(To express dependency.).freeze,
+      domain: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Requires".freeze,
+      range: term(
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze),
+          type: "owl:Class".freeze
+        ),
       type: "rdf:Property".freeze
     property :resourceDescription,
       comment: %(This can be specialised by using sub-properties
@@ -3972,15 +4213,15 @@ module RDF::Vocab
     property :salutationTitle,
       comment: %(To provide a salutation title e.g M. Ms, Dr, Pr.).freeze,
       domain: "ebucore:Person".freeze,
+      equivalentProperty: "foaf:title".freeze,
       label: "Salutation title".freeze,
-      :"owl:equivalentProperty" => %(foaf:title).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :sampleRate,
       comment: %(The frequency at which audio is sampled per second. Also called sampling rate.).freeze,
       domain: "ebucore:MediaResource".freeze,
+      equivalentProperty: "ma:samplingRate".freeze,
       label: "Sample Rate".freeze,
-      :"owl:equivalentProperty" => %(ma:samplingRate).freeze,
       range: "xsd:integer".freeze,
       type: "rdf:Property".freeze
     property :sampleSize,
@@ -4029,7 +4270,7 @@ module RDF::Vocab
       comment: [%(An identifier attributed to a Service.).freeze, %(Range: Identifier, anyURI, string).freeze],
       domain: "ebucore:Service".freeze,
       label: "Identifier".freeze,
-      :"skos:prefLabel" => %(Identifier).freeze,
+      prefLabel: "Identifier".freeze,
       type: "rdf:Property".freeze
     property :serviceName,
       comment: %(The name by which a Service is known.).freeze,
@@ -4055,6 +4296,10 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :start,
       comment: %(The start point of the MediaResource.).freeze,
+      domain: term(
+          unionOf: list("ebucore:MediaResource".freeze, "ebucore:EditorialObject".freeze),
+          type: "owl:Class".freeze
+        ),
       label: "Start time".freeze,
       type: "rdf:Property".freeze
     property :startNormalPlayTime,
@@ -4243,8 +4488,12 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :timelineTrackduration,
       comment: %(To provide information on the duration of a TimelineTrack.).freeze,
+      domain: term(
+          unionOf: list("ebucore:MediaResource".freeze, "ebucore:EditorialObject".freeze),
+          type: "owl:Class".freeze
+        ),
+      equivalentProperty: "ma:duration".freeze,
       label: "TimelineTrack duration".freeze,
-      :"owl:equivalentProperty" => %(ma:duration).freeze,
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
     property :title,
@@ -4255,16 +4504,16 @@ module RDF::Vocab
             alternativeTitle.).freeze, %(Specifies the title or name given to the
             resource.  A root for the definition of subproperties defining ebucore titles of different types. The ebucore title type can be used to define sub-properties to optionally refine the category of
             the title.).freeze],
+      equivalentProperty: "ma:title".freeze,
       label: "Title".freeze,
-      :"owl:equivalentProperty" => %(ma:title).freeze,
       subPropertyOf: "dc11:title".freeze,
       type: "rdf:Property".freeze
     property :trackDefinition,
       comment: %(To provide a definition associated to a
             Track.).freeze,
       domain: "ebucore:Track".freeze,
+      equivalentProperty: "ma:trackName".freeze,
       label: "Definition".freeze,
-      :"owl:equivalentProperty" => %(ma:trackName).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :trackId,
@@ -4275,22 +4524,22 @@ module RDF::Vocab
     property :trackName,
       comment: %(The name attributed to a Track.).freeze,
       domain: "ebucore:Track".freeze,
+      equivalentProperty: "ma:trackName".freeze,
       label: "Track name".freeze,
-      :"owl:equivalentProperty" => %(ma:trackName).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :trackPurpose,
       comment: %(The purpose for which the Track is provided.).freeze,
       domain: "ebucore:Track".freeze,
+      equivalentProperty: "ma:trackName".freeze,
       label: "Track purpose".freeze,
-      :"owl:equivalentProperty" => %(ma:trackName).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :trackType,
       comment: [%(Range: string or code/Concept).freeze, %(The type attributed to a Track.).freeze],
       domain: "ebucore:Track".freeze,
+      equivalentProperty: "ma:trackName".freeze,
       label: "Track name".freeze,
-      :"owl:equivalentProperty" => %(ma:trackName).freeze,
       type: "rdf:Property".freeze
     property :translationTitle,
       comment: %(A translated version of the title.).freeze,
@@ -4301,8 +4550,8 @@ module RDF::Vocab
       comment: %(The username by which a Person is
             known e.g. when attributing a rating value.).freeze,
       domain: "ebucore:Person".freeze,
+      equivalentProperty: "foaf:nick".freeze,
       label: "Username".freeze,
-      :"owl:equivalentProperty" => %(foaf:nick).freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :versionTitle,
@@ -4343,8 +4592,8 @@ module RDF::Vocab
       comment: %(The width of e.g. a video frame typically
             expressed as a number of pixels, or picture/image in millimeters.).freeze,
       domain: "ebucore:Resource".freeze,
+      equivalentProperty: "ma:frameWidth".freeze,
       label: "Width".freeze,
-      :"owl:equivalentProperty" => %(ma:frameWidth).freeze,
       range: "xsd:integer".freeze,
       type: "rdf:Property".freeze
     property :widthUnit,

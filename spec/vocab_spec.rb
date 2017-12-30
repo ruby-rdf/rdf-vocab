@@ -68,25 +68,25 @@ describe RDF::Vocab do
         if term.type.to_s =~ /Class/
           context term.pname do
             it "subClassOf" do
-              expect {term.subClassOf.map(&:pname)}.not_to raise_error
+              expect {term.subClassOf}.not_to raise_error
             end
             it "equivalentClass" do
-              expect {term.equivalentClass.map(&:pname)}.not_to raise_error
+              expect {term.equivalentClass}.not_to raise_error
             end
           end
         elsif term.type.to_s =~ /Property/
           context term.pname do
             it "subPropertyOf" do
-              expect {term.subPropertyOf.map(&:pname)}.not_to raise_error
+              expect {term.subPropertyOf}.not_to raise_error
             end
             it "domain" do
-              expect {term.domain.map(&:pname)}.not_to raise_error
+              expect {term.domain}.not_to raise_error
             end
             it "range" do
-              expect {term.range.map(&:pname)}.not_to raise_error
+              expect {term.range}.not_to raise_error
             end
             it "equivalentProperty" do
-              expect {term.equivalentProperty.map(&:pname)}.not_to raise_error
+              expect {term.equivalentProperty}.not_to raise_error
             end
           end
         end

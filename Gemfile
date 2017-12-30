@@ -11,9 +11,9 @@ gem 'rdf',
     branch: 'develop'
 
 group :development, :test do
-  gem 'ebnf',               git: 'https://github.com/gkellogg/ebnf.git',                branch: 'develop'
+  gem 'ebnf',               git: 'https://github.com/dryruby/ebnf.git',                 branch: 'develop'
   gem 'json-ld',            git: 'https://github.com/ruby-rdf/json-ld.git',             branch: 'develop'
-  #gem 'linkeddata',         git: 'https://github.com/ruby-rdf/linkeddata.git',          branch: 'develop'
+  gem 'linkeddata',         git: 'https://github.com/ruby-rdf/linkeddata.git',          branch: 'develop'
   gem 'rdf-aggregate-repo', git: 'https://github.com/ruby-rdf/rdf-aggregate-repo.git',  branch: 'develop'
   gem 'rdf-isomorphic',     git: 'https://github.com/ruby-rdf/rdf-isomorphic.git',      branch: 'develop'
   gem 'rdf-reasoner',       git: 'https://github.com/ruby-rdf/rdf-reasoner.git',        branch: 'develop'
