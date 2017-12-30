@@ -38,9 +38,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake",         "~> 12.0"
   #spec.add_development_dependency "rdf-rdfa",     '~> 3.0'
   spec.add_development_dependency "rdf-rdfa",     '>= 2.2', '< 4.0'
-  spec.add_development_dependency "rdf-reasoner", '~> 0.4'
-  #spec.add_development_dependency "rdf-turtle",   '~> 3.0'
-  spec.add_development_dependency "rdf-turtle",   '>= 2.2', '< 4.0'
+  spec.add_development_dependency "rdf-reasoner", '~> 0.5'
+  spec.add_development_dependency "rdf-turtle",   '~> 3.0'
   spec.add_development_dependency "rspec",        "~> 3.7"
   spec.add_development_dependency "rspec-its",    "~> 1.2"
   spec.add_development_dependency "yard",         "~> 0.9.12"
