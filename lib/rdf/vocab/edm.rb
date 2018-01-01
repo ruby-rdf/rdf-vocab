@@ -12,11 +12,11 @@ module RDF::Vocab
     # Ontology definition
     ontology :"http://www.europeana.eu/schemas/edm/",
       "dc11:contributor": ["http://www.ibi.hu-berlin.de/institut/personen/iwanowa".freeze, "http://www.ics.forth.gr/isl/people/people_individual.jsp?Person_ID=2".freeze, "http://www.image.ece.ntua.gr/~ndroso/".freeze, "http://www.image.ntua.gr/~tzouvaras/".freeze, term(
-          type: "foaf:Organization".freeze,
-          "foaf:name": "Participants of Europeana Version 1.0 Work Package on Further Specification of Functionality and Interoperability aspects of Europeana (WP3)".freeze
+          "foaf:name": "Hugo Manguinhas".freeze,
+          type: "foaf:Person".freeze
         ), term(
-          type: "foaf:Person".freeze,
-          "foaf:name": "Hugo Manguinhas".freeze
+          "foaf:name": "Participants of Europeana Version 1.0 Work Package on Further Specification of Functionality and Interoperability aspects of Europeana (WP3)".freeze,
+          type: "foaf:Organization".freeze
         )],
       "dc11:creator": "http://data.semanticweb.org/person/antoine-isaac".freeze,
       "dc11:description": "The Europeana Data Model (EDM) is aimed at being an integration medium for collecting, connecting and enriching the descriptions provided by Europeana data providers. The RDF vocabulary for http://www.europeana.eu/schemas/edm/ defines the elements introduced by EDM (as opposed to the ones EDM re-uses from other namespaces).".freeze,
@@ -50,9 +50,9 @@ potential to perform intentional actions for which they can be held responsible.
 collectively represent that object in Europeana. Such set consists of: all
 descriptions about the object that Europeana collects from \(possibly different\) content providers, including thumbnails and other forms of abstractions, as well as of the description of the object Europeana builds.).freeze,
       equivalentClass: term(
+          cardinality: "1".freeze,
           onProperty: "edm:aggregatedCHO".freeze,
-          type: "owl:Restriction".freeze,
-          cardinality: "1".freeze
+          type: "owl:Restriction".freeze
         ),
       label: "Europeana Aggregation".freeze,
       note: %(An instance of EuropeanaAggregation is created at ingestion time for each different Cultural Heritage Object recognized by Europeana. Such instance is associated to the Cultural Heritage Object that it is about, by the property edm:aggregatedCHO).freeze,
@@ -78,9 +78,9 @@ cultural, technological or legal phenomena" \(E5 Event in CIDOC CRM\) or a "set 
       "skos:example": ["the 2nd World War".freeze, "the act of painting Mona Lisa".freeze, "the change of custody of Mona Lisa".freeze],
       "skos:scopeNote": "Rationale:This class is a domain of edm:happenedAt and the domain of edm:occurredAt".freeze,
       subClassOf: ["edm:NonInformationResource".freeze, term(
+          cardinality: "1".freeze,
           onProperty: "edm:happenedAt".freeze,
-          type: "owl:Restriction".freeze,
-          cardinality: "1".freeze
+          type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze
     term :InformationResource,
@@ -119,12 +119,12 @@ Persons are not items. This class represents Cultural Heritage Objects known to 
       "skos:example": "Mona Lisa, Winged Victory of Samothrace".freeze,
       "skos:scopeNote": "Rationale: This class is the range of edm:aggregatedCHO. A resource of type ProvidedCHO can be the subject of statements using edm:isRelatedTo or any more specific property.".freeze,
       subClassOf: term(
+          cardinality: "1".freeze,
           onProperty: term(
-            type: "rdf:Property".freeze,
-            inverseOf: "edm:aggregatedCHO".freeze
+            inverseOf: "edm:aggregatedCHO".freeze,
+            type: "rdf:Property".freeze
           ),
-          type: "owl:Restriction".freeze,
-          cardinality: "1".freeze
+          type: "owl:Restriction".freeze
         ),
       type: "owl:Class".freeze
     term :TimeSpan,
@@ -172,14 +172,14 @@ a URI.).freeze,
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("edm:ProvidedCHO".freeze, term(
-            type: "owl:Class".freeze,
             intersectionOf: list(term(
               type: "owl:Class".freeze
             ), term(
-              someValuesFrom: "edm:ProvidedCHO".freeze,
               onProperty: "ore:proxyFor".freeze,
+              someValuesFrom: "edm:ProvidedCHO".freeze,
               type: "owl:Restriction".freeze
-            ))
+            )),
+            type: "owl:Class".freeze
           ))
         ),
       equivalentProperty: ["geo:location".freeze, "http://www.cidoc-crm.org/rdfs/cidoc-crm#P55_has_current_location".freeze],
@@ -228,14 +228,14 @@ type system such as MIME or any thesaurus that captures categories of objects in
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("edm:ProvidedCHO".freeze, term(
-            type: "owl:Class".freeze,
             intersectionOf: list(term(
               type: "owl:Class".freeze
             ), term(
-              someValuesFrom: "edm:ProvidedCHO".freeze,
               onProperty: "ore:proxyFor".freeze,
+              someValuesFrom: "edm:ProvidedCHO".freeze,
               type: "owl:Restriction".freeze
-            ))
+            )),
+            type: "owl:Class".freeze
           ))
         ),
       equivalentProperty: "http://www.cidoc-crm.org/rdfs/cidoc-crm#P2_has_type".freeze,
@@ -268,14 +268,14 @@ that it annotates.).freeze,
       range: term(
           type: "owl:Class".freeze,
           unionOf: list("edm:ProvidedCHO".freeze, term(
-            type: "owl:Class".freeze,
             intersectionOf: list(term(
               type: "owl:Class".freeze
             ), term(
-              someValuesFrom: "edm:ProvidedCHO".freeze,
               onProperty: "ore:proxyFor".freeze,
+              someValuesFrom: "edm:ProvidedCHO".freeze,
               type: "owl:Restriction".freeze
-            ))
+            )),
+            type: "owl:Class".freeze
           ))
         ),
       subPropertyOf: ["dc11:subject".freeze, "http://www.cidoc-crm.org/rdfs/cidoc-crm#P67_refers_to".freeze],
@@ -297,14 +297,14 @@ properties have typically to do either with the things that have happened to or 
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("edm:ProvidedCHO".freeze, term(
-            type: "owl:Class".freeze,
             intersectionOf: list(term(
               type: "owl:Class".freeze
             ), term(
-              someValuesFrom: "edm:ProvidedCHO".freeze,
               onProperty: "ore:proxyFor".freeze,
+              someValuesFrom: "edm:ProvidedCHO".freeze,
               type: "owl:Restriction".freeze
-            ))
+            )),
+            type: "owl:Class".freeze
           ))
         ),
       label: "Is Related To".freeze,
@@ -394,8 +394,8 @@ and isShownAt).freeze,
       definition: %(The Europeana material type of the resource).freeze,
       label: "Europeana Type".freeze,
       range: term(
-          type: "rdfs:Datatype".freeze,
-          "owl:oneOf": list("TEXT".freeze, "IMAGE".freeze, "SOUND".freeze, "VIDEO".freeze, "3D".freeze)
+          "owl:oneOf": list("TEXT".freeze, "IMAGE".freeze, "SOUND".freeze, "VIDEO".freeze, "3D".freeze),
+          type: "rdfs:Datatype".freeze
         ),
       subPropertyOf: "dc11:type".freeze,
       type: "owl:DatatypeProperty".freeze
@@ -403,8 +403,8 @@ and isShownAt).freeze,
       definition: %(This element is used to identify user generated content \(also called user created content\).  It should be applied to all digitised or born digital content contributed by the general public and collected by Europeana through a crowdsourcing initiative or project.).freeze,
       label: "UGC".freeze,
       range: term(
-          type: "rdfs:Datatype".freeze,
-          "owl:oneOf": list("TRUE".freeze)
+          "owl:oneOf": list("TRUE".freeze),
+          type: "rdfs:Datatype".freeze
         ),
       type: "owl:DatatypeProperty".freeze
     property :unstored,

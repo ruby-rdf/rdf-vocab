@@ -27,60 +27,60 @@ module RDF::Vocab
       equivalentClass: term(
           type: "owl:Class".freeze,
           unionOf: list(term(
-            type: "owl:Class".freeze,
             intersectionOf: list(term(
               onProperty: "vcard:country-name".freeze,
-              type: "owl:Restriction".freeze,
-              someValuesFrom: "xsd:string".freeze
+              someValuesFrom: "xsd:string".freeze,
+              type: "owl:Restriction".freeze
             ), term(
               maxCardinality: "1".freeze,
               onProperty: "vcard:country-name".freeze,
               type: "owl:Restriction".freeze
-            ))
+            )),
+            type: "owl:Class".freeze
           ), term(
-            type: "owl:Class".freeze,
             intersectionOf: list(term(
               onProperty: "vcard:locality".freeze,
-              type: "owl:Restriction".freeze,
-              someValuesFrom: "xsd:string".freeze
+              someValuesFrom: "xsd:string".freeze,
+              type: "owl:Restriction".freeze
             ), term(
               maxCardinality: "1".freeze,
               onProperty: "vcard:locality".freeze,
               type: "owl:Restriction".freeze
-            ))
+            )),
+            type: "owl:Class".freeze
           ), term(
-            type: "owl:Class".freeze,
             intersectionOf: list(term(
               onProperty: "vcard:postal-code".freeze,
-              type: "owl:Restriction".freeze,
-              someValuesFrom: "xsd:string".freeze
+              someValuesFrom: "xsd:string".freeze,
+              type: "owl:Restriction".freeze
             ), term(
               maxCardinality: "1".freeze,
               onProperty: "vcard:postal-code".freeze,
               type: "owl:Restriction".freeze
-            ))
+            )),
+            type: "owl:Class".freeze
           ), term(
-            type: "owl:Class".freeze,
             intersectionOf: list(term(
               onProperty: "vcard:region".freeze,
-              type: "owl:Restriction".freeze,
-              someValuesFrom: "xsd:string".freeze
+              someValuesFrom: "xsd:string".freeze,
+              type: "owl:Restriction".freeze
             ), term(
               maxCardinality: "1".freeze,
               onProperty: "vcard:region".freeze,
               type: "owl:Restriction".freeze
-            ))
+            )),
+            type: "owl:Class".freeze
           ), term(
-            type: "owl:Class".freeze,
             intersectionOf: list(term(
               onProperty: "vcard:street-address".freeze,
-              type: "owl:Restriction".freeze,
-              someValuesFrom: "xsd:string".freeze
+              someValuesFrom: "xsd:string".freeze,
+              type: "owl:Restriction".freeze
             ), term(
               maxCardinality: "1".freeze,
               onProperty: "vcard:street-address".freeze,
               type: "owl:Restriction".freeze
-            ))
+            )),
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
@@ -187,17 +187,17 @@ module RDF::Vocab
     term :Group,
       comment: %(Object representing a group of persons or entities.  A group object will usually contain hasMember properties to specify the members of the group.).freeze,
       equivalentClass: term(
-          type: "owl:Class".freeze,
           intersectionOf: list(term(
             onProperty: "vcard:hasMember".freeze,
-            type: "owl:Restriction".freeze,
-            someValuesFrom: "vcard:Kind".freeze
+            someValuesFrom: "vcard:Kind".freeze,
+            type: "owl:Restriction".freeze
           ), term(
             onProperty: "vcard:hasMember".freeze,
-            type: "owl:Restriction".freeze,
             "owl:minQualifiedCardinality": "1".freeze,
-            "owl:onClass": "vcard:Kind".freeze
-          ))
+            "owl:onClass": "vcard:Kind".freeze,
+            type: "owl:Restriction".freeze
+          )),
+          type: "owl:Class".freeze
         ),
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Group".freeze,
@@ -247,9 +247,9 @@ module RDF::Vocab
       comment: %(The parent class for all objects).freeze,
       equivalentClass: ["vcard:VCard".freeze, term(
           onProperty: "vcard:fn".freeze,
-          type: "owl:Restriction".freeze,
           "owl:minQualifiedCardinality": "1".freeze,
-          "owl:onDataRange": "xsd:string".freeze
+          "owl:onDataRange": "xsd:string".freeze,
+          type: "owl:Restriction".freeze
         )],
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Kind".freeze,
@@ -307,60 +307,60 @@ module RDF::Vocab
       equivalentClass: term(
           type: "owl:Class".freeze,
           unionOf: list(term(
-            type: "owl:Class".freeze,
             intersectionOf: list(term(
               onProperty: "vcard:additional-name".freeze,
-              type: "owl:Restriction".freeze,
-              someValuesFrom: "xsd:string".freeze
+              someValuesFrom: "xsd:string".freeze,
+              type: "owl:Restriction".freeze
             ), term(
               minCardinality: "0".freeze,
               onProperty: "vcard:additional-name".freeze,
               type: "owl:Restriction".freeze
-            ))
+            )),
+            type: "owl:Class".freeze
           ), term(
-            type: "owl:Class".freeze,
             intersectionOf: list(term(
               onProperty: "vcard:family-name".freeze,
-              type: "owl:Restriction".freeze,
-              someValuesFrom: "xsd:string".freeze
+              someValuesFrom: "xsd:string".freeze,
+              type: "owl:Restriction".freeze
             ), term(
               maxCardinality: "1".freeze,
               onProperty: "vcard:family-name".freeze,
               type: "owl:Restriction".freeze
-            ))
+            )),
+            type: "owl:Class".freeze
           ), term(
-            type: "owl:Class".freeze,
             intersectionOf: list(term(
               onProperty: "vcard:given-name".freeze,
-              type: "owl:Restriction".freeze,
-              someValuesFrom: "xsd:string".freeze
+              someValuesFrom: "xsd:string".freeze,
+              type: "owl:Restriction".freeze
             ), term(
               maxCardinality: "1".freeze,
               onProperty: "vcard:given-name".freeze,
               type: "owl:Restriction".freeze
-            ))
+            )),
+            type: "owl:Class".freeze
           ), term(
-            type: "owl:Class".freeze,
             intersectionOf: list(term(
               onProperty: "vcard:honorific-prefix".freeze,
-              type: "owl:Restriction".freeze,
-              someValuesFrom: "xsd:string".freeze
+              someValuesFrom: "xsd:string".freeze,
+              type: "owl:Restriction".freeze
             ), term(
               minCardinality: "0".freeze,
               onProperty: "vcard:honorific-prefix".freeze,
               type: "owl:Restriction".freeze
-            ))
+            )),
+            type: "owl:Class".freeze
           ), term(
-            type: "owl:Class".freeze,
             intersectionOf: list(term(
               onProperty: "vcard:honorific-suffix".freeze,
-              type: "owl:Restriction".freeze,
-              someValuesFrom: "xsd:string".freeze
+              someValuesFrom: "xsd:string".freeze,
+              type: "owl:Restriction".freeze
             ), term(
               minCardinality: "0".freeze,
               onProperty: "vcard:honorific-suffix".freeze,
               type: "owl:Restriction".freeze
-            ))
+            )),
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,

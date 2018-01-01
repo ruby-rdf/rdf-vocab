@@ -60,12 +60,12 @@ module RDF::Vocab
       combination of Authority and Variant descriptions, each of a
       madsrdf:SimpleType.).freeze,
       equivalentClass: term(
+          cardinality: "1".freeze,
           onProperty: "mads:componentList".freeze,
-          type: "owl:Restriction".freeze,
-          cardinality: "1".freeze
+          type: "owl:Restriction".freeze
         ),
       label: "Complex Type".freeze,
-      "owl:disjointUnionOf": ["mads:ComplexSubject".freeze, "mads:HierarchicalGeographic".freeze, "mads:NameTitle".freeze],
+      "owl:disjointUnionOf": list("mads:HierarchicalGeographic".freeze, "mads:ComplexSubject".freeze, "mads:NameTitle".freeze),
       "owl:disjointWith": "mads:SimpleType".freeze,
       subClassOf: "mads:MADSType".freeze,
       type: "owl:Class".freeze
@@ -117,9 +117,9 @@ module RDF::Vocab
       comment: %(madsrdf:Element types
       describe the various parts of labels.).freeze,
       equivalentClass: term(
+          cardinality: "1".freeze,
           onProperty: "mads:elementValue".freeze,
-          type: "owl:Restriction".freeze,
-          cardinality: "1".freeze
+          type: "owl:Restriction".freeze
         ),
       label: "Element".freeze,
       type: "owl:Class".freeze

@@ -552,8 +552,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: TEXT).freeze, %(This property defines the action to be invoked when an alarm is triggered.).freeze],
       domain: term(
-          unionOf: list("ical:Valarm".freeze, "ical:Valarm".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Valarm".freeze, "ical:Valarm".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "TEXT".freeze,
       range: "xsd:string".freeze,
@@ -565,8 +565,8 @@ module RDF::Vocab
       comment: [%(
 	    default value type: URI).freeze, %(The property provides the capability to associate a document object with a calendar component.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Valarm".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Valarm".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Valarm".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Valarm".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "URI".freeze,
       type: "owl:ObjectProperty".freeze
@@ -574,8 +574,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: CAL-ADDRESS).freeze, %(The property defines an "Attendee" within a calendar component.).freeze],
       domain: term(
-          unionOf: list("ical:Valarm".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vfreebusy".freeze, "ical:Valarm".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Valarm".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vfreebusy".freeze, "ical:Valarm".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "CAL-ADDRESS".freeze,
       label: "attendee".freeze,
@@ -617,8 +617,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: TEXT).freeze, %(This property defines the categories for a calendar component.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "TEXT".freeze,
       range: "xsd:string".freeze,
@@ -627,8 +627,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: TEXT).freeze, %(This property defines the access classification for a calendar component.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "TEXT".freeze,
       range: "xsd:string".freeze,
@@ -640,8 +640,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: TEXT).freeze, %(This property specifies non-processing information intended to provide a comment to the calendar user.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vtimezone".freeze, "ical:Vfreebusy".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vtimezone".freeze, "ical:Vfreebusy".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "TEXT".freeze,
       range: "xsd:string".freeze,
@@ -659,8 +659,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: TEXT).freeze, %(The property is used to represent contact information or alternately a reference to contact information associated with the calendar component.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vfreebusy".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vfreebusy".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "TEXT".freeze,
       range: "xsd:string".freeze,
@@ -672,8 +672,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: DATE-TIME).freeze, %(This property specifies the date and time that the calendar information was created by the calendar user agent in the calendar store. Note: This is analogous to the creation date and time for a file in the file system.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "DATE-TIME".freeze,
       range: "ical:Value_DATE-TIME".freeze,
@@ -694,8 +694,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: TEXT).freeze, %(This property provides a more complete description of the calendar component, than that provided by the "SUMMARY" property.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Valarm".freeze, "ical:Vjournal".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Valarm".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Valarm".freeze, "ical:Vjournal".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Valarm".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "TEXT".freeze,
       range: "xsd:string".freeze,
@@ -707,8 +707,8 @@ module RDF::Vocab
       comment: [%(
 	    default value type: DATE-TIME).freeze, %(This property specifies the date and time that a calendar component ends.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vfreebusy".freeze, "ical:Vevent".freeze, "ical:Vfreebusy".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vfreebusy".freeze, "ical:Vevent".freeze, "ical:Vfreebusy".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "DATE-TIME".freeze,
       label: "end".freeze,
@@ -717,8 +717,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: DATE-TIME).freeze, %(The property indicates the date/time that the instance of the iCalendar object was created.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vfreebusy".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vfreebusy".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "DATE-TIME".freeze,
       range: "ical:Value_DATE-TIME".freeze,
@@ -727,8 +727,8 @@ module RDF::Vocab
       comment: [%(
 	    default value type: DATE-TIME).freeze, %(This property specifies when the calendar component begins.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vfreebusy".freeze, "ical:Vtimezone".freeze, "ical:Vevent".freeze, "ical:Vevent".freeze, "ical:Vfreebusy".freeze, "ical:Vtimezone".freeze, "ical:Vtimezone".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vfreebusy".freeze, "ical:Vtimezone".freeze, "ical:Vevent".freeze, "ical:Vevent".freeze, "ical:Vfreebusy".freeze, "ical:Vtimezone".freeze, "ical:Vtimezone".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "DATE-TIME".freeze,
       label: "start".freeze,
@@ -743,8 +743,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: DURATION).freeze, %(The property specifies a positive duration of time.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vfreebusy".freeze, "ical:Valarm".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vfreebusy".freeze, "ical:Valarm".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vfreebusy".freeze, "ical:Valarm".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vfreebusy".freeze, "ical:Valarm".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "DURATION".freeze,
       range: "ical:Value_DURATION".freeze,
@@ -762,8 +762,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: RECUR).freeze, %(This property defines a rule or repeating pattern for an exception to a recurrence set.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "RECUR".freeze,
       range: "ical:Value_RECUR".freeze,
@@ -778,8 +778,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: PERIOD).freeze, %(The property defines one or more free or busy time intervals.).freeze],
       domain: term(
-          unionOf: list("ical:Vfreebusy".freeze, "ical:Vfreebusy".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vfreebusy".freeze, "ical:Vfreebusy".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "PERIOD".freeze,
       range: "ical:Value_PERIOD".freeze,
@@ -791,8 +791,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: list of FLOAT).freeze, %(This property specifies information related to the global position for the activity specified by a calendar component.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueListType": "FLOAT".freeze,
       range: "ical:List_of_Float".freeze,
@@ -807,8 +807,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: DATE-TIME).freeze, %(The property specifies the date and time that the information associated with the calendar component was last revised in the calendar store. Note: This is analogous to the modification date and time for a file in the file system.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vtimezone".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vtimezone".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "DATE-TIME".freeze,
       range: "ical:Value_DATE-TIME".freeze,
@@ -817,8 +817,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: TEXT).freeze, %(The property defines the intended venue for the activity defined by a calendar component.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "TEXT".freeze,
       label: "location".freeze,
@@ -837,8 +837,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: CAL-ADDRESS).freeze, %(The property defines the organizer for a calendar component.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vfreebusy".freeze, "ical:Vfreebusy".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vfreebusy".freeze, "ical:Vfreebusy".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "CAL-ADDRESS".freeze,
       range: "ical:Value_CAL-ADDRESS".freeze,
@@ -857,8 +857,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: INTEGER).freeze, %(The property defines the relative priority for a calendar component.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "INTEGER".freeze,
       range: "xsd:integer".freeze,
@@ -876,8 +876,8 @@ module RDF::Vocab
       comment: [%(
 	    default value type: DATE-TIME).freeze, %(This property defines the list of date/times for a recurrence set.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vtimezone".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vtimezone".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "DATE-TIME".freeze,
       type: "owl:DatatypeProperty".freeze
@@ -894,8 +894,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: TEXT).freeze, %(The property is used to represent a relationship or reference between one calendar component and another.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "TEXT".freeze,
       range: "xsd:string".freeze,
@@ -914,8 +914,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: TEXT).freeze, %(This property defines the status code returned for a scheduling request.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vfreebusy".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vfreebusy".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "TEXT".freeze,
       range: "xsd:string".freeze,
@@ -924,8 +924,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: TEXT).freeze, %(This property defines the equipment or resources anticipated for an activity specified by a calendar entity..).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "TEXT".freeze,
       range: "xsd:string".freeze,
@@ -937,8 +937,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: RECUR).freeze, %(This property defines a rule or repeating pattern for recurring events, to-dos, or time zone definitions.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vtimezone".freeze, "ical:Vtimezone".freeze, "ical:Vtimezone".freeze, "ical:Vtimezone".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vtimezone".freeze, "ical:Vtimezone".freeze, "ical:Vtimezone".freeze, "ical:Vtimezone".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "RECUR".freeze,
       range: "ical:Value_RECUR".freeze,
@@ -953,8 +953,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: integer).freeze, %(This property defines the revision sequence number of the calendar component within a sequence of revisions.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "integer".freeze,
       range: "xsd:integer".freeze,
@@ -966,8 +966,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: TEXT).freeze, %(This property defines the overall status or confirmation for the calendar component.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "TEXT".freeze,
       range: "xsd:string".freeze,
@@ -976,8 +976,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: TEXT).freeze, %(This property defines a short summary or subject for the calendar component.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Valarm".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Valarm".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Valarm".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Valarm".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "TEXT".freeze,
       label: "summary".freeze,
@@ -995,13 +995,13 @@ module RDF::Vocab
       comment: [%(
 	    default value type: DURATION).freeze, %(This property specifies when an alarm will trigger.).freeze],
       domain: term(
-          unionOf: list("ical:Valarm".freeze, "ical:Valarm".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Valarm".freeze, "ical:Valarm".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "DURATION".freeze,
       range: term(
-          unionOf: list("ical:Value_DURATION".freeze, "ical:Value_DATE".freeze, "ical:Value_DATE".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Value_DURATION".freeze, "ical:Value_DATE".freeze, "ical:Value_DATE".freeze)
         ),
       type: "owl:ObjectProperty".freeze
     property :tzid,
@@ -1022,8 +1022,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: UTC-OFFSET).freeze, %(This property specifies the offset which is in use prior to this time zone observance.).freeze],
       domain: term(
-          unionOf: list("ical:Vtimezone".freeze, "ical:Vtimezone".freeze, "ical:Vtimezone".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vtimezone".freeze, "ical:Vtimezone".freeze, "ical:Vtimezone".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "UTC-OFFSET".freeze,
       range: "xsd:string".freeze,
@@ -1039,8 +1039,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: URI).freeze, %(The TZURL provides a means for a VTIMEZONE component to point to a network location that can be used to retrieve an up-to- date version of itself.).freeze],
       domain: term(
-          unionOf: list("ical:Vtimezone".freeze, "ical:Vtimezone".freeze, "ical:Vtimezone".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vtimezone".freeze, "ical:Vtimezone".freeze, "ical:Vtimezone".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "URI".freeze,
       type: "owl:ObjectProperty".freeze
@@ -1048,8 +1048,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: TEXT).freeze, %(This property defines the persistent, globally unique identifier for the calendar component.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vfreebusy".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vfreebusy".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "TEXT".freeze,
       range: "xsd:string".freeze,
@@ -1061,8 +1061,8 @@ module RDF::Vocab
       comment: [%(
 	    value type: URI).freeze, %(This property defines a Uniform Resource Locator \(URL\) associated with the iCalendar object.).freeze],
       domain: term(
-          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vfreebusy".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("ical:Vevent".freeze, "ical:Vtodo".freeze, "ical:Vjournal".freeze, "ical:Vfreebusy".freeze)
         ),
       "http://www.w3.org/2002/12/cal/icalSpec#valueType": "URI".freeze,
       label: "see also".freeze,

@@ -51,8 +51,8 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       "prov:editorsDefinition": "ActivitiyInfluence is the capacity of an activity to have an effect on the character, development, or behavior of another by means of generation, invalidation, communication, or other.".freeze,
       "rdfs:seeAlso": "prov:activity".freeze,
       subClassOf: ["prov:Influence".freeze, term(
-          onProperty: "prov:hadActivity".freeze,
           maxCardinality: "0".freeze,
+          onProperty: "prov:hadActivity".freeze,
           type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze
@@ -288,13 +288,13 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       "prov:n": "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-insertion".freeze,
       "prov:unqualifiedForm": "prov:derivedByInsertionFrom".freeze,
       subClassOf: ["prov:Derivation".freeze, term(
-          onProperty: "prov:dictionary".freeze,
           cardinality: "1".freeze,
+          onProperty: "prov:dictionary".freeze,
           type: "owl:Restriction".freeze
         ), term(
+          minCardinality: "1".freeze,
           onProperty: "prov:insertedKeyEntityPair".freeze,
-          type: "owl:Restriction".freeze,
-          minCardinality: "1".freeze
+          type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze
     term :InstantaneousEvent,
@@ -329,12 +329,12 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       "prov:dm": "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-membership".freeze,
       "prov:n": "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-membership".freeze,
       subClassOf: [term(
-          onProperty: "prov:pairEntity".freeze,
           cardinality: "1".freeze,
+          onProperty: "prov:pairEntity".freeze,
           type: "owl:Restriction".freeze
         ), term(
-          onProperty: "prov:pairKey".freeze,
           cardinality: "1".freeze,
+          onProperty: "prov:pairKey".freeze,
           type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze
@@ -428,13 +428,13 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       "prov:n": "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-removal".freeze,
       "prov:unqualifiedForm": "prov:derivedByRemovalFrom".freeze,
       subClassOf: ["prov:Derivation".freeze, term(
-          onProperty: "prov:dictionary".freeze,
           cardinality: "1".freeze,
+          onProperty: "prov:dictionary".freeze,
           type: "owl:Restriction".freeze
         ), term(
+          minCardinality: "1".freeze,
           onProperty: "prov:removedKey".freeze,
-          type: "owl:Restriction".freeze,
-          minCardinality: "1".freeze
+          type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze
     term :Replace,
@@ -530,7 +530,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       domain: "prov:Agent".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "actedOnBehalfOf".freeze,
-      "owl:propertyChainAxiom": ["prov:agent".freeze, "prov:qualifiedDelegation".freeze],
+      "owl:propertyChainAxiom": list("prov:qualifiedDelegation".freeze, "prov:agent".freeze),
       "prov:category": "starting-point".freeze,
       "prov:component": "agents-responsibility".freeze,
       "prov:inverse": "hadDelegate".freeze,
@@ -593,8 +593,8 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
     property :atLocation,
       comment: [%(The Location of any resource.).freeze, %(This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href="#owl-profile">PROV-O OWL Profile</a>.).freeze],
       domain: term(
-          unionOf: list("prov:Activity".freeze, "prov:Agent".freeze, "prov:Entity".freeze, "prov:InstantaneousEvent".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("prov:Activity".freeze, "prov:Agent".freeze, "prov:Entity".freeze, "prov:InstantaneousEvent".freeze)
         ),
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "atLocation".freeze,
@@ -742,8 +742,8 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
     property :hadActivity,
       comment: [%(The _optional_ Activity of an Influence, which used, generated, invalidated, or was the responsibility of some Entity. This property is _not_ used by ActivityInfluence \(use prov:activity instead\).).freeze, %(This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href="#owl-profile">PROV-O OWL Profile</a>.).freeze],
       domain: ["prov:Influence".freeze, term(
-          unionOf: list("prov:Delegation".freeze, "prov:Derivation".freeze, "prov:End".freeze, "prov:Start".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("prov:Delegation".freeze, "prov:Derivation".freeze, "prov:End".freeze, "prov:Start".freeze)
         )],
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "hadActivity".freeze,
@@ -803,7 +803,7 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "hadPrimarySource".freeze,
-      "owl:propertyChainAxiom": ["prov:entity".freeze, "prov:qualifiedPrimarySource".freeze],
+      "owl:propertyChainAxiom": list("prov:qualifiedPrimarySource".freeze, "prov:entity".freeze),
       "prov:category": "expanded".freeze,
       "prov:component": "derivations".freeze,
       "prov:inverse": "wasPrimarySourceOf".freeze,
@@ -814,8 +814,8 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
     property :hadRole,
       comment: [%(The _optional_ Role that an Entity assumed in the context of an Activity. For example, :baking prov:used :spoon; prov:qualified [ a prov:Usage; prov:entity :spoon; prov:hadRole roles:mixing_implement ].).freeze, %(This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href="#owl-profile">PROV-O OWL Profile</a>.).freeze],
       domain: ["prov:Influence".freeze, term(
-          unionOf: list("prov:Association".freeze, "prov:InstantaneousEvent".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("prov:Association".freeze, "prov:InstantaneousEvent".freeze)
         )],
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "hadRole".freeze,
@@ -1098,8 +1098,8 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
     property :qualifiedInfluence,
       comment: %(Because prov:qualifiedInfluence is a broad relation, the more specific relations \(qualifiedCommunication, qualifiedDelegation, qualifiedEnd, etc.\) should be used when applicable.).freeze,
       domain: term(
-          unionOf: list("prov:Activity".freeze, "prov:Agent".freeze, "prov:Entity".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("prov:Activity".freeze, "prov:Agent".freeze, "prov:Entity".freeze)
         ),
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "qualifiedInfluence".freeze,
@@ -1268,7 +1268,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       domain: "prov:Activity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "used".freeze,
-      "owl:propertyChainAxiom": ["prov:entity".freeze, "prov:qualifiedUsage".freeze],
+      "owl:propertyChainAxiom": list("prov:qualifiedUsage".freeze, "prov:entity".freeze),
       "prov:category": "starting-point".freeze,
       "prov:component": "entities-activities".freeze,
       "prov:inverse": "wasUsedBy".freeze,
@@ -1291,7 +1291,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       domain: "prov:Activity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "wasAssociatedWith".freeze,
-      "owl:propertyChainAxiom": ["prov:agent".freeze, "prov:qualifiedAssociation".freeze],
+      "owl:propertyChainAxiom": list("prov:qualifiedAssociation".freeze, "prov:agent".freeze),
       "prov:category": "starting-point".freeze,
       "prov:component": "agents-responsibility".freeze,
       "prov:inverse": "wasAssociateFor".freeze,
@@ -1304,7 +1304,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "wasAttributedTo".freeze,
-      "owl:propertyChainAxiom": ["prov:agent".freeze, "prov:qualifiedAttribution".freeze],
+      "owl:propertyChainAxiom": list("prov:qualifiedAttribution".freeze, "prov:agent".freeze),
       "prov:category": "starting-point".freeze,
       "prov:component": "agents-responsibility".freeze,
       "prov:definition": "Attribution is the ascribing of an entity to an agent.".freeze,
@@ -1318,7 +1318,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "wasDerivedFrom".freeze,
-      "owl:propertyChainAxiom": ["prov:entity".freeze, "prov:qualifiedDerivation".freeze],
+      "owl:propertyChainAxiom": list("prov:qualifiedDerivation".freeze, "prov:entity".freeze),
       "prov:category": "starting-point".freeze,
       "prov:component": "derivations".freeze,
       "prov:definition": "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.".freeze,
@@ -1332,7 +1332,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       domain: "prov:Activity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "wasEndedBy".freeze,
-      "owl:propertyChainAxiom": ["prov:entity".freeze, "prov:qualifiedEnd".freeze],
+      "owl:propertyChainAxiom": list("prov:qualifiedEnd".freeze, "prov:entity".freeze),
       "prov:category": "expanded".freeze,
       "prov:component": "entities-activities".freeze,
       "prov:inverse": "ended".freeze,
@@ -1345,7 +1345,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       inverseOf: "prov:generated".freeze,
       isDefinedBy: ["http://www.w3.org/ns/prov-o#".freeze, "http://www.w3.org/ns/prov-o-inverses#".freeze],
       label: "wasGeneratedBy".freeze,
-      "owl:propertyChainAxiom": ["prov:activity".freeze, "prov:qualifiedGeneration".freeze],
+      "owl:propertyChainAxiom": list("prov:qualifiedGeneration".freeze, "prov:activity".freeze),
       "prov:category": "starting-point".freeze,
       "prov:component": "entities-activities".freeze,
       "prov:inverse": "generated".freeze,
@@ -1356,8 +1356,8 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
     property :wasInfluencedBy,
       comment: [%(Because prov:wasInfluencedBy is a broad relation, its more specific subproperties \(e.g. prov:wasInformedBy, prov:actedOnBehalfOf, prov:wasEndedBy, etc.\) should be used when applicable.).freeze, %(This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href="#owl-profile">PROV-O OWL Profile</a>.).freeze],
       domain: term(
-          unionOf: list("prov:Activity".freeze, "prov:Agent".freeze, "prov:Entity".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("prov:Activity".freeze, "prov:Agent".freeze, "prov:Entity".freeze)
         ),
       inverseOf: "prov:influenced".freeze,
       isDefinedBy: ["http://www.w3.org/ns/prov-o#".freeze, "http://www.w3.org/ns/prov-o-inverses#".freeze],
@@ -1369,8 +1369,8 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       "prov:qualifiedForm": ["prov:Influence".freeze, "prov:qualifiedInfluence".freeze],
       "prov:sharesDefinitionWith": "prov:Influence".freeze,
       range: term(
-          unionOf: list("prov:Activity".freeze, "prov:Agent".freeze, "prov:Entity".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("prov:Activity".freeze, "prov:Agent".freeze, "prov:Entity".freeze)
         ),
       type: "owl:ObjectProperty".freeze
     property :wasInformedBy,
@@ -1378,7 +1378,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       domain: "prov:Activity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "wasInformedBy".freeze,
-      "owl:propertyChainAxiom": ["prov:activity".freeze, "prov:qualifiedCommunication".freeze],
+      "owl:propertyChainAxiom": list("prov:qualifiedCommunication".freeze, "prov:activity".freeze),
       "prov:category": "starting-point".freeze,
       "prov:component": "entities-activities".freeze,
       "prov:inverse": "informed".freeze,
@@ -1391,7 +1391,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       inverseOf: "prov:invalidated".freeze,
       isDefinedBy: ["http://www.w3.org/ns/prov-o#".freeze, "http://www.w3.org/ns/prov-o-inverses#".freeze],
       label: "wasInvalidatedBy".freeze,
-      "owl:propertyChainAxiom": ["prov:activity".freeze, "prov:qualifiedInvalidation".freeze],
+      "owl:propertyChainAxiom": list("prov:qualifiedInvalidation".freeze, "prov:activity".freeze),
       "prov:category": "expanded".freeze,
       "prov:component": "entities-activities".freeze,
       "prov:inverse": "invalidated".freeze,
@@ -1404,7 +1404,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "wasQuotedFrom".freeze,
-      "owl:propertyChainAxiom": ["prov:entity".freeze, "prov:qualifiedQuotation".freeze],
+      "owl:propertyChainAxiom": list("prov:qualifiedQuotation".freeze, "prov:entity".freeze),
       "prov:category": "expanded".freeze,
       "prov:component": "derivations".freeze,
       "prov:inverse": "quotedAs".freeze,
@@ -1417,7 +1417,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "wasRevisionOf".freeze,
-      "owl:propertyChainAxiom": ["prov:entity".freeze, "prov:qualifiedRevision".freeze],
+      "owl:propertyChainAxiom": list("prov:qualifiedRevision".freeze, "prov:entity".freeze),
       "prov:category": "expanded".freeze,
       "prov:component": "derivations".freeze,
       "prov:inverse": "hadRevision".freeze,
@@ -1430,7 +1430,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       domain: "prov:Activity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "wasStartedBy".freeze,
-      "owl:propertyChainAxiom": ["prov:entity".freeze, "prov:qualifiedStart".freeze],
+      "owl:propertyChainAxiom": list("prov:qualifiedStart".freeze, "prov:entity".freeze),
       "prov:category": "expanded".freeze,
       "prov:component": "entities-activities".freeze,
       "prov:inverse": "started".freeze,

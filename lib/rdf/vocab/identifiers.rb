@@ -15,23 +15,23 @@ module RDF::Vocab
       label: "Standard Identifier Schemes".freeze,
       "mads:adminMetadata": term(
           "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2012-05-01T00:00:00".freeze,
-          "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "new".freeze,
           "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "http://id.loc.gov/vocabulary/organizations/dlcmrc".freeze,
+          "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "new".freeze,
           type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze
         ),
       "mads:hasMADSSchemeMember": ["identifiers:agrovoc".freeze, "identifiers:allmovie".freeze, "identifiers:allmusic".freeze, "identifiers:allocine".freeze, "identifiers:amnbo".freeze, "identifiers:ansi".freeze, "identifiers:artsy".freeze, "identifiers:bdusc".freeze, "identifiers:bfi".freeze, "identifiers:bnfcg".freeze, "identifiers:cantic".freeze, "identifiers:cgndb".freeze, "identifiers:danacode".freeze, "identifiers:datoses".freeze, "identifiers:discogs".freeze, "identifiers:dkfilm".freeze, "identifiers:doi".freeze, "identifiers:ean".freeze, "identifiers:eidr".freeze, "identifiers:fast".freeze, "identifiers:filmport".freeze, "identifiers:findagr".freeze, "identifiers:freebase".freeze, "identifiers:gec".freeze, "identifiers:geogndb".freeze, "identifiers:geonames".freeze, "identifiers:gettytgn".freeze, "identifiers:gettyulan".freeze, "identifiers:gnd".freeze, "identifiers:gnis".freeze, "identifiers:gtin-14".freeze, "identifiers:hdl".freeze, "identifiers:ibdb".freeze, "identifiers:idref".freeze, "identifiers:imdb".freeze, "identifiers:isan".freeze, "identifiers:isbn".freeze, "identifiers:isbn-a".freeze, "identifiers:isbnre".freeze, "identifiers:isil".freeze, "identifiers:ismn".freeze, "identifiers:isni".freeze, "identifiers:iso".freeze, "identifiers:isrc".freeze, "identifiers:issn".freeze, "identifiers:issn-l".freeze, "identifiers:issue-number".freeze, "identifiers:istc".freeze, "identifiers:iswc".freeze, "identifiers:itar".freeze, "identifiers:kinipo".freeze, "identifiers:lccn".freeze, "identifiers:lcmd".freeze, "identifiers:libaus".freeze, "identifiers:local".freeze, "identifiers:matrix-number".freeze, "identifiers:moma".freeze, "identifiers:munzing".freeze, "identifiers:music-plate".freeze, "identifiers:music-publisher".freeze, "identifiers:musicb".freeze, "identifiers:natgazfid".freeze, "identifiers:nga".freeze, "identifiers:nipo".freeze, "identifiers:nndb".freeze, "identifiers:npg".freeze, "identifiers:odnb".freeze, "identifiers:opensm".freeze, "identifiers:orcid".freeze, "identifiers:oxforddnb".freeze, "identifiers:porthu".freeze, "identifiers:rbmsbt".freeze, "identifiers:rbmsgt".freeze, "identifiers:rbmspe".freeze, "identifiers:rbmsppe".freeze, "identifiers:rbmspt".freeze, "identifiers:rbmsrd".freeze, "identifiers:rbmste".freeze, "identifiers:rid".freeze, "identifiers:rkda".freeze, "identifiers:saam".freeze, "identifiers:scholaru".freeze, "identifiers:scope".freeze, "identifiers:scopus".freeze, "identifiers:sici".freeze, "identifiers:spotify".freeze, "identifiers:sprfbsb".freeze, "identifiers:sprfbsk".freeze, "identifiers:sprfcbb".freeze, "identifiers:sprfcfb".freeze, "identifiers:sprfhoc".freeze, "identifiers:sprfoly".freeze, "identifiers:sprfpfb".freeze, "identifiers:stock-number".freeze, "identifiers:strn".freeze, "identifiers:svfilm".freeze, "identifiers:tatearid".freeze, "identifiers:theatr".freeze, "identifiers:trove".freeze, "identifiers:upc".freeze, "identifiers:uri".freeze, "identifiers:urn".freeze, "identifiers:viaf".freeze, "identifiers:videorecording-identifier".freeze, "identifiers:wikidata".freeze, "identifiers:wndla".freeze],
       "skos:changeNote": term(
-          "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/identifiers".freeze,
-          "http://purl.org/vocab/changeset/schema#createdDate": "2012-05-01T00:00:00".freeze,
           "http://purl.org/vocab/changeset/schema#changeReason": "new".freeze,
+          "http://purl.org/vocab/changeset/schema#createdDate": "2012-05-01T00:00:00".freeze,
           "http://purl.org/vocab/changeset/schema#creatorName": "http://id.loc.gov/vocabulary/organizations/dlcmrc".freeze,
+          "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/identifiers".freeze,
           type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze
         ),
       type: ["mads:MADSScheme".freeze, "skos:ConceptScheme".freeze]
 
     # Property definitions
     property :id,
-      comment: %(Generic Identifier property.  It is expected that one will use one of its many subproperties.).freeze,
+      comment: "Generic Identifier property.  It is expected that one will use one of its many subproperties.".freeze,
       label: "Identifier".freeze,
       type: "rdf:Property".freeze
 

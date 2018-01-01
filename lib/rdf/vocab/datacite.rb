@@ -29,8 +29,8 @@ module RDF::Vocab
       label: "agent identifier".freeze,
       "owl:disjointWith": "datacite:ResourceIdentifier".freeze,
       subClassOf: ["datacite:Identifier".freeze, term(
-          onProperty: "datacite:usesIdentifierScheme".freeze,
           allValuesFrom: "datacite:AgentIdentifier".freeze,
+          onProperty: "datacite:usesIdentifierScheme".freeze,
           type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze
@@ -66,8 +66,8 @@ module RDF::Vocab
       comment: %(An identifier that uniquely identities a funding agency, belonging to a particular scheme such as FundRef specified by an individual within the class datacite:FunderIdentifierScheme.).freeze,
       label: "funder identifier".freeze,
       subClassOf: ["datacite:AgentIdentifier".freeze, term(
-          onProperty: "datacite:usesIdentifierScheme".freeze,
           allValuesFrom: "datacite:FunderIdentifierScheme".freeze,
+          onProperty: "datacite:usesIdentifierScheme".freeze,
           type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze
@@ -86,15 +86,15 @@ module RDF::Vocab
       comment: %(An identifier that uniquely identities an entity – such as a funding agency, a person and a resource – belonging to a particular scheme such as those specified by individuals of the class datacite:IdentifierScheme.).freeze,
       label: "identifier".freeze,
       subClassOf: ["http://www.essepuntato.it/2010/06/literalreification/Literal".freeze, term(
-          "owl:onClass": "datacite:IdentifierScheme".freeze,
-          onProperty: "datacite:usesIdentifierScheme".freeze,
-          "owl:qualifiedCardinality": "1".freeze,
-          type: "owl:Restriction".freeze
-        ), term(
+          cardinality: "1".freeze,
           onProperty: term(
             inverseOf: "datacite:hasIdentifier".freeze
           ),
-          cardinality: "1".freeze,
+          type: "owl:Restriction".freeze
+        ), term(
+          onProperty: "datacite:usesIdentifierScheme".freeze,
+          "owl:onClass": "datacite:IdentifierScheme".freeze,
+          "owl:qualifiedCardinality": "1".freeze,
           type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze
@@ -120,8 +120,8 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL \(no
       comment: %(An identifier that uniquely identities an individual organization, belonging to a particular identifier scheme such as ISNI specified by an individual within the class datacite:OrganizationIdentifierScheme.).freeze,
       label: "organization identifier".freeze,
       subClassOf: ["datacite:AgentIdentifier".freeze, term(
-          onProperty: "datacite:usesIdentifierScheme".freeze,
           allValuesFrom: "datacite:OrganizationIdentifier".freeze,
+          onProperty: "datacite:usesIdentifierScheme".freeze,
           type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze
@@ -140,9 +140,9 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL \(no
       comment: %(An identifier that uniquely identities an individual person, belonging to a particular identifier scheme such as ORCID specified by an individual within the class datacite:PersonalIdentifierScheme.).freeze,
       label: "personal identifier".freeze,
       subClassOf: ["datacite:AgentIdentifier".freeze, term(
+          allValuesFrom: "datacite:PersonalIdentifierScheme".freeze,
           onProperty: "datacite:usesIdentifierScheme".freeze,
-          type: "owl:Restriction".freeze,
-          allValuesFrom: "datacite:PersonalIdentifierScheme".freeze
+          type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze
     term :PersonalIdentifierScheme,
@@ -169,9 +169,9 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL \(no
       comment: %(An identifier that is used to uniquely identifies a resource.).freeze,
       label: "resource identifier".freeze,
       subClassOf: ["datacite:Identifier".freeze, term(
+          allValuesFrom: "datacite:ResourceIdentifierScheme".freeze,
           onProperty: "datacite:usesIdentifierScheme".freeze,
-          type: "owl:Restriction".freeze,
-          allValuesFrom: "datacite:ResourceIdentifierScheme".freeze
+          type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze
     term :ResourceIdentifierScheme,
@@ -206,23 +206,23 @@ In addition, if needed, it is possible to use the dataproperty fabio:hasURL \(no
         ),
       label: "has description".freeze,
       range: term(
-          onProperty: "datacite:hasDescriptionType".freeze,
           cardinality: "1".freeze,
+          onProperty: "datacite:hasDescriptionType".freeze,
           type: "owl:Restriction".freeze
         ),
       type: "owl:ObjectProperty".freeze
     property :hasDescriptionType,
       comment: %(An object property permitting specification of the type of description used to describe a resource, defined as an individual of the class datacite:DescriptionType from the DataCite controlled list of Abstract, SeriesInformation, TableOfContent and Other.).freeze,
       domain: term(
-          onProperty: term(
-            inverseOf: "datacite:hasDescription".freeze
-          ),
-          type: "owl:Restriction".freeze,
           allValuesFrom: term(
             onProperty: "datacite:hasIdentifier".freeze,
             someValuesFrom: "datacite:ResourceIdentifier".freeze,
             type: "owl:Restriction".freeze
-          )
+          ),
+          onProperty: term(
+            inverseOf: "datacite:hasDescription".freeze
+          ),
+          type: "owl:Restriction".freeze
         ),
       label: "has description type".freeze,
       range: "datacite:DescriptionType".freeze,
