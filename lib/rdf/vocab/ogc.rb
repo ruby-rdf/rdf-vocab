@@ -26,7 +26,7 @@ module RDF::Vocab
       comment: %(The lexical space: "", "the", "a", "an", and "auto".).freeze,
       isDefinedBy: "ogc:".freeze,
       label: "determiner".freeze,
-      "owl:oneOf": ["".freeze, "a".freeze, "an".freeze, "auto".freeze, "the".freeze],
+      "owl:oneOf": list("".freeze, "the".freeze, "a".freeze, "an".freeze, "auto".freeze),
       subClassOf: "xsd:string".freeze,
       type: "rdfs:Datatype".freeze
     term :float_str,

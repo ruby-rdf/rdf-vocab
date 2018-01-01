@@ -26,9 +26,9 @@ module RDF::Vocab
       label: "Label".freeze,
       "owl:disjointWith": ["skos:Collection".freeze, "skos:Concept".freeze, "skos:ConceptScheme".freeze],
       subClassOf: term(
-          type: "owl:Restriction".freeze,
           cardinality: "1".freeze,
-          onProperty: "skosxl:literalForm".freeze
+          onProperty: "skosxl:literalForm".freeze,
+          type: "owl:Restriction".freeze
         ),
       type: "owl:Class".freeze
 

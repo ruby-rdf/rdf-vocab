@@ -16,13 +16,13 @@ module RDF::Vocab
       "dc11:description": "\n        The Music Ontology Specification provides main concepts and \n        properties fo describing music (i.e. artists, albums and tracks) \n        on the Semantic Web. \n    ".freeze,
       "dc11:title": "The Music Ontology".freeze,
       "foaf:maker": ["http://foaf.me/zazi#me".freeze, "http://kurtisrandom.com/foaf.rdf#kurtjx".freeze, "http://raimond.me.uk/foaf.rdf#moustaki".freeze, "http://www.talkdigger.com/foaf/fgiasson".freeze, term(
-          "foaf:name": "Alexandre Passant".freeze,
-          "foaf:homepage": "http://apassant.net/".freeze
+          "foaf:homepage": "http://apassant.net/".freeze,
+          "foaf:name": "Alexandre Passant".freeze
+        ), term(
+          "foaf:homepage": "http://simon-reinhardt.de/".freeze,
+          "foaf:name": "Simon Reinhardt".freeze
         ), term(
           "foaf:name": "George Fazekas".freeze
-        ), term(
-          "foaf:name": "Simon Reinhardt".freeze,
-          "foaf:homepage": "http://simon-reinhardt.de/".freeze
         )],
       "http://purl.org/vocab/vann/preferredNamespacePrefix": "mo".freeze,
       "http://purl.org/vocab/vann/preferredNamespaceUri": "http://purl.org/ontology/mo/".freeze,
@@ -694,8 +694,8 @@ work #1 J. S. Bach's The art of the fugue
     property :amazon_asin,
       comment: %(Used to link a work or the expression of a work to its corresponding Amazon ASINs page.).freeze,
       domain: term(
-          unionOf: list("http://purl.org/vocab/frbr/core#Work".freeze, "http://purl.org/vocab/frbr/core#Expression".freeze, "http://purl.org/vocab/frbr/core#Manifestation".freeze, "http://purl.org/vocab/frbr/core#Item".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("http://purl.org/vocab/frbr/core#Work".freeze, "http://purl.org/vocab/frbr/core#Expression".freeze, "http://purl.org/vocab/frbr/core#Manifestation".freeze, "http://purl.org/vocab/frbr/core#Item".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "amazon_asin".freeze,
@@ -786,8 +786,8 @@ work #1 J. S. Bach's The art of the fugue
         Beats per minute: the pace of music measured by the number of beats occurring in 60 seconds.
     ).freeze,
       domain: term(
-          unionOf: list("mo:MusicalWork".freeze, "mo:Performance".freeze, "mo:Signal".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:MusicalWork".freeze, "mo:Performance".freeze, "mo:Signal".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "bpm".freeze,
@@ -937,8 +937,8 @@ work #1 J. S. Bach's The art of the fugue
     property :discogs,
       comment: %(Used to link a musical work or the expression of a musical work, an artist or a corporate body to to its corresponding Discogs page.).freeze,
       domain: term(
-          unionOf: list("mo:MusicalWork".freeze, "mo:MusicalExpression".freeze, "mo:MusicalManifestation".freeze, "mo:MusicArtist".freeze, "mo:CorporateBody".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:MusicalWork".freeze, "mo:MusicalExpression".freeze, "mo:MusicalManifestation".freeze, "mo:MusicArtist".freeze, "mo:CorporateBody".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "discogs".freeze,
@@ -997,8 +997,8 @@ The artist usually selected the tracks, chose their sequence, and slightly chang
                 less to rip streams from Flash applications can still access the audio content.
         ).freeze,
       domain: term(
-          unionOf: list("http://purl.org/vocab/frbr/core#Manifestation".freeze, "foaf:Agent".freeze, "mo:CorporateBody".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("http://purl.org/vocab/frbr/core#Manifestation".freeze, "foaf:Agent".freeze, "mo:CorporateBody".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "download".freeze,
@@ -1010,8 +1010,8 @@ The artist usually selected the tracks, chose their sequence, and slightly chang
     property :duration,
       comment: %(The duration of a track or a signal in ms).freeze,
       domain: term(
-          unionOf: list("mo:Track".freeze, "mo:Signal".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:Track".freeze, "mo:Signal".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       "mo:level": "1".freeze,
@@ -1053,8 +1053,8 @@ The artist usually selected the tracks, chose their sequence, and slightly chang
     property :engineer,
       comment: %(Relates a performance or a recording to the engineer involved).freeze,
       domain: term(
-          unionOf: list("mo:Performance".freeze, "mo:Recording".freeze, "mo:RecordingSession".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:Performance".freeze, "mo:Recording".freeze, "mo:RecordingSession".freeze)
         ),
       inverseOf: "mo:engineered".freeze,
       isDefinedBy: "mo:".freeze,
@@ -1071,8 +1071,8 @@ The artist usually selected the tracks, chose their sequence, and slightly chang
       label: "engineered".freeze,
       "mo:level": "2".freeze,
       range: term(
-          unionOf: list("mo:Performance".freeze, "mo:Recording".freeze, "mo:RecordingSession".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:Performance".freeze, "mo:Recording".freeze, "mo:RecordingSession".freeze)
         ),
       subPropertyOf: ["http://purl.org/NET/c4dm/event.owl#isAgentIn".freeze, "http://purl.org/vocab/bio/0.1/event".freeze],
       type: "owl:ObjectProperty".freeze,
@@ -1122,8 +1122,8 @@ The artist usually selected the tracks, chose their sequence, and slightly chang
         less to rip streams from Flash applications can still access the audio content.
     ).freeze,
       domain: term(
-          unionOf: list("http://purl.org/vocab/frbr/core#Manifestation".freeze, "foaf:Agent".freeze, "mo:CorporateBody".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("http://purl.org/vocab/frbr/core#Manifestation".freeze, "foaf:Agent".freeze, "mo:CorporateBody".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "free download".freeze,
@@ -1143,8 +1143,8 @@ The artist usually selected the tracks, chose their sequence, and slightly chang
         Further version of this property may also include works and scores in the domain.
     ).freeze,
       domain: term(
-          unionOf: list("foaf:Agent".freeze, "mo:Performance".freeze, "mo:Arrangement".freeze, "mo:Composition".freeze, "mo:Recording".freeze, "mo:RecordingSession".freeze, "mo:MusicalWork".freeze, "mo:MusicalExpression".freeze, "mo:MusicalManifestation".freeze, "mo:MusicalItem".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("foaf:Agent".freeze, "mo:Performance".freeze, "mo:Arrangement".freeze, "mo:Composition".freeze, "mo:Recording".freeze, "mo:RecordingSession".freeze, "mo:MusicalWork".freeze, "mo:MusicalExpression".freeze, "mo:MusicalManifestation".freeze, "mo:MusicalItem".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "genre".freeze,
@@ -1197,8 +1197,8 @@ The artist usually selected the tracks, chose their sequence, and slightly chang
     property :homepage,
       comment: %(Links an artist, a record, etc. to a corresponding web page).freeze,
       domain: term(
-          unionOf: list("mo:MusicalWork".freeze, "mo:MusicArtist".freeze, "mo:MusicalExpression".freeze, "mo:MusicalManifestation".freeze, "mo:MusicalItem".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:MusicalWork".freeze, "mo:MusicArtist".freeze, "mo:MusicalExpression".freeze, "mo:MusicalManifestation".freeze, "mo:MusicalItem".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "homepage".freeze,
@@ -1210,8 +1210,8 @@ The artist usually selected the tracks, chose their sequence, and slightly chang
     property :image,
       comment: %(Indicates a pictorial image \(JPEG, GIF, PNG, Etc.\) of a musical work, the expression of a musical work, the manifestation of a work or the examplar of a manifestation.).freeze,
       domain: term(
-          unionOf: list("mo:MusicalWork".freeze, "mo:MusicArtist".freeze, "mo:MusicalExpression".freeze, "mo:MusicalManifestation".freeze, "mo:MusicalItem".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:MusicalWork".freeze, "mo:MusicArtist".freeze, "mo:MusicalExpression".freeze, "mo:MusicalManifestation".freeze, "mo:MusicalItem".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "image".freeze,
@@ -1223,8 +1223,8 @@ The artist usually selected the tracks, chose their sequence, and slightly chang
     property :imdb,
       comment: %(Used to link an artist, a musical work or the expression of a musical work to their equivalent page on IMDb, the InternetMovieDatabase.).freeze,
       domain: term(
-          unionOf: list("mo:MusicalWork".freeze, "mo:MusicalExpression".freeze, "mo:MusicalManifestation".freeze, "mo:MusicArtist".freeze, "mo:CorporateBody".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:MusicalWork".freeze, "mo:MusicalExpression".freeze, "mo:MusicalManifestation".freeze, "mo:MusicArtist".freeze, "mo:CorporateBody".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "imdb".freeze,
@@ -1264,8 +1264,8 @@ The artist usually selected the tracks, chose their sequence, and slightly chang
     property :ismn,
       comment: %(The International Standard Music Number \(ISMN\) is an ISO standard similar to ISBNs for identifying printed music publications).freeze,
       domain: term(
-          unionOf: list("mo:PublishedLyrics".freeze, "mo:PublishedLibretto".freeze, "mo:PublishedScore".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:PublishedLyrics".freeze, "mo:PublishedLibretto".freeze, "mo:PublishedScore".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "ismn".freeze,
@@ -1315,8 +1315,8 @@ The artist usually selected the tracks, chose their sequence, and slightly chang
         Indicated the key used by the musicians during a performance, or the key of a MusicalWork.
         Any of 24 major or minor diatonic scales that provide the tonal framework for a piece of music.).freeze,
       domain: term(
-          unionOf: list("mo:MusicalWork".freeze, "mo:Performance".freeze, "mo:Signal".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:MusicalWork".freeze, "mo:Performance".freeze, "mo:Signal".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "key".freeze,
@@ -1327,8 +1327,8 @@ The artist usually selected the tracks, chose their sequence, and slightly chang
     property :label,
       comment: %(Associates a release event with the label releasing the record).freeze,
       domain: term(
-          unionOf: list("mo:Release".freeze, "mo:MusicArtist".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:Release".freeze, "mo:MusicArtist".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "label".freeze,
@@ -1365,8 +1365,8 @@ The artist usually selected the tracks, chose their sequence, and slightly chang
     
 This is usually used to link to a Creative Commons licence.).freeze,
       domain: term(
-          unionOf: list("http://purl.org/vocab/frbr/core#Work".freeze, "http://purl.org/vocab/frbr/core#Expression".freeze, "http://purl.org/vocab/frbr/core#Manifestation".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("http://purl.org/vocab/frbr/core#Work".freeze, "http://purl.org/vocab/frbr/core#Expression".freeze, "http://purl.org/vocab/frbr/core#Manifestation".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "licence".freeze,
@@ -1407,8 +1407,8 @@ This is usually used to link to a Creative Commons licence.).freeze,
     property :mailorder,
       comment: %(Used to link a musical work or the expression of a musical work to a website where people can buy a copy of the musical manifestation.).freeze,
       domain: term(
-          unionOf: list("http://purl.org/vocab/frbr/core#Manifestation".freeze, "mo:MusicArtist".freeze, "mo:CorporateBody".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("http://purl.org/vocab/frbr/core#Manifestation".freeze, "mo:MusicArtist".freeze, "mo:CorporateBody".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "mailorder".freeze,
@@ -1481,8 +1481,8 @@ This means that the orignial musical expression were rearranged to create a new 
     property :meter,
       comment: %(Associates a musical work or a score with its meter).freeze,
       domain: term(
-          unionOf: list("mo:MusicalWork".freeze, "mo:Score".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:MusicalWork".freeze, "mo:Score".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "meter".freeze,
@@ -1515,8 +1515,8 @@ This means that the orignial musical expression were rearranged to create a new 
         Linking an agent, a track or a record to its corresponding Musicbrainz page.
         ).freeze,
       domain: term(
-          unionOf: list("mo:MusicalWork".freeze, "mo:MusicalManifestation".freeze, "foaf:Agent".freeze, "mo:Signal".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:MusicalWork".freeze, "mo:MusicalManifestation".freeze, "foaf:Agent".freeze, "mo:Signal".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "musicbrainz".freeze,
@@ -1528,8 +1528,8 @@ This means that the orignial musical expression were rearranged to create a new 
     property :musicbrainz_guid,
       comment: %(Links an object to the corresponding Musicbrainz identifier).freeze,
       domain: term(
-          unionOf: list("mo:MusicArtist".freeze, "mo:Track".freeze, "mo:Record".freeze, "mo:SignalGroup".freeze, "mo:Signal".freeze, "mo:ReleaseEvent".freeze, "mo:Label".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:MusicArtist".freeze, "mo:Track".freeze, "mo:Record".freeze, "mo:SignalGroup".freeze, "mo:Signal".freeze, "mo:ReleaseEvent".freeze, "mo:Label".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "Musicbrainz GUID".freeze,
@@ -1540,8 +1540,8 @@ This means that the orignial musical expression were rearranged to create a new 
     property :musicmoz,
       comment: %(Used to link an artist, a musical work or the expression of a musical work to its corresponding MusicMoz page.).freeze,
       domain: term(
-          unionOf: list("mo:MusicArtist".freeze, "mo:MusicalWork".freeze, "mo:MusicalExpression".freeze, "mo:MusicalManifestation".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:MusicArtist".freeze, "mo:MusicalWork".freeze, "mo:MusicalExpression".freeze, "mo:MusicalManifestation".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "musicmoz".freeze,
@@ -1615,8 +1615,8 @@ This means that the orignial musical expression were rearranged to create a new 
                 or a link from a manifestation \(record/track, for example\) to a web page providing a paid access to this manifestation.
         ).freeze,
       domain: term(
-          unionOf: list("http://purl.org/vocab/frbr/core#Manifestation".freeze, "mo:MusicArtist".freeze, "mo:CorporateBody".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("http://purl.org/vocab/frbr/core#Manifestation".freeze, "mo:MusicArtist".freeze, "mo:CorporateBody".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "paid download".freeze,
@@ -1642,8 +1642,8 @@ This means that the orignial musical expression were rearranged to create a new 
       label: "performance of".freeze,
       "mo:level": "2".freeze,
       range: term(
-          unionOf: list("mo:Score".freeze, "mo:MusicalWork".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:Score".freeze, "mo:MusicalWork".freeze)
         ),
       subPropertyOf: "http://purl.org/NET/c4dm/event.owl#factor".freeze,
       type: "owl:ObjectProperty".freeze,
@@ -1666,8 +1666,8 @@ This means that the orignial musical expression were rearranged to create a new 
         associate the Magic Flute to a particular performance at the Opera
         Bastille last year.).freeze,
       domain: term(
-          unionOf: list("mo:Score".freeze, "mo:MusicalWork".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:Score".freeze, "mo:MusicalWork".freeze)
         ),
       inverseOf: "mo:performance_of".freeze,
       isDefinedBy: "mo:".freeze,
@@ -1719,8 +1719,8 @@ This means that the orignial musical expression were rearranged to create a new 
                 less to rip streams from Flash applications can still access the audio content.
         ).freeze,
       domain: term(
-          unionOf: list("http://purl.org/vocab/frbr/core#Manifestation".freeze, "foaf:Agent".freeze, "mo:CorporateBody".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("http://purl.org/vocab/frbr/core#Manifestation".freeze, "foaf:Agent".freeze, "mo:CorporateBody".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "preview download".freeze,
@@ -1732,8 +1732,8 @@ This means that the orignial musical expression were rearranged to create a new 
     property :primary_instrument,
       comment: %(Indicates that an artist primarily plays an instrument, or that a member was primarily playing a particular instrument during his membership).freeze,
       domain: term(
-          unionOf: list("mo:Membership".freeze, "foaf:Agent".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:Membership".freeze, "foaf:Agent".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "primary instrument".freeze,
@@ -1757,8 +1757,8 @@ This means that the orignial musical expression were rearranged to create a new 
         an abstract arrangement of a particular work\).
     ).freeze,
       domain: term(
-          unionOf: list("mo:Composition".freeze, "mo:Arrangement".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:Composition".freeze, "mo:Arrangement".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "produced score".freeze,
@@ -2113,8 +2113,8 @@ This involves taking just one other musical work and using audio editing to make
     
 The review does not have to be open content, as long as it is accessible to the general internet population.).freeze,
       domain: term(
-          unionOf: list("http://purl.org/vocab/frbr/core#Work".freeze, "http://purl.org/vocab/frbr/core#Expression".freeze, "http://purl.org/vocab/frbr/core#Manifestation".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("http://purl.org/vocab/frbr/core#Work".freeze, "http://purl.org/vocab/frbr/core#Expression".freeze, "http://purl.org/vocab/frbr/core#Manifestation".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "review".freeze,
@@ -2222,15 +2222,15 @@ The review does not have to be open content, as long as it is accessible to the 
         documents providing such statements should attach some metadata to themselves \(confidence of the claim, etc.\).
         ).freeze,
       domain: term(
-          unionOf: list("foaf:Agent".freeze, "mo:MusicalWork".freeze, "mo:MusicalExpression".freeze, "mo:MusicalManifestation".freeze, "mo:MusicalItem".freeze, "mo:Genre".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("foaf:Agent".freeze, "mo:MusicalWork".freeze, "mo:MusicalExpression".freeze, "mo:MusicalManifestation".freeze, "mo:MusicalItem".freeze, "mo:Genre".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "similar_to".freeze,
       "mo:level": "1".freeze,
       range: term(
-          unionOf: list("foaf:Agent".freeze, "mo:MusicalWork".freeze, "mo:MusicalExpression".freeze, "mo:MusicalManifestation".freeze, "mo:MusicalItem".freeze, "mo:Genre".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("foaf:Agent".freeze, "mo:MusicalWork".freeze, "mo:MusicalExpression".freeze, "mo:MusicalManifestation".freeze, "mo:MusicalItem".freeze, "mo:Genre".freeze)
         ),
       type: "owl:ObjectProperty".freeze,
       "vs:term_status": "unstable".freeze
@@ -2261,8 +2261,8 @@ The review does not have to be open content, as long as it is accessible to the 
         and a tempo \(in time; returning to the original pace\).
     ).freeze,
       domain: term(
-          unionOf: list("mo:MusicalWork".freeze, "mo:Performance".freeze, "mo:Signal".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("mo:MusicalWork".freeze, "mo:Performance".freeze, "mo:Signal".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "tempo".freeze,
@@ -2409,8 +2409,8 @@ The review does not have to be open content, as long as it is accessible to the 
         The full URL should be used, not just the WikiName.
     ).freeze,
       domain: term(
-          unionOf: list("http://purl.org/vocab/frbr/core#Work".freeze, "http://purl.org/vocab/frbr/core#Expression".freeze, "http://purl.org/vocab/frbr/core#Manifestation".freeze, "http://purl.org/vocab/frbr/core#Item".freeze, "foaf:Agent".freeze, "mo:Instrument".freeze, "mo:Genre".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("http://purl.org/vocab/frbr/core#Work".freeze, "http://purl.org/vocab/frbr/core#Expression".freeze, "http://purl.org/vocab/frbr/core#Manifestation".freeze, "http://purl.org/vocab/frbr/core#Item".freeze, "foaf:Agent".freeze, "mo:Instrument".freeze, "mo:Genre".freeze)
         ),
       isDefinedBy: "mo:".freeze,
       label: "wikipedia".freeze,

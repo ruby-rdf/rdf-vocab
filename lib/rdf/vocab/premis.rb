@@ -32,13 +32,13 @@ Agent entities.).freeze,
       definition: %(Definition: The date range during which the particular rights statement applies or is applied to the content.).freeze,
       editorialNote: %(Rationale Specific dates may apply to the particular rights statement.).freeze,
       subClassOf: [term(
+          maxCardinality: "1".freeze,
           onProperty: "premis:hasEndDate".freeze,
-          type: "owl:Restriction".freeze,
-          maxCardinality: "1".freeze
+          type: "owl:Restriction".freeze
         ), term(
+          maxCardinality: "1".freeze,
           onProperty: "premis:hasStartDate".freeze,
-          type: "owl:Restriction".freeze,
-          maxCardinality: "1".freeze
+          type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -46,9 +46,9 @@ Agent entities.).freeze,
       definition: %(Definition: Contiguous or non-contiguous data within a file that has meaningful properties for preservation purposes.).freeze,
       "rdfs:seeAlso": "Object class definition".freeze,
       subClassOf: ["premis:Object".freeze, term(
+          minCardinality: "1".freeze,
           onProperty: "premis:hasObjectCharacteristics".freeze,
-          type: "owl:Restriction".freeze,
-          minCardinality: "1".freeze
+          type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -57,16 +57,16 @@ Agent entities.).freeze,
       "skos:historyNote": "Creation / Maintenance Notes: A preservation repository should never refer to content that it does not control. Therefore, the PREMIS working group assumed that the repository will always assign the contentLocation, probably by program.".freeze,
       "skos:scopeNote": "Usage Notes: If the preservation repository uses the objectIdentifier as a handle for retrieving data, contentLocation is implicit and does not need to be recorded.".freeze,
       subClassOf: term(
-          type: "owl:Class".freeze,
           intersectionOf: list(term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasContentLocationType".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasContentLocationValue".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
-          ))
+            type: "owl:Restriction".freeze
+          )),
+          type: "owl:Class".freeze
         ),
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -74,16 +74,16 @@ Agent entities.).freeze,
       definition: %(Definition: Information about the copyright status of the object\(s\).).freeze,
       "skos:scopeNote": "Usage Notes: When rights basis is a copyright, copyrightInformation should be provided. Repositories may need to extend this with more detailed information. See the California Digital Library's copyrightMD schema (www.cdlib.org/inside/projects/rights/schema/) for an example of a more detailed scheme.".freeze,
       subClassOf: ["premis:RightsStatement".freeze, term(
-          type: "owl:Class".freeze,
           intersectionOf: list(term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasCopyrightStatus".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasCopyrightJurisdiction".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
-          ))
+            type: "owl:Restriction".freeze
+          )),
+          type: "owl:Class".freeze
         )],
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -93,20 +93,20 @@ Agent entities.).freeze,
       "skos:historyNote": "Creation / Maintenance Notes: If the object was created by the repository, assignment of creating application information should be straightforward. If the object was created outside the repository, it is possible this information could be supplied by the depositor. It might also be extracted from the file itself; the name of the creating application is often embedded within the file.".freeze,
       "skos:scopeNote": "Usage Notes: This semantic unit applies to both objects created external to the repository and subsequently ingested, and to objects created by the repository, for example, through migration events. The creatingApplication container is repeatable if more than one application processed the object in turn. For example, a file could be created by Microsoft Word and later turned into a PDF using Adobe Acrobat. Details of both the Word and Acrobat applications may be recorded. However, if both files are stored in the repository, each file should be completely described as an Object entity and linked by using relationship information with a relationshipType “derivation.” It may also be repeated to record the creating application before the object was ingested as well as the creating application used as part of the ingest process. For example, an HTML file was created pre-ingest using Dreamweaver, and the Web crawler Heritrix then captured a snapshot of the files as part of the ingest. The amount of information needed for creatingApplication given here is minimal. For more granularity, extensibility is provided. Rather than having each repository record this locally, it would be preferable to have a registry of this information similar to format or environment registries.".freeze,
       subClassOf: term(
+          type: "owl:Class".freeze,
           unionOf: list(term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasCreatingApplicationName".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            maxCardinality: "1".freeze,
             onProperty: "premis:hasCreatingApplicationVersion".freeze,
-            type: "owl:Restriction".freeze,
-            maxCardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            maxCardinality: "1".freeze,
             onProperty: "premis:hasDateCreatedByApplication".freeze,
-            type: "owl:Restriction".freeze,
-            maxCardinality: "1".freeze
-          )),
-          type: "owl:Class".freeze
+            type: "owl:Restriction".freeze
+          ))
         ),
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -115,16 +115,16 @@ Agent entities.).freeze,
       "skos:historyNote": "Creation / Maintenance Notes: Recommended practice is for a repository to archive objects on which other objects depend. These may be sent by the submitter of the primary object, or they may in some cases be automatically obtained by the repository. For example, a markup file will often contain links to other objects it requires such as DTDs or XML Schema. If it does, these objects can often be identified by the link and downloaded by the repository.".freeze,
       "skos:scopeNote": "Usage Notes: This semantic unit is for additional objects that are necessary to render a file or representation, not for required software or hardware. It may also be used for a non-executable component of the object, such as a font or style sheet. For things that the software requires, see swDependency. This semantic unit does not include objects required by structural relationships, such as child content objects (e.g., figures that are part of an article), which are recorded under relationship with a relationshipType of “structural”. It is up to the repository to determine what constitutes a dependency in the context of the designated community. The objects noted may be internal or external to the preservation repository.".freeze,
       subClassOf: term(
+          type: "owl:Class".freeze,
           unionOf: list(term(
+            maxCardinality: "1".freeze,
             onProperty: "premis:hasIdentifier".freeze,
-            type: "owl:Restriction".freeze,
-            maxCardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            minCardinality: "1".freeze,
             onProperty: "premis:hasDependencyName".freeze,
-            type: "owl:Restriction".freeze,
-            minCardinality: "1".freeze
-          )),
-          type: "owl:Class".freeze
+            type: "owl:Restriction".freeze
+          ))
         ),
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -134,9 +134,9 @@ Agent entities.).freeze,
       "skos:historyNote": "Creation / Maintenance Notes: This information may be omitted when the repository is doing only bit-level preservation on the object. Rather than having each repository record this locally, it would be preferable to have a registry of environment information similar to proposed registries of format information. Repositories may choose to design mechanisms for inheritance, so that if the environment required for each file within a representation is identical to the environment recorded for the representation as a whole, it is not necessary to store this information in each file.".freeze,
       "skos:scopeNote": "Usage Notes: All of this semantic units’ subunits are optional. At least one subunit (i.e. environmentNote, dependency, software, hardware, and/or environmentExtension) must be present if this container is included.".freeze,
       subClassOf: term(
+          maxCardinality: "1".freeze,
           onProperty: "premis:hasEnvironmentCharacteristic".freeze,
-          type: "owl:Restriction".freeze,
-          maxCardinality: "1".freeze
+          type: "owl:Restriction".freeze
         ),
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -147,20 +147,20 @@ an Event entity.
 Mandatory semantic units are: eventIdentifier, eventType, and eventDateTime.).freeze,
       editorialNote: %(Entity properties: Must be related to one or more objects. Can be related to one or more agents. Links between entities may be recorded from either direction and need not be bi-directional.).freeze,
       subClassOf: ["premis:PremisEntity".freeze, term(
-          type: "owl:Class".freeze,
           intersectionOf: list(term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasEventType".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            maxCardinality: "1".freeze,
             onProperty: "premis:hasIdentifier".freeze,
-            type: "owl:Restriction".freeze,
-            maxCardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasEventDateTime".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
-          ))
+            type: "owl:Restriction".freeze
+          )),
+          type: "owl:Class".freeze
         )],
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -169,9 +169,9 @@ Mandatory semantic units are: eventIdentifier, eventType, and eventDateTime.).fr
       editorialNote: %(Rationale: An event outcome may be sufficiently complex that a coded description is not adequate to document it.).freeze,
       "skos:scopeNote": "Usage Notes: This may be used to record all error and warning messages issued by a program involved in the event or to record a pointer to an error log. If the event was a validity check (e.g., profile conformance) any anomalies or quirks discovered would be recorded here. All subunits of this semantic unit are optional. At least one subunit (i.e. eventOutcomeDetailNote and/or eventOutcomeDetailExtension) must be present if this container is included.".freeze,
       subClassOf: term(
+          maxCardinality: "1".freeze,
           onProperty: "premis:hasEventOutcomeDetailNote".freeze,
-          type: "owl:Restriction".freeze,
-          maxCardinality: "1".freeze
+          type: "owl:Restriction".freeze
         ),
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -179,9 +179,9 @@ Mandatory semantic units are: eventIdentifier, eventType, and eventDateTime.).fr
       definition: %(Definition: Information about the outcome of an event.).freeze,
       "skos:scopeNote": "Usage Notes: A repository may wish to supplement a coded eventOutcome value with additional information in eventOutcomeDetail. Since events may have more than one outcome, the container is repeatable. All subunits of this semantic unit are optional. At least one subunit (i.e. eventOutcome or eventOutcomeDetail) must be present if this container is included.".freeze,
       subClassOf: term(
+          maxCardinality: "1".freeze,
           onProperty: "premis:hasEventOutcome".freeze,
-          type: "owl:Restriction".freeze,
-          maxCardinality: "1".freeze
+          type: "owl:Restriction".freeze
         ),
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -189,9 +189,9 @@ Mandatory semantic units are: eventIdentifier, eventType, and eventDateTime.).fr
       definition: %(Definition: A named and ordered sequence of bytes that is known to an operating system.).freeze,
       "rdfs:seeAlso": "Object class definition".freeze,
       subClassOf: ["premis:Object".freeze, term(
+          minCardinality: "1".freeze,
           onProperty: "premis:hasObjectCharacteristics".freeze,
-          type: "owl:Restriction".freeze,
-          minCardinality: "1".freeze
+          type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -200,16 +200,16 @@ Mandatory semantic units are: eventIdentifier, eventType, and eventDateTime.).fr
       "skos:historyNote": "Creation / Maintenance Notes: Automatically calculated and recorded by repository.".freeze,
       "skos:scopeNote": "Usage Notes: To perform a fixity check, a message digest calculated at some earlier time is compared with a message digest calculated at a later time. If the digests are the same, the object was not altered in the interim. Recommended practice is to use two or more message digests calculated by different algorithms. (Note that the terms “message digest” and “checksum” are commonly used interchangeably. However, the term “checksum” is more correctly used for the product of a cyclical redundancy check (CRC), whereas the term “message digest” refers to the result of a cryptographic hash function, which is what is referred to here.) The act of performing a fixity check and the date it occurred would be recorded as an Event. The result of the check would be recorded as the eventOutcome. Therefore, only the messageDigestAlgorithm and messageDigest need to be recorded as objectCharacteristics for future comparison. Representation level: It could be argued that if a representation consists of a single file or if all the files comprised by a representation are combined (e.g., zipped) into a single file, then a fixity check could be performed on the representation. However, in both cases the fixity check is actually being performed on a file, which in this case happens to be coincidental with a representation. Bitstream level: Message digests can be computed for bitstreams although they are not as common as with files. For example, the JPX format, which is a JPEG2000 format, supports the inclusion of MD5 or SHA-1 message digests in internal metadata that was calculated on any range of bytes of the file.".freeze,
       subClassOf: term(
-          type: "owl:Class".freeze,
           intersectionOf: list(term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasMessageDigestAlgorithm".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasMessageDigest".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
-          ))
+            type: "owl:Restriction".freeze
+          )),
+          type: "owl:Class".freeze
         ),
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -219,16 +219,16 @@ Mandatory semantic units are: eventIdentifier, eventType, and eventDateTime.).fr
       "skos:historyNote": "Creation / Maintenance Notes: The format of a file or bitstream should be ascertained by the repository on ingest. Even if this information is provided by the submitter, directly in metadata or indirectly via the file name extension, recommended practice is to independently identify the format by parsing the file when possible. If the format cannot be identified at the time of ingest, it is valid to record that it is unknown, but the repository should subsequently make an effort to identify the format, even if manual intervention is required.".freeze,
       "skos:scopeNote": "Usage Notes: A bitstream embedded within a file may have different characteristics than the larger file. For example, a bitstream in LaTex format could be embedded within an SGML file, or multiple images using different colorspaces could be embedded within a TIFF file. format must be recorded for every object. When the bitstream format can be recognized by the repository and the repository might want to treat the bitstream differently from the embedding file for preservation purposes, format can be recorded for embedded bitstreams. Although this semantic unit is mandatory, both of its subunits are optional. At least one subunit (i.e. either formatDesignation or formatRegistry) must be present if this container is included or both may be used. If the subunit (formatDesignation or formatRegistry) needs to be repeated, the entire format container is repeated. This allows for association of format designation with a particular set of format registry information. For example, if the precise format cannot be determined and two format designations are recorded, each is given within a separate format container. The format container may also be repeated for multiple format registry entries.".freeze,
       subClassOf: term(
+          type: "owl:Class".freeze,
           unionOf: list(term(
+            maxCardinality: "1".freeze,
             onProperty: "premis:hasFormatDesignation".freeze,
-            type: "owl:Restriction".freeze,
-            maxCardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            maxCardinality: "1".freeze,
             onProperty: "premis:hasFormatRegistry".freeze,
-            type: "owl:Restriction".freeze,
-            maxCardinality: "1".freeze
-          )),
-          type: "owl:Class".freeze
+            type: "owl:Restriction".freeze
+          ))
         ),
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -236,9 +236,9 @@ Mandatory semantic units are: eventIdentifier, eventType, and eventDateTime.).fr
       definition: %(Definition: An identification of the format of the object.).freeze,
       "skos:scopeNote": "Usage Notes: Either formatDesignation or at least one instance of formatRegistry is required. Both may be included. The most specific format (or format profile) should be recorded. A repository (or formats registry) may wish to use multipart format names (e.g., “TIFF_GeoTIFF” or “WAVE_MPEG_BWF”) to achieve this specificity.".freeze,
       subClassOf: term(
+          cardinality: "1".freeze,
           onProperty: "premis:hasFormatName".freeze,
-          type: "owl:Restriction".freeze,
-          cardinality: "1".freeze
+          type: "owl:Restriction".freeze
         ),
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -247,13 +247,13 @@ Mandatory semantic units are: eventIdentifier, eventType, and eventDateTime.).fr
       editorialNote: %(Rationale: If central format registries are available to the preservation repository, they may provide an excellent way of referencing detailed format information.).freeze,
       "skos:scopeNote": "Usage Notes: Either formatDesignation or at least one instance of formatRegistry is required. If more than one formatRegistry needs to be recorded the format container should be repeated to include each additional set of formatRegistry information. The PREMIS working group assumed that a number of format registries will be developed and maintained to support digital preservation efforts. The proposal for a Global Digital Format Registry (GDFR) (http://hul.harvard.edu/gdfr/documents.html#data), for example, would create a network-accessible registry designed to store detailed specifications on formats and profiles.".freeze,
       subClassOf: [term(
+          cardinality: "1".freeze,
           onProperty: "premis:hasFormatRegistryKey".freeze,
-          type: "owl:Restriction".freeze,
-          cardinality: "1".freeze
+          type: "owl:Restriction".freeze
         ), term(
+          cardinality: "1".freeze,
           onProperty: "premis:hasFormatRegistryName".freeze,
-          type: "owl:Restriction".freeze,
-          cardinality: "1".freeze
+          type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -261,29 +261,29 @@ Mandatory semantic units are: eventIdentifier, eventType, and eventDateTime.).fr
       definition: %(Definition: Hardware components needed by the software referenced in swName or the human user of the referenced software.).freeze,
       "skos:historyNote": "Creation / Maintenance Notes: Hardware environment information can be very difficult to provide. Many different hardware environments may apply; there are a huge number of combinations of maker and type of CPU, memory, video drivers, and so on. Although at least one hardware environment should be recorded, it is not necessary to record them all and each repository will have to make its own decisions about which hardware environments to record. Because of the difficulty recording this information comprehensively, it would be optimal if central registries of environment information existed. In many cases the environment of a file object is directly associated with the format, making registry lookup by format feasible. In the absence of a global mechanism, repositories may be forced to develop their own local “registries” relating format to hwEnvironment.".freeze,
       subClassOf: term(
-          type: "owl:Class".freeze,
           intersectionOf: list(term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasHardwareType".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasHardwareName".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
-          ))
+            type: "owl:Restriction".freeze
+          )),
+          type: "owl:Class".freeze
         ),
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
     term :Identifier,
       comment: %(This class is used in PREMIS OWL to describe identifiers if the identifiers are not http URIs.).freeze,
       subClassOf: [term(
+          cardinality: "1".freeze,
           onProperty: "premis:hasIdentifierType".freeze,
-          type: "owl:Restriction".freeze,
-          cardinality: "1".freeze
+          type: "owl:Restriction".freeze
         ), term(
+          cardinality: "1".freeze,
           onProperty: "premis:hasIdentifierValue".freeze,
-          type: "owl:Restriction".freeze,
-          cardinality: "1".freeze
+          type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -293,9 +293,9 @@ Mandatory semantic units are: eventIdentifier, eventType, and eventDateTime.).fr
       "skos:historyNote": "Creation / Maintenance Notes: Inhibitors are more likely to be present on an object ingested by the repository than applied by the repository itself. It is often not possible to tell that a file has been encrypted by parsing it; the file may appear to be ASCII text. Therefore, information about inhibitors should be supplied as metadata with submitted objects when possible.".freeze,
       "skos:scopeNote": "Usage Notes: Some file formats allow encryption for embedded bitstreams. Some file formats such as PDF use passwords to control access to content or specific functions. Although this is actually implemented at the bitstream level, for preservation purposes it is effectively managed at the file level; that is, passwords would not be recorded for individually addressable bitstreams. For certain types of inhibitor keys, more granularity may be required. If the inhibitor key information is identical to key information in digital signatures, use those semantic units.".freeze,
       subClassOf: term(
+          cardinality: "1".freeze,
           onProperty: "premis:hasInhibitorType".freeze,
-          type: "owl:Restriction".freeze,
-          cardinality: "1".freeze
+          type: "owl:Restriction".freeze
         ),
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -309,9 +309,9 @@ Mandatory semantic units are: eventIdentifier, eventType, and eventDateTime.).fr
       definition: %(Definition: Information about a license or other agreement granting permissions related to an object.).freeze,
       "skos:scopeNote": "Usage Note: When rights basis is a license, licenseInformation should be provided.".freeze,
       subClassOf: ["premis:RightsStatement".freeze, term(
+          maxCardinality: "1".freeze,
           onProperty: "premis:hasLicenseTerms".freeze,
-          type: "owl:Restriction".freeze,
-          maxCardinality: "1".freeze
+          type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -327,13 +327,13 @@ The object class has three subclasses: Representation, File, and Bitstream.).fre
       editorialNote: %(Rationale: There are some important technical properties that apply to objects of any format. Detailed definition of format-specific properties is outside the scope of this Data Dictionary, although such properties may be included within objectCharacteristicsExtension.).freeze,
       "skos:scopeNote": "Usage Notes: The semantic units included in objectCharacteristics should be treated as a set of information that pertains to a single object at a single compositionLevel. Object characteristics may be repeated when an object was created by applying two or more encodings, such as compression and encryption. In this case each repetition of objectCharacteristics would have an incrementally higher compositionLevel. When encryption is applied, the objectCharacteristics block must include an inhibitors semantic unit. A bitstream embedded within a file may have different object characteristics than the file. Where these characteristics are relevant for preservation, they should be recorded. When a single file is equivalent to a representation, objectCharacteristics may be applied and thus associated with the representation. In these cases, the relationship between the file comprising the representation and other associated files may be expressed using relationshipSubType.".freeze,
       subClassOf: [term(
+          cardinality: "1".freeze,
           onProperty: "premis:hasCompositionLevel".freeze,
-          type: "owl:Restriction".freeze,
-          cardinality: "1".freeze
+          type: "owl:Restriction".freeze
         ), term(
+          minCardinality: "1".freeze,
           onProperty: "premis:hasFormat".freeze,
-          type: "owl:Restriction".freeze,
-          minCardinality: "1".freeze
+          type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -349,13 +349,13 @@ The object class has three subclasses: Representation, File, and Bitstream.).fre
       "skos:historyNote": "Creation / Maintenance Notes: The preservation level may be assigned by the repository or requested by the depositor and submitted as metadata. The repository may also choose to record additional metadata indicating the context for the assignment of the preservation level.".freeze,
       "skos:scopeNote": "Usage Notes: If the repository offers only a single preservation level, this value does not need to be explicitly recorded within the repository. Application of a particular set of preservationLevel semantic units may only cover a single representation of an object: representations in other technical forms or serving other functions may have a different preservationLevel applied. The container may be repeated if a preservation level value needs to be recorded in additional contexts (see preservationLevelRole).".freeze,
       subClassOf: [term(
-          onProperty: "premis:hasPreservationLevelRole".freeze,
-          type: "owl:Restriction".freeze,
-          maxCardinality: "1".freeze
-        ), term(
+          cardinality: "1".freeze,
           onProperty: "premis:hasPreservationLevelValue".freeze,
-          type: "owl:Restriction".freeze,
-          cardinality: "1".freeze
+          type: "owl:Restriction".freeze
+        ), term(
+          maxCardinality: "1".freeze,
+          onProperty: "premis:hasPreservationLevelRole".freeze,
+          type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -363,16 +363,16 @@ The object class has three subclasses: Representation, File, and Bitstream.).fre
       definition: %(Definition: The identifier and sequential context of the related resource).freeze,
       "skos:scopeNote": "Usage Notes: The related object may or may not be held within the preservation repository. Recommended practice is that objects reside within the repository unless there is a good reason to reference an object outside. Internal and external references should be clear.".freeze,
       subClassOf: term(
-          type: "owl:Class".freeze,
           intersectionOf: list(term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasRelatedObject".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasRelatedObjectSequence".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
-          ))
+            type: "owl:Restriction".freeze
+          )),
+          type: "owl:Class".freeze
         ),
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -385,29 +385,29 @@ The object class has three subclasses: Representation, File, and Bitstream.).fre
     term :RightsDocumentation,
       definition: %(Definition: A designation used to uniquely identify documentation supporting the specified rights within the repository system.).freeze,
       subClassOf: term(
+          maxCardinality: "1".freeze,
           onProperty: "premis:hasRightsDocumentationRole".freeze,
-          type: "owl:Restriction".freeze,
-          maxCardinality: "1".freeze
+          type: "owl:Restriction".freeze
         ),
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
     term :RightsGranted,
       definition: %(Definition: The action\(s\) that the granting agency has allowed the repository.).freeze,
       subClassOf: [term(
-          onProperty: "premis:hasTermOfRestriction".freeze,
-          type: "owl:Restriction".freeze,
-          maxCardinality: "1".freeze
-        ), term(
-          type: "owl:Class".freeze,
           intersectionOf: list(term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasAct".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            maxCardinality: "1".freeze,
             onProperty: "premis:hasTermOfGrant".freeze,
-            type: "owl:Restriction".freeze,
-            maxCardinality: "1".freeze
-          ))
+            type: "owl:Restriction".freeze
+          )),
+          type: "owl:Class".freeze
+        ), term(
+          maxCardinality: "1".freeze,
+          onProperty: "premis:hasTermOfRestriction".freeze,
+          type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -416,13 +416,13 @@ The object class has three subclasses: Representation, File, and Bitstream.).fre
       definition: %(Definition: Documentation of the repository's right to perform one or more acts.).freeze,
       "skos:scopeNote": "Usage Notes: This semantic unit is optional because in some cases rights may be unknown. Institutions are encouraged to record rights information when possible. Either rightsStatement or rightsExtension must be present if the Rights entity is included. The rightsStatement should be repeated when the act(s) described has more than one basis, or when different acts have different bases.".freeze,
       subClassOf: ["dc:RightsStatement".freeze, "premis:PremisEntity".freeze, term(
+          maxCardinality: "1".freeze,
           onProperty: "premis:hasApplicableDates".freeze,
-          type: "owl:Restriction".freeze,
-          maxCardinality: "1".freeze
+          type: "owl:Restriction".freeze
         ), term(
+          maxCardinality: "1".freeze,
           onProperty: "premis:hasIdentifier".freeze,
-          type: "owl:Restriction".freeze,
-          maxCardinality: "1".freeze
+          type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -431,24 +431,24 @@ The object class has three subclasses: Representation, File, and Bitstream.).fre
       editorialNote: %(Rationale: A repository may have a policy of generating digital signatures for files on ingest, or may have a need to store and later validate incoming digital signatures.).freeze,
       "skos:scopeNote": "Usage Notes: Several of the semantic components of signatureInformation are taken from the W3C’s XML-Signature Syntax and Processing; see www.w3.org/TR/2002/REC-xmldsig-core-20020212/ for more information on the structure and application of these semantic units.".freeze,
       subClassOf: term(
-          type: "owl:Class".freeze,
           intersectionOf: list(term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasSignatureEncoding".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasSignatureMethod".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasSignatureValidationRules".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasSignatureValue".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
-          ))
+            type: "owl:Restriction".freeze
+          )),
+          type: "owl:Class".freeze
         ),
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -463,16 +463,16 @@ The object class has three subclasses: Representation, File, and Bitstream.).fre
       definition: %(Definition: Software required to render or use the object.).freeze,
       "skos:historyNote": "Creation / Maintenance Notes: If recording this explicitly, many different software environments may apply; for example, a particular object such as a PDF file may be viewable by several versions of several applications running under several operating systems and operating system versions. Although at least one software environment should be recorded, it is not necessary to record them all and each repository will have to make its own decisions about which software environments to record. Also, what appears to the user as a single rendering program can have many dependencies, including system utilities, runtime libraries, and so on, which each might have their own dependencies in turn. As with environment, metadata may be more efficiently managed in conjunction with a format registry either internal or external to a repository. In the absence of a global mechanism, repositories may be forced to develop their own local “registries” relating format to software environment.".freeze,
       subClassOf: term(
-          type: "owl:Class".freeze,
           intersectionOf: list(term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasSoftwareType".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasSoftwareName".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
-          ))
+            type: "owl:Restriction".freeze
+          )),
+          type: "owl:Class".freeze
         ),
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -480,16 +480,16 @@ The object class has three subclasses: Representation, File, and Bitstream.).fre
       definition: %(Definition: Information about the statute allowing use of the object.).freeze,
       "skos:scopeNote": "Usage Notes: When rights basis is a statute, statuteInformation should be provided.".freeze,
       subClassOf: ["premis:RightsStatement".freeze, term(
-          type: "owl:Class".freeze,
           intersectionOf: list(term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasStatuteCitation".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            cardinality: "1".freeze,
             onProperty: "premis:hasStatuteJurisdiction".freeze,
-            type: "owl:Restriction".freeze,
-            cardinality: "1".freeze
-          ))
+            type: "owl:Restriction".freeze
+          )),
+          type: "owl:Class".freeze
         )],
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -498,16 +498,16 @@ The object class has three subclasses: Representation, File, and Bitstream.).fre
       editorialNote: %(Rationale: It is necessary for a repository to associate the contentLocation with the storageMedium.).freeze,
       "skos:scopeNote": "Usage Notes: Normally there would be a single storage location and medium for an object, because an object in another location would be considered a different object. The storage composite should be repeated if there are two or more copies that are identical bit-wise and managed as a unit except for the medium on which they are stored. They must have a single objectIdentifier and be managed as a single object by the repository. Although this semantic unit is mandatory, both of its subunits are optional. At least one subunit (i.e. either contentLocation or storageMedium) must be present or both may be used.".freeze,
       subClassOf: term(
+          type: "owl:Class".freeze,
           unionOf: list(term(
+            maxCardinality: "1".freeze,
             onProperty: "premis:hasContentLocation".freeze,
-            type: "owl:Restriction".freeze,
-            maxCardinality: "1".freeze
+            type: "owl:Restriction".freeze
           ), term(
+            maxCardinality: "1".freeze,
             onProperty: "premis:hasStorageMedium".freeze,
-            type: "owl:Restriction".freeze,
-            maxCardinality: "1".freeze
-          )),
-          type: "owl:Class".freeze
+            type: "owl:Restriction".freeze
+          ))
         ),
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -515,9 +515,9 @@ The object class has three subclasses: Representation, File, and Bitstream.).fre
       definition: %(Definition: The time period for the permissions granted.).freeze,
       editorialNote: %(Rationale: The permission to preserve may be time bounded.).freeze,
       subClassOf: ["premis:ApplicableDates".freeze, term(
+          cardinality: "1".freeze,
           onProperty: "premis:hasStartDate".freeze,
-          type: "owl:Restriction".freeze,
-          cardinality: "1".freeze
+          type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -525,9 +525,9 @@ The object class has three subclasses: Representation, File, and Bitstream.).fre
       definition: %(Definition: The time period for the restriction granted.).freeze,
       editorialNote: %(Rationale: The current definition of termOfGrant is "time period for the permissions granted." This allows for expressing information about the rights granted, but some repositories may need to express timebounded restrictions like embargoes. If this is applicable startDate for the beginning of the embargo and endDate for the end of the embargo should be recorded.).freeze,
       subClassOf: ["premis:ApplicableDates".freeze, term(
+          cardinality: "1".freeze,
           onProperty: "premis:hasStartDate".freeze,
-          type: "owl:Restriction".freeze,
-          cardinality: "1".freeze
+          type: "owl:Restriction".freeze
         )],
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
@@ -547,8 +547,8 @@ The object class has three subclasses: Representation, File, and Bitstream.).fre
     property :hasAgent,
       definition: %(Definition: link to the associated Agent.).freeze,
       domain: term(
-          unionOf: list("premis:Event".freeze, "premis:RightsStatement".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("premis:Event".freeze, "premis:RightsStatement".freeze)
         ),
       editorialNote: %(Rationale: Digital provenance requires often that relationships between agents and events are documented. The role of the associated agent may need to be documented. For this, a SKOS vocabulary can be used. The LOC will publish a vocabulary at http://id.loc.gov/, denoting the agent's role. These vocabulary will publish the concepts also as subproperties to the linkingAgent property, for denoting the role of the agent in the event or rightsstatement.).freeze,
       range: "premis:Agent".freeze,
@@ -744,8 +744,8 @@ and used with a standalone PDF reader.).freeze,
     property :hasEvent,
       definition: %(Definition: The event associated with the object or an agent.).freeze,
       domain: term(
-          unionOf: list("premis:Agent".freeze, "premis:Object".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("premis:Agent".freeze, "premis:Object".freeze)
         ),
       range: "premis:Event".freeze,
       "rdfs:seeAlso": "Object class definition, the Agent class Definition and Event class definition".freeze,
@@ -837,8 +837,8 @@ Program=“MIGJP2JP2K”; version=“2.2”).freeze,
     property :hasFormat,
       domain: "premis:ObjectCharacteristics".freeze,
       range: term(
-          unionOf: list("premis:Format".freeze, "http://reference.data.gov.uk/technical-registry/file-format".freeze, "http://www.udfr.org/onto#AbstractFormat".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("premis:Format".freeze, "http://reference.data.gov.uk/technical-registry/file-format".freeze, "http://www.udfr.org/onto#AbstractFormat".freeze)
         ),
       "rdfs:seeAlso": "ObjectCharacteristics class definition and Format class definition. Next to the premis:Format class this property can also link to a pronom:file-format or udfr:AbstractFormat .".freeze,
       type: "owl:ObjectProperty".freeze,
@@ -943,8 +943,8 @@ Program=“MIGJP2JP2K”; version=“2.2”).freeze,
       "vs:term_status": "stable".freeze
     property :hasIdentifier,
       domain: term(
-          unionOf: list("premis:Agent".freeze, "premis:Dependency".freeze, "premis:Event".freeze, "premis:LicenseInformation".freeze, "premis:Object".freeze, "premis:RightsDocumentation".freeze, "premis:RightsStatement".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("premis:Agent".freeze, "premis:Dependency".freeze, "premis:Event".freeze, "premis:LicenseInformation".freeze, "premis:Object".freeze, "premis:RightsDocumentation".freeze, "premis:RightsStatement".freeze)
         ),
       "rdfs:seeAlso": "Identifier class definition".freeze,
       type: ["owl:InverseFunctionalProperty".freeze, "owl:ObjectProperty".freeze],
@@ -1052,8 +1052,8 @@ Program=“MIGJP2JP2K”; version=“2.2”).freeze,
       comment: %(Extensions: One can extend this property to use more fine grained properties by defining the fine grained properties as subproperties of this property.).freeze,
       definition: %(Definition: Information about an object associated with an event or rightsstatement.).freeze,
       domain: term(
-          unionOf: list("premis:Event".freeze, "premis:RightsStatement".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("premis:Event".freeze, "premis:RightsStatement".freeze)
         ),
       editorialNote: %(Rationale: Digital provenance often requires that relationships between objects and events are documented. / Rights statements must be associated with the objects to which they pertain, either by linking from the rights statement to the object\(s\) or by linking from the object\(s\) to the rights statement. This provides the mechanism for the link from the rights statement to an object. For denoting the role of the object, when related to an event,one can extend this ontology be defining your own subproperties, such as those given by http://id.loc.gov/vocabulary/preservation/eventRelatedObjectRole.).freeze,
       range: "premis:Object".freeze,
@@ -1062,8 +1062,8 @@ Program=“MIGJP2JP2K”; version=“2.2”).freeze,
       "vs:term_status": "stable".freeze
     property :hasObjectCharacteristics,
       domain: term(
-          unionOf: list("premis:Bitstream".freeze, "premis:File".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("premis:Bitstream".freeze, "premis:File".freeze)
         ),
       range: "premis:ObjectCharacteristics".freeze,
       "rdfs:seeAlso": "Object class definition and ObjectCharacteristics class definition".freeze,
@@ -1073,8 +1073,8 @@ Program=“MIGJP2JP2K”; version=“2.2”).freeze,
       comment: %(Example: N419.pdf).freeze,
       definition: %(Definition: The name of the object as submitted to or harvested by the repository, before any renaming by the repository.).freeze,
       domain: term(
-          unionOf: list("premis:File".freeze, "premis:Representation".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("premis:File".freeze, "premis:Representation".freeze)
         ),
       editorialNote: %(Rationale: The name used within the preservation repository may not be known outside of the repository. A depositor might need to request a file by its original name. Also, the repository may need to reconstruct internal links for dissemination.).freeze,
       range: "xsd:string".freeze,
@@ -1084,8 +1084,8 @@ Program=“MIGJP2JP2K”; version=“2.2”).freeze,
       "vs:term_status": "stable".freeze
     property :hasPreservationLevel,
       domain: term(
-          unionOf: list("premis:File".freeze, "premis:Representation".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("premis:File".freeze, "premis:Representation".freeze)
         ),
       range: "premis:PreservationLevel".freeze,
       "rdfs:seeAlso": "Object class definition and PreservationLevel class definition".freeze,
@@ -1154,8 +1154,8 @@ Program=“MIGJP2JP2K”; version=“2.2”).freeze,
       definition: %(Definition: This property links one object to one or more other objects.).freeze,
       domain: "premis:Object".freeze,
       range: term(
-          unionOf: list("premis:Object".freeze, "premis:RelatedObjectIdentification".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("premis:Object".freeze, "premis:RelatedObjectIdentification".freeze)
         ),
       "rdfs:seeAlso": ["http://id.loc.gov/vocabulary/preservation/relationshipSubType".freeze, "http://id.loc.gov/vocabulary/preservation/relationshipType".freeze],
       type: "owl:ObjectProperty".freeze,
@@ -1205,8 +1205,8 @@ Program=“MIGJP2JP2K”; version=“2.2”).freeze,
     property :hasRightsStatement,
       definition: %(Definition: A rights statement associated with the object.).freeze,
       domain: term(
-          unionOf: list("premis:Agent".freeze, "premis:Object".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("premis:Agent".freeze, "premis:Object".freeze)
         ),
       editorialNote: %(Rationale: A repository may choose to link from a rights statement to an object or from an object to a rights statement or both.).freeze,
       range: "premis:RightsStatement".freeze,
@@ -1223,8 +1223,8 @@ License is embedded in XMP block in file header.).freeze,
       "vs:term_status": "stable".freeze
     property :hasSignature,
       domain: term(
-          unionOf: list("premis:Bitstream".freeze, "premis:File".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("premis:Bitstream".freeze, "premis:File".freeze)
         ),
       range: "premis:Signature".freeze,
       "rdfs:seeAlso": "Signature class definition".freeze,
@@ -1397,8 +1397,8 @@ License is embedded in XMP block in file header.).freeze,
       "vs:term_status": "stable".freeze
     property :hasStorage,
       domain: term(
-          unionOf: list("premis:Bitstream".freeze, "premis:File".freeze),
-          type: "owl:Class".freeze
+          type: "owl:Class".freeze,
+          unionOf: list("premis:Bitstream".freeze, "premis:File".freeze)
         ),
       range: "premis:Storage".freeze,
       "rdfs:seeAlso": "Object class definition and Storage class definition".freeze,

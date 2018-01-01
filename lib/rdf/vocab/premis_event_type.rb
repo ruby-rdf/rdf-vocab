@@ -15,39 +15,39 @@ module RDF::Vocab
       label: "Event Type".freeze,
       "mads:adminMetadata": [term(
           "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2010-06-01T00:00:00".freeze,
-          type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze,
           "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "premiseventtype:dlc".freeze,
-          "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "new".freeze
+          "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "new".freeze,
+          type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze
         ), term(
           "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2012-06-01T00:00:00".freeze,
-          type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze,
           "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "premiseventtype:dlc".freeze,
-          "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "modified".freeze
+          "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "modified".freeze,
+          type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze
         ), term(
           "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2017-12-01T00:00:00".freeze,
-          type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze,
           "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "premiseventtype:dlc".freeze,
-          "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "modified".freeze
+          "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "modified".freeze,
+          type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze
         )],
       "mads:hasMADSSchemeMember": ["premiseventtype:acc".freeze, "premiseventtype:app".freeze, "premiseventtype:cap".freeze, "premiseventtype:com".freeze, "premiseventtype:cre".freeze, "premiseventtype:dea".freeze, "premiseventtype:dec".freeze, "premiseventtype:del".freeze, "premiseventtype:der".freeze, "premiseventtype:dig".freeze, "premiseventtype:dis".freeze, "premiseventtype:dsg".freeze, "premiseventtype:enc".freeze, "premiseventtype:ffa".freeze, "premiseventtype:fil".freeze, "premiseventtype:fix".freeze, "premiseventtype:for".freeze, "premiseventtype:ima".freeze, "premiseventtype:ine".freeze, "premiseventtype:ing".freeze, "premiseventtype:ins".freeze, "premiseventtype:ipc".freeze, "premiseventtype:ipm".freeze, "premiseventtype:ips".freeze, "premiseventtype:mee".freeze, "premiseventtype:mem".freeze, "premiseventtype:mes".freeze, "premiseventtype:mig".freeze, "premiseventtype:mod".freeze, "premiseventtype:nor".freeze, "premiseventtype:pac".freeze, "premiseventtype:poa".freeze, "premiseventtype:qua".freeze, "premiseventtype:rec".freeze, "premiseventtype:red".freeze, "premiseventtype:ref".freeze, "premiseventtype:rep".freeze, "premiseventtype:tra".freeze, "premiseventtype:unp".freeze, "premiseventtype:unq".freeze, "premiseventtype:val".freeze, "premiseventtype:vir".freeze],
       "skos:changeNote": [term(
-          "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType".freeze,
-          "http://purl.org/vocab/changeset/schema#creatorName": "premiseventtype:dlc".freeze,
-          type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze,
-          "http://purl.org/vocab/changeset/schema#createdDate": "2010-06-01T00:00:00".freeze,
-          "http://purl.org/vocab/changeset/schema#changeReason": "new".freeze
-        ), term(
-          "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType".freeze,
-          "http://purl.org/vocab/changeset/schema#creatorName": "premiseventtype:dlc".freeze,
-          type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze,
+          "http://purl.org/vocab/changeset/schema#changeReason": "modified".freeze,
           "http://purl.org/vocab/changeset/schema#createdDate": "2012-06-01T00:00:00".freeze,
-          "http://purl.org/vocab/changeset/schema#changeReason": "modified".freeze
-        ), term(
-          "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType".freeze,
           "http://purl.org/vocab/changeset/schema#creatorName": "premiseventtype:dlc".freeze,
-          type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze,
+          "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType".freeze,
+          type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze
+        ), term(
+          "http://purl.org/vocab/changeset/schema#changeReason": "modified".freeze,
           "http://purl.org/vocab/changeset/schema#createdDate": "2017-12-01T00:00:00".freeze,
-          "http://purl.org/vocab/changeset/schema#changeReason": "modified".freeze
+          "http://purl.org/vocab/changeset/schema#creatorName": "premiseventtype:dlc".freeze,
+          "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType".freeze,
+          type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze
+        ), term(
+          "http://purl.org/vocab/changeset/schema#changeReason": "new".freeze,
+          "http://purl.org/vocab/changeset/schema#createdDate": "2010-06-01T00:00:00".freeze,
+          "http://purl.org/vocab/changeset/schema#creatorName": "premiseventtype:dlc".freeze,
+          "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType".freeze,
+          type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze
         )],
       type: ["mads:MADSScheme".freeze, "skos:ConceptScheme".freeze]
 

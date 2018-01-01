@@ -570,11 +570,11 @@ Note 2: You can use greater signs or slashes to informally indicate a category h
             subClassOf: "gr:Offering".freeze,
             type: "owl:Class".freeze
           ), term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ), term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:Location".freeze
+            equivalentClass: "gr:Location".freeze,
+            type: "owl:Class".freeze
           ), term(
             subClassOf: "gr:BusinessEntity".freeze,
             type: "owl:Class".freeze
@@ -611,8 +611,8 @@ Note 3: If the shop re-opens on the same day of the week or set of days of the w
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:ProductOrService".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -625,8 +625,8 @@ Note 3: If the shop re-opens on the same day of the week or set of days of the w
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:Offering".freeze, "gr:ProductOrService".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -640,8 +640,8 @@ In products and services ontologies, only such properties that are no quantitati
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:ProductOrService".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -669,8 +669,8 @@ Typical unit code\(s\): CMT for centimeters, INH for inches).freeze,
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:ProductOrService".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -795,8 +795,8 @@ The object is a gr:PriceSpecification that uses the properties gr:hasMaxCurrency
             subClassOf: "gr:BusinessEntity".freeze,
             type: "owl:Class".freeze
           ), term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -860,8 +860,8 @@ Note 2: As of January 1, 2007, the former ISBN numbers for books etc. have been 
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:Offering".freeze, "gr:ProductOrService".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -888,8 +888,8 @@ Note that if an offering is a bundle, i.e. it consists of more than one unit of 
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:Offering".freeze, "gr:ProductOrService".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -902,8 +902,8 @@ Note that if an offering is a bundle, i.e. it consists of more than one unit of 
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:Offering".freeze, "gr:ProductOrService".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -917,8 +917,8 @@ The Global Location Number is a thirteen-digit number used to identify parties a
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:BusinessEntity".freeze, "gr:Location".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:Location".freeze
+            equivalentClass: "gr:Location".freeze,
+            type: "owl:Class".freeze
           ), term(
             subClassOf: "gr:BusinessEntity".freeze,
             type: "owl:Class".freeze
@@ -938,8 +938,8 @@ Note: While ISIC codes are sometimes misused for classifying products or service
             subClassOf: "gr:BusinessEntity".freeze,
             type: "owl:Class".freeze
           ), term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:Location".freeze
+            equivalentClass: "gr:Location".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -972,8 +972,8 @@ See also http://en.wikipedia.org/wiki/Part_number).freeze,
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:Offering".freeze, "gr:ProductOrService".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -988,8 +988,8 @@ Example: myFordT hasMakeAndModel FordT.).freeze,
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:Individual".freeze, "gr:SomeItems".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -1001,8 +1001,8 @@ Example: myFordT hasMakeAndModel FordT.).freeze,
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:ProductOrService".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -1117,8 +1117,8 @@ Note: Use multiple instances of gr:OpeningHoursSpecification for specifying the 
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:Location".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:Location".freeze
+            equivalentClass: "gr:Location".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -1184,8 +1184,8 @@ See also http://en.wikipedia.org/wiki/Stock_Keeping_Unit.).freeze,
             subClassOf: "gr:Offering".freeze,
             type: "owl:Class".freeze
           ), term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -1253,8 +1253,8 @@ Typical unit code\(s\): CMT for centimeters, INH for inches).freeze,
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:ProductOrService".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -1294,8 +1294,8 @@ When linking to a gr:ProductOrServiceModel, it is equivalent to
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:ProductOrService".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -1307,8 +1307,8 @@ When linking to a gr:ProductOrServiceModel, it is equivalent to
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:ProductOrService".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -1329,8 +1329,8 @@ DEPRECATED. Use the gr:priceType property instead.).freeze,
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:ProductOrService".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -1483,8 +1483,8 @@ INVOICE: The invoice price, mostly used in the car industry - this is the price 
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:ProductOrService".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -1496,8 +1496,8 @@ INVOICE: The invoice price, mostly used in the car industry - this is the price 
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:ProductOrService".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -1534,8 +1534,8 @@ This property can also be attached to a gr:Offering in cases where the included 
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:Individual".freeze, "gr:Offering".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -1681,8 +1681,8 @@ Typical unit code\(s\): GRM for gram, KGM for kilogram, LBR for pound).freeze,
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:ProductOrService".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -1696,8 +1696,8 @@ Typical unit code\(s\): CMT for centimeters, INH for inches).freeze,
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("gr:ProductOrService".freeze, term(
-            type: "owl:Class".freeze,
-            equivalentClass: "gr:ProductOrService".freeze
+            equivalentClass: "gr:ProductOrService".freeze,
+            type: "owl:Class".freeze
           ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,

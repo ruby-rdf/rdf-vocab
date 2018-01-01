@@ -86,8 +86,8 @@ module RDF::Vocab
       comment: %(Corresponds to 'averageBitRate' in the Ontology for Media Resources, expressed in kilobits/second.).freeze,
       domain: term(
           intersectionOf: list("ma:MediaResource".freeze, term(
-            type: "owl:Class".freeze,
-            "owl:complementOf": "ma:Image".freeze
+            "owl:complementOf": "ma:Image".freeze,
+            type: "owl:Class".freeze
           )),
           type: "owl:Class".freeze
         ),
@@ -127,8 +127,8 @@ module RDF::Vocab
       comment: %(Corresponds to 'duration' in the Ontology for Media Resources.).freeze,
       domain: term(
           intersectionOf: list("ma:MediaResource".freeze, term(
-            type: "owl:Class".freeze,
-            "owl:complementOf": "ma:Image".freeze
+            "owl:complementOf": "ma:Image".freeze,
+            type: "owl:Class".freeze
           )),
           type: "owl:Class".freeze
         ),
