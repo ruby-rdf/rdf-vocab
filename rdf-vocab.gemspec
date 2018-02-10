@@ -34,7 +34,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "jsonpath",     "~> 0.8"
   spec.add_development_dependency "ld-patch",     '~> 0.3'
   spec.add_development_dependency "nokogiri",     '~> 1.8'
-  spec.add_development_dependency "nokogumbo",    '~> 1.4'
+  spec.add_development_dependency "nokogumbo",    '~> 1.5'
   spec.add_development_dependency "rake",         "~> 12.0"
   #spec.add_development_dependency "rdf-rdfa",     '~> 3.0'
   spec.add_development_dependency "rdf-rdfa",     '>= 2.2', '< 4.0'
