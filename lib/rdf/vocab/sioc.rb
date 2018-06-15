@@ -13,7 +13,7 @@ module RDF::Vocab
     ontology :"http://rdfs.org/sioc/ns#",
       "dc:description": "SIOC (Semantically-Interlinked Online Communities) is an ontology for describing the information in online communities. \nThis information can be used to export information from online communities and to link them together. The scope of the application areas that SIOC can be used for includes (and is not limited to) weblogs, message boards, mailing lists and chat channels.".freeze,
       "dc:title": "SIOC Core Ontology Namespace".freeze,
-      "owl:versionInfo": "Revision: 1.35".freeze,
+      "owl:versionInfo": "Revision: 1.36".freeze,
       "rdfs:seeAlso": "http://rdfs.org/sioc/spec".freeze,
       type: ["owl:Ontology".freeze, "owl:Thing".freeze]
 
@@ -144,6 +144,7 @@ module RDF::Vocab
       isDefinedBy: "sioc:".freeze,
       label: "container of".freeze,
       range: "sioc:Item".freeze,
+      subPropertyOf: "dc:hasPart".freeze,
       type: "owl:ObjectProperty".freeze
     property :content,
       comment: %(The content of the Item in plain text format.).freeze,
@@ -175,6 +176,13 @@ module RDF::Vocab
       isDefinedBy: "sioc:".freeze,
       label: "creator of".freeze,
       type: "owl:ObjectProperty".freeze
+    property :delivered_at,
+      comment: %(When this was delivered, in ISO 8601 format.).freeze,
+      domain: "sioc:Item".freeze,
+      isDefinedBy: "sioc:".freeze,
+      label: "delivered at".freeze,
+      range: "rdfs:Literal".freeze,
+      type: ["owl:DatatypeProperty".freeze, "owl:ObjectProperty".freeze]
     property :description,
       comment: %(The content of the Post.).freeze,
       domain: "sioc:Post".freeze,
@@ -183,6 +191,13 @@ module RDF::Vocab
       "owl:versionInfo": "This property is deprecated. Use sioc:content or other methods (AtomOwl, content:encoded from RSS 1.0, etc.) instead.".freeze,
       range: "rdfs:Literal".freeze,
       type: ["owl:DatatypeProperty".freeze, "owl:DeprecatedProperty".freeze]
+    property :discussion_of,
+      comment: %(The Item that this discussion is about.).freeze,
+      inverseOf: "sioc:has_discussion".freeze,
+      isDefinedBy: "sioc:".freeze,
+      label: "discussion of".freeze,
+      range: "sioc:Item".freeze,
+      type: "owl:ObjectProperty".freeze
     property :earlier_version,
       comment: %(Links to a previous \(older\) revision of this Item or Post.).freeze,
       domain: "sioc:Item".freeze,
@@ -238,6 +253,12 @@ module RDF::Vocab
       isDefinedBy: "sioc:".freeze,
       label: "function of".freeze,
       type: "owl:ObjectProperty".freeze
+    property :generator,
+      comment: %(A URI for the application used to generate this Item.).freeze,
+      domain: "sioc:Item".freeze,
+      isDefinedBy: "sioc:".freeze,
+      label: "generator".freeze,
+      type: "owl:ObjectProperty".freeze
     property :group_of,
       inverseOf: "sioc:has_group".freeze,
       label: "group of".freeze,
@@ -258,6 +279,7 @@ module RDF::Vocab
       isDefinedBy: "sioc:".freeze,
       label: "has container".freeze,
       range: "sioc:Container".freeze,
+      subPropertyOf: "dc:partOf".freeze,
       type: "owl:ObjectProperty".freeze
     property :has_creator,
       comment: %(This is the UserAccount that made this resource.).freeze,
@@ -267,8 +289,9 @@ module RDF::Vocab
       range: "sioc:UserAccount".freeze,
       type: "owl:ObjectProperty".freeze
     property :has_discussion,
-      comment: %(The discussion that is related to this Item.).freeze,
+      comment: %(A discussion that is related to this Item. The discussion can be anything, for example, a sioc:Forum or sioc:Thread, a sioct:WikiArticle or simply a foaf:Document.).freeze,
       domain: "sioc:Item".freeze,
+      inverseOf: "sioc:discussion_of".freeze,
       isDefinedBy: "sioc:".freeze,
       label: "has discussion".freeze,
       type: "owl:ObjectProperty".freeze
@@ -285,12 +308,13 @@ module RDF::Vocab
       "owl:versionInfo": "This property has been renamed. Use sioc:has_usergroup instead.".freeze,
       type: ["owl:DeprecatedProperty".freeze, "owl:ObjectProperty".freeze]
     property :has_host,
-      comment: %(The Site that hosts this Forum.).freeze,
-      domain: "sioc:Forum".freeze,
+      comment: %(The Site that hosts this Container.).freeze,
+      domain: "sioc:Container".freeze,
       inverseOf: "sioc:host_of".freeze,
       isDefinedBy: "sioc:".freeze,
       label: "has host".freeze,
       range: "sioc:Site".freeze,
+      subPropertyOf: "sioc:has_space".freeze,
       type: "owl:ObjectProperty".freeze
     property :has_member,
       comment: %(A UserAccount that is a member of this Usergroup.).freeze,
@@ -303,13 +327,13 @@ module RDF::Vocab
     property :has_moderator,
       comment: %(A UserAccount that is a moderator of this Forum.).freeze,
       domain: "sioc:Forum".freeze,
+      inverseOf: "sioc:moderator_of".freeze,
       isDefinedBy: "sioc:".freeze,
       label: "has moderator".freeze,
       range: "sioc:UserAccount".freeze,
       type: "owl:ObjectProperty".freeze
     property :has_modifier,
-      comment: %(A UserAccount that modified this Item.).freeze,
-      domain: "sioc:Item".freeze,
+      comment: %(A UserAccount that modified this resource \(e.g. Item, Container, Space\).).freeze,
       inverseOf: "sioc:modifier_of".freeze,
       isDefinedBy: "sioc:".freeze,
       label: "has modifier".freeze,
@@ -329,6 +353,7 @@ module RDF::Vocab
       isDefinedBy: "sioc:".freeze,
       label: "has parent".freeze,
       range: "sioc:Container".freeze,
+      subPropertyOf: "dc:partOf".freeze,
       type: "owl:ObjectProperty".freeze
     property :has_part,
       comment: %(An resource that is a part of this subject.).freeze,
@@ -359,6 +384,7 @@ module RDF::Vocab
       isDefinedBy: "sioc:".freeze,
       label: "has space".freeze,
       range: "sioc:Space".freeze,
+      subPropertyOf: "dc:partOf".freeze,
       type: "owl:ObjectProperty".freeze
     property :has_subscriber,
       comment: %(A UserAccount that is subscribed to this Container.).freeze,
@@ -378,12 +404,13 @@ module RDF::Vocab
       range: "sioc:Usergroup".freeze,
       type: "owl:ObjectProperty".freeze
     property :host_of,
-      comment: %(A Forum that is hosted on this Site.).freeze,
+      comment: %(A Container that is hosted on this Site.).freeze,
       domain: "sioc:Site".freeze,
       inverseOf: "sioc:has_host".freeze,
       isDefinedBy: "sioc:".freeze,
       label: "host of".freeze,
-      range: "sioc:Forum".freeze,
+      range: "sioc:Container".freeze,
+      subPropertyOf: "sioc:space_of".freeze,
       type: "owl:ObjectProperty".freeze
     property :id,
       comment: %(An identifier of a SIOC concept instance. For example, a user ID. Must be unique for instances of each type of SIOC concept within the same site.).freeze,
@@ -392,8 +419,7 @@ module RDF::Vocab
       range: "rdfs:Literal".freeze,
       type: "owl:DatatypeProperty".freeze
     property :ip_address,
-      comment: %(The IP address used when creating this Item. This can be associated with a creator. Some wiki articles list the IP addresses for the creator or modifiers when the usernames are absent.).freeze,
-      domain: "sioc:Item".freeze,
+      comment: %(The IP address used when creating this Item, UserAccount, etc. This can be associated with a creator. Some wiki articles list the IP addresses for the creator or modifiers when the usernames are absent.).freeze,
       isDefinedBy: "sioc:".freeze,
       label: "ip address".freeze,
       range: "rdfs:Literal".freeze,
@@ -443,6 +469,11 @@ module RDF::Vocab
       label: "latest version".freeze,
       range: "sioc:Item".freeze,
       type: "owl:ObjectProperty".freeze
+    property :likes,
+      comment: %(Used to indicate some form of endorsement by a UserAccount or Agent of an Item, Container, Space, UserAccount, etc.).freeze,
+      isDefinedBy: "sioc:".freeze,
+      label: "likes".freeze,
+      type: "owl:ObjectProperty".freeze
     property :link,
       comment: %(A URI of a document which contains this SIOC object.).freeze,
       isDefinedBy: "sioc:".freeze,
@@ -462,6 +493,13 @@ module RDF::Vocab
       label: "member of".freeze,
       range: "sioc:Usergroup".freeze,
       type: "owl:ObjectProperty".freeze
+    property :mentions,
+      comment: %(Refers to a UserAccount that a particular Item mentions.).freeze,
+      domain: "sioc:Item".freeze,
+      isDefinedBy: "sioc:".freeze,
+      label: "mentions".freeze,
+      range: "sioc:UserAccount".freeze,
+      type: "owl:ObjectProperty".freeze
     property :moderator_of,
       comment: %(A Forum that a UserAccount is a moderator of.).freeze,
       domain: "sioc:UserAccount".freeze,
@@ -479,12 +517,11 @@ module RDF::Vocab
       range: "rdfs:Literal".freeze,
       type: ["owl:DatatypeProperty".freeze, "owl:DeprecatedProperty".freeze]
     property :modifier_of,
-      comment: %(An Item that this UserAccount has modified.).freeze,
+      comment: %(A resource that this UserAccount has modified.).freeze,
       domain: "sioc:UserAccount".freeze,
       inverseOf: "sioc:has_modifier".freeze,
       isDefinedBy: "sioc:".freeze,
       label: "modifier of".freeze,
-      range: "sioc:Item".freeze,
       type: "owl:ObjectProperty".freeze
     property :name,
       comment: %(The name of a SIOC concept instance, e.g. a username for a UserAccount, group name for a Usergroup, etc.).freeze,
@@ -561,6 +598,7 @@ module RDF::Vocab
       isDefinedBy: "sioc:".freeze,
       label: "parent of".freeze,
       range: "sioc:Container".freeze,
+      subPropertyOf: "dc:hasPart".freeze,
       type: "owl:ObjectProperty".freeze
     property :part_of,
       comment: %(A resource that the subject is a part of.).freeze,
@@ -586,6 +624,13 @@ module RDF::Vocab
       range: "sioc:Item".freeze,
       subPropertyOf: "sioc:earlier_version".freeze,
       type: "owl:ObjectProperty".freeze
+    property :read_at,
+      comment: %(When this was read, in ISO 8601 format.).freeze,
+      domain: "sioc:Item".freeze,
+      isDefinedBy: "sioc:".freeze,
+      label: "read at".freeze,
+      range: "rdfs:Literal".freeze,
+      type: ["owl:DatatypeProperty".freeze, "owl:ObjectProperty".freeze]
     property :reference,
       comment: %(Links either created explicitly or extracted implicitly on the HTML level from the Post.).freeze,
       domain: "sioc:Post".freeze,
@@ -594,7 +639,7 @@ module RDF::Vocab
       "owl:versionInfo": "Renamed to sioc:links_to.".freeze,
       type: ["owl:DeprecatedProperty".freeze, "owl:ObjectProperty".freeze]
     property :related_to,
-      comment: %(Related Posts for this Post, perhaps determined implicitly from topics or references.).freeze,
+      comment: %(Related resources for this resource, e.g. for Posts, perhaps determined implicitly from topics or references.).freeze,
       isDefinedBy: "sioc:".freeze,
       label: "related to".freeze,
       type: "owl:ObjectProperty".freeze
@@ -607,12 +652,26 @@ module RDF::Vocab
       range: "sioc:Item".freeze,
       subPropertyOf: "sioc:related_to".freeze,
       type: "owl:ObjectProperty".freeze
+    property :respond_to,
+      comment: %(For the reply-to address set in email messages, IMs, etc. The property name was chosen to avoid confusion with has_reply/reply_of \(the reply graph\).).freeze,
+      domain: "sioc:Item".freeze,
+      isDefinedBy: "sioc:".freeze,
+      label: "respond to".freeze,
+      type: "owl:ObjectProperty".freeze
     property :scope_of,
       comment: %(A Role that has a scope of this resource.).freeze,
       inverseOf: "sioc:has_scope".freeze,
       isDefinedBy: "sioc:".freeze,
       label: "scope of".freeze,
       range: "sioc:Role".freeze,
+      type: "owl:ObjectProperty".freeze
+    property :shared_by,
+      comment: %(For shared Items where there is a certain creator_of and an intermediary who shares or forwards it \(e.g. as a sibling Item\).).freeze,
+      domain: "sioc:Item".freeze,
+      isDefinedBy: "sioc:".freeze,
+      label: "shared by".freeze,
+      range: "sioc:UserAccount".freeze,
+      "rdfs:seeAlso": "sioc:sibling".freeze,
       type: "owl:ObjectProperty".freeze
     property :sibling,
       comment: %(An Item may have a sibling or a twin that exists in a different Container, but the siblings may differ in some small way \(for example, language, category, etc.\). The sibling of this Item should be self-describing \(that is, it should contain all available information\).).freeze,
@@ -627,6 +686,7 @@ module RDF::Vocab
       inverseOf: "sioc:has_space".freeze,
       isDefinedBy: "sioc:".freeze,
       label: "space of".freeze,
+      subPropertyOf: "dc:hasPart".freeze,
       type: "owl:ObjectProperty".freeze
     property :subject,
       comment: %(Keyword\(s\) describing subject of the Post.).freeze,

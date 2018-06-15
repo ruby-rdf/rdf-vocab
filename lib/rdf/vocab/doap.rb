@@ -14,7 +14,7 @@ module RDF::Vocab
       "dc11:creator": "Edd Wilder-James".freeze,
       "dc11:description": "The Description of a Project (DOAP) vocabulary, described using W3C RDF Schema and the Web Ontology Language.".freeze,
       "dc11:format": "application/rdf+xml".freeze,
-      "dc11:rights": "Copyright © 2004-20017 Edd Dumbill, Edd Wilder-James".freeze,
+      "dc11:rights": "Copyright © 2004-2018 Edd Dumbill, Edd Wilder-James".freeze,
       "dc11:title": "Description of a Project (DOAP) vocabulary".freeze,
       "foaf:maker": term(
           "foaf:mbox": "mailto:edd@usefulinc.com".freeze,
@@ -289,7 +289,7 @@ module RDF::Vocab
       comment: %(Programming language a project is implemented in or intended for use with.).freeze,
       domain: "doap:Project".freeze,
       isDefinedBy: "doap:".freeze,
-      label: ["linguagem de programação".freeze, "programming language".freeze],
+      label: "programming language".freeze,
       range: "rdfs:Literal".freeze,
       type: "rdf:Property".freeze
     property :release,
