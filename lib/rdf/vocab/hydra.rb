@@ -261,6 +261,13 @@ module RDF::Vocab
       range: "hydra:ApiDocumentation".freeze,
       type: "hydra:Link".freeze,
       "vs:term_status": "testing".freeze
+    term :collection,
+      comment: %(Collections somehow related to this resource.).freeze,
+      domain: "hydra:Collection".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
+      label: "collection".freeze,
+      type: "hydra:Link".freeze,
+      "vs:term_status": "testing".freeze
     term :entrypoint,
       comment: %(A link to main entry point of the Web API).freeze,
       domain: "hydra:ApiDocumentation".freeze,
@@ -293,6 +300,12 @@ module RDF::Vocab
       range: "hydra:Resource".freeze,
       type: "hydra:Link".freeze,
       "vs:term_status": "testing".freeze
+    term :manages,
+      comment: %(Semantics of each member provided by the collection.).freeze,
+      domain: "hydra:Collection".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
+      label: "manages".freeze,
+      "vs:term_status": "testing".freeze
     term :member,
       comment: %(A member of the collection).freeze,
       domain: "hydra:Collection".freeze,
@@ -308,6 +321,11 @@ module RDF::Vocab
       label: "next".freeze,
       range: "hydra:Resource".freeze,
       type: "hydra:Link".freeze,
+      "vs:term_status": "testing".freeze
+    term :object,
+      comment: %(The object.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
+      label: "object".freeze,
       "vs:term_status": "testing".freeze
     term :operation,
       comment: %(An operation supported by the Hydra resource).freeze,
@@ -346,6 +364,11 @@ module RDF::Vocab
       label: "search".freeze,
       range: "hydra:IriTemplate".freeze,
       type: "hydra:TemplatedLink".freeze,
+      "vs:term_status": "testing".freeze
+    term :subject,
+      comment: %(The subject.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
+      label: "subject".freeze,
       "vs:term_status": "testing".freeze
     term :supportedClass,
       comment: %(A class known to be supported by the Web API).freeze,
