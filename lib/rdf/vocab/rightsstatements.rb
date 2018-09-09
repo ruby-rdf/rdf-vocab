@@ -91,7 +91,7 @@ For other uses you need to obtain permission from the rights-holder\(s\).).freez
     term :"InC-RUU/1.0/",
       "dc11:identifier": "InC-RUU".freeze,
       "dc:creator": "rightsstatements:irswg".freeze,
-      "dc:description": ["Dieser Rechtehinweis besagt, dass das damit gekennzeichnete Objekt urheberrechtlich geschützt ist, aber der/die Rechteinhaber entweder nicht identifiziert oder aufgefunden werden konnte(n).".freeze, "This Rights Statement indicates that the Item labeled with this Rights Statement has been identified as in copyright, but its rights-holder(s) either cannot be identified or cannot be located.".freeze],
+      "dc:description": "This Rights Statement indicates that the Item labeled with this Rights Statement has been identified as in copyright, but its rights-holder(s) either cannot be identified or cannot be located.".freeze,
       "dc:modified": "2018-06-06".freeze,
       definition: %(This Item is protected by copyright and/or related rights. However, for this Item, either \(a\) no rights-holder\(s\) have been identified or \(b\) one or more rights-holder\(s\) have been identified but none have been located.
 

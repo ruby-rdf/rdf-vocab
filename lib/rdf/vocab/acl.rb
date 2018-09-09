@@ -107,13 +107,22 @@ and for example to develop a reputation\)
       range: "rdfs:Class".freeze,
       type: "rdf:Property".freeze
     property :agentGroup,
-      comment: %(A group of persons or social entities to being given the right).freeze,
+      comment: %(A group of persons or social entities to being given the right.
+          The right is given to any entity which is a vcard:member of the group,
+          as defined by the document received when the Group is dereferenced.).freeze,
       domain: "acl:Authorization".freeze,
       label: "agent group".freeze,
       range: "vcard:Group".freeze,
       type: "rdf:Property".freeze
     property :default,
-      comment: %(A directory for which this authorization is used for new files in the directory.).freeze,
+      comment: %(If a resource has no ACL file \(it is 404\),
+        then access to the resource if given by the ACL of the immediately
+        containing directory, or failing that \(404\) the ACL of the recursively next
+        containing directory which has an ACL file.
+        Within that ACL file,
+        any Authentication which has that directory as its acl:default applies to the
+        resource. \(The highest directory must have an ACL file.\)
+).freeze,
       domain: "acl:Authorization".freeze,
       label: "default access for things in this".freeze,
       type: "rdf:Property".freeze
@@ -137,7 +146,11 @@ and for example to develop a reputation\)
       type: "rdf:Property".freeze
     property :origin,
       comment: %(A web application, identified by its Origin, such as
-        <https://scripts.example.com>, being given the right.).freeze,
+        <https://scripts.example.com>, being given the right.
+        When a user of the web application at a certain origin accesses the server,
+        then the browser sets the Origin: header to warn that a possibly untrusted webapp
+        is being used.
+        Then, BOTH the user AND the origin must have the required access.).freeze,
       domain: "acl:Authorization".freeze,
       label: "origin".freeze,
       range: "acl:Origin".freeze,
