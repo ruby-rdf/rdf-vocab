@@ -17,7 +17,6 @@ Gem::Specification.new do |spec|
   spec.files         = %w(README.md LICENSE VERSION) + Dir.glob('lib/**/*.rb')
   spec.test_files    = Dir.glob('spec/*.rb')
   spec.require_paths = %w(lib)
-  spec.has_rdoc      = false
 
   spec.required_ruby_version      = '>= 2.2.2'
 

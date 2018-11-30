@@ -18,9 +18,10 @@ module RDF::Vocab
       "dc11:title": "EBUCore - the Dublin Core for media".freeze,
       "http://purl.org/vocab/vann/preferredNamespaceUri": "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#".freeze,
       "http://spinrdf.org/spin#imports": "http://topbraid.org/spin/owlrl-all".freeze,
+      "owl:backwardCompatibleWith": "http://www.ebu.ch/metadata/ontologies/ebucore/20171009/ebucore.rdf".freeze,
       "owl:imports": "http://www.w3.org/2004/02/skos/core".freeze,
-      "owl:priorVersion": "http://www.ebu.ch/metadata/ontologies/ebucore/20150804/ebucore_2015_08_04.rdf".freeze,
-      "owl:versionInfo": ["Add CreativeCommons subclass to Rights.".freeze, "Add FIMS Classes: BMContent, BMEssence, BMTemplate, etc.".freeze, "Add Identifier as a class.".freeze, "Add event start and end times and dateTimes".freeze, "Add for each class an ids, a name a description when missing".freeze, "Add frameHeight and frameHeightUnit".freeze, "Add hasAudioCodec and hasVideoCodec".freeze, "Add hasAudioTrack and hasVideoTrack".freeze, "Add numberOfAudioTracks and numberOfVideoTracks".freeze, "Add resourceType property.".freeze, "Add videoEncodingLevel and audioEncodingLevel properties as subproperties of encodingLevel".freeze, "Add videoEncodingProfile and audioEncodingProfile properties as subproperties of encodingProfile".freeze, "Added eventPeriod property.".freeze, "Added locationCode and hasLocationPicture".freeze, "Added social medias: agentFacebook, agentTwitter, agentInstagram".freeze, "Added two Classes: Action and Emotion.".freeze, "Align with CCDM properties touching EBUCore classes".freeze, "Alignment with EBUCore schema: add missing rightsClearanceFlag".freeze, "CORRECTION: change PublicationPlanning into PublicationPlan".freeze, "Clean the definition of equivalent classes and properties from external vocabularies like foaf: and core:".freeze, "Extend bitRate properties with audio and video bitRate properties".freeze, "Harmonisation with EBU CCDM: businessObjectId, businessObjectType, editorialObjectId, editorialObjectType, storageId, storageType .".freeze, "Improved the relations around the notions of \"hasContributor\", \"Character\", \"Cast\".".freeze, "Introduce Person as a superClass of Contact and rename Contact properties accordingly".freeze, "Introduce new classes Artefact/Props/Food...".freeze, "Introduced new TextLine Class and associated properties for timed text, annotation, etc.".freeze, "Manage addresses as locations".freeze, "Sanity check on property domain and ranges and definitions or labels".freeze, "Support of specific timecode drop frame".freeze, "Version 1.8".freeze, "seasonNumber, Episode and episodeNumber.".freeze],
+      "owl:priorVersion": "http://www.ebu.ch/metadata/ontologies/ebucore/20171009/ebucore.rdf".freeze,
+      "owl:versionInfo": ["Add Award (for BO/EO, Contributor) and associated properties.".freeze, "Add Licensing as a subclass of Rights".freeze, "Add Locator class.".freeze, "Add Person weight and height.".freeze, "Add Platform as a subclass of Service.".freeze, "Add agentFee and agentAge.".freeze, "Add agentPreviousName.".freeze, "Add agentRelatedInformationLink and agentRelatedPressLink.".freeze, "Add artefactComment.".freeze, "Add dateOfRetirement".freeze, "Add dateProduced with domain Resource or BusinessObject.".freeze, "Add ebucore:placeOfDeath as subproperty of core:placeOfDeath".freeze, "Add firstShowingThisService with domain PublicationEvent.".freeze, "Add flag midRollAdAllowed with domain Essence.".freeze, "Add geoblocking, licensing, copyright, targetPlatform as a subproperties of description as a shortcut to provide such usage restrictions without the heavy use of asset.".freeze, "Add hasAgentBiography".freeze, "Add hasAgentRelatedArtefact".freeze, "Add hasArtefactRelatedLocation.".freeze, "Add hasBeenAwarded with domain Agent.".freeze, "Add hasCountryOfBirth and hasCountryOfDeath".freeze, "Add hasEventRelatedLocation/Event/Artefact/BusinessObject/Event".freeze, "Add hasImageCodec as subproperty of hasCodec.".freeze, "Add hasLocationRelatedAsset.".freeze, "Add hasProducer as subproperty of hasContributor.".freeze, "Add hasRelatedPublicationChannel to PublicationEvent".freeze, "Add hasRelatedPublicationChannel with domain PublicationEvent.".freeze, "Add isAgent relation".freeze, "Add isDistributedOn with domain EditorialObject and range string or Platform.".freeze, "Add isPartOf with domain Part and range EditorialObject.".freeze, "Add missing artefactBrand.".freeze, "Add missing class Element.".freeze, "Add missing relations from EBUCore schema: has/isParent, has/isChild, has/isMaster...".freeze, "Add new class UsageRestriction as subclass of Rights.".freeze, "Add personName for compound names".freeze, "Add relation hasRelatedAsset with domain BusinessObject.".freeze, "Add rightsStart/EndDateTime and righst Duration.".freeze, "Add rightsTerritory/includes/Excludes.".freeze, "Add tag as a subproperty of description to provide tags.".freeze, "Add timeCreated to BusinessObject and Resource".freeze, "Add totalNumberOfgroupMembers with domain Group and totalNumberOfEpisodes with domain Series or Season.".freeze, "Change AudioChannelPurpoose into AudioTrackPurpose, a subclass of skos:Concept.".freeze, "Change Domain of isAgent from Cast to Agent.".freeze, "Change artefactPriceCurrency into hasArtefactPriceCurrency to allow using Concept / currency codes.".freeze, "Change countryOfResidence and agentNationality into hasAgentCountryOfResidence and hasAgentNationality".freeze, "Change domain of  seasonNumber to EditorialObject for more flexibility in implementation.".freeze, "Change hasEvent and hasLocation into hasRelatedEVent and hasRelatedLocation.".freeze, "Correction: empty range for hasRelatedEvent and hasRelatedLocation".freeze, "Define Resource and BusinessObject as subclass of Asset. Add properties hasAssetRelatedResource, hasAssetRelatedBusinessObject and hasAssetEditorialObject (for harmonisation with CCDM).".freeze, "Enrich list of EOs from CCDM school discussion e.g. BreakingNewsItem...".freeze, "Move Character as subclass of Agent to allow characters other than persons (e.g. animals)".freeze, "Move cast, crew, staff as subclasses of Agent.".freeze, "Remove placeOfBirth and placeOfDeath in conflict with hasPlaceOfBirth and hasPlaceofDeath".freeze, "Replace AudioChannel with AudioObject for better ADM compliance. Change AudioChannelPurpose into AudioTrackPurpose, Change audioChannelNumber into audioTrackNumber. Add a relation hasRelatedAudioObject with domain MediaResource.".freeze, "Version draft 1.9".freeze],
       type: "owl:Ontology".freeze,
       "vs:term_status": "stable".freeze
 
@@ -31,13 +32,14 @@ module RDF::Vocab
       subClassOf: "ebucore:Rights".freeze,
       type: "rdfs:Class".freeze
     term :Action,
+      comment: %(A class to log Actions.).freeze,
       label: "Action".freeze,
       subClassOf: "owl:Thing".freeze,
-      type: "owl:Class".freeze
+      type: "rdfs:Class".freeze
     term :ActiveFormatDescriptorCode,
       label: "Active format descriptor code".freeze,
       subClassOf: "ebucore:Format".freeze,
-      type: "owl:Class".freeze
+      type: "rdfs:Class".freeze
     term :Affiliation,
       comment: %(An Organisation to which a Contact is affiliated \(with period of validity\).).freeze,
       label: "Affiliation".freeze,
@@ -65,7 +67,7 @@ module RDF::Vocab
     term :Artefact,
       comment: %(To identify and describe artefacts used in a production \(on and behind the stage\).).freeze,
       label: "Artefact".freeze,
-      subClassOf: "owl:Thing".freeze,
+      subClassOf: "ebucore:BusinessObject".freeze,
       type: "rdfs:Class".freeze
     term :Asset,
       comment: %(The Class "Asset" is an
@@ -95,20 +97,6 @@ module RDF::Vocab
       label: "Audience rating".freeze,
       subClassOf: "ebucore:Rating".freeze,
       type: "rdfs:Class".freeze
-    term :AudioChannel,
-      comment: %(An audioChannel represents a single sequence of audio samples. It
-				is sub-divided in the time domain into audioBlocks, which is must contain at
-				least one of. The typeDefintion of the audioChannel format specifies the type of
-				audio it is describing, and also determines which parameters are used within its
-				audioBlock children.).freeze,
-      label: "Audio channel".freeze,
-      subClassOf: "ebucore:Essence".freeze,
-      type: "rdfs:Class".freeze
-    term :AudioChannelPurpose,
-      comment: %(To describe the purpose of an AudioChannel e.g. dubbing.).freeze,
-      label: "Audio channel purpose".freeze,
-      subClassOf: "skos:Concept".freeze,
-      type: "owl:Class".freeze
     term :AudioCodec,
       comment: %(To provide information about an audio codec.).freeze,
       label: "Audio codec".freeze,
@@ -132,6 +120,10 @@ module RDF::Vocab
       label: "Audio encoding format".freeze,
       subClassOf: "ebucore:EncodingFormat".freeze,
       type: "rdfs:Class".freeze
+    term :AudioObject,
+      label: "Audio object".freeze,
+      subClassOf: "ebucore:Essence".freeze,
+      type: "rdfs:Class".freeze
     term :AudioProgramme,
       comment: %(A set of one or more audioContent that derive from the same material,
 				i.e. an audioMultiplex, and the definition of its multiplexed audioContents \(e.g.
@@ -153,6 +145,15 @@ module RDF::Vocab
       label: "Audio track".freeze,
       subClassOf: "ebucore:Track".freeze,
       type: "rdfs:Class".freeze
+    term :AudioTrackPurpose,
+      comment: %(To describe the purpose of an AudioTrack e.g. dubbing.).freeze,
+      label: "Audio track purpose".freeze,
+      subClassOf: "skos:Concept".freeze,
+      type: "rdfs:Class".freeze
+    term :Award,
+      label: "Award".freeze,
+      subClassOf: "owl:Thing".freeze,
+      type: "owl:Class".freeze
     term :BMContent,
       comment: %(The FIMS BMContent.).freeze,
       label: "BMContent".freeze,
@@ -179,6 +180,10 @@ module RDF::Vocab
       label: "Brand".freeze,
       subClassOf: "ebucore:Group".freeze,
       type: "rdfs:Class".freeze
+    term :BreakingNewsItem,
+      label: "Breaking news item".freeze,
+      subClassOf: "ebucore:Item".freeze,
+      type: "rdfs:Class".freeze
     term :BusinessObject,
       comment: %(An image, a document, an annotation
             \(descriptive textual metadata or audio/video tag\), a tag \(time related in audiovisual
@@ -187,7 +192,7 @@ module RDF::Vocab
             be defined as subclasses.).freeze,
       label: "Business Object".freeze,
       "owl:disjointWith": "ebucore:Resource".freeze,
-      subClassOf: "owl:Thing".freeze,
+      subClassOf: "ebucore:Asset".freeze,
       type: "rdfs:Class".freeze
     term :Captioning,
       comment: %(To signal the presence of hard of hearing
@@ -207,18 +212,18 @@ module RDF::Vocab
       comment: %(A member of the cast list \(a list of performers/actors and associated fictitious
             characters\).).freeze,
       label: "Cast member".freeze,
-      subClassOf: "ebucore:Person".freeze,
+      subClassOf: "ebucore:Agent".freeze,
       type: "rdfs:Class".freeze
     term :Character,
       comment: %(E.g. a fictitious contact / person.).freeze,
       label: "Character".freeze,
-      subClassOf: "ebucore:FictionalPerson".freeze,
+      subClassOf: "ebucore:Person".freeze,
       type: "rdfs:Class".freeze
     term :CityCode,
       comment: %(To allocate a city code.).freeze,
       label: "City code".freeze,
       subClassOf: "skos:Concept".freeze,
-      type: "owl:Class".freeze
+      type: "rdfs:Class".freeze
     term :ClosedCaptions,
       comment: %(Closed captioning is provided as separate
             content.).freeze,
@@ -300,7 +305,7 @@ module RDF::Vocab
       comment: %(To identify a country by its ISO code.).freeze,
       label: "Country code".freeze,
       subClassOf: "skos:Concept".freeze,
-      type: "owl:Class".freeze
+      type: "rdfs:Class".freeze
     term :CoverageRestrictions,
       comment: %(To provide information on possible restrictions
             regarding the temporal and spatial coverage for publication.).freeze,
@@ -315,13 +320,13 @@ module RDF::Vocab
     term :Crew,
       comment: %(A member of the Crew.).freeze,
       label: "Crew member".freeze,
-      subClassOf: "ebucore:Person".freeze,
+      subClassOf: "ebucore:Agent".freeze,
       type: "rdfs:Class".freeze
     term :CurrencyCode,
       comment: %(To identify a currency by its ISO code.).freeze,
       label: "Currency code".freeze,
       subClassOf: "skos:Concept".freeze,
-      type: "owl:Class".freeze
+      type: "rdfs:Class".freeze
     term :DataFormat,
       comment: %(To provide addtional technical information on
             the characteristics of data streams in a MediaResource including but not limited to
@@ -387,9 +392,10 @@ module RDF::Vocab
       subClassOf: "ebucore:BusinessObject".freeze,
       type: "rdfs:Class".freeze
     term :Emotion,
+      comment: %(A class to log Emotions.).freeze,
       label: "Emotion".freeze,
       subClassOf: "owl:Thing".freeze,
-      type: "owl:Class".freeze
+      type: "rdfs:Class".freeze
     term :EncodingFormat,
       comment: %(To provide a definition of the encoding format
             for audio and video. This is provided as free text in an annotation label or as an
@@ -404,9 +410,7 @@ module RDF::Vocab
       subClassOf: "ebucore:EditorialObject".freeze,
       type: "rdfs:Class".freeze
     term :Essence,
-      comment: %(In some audiovisual standardisation groups,
-            Essence is preferred to MediaResource. In also has subclasses well known as MediaObject
-            clustered in AudioObjects and VideoObjects.).freeze,
+      comment: %(Essence is content ready for distribution. Essence can become a MediaResource in further production processes.).freeze,
       label: "Essence".freeze,
       subClassOf: "ebucore:MediaResource".freeze,
       type: "rdfs:Class".freeze
@@ -515,11 +519,6 @@ module RDF::Vocab
       label: "Image format".freeze,
       subClassOf: "ebucore:Format".freeze,
       type: "rdfs:Class".freeze
-    term :IntendedAudience,
-      comment: %(To identify the audience for which the content was created.).freeze,
-      label: "Intended audience".freeze,
-      subClassOf: "ebucore:Type".freeze,
-      type: "rdfs:Class".freeze
     term :IntentionCode,
       comment: %(To indicate the purpose for which content was created.).freeze,
       label: "Intention code".freeze,
@@ -567,6 +566,13 @@ module RDF::Vocab
       label: "Language".freeze,
       subClassOf: "skos:Concept".freeze,
       type: "rdfs:Class".freeze
+    term :Licensing,
+      label: "Licensing".freeze,
+      subClassOf: "ebucore:Rights".freeze,
+      type: "rdfs:Class".freeze
+    term :Link,
+      subClassOf: "ebucore:Resource".freeze,
+      type: "rdfs:Class".freeze
     term :Location,
       comment: [%(A location related to the media resource, e.g.
             depicted in the resource \(possibly fictional\) or where the resource was created
@@ -577,6 +583,11 @@ module RDF::Vocab
       label: "Location".freeze,
       subClassOf: "owl:Thing".freeze,
       type: "rdfs:Class".freeze
+    term :Locator,
+      comment: [%(Custom attributes are to be associated by implementers.).freeze, %(To provide information about complex locators.).freeze],
+      label: "Locator".freeze,
+      subClassOf: "owl:Thing".freeze,
+      type: "owl:Class".freeze
     term :Logo,
       comment: %(A Logo allows to visually identify an
             organisation, publicationService, publicationChannel, or ratings /
@@ -591,7 +602,7 @@ module RDF::Vocab
       type: "rdfs:Class".freeze
     term :MediaResource,
       comment: %(The use of MediaResource is reserved to
-            audiovisual content.).freeze,
+            audiovisual content. In a production process, several MediaResources can be edited and assembled to realsie an Essence ready for distribution \(see IMF package and OPL\)).freeze,
       label: "Media Resource".freeze,
       subClassOf: "ebucore:Resource".freeze,
       type: "rdfs:Class".freeze
@@ -681,6 +692,10 @@ module RDF::Vocab
       label: "Person".freeze,
       subClassOf: "ebucore:Agent".freeze,
       type: "rdfs:Class".freeze
+    term :PhysicalResource,
+      label: "Physical resource".freeze,
+      subClassOf: "ebucore:Resource".freeze,
+      type: "rdfs:Class".freeze
     term :Pictogram,
       comment: %(A visual / graphical representation of a concept.).freeze,
       label: "Pictogram".freeze,
@@ -695,6 +710,11 @@ module RDF::Vocab
     term :PictureDisplayFormat,
       label: "Picture display format code".freeze,
       subClassOf: "ebucore:Format".freeze,
+      type: "rdfs:Class".freeze
+    term :Platform,
+      comment: %(A platform like a network or operator platform.).freeze,
+      label: "Platform".freeze,
+      subClassOf: "ebucore:Service".freeze,
       type: "rdfs:Class".freeze
     term :Programme,
       comment: %(An EditorialObject corresponding to a
@@ -731,7 +751,7 @@ module RDF::Vocab
     term :PublicationMedium,
       label: "Publication medium".freeze,
       subClassOf: "skos:Concept".freeze,
-      type: "owl:Class".freeze
+      type: "rdfs:Class".freeze
     term :PublicationPlan,
       comment: %(A collection of PublicationEvents organised as a PublicationPlanning.).freeze,
       label: "Publication History".freeze,
@@ -752,12 +772,16 @@ module RDF::Vocab
       "owl:disjointWith": ["ebucore:Asset".freeze, "ebucore:BusinessObject".freeze, "ebucore:PublicationEvent".freeze, "ebucore:Resource".freeze],
       subClassOf: "owl:Thing".freeze,
       type: "rdfs:Class".freeze
+    term :Relation,
+      comment: %(To define links and relations.).freeze,
+      subClassOf: "owl:Thing".freeze,
+      type: "owl:Class".freeze
     term :Resource,
       comment: %(A manifestation of a
             BusinessObject.).freeze,
       label: "Resource".freeze,
       "owl:disjointWith": "ebucore:BusinessObject".freeze,
-      subClassOf: "owl:Thing".freeze,
+      subClassOf: "ebucore:Asset".freeze,
       type: "rdfs:Class".freeze
     term :Rights,
       comment: %(To provide information on the rights, including
@@ -810,7 +834,7 @@ module RDF::Vocab
       comment: %(To identify a sign language by its code.).freeze,
       label: "Sign language code".freeze,
       subClassOf: "skos:Concept".freeze,
-      type: "owl:Class".freeze
+      type: "rdfs:Class".freeze
     term :Signing,
       comment: %(To signal the presence of Signing for hard of
             hearing users. The type of Signing \(e.g. incursted in or else\) or language of Signing
@@ -833,7 +857,7 @@ module RDF::Vocab
     term :Staff,
       comment: %(A member of Staff.).freeze,
       label: "Staff member.".freeze,
-      subClassOf: "ebucore:Person".freeze,
+      subClassOf: "ebucore:Agent".freeze,
       type: "rdfs:Class".freeze
     term :Standard,
       comment: %(identifies the technical video standard of a resource, i.e. NTSC or PAL.).freeze,
@@ -884,6 +908,11 @@ module RDF::Vocab
       label: "TV Programme".freeze,
       subClassOf: "ebucore:Programme".freeze,
       type: "rdfs:Class".freeze
+    term :TargetAudience,
+      comment: %(To identify the audience for which the content was created.).freeze,
+      label: "Target audience".freeze,
+      subClassOf: "ebucore:Type".freeze,
+      type: "rdfs:Class".freeze
     term :Team,
       comment: %(To define a Team.).freeze,
       equivalentClass: "foaf:Group".freeze,
@@ -899,17 +928,17 @@ module RDF::Vocab
       comment: %(To identify a territory e.g. by its UN code.).freeze,
       label: "Territory code".freeze,
       subClassOf: "skos:Concept".freeze,
-      type: "owl:Class".freeze
+      type: "rdfs:Class".freeze
     term :TextLine,
       comment: %(To provide lines of text extracted from or additional to the resource.).freeze,
       label: "Text line".freeze,
       subClassOf: "owl:Thing".freeze,
-      type: "owl:Class".freeze
+      type: "rdfs:Class".freeze
     term :TextUsageType,
       comment: %(To specify the usage of a text.).freeze,
       label: "Text usage type".freeze,
       subClassOf: "skos:Concept".freeze,
-      type: "owl:Class".freeze
+      type: "rdfs:Class".freeze
     term :Thumbnail,
       comment: %(A thumbnail is a low resolution picture that
             can be associated with EditorialObjects or e.g. MediaResources or
@@ -938,7 +967,7 @@ module RDF::Vocab
       comment: %(To define a time sequence of EditorialObjects.).freeze,
       label: "Timeline track".freeze,
       subClassOf: "owl:Thing".freeze,
-      type: "owl:Class".freeze
+      type: "rdfs:Class".freeze
     term :Topic,
       comment: %(A type subject for use in some contexts. This
             is provided as free text in an annotation label or as an identifier pointing to a term
@@ -956,6 +985,11 @@ module RDF::Vocab
       comment: %(An expression of type in textual form or as a term from a classification scheme.).freeze,
       label: "Type".freeze,
       subClassOf: "skos:Concept".freeze,
+      type: "rdfs:Class".freeze
+    term :UsageRestrictions,
+      comment: %(To define a set of UsageRestrictions.).freeze,
+      label: "Usage restrictions".freeze,
+      subClassOf: "ebucore:Rights".freeze,
       type: "rdfs:Class".freeze
     term :UsageRights,
       comment: %(Usage rights associated with content.).freeze,
@@ -1108,11 +1142,6 @@ module RDF::Vocab
       label: "Age".freeze,
       range: "xsd:integer".freeze,
       type: "rdf:Property".freeze
-    property :agentCountryOfResidence,
-      comment: %(To indicate the country of residence.).freeze,
-      domain: "ebucore:Agent".freeze,
-      label: "Country of residence".freeze,
-      type: "rdf:Property".freeze
     property :agentDbpedia,
       comment: %(A reference to a dbpedia page.).freeze,
       label: "dbpedia".freeze,
@@ -1130,6 +1159,11 @@ module RDF::Vocab
     property :agentFacebook,
       label: "Facebook".freeze,
       subPropertyOf: "ebucore:agentSocialMedia".freeze,
+      type: "rdf:Property".freeze
+    property :agentFee,
+      comment: %(The fee of an Agent.).freeze,
+      domain: "ebucore:Agent".freeze,
+      label: "Agent fee".freeze,
       type: "rdf:Property".freeze
     property :agentFlickr,
       label: "Flickr".freeze,
@@ -1171,10 +1205,10 @@ module RDF::Vocab
       label: "Mobile".freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
-    property :agentNationality,
-      comment: [%(Range: a string or a Concept.).freeze, %(To provide the nationality of an Agent.).freeze],
+    property :agentName,
       domain: "ebucore:Agent".freeze,
-      label: "Nationality".freeze,
+      label: "Agent name.".freeze,
+      range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :agentNickname,
       comment: %(To provide a nickname of a Contact/person.).freeze,
@@ -1182,11 +1216,31 @@ module RDF::Vocab
       label: "Nickname".freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
+    property :agentPreviousName,
+      comment: %(To provide the previous name of a Contact/person.).freeze,
+      domain: "ebucore:Person".freeze,
+      label: "Previous name".freeze,
+      range: "xsd:string".freeze,
+      type: "rdf:Property".freeze
+    property :agentRelatedInformationLink,
+      comment: %(To provide a link to a web resource containing
+            information related to an Agent \(Contact/Person or Organisation\).).freeze,
+      domain: "ebucore:Agent".freeze,
+      label: "Related information link".freeze,
+      range: "xsd:anyURI".freeze,
+      type: "rdf:Property".freeze
     property :agentRelatedLink,
       comment: %(To provide a link to a web resource containing
             information related to an Agent \(Contact/Person or Organisation\).).freeze,
       domain: "ebucore:Agent".freeze,
       label: "Related resources".freeze,
+      range: "xsd:anyURI".freeze,
+      type: "rdf:Property".freeze
+    property :agentRelatedPressLink,
+      comment: %(To provide a link to a web resource containing
+            information related to an Agent \(Contact/Person or Organisation\).).freeze,
+      domain: "ebucore:Agent".freeze,
+      label: "Related press link".freeze,
       range: "xsd:anyURI".freeze,
       type: "rdf:Property".freeze
     property :agentSocialMedia,
@@ -1257,11 +1311,22 @@ module RDF::Vocab
       label: "Artefact availability".freeze,
       range: "xsd:boolean".freeze,
       type: "rdf:Property".freeze
+    property :artefactBrand,
+      comment: %(To specify the brand of an Artefact.).freeze,
+      domain: "ebucore:Artefact".freeze,
+      label: "Artefact brand".freeze,
+      range: "xsd:string".freeze,
+      type: "rdf:Property".freeze
     property :artefactColour,
       comment: %(To specify the colour of an Artefact.).freeze,
       domain: "ebucore:Artefact".freeze,
       label: "Artefact colour".freeze,
       range: "xsd:string".freeze,
+      type: "rdf:Property".freeze
+    property :artefactComment,
+      comment: %(To provide a contextual comment about an Artefact.).freeze,
+      domain: "ebucore:Artefact".freeze,
+      label: "Artefact comment".freeze,
       type: "rdf:Property".freeze
     property :artefactDateOfPurchase,
       comment: %(The date when an Artefact was purchased. .).freeze,
@@ -1307,11 +1372,6 @@ module RDF::Vocab
       comment: %(To specifythe price of an Artefact.).freeze,
       domain: "ebucore:Artefact".freeze,
       label: "Artefact price".freeze,
-      type: "rdf:Property".freeze
-    property :artefactPriceCurrency,
-      comment: %(To specify the currency into which the price of an Artefact is expressed.).freeze,
-      domain: "ebucore:Artefact".freeze,
-      label: "Artefact price currency".freeze,
       type: "rdf:Property".freeze
     property :artefactReference,
       comment: %(To specify a reference of an Artefact.).freeze,
@@ -1390,13 +1450,6 @@ module RDF::Vocab
       label: "Audio bitrate mode".freeze,
       subPropertyOf: "ebucore:bitRateMode".freeze,
       type: "rdf:Property".freeze
-    property :audioChannelNumber,
-      comment: %(The total number of audio channels contained in
-            the MediaResource.).freeze,
-      domain: "ebucore:MediaResource".freeze,
-      label: "Audio channel number".freeze,
-      range: "xsd:nonNegativeInteger".freeze,
-      type: "rdf:Property".freeze
     property :audioEncodingLevel,
       comment: %(The encoding level as defined in specifications.).freeze,
       label: "Audio encoding level".freeze,
@@ -1413,6 +1466,42 @@ module RDF::Vocab
       domain: "ebucore:MediaResource".freeze,
       label: "Audio track configuration".freeze,
       range: "xsd:string".freeze,
+      type: "rdf:Property".freeze
+    property :audioTrackNumber,
+      comment: %(The total number of audio tracks contained in
+            the MediaResource.).freeze,
+      domain: "ebucore:MediaResource".freeze,
+      label: "Audio track number".freeze,
+      range: "xsd:nonNegativeInteger".freeze,
+      type: "rdf:Property".freeze
+    property :awardCeremony,
+      comment: %(To provide an Award ceremony name).freeze,
+      domain: "ebucore:Award".freeze,
+      label: "Award ceremony".freeze,
+      range: "xsd:string".freeze,
+      type: "rdf:Property".freeze
+    property :awardDescription,
+      comment: %(To provide a description for an Award).freeze,
+      domain: "ebucore:Award".freeze,
+      label: "Award description".freeze,
+      range: "xsd:string".freeze,
+      type: "rdf:Property".freeze
+    property :awardId,
+      comment: %(To provide an id to an Award).freeze,
+      domain: "ebucore:Award".freeze,
+      label: "Award id".freeze,
+      range: "xsd:string".freeze,
+      type: "rdf:Property".freeze
+    property :awardId_1,
+      comment: %(To provide an date when an Award was delivered).freeze,
+      domain: "ebucore:Award".freeze,
+      label: "Award date".freeze,
+      range: "xsd:date".freeze,
+      type: "rdf:Property".freeze
+    property :awardName,
+      comment: [%(Range: string or concept).freeze, %(To define an Award category).freeze],
+      domain: "ebucore:Award".freeze,
+      label: "Award category".freeze,
       type: "rdf:Property".freeze
     property :bitDepth,
       comment: %(To provide the video encoding bit depth.).freeze,
@@ -1534,6 +1623,14 @@ module RDF::Vocab
       comment: %(To provide a comment.).freeze,
       label: "Comments".freeze,
       subPropertyOf: "ebucore:description".freeze,
+      type: "rdf:Property".freeze
+    property :copyright,
+      comment: %(To provide information on copyright.).freeze,
+      domain: "ebucore:BusinessObject".freeze,
+      equivalentProperty: "ma:description".freeze,
+      label: "copyright".freeze,
+      range: "xsd:string".freeze,
+      subPropertyOf: "dc11:description".freeze,
       type: "rdf:Property".freeze
     property :costumeGender,
       comment: %(To specify the gender associated with a Costume.).freeze,
@@ -1673,6 +1770,21 @@ module RDF::Vocab
       equivalentProperty: "http://www.bbc.co.uk/ontologies/coreconcepts/dateOfDeath".freeze,
       label: "Date of death".freeze,
       range: "xsd:date".freeze,
+      type: "rdf:Property".freeze
+    property :dateOfRetirement,
+      comment: %(The date when a Contact/Person has retired.).freeze,
+      domain: "ebucore:Person".freeze,
+      label: "Date of retirement".freeze,
+      range: "xsd:date".freeze,
+      type: "rdf:Property".freeze
+    property :dateProduced,
+      comment: %(The date when the Resource was produced.).freeze,
+      domain: term(
+          type: "owl:Class".freeze,
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze)
+        ),
+      label: "Production date".freeze,
+      subPropertyOf: "ebucore:date".freeze,
       type: "rdf:Property".freeze
     property :dateReleased,
       comment: %(The date when the Resource was first made available to the public for purchase, download, or online access.).freeze,
@@ -1996,6 +2108,11 @@ module RDF::Vocab
       label: "Episode number".freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
+    property :essenceId,
+      domain: "ebucore:Essence".freeze,
+      label: "Essence id".freeze,
+      range: "xsd:anyURI".freeze,
+      type: "rdf:Property".freeze
     property :eventDescription,
       comment: %(To provide a deescription for an
             Event.).freeze,
@@ -2105,6 +2222,12 @@ module RDF::Vocab
       label: "First showing".freeze,
       range: "xsd:boolean".freeze,
       type: "rdf:Property".freeze
+    property :firstShowingThisService,
+      comment: %(A flag to indicate that this is the first time the event occurs on this service/channel.).freeze,
+      domain: "ebucore:PublicationEvent".freeze,
+      label: "First showing this service".freeze,
+      range: "xsd:boolean".freeze,
+      type: "rdf:Property".freeze
     property :folksonomy,
       comment: %(Provides a user/audience-generated description, tag, or label for resource content.).freeze,
       domain: "ebucore:Resource".freeze,
@@ -2204,6 +2327,11 @@ module RDF::Vocab
       label: "Gender".freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
+    property :geoBlocking,
+      label: "geoblocking".freeze,
+      range: "xsd:string".freeze,
+      subPropertyOf: "ebucore:description".freeze,
+      type: "rdf:Property".freeze
     property :givenName,
       comment: %(To provide one or more given names.).freeze,
       domain: "ebucore:Person".freeze,
@@ -2246,6 +2374,26 @@ module RDF::Vocab
             Contact/person and an Organisation.).freeze, %(Range: Affiliation or string).freeze],
       domain: "ebucore:Person".freeze,
       label: "Affiliation".freeze,
+      type: "rdf:Property".freeze
+    property :hasAgentBiography,
+      comment: [%(Range: a string or an anyURI.).freeze, %(To provide a biography of an Agent.).freeze],
+      domain: "ebucore:Agent".freeze,
+      label: "Biography".freeze,
+      type: "rdf:Property".freeze
+    property :hasAgentCountryOfResidence,
+      comment: %(To indicate the country of residence.).freeze,
+      domain: "ebucore:Agent".freeze,
+      label: "Country of residence".freeze,
+      type: "rdf:Property".freeze
+    property :hasAgentMember,
+      comment: [%(Range: string or Agent.).freeze, %(To associate an Agent to another Agent e.g. a Team.).freeze],
+      domain: "ebucore:Agent".freeze,
+      label: "Agent member".freeze,
+      type: "rdf:Property".freeze
+    property :hasAgentNationality,
+      comment: [%(Range: a string or a Concept.).freeze, %(To provide the nationality of an Agent.).freeze],
+      domain: "ebucore:Agent".freeze,
+      label: "Nationality".freeze,
       type: "rdf:Property".freeze
     property :hasAgentRelatedPicture,
       "dc11:description": "A link/locator to a picture related to an Agent.".freeze,
@@ -2293,16 +2441,32 @@ module RDF::Vocab
       domain: "ebucore:Artefact".freeze,
       label: "Owner".freeze,
       type: "rdf:Property".freeze
+    property :hasArtefactPriceCurrency,
+      comment: [%(Range: string or Concept).freeze, %(To specify the currency into which the price of an Artefact is expressed.).freeze],
+      domain: "ebucore:Artefact".freeze,
+      label: "Artefact price currency".freeze,
+      type: "rdf:Property".freeze
     property :hasArtefactRelatedAgent,
       comment: %(To associate an Artefact/Prop or else with an Agent.).freeze,
-      domain: "ebucore:Agent".freeze,
-      label: "Associated artifact".freeze,
+      domain: "ebucore:Artefact".freeze,
+      label: "Associated agent".freeze,
       type: "rdf:Property".freeze
     property :hasArtefactRelatedEditorialObject,
       comment: %(To establish a relation between an Artefact and an EditorialObject.).freeze,
       domain: "ebucore:Artefact".freeze,
       label: "Related editorial object".freeze,
       range: "ebucore:EditorialObject".freeze,
+      type: "rdf:Property".freeze
+    property :hasArtefactRelatedLocation,
+      comment: %(To associate an Artefact/Prop or else with a Location.).freeze,
+      domain: "ebucore:Artefact".freeze,
+      label: "Associated location".freeze,
+      type: "rdf:Property".freeze
+    property :hasArtefactRelatedPhysicalResource,
+      comment: %(To establish a relation between an Artefact and a PhysicalResource.).freeze,
+      domain: "ebucore:Artefact".freeze,
+      label: "Related physical resource".freeze,
+      range: "ebucore:PhysicalResource".freeze,
       type: "rdf:Property".freeze
     property :hasArtefactRelatedResource,
       comment: %(To establish a relation between an Artefact and a Resource.).freeze,
@@ -2320,17 +2484,38 @@ module RDF::Vocab
       domain: "ebucore:Artefact".freeze,
       label: "Supplier".freeze,
       type: "rdf:Property".freeze
+    property :hasAssetRelatedEditorialObject,
+      domain: "ebucore:Asset".freeze,
+      label: "Related editorial object".freeze,
+      range: "ebucore:EditorialObject".freeze,
+      subPropertyOf: "ebucore:hasRelatedBusinessObject".freeze,
+      type: "rdf:Property".freeze
+    property :hasAssetRelatedResource,
+      domain: "ebucore:Asset".freeze,
+      label: "has asset related resource".freeze,
+      range: "ebucore:Resource".freeze,
+      subPropertyOf: "ebucore:hasRelatedResource".freeze,
+      type: "rdf:Property".freeze
+    property :hasAssociatedArtefact,
+      "dc11:description": ["A Artefact related to an Agent.".freeze, "Range: string or Artefact".freeze],
+      domain: "ebucore:Agent".freeze,
+      label: "Related Artefact".freeze,
+      type: "rdf:Property".freeze
     property :hasAssociatedAsset,
       comment: %(To identify an Asset associated with a PublicationPlan.).freeze,
       domain: "ebucore:PublicationPlan".freeze,
       label: "Publication plan associated asset.".freeze,
       range: "ebucore:Asset".freeze,
       type: "rdf:Property".freeze
+    property :hasAssociatedRelation,
+      comment: %(To establish Relations with BusinessObjects.).freeze,
+      domain: "ebucore:BusinessObject".freeze,
+      range: "ebucore:Relation".freeze,
+      type: "rdf:Property".freeze
     property :hasAssociatedRights,
       comment: %(To associate Rights with a PublicationEvent.).freeze,
       domain: "ebucore:PublicationEvent".freeze,
       label: "Rights".freeze,
-      range: "ebucore:Rights".freeze,
       subPropertyOf: "dc11:rights".freeze,
       type: "rdf:Property".freeze
     property :hasAudioCodec,
@@ -2357,6 +2542,27 @@ module RDF::Vocab
       label: "Audio track".freeze,
       range: "ebucore:AudioTrack".freeze,
       subPropertyOf: "ebucore:hasTrack".freeze,
+      type: "rdf:Property".freeze
+    property :hasAwardRelatedAgent,
+      comment: [%(Range: string ro Agent.).freeze, %(To link an Agent to an Award.).freeze],
+      domain: "ebucore:Award".freeze,
+      label: "Agent".freeze,
+      type: "rdf:Property".freeze
+    property :hasAwardRelatedBusinessObject,
+      comment: %(To link a BusinessObject to an Award.).freeze,
+      domain: "ebucore:Award".freeze,
+      label: "Business object".freeze,
+      range: "ebucore:BusinessObject".freeze,
+      type: "rdf:Property".freeze
+    property :hasAwardRelatedResource,
+      comment: %(To link a Resource to an Award.).freeze,
+      domain: "ebucore:Award".freeze,
+      label: "Resource".freeze,
+      range: "ebucore:Resource".freeze,
+      type: "rdf:Property".freeze
+    property :hasBeenAwarded,
+      comment: [%(Award.).freeze, %(Range: a string or an Award.).freeze],
+      label: "Agent".freeze,
       type: "rdf:Property".freeze
     property :hasCaptioning,
       comment: %(To signal the presence of
@@ -2394,6 +2600,18 @@ module RDF::Vocab
       comment: [%(Range: a string or a "fictitious" Person.).freeze, %(To list characters in a fiction.).freeze],
       domain: "ebucore:BusinessObject".freeze,
       label: "Character".freeze,
+      type: "rdf:Property".freeze
+    property :hasChild,
+      comment: %(To link a BusinessOject or Resource to a child.).freeze,
+      domain: term(
+          type: "owl:Class".freeze,
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze)
+        ),
+      label: "Child".freeze,
+      range: term(
+          type: "owl:Class".freeze,
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze)
+        ),
       type: "rdf:Property".freeze
     property :hasCodec,
       comment: [%(Range: a string or a Codec).freeze, %(To identify the Codec with which the Resource has been encoded.).freeze],
@@ -2433,6 +2651,18 @@ module RDF::Vocab
       equivalentProperty: "ma:hasContributor".freeze,
       label: "Contributor".freeze,
       subPropertyOf: "dc11:contributor".freeze,
+      type: "rdf:Property".freeze
+    property :hasCountryOfBirth,
+      comment: [%(Range: string or Concept).freeze, %(The country where a person is born.).freeze],
+      domain: "ebucore:Person".freeze,
+      equivalentProperty: "http://www.bbc.co.uk/ontologies/coreconcepts/placeOfBirth".freeze,
+      label: "Country of birth".freeze,
+      type: "rdf:Property".freeze
+    property :hasCountryOfDeath,
+      comment: [%(Range: string or Concept).freeze, %(The country where a person is dead.).freeze],
+      domain: "ebucore:Person".freeze,
+      equivalentProperty: "http://www.bbc.co.uk/ontologies/coreconcepts/placeOfBirth".freeze,
+      label: "Country of death".freeze,
       type: "rdf:Property".freeze
     property :hasCoverage,
       comment: %(A property to identify the Events and or
@@ -2498,7 +2728,6 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :hasEOContributor,
       comment: [%(Range: Agent or string).freeze, %(To identify Agents who contributed to the EditorialObject, according to their respective Agent Role.).freeze],
-      domain: "ebucore:EditorialObject".freeze,
       label: "Contributor".freeze,
       subPropertyOf: "ebucore:hasContributor".freeze,
       type: "rdf:Property".freeze
@@ -2522,19 +2751,43 @@ module RDF::Vocab
     property :hasEpisode,
       comment: %(To identify an episode of a
             Series or a Season.).freeze,
-      domain: term(
-          type: "owl:Class".freeze,
-          unionOf: list("ebucore:Season".freeze, "ebucore:Series".freeze)
-        ),
+      domain: "ebucore:Group".freeze,
       inverseOf: "ebucore:isEpisodeOf".freeze,
       label: "Episode".freeze,
       range: "ebucore:Programme".freeze,
       subPropertyOf: "ebucore:hasRelatedBusinessObject".freeze,
       type: "rdf:Property".freeze
+    property :hasEventRelatedAgent,
+      comment: [%(An Agent relates to an Event.).freeze, %(Range: string or Agent).freeze],
+      domain: "ebucore:Event".freeze,
+      label: "Agent".freeze,
+      type: "rdf:Property".freeze
+    property :hasEventRelatedArtefact,
+      comment: [%(An Artefact relates to an Event.).freeze, %(Range: string or Artefact).freeze],
+      domain: "ebucore:Event".freeze,
+      label: "Artefact".freeze,
+      type: "rdf:Property".freeze
+    property :hasEventRelatedBusinessObject,
+      comment: %(A BusinessObject relates to an Event.).freeze,
+      domain: "ebucore:Event".freeze,
+      label: "Business object".freeze,
+      range: "ebucore:BusinessObject".freeze,
+      type: "rdf:Property".freeze
+    property :hasEventRelatedEvent,
+      comment: [%(An Event relates to an Event.).freeze, %(range: string or Event).freeze],
+      domain: "ebucore:Event".freeze,
+      label: "Event".freeze,
+      type: "rdf:Property".freeze
     property :hasEventRelatedLocation,
       comment: [%(Range: a Location or a string).freeze, %(To associate a Location with an Event.).freeze],
       domain: "ebucore:Event".freeze,
       label: "Location".freeze,
+      type: "rdf:Property".freeze
+    property :hasEventRelatedResource,
+      comment: %(A Resource relates to an Event.).freeze,
+      domain: "ebucore:Event".freeze,
+      label: "Resource".freeze,
+      range: "ebucore:Resource".freeze,
       type: "rdf:Property".freeze
     property :hasFileFormat,
       comment: %(To specify the file format.).freeze,
@@ -2577,6 +2830,10 @@ module RDF::Vocab
       comment: [%(Range: code/Concept or string).freeze, %(To define a type of Identifer \(e.g. UUID, ISAN, EIDR, in-house production Id\).).freeze],
       domain: "ebucore:Identifier".freeze,
       label: "Id type".freeze,
+      type: "rdf:Property".freeze
+    property :hasImageCodec,
+      comment: [%(Range: string or Codec).freeze, %(To specify the codec of an Image.).freeze],
+      label: "Image codec".freeze,
       type: "rdf:Property".freeze
     property :hasImageFormat,
       comment: %(To specify the format of an Image.).freeze,
@@ -2624,6 +2881,12 @@ module RDF::Vocab
       label: "Picture".freeze,
       range: "ebucore:Picture".freeze,
       type: "rdf:Property".freeze
+    property :hasLocationRelatedArtefact,
+      comment: [%(Range: a string or an Artefact.).freeze, %(To associate an Artefact with a
+            Location.).freeze],
+      domain: "ebucore:Location".freeze,
+      label: "Event".freeze,
+      type: "rdf:Property".freeze
     property :hasLocationRelatedEvent,
       comment: [%(Range: a string or an Event.).freeze, %(To associate an Event with a
             Location.).freeze],
@@ -2641,6 +2904,13 @@ module RDF::Vocab
             Logo can be associated with an Organisation or a Service or a PublicationChannel.).freeze,
       label: "Logo".freeze,
       range: "ebucore:Logo".freeze,
+      type: "rdf:Property".freeze
+    property :hasMaster,
+      comment: %(To identify the master of a Resource).freeze,
+      domain: "ebucore:Resource".freeze,
+      label: "Master".freeze,
+      range: "ebucore:Resource".freeze,
+      subPropertyOf: "ebucore:hasRelatedResource".freeze,
       type: "rdf:Property".freeze
     property :hasMediaFragment,
       comment: %(To define relation to MediaFragments
@@ -2701,6 +2971,18 @@ module RDF::Vocab
       label: "Original language".freeze,
       subPropertyOf: "ebucore:hasLanguage".freeze,
       type: "rdf:Property".freeze
+    property :hasParent,
+      comment: %(To link a BusinessOject or Resource to a parent.).freeze,
+      domain: term(
+          type: "owl:Class".freeze,
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze)
+        ),
+      label: "Parent".freeze,
+      range: term(
+          type: "owl:Class".freeze,
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze)
+        ),
+      type: "rdf:Property".freeze
     property :hasPart,
       comment: %(To define Parts \(segments, fragments, shots, etc.\)
             within an EditorialObject.).freeze,
@@ -2731,6 +3013,10 @@ module RDF::Vocab
       equivalentProperty: "http://www.bbc.co.uk/ontologies/coreconcepts/placeOfDeath".freeze,
       label: "Place of death".freeze,
       type: "rdf:Property".freeze
+    property :hasProducer,
+      label: "has producer".freeze,
+      subPropertyOf: "ebucore:hasContributor".freeze,
+      type: "rdf:Property".freeze
     property :hasProductionLocation,
       comment: [%(Range: a location or string).freeze, %(To identify the Location of a production).freeze],
       domain: "ebucore:EditorialObject".freeze,
@@ -2759,6 +3045,11 @@ module RDF::Vocab
       comment: [%(Range: string or concept PublicationMedium).freeze, %(To identify the publication medium of a PublicationEvent.).freeze],
       domain: "ebucore:PublicationEvent".freeze,
       label: "Publication medium".freeze,
+      type: "rdf:Property".freeze
+    property :hasPublicationPlanMember,
+      domain: "ebucore:PublicationPlan".freeze,
+      label: "Publication plan member".freeze,
+      range: "ebucore:PublicationPlan".freeze,
       type: "rdf:Property".freeze
     property :hasPublicationRegion,
       comment: [%(Range: string or Location).freeze, %(The region where the publication takes place.).freeze],
@@ -2798,7 +3089,10 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :hasRelatedAsset,
       comment: %(To identify related Assets.).freeze,
-      domain: "ebucore:Asset".freeze,
+      domain: term(
+          type: "owl:Class".freeze,
+          unionOf: list("ebucore:Asset".freeze, "ebucore:BusinessObject".freeze)
+        ),
       label: "Related asset".freeze,
       range: "ebucore:Asset".freeze,
       type: "rdf:Property".freeze
@@ -2809,6 +3103,12 @@ module RDF::Vocab
       range: "ebucore:AudioContent".freeze,
       subPropertyOf: "ebucore:hasRelatedBusinessObject".freeze,
       type: "rdf:Property".freeze
+    property :hasRelatedAudioObject,
+      domain: "ebucore:MediaResource".freeze,
+      label: "Audio object".freeze,
+      range: "ebucore:AudioObject".freeze,
+      subPropertyOf: "ebucore:hasRelatedResource".freeze,
+      type: "rdf:Property".freeze
     property :hasRelatedAudioProgramme,
       comment: %(To identify the AudioProgramme.).freeze,
       domain: "ebucore:EditorialObject".freeze,
@@ -2816,24 +3116,28 @@ module RDF::Vocab
       range: "ebucore:AudioProgramme".freeze,
       subPropertyOf: "ebucore:hasRelatedBusinessObject".freeze,
       type: "rdf:Property".freeze
+    property :hasRelatedAudioTrack,
+      domain: "ebucore:AudioObject".freeze,
+      label: "Audio Track".freeze,
+      range: "ebucore:AudioTrack".freeze,
+      subPropertyOf: "ebucore:hasRelatedResource".freeze,
+      type: "rdf:Property".freeze
+    property :hasRelatedAward,
+      comment: [%(Range: string or Award).freeze, %(To identify an Award related to EditorialObject.).freeze],
+      domain: "ebucore:EditorialObject".freeze,
+      label: "Related aaward".freeze,
+      type: "rdf:Property".freeze
     property :hasRelatedBusinessObject,
       comment: %(To aggregate properties defining a relation to BusinessOjects.).freeze,
       label: "Business object".freeze,
       range: "ebucore:BusinessObject".freeze,
       type: "rdf:Property".freeze
-    property :hasRelatedEditorialObject,
-      domain: "ebucore:Asset".freeze,
-      label: "Related editorial object".freeze,
-      range: "ebucore:EditorialObject".freeze,
-      subPropertyOf: "ebucore:hasRelatedBusinessObject".freeze,
-      type: "rdf:Property".freeze
     property :hasRelatedEvent,
-      comment: %(A property to identify the 
+      comment: [%(A property to identify the 
             Events, all real or fictional, covered by the 
-            BusinessObject.).freeze,
+            BusinessObject.).freeze, %(Range: Sting or Event).freeze],
       domain: "ebucore:BusinessObject".freeze,
       label: "Event".freeze,
-      range: "ebucore:Event".freeze,
       subPropertyOf: "ebucore:hasCoverage".freeze,
       type: "rdf:Property".freeze
     property :hasRelatedImage,
@@ -2844,13 +3148,12 @@ module RDF::Vocab
       subPropertyOf: "ebucore:hasRelatedBusinessObject".freeze,
       type: "rdf:Property".freeze
     property :hasRelatedLocation,
-      comment: %(A property to identify the 
+      comment: [%(A property to identify the 
             Locations, all real or fictional, covered by the 
-            BusinessObject.).freeze,
+            BusinessObject.).freeze, %(Range: String or Location).freeze],
       domain: "ebucore:BusinessObject".freeze,
       equivalentProperty: "ma:hasRelatedLocation".freeze,
       label: "Location".freeze,
-      range: "ebucore:Location".freeze,
       subPropertyOf: "ebucore:hasCoverage".freeze,
       type: "rdf:Property".freeze
     property :hasRelatedMediaFragment,
@@ -2867,6 +3170,10 @@ module RDF::Vocab
       label: "Picture".freeze,
       range: "ebucore:Picture".freeze,
       subPropertyOf: "ebucore:hasRelatedResource".freeze,
+      type: "rdf:Property".freeze
+    property :hasRelatedPublicationChannel,
+      domain: "ebucore:PublicationEvent".freeze,
+      label: "Publication channel".freeze,
       type: "rdf:Property".freeze
     property :hasRelatedPublicationEvent,
       comment: %(To identify the PublicationEvent associated with a MediaResource \(manifestation of an EditorialObject\).).freeze,
@@ -2890,6 +3197,14 @@ module RDF::Vocab
       domain: "ebucore:EditorialObject".freeze,
       label: "Related text line".freeze,
       type: "rdf:Property".freeze
+    property :hasRelationIdentifier,
+      comment: [%(Range: a string or an Identifier.).freeze, %(To define a Relation using an Identifier.).freeze],
+      domain: "ebucore:Relation".freeze,
+      type: "rdf:Property".freeze
+    property :hasRelationSource,
+      comment: [%(Range: string or anyURI/Agent.).freeze, %(To identify an Agent associated with a Relation.).freeze],
+      domain: "ebucore:Relation".freeze,
+      type: "rdf:Property".freeze
     property :hasRightsContact,
       comment: [%(Range: a string or a Contact.).freeze, %(To identify a Contact/person who can provide
             assistance / guidance regarding the associated Rights.).freeze],
@@ -2910,10 +3225,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :hasSeason,
       comment: %(The Season of a Series.).freeze,
-      domain: term(
-          type: "owl:Class".freeze,
-          unionOf: list("ebucore:Series".freeze, "ebucore:Brand".freeze)
-        ),
+      domain: "ebucore:Group".freeze,
       inverseOf: "ebucore:isSeasonOf".freeze,
       label: "Season".freeze,
       range: "ebucore:Season".freeze,
@@ -2921,10 +3233,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :hasSeries,
       comment: %(A Series.).freeze,
-      domain: term(
-          type: "owl:Class".freeze,
-          unionOf: list("ebucore:Brand".freeze, "ebucore:Season".freeze)
-        ),
+      domain: "ebucore:Group".freeze,
       inverseOf: "ebucore:isSeasonOf".freeze,
       label: "Series".freeze,
       range: "ebucore:Series".freeze,
@@ -3156,6 +3465,10 @@ module RDF::Vocab
       label: "Date of creation".freeze,
       range: "xsd:date".freeze,
       type: "rdf:Property".freeze
+    property :identifier,
+      label: "identifier".freeze,
+      subPropertyOf: "dc11:identifier".freeze,
+      type: "rdf:Property".freeze
     property :identifierValue,
       comment: [%(Range: string or anyURI.).freeze, %(To provide the value attribued to an Identifier.).freeze],
       domain: "ebucore:Identifier".freeze,
@@ -3178,9 +3491,10 @@ module RDF::Vocab
       subPropertyOf: "ebucore:hasRelatedBusinessObject".freeze,
       type: "rdf:Property".freeze
     property :isAgent,
-      comment: [%(Range: a string or an Agent.).freeze, %(To identify a Contact/person or Organisation as part of a cast list.).freeze],
-      domain: "ebucore:Cast".freeze,
+      comment: %(To establish a link between two Agents.).freeze,
+      domain: "ebucore:Agent".freeze,
       label: "Agent".freeze,
+      range: "ebucore:Agent".freeze,
       type: "rdf:Property".freeze
     property :isBrand,
       comment: %(To identify a Brand.).freeze,
@@ -3194,6 +3508,18 @@ module RDF::Vocab
       comment: [%(Range: a string or a FictionalPerson/Character.).freeze, %(To identify the character personified by a Cast individual.).freeze],
       domain: "ebucore:Cast".freeze,
       label: "Character".freeze,
+      type: "rdf:Property".freeze
+    property :isChildOf,
+      comment: %(To link a BusinessOject or Resource to a parent.).freeze,
+      domain: term(
+          type: "owl:Class".freeze,
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze)
+        ),
+      label: "Parent".freeze,
+      range: term(
+          type: "owl:Class".freeze,
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze)
+        ),
       type: "rdf:Property".freeze
     property :isClonedFrom,
       comment: %(Identifies relationship between a digital instantiation of a resource and its direct copy, with no generational loss.).freeze,
@@ -3235,12 +3561,21 @@ module RDF::Vocab
           unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze)
         ),
       type: "rdf:Property".freeze
+    property :isDistributedOn,
+      domain: "ebucore:EditorialObject".freeze,
+      label: "Platform/Service/PublicationChannel".freeze,
+      type: "rdf:Property".freeze
     property :isDubbedFrom,
       comment: %(Identifies relationship between a physical instantiation of a resource and a duplicate physical copy that may involve generational loss.).freeze,
       domain: "ebucore:Resource".freeze,
       inverseOf: "ebucore:dubbedTo".freeze,
       label: "Dubbed from".freeze,
       range: "ebucore:Resource".freeze,
+      type: "rdf:Property".freeze
+    property :isEditorialFormatOf,
+      domain: "ebucore:EditorialObject".freeze,
+      label: "Same editorial format".freeze,
+      range: "ebucore:EditorialObject".freeze,
       type: "rdf:Property".freeze
     property :isEpisodeOf,
       comment: %(The Episode of a Series or a Season.).freeze,
@@ -3269,6 +3604,13 @@ module RDF::Vocab
       domain: "ebucore:Identifier".freeze,
       label: "Issuer".freeze,
       type: "rdf:Property".freeze
+    property :isMasterOf,
+      comment: %(To identify the derivations of a master Resource).freeze,
+      domain: "ebucore:Resource".freeze,
+      label: "Derivation".freeze,
+      range: "ebucore:Resource".freeze,
+      subPropertyOf: "ebucore:hasRelatedResource".freeze,
+      type: "rdf:Property".freeze
     property :isMediaFragmentOf,
       comment: %(To identify the MediaResource to which the MediaFragment belongs to.).freeze,
       domain: "ebucore:MediaFragment".freeze,
@@ -3287,7 +3629,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :isMemberOfPublicationPlan,
       domain: "ebucore:PublicationPlan".freeze,
-      label: "Member of publication  plan".freeze,
+      label: "Parent publication  plan".freeze,
       range: "ebucore:PublicationPlan".freeze,
       type: "rdf:Property".freeze
     property :isNextInSequence,
@@ -3315,6 +3657,24 @@ module RDF::Vocab
       domain: "ebucore:Service".freeze,
       label: "Owner".freeze,
       range: "ebucore:Agent".freeze,
+      type: "rdf:Property".freeze
+    property :isParentOf,
+      comment: %(To link a BusinessOject or Resource to a parent.).freeze,
+      domain: term(
+          type: "owl:Class".freeze,
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze)
+        ),
+      label: "Child".freeze,
+      range: term(
+          type: "owl:Class".freeze,
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze)
+        ),
+      type: "rdf:Property".freeze
+    property :isPartOf,
+      comment: %(To identify and EditorialObject to which a Part belongs to.).freeze,
+      domain: "ebucore:Part".freeze,
+      label: "Part of".freeze,
+      range: "ebucore:EditorialObject".freeze,
       type: "rdf:Property".freeze
     property :isReferencedBy,
       comment: %(To express references across Assets, BusinessObjects or Resources.).freeze,
@@ -3392,6 +3752,11 @@ module RDF::Vocab
       inverseOf: "ebucore:hasVersion".freeze,
       label: "Version of".freeze,
       range: "ebucore:BusinessObject".freeze,
+      type: "rdf:Property".freeze
+    property :licensing,
+      comment: %(To provide information on licensing.).freeze,
+      label: "Licensing".freeze,
+      subPropertyOf: "ebucore:description".freeze,
       type: "rdf:Property".freeze
     property :lineNumber,
       comment: %(To provide the number of the line on which
@@ -3646,6 +4011,12 @@ module RDF::Vocab
       domain: "ebucore:MediaResource".freeze,
       label: "Media Resource type".freeze,
       type: "rdf:Property".freeze
+    property :midRollAdAllowed,
+      comment: %(A flag to indicate whether it is allowed to insert ad breaks in mid-roll.).freeze,
+      domain: "ebucore:Essence".freeze,
+      label: "Midroll ad allowed".freeze,
+      range: "xsd:boolean".freeze,
+      type: "rdf:Property".freeze
     property :middleName,
       comment: %(To provide one or more middle names.).freeze,
       domain: "ebucore:Person".freeze,
@@ -3819,6 +4190,22 @@ module RDF::Vocab
       comment: [%(A type of Part.).freeze, %(Note: this can also be done defining subClasses of Part.).freeze, %(Range: a string or code/Concept).freeze],
       domain: "ebucore:Part".freeze,
       label: "Part type".freeze,
+      type: "rdf:Property".freeze
+    property :personHeight,
+      comment: %(To indicate the height of a person.).freeze,
+      domain: "ebucore:Person".freeze,
+      label: "Person height".freeze,
+      range: "xsd:string".freeze,
+      type: "rdf:Property".freeze
+    property :personName,
+      comment: %(To provide e.g. compound names).freeze,
+      label: "Person name".freeze,
+      type: "rdf:Property".freeze
+    property :personWeight,
+      comment: %(To indicate the weight of a person.).freeze,
+      domain: "ebucore:Person".freeze,
+      label: "Person weight".freeze,
+      range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :pictureIdLocator,
       comment: %(The location from where a Person Id picture can be accessed.).freeze,
@@ -4087,6 +4474,39 @@ module RDF::Vocab
       label: "Region delimiter (y-axis)".freeze,
       range: "xsd:integer".freeze,
       type: "rdf:Property".freeze
+    property :relation,
+      comment: %(To define a Relation.).freeze,
+      domain: "ebucore:Relation".freeze,
+      type: "rdf:Property".freeze
+    property :relationLink,
+      comment: %(To define a relation using a link.).freeze,
+      domain: "ebucore:Relation".freeze,
+      range: "xsd:anyURI".freeze,
+      type: "rdf:Property".freeze
+    property :relationNote,
+      comment: %(A note to provide additional information about a Relation.).freeze,
+      domain: "ebucore:Relation".freeze,
+      range: "xsd:string".freeze,
+      type: "rdf:Property".freeze
+    property :relationOrderedgroupFlag,
+      comment: %(A boolean to define if a relation is defined within and ordered group.).freeze,
+      domain: "ebucore:Relation".freeze,
+      range: "xsd:boolean".freeze,
+      type: "rdf:Property".freeze
+    property :relationRunningOrderNumber,
+      comment: %(The order number in a list.).freeze,
+      domain: "ebucore:Relation".freeze,
+      range: "xsd:string".freeze,
+      type: "rdf:Property".freeze
+    property :relationTotalNumberOfGroupMembers,
+      comment: %(The total number of members in a group to which a relation refers to.).freeze,
+      domain: "ebucore:Relation".freeze,
+      range: "xsd:string".freeze,
+      type: "rdf:Property".freeze
+    property :relationType,
+      comment: [%(Range: string or anyURI/Concept.).freeze, %(To define a type of Relation.).freeze],
+      domain: "ebucore:Relation".freeze,
+      type: "rdf:Property".freeze
     property :replaces,
       comment: %(To identify substitution.).freeze,
       domain: term(
@@ -4178,6 +4598,18 @@ module RDF::Vocab
       label: "Rights clearance flag".freeze,
       range: "xsd:boolean".freeze,
       type: "rdf:Property".freeze
+    property :rightsDuration,
+      comment: %(To define the duration of the period when Rights are applicable.).freeze,
+      domain: "ebucore:Rights".freeze,
+      label: "Rights duration".freeze,
+      range: "xsd:duration".freeze,
+      type: "rdf:Property".freeze
+    property :rightsEndDateTime,
+      comment: %(To define the end time until when Rights are applicable.).freeze,
+      domain: "ebucore:Rights".freeze,
+      label: "Rights end date time".freeze,
+      range: "xsd:dateTime".freeze,
+      type: "rdf:Property".freeze
     property :rightsExpression,
       comment: %(The expression of Rights as free
             text.).freeze,
@@ -4196,6 +4628,22 @@ module RDF::Vocab
       domain: "ebucore:Rights".freeze,
       label: "Rights web resource".freeze,
       range: "xsd:anyURI".freeze,
+      type: "rdf:Property".freeze
+    property :rightsStartDateTime,
+      comment: %(To define the start time since when Rights are applicable.).freeze,
+      domain: "ebucore:Rights".freeze,
+      label: "Rights start date time".freeze,
+      range: "xsd:dateTime".freeze,
+      type: "rdf:Property".freeze
+    property :rightsTerritoryExcludes,
+      comment: %(A list of country or region codes to which rights do not apply.).freeze,
+      domain: "ebucore:Rights".freeze,
+      label: "Excluded territories".freeze,
+      type: "rdf:Property".freeze
+    property :rightsTerritoryIncludes,
+      comment: %(A list of country or region codes within which rights apply.).freeze,
+      domain: "ebucore:Rights".freeze,
+      label: "Applicable territories".freeze,
       type: "rdf:Property".freeze
     property :rightsType,
       comment: [%(Range: string or code/Concept).freeze, %(To identify a type of Rights.).freeze],
@@ -4249,7 +4697,7 @@ module RDF::Vocab
       type: "rdf:Property".freeze
     property :seasonNumber,
       comment: %(To provide a Seaon number.).freeze,
-      domain: "ebucore:Season".freeze,
+      domain: "ebucore:EditorialObject".freeze,
       label: "Season number".freeze,
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze
@@ -4372,11 +4820,22 @@ module RDF::Vocab
       label: "Table of Content".freeze,
       subPropertyOf: "ebucore:description".freeze,
       type: "rdf:Property".freeze
+    property :tag,
+      comment: %(To provide a list of tags.).freeze,
+      label: "Tag".freeze,
+      range: "xsd:string".freeze,
+      subPropertyOf: "ebucore:description".freeze,
+      type: "rdf:Property".freeze
     property :targetAudienceSystem,
       comment: %(To define the system used to provide a TargetAudience.).freeze,
       domain: "ebucore:AudienceLevel".freeze,
       label: "Target audience system".freeze,
       range: "xsd:string".freeze,
+      type: "rdf:Property".freeze
+    property :targetPlatform,
+      comment: %(To provide information on the platforms on which this content can be distributed.).freeze,
+      label: "Target platform".freeze,
+      subPropertyOf: "ebucore:description".freeze,
       type: "rdf:Property".freeze
     property :textLineContent,
       comment: %(To provide the content of a text line.).freeze,
@@ -4455,6 +4914,14 @@ module RDF::Vocab
       label: "Text line start timecode drop frames".freeze,
       subPropertyOf: "ebucore:textLineStartTime".freeze,
       type: "rdf:Property".freeze
+    property :timeCreated,
+      domain: term(
+          type: "owl:Class".freeze,
+          unionOf: list("ebucore:BusinessObject".freeze, "ebucore:Resource".freeze)
+        ),
+      label: "Time created".freeze,
+      range: "xsd:string".freeze,
+      type: "rdf:Property".freeze
     property :timelineTrackDurationNormalPlayTime,
       comment: %(To provide a duration as normal
             time.).freeze,
@@ -4505,6 +4972,18 @@ module RDF::Vocab
       equivalentProperty: "ma:title".freeze,
       label: "Title".freeze,
       subPropertyOf: "dc11:title".freeze,
+      type: "rdf:Property".freeze
+    property :totalNumberOfEpisodes,
+      comment: %(To provide the total number of episodes in a series or a season.).freeze,
+      domain: "ebucore:Group".freeze,
+      label: "Total number of episodes".freeze,
+      range: "xsd:string".freeze,
+      type: "rdf:Property".freeze
+    property :totalNumberOfGroupMembers,
+      comment: %(To provide the total number of members in a group.).freeze,
+      domain: "ebucore:Group".freeze,
+      label: "Total number of group members".freeze,
+      range: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :trackDefinition,
       comment: %(To provide a definition associated to a

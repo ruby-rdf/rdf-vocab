@@ -11,40 +11,52 @@ module RDF::Vocab
 
     # Ontology definition
     ontology :"http://id.loc.gov/vocabulary/preservation/eventType/",
-      comment: %(                                       Event types are actions performed on digital objects within a                         preservation repository.                                   ).freeze,
+      comment: %(                                                          Event Types are actions performed within or outside the repository that affect the long term preservation of digital objects.                                  ).freeze,
       label: "Event Type".freeze,
       "mads:adminMetadata": [term(
-          "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2010-06-01T00:00:00".freeze,
+          "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2010-06-01T00:00:01".freeze,
           "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "premiseventtype:dlc".freeze,
           "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "new".freeze,
           type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze
         ), term(
-          "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2012-06-01T00:00:00".freeze,
+          "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2012-06-01T00:00:01".freeze,
           "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "premiseventtype:dlc".freeze,
           "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "modified".freeze,
           type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze
         ), term(
-          "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2017-12-01T00:00:00".freeze,
+          "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2017-09-07T00:00:01".freeze,
+          "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "premiseventtype:dlc".freeze,
+          "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "modified".freeze,
+          type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze
+        ), term(
+          "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2018-09-24T00:00:01".freeze,
           "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "premiseventtype:dlc".freeze,
           "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "modified".freeze,
           type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze
         )],
-      "mads:hasMADSSchemeMember": ["premiseventtype:acc".freeze, "premiseventtype:app".freeze, "premiseventtype:cap".freeze, "premiseventtype:com".freeze, "premiseventtype:cre".freeze, "premiseventtype:dea".freeze, "premiseventtype:dec".freeze, "premiseventtype:del".freeze, "premiseventtype:der".freeze, "premiseventtype:dig".freeze, "premiseventtype:dis".freeze, "premiseventtype:dsg".freeze, "premiseventtype:enc".freeze, "premiseventtype:ffa".freeze, "premiseventtype:fil".freeze, "premiseventtype:fix".freeze, "premiseventtype:for".freeze, "premiseventtype:ima".freeze, "premiseventtype:ine".freeze, "premiseventtype:ing".freeze, "premiseventtype:ins".freeze, "premiseventtype:ipc".freeze, "premiseventtype:ipm".freeze, "premiseventtype:ips".freeze, "premiseventtype:mee".freeze, "premiseventtype:mem".freeze, "premiseventtype:mes".freeze, "premiseventtype:mig".freeze, "premiseventtype:mod".freeze, "premiseventtype:nor".freeze, "premiseventtype:pac".freeze, "premiseventtype:poa".freeze, "premiseventtype:qua".freeze, "premiseventtype:rec".freeze, "premiseventtype:red".freeze, "premiseventtype:ref".freeze, "premiseventtype:rep".freeze, "premiseventtype:tra".freeze, "premiseventtype:unp".freeze, "premiseventtype:unq".freeze, "premiseventtype:val".freeze, "premiseventtype:vir".freeze],
+      "mads:hasMADSSchemeMember": ["premiseventtype:acc".freeze, "premiseventtype:app".freeze, "premiseventtype:cap".freeze, "premiseventtype:com".freeze, "premiseventtype:cop".freeze, "premiseventtype:cre".freeze, "premiseventtype:dea".freeze, "premiseventtype:dec".freeze, "premiseventtype:del".freeze, "premiseventtype:der".freeze, "premiseventtype:dig".freeze, "premiseventtype:dis".freeze, "premiseventtype:dsg".freeze, "premiseventtype:dsp".freeze, "premiseventtype:enc".freeze, "premiseventtype:exe".freeze, "premiseventtype:exp".freeze, "premiseventtype:ext".freeze, "premiseventtype:ffa".freeze, "premiseventtype:fil".freeze, "premiseventtype:fix".freeze, "premiseventtype:for".freeze, "premiseventtype:ima".freeze, "premiseventtype:ine".freeze, "premiseventtype:ing".freeze, "premiseventtype:ins".freeze, "premiseventtype:int".freeze, "premiseventtype:ipc".freeze, "premiseventtype:ipm".freeze, "premiseventtype:ips".freeze, "premiseventtype:mee".freeze, "premiseventtype:mem".freeze, "premiseventtype:mes".freeze, "premiseventtype:mig".freeze, "premiseventtype:mod".freeze, "premiseventtype:nor".freeze, "premiseventtype:pac".freeze, "premiseventtype:poa".freeze, "premiseventtype:prt".freeze, "premiseventtype:qua".freeze, "premiseventtype:rec".freeze, "premiseventtype:red".freeze, "premiseventtype:ref".freeze, "premiseventtype:ren".freeze, "premiseventtype:rep".freeze, "premiseventtype:tra".freeze, "premiseventtype:unp".freeze, "premiseventtype:unq".freeze, "premiseventtype:val".freeze, "premiseventtype:vir".freeze],
+      "mads:useFor": ["http://id.loc.gov/vocabulary/preservation/actionsGranted".freeze, "http://id.loc.gov/vocabulary/preservation/environmentPurpose".freeze, "http://id.loc.gov/vocabulary/preservation/inhibitorTarget".freeze],
       "skos:changeNote": [term(
           "http://purl.org/vocab/changeset/schema#changeReason": "modified".freeze,
-          "http://purl.org/vocab/changeset/schema#createdDate": "2012-06-01T00:00:00".freeze,
+          "http://purl.org/vocab/changeset/schema#createdDate": "2012-06-01T00:00:01".freeze,
           "http://purl.org/vocab/changeset/schema#creatorName": "premiseventtype:dlc".freeze,
           "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType".freeze,
           type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze
         ), term(
           "http://purl.org/vocab/changeset/schema#changeReason": "modified".freeze,
-          "http://purl.org/vocab/changeset/schema#createdDate": "2017-12-01T00:00:00".freeze,
+          "http://purl.org/vocab/changeset/schema#createdDate": "2017-09-07T00:00:01".freeze,
+          "http://purl.org/vocab/changeset/schema#creatorName": "premiseventtype:dlc".freeze,
+          "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType".freeze,
+          type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze
+        ), term(
+          "http://purl.org/vocab/changeset/schema#changeReason": "modified".freeze,
+          "http://purl.org/vocab/changeset/schema#createdDate": "2018-09-24T00:00:01".freeze,
           "http://purl.org/vocab/changeset/schema#creatorName": "premiseventtype:dlc".freeze,
           "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType".freeze,
           type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze
         ), term(
           "http://purl.org/vocab/changeset/schema#changeReason": "new".freeze,
-          "http://purl.org/vocab/changeset/schema#createdDate": "2010-06-01T00:00:00".freeze,
+          "http://purl.org/vocab/changeset/schema#createdDate": "2010-06-01T00:00:01".freeze,
           "http://purl.org/vocab/changeset/schema#creatorName": "premiseventtype:dlc".freeze,
           "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType".freeze,
           type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze
@@ -63,6 +75,9 @@ module RDF::Vocab
       type: "mads:Authority".freeze
     term :com,
       "mads:authoritativeLabel": "compression".freeze,
+      type: "mads:Authority".freeze
+    term :cop,
+      "mads:authoritativeLabel": "compiling".freeze,
       type: "mads:Authority".freeze
     term :cre,
       "mads:authoritativeLabel": "creation".freeze,
@@ -88,8 +103,20 @@ module RDF::Vocab
     term :dsg,
       "mads:authoritativeLabel": "digital signature generation".freeze,
       type: "mads:Authority".freeze
+    term :dsp,
+      "mads:authoritativeLabel": "displaying".freeze,
+      type: "mads:Authority".freeze
     term :enc,
       "mads:authoritativeLabel": "encryption".freeze,
+      type: "mads:Authority".freeze
+    term :exe,
+      "mads:authoritativeLabel": "execution".freeze,
+      type: "mads:Authority".freeze
+    term :exp,
+      "mads:authoritativeLabel": "exporting".freeze,
+      type: "mads:Authority".freeze
+    term :ext,
+      "mads:authoritativeLabel": "extraction".freeze,
       type: "mads:Authority".freeze
     term :ffa,
       "mads:authoritativeLabel": "forensic feature analysis".freeze,
@@ -114,6 +141,9 @@ module RDF::Vocab
       type: "mads:Authority".freeze
     term :ins,
       "mads:authoritativeLabel": "ingestion start".freeze,
+      type: "mads:Authority".freeze
+    term :int,
+      "mads:authoritativeLabel": "interpreting".freeze,
       type: "mads:Authority".freeze
     term :ipc,
       "mads:authoritativeLabel": "information package creation".freeze,
@@ -148,6 +178,9 @@ module RDF::Vocab
     term :poa,
       "mads:authoritativeLabel": "policy assignment".freeze,
       type: "mads:Authority".freeze
+    term :prt,
+      "mads:authoritativeLabel": "printing".freeze,
+      type: "mads:Authority".freeze
     term :qua,
       "mads:authoritativeLabel": "quarantine".freeze,
       type: "mads:Authority".freeze
@@ -159,6 +192,9 @@ module RDF::Vocab
       type: "mads:Authority".freeze
     term :ref,
       "mads:authoritativeLabel": "refreshment".freeze,
+      type: "mads:Authority".freeze
+    term :ren,
+      "mads:authoritativeLabel": "rendering".freeze,
       type: "mads:Authority".freeze
     term :rep,
       "mads:authoritativeLabel": "replication".freeze,
