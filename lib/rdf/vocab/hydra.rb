@@ -125,6 +125,7 @@ module RDF::Vocab
     # Property definitions
     property :description,
       comment: %(A description.).freeze,
+      domainIncludes: ["hydra:ApiDocumentation".freeze, "hydra:Class".freeze, "hydra:Link".freeze, "hydra:Operation".freeze, "hydra:Status".freeze, "hydra:SupportedProperty".freeze],
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "description".freeze,
       range: "xsd:string".freeze,
@@ -133,9 +134,17 @@ module RDF::Vocab
       "vs:term_status": "testing".freeze
     property :freetextQuery,
       comment: %(A property representing a freetext query.).freeze,
+      domain: "hydra:Resource".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "freetext query".freeze,
       range: "xsd:string".freeze,
+      type: "rdf:Property".freeze,
+      "vs:term_status": "testing".freeze
+    property :limit,
+      comment: %(Instructs to limit set only to N elements.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
+      label: "take".freeze,
+      range: "xsd:nonNegativeInteger".freeze,
       type: "rdf:Property".freeze,
       "vs:term_status": "testing".freeze
     property :mapping,
@@ -154,8 +163,30 @@ module RDF::Vocab
       range: "xsd:string".freeze,
       type: "rdf:Property".freeze,
       "vs:term_status": "testing".freeze
+    property :offset,
+      comment: %(Instructs to skip N elements of the set.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
+      label: "skip".freeze,
+      range: "xsd:nonNegativeInteger".freeze,
+      type: "rdf:Property".freeze,
+      "vs:term_status": "testing".freeze
+    property :pageIndex,
+      comment: %(Instructs to provide a specific page of the collection at a given index.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
+      label: "page index".freeze,
+      range: "xsd:nonNegativeInteger".freeze,
+      subPropertyOf: "hydra:pageReference".freeze,
+      type: "rdf:Property".freeze,
+      "vs:term_status": "testing".freeze
+    property :pageReference,
+      comment: %(Instructs to provide a specific page reference of the collection.).freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
+      label: "page reference".freeze,
+      type: "rdf:Property".freeze,
+      "vs:term_status": "testing".freeze
     property :property,
       comment: %(A property).freeze,
+      domainIncludes: ["hydra:IriTemplateMapping".freeze, "hydra:SupportedProperty".freeze],
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "property".freeze,
       range: "rdf:Property".freeze,
@@ -171,6 +202,7 @@ module RDF::Vocab
       "vs:term_status": "testing".freeze
     property :required,
       comment: %(True if the property is required, false otherwise.).freeze,
+      domainIncludes: ["hydra:IriTemplateMapping".freeze, "hydra:SupportedProperty".freeze],
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "required".freeze,
       range: "xsd:boolean".freeze,
@@ -186,13 +218,16 @@ module RDF::Vocab
       "vs:term_status": "testing".freeze
     property :template,
       comment: %(A templated string with placeholders. The literal's datatype indicates the template syntax; if not specified, hydra:Rfc6570Template is assumed.).freeze,
+      domain: "hydra:IriTemplate".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "template".freeze,
+      range: "hydra:Rfc6570Template".freeze,
       "rdfs:seeAlso": "hydra:Rfc6570Template".freeze,
       type: "rdf:Property".freeze,
       "vs:term_status": "testing".freeze
     property :title,
       comment: %(A title, often used along with a description.).freeze,
+      domainIncludes: ["hydra:ApiDocumentation".freeze, "hydra:Class".freeze, "hydra:Link".freeze, "hydra:Operation".freeze, "hydra:Status".freeze, "hydra:SupportedProperty".freeze],
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "title".freeze,
       range: "xsd:string".freeze,
@@ -217,6 +252,7 @@ module RDF::Vocab
       "vs:term_status": "testing".freeze
     property :variableRepresentation,
       comment: %(The representation format to use when expanding the IRI template.).freeze,
+      domain: "hydra:IriTemplateMapping".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "variable representation".freeze,
       range: "hydra:VariableRepresentation".freeze,
@@ -256,6 +292,7 @@ module RDF::Vocab
       "vs:term_status": "testing".freeze
     term :apiDocumentation,
       comment: %(A link to the API documentation).freeze,
+      domain: "hydra:Resource".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "apiDocumentation".freeze,
       range: "hydra:ApiDocumentation".freeze,
@@ -263,9 +300,10 @@ module RDF::Vocab
       "vs:term_status": "testing".freeze
     term :collection,
       comment: %(Collections somehow related to this resource.).freeze,
-      domain: "hydra:Collection".freeze,
+      domain: "hydra:Resource".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "collection".freeze,
+      range: "hydra:Collection".freeze,
       type: "hydra:Link".freeze,
       "vs:term_status": "testing".freeze
     term :entrypoint,
@@ -337,6 +375,7 @@ module RDF::Vocab
       "vs:term_status": "testing".freeze
     term :possibleStatus,
       comment: %(A status that might be returned by the Web API \(other statuses should be expected and properly handled as well\)).freeze,
+      domainIncludes: ["hydra:ApiDocumentation".freeze, "hydra:Operation".freeze],
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "possible status".freeze,
       range: "hydra:Status".freeze,
@@ -360,6 +399,7 @@ module RDF::Vocab
       "vs:term_status": "testing".freeze
     term :search,
       comment: %(A IRI template that can be used to query a collection.).freeze,
+      domain: "hydra:Resource".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "search".freeze,
       range: "hydra:IriTemplate".freeze,
@@ -380,6 +420,7 @@ module RDF::Vocab
       "vs:term_status": "testing".freeze
     term :supportedOperation,
       comment: %(An operation supported by instances of the specific Hydra class or the target of the Hydra link).freeze,
+      domainIncludes: ["hydra:Class".freeze, "hydra:Link".freeze],
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "supported operation".freeze,
       range: "hydra:Operation".freeze,

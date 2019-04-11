@@ -11,9 +11,12 @@ module RDF::Vocab
 
     # Ontology definition
     ontology :"http://id.loc.gov/ontologies/bibframe/",
-      "dc:modified": "2017-05-04T14:49:12.796-04:00".freeze,
+      "dc:modified": "2019-01-09T12:06:57.926-05:00".freeze,
       label: "BIBFRAME vocabulary".freeze,
-      "owl:versionInfo": "2017-05-04T14:49:12.796-04:00".freeze,
+      "owl:ontologyIRI": "bf2:".freeze,
+      "owl:priorVersion": "http://id.loc.gov/ontologies/bibframe-2-0-0/".freeze,
+      "owl:versionIRI": "http://id.loc.gov/ontologies/bibframe-2-0-1/".freeze,
+      "owl:versionInfo": "2.0.1".freeze,
       type: "owl:Ontology".freeze
 
     # Class definitions
@@ -568,7 +571,7 @@ module RDF::Vocab
       type: "owl:Class".freeze
     term :MixedMaterial,
       "dc:modified": "2016-04-21 (New)".freeze,
-      definition: %(Resource comprised of multiple types which are not driven by software. This may include materials in two or more forms that are related by virtue of their having been accumulated by or about a person or body., archival fonds.).freeze,
+      definition: %(Resource comprised of multiple types which is not driven by software; for instance, a manuscript collection of text, photographs and sound recordings.).freeze,
       label: "Mixed material".freeze,
       subClassOf: "bf2:Work".freeze,
       type: "owl:Class".freeze
@@ -789,7 +792,7 @@ module RDF::Vocab
     term :PublisherNumber,
       "dc:modified": "2016-04-21 (New)".freeze,
       definition: %(Number assigned by a publisher that is not one of the specific defined types.).freeze,
-      label: "Other publisher number".freeze,
+      label: "Publisher number".freeze,
       subClassOf: "bf2:Identifier".freeze,
       type: "owl:Class".freeze
     term :RecordingMedium,
@@ -1730,7 +1733,7 @@ module RDF::Vocab
       definition: %(Resource that is associated with a character string that serves to differentiate one resource from another.).freeze,
       domain: "bf2:Identifier".freeze,
       inverseOf: "bf2:identifiedBy".freeze,
-      label: "Resouce identified".freeze,
+      label: "Resource identified".freeze,
       type: "owl:ObjectProperty".freeze
     property :illustrativeContent,
       comment: %(Used with Work or Instance).freeze,

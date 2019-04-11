@@ -33,10 +33,10 @@ module RDF::Vocab
       subClassOf: "disco:DescriptiveStatistics".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :DataFile,
-      comment: %(The class DataFile, which is also a dcterms:Dataset, represents all the data files containing the microdata datasets.).freeze,
+      comment: %(The class DataFile, which is also a dcmitype:Dataset, represents all the data files containing the microdata datasets.).freeze,
       isDefinedBy: "http://rdf-vocabulary.ddialliance.org/discovery".freeze,
       label: "Data file".freeze,
-      subClassOf: ["dcat:Distribution".freeze, "dcmitype:Dataset".freeze],
+      subClassOf: ["dc:DCMITypeDataset".freeze, "dcat:Distribution".freeze],
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :DescriptiveStatistics,
       comment: %(SummaryStatistics pointing to variables and CategoryStatistics pointing to categories and codes are both DescriptiveStatistics.).freeze,
@@ -72,9 +72,9 @@ module RDF::Vocab
       subClassOf: "disco:Instrument".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Representation,
-      comment: %(Representation of a variable, question, or variable definition.).freeze,
+      comment: %(Representation of a variable or question definition.).freeze,
       isDefinedBy: "http://rdf-vocabulary.ddialliance.org/discovery".freeze,
-      label: "Representation of a variable, question, or variable definition.".freeze,
+      label: "Representation of a variable or question definition.".freeze,
       subClassOf: term(
           type: "owl:Class".freeze,
           unionOf: list("rdfs:Datatype".freeze, "skos:ConceptScheme".freeze, "skos:OrderedCollection".freeze)
@@ -236,6 +236,13 @@ module RDF::Vocab
       label: "funded by".freeze,
       range: "foaf:Agent".freeze,
       subPropertyOf: "dc:contributor".freeze,
+      type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
+    property :hadRole,
+      comment: %(This property indicates the role of an Agent, e.g. analyst, data modeler, programmer, co-investigator or others.).freeze,
+      domain: "foaf:Agent".freeze,
+      isDefinedBy: "http://rdf-vocabulary.ddialliance.org/discovery".freeze,
+      label: "had role".freeze,
+      range: "skos:Concept".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :inGroup,
       comment: %(This property points from a Study to the StudyGroup which contains the Study.).freeze,
