@@ -27,10 +27,4 @@ end
 
 group :debug do
   gem 'byebug', platform: :mri
-  gem 'rubinius-debugger', platform: :rbx
-end
-
-platforms :rbx do
-  gem 'rubinius', '~> 2.0'
-  gem 'rubysl', '~> 2.0'
 end

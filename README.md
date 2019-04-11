@@ -26,6 +26,7 @@ Also extends `RDF::Vocabulary::Format` with the `gen-vocab` command extension to
 * RDF::Vocab::DOAP      - [Description of a Project (DOAP) vocabulary](https://github.com/edumbill/doap/wiki) - Alias of `RDF::DOAP`
 * RDF::Vocab::DWC       - [Darwin Core](http://rs.tdwg.org/dwc/terms/)
 * RDF::Vocab::EBUCore   - [EBUCore](http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#)
+* RDF::Vocab::EDM       - [Europeana Data Model (EDM)](https://pro.europeana.eu/page/edm-documentation)
 * RDF::Vocab::EXIF      - [Exif vocabulary workspace](http://www.w3.org/2003/12/exif/) (W3C) - Alias of `RDF::EXIF`
 * RDF::Vocab::Fcrepo4   - [Fedora Commons Repository 4 Ontology](http://fedora.info/definitions/v4/repository)
 * RDF::Vocab::FOAF      - [Friend of a Friend (FOAF) vocabulary](http://xmlns.com/foaf/spec/) - Alias of `RDF::FOAF`

@@ -11,9 +11,8 @@ module RDF
       bf2:    {uri: 'http://id.loc.gov/ontologies/bibframe/'},
       bibframe: {
         uri: "http://bibframe.org/vocab/",
-        source: "http://bibframe.org/vocab.rdf",
         class_name: "Bibframe",
-        extra: {hasAccompaniment: {type: "rdf:Property", label: "has accompaniment"}}
+        skip: true
       },
       bibo:   {uri: "http://purl.org/ontology/bibo/", source: "etc/bibo.ttl"},
       cc:     {
@@ -53,8 +52,8 @@ module RDF
       crm:    {uri: "http://www.cidoc-crm.org/cidoc-crm/", source: "etc/crm.rdf"},
       datacite: {
         uri: "http://purl.org/spar/datacite/",
-        source: "http://eelst.cs.unibo.it/apps/LODE/source?url=http://purl.org/spar/datacite",
-        class_name: "DataCite"
+        class_name: "DataCite",
+        skip: true
       },
       dc:     {uri: "http://purl.org/dc/terms/"},
       dc11:   {uri: "http://purl.org/dc/elements/1.1/"},
@@ -79,18 +78,6 @@ module RDF
       disco: {
         uri: "http://rdf-vocabulary.ddialliance.org/discovery#",
         source: "https://raw.githubusercontent.com/linked-statistics/disco-spec/master/discovery.ttl",
-        patch: %{
-          @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
-          @prefix dcterms: <http://purl.org/dc/terms/> .
-          @prefix disco: <http://rdf-vocabulary.ddialliance.org/discovery#> .
-          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-          DeleteExisting {
-            disco:DataFile rdfs:subClassOf dcterms:Dataset .
-          } .
-          AddNew {
-            disco:DataFile rdfs:subClassOf dcmitype:Dataset .
-          } .
-        }
       },
       doap:   {
         uri: "http://usefulinc.com/ns/doap#",

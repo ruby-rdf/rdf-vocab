@@ -2,6 +2,7 @@
 $:.unshift(File.expand_path(File.join(File.dirname(__FILE__), 'lib')))
 require 'rdf'
 require 'rdf/vocab'
+require 'json'
 begin
   require 'linkeddata'
 rescue LoadError
@@ -39,7 +40,7 @@ desc "Generate Vocabularies"
 task :gen_vocabs => RDF::Vocab::VOCABS.select{|k, v| !v[:alias]}.keys.map {|v| "lib/rdf/vocab/#{v}.rb"}
 
 RDF::Vocab::VOCABS.each do |id, v|
-  next if v[:alias]
+  next if v[:alias] || v[:skip]
   file "lib/rdf/vocab/#{id}.rb" => :do_build do
     puts "Generate lib/rdf/vocab/#{id}.rb"
     cmd = "bundle exec rdf"
@@ -56,7 +57,7 @@ RDF::Vocab::VOCABS.each do |id, v|
     cmd += " '" + v.fetch(:source, v[:uri]) + "'"
     puts "  #{cmd}"
     begin
-      %x{#{cmd} && mv lib/rdf/vocab/#{id}.rb_t lib/rdf/vocab/#{id}.rb}
+      %x{#{cmd} && sed 's/\r//g' lib/rdf/vocab/#{id}.rb_t > lib/rdf/vocab/#{id}.rb}
     rescue
       puts "Failed to load #{id}: #{$!.message}"
     ensure

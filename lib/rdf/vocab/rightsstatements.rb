@@ -27,6 +27,7 @@ module RDF::Vocab
 
   You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.).freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
+      notation: %(CNE).freeze,
       note: [%(Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.).freeze, %(You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.).freeze, %(You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.).freeze],
       "owl:versionInfo": "1.0".freeze,
       prefLabel: "Copyright Not Evaluated".freeze,
@@ -45,6 +46,7 @@ module RDF::Vocab
 
   For other uses, you need to obtain permission from the rights-holder\(s\).).freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
+      notation: %(InC-EDU).freeze,
       note: [%(Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.).freeze, %(You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.).freeze, %(You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.).freeze],
       "owl:versionInfo": "1.0".freeze,
       prefLabel: "In Copyright - Educational Use Permitted".freeze,
@@ -63,6 +65,7 @@ module RDF::Vocab
 
   For other uses you need to obtain permission from the rights-holder\(s\).).freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
+      notation: %(InC-NC).freeze,
       note: [%(Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.).freeze, %(You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.).freeze, %(You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.).freeze],
       "owl:versionInfo": "1.0".freeze,
       prefLabel: "In Copyright - Non-Commercial Use Permitted".freeze,
@@ -81,6 +84,7 @@ module RDF::Vocab
 
   You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.).freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
+      notation: %(InC-OW-EU).freeze,
       note: [%(If you have any information that can contribute to identifying or locating the rights-holder\(s\), please notify the organization that has made the Item available.).freeze, %(Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.).freeze, %(You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.).freeze, %(You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.).freeze],
       "owl:versionInfo": "1.0".freeze,
       prefLabel: "In Copyright - EU Orphan Work".freeze,
@@ -97,6 +101,7 @@ module RDF::Vocab
 
   You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.).freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
+      notation: %(InC-RUU).freeze,
       note: [%(If you have any information that can contribute to identifying or locating the rights-holder\(s\) please notify the organization that has made the Item available.).freeze, %(Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.).freeze, %(You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.).freeze, %(You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.).freeze],
       "owl:versionInfo": "1.0".freeze,
       prefLabel: "In Copyright - Rights-holder(s) Unlocatable or Unidentifiable".freeze,
@@ -114,6 +119,7 @@ module RDF::Vocab
 
   For other uses you need to obtain permission from the rights-holder\(s\).).freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
+      notation: %(InC).freeze,
       note: [%(Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.).freeze, %(You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.).freeze, %(You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.).freeze],
       "owl:versionInfo": "1.0".freeze,
       prefLabel: "In Copyright".freeze,
@@ -132,6 +138,7 @@ module RDF::Vocab
 
   You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.).freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
+      notation: %(NKC).freeze,
       note: [%(Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.).freeze, %(You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.).freeze, %(You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.).freeze],
       "owl:versionInfo": "1.0".freeze,
       prefLabel: "No Known Copyright".freeze,
@@ -149,6 +156,7 @@ module RDF::Vocab
 
   Please refer to the organization that has made the Item available for more information.).freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
+      notation: %(NoC-CR).freeze,
       note: [%(Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.).freeze, %(You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.).freeze, %(You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.).freeze],
       "owl:versionInfo": "1.0".freeze,
       prefLabel: "No Copyright - Contractual Restrictions".freeze,
@@ -165,6 +173,7 @@ module RDF::Vocab
 
   You can, without permission, copy, modify, distribute, display, or perform the Item, for non-commercial uses. For any other permissible uses, please review the terms and conditions of the organization that has made the Item available.).freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
+      notation: %(NoC-NC).freeze,
       note: [%(Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.).freeze, %(You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.).freeze, %(You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you may use the material.).freeze],
       "owl:versionInfo": "1.0".freeze,
       prefLabel: "No Copyright - Non-Commercial Use Only".freeze,
@@ -182,6 +191,7 @@ module RDF::Vocab
 
   Please refer to the organization that has made the Item available for more information.).freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
+      notation: %(NoC-OKLR).freeze,
       note: [%(Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.).freeze, %(You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.).freeze, %(You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.).freeze],
       "owl:versionInfo": "1.0".freeze,
       prefLabel: "No Copyright - Other Known Legal Restrictions".freeze,
@@ -197,6 +207,7 @@ module RDF::Vocab
 
   Please refer to the organization that has made the Item available for more information.).freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
+      notation: %(NoC-US).freeze,
       note: [%(Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.).freeze, %(You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.).freeze, %(You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.).freeze],
       "owl:versionInfo": "1.0".freeze,
       prefLabel: "No Copyright - United States".freeze,
@@ -213,6 +224,7 @@ module RDF::Vocab
 
   You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.).freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
+      notation: %(CNE).freeze,
       note: [%(Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.).freeze, %(You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.).freeze, %(You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.).freeze],
       "owl:versionInfo": "1.0".freeze,
       prefLabel: "Copyright Undetermined".freeze,
