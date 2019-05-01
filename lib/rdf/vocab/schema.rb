@@ -694,17 +694,22 @@ Commonly used values:<br/><br/>
       subClassOf: "schema:FoodEstablishment".freeze,
       type: "rdfs:Class".freeze
     term :Campground,
-      comment: %(A camping site, campsite, or campground is a place used for overnight stay in the outdoors. In British English a campsite is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or parks a camper; a campground may contain many campsites \(Source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Campsite">http://en.wikipedia.org/wiki/Campsite</a>\).
-<br /><br />
-See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.).freeze,
+      comment: %(A camping site, campsite, or <a class="localLink" href="http://schema.org/Campground">Campground</a> is a place used for overnight stay in the outdoors, typically containing individual <a class="localLink" href="http://schema.org/CampingPitch">CampingPitch</a> locations. <br/><br/>
+
+In British English a campsite is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or park a camper; a campground may contain many campsites \(Source: Wikipedia see <a href="https://en.wikipedia.org/wiki/Campsite">https://en.wikipedia.org/wiki/Campsite</a>\).<br/><br/>
+
+See also the dedicated <a href="/docs/hotels.html">document on the use of schema.org for marking up hotels and other forms of accommodations</a>.).freeze,
       "dc:source": "https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology".freeze,
       label: "Campground".freeze,
       subClassOf: ["schema:CivicStructure".freeze, "schema:LodgingBusiness".freeze],
       type: "rdfs:Class".freeze
     term :CampingPitch,
-      comment: %(A camping pitch is an individual place for overnight stay in the outdoors, typically being part of a larger camping site.
-<br /><br />
-See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.).freeze,
+      comment: %(A <a class="localLink" href="http://schema.org/CampingPitch">CampingPitch</a> is an individual place for overnight stay in the outdoors, typically being part of a larger camping site, or <a class="localLink" href="http://schema.org/Campground">Campground</a>.<br/><br/>
+
+In British English a campsite, or campground, is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or park a camper; a campground may contain many campsites.
+\(Source: Wikipedia see <a href="https://en.wikipedia.org/wiki/Campsite">https://en.wikipedia.org/wiki/Campsite</a>\).<br/><br/>
+
+See also the dedicated <a href="/docs/hotels.html">document on the use of schema.org for marking up hotels and other forms of accommodations</a>.).freeze,
       "dc:source": "https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology".freeze,
       label: "CampingPitch".freeze,
       subClassOf: "schema:Accommodation".freeze,
@@ -763,7 +768,7 @@ Related actions:<br/><br/>
     term :CatholicChurch,
       comment: %(A Catholic church.).freeze,
       label: "CatholicChurch".freeze,
-      subClassOf: "schema:PlaceOfWorship".freeze,
+      subClassOf: "schema:Church".freeze,
       type: "rdfs:Class".freeze
     term :Cemetery,
       comment: %(A graveyard.).freeze,
@@ -3143,7 +3148,15 @@ A more detailed overview of <a href="/docs/news.html">schema.org News markup</a>
       subClassOf: "schema:DigitalDocument".freeze,
       type: "rdfs:Class".freeze
     term :Number,
-      comment: %(Data type: Number.).freeze,
+      comment: %(Data type: Number.<br/><br/>
+
+Usage guidelines:<br/><br/>
+
+<ul>
+<li>Use values from 0123456789 \(Unicode 'DIGIT ZERO' \(U+0030\) to 'DIGIT NINE' \(U+0039\)\) rather than superficially similiar Unicode symbols.</li>
+<li>Use '.' \(Unicode 'FULL STOP' \(U+002E\)\) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.</li>
+</ul>
+).freeze,
       label: "Number".freeze,
       type: ["rdfs:Class".freeze, "schema:DataType".freeze]
     term :NutritionInformation,
@@ -6855,6 +6868,15 @@ Note: You can use <a class="localLink" href="http://schema.org/minValue">minValu
       label: "coursePrerequisites".freeze,
       rangeIncludes: ["schema:AlignmentObject".freeze, "schema:Course".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
+    property :courseWorkload,
+      comment: %(The amount of work expected of students taking the course, often provided as a figure per week or per month, and may be broken down by type. For example, "2 hours of lectures, 1 hour of lab work and 3 hours of independent study per week".).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/1909".freeze,
+      domainIncludes: "schema:CourseInstance".freeze,
+      label: "courseWorkload".freeze,
+      rangeIncludes: "schema:Text".freeze,
+      "schema:category": "issue-1909".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :coverageEndTime,
       comment: %(The time when the live blog will stop covering the Event. Note that coverage may continue after the Event concludes.).freeze,
       domainIncludes: "schema:LiveBlogPosting".freeze,
@@ -7474,12 +7496,9 @@ Use standard formats: <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 c
       type: "rdf:Property".freeze
     property :educationalCredentialAwarded,
       comment: %(A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course.).freeze,
-      "dc:source": "https://github.com/schemaorg/schemaorg/issues/195".freeze,
       domainIncludes: "schema:Course".freeze,
       label: "educationalCredentialAwarded".freeze,
       rangeIncludes: ["schema:EducationalOccupationalCredential".freeze, "schema:Text".freeze, "schema:URL".freeze],
-      "schema:category": "issue-195".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :educationalFramework,
       comment: %(The framework to which the resource being described is aligned.).freeze,
@@ -7763,9 +7782,9 @@ Typical unit code\(s\): CMQ for cubic centimeter, LTR for liters, INQ for cubic 
       rangeIncludes: ["schema:Duration".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
     property :estimatedSalary,
-      comment: %(An estimated salary for a job posting based on a variety of variables including, but not limited to industry, job title, and location. Estimated salaries  are often computed by outside organizations rather than the hiring organization, who may not have committed to the estimated value.).freeze,
+      comment: %(An estimated salary for a job posting or occupation, based on a variety of variables including, but not limited to industry, job title, and location. Estimated salaries  are often computed by outside organizations rather than the hiring organization, who may not have committed to the estimated value.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/1698".freeze,
-      domainIncludes: "schema:Occupation".freeze,
+      domainIncludes: ["schema:JobPosting".freeze, "schema:Occupation".freeze],
       label: "estimatedSalary".freeze,
       rangeIncludes: "schema:MonetaryAmountDistribution".freeze,
       "schema:category": "issue-1698".freeze,
@@ -8345,56 +8364,6 @@ Typical unit code\(s\): LTR for liters, GLL of US gallons, GLI for UK / imperial
       label: "geographicArea".freeze,
       rangeIncludes: "schema:AdministrativeArea".freeze,
       type: "rdf:Property".freeze
-    property :geospatiallyContains,
-      "dc:source": "https://github.com/schemaorg/schemaorg/issues/1375".freeze,
-      "schema:category": "issue-1375".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
-      type: "rdf:Property".freeze
-    property :geospatiallyCoveredBy,
-      "dc:source": "https://github.com/schemaorg/schemaorg/issues/1375".freeze,
-      "schema:category": "issue-1375".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
-      type: "rdf:Property".freeze
-    property :geospatiallyCovers,
-      "dc:source": "https://github.com/schemaorg/schemaorg/issues/1375".freeze,
-      "schema:category": "issue-1375".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
-      type: "rdf:Property".freeze
-    property :geospatiallyCrosses,
-      "dc:source": "https://github.com/schemaorg/schemaorg/issues/1375".freeze,
-      "schema:category": "issue-1375".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
-      type: "rdf:Property".freeze
-    property :geospatiallyDisjoint,
-      "dc:source": "https://github.com/schemaorg/schemaorg/issues/1375".freeze,
-      "schema:category": "issue-1375".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
-      type: "rdf:Property".freeze
-    property :geospatiallyEquals,
-      "dc:source": "https://github.com/schemaorg/schemaorg/issues/1375".freeze,
-      "schema:category": "issue-1375".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
-      type: "rdf:Property".freeze
-    property :geospatiallyIntersects,
-      "dc:source": "https://github.com/schemaorg/schemaorg/issues/1375".freeze,
-      "schema:category": "issue-1375".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
-      type: "rdf:Property".freeze
-    property :geospatiallyOverlaps,
-      "dc:source": "https://github.com/schemaorg/schemaorg/issues/1375".freeze,
-      "schema:category": "issue-1375".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
-      type: "rdf:Property".freeze
-    property :geospatiallyTouches,
-      "dc:source": "https://github.com/schemaorg/schemaorg/issues/1375".freeze,
-      "schema:category": "issue-1375".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
-      type: "rdf:Property".freeze
-    property :geospatiallyWithin,
-      "dc:source": "https://github.com/schemaorg/schemaorg/issues/1375".freeze,
-      "schema:category": "issue-1375".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
-      type: "rdf:Property".freeze
     property :givenName,
       comment: %(Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the name property.).freeze,
       domainIncludes: "schema:Person".freeze,
@@ -8718,7 +8687,15 @@ Typical unit code\(s\): LTR for liters, GLL of US gallons, GLI for UK / imperial
       rangeIncludes: ["schema:Distance".freeze, "schema:QuantitativeValue".freeze],
       type: "rdf:Property".freeze
     property :highPrice,
-      comment: %(The highest price of all offers available.).freeze,
+      comment: %(The highest price of all offers available.<br/><br/>
+
+Usage guidelines:<br/><br/>
+
+<ul>
+<li>Use values from 0123456789 \(Unicode 'DIGIT ZERO' \(U+0030\) to 'DIGIT NINE' \(U+0039\)\) rather than superficially similiar Unicode symbols.</li>
+<li>Use '.' \(Unicode 'FULL STOP' \(U+002E\)\) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.</li>
+</ul>
+).freeze,
       domainIncludes: "schema:AggregateOffer".freeze,
       label: "highPrice".freeze,
       rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
@@ -9786,7 +9763,15 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
       subPropertyOf: "schema:participant".freeze,
       type: "rdf:Property".freeze
     property :lowPrice,
-      comment: %(The lowest price of all offers available.).freeze,
+      comment: %(The lowest price of all offers available.<br/><br/>
+
+Usage guidelines:<br/><br/>
+
+<ul>
+<li>Use values from 0123456789 \(Unicode 'DIGIT ZERO' \(U+0030\) to 'DIGIT NINE' \(U+0039\)\) rather than superficially similiar Unicode symbols.</li>
+<li>Use '.' \(Unicode 'FULL STOP' \(U+002E\)\) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.</li>
+</ul>
+).freeze,
       domainIncludes: "schema:AggregateOffer".freeze,
       label: "lowPrice".freeze,
       rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
@@ -10389,7 +10374,7 @@ Typical unit code\(s\): C62).freeze,
       comment: %(The number of rooms \(excluding bathrooms and closets\) of the accommodation or lodging business.
 Typical unit code\(s\): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.).freeze,
       "dc:source": "https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology".freeze,
-      domainIncludes: ["schema:Accommodation".freeze, "schema:Apartment".freeze, "schema:House".freeze, "schema:SingleFamilyResidence".freeze, "schema:Suite".freeze],
+      domainIncludes: ["schema:Accommodation".freeze, "schema:Apartment".freeze, "schema:House".freeze, "schema:LodgingBusiness".freeze, "schema:SingleFamilyResidence".freeze, "schema:Suite".freeze],
       label: "numberOfRooms".freeze,
       rangeIncludes: ["schema:Number".freeze, "schema:QuantitativeValue".freeze],
       type: "rdf:Property".freeze
@@ -10565,7 +10550,7 @@ Typical unit code\(s\): C62 for person).freeze,
       comment: %(The item ordered.).freeze,
       domainIncludes: ["schema:Order".freeze, "schema:OrderItem".freeze],
       label: "orderedItem".freeze,
-      rangeIncludes: ["schema:OrderItem".freeze, "schema:Product".freeze],
+      rangeIncludes: ["schema:OrderItem".freeze, "schema:Product".freeze, "schema:Service".freeze],
       type: "rdf:Property".freeze
     property :organizer,
       comment: %(An organizer of an Event.).freeze,
@@ -11478,7 +11463,15 @@ While such policies are most typically expressed in natural language, sometimes 
       rangeIncludes: "schema:Integer".freeze,
       type: "rdf:Property".freeze
     property :ratingValue,
-      comment: %(The rating for the content.).freeze,
+      comment: %(The rating for the content.<br/><br/>
+
+Usage guidelines:<br/><br/>
+
+<ul>
+<li>Use values from 0123456789 \(Unicode 'DIGIT ZERO' \(U+0030\) to 'DIGIT NINE' \(U+0039\)\) rather than superficially similiar Unicode symbols.</li>
+<li>Use '.' \(Unicode 'FULL STOP' \(U+002E\)\) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.</li>
+</ul>
+).freeze,
       domainIncludes: "schema:Rating".freeze,
       label: "ratingValue".freeze,
       rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
@@ -13017,7 +13010,7 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
       rangeIncludes: "schema:Seat".freeze,
       type: "rdf:Property".freeze
     property :timeRequired,
-      comment: %(Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.).freeze,
+      comment: %(Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'PT30M', 'PT1H25M'.).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       label: "timeRequired".freeze,
       rangeIncludes: "schema:Duration".freeze,
@@ -13096,7 +13089,15 @@ Typical unit code\(s\): NU for newton metre \(N m\), F17 for pound-force per foo
       rangeIncludes: ["schema:MonetaryAmount".freeze, "schema:PriceSpecification".freeze],
       type: "rdf:Property".freeze
     property :totalPrice,
-      comment: %(The total price for the reservation or ticket, including applicable taxes, shipping, etc.).freeze,
+      comment: %(The total price for the reservation or ticket, including applicable taxes, shipping, etc.<br/><br/>
+
+Usage guidelines:<br/><br/>
+
+<ul>
+<li>Use values from 0123456789 \(Unicode 'DIGIT ZERO' \(U+0030\) to 'DIGIT NINE' \(U+0039\)\) rather than superficially similiar Unicode symbols.</li>
+<li>Use '.' \(Unicode 'FULL STOP' \(U+002E\)\) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.</li>
+</ul>
+).freeze,
       domainIncludes: ["schema:Reservation".freeze, "schema:Ticket".freeze],
       label: "totalPrice".freeze,
       rangeIncludes: ["schema:Number".freeze, "schema:PriceSpecification".freeze, "schema:Text".freeze],
@@ -13377,6 +13378,8 @@ Typical unit code\(s\): KGM for kilogram, LBR for pound
 <ul>
 <li>For <a class="localLink" href="http://schema.org/QuantitativeValue">QuantitativeValue</a> and <a class="localLink" href="http://schema.org/MonetaryAmount">MonetaryAmount</a>, the recommended type for values is 'Number'.</li>
 <li>For <a class="localLink" href="http://schema.org/PropertyValue">PropertyValue</a>, it can be 'Text;', 'Number', 'Boolean', or 'StructuredValue'.</li>
+<li>Use values from 0123456789 \(Unicode 'DIGIT ZERO' \(U+0030\) to 'DIGIT NINE' \(U+0039\)\) rather than superficially similiar Unicode symbols.</li>
+<li>Use '.' \(Unicode 'FULL STOP' \(U+002E\)\) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.</li>
 </ul>
 ).freeze,
       "dc:source": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms".freeze,
