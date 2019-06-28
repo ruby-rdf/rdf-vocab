@@ -314,18 +314,7 @@ module RDF
       wot:    {uri: "http://xmlns.com/wot/0.1/", source: "http://xmlns.com/wot/0.1/index.rdf"},
       xkos:   {
         uri: "http://rdf-vocabulary.ddialliance.org/xkos#",
-        source: "http://rdf-vocabulary.ddialliance.org/xkos.ttl",
-        patch: %{
-          @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-          @prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
-          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-          DeleteExisting {
-            xkos:compares rdfs:range xkos:ConceptScheme .
-          } .
-          AddNew {
-            xkos:compares rdfs:range skos:ConceptScheme .
-          } .
-        }
+        source: "https://raw.githubusercontent.com/linked-statistics/xkos/master/xkos.ttl"
       },
       xhtml:  {uri: "http://www.w3.org/1999/xhtml#", strict: false},
       xhv:    {uri: "http://www.w3.org/1999/xhtml/vocab#", strict: false},

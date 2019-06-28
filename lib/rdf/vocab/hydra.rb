@@ -132,6 +132,14 @@ module RDF::Vocab
       subPropertyOf: "rdfs:comment".freeze,
       type: "rdf:Property".freeze,
       "vs:term_status": "testing".freeze
+    property :expectsHeader,
+      comment: %(Specification of the header expected by the operation.).freeze,
+      domain: "hydra:Operation".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
+      label: "expects header".freeze,
+      range: "xsd:string".freeze,
+      type: "rdf:Property".freeze,
+      "vs:term_status": "testing".freeze
     property :freetextQuery,
       comment: %(A property representing a freetext query.).freeze,
       domain: "hydra:Resource".freeze,
@@ -206,6 +214,14 @@ module RDF::Vocab
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "required".freeze,
       range: "xsd:boolean".freeze,
+      type: "rdf:Property".freeze,
+      "vs:term_status": "testing".freeze
+    property :returnsHeader,
+      comment: %(Name of the header returned by the operation.).freeze,
+      domain: "hydra:Operation".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
+      label: "returns header".freeze,
+      range: "xsd:string".freeze,
       type: "rdf:Property".freeze,
       "vs:term_status": "testing".freeze
     property :statusCode,

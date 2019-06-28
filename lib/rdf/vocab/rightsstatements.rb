@@ -20,7 +20,7 @@ module RDF::Vocab
       "dc11:identifier": "CNE".freeze,
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:description": "This Rights Statement indicates that the organization that has published the Item has not evaluated the copyright and related rights status of the Item.".freeze,
-      "dc:modified": "2018-10-27".freeze,
+      "dc:modified": "2019-04-18".freeze,
       definition: %(The copyright and related rights status of this Item has not been evaluated.
 
   Please refer to the organization that has made the Item available for more information.
@@ -39,7 +39,7 @@ module RDF::Vocab
       "dc11:identifier": "InC-EDU".freeze,
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:description": "This Rights Statement indicates that the Item labeled with this Rights Statement is in copyright but that educational use is allowed without the need to obtain additional permission.".freeze,
-      "dc:modified": "2018-10-27".freeze,
+      "dc:modified": "2019-04-18".freeze,
       definition: %(This Item is protected by copyright and/or related rights.
 
   You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use. In addition, no permission is required from the rights-holder\(s\) for educational uses.
@@ -58,7 +58,7 @@ module RDF::Vocab
       "dc11:identifier": "InC-NC".freeze,
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:description": "This Rights Statement indicates that the Item labeled with this Rights Statement is in copyright but that non-commercial use is allowed without the need to obtain additional permission.".freeze,
-      "dc:modified": "2018-10-27".freeze,
+      "dc:modified": "2019-04-18".freeze,
       definition: %(This Item is protected by copyright and/or related rights.
 
   You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use. In addition, no permission is required from the rights-holder\(s\) for non-commercial uses.
@@ -77,7 +77,7 @@ module RDF::Vocab
       "dc11:identifier": "InC-OW-EU".freeze,
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:description": "This Rights Statement indicates that the Item labeled with this Rights Statement has been identified as an ‘Orphan Work’ under the terms of the EU Orphan Works Directive.".freeze,
-      "dc:modified": "2018-10-27".freeze,
+      "dc:modified": "2010-04-18".freeze,
       definition: %(This Item has been identified as an orphan work in the country of first publication and in line with Directive 2012/28/EU of the European Parliament and of the Council of 25 October 2012 on certain permitted uses of orphan works.
 
   For this Item, either \(a\) no rights-holder\(s\) have been identified or \(b\) one or more rights-holder\(s\) have been identified but none have been located even though a diligent search for the rights-holder\(s\) has been conducted. The results of the diligent search are available in the EU Orphan Works Database.
@@ -96,7 +96,7 @@ module RDF::Vocab
       "dc11:identifier": "InC-RUU".freeze,
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:description": "This Rights Statement indicates that the Item labeled with this Rights Statement has been identified as in copyright, but its rights-holder(s) either cannot be identified or cannot be located.".freeze,
-      "dc:modified": "2018-10-27".freeze,
+      "dc:modified": "2019-04-18".freeze,
       definition: %(This Item is protected by copyright and/or related rights. However, for this Item, either \(a\) no rights-holder\(s\) have been identified or \(b\) one or more rights-holder\(s\) have been identified but none have been located.
 
   You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.).freeze,
@@ -112,7 +112,7 @@ module RDF::Vocab
       "dc11:identifier": "InC".freeze,
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:description": "This Rights Statement indicates that the Item labeled with this Rights Statement is in copyright.".freeze,
-      "dc:modified": "2018-10-27".freeze,
+      "dc:modified": "2019-04-18".freeze,
       definition: %(This Item is protected by copyright and/or related rights.
 
   You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.
@@ -131,7 +131,7 @@ module RDF::Vocab
       "dc11:identifier": "NKC".freeze,
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:description": "This Rights Statement indicates that the organization that has published the Item believes that no copyright or related rights are known to exist for the Item, but that a conclusive determination could not be made.".freeze,
-      "dc:modified": "2018-10-27".freeze,
+      "dc:modified": "2019-04-18".freeze,
       definition: %(The organization that has made the Item available reasonably believes that the Item is not restricted by copyright or related rights, but a conclusive determination could not be made.
 
   Please refer to the organization that has made the Item available for more information.
@@ -149,7 +149,7 @@ module RDF::Vocab
       "dc11:identifier": "NoC-CR".freeze,
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:description": "This Rights Statement indicates that the underlying Work is in the Public Domain, but the organization that has published the Item is contractually required to restrict certain forms of use by third parties.".freeze,
-      "dc:modified": "2018-10-27".freeze,
+      "dc:modified": "2019-04-18".freeze,
       definition: %(Use of this Item is not restricted by copyright and/or related rights.
 
   As part of the acquisition or digitization of this Work, the organization that has made the Item available is contractually required to limit the use of this Item. Limitations may include, but are not limited to, privacy issues, cultural protections, digitization agreements or donor agreements.
@@ -168,7 +168,7 @@ module RDF::Vocab
       "dc11:identifier": "NoC-NC".freeze,
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:description": "This Rights Statement indicates that the underlying Work is in the Public Domain, but the organization that has published the Item is contractually required to allow only non-commercial use by third parties.".freeze,
-      "dc:modified": "2018-10-27".freeze,
+      "dc:modified": "2019-04-18".freeze,
       definition: %(This Work has been digitized in a public-private partnership. As part of this partnership, the partners have agreed to limit commercial uses of this digital representation of the Work by third parties.
 
   You can, without permission, copy, modify, distribute, display, or perform the Item, for non-commercial uses. For any other permissible uses, please review the terms and conditions of the organization that has made the Item available.).freeze,
@@ -184,7 +184,7 @@ module RDF::Vocab
       "dc11:identifier": "NoC-OKLR".freeze,
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:description": "This Rights Statement indicates that the underlying Work is in the Public Domain, but that there are known restrictions imposed by laws other than copyright and/or related rights on the use of the Item by third parties.".freeze,
-      "dc:modified": "2018-10-27".freeze,
+      "dc:modified": "2019-04-18".freeze,
       definition: %(Use of this Item is not restricted by copyright and/or related rights.
 
   In one or more jurisdictions, laws other than copyright are known to impose restrictions on the use of this Item.
@@ -202,7 +202,7 @@ module RDF::Vocab
       "dc11:identifier": "NoC-US".freeze,
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:description": "This Rights Statement indicates that the Item is in the Public Domain under the laws of the United States, but that a determination was not made as to its copyright status under the copyright laws of other countries.".freeze,
-      "dc:modified": "2018-10-27".freeze,
+      "dc:modified": "2019-04-18".freeze,
       definition: %(The organization that has made the Item available believes that the Item is in the Public Domain under the laws of the United States, but a determination was not made as to its copyright status under the copyright laws of other countries. The Item may not be in the Public Domain under the laws of other countries.
 
   Please refer to the organization that has made the Item available for more information.).freeze,
@@ -217,14 +217,14 @@ module RDF::Vocab
       "dc11:identifier": "UND".freeze,
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:description": "This Rights Statement indicates that the organization that has made the Item available has reviewed the copyright and related rights status of the Item, but was unable to determine the copyright status of the Item.".freeze,
-      "dc:modified": "2018-10-27".freeze,
+      "dc:modified": "2019-04-18".freeze,
       definition: %(The copyright and related rights status of this Item has been reviewed by the organization that has made the Item available, but the organization was unable to make a conclusive determination as to the copyright status of the Item.
 
   Please refer to the organization that has made the Item available for more information.
 
   You are free to use this Item in any way that is permitted by the copyright and related rights legislation that applies to your use.).freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
-      notation: %(CNE).freeze,
+      notation: %(UND).freeze,
       note: [%(Unless expressly stated otherwise, the organization that has made this Item available makes no warranties about the Item and cannot guarantee the accuracy of this Rights Statement. You are responsible for your own use.).freeze, %(You may find additional information about the copyright status of the Item on the website of the organization that has made the Item available.).freeze, %(You may need to obtain other permissions for your intended use. For example, other rights such as publicity, privacy or moral rights may limit how you may use the material.).freeze],
       "owl:versionInfo": "1.0".freeze,
       prefLabel: "Copyright Undetermined".freeze,
