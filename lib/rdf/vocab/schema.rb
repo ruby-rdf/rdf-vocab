@@ -3699,7 +3699,7 @@ Always use specific schema.org properties when a\) they exist and b\) you can po
     term :PublicationIssue,
       comment: %(A part of a successively published publication such as a periodical or publication volume, often numbered, usually containing a grouping of works such as articles.<br/><br/>
 
-<a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog post</a>.).freeze,
+See also <a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog post</a>.).freeze,
       "dc:source": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex".freeze,
       equivalentClass: "bibo:Issue".freeze,
       label: "PublicationIssue".freeze,
@@ -3708,9 +3708,7 @@ Always use specific schema.org properties when a\) they exist and b\) you can po
     term :PublicationVolume,
       comment: %(A part of a successively published publication such as a periodical or multi-volume work, often numbered. It may represent a time span, such as a year.<br/><br/>
 
-<pre><code>  &lt;br/&gt;&lt;br/&gt;See also &lt;a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html"&gt;blog post&lt;/a&gt;.
-</code></pre>
-).freeze,
+See also <a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html">blog post</a>.).freeze,
       "dc:source": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex".freeze,
       label: "PublicationVolume".freeze,
       subClassOf: "schema:CreativeWork".freeze,
@@ -4346,6 +4344,12 @@ Related actions:<br/><br/>
       comment: %(Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.).freeze,
       label: "StructuredValue".freeze,
       subClassOf: "schema:Intangible".freeze,
+      type: "rdfs:Class".freeze
+    term :StupidType,
+      comment: %(A StupidType for testing.).freeze,
+      label: "StupidType".freeze,
+      "schema:isPartOf": "http://attic.schema.org".freeze,
+      subClassOf: "schema:Thing".freeze,
       type: "rdfs:Class".freeze
     term :SubscribeAction,
       comment: %(The act of forming a personal connection with someone/something \(object\) unidirectionally/asymmetrically to get updates pushed to.<br/><br/>
@@ -5268,13 +5272,13 @@ Note: Publishers should be aware that applications designed to use specific sche
       rangeIncludes: ["schema:Country".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
     property :addressLocality,
-      comment: %(The locality. For example, Mountain View.).freeze,
+      comment: %(The locality in which the street address is, and which is in the region. For example, Mountain View.).freeze,
       domainIncludes: "schema:PostalAddress".freeze,
       label: "addressLocality".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
     property :addressRegion,
-      comment: %(The region. For example, CA.).freeze,
+      comment: %(The region in which the locality is, and which is in the country. For example, California or another appropriate first-level <a href="https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country">Administrative division</a>).freeze,
       domainIncludes: "schema:PostalAddress".freeze,
       label: "addressRegion".freeze,
       rangeIncludes: "schema:Text".freeze,
@@ -7786,7 +7790,7 @@ Typical unit code\(s\): CMQ for cubic centimeter, LTR for liters, INQ for cubic 
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/1698".freeze,
       domainIncludes: ["schema:JobPosting".freeze, "schema:Occupation".freeze],
       label: "estimatedSalary".freeze,
-      rangeIncludes: "schema:MonetaryAmountDistribution".freeze,
+      rangeIncludes: ["schema:MonetaryAmount".freeze, "schema:MonetaryAmountDistribution".freeze, "schema:Number".freeze],
       "schema:category": "issue-1698".freeze,
       type: "rdf:Property".freeze
     property :estimatesRiskOf,
@@ -9138,7 +9142,7 @@ See also <a class="localLink" href="http://schema.org/eligibleRegion">eligibleRe
       "schema:isPartOf": "http://health-lifesci.schema.org".freeze,
       type: "rdf:Property".freeze
     property :isBasedOn,
-      comment: %(A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html.).freeze,
+      comment: %(A resource from which this work is derived or from which it is a modification or adaption.).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       label: "isBasedOn".freeze,
       rangeIncludes: ["schema:CreativeWork".freeze, "schema:Product".freeze, "schema:URL".freeze],
@@ -9357,9 +9361,12 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
       type: "rdf:Property".freeze
     property :jobTitle,
       comment: %(The job title of the person \(for example, Financial Manager\).).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2192".freeze,
       domainIncludes: "schema:Person".freeze,
       label: "jobTitle".freeze,
-      rangeIncludes: "schema:Text".freeze,
+      rangeIncludes: ["schema:DefinedTerm".freeze, "schema:Text".freeze],
+      "schema:category": "issue-2192".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :keywords,
       comment: %(Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.).freeze,
@@ -10419,12 +10426,14 @@ Typical unit code\(s\): C62 for person).freeze,
       "schema:category": "issue-1698".freeze,
       type: "rdf:Property".freeze
     property :occupationalCategory,
-      comment: %(Category or categories describing the job. Use BLS O*NET-SOC taxonomy: http://www.onetcenter.org/taxonomy.html. Ideally includes textual label and formal code, with the property repeated for each applicable value.).freeze,
-      "dc:source": "https://github.com/schemaorg/schemaorg/issues/1698".freeze,
+      comment: %(A category describing the job, preferably using a term from a taxonomy such as <a href="http://www.onetcenter.org/taxonomy.html">BLS O*NET-SOC</a>, <a href="https://www.ilo.org/public/english/bureau/stat/isco/isco08/">ISCO-08</a> or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.<br/><br/>
+
+Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.).freeze,
+      "dc:source": ["https://github.com/schemaorg/schemaorg/issues/1698".freeze, "https://github.com/schemaorg/schemaorg/issues/2192".freeze],
       domainIncludes: ["schema:JobPosting".freeze, "schema:Occupation".freeze],
       label: "occupationalCategory".freeze,
-      rangeIncludes: "schema:Text".freeze,
-      "schema:category": "issue-1698".freeze,
+      rangeIncludes: ["schema:CategoryCode".freeze, "schema:Text".freeze],
+      "schema:category": ["issue-1698".freeze, "issue-2192".freeze],
       type: "rdf:Property".freeze
     property :offerCount,
       comment: %(The number of offers for the product.).freeze,
@@ -12702,6 +12711,13 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       rangeIncludes: "schema:MedicalEntity".freeze,
       "schema:isPartOf": "http://health-lifesci.schema.org".freeze,
       type: "rdf:Property".freeze
+    property :stupidProperty,
+      comment: %(This is a StupidProperty! - for testing only).freeze,
+      domainIncludes: ["schema:StupidType".freeze, "schema:Vehicle".freeze],
+      label: "stupidProperty".freeze,
+      rangeIncludes: "schema:QuantitativeValue".freeze,
+      "schema:isPartOf": "http://attic.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :subEvent,
       comment: %(An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference.).freeze,
       domainIncludes: "schema:Event".freeze,
@@ -13439,6 +13455,13 @@ Typical unit code\(s\): KGM for kilogram, LBR for pound
       rangeIncludes: ["schema:PropertyValue".freeze, "schema:Text".freeze],
       "schema:category": "issue-1083".freeze,
       "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :variablesMeasured,
+      comment: %(Originally named <a class="localLink" href="http://schema.org/variablesMeasured">variablesMeasured</a>, The <a class="localLink" href="http://schema.org/variableMeasured">variableMeasured</a> property can indicate \(repeated as necessary\) the  variables that are measured in some dataset, either described as text or as pairs of identifier and description using PropertyValue.).freeze,
+      domainIncludes: "schema:Dataset".freeze,
+      label: "variablesMeasured".freeze,
+      rangeIncludes: ["schema:PropertyValue".freeze, "schema:Text".freeze],
+      "schema:isPartOf": "http://attic.schema.org".freeze,
       type: "rdf:Property".freeze
     property :variantCover,
       comment: %(A description of the variant cover

@@ -64,7 +64,6 @@ module RDF::Vocab
       domain: "skos:ConceptScheme".freeze,
       isDefinedBy: "http://rdf-vocabulary.ddialliance.org/xkos".freeze,
       label: "belongs to".freeze,
-      range: "skos:Concept".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :caseLaw,
       isDefinedBy: "http://rdf-vocabulary.ddialliance.org/xkos".freeze,
@@ -105,6 +104,7 @@ module RDF::Vocab
       type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :covers,
       domain: term(
+          type: "owl:Class".freeze,
           unionOf: list("skos:ConceptScheme".freeze, "xkos:ClassificationLevel".freeze)
         ),
       isDefinedBy: "http://rdf-vocabulary.ddialliance.org/xkos".freeze,
@@ -144,16 +144,19 @@ module RDF::Vocab
       range: "skos:ConceptScheme".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :generalizes,
+      equivalentProperty: "http://purl.org/iso25964/skos-thes#narrowerGeneric".freeze,
       inverseOf: "xkos:specializes".freeze,
       isDefinedBy: "http://rdf-vocabulary.ddialliance.org/xkos".freeze,
       label: "generalizes".freeze,
       subPropertyOf: "skos:narrower".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :hasPart,
+      equivalentProperty: "http://purl.org/iso25964/skos-thes#narrowerPartitive".freeze,
+      exactMatch: "dc:hasPart".freeze,
       inverseOf: "xkos:isPartOf".freeze,
       isDefinedBy: "http://rdf-vocabulary.ddialliance.org/xkos".freeze,
       label: "has part".freeze,
-      subPropertyOf: ["dc:hasPart".freeze, "skos:narrower".freeze],
+      subPropertyOf: "skos:narrower".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :inclusionNote,
       isDefinedBy: "http://rdf-vocabulary.ddialliance.org/xkos".freeze,
@@ -161,10 +164,12 @@ module RDF::Vocab
       subPropertyOf: "skos:scopeNote".freeze,
       type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :isPartOf,
+      equivalentProperty: "http://purl.org/iso25964/skos-thes#broaderPartitive".freeze,
+      exactMatch: "dc:isPartOf".freeze,
       inverseOf: "xkos:hasPart".freeze,
       isDefinedBy: "http://rdf-vocabulary.ddialliance.org/xkos".freeze,
       label: "is a part of".freeze,
-      subPropertyOf: ["dc:isPartOf".freeze, "skos:broader".freeze],
+      subPropertyOf: "skos:broader".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :levels,
       domain: "skos:ConceptScheme".freeze,
@@ -209,6 +214,7 @@ module RDF::Vocab
       range: "skos:Concept".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :plainText,
+      comment: %(This property is expected to store plain text literals, without HTML or XML markup.).freeze,
       domain: "xkos:ExplanatoryNote".freeze,
       isDefinedBy: "http://rdf-vocabulary.ddialliance.org/xkos".freeze,
       label: "plain text".freeze,
@@ -238,6 +244,7 @@ module RDF::Vocab
       range: "skos:Concept".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :specializes,
+      equivalentProperty: "http://purl.org/iso25964/skos-thes#broaderGeneric".freeze,
       inverseOf: "xkos:generalizes".freeze,
       isDefinedBy: "http://rdf-vocabulary.ddialliance.org/xkos".freeze,
       label: "specializes".freeze,
@@ -250,9 +257,10 @@ module RDF::Vocab
       subPropertyOf: "xkos:sequential".freeze,
       type: ["owl:TransitiveProperty".freeze, "rdf:Property".freeze]
     property :supersedes,
+      exactMatch: "dc:replaces".freeze,
       isDefinedBy: "http://rdf-vocabulary.ddialliance.org/xkos".freeze,
       label: "supersedes".freeze,
-      subPropertyOf: ["dc:replaces".freeze, "xkos:follows".freeze],
+      subPropertyOf: "xkos:follows".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :targetConcept,
       domain: "xkos:ConceptAssociation".freeze,
