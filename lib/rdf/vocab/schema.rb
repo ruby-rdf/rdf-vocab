@@ -1538,6 +1538,14 @@ Commonly used values:<br/><br/>
       "schema:isPartOf": "http://pending.schema.org".freeze,
       subClassOf: "schema:CreativeWork".freeze,
       type: "rdfs:Class".freeze
+    term :EducationalOccupationalProgram,
+      comment: %(A program offered by an institution which determines the learning progress to achieve an outcome, usually a credential like a degree or certificate. This would define a discrete set of opportunities \(e.g., job, courses\) that together constitute a program with a clear start, end, set of requirements, and transition to a new occupational opportunity \(e.g., a job\), or sometimes a higher educational opportunity \(e.g., an advanced degree\).).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2289".freeze,
+      label: "EducationalOccupationalProgram".freeze,
+      "schema:category": "issue-2289".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:Intangible".freeze,
+      type: "rdfs:Class".freeze
     term :EducationalOrganization,
       comment: %(An educational organization.).freeze,
       label: "EducationalOrganization".freeze,
@@ -3164,6 +3172,15 @@ Usage guidelines:<br/><br/>
       label: "NutritionInformation".freeze,
       subClassOf: "schema:StructuredValue".freeze,
       type: "rdfs:Class".freeze
+    term :Observation,
+      comment: %(Instances of the class <a class="localLink" href="http://schema.org/Observation">Observation</a> are used to specify observations about an entity \(which may or may not be an instance of a <a class="localLink" href="http://schema.org/StatisticalPopulation">StatisticalPopulation</a>\), at a particular time. The principal properties of an <a class="localLink" href="http://schema.org/Observation">Observation</a> are <a class="localLink" href="http://schema.org/observedNode">observedNode</a>, <a class="localLink" href="http://schema.org/measuredProperty">measuredProperty</a>, <a class="localLink" href="http://schema.org/measuredValue">measuredValue</a> \(or <a class="localLink" href="http://schema.org/median">median</a>, etc.\) and <a class="localLink" href="http://schema.org/observationDate">observationDate</a> \(<a class="localLink" href="http://schema.org/measuredProperty">measuredProperty</a> properties can, but need not always, be W3C RDF Data Cube "measure properties", as in the <a href="https://www.w3.org/TR/vocab-data-cube/#dsd-example">lifeExpectancy example</a>\).
+See also <a class="localLink" href="http://schema.org/StatisticalPopulation">StatisticalPopulation</a>, and the <a href="/docs/data-and-datasets.html">data and datasets</a> overview for more details.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2291".freeze,
+      label: "Observation".freeze,
+      "schema:category": "issue-2291".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:Intangible".freeze,
+      type: "rdfs:Class".freeze
     term :Occupation,
       comment: %(A profession, may involve prolonged training and/or a formal qualification.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/1698".freeze,
@@ -4361,6 +4378,16 @@ Related actions:<br/><br/>
       label: "State".freeze,
       subClassOf: "schema:AdministrativeArea".freeze,
       type: "rdfs:Class".freeze
+    term :StatisticalPopulation,
+      comment: %(A StatisticalPopulation is a set of instances of a certain given type that satisfy some set of constraints. The property <a class="localLink" href="http://schema.org/populationType">populationType</a> is used to specify the type. Any property that can be used on instances of that type can appear on the statistical population. For example, a <a class="localLink" href="http://schema.org/StatisticalPopulation">StatisticalPopulation</a> representing all <a class="localLink" href="http://schema.org/Person">Person</a>s with a <a class="localLink" href="http://schema.org/homeLocation">homeLocation</a> of East Podunk California, would be described by applying the appropriate <a class="localLink" href="http://schema.org/homeLocation">homeLocation</a> and <a class="localLink" href="http://schema.org/populationType">populationType</a> properties to a <a class="localLink" href="http://schema.org/StatisticalPopulation">StatisticalPopulation</a> item that stands for that set of people.
+The properties <a class="localLink" href="http://schema.org/numConstraints">numConstraints</a> and <a class="localLink" href="http://schema.org/constrainingProperties">constrainingProperties</a> are used to specify which of the populations properties are used to specify the population. Note that the sense of "population" used here is the general sense of a statistical
+population, and does not imply that the population consists of people. For example, a <a class="localLink" href="http://schema.org/populationType">populationType</a> of <a class="localLink" href="http://schema.org/Event">Event</a> or <a class="localLink" href="http://schema.org/NewsArticle">NewsArticle</a> could be used. See also <a class="localLink" href="http://schema.org/Observation">Observation</a>, and the <a href="/docs/data-and-datasets.html">data and datasets</a> overview for more details.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2291".freeze,
+      label: "StatisticalPopulation".freeze,
+      "schema:category": "issue-2291".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:Intangible".freeze,
+      type: "rdfs:Class".freeze
     term :SteeringPositionValue,
       comment: %(A value indicating a steering position.).freeze,
       "dc:source": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group".freeze,
@@ -4981,6 +5008,14 @@ Commonly used values:<br/><br/>
       comment: %(A winery.).freeze,
       label: "Winery".freeze,
       subClassOf: "schema:FoodEstablishment".freeze,
+      type: "rdfs:Class".freeze
+    term :WorkBasedProgram,
+      comment: %(A program with both an educational and employment component. Typically based at a workplace and structured around work-based learning, with the aim of instilling competencies related to an occupation. WorkBasedProgram is used to distinguish programs such as apprenticeships from school, college or other classroom based educational programs.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2289".freeze,
+      label: "WorkBasedProgram".freeze,
+      "schema:category": "issue-2289".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:EducationalOccupationalProgram".freeze,
       type: "rdfs:Class".freeze
     term :WorkersUnion,
       comment: %(A Workers Union \(also known as a Labor Union, Labour Union, or Trade Union\) is an organization that promotes the interests of its worker members by collectively bargaining with management, organizing, and political lobbying.).freeze,
@@ -6678,6 +6713,16 @@ For example "Available by appointment from the Reading Room" or "Accessible only
       rangeIncludes: "schema:AnatomicalStructure".freeze,
       "schema:isPartOf": "http://health-lifesci.schema.org".freeze,
       type: "rdf:Property".freeze
+    property :constrainingProperty,
+      comment: %(Indicates a property used as a constraint to define a <a class="localLink" href="http://schema.org/StatisticalPopulation">StatisticalPopulation</a> with respect to the set of entities
+  corresponding to an indicated type \(via <a class="localLink" href="http://schema.org/populationType">populationType</a>\).).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2291".freeze,
+      domainIncludes: "schema:StatisticalPopulation".freeze,
+      label: "constrainingProperty".freeze,
+      rangeIncludes: "schema:Integer".freeze,
+      "schema:category": "issue-2291".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :contactOption,
       comment: %(An option available on this contact point \(e.g. a toll-free number or support for hearing-impaired callers\).).freeze,
       domainIncludes: "schema:ContactPoint".freeze,
@@ -7551,10 +7596,12 @@ Use standard formats: <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 c
       rangeIncludes: "schema:AlignmentObject".freeze,
       type: "rdf:Property".freeze
     property :educationalCredentialAwarded,
-      comment: %(A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course.).freeze,
-      domainIncludes: "schema:Course".freeze,
+      comment: %(A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course or program.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2289".freeze,
+      domainIncludes: ["schema:Course".freeze, "schema:EducationalOccupationalProgram".freeze],
       label: "educationalCredentialAwarded".freeze,
       rangeIncludes: ["schema:EducationalOccupationalCredential".freeze, "schema:Text".freeze, "schema:URL".freeze],
+      "schema:category": "issue-2289".freeze,
       type: "rdf:Property".freeze
     property :educationalFramework,
       comment: %(The framework to which the resource being described is aligned.).freeze,
@@ -8550,6 +8597,15 @@ Typical unit code\(s\): LTR for liters, GLL of US gallons, GLI for UK / imperial
       label: "hasCourseInstance".freeze,
       rangeIncludes: "schema:CourseInstance".freeze,
       type: "rdf:Property".freeze
+    property :hasCredential,
+      comment: %(A credential awarded to the Person or Organization.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2289".freeze,
+      domainIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      label: "hasCredential".freeze,
+      rangeIncludes: "schema:EducationalOccupationalCredential".freeze,
+      "schema:category": "issue-2289".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :hasDefinedTerm,
       comment: %(A Defined Term contained in this term set.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/894".freeze,
@@ -9486,7 +9542,7 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
       rangeIncludes: "schema:Person".freeze,
       type: "rdf:Property".freeze
     property :knowsAbout,
-      comment: %(Of a <a class="localLink" href="http://schema.org/Person">Person</a>, and less typically of an <a class="localLink" href="http://schema.org/Organization">Organization</a>, to indicate a topic that is known about - suggesting possible expertise but not implying it. We do not distinguish skill levels here, or yet relate this to educational content, events, objectives or <a class="localLink" href="http://schema.org/JobPosting">JobPosting</a> descriptions.).freeze,
+      comment: %(Of a <a class="localLink" href="http://schema.org/Person">Person</a>, and less typically of an <a class="localLink" href="http://schema.org/Organization">Organization</a>, to indicate a topic that is known about - suggesting possible expertise but not implying it. We do not distinguish skill levels here, or relate this to educational content, events, objectives or <a class="localLink" href="http://schema.org/JobPosting">JobPosting</a> descriptions.).freeze,
       "dc:source": ["https://github.com/schemaorg/schemaorg/issues/1688".freeze, "https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#TP".freeze],
       domainIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
       label: "knowsAbout".freeze,
@@ -9950,6 +10006,15 @@ Usage guidelines:<br/><br/>
       rangeIncludes: "schema:URL".freeze,
       "schema:supersededBy": "schema:hasMap".freeze,
       type: "rdf:Property".freeze
+    property :marginOfError,
+      comment: %(A marginOfError for an <a class="localLink" href="http://schema.org/Observation">Observation</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2291".freeze,
+      domainIncludes: "schema:Observation".freeze,
+      label: "marginOfError".freeze,
+      rangeIncludes: "schema:DateTime".freeze,
+      "schema:category": "issue-2291".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :masthead,
       comment: %(For a <a class="localLink" href="http://schema.org/NewsMediaOrganization">NewsMediaOrganization</a>, a link to the masthead page or a page listing top editorial management.).freeze,
       "dc:source": ["https://github.com/schemaorg/schemaorg/issues/1525".freeze, "https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#TP".freeze],
@@ -10007,6 +10072,24 @@ Usage guidelines:<br/><br/>
       domainIncludes: "schema:Flight".freeze,
       label: "mealService".freeze,
       rangeIncludes: "schema:Text".freeze,
+      type: "rdf:Property".freeze
+    property :measuredProperty,
+      comment: %(The measuredProperty of an <a class="localLink" href="http://schema.org/Observation">Observation</a>, either a schema.org property, a property from other RDF-compatible systems e.g. W3C RDF Data Cube, or schema.org extensions such as <a href="https://www.gs1.org/voc/?show=properties">GS1's</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2291".freeze,
+      domainIncludes: "schema:Observation".freeze,
+      label: "measuredProperty".freeze,
+      rangeIncludes: "schema:Property".freeze,
+      "schema:category": "issue-2291".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :measuredValue,
+      comment: %(The measuredValue of an <a class="localLink" href="http://schema.org/Observation">Observation</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2291".freeze,
+      domainIncludes: "schema:Observation".freeze,
+      label: "measuredValue".freeze,
+      rangeIncludes: "schema:DataType".freeze,
+      "schema:category": "issue-2291".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :measurementTechnique,
       comment: %(A technique or technology used in a <a class="localLink" href="http://schema.org/Dataset">Dataset</a> \(or <a class="localLink" href="http://schema.org/DataDownload">DataDownload</a>, <a class="localLink" href="http://schema.org/DataCatalog">DataCatalog</a>\),
@@ -10380,6 +10463,15 @@ Typical unit code\(s\): KMT for kilometers, SMI for statute miles).freeze,
       label: "numChildren".freeze,
       rangeIncludes: ["schema:Integer".freeze, "schema:QuantitativeValue".freeze],
       type: "rdf:Property".freeze
+    property :numConstraints,
+      comment: %(Indicates the number of constraints \(not counting <a class="localLink" href="http://schema.org/populationType">populationType</a>\) defined for a particular <a class="localLink" href="http://schema.org/StatisticalPopulation">StatisticalPopulation</a>. This helps applications understand if they have access to a sufficiently complete description of a <a class="localLink" href="http://schema.org/StatisticalPopulation">StatisticalPopulation</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2291".freeze,
+      domainIncludes: "schema:StatisticalPopulation".freeze,
+      label: "numConstraints".freeze,
+      rangeIncludes: "schema:Integer".freeze,
+      "schema:category": "issue-2291".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :numTracks,
       comment: %(The number of tracks in this album or playlist.).freeze,
       domainIncludes: "schema:MusicPlaylist".freeze,
@@ -10507,6 +10599,24 @@ Typical unit code\(s\): ROM for room or C62 for no unit. The type of room can be
       label: "object".freeze,
       rangeIncludes: "schema:Thing".freeze,
       type: "rdf:Property".freeze
+    property :observationDate,
+      comment: %(The observationDate of an <a class="localLink" href="http://schema.org/Observation">Observation</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2291".freeze,
+      domainIncludes: "schema:Observation".freeze,
+      label: "observationDate".freeze,
+      rangeIncludes: "schema:DateTime".freeze,
+      "schema:category": "issue-2291".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :observedNode,
+      comment: %(The observedNode of an <a class="localLink" href="http://schema.org/Observation">Observation</a>, often a <a class="localLink" href="http://schema.org/StatisticalPopulation">StatisticalPopulation</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2291".freeze,
+      domainIncludes: "schema:Observation".freeze,
+      label: "observedNode".freeze,
+      rangeIncludes: "schema:StatisticalPopulation".freeze,
+      "schema:category": "issue-2291".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :occupancy,
       comment: %(The allowed total occupancy for the accommodation in persons \(including infants etc\). For individual accommodations, this is not necessarily the legal maximum but defines the permitted usage as per the contractual agreement \(e.g. a double room used by a single person\).
 Typical unit code\(s\): C62 for person).freeze,
@@ -10527,11 +10637,20 @@ Typical unit code\(s\): C62 for person).freeze,
       comment: %(A category describing the job, preferably using a term from a taxonomy such as <a href="http://www.onetcenter.org/taxonomy.html">BLS O*NET-SOC</a>, <a href="https://www.ilo.org/public/english/bureau/stat/isco/isco08/">ISCO-08</a> or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.<br/><br/>
 
 Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.).freeze,
-      "dc:source": ["https://github.com/schemaorg/schemaorg/issues/1698".freeze, "https://github.com/schemaorg/schemaorg/issues/2192".freeze],
-      domainIncludes: ["schema:JobPosting".freeze, "schema:Occupation".freeze],
+      "dc:source": ["https://github.com/schemaorg/schemaorg/issues/1698".freeze, "https://github.com/schemaorg/schemaorg/issues/2192".freeze, "https://github.com/schemaorg/schemaorg/issues/2289".freeze],
+      domainIncludes: ["schema:JobPosting".freeze, "schema:Occupation".freeze, "schema:WorkBasedProgram".freeze],
       label: "occupationalCategory".freeze,
       rangeIncludes: ["schema:CategoryCode".freeze, "schema:Text".freeze],
-      "schema:category": ["issue-1698".freeze, "issue-2192".freeze],
+      "schema:category": ["issue-1698".freeze, "issue-2192".freeze, "issue-2289".freeze],
+      type: "rdf:Property".freeze
+    property :occupationalCredentialAwarded,
+      comment: %(A description of the qualification, award, certificate, diploma or other occupational credential awarded as a consequence of successful completion of this course or program.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2289".freeze,
+      domainIncludes: ["schema:Course".freeze, "schema:EducationalOccupationalProgram".freeze],
+      label: "occupationalCredentialAwarded".freeze,
+      rangeIncludes: ["schema:EducationalOccupationalCredential".freeze, "schema:Text".freeze, "schema:URL".freeze],
+      "schema:category": "issue-2289".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :offerCount,
       comment: %(The number of offers for the product.).freeze,
@@ -10548,9 +10667,11 @@ Note: for historical reasons, any textual label and formal code provided as a li
       type: "rdf:Property".freeze
     property :offers,
       comment: %(An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.).freeze,
-      domainIncludes: ["schema:AggregateOffer".freeze, "schema:CreativeWork".freeze, "schema:Event".freeze, "schema:MenuItem".freeze, "schema:Product".freeze, "schema:Service".freeze, "schema:Trip".freeze],
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2289".freeze,
+      domainIncludes: ["schema:AggregateOffer".freeze, "schema:CreativeWork".freeze, "schema:EducationalOccupationalProgram".freeze, "schema:Event".freeze, "schema:MenuItem".freeze, "schema:Product".freeze, "schema:Service".freeze, "schema:Trip".freeze],
       label: "offers".freeze,
       rangeIncludes: "schema:Offer".freeze,
+      "schema:category": "issue-2289".freeze,
       type: "rdf:Property".freeze
     property :offersPrescriptionByMail,
       comment: %(Whether prescriptions can be delivered by mail.).freeze,
@@ -11111,6 +11232,15 @@ Typical unit code\(s\): KGM for kilogram, LBR for pound<br/><br/>
       rangeIncludes: "schema:Text".freeze,
       "schema:isPartOf": "http://health-lifesci.schema.org".freeze,
       type: "rdf:Property".freeze
+    property :populationType,
+      comment: %(Indicates the populationType common to all members of a <a class="localLink" href="http://schema.org/StatisticalPopulation">StatisticalPopulation</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2291".freeze,
+      domainIncludes: "schema:StatisticalPopulation".freeze,
+      label: "populationType".freeze,
+      rangeIncludes: "schema:Class".freeze,
+      "schema:category": "issue-2291".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :position,
       comment: %(The position of an item in a series or sequence of items.).freeze,
       domainIncludes: ["schema:CreativeWork".freeze, "schema:ListItem".freeze],
@@ -11418,6 +11548,15 @@ Use standard formats: <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 c
       label: "programName".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
+    property :programPrerequisites,
+      comment: %(Prerequisites for enrolling in the program.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2289".freeze,
+      domainIncludes: "schema:EducationalOccupationalProgram".freeze,
+      label: "programPrerequisites".freeze,
+      rangeIncludes: ["schema:AlignmentObject".freeze, "schema:Course".freeze, "schema:EducationalOccupationalCredential".freeze, "schema:Text".freeze],
+      "schema:category": "issue-2289".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :programmingLanguage,
       comment: %(The computer programming language.).freeze,
       domainIncludes: "schema:SoftwareSourceCode".freeze,
@@ -11454,9 +11593,11 @@ Standards bodies should promote a standard prefix for the identifiers of propert
       type: "rdf:Property".freeze
     property :provider,
       comment: %(The service provider, service operator, or service performer; the goods producer. Another party \(a seller\) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.).freeze,
-      domainIncludes: ["schema:CreativeWork".freeze, "schema:Invoice".freeze, "schema:ParcelDelivery".freeze, "schema:Reservation".freeze, "schema:Service".freeze, "schema:Trip".freeze],
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2289".freeze,
+      domainIncludes: ["schema:CreativeWork".freeze, "schema:EducationalOccupationalProgram".freeze, "schema:Invoice".freeze, "schema:ParcelDelivery".freeze, "schema:Reservation".freeze, "schema:Service".freeze, "schema:Trip".freeze],
       label: "provider".freeze,
       rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      "schema:category": "issue-2289".freeze,
       type: "rdf:Property".freeze
     property :providerMobility,
       comment: %(Indicates the mobility of a provided service \(e.g. 'static', 'dynamic'\).).freeze,
@@ -11586,6 +11727,15 @@ While such policies are most typically expressed in natural language, sometimes 
       domainIncludes: "schema:AggregateRating".freeze,
       label: "ratingCount".freeze,
       rangeIncludes: "schema:Integer".freeze,
+      type: "rdf:Property".freeze
+    property :ratingExplanation,
+      comment: %(A short explanation \(e.g. one to two sentences\) providing background context and other information that led to the conclusion expressed in the rating. This is particularly applicable to ratings associated with "fact check" markup using <a class="localLink" href="http://schema.org/ClaimReview">ClaimReview</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2300".freeze,
+      domainIncludes: "schema:Rating".freeze,
+      label: "ratingExplanation".freeze,
+      rangeIncludes: "schema:Text".freeze,
+      "schema:category": "issue-2300".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :ratingValue,
       comment: %(The rating for the content.<br/><br/>
@@ -12196,6 +12346,15 @@ Typical unit code\(s\): KGM for kilogram, LBR for pound<br/><br/>
       domainIncludes: ["schema:EmployeeRole".freeze, "schema:JobPosting".freeze],
       label: "salaryCurrency".freeze,
       rangeIncludes: "schema:Text".freeze,
+      type: "rdf:Property".freeze
+    property :salaryUponCompletion,
+      comment: %(The expected salary upon completing the training.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2289".freeze,
+      domainIncludes: "schema:EducationalOccupationalProgram".freeze,
+      label: "salaryUponCompletion".freeze,
+      rangeIncludes: "schema:MonetaryAmountDistribution".freeze,
+      "schema:category": "issue-2289".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :sameAs,
       comment: %(URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.).freeze,
@@ -13174,6 +13333,15 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
       label: "timeRequired".freeze,
       rangeIncludes: "schema:Duration".freeze,
       type: "rdf:Property".freeze
+    property :timeToComplete,
+      comment: %(The expected length of time to complete the program if attending full-time.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2289".freeze,
+      domainIncludes: "schema:EducationalOccupationalProgram".freeze,
+      label: "timeToComplete".freeze,
+      rangeIncludes: "schema:Duration".freeze,
+      "schema:category": "issue-2289".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :tissueSample,
       comment: %(The type of tissue sample required for the test.).freeze,
       domainIncludes: "schema:PathologyTest".freeze,
@@ -13331,6 +13499,15 @@ Typical unit code\(s\): KGM for kilogram, LBR for pound
       domainIncludes: "schema:TrainTrip".freeze,
       label: "trainNumber".freeze,
       rangeIncludes: "schema:Text".freeze,
+      type: "rdf:Property".freeze
+    property :trainingSalary,
+      comment: %(The estimated salary earned while in the program.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2289".freeze,
+      domainIncludes: "schema:WorkBasedProgram".freeze,
+      label: "trainingSalary".freeze,
+      rangeIncludes: "schema:MonetaryAmountDistribution".freeze,
+      "schema:category": "issue-2289".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :transFatContent,
       comment: %(The number of grams of trans fat.).freeze,
