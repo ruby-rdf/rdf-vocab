@@ -59,17 +59,7 @@ module RDF
       dc11:   {uri: "http://purl.org/dc/elements/1.1/"},
       dcat:   {
         uri: "http://www.w3.org/ns/dcat#",
-        patch: %{
-          @prefix dcat: <http://www.w3.org/ns/dcat#> .
-          @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-          DeleteExisting {
-            dcat:landingPage rdfs:subPropertyOf foaf:Page .
-          } .
-          AddNew {
-            dcat:landingPage rdfs:subPropertyOf foaf:page .
-          } .
-        }
+        source: "https://w3c.github.io/dxwg/dcat/rdf/dcat.ttl"
       },
       dcmitype: {
           uri: "http://purl.org/dc/dcmitype/",
