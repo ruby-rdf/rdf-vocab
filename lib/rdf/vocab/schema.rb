@@ -3212,6 +3212,26 @@ For <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GTIN</a>-related
       label: "OfferCatalog".freeze,
       subClassOf: "schema:ItemList".freeze,
       type: "rdfs:Class".freeze
+    term :OfferForLease,
+      comment: %(An <a class="localLink" href="http://schema.org/OfferForLease">OfferForLease</a> in Schema.org represents an <a class="localLink" href="http://schema.org/Offer">Offer</a> to lease out something, i.e. an <a class="localLink" href="http://schema.org/Offer">Offer</a> whose
+  <a class="localLink" href="http://schema.org/businessFunction">businessFunction</a> is <a href="http://purl.org/goodrelations/v1#LeaseOut.">lease out</a>. See <a href="https://en.wikipedia.org/wiki/GoodRelations">Good Relations</a> for
+  background on the underlying concepts.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2348".freeze,
+      label: "OfferForLease".freeze,
+      "schema:category": "issue-2348".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:Offer".freeze,
+      type: "rdfs:Class".freeze
+    term :OfferForPurchase,
+      comment: %(An <a class="localLink" href="http://schema.org/OfferForPurchase">OfferForPurchase</a> in Schema.org represents an <a class="localLink" href="http://schema.org/Offer">Offer</a> to sell something, i.e. an <a class="localLink" href="http://schema.org/Offer">Offer</a> whose
+  <a class="localLink" href="http://schema.org/businessFunction">businessFunction</a> is <a href="http://purl.org/goodrelations/v1#Sell.">sell</a>. See <a href="https://en.wikipedia.org/wiki/GoodRelations">Good Relations</a> for
+  background on the underlying concepts.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2348".freeze,
+      label: "OfferForPurchase".freeze,
+      "schema:category": "issue-2348".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:Offer".freeze,
+      type: "rdfs:Class".freeze
     term :OfferItemCondition,
       comment: %(A list of possible conditions for the item.).freeze,
       label: "OfferItemCondition".freeze,
@@ -3556,6 +3576,30 @@ Related actions:<br/><br/>
       label: "Plumber".freeze,
       subClassOf: "schema:HomeAndConstructionBusiness".freeze,
       type: "rdfs:Class".freeze
+    term :PodcastEpisode,
+      comment: %(A single episode of a podcast series.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/373".freeze,
+      label: "PodcastEpisode".freeze,
+      "schema:category": "issue-373".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:Episode".freeze,
+      type: "rdfs:Class".freeze
+    term :PodcastSeason,
+      comment: %(A single season of a podcast. Many podcasts do not break down into separate seasons. In that case, PodcastSeries should be used.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/373".freeze,
+      label: "PodcastSeason".freeze,
+      "schema:category": "issue-373".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:CreativeWorkSeason".freeze,
+      type: "rdfs:Class".freeze
+    term :PodcastSeries,
+      comment: %(A podcast is an episodic series of digital audio or video files which a user can download and listen to.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/373".freeze,
+      label: "PodcastSeries".freeze,
+      "schema:category": "issue-373".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:CreativeWorkSeries".freeze,
+      type: "rdfs:Class".freeze
     term :PoliceStation,
       comment: %(A police station.).freeze,
       label: "PoliceStation".freeze,
@@ -3862,6 +3906,15 @@ See also <a href="http://blog.schema.org/2014/09/schemaorg-support-for-bibliogra
       comment: %(A real-estate agent.).freeze,
       label: "RealEstateAgent".freeze,
       subClassOf: "schema:LocalBusiness".freeze,
+      type: "rdfs:Class".freeze
+    term :RealEstateListing,
+      comment: %(A <a class="localLink" href="http://schema.org/RealEstateListing">RealEstateListing</a> is a listing that describes one or more real-estate <a class="localLink" href="http://schema.org/Offer">Offer</a>s \(whose <a class="localLink" href="http://schema.org/businessFunction">businessFunction</a> is typically to lease out, or to sell\).
+  The <a class="localLink" href="http://schema.org/RealEstateListing">RealEstateListing</a> type itself represents the overall listing, as manifested in some <a class="localLink" href="http://schema.org/WebPage">WebPage</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2348".freeze,
+      label: "RealEstateListing".freeze,
+      "schema:category": "issue-2348".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:WebPage".freeze,
       type: "rdfs:Class".freeze
     term :ReceiveAction,
       comment: %(The act of physically/electronically taking delivery of an object thathas been transferred from an origin to a destination. Reciprocal of SendAction.<br/><br/>
@@ -5059,6 +5112,15 @@ Commonly used values:<br/><br/>
       label: "abridged".freeze,
       rangeIncludes: "schema:Boolean".freeze,
       "schema:isPartOf": "http://bib.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :abstract,
+      comment: %(An abstract is a short description that summarizes a <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/276".freeze,
+      domainIncludes: "schema:CreativeWork".freeze,
+      label: "abstract".freeze,
+      rangeIncludes: "schema:Text".freeze,
+      "schema:category": "issue-276".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :accelerationTime,
       comment: %(The time needed to accelerate the vehicle from a given start velocity to a given target velocity.<br/><br/>
@@ -7714,6 +7776,15 @@ See also <a class="localLink" href="http://schema.org/ineligibleRegion">ineligib
       label: "employmentType".freeze,
       rangeIncludes: "schema:Text".freeze,
       type: "rdf:Property".freeze
+    property :employmentUnit,
+      comment: %(Indicates the department, unit and/or facility where the employee reports and/or in which the job is to be performed.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2296".freeze,
+      domainIncludes: "schema:JobPosting".freeze,
+      label: "employmentUnit".freeze,
+      rangeIncludes: "schema:Organization".freeze,
+      "schema:category": "issue-2296".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :encodesCreativeWork,
       comment: %(The CreativeWork encoded by this media object.).freeze,
       domainIncludes: "schema:MediaObject".freeze,
@@ -8372,10 +8443,13 @@ Typical unit code\(s\): LTR for liters, GLL of US gallons, GLI for UK / imperial
       rangeIncludes: "schema:CreativeWork".freeze,
       type: "rdf:Property".freeze
     property :gender,
-      comment: %(Gender of the person. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender.).freeze,
-      domainIncludes: "schema:Person".freeze,
+      comment: %(Gender of something, typically a <a class="localLink" href="http://schema.org/Person">Person</a>, but possibly also fictional characters, animals, etc. While http://schema.org/Male and http://schema.org/Female may be used, text strings are also acceptable for people who do not identify as a binary gender. The <a class="localLink" href="http://schema.org/gender">gender</a> property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender <a class="localLink" href="http://schema.org/SportsTeam">SportsTeam</a> can be indicated with a text value of "Mixed".).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2341".freeze,
+      domainIncludes: ["schema:Person".freeze, "schema:SportsTeam".freeze],
       label: "gender".freeze,
       rangeIncludes: ["schema:GenderType".freeze, "schema:Text".freeze],
+      "schema:category": "issue-2341".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :genre,
       comment: %(Genre of the creative work, broadcast channel or group.).freeze,
@@ -9125,9 +9199,12 @@ Usage guidelines:<br/><br/>
       comment: %(The ISO 3166-1 \(ISO 3166-1 alpha-2\) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region\(s\) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.<br/><br/>
 
 See also <a class="localLink" href="http://schema.org/eligibleRegion">eligibleRegion</a>.).freeze,
-      domainIncludes: ["schema:DeliveryChargeSpecification".freeze, "schema:Demand".freeze, "schema:Offer".freeze],
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2242".freeze,
+      domainIncludes: ["schema:ActionAccessSpecification".freeze, "schema:DeliveryChargeSpecification".freeze, "schema:Demand".freeze, "schema:Offer".freeze],
       label: "ineligibleRegion".freeze,
       rangeIncludes: ["schema:GeoShape".freeze, "schema:Place".freeze, "schema:Text".freeze],
+      "schema:category": "issue-2242".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :infectiousAgent,
       comment: %(The actual infectious agent, such as a specific bacterium.).freeze,
@@ -9589,7 +9666,7 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
       type: "rdf:Property".freeze
     property :latitude,
       comment: %(The latitude of a location. For example <code>37.42242</code> \(<a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a>\).).freeze,
-      domainIncludes: "schema:GeoCoordinates".freeze,
+      domainIncludes: ["schema:GeoCoordinates".freeze, "schema:Place".freeze],
       label: "latitude".freeze,
       rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
@@ -9912,7 +9989,7 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
       type: "rdf:Property".freeze
     property :longitude,
       comment: %(The longitude of a location. For example <code>-122.08585</code> \(<a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS 84</a>\).).freeze,
-      domainIncludes: "schema:GeoCoordinates".freeze,
+      domainIncludes: ["schema:GeoCoordinates".freeze, "schema:Place".freeze],
       label: "longitude".freeze,
       rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
@@ -13089,9 +13166,12 @@ Note that Event uses startDate/endDate instead of startTime/endTime, even when d
       type: "rdf:Property".freeze
     property :subtitleLanguage,
       comment: %(Languages in which subtitles/captions are available, in <a href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard format</a>.).freeze,
-      domainIncludes: ["schema:Movie".freeze, "schema:ScreeningEvent".freeze, "schema:TVEpisode".freeze],
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2110".freeze,
+      domainIncludes: ["schema:BroadcastEvent".freeze, "schema:Movie".freeze, "schema:ScreeningEvent".freeze, "schema:TVEpisode".freeze],
       label: "subtitleLanguage".freeze,
       rangeIncludes: ["schema:Language".freeze, "schema:Text".freeze],
+      "schema:category": "issue-2110".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :subtype,
       comment: %(A more specific type of the condition, where applicable, for example 'Type 1 Diabetes', 'Type 2 Diabetes', or 'Gestational Diabetes' for Diabetes.).freeze,
@@ -13408,6 +13488,15 @@ Typical unit code\(s\): NU for newton metre \(N m\), F17 for pound-force per foo
       label: "torque".freeze,
       rangeIncludes: "schema:QuantitativeValue".freeze,
       "schema:isPartOf": "http://auto.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :totalJobOpenings,
+      comment: %(The number of positions open for this job posting. Use a positive integer. Do not use if the number of positions is unclear or not known.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2329".freeze,
+      domainIncludes: "schema:JobPosting".freeze,
+      label: "totalJobOpenings".freeze,
+      rangeIncludes: "schema:Integer".freeze,
+      "schema:category": "issue-2329".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :totalPaymentDue,
       comment: %(The total amount due.).freeze,
@@ -13957,6 +14046,15 @@ Typical unit code\(s\): C62 for persons.).freeze,
       domainIncludes: "schema:Flight".freeze,
       label: "webCheckinTime".freeze,
       rangeIncludes: "schema:DateTime".freeze,
+      type: "rdf:Property".freeze
+    property :webFeed,
+      comment: %(The URL for the feed associated with the podcast series. This is usually RSS or Atom.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/373".freeze,
+      domainIncludes: "schema:PodcastSeries".freeze,
+      label: "webFeed".freeze,
+      rangeIncludes: "schema:URL".freeze,
+      "schema:category": "issue-373".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :weight,
       comment: %(The weight of the product or person.).freeze,

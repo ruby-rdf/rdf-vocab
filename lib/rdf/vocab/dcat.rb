@@ -104,7 +104,7 @@ module RDF::Vocab
         ),
       label: "The data catalog vocabulary".freeze,
       "owl:imports": ["dc:".freeze, "http://www.w3.org/2004/02/skos/core".freeze, "http://www.w3.org/ns/prov-o#".freeze],
-      "owl:versionInfo": "This is an updated copy of v1.0 of the DCAT vocabulary, taken from https://www.w3.org/ns/dcat.ttl and will replace that file when DCAT2 is published\nTemporarily added imports for DCTerms, SKOS, FOAF to assist in development of v1.* or v2.0 by W3C Data Exchange Working Group".freeze,
+      "owl:versionInfo": ["Questa è una copia aggiornata del vocabolario DCAT v2.0 disponibile in https://www.w3.org/ns/dcat.ttl".freeze, "This is an updated copy of v2.0 of the DCAT vocabulary, taken from https://www.w3.org/ns/dcat.ttl".freeze],
       type: "owl:Ontology".freeze
 
     # Class definitions
