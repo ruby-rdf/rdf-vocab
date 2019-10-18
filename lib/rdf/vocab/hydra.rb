@@ -335,7 +335,8 @@ module RDF::Vocab
       domain: "hydra:Operation".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "expects".freeze,
-      range: "hydra:Class".freeze,
+      range: "hydra:Resource".freeze,
+      rangeIncludes: ["hydra:Class".freeze, "hydra:Resource".freeze],
       type: "hydra:Link".freeze,
       "vs:term_status": "testing".freeze
     term :first,
@@ -410,7 +411,8 @@ module RDF::Vocab
       domain: "hydra:Operation".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "returns".freeze,
-      range: "hydra:Class".freeze,
+      range: "hydra:Resource".freeze,
+      rangeIncludes: ["hydra:Class".freeze, "hydra:Resource".freeze],
       type: "hydra:Link".freeze,
       "vs:term_status": "testing".freeze
     term :search,
