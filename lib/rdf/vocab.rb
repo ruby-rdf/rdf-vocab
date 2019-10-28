@@ -8,6 +8,7 @@ module RDF
     autoload :VERSION,        'rdf/vocab/version'
     VOCABS = {
       acl:    {uri: "http://www.w3.org/ns/auth/acl#"},
+      as:    {uri: "https://www.w3.org/ns/activitystreams#", source: 'etc/as.ttl'},
       bf2:    {uri: 'http://id.loc.gov/ontologies/bibframe/'},
       bibframe: {
         uri: "http://bibframe.org/vocab/",
