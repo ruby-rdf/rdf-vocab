@@ -288,6 +288,7 @@ module RDF
         uri: "http://schema.org/",
         source: "http://schema.org/version/latest/all-layers.nq"
       },
+      sh: { uri: 'http://www.w3.org/ns/shacl#', source: 'https://www.w3.org/ns/shacl.ttl' },
       sioc:   {uri: "http://rdfs.org/sioc/ns#"},
       sioc_services: {
         uri: "http://rdfs.org/sioc/services#",
