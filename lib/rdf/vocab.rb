@@ -55,6 +55,7 @@ module RDF
         class_name: "DataCite",
         skip: true
       },
+      dbo:    {uri: "http://dbpedia.org/ontology/", source: "http://dbpedia.org/data3/.ttl"},
       dc:     {uri: "http://purl.org/dc/terms/"},
       dc11:   {uri: "http://purl.org/dc/elements/1.1/"},
       dcat:   {
