@@ -11,13 +11,7 @@ module RDF::Vocab
 
     # Ontology definition
     ontology :"http://www.w3.org/ns/dcat#",
-      comment: %(DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web.
-          By using DCAT to describe datasets in data catalogs, publishers increase discoverability and enable
-          applications easily to consume metadata from multiple catalogs. It further enables decentralized
-          publishing of catalogs and facilitates federated dataset search across sites. Aggregated DCAT metadata can
-          serve as a manifest file to facilitate digital preservation.
-          DCAT is defined at http://www.w3.org/TR/vocab-dcat/. Any variance between that normative
-          document and this schema is an error in this schema.).freeze,
+      comment: %(DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web. By using DCAT to describe datasets in data catalogs, publishers increase discoverability and enable applications easily to consume metadata from multiple catalogs. It further enables decentralized publishing of catalogs and facilitates federated dataset search across sites. Aggregated DCAT metadata can serve as a manifest file to facilitate digital preservation. DCAT is defined at http://www.w3.org/TR/vocab-dcat/. Any variance between that normative document and this schema is an error in this schema.).freeze,
       "dc:contributor": [term(
           "foaf:homepage": "http://makxdekkers.com/".freeze,
           "foaf:name": "Makx Dekkers".freeze,
@@ -47,7 +41,7 @@ module RDF::Vocab
           "foaf:name": "Jakub Klímek".freeze,
           "rdfs:seeAlso": "https://jakub.klímek.com/#me".freeze
         ), term(
-          "foaf:homepage": ["https://w3id.org/people/ralbertoni/".freeze,"http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni".freeze],
+          "foaf:homepage": ["http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni".freeze,"https://w3id.org/people/ralbertoni/".freeze],
           "foaf:name": "Riccardo Albertoni".freeze,
           "rdfs:seeAlso": "https://orcid.org/0000-0001-5648-2713".freeze
         ), term(
@@ -110,7 +104,7 @@ module RDF::Vocab
     # Class definitions
     term :Catalog,
       comment: %(A curated collection of metadata about datasets and data services).freeze,
-      definition: %(A curated collection of metadata about datasets and data services).freeze,
+      definition: %(A curated collection of metadata about datasets and data services.).freeze,
       editorialNote: %(English, Italian, Spanish definitions updated in this revision. Multilingual text not yet updated.).freeze,
       isDefinedBy: "http://www.w3.org/TR/vocab-dcat/".freeze,
       label: "Catalog".freeze,
@@ -127,7 +121,7 @@ module RDF::Vocab
       editorialNote: %(English definition updated in this revision. Multilingual text not yet updated except the Spanish one and the Czech one and Italian one.).freeze,
       isDefinedBy: "http://www.w3.org/TR/vocab-dcat/".freeze,
       label: "Catalog Record".freeze,
-      "skos:scopeNote": "This class is optional and not all catalogs will use it. It exists for\n              catalogs where a distinction is made between metadata about a dataset or data service and\n              metadata about the entry for the dataset or data service in the catalog. For example, the publication\n              date property of the dataset reflects the date when the information was originally\n              made available by the publishing agency, while the publication date of the catalog\n              record is the date when the dataset was added to the catalog. In cases where both\n              dates differ, or where only the latter is known, the publication date should only\n              be specified for the catalog record. Notice that the W3C PROV Ontology allows\n              describing further provenance information such as the details of the process and the\n              agent involved in a particular change to a dataset.".freeze,
+      "skos:scopeNote": "This class is optional and not all catalogs will use it. It exists for catalogs where a distinction is made between metadata about a dataset or data service and metadata about the entry for the dataset or data service in the catalog. For example, the publication date property of the dataset reflects the date when the information was originally made available by the publishing agency, while the publication date of the catalog record is the date when the dataset was added to the catalog. In cases where both dates differ, or where only the latter is known, the publication date should only be specified for the catalog record. Notice that the W3C PROV Ontology allows describing further provenance information such as the details of the process and the agent involved in a particular change to a dataset.".freeze,
       subClassOf: [term(
           allValuesFrom: "dcat:Resource".freeze,
           onProperty: "foaf:primaryTopic".freeze,
@@ -143,7 +137,7 @@ module RDF::Vocab
       definition: %(A site or end-point providing operations related to the discovery of, access to, or processing functions on, data or related resources.).freeze,
       label: "Data service".freeze,
       "skos:changeNote": "New class added in DCAT 2.0.".freeze,
-      "skos:scopeNote": ["If a dcat:DataService is bound to one or more specified Datasets, they are indicated by the dcat:servesDataset property.".freeze, "The kind of service can be indicated using the dct:type property. Its value may be taken from a controlled vocabulary such as the INSPIRE spatial data service type vocabulary".freeze],
+      "skos:scopeNote": ["If a dcat:DataService is bound to one or more specified Datasets, they are indicated by the dcat:servesDataset property.".freeze, "The kind of service can be indicated using the dct:type property. Its value may be taken from a controlled vocabulary such as the INSPIRE spatial data service type vocabulary.".freeze],
       subClassOf: ["dcat:Resource".freeze, "dcmitype:Service".freeze, term(
           maxCardinality: "1".freeze,
           onProperty: "dcat:endpointURL".freeze,
@@ -151,31 +145,27 @@ module RDF::Vocab
         )],
       type: "owl:Class".freeze
     term :Dataset,
-      comment: %(A collection of data, published or curated by a single source, and available for access or download in one or more represenations).freeze,
-      definition: %(A collection of data, published or curated by a single source, and available for access or download in one or more represenations).freeze,
+      comment: %(A collection of data, published or curated by a single source, and available for access or download in one or more represenations.).freeze,
+      definition: %(A collection of data, published or curated by a single source, and available for access or download in one or more represenations.).freeze,
       isDefinedBy: "http://www.w3.org/TR/vocab-dcat/".freeze,
       label: "Dataset".freeze,
       "skos:changeNote": "2018-02 - subclass of dctype:Dataset removed because scope of dcat:Dataset includes several other types from the dctype vocabulary.".freeze,
-      "skos:scopeNote": ["This class describes the conceptual dataset. One or more representations might be available, with differing schematic layouts and formats or serializations.".freeze, "This class represents the actual dataset as published by the dataset provider. In\n          cases where a distinction between the actual dataset and its entry in the catalog is\n          necessary (because metadata such as modification date and maintainer might differ), the\n          catalog record class can be used for the latter.".freeze],
+      "skos:scopeNote": ["This class describes the conceptual dataset. One or more representations might be available, with differing schematic layouts and formats or serializations.".freeze, "This class represents the actual dataset as published by the dataset provider. In cases where a distinction between the actual dataset and its entry in the catalog is necessary (because metadata such as modification date and maintainer might differ), the catalog record class can be used for the latter.".freeze],
       subClassOf: "dcat:Resource".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Distribution,
-      comment: %(A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways,
-                  including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or
-                  profiles \(which might specify any or all of the above\).).freeze,
-      definition: %(A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways,
-                  including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or
-                  profiles \(which might specify any or all of the above\).).freeze,
+      comment: %(A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles \(which might specify any or all of the above\).).freeze,
+      definition: %(A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles \(which might specify any or all of the above\).).freeze,
       isDefinedBy: "http://www.w3.org/TR/vocab-dcat/".freeze,
       label: "Distribution".freeze,
-      "skos:scopeNote": "This represents a general availability of a dataset it implies no information about the\n          actual access method of the data, i.e. whether by direct download, API, or through a Web page.\n          The use of dcat:downloadURL property indicates directly downloadable distributions.".freeze,
+      "skos:scopeNote": "This represents a general availability of a dataset it implies no information about the actual access method of the data, i.e. whether by direct download, API, or through a Web page. The use of dcat:downloadURL property indicates directly downloadable distributions.".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Relationship,
       comment: %(An association class for attaching additional information to a relationship between DCAT Resources.).freeze,
       definition: %(An association class for attaching additional information to a relationship between DCAT Resources.).freeze,
       label: "Relationship".freeze,
       "skos:changeNote": "New class added in DCAT 2.0.".freeze,
-      "skos:scopeNote": "Use to characterize a relationship between datasets, and potentially other resources, where the nature of the relationship is known but is not adequately characterized by the standard Dublin Core properties (dct:hasPart, dct:isPartOf, dct:conformsTo, dct:isFormatOf, dct:hasFormat, dct:isVersionOf, dct:hasVersion, dct:replaces, dct:isReplacedBy, dct:references, dct:isReferencedBy, dct:requires, dct:isRequiredBy) or PROV-O properties (prov:wasDerivedFrom, prov:wasInfluencedBy, prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource, prov:alternateOf, prov:specializationOf)".freeze,
+      "skos:scopeNote": "Use to characterize a relationship between datasets, and potentially other resources, where the nature of the relationship is known but is not adequately characterized by the standard Dublin Core properties (dct:hasPart, dct:isPartOf, dct:conformsTo, dct:isFormatOf, dct:hasFormat, dct:isVersionOf, dct:hasVersion, dct:replaces, dct:isReplacedBy, dct:references, dct:isReferencedBy, dct:requires, dct:isRequiredBy) or PROV-O properties (prov:wasDerivedFrom, prov:wasInfluencedBy, prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource, prov:alternateOf, prov:specializationOf).".freeze,
       subClassOf: term(
           minCardinality: "1".freeze,
           onProperty: "dc:relation".freeze,
@@ -187,16 +177,16 @@ module RDF::Vocab
       definition: %(Resource published or curated by a single agent.).freeze,
       label: "Catalogued resource".freeze,
       "skos:changeNote": "New class added in DCAT 2.0.".freeze,
-      "skos:scopeNote": ["The class of all catalogued resources, the Superclass of\n    dcat:Dataset, dcat:DataService, dcat:Catalog and any other member of a dcat:Catalog.\n    This class carries properties common to all catalogued resources, including datasets and data services.\n    It is strongly recommended to use a more specific sub-class. When describing a \nresource which is not a dcat:Dataset or dcat:DataService, it is recommended to create a \nsuitable sub-class of dcat:Resource, or use dcat:Resource with the dct:type property to \nindicate the specific type.".freeze, "dcat:Resource is an extension point that enables the definition of any kind of catalog. Additional subclasses may be defined in a DCAT profile or application for catalogs of other kinds of resources.".freeze],
+      "skos:scopeNote": ["The class of all catalogued resources, the Superclass of dcat:Dataset, dcat:DataService, dcat:Catalog and any other member of a dcat:Catalog. This class carries properties common to all catalogued resources, including datasets and data services. It is strongly recommended to use a more specific sub-class. When describing a resource which is not a dcat:Dataset or dcat:DataService, it is recommended to create a suitable sub-class of dcat:Resource, or use dcat:Resource with the dct:type property to indicate the specific type.".freeze, "dcat:Resource is an extension point that enables the definition of any kind of catalog. Additional subclasses may be defined in a DCAT profile or application for catalogs of other kinds of resources.".freeze],
       type: "owl:Class".freeze
     term :Role,
       comment: %(A role is the function of a resource or agent with respect to another resource, in the context of resource attribution or resource relationships.).freeze,
       definition: %(A role is the function of a resource or agent with respect to another resource, in the context of resource attribution or resource relationships.).freeze,
-      editorialNote: %(Introduced into DCAT to complement prov:Role \(whose use is limited to roles in the context of an activity, as the range of prov:hadRole\)).freeze,
+      editorialNote: %(Introduced into DCAT to complement prov:Role \(whose use is limited to roles in the context of an activity, as the range of prov:hadRole\).).freeze,
       label: "Role".freeze,
       "rdfs:seeAlso": "dcat:hadRole".freeze,
       "skos:changeNote": "New class added in DCAT 2.0.".freeze,
-      "skos:scopeNote": ["Used in a qualified-attribution to specify the role of an Agent with respect to an Entity. It is recommended that the values be managed as a controlled vocabulary of agent roles, such as http://registry.it.csiro.au/def/isotc211/CI_RoleCode".freeze, "Used in a qualified-relation to specify the role of an Entity with respect to another Entity.\n  It is recommended that the values be managed as a controlled vocabulary of entity roles such as\n  - ISO 19115 DS_AssociationTypeCode http://registry.it.csiro.au/def/isotc211/DS_AssociationTypeCode\n  - IANA Registry of Link Relations https://www.iana.org/assignments/link-relation\n  - DataCite metadata schema\n  - MARC relators https://id.loc.gov/vocabulary/relators".freeze],
+      "skos:scopeNote": ["Used in a qualified-attribution to specify the role of an Agent with respect to an Entity. It is recommended that the values be managed as a controlled vocabulary of agent roles, such as http://registry.it.csiro.au/def/isotc211/CI_RoleCode.".freeze, "Used in a qualified-relation to specify the role of an Entity with respect to another Entity. It is recommended that the values be managed as a controlled vocabulary of entity roles such as: ISO 19115 DS_AssociationTypeCode http://registry.it.csiro.au/def/isotc211/DS_AssociationTypeCode; IANA Registry of Link Relations https://www.iana.org/assignments/link-relation;  DataCite metadata schema;  MARC relators https://id.loc.gov/vocabulary/relators.".freeze],
       subClassOf: "skos:Concept".freeze,
       type: "owl:Class".freeze
 
@@ -209,20 +199,18 @@ module RDF::Vocab
       "skos:changeNote": "New property added in DCAT 2.0.".freeze,
       type: "owl:ObjectProperty".freeze
     property :accessURL,
-      comment: %(A URL of a resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint.
-          Use for all cases except a simple download link, in which case downloadURL is preferred.).freeze,
-      definition: %(A URL of a resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint.
-          Use for all cases except a simple download link, in which case downloadURL is preferred.).freeze,
+      comment: %(A URL of a resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint. Use for all cases except a simple download link, in which case downloadURL is preferred.).freeze,
+      definition: %(A URL of a resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint. Use for all cases except a simple download link, in which case downloadURL is preferred.).freeze,
       domain: "dcat:Distribution".freeze,
       editorialNote: [%(Status: English Definition text modified by DCAT revision team, updated Italian and Czech translation provided, translations for other languages pending.).freeze, %(rdfs:label, rdfs:comment and skos:scopeNote have been modified. Non-english versions except for Italian must be updated.).freeze],
       isDefinedBy: "http://www.w3.org/TR/vocab-dcat/".freeze,
       label: "access address".freeze,
       "owl:propertyChainAxiom": list("dcat:accessService".freeze, "dcat:endpointURL".freeze),
       range: "rdfs:Resource".freeze,
-      "skos:scopeNote": "If the distribution(s) are accessible only through a landing page (i.e. direct download URLs are not known),\n          then the landing page link should be duplicated as accessURL on a distribution.".freeze,
+      "skos:scopeNote": "If the distribution(s) are accessible only through a landing page (i.e. direct download URLs are not known), then the landing page link should be duplicated as accessURL on a distribution.".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :bbox,
-      definition: %(The geographic bounding box of a resource).freeze,
+      definition: %(The geographic bounding box of a resource.).freeze,
       domain: "dc:Location".freeze,
       label: "bounding box".freeze,
       range: "rdfs:Literal".freeze,
@@ -236,7 +224,7 @@ module RDF::Vocab
       isDefinedBy: "http://www.w3.org/TR/vocab-dcat/".freeze,
       label: "byte size".freeze,
       range: "rdfs:Literal".freeze,
-      "skos:scopeNote": "The size in bytes can be approximated when the precise size is not known.\n          The literal value of dcat:byteSize should by typed as xsd:decimal".freeze,
+      "skos:scopeNote": "The size in bytes can be approximated when the precise size is not known. The literal value of dcat:byteSize should by typed as xsd:decimal.".freeze,
       type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :catalog,
       comment: %(A catalog whose contents are of interest in the context of this catalog.).freeze,
@@ -295,10 +283,8 @@ module RDF::Vocab
       subPropertyOf: "dc:relation".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :downloadURL,
-      comment: %(The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The
-            format is indicated by the distribution's dct:format and/or dcat:mediaType).freeze,
-      definition: %(The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The
-            format is indicated by the distribution's dct:format and/or dcat:mediaType).freeze,
+      comment: %(The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType.).freeze,
+      definition: %(The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType.).freeze,
       domain: "dcat:Distribution".freeze,
       editorialNote: [%(Status: English  Definition text modified by DCAT revision team, Italian, Spanish and Czech translation updated, other translations pending.).freeze, %(rdfs:label, rdfs:comment and/or skos:scopeNote have been modified. Non-english versions must be updated.).freeze],
       isDefinedBy: "http://www.w3.org/TR/vocab-dcat/".freeze,
@@ -307,7 +293,7 @@ module RDF::Vocab
       "skos:scopeNote": "dcat:downloadURL SHOULD be used for the address at which this distribution is available directly, typically through a HTTP Get request.".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :endDate,
-      definition: %(The end of the period).freeze,
+      definition: %(The end of the period.).freeze,
       domain: "dc:PeriodOfTime".freeze,
       label: "end date".freeze,
       range: "rdfs:Literal".freeze,
@@ -323,8 +309,8 @@ module RDF::Vocab
       "skos:scopeNote": ["An endpoint description may be expressed in a machine-readable form, such as an OpenAPI (Swagger) description, an OGC GetCapabilities response, a SPARQL Service Description, an OpenSearch or WSDL document, a Hydra API description, else in text or some other informal mode if a formal representation is not possible.".freeze, "The endpoint decription gives specific details of the actual endpoint instance, while dct:conformsTo is used to indicate the general standard or specification that the endpoint implements.".freeze],
       type: "owl:ObjectProperty".freeze
     property :endpointURL,
-      comment: %(The root location or primary endpoint of the service \(a web-resolvable IRI\)).freeze,
-      definition: %(The root location or primary endpoint of the service \(a web-resolvable IRI\)).freeze,
+      comment: %(The root location or primary endpoint of the service \(a web-resolvable IRI\).).freeze,
+      definition: %(The root location or primary endpoint of the service \(a web-resolvable IRI\).).freeze,
       domain: "dcat:DataService".freeze,
       label: "service end-point".freeze,
       range: "rdfs:Resource".freeze,
@@ -337,11 +323,11 @@ module RDF::Vocab
           type: "owl:Class".freeze,
           unionOf: list("prov:Attribution".freeze, "dcat:Relationship".freeze)
         ),
-      editorialNote: %(Introduced into DCAT to complement prov:hadRole \(whose use is limited to roles in the context of an activity, with the domain of prov:Association).freeze,
+      editorialNote: %(Introduced into DCAT to complement prov:hadRole \(whose use is limited to roles in the context of an activity, with the domain of prov:Association.).freeze,
       label: "hadRole".freeze,
       range: "dcat:Role".freeze,
       "skos:changeNote": "New property added in DCAT 2.0.".freeze,
-      "skos:scopeNote": ["May be used in a qualified-attribution to specify the role of an Agent with respect to an Entity. It is recommended that the value be taken from a controlled vocabulary of agent roles, such as http://registry.it.csiro.au/def/isotc211/CI_RoleCode".freeze, "May be used in a qualified-relation to specify the role of an Entity with respect to another Entity.\n  It is recommended that the value be taken from a controlled vocabulary of entity roles such as\n  - ISO 19115 DS_AssociationTypeCode http://registry.it.csiro.au/def/isotc211/DS_AssociationTypeCode\n  - IANA Registry of Link Relations https://www.iana.org/assignments/link-relation\n  - DataCite metadata schema\n  - MARC relators https://id.loc.gov/vocabulary/relators".freeze],
+      "skos:scopeNote": ["May be used in a qualified-attribution to specify the role of an Agent with respect to an Entity. It is recommended that the value be taken from a controlled vocabulary of agent roles, such as http://registry.it.csiro.au/def/isotc211/CI_RoleCode.".freeze, "May be used in a qualified-relation to specify the role of an Entity with respect to another Entity.  It is recommended that the value be taken from a controlled vocabulary of entity roles such as: ISO 19115 DS_AssociationTypeCode http://registry.it.csiro.au/def/isotc211/DS_AssociationTypeCode; IANA Registry of Link Relations https://www.iana.org/assignments/link-relation; DataCite metadata schema; MARC relators https://id.loc.gov/vocabulary/relators.".freeze],
       type: "owl:ObjectProperty".freeze
     property :keyword,
       comment: %(A keyword or tag describing a resource.).freeze,
@@ -357,14 +343,14 @@ module RDF::Vocab
       isDefinedBy: "http://www.w3.org/TR/vocab-dcat/".freeze,
       label: "landing page".freeze,
       range: "foaf:Document".freeze,
-      "skos:scopeNote": "If the distribution(s) are accessible only through a landing page (i.e. direct download\n          URLs are not known), then the landing page link should be duplicated as accessURL on a distribution.".freeze,
+      "skos:scopeNote": "If the distribution(s) are accessible only through a landing page (i.e. direct download URLs are not known), then the landing page link should be duplicated as accessURL on a distribution.".freeze,
       subPropertyOf: "foaf:page".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :mediaType,
       comment: %(The media type of the distribution as defined by IANA).freeze,
-      definition: %(The media type of the distribution as defined by IANA).freeze,
+      definition: %(The media type of the distribution as defined by IANA.).freeze,
       domain: "dcat:Distribution".freeze,
-      editorialNote: %(Status: English Definition text modified by DCAT revision team, Italian and Czech translation provided, other translations pending. Note some inconsistency on def vs. usage).freeze,
+      editorialNote: %(Status: English Definition text modified by DCAT revision team, Italian and Czech translation provided, other translations pending. Note some inconsistency on def vs. usage.).freeze,
       isDefinedBy: "http://www.w3.org/TR/vocab-dcat/".freeze,
       label: "media type".freeze,
       range: "dc:MediaType".freeze,
@@ -403,8 +389,8 @@ module RDF::Vocab
       range: "dcat:CatalogRecord".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :servesDataset,
-      comment: %(A collection of data that this DataService can distribute).freeze,
-      definition: %(A collection of data that this DataService can distribute).freeze,
+      comment: %(A collection of data that this DataService can distribute.).freeze,
+      definition: %(A collection of data that this DataService can distribute.).freeze,
       domain: "dcat:DataService".freeze,
       label: "serves dataset".freeze,
       range: "dcat:Dataset".freeze,
@@ -420,13 +406,13 @@ module RDF::Vocab
       subPropertyOf: ["dc:hasPart".freeze, "rdfs:member".freeze],
       type: "owl:ObjectProperty".freeze
     property :spatialResolutionInMeters,
-      comment: [%(minimum spatial separation resolvable in a dataset, measured in meters).freeze, %(minimum spatial separation resolvable in a dataset, measured in metres).freeze],
-      definition: [%(minimum spatial separation resolvable in a dataset, measured in meters).freeze, %(minimum spatial separation resolvable in a dataset, measured in metres).freeze],
-      editorialNote: %(Might appear in the description of a Dataset or a Distribution, so no domain is specified).freeze,
+      comment: [%(minimum spatial separation resolvable in a dataset, measured in meters.).freeze, %(minimum spatial separation resolvable in a dataset, measured in metres.).freeze],
+      definition: [%(minimum spatial separation resolvable in a dataset, measured in meters.).freeze, %(minimum spatial separation resolvable in a dataset, measured in metres.).freeze],
+      editorialNote: %(Might appear in the description of a Dataset or a Distribution, so no domain is specified.).freeze,
       label: ["spatial resolution (meters)".freeze, "spatial resolution (metres)".freeze],
       range: "xsd:decimal".freeze,
       "skos:changeNote": "New property added in DCAT 2.0.".freeze,
-      "skos:scopeNote": ["Alternative spatial resolutions might be provided as different dataset distributions".freeze, "If the dataset is an image or grid this should correspond to the spacing of items. For other kinds of spatial dataset, this property will usually indicate the smallest distance between items in the dataset. ".freeze],
+      "skos:scopeNote": ["Alternative spatial resolutions might be provided as different dataset distributions.".freeze, "If the dataset is an image or grid this should correspond to the spacing of items. For other kinds of spatial dataset, this property will usually indicate the smallest distance between items in the dataset.".freeze],
       type: "owl:DatatypeProperty".freeze
     property :startDate,
       definition: %(The start of the period).freeze,
@@ -437,13 +423,13 @@ module RDF::Vocab
       "skos:scopeNote": "The range of this property is intentionally generic, with the purpose of allowing different level of temporal precision for specifying the start of a period. E.g., it can be expressed with a date (xsd:date), a date and time (xsd:dateTime), or a year (xsd:gYear).".freeze,
       type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :temporalResolution,
-      comment: %(minimum time period resolvable in a dataset).freeze,
-      definition: %(minimum time period resolvable in a dataset).freeze,
-      editorialNote: %(Might appear in the description of a Dataset or a Distribution, so no domain is specified).freeze,
+      comment: %(minimum time period resolvable in a dataset.).freeze,
+      definition: %(minimum time period resolvable in a dataset.).freeze,
+      editorialNote: %(Might appear in the description of a Dataset or a Distribution, so no domain is specified.).freeze,
       label: "temporal resolution".freeze,
       range: "xsd:duration".freeze,
       "skos:changeNote": "New property added in DCAT 2.0.".freeze,
-      "skos:scopeNote": ["Alternative temporal resolutions might be provided as different dataset distributions".freeze, "If the dataset is a time-series this should correspond to the spacing of items in the series. For other kinds of dataset, this property will usually indicate the smallest time difference between items in the dataset. ".freeze],
+      "skos:scopeNote": ["Alternative temporal resolutions might be provided as different dataset distributions.".freeze, "If the dataset is a time-series this should correspond to the spacing of items in the series. For other kinds of dataset, this property will usually indicate the smallest time difference between items in the dataset.".freeze],
       type: "owl:DatatypeProperty".freeze
     property :theme,
       comment: %(A main category of the resource. A resource can have multiple themes.).freeze,
