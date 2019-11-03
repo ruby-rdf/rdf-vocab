@@ -8,6 +8,7 @@ module RDF
     autoload :VERSION,        'rdf/vocab/version'
     VOCABS = {
       acl:    {uri: "http://www.w3.org/ns/auth/acl#"},
+      as:    {uri: "https://www.w3.org/ns/activitystreams#", source: 'etc/as.ttl'},
       bf2:    {uri: 'http://id.loc.gov/ontologies/bibframe/'},
       bibframe: {
         uri: "http://bibframe.org/vocab/",
@@ -55,6 +56,7 @@ module RDF
         class_name: "DataCite",
         skip: true
       },
+      dbo:    {uri: "http://dbpedia.org/ontology/", source: "http://dbpedia.org/data3/.ttl"},
       dc:     {uri: "http://purl.org/dc/terms/"},
       dc11:   {uri: "http://purl.org/dc/elements/1.1/"},
       dcat:   {
@@ -287,6 +289,7 @@ module RDF
         uri: "http://schema.org/",
         source: "http://schema.org/version/latest/all-layers.nq"
       },
+      sh: { uri: 'http://www.w3.org/ns/shacl#', source: 'https://www.w3.org/ns/shacl.ttl' },
       sioc:   {uri: "http://rdfs.org/sioc/ns#"},
       sioc_services: {
         uri: "http://rdfs.org/sioc/services#",
