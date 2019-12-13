@@ -18,27 +18,27 @@ Gem::Specification.new do |spec|
   spec.test_files    = Dir.glob('spec/*.rb')
   spec.require_paths = %w(lib)
 
-  spec.required_ruby_version      = '>= 2.2.2'
+  spec.required_ruby_version      = '>= 2.4'
 
-  spec.add_runtime_dependency     "rdf",          '~> 3.0', '>= 3.0.11'
+  spec.add_runtime_dependency     "rdf",          '~> 3.1'
 
   # Either of these are required for HTML vocabulary generation
-  spec.add_development_dependency "haml",         '~> 5.0'
+  spec.add_development_dependency "haml",         '~> 5.1'
   spec.add_development_dependency "erubis",       '~> 2.7'
 
-  spec.add_development_dependency "json-ld",      '~> 3.0'
+  spec.add_development_dependency "json-ld",      '~> 3.1'
   spec.add_development_dependency "json-schema",  "~> 2.8"
   spec.add_development_dependency "jsonpath",     "~> 0.9"
   spec.add_development_dependency "ld-patch",     '~> 0.3'
-  spec.add_development_dependency "nokogiri",     '~> 1.8'
-  spec.add_development_dependency "nokogumbo",    '~> 1.5'
-  spec.add_development_dependency "rake",         "~> 12.3"
-  spec.add_development_dependency "rdf-rdfa",     '~> 3.0'
+  spec.add_development_dependency "nokogiri",     '~> 1.10'
+  spec.add_development_dependency "nokogumbo",    '~> 2.0'
+  spec.add_development_dependency "rake",         "~> 13.0"
+  spec.add_development_dependency "rdf-rdfa",     '~> 3.1'
   spec.add_development_dependency "rdf-reasoner", '~> 0.5'
-  spec.add_development_dependency "rdf-turtle",   '~> 3.0'
-  spec.add_development_dependency "rspec",        "~> 3.8"
-  spec.add_development_dependency "rspec-its",    "~> 1.2"
-  spec.add_development_dependency "yard",         "~> 0.9.16"
+  spec.add_development_dependency "rdf-turtle",   '~> 3.1'
+  spec.add_development_dependency "rspec",        "~> 3.9"
+  spec.add_development_dependency "rspec-its",    "~> 1.3"
+  spec.add_development_dependency "yard",         "~> 0.9.20"
 
   spec.extra_rdoc_files = %w(LICENSE README.md)
 end

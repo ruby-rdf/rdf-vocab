@@ -16,6 +16,7 @@ group :development, :test do
   gem 'linkeddata',         git: 'https://github.com/ruby-rdf/linkeddata.git',          branch: 'develop'
   gem 'rdf-aggregate-repo', git: 'https://github.com/ruby-rdf/rdf-aggregate-repo.git',  branch: 'develop'
   gem 'rdf-isomorphic',     git: 'https://github.com/ruby-rdf/rdf-isomorphic.git',      branch: 'develop'
+  gem 'rdf-rdfa',           git: 'https://github.com/ruby-rdf/rdf-rdfa.git',            branch: 'develop'
   gem 'rdf-reasoner',       git: 'https://github.com/ruby-rdf/rdf-reasoner.git',        branch: 'develop'
   gem 'rdf-spec',           git: 'https://github.com/ruby-rdf/rdf-spec.git',            branch: 'develop'
   gem 'rdf-turtle',         git: 'https://github.com/ruby-rdf/rdf-turtle.git',          branch: 'develop'
