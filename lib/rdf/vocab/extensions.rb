@@ -447,13 +447,13 @@ module RDF
             description: "Generate a vocabulary using a special serialization.",
             parse: false,  # Only parse if there are input files, otherwise, uses vocabulary
             help: "gen-vocab --uri <vocabulary-URI> [--output format ttl|jsonld|html] [options] [files]\nGenerate a vocabulary from repository using a special serialization.",
-            lambda: ->(files, options) do
+            lambda: ->(files, **options) do
               $stdout.puts "Generate Vocabulary"
               raise ArgumentError, "Must specify vocabulary URI" unless options[:base_uri]
 
               # Parse input graphs, if repository is not already created
               if RDF::CLI.repository.empty? && !files.empty?
-                RDF::CLI.parse(files, options) do |reader|
+                RDF::CLI.parse(files, **options) do |reader|
                   RDF::CLI.repository << reader
                 end
               end
@@ -474,7 +474,7 @@ module RDF
               else
                 # Use whatever writer we find
                 writer = RDF::Writer.for(options[:output_format]) || RDF::NTriples::Writer
-                writer.new(out, options) do |w|
+                writer.new(out, **options) do |w|
                   if RDF::CLI.repository.empty?
                     vocab.each_statement {|s| w << s}
                   else
