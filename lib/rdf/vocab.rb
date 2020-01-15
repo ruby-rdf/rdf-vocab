@@ -249,6 +249,11 @@ module RDF
       ore:    {uri: "http://www.openarchives.org/ore/terms/"},
       org:    {uri: "http://www.w3.org/ns/org#"},
       owl:    {uri: "http://www.w3.org/2002/07/owl#", alias: true},
+      pcdm_models: {
+        uri: "http://pcdm.org/models#",
+        source: "https://raw.githubusercontent.com/duraspace/pcdm/master/models.rdf",
+        class_name: 'PCDMModels'
+      },
       pplan:  {uri: "http://purl.org/net/p-plan#"},
       premis: {uri: "http://www.loc.gov/premis/rdf/v1#", source: "http://www.loc.gov/premis/rdf/v1.rdf"},
       premis_event_type: {
