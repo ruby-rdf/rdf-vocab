@@ -16,16 +16,15 @@ module RDF
       # @return [Enumerator]
       alias_method :_orig_each, :each
       def each(&block)
-        # This is needed since all vocabulary classes are defined using
-        # Ruby's autoloading facility, meaning that `@@subclasses` will be
-        # empty until each subclass has been touched or require'd.
-        RDF::Vocab::VOCABS.each do |n, params|
-          begin
-            require "rdf/vocab/#{n}"
-          rescue LoadError
-            # Transient error
-            warn "Failed to load #{n}"
-          end
+        if self.equal?(Vocabulary)
+          # This is needed since all vocabulary classes are defined using
+          # Ruby's autoloading facility, meaning that `@@subclasses` will be
+          # empty until each subclass has been touched or require'd.
+          RDF::Vocab::VOCABS.each do |n, params|
+            clsname = params.fetch(:class_name, n.to_s.upcase).to_sym
+            RDF::Vocab.const_get(clsname) # Forces class to load
+          end unless @classes_loaded
+          @classes_loaded = true
         end
         _orig_each(&block)
       end
