@@ -11,6 +11,7 @@ gem 'rdf',
     branch: 'develop'
 
 group :development, :test do
+  gem 'ruby-prof'
   gem 'ebnf',               git: 'https://github.com/dryruby/ebnf.git',                 branch: 'develop'
   gem 'json-ld',            git: 'https://github.com/ruby-rdf/json-ld.git',             branch: 'develop'
   gem 'linkeddata',         git: 'https://github.com/ruby-rdf/linkeddata.git',          branch: 'develop'

@@ -118,7 +118,9 @@ See also <a href="http://blog.schema.org/2014/04/announcing-schemaorg-actions.ht
       subClassOf: "schema:Article".freeze,
       type: "rdfs:Class".freeze
     term :AggregateOffer,
-      comment: %(When a single product is associated with multiple offers \(for example, the same pair of shoes is offered by different merchants\), then AggregateOffer can be used.).freeze,
+      comment: %(When a single product is associated with multiple offers \(for example, the same pair of shoes is offered by different merchants\), then AggregateOffer can be used.<br/><br/>
+
+Note: AggregateOffers are normally expected to associate multiple offers that all share the same defined <a class="localLink" href="http://schema.org/businessFunction">businessFunction</a> value, or default to http://purl.org/goodrelations/v1#Sell if businessFunction is not explicitly defined.).freeze,
       label: "AggregateOffer".freeze,
       subClassOf: "schema:Offer".freeze,
       type: "rdfs:Class".freeze
@@ -1801,6 +1803,14 @@ Note: This type is for information about actual reservations, e.g. in confirmati
       label: "Float".freeze,
       subClassOf: "schema:Number".freeze,
       type: "rdfs:Class".freeze
+    term :FloorPlan,
+      comment: %(A FloorPlan is an explicit representation of a collection of similar accommodations, allowing the provision of common information \(room counts, sizes, layout diagrams\) and offers for rental or sale. In typical use, some <a class="localLink" href="http://schema.org/ApartmentComplex">ApartmentComplex</a> has an <a class="localLink" href="http://schema.org/accommodationFloorPlan">accommodationFloorPlan</a> which is a <a class="localLink" href="http://schema.org/FloorPlan">FloorPlan</a>.  A FloorPlan is always in the context of a particular place, either a larger <a class="localLink" href="http://schema.org/ApartmentComplex">ApartmentComplex</a> or a single <a class="localLink" href="http://schema.org/Apartment">Apartment</a>. The visual/spatial aspects of a floor plan \(i.e. room layout, <a href="https://en.wikipedia.org/wiki/Floor_plan">see wikipedia</a>\) can be indicated using <a class="localLink" href="http://schema.org/image">image</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2373".freeze,
+      label: "FloorPlan".freeze,
+      "schema:category": "issue-2373".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:Intangible".freeze,
+      type: "rdfs:Class".freeze
     term :Florist,
       comment: %(A florist.).freeze,
       label: "Florist".freeze,
@@ -2011,6 +2021,14 @@ The amount of a <a class="localLink" href="http://schema.org/Grant">Grant</a> is
       label: "GroceryStore".freeze,
       subClassOf: "schema:Store".freeze,
       type: "rdfs:Class".freeze
+    term :Guide,
+      comment: %(<a class="localLink" href="http://schema.org/Guide">Guide</a> is a page or article that recommend specific products or services, or aspects of a thing for a user to consider. A <a class="localLink" href="http://schema.org/Guide">Guide</a> may represent a Buying Guide and detail aspects of products or services for a user to consider. A <a class="localLink" href="http://schema.org/Guide">Guide</a> may represent a Product Guide and recommend specific products or services. A <a class="localLink" href="http://schema.org/Guide">Guide</a> may represent a Ranked List and recommend specific products or services with ranking.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2405".freeze,
+      label: "Guide".freeze,
+      "schema:category": "issue-2405".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:CreativeWork".freeze,
+      type: "rdfs:Class".freeze
     term :HVACBusiness,
       comment: %(A business that provide Heating, Ventilation and Air Conditioning services.).freeze,
       label: "HVACBusiness".freeze,
@@ -2205,7 +2223,7 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
     term :ImageGallery,
       comment: %(Web page type: Image gallery page.).freeze,
       label: "ImageGallery".freeze,
-      subClassOf: "schema:CollectionPage".freeze,
+      subClassOf: "schema:MediaGallery".freeze,
       type: "rdfs:Class".freeze
     term :ImageObject,
       comment: %(An image file.).freeze,
@@ -2597,6 +2615,11 @@ Note: This type is for information about actual reservations, e.g. in confirmati
       "schema:isPartOf": "http://health-lifesci.schema.org".freeze,
       subClassOf: "schema:DoseSchedule".freeze,
       type: "rdfs:Class".freeze
+    term :MediaGallery,
+      comment: %(Web page type: Media gallery page. A mixed-media page that can contains media such as images, videos, and other multimedia.).freeze,
+      label: "MediaGallery".freeze,
+      subClassOf: "schema:CollectionPage".freeze,
+      type: "rdfs:Class".freeze
     term :MediaObject,
       comment: %(A media object, such as an image, video, or audio object embedded in a web page or a downloadable dataset i.e. DataDownload. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song \(MusicRecording\) may have a music video \(VideoObject\), and a high and low bandwidth audio stream \(2 AudioObject's\).).freeze,
       label: "MediaObject".freeze,
@@ -2890,6 +2913,22 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
       comment: %(A sub-grouping of food or drink items in a menu. E.g. courses \(such as 'Dinner', 'Breakfast', etc.\), specific type of dishes \(such as 'Meat', 'Vegan', 'Drinks', etc.\), or some other classification made by the menu provider.).freeze,
       label: "MenuSection".freeze,
       subClassOf: "schema:CreativeWork".freeze,
+      type: "rdfs:Class".freeze
+    term :MerchantReturnEnumeration,
+      comment: %(MerchantReturnEnumeration enumerates several kinds of product return policy. Note that this structure may not capture all aspects of the policy.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
+      label: "MerchantReturnEnumeration".freeze,
+      "schema:category": "issue-2288".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:Enumeration".freeze,
+      type: "rdfs:Class".freeze
+    term :MerchantReturnPolicy,
+      comment: %(A MerchantReturnPolicy provides information about product return policies associated with an <a class="localLink" href="http://schema.org/Organization">Organization</a> or <a class="localLink" href="http://schema.org/Product">Product</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
+      label: "MerchantReturnPolicy".freeze,
+      "schema:category": "issue-2288".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:Intangible".freeze,
       type: "rdfs:Class".freeze
     term :Message,
       comment: %(A single message from a sender to one or more organizations or people.).freeze,
@@ -3217,6 +3256,8 @@ See also <a class="localLink" href="http://schema.org/StatisticalPopulation">Sta
       type: "rdfs:Class".freeze
     term :Offer,
       comment: %(An offer to transfer some rights to an item or to provide a service — for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.<br/><br/>
+
+Note: As the <a class="localLink" href="http://schema.org/businessFunction">businessFunction</a> property, which identifies the form of offer \(e.g. sell, lease, repair, dispose\), defaults to http://purl.org/goodrelations/v1#Sell; an Offer without a defined businessFunction value can be assumed to be an offer to sell.<br/><br/>
 
 For <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GTIN</a>-related fields, see <a href="http://www.gs1.org/barcodes/support/check_digit_calculator">Check Digit calculator</a> and <a href="http://www.gs1us.org/resources/standards/gtin-validation-guide">validation guide</a> from <a href="http://www.gs1.org/">GS1</a>.).freeze,
       "dc:source": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms".freeze,
@@ -3700,7 +3741,8 @@ Related actions:<br/><br/>
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
       label: "ProductReturnEnumeration".freeze,
       "schema:category": "issue-2288".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
+      "schema:isPartOf": "http://attic.schema.org".freeze,
+      "schema:supersededBy": "schema:MerchantReturnEnumeration".freeze,
       subClassOf: "schema:Enumeration".freeze,
       type: "rdfs:Class".freeze
     term :ProductReturnPolicy,
@@ -3708,7 +3750,8 @@ Related actions:<br/><br/>
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
       label: "ProductReturnPolicy".freeze,
       "schema:category": "issue-2288".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
+      "schema:isPartOf": "http://attic.schema.org".freeze,
+      "schema:supersededBy": "schema:MerchantReturnPolicy".freeze,
       subClassOf: "schema:Intangible".freeze,
       type: "rdfs:Class".freeze
     term :ProfessionalService,
@@ -3738,6 +3781,14 @@ Use properties from <a class="localLink" href="http://schema.org/Organization">O
       "schema:category": "issue-383".freeze,
       "schema:isPartOf": "http://pending.schema.org".freeze,
       subClassOf: "schema:Organization".freeze,
+      type: "rdfs:Class".freeze
+    term :PronounceableText,
+      comment: %(Data type: PronounceableText.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2108".freeze,
+      label: "PronounceableText".freeze,
+      "schema:category": "issue-2108".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:Text".freeze,
       type: "rdfs:Class".freeze
     term :Property,
       comment: %(A property, used to indicate attributes and relationships of some Thing; equivalent to rdf:Property.).freeze,
@@ -3949,6 +4000,14 @@ Related actions:<br/><br/>
       comment: %(A recipe. For dietary restrictions covered by the recipe, a few common restrictions are enumerated via <a class="localLink" href="http://schema.org/suitableForDiet">suitableForDiet</a>. The <a class="localLink" href="http://schema.org/keywords">keywords</a> property can also be used to add more detail.).freeze,
       label: "Recipe".freeze,
       subClassOf: "schema:HowTo".freeze,
+      type: "rdfs:Class".freeze
+    term :Recommendation,
+      comment: %(<a class="localLink" href="http://schema.org/Recommendation">Recommendation</a> is a type of <a class="localLink" href="http://schema.org/Review">Review</a> that suggests or proposes something as the best option or best course of action. Recommendations may be for products or services, or other concrete things, as in the case of a ranked list or product guide. A <a class="localLink" href="http://schema.org/Guide">Guide</a> may list multiple recommendations for different categories. For example, in a <a class="localLink" href="http://schema.org/Guide">Guide</a> about which TVs to buy, the author may have several <a class="localLink" href="http://schema.org/Recommendation">Recommendation</a>s.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2405".freeze,
+      label: "Recommendation".freeze,
+      "schema:category": "issue-2405".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:Review".freeze,
       type: "rdfs:Class".freeze
     term :RecommendedDoseSchedule,
       comment: %(A recommended dosing schedule for a drug or supplement as prescribed or recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.).freeze,
@@ -4208,7 +4267,7 @@ See also the <a href="/docs/hotels.html">dedicated document on the use of schema
       subClassOf: "schema:Article".freeze,
       type: "rdfs:Class".freeze
     term :Schedule,
-      comment: %(A schedule defines a repeating time period used to describe a regularly occurring <a class="localLink" href="http://schema.org/Event">Event</a>. At a minimum a schedule will specify <a class="localLink" href="http://schema.org/repeatFrequency">repeatFrequency</a> which describes the interval between occurences of the event. Additional information can be provided to specify the schedule more precisely. 
+      comment: %(A schedule defines a repeating time period used to describe a regularly occurring <a class="localLink" href="http://schema.org/Event">Event</a>. At a minimum a schedule will specify <a class="localLink" href="http://schema.org/repeatFrequency">repeatFrequency</a> which describes the interval between occurences of the event. Additional information can be provided to specify the schedule more precisely.
       This includes identifying the day\(s\) of the week or month when the recurring event will take place, in addition to its start and end time. Schedules may also
       have start and end dates to indicate when they are active, e.g. to define a limited calendar of events.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/1457".freeze,
@@ -4914,7 +4973,7 @@ Related actions:<br/><br/>
     term :VideoGallery,
       comment: %(Web page type: Video gallery page.).freeze,
       label: "VideoGallery".freeze,
-      subClassOf: "schema:CollectionPage".freeze,
+      subClassOf: "schema:MediaGallery".freeze,
       type: "rdfs:Class".freeze
     term :VideoGame,
       comment: %(A video game is an electronic game that involves human interaction with a user interface to generate visual feedback on a video device.).freeze,
@@ -5250,6 +5309,15 @@ Typical unit code\(s\): SEC for seconds<br/><br/>
       "schema:category": "issue-2373".freeze,
       "schema:isPartOf": "http://pending.schema.org".freeze,
       subPropertyOf: "schema:category".freeze,
+      type: "rdf:Property".freeze
+    property :accommodationFloorPlan,
+      comment: %(A floorplan of some <a class="localLink" href="http://schema.org/Accommodation">Accommodation</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2373".freeze,
+      domainIncludes: ["schema:Accommodation".freeze, "schema:Residence".freeze],
+      label: "accommodationFloorPlan".freeze,
+      rangeIncludes: "schema:FloorPlan".freeze,
+      "schema:category": "issue-2373".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :accountId,
       comment: %(The identifier for the account the payment will be applied to.).freeze,
@@ -5666,6 +5734,33 @@ Note: Publishers should be aware that applications designed to use specific sche
       label: "applicationCategory".freeze,
       rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
       type: "rdf:Property".freeze
+    property :applicationContact,
+      comment: %(Contact details for further information relevant to this job posting.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2396".freeze,
+      domainIncludes: "schema:JobPosting".freeze,
+      label: "applicationContact".freeze,
+      rangeIncludes: "schema:ContactPoint".freeze,
+      "schema:category": "issue-2396".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :applicationDeadline,
+      comment: %(The date at which the program stops collecting applications for the next enrollment cycle.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2419".freeze,
+      domainIncludes: "schema:EducationalOccupationalProgram".freeze,
+      label: "applicationDeadline".freeze,
+      rangeIncludes: "schema:Date".freeze,
+      "schema:category": "issue-2419".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :applicationStartDate,
+      comment: %(The date at which the program begins collecting applications for the next enrollment cycle.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2419".freeze,
+      domainIncludes: "schema:EducationalOccupationalProgram".freeze,
+      label: "applicationStartDate".freeze,
+      rangeIncludes: "schema:Date".freeze,
+      "schema:category": "issue-2419".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :applicationSubCategory,
       comment: %(Subcategory of the application, e.g. 'Arcade Game'.).freeze,
       domainIncludes: "schema:SoftwareApplication".freeze,
@@ -5891,9 +5986,11 @@ Note: Publishers should be aware that applications designed to use specific sche
       type: "rdf:Property".freeze
     property :audio,
       comment: %(An embedded audio object.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2420".freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       label: "audio".freeze,
-      rangeIncludes: ["schema:AudioObject".freeze, "schema:Clip".freeze],
+      rangeIncludes: ["schema:AudioObject".freeze, "schema:Clip".freeze, "schema:MusicRecording".freeze],
+      "schema:category": "issue-2420".freeze,
       type: "rdf:Property".freeze
     property :authenticator,
       comment: %(The Organization responsible for authenticating the user's subscription. For example, many media apps require a cable/satellite provider to authenticate your subscription before playing media.).freeze,
@@ -6399,11 +6496,11 @@ For example, in the URL http://www.starbucks.co.uk/store-locator/etc/detail/3047
       rangeIncludes: ["schema:MusicGroup".freeze, "schema:Person".freeze],
       type: "rdf:Property".freeze
     property :byDay,
-      comment: %(Defines the day\(s\) of the week on which a recurring <a class="localLink" href="http://schema.org/Event">Event</a> takes place).freeze,
+      comment: %(Defines the day\(s\) of the week on which a recurring <a class="localLink" href="http://schema.org/Event">Event</a> takes place. May be specified using either <a class="localLink" href="http://schema.org/DayOfWeek">DayOfWeek</a>, or alternatively <a class="localLink" href="http://schema.org/Text">Text</a> conforming to iCal's syntax for byDay recurrence rules).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/1457".freeze,
       domainIncludes: "schema:Schedule".freeze,
       label: "byDay".freeze,
-      rangeIncludes: "schema:DayOfWeek".freeze,
+      rangeIncludes: ["schema:DayOfWeek".freeze, "schema:Text".freeze],
       "schema:category": "issue-1457".freeze,
       "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
@@ -6510,7 +6607,7 @@ Note: You can use <a class="localLink" href="http://schema.org/minValue">minValu
     property :category,
       comment: %(A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/1741".freeze,
-      domainIncludes: ["schema:ActionAccessSpecification".freeze, "schema:Invoice".freeze, "schema:Offer".freeze, "schema:PhysicalActivity".freeze, "schema:Product".freeze, "schema:Service".freeze],
+      domainIncludes: ["schema:ActionAccessSpecification".freeze, "schema:Invoice".freeze, "schema:Offer".freeze, "schema:PhysicalActivity".freeze, "schema:Product".freeze, "schema:Recommendation".freeze, "schema:Service".freeze],
       label: "category".freeze,
       rangeIncludes: ["schema:PhysicalActivityCategory".freeze, "schema:Text".freeze, "schema:Thing".freeze],
       "schema:category": "issue-1741".freeze,
@@ -7195,8 +7292,8 @@ Use standard formats: <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 c
       rangeIncludes: ["schema:Date".freeze, "schema:DateTime".freeze],
       type: "rdf:Property".freeze
     property :datePosted,
-      comment: %(Publication date for the job posting.).freeze,
-      domainIncludes: "schema:JobPosting".freeze,
+      comment: %(Publication date of an online listing.).freeze,
+      domainIncludes: ["schema:JobPosting".freeze, "schema:RealEstateListing".freeze],
       label: "datePosted".freeze,
       rangeIncludes: "schema:Date".freeze,
       type: "rdf:Property".freeze
@@ -7204,7 +7301,7 @@ Use standard formats: <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 c
       comment: %(Date of first broadcast/publication.).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       label: "datePublished".freeze,
-      rangeIncludes: "schema:Date".freeze,
+      rangeIncludes: ["schema:Date".freeze, "schema:DateTime".freeze],
       type: "rdf:Property".freeze
     property :dateRead,
       comment: %(The date/time at which the message has been read by the recipient if a single recipient exists.).freeze,
@@ -7244,7 +7341,7 @@ Dateline summaries are oriented more towards human readers than towards automate
     property :dayOfWeek,
       comment: %(The day of the week for which these opening hours are valid.).freeze,
       "dc:source": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms".freeze,
-      domainIncludes: "schema:OpeningHoursSpecification".freeze,
+      domainIncludes: ["schema:EducationalOccupationalProgram".freeze, "schema:OpeningHoursSpecification".freeze],
       label: "dayOfWeek".freeze,
       rangeIncludes: "schema:DayOfWeek".freeze,
       type: "rdf:Property".freeze
@@ -7643,11 +7740,11 @@ Use standard formats: <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 c
       type: "rdf:Property".freeze
     property :duration,
       comment: %(The duration of the item \(movie, audio recording, event, etc.\) in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>.).freeze,
-      "dc:source": "https://github.com/schemaorg/schemaorg/issues/1698".freeze,
-      domainIncludes: ["schema:Audiobook".freeze, "schema:Event".freeze, "schema:MediaObject".freeze, "schema:Movie".freeze, "schema:MusicRecording".freeze, "schema:MusicRelease".freeze, "schema:QuantitativeValueDistribution".freeze],
+      "dc:source": ["https://github.com/schemaorg/schemaorg/issues/1457".freeze, "https://github.com/schemaorg/schemaorg/issues/1698".freeze],
+      domainIncludes: ["schema:Audiobook".freeze, "schema:Event".freeze, "schema:MediaObject".freeze, "schema:Movie".freeze, "schema:MusicRecording".freeze, "schema:MusicRelease".freeze, "schema:QuantitativeValueDistribution".freeze, "schema:Schedule".freeze],
       label: "duration".freeze,
       rangeIncludes: "schema:Duration".freeze,
-      "schema:category": "issue-1698".freeze,
+      "schema:category": ["issue-1457".freeze, "issue-1698".freeze],
       type: "rdf:Property".freeze
     property :durationOfWarranty,
       comment: %(The duration of the warranty promise. Common unitCode values are ANN for year, MON for months, or DAY for days.).freeze,
@@ -7713,6 +7810,15 @@ Use standard formats: <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 c
       label: "educationalLevel".freeze,
       rangeIncludes: ["schema:DefinedTerm".freeze, "schema:Text".freeze, "schema:URL".freeze],
       "schema:category": "issue-1779".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :educationalProgramMode,
+      comment: %(Similar to courseMode, The medium or means of delivery of the program as a whole. The value may either be a text label \(e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time"\) or a URL reference to a term from a controlled vocabulary \(e.g. https://ceds.ed.gov/element/001311#Asynchronous \).).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2419".freeze,
+      domainIncludes: "schema:EducationalOccupationalProgram".freeze,
+      label: "educationalProgramMode".freeze,
+      rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
+      "schema:category": "issue-2419".freeze,
       "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :educationalRole,
@@ -7805,6 +7911,15 @@ See also <a class="localLink" href="http://schema.org/ineligibleRegion">ineligib
       rangeIncludes: "schema:Person".freeze,
       "schema:supersededBy": "schema:employee".freeze,
       type: "rdf:Property".freeze
+    property :employerOverview,
+      comment: %(A description of the employer, career opportunities and work environment for this position.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2396".freeze,
+      domainIncludes: "schema:JobPosting".freeze,
+      label: "employerOverview".freeze,
+      rangeIncludes: "schema:Text".freeze,
+      "schema:category": "issue-2396".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :employmentType,
       comment: %(Type of employment \(e.g. full-time, part-time, contract, temporary, seasonal, internship\).).freeze,
       domainIncludes: "schema:JobPosting".freeze,
@@ -7859,7 +7974,7 @@ Unregistered or niche encoding and file formats can be indicated instead via the
       type: "rdf:Property".freeze
     property :endDate,
       comment: %(The end date and time of the item \(in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>\).).freeze,
-      domainIncludes: ["schema:CreativeWorkSeason".freeze, "schema:CreativeWorkSeries".freeze, "schema:DatedMoneySpecification".freeze, "schema:Event".freeze, "schema:Role".freeze],
+      domainIncludes: ["schema:CreativeWorkSeason".freeze, "schema:CreativeWorkSeries".freeze, "schema:DatedMoneySpecification".freeze, "schema:EducationalOccupationalProgram".freeze, "schema:Event".freeze, "schema:Role".freeze],
       label: "endDate".freeze,
       rangeIncludes: ["schema:Date".freeze, "schema:DateTime".freeze],
       type: "rdf:Property".freeze
@@ -8025,12 +8140,12 @@ Typical unit code\(s\): CMQ for cubic centimeter, LTR for liters, INQ for cubic 
       repeating events rather than data on the individual events themselves. For example, a website or application might prefer to publish a schedule for a weekly
       gym class rather than provide data on every event. A schedule could be processed by applications to add forthcoming events to a calendar. An <a class="localLink" href="http://schema.org/Event">Event</a> that
       is associated with a <a class="localLink" href="http://schema.org/Schedule">Schedule</a> using this property should not have <a class="localLink" href="http://schema.org/startDate">startDate</a> or <a class="localLink" href="http://schema.org/endDate">endDate</a> properties. These are instead defined within the associated
-      <a class="localLink" href="http://schema.org/Schedule">Schedule</a>, this avoids any ambiguity for clients using the data. The propery might have repeated values to specify different schedules, e.g. for different months
+      <a class="localLink" href="http://schema.org/Schedule">Schedule</a>, this avoids any ambiguity for clients using the data. The property might have repeated values to specify different schedules, e.g. for different months
       or seasons.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/1457".freeze,
-      domainIncludes: "schema:Schedule".freeze,
+      domainIncludes: "schema:Event".freeze,
       label: "eventSchedule".freeze,
-      rangeIncludes: "schema:Duration".freeze,
+      rangeIncludes: "schema:Schedule".freeze,
       "schema:category": "issue-1457".freeze,
       "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
@@ -8229,6 +8344,15 @@ Typical unit code\(s\): CMQ for cubic centimeter, LTR for liters, INQ for cubic 
       domainIncludes: "schema:SoftwareApplication".freeze,
       label: "fileSize".freeze,
       rangeIncludes: "schema:Text".freeze,
+      type: "rdf:Property".freeze
+    property :financialAidEligible,
+      comment: %(A financial aid type or program which students may use to pay for tuition or fees associated with the program.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2418".freeze,
+      domainIncludes: "schema:EducationalOccupationalProgram".freeze,
+      label: "financialAidEligible".freeze,
+      rangeIncludes: ["schema:DefinedTerm".freeze, "schema:Text".freeze],
+      "schema:category": "issue-2418".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :firstAppearance,
       comment: %(Indicates the first known occurence of a <a class="localLink" href="http://schema.org/Claim">Claim</a> in some <a class="localLink" href="http://schema.org/CreativeWork">CreativeWork</a>.).freeze,
@@ -8780,6 +8904,15 @@ Typical unit code\(s\): LTR for liters, GLL of US gallons, GLI for UK / imperial
       label: "hasMenuSection".freeze,
       rangeIncludes: "schema:MenuSection".freeze,
       type: "rdf:Property".freeze
+    property :hasMerchantReturnPolicy,
+      comment: %(Indicates a MerchantReturnPolicy that may be applicable.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
+      domainIncludes: ["schema:Organization".freeze, "schema:Product".freeze],
+      label: "hasMerchantReturnPolicy".freeze,
+      rangeIncludes: "schema:MerchantReturnPolicy".freeze,
+      "schema:category": "issue-2288".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :hasOccupation,
       comment: %(The Person's occupation. For past professions, use Role for expressing dates.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/1698".freeze,
@@ -8816,7 +8949,8 @@ Typical unit code\(s\): LTR for liters, GLL of US gallons, GLI for UK / imperial
       label: "hasProductReturnPolicy".freeze,
       rangeIncludes: "schema:ProductReturnPolicy".freeze,
       "schema:category": "issue-2288".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
+      "schema:isPartOf": "http://attic.schema.org".freeze,
+      "schema:supersededBy": "schema:hasMerchantReturnPolicy".freeze,
       type: "rdf:Property".freeze
     property :headline,
       comment: %(Headline of the article.).freeze,
@@ -9119,9 +9253,11 @@ Usage guidelines:<br/><br/>
       type: "rdf:Property".freeze
     property :inLanguage,
       comment: %(The language of the content or performance or used in an action. Please use one of the language codes from the <a href="http://tools.ietf.org/html/bcp47">IETF BCP 47 standard</a>. See also <a class="localLink" href="http://schema.org/availableLanguage">availableLanguage</a>.).freeze,
-      domainIncludes: ["schema:CommunicateAction".freeze, "schema:CreativeWork".freeze, "schema:Event".freeze, "schema:LinkRole".freeze, "schema:WriteAction".freeze],
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2382".freeze,
+      domainIncludes: ["schema:BroadcastService".freeze, "schema:CommunicateAction".freeze, "schema:CreativeWork".freeze, "schema:Event".freeze, "schema:LinkRole".freeze, "schema:PronounceableText".freeze, "schema:WriteAction".freeze],
       label: "inLanguage".freeze,
       rangeIncludes: ["schema:Language".freeze, "schema:Text".freeze],
+      "schema:category": "issue-2382".freeze,
       type: "rdf:Property".freeze
     property :inPlaylist,
       comment: %(The playlist to which this recording belongs.).freeze,
@@ -9132,7 +9268,7 @@ Usage guidelines:<br/><br/>
     property :inStoreReturnsOffered,
       comment: %(Are in-store returns offered?).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
-      domainIncludes: "schema:ProductReturnPolicy".freeze,
+      domainIncludes: "schema:MerchantReturnPolicy".freeze,
       label: "inStoreReturnsOffered".freeze,
       rangeIncludes: "schema:Boolean".freeze,
       "schema:category": "issue-2288".freeze,
@@ -9247,7 +9383,7 @@ Usage guidelines:<br/><br/>
       comment: %(The industry associated with the job position.).freeze,
       domainIncludes: "schema:JobPosting".freeze,
       label: "industry".freeze,
-      rangeIncludes: "schema:Text".freeze,
+      rangeIncludes: ["schema:DefinedTerm".freeze, "schema:Text".freeze],
       type: "rdf:Property".freeze
     property :ineligibleRegion,
       comment: %(The ISO 3166-1 \(ISO 3166-1 alpha-2\) or ISO 3166-2 code, the place, or the GeoShape for the geo-political region\(s\) for which the offer or delivery charge specification is not valid, e.g. a region where the transaction is not allowed.<br/><br/>
@@ -9342,9 +9478,11 @@ See also <a class="localLink" href="http://schema.org/eligibleRegion">eligibleRe
       type: "rdf:Property".freeze
     property :interactionStatistic,
       comment: %(The number of interactions for the CreativeWork using the WebSite or SoftwareApplication. The most specific child type of InteractionCounter should be used.).freeze,
-      domainIncludes: "schema:CreativeWork".freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2421".freeze,
+      domainIncludes: ["schema:CreativeWork".freeze, "schema:Organization".freeze, "schema:Person".freeze],
       label: "interactionStatistic".freeze,
       rangeIncludes: "schema:InteractionCounter".freeze,
+      "schema:category": "issue-2421".freeze,
       type: "rdf:Property".freeze
     property :interactionType,
       comment: %(The Action representing the type of interaction. For up votes, +1s, etc. use <a class="localLink" href="http://schema.org/LikeAction">LikeAction</a>. For down votes use <a class="localLink" href="http://schema.org/DislikeAction">DislikeAction</a>. Otherwise, use the most specific Action.).freeze,
@@ -9450,8 +9588,17 @@ See also <a class="localLink" href="http://schema.org/eligibleRegion">eligibleRe
       comment: %(Indicates an item or CreativeWork that this item, or CreativeWork \(in some sense\), is part of.).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       label: "isPartOf".freeze,
-      rangeIncludes: "schema:CreativeWork".freeze,
+      rangeIncludes: ["schema:CreativeWork".freeze, "schema:URL".freeze],
       "schema:inverseOf": "schema:hasPart".freeze,
+      type: "rdf:Property".freeze
+    property :isPlanForApartment,
+      comment: %(Indicates some accommodation that this floor plan describes.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2373".freeze,
+      domainIncludes: "schema:FloorPlan".freeze,
+      label: "isPlanForApartment".freeze,
+      rangeIncludes: "schema:Accommodation".freeze,
+      "schema:category": "issue-2373".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :isProprietary,
       comment: %(True if this item's name is a proprietary/brand name \(vs. generic name\).).freeze,
@@ -9466,6 +9613,15 @@ See also <a class="localLink" href="http://schema.org/eligibleRegion">eligibleRe
       domainIncludes: ["schema:Product".freeze, "schema:Service".freeze],
       label: "isRelatedTo".freeze,
       rangeIncludes: ["schema:Product".freeze, "schema:Service".freeze],
+      type: "rdf:Property".freeze
+    property :isResizable,
+      comment: %(Whether the 3DModel allows resizing. For example, room layout applications often do not allow 3DModel elements to be resized to reflect reality.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2394".freeze,
+      domainIncludes: "schema:3DModel".freeze,
+      label: "isResizable".freeze,
+      rangeIncludes: "schema:Boolean".freeze,
+      "schema:category": "issue-2394".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :isSimilarTo,
       comment: %(A pointer to another, functionally similar product \(or multiple products\).).freeze,
@@ -9579,10 +9735,11 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
       subPropertyOf: "schema:location".freeze,
       type: "rdf:Property".freeze
     property :itemOffered,
-      comment: %(The item being offered.).freeze,
+      comment: %(An item being offered \(or demanded\). The transactional nature of the offer or demand is documented using <a class="localLink" href="http://schema.org/businessFunction">businessFunction</a>, e.g. sell, lease etc. While several common expected types are listed explicitly in this definition, others can be used. Using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.).freeze,
       domainIncludes: ["schema:Demand".freeze, "schema:Offer".freeze],
       label: "itemOffered".freeze,
-      rangeIncludes: ["schema:Product".freeze, "schema:Service".freeze],
+      rangeIncludes: ["schema:AggregateOffer".freeze, "schema:CreativeWork".freeze, "schema:Event".freeze, "schema:MenuItem".freeze, "schema:Product".freeze, "schema:Service".freeze, "schema:Trip".freeze],
+      "schema:inverseOf": "schema:offers".freeze,
       type: "rdf:Property".freeze
     property :itemReviewed,
       comment: %(The item that is being reviewed/rated.).freeze,
@@ -9733,7 +9890,7 @@ Note: The order of elements in your mark-up is not sufficient for indicating the
     property :leaseLength,
       comment: %(Length of the lease for some <a class="localLink" href="http://schema.org/Accommodation">Accommodation</a>, either particular to some <a class="localLink" href="http://schema.org/Offer">Offer</a> or in some cases intrinsic to the property.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/2373".freeze,
-      domainIncludes: ["schema:Accommodation".freeze, "schema:RealEstateListing".freeze],
+      domainIncludes: ["schema:Accommodation".freeze, "schema:Offer".freeze, "schema:RealEstateListing".freeze],
       label: "leaseLength".freeze,
       rangeIncludes: ["schema:Duration".freeze, "schema:QuantitativeValue".freeze],
       "schema:category": "issue-2373".freeze,
@@ -10112,6 +10269,15 @@ Usage guidelines:<br/><br/>
       rangeIncludes: ["schema:CreativeWork".freeze, "schema:URL".freeze],
       "schema:inverseOf": "schema:mainEntity".freeze,
       type: "rdf:Property".freeze
+    property :maintainer,
+      comment: %(A maintainer of a <a class="localLink" href="http://schema.org/Dataset">Dataset</a>, software package \(<a class="localLink" href="http://schema.org/SoftwareApplication">SoftwareApplication</a>\), or other <a class="localLink" href="http://schema.org/Project">Project</a>. A maintainer is a <a class="localLink" href="http://schema.org/Person">Person</a> or <a class="localLink" href="http://schema.org/Organization">Organization</a> that manages contributions to, and/or publication of, some \(typically complex\) artifact. It is common for distributions of software and data to be based on "upstream" sources. When <a class="localLink" href="http://schema.org/maintainer">maintainer</a> is applied to a specific version of something e.g. a particular version or packaging of a <a class="localLink" href="http://schema.org/Dataset">Dataset</a>, it is always  possible that the upstream source has a different maintainer. The <a class="localLink" href="http://schema.org/isBasedOn">isBasedOn</a> property can be used to indicate such relationships between datasets to make the different maintenance roles clear. Similarly in the case of software, a package may have dedicated maintainers working on integration into software distributions such as Ubuntu, as well as upstream maintainers of the underlying work.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2311".freeze,
+      domainIncludes: "schema:CreativeWork".freeze,
+      label: "maintainer".freeze,
+      rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
+      "schema:category": "issue-2311".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :makesOffer,
       comment: %(A pointer to products or services offered by the organization or person.).freeze,
       "dc:source": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms".freeze,
@@ -10199,6 +10365,15 @@ Usage guidelines:<br/><br/>
       domainIncludes: ["schema:Event".freeze, "schema:Place".freeze],
       label: "maximumAttendeeCapacity".freeze,
       rangeIncludes: "schema:Integer".freeze,
+      type: "rdf:Property".freeze
+    property :maximumEnrollment,
+      comment: %(The maximum number of students who may be enrolled in the program.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2419".freeze,
+      domainIncludes: "schema:EducationalOccupationalProgram".freeze,
+      label: "maximumEnrollment".freeze,
+      rangeIncludes: "schema:Integer".freeze,
+      "schema:category": "issue-2419".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :maximumIntake,
       comment: %(Recommended intake of this supplement for a given population as defined by a specific recommending authority.).freeze,
@@ -10353,6 +10528,24 @@ If there are several <a class="localLink" href="http://schema.org/variableMeasur
       label: "merchant".freeze,
       rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
       "schema:supersededBy": "schema:seller".freeze,
+      type: "rdf:Property".freeze
+    property :merchantReturnDays,
+      comment: %(The merchantReturnDays property indicates the number of days \(from purchase\) within which relevant merchant return policy is applicable.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
+      domainIncludes: "schema:MerchantReturnPolicy".freeze,
+      label: "merchantReturnDays".freeze,
+      rangeIncludes: "schema:Integer".freeze,
+      "schema:category": "issue-2288".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :merchantReturnLink,
+      comment: %(Indicates a Web page or service by URL, for product return.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
+      domainIncludes: "schema:MerchantReturnPolicy".freeze,
+      label: "merchantReturnLink".freeze,
+      rangeIncludes: "schema:URL".freeze,
+      "schema:category": "issue-2288".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :messageAttachment,
       comment: %(A CreativeWork attached to the message.).freeze,
@@ -10618,12 +10811,30 @@ Typical unit code\(s\): KMT for kilometers, SMI for statute miles).freeze,
       label: "numTracks".freeze,
       rangeIncludes: "schema:Integer".freeze,
       type: "rdf:Property".freeze
+    property :numberOfAccommodationUnits,
+      comment: %(Indicates the total \(available plus unavailable\) number of accommodation units in an <a class="localLink" href="http://schema.org/ApartmentComplex">ApartmentComplex</a>, or the number of accommodation units for a specific <a class="localLink" href="http://schema.org/FloorPlan">FloorPlan</a> \(within its specific <a class="localLink" href="http://schema.org/ApartmentComplex">ApartmentComplex</a>\). See also <a class="localLink" href="http://schema.org/numberOfAvailableAccommodationUnits">numberOfAvailableAccommodationUnits</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2373".freeze,
+      domainIncludes: ["schema:ApartmentComplex".freeze, "schema:FloorPlan".freeze],
+      label: "numberOfAccommodationUnits".freeze,
+      rangeIncludes: "schema:QuantitativeValue".freeze,
+      "schema:category": "issue-2373".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :numberOfAirbags,
       comment: %(The number or type of airbags in the vehicle.).freeze,
       "dc:source": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group".freeze,
       domainIncludes: "schema:Vehicle".freeze,
       label: "numberOfAirbags".freeze,
       rangeIncludes: ["schema:Number".freeze, "schema:Text".freeze],
+      type: "rdf:Property".freeze
+    property :numberOfAvailableAccommodationUnits,
+      comment: %(Indicates the number of available accommodation units in an <a class="localLink" href="http://schema.org/ApartmentComplex">ApartmentComplex</a>, or the number of accommodation units for a specific <a class="localLink" href="http://schema.org/FloorPlan">FloorPlan</a> \(within its specific <a class="localLink" href="http://schema.org/ApartmentComplex">ApartmentComplex</a>\). See also <a class="localLink" href="http://schema.org/numberOfAccommodationUnits">numberOfAccommodationUnits</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2373".freeze,
+      domainIncludes: ["schema:ApartmentComplex".freeze, "schema:FloorPlan".freeze],
+      label: "numberOfAvailableAccommodationUnits".freeze,
+      rangeIncludes: "schema:QuantitativeValue".freeze,
+      "schema:category": "issue-2373".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :numberOfAxles,
       comment: %(The number of axles.<br/><br/>
@@ -10637,7 +10848,7 @@ Typical unit code\(s\): C62).freeze,
     property :numberOfBathroomsTotal,
       comment: %(The total integer number of bathrooms in a some <a class="localLink" href="http://schema.org/Accommodation">Accommodation</a>, following real estate conventions as <a href="https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field">documented in RESO</a>: "The simple sum of the number of bathrooms. For example for a property with two Full Bathrooms and one Half Bathroom, the Bathrooms Total Integer will be 3.". See also <a class="localLink" href="http://schema.org/numberOfRooms">numberOfRooms</a>.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/2373".freeze,
-      domainIncludes: "schema:Accommodation".freeze,
+      domainIncludes: ["schema:Accommodation".freeze, "schema:FloorPlan".freeze],
       label: "numberOfBathroomsTotal".freeze,
       rangeIncludes: "schema:Integer".freeze,
       "schema:category": "issue-2373".freeze,
@@ -10649,6 +10860,15 @@ Typical unit code\(s\): C62).freeze,
       domainIncludes: "schema:BedDetails".freeze,
       label: "numberOfBeds".freeze,
       rangeIncludes: "schema:Number".freeze,
+      type: "rdf:Property".freeze
+    property :numberOfCredits,
+      comment: %(The number of credits or units awarded by a Course or required to complete an EducationalOccupationalProgram.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2419".freeze,
+      domainIncludes: ["schema:Course".freeze, "schema:EducationalOccupationalProgram".freeze],
+      label: "numberOfCredits".freeze,
+      rangeIncludes: ["schema:Integer".freeze, "schema:StructuredValue".freeze],
+      "schema:category": "issue-2419".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :numberOfDoors,
       comment: %(The number of doors.<br/><br/>
@@ -10683,7 +10903,7 @@ Typical unit code\(s\): C62).freeze,
     property :numberOfFullBathrooms,
       comment: %(Number of full bathrooms - The total number of full and ¾ bathrooms in an <a class="localLink" href="http://schema.org/Accommodation">Accommodation</a>. This corresponds to the <a href="https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field">BathroomsFull field in RESO</a>.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/2373".freeze,
-      domainIncludes: "schema:Accommodation".freeze,
+      domainIncludes: ["schema:Accommodation".freeze, "schema:FloorPlan".freeze],
       label: "numberOfFullBathrooms".freeze,
       rangeIncludes: "schema:Number".freeze,
       "schema:category": "issue-2373".freeze,
@@ -10710,6 +10930,15 @@ Typical unit code\(s\): C62).freeze,
       label: "numberOfPages".freeze,
       rangeIncludes: "schema:Integer".freeze,
       type: "rdf:Property".freeze
+    property :numberOfPartialBathrooms,
+      comment: %(Number of partial bathrooms - The total number of half and ¼ bathrooms in an <a class="localLink" href="http://schema.org/Accommodation">Accommodation</a>. This corresponds to the <a href="https://ddwiki.reso.org/display/DDW17/BathroomsPartial+Field">BathroomsPartial field in RESO</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2373".freeze,
+      domainIncludes: ["schema:Accommodation".freeze, "schema:FloorPlan".freeze],
+      label: "numberOfPartialBathrooms".freeze,
+      rangeIncludes: "schema:Number".freeze,
+      "schema:category": "issue-2373".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :numberOfPlayers,
       comment: %(Indicate how many people can play this game \(minimum, maximum, or range\).).freeze,
       domainIncludes: ["schema:Game".freeze, "schema:VideoGameSeries".freeze],
@@ -10729,7 +10958,7 @@ Typical unit code\(s\): C62).freeze,
       comment: %(The number of rooms \(excluding bathrooms and closets\) of the accommodation or lodging business.
 Typical unit code\(s\): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.).freeze,
       "dc:source": "https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology".freeze,
-      domainIncludes: ["schema:Accommodation".freeze, "schema:Apartment".freeze, "schema:House".freeze, "schema:LodgingBusiness".freeze, "schema:SingleFamilyResidence".freeze, "schema:Suite".freeze],
+      domainIncludes: ["schema:Accommodation".freeze, "schema:Apartment".freeze, "schema:FloorPlan".freeze, "schema:House".freeze, "schema:LodgingBusiness".freeze, "schema:SingleFamilyResidence".freeze, "schema:Suite".freeze],
       label: "numberOfRooms".freeze,
       rangeIncludes: ["schema:Number".freeze, "schema:QuantitativeValue".freeze],
       type: "rdf:Property".freeze
@@ -10824,12 +11053,13 @@ Note: for historical reasons, any textual label and formal code provided as a li
       "schema:inverseOf": "schema:makesOffer".freeze,
       type: "rdf:Property".freeze
     property :offers,
-      comment: %(An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.).freeze,
+      comment: %(An offer to provide this item&#x2014;for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event. Use <a class="localLink" href="http://schema.org/businessFunction">businessFunction</a> to indicate the kind of transaction offered, i.e. sell, lease, etc. This property can also be used to describe a <a class="localLink" href="http://schema.org/Demand">Demand</a>. While this property is listed as expected on a number of common types, it can be used in others. In that case, using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/2289".freeze,
       domainIncludes: ["schema:AggregateOffer".freeze, "schema:CreativeWork".freeze, "schema:EducationalOccupationalProgram".freeze, "schema:Event".freeze, "schema:MenuItem".freeze, "schema:Product".freeze, "schema:Service".freeze, "schema:Trip".freeze],
       label: "offers".freeze,
-      rangeIncludes: "schema:Offer".freeze,
+      rangeIncludes: ["schema:Demand".freeze, "schema:Offer".freeze],
       "schema:category": "issue-2289".freeze,
+      "schema:inverseOf": "schema:itemOffered".freeze,
       type: "rdf:Property".freeze
     property :offersPrescriptionByMail,
       comment: %(Whether prescriptions can be delivered by mail.).freeze,
@@ -11326,6 +11556,15 @@ Typical unit code\(s\): KGM for kilogram, LBR for pound<br/><br/>
       rangeIncludes: "schema:Text".freeze,
       "schema:isPartOf": "http://health-lifesci.schema.org".freeze,
       type: "rdf:Property".freeze
+    property :phoneticText,
+      comment: %(Representation of a text <a class="localLink" href="http://schema.org/textValue">textValue</a> using the specified <a class="localLink" href="http://schema.org/speechToTextMarkup">speechToTextMarkup</a>. For example the city name of Houston in IPA: /ˈhjuːstən/.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2108".freeze,
+      domainIncludes: "schema:PronounceableText".freeze,
+      label: "phoneticText".freeze,
+      rangeIncludes: "schema:Text".freeze,
+      "schema:category": "issue-2108".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :photo,
       comment: %(A photograph of this place.).freeze,
       domainIncludes: "schema:Place".freeze,
@@ -11339,6 +11578,15 @@ Typical unit code\(s\): KGM for kilogram, LBR for pound<br/><br/>
       label: "photos".freeze,
       rangeIncludes: ["schema:ImageObject".freeze, "schema:Photograph".freeze],
       "schema:supersededBy": "schema:photo".freeze,
+      type: "rdf:Property".freeze
+    property :physicalRequirement,
+      comment: %(A description of the types of physical activity associated with the job. Defined terms such as those in O*net may be used, but note that there is no way to specify the level of ability as well as its nature when using a defined term.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2384".freeze,
+      domainIncludes: "schema:JobPosting".freeze,
+      label: "physicalRequirement".freeze,
+      rangeIncludes: ["schema:DefinedTerm".freeze, "schema:Text".freeze, "schema:URL".freeze],
+      "schema:category": "issue-2384".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :physiologicalBenefits,
       comment: %(Specific physiologic benefits associated to the plan.).freeze,
@@ -11658,7 +11906,8 @@ Use standard formats: <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 c
       label: "productReturnDays".freeze,
       rangeIncludes: "schema:Integer".freeze,
       "schema:category": "issue-2288".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
+      "schema:isPartOf": "http://attic.schema.org".freeze,
+      "schema:supersededBy": "schema:merchantReturnDays".freeze,
       type: "rdf:Property".freeze
     property :productReturnLink,
       comment: %(Indicates a Web page or service by URL, for product return.).freeze,
@@ -11667,7 +11916,8 @@ Use standard formats: <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 c
       label: "productReturnLink".freeze,
       rangeIncludes: "schema:URL".freeze,
       "schema:category": "issue-2288".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
+      "schema:isPartOf": "http://attic.schema.org".freeze,
+      "schema:supersededBy": "schema:merchantReturnLink".freeze,
       type: "rdf:Property".freeze
     property :productSupported,
       comment: %(The product or service this support contact point is related to \(such as product support for a particular product line\). This can be a specific product or product line \(e.g. "iPhone"\) or a general category of products or services \(e.g. "smartphones"\).).freeze,
@@ -12070,7 +12320,7 @@ Usage guidelines:<br/><br/>
     property :refundType,
       comment: %(A refundType, from an enumerated list.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
-      domainIncludes: "schema:ProductReturnPolicy".freeze,
+      domainIncludes: "schema:MerchantReturnPolicy".freeze,
       label: "refundType".freeze,
       rangeIncludes: "schema:RefundTypeEnumeration".freeze,
       "schema:category": "issue-2288".freeze,
@@ -12358,9 +12608,9 @@ Usage guidelines:<br/><br/>
       subPropertyOf: "schema:result".freeze,
       type: "rdf:Property".freeze
     property :returnFees,
-      comment: %(Indicates \(via enumerated options\) the return fees policy for a ProductReturnPolicy).freeze,
+      comment: %(Indicates \(via enumerated options\) the return fees policy for a MerchantReturnPolicy).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
-      domainIncludes: "schema:ProductReturnPolicy".freeze,
+      domainIncludes: "schema:MerchantReturnPolicy".freeze,
       label: "returnFees".freeze,
       rangeIncludes: "schema:ReturnFeesEnumeration".freeze,
       "schema:category": "issue-2288".freeze,
@@ -12369,9 +12619,9 @@ Usage guidelines:<br/><br/>
     property :returnPolicyCategory,
       comment: %(A returnPolicyCategory expresses at most one of several enumerated kinds of return.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
-      domainIncludes: "schema:ProductReturnPolicy".freeze,
+      domainIncludes: "schema:MerchantReturnPolicy".freeze,
       label: "returnPolicyCategory".freeze,
-      rangeIncludes: "schema:ProductReturnEnumeration".freeze,
+      rangeIncludes: "schema:MerchantReturnEnumeration".freeze,
       "schema:category": "issue-2288".freeze,
       "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
@@ -12384,7 +12634,7 @@ Usage guidelines:<br/><br/>
     property :reviewAspect,
       comment: %(This Review or Rating is relevant to this part or facet of the itemReviewed.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/1689".freeze,
-      domainIncludes: ["schema:Rating".freeze, "schema:Review".freeze],
+      domainIncludes: ["schema:Guide".freeze, "schema:Rating".freeze, "schema:Review".freeze],
       label: "reviewAspect".freeze,
       rangeIncludes: "schema:Text".freeze,
       "schema:category": "issue-1689".freeze,
@@ -12533,6 +12783,15 @@ Typical unit code\(s\): KGM for kilogram, LBR for pound<br/><br/>
       label: "saturatedFatContent".freeze,
       rangeIncludes: "schema:Mass".freeze,
       type: "rdf:Property".freeze
+    property :scheduleTimezone,
+      comment: %(Indicates the timezone for which the time\(s\) indicated in the <a class="localLink" href="http://schema.org/Schedule">Schedule</a> are given. The value provided should be among those listed in the IANA Time Zone Database.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/1457".freeze,
+      domainIncludes: "schema:Schedule".freeze,
+      label: "scheduleTimezone".freeze,
+      rangeIncludes: "schema:Text".freeze,
+      "schema:category": "issue-1457".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :scheduledPaymentDate,
       comment: %(The date the invoice is scheduled to be paid.).freeze,
       domainIncludes: "schema:Invoice".freeze,
@@ -12595,7 +12854,7 @@ Typical unit code\(s\): KGM for kilogram, LBR for pound<br/><br/>
       comment: %(A season in a media series.).freeze,
       domainIncludes: ["schema:RadioSeries".freeze, "schema:TVSeries".freeze, "schema:VideoGameSeries".freeze],
       label: "season".freeze,
-      rangeIncludes: "schema:CreativeWorkSeason".freeze,
+      rangeIncludes: ["schema:CreativeWorkSeason".freeze, "schema:URL".freeze],
       "schema:supersededBy": "schema:containsSeason".freeze,
       subPropertyOf: "schema:hasPart".freeze,
       type: "rdf:Property".freeze
@@ -12654,6 +12913,15 @@ Typical unit code\(s\): C62 for persons).freeze,
       rangeIncludes: "schema:MedicalTherapy".freeze,
       "schema:isPartOf": "http://health-lifesci.schema.org".freeze,
       type: "rdf:Property".freeze
+    property :securityClearanceRequirement,
+      comment: %(A description of any security clearance requirements of the job.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2384".freeze,
+      domainIncludes: "schema:JobPosting".freeze,
+      label: "securityClearanceRequirement".freeze,
+      rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
+      "schema:category": "issue-2384".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :securityScreening,
       comment: %(The type of security screening the passenger is subject to.).freeze,
       domainIncludes: "schema:FlightReservation".freeze,
@@ -12680,6 +12948,15 @@ Typical unit code\(s\): C62 for persons).freeze,
       label: "sender".freeze,
       rangeIncludes: ["schema:Audience".freeze, "schema:Organization".freeze, "schema:Person".freeze],
       subPropertyOf: "schema:participant".freeze,
+      type: "rdf:Property".freeze
+    property :sensoryRequirement,
+      comment: %(A description of any sensory requirements and levels necessary to function on the job, including hearing and vision. Defined terms such as those in O*net may be used, but note that there is no way to specify the level of ability as well as its nature when using a defined term.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2384".freeze,
+      domainIncludes: "schema:JobPosting".freeze,
+      label: "sensoryRequirement".freeze,
+      rangeIncludes: ["schema:DefinedTerm".freeze, "schema:Text".freeze, "schema:URL".freeze],
+      "schema:category": "issue-2384".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :sensoryUnit,
       comment: %(The neurological pathway extension that inputs and sends information to the brain or spinal cord.).freeze,
@@ -12972,6 +13249,15 @@ Use this to explicitly override general opening hours brought in scope by <a cla
       label: "specialty".freeze,
       rangeIncludes: "schema:Specialty".freeze,
       type: "rdf:Property".freeze
+    property :speechToTextMarkup,
+      comment: %(Form of markup used. eg. <a href="https://www.w3.org/TR/speech-synthesis11">SSML</a> or <a href="https://www.wikidata.org/wiki/Property:P898">IPA</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2108".freeze,
+      domainIncludes: "schema:PronounceableText".freeze,
+      label: "speechToTextMarkup".freeze,
+      rangeIncludes: "schema:Text".freeze,
+      "schema:category": "issue-2108".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :speed,
       comment: %(The speed range of the vehicle. If the vehicle is powered by an engine, the upper limit of the speed range \(indicated by <a class="localLink" href="http://schema.org/maxValue">maxValue</a> should be the maximum speed achievable under regular conditions.<br/><br/>
 
@@ -13002,9 +13288,12 @@ Typical unit code\(s\): KMH for km/h, HM for mile per hour \(0.447 04 m/s\), KNT
       type: "rdf:Property".freeze
     property :sport,
       comment: %(A type of sport \(e.g. Baseball\).).freeze,
-      domainIncludes: "schema:SportsOrganization".freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/1951".freeze,
+      domainIncludes: ["schema:SportsEvent".freeze, "schema:SportsOrganization".freeze],
       label: "sport".freeze,
       rangeIncludes: ["schema:Text".freeze, "schema:URL".freeze],
+      "schema:category": "issue-1951".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :sportsActivityLocation,
       comment: %(A sub property of location. The sports activity location where this action occurred.).freeze,
@@ -13056,7 +13345,7 @@ Typical unit code\(s\): KMH for km/h, HM for mile per hour \(0.447 04 m/s\), KNT
       type: "rdf:Property".freeze
     property :startDate,
       comment: %(The start date and time of the item \(in <a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601 date format</a>\).).freeze,
-      domainIncludes: ["schema:CreativeWorkSeason".freeze, "schema:CreativeWorkSeries".freeze, "schema:DatedMoneySpecification".freeze, "schema:Event".freeze, "schema:Role".freeze],
+      domainIncludes: ["schema:CreativeWorkSeason".freeze, "schema:CreativeWorkSeries".freeze, "schema:DatedMoneySpecification".freeze, "schema:EducationalOccupationalProgram".freeze, "schema:Event".freeze, "schema:Role".freeze],
       label: "startDate".freeze,
       rangeIncludes: ["schema:Date".freeze, "schema:DateTime".freeze],
       type: "rdf:Property".freeze
@@ -13437,6 +13726,15 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
       "schema:category": "issue-894".freeze,
       "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
+    property :termDuration,
+      comment: %(The amount of time in a term as defined by the institution. A term is a length of time where students take one or more classes. Semesters and quarters are common units for term.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2419".freeze,
+      domainIncludes: "schema:EducationalOccupationalProgram".freeze,
+      label: "termDuration".freeze,
+      rangeIncludes: "schema:Duration".freeze,
+      "schema:category": "issue-2419".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :termsOfService,
       comment: %(Human-readable terms of service documentation.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/1423".freeze,
@@ -13446,11 +13744,29 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
       "schema:category": "issue-1423".freeze,
       "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
+    property :termsPerYear,
+      comment: %(The number of times terms of study are offered per year. Semesters and quarters are common units for term. For example, if the student can only take 2 semesters for the program in one year, then termsPerYear should be 2.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2419".freeze,
+      domainIncludes: "schema:EducationalOccupationalProgram".freeze,
+      label: "termsPerYear".freeze,
+      rangeIncludes: "schema:Number".freeze,
+      "schema:category": "issue-2419".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :text,
       comment: %(The textual content of this CreativeWork.).freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       label: "text".freeze,
       rangeIncludes: "schema:Text".freeze,
+      type: "rdf:Property".freeze
+    property :textValue,
+      comment: %(Text value being annotated.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2108".freeze,
+      domainIncludes: "schema:PronounceableText".freeze,
+      label: "textValue".freeze,
+      rangeIncludes: "schema:Text".freeze,
+      "schema:category": "issue-2108".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :thumbnail,
       comment: %(Thumbnail image for an image or video.).freeze,
@@ -13487,6 +13803,15 @@ Open-ended date ranges can be written with ".." in place of the end date. For ex
       domainIncludes: "schema:Ticket".freeze,
       label: "ticketedSeat".freeze,
       rangeIncludes: "schema:Seat".freeze,
+      type: "rdf:Property".freeze
+    property :timeOfDay,
+      comment: %(The time of day the program normally runs. For example, "evenings".).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2419".freeze,
+      domainIncludes: "schema:EducationalOccupationalProgram".freeze,
+      label: "timeOfDay".freeze,
+      rangeIncludes: "schema:Text".freeze,
+      "schema:category": "issue-2419".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :timeRequired,
       comment: %(Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'PT30M', 'PT1H25M'.).freeze,
@@ -13745,6 +14070,15 @@ Typical unit code\(s\): KGM for kilogram, LBR for pound
       domainIncludes: ["schema:CreativeWork".freeze, "schema:Event".freeze],
       label: "typicalAgeRange".freeze,
       rangeIncludes: "schema:Text".freeze,
+      type: "rdf:Property".freeze
+    property :typicalCreditsPerTerm,
+      comment: %(The number of credits or units a full-time student would be expected to take in 1 term however 'term' is defined by the institution.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2419".freeze,
+      domainIncludes: "schema:EducationalOccupationalProgram".freeze,
+      label: "typicalCreditsPerTerm".freeze,
+      rangeIncludes: ["schema:Integer".freeze, "schema:StructuredValue".freeze],
+      "schema:category": "issue-2419".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :typicalTest,
       comment: %(A medical test typically performed given this condition.).freeze,
@@ -14266,6 +14600,15 @@ Typical unit code\(s\): CMT for centimeters, MTR for meters, INH for inches, FOT
       label: "xpath".freeze,
       rangeIncludes: "schema:XPathType".freeze,
       "schema:category": "issue-1389".freeze,
+      type: "rdf:Property".freeze
+    property :yearBuilt,
+      comment: %(The year an <a class="localLink" href="http://schema.org/Accommodation">Accommodation</a> was constructed. This corresponds to the <a href="https://ddwiki.reso.org/display/DDW17/YearBuilt+Field">YearBuilt field in RESO</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2373".freeze,
+      domainIncludes: "schema:Accommodation".freeze,
+      label: "yearBuilt".freeze,
+      rangeIncludes: "schema:Number".freeze,
+      "schema:category": "issue-2373".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :yearlyRevenue,
       comment: %(The size of the business in annual revenue.).freeze,
@@ -14888,6 +15231,34 @@ Typical unit code\(s\): CMT for centimeters, MTR for meters, INH for inches, FOT
       label: "MedicalResearcher".freeze,
       "schema:isPartOf": "http://health-lifesci.schema.org".freeze,
       type: "schema:MedicalAudience".freeze
+    term :MerchantReturnFiniteReturnWindow,
+      comment: %(MerchantReturnFiniteReturnWindow: there is a finite window for product returns.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
+      label: "MerchantReturnFiniteReturnWindow".freeze,
+      "schema:category": "issue-2288".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "schema:MerchantReturnEnumeration".freeze
+    term :MerchantReturnNotPermitted,
+      comment: %(MerchantReturnNotPermitted: product returns are not permitted.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
+      label: "MerchantReturnNotPermitted".freeze,
+      "schema:category": "issue-2288".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "schema:MerchantReturnEnumeration".freeze
+    term :MerchantReturnUnlimitedWindow,
+      comment: %(MerchantReturnUnlimitedWindow: there is an unlimited window for product returns.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
+      label: "MerchantReturnUnlimitedWindow".freeze,
+      "schema:category": "issue-2288".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "schema:MerchantReturnEnumeration".freeze
+    term :MerchantReturnUnspecified,
+      comment: %(MerchantReturnUnspecified: a product return policy is not specified here.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
+      label: "MerchantReturnUnspecified".freeze,
+      "schema:category": "issue-2288".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "schema:MerchantReturnEnumeration".freeze
     term :Midwifery,
       comment: %(A nurse-like health profession that deals with pregnancy, childbirth, and the postpartum period \(including care of the newborn\), besides sexual and reproductive health of women throughout their lives.).freeze,
       label: "Midwifery".freeze,
@@ -15206,7 +15577,7 @@ Typical unit code\(s\): CMT for centimeters, MTR for meters, INH for inches, FOT
       label: "PotentialActionStatus".freeze,
       type: "schema:ActionStatusType".freeze
     term :PreOrder,
-      comment: %(Indicates that the item is available for pre-order, but will be delivered when generally available.).freeze,
+      comment: %(Indicates that the item is available for pre-order.).freeze,
       label: "PreOrder".freeze,
       type: "schema:ItemAvailability".freeze
     term :PreSale,
@@ -15236,28 +15607,32 @@ Typical unit code\(s\): CMT for centimeters, MTR for meters, INH for inches, FOT
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
       label: "ProductReturnFiniteReturnWindow".freeze,
       "schema:category": "issue-2288".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
+      "schema:isPartOf": "http://attic.schema.org".freeze,
+      "schema:supersededBy": "schema:MerchantReturnFiniteReturnWindow".freeze,
       type: "schema:ProductReturnEnumeration".freeze
     term :ProductReturnNotPermitted,
       comment: %(ProductReturnNotPermitted: product returns are not permitted.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
       label: "ProductReturnNotPermitted".freeze,
       "schema:category": "issue-2288".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
+      "schema:isPartOf": "http://attic.schema.org".freeze,
+      "schema:supersededBy": "schema:MerchantReturnNotPermitted".freeze,
       type: "schema:ProductReturnEnumeration".freeze
     term :ProductReturnUnlimitedWindow,
       comment: %(ProductReturnUnlimitedWindow: there is an unlimited window for product returns.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
       label: "ProductReturnUnlimitedWindow".freeze,
       "schema:category": "issue-2288".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
+      "schema:isPartOf": "http://attic.schema.org".freeze,
+      "schema:supersededBy": "schema:MerchantReturnUnlimitedWindow".freeze,
       type: "schema:ProductReturnEnumeration".freeze
     term :ProductReturnUnspecified,
       comment: %(ProductReturnUnspecified: a product return policy is not specified here.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/2288".freeze,
       label: "ProductReturnUnspecified".freeze,
       "schema:category": "issue-2288".freeze,
-      "schema:isPartOf": "http://pending.schema.org".freeze,
+      "schema:isPartOf": "http://attic.schema.org".freeze,
+      "schema:supersededBy": "schema:MerchantReturnUnspecified".freeze,
       type: "schema:ProductReturnEnumeration".freeze
     term :PrognosisHealthAspect,
       comment: %(Typical progression and happenings of life course of the topic.).freeze,

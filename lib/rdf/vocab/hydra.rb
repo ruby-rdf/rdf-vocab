@@ -125,7 +125,7 @@ module RDF::Vocab
     # Property definitions
     property :description,
       comment: %(A description.).freeze,
-      domainIncludes: ["hydra:ApiDocumentation".freeze, "hydra:Class".freeze, "hydra:Link".freeze, "hydra:Operation".freeze, "hydra:Status".freeze, "hydra:SupportedProperty".freeze],
+      domainIncludes: ["hydra:ApiDocumentation".freeze, "hydra:Class".freeze, "hydra:Link".freeze, "hydra:Operation".freeze, "hydra:Status".freeze, "hydra:SupportedProperty".freeze, "hydra:TemplatedLink".freeze],
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "description".freeze,
       range: "xsd:string".freeze,
@@ -243,7 +243,7 @@ module RDF::Vocab
       "vs:term_status": "testing".freeze
     property :title,
       comment: %(A title, often used along with a description.).freeze,
-      domainIncludes: ["hydra:ApiDocumentation".freeze, "hydra:Class".freeze, "hydra:Link".freeze, "hydra:Operation".freeze, "hydra:Status".freeze, "hydra:SupportedProperty".freeze],
+      domainIncludes: ["hydra:ApiDocumentation".freeze, "hydra:Class".freeze, "hydra:Link".freeze, "hydra:Operation".freeze, "hydra:Status".freeze, "hydra:SupportedProperty".freeze, "hydra:TemplatedLink".freeze],
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "title".freeze,
       range: "xsd:string".freeze,
@@ -438,7 +438,7 @@ module RDF::Vocab
       "vs:term_status": "testing".freeze
     term :supportedOperation,
       comment: %(An operation supported by instances of the specific Hydra class or the target of the Hydra link).freeze,
-      domainIncludes: ["hydra:Class".freeze, "hydra:Link".freeze],
+      domainIncludes: ["hydra:Class".freeze, "hydra:Link".freeze, "hydra:TemplatedLink".freeze],
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "supported operation".freeze,
       range: "hydra:Operation".freeze,
