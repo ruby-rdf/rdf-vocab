@@ -128,7 +128,8 @@ module RDF
       fcrepo4: {
         uri: "http://fedora.info/definitions/v4/repository#",
         class_name: "Fcrepo4",
-        source: "http://fedora.info/definitions/v4/2015/07/24/repository"
+        source: "http://fedora.info/definitions/v4/2015/07/24/repository",
+        skip: true  # Not returning triples
       },
       foaf:   {uri: "http://xmlns.com/foaf/0.1/"},
       geo:    {uri: "http://www.w3.org/2003/01/geo/wgs84_pos#"},
@@ -254,7 +255,11 @@ module RDF
         source: "https://raw.githubusercontent.com/duraspace/pcdm/master/models.rdf"
       },
       pplan:  {uri: "http://purl.org/net/p-plan#"},
-      premis: {uri: "http://www.loc.gov/premis/rdf/v1#", source: "http://www.loc.gov/premis/rdf/v1.rdf"},
+      premis: {
+        uri: "http://www.loc.gov/premis/rdf/v1#",
+        source: "http://www.loc.gov/premis/rdf/v1.rdf",
+        skip: true  # Not returning triples
+      },
       premis_event_type: {
         uri: "http://id.loc.gov/vocabulary/preservation/eventType/",
         source: "http://id.loc.gov/vocabulary/preservation/eventType",
