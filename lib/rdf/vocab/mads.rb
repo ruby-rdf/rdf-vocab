@@ -30,9 +30,9 @@ module RDF::Vocab
       "dc:modified": "2019-01-04T17:01:03.065-05:00".freeze,
       label: "MADS/RDF (Metadata Authority Description Schema in RDF)".freeze,
       "owl:ontologyIRI": "mads:".freeze,
-      "owl:priorVersion": "http://id.loc.gov/ontologies/madsrdf/v1-3-0".freeze,
-      "owl:versionIRI": "http://id.loc.gov/ontologies/madsrdf/v1-3-1".freeze,
-      "owl:versionInfo": "1.3.1".freeze,
+      "owl:priorVersion": "http://id.loc.gov/ontologies/madsrdf/v1-3-1".freeze,
+      "owl:versionIRI": "http://id.loc.gov/ontologies/madsrdf/v1-4-0".freeze,
+      "owl:versionInfo": "1.4.0".freeze,
       type: "owl:Ontology".freeze
 
     # Class definitions
@@ -336,7 +336,7 @@ module RDF::Vocab
       comment: %(This relates an Authority or Variant to its administrative metadata, which is, minimimally, a Class defined outside of the MADS/RDF namespace. The RecordInfo Class from the RecordInfo ontology is recommended.).freeze,
       domain: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70196556549360".freeze, "_:g70196556569000".freeze, "_:g70196556563900".freeze)
+          unionOf: list("_:g70091716318520".freeze, "_:g70091716332600".freeze, "_:g70091794584860".freeze)
         ),
       label: "Administrative Metadata".freeze,
       type: "owl:ObjectProperty".freeze
@@ -418,7 +418,7 @@ module RDF::Vocab
       comment: %(A code is a string of characters associated with a the authoritative or deprecated label. It may record an historical notation once used to uniquely identify a concept.).freeze,
       domain: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70196426469140".freeze, "_:g70196426482940".freeze)
+          unionOf: list("_:g70091717845900".freeze, "_:g70091717865180".freeze)
         ),
       label: "Code".freeze,
       subPropertyOf: "skos:notation".freeze,
@@ -429,7 +429,7 @@ module RDF::Vocab
       label: "Component List".freeze,
       range: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70196426898260".freeze, "_:g70196426915760".freeze)
+          unionOf: list("_:g70091718079820".freeze, "_:g70091718098380".freeze)
         ),
       type: "owl:ObjectProperty".freeze
     property :country,
@@ -484,7 +484,7 @@ module RDF::Vocab
       label: "Element List".freeze,
       range: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70196557222280".freeze, "_:g70196557241860".freeze)
+          unionOf: list("_:g70091312121580".freeze, "_:g70091717685740".freeze)
         ),
       type: "owl:ObjectProperty".freeze
     property :elementValue,
@@ -594,6 +594,11 @@ module RDF::Vocab
       range: "mads:CorporateName".freeze,
       subPropertyOf: "mads:hasRelatedAuthority".freeze,
       type: "owl:ObjectProperty".freeze
+    property :hasDemonym,
+      comment: %(Establishes a relationship between an Authority that represents the demonym - Japanese or Greek, for example - and an Authority that represents the Geographic place - Japan or Greece, respectively - associated with the demonym.).freeze,
+      inverseOf: "mads:isDemonymFor".freeze,
+      label: "Has Demonym".freeze,
+      type: "owl:ObjectProperty".freeze
     property :hasEarlierEstablishedForm,
       comment: %(Used to reference a resource that was an earlier form. This is Related type='earlier' in MADS XML.).freeze,
       inverseOf: "mads:hasLaterEstablishedForm".freeze,
@@ -634,7 +639,7 @@ module RDF::Vocab
       label: "Has MADSCollection Member".freeze,
       range: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70196426163180".freeze, "_:g70196560251380".freeze)
+          unionOf: list("_:g70091717636060".freeze, "_:g70091717654620".freeze)
         ),
       subPropertyOf: "skos:member".freeze,
       type: "owl:ObjectProperty".freeze
@@ -645,7 +650,7 @@ module RDF::Vocab
       label: "Has MADS Scheme Member".freeze,
       range: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70196426811380".freeze, "_:g70196426842540".freeze)
+          unionOf: list("_:g70091312136880".freeze, "_:g70091717684180".freeze)
         ),
       type: "owl:ObjectProperty".freeze
     property :hasNarrowerAuthority,
@@ -740,6 +745,11 @@ module RDF::Vocab
       range: "mads:RWO".freeze,
       subPropertyOf: "foaf:focus".freeze,
       type: "owl:ObjectProperty".freeze
+    property :isDemonymFor,
+      comment: %(Establishes a relationship between an Authority that represents a Geographic place - Japan or Greece, for example - and an Authority that represents the demonym - Japanese or Greek, respectively - associated with the place.).freeze,
+      inverseOf: "mads:hasDemonym".freeze,
+      label: "Is Demonym For".freeze,
+      type: "owl:ObjectProperty".freeze
     property :isIdentifiedByAuthority,
       comment: %(Associates a Real World Object with its Authority description.).freeze,
       domain: "mads:RWO".freeze,
@@ -751,7 +761,7 @@ module RDF::Vocab
       comment: %(Associates a Collection with a madsrdf:Authority or another madsrdf:MADSCollection.).freeze,
       domain: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70196555975320".freeze, "_:g70196556007720".freeze)
+          unionOf: list("_:g70091312142140".freeze, "_:g70091717689040".freeze)
         ),
       inverseOf: "mads:hasMADSCollectionMember".freeze,
       label: "Is Member Of MADSCollection".freeze,
@@ -760,7 +770,7 @@ module RDF::Vocab
     property :isMemberOfMADSScheme,
       domain: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70196426450620".freeze, "_:g70196426488680".freeze)
+          unionOf: list("_:g70091717831100".freeze, "_:g70091717849500".freeze)
         ),
       inverseOf: "mads:hasMADSSchemeMember".freeze,
       label: "Is Member of MADS Scheme".freeze,
@@ -771,7 +781,7 @@ module RDF::Vocab
       comment: %(Identifies a MADS Scheme in which the Authority is at the top of the hierarchy.).freeze,
       domain: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70196426911160".freeze, "_:g70196426947400".freeze)
+          unionOf: list("_:g70091718058260".freeze, "_:g70091718076240".freeze)
         ),
       inverseOf: "mads:hasTopMemberOfMADSScheme".freeze,
       label: "Is Top Member of MADS Scheme".freeze,
@@ -821,12 +831,12 @@ module RDF::Vocab
       comment: %(Denotes a relationship between an Authority and/or DeprecatedAuthority. The relationship may or may or may not be reciprocated and there is no certainty that the related resource will further illuminate the original resource.).freeze,
       domain: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70196557240720".freeze, "_:g70196557234280".freeze)
+          unionOf: list("_:g70091716696020".freeze, "_:g70091716714260".freeze)
         ),
       label: "See Also".freeze,
       range: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70196557302440".freeze, "_:g70196557320800".freeze)
+          unionOf: list("_:g70091716803840".freeze, "_:g70091716797920".freeze)
         ),
       subPropertyOf: "rdfs:seeAlso".freeze,
       type: "owl:ObjectProperty".freeze
