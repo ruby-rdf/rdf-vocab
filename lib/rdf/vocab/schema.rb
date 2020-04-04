@@ -17,7 +17,7 @@ case of a single file published after Zip compression, the convention of appendi
       label: "3DModel".freeze,
       "schema:category": "issue-2140".freeze,
       "schema:isPartOf": "http://pending.schema.org".freeze,
-      subClassOf: "schema:CreativeWork".freeze,
+      subClassOf: "schema:MediaObject".freeze,
       type: "rdfs:Class".freeze
     term :AMRadioChannel,
       comment: %(A radio channel that uses AM.).freeze,
@@ -684,6 +684,16 @@ Commonly used values:<br/><br/>
       comment: %(The act of giving money to a seller in exchange for goods or services rendered. An agent buys an object, product, or service from a seller for a price. Reciprocal of SellAction.).freeze,
       label: "BuyAction".freeze,
       subClassOf: "schema:TradeAction".freeze,
+      type: "rdfs:Class".freeze
+    term :CDCPMDRecord,
+      comment: %(A CDCPMDRecord is a data structure representing a record in a CDC tabular data format
+      used for hospital data reporting. See <a href="/docs/cdc-covid.html">documentation</a> for details, and the linked CDC materials for authoritative
+      definitions used as the source here.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2521".freeze,
+      label: "CDCPMDRecord".freeze,
+      "schema:category": "issue-2521".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:StructuredValue".freeze,
       type: "rdfs:Class".freeze
     term :CableOrSatelliteService,
       comment: %(A service which provides access to media programming like TV or radio. Access may be via cable or satellite.).freeze,
@@ -3331,6 +3341,14 @@ For <a href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GTIN</a>-related
       label: "OfferItemCondition".freeze,
       subClassOf: "schema:Enumeration".freeze,
       type: "rdfs:Class".freeze
+    term :OfferShippingDetails,
+      comment: %(OfferShippingDetails - indicates the kinds of shipping options might be available for an online shopping offer.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2506".freeze,
+      label: "OfferShippingDetails".freeze,
+      "schema:category": "issue-2506".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:Intangible".freeze,
+      type: "rdfs:Class".freeze
     term :OfficeEquipmentStore,
       comment: %(An office equipment store.).freeze,
       label: "OfficeEquipmentStore".freeze,
@@ -4335,6 +4353,14 @@ Related actions:<br/><br/>
       label: "School".freeze,
       subClassOf: "schema:EducationalOrganization".freeze,
       type: "rdfs:Class".freeze
+    term :SchoolDistrict,
+      comment: %(A School District is an administrative area for the administration of schools.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2500".freeze,
+      label: "SchoolDistrict".freeze,
+      "schema:category": "issue-2500".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subClassOf: "schema:AdministrativeArea".freeze,
+      type: "rdfs:Class".freeze
     term :ScreeningEvent,
       comment: %(A screening of a movie or other video.).freeze,
       label: "ScreeningEvent".freeze,
@@ -4499,6 +4525,8 @@ Related actions:<br/><br/>
       locally-oriented organization, for example schools, pharmacies, healthcare providers,  community groups, police,
       local government.<br/><br/>
 
+For work in progress guidelines on Coronavirus-related markup see <a href="https://docs.google.com/document/d/14ikaGCKxo50rRM7nvKSlbUpjyIk2WMQd3IkB1lItlrM/edit#">this doc</a>.<br/><br/>
+
 The motivating scenario for SpecialAnnouncement is the <a href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">Coronavirus pandemic</a>, and the initial vocabulary is oriented to this urgent situation. Schema.org
 expect to improve the markup iteratively as it is deployed and as feedback emerges from use. In addition to our
 usual <a href="https://github.com/schemaorg/schemaorg/issues/2490">Github entry</a>, feedback comments can also be provided in <a href="https://docs.google.com/document/d/1fpdFFxk8s87CWwACs53SGkYv3aafSxz_DTtOQxMrBJQ/edit#">this document</a>.<br/><br/>
@@ -4508,25 +4536,24 @@ the kinds of everyday practical information being posted to existing websites du
 
 Several kinds of information can be provided:<br/><br/>
 
-We encourage the provision of "name", "text", "datePosted", "expires" \(if appropriate\) and
+We encourage the provision of "name", "text", "datePosted", "expires" \(if appropriate\), "category" and
 "url" as a simple baseline. It is important to provide a value for "category" where possible, most ideally as a well known
 URL from Wikipedia or Wikidata. In the case of the 2019-2020 Coronavirus pandemic, this should be "https://en.wikipedia.org/w/index.php?title=2019-20_coronavirus_pandemic" or "https://www.wikidata.org/wiki/Q81068910".<br/><br/>
 
 For many of the possible properties, values can either be simple links or an inline description, depending on whether a summary is available. For a link, provide just the URL of the appropriate page as the property's value. For an inline description, use a <a class="localLink" href="http://schema.org/WebContent">WebContent</a> type, and provide the url as a property of that, alongside at least a simple "<a class="localLink" href="http://schema.org/text">text</a>" summary of the page. It is
-unlikely that a single SpecialAnnouncement will need all of the possible properties simultaneously. More options may be added
-later if<br/><br/>
+unlikely that a single SpecialAnnouncement will need all of the possible properties simultaneously.<br/><br/>
 
-We expect that in many cases the page referenced might contain more specialized structured data, e.g. contact info, <a class="localLink" href="http://schema.org/openingHours">openingHours</a>, <a class="localLink" href="http://schema.org/Event">Event</a>, <a class="localLink" href="http://schema.org/FAQPage">FAQPage</a> etc. By linking to those pages from a <a class="localLink" href="http://schema.org/SpecialAnnouncement">SpecialAnnouncement</a> you can help make it clearer that the events are related to the situation
-\(e.g. Coronavirus\) indicated by the <a class="localLink" href="http://schema.org/category">category</a> property of the <a class="localLink" href="http://schema.org/SpecialAnnouncement">SpecialAnnouncement</a>.<br/><br/>
+We expect that in many cases the page referenced might contain more specialized structured data, e.g. contact info, <a class="localLink" href="http://schema.org/openingHours">openingHours</a>, <a class="localLink" href="http://schema.org/Event">Event</a>, <a class="localLink" href="http://schema.org/FAQPage">FAQPage</a> etc. By linking to those pages from a <a class="localLink" href="http://schema.org/SpecialAnnouncement">SpecialAnnouncement</a> you can help make it clearer that the events are related to the situation \(e.g. Coronavirus\) indicated by the <a class="localLink" href="http://schema.org/category">category</a> property of the <a class="localLink" href="http://schema.org/SpecialAnnouncement">SpecialAnnouncement</a>.<br/><br/>
+
+Many <a class="localLink" href="http://schema.org/SpecialAnnouncement">SpecialAnnouncement</a>s will relate to particular regions and to identifiable local organizations. Use <a class="localLink" href="http://schema.org/spatialCoverage">spatialCoverage</a> for the region, and <a class="localLink" href="http://schema.org/announcementLocation">announcementLocation</a> to indicate specific <a class="localLink" href="http://schema.org/LocalBusiness">LocalBusiness</a>es and <a class="localLink" href="http://schema.org/CivicStructures">CivicStructures</a>. If the announcement affects both a particular region and a specific location \(for example, a library closure that serves an entire region\), use both <a class="localLink" href="http://schema.org/spatialCoverage">spatialCoverage</a> and <a class="localLink" href="http://schema.org/announcementLocation">announcementLocation</a>.<br/><br/>
+
+The <a class="localLink" href="http://schema.org/about">about</a> property can be used to indicate entities that are the focus of the announcement. We now recommend using <a class="localLink" href="http://schema.org/about">about</a> only
+for representing non-location entities \(e.g. a <a class="localLink" href="http://schema.org/Course">Course</a> or a <a class="localLink" href="http://schema.org/RadioStation">RadioStation</a>\). For places, use <a class="localLink" href="http://schema.org/announcementLocation">announcementLocation</a> and <a class="localLink" href="http://schema.org/spatialCoverage">spatialCoverage</a>. Consumers of this markup should be aware that the initial design encouraged the use of /about for locations too.<br/><br/>
 
 The basic content of <a class="localLink" href="http://schema.org/SpecialAnnouncement">SpecialAnnouncement</a> is similar to that of an <a href="https://en.wikipedia.org/wiki/RSS">RSS</a> or <a href="https://en.wikipedia.org/wiki/Atom_\(Web_standard\)">Atom</a> feed. For publishers without such feeds, basic feed-like information can be shared by posting
 <a class="localLink" href="http://schema.org/SpecialAnnouncement">SpecialAnnouncement</a> updates in a page, e.g. using JSON-LD. For sites with Atom/RSS functionality, you can point to a feed
 with the <a class="localLink" href="http://schema.org/webFeed">webFeed</a> property. This can be a simple URL, or an inline <a class="localLink" href="http://schema.org/DataFeed">DataFeed</a> object, with <a class="localLink" href="http://schema.org/encodingFormat">encodingFormat</a> providing
-media type information e.g. "application/rss+xml" or "application/atom+xml".<br/><br/>
-
-For an announcement that is about a place, you can use <a class="localLink" href="http://schema.org/about">about</a> \(or <a class="localLink" href="http://schema.org/mainEntity">mainEntity</a>\) to make that relationship explicit.
-For example, the announcement could be "about" a new <a class="localLink" href="http://schema.org/CovidTestingFacility">CovidTestingFacility</a>, and provide contact information, <a class="localLink" href="http://schema.org/location">location</a>, <a class="localLink" href="http://schema.org/geo">geo</a>,
-<a class="localLink" href="http://schema.org/openingHours">openingHours</a> etc.).freeze,
+media type information e.g. "application/rss+xml" or "application/atom+xml".).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/2490".freeze,
       label: "SpecialAnnouncement".freeze,
       "schema:category": "issue-2490".freeze,
@@ -5762,6 +5789,16 @@ Note: Publishers should be aware that applications designed to use specific sche
       domainIncludes: "schema:TypeAndQuantityNode".freeze,
       label: "amountOfThisGood".freeze,
       rangeIncludes: "schema:Number".freeze,
+      type: "rdf:Property".freeze
+    property :announcementLocation,
+      comment: %(Indicates a specific <a class="localLink" href="http://schema.org/CivicStructure">CivicStructure</a> or <a class="localLink" href="http://schema.org/LocalBusiness">LocalBusiness</a> associated with the SpecialAnnouncement. For example, a specific testing facility or business with special opening hours. For a larger geographic region like a quarantine of an entire region, use <a class="localLink" href="http://schema.org/spatialCoverage">spatialCoverage</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2514".freeze,
+      domainIncludes: "schema:SpecialAnnouncement".freeze,
+      label: "announcementLocation".freeze,
+      rangeIncludes: ["schema:CivicStructure".freeze, "schema:LocalBusiness".freeze],
+      "schema:category": "issue-2514".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      subPropertyOf: "schema:spatialCoverage".freeze,
       type: "rdf:Property".freeze
     property :annualPercentageRate,
       comment: %(The annual rate that is charged for borrowing \(or made by investing\), expressed as a single percentage number that represents the actual yearly cost of funds over the term of a loan. This includes any fees or additional costs associated with the transaction.).freeze,
@@ -7314,6 +7351,132 @@ Use standard formats: <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 c
       label: "customer".freeze,
       rangeIncludes: ["schema:Organization".freeze, "schema:Person".freeze],
       type: "rdf:Property".freeze
+    property :cvdCollectionDate,
+      comment: %(collectiondate - Date for which patient counts are reported.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2521".freeze,
+      domainIncludes: "schema:CDCPMDRecord".freeze,
+      label: "cvdCollectionDate".freeze,
+      rangeIncludes: ["schema:DateTime".freeze, "schema:Text".freeze],
+      "schema:category": "issue-2521".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :cvdNumBeds,
+      comment: %(numbeds - HOSPITAL INPATIENT BEDS: Inpatient beds, including all staffed, licensed, and overflow \(surge\) beds used for inpatients.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2521".freeze,
+      domainIncludes: "schema:CDCPMDRecord".freeze,
+      label: "cvdNumBeds".freeze,
+      rangeIncludes: "schema:Number".freeze,
+      "schema:category": "issue-2521".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :cvdNumBedsOcc,
+      comment: %(numbedsocc - HOSPITAL INPATIENT BED OCCUPANCY: Total number of staffed inpatient beds that are occupied.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2521".freeze,
+      domainIncludes: "schema:CDCPMDRecord".freeze,
+      label: "cvdNumBedsOcc".freeze,
+      rangeIncludes: "schema:Number".freeze,
+      "schema:category": "issue-2521".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :cvdNumC19Died,
+      comment: %(numc19died - DEATHS: Patients with suspected or confirmed COVID-19 who died in the hospital, ED, or any overflow location.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2521".freeze,
+      domainIncludes: "schema:CDCPMDRecord".freeze,
+      label: "cvdNumC19Died".freeze,
+      rangeIncludes: "schema:Number".freeze,
+      "schema:category": "issue-2521".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :cvdNumC19HOPats,
+      comment: %(numc19hopats - HOSPITAL ONSET: Patients hospitalized in an NHSN inpatient care location with onset of suspected or confirmed COVID-19 14 or more days after hospitalization.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2521".freeze,
+      domainIncludes: "schema:CDCPMDRecord".freeze,
+      label: "cvdNumC19HOPats".freeze,
+      rangeIncludes: "schema:Number".freeze,
+      "schema:category": "issue-2521".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :cvdNumC19HospPats,
+      comment: %(numc19hosppats - HOSPITALIZED: Patients currently hospitalized in an inpatient care location who have suspected or confirmed COVID-19.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2521".freeze,
+      domainIncludes: "schema:CDCPMDRecord".freeze,
+      label: "cvdNumC19HospPats".freeze,
+      rangeIncludes: "schema:Number".freeze,
+      "schema:category": "issue-2521".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :cvdNumC19MechVentPats,
+      comment: %(numc19mechventpats - HOSPITALIZED and VENTILATED: Patients hospitalized in an NHSN inpatient care location who have suspected or confirmed COVID-19 and are on a mechanical ventilator.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2521".freeze,
+      domainIncludes: "schema:CDCPMDRecord".freeze,
+      label: "cvdNumC19MechVentPats".freeze,
+      rangeIncludes: "schema:Number".freeze,
+      "schema:category": "issue-2521".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :cvdNumC19OFMechVentPats,
+      comment: %(numc19ofmechventpats - ED/OVERFLOW and VENTILATED: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed and on a mechanical ventilator.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2521".freeze,
+      domainIncludes: "schema:CDCPMDRecord".freeze,
+      label: "cvdNumC19OFMechVentPats".freeze,
+      rangeIncludes: "schema:Number".freeze,
+      "schema:category": "issue-2521".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :cvdNumC19OverflowPats,
+      comment: %(numc19overflowpats - ED/OVERFLOW: Patients with suspected or confirmed COVID-19 who are in the ED or any overflow location awaiting an inpatient bed.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2521".freeze,
+      domainIncludes: "schema:CDCPMDRecord".freeze,
+      label: "cvdNumC19OverflowPats".freeze,
+      rangeIncludes: "schema:Number".freeze,
+      "schema:category": "issue-2521".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :cvdNumICUBeds,
+      comment: %(numicubeds - ICU BEDS: Total number of staffed inpatient intensive care unit \(ICU\) beds.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2521".freeze,
+      domainIncludes: "schema:CDCPMDRecord".freeze,
+      label: "cvdNumICUBeds".freeze,
+      rangeIncludes: "schema:Number".freeze,
+      "schema:category": "issue-2521".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :cvdNumICUBedsOcc,
+      comment: %(numicubedsocc - ICU BED OCCUPANCY: Total number of staffed inpatient ICU beds that are occupied.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2521".freeze,
+      domainIncludes: "schema:CDCPMDRecord".freeze,
+      label: "cvdNumICUBedsOcc".freeze,
+      rangeIncludes: "schema:Number".freeze,
+      "schema:category": "issue-2521".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :cvdNumTotBeds,
+      comment: %(numtotbeds - ALL HOSPITAL BEDS: Total number of all Inpatient and outpatient beds, including all staffed,ICU, licensed, and overflow \(surge\) beds used for inpatients or outpatients.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2521".freeze,
+      domainIncludes: "schema:CDCPMDRecord".freeze,
+      label: "cvdNumTotBeds".freeze,
+      rangeIncludes: "schema:Number".freeze,
+      "schema:category": "issue-2521".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :cvdNumVent,
+      comment: %(numvent - MECHANICAL VENTILATORS: Total number of ventilators available.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2521".freeze,
+      domainIncludes: "schema:CDCPMDRecord".freeze,
+      label: "cvdNumVent".freeze,
+      rangeIncludes: "schema:Number".freeze,
+      "schema:category": "issue-2521".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :cvdNumVentUse,
+      comment: %(numventuse - MECHANICAL VENTILATORS IN USE: Total number of ventilators in use.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2521".freeze,
+      domainIncludes: "schema:CDCPMDRecord".freeze,
+      label: "cvdNumVentUse".freeze,
+      rangeIncludes: "schema:Number".freeze,
+      "schema:category": "issue-2521".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :dataFeedElement,
       comment: %(An item within in a data feed. Data feeds may have many elements.).freeze,
       domainIncludes: "schema:DataFeed".freeze,
@@ -7360,9 +7523,11 @@ Use standard formats: <a href="http://en.wikipedia.org/wiki/ISO_4217">ISO 4217 c
       type: "rdf:Property".freeze
     property :datePosted,
       comment: %(Publication date of an online listing.).freeze,
-      domainIncludes: ["schema:JobPosting".freeze, "schema:RealEstateListing".freeze],
+      "dc:source": ["https://github.com/schemaorg/schemaorg/issues/2490".freeze, "https://github.com/schemaorg/schemaorg/issues/2521".freeze],
+      domainIncludes: ["schema:CDCPMDRecord".freeze, "schema:JobPosting".freeze, "schema:RealEstateListing".freeze, "schema:SpecialAnnouncement".freeze],
       label: "datePosted".freeze,
-      rangeIncludes: "schema:Date".freeze,
+      rangeIncludes: ["schema:Date".freeze, "schema:DateTime".freeze],
+      "schema:category": ["issue-2490".freeze, "issue-2521".freeze],
       type: "rdf:Property".freeze
     property :datePublished,
       comment: %(Date of first broadcast/publication.).freeze,
@@ -9180,6 +9345,15 @@ Typical unit code\(s\): LTR for liters, GLL of US gallons, GLI for UK / imperial
       label: "healthPlanPharmacyCategory".freeze,
       rangeIncludes: "schema:Text".freeze,
       "schema:category": "issue-1062".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
+    property :healthcareReportingData,
+      comment: %(Indicates data describing a hospital, e.g. a CDC <a class="localLink" href="http://schema.org/CDCPMDRecord">CDCPMDRecord</a> or as some kind of <a class="localLink" href="http://schema.org/Dataset">Dataset</a>.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2521".freeze,
+      domainIncludes: "schema:Hospital".freeze,
+      label: "healthcareReportingData".freeze,
+      rangeIncludes: ["schema:CDCPMDRecord".freeze, "schema:Dataset".freeze],
+      "schema:category": "issue-2521".freeze,
       "schema:isPartOf": "http://pending.schema.org".freeze,
       type: "rdf:Property".freeze
     property :height,
@@ -13208,6 +13382,15 @@ Typical unit code\(s\): C62 for persons).freeze,
       label: "sharedContent".freeze,
       rangeIncludes: "schema:CreativeWork".freeze,
       type: "rdf:Property".freeze
+    property :shippingDestination,
+      comment: %(shippingDestination indicates the target region for an online shipping destination.).freeze,
+      "dc:source": "https://github.com/schemaorg/schemaorg/issues/2506".freeze,
+      domainIncludes: "schema:OfferShippingDetails".freeze,
+      label: "shippingDestination".freeze,
+      rangeIncludes: "schema:AdministrativeArea".freeze,
+      "schema:category": "issue-2506".freeze,
+      "schema:isPartOf": "http://pending.schema.org".freeze,
+      type: "rdf:Property".freeze
     property :sibling,
       comment: %(A sibling of the person.).freeze,
       domainIncludes: "schema:Person".freeze,
@@ -14624,7 +14807,7 @@ Typical unit code\(s\): C62 for persons.).freeze,
     property :webFeed,
       comment: %(The URL for a feed, e.g. associated with a podcast series, blog, or series of date-stamped updates. This is usually RSS or Atom.).freeze,
       "dc:source": "https://github.com/schemaorg/schemaorg/issues/373".freeze,
-      domainIncludes: "schema:PodcastSeries".freeze,
+      domainIncludes: ["schema:PodcastSeries".freeze, "schema:SpecialAnnouncement".freeze],
       label: "webFeed".freeze,
       rangeIncludes: ["schema:DataFeed".freeze, "schema:URL".freeze],
       "schema:category": "issue-373".freeze,
