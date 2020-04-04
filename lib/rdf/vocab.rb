@@ -87,6 +87,10 @@ module RDF
         alt_source: "http://rs.tdwg.org/dwc/rdf/dwcterms.rdf",
         strict: false,
       },
+      earl: {
+        uri: "http://www.w3.org/ns/earl#",
+        source: "http://www.w3.org/ns/earl",
+      },
       ebucore: {
         uri: "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
         source: "https://www.ebu.ch/metadata/ontologies/ebucore/ebucore.rdf",
@@ -243,7 +247,7 @@ module RDF
         uri: "http://www.loc.gov/mods/rdf/v1#",
         source: "http://www.loc.gov/standards/mods/modsrdf/v1/modsrdf.owl"
       },
-      nfo:    {uri: 'http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#'},
+      nfo:    {uri: 'http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#', skip: true},
       oa:     {uri: "http://www.w3.org/ns/oa#"},
       og:     {uri: "http://ogp.me/ns#", strict: false},
       ogc:    {uri: "http://ogp.me/ns/class#", source: "http://ogp.me/ns", strict: false},
