@@ -5,9 +5,46 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://rdfs.org/sioc/services#>
+  #   #
+  #   # SIOC Services Ontology Module Namespace
+  #   #
+  #   # Extends the SIOC Core Ontology (Semantically-Interlinked Online Communities) by defining basic information on community-related web services.
+  #   # @see http://rdfs.org/sioc/spec/#sec-modules
   #   class SiocServices < RDF::StrictVocabulary
+  #     # A Service is web service associated with a Site or part of it.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Service
+  #
+  #     # A Service associated with this SIOC object.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :has_service
+  #
+  #     # Maximum number of results results returned by a web service.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :max_results
+  #
+  #     # Format of results returned by a web service.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :results_format
+  #
+  #     # Links to a web service definition of this sioc:Service.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :service_definition
+  #
+  #     # URL of a web service endpoint.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :service_endpoint
+  #
+  #     # A SIOC object this Service is associated with.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :service_of
+  #
+  #     # A protocol used by a web service. Possible protocol values include SOAP, REST, SPARQL-QUERY, GData and OpenSearch. These will be added to this module later.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :service_protocol
+  #
   #   end
-  class SiocServices < RDF::StrictVocabulary("http://rdfs.org/sioc/services#")
+  SiocServices = Class.new(RDF::StrictVocabulary("http://rdfs.org/sioc/services#")) do
 
     # Ontology definition
     ontology :"http://rdfs.org/sioc/services#",

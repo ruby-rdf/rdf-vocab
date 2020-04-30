@@ -5,9 +5,389 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.w3.org/ns/ma-ont#>
+  #   #
+  #   # Created by Tobias Buerger, Jean Pierre Evain and Pierre-Antoine Champin with the RDFS Taskforce within the W3C Media Annotation Working Group.
+  #   #
+  #   # THE CONTENT OF THIS MA-ONT.RDF AND DERIVED MA-ONT.TTL FILES PREVAIL OVER THE SPECIFICATION.
+  #   # @version R36
   #   class MA < RDF::Vocabulary
+  #     # A person or organisation contributing to the media resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Agent
+  #
+  #     # A specialisation of Track for Audio to provide a link to specific data properties such as sampleRate, etc. Specialisation is defined through object properties.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AudioTrack
+  #
+  #     # Any group of media resource e.g. a series.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Collection
+  #
+  #     # Ancillary data track e.g. captioning  in addition to video and audio tracks. Specialisation is made through the use of appropriate object properties.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DataTrack
+  #
+  #     # A still image / thumbnail / key frame related to the media resource or being the media resource itself.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Image
+  #
+  #     # A location related to the media resource, e.g. depicted in the resource (possibly fictional) or where the resource was created (shooting location), etc.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Location
+  #
+  #     # A media fragment (spatial, temporal, track...) composing a media resource. In other ontologies fragment is sometimes referred to as a 'part' or 'segment'.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MediaFragment
+  #
+  #     # An image or an audiovisual media resource, which can be composed of one or more fragment / track.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MediaResource
+  #
+  #     # An organisation or moral agent.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Organisation
+  #
+  #     # A physical person.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Person
+  #
+  #     # Information about the rating given to a media resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Rating
+  #
+  #     # Information about The target audience (target region, target audience category but also parental guidance recommendation) for which a media resource is intended.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TargetAudience
+  #
+  #     # A specialisation of MediaFragment for audiovisual content.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Track
+  #
+  #     # A specialisation of Track for Video to provide a link to specific data properties such as frameRate, etc. Signing is another possible example of video track. Specialisation is defined through object properties.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :VideoTrack
+  #
+  #     # Corresponds to 'title.title' in the Ontology for Media Resources with a 'title.type' meaning "alternative".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alternativeTitle
+  #
+  #     # Corresponds to 'averageBitRate' in the Ontology for Media Resources, expressed in kilobits/second.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :averageBitRate
+  #
+  #     # The name by which a collection (e.g. series) is known.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :collectionName
+  #
+  #     # Corresponds to 'copyright.copyright' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :copyright
+  #
+  #     # A subproperty of 'hasRelatedLocation" used to specify where material shooting took place.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :createdIn
+  #
+  #     # Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning "creationDate".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :creationDate
+  #
+  #     # Corresponds to date.date in the ontology for Media Resources. Subproperties can be used to distinguish different values of 'date.type'. The recommended range is 'xsd:dateTime' (for compliance with OWL2-QL and OWL2-RL) but other time-related datatypes may be used (e.g. 'xsd:gYear', 'xsd:date'...).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :date
+  #
+  #     # A subproperty of 'hasRelatedLocation' used to specify where the action depicted in the media is supposed to take place, as opposed to the location where shooting actually took place (see 'createdIn').
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :depictsFictionalLocation
+  #
+  #     # Corresponds to 'description' in the Ontology for Media Resources. This can be specialised by using sub-properties e.g. 'summary' or 'script'.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :description
+  #
+  #     # Corresponds to 'duration' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :duration
+  #
+  #     # Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning "editDate".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :editDate
+  #
+  #     # Corresponds to 'contributor.contributor' in the Ontology for Media Resources with a 'contributor.role' meaning "actor".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :features
+  #
+  #     # Corresponds to 'namedFragment.label' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fragmentName
+  #
+  #     # Corresponds to 'frameSize.height' in the Ontology for Media Resources, measured in frameSizeUnit.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :frameHeight
+  #
+  #     # Corresponds to 'frameRate' in the Ontology for Media Resources, in frame per second.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :frameRate
+  #
+  #     # Corresponds to 'frameSize.unit' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :frameSizeUnit
+  #
+  #     # Corresponds to 'frameSize.width' in the Ontology for Media Resources measured in frameSizeUnit.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :frameWidth
+  #
+  #     # Corresponds to 'policy' in the Ontology for Media Resources with a 'policy.type' "access conditions".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasAccessConditions
+  #
+  #     # Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "audio-description".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasAudioDescription
+  #
+  #     # Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "captioning". This property can for example point to a spatial fragment, a VideoTrack or a DataTrack. The language of the captioning track can be expressed by attaching a 'hasLanguage' property to the specific track.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasCaptioning
+  #
+  #     # Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "chapter".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasChapter
+  #
+  #     # Corresponds to 'targetAudience.classification' in the Ontology for Media Resources. This property is used to provide a value characterising the target audience.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasClassification
+  #
+  #     # Corresponds to 'targetAudience.identifier' in the Ontology for Media Resources. This is used to identify the reference sheme against which the target audience has been characterised.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasClassificationSystem
+  #
+  #     # Corresponds to 'compression' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasCompression
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasContributedTo
+  #
+  #     # Corresponds to 'contributor.contributor' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'contributor.role'.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasContributor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasCopyrightOver
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasCreated
+  #
+  #     # Corresponds to 'creator.creator' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'creator.role'. Note that this property is semantically a subproperty of 'hasContributor'.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasCreator
+  #
+  #     # Corresponds to 'format' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasFormat
+  #
+  #     # Corresponds to 'fragment' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'fragment.role'.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasFragment
+  #
+  #     # Corresponds to 'genre' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasGenre
+  #
+  #     # Corresponds to 'keyword' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasKeyword
+  #
+  #     # Corresponds to 'language' in the Ontology for Media Resources. The language used in the resource. A controlled vocabulary such as defined in BCP 47 SHOULD be used. This property can also be used to identify the presence of sign language (RFC 5646). By inheritance, the hasLanguage property applies indifferently at the media resource / fragment / track levels.  Best practice recommends to use to best possible level of granularity fo describe the usage of language within a media resource including at fragment and track levels.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasLanguage
+  #
+  #     # Corresponds to 'location.coordinateSystem' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasLocationCoordinateSystem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasMember
+  #
+  #     # Corresponds to 'namedFragment' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasNamedFragment
+  #
+  #     # Corresponds to 'policy' in the Ontology for Media Resources with a  'policy.type' meaning "permissions".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasPermissions
+  #
+  #     # Corresponds to 'policy' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'policy.type'.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasPolicy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasPublished
+  #
+  #     # Corresponds to 'publisher' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasPublisher
+  #
+  #     # Corresponds to 'rating' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasRating
+  #
+  #     # Corresponds to 'rating.type' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasRatingSystem
+  #
+  #     # Corresponds to 'relation' and in the Ontology for Media Resources with a 'relation.type' meaning "related image".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasRelatedImage
+  #
+  #     # Corresponds to 'location' in the Ontology for Media Resources. Subproperties are provided to specify, when possible, the relation between the media resource and the location.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasRelatedLocation
+  #
+  #     # Corresponds to 'relation' and in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'relation.type'.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasRelatedResource
+  #
+  #     # Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "signing". This property can for example point to a spatial fragment or a VideoTrack. The sign language of the captioning track can be expressed by attaching a 'hasLanguage' property to the specific track.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasSigning
+  #
+  #     # Corresponds to 'relation' and in the Ontology for Media Resources with a 'relation.type' meaning "source".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasSource
+  #
+  #     # Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "subtitling".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasSubtitling
+  #
+  #     # Corresponds to 'targetAudience' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasTargetAudience
+  #
+  #     # Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "track".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasTrack
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isCaptioningOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isChapterOf
+  #
+  #     # Corresponds to 'copyright.identifier' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isCopyrightedBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isCreationLocationOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isFictionalLocationDepictedIn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isFragmentOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isImageRelatedTo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isLocationRelatedTo
+  #
+  #     # Corresponds to 'collection' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isMemberOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isNamedFragmentOf
+  #
+  #     # Corresponds to 'rating.identifier' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isProvidedBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isRatingOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isRelatedTo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isSigningOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isSourceOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isTargetAudienceOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isTrackOf
+  #
+  #     # Corresponds to 'location.altitude' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationAltitude
+  #
+  #     # Corresponds to 'location.latitude' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationLatitude
+  #
+  #     # Corresponds to 'location.longitude' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationLongitude
+  #
+  #     # Corresponds to 'location.name' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationName
+  #
+  #     # Corresponds to 'locator' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locator
+  #
+  #     # Corresponds to 'title.title' in the Ontology for Media Resources with a 'title.type' meaning "original".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mainOriginalTitle
+  #
+  #     # Corresponds to 'numTracks.number' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'numTracks.type'.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfTracks
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :playsIn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :provides
+  #
+  #     # Corresponds to 'rating.max' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ratingScaleMax
+  #
+  #     # Corresponds to 'rating.min' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ratingScaleMin
+  #
+  #     # Corresponds to 'rating.value' in the Ontology for Media Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ratingValue
+  #
+  #     # Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning "recordDate".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :recordDate
+  #
+  #     # Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning "releaseDate".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :releaseDate
+  #
+  #     # Corresponds to 'samplingRate' in the Ontology for Media Resources, in samples per second.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :samplingRate
+  #
+  #     # Corresponds to 'title.title' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'title.type'.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :title
+  #
+  #     # Corresponds to 'fragment.name' in the Ontology for Media Resources, for Track fragments.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :trackName
+  #
   #   end
-  class MA < RDF::Vocabulary("http://www.w3.org/ns/ma-ont#")
+  MA = Class.new(RDF::Vocabulary("http://www.w3.org/ns/ma-ont#")) do
 
     # Ontology definition
     ontology :"http://www.w3.org/ns/ma-ont#",

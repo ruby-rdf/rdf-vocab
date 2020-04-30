@@ -5,9 +5,72 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://purl.org/net/p-plan#>
+  #   #
+  #   # The P-Plan ontology
+  #   #
+  #   # PROV extension for linking Plans and parts of plans to their respective executions. Created by Daniel Garijo and Yolanda Gil
+  #   #
+  #   # PROV extension for linking Plans and parts of plans to their respective executions.
+  #   # @version 1.3
   #   class PPLAN < RDF::StrictVocabulary
+  #     # A p-plan:Activity represents the execution process planned in a p-plan:Step
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Activity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Bundle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Entity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MultiStep
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Plan
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Step
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Variable
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :correspondsToStep
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :correspondsToVariable
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasInputVar
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasOutputVar
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isDecomposedAsPlan
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isInputVarOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isOutputVarOf
+  #
+  #     # Property that asserts which Step preceeds the current one. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isPrecededBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isStepOfPlan
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isSubPlanOfPlan
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isVariableOfPlan
+  #
   #   end
-  class PPLAN < RDF::StrictVocabulary("http://purl.org/net/p-plan#")
+  PPLAN = Class.new(RDF::StrictVocabulary("http://purl.org/net/p-plan#")) do
 
     # Ontology definition
     ontology :"http://purl.org/net/p-plan#",

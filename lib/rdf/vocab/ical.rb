@@ -5,9 +5,470 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.w3.org/2002/12/cal/icaltzd#>
+  #   #
+  #   # @version $Id: icaltzd.rdf,v 1.6 2007/06/28 18:22:09 connolly Exp $
+  #   # @version subject to change with notice to www-rdf-calendar@w3.org
+  #   # @see http://www.w3.org/2002/12/cal/
+  #   # @see http://esw.w3.org/topic/RdfCalendar
+  #   # @see http://lists.w3.org/Archives/Public/www-rdf-calendar/
   #   class ICAL < RDF::StrictVocabulary
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DomainOf_rrule
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :List_of_Float
+  #
+  #     # Provide a grouping of component properties that define an alarm.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Valarm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Value_DATE
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Value_DURATION
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Value_PERIOD
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Value_RECUR
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Vcalendar
+  #
+  #     # Provide a grouping of component properties that describe an event.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Vevent
+  #
+  #     # Provide a grouping of component properties that describe either a request for free/busy time, describe a response to a request for free/busy time or describe a published set of busy time.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Vfreebusy
+  #
+  #     # Provide a grouping of component properties that describe a journal entry.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Vjournal
+  #
+  #     # Provide a grouping of component properties that defines a time zone.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Vtimezone
+  #
+  #     # Provide a grouping of calendar properties that describe a to-do.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Vtodo
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # This property defines the action to be invoked when an alarm is triggered.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :action
+  #
+  #     # To specify an alternate text representation for the property value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :altrep
+  #
+  #     # The property provides the capability to associate a document object with a calendar component.
+  #     #
+  #     #  	    default value type: URI
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :attach
+  #
+  #     #  	    value type: CAL-ADDRESS
+  #     #
+  #     # The property defines an "Attendee" within a calendar component.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :attendee
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :byday
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :byhour
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :byminute
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bymonth
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bysecond
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bysetpos
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :byweekno
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :byyearday
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :calAddress
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # This property defines the calendar scale used for the calendar information specified in the iCalendar object.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :calscale
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # This property defines the categories for a calendar component.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :categories
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # This property defines the access classification for a calendar component.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :class
+  #
+  #     # To specify the common name to be associated with the calendar user specified by the property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cn
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # This property specifies non-processing information intended to provide a comment to the calendar user.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :comment
+  #
+  #     # This property defines the date and time that a to-do was actually completed.
+  #     #
+  #     #  	    value type: DATE-TIME
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :completed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :component
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # The property is used to represent contact information or alternately a reference to contact information associated with the calendar component.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :contact
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :count
+  #
+  #     # This property specifies the date and time that the calendar information was created by the calendar user agent in the calendar store. Note: This is analogous to the creation date and time for a file in the file system.
+  #     #
+  #     #  	    value type: DATE-TIME
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :created
+  #
+  #     # To specify the type of calendar user specified by the property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cutype
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :daylight
+  #
+  #     # To specify the calendar users that have delegated their participation to the calendar user specified by the property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :delegatedFrom
+  #
+  #     # To specify the calendar users to whom the calendar user specified by the property has delegated participation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :delegatedTo
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # This property provides a more complete description of the calendar component, than that provided by the "SUMMARY" property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :description
+  #
+  #     # To specify reference to a directory entry associated with the calendar user specified by the property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dir
+  #
+  #     # This property specifies the date and time that a calendar component ends.
+  #     #
+  #     #  	    default value type: DATE-TIME
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dtend
+  #
+  #     #  	    value type: DATE-TIME
+  #     #
+  #     # The property indicates the date/time that the instance of the iCalendar object was created.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dtstamp
+  #
+  #     # This property specifies when the calendar component begins.
+  #     #
+  #     #  	    default value type: DATE-TIME
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dtstart
+  #
+  #     #  	    default value type: DATE-TIME
+  #     #
+  #     # This property defines the date and time that a to-do is expected to be completed.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :due
+  #
+  #     #  	    value type: DURATION
+  #     #
+  #     # The property specifies a positive duration of time.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :duration
+  #
+  #     # To specify an alternate inline encoding for the property value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :encoding
+  #
+  #     #  	    default value type: DATE-TIME
+  #     #
+  #     # This property defines the list of date/time exceptions for a recurring calendar component.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :exdate
+  #
+  #     #  	    value type: RECUR
+  #     #
+  #     # This property defines a rule or repeating pattern for an exception to a recurrence set.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :exrule
+  #
+  #     # To specify the free or busy time type.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fbtype
+  #
+  #     # To specify the content type of a referenced object.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fmttype
+  #
+  #     #  	    value type: PERIOD
+  #     #
+  #     # The property defines one or more free or busy time intervals.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :freebusy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :freq
+  #
+  #     # This property specifies information related to the global position for the activity specified by a calendar component.
+  #     #
+  #     #  	    value type: list of FLOAT
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :interval
+  #
+  #     # To specify the language for text values in a property or property parameter.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :language
+  #
+  #     # The property specifies the date and time that the information associated with the calendar component was last revised in the calendar store. Note: This is analogous to the modification date and time for a file in the file system.
+  #     #
+  #     #  	    value type: DATE-TIME
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastModified
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # The property defines the intended venue for the activity defined by a calendar component.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :location
+  #
+  #     # To specify the group or list membership of the calendar user specified by the property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :member
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # This property defines the iCalendar object method associated with the calendar object.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :method
+  #
+  #     # The property defines the organizer for a calendar component.
+  #     #
+  #     #  	    value type: CAL-ADDRESS
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organizer
+  #
+  #     # To specify the participation status for the calendar user specified by the property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partstat
+  #
+  #     # This property is used by an assignee or delegatee of a to-do to convey the percent completion of a to-do to the Organizer.
+  #     #
+  #     #  	    value type: INTEGER
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :percentComplete
+  #
+  #     # The property defines the relative priority for a calendar component.
+  #     #
+  #     #  	    value type: INTEGER
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :priority
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # This property specifies the identifier for the product that created the iCalendar object.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prodid
+  #
+  #     # To specify the effective range of recurrence instances from the instance specified by the recurrence identifier specified by the property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :range
+  #
+  #     #  	    default value type: DATE-TIME
+  #     #
+  #     # This property defines the list of date/times for a recurrence set.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rdate
+  #
+  #     # This property is used in conjunction with the "UID" and "SEQUENCE" property to identify a specific instance of a recurring "VEVENT", "VTODO" or "VJOURNAL" calendar component. The property value is the effective value of the "DTSTART" property of the recurrence instance.
+  #     #
+  #     #  	    default value type: DATE-TIME
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :recurrenceId
+  #
+  #     # To specify the relationship of the alarm trigger with respect to the start or end of the calendar component.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :related
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # The property is used to represent a relationship or reference between one calendar component and another.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedTo
+  #
+  #     # To specify the type of hierarchical relationship associated with the calendar component specified by the property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reltype
+  #
+  #     # This property defines the number of time the alarm should be repeated, after the initial trigger.
+  #     #
+  #     #  	    value type: INTEGER
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :repeat
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # This property defines the status code returned for a scheduling request.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :requestStatus
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # This property defines the equipment or resources anticipated for an activity specified by a calendar entity..
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :resources
+  #
+  #     # To specify the participation role for the calendar user specified by the property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :role
+  #
+  #     #  	    value type: RECUR
+  #     #
+  #     # This property defines a rule or repeating pattern for recurring events, to-dos, or time zone definitions.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rrule
+  #
+  #     # To specify whether there is an expectation of a favor of a reply from the calendar user specified by the property value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rsvp
+  #
+  #     # To specify the calendar user that is acting on behalf of the calendar user specified by the property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sentBy
+  #
+  #     #  	    value type: integer
+  #     #
+  #     # This property defines the revision sequence number of the calendar component within a sequence of revisions.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sequence
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :standard
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # This property defines the overall status or confirmation for the calendar component.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :status
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # This property defines a short summary or subject for the calendar component.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :summary
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # This property defines whether an event is transparent or not to busy time searches.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :transp
+  #
+  #     # This property specifies when an alarm will trigger.
+  #     #
+  #     #  	    default value type: DURATION
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :trigger
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # To specify the identifier for the time zone definition for a time component in the property value.
+  #     #
+  #     # This property specifies the text value that uniquely identifies the "VTIMEZONE" calendar component.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tzid
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # This property specifies the customary designation for a time zone description.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tzname
+  #
+  #     #  	    value type: UTC-OFFSET
+  #     #
+  #     # This property specifies the offset which is in use prior to this time zone observance.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tzoffsetfrom
+  #
+  #     # This property specifies the offset which is in use in this time zone observance.
+  #     #
+  #     #  	    value type: UTC-OFFSET
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tzoffsetto
+  #
+  #     # The TZURL provides a means for a VTIMEZONE component to point to a network location that can be used to retrieve an up-to- date version of itself.
+  #     #
+  #     #  	    value type: URI
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tzurl
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # This property defines the persistent, globally unique identifier for the calendar component.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :uid
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :until
+  #
+  #     # This property defines a Uniform Resource Locator (URL) associated with the iCalendar object.
+  #     #
+  #     #  	    value type: URI
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :url
+  #
+  #     #  	    value type: TEXT
+  #     #
+  #     # This property specifies the identifier corresponding to the highest version number or the minimum and maximum range of the iCalendar specification that is required in order to interpret the iCalendar object.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :version
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wkst
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateTime
+  #
   #   end
-  class ICAL < RDF::StrictVocabulary("http://www.w3.org/2002/12/cal/icaltzd#")
+  ICAL = Class.new(RDF::StrictVocabulary("http://www.w3.org/2002/12/cal/icaltzd#")) do
 
     # Ontology definition
     ontology :"http://www.w3.org/2002/12/cal/icaltzd#",

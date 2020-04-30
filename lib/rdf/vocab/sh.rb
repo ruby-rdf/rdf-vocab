@@ -5,9 +5,744 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.w3.org/ns/shacl#>
+  #   #
+  #   # W3C Shapes Constraint Language (SHACL) Vocabulary
+  #   #
+  #   # This vocabulary defines terms used in SHACL, the W3C Shapes Constraint Language.
   #   class SH < RDF::StrictVocabulary
+  #     # The base class of validation results, typically not instantiated directly.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AbstractResult
+  #
+  #     # The class of constraint components.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ConstraintComponent
+  #
+  #     # The class of SHACL functions.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Function
+  #
+  #     # The class of constraints backed by a JavaScript function.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :JSConstraint
+  #
+  #     # Abstract base class of resources that declare an executable JavaScript.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :JSExecutable
+  #
+  #     # The class of SHACL functions that execute a JavaScript function when called.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :JSFunction
+  #
+  #     # Represents a JavaScript library, typically identified by one or more URLs of files to include.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :JSLibrary
+  #
+  #     # The class of SHACL rules expressed using JavaScript.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :JSRule
+  #
+  #     # The class of targets that are based on JavaScript functions.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :JSTarget
+  #
+  #     # The (meta) class for parameterizable targets that are based on JavaScript functions.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :JSTargetType
+  #
+  #     # A SHACL validator based on JavaScript. This can be used to declare SHACL constraint components that perform JavaScript-based validation when used.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :JSValidator
+  #
+  #     # The class of all node kinds, including sh:BlankNode, sh:IRI, sh:Literal or the combinations of these: sh:BlankNodeOrIRI, sh:BlankNodeOrLiteral, sh:IRIOrLiteral.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NodeKind
+  #
+  #     # A node shape is a shape that specifies constraint that need to be met with respect to focus nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NodeShape
+  #
+  #     # The class of parameter declarations, consisting of a path predicate and (possibly) information about allowed value type, cardinality and other characteristics.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Parameter
+  #
+  #     # Superclass of components that can take parameters, especially functions and constraint components.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Parameterizable
+  #
+  #     # The class of prefix declarations, consisting of pairs of a prefix with a namespace.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PrefixDeclaration
+  #
+  #     # Instances of this class represent groups of property shapes that belong together.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PropertyGroup
+  #
+  #     # A property shape is a shape that specifies constraints on the values of a focus node for a given property or path.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PropertyShape
+  #
+  #     # A class of result annotations, which define the rules to derive the values of a given annotation property as extra values for a validation result.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ResultAnnotation
+  #
+  #     # The class of SHACL rules. Never instantiated directly.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Rule
+  #
+  #     # The class of SPARQL executables that are based on an ASK query.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SPARQLAskExecutable
+  #
+  #     # The class of validators based on SPARQL ASK queries. The queries are evaluated for each value node and are supposed to return true if the given node conforms.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SPARQLAskValidator
+  #
+  #     # The class of constraints based on SPARQL SELECT queries.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SPARQLConstraint
+  #
+  #     # The class of SPARQL executables that are based on a CONSTRUCT query.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SPARQLConstructExecutable
+  #
+  #     # The class of resources that encapsulate a SPARQL query.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SPARQLExecutable
+  #
+  #     # A function backed by a SPARQL query - either ASK or SELECT.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SPARQLFunction
+  #
+  #     # The class of SHACL rules based on SPARQL CONSTRUCT queries.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SPARQLRule
+  #
+  #     # The class of SPARQL executables based on a SELECT query.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SPARQLSelectExecutable
+  #
+  #     # The class of validators based on SPARQL SELECT queries. The queries are evaluated for each focus node and are supposed to produce bindings for all focus nodes that do not conform.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SPARQLSelectValidator
+  #
+  #     # The class of targets that are based on SPARQL queries.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SPARQLTarget
+  #
+  #     # The (meta) class for parameterizable targets that are based on SPARQL queries.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SPARQLTargetType
+  #
+  #     # The class of SPARQL executables based on a SPARQL UPDATE.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SPARQLUpdateExecutable
+  #
+  #     # The class of validation result severity levels, including violation and warning levels.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Severity
+  #
+  #     # A shape is a collection of constraints that may be targeted for certain nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Shape
+  #
+  #     # The base class of targets such as those based on SPARQL queries.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Target
+  #
+  #     # The (meta) class for parameterizable targets.	Instances of this are instantiated as values of the sh:target property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TargetType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TripleRule
+  #
+  #     # The class of SHACL validation reports.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ValidationReport
+  #
+  #     # The class of validation results.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ValidationResult
+  #
+  #     # The class of validators, which provide instructions on how to process a constraint definition. This class serves as base class for the SPARQL-based validators and other possible implementations.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Validator
+  #
+  #     # The (single) value of this property must be a list of path elements, representing the elements of alternative paths.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alternativePath
+  #
+  #     # RDF list of shapes to validate the value nodes against.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :and
+  #
+  #     # The annotation property that shall be set.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :annotationProperty
+  #
+  #     # The (default) values of the annotation property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :annotationValue
+  #
+  #     # The name of the SPARQL variable from the SELECT clause that shall be used for the values.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :annotationVarName
+  #
+  #     # The SPARQL ASK query to execute.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ask
+  #
+  #     # The type that all value nodes must have.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :class
+  #
+  #     # If set to true then the shape is closed.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :closed
+  #
+  #     # The shapes that the focus nodes need to conform to before a rule is executed on them.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :condition
+  #
+  #     # True if the validation did not produce any validation results, and false otherwise.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :conforms
+  #
+  #     # The SPARQL CONSTRUCT query to execute.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :construct
+  #
+  #     # Specifies an RDF datatype that all value nodes must have.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :datatype
+  #
+  #     # If set to true then all nodes conform to this.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deactivated
+  #
+  #     # Links a resource with its namespace prefix declarations.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :declare
+  #
+  #     # A default value for a property, for example for user interface tools to pre-populate input fields.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :defaultValue
+  #
+  #     # Human-readable descriptions for the property in the context of the surrounding shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :description
+  #
+  #     # Links a result with other results that provide more details, for example to describe violations against nested shapes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :detail
+  #
+  #     # Specifies a property where the set of values must be disjoint with the value nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :disjoint
+  #
+  #     # An entailment regime that indicates what kind of inferencing is required by a shapes graph.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :entailment
+  #
+  #     # Specifies a property that must have the same values as the value nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :equals
+  #
+  #     # The node expression that must return true for the value nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :expression
+  #
+  #     # The shape that all input nodes of the expression need to conform to.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :filterShape
+  #
+  #     # An optional flag to be used with regular expression pattern matching.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :flags
+  #
+  #     # The focus node that was validated when the result was produced.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :focusNode
+  #
+  #     # Can be used to link to a property group to indicate that a property shape belongs to a group of related property shapes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :group
+  #
+  #     # Specifies a value that must be among the value nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasValue
+  #
+  #     # An optional RDF list of properties that are also permitted in addition to those explicitly enumerated via sh:property/sh:path.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ignoredProperties
+  #
+  #     # Specifies a list of allowed values so that each value node must be among the members of the given list.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :in
+  #
+  #     # A list of node expressions that shall be intersected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :intersection
+  #
+  #     # The (single) value of this property represents an inverse path (object to subject).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :inversePath
+  #
+  #     # Constraints expressed in JavaScript.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :js
+  #
+  #     # The name of the JavaScript function to execute.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :jsFunctionName
+  #
+  #     # Declares which JavaScript libraries are needed to execute this.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :jsLibrary
+  #
+  #     # Declares the URLs of a JavaScript library. This should be the absolute URL of a JavaScript file. Implementations may redirect those to local files.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :jsLibraryURL
+  #
+  #     # Outlines how human-readable labels of instances of the associated Parameterizable shall be produced. The values can contain {?paramName} as placeholders for the actual values of the given parameter.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :labelTemplate
+  #
+  #     # Specifies a list of language tags that all value nodes must have.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :languageIn
+  #
+  #     # Specifies a property that must have smaller values than the value nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lessThan
+  #
+  #     # Specifies a property that must have smaller or equal values than the value nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lessThanOrEquals
+  #
+  #     # Specifies the maximum number of values in the set of value nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maxCount
+  #
+  #     # Specifies the maximum exclusive value of each value node.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maxExclusive
+  #
+  #     # Specifies the maximum inclusive value of each value node.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maxInclusive
+  #
+  #     # Specifies the maximum string length of each value node.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maxLength
+  #
+  #     # A human-readable message (possibly with placeholders for variables) explaining the cause of the result.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :message
+  #
+  #     # Specifies the minimum number of values in the set of value nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minCount
+  #
+  #     # Specifies the minimum exclusive value of each value node.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minExclusive
+  #
+  #     # Specifies the minimum inclusive value of each value node.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minInclusive
+  #
+  #     # Specifies the minimum string length of each value node.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minLength
+  #
+  #     # Human-readable labels for the property in the context of the surrounding shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :name
+  #
+  #     # The namespace associated with a prefix in a prefix declaration.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :namespace
+  #
+  #     # Specifies the node shape that all value nodes must conform to.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :node
+  #
+  #     # Specifies the node kind (e.g. IRI or literal) each value node.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nodeKind
+  #
+  #     # The validator(s) used to evaluate a constraint in the context of a node shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nodeValidator
+  #
+  #     # The node expression producing the input nodes of a filter shape expression.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nodes
+  #
+  #     # Specifies a shape that the value nodes must not conform to.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :not
+  #
+  #     # An expression producing the nodes that shall be inferred as objects.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :object
+  #
+  #     # The (single) value of this property represents a path that is matched one or more times.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :oneOrMorePath
+  #
+  #     # Indicates whether a parameter is optional.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :optional
+  #
+  #     # Specifies a list of shapes so that the value nodes must conform to at least one of the shapes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :or
+  #
+  #     # Specifies the relative order of this compared to its siblings. For example use 0 for the first, 1 for the second.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :order
+  #
+  #     # The parameters of a function or constraint component.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parameter
+  #
+  #     # Specifies the property path of a property shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :path
+  #
+  #     # Specifies a regular expression pattern that the string representations of the value nodes must match.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pattern
+  #
+  #     # An expression producing the properties that shall be inferred as predicates.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :predicate
+  #
+  #     # The prefix of a prefix declaration.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prefix
+  #
+  #     # The prefixes that shall be applied before parsing the associated SPARQL query.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prefixes
+  #
+  #     # Links a shape to its property shapes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :property
+  #
+  #     # The validator(s) used to evaluate a constraint in the context of a property shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :propertyValidator
+  #
+  #     # The maximum number of value nodes that can conform to the shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :qualifiedMaxCount
+  #
+  #     # The minimum number of value nodes that must conform to the shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :qualifiedMinCount
+  #
+  #     # The shape that a specified number of values must conform to.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :qualifiedValueShape
+  #
+  #     # Can be used to mark the qualified value shape to be disjoint with its sibling shapes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :qualifiedValueShapesDisjoint
+  #
+  #     # The validation results contained in a validation report.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :result
+  #
+  #     # Links a SPARQL validator with zero or more sh:ResultAnnotation instances, defining how to derive additional result properties based on the variables of the SELECT query.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :resultAnnotation
+  #
+  #     # Human-readable messages explaining the cause of the result.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :resultMessage
+  #
+  #     # The path of a validation result, based on the path of the validated property shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :resultPath
+  #
+  #     # The severity of the result, e.g. warning.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :resultSeverity
+  #
+  #     # The expected type of values returned by the associated function.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :returnType
+  #
+  #     # The rules linked to a shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rule
+  #
+  #     # The SPARQL SELECT query to execute.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :select
+  #
+  #     # Defines the severity that validation results produced by a shape must have. Defaults to sh:Violation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :severity
+  #
+  #     # Shapes graphs that should be used when validating this data graph.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shapesGraph
+  #
+  #     # If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shapesGraphWellFormed
+  #
+  #     # The constraint that was validated when the result was produced.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceConstraint
+  #
+  #     # The constraint component that is the source of the result.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceConstraintComponent
+  #
+  #     # The shape that is was validated when the result was produced.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceShape
+  #
+  #     # Links a shape with SPARQL constraints.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sparql
+  #
+  #     # An expression producing the resources that shall be inferred as subjects.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subject
+  #
+  #     # Suggested shapes graphs for this ontology. The values of this property may be used in the absence of specific sh:shapesGraph statements.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :suggestedShapesGraph
+  #
+  #     # Links a shape to a target specified by an extension language, for example instances of sh:SPARQLTarget.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :target
+  #
+  #     # Links a shape to a class, indicating that all instances of the class must conform to the shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :targetClass
+  #
+  #     # Links a shape to individual nodes, indicating that these nodes must conform to the shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :targetNode
+  #
+  #     # Links a shape to a property, indicating that all all objects of triples that have the given property as their predicate must conform to the shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :targetObjectsOf
+  #
+  #     # Links a shape to a property, indicating that all subjects of triples that have the given property as their predicate must conform to the shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :targetSubjectsOf
+  #
+  #     # A list of node expressions that shall be used together.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :union
+  #
+  #     # Specifies whether all node values must have a unique (or no) language tag.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :uniqueLang
+  #
+  #     # The SPARQL UPDATE to execute.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :update
+  #
+  #     # The validator(s) used to evaluate constraints of either node or property shapes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :validator
+  #
+  #     # An RDF node that has caused the result.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :value
+  #
+  #     # Specifies a list of shapes so that the value nodes must conform to exactly one of the shapes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :xone
+  #
+  #     # The (single) value of this property represents a path that is matched zero or more times.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :zeroOrMorePath
+  #
+  #     # The (single) value of this property represents a path that is matched zero or one times.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :zeroOrOnePath
+  #
+  #     # A constraint component that can be used to test whether a value node conforms to all members of a provided list of shapes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AndConstraintComponent
+  #
+  #     # The node kind of all blank nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BlankNode
+  #
+  #     # The node kind of all blank nodes or IRIs.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BlankNodeOrIRI
+  #
+  #     # The node kind of all blank nodes or literals.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BlankNodeOrLiteral
+  #
+  #     # A constraint component that can be used to verify that each value node is an instance of a given type.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ClassConstraintComponent
+  #
+  #     # A constraint component that can be used to indicate that focus nodes must only have values for those properties that have been explicitly enumerated via sh:property/sh:path.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ClosedConstraintComponent
+  #
+  #     # A constraint component that can be used to restrict the datatype of all value nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DatatypeConstraintComponent
+  #
+  #     # A constraint component that can be used to verify that the set of value nodes is disjoint with the the set of nodes that have the focus node as subject and the value of a given property as predicate.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DisjointConstraintComponent
+  #
+  #     # A constraint component that can be used to verify that the set of value nodes is equal to the set of nodes that have the focus node as subject and the value of a given property as predicate.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :EqualsConstraintComponent
+  #
+  #     # A constraint component that can be used to verify that a given node expression produces true for all value nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ExpressionConstraintComponent
+  #
+  #     # A constraint component that can be used to verify that one of the value nodes is a given RDF node.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HasValueConstraintComponent
+  #
+  #     # The node kind of all IRIs.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :IRI
+  #
+  #     # The node kind of all IRIs or literals.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :IRIOrLiteral
+  #
+  #     # A constraint component that can be used to exclusively enumerate the permitted value nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :InConstraintComponent
+  #
+  #     # The severity for an informational validation result.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Info
+  #
+  #     # A constraint component with the parameter sh:js linking to a sh:JSConstraint containing a sh:script.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :JSConstraintComponent
+  #
+  #     # A constraint component that can be used to enumerate language tags that all value nodes must have.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LanguageInConstraintComponent
+  #
+  #     # A constraint component that can be used to verify that each value node is smaller than all the nodes that have the focus node as subject and the value of a given property as predicate.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LessThanConstraintComponent
+  #
+  #     # A constraint component that can be used to verify that every value node is smaller than all the nodes that have the focus node as subject and the value of a given property as predicate.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LessThanOrEqualsConstraintComponent
+  #
+  #     # The node kind of all literals.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Literal
+  #
+  #     # A constraint component that can be used to restrict the maximum number of value nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MaxCountConstraintComponent
+  #
+  #     # A constraint component that can be used to restrict the range of value nodes with a maximum exclusive value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MaxExclusiveConstraintComponent
+  #
+  #     # A constraint component that can be used to restrict the range of value nodes with a maximum inclusive value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MaxInclusiveConstraintComponent
+  #
+  #     # A constraint component that can be used to restrict the maximum string length of value nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MaxLengthConstraintComponent
+  #
+  #     # A constraint component that can be used to restrict the minimum number of value nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MinCountConstraintComponent
+  #
+  #     # A constraint component that can be used to restrict the range of value nodes with a minimum exclusive value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MinExclusiveConstraintComponent
+  #
+  #     # A constraint component that can be used to restrict the range of value nodes with a minimum inclusive value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MinInclusiveConstraintComponent
+  #
+  #     # A constraint component that can be used to restrict the minimum string length of value nodes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MinLengthConstraintComponent
+  #
+  #     # A constraint component that can be used to verify that all value nodes conform to the given node shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NodeConstraintComponent
+  #
+  #     # A constraint component that can be used to restrict the RDF node kind of each value node.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NodeKindConstraintComponent
+  #
+  #     # A constraint component that can be used to verify that value nodes do not conform to a given shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NotConstraintComponent
+  #
+  #     # A constraint component that can be used to restrict the value nodes so that they conform to at least one out of several provided shapes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OrConstraintComponent
+  #
+  #     # A constraint component that can be used to verify that every value node matches a given regular expression.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PatternConstraintComponent
+  #
+  #     # A constraint component that can be used to verify that all value nodes conform to the given property shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PropertyConstraintComponent
+  #
+  #     # A constraint component that can be used to verify that a specified maximum number of value nodes conforms to a given shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :QualifiedMaxCountConstraintComponent
+  #
+  #     # A constraint component that can be used to verify that a specified minimum number of value nodes conforms to a given shape.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :QualifiedMinCountConstraintComponent
+  #
+  #     # A constraint component that can be used to define constraints based on SPARQL queries.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SPARQLConstraintComponent
+  #
+  #     # A constraint component that can be used to specify that no pair of value nodes may use the same language tag.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :UniqueLangConstraintComponent
+  #
+  #     # The severity for a violation validation result.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Violation
+  #
+  #     # The severity for a warning validation result.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Warning
+  #
+  #     # A constraint component that can be used to restrict the value nodes so that they conform to exactly one out of several provided shapes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :XoneConstraintComponent
+  #
+  #     # A node expression that represents the current focus node.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :this
+  #
   #   end
-  class SH < RDF::StrictVocabulary("http://www.w3.org/ns/shacl#")
+  SH = Class.new(RDF::StrictVocabulary("http://www.w3.org/ns/shacl#")) do
 
     # Ontology definition
     ontology :"http://www.w3.org/ns/shacl#",

@@ -5,9 +5,86 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://xmlns.com/wot/0.1/>
+  #   #
+  #   # Web Of Trust vocabulary
+  #   #
+  #   # Web Of Trust (wot) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language.
+  #   # @see http://xmlns.com/foaf/0.1/
   #   class WOT < RDF::StrictVocabulary
+  #     # An encrypted document intended for a set of recipients.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :EncryptedDocument
+  #
+  #     # An endorsement resource containing a detached ascii signature.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Endorsement
+  #
+  #     # A class used to represent a PGP/GPG public key for a user (an agent, person, group or organization).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PubKey
+  #
+  #     # An event describing the action of a public key being signed by some other public key.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SigEvent
+  #
+  #     # A user (agent, person, group or organization) of a PGP/GPG public key.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :User
+  #
+  #     # A property linking a document to an endorsement resource containing a detached ascii signature.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :assurance
+  #
+  #     # A property linking an encrypted document to a recipient.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :encryptedTo
+  #
+  #     # A property linking an encrypted document to the public key that was used to encrypt it.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :encrypter
+  #
+  #     # A public key hex fingerprint string (40 digits, white space insignificant).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fingerprint
+  #
+  #     # A property to link a PubKey from a User
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasKey
+  #
+  #     # A public key hex identifier string (8 digits).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hex_id
+  #
+  #     # A property linking a public key to the user of the key.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identity
+  #
+  #     # A numeric string representing the length, in bytes, of a public key.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :length
+  #
+  #     # The location of an ascii version of a public key.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pubkeyAddress
+  #
+  #     # The date of a public key signature event.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sigdate
+  #
+  #     # A property linking a public key to a public key signature event.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :signed
+  #
+  #     # A property linking a public key signature event to the public key that was used to sign.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :signer
+  #
+  #     # The time (of day) of a public key signature event.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sigtime
+  #
   #   end
-  class WOT < RDF::StrictVocabulary("http://xmlns.com/wot/0.1/")
+  WOT = Class.new(RDF::StrictVocabulary("http://xmlns.com/wot/0.1/")) do
 
     # Ontology definition
     ontology :"http://xmlns.com/wot/0.1/",

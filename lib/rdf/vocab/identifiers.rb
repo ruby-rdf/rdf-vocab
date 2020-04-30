@@ -5,9 +5,470 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://id.loc.gov/vocabulary/identifiers/>
+  #   #
+  #   # Standard Identifiers Scheme
+  #   #
+  #   # Standard Identifiers Scheme lists standard number or code systems and assigns a URI to each database or publication that defines or contains the identifiers. The purpose of these source codes is to enable the type of standard numbers or codes in resource descriptions to be indicated by URI.
   #   class Identifiers < RDF::StrictVocabulary
+  #     # Generic Identifier property.  It is expected that one will use one of its many subproperties.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :id
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :agorha
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :agrovoc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :allmovie
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :allmusic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :allocine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :amnbo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ansi
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :artsy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :artukart
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :artukaw
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :balat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bbcth
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bdusc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :belvku
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :belvwrk
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :benezit
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bfi
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bigenc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bnfcg
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bpn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cana
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cantic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cbwpid
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cerl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cgndb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :clara
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cnbksy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :csfdcz
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :danacode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :datoses
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :discogs
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dkfilm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :doi
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dpb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ean
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eidr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :emlo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fast
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fidecp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :filmaff
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :filmport
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :findagr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fisa
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :freebase
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gec
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geogndb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geonames
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gettyart
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gettyobj
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gettytgn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gettyulan
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gnd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gnis
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :goodra
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gtaa
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hdl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :iaafa
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ibdb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :idref
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :imdb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isan
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isbn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isbnre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isbnsbn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isfdbau
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isfdbaw
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isfdbma
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isfdbpu
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isil
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ismn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isni
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :iso
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isrc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :issn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :istc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :iswc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :itar
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :kda
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :kdw
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :kinopo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lattes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lccn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lcmd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lei
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :libaus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :local
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mocofo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :moma
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :morana
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :moviemetf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :moviemetr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :munzing
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :muscl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :natgazfid
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nga
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ngva
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ngvw
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nipo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nndb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :npg
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :odnb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ofdb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :onix
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :opensm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :orcid
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :oxforddnb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :permid
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :picnypl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pnta
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :porthu
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prabook
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rbmsbt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rbmsgt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rbmspe
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rbmsppe
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rbmspt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rbmsrd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rbmste
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rid
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rkda
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :saam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :scholaru
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :scope
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :scopus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sici
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :snac
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spotify
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sprfbsb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sprfbsk
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sprfcbb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sprfcfb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sprfhoc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sprfoly
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sprfpfb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :strn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :svfilm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tatearid
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :theatr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :trove
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :upc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :uri
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :urn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vd16
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vd17
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vd18
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vgmdb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :viaf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikidata
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wndla
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :xgamea
+  #
   #   end
-  class Identifiers < RDF::StrictVocabulary("http://id.loc.gov/vocabulary/identifiers/")
+  Identifiers = Class.new(RDF::StrictVocabulary("http://id.loc.gov/vocabulary/identifiers/")) do
 
     # Ontology definition
     ontology :"http://id.loc.gov/vocabulary/identifiers/",

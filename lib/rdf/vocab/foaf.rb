@@ -5,9 +5,313 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://xmlns.com/foaf/0.1/>
+  #   #
+  #   # Friend of a Friend (FOAF) vocabulary
+  #   #
+  #   # The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language.
   #   class FOAF < RDF::StrictVocabulary
+  #     # An agent (eg. person, group, software or physical artifact).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Agent
+  #
+  #     # A document.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Document
+  #
+  #     # A class of Agents.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Group
+  #
+  #     # An image.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Image
+  #
+  #     # A foaf:LabelProperty is any RDF property with texual values that serve as labels.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LabelProperty
+  #
+  #     # An online account.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OnlineAccount
+  #
+  #     # An online chat account.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OnlineChatAccount
+  #
+  #     # An online e-commerce account.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OnlineEcommerceAccount
+  #
+  #     # An online gaming account.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OnlineGamingAccount
+  #
+  #     # An organization.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Organization
+  #
+  #     # A person.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Person
+  #
+  #     # A personal profile RDF document.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PersonalProfileDocument
+  #
+  #     # A project (a collective endeavour of some kind).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Project
+  #
+  #     # Indicates an account held by this agent.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :account
+  #
+  #     # Indicates the name (identifier) associated with this online account.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :accountName
+  #
+  #     # Indicates a homepage of the service provide for this online account.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :accountServiceHomepage
+  #
+  #     # The age in years of some agent.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :age
+  #
+  #     # An AIM chat ID
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aimChatID
+  #
+  #     # A location that something is based near, for some broadly human notion of near.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :based_near
+  #
+  #     # The birthday of this Agent, represented in mm-dd string form, eg. '12-31'.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :birthday
+  #
+  #     # A current project this person works on.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currentProject
+  #
+  #     # A depiction of some thing.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :depiction
+  #
+  #     # A thing depicted in this representation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :depicts
+  #
+  #     # A checksum for the DNA of some thing. Joke.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dnaChecksum
+  #
+  #     # The family name of some person.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :familyName
+  #
+  #     # The family name of some person.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :family_name
+  #
+  #     # The first name of a person.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstName
+  #
+  #     # The underlying or 'focal' entity associated with some SKOS-described concept.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :focus
+  #
+  #     # An organization funding a project or person.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fundedBy
+  #
+  #     # A textual geekcode for this person, see http://www.geekcode.com/geek.html
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geekcode
+  #
+  #     # The gender of this Agent (typically but not necessarily 'male' or 'female').
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gender
+  #
+  #     # The given name of some person.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :givenName
+  #
+  #     # The given name of some person.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :givenname
+  #
+  #     # Indicates an account held by this agent.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :holdsAccount
+  #
+  #     # A homepage for some thing.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :homepage
+  #
+  #     # An ICQ chat ID
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :icqChatID
+  #
+  #     # An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one's photo on a homepage).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :img
+  #
+  #     # A page about a topic of interest to this person.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :interest
+  #
+  #     # A document that this thing is the primary topic of.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isPrimaryTopicOf
+  #
+  #     # A jabber ID for something.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :jabberID
+  #
+  #     # A person known by this person (indicating some level of reciprocated interaction between the parties).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :knows
+  #
+  #     # The last name of a person.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastName
+  #
+  #     # A logo representing some thing.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :logo
+  #
+  #     # Something that was made by this agent.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :made
+  #
+  #     # An agent that made this thing.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maker
+  #
+  #     # A personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that there is (across time and change) at most one individual that ever has any particular value for foaf:mbox.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mbox
+  #
+  #     # The sha1sum of the URI of an Internet mailbox associated with exactly one owner, the first owner of the mailbox.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mbox_sha1sum
+  #
+  #     # Indicates a member of a Group
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :member
+  #
+  #     # Indicates the class of individuals that are a member of a Group
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :membershipClass
+  #
+  #     # An MSN chat ID
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :msnChatID
+  #
+  #     # A Myers Briggs (MBTI) personality classification.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :myersBriggs
+  #
+  #     # A name for some thing.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :name
+  #
+  #     # A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nick
+  #
+  #     # An OpenID for an Agent.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :openid
+  #
+  #     # A page or document about this thing.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :page
+  #
+  #     # A project this person has previously worked on.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pastProject
+  #
+  #     # A phone, specified using fully qualified tel: URI scheme (refs: http://www.w3.org/Addressing/schemes.html#tel).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :phone
+  #
+  #     # A .plan comment, in the tradition of finger and '.plan' files.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :plan
+  #
+  #     # The primary topic of some page or document.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :primaryTopic
+  #
+  #     # A link to the publications of this person.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :publications
+  #
+  #     # A homepage of a school attended by the person.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :schoolHomepage
+  #
+  #     # A sha1sum hash, in hex.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sha1
+  #
+  #     # A Skype ID
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :skypeID
+  #
+  #     # A string expressing what the user is happy for the general public (normally) to know about their current activity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :status
+  #
+  #     # The surname of some person.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :surname
+  #
+  #     # A theme.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :theme
+  #
+  #     # A derived thumbnail image.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :thumbnail
+  #
+  #     # A tipjar document for this agent, describing means for payment and reward.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tipjar
+  #
+  #     # Title (Mr, Mrs, Ms, Dr. etc)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :title
+  #
+  #     # A topic of some page or document.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :topic
+  #
+  #     # A thing of interest to this person.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :topic_interest
+  #
+  #     # A weblog of some thing (whether person, group, company etc.).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :weblog
+  #
+  #     # A work info homepage of some person; a page about their work for some organization.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :workInfoHomepage
+  #
+  #     # A workplace homepage of some person; the homepage of an organization they work for.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :workplaceHomepage
+  #
+  #     # A Yahoo chat ID
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :yahooChatID
+  #
   #   end
-  class FOAF < RDF::StrictVocabulary("http://xmlns.com/foaf/0.1/")
+  FOAF = Class.new(RDF::StrictVocabulary("http://xmlns.com/foaf/0.1/")) do
 
     # Ontology definition
     ontology :"http://xmlns.com/foaf/0.1/",

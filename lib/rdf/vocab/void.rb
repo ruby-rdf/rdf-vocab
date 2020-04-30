@@ -5,9 +5,129 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://rdfs.org/ns/void#>
+  #   #
   #   class VOID < RDF::StrictVocabulary
+  #     # A set of RDF triples that are published, maintained or aggregated by a single provider.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Dataset
+  #
+  #     # A web resource whose foaf:primaryTopic or foaf:topics include void:Datasets.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DatasetDescription
+  #
+  #     # A collection of RDF links between two void:Datasets.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Linkset
+  #
+  #     # A technical feature of a void:Dataset, such as a supported RDF serialization format.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TechnicalFeature
+  #
+  #     # The rdfs:Class that is the rdf:type of all entities in a class-based partition.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :class
+  #
+  #     # A subset of a void:Dataset that contains only the entities of a certain rdfs:Class.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :classPartition
+  #
+  #     # The total number of distinct classes in a void:Dataset. In other words, the number of distinct resources occuring as objects of rdf:type triples in the dataset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :classes
+  #
+  #     # An RDF dump, partial or complete, of a void:Dataset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dataDump
+  #
+  #     # The total number of distinct objects in a void:Dataset. In other words, the number of distinct resources that occur in the object position of triples in the dataset. Literals are included in this count.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distinctObjects
+  #
+  #     # The total number of distinct subjects in a void:Dataset. In other words, the number of distinct resources that occur in the subject position of triples in the dataset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distinctSubjects
+  #
+  #     # The total number of documents, for datasets that are published as a set of individual documents, such as RDF/XML documents or RDFa-annotated web pages. Non-RDF documents, such as web pages in HTML or images, are usually not included in this count. This property is intended for datasets where the total number of triples or entities is hard to determine. void:triples or void:entities should be preferred where practical.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :documents
+  #
+  #     # The total number of entities that are described in a void:Dataset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :entities
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :exampleResource
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :feature
+  #
+  #     # Points to the void:Dataset that a document is a part of.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :inDataset
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :linkPredicate
+  #
+  #     # The dataset describing the objects of the triples contained in the Linkset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :objectsTarget
+  #
+  #     # An OpenSearch description document for a free-text search service over a void:Dataset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :openSearchDescription
+  #
+  #     # The total number of distinct properties in a void:Dataset. In other words, the number of distinct resources that occur in the predicate position of triples in the dataset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :properties
+  #
+  #     # The rdf:Property that is the predicate of all triples in a property-based partition.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :property
+  #
+  #     # A subset of a void:Dataset that contains only the triples of a certain rdf:Property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :propertyPartition
+  #
+  #     # A top concept or entry point for a void:Dataset that is structured in a tree-like fashion. All resources in a dataset can be reached by following links from its root resources in a small number of steps.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rootResource
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sparqlEndpoint
+  #
+  #     # The dataset describing the subjects of triples contained in the Linkset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subjectsTarget
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subset
+  #
+  #     # One of the two datasets linked by the Linkset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :target
+  #
+  #     # The total number of triples contained in a void:Dataset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :triples
+  #
+  #     # Defines a simple URI look-up protocol for accessing a dataset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :uriLookupEndpoint
+  #
+  #     # Defines a regular expression pattern matching URIs in the dataset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :uriRegexPattern
+  #
+  #     # A URI that is a common string prefix of all the entity URIs in a void:Dataset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :uriSpace
+  #
+  #     # A vocabulary that is used in the dataset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vocabulary
+  #
   #   end
-  class VOID < RDF::StrictVocabulary("http://rdfs.org/ns/void#")
+  VOID = Class.new(RDF::StrictVocabulary("http://rdfs.org/ns/void#")) do
 
     # Class definitions
     term :Dataset,

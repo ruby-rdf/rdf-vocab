@@ -5,9 +5,236 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://rdf-vocabulary.ddialliance.org/discovery#>
+  #   #
+  #   # DDI-RDF Discovery Vocabulary
+  #   #
+  #   # This specification defines the DDI Discovery Vocabulary, an RDF Schema vocabulary that enables discovery of research and survey data on the Web. It is based on DDI (Data Documentation Initiative) XML formats.
+  #   #
+  #   # This specification defines the DDI Discovery Vocabulary, an RDF Schema vocabulary that enables discovery of research and survey data on the Web. It is based on DDI (Data Documentation Initiative) XML formats.
+  #   # @version Version 0.6 - 2013-09-30
   #   class DISCO < RDF::StrictVocabulary
+  #     # The process collecting data is focusing on the analysis of a particular type of subject. If, for example, the adult population of Finland is being studied, the AnalysisUnit would be individuals or persons.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AnalysisUnit
+  #
+  #     # For CategoryStatistics, frequencies, percentages, and weighted percentages can be defined.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CategoryStatistics
+  #
+  #     # The class DataFile, which is also a dcmitype:Dataset, represents all the data files containing the microdata datasets.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DataFile
+  #
+  #     # SummaryStatistics pointing to variables and CategoryStatistics pointing to categories and codes are both DescriptiveStatistics.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DescriptiveStatistics
+  #
+  #     # The data for the study are collected by an Instrument. The purpose of an Instrument, i.e. an interview, a questionnaire or another entity used as a means of data collection, is in the case of a survey to record the flow of a questionnaire, its use of questions, and additional component parts. A questionnaire contains a flow of questions.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Instrument
+  #
+  #     # Each study has a set of logical metadata associated with the processing of data, at the time of collection or later during cleaning, and re-coding. LogicalDataSet represents the microdata dataset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LogicalDataSet
+  #
+  #     # This class is for representing mappings betwenn DDI-RDF and DDI-XML. See Section 10 in the specification for more details and examples.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Mapping
+  #
+  #     # A Question is designed to get information upon a subject, or sequence of subjects, from a respondent.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Question
+  #
+  #     # A questionnaire contains a flow of questions. Questionnaires must contain 1 to n questions using the object property question. Particular questions may be contained in 0 to n questionnaires.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Questionnaire
+  #
+  #     # Representation of a variable or question definition.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Representation
+  #
+  #     # RepresentedVariables encompasse study-independent, re-usable parts of variables like occupation classification.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RepresentedVariable
+  #
+  #     # A Study represents the process by which a data set was generated or collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Study
+  #
+  #     # In some cases, where data collection is cyclic or on-going, data sets may be released as a StudyGroup, where each cycle or wave of the data collection activity produces one or more data sets. This is typical for longitudinal studies, panel studies, and other types of series (to use the DDI term). In this case, a number of Study objects would be collected into a single StudyGroup.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :StudyGroup
+  #
+  #     # For SummaryStatistics, maximum values, minimum values, and standard deviations can be defined.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SummaryStatistics
+  #
+  #     # A Universe is the total membership or population of a defined class of people, objects or events.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Universe
+  #
+  #     # Variables provide a definition of the column in a rectangular data file. Variable is a characteristic of a unit being observed. A variable might be the answer of a question, have an administrative source, or be derived from other variables.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Variable
+  #
+  #     # This property points to the aggregated data set of a microdata data set. The aggregated data set is a qb:DataSet of the RDF Data Cube Vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aggregation
+  #
+  #     # This property links to the analysis unit of a Study, a StudyGroup, or a Variable.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :analysisUnit
+  #
+  #     # This property points to the RepresentedVariable the Variable is based on.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :basedOn
+  #
+  #     # This property is used for representing the case quantity of a DataFile.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :caseQuantity
+  #
+  #     # This property points to the mode of collection of a Questionnaire which is a skos:Concept.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :collectionMode
+  #
+  #     # computationBase expresses if the cases - which are the basis of the computation of a statistics value - are valid, invalid or the total of both. The usage of computationBase for frequency differs from the usage for the percentage statistics and the summary statistics. A distinction regarding computationBase doesn’t apply to frequency as category statistic. Please find more details in Section 6.3 of the specification.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :computationBase
+  #
+  #     # This property points to the DDI concept of a RepresentedVariable, a Variable, or a Question
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :concept
+  #
+  #     # context specifies conditions which have to be fulfilled for particular mappings. Context information can be either a SPARQL query or an informal description as plain literal.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :context
+  #
+  #     # This property is used to describe the cumulative percentages within category statistics. See Sections 6 and 7 more more details and examples.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cumulativePercentage
+  #
+  #     # This property points to the DataFile of a Study or a LogicalDataSet.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dataFile
+  #
+  #     # This property points from a Study or a StudyGroup to the original DDI file which is a foaf:Document.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ddifile
+  #
+  #     # Defines the end date of a period of time. Please note that this property is a feature at risk, since the domain is not a class of Disco. Maintainers of the domain ontology may define their own property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endDate
+  #
+  #     # This property points from an Instrument to a foaf:Document which is the external documentation of the Instrument.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :externalDocumentation
+  #
+  #     # This property is used to describe the frequencies within category statistics. See Sections 6 and 7 more more details and examples.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :frequency
+  #
+  #     # This property points from a Study or a StudyGroup to the funding foaf:Agent which is either a foaf:Person or a org:Organization.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fundedBy
+  #
+  #     # This property indicates the role of an Agent, e.g. analyst, data modeler, programmer, co-investigator or others.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hadRole
+  #
+  #     # This property points from a Study to the StudyGroup which contains the Study.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :inGroup
+  #
+  #     # This property indicates the original Variable of an aggregated qb:DataSet. Please note that this property is a feature at risk, since the domain is not a class of Disco. Maintainers of the domain ontology may define their own property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :inputVariable
+  #
+  #     # This property indicates the Instrument of a Study or a LogicalDataSet.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :instrument
+  #
+  #     # This property is used as a flag indicating if the microdata dataset is publicly available. The value true indicates that the dataset can be accessed (usually downloaded) by anyone.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isPublic
+  #
+  #     # Indicates if the code (represented by skos:Concept) is valid or missing. Please note that this property is a feature at risk, since the domain is not a class of Disco. Maintainers of the domain ontology may define their own property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isValid
+  #
+  #     # The general kind of data (e.g. geospatial, register, survey) collected in this study, given either as a skos:Concept, or as a blank node with attached free-text rdfs:label.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :kindOfData
+  #
+  #     # This property is used to describe the percentages within category statistics. See Sections 6 and 7 more more details and examples.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :percentage
+  #
+  #     # This property indicates the LogicalDataSets of a Study.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :product
+  #
+  #     # The purpose of a Study of a StudyGroup.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :purpose
+  #
+  #     # This property indicates the Questions associated to Variables or contained in Questionnaires.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :question
+  #
+  #     # This property contains the actual text of a question as string. See Section 8.2 for examples.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :questionText
+  #
+  #     # RepresentedVariables and Variables can have a Representation whose individuals are either of the class rdfs:Datatype (to represent values) or skos:ConceptScheme (to represent code lists).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :representation
+  #
+  #     # The response domain of questions. The response domain has to be an instance of the class Representation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :responseDomain
+  #
+  #     # Defines the start date of a period of time. Please note that this property is a feature at risk, since the domain is not a class of Disco. Maintainers of the domain ontology may define their own property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :startDate
+  #
+  #     # This property points to the skos:Concept (representing codes and categories) of a specific CategoryStatistics individual.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :statisticsCategory
+  #
+  #     # This property indicates the DataFile of a specific DesciptiveStatistics individual. DescriptiveStatistics may have statisticsDataFile relations to 0 to n data files (DataFile) and data files (DataFile) may be in 0 to n statisticsDataFile relations to DescriptiveStatistics individuals.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :statisticsDataFile
+  #
+  #     # This property indicates the Variable of a specific SummaryStatistics individual. SummaryStatistics point to 0 to n variables (Variable) using the object property statisticsVariable.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :statisticsVariable
+  #
+  #     # The sub-title of a Study of a StudyGroup.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subtitle
+  #
+  #     # This property points to the summary statistics type of a Questionnaire which is a skos:Concept.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :summaryStatisticsType
+  #
+  #     # This property indicates the Universe(s) of Studies, StudyGrous, RepresentedVariables, Variables, Questions, and LogicalDataSets.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :universe
+  #
+  #     # This property indicates the Variable of a Study and points to Variable contained in the LogicalDataSet.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :variable
+  #
+  #     # This property can be used when (1) no variable level information is available and when (2) only a stub of the RDF is requested e.g when returning basic information on a study of file, no information on potentially hundreds or thousands of variables references or metadata has to be returned.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :variableQuantity
+  #
+  #     # SummaryStatistics or CategoryStatistics resources may be weighted by a specific Variable.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :weightedBy
+  #
   #   end
-  class DISCO < RDF::StrictVocabulary("http://rdf-vocabulary.ddialliance.org/discovery#")
+  DISCO = Class.new(RDF::StrictVocabulary("http://rdf-vocabulary.ddialliance.org/discovery#")) do
 
     # Ontology definition
     ontology :"http://rdf-vocabulary.ddialliance.org/discovery#",

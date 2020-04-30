@@ -11,6 +11,7 @@ module RDF
       as:    {uri: "https://www.w3.org/ns/activitystreams#", source: 'etc/as.ttl'},
       bf2:    {uri: 'http://id.loc.gov/ontologies/bibframe/'},
       bibframe: {
+        # Obsolete
         uri: "http://bibframe.org/vocab/",
         class_name: "Bibframe",
         skip: true
@@ -60,8 +61,7 @@ module RDF
       dc:     {uri: "http://purl.org/dc/terms/"},
       dc11:   {uri: "http://purl.org/dc/elements/1.1/"},
       dcat:   {
-        uri: "http://www.w3.org/ns/dcat#",
-        source: "https://w3c.github.io/dxwg/dcat/rdf/dcat.ttl"
+        uri: "http://www.w3.org/ns/dcat#"
       },
       dcmitype: {
           uri: "http://purl.org/dc/dcmitype/",
@@ -94,19 +94,7 @@ module RDF
       ebucore: {
         uri: "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
         source: "https://www.ebu.ch/metadata/ontologies/ebucore/ebucore.rdf",
-        class_name: "EBUCore",
-        patch: %{
-          @prefix ebucore: <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#> .
-          @prefix dc: <http://purl.org/dc/terms/> .
-          @prefix dc11: <http://purl.org/dc/elements/1.1/> .
-          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-          DeleteExisting {
-            ebucore:Agent rdfs:subClassOf dc11:Agent .
-          } .
-          AddNew {
-            ebucore:Agent rdfs:subClassOf dc:Agent .
-          } .
-        }
+        class_name: "EBUCore"
       },
       edm: {
         uri: "http://www.europeana.eu/schemas/edm/",
@@ -132,8 +120,7 @@ module RDF
       fcrepo4: {
         uri: "http://fedora.info/definitions/v4/repository#",
         class_name: "Fcrepo4",
-        source: "http://fedora.info/definitions/v4/2015/07/24/repository",
-        skip: true  # Not returning triples
+        source: "http://fedora.info/definitions/v4/2015/07/24/repository"
       },
       foaf:   {uri: "http://xmlns.com/foaf/0.1/"},
       geo:    {uri: "http://www.w3.org/2003/01/geo/wgs84_pos#"},
@@ -249,8 +236,8 @@ module RDF
       },
       nfo:    {uri: 'http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#', skip: true},
       oa:     {uri: "http://www.w3.org/ns/oa#"},
-      og:     {uri: "http://ogp.me/ns#", strict: false},
-      ogc:    {uri: "http://ogp.me/ns/class#", source: "http://ogp.me/ns", strict: false},
+      og:     {uri: "http://ogp.me/ns#", source: 'http://ogp.me/ns/ogp.me.ttl', strict: false},
+      ogc:    {uri: "http://ogp.me/ns/class#", source: "http://ogp.me/ns/ogp.me.ttl", strict: false},
       ore:    {uri: "http://www.openarchives.org/ore/terms/"},
       org:    {uri: "http://www.w3.org/ns/org#"},
       owl:    {uri: "http://www.w3.org/2002/07/owl#", alias: true},
@@ -261,8 +248,7 @@ module RDF
       pplan:  {uri: "http://purl.org/net/p-plan#"},
       premis: {
         uri: "http://www.loc.gov/premis/rdf/v1#",
-        source: "http://www.loc.gov/premis/rdf/v1.rdf",
-        skip: true  # Not returning triples
+        source: "http://www.loc.gov/premis/rdf/v1.rdf"
       },
       premis_event_type: {
         uri: "http://id.loc.gov/vocabulary/preservation/eventType/",

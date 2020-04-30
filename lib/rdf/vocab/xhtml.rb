@@ -5,9 +5,10 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.w3.org/1999/xhtml#>
+  #   #
   #   class XHTML < RDF::Vocabulary
   #   end
-  class XHTML < RDF::Vocabulary("http://www.w3.org/1999/xhtml#")
+  XHTML = Class.new(RDF::Vocabulary("http://www.w3.org/1999/xhtml#")) do
 
     # Ontology definition
     ontology :"http://www.w3.org/1999/xhtml#",

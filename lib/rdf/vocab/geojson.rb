@@ -5,9 +5,74 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <https://purl.org/geojson/vocab#>
+  #   #
   #   class GEOJSON < RDF::StrictVocabulary
+  #     # See RFC 7946 Section 3.2.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Feature
+  #
+  #     # See RFC 7946 Section 3.3.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FeatureCollection
+  #
+  #     # See RFC 7946 Section 3.1.8.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GeometryCollection
+  #
+  #     # See RFC 7946 Section 3.1.4.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LineString
+  #
+  #     # See RFC 7946 Section 3.1.5.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MultiLineString
+  #
+  #     # See RFC 7946 Section 3.1.3.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MultiPoint
+  #
+  #     # See RFC 7946 Section 3.1.7.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MultiPolygon
+  #
+  #     # See RFC 7946 Section 3.1.2.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Point
+  #
+  #     # See RFC 7946 Section 3.1.6.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Polygon
+  #
+  #     # See RFC 7946 Section 5.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bbox
+  #
+  #     # RFC 7946 Section 3.1.1.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coordinates
+  #
+  #     # RFC 7946 Section 3.3.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :features
+  #
+  #     # RFC 7946 Section 3.2.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geometry
+  #
+  #     # RFC 7946 Section 3.2.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :id
+  #
+  #     # RFC 7946 Section 3.2.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :properties
+  #
+  #     # RFC 7946 Section 3.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :type
+  #
   #   end
-  class GEOJSON < RDF::StrictVocabulary("https://purl.org/geojson/vocab#")
+  GEOJSON = Class.new(RDF::StrictVocabulary("https://purl.org/geojson/vocab#")) do
 
     # Class definitions
     term :Feature,

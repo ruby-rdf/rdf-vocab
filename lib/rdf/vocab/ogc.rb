@@ -5,9 +5,42 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://ogp.me/ns/class#>
+  #   #
   #   class OGC < RDF::Vocabulary
+  #     # A string representation of a true or false value.  The lexical space contains: "true", "false", "1", and "0".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :boolean_str
+  #
+  #     # A string representation of a temporal value composed of a date (year, month, day) and an optional time component (hours, minutes).  The lexical space is defined by ISO 8601.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :date_time_str
+  #
+  #     # The lexical space: "", "the", "a", "an", and "auto".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :determiner_str
+  #
+  #     # A string representation of a 64-bit signed floating point number.  Example lexical values include "1.234", "-1.234", "1.2e3", "-1.2e3", and "7E-10".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :float_str
+  #
+  #     # A string representation of a 32-bit signed integer.  Example lexical values include "1234" and "-123".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :integer_str
+  #
+  #     # Valid mime type strings (e.g., "application/mp3").
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mime_type_str
+  #
+  #     # A string of Unicode characters.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :string
+  #
+  #     # A string of Unicode characters forming a valid URL having the http or https scheme.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :url
+  #
   #   end
-  class OGC < RDF::Vocabulary("http://ogp.me/ns/class#")
+  OGC = Class.new(RDF::Vocabulary("http://ogp.me/ns/class#")) do
 
     # Datatype definitions
     term :boolean_str,

@@ -5,9 +5,172 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.w3.org/2011/http#>
+  #   #
+  #   # HTTP in RDF
+  #   #
+  #   # A namespace for describing HTTP messages (http://www.w3.org/Protocols/rfc2616/rfc2616.html)
+  #   # @version Working Draft 29 April 2011
+  #   # @see http://www.w3.org/TR/Content-in-RDF/
+  #   # @see http://www.w3.org/WAI/intro/earl
   #   class HT < RDF::StrictVocabulary
+  #     # A connection used for HTTP transfer.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Connection
+  #
+  #     # An entity header in an HTTP message.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :EntityHeader
+  #
+  #     # A general header in an HTTP message.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GeneralHeader
+  #
+  #     # A part of a deconstructed header value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HeaderElement
+  #
+  #     # A header name.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HeaderName
+  #
+  #     # An HTTP message.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Message
+  #
+  #     # A header in an HTTP message.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MessageHeader
+  #
+  #     # The HTTP method used for the request.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Method
+  #
+  #     # A parameter for a part of a header value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Parameter
+  #
+  #     # An HTTP request.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Request
+  #
+  #     # A header in an HTTP request message.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RequestHeader
+  #
+  #     # An HTTP response.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Response
+  #
+  #     # A header in an HTTP response message.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ResponseHeader
+  #
+  #     # The status code of an HTTP response.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :StatusCode
+  #
+  #     # The absolute path sort of request URI.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :absolutePath
+  #
+  #     # The absolute request URI.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :absoluteURI
+  #
+  #     # The authority sort of request URI.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :authority
+  #
+  #     # The entity body of an HTTP message.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :body
+  #
+  #     # The authority of a connection used for the HTTP transfer.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :connectionAuthority
+  #
+  #     # The name of a header element.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :elementName
+  #
+  #     # The value of a header element.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :elementValue
+  #
+  #     # The name of an HTTP header field.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fieldName
+  #
+  #     # The value of an HTTP header field.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fieldValue
+  #
+  #     # The name of an HTTP header.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hdrName
+  #
+  #     # The deconstructed parts of an HTTP header value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :headerElements
+  #
+  #     # The headers in an HTTP message.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :headers
+  #
+  #     # The HTTP version of an HTTP message.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :httpVersion
+  #
+  #     # The HTTP method name used for the HTTP request.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :methodName
+  #
+  #     # The HTTP method used for the HTTP request.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mthd
+  #
+  #     # The name of a parameter in a part of a deconstructed HTTP header value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :paramName
+  #
+  #     # The value of a parameter in a part of a deconstructed HTTP header value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :paramValue
+  #
+  #     # The parameters in a part of a deconstructed HTTP header value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :params
+  #
+  #     # The reason phrase (status text) of an HTTP response.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reasonPhrase
+  #
+  #     # The request URI of an HTTP request.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :requestURI
+  #
+  #     # The HTTP requests made via a connection.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :requests
+  #
+  #     # The HTTP response sent in answer to an HTTP request.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :resp
+  #
+  #     # The status code of an HTTP response.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sc
+  #
+  #     # The status code number.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :statusCodeNumber
+  #
+  #     # The status code value of an HTTP response.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :statusCodeValue
+  #
   #   end
-  class HT < RDF::StrictVocabulary("http://www.w3.org/2011/http#")
+  HT = Class.new(RDF::StrictVocabulary("http://www.w3.org/2011/http#")) do
 
     # Ontology definition
     ontology :"http://www.w3.org/2011/http#",

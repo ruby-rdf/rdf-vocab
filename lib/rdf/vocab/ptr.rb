@@ -5,9 +5,146 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.w3.org/2009/pointers#>
+  #   #
   #   class PTR < RDF::StrictVocabulary
+  #     # Pointer to a byte range with a defined start and a byte offset from there.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ByteOffsetCompoundPointer
+  #
+  #     # Single pointer using a byte offset from the start of the reference.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ByteOffsetPointer
+  #
+  #     # Pointer to a range with a defined start and a byte snippet from there.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ByteSnippetCompoundPointer
+  #
+  #     # Single pointer using a CSS selector.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CSSSelectorPointer
+  #
+  #     # Pointer to a char range with a defined start and a char offset from there.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CharOffsetCompoundPointer
+  #
+  #     # Single pointer using a character offset from the start of the reference.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CharOffsetPointer
+  #
+  #     # Pointer to a range with a defined start and a character snippet from there.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CharSnippetCompoundPointer
+  #
+  #     # An abstract method made of a pair of pointers to a defined section to be subclassed for extensibility.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CompoundPointer
+  #
+  #     # Group of equivalent pointers that point to the same places.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :EquivalentPointers
+  #
+  #     # Generic single pointer that make use of an expression language such as xPath, CSS selectors, etc.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ExpressionPointer
+  #
+  #     # Single pointer using line and char numbers.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LineCharPointer
+  #
+  #     # Generic single pointer based on an offset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OffsetPointer
+  #
+  #     # Abstract Pointer to be subclassed for extensibility.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Pointer
+  #
+  #     # Generic container for a group of Pointers
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PointersGroup
+  #
+  #     # Group of related pointers you use together for some purpose.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RelatedPointers
+  #
+  #     # Abstract pointer to a single point to be subclassed for extensibility.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SinglePointer
+  #
+  #     # Compound pointer to a range with a start and an end point.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :StartEndPointer
+  #
+  #     # An XML Namespace.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :XMLNamespace
+  #
+  #     # Single pointer using an XPath expression.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :XPathPointer
+  #
+  #     # Single pointer using an XPointer expression.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :XPointerPointer
+  #
+  #     # Number of bytes counting from the start point.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :byteOffset
+  #
+  #     # Char number within a line starting at one. 		
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :charNumber
+  #
+  #     # Number of characters counting from the start point.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :charOffset
+  #
+  #     # Pointer to the end point of the range.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endPointer
+  #
+  #     # Expressions, such as xPath or CSS selectors, that identify points.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :expression
+  #
+  #     # A Pointer that is part of a Group
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :groupPointer
+  #
+  #     # Line number within the reference starting at one. 		
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lineNumber
+  #
+  #     # The namespace being used for the XPath expression.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :namespace
+  #
+  #     # The namespace name being used for an XML Namespace.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :namespaceName
+  #
+  #     # Offset from the start of the reference.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :offset
+  #
+  #     # The namespace prefix being used for an XML Namespace.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prefix
+  #
+  #     # Scope within which a single pointer operates.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reference
+  #
+  #     # Pointer to the start point of the range in a compound pointer.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :startPointer
+  #
+  #     # Version for the expression language being used.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :version
+  #
   #   end
-  class PTR < RDF::StrictVocabulary("http://www.w3.org/2009/pointers#")
+  PTR = Class.new(RDF::StrictVocabulary("http://www.w3.org/2009/pointers#")) do
 
     # Class definitions
     term :ByteOffsetCompoundPointer,

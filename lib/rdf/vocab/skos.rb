@@ -5,9 +5,127 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.w3.org/2004/02/skos/core#>
+  #   #
+  #   # SKOS Vocabulary
+  #   #
+  #   # An RDF vocabulary for describing the basic structure and content of concept schemes such as thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', other types of controlled vocabulary, and also concept schemes embedded in glossaries and terminologies.
+  #   # @see http://www.w3.org/TR/skos-reference/
   #   class SKOS < RDF::StrictVocabulary
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Collection
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Concept
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ConceptScheme
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OrderedCollection
+  #
+  #     # The range of skos:altLabel is the class of RDF plain literals.
+  #     #
+  #     # skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :altLabel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :broadMatch
+  #
+  #     # Broader concepts are typically rendered as parents in a concept hierarchy (tree).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :broader
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :broaderTransitive
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :changeNote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :closeMatch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :definition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :editorialNote
+  #
+  #     # skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :exactMatch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :example
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasTopConcept
+  #
+  #     # The range of skos:hiddenLabel is the class of RDF plain literals.
+  #     #
+  #     # skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hiddenLabel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :historyNote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :inScheme
+  #
+  #     # These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mappingRelation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :member
+  #
+  #     # For any resource, every item in the list given as the value of the       skos:memberList property is also a value of the skos:member property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :memberList
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :narrowMatch
+  #
+  #     # Narrower concepts are typically rendered as children in a concept hierarchy (tree).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :narrower
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :narrowerTransitive
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :notation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :note
+  #
+  #     # A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag.
+  #     #
+  #     # skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise       disjoint properties.
+  #     #
+  #     # The range of skos:prefLabel is the class of RDF plain literals.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prefLabel
+  #
+  #     # skos:related is disjoint with skos:broaderTransitive
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :related
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedMatch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :scopeNote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :semanticRelation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :topConceptOf
+  #
   #   end
-  class SKOS < RDF::StrictVocabulary("http://www.w3.org/2004/02/skos/core#")
+  SKOS = Class.new(RDF::StrictVocabulary("http://www.w3.org/2004/02/skos/core#")) do
 
     # Ontology definition
     ontology :"http://www.w3.org/2004/02/skos/core#",

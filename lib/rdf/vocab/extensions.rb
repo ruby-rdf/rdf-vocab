@@ -266,8 +266,8 @@ module RDF
       ##
       # Generate HTML+RDFa representation, specific to vocabularies. This uses generated JSON-LD and a Haml template.
       #
-      # @param [RDF::Queryable] :graph Optional graph, otherwise uses statements from vocabulary.
-      # @param [Hash{#to_sym => String}] Prefixes to add to output
+      # @param [RDF::Queryable] graph Optional graph, otherwise uses statements from vocabulary.
+      # @param [Hash{#to_sym => String}] prefixes to add to output
       # @param [String, Hash] jsonld
       #   If not provided, the `to_jsonld` method is used to generate it.
       # @param [String] template The path to a Haml or ERB template used to generate the output using the JSON-LD serialization

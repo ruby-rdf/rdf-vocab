@@ -5,9 +5,143 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.w3.org/ns/earl#>
+  #   #
+  #   # Evaluation and Report Language (EARL) 1.0 Schema
+  #   #
+  #   # Formal schema of the Evaluation and Report Language (EARL) 1.0
+  #   # @see http://www.w3.org/TR/Pointers-in-RDF/
+  #   # @see http://www.w3.org/WAI/intro/earl
+  #   # @see http://www.w3.org/TR/HTTP-in-RDF/
+  #   # @see http://www.w3.org/TR/Content-in-RDF/
   #   class EARL < RDF::StrictVocabulary
+  #     # a statement that embodies the results of a test
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Assertion
+  #
+  #     # an entity such as a person, a software tool, an organization, or any other grouping that carries out a test collectively
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Assertor
+  #
+  #     # the class of outcomes to denote an undetermined outcome
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CannotTell
+  #
+  #     # the class of outcomes to denote failing a test
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Fail
+  #
+  #     # the class of outcomes to denote the test is not applicable
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NotApplicable
+  #
+  #     # the class of outcomes to denote the test has not been carried out
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NotTested
+  #
+  #     # a discrete value that describes a resulting condition from carrying out the test
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OutcomeValue
+  #
+  #     # the class of outcomes to denote passing a test
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Pass
+  #
+  #     # any piece of software such as an authoring tool, browser, or evaluation tool
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Software
+  #
+  #     # an atomic test, usually one that is a partial test for a requirement
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TestCase
+  #
+  #     # a testable statement, usually one that can be passed or failed
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TestCriterion
+  #
+  #     # describes how a test was carried out
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TestMode
+  #
+  #     # a higher-level requirement that is tested by executing one or more sub-tests
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TestRequirement
+  #
+  #     # the actual result of performing the test
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TestResult
+  #
+  #     # the class of things that have been tested against some test criterion
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TestSubject
+  #
+  #     # assertor of an assertion
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :assertedBy
+  #
+  #     # additional warnings or error messages in a human-readable form
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :info
+  #
+  #     # assertor that is primarily responsible for performing the test
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mainAssertor
+  #
+  #     # mode in which the test was performed
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mode
+  #
+  #     # outcome of performing the test
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :outcome
+  #
+  #     # location within a test subject that are most relevant to a test result
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pointer
+  #
+  #     # result of an assertion
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :result
+  #
+  #     # test subject of an assertion
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subject
+  #
+  #     # test criterion of an assertion
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :test
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :automatic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cantTell
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :failed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :inapplicable
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :manual
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :passed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :semiAuto
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :undisclosed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :unknownMode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :untested
+  #
   #   end
-  class EARL < RDF::StrictVocabulary("http://www.w3.org/ns/earl#")
+  EARL = Class.new(RDF::StrictVocabulary("http://www.w3.org/ns/earl#")) do
 
     # Ontology definition
     ontology :"http://www.w3.org/ns/earl#",

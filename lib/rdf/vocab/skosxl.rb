@@ -5,9 +5,38 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.w3.org/2008/05/skos-xl#>
+  #   #
+  #   # SKOS XL Vocabulary
+  #   #
+  #   # An RDF vocabulary extending SKOS and allowing the description and linking of lexical entities.
+  #   # @see http://www.w3.org/2008/05/skos
   #   class SKOSXL < RDF::StrictVocabulary
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Label
+  #
+  #     # If C skosxl:altLabel L and L skosxl:literalForm V, then X skos:altLabel V.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :altLabel
+  #
+  #     # If C skosxl:hiddenLabel L and L skosxl:literalForm V, then C skos:hiddenLabel V.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hiddenLabel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :labelRelation
+  #
+  #     # If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource.
+  #     #
+  #     # The range of skosxl:literalForm is the class of RDF plain literals.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :literalForm
+  #
+  #     # If C skosxl:prefLabel L and L skosxl:literalForm V, then X skos:prefLabel V.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prefLabel
+  #
   #   end
-  class SKOSXL < RDF::StrictVocabulary("http://www.w3.org/2008/05/skos-xl#")
+  SKOSXL = Class.new(RDF::StrictVocabulary("http://www.w3.org/2008/05/skos-xl#")) do
 
     # Ontology definition
     ontology :"http://www.w3.org/2008/05/skos-xl#",

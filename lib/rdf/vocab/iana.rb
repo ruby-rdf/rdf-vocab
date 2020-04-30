@@ -5,9 +5,238 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.iana.org/assignments/relation/>
+  #   #
   #   class IANA < RDF::StrictVocabulary
+  #     # Refers to a resource that is the subject of the link's context.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :about
+  #
+  #     # Refers to a substitute for this context
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alternate
+  #
+  #     # Refers to an appendix.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :appendix
+  #
+  #     # Refers to a collection of records, documents, or other       materials of historical interest.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :archives
+  #
+  #     # Refers to the context's author.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :author
+  #
+  #     # Gives a permanent link to use for bookmarking purposes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bookmark
+  #
+  #     # Designates the preferred version of a resource (the IRI and its contents).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :canonical
+  #
+  #     # Refers to a chapter in a collection of resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chapter
+  #
+  #     # The target IRI points to a resource which represents the collection resource for the context IRI.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :collection
+  #
+  #     # Refers to a table of contents.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :contents
+  #
+  #     # Refers to a copyright statement that applies to the     link's context.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :copyright
+  #
+  #     # Refers to a resource containing the most recent       item(s) in a collection of resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :current
+  #
+  #     # The target IRI points to a resource from which this material was derived.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :derivedfrom
+  #
+  #     # Refers to a resource providing information about the       link's context.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :describedby
+  #
+  #     # The relationship A 'describes' B asserts that       resource A provides a description of resource B. There are no       constraints on the format or representation of either A or B,       neither are there any further constraints on either resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :describes
+  #
+  #     # Refers to a list of patent disclosures made with respect to material for which 'disclosure' relation is specified.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :disclosure
+  #
+  #     # Refers to a resource whose available representations       are byte-for-byte identical with the corresponding representations of       the context IRI.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :duplicate
+  #
+  #     # Refers to a resource that can be used to edit the       link's context.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :edit
+  #
+  #     # Identifies a related resource that is potentially       large and might require special handling.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :enclosure
+  #
+  #     # An IRI that refers to the furthest preceding resource     in a series of resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :first
+  #
+  #     # Refers to a glossary of terms.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :glossary
+  #
+  #     # Refers to context-sensitive help.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :help
+  #
+  #     # Refers to a resource hosted by the server indicated by       the link context.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hosts
+  #
+  #     # Refers to a hub that enables registration for     notification of updates to the context.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hub
+  #
+  #     # Refers to an icon representing the link's context.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :icon
+  #
+  #     # Refers to an index.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :index
+  #
+  #     # The target IRI points to a resource that is a member of the collection represented by the context IRI.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :item
+  #
+  #     # An IRI that refers to the furthest following resource       in a series of resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :last
+  #
+  #     # Refers to a license associated with this context.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :license
+  #
+  #     # Refers to further information about the link's context,       expressed as a LRDD ("Link-based Resource Descriptor Document")       resource.  See [RFC6415] for information about       processing this relation type in host-meta documents. When used       elsewhere, it refers to additional links and other metadata.       Multiple instances indicate additional LRDD resources. LRDD       resources MUST have an "application/xrd+xml" representation, and       MAY have others.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lrdd
+  #
+  #     # The Target IRI points to a Memento, a fixed resource that will not change state anymore.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :memento
+  #
+  #     # Refers to a resource that can be used to monitor changes in an HTTP resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :monitor
+  #
+  #     # Indicates that the link's context is a part of a series, and       that the next in the series is the link target.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :next
+  #
+  #     # Indicates that the context’s original author or publisher does not endorse the link target.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nofollow
+  #
+  #     # Indicates that no referrer information is to be leaked when following the link.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :noreferrer
+  #
+  #     # The Target IRI points to an Original Resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :original
+  #
+  #     # Indicates a resource where payment is accepted.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :payment
+  #
+  #     # Indicates that the link target should be preemptively cached.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prefetch
+  #
+  #     # Indicates that the link's context is a part of a series, and       that the previous in the series is the link target.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prev
+  #
+  #     # Refers to a resource that provides a preview of the link's context.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :preview
+  #
+  #     # Refers to the previous resource in an ordered series       of resources.  Synonym for "prev".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :previous
+  #
+  #     # Identifying that a resource representation conforms to a certain profile, without affecting the non-profile semantics of the resource representation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :profile
+  #
+  #     # Identifies a related resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :related
+  #
+  #     # Identifies a resource that is a reply to the context       of the link.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :replies
+  #
+  #     # Refers to a resource that can be used to search through       the link's context and related resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :search
+  #
+  #     # Refers to a section in a collection of resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :section
+  #
+  #     # Conveys an identifier for the link's context.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :self
+  #
+  #     # Indicates a URI that can be used to retrieve a       service document.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :service
+  #
+  #     # Refers to the first resource in a collection of       resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :start
+  #
+  #     # Refers to a stylesheet.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stylesheet
+  #
+  #     # Refers to a resource serving as a subsection in a       collection of resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subsection
+  #
+  #     # Gives a tag (identified by the given address) that applies to       the current document.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tag
+  #
+  #     # The Target IRI points to a TimeGate for an Original Resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :timegate
+  #
+  #     # The Target IRI points to a TimeMap for an Original Resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :timemap
+  #
+  #     # Refers to a resource identifying the abstract semantic type of which the link's context is considered to be an instance.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :type
+  #
+  #     # Refers to a parent document in a hierarchy of       documents.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :up
+  #
+  #     # Identifies a resource that is the source of the       information in the link's context.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :via
+  #
   #   end
-  class IANA < RDF::StrictVocabulary("http://www.iana.org/assignments/relation/")
+  IANA = Class.new(RDF::StrictVocabulary("http://www.iana.org/assignments/relation/")) do
 
     # Property definitions
     property :about,

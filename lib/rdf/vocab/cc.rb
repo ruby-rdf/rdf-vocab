@@ -5,9 +5,115 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://creativecommons.org/ns#>
+  #   #
   #   class CC < RDF::StrictVocabulary
+  #     # the legal jurisdiction of a license
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Jurisdiction
+  #
+  #     # a set of requests/permissions to users of a Work, e.g. a copyright license, the public domain, information for distributors
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :License
+  #
+  #     # an action that may or may not be allowed or desired
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Permission
+  #
+  #     # something you may be asked not to do
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Prohibition
+  #
+  #     # an action that may or may not be requested of you
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Requirement
+  #
+  #     # a potentially copyrightable work
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Work
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :attributionName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :attributionURL
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deprecatedOn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :jurisdiction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :legalcode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :license
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :morePermissions
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :permits
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prohibits
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :requires
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :useGuidelines
+  #
+  #     # credit be given to copyright holder and/or author
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Attribution
+  #
+  #     # exercising rights for commercial purposes
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CommercialUse
+  #
+  #     # derivative and combined works must be licensed under specified terms, similar to those on the original work
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Copyleft
+  #
+  #     # distribution of derivative works
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DerivativeWorks
+  #
+  #     # distribution, public display, and publicly performance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Distribution
+  #
+  #     # use in a non-developing country
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HighIncomeNationUse
+  #
+  #     # derivative works must be licensed under specified terms, with at least the same conditions as the original work; combinations with the work may be licensed under different terms
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LesserCopyleft
+  #
+  #     # copyright and license notices be kept intact
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Notice
+  #
+  #     # making multiple copies
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Reproduction
+  #
+  #     # derivative works be licensed under the same terms or compatible terms as the original work
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ShareAlike
+  #
+  #     # permits commercial derivatives, but only non-commercial distribution
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Sharing
+  #
+  #     # source code (the preferred form for making modifications) must be provided when exercising some rights granted by the license.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SourceCode
+  #
   #   end
-  class CC < RDF::StrictVocabulary("http://creativecommons.org/ns#")
+  CC = Class.new(RDF::StrictVocabulary("http://creativecommons.org/ns#")) do
 
     # Ontology definition
     ontology :"http://creativecommons.org/ns#",

@@ -5,9 +5,27 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+  #   #
+  #   # SemWeb Vocab Status ontology
+  #   #
+  #   # This vocabulary was created in the FOAF project, based on experience with FOAF, Dublin Core and other early RDF vocabularies. Deployment experience shows that changing namespace URIs is expensive and unrewarding, so this vocabulary provides terms to support in-place evolution of structured data vocabularies. By indicating status at the level of terms rather than vocabularies, dictionary-style, fine grained improvements become easier. Different organizations and parties can agree or disagree on the status of a vocabulary term; however the status published alongside the term may deserve special attention. Future work could include patterns for citing announcements and decisions, or using SKOS to decentralise the extension of the basic status levels.
+  #   #
+  #   # An RDF vocabulary for relating SW vocabulary terms to their status.
   #   class VS < RDF::StrictVocabulary
+  #     # more information about the status etc of a term, typically human oriented
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :moreinfo
+  #
+  #     # the status of a vocabulary term, expressed as a short symbolic string; known values include 'unstable','testing', 'stable' and 'archaic'
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :term_status
+  #
+  #     # human-oriented documentation, examples etc for use of this term
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :userdocs
+  #
   #   end
-  class VS < RDF::StrictVocabulary("http://www.w3.org/2003/06/sw-vocab-status/ns#")
+  VS = Class.new(RDF::StrictVocabulary("http://www.w3.org/2003/06/sw-vocab-status/ns#")) do
 
     # Ontology definition
     ontology :"http://www.w3.org/2003/06/sw-vocab-status/ns#",

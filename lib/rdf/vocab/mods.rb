@@ -5,9 +5,524 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.loc.gov/mods/rdf/v1#>
+  #   #
   #   class MODS < RDF::StrictVocabulary
+  #     # Aggregates cartographic properties.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Cartographics
+  #
+  #     # For a classification whose scheme is not part of the controlled vocabulary. Bundles together a classification number and scheme.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ClassificationGroup
+  #
+  #     # Used when the identifier type is not from the controlled list. Bundles together an identifier and its type.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :IdentifierGroup
+  #
+  #     # An aggregator for location properties.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Location
+  #
+  #     #  An aggregator for copy properties.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LocationCopy
+  #
+  #     #  The resource which is the subject of this description.   
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ModsResource
+  #
+  #     # Aggregates a note with its type.  
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NoteGroup
+  #
+  #     # An aggregator for part properties.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Part
+  #
+  #     # Aggregates a name with its role. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RoleRelationship
+  #
+  #     # A summary of the content of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :abstract
+  #
+  #     # Information about restrictions imposed on access to  the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :accessCondition
+  #
+  #     # Administrative metadata for the MODS description, corresponds to recordInfo (MODS XML) which is, minimimally, a Class defined outside of the MADS/RDF namespace. The RecordInfo Class from the RecordInfo ontology is recommended.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :adminMetadata
+  #
+  #     # A geographic entity expressed in cartographic terms.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cartographics
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cartographicsCoordinates
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cartographicsProjection
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cartographicsScale
+  #
+  #     # A designation applied to the resource that indicates the subject by applying a formal system of coding and organizing resources according to subject areas.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :classification
+  #
+  #     # Used when classification scheme is not in controlled vocabulary. Bundles together the classification number with its scheme.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :classificationGroup
+  #
+  #     # The classification scheme
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :classificationGroupScheme
+  #
+  #     # The classification value
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :classificationGroupValue
+  #
+  #     # Date that the resource  was digitized or a subsequent snapshot was taken.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateCaptured
+  #
+  #     # When there is both a start and end for the capture date this is the end  date.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateCapturedEnd
+  #
+  #     # When there is both a start and end for the capture date this is the start date.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateCapturedStart
+  #
+  #     # The resource's creation date.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateCreated
+  #
+  #     # When there is both a start and end for the creation date this is the end date.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateCreatedEnd
+  #
+  #     # When there is both a start and end for the creation date this is the start date.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateCreatedStart
+  #
+  #     # Date when resource was modified.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateModified
+  #
+  #     # When there is both a start and end for the modification date this is the end date.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateModifiedEnd
+  #
+  #     # When there is both a start and end for the modification date this is the start date.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateModifiedStart
+  #
+  #     # Date when resource was copyrighted.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateOfCopyright
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateOfCopyrightEnd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateOfCopyrightStart
+  #
+  #     # A date when resource was valid. (Not necessarily the first or last date, but this is an assertion that on that given date the information was valid.)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateValid
+  #
+  #     # When the resource is valid over an interval with a start and end date, this is the end date. (When start and end date are given, it is an assertion that the information was valid over the course of this interval.  It does not necessarily assert that is was not valid before the start or after the end of the interval.)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateValidEnd
+  #
+  #     # When the resource is valid over an interval with a start and end date, this is the start date. (When start and end date are given, it is an assertion that the information was valid over the course of this interval.  It does not necessarily assert that is was not valid before the start or after the end of the interval.)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateValidStart
+  #
+  #     # a designation of the source of a digital file important to its creation, use and management.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :digitalOrigin
+  #
+  #     # Version of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :edition
+  #
+  #     # publication frequency
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :frequency
+  #
+  #     # The genre (or one of several genres) of the resource. Represented in the MADS namespace. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :genre
+  #
+  #     # identifier is a property for which all terms in the "identifier" vocabulary become subproperties.  Thus for example 'identifer:isbn' is a subproperty saying in effect "has this ISBN" where 'isbn' is a term within that vocabulary. (The prefix 'identifier:' is used to denote the namespace for the "identifier" vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identifier
+  #
+  #     # Used when identifier type is not in controlled vocabulary. Bundles together the identifier with its type.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identifierGroup
+  #
+  #     # The identifier type.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identifierGroupType
+  #
+  #     # The identifier value	.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identifierGroupValue
+  #
+  #     # Used in conjuction with identifierType, when the type is not from the controlled vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identifierValue
+  #
+  #     # Describes the issuance of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :issuance
+  #
+  #     # The language (or one of several languages) of the resource. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :languageOfResource
+  #
+  #     # Information about a specific tangible instance of a bibliographic resource or set which comprises one or more pieces via indication of sublocation and/or locator.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationCopy
+  #
+  #     # URI of the copy of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationCopyElectronicLocator
+  #
+  #     # A summary holdings statement for the copy. A string with information including volume or issue, date of publication or date of issue of a component of a multi-part resource, distinguishing it from other components of the same resource. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationCopyEnumerationAndChronology
+  #
+  #     # One of three levels of enumerationAndChronology: 'basic'
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationCopyEnumerationAndChronologyBasic
+  #
+  #     # One of three levels of enumerationAndChronology:'index'
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationCopyEnumerationAndChronologyIndex
+  #
+  #     # One of three levels  of enumerationAndChronology:'supplement'
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationCopyEnumerationAndChronologySupplement
+  #
+  #     # The form of a particular copy may be indicated when the general description refers to multiple forms and there is different detailed holdings information associated with different forms.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationCopyForm
+  #
+  #     # A note pertaining to a specific copy.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationCopyNote
+  #
+  #     # Shelfmark or other shelving designation that indicates the location identifier for a copy.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationCopyShelfLocator
+  #
+  #     # Department, division, or section of an institution holding a copy of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationCopySublocation
+  #
+  #     # The location (or one of several locations) at which the resource resides.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationOfResource
+  #
+  #     # The institution or repository that holds the resource, or where it is available.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationPhysical
+  #
+  #     # Shelfmark or other shelving designation
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationShelfLocator
+  #
+  #     # Location of the resource (a URL)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationUrl
+  #
+  #     # An Internet Media (MIME) type e.g. text/html. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mediaType
+  #
+  #     # A name  - personal, corporate, conference, or family - associated with the resource. Represented in the MADS namespace. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :name
+  #
+  #     # A name that has been distinguished as the principal name associated with the resource. There should be no more than one name principal name. (The rule for determining the principal name is as follows: If the role associated with the name is 'creator' AND if it is the only name whose role is 'creator' then it is the principal name. Thus if there are more than one name, or no name, whose role is 'creator', then there is no principal name.) If there is a principal name, and if there is a uniform title, then that name and title are to be combined into a nameTitle. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :namePrincipal
+  #
+  #     # Textual information about the resource. This property is used when no type is specified. (In contrast to hasTypedNote, whose object is an aggregator that includes both the type and note.)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :note
+  #
+  #     # Used for a note with a type (other than "statement of responsibility")
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :noteGroup
+  #
+  #     # A property of NoteGroup - used when a type is supplied for the note.  The type.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :noteGroupType
+  #
+  #     # A property of noteGroup - used when a type is supplied for the note. The text of the note.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :noteGroupValue
+  #
+  #     # Information about a physical part of the resource, including the part number, its caption and title, and dimensions. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :part
+  #
+  #     # Date associated with a part.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partDate
+  #
+  #     # The type of the resource part, e.g. volume, issue, page.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partDetailType
+  #
+  #     # The value of the end of a part. For example, if unit of the part has value 'page', this is the number of the last page. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partEnd
+  #
+  #     # A property of a part - the level of numbering in the host/parent item.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partLevel
+  #
+  #     # A property of a part - a textual listing of the units within the part.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partList
+  #
+  #     # A string that designates the part name.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partName
+  #
+  #     # A string that designates the part number.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partNumber
+  #
+  #     # An integer that designates the sequence of parts
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partOrder
+  #
+  #     # The beginning unit of the part.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partStart
+  #
+  #     # The total number of units within a part.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partTotal
+  #
+  #     # The segment type of a part. (When parts are included, the resource is ususally a document, so the part type would be the segment type of the document.)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partType
+  #
+  #     # the unit -- e.g. page, chapter -- applying to the start, end, and total values.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partUnit
+  #
+  #     # a statement of the number and specific material of the units of the resource that express physical extent.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :physicalExtent
+  #
+  #     # A particular physical presentation of the resource, including the physical form or medium of material for a resource. Example: oil paint
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :physicalForm
+  #
+  #     # Place of publication/origin. Used in connection with the origin of a resource, i.e., creation, publication, issuance, etc.  Represented as a MADS Geographic.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :placeOfOrigin
+  #
+  #     # The name of the entity that published, printed, distributed, released, issued, or produced the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :publisher
+  #
+  #     # The code or name of the organization that either created the original description or modified it.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :recordContentSource
+  #
+  #     # Part of administrative metadata. The standard  which designates the rules used for the content of the description.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :recordDescriptionStandard
+  #
+  #     # The system control number assigned by the organization creating, using, or distributing the description.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :recordIdentifier
+  #
+  #     # Describes the origin or provenance of the description.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :recordOrigin
+  #
+  #     # The reformatting quality;  e.g. access, preservation,  replacement.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reformattingQuality
+  #
+  #     # Relates the described MODS resource to another MODS resource which is a constituent of the described resource. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedConstituent
+  #
+  #     # Relates the described MODS resource to a similar MODS resource of a different format.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedFormat
+  #
+  #     # Relates the described MODS resource to another MODS resource which is a host of the described resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedHost
+  #
+  #     # Relates the described resource to a another MODS resource with different origination information.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedInstantiation
+  #
+  #     # Relates the described MODS resource to another, related MODS resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedItem
+  #
+  #     # Relates the described MODS resource to another MODS resource which is an original of the described resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedOriginal
+  #
+  #     # Relates the described MODS resource to a MODS resource which preceded the described resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedPreceding
+  #
+  #     # Relates the described MODS resource to another MODS resource which the described resource references.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedReference
+  #
+  #     # 
+  #     #
+  #     # Relates the described MODS resource to another MODS resource which references the described resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedReferencedBy
+  #
+  #     # Relates the described MODS resource to another MODS resource which is review of the described resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedReview
+  #
+  #     # Relates the described resource to a another MODS resource which is a series of which the described resource is a part.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedSeries
+  #
+  #     # Relates the described resource to a another MODS resource which suceeded it.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedSucceeding
+  #
+  #     # Relates the described MODS resource to another MODS resource which is a different version of the described resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedVersion
+  #
+  #     # role is an abstract property, for which all terms in the relator vocabulary of roles become subproperties.  Thus for example 'relator:artist' refers to the role 'artist' within that vocabulary. (The prefix 'relator:' is used to denote the namespace for the "relator" vocabulary.   The property 'relator:artist' relates the resource to an artist associated with the resource, represented as a mads name.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :role
+  #
+  #     # Binds a name to the role that the named entity played for the resource. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :roleRelationship
+  #
+  #     # The name included in a roleRelationship.  The roleRelationship binds an name and a role, where the name is a name associated with the resource and is specified elsewhere via the hasName property.  This mechanism is used when the role is not part of a known vocabulary.  Otherwise, the relationship is expressed by using the role vocabulary term as the property; for example, see relator:creator.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :roleRelationshipName
+  #
+  #     # The role associated with a name, where the name and role are bound together in a roleRelationship.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :roleRelationshipRole
+  #
+  #     # A note, when the note type is "statement of responsibility"
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :statementOfResponsibility
+  #
+  #     # An abstract property defined for which the various subject catergories (e.g. subjectGenre, subjectTitle) are subproperties.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subject
+  #
+  #     # A subject of the resource composed of several component subjects. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subjectComplex
+  #
+  #     # A subject of the resource which is a genre, expressed in terms of a MADS GenreForm.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subjectGenre
+  #
+  #     # A subject of the resource which is a geographic entity, expressed in terms of a MADS Geographic.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subjectGeographic
+  #
+  #     # A subject of the resource which is a geographic entity, expressed as a geographic code and in terms of a MADS Geographic.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subjectGeographicCode
+  #
+  #     # A subject of the resource which is a hierarchy of geographic entities expressed in terms of a MADS Geographics.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subjectHierarchicalGeographic
+  #
+  #     # A subject of the resource which is a name, expressed in terms of a MADS Name.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subjectName
+  #
+  #     # A subject of the resource which is an occupation, expressed in terms of a MADS Occupation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subjectOccupation
+  #
+  #     # A subject of the resource which is a temporal expression, expressed in terms of a MADS Temporal.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subjectTemporal
+  #
+  #     # A subject of the resource which is a title, expressed in terms of a MADS Title.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subjectTitle
+  #
+  #     # A subject of the resource which is a topic, expressed in terms of a MADS Topic.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subjectTopic
+  #
+  #     # Description of the contents of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tableOfContents
+  #
+  #     # The target audience of the resource. Examples: adolescent, adult, general, juvenile, preschool,  specialized.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :targetAudience
+  #
+  #     # A title for the resource. Represented as a MADS Title.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :title
+  #
+  #     # A title which has been distinguished as the principal  title. (This corresponds to a MODS XML titleInfo with  no type attribute.) There should be no more than one principal title. Represented as a MADS Title.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :titlePrincipal
+  #
+  #     # A title which has been distinguished as a uniform title. (This corresponds to a MODS XML titleInfo with 'type=uniform' attribute.) There should be no more than one uniform title.  Represented as a MADS Title, or, if there is a primary name, it is represented as a MADS NameTitle.  
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :titleUniform
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :access
+  #
+  #     # An abstract property for which date properties in general are subproperties.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :date
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :digitizedAnalog
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :digitizedMicrofilm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :integratingResource
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :monographic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reformattedDigital
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :serial
+  #
   #   end
-  class MODS < RDF::StrictVocabulary("http://www.loc.gov/mods/rdf/v1#")
+  MODS = Class.new(RDF::StrictVocabulary("http://www.loc.gov/mods/rdf/v1#")) do
 
     # Ontology definition
     ontology :"http://www.loc.gov/mods/rdf/v1#",

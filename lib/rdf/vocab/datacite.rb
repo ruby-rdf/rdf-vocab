@@ -7,7 +7,7 @@ module RDF::Vocab
   #   # Vocabulary for <http://purl.org/spar/datacite/>
   #   class DataCite < RDF::StrictVocabulary
   #   end
-  class DataCite < RDF::StrictVocabulary("http://purl.org/spar/datacite/")
+  DataCite = Class.new(RDF::StrictVocabulary("http://purl.org/spar/datacite/")) do
 
     # Ontology definition
     ontology :"http://purl.org/spar/datacite/",

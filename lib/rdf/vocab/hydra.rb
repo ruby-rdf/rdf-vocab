@@ -5,9 +5,243 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.w3.org/ns/hydra/core#>
+  #   #
+  #   # The Hydra Core Vocabulary
+  #   #
+  #   # A lightweight vocabulary for hypermedia-driven Web APIs
+  #   #
+  #   # The Hydra Core Vocabulary is a lightweight vocabulary to create hypermedia-driven Web APIs. By specifying a number of concepts commonly used in Web APIs it enables the creation of generic API clients.
   #   class HYDRA < RDF::StrictVocabulary
+  #     # The Hydra API documentation class
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ApiDocumentation
+  #
+  #     # The class of Hydra classes. Hydra classes and their instances are dereferenceable resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Class
+  #
+  #     # A collection holding references to a number of related resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Collection
+  #
+  #     # A runtime error, used to report information beyond the returned status code.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Error
+  #
+  #     # The class of IRI templates.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :IriTemplate
+  #
+  #     # A mapping from an IRI template variable to a property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :IriTemplateMapping
+  #
+  #     # The class of properties representing links.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Link
+  #
+  #     # An operation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Operation
+  #
+  #     # A PartialCollectionView describes a partial view of a Collection. Multiple PartialCollectionViews can be connected with the the next/previous properties to allow a client to retrieve all members of the collection.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PartialCollectionView
+  #
+  #     # The class of dereferenceable resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Resource
+  #
+  #     # Additional information about a status code that might be returned.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Status
+  #
+  #     # A property known to be supported by a Hydra class.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SupportedProperty
+  #
+  #     # A templated link.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TemplatedLink
+  #
+  #     # A representation specifies how to serialize variable values into strings.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :VariableRepresentation
+  #
+  #     # A description.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :description
+  #
+  #     # Specification of the header expected by the operation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :expectsHeader
+  #
+  #     # A property representing a freetext query.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :freetextQuery
+  #
+  #     # Instructs to limit set only to N elements.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :limit
+  #
+  #     # A variable-to-property mapping of the IRI template.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mapping
+  #
+  #     # The HTTP method.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :method
+  #
+  #     # Instructs to skip N elements of the set.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :offset
+  #
+  #     # Instructs to provide a specific page of the collection at a given index.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pageIndex
+  #
+  #     # Instructs to provide a specific page reference of the collection.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pageReference
+  #
+  #     # A property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :property
+  #
+  #     # True if the client can retrieve the property's value, false otherwise.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :readable
+  #
+  #     # True if the property is required, false otherwise.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :required
+  #
+  #     # Name of the header returned by the operation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :returnsHeader
+  #
+  #     # The HTTP status code
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :statusCode
+  #
+  #     # A templated string with placeholders. The literal's datatype indicates the template syntax; if not specified, hydra:Rfc6570Template is assumed.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :template
+  #
+  #     # A title, often used along with a description.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :title
+  #
+  #     # The total number of items referenced by a collection.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :totalItems
+  #
+  #     # An IRI template variable
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :variable
+  #
+  #     # The representation format to use when expanding the IRI template.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :variableRepresentation
+  #
+  #     # True if the client can change the property's value, false otherwise.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :writeable
+  #
+  #     # An IRI template as defined by RFC6570.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Rfc6570Template
+  #
+  #     # A representation that serializes just the lexical form of a variable value, but omits language and type information.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BasicRepresentation
+  #
+  #     # A representation that serializes a variable value including its language and type information and thus differentiating between IRIs and literals.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ExplicitRepresentation
+  #
+  #     # A link to the API documentation
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :apiDocumentation
+  #
+  #     # Collections somehow related to this resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :collection
+  #
+  #     # A link to main entry point of the Web API
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :entrypoint
+  #
+  #     # The information expected by the Web API.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :expects
+  #
+  #     # The first resource of an interlinked set of resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :first
+  #
+  #     # The last resource of an interlinked set of resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :last
+  #
+  #     # Semantics of each member provided by the collection.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :manages
+  #
+  #     # A member of the collection
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :member
+  #
+  #     # The resource following the current instance in an interlinked set of resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :next
+  #
+  #     # The object.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :object
+  #
+  #     # An operation supported by the Hydra resource
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :operation
+  #
+  #     # A status that might be returned by the Web API (other statuses should be expected and properly handled as well)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :possibleStatus
+  #
+  #     # The resource preceding the current instance in an interlinked set of resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :previous
+  #
+  #     # The information returned by the Web API on success
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :returns
+  #
+  #     # A IRI template that can be used to query a collection.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :search
+  #
+  #     # The subject.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subject
+  #
+  #     # A class known to be supported by the Web API
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :supportedClass
+  #
+  #     # An operation supported by instances of the specific Hydra class or the target of the Hydra link
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :supportedOperation
+  #
+  #     # The properties known to be supported by a Hydra class
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :supportedProperty
+  #
+  #     # A specific view of a resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :view
+  #
   #   end
-  class HYDRA < RDF::StrictVocabulary("http://www.w3.org/ns/hydra/core#")
+  HYDRA = Class.new(RDF::StrictVocabulary("http://www.w3.org/ns/hydra/core#")) do
 
     # Ontology definition
     ontology :"http://www.w3.org/ns/hydra/core#",
@@ -438,7 +672,7 @@ module RDF::Vocab
       "vs:term_status": "testing".freeze
     term :supportedOperation,
       comment: %(An operation supported by instances of the specific Hydra class or the target of the Hydra link).freeze,
-      domainIncludes: ["hydra:Class".freeze, "hydra:Link".freeze, "hydra:TemplatedLink".freeze],
+      domainIncludes: ["hydra:Class".freeze, "hydra:Link".freeze, "hydra:SupportedProperty".freeze, "hydra:TemplatedLink".freeze],
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "supported operation".freeze,
       range: "hydra:Operation".freeze,
