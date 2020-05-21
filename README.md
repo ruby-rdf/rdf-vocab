@@ -1,8 +1,8 @@
 # rdf-vocab
 Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 
-[![Gem Version](https://badge.fury.io/rb/rdf-vocab.png)](http://badge.fury.io/rb/rdf-vocab)
-[![Build Status](https://travis-ci.org/ruby-rdf/rdf-vocab.png?branch=master)](http://travis-ci.org/ruby-rdf/rdf-vocab)
+[![Gem Version](https://badge.fury.io/rb/rdf-vocab.png)](https://badge.fury.io/rb/rdf-vocab)
+[![Build Status](https://travis-ci.org/ruby-rdf/rdf-vocab.png?branch=master)](https://travis-ci.org/ruby-rdf/rdf-vocab)
 
 ## Extensions
 This gem extends `RDF::Vocabulary` with `#to_ttl`, `#to_jsonld`, and `#to_html` methods to create special-purpose vocabulary serializations. The HTML version is templated using a Haml template to allow output to be customized.
@@ -94,7 +94,7 @@ Also adds the `gen-vocab` command to the `rdf` command-line executable to genera
 
 * First, add an entry to `lib/rdf/vocab.rb`, the key names contained within
 for guidance. For more information, see the documentation on
-[RDF::Vocabulary](http://www.rubydoc.info/github/ruby-rdf/rdf/RDF/Vocabulary).
+[RDF::Vocabulary](https://www.rubydoc.info/github/ruby-rdf/rdf/RDF/Vocabulary).
 * Next, create an empty file in `lib/rdf/vocab` based on the key name for
 your vocabulary. For example, if you've added the vocabulary `:foo`, create a
 new empty file at `lib/rdf/vocab/foo.rb`.
@@ -105,7 +105,7 @@ new empty file at `lib/rdf/vocab/foo.rb`.
 * [David Chandek-Stark](https://github.com/dchandekstark)
 * [Aaron Coburn](https://github.com/acoburn)
 * [Michael J. Giarlo](https://github.com/mjgiarlo)
-* [Gregg Kellogg](http://github.com/gkellogg)
+* [Gregg Kellogg](https://github.com/gkellogg)
 
 ## Contributing
 
@@ -125,10 +125,10 @@ This repository uses [Git Flow](https://github.com/nvie/gitflow) to mange develo
 ## License
 
 This is free and unencumbered public domain software. For more information,
-see <http://unlicense.org/> or the accompanying {file:LICENSE} file.
+see <https://unlicense.org/> or the accompanying {file:LICENSE} file.
 
-[RDF]:              http://www.w3.org/RDF/
-[RDF.rb]:           http://rubydoc.info/github/ruby-rdf/rdf
-[YARD]:             http://yardoc.org/
-[YARD-GS]:          http://rubydoc.info/docs/yard/file/docs/GettingStarted.md
-[PDD]:              http://lists.w3.org/Archives/Public/public-rdf-ruby/2010May/0013.html
+[RDF]:              https://www.w3.org/RDF/
+[RDF.rb]:           https://rubydoc.info/github/ruby-rdf/rdf
+[YARD]:             https://yardoc.org/
+[YARD-GS]:          https://rubydoc.info/docs/yard/file/docs/GettingStarted.md
+[PDD]:              https://lists.w3.org/Archives/Public/public-rdf-ruby/2010May/0013.html
