@@ -212,7 +212,7 @@ module RDF
           AddNew {:gender a owl:DatatypeProperty .} .
         }
       },
-      marc_relators: {
+      marcrelators: {
         uri: "http://id.loc.gov/vocabulary/relators/",
         source: "http://id.loc.gov/vocabulary/relators.rdf",
         class_name: "MARCRelators",
@@ -250,7 +250,7 @@ module RDF
         uri: "http://www.loc.gov/premis/rdf/v1#",
         source: "http://www.loc.gov/premis/rdf/v1.rdf"
       },
-      premis_event_type: {
+      premiseventtype: {
         uri: "http://id.loc.gov/vocabulary/preservation/eventType/",
         source: "http://id.loc.gov/vocabulary/preservation/eventType",
         class_name: "PremisEventType"
@@ -288,13 +288,14 @@ module RDF
         uri: "http://schema.org/",
         source: "http://schema.org/version/latest/all-layers.nq"
       },
-      sh: { uri: 'http://www.w3.org/ns/shacl#', source: 'https://www.w3.org/ns/shacl.ttl' },
+      sd: {uri: 'http://www.w3.org/ns/sparql-service-description#', source: 'http://www.w3.org/ns/sparql-service-description.ttl'},
+      sh: {uri: 'http://www.w3.org/ns/shacl#', source: 'https://www.w3.org/ns/shacl.ttl'},
       sioc:   {uri: "http://rdfs.org/sioc/ns#"},
-      sioc_services: {
+      siocservices: {
         uri: "http://rdfs.org/sioc/services#",
         class_name: "SiocServices"
       },
-      sioct:  {uri: "http://rdfs.org/sioc/types#", class_name: "SiocTypes"},
+      sioctypes:  {uri: "http://rdfs.org/sioc/types#", class_name: "SiocTypes"},
       skos:   {uri: "http://www.w3.org/2004/02/skos/core#"},
       skosxl: {uri: "http://www.w3.org/2008/05/skos-xl#", source: "http://www.w3.org/TR/skos-reference/skos-xl.rdf"},
       v:      {uri: "http://rdf.data-vocabulary.org/#", source: "etc/rdf.data-vocab.ttl"},
@@ -315,7 +316,7 @@ module RDF
 
     # Autoload vocabularies
     VOCABS.each do |id, params|
-      v = params.fetch(:class_name, id.to_s.upcase).to_sym
+      v = (params[:class_name] ||= id.to_s.upcase).to_sym
       autoload v, File.expand_path("../vocab/#{id}", __FILE__) unless params[:alias]
     end
 
