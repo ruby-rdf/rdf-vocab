@@ -10,7 +10,7 @@
 <> a doap:Project, earl:TestSubject, earl:Software ;
   doap:name          "RDF::Vocab" ;
   doap:homepage      <https://ruby-rdf.github.com/rdf-vocab> ;
-  doap:license       <https://creativecommons.org/licenses/publicdomain/> ;
+  doap:license       <https://unlicense.org/> ;
   doap:shortdesc     "A library of RDF vocabularies"@en ;
   doap:description   "Defines several standard RDF vocabularies"@en ;
   doap:created       "2015-04-04"^^xsd:date ;
