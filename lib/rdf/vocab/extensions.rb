@@ -48,6 +48,42 @@ module RDF
       end
 
       ##
+      # Limits iteration over vocabularies to just those selected
+      #
+      # @example limit to set of vocabularies by symbol
+      #     RDF::Vocabulary.limit_vocabs(:rdf, :rdfs, :schema)
+      #     RDF::Vocabulary.find_term('http://schema.org/CreativeWork').pname
+      #     # => 'schema:CreativeWork'
+      #
+      # @example limit to set of vocabularies by class name
+      #     RDF::Vocabulary.limit_vocabs(RDF::RDFV, RDF::RDFS, RDF::Vocab::SCHEMA)
+      #     RDF::Vocabulary.find_term('http://schema.org/CreativeWork').pname
+      #     # => 'schema:CreativeWork'
+      #
+      # @param [Array<symbol, RDF::Vocabulary>] vocabs
+      #   A list of vocabularies (symbols or classes) which may
+      #   be returned by {Vocabulary.each}. Also limits
+      #   vocabularies that will be inspeced for other methods.
+      #   Set to nil, or an empty array to reset.
+      # @return [Array<RDF::Vocabulary>]
+      def limit_vocabs(*vocabs)
+        @vocabs = if Array(vocabs).empty?
+          nil
+        else
+          @classes_loaded = true
+          vocabs.map do |vocab|
+            if vocab == :rdf || vocab == :rdfv
+              RDF::RDFV
+            elsif vocab.is_a?(Symbol) && RDF::Vocab::VOCABS.key?(vocab)
+              RDF::Vocab.const_get(RDF::Vocab::VOCABS[vocab][:class_name].to_sym)
+            else
+              vocab
+            end
+          end.compact
+        end
+      end
+
+      ##
       # Generate Turtle representation, specific to vocabularies
       #
       # @param [RDF::Queryable] :graph Optional graph, otherwise uses statements from vocabulary.

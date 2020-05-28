@@ -9,6 +9,14 @@ This gem extends `RDF::Vocabulary` with `#to_ttl`, `#to_jsonld`, and `#to_html` 
 
 Also extends `RDF::Vocabulary::Format` with the `gen-vocab` command extension to the `rdf` executable.
 
+### Limiting vocabularies used for lookup
+
+As loading vocabularies can dominate processing time, the `RDF::Vocabulary.limit_vocabs` method can be used to set a specific set of vocabularies over which to reason. For example:
+
+    RDF::Vocabulary.limit_vocabs(:rdf, :rdf, :schema)
+
+will limit the vocabularies which are returned from `RDF::Vocabulary.each`, which is used for reasoning and other operations over vocabularies and terms.
+
 ## Vocabularies
 
 * RDF::Vocab::ACL       - [Web Access Control](http://www.w3.org/wiki/WebAccessControl) (W3C)

@@ -323,7 +323,6 @@ module RDF
     # Aliases for vocabularies still defined directly in RDF.rb
     def self.const_missing(constant)
       if VOCABS.fetch(constant.to_s.downcase.to_sym, {})[:alias]
-        require "rdf/vocab/#{constant.to_s.downcase}"
         const_set(constant, RDF.const_get(constant))
       else
         super
