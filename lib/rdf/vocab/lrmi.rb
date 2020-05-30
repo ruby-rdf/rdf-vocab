@@ -7,7 +7,7 @@ module RDF::Vocab
   #   # Vocabulary for <http://purl.org/dcx/lrmi-terms/>
   #   class LRMI < RDF::Vocabulary
   #   end
-  class LRMI < RDF::Vocabulary("http://purl.org/dcx/lrmi-terms/")
+  LRMI = Class.new(RDF::Vocabulary("http://purl.org/dcx/lrmi-terms/")) do
 
     # Ontology definition
     ontology :"http://purl.org/dcx/lrmi-terms/",

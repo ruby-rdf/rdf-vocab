@@ -5,9 +5,158 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://rdf-vocabulary.ddialliance.org/xkos#>
+  #   #
+  #   # XKOS: an SKOS extension for representing statistical classifications
+  #   #
+  #   # This ontology is based on work initiated at Dagstuhl Schloss in September 2011
+  #   # @version Version 1.0.3 - 2016-03-15
+  #   # @version Version 1.1 - 2016-03-20
+  #   # @version Version 1.0.2 - 2016-03-15
+  #   # @version Version 1.0.1 - 2014-11-26
   #   class XKOS < RDF::StrictVocabulary
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ClassificationLevel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ConceptAssociation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Correspondence
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ExplanatoryNote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :additionalContentNote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :after
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :before
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :belongsTo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :caseLaw
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :causal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :causedBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :causes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :classifiedUnder
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :compares
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coreContentNote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :covers
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coversExhaustively
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coversMutuallyExclusively
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :depth
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :disjoint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :exclusionNote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :follows
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :generalizes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasPart
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :inclusionNote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isPartOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :levels
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :madeOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maxLength
+  #
+  #     # immediate successor in the sequence
+  #     #
+  #     # successeur immédiat dans la séquence
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :next
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :notationPattern
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfLevels
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organizedBy
+  #
+  #     # This property is expected to store plain text literals, without HTML or XML markup.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :plainText
+  #
+  #     # predecessor in the sequence
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :precedes
+  #
+  #     # immediate predecessor in the sequence
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :previous
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sequential
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceConcept
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :specializes
+  #
+  #     # successeur dans la séquence
+  #     #
+  #     # successor in the sequence
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :succeeds
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :supersedes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :targetConcept
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :temporal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :variant
+  #
   #   end
-  class XKOS < RDF::StrictVocabulary("http://rdf-vocabulary.ddialliance.org/xkos#")
+  XKOS = Class.new(RDF::StrictVocabulary("http://rdf-vocabulary.ddialliance.org/xkos#")) do
 
     # Ontology definition
     ontology :"http://rdf-vocabulary.ddialliance.org/xkos#",

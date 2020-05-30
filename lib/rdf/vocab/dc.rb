@@ -7,7 +7,7 @@ module RDF::Vocab
   #   # Vocabulary for <http://purl.org/dc/terms/>
   #   class DC < RDF::StrictVocabulary
   #   end
-  class DC < RDF::StrictVocabulary("http://purl.org/dc/terms/")
+  DC = Class.new(RDF::StrictVocabulary("http://purl.org/dc/terms/")) do
 
     # Ontology definition
     ontology :"http://purl.org/dc/terms/",

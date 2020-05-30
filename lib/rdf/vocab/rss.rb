@@ -7,7 +7,7 @@ module RDF::Vocab
   #   # Vocabulary for <http://purl.org/rss/1.0/>
   #   class RSS < RDF::StrictVocabulary
   #   end
-  class RSS < RDF::StrictVocabulary("http://purl.org/rss/1.0/")
+  RSS = Class.new(RDF::StrictVocabulary("http://purl.org/rss/1.0/")) do
 
     # Class definitions
     term :channel,

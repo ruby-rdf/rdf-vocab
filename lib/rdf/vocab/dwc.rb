@@ -5,9 +5,761 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://rs.tdwg.org/dwc/terms/>
+  #   #
+  #   # Darwin Core Recommended Terms
+  #   #
+  #   # This document contains a list of Darwin Core terms that have the dwcattributes:status equal to "recommended". For the full normative RDF document of all Darwin Core terms, see dwctermshistory.rdf. To comment on this schema, please create a new issue in https://github.com/tdwg/dwc/issues
   #   class DWC < RDF::Vocabulary
+  #     # An action that occurs at some location during some time.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Event
+  #
+  #     # A preserved specimen that is a fossil.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FossilSpecimen
+  #
+  #     # Geological information, such as stratigraphy, that qualifies a region or place.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GeologicalContext
+  #
+  #     # An output of a human observation process.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HumanObservation
+  #
+  #     # A taxonomic determination (e.g., the assignment to a taxon).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Identification
+  #
+  #     # A specimen that is alive.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LivingSpecimen
+  #
+  #     # An output of a machine observation process.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MachineObservation
+  #
+  #     # A physical results of a sampling (or subsampling) event. In biological collections, the material sample is typically collected, and either preserved or destructively processed.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MaterialSample
+  #
+  #     # A measurement of or fact about an rdfs:Resource (http://www.w3.org/2000/01/rdf-schema#Resource).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MeasurementOrFact
+  #
+  #     # An existence of an Organism (sensu http://rs.tdwg.org/dwc/terms/Organism) at a particular place at a particular time.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Occurrence
+  #
+  #     # A particular organism or defined group of organisms considered to be taxonomically homogeneous.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Organism
+  #
+  #     # A specimen that has been preserved.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PreservedSpecimen
+  #
+  #     # A relationship of one rdfs:Resource (http://www.w3.org/2000/01/rdf-schema#Resource) to another.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ResourceRelationship
+  #
+  #     # A group of organisms (sensu http://purl.obolibrary.org/obo/OBI_0100026) considered by taxonomists to form a homogeneous unit.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Taxon
+  #
+  #     # The full name, with authorship and date information if known, of the currently valid (zoological) or accepted (botanical) taxon.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :acceptedNameUsage
+  #
+  #     # An identifier for the name usage (documented meaning of the name according to a source) of the currently valid (zoological) or accepted (botanical) taxon.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :acceptedNameUsageID
+  #
+  #     # Abstract term to attribute information to a source.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :accordingTo
+  #
+  #     # A list (concatenated and separated) of identifiers (publication, global unique identifier, URI) of media associated with the Occurrence.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :associatedMedia
+  #
+  #     # A list (concatenated and separated) of identifiers of other Occurrence records and their associations to this Occurrence.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :associatedOccurrences
+  #
+  #     # A list (concatenated and separated) of identifiers of other Organisms and their associations to this Organism.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :associatedOrganisms
+  #
+  #     # A list (concatenated and separated) of identifiers (publication, bibliographic reference, global unique identifier, URI) of literature associated with the Occurrence.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :associatedReferences
+  #
+  #     # A list (concatenated and separated) of identifiers (publication, global unique identifier, URI) of genetic sequence information associated with the Occurrence.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :associatedSequences
+  #
+  #     # A list (concatenated and separated) of identifiers or names of taxa and their associations with the Occurrence.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :associatedTaxa
+  #
+  #     # The specific nature of the data record.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :basisOfRecord
+  #
+  #     # The full name of the lithostratigraphic bed from which the cataloged item was collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bed
+  #
+  #     # A description of the behavior shown by the subject at the time the Occurrence was recorded.  Recommended best practice is to use a controlled vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :behavior
+  #
+  #     # An identifier (preferably unique) for the record within the data set or collection.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :catalogNumber
+  #
+  #     # The full scientific name of the class in which the taxon is classified.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :class
+  #
+  #     # The name, acronym, coden, or initialism identifying the collection or data set from which the record was derived.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :collectionCode
+  #
+  #     # An identifier for the collection or dataset from which the record was derived.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :collectionID
+  #
+  #     # The name of the continent in which the Location occurs. Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :continent
+  #
+  #     # A decimal representation of the precision of the coordinates given in the decimalLatitude and decimalLongitude.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coordinatePrecision
+  #
+  #     # The horizontal distance (in meters) from the given decimalLatitude and decimalLongitude describing the smallest circle containing the whole of the Location. Leave the value empty if the uncertainty is unknown, cannot be estimated, or is not applicable (because there are no coordinates). Zero is not a valid value for this term.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coordinateUncertaintyInMeters
+  #
+  #     # The name of the country or major administrative unit in which the Location occurs. Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :country
+  #
+  #     # The standard code for the country in which the Location occurs. Recommended best practice is to use ISO 3166-1-alpha-2 country codes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :countryCode
+  #
+  #     # The full, unabbreviated name of the next smaller administrative region than stateProvince (county, shire, department, etc.) in which the Location occurs.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :county
+  #
+  #     # Actions taken to make the shared data less specific or complete than in its original form. Suggests that alternative data of higher quality may be available on request.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dataGeneralizations
+  #
+  #     # An identifier for the set of data. May be a global unique identifier or an identifier specific to a collection or institution.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :datasetID
+  #
+  #     # The name identifying the data set from which the record was derived.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :datasetName
+  #
+  #     # The date on which the subject was identified as representing the Taxon. Recommended best practice is to use an encoding scheme, such as ISO 8601:2004(E).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateIdentified
+  #
+  #     # The integer day of the month on which the Event occurred.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :day
+  #
+  #     # The geographic latitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location. Positive values are north of the Equator, negative values are south of it. Legal values lie between -90 and 90, inclusive.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :decimalLatitude
+  #
+  #     # The geographic longitude (in decimal degrees, using the spatial reference system given in geodeticDatum) of the geographic center of a Location. Positive values are east of the Greenwich Meridian, negative values are west of it. Legal values lie between -180 and 180, inclusive.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :decimalLongitude
+  #
+  #     # The current state of a specimen with respect to the collection identified in collectionCode or collectionID. Recommended best practice is to use a controlled vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :disposition
+  #
+  #     # A list of additional measurements, facts, characteristics, or assertions about the record. Meant to provide a mechanism for structured content.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dynamicProperties
+  #
+  #     # The full name of the earliest possible geochronologic age or lowest chronostratigraphic stage attributable to the stratigraphic horizon from which the cataloged item was collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :earliestAgeOrLowestStage
+  #
+  #     # The full name of the earliest possible geochronologic eon or lowest chrono-stratigraphic eonothem or the informal name ("Precambrian") attributable to the stratigraphic horizon from which the cataloged item was collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :earliestEonOrLowestEonothem
+  #
+  #     # The full name of the earliest possible geochronologic epoch or lowest chronostratigraphic series attributable to the stratigraphic horizon from which the cataloged item was collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :earliestEpochOrLowestSeries
+  #
+  #     # The full name of the earliest possible geochronologic era or lowest chronostratigraphic erathem attributable to the stratigraphic horizon from which the cataloged item was collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :earliestEraOrLowestErathem
+  #
+  #     # The full name of the earliest possible geochronologic period or lowest chronostratigraphic system attributable to the stratigraphic horizon from which the cataloged item was collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :earliestPeriodOrLowestSystem
+  #
+  #     # The latest ordinal day of the year on which the Event occurred (1 for January 1, 365 for December 31, except in a leap year, in which case it is 366).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endDayOfYear
+  #
+  #     # The process by which the biological individual(s) represented in the Occurrence became established at the location. Recommended best practice is to use a controlled vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :establishmentMeans
+  #
+  #     # The date-time or interval during which an Event occurred. For occurrences, this is the date-time when the event was recorded. Not suitable for a time in a geological context. Recommended best practice is to use an encoding scheme, such as ISO 8601:2004(E).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eventDate
+  #
+  #     # An identifier for the set of information associated with an Event (something that occurs at a place and time). May be a global unique identifier or an identifier specific to the data set.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eventID
+  #
+  #     # Comments or notes about the Event.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eventRemarks
+  #
+  #     # The time or interval during which an Event occurred. Recommended best practice is to use an encoding scheme, such as ISO 8601:2004(E).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eventTime
+  #
+  #     # The full scientific name of the family in which the taxon is classified.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :family
+  #
+  #     # One of a) an indicator of the existence of, b) a reference to (publication, URI), or c) the text of notes taken in the field about the Event.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fieldNotes
+  #
+  #     # An identifier given to the event in the field. Often serves as a link between field notes and the Event.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fieldNumber
+  #
+  #     # A Well-Known Text (WKT) representation of the Spatial Reference System (SRS) for the footprintWKT of the Location. Do not use this term to describe the SRS of the decimalLatitude and decimalLongitude, even if it is the same as for the footprintWKT - use the geodeticDatum instead.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :footprintSRS
+  #
+  #     # The ratio of the area of the footprint (footprintWKT) to the area of the true (original, or most specific) spatial representation of the Location. Legal values are 0, greater than or equal to 1, or undefined. A value of 1 is an exact match or 100% overlap. A value of 0 should be used if the given footprint does not completely contain the original representation. The footprintSpatialFit is undefined (and should be left blank) if the original representation is a point and the given georeference is not that same point. If both the original and the given georeference are the same point, the footprintSpatialFit is 1.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :footprintSpatialFit
+  #
+  #     # A Well-Known Text (WKT) representation of the shape (footprint, geometry) that defines the Location. A Location may have both a point-radius representation (see decimalLatitude) and a footprint representation, and they may differ from each other.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :footprintWKT
+  #
+  #     # The full name of the lithostratigraphic formation from which the cataloged item was collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :formation
+  #
+  #     # The full scientific name of the genus in which the taxon is classified.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :genus
+  #
+  #     # The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which the geographic coordinates given in decimalLatitude and decimalLongitude as based. Recommended best practice is use the EPSG code as a controlled vocabulary to provide an SRS, if known. Otherwise use a controlled vocabulary for the name or code of the geodetic datum, if known. Otherwise use a controlled vocabulary for the name or code of the ellipsoid, if known. If none of these is known, use the value "unknown".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geodeticDatum
+  #
+  #     # An identifier for the set of information associated with a GeologicalContext (the location within a geological context, such as stratigraphy). May be a global unique identifier or an identifier specific to the data set.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geologicalContextID
+  #
+  #     # A description or reference to the methods used to determine the spatial footprint, coordinates, and uncertainties.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :georeferenceProtocol
+  #
+  #     # Notes or comments about the spatial description determination, explaining assumptions made in addition or opposition to the those formalized in the method referred to in georeferenceProtocol.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :georeferenceRemarks
+  #
+  #     # A list (concatenated and separated) of maps, gazetteers, or other resources used to georeference the Location, described specifically enough to allow anyone in the future to use the same resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :georeferenceSources
+  #
+  #     # A categorical description of the extent to which the georeference has been verified to represent the best possible spatial description. Recommended best practice is to use a controlled vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :georeferenceVerificationStatus
+  #
+  #     # A list (concatenated and separated) of names of people, groups, or organizations who determined the georeference (spatial representation) for the Location.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :georeferencedBy
+  #
+  #     # The date on which the Location was georeferenced. Recommended best practice is to use an encoding scheme, such as ISO 8601:2004(E).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :georeferencedDate
+  #
+  #     # The full name of the lithostratigraphic group from which the cataloged item was collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :group
+  #
+  #     # A category or description of the habitat in which the Event occurred.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :habitat
+  #
+  #     # A list (concatenated and separated) of taxa names terminating at the rank immediately superior to the taxon referenced in the taxon record.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :higherClassification
+  #
+  #     # A list (concatenated and separated) of geographic names less specific than the information captured in the locality term.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :higherGeography
+  #
+  #     # An identifier for the geographic region within which the Location occurred. Recommended best practice is to use an persistent identifier from a controlled vocabulary such as the Getty Thesaurus of Geographic Names.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :higherGeographyID
+  #
+  #     # The full name of the highest possible geological biostratigraphic zone of the stratigraphic horizon from which the cataloged item was collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :highestBiostratigraphicZone
+  #
+  #     # An identifier for the Identification (the body of information associated with the assignment of a scientific name). May be a global unique identifier or an identifier specific to the data set.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identificationID
+  #
+  #     # A brief phrase or a standard term ("cf.", "aff.") to express the determiner's doubts about the Identification.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identificationQualifier
+  #
+  #     # A list (concatenated and separated) of references (publication, global unique identifier, URI) used in the Identification.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identificationReferences
+  #
+  #     # Comments or notes about the Identification.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identificationRemarks
+  #
+  #     # A categorical indicator of the extent to which the taxonomic identification has been verified to be correct. Recommended best practice is to use a controlled vocabulary such as that used in HISPID/ABCD.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identificationVerificationStatus
+  #
+  #     # A list (concatenated and separated) of names of people, groups, or organizations who assigned the Taxon to the subject.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identifiedBy
+  #
+  #     # The number of individuals represented present at the time of the Occurrence.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :individualCount
+  #
+  #     # Additional information that exists, but that has not been shared in the given record.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :informationWithheld
+  #
+  #     # The name of the lowest or terminal infraspecific epithet of the scientificName, excluding any rank designation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :infraspecificEpithet
+  #
+  #     # The name (or acronym) in use by the institution having custody of the object(s) or information referred to in the record.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :institutionCode
+  #
+  #     # An identifier for the institution having custody of the object(s) or information referred to in the record.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :institutionID
+  #
+  #     # The name of the island on or near which the Location occurs. Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :island
+  #
+  #     # The name of the island group in which the Location occurs. Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :islandGroup
+  #
+  #     # The full scientific name of the kingdom in which the taxon is classified.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :kingdom
+  #
+  #     # The full name of the latest possible geochronologic age or highest chronostratigraphic stage attributable to the stratigraphic horizon from which the cataloged item was collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :latestAgeOrHighestStage
+  #
+  #     # The full name of the latest possible geochronologic eon or highest chrono-stratigraphic eonothem or the informal name ("Precambrian") attributable to the stratigraphic horizon from which the cataloged item was collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :latestEonOrHighestEonothem
+  #
+  #     # The full name of the latest possible geochronologic epoch or highest chronostratigraphic series attributable to the stratigraphic horizon from which the cataloged item was collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :latestEpochOrHighestSeries
+  #
+  #     # The full name of the latest possible geochronologic era or highest chronostratigraphic erathem attributable to the stratigraphic horizon from which the cataloged item was collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :latestEraOrHighestErathem
+  #
+  #     # The full name of the latest possible geochronologic period or highest chronostratigraphic system attributable to the stratigraphic horizon from which the cataloged item was collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :latestPeriodOrHighestSystem
+  #
+  #     # The age class or life stage of the biological individual(s) at the time the Occurrence was recorded. Recommended best practice is to use a controlled vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lifeStage
+  #
+  #     # The combination of all litho-stratigraphic names for the rock from which the cataloged item was collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lithostratigraphicTerms
+  #
+  #     # The specific description of the place. Less specific geographic information can be provided in other geographic terms (higherGeography, continent, country, stateProvince, county, municipality, waterBody, island, islandGroup). This term may contain information modified from the original to correct perceived errors or standardize the description.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locality
+  #
+  #     # Information about the source of this Location information. Could be a publication (gazetteer), institution, or team of individuals.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationAccordingTo
+  #
+  #     # An identifier for the set of location information (data associated with dcterms:Location). May be a global unique identifier or an identifier specific to the data set.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationID
+  #
+  #     # Comments or notes about the Location.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationRemarks
+  #
+  #     # The full name of the lowest possible geological biostratigraphic zone of the stratigraphic horizon from which the cataloged item was collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lowestBiostratigraphicZone
+  #
+  #     # An identifier for the MaterialSample (as opposed to a particular digital record of the material sample). In the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the materialSampleID globally unique.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :materialSampleID
+  #
+  #     # The greater depth of a range of depth below the local surface, in meters.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maximumDepthInMeters
+  #
+  #     # The greater distance in a range of distance from a reference surface in the vertical direction, in meters. Use positive values for locations above the surface, negative values for locations below. If depth measures are given, the reference surface is the location given by the depth, otherwise the reference surface is the location given by the elevation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maximumDistanceAboveSurfaceInMeters
+  #
+  #     # The upper limit of the range of elevation (altitude, usually above sea level), in meters.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maximumElevationInMeters
+  #
+  #     # The description of the potential error associated with the measurementValue.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :measurementAccuracy
+  #
+  #     # A list (concatenated and separated) of names of people, groups, or organizations who determined the value of the MeasurementOrFact.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :measurementDeterminedBy
+  #
+  #     # The date on which the MeasurementOrFact was made. Recommended best practice is to use an encoding scheme, such as ISO 8601:2004(E).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :measurementDeterminedDate
+  #
+  #     # An identifier for the MeasurementOrFact (information pertaining to measurements, facts, characteristics, or assertions). May be a global unique identifier or an identifier specific to the data set.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :measurementID
+  #
+  #     # A description of or reference to (publication, URI) the method or protocol used to determine the measurement, fact, characteristic, or assertion.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :measurementMethod
+  #
+  #     # Comments or notes accompanying the MeasurementOrFact.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :measurementRemarks
+  #
+  #     # The nature of the measurement, fact, characteristic, or assertion. Recommended best practice is to use a controlled vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :measurementType
+  #
+  #     # The units associated with the measurementValue. Recommended best practice is to use the International System of Units (SI).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :measurementUnit
+  #
+  #     # The value of the measurement, fact, characteristic, or assertion.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :measurementValue
+  #
+  #     # The full name of the lithostratigraphic member from which the cataloged item was collected.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :member
+  #
+  #     # The lesser depth of a range of depth below the local surface, in meters.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minimumDepthInMeters
+  #
+  #     # The lesser distance in a range of distance from a reference surface in the vertical direction, in meters. Use positive values for locations above the surface, negative values for locations below. If depth measures are given, the reference surface is the location given by the depth, otherwise the reference surface is the location given by the elevation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minimumDistanceAboveSurfaceInMeters
+  #
+  #     # The lower limit of the range of elevation (altitude, usually above sea level), in meters.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minimumElevationInMeters
+  #
+  #     # The ordinal month in which the Event occurred.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :month
+  #
+  #     # The full, unabbreviated name of the next smaller administrative region than county (city, municipality, etc.) in which the Location occurs. Do not use this term for a nearby named place that does not contain the actual location.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :municipality
+  #
+  #     # The reference to the source in which the specific taxon concept circumscription is defined or implied - traditionally signified by the Latin "sensu" or "sec." (from secundum, meaning "according to"). For taxa that result from identifications, a reference to the keys, monographs, experts and other sources should be given.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nameAccordingTo
+  #
+  #     # An identifier for the source in which the specific taxon concept circumscription is defined or implied. See nameAccordingTo.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nameAccordingToID
+  #
+  #     # A reference for the publication in which the scientificName was originally established under the rules of the associated nomenclaturalCode.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :namePublishedIn
+  #
+  #     # An identifier for the publication in which the scientificName was originally established under the rules of the associated nomenclaturalCode.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :namePublishedInID
+  #
+  #     # The four-digit year in which the scientificName was published.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :namePublishedInYear
+  #
+  #     # The nomenclatural code (or codes in the case of an ambiregnal name) under which the scientificName is constructed. Recommended best practice is to use a controlled vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nomenclaturalCode
+  #
+  #     # The status related to the original publication of the name and its conformance to the relevant rules of nomenclature. It is based essentially on an algorithm according to the business rules of the code.  It requires no taxonomic opinion.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nomenclaturalStatus
+  #
+  #     # An identifier for the Occurrence (as opposed to a particular digital record of the occurrence). In the absence of a persistent global unique identifier, construct one from a combination of identifiers in the record that will most closely make the occurrenceID globally unique.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :occurrenceID
+  #
+  #     # Comments or notes about the Occurrence.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :occurrenceRemarks
+  #
+  #     # A statement about the presence or absence of a Taxon at a Location. Recommended best practice is to use a controlled vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :occurrenceStatus
+  #
+  #     # The full scientific name of the order in which the taxon is classified.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :order
+  #
+  #     # An identifier for the Organism instance (as opposed to a particular digital record of the Organism). May be a globally unique identifier or an identifier specific to the data set.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organismID
+  #
+  #     # A textual name or label assigned to an Organism instance.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organismName
+  #
+  #     # Comments or notes about the Organism instance.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organismRemarks
+  #
+  #     # A description of the kind of Organism instance. Can be used to indicate whether the Organism instance represents a discrete organism or if it represents a particular type of aggregation. Recommended best practice is to use a controlled vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organismScope
+  #
+  #     # The taxon name, with authorship and date information if known, as it originally appeared when first established under the rules of the associated nomenclaturalCode. The basionym (botany) or basonym (bacteriology) of the scientificName or the senior/earlier homonym for replaced names.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :originalNameUsage
+  #
+  #     # An identifier for the name usage (documented meaning of the name according to a source) in which the terminal element of the scientificName was originally established under the rules of the associated nomenclaturalCode.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :originalNameUsageID
+  #
+  #     # A list (concatenated and separated) of previous or alternate fully qualified catalog numbers or other human-used identifiers for the same Occurrence, whether in the current or any other data set or collection.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherCatalogNumbers
+  #
+  #     # The name (or acronym) in use by the institution having ownership of the object(s) or information referred to in the record.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ownerInstitutionCode
+  #
+  #     # The full name, with authorship and date information if known, of the direct, most proximate higher-rank parent taxon (in a classification) of the most specific element of the scientificName.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parentNameUsage
+  #
+  #     # An identifier for the name usage (documented meaning of the name according to a source) of the direct, most proximate higher-rank parent taxon (in a classification) of the most specific element of the scientificName.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parentNameUsageID
+  #
+  #     # The full scientific name of the phylum or division in which the taxon is classified.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :phylum
+  #
+  #     # The ratio of the area of the point-radius (decimalLatitude, decimalLongitude, coordinateUncertaintyInMeters) to the area of the true (original, or most specific) spatial representation of the Location. Legal values are 0, greater than or equal to 1, or undefined. A value of 1 is an exact match or 100% overlap. A value of 0 should be used if the given point-radius does not completely contain the original representation. The pointRadiusSpatialFit is undefined (and should be left blank) if the original representation is a point without uncertainty and the given georeference is not that same point (without uncertainty). If both the original and the given georeference are the same point, the pointRadiusSpatialFit is 1.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pointRadiusSpatialFit
+  #
+  #     # A list (concatenated and separated) of preparations and preservation methods for a specimen.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :preparations
+  #
+  #     # A list (concatenated and separated) of previous assignments of names to the Organism.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :previousIdentifications
+  #
+  #     # An identifier given to the Occurrence at the time it was recorded. Often serves as a link between field notes and an Occurrence record, such as a specimen collector's number.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :recordNumber
+  #
+  #     # A list (concatenated and separated) of names of people, groups, or organizations responsible for recording the original Occurrence. The primary collector or observer, especially one who applies a personal identifier (recordNumber), should be listed first.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :recordedBy
+  #
+  #     # An identifier for a related resource (the object, rather than the subject of the relationship).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedResourceID
+  #
+  #     # The source (person, organization, publication, reference) establishing the relationship between the two resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relationshipAccordingTo
+  #
+  #     # The date-time on which the relationship between the two resources was established. Recommended best practice is to use an encoding scheme, such as ISO 8601:2004(E).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relationshipEstablishedDate
+  #
+  #     # The relationship of the resource identified by relatedResourceID to the subject (optionally identified by the resourceID). Recommended best practice is to use a controlled vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relationshipOfResource
+  #
+  #     # Comments or notes about the relationship between the two resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relationshipRemarks
+  #
+  #     # The reproductive condition of the biological individual(s) represented in the Occurrence. Recommended best practice is to use a controlled vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reproductiveCondition
+  #
+  #     # An identifier for the resource that is the subject of the relationship.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :resourceID
+  #
+  #     # An identifier for an instance of relationship between one resource (the subject) and another (relatedResource, the object).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :resourceRelationshipID
+  #
+  #     # The amount of effort expended during an Event.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :samplingEffort
+  #
+  #     # The name of, reference to, or description of the method or protocol used during an Event.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :samplingProtocol
+  #
+  #     # The full scientific name, with authorship and date information if known. When forming part of an Identification, this should be the name in lowest level taxonomic rank that can be determined. This term should not contain identification qualifications, which should instead be supplied in the IdentificationQualifier term.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :scientificName
+  #
+  #     # The authorship information for the scientificName formatted according to the conventions of the applicable nomenclaturalCode.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :scientificNameAuthorship
+  #
+  #     # An identifier for the nomenclatural (not taxonomic) details of a scientific name.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :scientificNameID
+  #
+  #     # The sex of the biological individual(s) represented in the Occurrence. Recommended best practice is to use a controlled vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sex
+  #
+  #     # The name of the first or species epithet of the scientificName.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :specificEpithet
+  #
+  #     # The earliest ordinal day of the year on which the Event occurred (1 for January 1, 365 for December 31, except in a leap year, in which case it is 366).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :startDayOfYear
+  #
+  #     # The name of the next smaller administrative region than country (state, province, canton, department, region, etc.) in which the Location occurs.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stateProvince
+  #
+  #     # The full scientific name of the subgenus in which the taxon is classified. Values should include the genus to avoid homonym confusion.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subgenus
+  #
+  #     # An identifier for the taxonomic concept to which the record refers - not for the nomenclatural details of a taxon.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :taxonConceptID
+  #
+  #     # An identifier for the set of taxon information (data associated with the Taxon class). May be a global unique identifier or an identifier specific to the data set.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :taxonID
+  #
+  #     # The taxonomic rank of the most specific name in the scientificName. Recommended best practice is to use a controlled vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :taxonRank
+  #
+  #     # Comments or notes about the taxon or name.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :taxonRemarks
+  #
+  #     # The status of the use of the scientificName as a label for a taxon. Requires taxonomic opinion to define the scope of a taxon. Rules of priority then are used to define the taxonomic status of the nomenclature contained in that scope, combined with the experts opinion. It must be linked to a specific taxonomic reference that defines the concept. Recommended best practice is to use a controlled vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :taxonomicStatus
+  #
+  #     # A list (concatenated and separated) of nomenclatural types (type status, typified scientific name, publication) applied to the subject.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :typeStatus
+  #
+  #     # The spatial coordinate system for the verbatimLatitude and verbatimLongitude or the verbatimCoordinates of the Location. Recommended best practice is to use a controlled vocabulary.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :verbatimCoordinateSystem
+  #
+  #     # The verbatim original spatial coordinates of the Location. The coordinate ellipsoid, geodeticDatum, or full Spatial Reference System (SRS) for these coordinates should be stored in verbatimSRS and the coordinate system should be stored in verbatimCoordinateSystem.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :verbatimCoordinates
+  #
+  #     # The original description of the depth below the local surface.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :verbatimDepth
+  #
+  #     # The original description of the elevation (altitude, usually above sea level) of the Location.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :verbatimElevation
+  #
+  #     # The verbatim original representation of the date and time information for an Event.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :verbatimEventDate
+  #
+  #     # The verbatim original latitude of the Location. The coordinate ellipsoid, geodeticDatum, or full Spatial Reference System (SRS) for these coordinates should be stored in verbatimSRS and the coordinate system should be stored in verbatimCoordinateSystem.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :verbatimLatitude
+  #
+  #     # The original textual description of the place.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :verbatimLocality
+  #
+  #     # The verbatim original longitude of the Location. The coordinate ellipsoid, geodeticDatum, or full Spatial Reference System (SRS) for these coordinates should be stored in verbatimSRS and the coordinate system should be stored in verbatimCoordinateSystem.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :verbatimLongitude
+  #
+  #     # The ellipsoid, geodetic datum, or spatial reference system (SRS) upon which coordinates given in verbatimLatitude and verbatimLongitude, or verbatimCoordinates are based. Recommended best practice is use the EPSG code as a controlled vocabulary to provide an SRS, if known. Otherwise use a controlled vocabulary for the name or code of the geodetic datum, if known. Otherwise use a controlled vocabulary for the name or code of the ellipsoid, if known. If none of these is known, use the value "unknown".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :verbatimSRS
+  #
+  #     # The taxonomic rank of the most specific name in the scientificName as it appears in the original record.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :verbatimTaxonRank
+  #
+  #     # A common or vernacular name.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vernacularName
+  #
+  #     # The name of the water body in which the Location occurs. Recommended best practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :waterBody
+  #
+  #     # The four-digit year in which the Event occurred, according to the Common Era Calendar.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :year
+  #
   #   end
-  class DWC < RDF::Vocabulary("http://rs.tdwg.org/dwc/terms/")
+  DWC = Class.new(RDF::Vocabulary("http://rs.tdwg.org/dwc/terms/")) do
 
     # Ontology definition
     ontology :"http://rs.tdwg.org/dwc/terms/",

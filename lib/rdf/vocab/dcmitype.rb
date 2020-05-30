@@ -7,7 +7,7 @@ module RDF::Vocab
   #   # Vocabulary for <http://purl.org/dc/dcmitype/>
   #   class DCMIType < RDF::StrictVocabulary
   #   end
-  class DCMIType < RDF::StrictVocabulary("http://purl.org/dc/dcmitype/")
+  DCMIType = Class.new(RDF::StrictVocabulary("http://purl.org/dc/dcmitype/")) do
 
     # Ontology definition
     ontology :"http://purl.org/dc/dcmitype/",

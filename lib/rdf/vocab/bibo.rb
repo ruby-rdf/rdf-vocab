@@ -5,9 +5,504 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://purl.org/ontology/bibo/>
+  #   #
+  #   # The Bibliographic Ontology
+  #   #
+  #   # The Bibliographic Ontology describes bibliographic things on the semantic Web in RDF.  This ontology can be used as a citation ontology, as a document classification ontology, or simply as a way to describe any kind of document in RDF. It has been inspired by many existing document description metadata formats, and can be used as a common ground for converting other bibliographic data sources.
+  #   # @version http://purl.org/ontology/bibo/1.3/
   #   class BIBO < RDF::StrictVocabulary
+  #     # A scholarly academic article, typically published in a journal.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AcademicArticle
+  #
+  #     # A written composition in prose, usually nonfiction, on a specific topic, forming an independent part of a book or other publication, as a newspaper or magazine.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Article
+  #
+  #     # An audio document; aka record.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AudioDocument
+  #
+  #     # An audio-visual document; film, video, and so forth.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AudioVisualDocument
+  #
+  #     # Draft legislation presented for discussion to a legal body.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Bill
+  #
+  #     # A written or printed work of fiction or nonfiction, usually on sheets of paper fastened or bound together within covers.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Book
+  #
+  #     # A section of a book.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BookSection
+  #
+  #     # A written argument submitted to a court.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Brief
+  #
+  #     # A chapter of a book.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Chapter
+  #
+  #     # A collection of statutes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Code
+  #
+  #     # A document that simultaneously contains other documents.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CollectedDocument
+  #
+  #     # A collection of Documents or Collections
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Collection
+  #
+  #     # A meeting for consultation or discussion.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Conference
+  #
+  #     # A collection of legal cases.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CourtReporter
+  #
+  #     # A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Document
+  #
+  #     # a distinct part of a larger document or collected document.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DocumentPart
+  #
+  #     # The status of the publication of a document.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DocumentStatus
+  #
+  #     # An edited book.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :EditedBook
+  #
+  #     # A written communication addressed to a person or organization and transmitted electronically.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Email
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Event
+  #
+  #     # A passage selected from a larger work.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Excerpt
+  #
+  #     # aka movie.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Film
+  #
+  #     # An instance or a session in which testimony and arguments are presented, esp. before an official, as a judge in a lawsuit.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Hearing
+  #
+  #     # A document that presents visual or diagrammatic information.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Image
+  #
+  #     # A formalized discussion between two or more people.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Interview
+  #
+  #     # something that is printed or published and distributed, esp. a given number of a periodical
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Issue
+  #
+  #     # A periodical of scholarly journal Articles.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Journal
+  #
+  #     # A document accompanying a legal case.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LegalCaseDocument
+  #
+  #     # A document containing an authoritative determination (as a decree or judgment) made after consideration of facts or law.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LegalDecision
+  #
+  #     # A legal document; for example, a court decision, a brief, and so forth.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LegalDocument
+  #
+  #     # A legal document proposing or enacting a law or a group of laws.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Legislation
+  #
+  #     # A written or printed communication addressed to a person or organization and usually transmitted by mail.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Letter
+  #
+  #     # A periodical of magazine Articles. A magazine is a publication that is issued periodically, usually bound in a paper cover, and typically contains essays, stories, poems, etc., by many writers, and often photographs and drawings, frequently specializing in a particular subject or area, as hobbies, news, or sports.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Magazine
+  #
+  #     # A small reference book, especially one giving instructions.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Manual
+  #
+  #     # An unpublished Document, which may also be submitted to a publisher for publication.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Manuscript
+  #
+  #     # A graphical depiction of geographic features.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Map
+  #
+  #     # A loose, thematic, collection of Documents, often Books.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MultiVolumeBook
+  #
+  #     # A periodical of documents, usually issued daily or weekly, containing current news, editorials, feature articles, and usually advertising.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Newspaper
+  #
+  #     # Notes or annotations about a resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Note
+  #
+  #     # A document describing the exclusive right granted by a government to an inventor to manufacture, use, or sell an invention for a certain number of years.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Patent
+  #
+  #     # A public performance.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Performance
+  #
+  #     # A group of related documents issued at regular intervals.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Periodical
+  #
+  #     # A communication between an agent and one or more specific recipients.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PersonalCommunication
+  #
+  #     # A personal communication manifested in some document.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PersonalCommunicationDocument
+  #
+  #     # A compilation of documents published from an event, such as a conference.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Proceedings
+  #
+  #     # An excerpted collection of words.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Quote
+  #
+  #     # A document that presents authoritative reference information, such as a dictionary or encylopedia .
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ReferenceSource
+  #
+  #     # A document describing an account or statement describing in detail an event, situation, or the like, usually as the result of observation, inquiry, etc..
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Report
+  #
+  #     # A loose, thematic, collection of Documents, often Books.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Series
+  #
+  #     # A slide in a slideshow
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Slide
+  #
+  #     # A presentation of a series of slides, usually presented in front of an audience with written text and images.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Slideshow
+  #
+  #     # A document describing a specification.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Specification
+  #
+  #     # A document describing a standard: a specification organized through a standards body.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Standard
+  #
+  #     # A bill enacted into law.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Statute
+  #
+  #     # A document created to summarize research findings associated with the completion of an academic degree.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Thesis
+  #
+  #     # The academic degree of a Thesis
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ThesisDegree
+  #
+  #     # A web page is an online document available (at least initially) on the world wide web. A web page is written first and foremost to appear on the web, as distinct from other online resources such as books, manuscripts or audio documents which use the web primarily as a distribution mechanism alongside other more traditional methods such as print.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Webpage
+  #
+  #     # A group of Webpages accessible on the Web.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Website
+  #
+  #     # A seminar, discussion group, or the like, that emphasizes zxchange of ideas and the demonstration and application of techniques, skills, etc.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Workshop
+  #
+  #     # A summary of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :abstract
+  #
+  #     # A legal decision that affirms a ruling.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :affirmedBy
+  #
+  #     # Critical or explanatory note for a Document.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :annotates
+  #
+  #     # The date on which a legal case is argued before a court. Date is of format xsd:date
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :argued
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :asin
+  #
+  #     # An ordered list of authors. Normally, this list is seen as a priority list that order authors by importance.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :authorList
+  #
+  #     # An chapter number
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chapter
+  #
+  #     # Relates a document to another document that cites the first document.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :citedBy
+  #
+  #     # Relates a document to another document that is cited by the first document as reference, comment, review, quotation or for another purpose.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cites
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coden
+  #
+  #     # This property is for a plain-text rendering of the content of a Document. While the plain-text content of an entire document could be described by this property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :content
+  #
+  #     # An ordered list of contributors. Normally, this list is seen as a priority list that order contributors by importance.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :contributorList
+  #
+  #     # A court associated with a legal document; for example, that which issues a decision.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :court
+  #
+  #     # The thesis degree.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :degree
+  #
+  #     # A Film director.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :director
+  #
+  #     # Distributor of a document or a collection of documents.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distributor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :doi
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eanucc13
+  #
+  #     # The name defining a special edition of a document. Normally its a literal value composed of a version number and words.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :edition
+  #
+  #     # A person having managerial and sometimes policy-making responsibility for the editorial part of a publishing firm or of a newspaper, magazine, or other publication.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :editor
+  #
+  #     # An ordered list of editors. Normally, this list is seen as a priority list that order editors by importance.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :editorList
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eissn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gtin14
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :handle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identifier
+  #
+  #     # An agent that is interviewed by another agent.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :interviewee
+  #
+  #     # An agent that interview another agent.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :interviewer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isbn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isbn10
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isbn13
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :issn
+  #
+  #     # An issue number
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :issue
+  #
+  #     # An entity responsible for issuing often informally published documents such as press releases, reports, etc.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :issuer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lccn
+  #
+  #     # A description (often numeric) that locates an item within a containing document or collection.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locator
+  #
+  #     # The number of pages contained in a document
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numPages
+  #
+  #     # The number of volumes contained in a collection of documents (usually a series, periodical, etc.).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numVolumes
+  #
+  #     # A generic item or document number. Not to be confused with issue number.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :number
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :oclcnum
+  #
+  #     # The organizer of an event; includes conference organizers, but also government agencies or other bodies that are responsible for conducting hearings.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organizer
+  #
+  #     # Owner of a document or a collection of documents.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :owner
+  #
+  #     # Ending page number within a continuous page range.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pageEnd
+  #
+  #     # Starting page number within a continuous page range.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pageStart
+  #
+  #     # A string of non-contiguous page spans that locate a Document within a Collection. Example: 23-25, 34, 54-56. For continuous page ranges, use the pageStart and pageEnd properties.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pages
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :performer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pmid
+  #
+  #     # The prefix of a name
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prefixName
+  #
+  #     # Relates a document to an event; for example, a paper to a conference.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :presentedAt
+  #
+  #     # Relates an event to associated documents; for example, conference to a paper.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :presents
+  #
+  #     # Producer of a document or a collection of documents.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :producer
+  #
+  #     # An agent that receives a communication document.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :recipient
+  #
+  #     # The resource in which another resource is reproduced.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reproducedIn
+  #
+  #     # A legal decision that reverses a ruling.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reversedBy
+  #
+  #     # Relates a review document to a reviewed thing (resource, item, etc.).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reviewOf
+  #
+  #     # A section number
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :section
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shortDescription
+  #
+  #     # The abbreviation of a title.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shortTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sici
+  #
+  #     # The publication status of (typically academic) content.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :status
+  #
+  #     # A legal decision on appeal that takes action on a case (affirming it, reversing it, etc.).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subsequentLegalDecision
+  #
+  #     # The suffix of a name
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :suffixName
+  #
+  #     # Relates a document to some transcribed original.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :transcriptOf
+  #
+  #     # Relates a translated document to the original document.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :translationOf
+  #
+  #     # A person who translates written document from one language to another.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :translator
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :upc
+  #
+  #     # Universal Resource Identifier of a document
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :uri
+  #
+  #     # A volume number
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :volume
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bdarcus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fgiasson
+  #
   #   end
-  class BIBO < RDF::StrictVocabulary("http://purl.org/ontology/bibo/")
+  BIBO = Class.new(RDF::StrictVocabulary("http://purl.org/ontology/bibo/")) do
 
     # Ontology definition
     ontology :"http://purl.org/ontology/bibo/",

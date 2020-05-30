@@ -5,9 +5,157 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.w3.org/ns/dcat#>
+  #   #
+  #   # The data catalog vocabulary
+  #   #
+  #   # DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web. By using DCAT to describe datasets in data catalogs, publishers increase discoverability and enable applications easily to consume metadata from multiple catalogs. It further enables decentralized publishing of catalogs and facilitates federated dataset search across sites. Aggregated DCAT metadata can serve as a manifest file to facilitate digital preservation. DCAT is defined at http://www.w3.org/TR/vocab-dcat/. Any variance between that normative document and this schema is an error in this schema.
+  #   # @version Questa è una copia aggiornata del vocabolario DCAT v2.0 disponibile in https://www.w3.org/ns/dcat.ttl
+  #   # @version This is an updated copy of v2.0 of the DCAT vocabulary, taken from https://www.w3.org/ns/dcat.ttl
   #   class DCAT < RDF::StrictVocabulary
+  #     # A curated collection of metadata about resources (e.g., datasets and data services in the context of a data catalog).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Catalog
+  #
+  #     # A record in a data catalog, describing the registration of a single dataset or data service.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CatalogRecord
+  #
+  #     # A site or end-point providing operations related to the discovery of, access to, or processing functions on, data or related resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DataService
+  #
+  #     # A collection of data, published or curated by a single source, and available for access or download in one or more represenations.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Dataset
+  #
+  #     # A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Distribution
+  #
+  #     # An association class for attaching additional information to a relationship between DCAT Resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Relationship
+  #
+  #     # Resource published or curated by a single agent.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Resource
+  #
+  #     # A role is the function of a resource or agent with respect to another resource, in the context of resource attribution or resource relationships.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Role
+  #
+  #     # A site or end-point that gives access to the distribution of the dataset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :accessService
+  #
+  #     # A URL of a resource that gives access to a distribution of the dataset. E.g. landing page, feed, SPARQL endpoint. Use for all cases except a simple download link, in which case downloadURL is preferred.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :accessURL
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bbox
+  #
+  #     # The size of a distribution in bytes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :byteSize
+  #
+  #     # A catalog whose contents are of interest in the context of this catalog.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :catalog
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :centroid
+  #
+  #     # The compression format of the distribution in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :compressFormat
+  #
+  #     # Relevant contact information for the catalogued resource. Use of vCard is recommended.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :contactPoint
+  #
+  #     # A collection of data that is listed in the catalog.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dataset
+  #
+  #     # An available distribution of the dataset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distribution
+  #
+  #     # The URL of the downloadable file in a given format. E.g. CSV file or RDF file. The format is indicated by the distribution's dct:format and/or dcat:mediaType.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :downloadURL
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endDate
+  #
+  #     # A description of the service end-point, including its operations, parameters etc.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endpointDescription
+  #
+  #     # The root location or primary endpoint of the service (a web-resolvable IRI).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endpointURL
+  #
+  #     # The function of an entity or agent with respect to another entity or resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hadRole
+  #
+  #     # A keyword or tag describing a resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :keyword
+  #
+  #     # A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :landingPage
+  #
+  #     # The media type of the distribution as defined by IANA
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mediaType
+  #
+  #     # The package format of the distribution in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :packageFormat
+  #
+  #     # Link to a description of a relationship with another resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :qualifiedRelation
+  #
+  #     # A record describing the registration of a single dataset or data service that is part of the catalog.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :record
+  #
+  #     # A collection of data that this DataService can distribute.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :servesDataset
+  #
+  #     # A site or endpoint that is listed in the catalog.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :service
+  #
+  #     # minimum spatial separation resolvable in a dataset, measured in meters.
+  #     #
+  #     # minimum spatial separation resolvable in a dataset, measured in metres.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spatialResolutionInMeters
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :startDate
+  #
+  #     # minimum time period resolvable in a dataset.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :temporalResolution
+  #
+  #     # A main category of the resource. A resource can have multiple themes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :theme
+  #
+  #     # The knowledge organization system (KOS) used to classify catalog's datasets.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :themeTaxonomy
+  #
   #   end
-  class DCAT < RDF::StrictVocabulary("http://www.w3.org/ns/dcat#")
+  DCAT = Class.new(RDF::StrictVocabulary("http://www.w3.org/ns/dcat#")) do
 
     # Ontology definition
     ontology :"http://www.w3.org/ns/dcat#",
@@ -89,7 +237,7 @@ module RDF::Vocab
         ), term(
           "foaf:name": "John Erickson".freeze
         )],
-      "dc:license": "https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document".freeze,
+      "dc:license": "https://creativecommons.org/licenses/by/4.0/".freeze,
       "dc:modified": ["2012-04-24".freeze, "2013-09-20".freeze, "2013-11-28".freeze, "2017-12-19".freeze, "2019".freeze],
       editorialNote: %(English language definitions updated in this revision in line with ED. Multilingual text unevenly updated.).freeze,
       "foaf:maker": term(
@@ -103,8 +251,8 @@ module RDF::Vocab
 
     # Class definitions
     term :Catalog,
-      comment: %(A curated collection of metadata about datasets and data services).freeze,
-      definition: %(A curated collection of metadata about datasets and data services.).freeze,
+      comment: %(A curated collection of metadata about resources \(e.g., datasets and data services in the context of a data catalog\).).freeze,
+      definition: %(A curated collection of metadata about resources \(e.g., datasets and data services in the context of a data catalog\).).freeze,
       editorialNote: %(English, Italian, Spanish definitions updated in this revision. Multilingual text not yet updated.).freeze,
       isDefinedBy: "http://www.w3.org/TR/vocab-dcat/".freeze,
       label: "Catalog".freeze,

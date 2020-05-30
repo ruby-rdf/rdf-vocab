@@ -5,9 +5,87 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.w3.org/2011/content#>
+  #   #
+  #   # Representing Content in RDF
+  #   #
+  #   # Representing Content in RDF as defined by http://www.w3.org/TR/Content-in-RDF/
+  #   # @version Working Draft 29 April 2011
+  #   # @see http://www.w3.org/WAI/intro/earl
   #   class CNT < RDF::StrictVocabulary
+  #     # The content.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Content
+  #
+  #     # The base64 encoded content (can be used for binary content).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ContentAsBase64
+  #
+  #     # The text content (can be used for text content).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ContentAsText
+  #
+  #     # The XML content (can only be used for XML-wellformed content).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ContentAsXML
+  #
+  #     # The document type declaration.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DoctypeDecl
+  #
+  #     # The Base64 encoded byte sequence of the content.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bytes
+  #
+  #     # The character encoding used to create a character sequence from a byte sequence or vice versa.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :characterEncoding
+  #
+  #     # The character sequence of the text content.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chars
+  #
+  #     # The character encoding declared in the XML declaration.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :declaredEncoding
+  #
+  #     # The document type name.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :doctypeName
+  #
+  #     # The document type declaration.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dtDecl
+  #
+  #     # The internal document type definition subset within the document type declarations.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :internalSubset
+  #
+  #     # The XML content preceding the document type declaration.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :leadingMisc
+  #
+  #     # The document type declarations's public identifier.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :publicId
+  #
+  #     # The XML content following the document type declaration.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rest
+  #
+  #     # The standalone declaration in the XML declaration.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :standalone
+  #
+  #     # The document type declarations's system identifier (typed: xsd:anyURI)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :systemId
+  #
+  #     # The XML version declared in the XML declaration.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :version
+  #
   #   end
-  class CNT < RDF::StrictVocabulary("http://www.w3.org/2011/content#")
+  CNT = Class.new(RDF::StrictVocabulary("http://www.w3.org/2011/content#")) do
 
     # Ontology definition
     ontology :"http://www.w3.org/2011/content#",

@@ -5,9 +5,71 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://purl.org/dc/elements/1.1/>
+  #   #
+  #   # Dublin Core Metadata Element Set, Version 1.1
   #   class DC11 < RDF::StrictVocabulary
+  #     # An entity responsible for making contributions to the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :contributor
+  #
+  #     # The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coverage
+  #
+  #     # An entity primarily responsible for making the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :creator
+  #
+  #     # A point or period of time associated with an event in the lifecycle of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :date
+  #
+  #     # An account of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :description
+  #
+  #     # The file format, physical medium, or dimensions of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :format
+  #
+  #     # An unambiguous reference to the resource within a given context.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identifier
+  #
+  #     # A language of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :language
+  #
+  #     # An entity responsible for making the resource available.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :publisher
+  #
+  #     # A related resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relation
+  #
+  #     # Information about rights held in and over the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rights
+  #
+  #     # A related resource from which the described resource is derived.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :source
+  #
+  #     # The topic of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subject
+  #
+  #     # A name given to the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :title
+  #
+  #     # The nature or genre of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :type
+  #
   #   end
-  class DC11 < RDF::StrictVocabulary("http://purl.org/dc/elements/1.1/")
+  DC11 = Class.new(RDF::StrictVocabulary("http://purl.org/dc/elements/1.1/")) do
 
     # Ontology definition
     ontology :"http://purl.org/dc/elements/1.1/",

@@ -5,9 +5,174 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.geonames.org/ontology#>
+  #   #
+  #   # The Geonames ontology
+  #   #
+  #   # Modifications from version 3.01 :             Added : gn:GeonamesFeature, subclass of gn:Feature.             Added : explicit property gn:geonamesID, mandatory and unique for each gn:GeonamesFeature instance.             Deleted : owl:FunctionalProperty declarations for properties attached to gn:Feature, replaced by local cardinality restrictions on gn:GeonamesFeature             The gn:Feature class and attached properties can therefore be used in the open world for features not necessarily identified in the Geonames data base, or with partial descriptions.             Modified : Equivalent classes and superclasses of geonames:Feature in other vocabularies.             Added : new feature codes for historical features.             Improved metadata.       
+  #   #
+  #   # The Geonames ontologies provides elements of description for geographical features, in particular those defined in the geonames.org data base
+  #   # @version Version 3.1 - 2012-10-29
   #   class GEONAMES < RDF::StrictVocabulary
+  #     # country, state, region ...
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :A
+  #
+  #     # A class of features.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Class
+  #
+  #     # A feature code.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Code
+  #
+  #     # A geographical feature
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Feature
+  #
+  #     # A feature described in geonames database, uniquely defined by its geonames identifier
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GeonamesFeature
+  #
+  #     # stream, lake, ...
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :H
+  #
+  #     # parks,area, ...
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :L
+  #
+  #     # A Web page displaying a map
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Map
+  #
+  #     # city, village,...
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :P
+  #
+  #     # road, railroad, ...
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :R
+  #
+  #     # A Document containing RDF description of one or several features.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RDFData
+  #
+  #     # spot, building, farm, ...
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :S
+  #
+  #     # mountain, hill, rock, ...
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :T
+  #
+  #     # undersea
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :U
+  #
+  #     # forest, heath, ...
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :V
+  #
+  #     # A Wikipedia article
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :WikipediaArticle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alternateName
+  #
+  #     # Links to an RDF document containing the descriptions of children features
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :childrenFeatures
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :colloquialName
+  #
+  #     # The countryCode value for a Geoname Feature is equal to the countryCode value of the parentCountry value.
+  #     #
+  #     # A two letters country code in the ISO 3166 list
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :countryCode
+  #
+  #     # The main category of the feature, as defined in geonames taxonomy.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :featureClass
+  #
+  #     # Type of the feature, as defined in geonames taxonomy.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :featureCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geonamesID
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :historicalName
+  #
+  #     # Indicates that the subject resource is located in the object feature
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locatedIn
+  #
+  #     # A geonames map centered on the feature.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationMap
+  #
+  #     # The main international name of a feature. The value has no xml:lang tag.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :name
+  #
+  #     # A feature close to the reference feature
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nearby
+  #
+  #     # Links to an RDF document containing the descriptions of nearby features
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nearbyFeatures
+  #
+  #     # A feature sharing a common boarder with the reference feature
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :neighbour
+  #
+  #     # Links to an RDF document containing the descriptions of neighbouring features. Applies when the feature has definite boarders.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :neighbouringFeatures
+  #
+  #     # A name in an official local language
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :officialName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parentADM1
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parentADM2
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parentADM3
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parentADM4
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parentCountry
+  #
+  #     # A feature parent of the current one, in either administrative or physical subdivision.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parentFeature
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :population
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :postalCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shortName
+  #
+  #     # A Wikipedia article of which subject is the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikipediaArticle
+  #
   #   end
-  class GEONAMES < RDF::StrictVocabulary("http://www.geonames.org/ontology#")
+  GEONAMES = Class.new(RDF::StrictVocabulary("http://www.geonames.org/ontology#")) do
 
     # Ontology definition
     ontology :"http://www.geonames.org/ontology#",

@@ -5,9 +5,1325 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://id.loc.gov/ontologies/bibframe/>
+  #   #
+  #   # BIBFRAME vocabulary
+  #   # @version 2.0.1
   #   class BF2 < RDF::StrictVocabulary
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AbbreviatedTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AccessPolicy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AcquisitionSource
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AdminMetadata
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Agent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Ansi
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AppliedMaterial
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Archival
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Arrangement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AspectRatio
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Audio
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AudioIssueNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AudioTake
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Barcode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BaseMaterial
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BookFormat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BroadcastStandard
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Capture
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Carrier
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Cartographic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CartographicDataType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CartographicObjectType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Cartography
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Chronology
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Classification
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ClassificationDdc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ClassificationLcc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ClassificationNlm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ClassificationUdc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Coden
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Collection
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CollectiveTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ColorContent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Content
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ContentAccessibility
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Contribution
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CopyrightNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CopyrightRegistration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CoverArt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Dataset
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DescriptionAuthentication
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DescriptionConventions
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DigitalCharacteristic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Dissertation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DissertationIdentifier
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Distribution
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Doi
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Ean
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Electronic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Emulsion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :EncodedBitrate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :EncodingFormat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Enumeration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :EnumerationAndChronology
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Event
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Extent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Family
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FileSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FileType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Fingerprint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FontSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Frequency
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Generation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GenerationProcess
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GenreForm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GeographicCoverage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GrooveCharacteristic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Gtin14Number
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Hdl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Identifier
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Illustration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ImmediateAcquisition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Instance
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :IntendedAudience
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Isan
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Isbn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Ismn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Isni
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Iso
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Isrc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Issn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :IssnL
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Issuance
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Istc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Iswc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Item
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Jurisdiction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :KeyTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Language
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Layout
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LcOverseasAcq
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Lccn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Local
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Manufacture
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Manuscript
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MatrixNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Media
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Meeting
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MixedMaterial
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Mount
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MovementNotation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MovingImage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Multimedia
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MusicDistributorNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MusicEnsemble
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MusicFormat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MusicInstrument
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MusicMedium
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MusicNotation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MusicPlate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MusicPublisherNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MusicVoice
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Nbn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NotatedMovement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NotatedMusic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Notation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Note
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Object
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ObjectCount
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Organization
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ParallelTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Person
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Place
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PlaybackChannels
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PlaybackCharacteristic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PlayingSpeed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Polarity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PostalRegistration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PresentationFormat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Print
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Production
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ProductionMethod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Projection
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ProjectionCharacteristic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ProjectionSpeed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ProvisionActivity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Publication
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PublisherNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RecordingMedium
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RecordingMethod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ReductionRatio
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RegionalEncoding
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ReportNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Resolution
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RetentionPolicy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Review
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Role
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Scale
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Script
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ShelfMark
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ShelfMarkDdc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ShelfMarkLcc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ShelfMarkNlm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ShelfMarkUdc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Sici
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SoundCharacteristic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SoundContent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Source
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Status
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :StillImage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :StockNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Strn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :StudyNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Sublocation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Summary
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SupplementaryContent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SystemRequirement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TableOfContents
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Tactile
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TactileNotation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TapeConfig
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Temporal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Text
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Title
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Topic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TrackConfig
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Unit
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Upc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Urn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :UsageAndAccessPolicy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :UsePolicy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :VariantTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :VideoCharacteristic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :VideoFormat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :VideoRecordingNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Work
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :absorbed
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :absorbedBy
+  #
+  #     # Expected value Work, Instance or Item
+  #     #
+  #     # Used with Work, Instance or Item
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :accompaniedBy
+  #
+  #     # Expected value Work, Instance or Item
+  #     #
+  #     # Used with Work, Instance or Item
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :accompanies
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :acquisitionSource
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :acquisitionTerms
+  #
+  #     # Used with Unspecified
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :adminMetadata
+  #
+  #     # Used with Unspecified
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :agent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :appliedMaterial
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :arrangement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ascensionAndDeclination
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aspectRatio
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :assigner
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :awards
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :baseMaterial
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bookFormat
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :capture
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :carrier
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cartographicAttributes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :changeDate
+  #
+  #     # Used with Work, Instance or Item
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :classification
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :classificationPortion
+  #
+  #     # Used with Unspecified
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :code
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :colorContent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :content
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :contentAccessibility
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :continuedBy
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :continuedInPartBy
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :continues
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :continuesInPart
+  #
+  #     # Used with Work, Instance or Item
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :contribution
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coordinates
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :copyrightDate
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :copyrightRegistration
+  #
+  #     # Used with Unspecified
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :count
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coverArt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :creationDate
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :credits
+  #
+  #     # Used with Work, Instance or Item
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :custodialHistory
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dataSource
+  #
+  #     # Used with Unspecified
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :date
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :degree
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :derivativeOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :derivedFrom
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :descriptionAuthentication
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :descriptionConventions
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :descriptionLanguage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :descriptionModifier
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :digitalCharacteristic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dimensions
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dissertation
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :duration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :edition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :editionEnumeration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :editionStatement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :electronicLocator
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :emulsion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ensemble
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ensembleType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :enumerationAndChronology
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :equinox
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eventContent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eventContentOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :exclusionGRing
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :expressionOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :extent
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :findingAid
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :findingAidOf
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstIssue
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fontSize
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :frequency
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :generation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :generationDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :generationProcess
+  #
+  #     # Used with Work, Instance or Item
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :genreForm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geographicCoverage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :grantingInstitution
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasDerivative
+  #
+  #     # Expected value Work, Instance or Item
+  #     #
+  #     # Used with Work, Instance or Item
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasEquivalent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasExpression
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasInstance
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasItem
+  #
+  #     # Expected value Work, Instance or Item
+  #     #
+  #     # Used with Work, Instance or Item
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasPart
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasReproduction
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasSeries
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasSubseries
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :heldBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hierarchicalLevel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :historyOfWork
+  #
+  #     # Used with Unspecified
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identifiedBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identifies
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :illustrativeContent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :immediateAcquisition
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :index
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :indexOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :instanceOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :instrument
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :instrumentalType
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :intendedAudience
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :issuance
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :issuedWith
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :itemOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :itemPortion
+  #
+  #     # Used with Unspecified
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :language
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastIssue
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :layout
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :legalDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mainTitle
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :media
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mergedToForm
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mergerOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mount
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicFormat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicKey
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicMedium
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicOpusNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicSerialNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicThematicNumber
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :natureOfContent
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :notation
+  #
+  #     # Used with Unspecified
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :note
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :noteType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organization
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :originDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :originPlace
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :originalVersion
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :originalVersionOf
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherEdition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherPhysicalFormat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :outerGRing
+  #
+  #     # Used with Unspecified
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :part
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partNumber
+  #
+  #     # Expected value Work, Instance or Item
+  #     #
+  #     # Used with Work, Instance or Item
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pattern
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :physicalLocation
+  #
+  #     # Used with Unspecified
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :place
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :polarity
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :precededBy
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :preferredCitation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productionMethod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :projection
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :projectionCharacteristic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :provisionActivity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :provisionActivityStatement
+  #
+  #     # Used with Unspecified
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :qualifier
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reductionRatio
+  #
+  #     # Expected value Work, Instance or Item
+  #     #
+  #     # Used with Work, Instance or Item
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :referencedBy
+  #
+  #     # Expected value Work, Instance or Item
+  #     #
+  #     # Used with Work, Instance or Item
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :references
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedTo
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :replacedBy
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :replacementOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reproductionOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :responsibilityStatement
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :review
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :role
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :scale
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :schedulePart
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :separatedFrom
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :seriesEnumeration
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :seriesOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :seriesStatement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shelfMark
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :soundCharacteristic
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :soundContent
+  #
+  #     # Used with Unspecified
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :source
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spanEnd
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :splitInto
+  #
+  #     # Used with Unspecified
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :status
+  #
+  #     # Used with Work, Instance or Item
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subject
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sublocation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subseriesEnumeration
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subseriesOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subseriesStatement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subtitle
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :succeededBy
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :summary
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :supplement
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :supplementTo
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :supplementaryContent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :systemRequirement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :table
+  #
+  #     # Used with Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tableOfContents
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tableSeq
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :temporalCoverage
+  #
+  #     # Used with Work, Instance or Item
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :title
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :translation
+  #
+  #     # Used with Work or Instance
+  #     #
+  #     # Expected value Work or Instance
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :translationOf
+  #
+  #     # Used with Unspecified
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :unit
+  #
+  #     # Used with Work, Instance or Item
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :usageAndAccessPolicy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :variantType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :version
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :videoCharacteristic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :voice
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :voiceType
+  #
   #   end
-  class BF2 < RDF::StrictVocabulary("http://id.loc.gov/ontologies/bibframe/")
+  BF2 = Class.new(RDF::StrictVocabulary("http://id.loc.gov/ontologies/bibframe/")) do
 
     # Ontology definition
     ontology :"http://id.loc.gov/ontologies/bibframe/",

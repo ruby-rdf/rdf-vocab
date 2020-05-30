@@ -21,7 +21,7 @@ module RDF
           # Ruby's autoloading facility, meaning that `@@subclasses` will be
           # empty until each subclass has been touched or require'd.
           RDF::Vocab::VOCABS.each do |n, params|
-            clsname = params.fetch(:class_name, n.to_s.upcase).to_sym
+            clsname = params[:class_name].to_sym
             RDF::Vocab.const_get(clsname) # Forces class to load
           end unless @classes_loaded
           @classes_loaded = true
@@ -29,236 +29,286 @@ module RDF
         _orig_each(&block)
       end
 
-      begin
-        require 'rdf/turtle'
-        ##
-        # Generate Turtle representation, specific to vocabularies
-        #
-        # @param [RDF::Queryable] :graph Optional graph, otherwise uses statements from vocabulary.
-        # @param [Hash{#to_sym => String}] Prefixes to add to output
-        # @return [String]
-        def to_ttl(graph: nil, prefixes: nil)
-          output = []
+      ##
+      # A hash of all vocabularies by prefix showing relevant URI and associated vocabulary Class Name
+      # @return [Hash{Symbol => Hash{Symbol => String}}]
+      #alias_method :_orig_vocab_map, :vocab_map
+      def vocab_map
+        @vocab_map ||= RDF::VOCABS.merge(RDF::Vocab::VOCABS)
+      end
 
-          # Find namespaces used in the vocabulary
-          graph = RDF::Graph.new {|g| each_statement {|s| g << s}} if graph.nil? || graph.empty?
+      ##
+      # Return the vocabulary based on it's class_name symbol
+      #
+      # @param [Symbol] sym
+      # @return [RDF::Vocabulary]
+      alias_method :_orig_from_sym, :from_sym
+      def from_sym(sym)
+        RDF::Vocab.const_defined?(sym.to_sym) ? RDF::Vocab.const_get(sym.to_sym) : _orig_from_sym(sym)
+      end
 
-          prefixes = vocab_prefixes(graph).merge(prefixes || {})
-          pfx_width = prefixes.keys.map(&:to_s).map(&:length).max
-          prefixes.each do |pfx, uri|
-            output << "@prefix %*s: <%s> .\n" % [pfx_width, pfx, uri]
-          end
-
-          # Determine the category for each subject in the vocabulary graph
-          cats = subject_categories(graph)
-
-          writer = RDF::Turtle::Writer.new(StringIO.new, prefixes: prefixes)
-
-          {
-            ont: {
-              heading:  "# #{__name__.split('::').last} Vocabulary definition\n"
-            },
-            classes: {
-              heading:  "# Class definitions\n"
-            },
-            properties: {
-              heading:  "# Property definitions\n"
-            },
-            datatypes: {
-              heading:  "# Datatype definitions\n"
-            },
-            other: {
-              heading:  "# Other definitions\n"
-            }
-          }.each do |key, hash|
-            next unless cats[key]
-
-            output << "\n\n#{hash[:heading]}"
-
-            cats[key].each do |subject|
-              po = {}
-
-              # Group predicates with their values
-              graph.query(subject: subject) do |statement|
-                # Sanity check this, as these are set to an empty string if not defined.
-                next if [RDF::RDFS.label, RDF::RDFS.comment].include?(statement.predicate) && statement.object.to_s.empty?
-                po[statement.predicate] ||= []
-                po[statement.predicate] << statement.object
-              end
-
-              next if po.empty?
-
-              po_list = []
-              unless (types = po.delete(RDF.type)).empty?
-                po_list << 'a ' + types.map {|o| writer.format_term(o)}.join(", ")
-              end
-
-              # Serialize other predicate/objects
-              po.each do |predicate, objects|
-                resource = predicate.qname ? predicate.pname : "<#{predicate}>"
-                po_list << resource + ' ' + objects.map {|o| writer.format_term(o)}.join(", ")
-              end
-
-              # Output statements for this subject
-              subj = subject.qname ? subject.pname : "<#{subject}>"
-              output << "#{subj} " + po_list.join(";\n  ") + "\n  .\n"
+      ##
+      # Limits iteration over vocabularies to just those selected
+      #
+      # @example limit to set of vocabularies by symbol
+      #     RDF::Vocabulary.limit_vocabs(:rdf, :rdfs, :schema)
+      #     RDF::Vocabulary.find_term('http://schema.org/CreativeWork').pname
+      #     # => 'schema:CreativeWork'
+      #
+      # @example limit to set of vocabularies by class name
+      #     RDF::Vocabulary.limit_vocabs(RDF::RDFV, RDF::RDFS, RDF::Vocab::SCHEMA)
+      #     RDF::Vocabulary.find_term('http://schema.org/CreativeWork').pname
+      #     # => 'schema:CreativeWork'
+      #
+      # @param [Array<symbol, RDF::Vocabulary>] vocabs
+      #   A list of vocabularies (symbols or classes) which may
+      #   be returned by {Vocabulary.each}. Also limits
+      #   vocabularies that will be inspeced for other methods.
+      #   Set to nil, or an empty array to reset.
+      # @return [Array<RDF::Vocabulary>]
+      def limit_vocabs(*vocabs)
+        @vocabs = if Array(vocabs).empty?
+          nil
+        else
+          @classes_loaded = true
+          vocabs.map do |vocab|
+            if vocab == :rdf || vocab == :rdfv
+              RDF::RDFV
+            elsif vocab.is_a?(Symbol) && RDF::Vocab::VOCABS.key?(vocab)
+              RDF::Vocab.const_get(RDF::Vocab::VOCABS[vocab][:class_name].to_sym)
+            else
+              vocab
             end
-          end
-
-          output.join("")
+          end.compact
         end
+      end
+
+      ##
+      # Generate Turtle representation, specific to vocabularies
+      #
+      # @param [RDF::Queryable] :graph Optional graph, otherwise uses statements from vocabulary.
+      # @param [Hash{#to_sym => String}] Prefixes to add to output
+      # @return [String]
+      def to_ttl(graph: nil, prefixes: nil)
+        require 'rdf/turtle'
+        output = []
+
+        # Find namespaces used in the vocabulary
+        graph = RDF::Graph.new {|g| each_statement {|s| g << s}} if graph.nil? || graph.empty?
+
+        prefixes = vocab_prefixes(graph).merge(prefixes || {})
+        pfx_width = prefixes.keys.map(&:to_s).map(&:length).max
+        prefixes.each do |pfx, uri|
+          output << "@prefix %*s: <%s> .\n" % [pfx_width, pfx, uri]
+        end
+
+        # Determine the category for each subject in the vocabulary graph
+        cats = subject_categories(graph)
+
+        writer = RDF::Turtle::Writer.new(StringIO.new, prefixes: prefixes)
+
+        {
+          ont: {
+            heading:  "# #{__name__.split('::').last} Vocabulary definition\n"
+          },
+          classes: {
+            heading:  "# Class definitions\n"
+          },
+          properties: {
+            heading:  "# Property definitions\n"
+          },
+          datatypes: {
+            heading:  "# Datatype definitions\n"
+          },
+          other: {
+            heading:  "# Other definitions\n"
+          }
+        }.each do |key, hash|
+          next unless cats[key]
+
+          output << "\n\n#{hash[:heading]}"
+
+          cats[key].each do |subject|
+            po = {}
+
+            # Group predicates with their values
+            graph.query(subject: subject) do |statement|
+              # Sanity check this, as these are set to an empty string if not defined.
+              next if [RDF::RDFS.label, RDF::RDFS.comment].include?(statement.predicate) && statement.object.to_s.empty?
+              po[statement.predicate] ||= []
+              po[statement.predicate] << statement.object
+            end
+
+            next if po.empty?
+
+            po_list = []
+            unless (types = po.delete(RDF.type)).empty?
+              po_list << 'a ' + types.map {|o| writer.format_term(o)}.join(", ")
+            end
+
+            # Serialize other predicate/objects
+            po.each do |predicate, objects|
+              resource = predicate.qname ? predicate.pname : "<#{predicate}>"
+              po_list << resource + ' ' + objects.map {|o| writer.format_term(o)}.join(", ")
+            end
+
+            # Output statements for this subject
+            subj = subject.qname ? subject.pname : "<#{subject}>"
+            output << "#{subj} " + po_list.join(";\n  ") + "\n  .\n"
+          end
+        end
+
+        output.join("")
       rescue LoadError
         # No Turtle serialization unless gem loaded
       end
 
-      begin
+      ##
+      # Generate JSON-LD representation, specific to vocabularies
+      #
+      # @param [RDF::Queryable] :graph Optional graph, otherwise uses statements from vocabulary.
+      # @param [Hash{#to_sym => String}] Prefixes to add to output
+      # @return [String]
+      def to_jsonld(graph: nil, prefixes: nil)
         require 'json/ld'
 
-        ##
-        # Generate JSON-LD representation, specific to vocabularies
-        #
-        # @param [RDF::Queryable] :graph Optional graph, otherwise uses statements from vocabulary.
-        # @param [Hash{#to_sym => String}] Prefixes to add to output
-        # @return [String]
-        def to_jsonld(graph: nil, prefixes: nil)
-          context = {}
-          rdfs_context = ::JSON.parse %({
-            "dc:title": {"@container": "@language"},
-            "dc:description": {"@container": "@language"},
-            "dc:date": {"@type": "xsd:date"},
-            "rdfs:comment": {"@container": "@language"},
-            "rdfs:domain": {"@type": "@vocab"},
-            "rdfs:label": {"@container": "@language"},
-            "rdfs:range": {"@type": "@vocab"},
-            "rdfs:seeAlso": {"@type": "@id"},
-            "rdfs:subClassOf": {"@type": "@vocab"},
-            "rdfs:subPropertyOf": {"@type": "@vocab"},
-            "schema:domainIncludes": {"@type": "@vocab"},
-            "schema:rangeIncludes": {"@type": "@vocab"},
-            "owl:equivalentClass": {"@type": "@vocab"},
-            "owl:equivalentProperty": {"@type": "@vocab"},
-            "owl:oneOf": {"@container": "@list", "@type": "@vocab"},
-            "owl:imports": {"@type": "@id"},
-            "owl:versionInfo": {"@type": "@id"},
-            "owl:inverseOf": {"@type": "@vocab"},
-            "owl:unionOf": {"@type": "@vocab", "@container": "@list"},
-            "rdfs_classes": {"@reverse": "rdfs:isDefinedBy", "@type": "@id"},
-            "rdfs_properties": {"@reverse": "rdfs:isDefinedBy", "@type": "@id"},
-            "rdfs_datatypes": {"@reverse": "rdfs:isDefinedBy", "@type": "@id"},
-            "rdfs_instances": {"@reverse": "rdfs:isDefinedBy", "@type": "@id"}
-          })
-          rdfs_classes, rdfs_properties, rdfs_datatypes, rdfs_instances = [], [], [], [], []
+        context = {}
+        rdfs_context = ::JSON.parse %({
+          "dc:title": {"@container": "@language"},
+          "dc:description": {"@container": "@language"},
+          "dc:date": {"@type": "xsd:date"},
+          "rdfs:comment": {"@container": "@language"},
+          "rdfs:domain": {"@type": "@vocab"},
+          "rdfs:label": {"@container": "@language"},
+          "rdfs:range": {"@type": "@vocab"},
+          "rdfs:seeAlso": {"@type": "@id"},
+          "rdfs:subClassOf": {"@type": "@vocab"},
+          "rdfs:subPropertyOf": {"@type": "@vocab"},
+          "schema:domainIncludes": {"@type": "@vocab"},
+          "schema:rangeIncludes": {"@type": "@vocab"},
+          "owl:equivalentClass": {"@type": "@vocab"},
+          "owl:equivalentProperty": {"@type": "@vocab"},
+          "owl:oneOf": {"@container": "@list", "@type": "@vocab"},
+          "owl:imports": {"@type": "@id"},
+          "owl:versionInfo": {"@type": "@id"},
+          "owl:inverseOf": {"@type": "@vocab"},
+          "owl:unionOf": {"@type": "@vocab", "@container": "@list"},
+          "rdfs_classes": {"@reverse": "rdfs:isDefinedBy", "@type": "@id"},
+          "rdfs_properties": {"@reverse": "rdfs:isDefinedBy", "@type": "@id"},
+          "rdfs_datatypes": {"@reverse": "rdfs:isDefinedBy", "@type": "@id"},
+          "rdfs_instances": {"@reverse": "rdfs:isDefinedBy", "@type": "@id"}
+        })
+        rdfs_classes, rdfs_properties, rdfs_datatypes, rdfs_instances = [], [], [], [], []
 
-          ontology = {
-            "@context" => rdfs_context,
-            "@id" => to_uri.to_s
+        ontology = {
+          "@context" => rdfs_context,
+          "@id" => to_uri.to_s
+        }
+
+        # Find namespaces used in the vocabulary
+        graph = RDF::Graph.new {|g| each_statement {|s| g << s}} if graph.nil? || graph.empty?
+
+        prefixes = vocab_prefixes(graph).merge(prefixes || {})
+        prefixes.each do |pfx, uri|
+          context[pfx.to_s] = uri.to_s unless pfx.to_s.empty?
+        end
+
+        # Determine the category for each subject in the vocabulary graph
+        cats = subject_categories(graph)
+
+        # Generate term definitions from graph subjects
+        cats.values.flatten.each do |term|
+          next unless Array(term.qname).length == 2
+          context[term.qname.last.to_s] = term.to_uri.to_s
+        end
+
+        # Parse the two contexts so we know what terms are in scope
+        jld_context = ::JSON::LD::Context.new.parse([context, rdfs_context])
+
+        {
+          ont: {
+            heading:  "# #{__name__.split('::').last} Vocabulary definition\n",
+            bucket:   ontology,
+          },
+          classes: {
+            heading:  "# Class definitions\n",
+            bucket:   rdfs_classes,
+            rev_prop: "rdfs_classes"
+          },
+          properties: {
+            heading:  "# Property definitions\n",
+            bucket:   rdfs_properties,
+            rev_prop: "rdfs_properties"
+          },
+          datatypes: {
+            heading:  "# Datatype definitions\n",
+            bucket:   rdfs_datatypes,
+            rev_prop: "rdfs_datatypes"
+          },
+          other: {
+            heading:  "# Other definitions\n",
+            bucket:   rdfs_instances,
+            rev_prop: "rdfs_instances"
           }
+        }.each do |key, hash|
+          next unless cats[key]
 
-          # Find namespaces used in the vocabulary
-          graph = RDF::Graph.new {|g| each_statement {|s| g << s}} if graph.nil? || graph.empty?
+          cats[key].each do |subject|
+            node = {"@id" => subject.pname}
+            po = {}
 
-          prefixes = vocab_prefixes(graph).merge(prefixes || {})
-          prefixes.each do |pfx, uri|
-            context[pfx.to_s] = uri.to_s unless pfx.to_s.empty?
-          end
+            # Group predicates with their values
+            graph.query(subject: subject) do |statement|
+              # Sanity check this, as these are set to an empty string if not defined.
+              next if [RDF::RDFS.label, RDF::RDFS.comment].include?(statement.predicate) && statement.object.to_s.empty?
+              po[statement.predicate] ||= []
+              po[statement.predicate] << statement.object
+            end
 
-          # Determine the category for each subject in the vocabulary graph
-          cats = subject_categories(graph)
+            next if po.empty?
 
-          # Generate term definitions from graph subjects
-          cats.values.flatten.each do |term|
-            next unless Array(term.qname).length == 2
-            context[term.qname.last.to_s] = term.to_uri.to_s
-          end
+            node['@type'] = po.delete(RDF.type).map {|t| jld_context.compact_iri(t, vocab: true)}
 
-          # Parse the two contexts so we know what terms are in scope
-          jld_context = ::JSON::LD::Context.new.parse([context, rdfs_context])
-
-          {
-            ont: {
-              heading:  "# #{__name__.split('::').last} Vocabulary definition\n",
-              bucket:   ontology,
-            },
-            classes: {
-              heading:  "# Class definitions\n",
-              bucket:   rdfs_classes,
-              rev_prop: "rdfs_classes"
-            },
-            properties: {
-              heading:  "# Property definitions\n",
-              bucket:   rdfs_properties,
-              rev_prop: "rdfs_properties"
-            },
-            datatypes: {
-              heading:  "# Datatype definitions\n",
-              bucket:   rdfs_datatypes,
-              rev_prop: "rdfs_datatypes"
-            },
-            other: {
-              heading:  "# Other definitions\n",
-              bucket:   rdfs_instances,
-              rev_prop: "rdfs_instances"
-            }
-          }.each do |key, hash|
-            next unless cats[key]
-
-            cats[key].each do |subject|
-              node = {"@id" => subject.pname}
-              po = {}
-
-              # Group predicates with their values
-              graph.query(subject: subject) do |statement|
-                # Sanity check this, as these are set to an empty string if not defined.
-                next if [RDF::RDFS.label, RDF::RDFS.comment].include?(statement.predicate) && statement.object.to_s.empty?
-                po[statement.predicate] ||= []
-                po[statement.predicate] << statement.object
-              end
-
-              next if po.empty?
-
-              node['@type'] = po.delete(RDF.type).map {|t| jld_context.compact_iri(t, vocab: true)}
-
-              po.each do |predicate, objects|
-                term = jld_context.compact_iri(predicate, vocab: true)
-                node[term] = if jld_context.container(term) == '@language'
-                  lang_map = objects.inject({}) do |memo, o|
-                    raise "Language-mapped term #{term} with non plain-literal #{o.inspect}" unless o.literal? && o.plain?
-                    memo.merge(o.language.to_s => o.value)
-                  end
-                  # Don't use language map if there's only one entry with no language
-                  lang_map = lang_map[""] if lang_map.keys == [""]
-                  [lang_map]
-                else
-                  objects.map do |o|
-                    expanded_value = jld_context.expand_value(term, o)
-                    jld_context.compact_value(term, expanded_value)
-                  end
+            po.each do |predicate, objects|
+              term = jld_context.compact_iri(predicate, vocab: true)
+              node[term] = if jld_context.container(term) == '@language'
+                lang_map = objects.inject({}) do |memo, o|
+                  raise "Language-mapped term #{term} with non plain-literal #{o.inspect}" unless o.literal? && o.plain?
+                  memo.merge(o.language.to_s => o.value)
                 end
-              end
-
-              node.each do |property, values|
-                case values.length
-                when 0 then node.delete(property)
-                when 1 then node[property] = values.first
-                end
-              end
-
-              # Either set bucket from node, or append node to bucket
-              if hash[:bucket].is_a?(Hash)
-                hash[:bucket].merge!(node)
+                # Don't use language map if there's only one entry with no language
+                lang_map = lang_map[""] if lang_map.keys == [""]
+                [lang_map]
               else
-                ontology[hash[:rev_prop]] ||= hash[:bucket]
-                hash[:bucket] << node
+                objects.map do |o|
+                  expanded_value = jld_context.expand_value(term, o)
+                  jld_context.compact_value(term, expanded_value)
+                end
               end
             end
-          end
 
-          # Serialize result
-          {
-            "@context" => context,
-            "@graph" => ontology
-          }.to_json(::JSON::LD::JSON_STATE)
+            node.each do |property, values|
+              case values.length
+              when 0 then node.delete(property)
+              when 1 then node[property] = values.first
+              end
+            end
+
+            # Either set bucket from node, or append node to bucket
+            if hash[:bucket].is_a?(Hash)
+              hash[:bucket].merge!(node)
+            else
+              ontology[hash[:rev_prop]] ||= hash[:bucket]
+              hash[:bucket] << node
+            end
+          end
         end
+
+        # Serialize result
+        {
+          "@context" => context,
+          "@graph" => ontology
+        }.to_json(::JSON::LD::JSON_STATE)
       rescue LoadError
         # No JSON-LD serialization unless gem loaded
       end
@@ -266,8 +316,8 @@ module RDF
       ##
       # Generate HTML+RDFa representation, specific to vocabularies. This uses generated JSON-LD and a Haml template.
       #
-      # @param [RDF::Queryable] :graph Optional graph, otherwise uses statements from vocabulary.
-      # @param [Hash{#to_sym => String}] Prefixes to add to output
+      # @param [RDF::Queryable] graph Optional graph, otherwise uses statements from vocabulary.
+      # @param [Hash{#to_sym => String}] prefixes to add to output
       # @param [String, Hash] jsonld
       #   If not provided, the `to_jsonld` method is used to generate it.
       # @param [String] template The path to a Haml or ERB template used to generate the output using the JSON-LD serialization
@@ -342,7 +392,7 @@ module RDF
         when /.erb$/
           require 'erubis'
           eruby = Erubis::FastEruby.new(File.read(template))
-          result = eruby.evaluate(binding: self, ont: expanded, context: json['@context'], prefixes: prefixes)
+          eruby.evaluate(binding: self, ont: expanded, context: json['@context'], prefixes: prefixes)
         else
           raise "Unknown template type #{template}. Should have '.erb' or '.haml' extension"
         end

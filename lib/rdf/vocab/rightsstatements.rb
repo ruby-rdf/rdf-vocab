@@ -5,9 +5,13 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://rightsstatements.org/vocab/>
+  #   #
   #   class RightsStatements < RDF::StrictVocabulary
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :irswg
+  #
   #   end
-  class RightsStatements < RDF::StrictVocabulary("http://rightsstatements.org/vocab/")
+  RightsStatements = Class.new(RDF::StrictVocabulary("http://rightsstatements.org/vocab/")) do
 
     # Extra definitions
     term :"1.0/",

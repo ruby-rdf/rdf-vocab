@@ -5,9 +5,158 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.europeana.eu/schemas/edm/>
+  #   #
+  #   # Europeana Data Model (EDM) vocabulary
+  #   #
+  #   # The Europeana Data Model (EDM) is aimed at being an integration medium for collecting, connecting and enriching the descriptions provided by Europeana data providers. The RDF vocabulary for http://www.europeana.eu/schemas/edm/ defines the elements introduced by EDM (as opposed to the ones EDM re-uses from other namespaces).
+  #   # @version 5.2.4
   #   class EDM < RDF::StrictVocabulary
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Agent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :EuropeanaAggregation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :EuropeanaObject
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Event
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :InformationResource
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NonInformationResource
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PhysicalThing
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Place
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ProvidedCHO
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TimeSpan
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :WebResource
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aggregatedCHO
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :begin
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :collectionName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :country
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currentLocation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dataProvider
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :end
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :europeanaProxy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :happenedAt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasMet
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasView
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :incorporates
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isAnnotationOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isDerivativeOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isNextInSequence
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isRelatedTo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isRepresentationOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isShownAt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isShownBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isSimilarTo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isSuccessorOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :landingPage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :language
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :object
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :occurredAt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :preview
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :provider
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :realizes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rights
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :type
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ugc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :unstored
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :uri
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :userTag
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wasPresentAt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :year
+  #
   #   end
-  class EDM < RDF::StrictVocabulary("http://www.europeana.eu/schemas/edm/")
+  EDM = Class.new(RDF::StrictVocabulary("http://www.europeana.eu/schemas/edm/")) do
 
     # Ontology definition
     ontology :"http://www.europeana.eu/schemas/edm/",

@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = "public-rdf-ruby@w3.org"
   spec.summary       = %q{A library of RDF vocabularies}
   spec.description   = %q{Defines several standard RDF vocabularies}
-  spec.homepage      = "http://ruby-rdf.github.com/rdf-vocab"
+  spec.homepage      = "https://github.com/ruby-rdf/rdf-vocab"
   spec.license       = "Unlicense"
 
   spec.platform      = Gem::Platform::RUBY
@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version      = '>= 2.4'
 
-  spec.add_runtime_dependency     "rdf",          '~> 3.1'
+  spec.add_runtime_dependency     "rdf",          '~> 3.1', '>= 3.1.2'
 
   # Either of these are required for HTML vocabulary generation
   spec.add_development_dependency "haml",         '~> 5.1'

@@ -5,9 +5,10471 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://dbpedia.org/ontology/>
+  #   #
+  #   # The DBpedia Ontology
+  #   #
+  #   #                This ontology is generated from the manually created specifications in the DBpedia Mappings               Wiki. Each release of this ontology corresponds to a new release of the DBpedia data set which               contains instance data extracted from the different language versions of Wikipedia. For               information regarding changes in this ontology, please refer to the DBpedia Mappings Wiki.             
+  #   #
+  #   #                The DBpedia ontology provides the classes and properties used in the DBpedia data set.             
+  #   # @version 4.2-SNAPSHOT
   #   class DBO < RDF::StrictVocabulary
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Abbey
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AcademicConference
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AcademicJournal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AcademicSubject
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Activity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Actor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AdministrativeRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AdultActor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Agent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Agglomeration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Aircraft
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Airline
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Airport
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Album
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Altitude
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AmateurBoxer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Ambassador
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AmericanFootballCoach
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AmericanFootballLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AmericanFootballPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AmericanFootballTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Amphibian
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AmusementParkAttraction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AnatomicalStructure
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Animal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AnimangaCharacter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Anime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Annotation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Arachnid
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Archaea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Archeologist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ArcherPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Archipelago
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Architect
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ArchitecturalStructure
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Archive
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Area
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Arena
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Aristocrat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Arrondissement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Artery
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Article
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ArtificialSatellite
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Artist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ArtistDiscography
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ArtisticGenre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Artwork
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Asteroid
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Astronaut
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Athlete
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Athletics
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AthleticsPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Atoll
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Attack
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AustralianFootballLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AustralianFootballTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AustralianRulesFootballPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AutoRacingLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Automobile
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AutomobileEngine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Award
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BackScene
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Bacteria
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BadmintonPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Band
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Bank
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Baronet
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BaseballLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BaseballPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BaseballSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BaseballTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BasketballLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BasketballPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BasketballTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Bay
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Beach
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BeachVolleyballPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BeautyQueen
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Beer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Beverage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Biathlete
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BiologicalDatabase
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Biologist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Biomolecule
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Bird
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Birth
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Blazon
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BloodVessel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BoardGame
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BobsleighAthlete
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BodyOfWater
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Bodybuilder
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Bone
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Book
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BowlingLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Boxer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Boxing
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BoxingCategory
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BoxingLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BoxingStyle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Brain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Brewery
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Bridge
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BritishRoyalty
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BroadcastNetwork
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Broadcaster
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BrownDwarf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Building
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BullFighter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BusCompany
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BusinessPerson
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Camera
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CanadianFootballLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CanadianFootballPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CanadianFootballTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Canal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Canoeist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Canton
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Cape
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Capital
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CapitalOfRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CardGame
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Cardinal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CardinalDirection
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CareerStation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Cartoon
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Case
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Casino
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Castle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Cat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Caterer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Cave
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Celebrity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CelestialBody
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Cemetery
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Chancellor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ChartsPlacements
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Cheese
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Chef
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ChemicalCompound
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ChemicalElement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ChemicalSubstance
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ChessPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ChristianBishop
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ChristianDoctrine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ChristianPatriarch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Church
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :City
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CityDistrict
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ClassicalMusicArtist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ClassicalMusicComposition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Cleric
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ClericalAdministrativeRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ClericalOrder
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ClubMoss
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Coach
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CoalPit
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CollectionOfValuables
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :College
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CollegeCoach
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Colour
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Comedian
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ComedyGroup
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Comic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ComicStrip
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ComicsCharacter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ComicsCreator
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Community
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Company
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Competition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ConcentrationCamp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Congressman
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Conifer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Constellation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Contest
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Continent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ControlledDesignationOfOriginWine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Convention
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ConveyorSystem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Country
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CountrySeat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Crater
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Creek
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CricketGround
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CricketLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CricketTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Cricketer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Criminal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CrossCountrySkier
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Crustacean
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CultivatedVariety
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Curler
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CurlingLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Currency
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Cycad
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CyclingCompetition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CyclingLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CyclingRace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CyclingTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Cyclist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DTMRacer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Dam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Dancer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DartsPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Database
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Deanery
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Death
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Decoration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Deity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Demographics
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Department
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Depth
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Deputy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Desert
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Device
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DigitalCamera
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Dike
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Diocese
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Diploma
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Disease
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DisneyCharacter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :District
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DistrictWaterBoard
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Divorce
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Document
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DocumentType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Dog
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Drama
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Drug
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Earthquake
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Economist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :EducationalInstitution
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Egyptologist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Election
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ElectionDiagram
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ElectricalSubstation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Embryology
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Employer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :EmployersOrganisation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Engine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Engineer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Entomologist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Enzyme
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Escalator
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :EthnicGroup
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Eukaryote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :EurovisionSongContestEntry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Event
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Factory
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Family
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Farmer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Fashion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FashionDesigner
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Fencer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Fern
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FictionalCharacter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Fiefdom
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FieldHockeyLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FigureSkater
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :File
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FillingStation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Film
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FilmFestival
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Fish
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Flag
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FloweringPlant
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Food
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FootballLeagueSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FootballMatch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Forest
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FormerMunicipality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FormulaOneRacer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FormulaOneRacing
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FormulaOneTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Fort
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Fungus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GaelicGamesPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Galaxy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Game
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Garden
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Gate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GatedCommunity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Gene
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GeneLocation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Genre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GeologicalPeriod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GeopoliticalOrganisation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Ginkgo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GivenName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Glacier
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Globularswarm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Gnetophytes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GolfCourse
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GolfLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GolfPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GolfTournament
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GovernmentAgency
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GovernmentCabinet
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GovernmentType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GovernmentalAdministrativeRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Governor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GrandPrix
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Grape
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GraveMonument
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GreenAlga
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GridironFootballPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GrossDomesticProduct
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GrossDomesticProductPerCapita
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Group
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Guitar
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Guitarist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Gymnast
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HandballLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HandballPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HandballTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HighDiver
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Historian
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HistoricBuilding
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HistoricPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HistoricalAreaOfAuthority
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HistoricalCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HistoricalDistrict
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HistoricalPeriod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HistoricalProvince
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HistoricalRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HistoricalSettlement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HockeyClub
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HockeyTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Holiday
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HollywoodCartoon
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Hormone
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Horse
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HorseRace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HorseRider
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HorseRiding
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HorseTrainer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Hospital
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Host
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HotSpring
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Hotel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HumanDevelopmentIndex
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HumanGene
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HumanGeneLocation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Humorist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :IceHockeyLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :IceHockeyPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Ideology
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Image
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :InformationAppliance
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Infrastructure
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :InlineHockeyLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Insect
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Instrument
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Instrumentalist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Intercommunality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :InternationalFootballLeagueEvent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :InternationalOrganisation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Island
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Jockey
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Journalist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Judge
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LacrosseLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LacrossePlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Lake
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Language
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LaunchPad
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Law
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LawFirm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Lawyer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LegalCase
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Legislature
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Letter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Library
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Lieutenant
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LifeCycleEvent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Ligament
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LightNovel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Lighthouse
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LineOfFashion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Linguist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Lipid
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :List
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LiteraryGenre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Locality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Lock
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Locomotive
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LunarCrater
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Lymph
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Magazine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Mammal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Manga
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Manhua
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Manhwa
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Marriage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MartialArtist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MathematicalConcept
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Mayor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MeanOfTransportation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Media
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Medician
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Medicine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Meeting
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MemberOfParliament
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MemberResistanceMovement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Memorial
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MetroStation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MicroRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MilitaryAircraft
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MilitaryConflict
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MilitaryPerson
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MilitaryStructure
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MilitaryUnit
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MilitaryVehicle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Mill
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Mine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Mineral
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MixedMartialArtsEvent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MixedMartialArtsLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MobilePhone
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Model
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Mollusca
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Monarch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Monastery
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Monument
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Mosque
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Moss
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MotocycleRacer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MotorRace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Motorcycle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MotorcycleRacingLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MotorcycleRider
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MotorsportRacer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MotorsportSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Mountain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MountainPass
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MountainRange
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MouseGene
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MouseGeneLocation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MovieDirector
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MovieGenre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MovingImage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MovingWalkway
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MultiVolumePublication
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Municipality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Murderer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Muscle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Museum
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MusicComposer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MusicDirector
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MusicFestival
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MusicGenre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Musical
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MusicalArtist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MusicalWork
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MythologicalFigure
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NCAATeamSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Name
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NarutoCharacter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NascarDriver
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NationalAnthem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NationalCollegiateAthleticAssociationAthlete
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NationalFootballLeagueEvent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NationalFootballLeagueSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NationalSoccerClub
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NaturalEvent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NaturalPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NaturalRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Nerve
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NetballPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Newspaper
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NobelPrize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Noble
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NobleFamily
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NordicCombined
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Novel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NuclearPowerStation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Ocean
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OfficeHolder
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OldTerritory
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OlympicEvent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OlympicResult
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Olympics
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Openswarm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Opera
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Organ
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Organisation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OrganisationMember
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Orphan
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OverseasDepartment
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PaintballLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Painter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Painting
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Parish
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Park
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Parliament
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PenaltyShootOut
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PeriodOfArtisticStyle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PeriodicalLiterature
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Person
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PersonFunction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PersonalEvent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Philosopher
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PhilosophicalConcept
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Photographer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Place
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Planet
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Plant
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Play
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PlayWright
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PlayboyPlaymate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Poem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Poet
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PokerPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PoliticalConcept
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PoliticalFunction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PoliticalParty
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Politician
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PoliticianSpouse
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PoloLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Polyhedron
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Polysaccharide
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Pope
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PopulatedPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Population
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Port
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PowerStation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Prefecture
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PrehistoricalPeriod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Presenter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :President
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Priest
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PrimeMinister
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Prison
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Producer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Profession
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Professor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ProgrammingLanguage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Project
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ProtectedArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Protein
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ProtohistoricalPeriod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Province
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Psychologist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PublicService
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PublicTransitSystem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Publisher
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Pyramid
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Quote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Race
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RaceHorse
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RaceTrack
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Racecourse
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RacingDriver
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RadioControlledRacingLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RadioHost
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RadioProgram
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RadioStation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RailwayLine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RailwayStation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RailwayTunnel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RallyDriver
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Ratio
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Rebellion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RecordLabel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RecordOffice
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Referee
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Reference
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Regency
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Region
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Relationship
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Religious
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ReligiousBuilding
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ReligiousOrganisation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Reptile
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ResearchProject
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RestArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Restaurant
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Resume
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :River
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Road
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RoadJunction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RoadTunnel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Rocket
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RocketEngine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RollerCoaster
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RomanEmperor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RouteOfTransportation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RouteStop
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Rower
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Royalty
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RugbyClub
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RugbyLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RugbyPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Saint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Sales
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SambaSchool
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Satellite
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :School
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ScientificConcept
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Scientist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ScreenWriter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Sculptor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Sculpture
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Sea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Senator
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SerialKiller
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Settlement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Ship
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ShoppingMall
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Shrine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Singer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Single
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SiteOfSpecialScientificInterest
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Skater
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SkiArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SkiResort
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Ski_jumper
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Skier
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Skyscraper
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SnookerChamp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SnookerPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SnookerWorldRanking
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SoapCharacter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Soccer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SoccerClub
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SoccerClubSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SoccerLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SoccerLeagueSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SoccerManager
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SoccerPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SoccerTournament
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SocietalEvent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SoftballLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Software
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SolarEclipse
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Song
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SongWriter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Sound
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SpaceMission
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SpaceShuttle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SpaceStation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Spacecraft
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Species
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SpeedSkater
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SpeedwayLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SpeedwayRider
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SpeedwayTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Sport
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SportCompetitionResult
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SportFacility
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SportsClub
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SportsEvent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SportsLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SportsManager
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SportsSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SportsTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SportsTeamMember
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SportsTeamSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Square
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SquashPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Stadium
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Standard
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Star
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :State
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :StatedResolution
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Station
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Statistic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :StillImage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :StormSurge
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Stream
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Street
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SubMunicipality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SumoWrestler
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SupremeCourtOfTheUnitedStatesCase
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Surfer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Surname
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Swarm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Swimmer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Synagogue
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SystemOfLaw
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TableTennisPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Tax
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Taxon
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TeamMember
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TeamSport
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TelevisionDirector
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TelevisionEpisode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TelevisionHost
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TelevisionPersonality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TelevisionSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TelevisionShow
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TelevisionStation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Temple
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TennisLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TennisPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TennisTournament
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TermOfOffice
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Territory
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Theatre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TheatreDirector
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TheologicalConcept
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TimePeriod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TopicalConcept
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Tournament
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Tower
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Town
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TrackList
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TradeUnion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Train
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TrainCarriage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Tram
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TramStation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Treadmill
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Treaty
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Tunnel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Type
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :UndergroundJournal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :UnitOfWork
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :University
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Unknown
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Valley
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Vein
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Venue
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Vicar
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :VicePresident
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :VicePrimeMinister
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :VideoGame
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :VideogamesLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Village
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Vodka
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :VoiceActor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Volcano
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :VolleyballCoach
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :VolleyballLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :VolleyballPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :WaterPoloPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :WaterRide
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :WaterTower
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Watermill
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :WaterwayTunnel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Weapon
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Website
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :WindMotor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Windmill
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Wine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :WineRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Winery
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :WinterSportPlayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :WomensTennisAssociationTournament
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Work
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :WorldHeritageSite
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Wrestler
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :WrestlingEvent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Writer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :WrittenWork
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Year
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :YearInSpaceflight
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Zoo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aSide
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :abbeychurchBlessing
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :abbeychurchBlessingCharge
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :abbreviation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ableToGrind
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :absoluteMagnitude
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :abstentions
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :abstract
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :academicAdvisor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :academicDiscipline
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :academyAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :acceleration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :access
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :accessDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :achievement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :acquirementDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :actScore
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :actingHeadteacher
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :activeYears
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :activeYearsEndDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :activeYearsEndDateMgr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :activeYearsEndYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :activeYearsEndYearMgr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :activeYearsStartDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :activeYearsStartDateMgr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :activeYearsStartYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :activeYearsStartYearMgr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :activity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :added
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :address
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :addressInRoad
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :adjacentSettlement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :administrativeCenter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :administrativeCollectivity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :administrativeDistrict
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :administrativeHeadCity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :administrativeStatus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :administrator
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :afdbId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :affair
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :affiliate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :affiliation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :afiAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :age
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ageRange
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :agency
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :agencyStationCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :agglomeration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :agglomerationArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :agglomerationDemographics
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :agglomerationPopulation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :agglomerationPopulationTotal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :agglomerationPopulationYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aggregation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :airDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftAttack
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftBomber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftElectronic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftFighter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftHelicopter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftHelicopterAttack
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftHelicopterCargo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftHelicopterMultirole
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftHelicopterObservation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftHelicopterTransport
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftHelicopterUtility
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftInterceptor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftPatrol
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftRecon
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftTrainer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftTransport
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aircraftUser
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :airportUsing
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aitaCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :albedo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :album
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :albumRuntime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alias
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :allcinemaId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :allegiance
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alliance
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :almaMater
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alongside
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alpsGroup
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alpsMainPart
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alpsMajorSector
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alpsSection
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alpsSoiusaCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alpsSubgroup
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alpsSubsection
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alpsSupergroup
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alternativeName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alternativeTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :altitude
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alumni
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :amateurDefeat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :amateurFight
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :amateurKo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :amateurNoContest
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :amateurTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :amateurTie
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :amateurTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :amateurVictory
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :amateurYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :americanComedyAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :amgid
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :amsterdamCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :analogChannel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :animal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :animator
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :anniversary
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :announcedFrom
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :annualTemperature
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :anthem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :apcPresident
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :apoapsis
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :apofocus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :apparentMagnitude
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :appearancesInLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :appearancesInNationalTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :appointer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :approach
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :approvedByLowerParliament
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :approvedByUpperParliament
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :approximateCalories
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :apskritis
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :archipelago
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :architect
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :architectualBureau
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :architecturalMovement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :architecturalStyle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :area
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :areaCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :areaDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :areaLand
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :areaMetro
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :areaOfCatchment
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :areaOfCatchmentQuote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :areaOfSearch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :areaQuote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :areaRank
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :areaRural
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :areaTotal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :areaTotalRanking
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :areaUrban
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :areaWater
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :argueDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :arielAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :arm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :army
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :arrestDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :arrondissement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :artPatron
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :artery
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :artificialSnowArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :artist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :artisticFunction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :asWikiText
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ascent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :asiaChampionship
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aspectRatio
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :assembly
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :assetUnderManagement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :assets
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :assistantPrincipal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :associate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :associateEditor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :associateStar
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :associatedAct
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :associatedBand
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :associatedMusicalArtist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :associatedRocket
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :associationOfLocalGovernment
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :astrologicalSign
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :atPage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :atRowNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :atcPrefix
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :atcSuffix
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :atcSupplemental
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :athletics
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :athleticsDiscipline
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :atomicNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :attorneyGeneral
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :australiaOpenDouble
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :australiaOpenMixed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :australiaOpenSingle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :author
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :authority
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :authorityMandate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :authorityTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :automobileModel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :automobilePlatform
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :autonomy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :availableSmartCard
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :average
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :averageAnnualGeneration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :averageClassSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :averageDepth
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :averageDepthQuote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :averageSpeed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :avifaunaPopulation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :award
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :awardName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :awayColourHexCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bSide
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :background
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :backhand
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :badGuy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :baftaAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :band
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bandMember
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :barPassRate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :barangays
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :basedOn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :battingSide
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :battle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :battleHonours
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :beatifiedBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :beatifiedDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :beatifiedPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bedCount
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :believers
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :beltwayCity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bestFinish
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bestLap
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bestRankDouble
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bestRankSingle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bestWsopRank
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bestYearWsop
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bgafdId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bibsysId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bicycleInformation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bigPoolRecord
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :biggestCity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :billed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :binomial
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :binomialAuthority
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bioavailability
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bioclimate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :biome
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bird
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :birthDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :birthName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :birthPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :birthSign
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :birthYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bishopric
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :blackLongDistancePisteNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :blackSkiPisteNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :blazon
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :blazonCaption
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :blazonLink
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :blazonRatio
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :block
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :blockAlloy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bloodGroup
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bloodType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :blueLongDistancePisteNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :blueSkiPisteNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bnfId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :board
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bodyDiscovered
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bodyStyle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :boiler
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :boilerPressure
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :boilingPoint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :book
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :booster
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :border
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :borough
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bourgmestre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bowlRecord
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :boxerCategory
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :boxerStyle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bpnId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :brainInfoNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :brainInfoType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :branchFrom
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :branchTo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :brand
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :breeder
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bridgeCarries
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :britishComedyAwards
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :britishOpen
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :britishWins
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :broadcastArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :broadcastNetwork
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :broadcastRepeater
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :broadcastStationClass
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :broadcastTranslator
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bronzeMedalDouble
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bronzeMedalMixed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bronzeMedalSingle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bronzeMedalist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :budget
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :budgetYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :builder
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :building
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :buildingEndDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :buildingEndYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :buildingStartDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :buildingStartYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :buildingType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bustSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bustWaistHipSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cableCar
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :calculationNeeds
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :callSign
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :callsignMeaning
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :campus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :campusSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :campusType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :canBaggageChecked
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cannonNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :canonizedBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :canonizedDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :canonizedPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :canton
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :capacity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :capacityFactor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :capital
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :capitalCoordinates
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :capitalCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :capitalDistrict
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :capitalElevation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :capitalMountain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :capitalPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :capitalPosition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :capitalRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :captureDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :carNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :carbohydrate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :carcinogen
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :careerPoints
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :careerPrizeMoney
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :careerStation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cargoFuel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cargoGas
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cargoWater
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :casNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :casSupplemental
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :case
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :casualties
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :catch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :category
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :caterer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :catholicPercentage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :causalties
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :causeOfDeath
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :causedBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ccaState
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ceeb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ceiling
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cemetery
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :censusYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :center
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :centuryBreaks
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ceo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ceremonialCounty
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :certification
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :certificationDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cesarAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chEBI
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chairLabel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chairman
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chairmanTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chairperson
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :champion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :championInDouble
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :championInDoubleFemale
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :championInDoubleMale
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :championInMixedDouble
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :championInSingle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :championInSingleFemale
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :championInSingleMale
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :championships
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chancellor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :channel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chaplain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :characterInPlay
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chef
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chiefEditor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chiefPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :child
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :childOrganisation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :choreographer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chorusCharacterInPlay
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :christeningDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chromosome
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cinematography
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :circle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :circuitLength
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :circuitName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :circulation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :circumcised
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cites
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :citizenship
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :city
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cityLink
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cityRank
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :citySince
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cityType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :class
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :classes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :classification
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :classis
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :climate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :climbUpNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :closeTo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :closed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :closingDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :closingFilm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :closingYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :clothSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :clothingSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :club
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :clubsRecordGoalscorer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cluster
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cmpEvaDuration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cmykCoordinateBlack
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cmykCoordinateCyanic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cmykCoordinateMagenta
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cmykCoordinateYellow
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :co2Emission
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coExecutiveProducer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coProducer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coach
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coachClub
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coachSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coachedTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coachingRecord
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coalition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coastLength
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coastLine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coatOfArms
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :code
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :codeBook
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :codeDistrict
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :codeIndex
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :codeLandRegistry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :codeListOfHonour
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :codeMemorial
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :codeMunicipalMonument
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :codeNationalMonument
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :codeProvincialMonument
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :codeSettlement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :codeStockExchange
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coden
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coemperor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :collaboration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :colleague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :collection
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :collectionSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :collectivityMinority
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :college
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :collegeHof
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :colonialName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :colorChart
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :colour
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :colourHexCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :colourName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :combatant
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :comic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :comitat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :command
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :commandModule
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :commandStructure
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :commandant
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :commander
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :comment
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :commissioner
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :commissionerDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :commissioningDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :committee
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :committeeInLegislature
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :commonName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :commune
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :communityIsoCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :company
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :comparable
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :competition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :competitionTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :compiler
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :completionDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :complexion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :complexity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :component
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :composer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :compressionRatio
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :computingInput
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :computingMedia
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :computingPlatform
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :configuration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :conflict
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :congressionalDistrict
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :connectsReferencedTo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :connotation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :consecration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :conservationStatus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :conservationStatusSystem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :constellation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :construction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :constructionMaterial
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :contest
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :continent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :continentRank
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :continentalTournament
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :continentalTournamentBronze
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :continentalTournamentGold
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :continentalTournamentSilver
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :contractAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :contractor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :convictionDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coolingSystem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :copilote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coronationDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cosparId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cost
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :costumeDesigner
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :council
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :councilArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :country
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :countryOrigin
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :countryRank
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :countryWithFirstAstronaut
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :countryWithFirstSatellite
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :countryWithFirstSatelliteLaunched
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :countryWithFirstSpaceflight
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :county
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :countySeat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :course
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cousurper
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coverArtist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cpu
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :created
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :creationChristianBishop
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :creationYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :creativeDirector
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :creator
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :creatorOfDish
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :credit
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :crest
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :crew
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :crewMember
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :crewSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :crews
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :criteria
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :crosses
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :crownDependency
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cuisine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cultivatedVariety
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :curator
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currency
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currencyCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currentCity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currentLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currentMember
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currentPartner
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currentProduction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currentRank
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currentRecord
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currentSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currentStatus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currentTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currentTeamManager
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currentTeamMember
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currentWorldChampion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currentlyUsedFor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :custodian
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cyclistGenre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cylinderBore
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cylinderCount
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :daira
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :damage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :damsire
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :danseCompetition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :danseScore
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :date
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateAct
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateAgreement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateBudget
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateClosed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateCompleted
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateConstruction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateExtended
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateLastUpdated
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateOfAbandonment
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateOfBurial
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateUnveiled
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateUse
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :davisCup
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :day
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :daylightSavingTimeZone
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dbnlCodeDutch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dcc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deFactoLanguage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deadInFightDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deadInFightPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dean
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deanery
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deathAge
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deathCause
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deathDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deathPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deathYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :debut
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :debutTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :debutWork
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dec
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :decay
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :decideDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :declination
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :decommissioningDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :decoration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :defeat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :defeatAsMgr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :definition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :delegateMayor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :delegation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deliveryDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deme
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :demographics
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :demographicsAsOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :demolitionDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :demolitionYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :demonym
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :denomination
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :density
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :department
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :departmentCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :departmentPosition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :depictionDescription
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :depth
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :depthQuote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :depths
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deputy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :derivative
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :derivedWord
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :description
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :designCompany
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :designer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :destination
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :destructionDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :detectionMethod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :detractor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :developer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dfE
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :diameter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :different
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :digitalChannel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :digitalSubChannel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :diocese
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :diploma
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :director
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :disappearanceDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :disbanded
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :discharge
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dischargeAverage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :disciple
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :discipline
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :discontinued
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :discovered
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :discoverer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :discovery
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :diseasesDb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :displacement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dissolutionDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dissolutionYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dissolved
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dist_ly
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dist_pc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distance
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distanceLaps
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distanceToBelfast
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distanceToCapital
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distanceToCardiff
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distanceToCharingCross
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distanceToDouglas
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distanceToDublin
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distanceToEdinburgh
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distanceToLondon
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distanceToNearestCity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distanceTraveled
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distributingCompany
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distributingLabel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :distributor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :district
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :division
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dockedTime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :doctoralAdvisor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :doctoralStudent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :documentDesignation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :documentNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :domain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dorlandsPrefix
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dorlandsSuffix
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :draft
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :draftLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :draftPick
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :draftPosition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :draftRound
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :draftTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :draftYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :drainsFrom
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :drainsTo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :drama
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dressCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :drugbank
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dryCargo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dubber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :duration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dutchArtworkCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dutchCOROPCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dutchMIPCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dutchNAIdentifier
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dutchPPNCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dutchRKDCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dutchWinkelID
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dynasty
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eMedicineSubject
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eMedicineTopic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eTeatrId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eastPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ecNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :editing
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :editor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :editorTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :education
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :educationPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :educationSystem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :effectiveRadiatedPower
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :egafdId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :einecsNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ekatteCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :electionDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :electionDateLeader
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :electionMajority
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :elementAbove
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :elementBlock
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :elementGroup
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :elementPeriod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :elevation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :elevationQuote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :elevatorCount
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :elo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eloRecord
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :emblem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :emmyAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :employer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :employersCelebration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endCareer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endDateTime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endOccupation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endPoint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endReign
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endYearOfInsertion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endYearOfSales
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endangeredSince
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endingTheme
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :endowment
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :enemy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :engine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :enginePower
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :engineType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :engineer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ensembl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :enshrinedDeity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :entourage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :entrezgene
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eparchy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :episode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :episodeNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :epoch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eptFinalTable
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eptItm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eptTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :equipment
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :equity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :era
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eruption
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eruptionYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :escalafon
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :escapeVelocity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :espnId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :established
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :establishment
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ethnicGroup
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ethnicGroupsInYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ethnicity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eurobabeIndexId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :europeanAffiliation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :europeanChampionship
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :europeanParliamentGroup
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :europeanUnionEntranceDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :event
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eventDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eventDescription
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :executiveHeadteacher
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :executiveProducer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :exhibition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :existence
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :expedition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :explorer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :externalOrnament
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :extinctionDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :extinctionYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eyeColor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eyeColour
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eyes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :faaLocationIdentifier
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :facilityId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :facultySize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :failedLaunches
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :family
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :familyMember
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fansgroup
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fareZone
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fastestDriver
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fastestDriverCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fastestDriverTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fastestLap
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :father
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fauna
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fcRuns
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fdaUniiCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :feastDay
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :feat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :feature
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :features
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fedCup
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :federalState
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :federation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fees
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fibahof
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :field
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fight
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fighter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fileExtension
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fileSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fileURL
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :filename
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fillingStation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :film
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :filmAudioType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :filmColourType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :filmFareAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :filmNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :filmPolskiId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :filmRuntime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :filmVersion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :finalFlight
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :finalLost
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :finalLostDouble
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :finalLostSingle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :finalLostTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :finalPublicationDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :finalPublicationYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fipsCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstAirDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstAppearance
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstAscent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstAscentPerson
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstAscentYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstBroadcast
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstDriver
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstDriverCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstDriverTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstFlight
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstFlightEndDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstFlightStartDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstGame
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstLaunch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstLaunchDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstLaunchRocket
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstLeader
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstMention
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstOlympicEvent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstOwner
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstPopularVote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstProMatch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstPublicationDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstPublicationYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstPublisher
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstRace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstWin
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :firstWinner
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :flag
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :flagBearer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :flagBorder
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :flagCaption
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :flagLink
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :flagSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :flashPoint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :floodingDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :floorArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :floorCount
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :flora
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :flower
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :flyingHours
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :foalDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :followedBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :followingEvent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :follows
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :foot
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :footedness
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :forces
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :foresterDistrict
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :format
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :formationDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :formationYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :formerBandMember
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :formerBroadcastNetwork
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :formerCallsign
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :formerChannel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :formerChoreographer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :formerCoach
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :formerHighschool
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :formerName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :formerPartner
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :formerTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :formula
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fossil
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :foundation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :foundationPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :foundedBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :founder
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :foundingDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :foundingYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fourthCommander
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :frazioni
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :free
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :freeDanseScore
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :freeFlightTime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :freeLabel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :freeProgCompetition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :freeProgScore
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :freeScoreCompetition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :frequency
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :frequencyOfPublication
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :frequentlyUpdated
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :friend
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :frontierLength
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :frozen
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fuel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fuelCapacity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fuelConsumption
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fuelSystem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fuelType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fuelTypeName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fullCompetition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fullScore
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :functionEndDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :functionEndYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :functionStartDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :functionStartYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fundedBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :galicianSpeakersDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :galicianSpeakersPercentage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :galleryItem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gameArtist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gameEngine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gameModus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :games
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :garrison
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gasChambers
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gaudiAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geminiAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gender
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geneLocation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geneLocationEnd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geneLocationStart
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geneReviewsId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geneReviewsName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :generalCouncil
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :generalManager
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :generationUnits
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :genomeDB
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :genre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :genus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geolocDepartment
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geolocDual
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geologicPeriod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geology
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :giniCoefficient
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :giniCoefficientAsOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :giniCoefficientCategory
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :giniCoefficientRanking
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :glycemicIndex
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gnisCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gnl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :goalsInLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :goalsInNationalTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :goldMedalDouble
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :goldMedalMixed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :goldMedalSingle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :goldMedalist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :goldenCalfAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :goldenGlobeAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :goldenRaspberryAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :governingBody
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :government
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :governmentCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :governmentElevation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :governmentMountain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :governmentPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :governmentPosition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :governmentRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :governmentType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :governor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :governorGeneral
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :governorate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :goyaAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :grades
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :grammyAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :grandsire
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :grave
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :grayPage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :graySubject
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :greekName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :greenLongDistancePisteNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :greenSkiPisteNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gridReference
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :grindingCapability
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gross
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :grossDomesticProduct
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :grossDomesticProductAsOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :grossDomesticProductNominalPerCapita
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :grossDomesticProductPerPeople
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :grossDomesticProductPurchasingPowerParityPerCapita
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :grossDomesticProductRank
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ground
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :groundsForLiquidation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :groupCommemorated
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :growingGrape
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :guest
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gun
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gymApparatus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hairColor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hairColour
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hairs
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hallOfFame
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hand
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :handedness
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :handisport
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasAbsorbedMunicipality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasAnnotation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasChannel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasInput
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasInsidePlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasJunctionWith
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasKMLData
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasNaturalBust
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasOutsidePlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasSurfaceForm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasVariant
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :head
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :headAlloy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :headChef
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :headLabel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :headOfFamily
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :headquarter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :headteacher
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :height
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :heightAboveAverageTerrain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :heightAgainst
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :heightAttack
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :heir
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :heisman
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :heritageRegister
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hgncid
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :highestBreak
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :highestBuildingInYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :highestMountain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :highestPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :highestPoint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :highestPointIsland
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :highestPosition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :highestRank
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :highestRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :highestState
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :highschool
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :highwaySystem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hipSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :historicalMap
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :historicalName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :historicalRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hof
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :homage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :homeArena
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :homeColourHexCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :homeStadium
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :homeport
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hometown
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :honours
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hopmanCup
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :horseRidingDiscipline
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :house
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hraState
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hsvCoordinateHue
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hsvCoordinateSaturation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hsvCoordinateValue
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hubAirport
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :humanDevelopmentIndex
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :humanDevelopmentIndexAsOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :humanDevelopmentIndexRank
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :humanDevelopmentIndexRankingCategory
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hybrid
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :iafdId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :iataAirlineCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :iataLocationIdentifier
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ibdbId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :icaoAirlineCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :icaoLocationIdentifier
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :icd1
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :icd10
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :icd9
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :icdo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :iconographicAttributes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :id
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :idAllocine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :idNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identificationSymbol
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ideology
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :iftaAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :iihfHof
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :illiteracy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :illustrator
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :imageSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :imdbId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :impactFactor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :impactFactorAsOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :imposedDanseCompetition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :imposedDanseScore
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :inCemetery
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :inchi
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :inclination
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :income
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :incumbent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :individualisedGnd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :individualisedPnd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :industry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :infantMortality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :inflow
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :influenced
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :influencedBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :information
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :informationName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ingredient
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ingredientName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :initiallyUsedFor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :inn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :innervates
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :inscription
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :inseeCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :installedCapacity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :institution
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :instrument
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :intercommunality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :interest
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :internationalAffiliation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :internationalPhonePrefix
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :internationalPhonePrefixLabel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :internationally
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :introduced
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :introductionDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :iobdbId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isCityState
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isHandicappedAccessible
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isPartOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isPartOfAnatomicalStructure
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isPartOfMilitaryConflict
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isPartOfName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isPartOfWineRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isPeerReviewed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isRouteStop
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isbn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isil
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :island
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isniId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :iso31661Code
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :iso6391Code
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :iso6392Code
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :iso6393Code
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isoCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isoCodeRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :issDockings
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :issn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :istat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ithfDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :iucnCategory
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :iupacName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :jockey
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :jointCommunity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :jstor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :judge
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :juniorSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :juniorTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :juniorYearsEndYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :juniorYearsStartYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :jureLanguage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :jurisdiction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :jutsu
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :keyPerson
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :khlDraft
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :khlDraftTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :khlDraftYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :killedBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :kinOfLanguage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :kindOfCoordinate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :kindOfCriminal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :kindOfCriminalAction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :kindOfRock
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :kingdom
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :knownFor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ko
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lahHof
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lake
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :land
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :landArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :landPercentage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :landRegistryCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :landeshauptmann
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :landingDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :landingSite
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :landingVehicle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :landskap
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :landtag
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :landtagMandate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :language
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :languageCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :languageFamily
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :languageRegulator
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :largestCity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :largestMetro
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :largestSettlement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :largestWin
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastAirDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastAppearance
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastElectionDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastFamilyMember
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastFlight
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastFlightEndDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastFlightStartDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastLaunch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastLaunchDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastLaunchRocket
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastPosition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastProMatch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastPublicationDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastRace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lastWin
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :laterality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :latestElection
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :latestPreviewDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :latestPreviewVersion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :latestReleaseDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :latestReleaseVersion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :latinName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :launch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :launchDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :launchPad
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :launchSite
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :launchVehicle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :launches
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :laurenceOlivierAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lawCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :layingDown
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :layout
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lcc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lccn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lccnId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lchfDraft
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lchfDraftTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lchfDraftYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :leadTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :leadYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :leader
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :leaderFunction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :leaderName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :leaderParty
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :leaderTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :leadership
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :league
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :leagueManager
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :leftChild
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :leftTributary
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :legalArrondissement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :legalArticle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :legalForm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :legislativePeriodName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :length
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lengthQuote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lengthReference
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lethalOnChickens
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lethalOnMice
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lethalOnRabbits
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lethalOnRats
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :liberationDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :libretto
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :licenceLetter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :licenceNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :licenceNumberLabel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :license
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :licensee
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lieutenancy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lieutenancyArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lieutenant
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lifeExpectancy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :limit
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lineLength
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :linguisticsTradition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :linkedSpace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :linkedTo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :listItemOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :literaryGenre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :littlePoolRecord
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :livingPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :loadLimit
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :localAuthority
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :localPhonePrefix
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :localization
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :localizationThumbnail
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :localizationThumbnailCaption
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locatedInArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :location
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationCity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationIdentifier
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locationName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locomotive
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locusSupplementaryData
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :logo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :longDistancePisteKilometre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :longDistancePisteNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :longName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :longtype
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lounge
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lowerAge
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lowerEarthOrbitPayload
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lowest
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lowestMountain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lowestPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lowestPoint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lowestPosition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lowestRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lowestState
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lunarEvaTime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lunarLandingSite
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lunarModule
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lunarOrbitTime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lunarRover
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lunarSampleMass
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lunarSurfaceTime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lymph
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lyrics
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :magazine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maidenFlight
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maidenFlightRocket
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maidenVoyage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mainBuilding
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mainCharacter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mainDomain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mainFamilyBranch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mainInterest
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mainIsland
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mainIslands
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mainOrgan
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mainspan
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maintainedBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :majorIsland
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :majorShrine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :majorityFloorLeader
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :majorityLeader
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :makeupArtist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :management
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :managementCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :managementElevation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :managementMountain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :managementPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :managementPosition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :managementRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :manager
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :managerClub
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :managerSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :managerTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :managerYears
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :managerYearsEndYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :managerYearsStartYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :managingEditor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mandate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :manufacturer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :map
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mapCaption
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mapDescription
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :march
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :marketCapitalisation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mascot
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mass
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :massif
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mastersWins
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :matchPoint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :material
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :max
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maxAbsoluteMagnitude
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maxApparentMagnitude
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maxTime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maximumArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maximumAreaQuote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maximumBoatBeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maximumBoatLength
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maximumDepth
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maximumDepthQuote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maximumDischarge
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maximumElevation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maximumInclination
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maximumTemperature
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mayor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mayorArticle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mayorCouncillor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mayorFunction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mayorMandate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mayorTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mbaId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :meanRadius
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :meanTemperature
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :meaning
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :measurements
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :medalist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :media
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mediaItem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mediaType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :medlinePlus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :meetingBuilding
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :meetingCity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :meetingRoad
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :meltingPoint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :member
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :memberOfParliament
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :membership
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :membershipAsOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mentor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mergedIntoParty
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mergedSettlement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mergerDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :meshId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :meshName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :meshNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :messierName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :metropolitanBorough
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mgiid
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :militaryBranch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :militaryCommand
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :militaryFunction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :militaryGovernment
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :militaryRank
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :militaryUnit
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :militaryUnitSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :millSpan
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :millType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :millsCodeBE
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :millsCodeDutch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :millsCodeNL
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :millsCodeNLVerdwenen
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :millsCodeNLWindmotoren
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :min
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minTime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minimumArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minimumAreaQuote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minimumDischarge
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minimumElevation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minimumInclination
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minimumTemperature
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minority
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minorityFloorLeader
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minorityLeader
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mirDockings
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mission
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :missionDuration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :missions
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :model
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :modelEndDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :modelEndYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :modelLineVehicle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :modelStartDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :modelStartYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :molecularWeight
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :monarch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :month
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mood
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mostDownPoint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mostWins
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mother
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :motto
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mount
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mountainRange
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mouthCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mouthDistrict
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mouthElevation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mouthMountain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mouthPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mouthPosition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mouthRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mouthState
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :movement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :movie
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mukhtar
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :municipality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :municipalityAbsorbedBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :municipalityCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :municipalityRenamedTo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :municipalityType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :museum
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :museumType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicBand
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicComposer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicFormat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicFusionGenre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicSubgenre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicalArtist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicalBand
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicalKey
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :musicians
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :muteCharacterInPlay
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mvp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mythology
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :naacpImageAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :name
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nameAsOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nameDay
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nameInCantoneseChinese
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nameInHangulKorean
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nameInHanjaKorean
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nameInJapanese
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nameInMindongyuChinese
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nameInMinnanyuChinese
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nameInPinyinChinese
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nameInSimplifiedChinese
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nameInTraditionalChinese
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nameInWadeGilesChinese
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :namedAfter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :namedByLanguage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :names
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :narrator
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nationalAffiliation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nationalChampionship
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nationalFilmAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nationalOlympicCommittee
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nationalRanking
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nationalSelection
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nationalTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nationalTeamMatchPoint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nationalTeamYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nationalTopographicSystemMapNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nationalTournament
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nationalTournamentBronze
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nationalTournamentGold
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nationalTournamentSilver
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nationalYears
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nationality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ncaaSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ncaaTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ncbhof
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ndlId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nearestCity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :neighboringMunicipality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :neighbourConstellations
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :neighbourRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :neighbourhood
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nerve
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :netIncome
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :network
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :networth
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :newspaper
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nextEntity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nextEvent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nextMission
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nflCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nflSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nflTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ngcName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nisCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nlaId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nndbId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :noContest
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nobelLaureates
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nominee
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nonFictionSubject
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nonProfessionalCareer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :northEastPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :northPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :northWestPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :notSolubleIn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :notableCommander
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :notableFeatures
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :notableIdea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :notableStudent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :notableWine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :notableWork
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :note
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :noteOnPlaceOfBurial
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :noteOnRestingPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :notes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :notifyDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :novel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nrhpReferenceNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nrhpType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nssdcId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :number
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberBuilt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfAcademicStaff
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfAlbums
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfArrondissement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfBombs
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfBronzeMedalsWon
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfCanton
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfCantons
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfCapitalDeputies
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfCity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfClassrooms
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfClubs
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfCollectionItems
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfCompetitors
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfCounties
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfCountries
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfCrew
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfDeaths
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfDependency
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfDistrict
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfDistricts
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfDoctoralStudents
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfEmployees
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfEntrances
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfEpisodes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfFederalDeputies
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfFilms
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfGoals
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfGoldMedalsWon
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfGraduateStudents
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfGraves
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfHoles
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfHouses
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfIntercommunality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfIsland
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfIslands
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfLanes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfLaps
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfLaunches
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfLawyers
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfLines
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfLiveAlbums
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfLocations
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfMatches
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfMembers
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfMembersAsOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfMinistries
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfMunicipalities
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfNeighbourhood
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfNewlyIntroducedSports
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfOffices
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfOfficials
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfOrbits
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfPads
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfPages
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfParkingSpaces
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfParticipatingAthletes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfParticipatingFemaleAthletes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfParticipatingMaleAthletes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfParticipatingNations
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfPeopleAttending
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfPeopleLicensed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfPiersInWater
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfPixels
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfPlatformLevels
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfPlayers
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfPostgraduateStudents
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfProfessionals
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfReactors
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfRestaurants
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfRockets
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfRooms
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfRun
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfSeasons
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfSeats
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfSeatsInParliament
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfSettlement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfSilverMedalsWon
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfSpans
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfSpeakers
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfSports
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfSportsEvents
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfStaff
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfStars
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfStateDeputies
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfStations
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfStudents
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfStudioAlbums
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfSuites
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfTeams
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfTracks
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfTurns
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfUndergraduateStudents
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfVehicles
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfVillages
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfVineyards
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfVisitors
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfVisitorsAsOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfVolumes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfVolunteers
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfWineries
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberSold
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nutsCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :observatory
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :occupation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :oclc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :offeredClasses
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :office
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :officerInCharge
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :officialLanguage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :officialName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :officialOpenedBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :officialSchoolColour
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ofsCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :oilSystem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :okatoCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :oldDistrict
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :oldName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :oldProvince
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :oldTeamCoached
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :oldcode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :olivierAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :olympicGames
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :olympicGamesBronze
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :olympicGamesGold
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :olympicGamesSilver
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :olympicGamesWins
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :olympicOathSwornBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :olympicOathSwornByAthlete
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :olympicOathSwornByJudge
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :omim
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :onChromosome
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ons
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :openAccessContent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :openingDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :openingFilm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :openingTheme
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :openingYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :operatingIncome
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :operatingSystem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :operator
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :opponent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :opponents
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :orbitalEccentricity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :orbitalFlights
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :orbitalInclination
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :orbitalPeriod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :orbits
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :orcidId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :order
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :orderDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :orderInOffice
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ordination
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organ
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organSystem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organisation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organisationMember
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :orientation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :origin
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :originalDanseCompetition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :originalDanseScore
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :originalEndPoint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :originalLanguage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :originalMaximumBoatBeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :originalMaximumBoatLength
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :originalName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :originalStartPoint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :originalTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :originallyUsedFor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :origo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :orogeny
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :orthologousGene
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :other
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherActivity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherAppearances
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherChannel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherFamilyBranch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherFuelType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherFunction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherInformation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherLanguage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherMedia
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherOccupation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherParty
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherServingLines
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherSportsExperience
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :otherWins
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :outflow
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :output
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :outskirts
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :overallRecord
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :oversight
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :owner
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :owningCompany
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :owningOrganisation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :owns
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :painter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parentCompany
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parentMountainPeak
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parentOrganisation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parish
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parkingInformation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parkingLotsCars
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parkingLotsTrucks
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parliament
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parliamentType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :parliamentaryGroup
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :part
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partialFailedLaunches
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :participant
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :participatingIn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :particularSign
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partner
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :party
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :partyNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :passengersPerDay
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :passengersPerYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :passengersUsedSystem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pastMember
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pastor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :patent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :patron
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :patronSaint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pccSecretary
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pdb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :peabodyAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :penaltiesTeamA
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :penaltiesTeamB
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :penaltyScore
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :penisLength
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :peopleName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :perCapitaIncome
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :perCapitaIncomeAsOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :perCapitaIncomeRank
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :percentage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :percentageAlcohol
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :percentageFat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :percentageLiteracyMen
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :percentageLiteracyWomen
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :percentageLiterate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :percentageOfAreaWater
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :performer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :periapsis
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :perifocus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :perimeter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :period
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :person
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :personFunction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :personName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pgaWins
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :philosophicalSchool
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :phonePrefix
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :phonePrefixLabel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :photographer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :phylum
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :picture
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pictureDescription
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pictureFormat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :picturesCommonsCategory
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :piercing
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pisciculturalPopulation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pistonStroke
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :place
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :placeOfBurial
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :placeOfWorship
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :plant
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :playRole
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :playerInTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :playerSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :playerStatus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :playingTime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :plays
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pluviometry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :podium
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :podiums
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pole
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :poleDriver
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :poleDriverCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :poleDriverTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :polePosition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :poles
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :policeName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :polishFilmAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :politicGovernmentDepartment
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :politicalFunction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :politicalLeader
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :politicalMajority
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :politicalPartyInLegislature
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :politicalPartyOfLeader
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :politicalSeats
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :popularVote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :population
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :populationAsOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :populationDensity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :populationMetro
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :populationMetroDensity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :populationPctChildren
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :populationPctMen
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :populationPctWomen
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :populationPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :populationQuote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :populationRural
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :populationRuralDensity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :populationTotal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :populationTotalRanking
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :populationTotalReference
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :populationUrban
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :populationUrbanDensity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :populationYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :portfolio
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :portrayer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :position
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :postalCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :power
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :powerOutput
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :powerType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :precursor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :predecessor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prefaceBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prefect
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prefectMandate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prefecture
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prefix
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :premiereDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :premierePlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :premiereYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :presentMunicipality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :presentName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :presenter
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :president
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :presidentGeneralCouncil
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :presidentGeneralCouncilMandate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :presidentRegionalCouncil
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :presidentRegionalCouncilMandate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :previousDemographics
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :previousEditor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :previousEntity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :previousEvent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :previousInfrastructure
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :previousMission
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :previousName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :previousPopulation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :previousPopulationTotal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :previousWork
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :price
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :primaryFuelType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :primate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :primeMinister
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :primogenitor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :principal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :principalArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :principalEngineer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :proPeriod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :proSince
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :proTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :proYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :probowlPick
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :procedure
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :producedBy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :producer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :produces
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :product
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productShape
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :production
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productionCompany
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productionEndDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productionEndYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productionStartDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productionStartYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productionYears
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :profession
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :programCost
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :programmeFormat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :programmingLanguage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :project
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :projectBudgetFunding
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :projectBudgetTotal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :projectCoordinator
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :projectEndDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :projectKeyword
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :projectObjective
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :projectParticipant
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :projectReferenceID
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :projectStartDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :projectType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prominence
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :promotion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pronunciation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prospectLeague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prospectTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :protectionStatus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :protein
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :protestantPercentage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :provCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :provides
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :province
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :provinceIsoCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :provinceLink
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :provost
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pseudonym
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pubchem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :publication
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :publicationDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :publiclyAccessible
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :publisher
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :purchasingPowerParity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :purchasingPowerParityRank
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :purchasingPowerParityYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :purpose
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :qatarClassic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :quebecerTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :quotation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :quote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ra
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :race
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :raceHorse
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :raceLength
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :raceResult
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :raceTrack
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :raceWins
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :races
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :racketCatching
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :radio
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :radioStation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :radius_ly
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :railGauge
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :railwayLineUsingTunnel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :railwayPlatforms
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :railwayRollingStock
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :range
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rank
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rankAgreement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rankArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rankInFinalMedalCount
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rankPopulation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ranking
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rankingWins
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rankingsDoubles
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rankingsSingles
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rating
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ratio
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rebuildDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rebuilder
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rebuildingDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rebuildingYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :recentWinner
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :recommissioningDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :recordDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :recordLabel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :recordedIn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rector
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :redListIdNL
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :redLongDistancePisteNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :redSkiPisteNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :redline
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :refcul
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reference
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reffBourgmestre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :refgen
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :refgeo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :refpol
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :refseq
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :refseqmrna
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :refseqprotein
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :regency
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :regentOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :regime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :region
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :regionLink
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :regionServed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :regionType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :regionalCouncil
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :regionalLanguage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :regionalPrefecture
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :registration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :registryNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reign
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reignName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reigningPope
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :related
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedFunctions
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedMeanOfTransportation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relatedPlaces
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relative
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relativeAtomicMass
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :releaseDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :releaseLocation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relics
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relief
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :religion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :religiousHead
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :religiousHeadLabel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :religiousOrder
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reopened
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reopeningDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reopeningYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reportingMark
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :representative
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :requirement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reservations
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :residence
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :resolution
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :restingDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :restingPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :restingPlacePosition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :restoreDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :result
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :retentionTime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :retired
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :retiredRocket
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :retirementDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :revenue
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :review
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rgbCoordinateBlue
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rgbCoordinateGreen
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rgbCoordinateRed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ridId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rightAscension
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rightChild
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rightTributary
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rival
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :river
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :riverBranch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :riverBranchOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :riverMouth
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rkdArtistsId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :road
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rocket
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rocketFunction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rocketStages
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rolandGarrosDouble
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rolandGarrosMixed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rolandGarrosSingle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :role
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :roleInEvent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :roofHeight
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rotationPeriod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :route
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :routeActivity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :routeDirection
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :routeEnd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :routeEndDirection
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :routeEndLocation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :routeJunction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :routeLine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :routeNext
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :routeNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :routePrevious
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :routeStart
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :routeStartDirection
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :routeStartLocation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :routeTypeAbbreviation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :royalAnthem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ruling
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :runningMate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :runtime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :runwayDesignation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :runwayLength
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :runwaySurface
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :runwayWidth
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ruralMunicipality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :saint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :salary
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sales
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sameName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :satScore
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :satellite
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :satellitesDeployed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :scale
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :scene
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :school
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :schoolBoard
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :schoolCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :schoolNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :schoolPatron
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :scientificName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :score
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :screenActorsGuildAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :season
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :seasonManager
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :seasonNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :seatNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :seatingCapacity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :second
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :secondCommander
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :secondDriver
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :secondDriverCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :secondLeader
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :secondPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :secondPopularVote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :secondTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :secretaryGeneral
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :security
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :seiyu
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :selection
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :selectionPoint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :selectionYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :selibrId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :senator
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :senior
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :seniority
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :seniunija
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sentence
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :series
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :service
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :serviceEndDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :serviceEndYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :serviceModule
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :serviceNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :serviceStartDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :serviceStartYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :servingRailwayLine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :servingSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :servingTemperature
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sessionNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :setDesigner
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :settingOfPlay
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :settlement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :settlementAttached
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :setupTime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sex
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sexualOrientation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shape
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shareDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shareOfAudience
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shareSource
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sharingOutPopulation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sharingOutPopulationYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sheading
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shipBeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shipCrew
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shipDisplacement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shipDraft
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shipLaunch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shoeNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shoeSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shoot
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shoots
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shoreLength
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shortProgCompetition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shortProgScore
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :show
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :showJudge
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shuttle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sibling
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :signName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :signature
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :significantBuilding
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :significantDesign
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :significantProject
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :silCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :silverMedalDouble
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :silverMedalMixed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :silverMedalSingle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :silverMedalist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :simcCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :similar
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sire
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :siren
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sisterCollege
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sisterNewspaper
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sisterStation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sixthFormStudents
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sizeBlazon
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sizeLogo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sizeMap
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sizeThumbnail
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :size_v
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :skiLift
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :skiPisteKilometre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :skiPisteNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :skiTow
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :skills
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :skinColor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :slogan
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :smiles
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :snowParkNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :soccerLeaguePromoted
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :soccerLeagueRelegated
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :soccerLeagueSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :soccerLeagueWinner
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :soccerTournamentClosingSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :soccerTournamentLastChampion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :soccerTournamentMostSteady
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :soccerTournamentMostSuccesfull
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :soccerTournamentOpeningSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :soccerTournamentThisSeason
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :soccerTournamentTopScorer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :solicitorGeneral
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :solubility
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :solventWithBadSolubility
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :solventWithGoodSolubility
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :solventWithMediocreSolubility
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :soundRecording
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :source
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceConfluence
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceConfluenceCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceConfluenceElevation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceConfluenceMountain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceConfluencePlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceConfluencePosition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceConfluenceRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceConfluenceState
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceDistrict
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceElevation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceMountain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourcePlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourcePosition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceState
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceText
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :southEastPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :southPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :southWestPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sovereignCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :space
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spacecraft
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spacestation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spacewalkBegin
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spacewalkEnd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :speaker
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :specialEffects
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :specialTrial
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :specialist
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :speciality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :species
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :speedLimit
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spike
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :splitFromParty
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spokenIn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spokesperson
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sport
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sportCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sportDiscipline
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sportGoverningBody
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sportSpecialty
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sportsFunction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spouse
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spouseName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spurOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spurType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :squadNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stadium
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :staff
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :starRating
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :starring
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :start
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :startCareer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :startDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :startDateTime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :startOccupation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :startPoint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :startReign
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :startWct
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :startWqs
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :startYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :startYearOfInsertion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :startYearOfSales
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :statName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :statValue
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :state
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stateDelegate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stateOfOrigin
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stateOfOriginPoint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stateOfOriginTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stateOfOriginYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stationEvaDuration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stationStructure
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stationVisitDuration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :statistic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :statisticLabel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :statisticValue
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :statisticYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :status
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :statusManager
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :statusYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stellarClassification
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stockExchange
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :storyEditor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :strength
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :structuralSystem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :student
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :style
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stylisticOrigin
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subClassis
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subFamily
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subGenus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subMunicipalityType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subOrder
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subPrefecture
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subTribus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subdivision
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subdivisionLink
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subdivisionName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subdivisions
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subjectOfPlay
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subjectTerm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sublimationPoint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :suborbitalFlights
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subprefecture
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subregion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subsequentInfrastructure
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subsequentWork
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subsidiary
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subsystem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subsystemLink
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subtitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :successfulLaunches
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :successor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sudocId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :summerAppearances
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :summerTemperature
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :superFamily
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :superOrder
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :superTribus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :superbowlWin
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :superintendent
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :supplementalDraftRound
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :supplementalDraftYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :supplies
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :supply
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :suppreddedDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :surfaceArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :surfaceFormOccurrenceOffset
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :surfaceGravity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :surfaceType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :swimmingStyle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :symbol
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :synonym
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :systemOfLaw
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :systemRequirements
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tag
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :taoiseach
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :targetAirport
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :targetSpaceStation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :taste
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tattoo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :taxon
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :teachingStaff
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :team
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :teamCoached
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :teamManager
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :teamName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :teamPoint
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :teamSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :teamTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :technique
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :televisionSeries
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tempPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :temperature
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :temple
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :templeYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tenant
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tennisSurfaceType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :termOfOffice
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :termPeriod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :territory
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :terytCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tessitura
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :testaverage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :theology
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :third
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :thirdCommander
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :thirdDriver
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :thirdDriverCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :thirdPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :thirdTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :throwingSide
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :thumbnail
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :thumbnailCaption
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tie
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :time
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :timeInSpace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :timeZone
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :timeshiftChannel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :title
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :titleDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :titleDouble
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :titleLanguage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :titleSingle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :toll
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tonyAward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :topFloorHeight
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :topLevelDomain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :topSpeed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :topic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :torchBearer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :torqueOutput
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :totalCargo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :totalDiscs
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :totalLaunches
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :totalMass
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :totalPopulation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :totalTracks
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :totalTravellers
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :touristicSite
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tournamentOfChampions
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tournamentRecord
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :towerHeight
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :trackLength
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :trackNumber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :trackWidth
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tradeMark
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :trainer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :trainerClub
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :trainerYears
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :training
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :translatedMotto
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :translator
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :transmission
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tree
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tribus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :trustee
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tu
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tuition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tvComId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tvShow
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :twinCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :twinTown
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :type
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :typeCoordinate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :typeOfElectrification
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :typeOfGrain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :typeOfStorage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :typeOfYeast
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :uRN
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :uciCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ulanId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :umbrellaTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :undraftedYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :unesco
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :unicode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :uniprot
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :unitCost
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :unitaryAuthority
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :unitedStatesNationalBridgeId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :university
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :unknownOutcomes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :unloCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :updated
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :upperAge
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :urbanArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :usOpenDouble
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :usOpenMixed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :usOpenSingle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :usSales
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :usedInWar
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :uses
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :usingCountry
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :usk
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :usopenWins
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :usurper
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :utcOffset
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :v_hb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :value
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :valvetrain
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :variantOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :varietals
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vehicle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vehicleCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vehiclesPerDay
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vein
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :veneratedIn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :version
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :viafId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :viceChancellor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :viceLeader
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :viceLeaderParty
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vicePresident
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vicePrimeMinister
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vicePrincipal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vicePrincipalLabel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :victim
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :victims
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :victory
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :victoryAsMgr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :victoryPercentageAsMgr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :virtualChannel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :visitorStatisticsAsOf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :visitorsPerDay
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :visitorsPerYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :visitorsPercentageChange
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :visitorsTotal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :voice
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :voiceType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :volcanicActivity
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :volcanicType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :volcanoId
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :voltageOfElectrification
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :volume
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :volumeQuote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :volumes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vonKlitzingConstant
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :votesAgainst
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :votesFor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wagon
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :waistSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :war
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ward
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :water
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :waterArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :waterPercentage
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :watercourse
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :watershed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :waterwayThroughTunnel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wavelength
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :weapon
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :webcast
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :websiteLabel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :weddingParentsDate
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :weight
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :westPlace
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :whaDraft
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :whaDraftTeam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :whaDraftYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wheelbase
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wholeArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :width
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :widthQuote
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikiPageCharacterSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikiPageDisambiguates
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikiPageEditLink
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikiPageExternalLink
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikiPageExtracted
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikiPageHistoryLink
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikiPageID
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikiPageInDegree
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikiPageInterLanguageLink
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikiPageLength
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikiPageModified
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikiPageOutDegree
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikiPageRedirects
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikiPageRevisionID
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikiPageRevisionLink
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikiPageWikiLink
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikiPageWikiLinkText
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wikidataSplitIri
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wilaya
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wimbledonDouble
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wimbledonMixed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wimbledonSingle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wineProduced
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wineRegion
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wineYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wingArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wingspan
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wins
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtAlpg
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtAsia
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtAus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtChallenges
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtChampionships
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtJLPGA
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtJapan
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtKLPGA
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtLAGT
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtLET
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtLPGA
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtMajors
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtNWIDE
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtOtherTournaments
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtPGA
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtProTournaments
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtSenEuro
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsAtSun
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winsInEurope
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winterAppearances
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :winterTemperature
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :woRMS
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wordBefore
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :work
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :workArea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :world
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :worldChampionTitleYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :worldOpen
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :worldTeamCup
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :worldTournament
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :worldTournamentBronze
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :worldTournamentGold
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :worldTournamentSilver
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :worstDefeat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wptFinalTable
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wptItm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wptTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :writer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wsopItm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wsopWinYear
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wsopWristband
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :year
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :yearElevationIntoNobility
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :yearOfConstruction
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :yearOfElectrification
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :years
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :youthClub
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :youthWing
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :youthYears
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :zdb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :zipCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :zodiacSign
+  #
   #   end
-  class DBO < RDF::StrictVocabulary("http://dbpedia.org/ontology/")
+  DBO = Class.new(RDF::StrictVocabulary("http://dbpedia.org/ontology/")) do
 
     # Ontology definition
     ontology :"http://dbpedia.org/ontology/",

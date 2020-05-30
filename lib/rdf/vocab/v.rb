@@ -5,9 +5,299 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://rdf.data-vocabulary.org/#>
+  #   #
   #   class V < RDF::StrictVocabulary
+  #     # Postal address for a Person or Organization.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Address
+  #
+  #     # Represents a single Breadcrumb in a Breadcrumb trail.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Breadcrumb
+  #
+  #     # Represents the steps to make a dish.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Instructions
+  #
+  #     # Represents the nutrition information about a recipe.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Nutrition
+  #
+  #     # Represents an offer to sell a product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Offer
+  #
+  #     # Represents a collection of offers to sell a product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OfferAggregate
+  #
+  #     # An Organization is a business, agency, school, etc.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Organization
+  #
+  #     # Represents a Person, living/dead/fictional.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Person
+  #
+  #     # Represents a product or service in a Review or Review-aggregate.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Product
+  #
+  #     # Represents a rating in a Review or Review-aggregate.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Rating
+  #
+  #     # A single instance of a Recipe.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Recipe
+  #
+  #     # Represents ingredients used in a recipe.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RecipeIngredient
+  #
+  #     # A single instance of a Review.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Review
+  #
+  #     # Represents the length of time it takes to prepare a recipe.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TimeRange
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :acquaintance
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :address
+  #
+  #     # An affiliation can be specified by a string literal or an Organization instance.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :affiliation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :amount
+  #
+  #     # An author of the recipe can be specified by a string literal or a Person instance.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :author
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :availability
+  #
+  #     # The average of an aggregate value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :average
+  #
+  #     # The best value of a rating scale (default 5).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :best
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :brand
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :calories
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :carbohydrates
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :category
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :child
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cholesterol
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :colleague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :condition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :contact
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cookTime
+  #
+  #     # The total number of items used in an aggregate (e.g., number of reviews).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :count
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :currency
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :description
+  #
+  #     # The date of the review.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dtreviewed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :duration
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fiber
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :friend
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :highprice
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identifier
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :image
+  #
+  #     # Represents ingredients used in a recipe.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ingredient
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :instruction
+  #
+  #     # Represents the steps to make a dish.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :instructions
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :itemoffered
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :itemreviewed
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locality
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lowprice
+  #
+  #     # The maximum value of an aggregated Rating.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :max
+  #
+  #     # The minimum value of an aggregated Rating.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :min
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :name
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nickname
+  #
+  #     # Represents the nutrition information about a recipe.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nutrition
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :offercount
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :offerdetails
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :offerurl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :photo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prepTime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :price
+  #
+  #     # The price range of products and services offered     by a restaurant, business or other organization.   
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pricerange
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pricevaliduntil
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :protein
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :published
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :quantity
+  #
+  #     # A rating can be specified by a string literal or a Rating instance.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rating
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :recipeType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :region
+  #
+  #     # A reviewer can be specified by a string literal or a Person instance.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reviewer
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :role
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :saturatedFat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :seller
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :servingSize
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sugar
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :summary
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tag
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tel
+  #
+  #     # Represents the length of time it takes to prepare a recipe.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :timeRange
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :title
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :totalTime
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :unsaturatedFat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :url
+  #
+  #     # The value of a single Rating.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :value
+  #
+  #     # The poorest value of a rating scale (default 1).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :worst
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :yield
+  #
   #   end
-  class V < RDF::StrictVocabulary("http://rdf.data-vocabulary.org/#")
+  V = Class.new(RDF::StrictVocabulary("http://rdf.data-vocabulary.org/#")) do
 
     # Class definitions
     term :Address,

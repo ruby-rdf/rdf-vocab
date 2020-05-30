@@ -43,6 +43,7 @@ RDF::Vocab::VOCABS.each do |id, v|
   next if v[:alias] || v[:skip]
   file "lib/rdf/vocab/#{id}.rb" => :do_build do
     puts "Generate lib/rdf/vocab/#{id}.rb"
+    %x{touch lib/rdf/vocab/#{id}.rb}
     cmd = "bundle exec rdf"
     if v[:patch]
       File.open("lib/rdf/vocab/#{id}.rb_p", "w") {|f| f.write v[:patch]}
