@@ -36,8 +36,8 @@ module RDF
       # @return [Hash{Symbol => Hash{Symbol => String}}]
       #alias_method :_orig_vocab_map, :vocab_map
       def vocab_map
-        (@vocab_map ||= {}).merge RDF::VOCABS.transform_values(&:freeze),
-          RDF::Vocab::VOCABS.transform_values(&:freeze)
+        @vocab_map ||= RDF::VOCABS.transform_values(&:freeze).merge(
+          RDF::Vocab::VOCABS.transform_values(&:freeze))
       end
 
       ##
