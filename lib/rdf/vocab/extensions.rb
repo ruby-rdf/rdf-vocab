@@ -30,11 +30,14 @@ module RDF
       end
 
       ##
-      # A hash of all vocabularies by prefix showing relevant URI and associated vocabulary Class Name
+      # A hash of all vocabularies by prefix showing relevant URI and
+      # associated vocabulary Class Name
+      #
       # @return [Hash{Symbol => Hash{Symbol => String}}]
       #alias_method :_orig_vocab_map, :vocab_map
       def vocab_map
-        @vocab_map ||= RDF::VOCABS.merge(RDF::Vocab::VOCABS)
+        (@vocab_map ||= {}).merge RDF::VOCABS.transform_values(&:freeze),
+          RDF::Vocab::VOCABS.transform_values(&:freeze)
       end
 
       ##
@@ -44,7 +47,8 @@ module RDF
       # @return [RDF::Vocabulary]
       alias_method :_orig_from_sym, :from_sym
       def from_sym(sym)
-        RDF::Vocab.const_defined?(sym.to_sym) ? RDF::Vocab.const_get(sym.to_sym) : _orig_from_sym(sym)
+        RDF::Vocab.const_defined?(sym.to_sym) ?
+          RDF::Vocab.const_get(sym.to_sym) : _orig_from_sym(sym)
       end
 
       ##
