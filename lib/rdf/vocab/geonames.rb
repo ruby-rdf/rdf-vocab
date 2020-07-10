@@ -87,9 +87,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :colloquialName
   #
-  #     # The countryCode value for a Geoname Feature is equal to the countryCode value of the parentCountry value.
-  #     #
   #     # A two letters country code in the ISO 3166 list
+  #     #
+  #     # The countryCode value for a Geoname Feature is equal to the countryCode value of the parentCountry value.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :countryCode
   #

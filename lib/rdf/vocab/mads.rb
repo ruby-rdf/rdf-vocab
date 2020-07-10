@@ -922,7 +922,7 @@ module RDF::Vocab
       comment: %(This relates an Authority or Variant to its administrative metadata, which is, minimimally, a Class defined outside of the MADS/RDF namespace. The RecordInfo Class from the RecordInfo ontology is recommended.).freeze,
       domain: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g10900".freeze, "_:g10920".freeze, "_:g10940".freeze)
+          unionOf: list("_:g10080".freeze, "_:g10100".freeze, "_:g10120".freeze)
         ),
       label: "Administrative Metadata".freeze,
       type: "owl:ObjectProperty".freeze
@@ -1004,7 +1004,7 @@ module RDF::Vocab
       comment: %(A code is a string of characters associated with a the authoritative or deprecated label. It may record an historical notation once used to uniquely identify a concept.).freeze,
       domain: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g11420".freeze, "_:g11440".freeze)
+          unionOf: list("_:g10600".freeze, "_:g10620".freeze)
         ),
       label: "Code".freeze,
       subPropertyOf: "skos:notation".freeze,
@@ -1015,7 +1015,7 @@ module RDF::Vocab
       label: "Component List".freeze,
       range: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g11540".freeze, "_:g11560".freeze)
+          unionOf: list("_:g10720".freeze, "_:g10740".freeze)
         ),
       type: "owl:ObjectProperty".freeze
     property :country,
@@ -1070,7 +1070,7 @@ module RDF::Vocab
       label: "Element List".freeze,
       range: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g11900".freeze, "_:g11920".freeze)
+          unionOf: list("_:g11080".freeze, "_:g11100".freeze)
         ),
       type: "owl:ObjectProperty".freeze
     property :elementValue,
@@ -1225,7 +1225,7 @@ module RDF::Vocab
       label: "Has MADSCollection Member".freeze,
       range: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g12800".freeze, "_:g12820".freeze)
+          unionOf: list("_:g11980".freeze, "_:g12000".freeze)
         ),
       subPropertyOf: "skos:member".freeze,
       type: "owl:ObjectProperty".freeze
@@ -1236,7 +1236,7 @@ module RDF::Vocab
       label: "Has MADS Scheme Member".freeze,
       range: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g12960".freeze, "_:g12980".freeze)
+          unionOf: list("_:g12140".freeze, "_:g12160".freeze)
         ),
       type: "owl:ObjectProperty".freeze
     property :hasNarrowerAuthority,
@@ -1347,7 +1347,7 @@ module RDF::Vocab
       comment: %(Associates a Collection with a madsrdf:Authority or another madsrdf:MADSCollection.).freeze,
       domain: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g13540".freeze, "_:g13560".freeze)
+          unionOf: list("_:g12720".freeze, "_:g12740".freeze)
         ),
       inverseOf: "mads:hasMADSCollectionMember".freeze,
       label: "Is Member Of MADSCollection".freeze,
@@ -1356,7 +1356,7 @@ module RDF::Vocab
     property :isMemberOfMADSScheme,
       domain: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g13640".freeze, "_:g13660".freeze)
+          unionOf: list("_:g12820".freeze, "_:g12840".freeze)
         ),
       inverseOf: "mads:hasMADSSchemeMember".freeze,
       label: "Is Member of MADS Scheme".freeze,
@@ -1367,7 +1367,7 @@ module RDF::Vocab
       comment: %(Identifies a MADS Scheme in which the Authority is at the top of the hierarchy.).freeze,
       domain: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g13780".freeze, "_:g13800".freeze)
+          unionOf: list("_:g12960".freeze, "_:g12980".freeze)
         ),
       inverseOf: "mads:hasTopMemberOfMADSScheme".freeze,
       label: "Is Top Member of MADS Scheme".freeze,

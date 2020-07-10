@@ -9,8 +9,8 @@ module RDF::Vocab
   #   # W3C PROVenance Interchange
   #   #
   #   # This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page).  If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/ Archives/Public/public-prov-comments/). All feedback is welcome.
-  #   # @see http://www.w3.org/TR/prov-overview/
   #   # @see http://www.w3.org/TR/prov-o/#names-of-inverse-properties
+  #   # @see http://www.w3.org/TR/prov-overview/
   #   class PROV < RDF::StrictVocabulary
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Accept
@@ -18,18 +18,18 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Activity
   #
-  #     # It is not recommended that the type ActivityInfluence be asserted without also asserting one of its more specific subclasses.
-  #     #
   #     # ActivityInfluence provides additional descriptions of an Activity's binary influence upon any other kind of resource. Instances of ActivityInfluence use the prov:activity property to cite the influencing Activity.
+  #     #
+  #     # It is not recommended that the type ActivityInfluence be asserted without also asserting one of its more specific subclasses.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :ActivityInfluence
   #
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Agent
   #
-  #     # It is not recommended that the type AgentInfluence be asserted without also asserting one of its more specific subclasses.
-  #     #
   #     # AgentInfluence provides additional descriptions of an Agent's binary influence upon any other kind of resource. Instances of AgentInfluence use the prov:agent property to cite the influencing Agent.
+  #     #
+  #     # It is not recommended that the type AgentInfluence be asserted without also asserting one of its more specific subclasses.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :AgentInfluence
   #
@@ -110,9 +110,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Generation
   #
-  #     # Because prov:Influence is a broad relation, its most specific subclasses (e.g. prov:Communication, prov:Delegation, prov:End, prov:Revision, etc.) should be used when applicable.
-  #     #
   #     # An instance of prov:Influence provides additional descriptions about the binary prov:wasInfluencedBy relation from some influenced Activity, Entity, or Agent to the influencing Activity, Entity, or Agent. For example, :stomach_ache prov:wasInfluencedBy :spoon; prov:qualifiedInfluence [ a prov:Influence; prov:entity :spoon; :foo :bar ] . Because prov:Influence is a broad relation, the more specific relations (Communication, Delegation, End, etc.) should be used when applicable.
+  #     #
+  #     # Because prov:Influence is a broad relation, its most specific subclasses (e.g. prov:Communication, prov:Delegation, prov:End, prov:Revision, etc.) should be used when applicable.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Influence
   #
@@ -217,9 +217,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :asInBundle
   #
-  #     # The Location of any resource.
-  #     #
   #     # This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href="#owl-profile">PROV-O OWL Profile</a>.
+  #     #
+  #     # The Location of any resource.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :atLocation
   #
@@ -305,9 +305,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hadPrimarySource
   #
-  #     # This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href="#owl-profile">PROV-O OWL Profile</a>.
-  #     #
   #     # The _optional_ Role that an Entity assumed in the context of an Activity. For example, :baking prov:used :spoon; prov:qualified [ a prov:Usage; prov:entity :spoon; prov:hadRole roles:mixing_implement ].
+  #     #
+  #     # This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href="#owl-profile">PROV-O OWL Profile</a>.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hadRole
   #
@@ -352,9 +352,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :mentionOf
   #
-  #     # A reference to the principal section of the PROV-M document that describes this concept.
-  #     #
   #     # A reference to the principal section of the PROV-DM document that describes this concept.
+  #     #
+  #     # A reference to the principal section of the PROV-M document that describes this concept.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :n
   #

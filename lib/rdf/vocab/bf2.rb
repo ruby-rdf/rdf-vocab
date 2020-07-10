@@ -567,27 +567,27 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Work
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :absorbed
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :absorbedBy
   #
-  #     # Expected value Work, Instance or Item
-  #     #
   #     # Used with Work, Instance or Item
+  #     #
+  #     # Expected value Work, Instance or Item
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :accompaniedBy
   #
-  #     # Expected value Work, Instance or Item
-  #     #
   #     # Used with Work, Instance or Item
+  #     #
+  #     # Expected value Work, Instance or Item
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :accompanies
   #
@@ -670,27 +670,27 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :contentAccessibility
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :continuedBy
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :continuedInPartBy
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :continues
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :continuesInPart
   #
@@ -728,9 +728,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :custodialHistory
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :dataSource
   #
@@ -741,9 +741,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :degree
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :derivativeOf
   #
@@ -818,15 +818,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :extent
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :findingAid
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :findingAidOf
   #
@@ -860,15 +860,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :grantingInstitution
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasDerivative
   #
-  #     # Expected value Work, Instance or Item
-  #     #
   #     # Used with Work, Instance or Item
+  #     #
+  #     # Expected value Work, Instance or Item
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEquivalent
   #
@@ -881,24 +881,24 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasItem
   #
-  #     # Expected value Work, Instance or Item
-  #     #
   #     # Used with Work, Instance or Item
+  #     #
+  #     # Expected value Work, Instance or Item
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasPart
   #
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasReproduction
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSeries
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSubseries
   #
@@ -925,15 +925,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :immediateAcquisition
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :index
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :indexOf
   #
@@ -984,15 +984,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :media
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :mergedToForm
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :mergerOf
   #
@@ -1042,21 +1042,21 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :originPlace
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :originalVersion
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :originalVersionOf
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :otherEdition
   #
@@ -1076,9 +1076,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :partNumber
   #
-  #     # Expected value Work, Instance or Item
-  #     #
   #     # Used with Work, Instance or Item
+  #     #
+  #     # Expected value Work, Instance or Item
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :partOf
   #
@@ -1095,9 +1095,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :polarity
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :precededBy
   #
@@ -1127,30 +1127,30 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :reductionRatio
   #
-  #     # Expected value Work, Instance or Item
-  #     #
   #     # Used with Work, Instance or Item
+  #     #
+  #     # Expected value Work, Instance or Item
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :referencedBy
   #
-  #     # Expected value Work, Instance or Item
-  #     #
   #     # Used with Work, Instance or Item
+  #     #
+  #     # Expected value Work, Instance or Item
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :references
   #
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :relatedTo
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :replacedBy
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :replacementOf
   #
@@ -1174,18 +1174,18 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :schedulePart
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :separatedFrom
   #
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :seriesEnumeration
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :seriesOf
   #
@@ -1209,9 +1209,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :spanEnd
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :splitInto
   #
@@ -1229,9 +1229,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :subseriesEnumeration
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :subseriesOf
   #
@@ -1241,9 +1241,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :subtitle
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :succeededBy
   #
@@ -1251,15 +1251,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :summary
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :supplement
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :supplementTo
   #
@@ -1287,15 +1287,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :title
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :translation
   #
-  #     # Used with Work or Instance
-  #     #
   #     # Expected value Work or Instance
+  #     #
+  #     # Used with Work or Instance
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :translationOf
   #

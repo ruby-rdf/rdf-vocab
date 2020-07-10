@@ -23,9 +23,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :OrderedCollection
   #
-  #     # The range of skos:altLabel is the class of RDF plain literals.
-  #     #
   #     # skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.
+  #     #
+  #     # The range of skos:altLabel is the class of RDF plain literals.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :altLabel
   #

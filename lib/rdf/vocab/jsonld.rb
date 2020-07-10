@@ -9,7 +9,7 @@ module RDF::Vocab
   #   # The JSON-LD Vocabulary
   #   #
   #   # This is a vocabulary document and is used to achieve certain features of the JSON-LD language.
-  #   # @version https://github.com/w3c/json-ld-wg/commit/606458561d3761dad00912b4ac7b1959302ef304
+  #   # @version https://github.com/w3c/json-ld-wg/commit/dfd1827c95a66bc36c01368e10b6e4f4bbb5c8b3
   #   # @see http://www.w3.org/TR/json-ld11
   #   class JSONLD < RDF::StrictVocabulary
   #     # Defines term definitions and other aspects of a JSON-LD `Context`.  A [context definition](https://www.w3.org/TR/json-ld11/#dfn-context-definition) MUST be a map whose keys MUST be either _terms_, _compact IRIs_, _IRIs_, or one of the keywords `@base`, `@import`, `@language`, `@propagate`, `@protected`, `@type`, `@version`, or `@vocab`.
@@ -136,6 +136,10 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :setContainerType
   #
+  #     # This profile URI is used to request or specify streaming JSON-LD document form.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :streaming
+  #
   #     # If the [expanded term definition](https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :typeContainerType
@@ -145,10 +149,10 @@ module RDF::Vocab
 
     # Ontology definition
     ontology :"http://www.w3.org/ns/json-ld#",
-      "dc:date": "2020-01-03".freeze,
+      "dc:date": "2020-03-30".freeze,
       "dc:description": "This is a vocabulary document and is used to achieve certain features of the JSON-LD language.".freeze,
       "dc:title": "The JSON-LD Vocabulary".freeze,
-      "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/606458561d3761dad00912b4ac7b1959302ef304".freeze,
+      "owl:versionInfo": "https://github.com/w3c/json-ld-wg/commit/dfd1827c95a66bc36c01368e10b6e4f4bbb5c8b3".freeze,
       "rdfs:seeAlso": "http://www.w3.org/TR/json-ld11".freeze,
       type: "owl:Ontology".freeze
 
@@ -393,6 +397,12 @@ If the [expanded term definition]\(https://www.w3.org/TR/json-ld11/#dfn-expanded
       label: "@set".freeze,
       "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11/#context-definitions".freeze,
       type: "http://www.w3.org/ns/ContainerType".freeze
+    term :streaming,
+      comment: %(This profile URI is used to request or specify streaming JSON-LD document form.).freeze,
+      isDefinedBy: "jsonld:".freeze,
+      label: "streaming".freeze,
+      "rdfs:seeAlso": "https://www.w3.org/TR/json-ld11-streaming/#streaming-profile".freeze,
+      type: "owl:NamedIndividual".freeze
     term :typeContainerType,
       comment: %(If the [expanded term definition]\(https://www.w3.org/TR/json-ld11/#dfn-expanded-term-definitions\) contains the `@container` keyword, its value MUST be either `@list`, `@set`, `@language`, `@index`, `@id`, `@graph`, `@type`, or be `null` or an _array_ containing exactly any one of those keywords.).freeze,
       isDefinedBy: "jsonld:".freeze,

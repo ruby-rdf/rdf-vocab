@@ -10,8 +10,8 @@ module RDF::Vocab
   #   #
   #   # Formal schema of the Evaluation and Report Language (EARL) 1.0
   #   # @see http://www.w3.org/TR/Pointers-in-RDF/
-  #   # @see http://www.w3.org/WAI/intro/earl
   #   # @see http://www.w3.org/TR/HTTP-in-RDF/
+  #   # @see http://www.w3.org/WAI/intro/earl
   #   # @see http://www.w3.org/TR/Content-in-RDF/
   #   class EARL < RDF::StrictVocabulary
   #     # a statement that embodies the results of a test

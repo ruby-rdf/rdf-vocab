@@ -305,7 +305,7 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :jsLibraryURL
   #
-  #     # Outlines how human-readable labels of instances of the associated Parameterizable shall be produced. The values can contain `{?paramName}` as placeholders for the actual values of the given parameter.
+  #     # Outlines how human-readable labels of instances of the associated Parameterizable shall be produced. The values can contain {?paramName} as placeholders for the actual values of the given parameter.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :labelTemplate
   #

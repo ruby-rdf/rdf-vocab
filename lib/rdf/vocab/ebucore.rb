@@ -8,45 +8,45 @@ module RDF::Vocab
   #   #
   #   # EBUCore - the Dublin Core for media
   #   #
-  #   # Guidelines: for the purpose of flexibility and interoperability with a wider range of implementations, some properties purposefully do not have a range and accept either a resource or a literal.  When a resource is used, it is recommended to reuse objects defined in the model (e.g. pair hasEvent/Event or hasRole/Role). Example 1: x hasRole 'actor'. Example 2: x hasRole _:Role_1 (a reference to the Concept identifier from a SKOS Role vocabulary defined in the ontology).
-  #   #
-  #   # Note to implementers: The EBUCore ontology is used by a variety of users with different needs. Several EBUCore properties have no range to allow different implementations using entities or literals. As an implementer, it is your choice to go for one or the other for each property to have consistent expectations when parsing individuals. EBUCore also provides different classes defined as subclasses of skos:Concept. You can use these classes as entities in range of several properties currently left without range. EBUCore is expressed in RDF in order to facilitate such modelling and flexibility. As a consequence, propoerties appear in the documentation as annotation properties.
-  #   #
   #   # The EBUCore has been designed to make users benefit from the flexibility of RDF to adapt the names of Classes and properties to their respective needs. This means users are welcome to add their own subclasses (e.g. to define the most appropriate BusinessObjects or Resources or Agents) and subproperties.
   #   #
+  #   # Guidelines: for the purpose of flexibility and interoperability with a wider range of implementations, some properties purposefully do not have a range and accept either a resource or a literal.  When a resource is used, it is recommended to reuse objects defined in the model (e.g. pair hasEvent/Event or hasRole/Role). Example 1: x hasRole 'actor'. Example 2: x hasRole _:Role_1 (a reference to the Concept identifier from a SKOS Role vocabulary defined in the ontology).
+  #   #
   #   # The development of the EBUCore ontology is a joint effort of the EBUCore and PBCore communities.
-  #   # @version Add roleId to identify a Role.
-  #   # @version Correct property actionType into hasActionType of rnage string or ActionType subclass of Concept.
-  #   # @version Add lead as subproperty of description.
+  #   #
+  #   # Note to implementers: The EBUCore ontology is used by a variety of users with different needs. Several EBUCore properties have no range to allow different implementations using entities or literals. As an implementer, it is your choice to go for one or the other for each property to have consistent expectations when parsing individuals. EBUCore also provides different classes defined as subclasses of skos:Concept. You can use these classes as entities in range of several properties currently left without range. EBUCore is expressed in RDF in order to facilitate such modelling and flexibility. As a consequence, propoerties appear in the documentation as annotation properties.
+  #   # @version Changed subclasses to dc: with owl:equivalentClass or owl:equivalentProperty.
   #   # @version Add Concept Theme and define property hasTheme as subproperty of hasSubject.
   #   # @version Change identifier into hasIdentifier.
-  #   # @version Delete roleDefinition and use skos:definition instead as Role is a subclass of Concept.
-  #   # @version Add missing Concepts and propose default types.
-  #   # @version Add productionSynopsis as subproperty of description.
-  #   # @version Harmonise multi-range definition of properties, when applicable.
-  #   # @version Changed subclasses to dc: with owl:equivalentClass or owl:equivalentProperty.
-  #   # @version Alignment of Concepts and Types with original EBU and new Dwerft SKOS vocabularies
   #   # @version Correct target of end and start as MediaResource.
-  #   # @version Add ContentEditorialFormat as subclass of Type + hasContentEditorialFormat property as subpropertyof hastype.
-  #   # @version Correct misstyped owl:Classes into rdfs:Classes.
-  #   # @version Version 1.10
-  #   # @version Add hasRelationType with domain Relation.
-  #   # @version Separate mutli-domains and multi-ranges to avoid owl:unionOf statements.
   #   # @version Add roleType to define a type of Role.
-  #   # @version Add Concept TargetPlatform and property hasTargetPlatform as a subproperty of Type.
-  #   # @version Change hierarchy between Resource and MediaResource and provide hasRelatedResource and hasRelatedMediaResource and similar properties.
-  #   # @version Delete formatName and use skos:prefLabel and skos:definition.
-  #   # @version Delete hasAssociatedRights has already covered by isCoveredBy.
+  #   # @version Add productionSynopsis as subproperty of description.
+  #   # @version Version 1.10
   #   # @version Add missing multiple range definitions.
-  #   # @version Add formatId to Format.
-  #   # @version Add reverse property isTimelineTrackPartOf.
-  #   # @version Create property Asset / hasCopyright with range string or Copyright. Same correction for all Rights subclasses e.g. AccessConditions
-  #   # @version Had Review and hasReview.
+  #   # @version Harmonise multi-range definition of properties, when applicable.
   #   # @version Add property dateProduced and property hasProducer.
-  #   # @version Add isScheduledOn to associate a PublicationEvent directly with an EditorialObject.
-  #   # @version Add abstract as subpropertyOf description.
-  #   # @version Move generic properties from BusinessObject/EditorialObject, Resource and MediaResource at Asset level (e.g. title, etc.).
+  #   # @version Add ContentEditorialFormat as subclass of Type + hasContentEditorialFormat property as subpropertyof hastype.
+  #   # @version Delete hasAssociatedRights has already covered by isCoveredBy.
+  #   # @version Create property Asset / hasCopyright with range string or Copyright. Same correction for all Rights subclasses e.g. AccessConditions
+  #   # @version Add hasRelationType with domain Relation.
+  #   # @version Correct property actionType into hasActionType of rnage string or ActionType subclass of Concept.
+  #   # @version Correct misstyped owl:Classes into rdfs:Classes.
   #   # @version Add hasRatingProvider equivalent to hasRatingSource in specific environments
+  #   # @version Separate mutli-domains and multi-ranges to avoid owl:unionOf statements.
+  #   # @version Delete roleDefinition and use skos:definition instead as Role is a subclass of Concept.
+  #   # @version Alignment of Concepts and Types with original EBU and new Dwerft SKOS vocabularies
+  #   # @version Add formatId to Format.
+  #   # @version Had Review and hasReview.
+  #   # @version Add isScheduledOn to associate a PublicationEvent directly with an EditorialObject.
+  #   # @version Delete formatName and use skos:prefLabel and skos:definition.
+  #   # @version Add roleId to identify a Role.
+  #   # @version Add Concept TargetPlatform and property hasTargetPlatform as a subproperty of Type.
+  #   # @version Move generic properties from BusinessObject/EditorialObject, Resource and MediaResource at Asset level (e.g. title, etc.).
+  #   # @version Change hierarchy between Resource and MediaResource and provide hasRelatedResource and hasRelatedMediaResource and similar properties.
+  #   # @version Add reverse property isTimelineTrackPartOf.
+  #   # @version Add abstract as subpropertyOf description.
+  #   # @version Add lead as subproperty of description.
+  #   # @version Add missing Concepts and propose default types.
   #   class EBUCore < RDF::StrictVocabulary
   #     # The conditions under which content can be accessed.
   #     # @return [RDF::Vocabulary::Term]
@@ -418,9 +418,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Essence
   #
-  #     # An event related to the media resource, e.g.             depicted in the resource (possibly fictional), etc.
-  #     #
   #     # Additional types of event shall be defined as             new sub-classes of event.
+  #     #
+  #     # An event related to the media resource, e.g.             depicted in the resource (possibly fictional), etc.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Event
   #
@@ -548,11 +548,11 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Link
   #
-  #     # A type of location is defined as a sub-class of              location.
+  #     # A location related to the media resource, e.g.             depicted in the resource (possibly fictional) or where the resource was created             (shooting location), etc.
   #     #
   #     # This is provided as free text in an annotation             label or as an identifier pointing to a term in a classification scheme.
   #     #
-  #     # A location related to the media resource, e.g.             depicted in the resource (possibly fictional) or where the resource was created             (shooting location), etc.
+  #     # A type of location is defined as a sub-class of              location.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Location
   #
@@ -714,9 +714,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :RadioProgramme
   #
-  #     # This is provided as free text in an annotation             label or as an identifier pointing to a term in a classification scheme.
-  #     #
   #     # All the information about the rating/evaluation             given to a media resource by an Agent i.e. a person/Contact or             Organisation.
+  #     #
+  #     # This is provided as free text in an annotation             label or as an identifier pointing to a term in a classification scheme.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Rating
   #
@@ -984,9 +984,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :actionDescription
   #
-  #     # An identifier attributed to an Action.
-  #     #
   #     # Range: anyURI or string or Identifier
+  #     #
+  #     # An identifier attributed to an Action.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :actionId
   #
@@ -1014,9 +1014,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :actionTimestampTimecodeDropFrame
   #
-  #     # A type of Action.
-  #     #
   #     # Range: Action_type or string
+  #     #
+  #     # A type of Action.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :actionType
   #
@@ -1127,9 +1127,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :agentTwitter
   #
-  #     # To define a type of Agent.
-  #     #
   #     # Range: string or anyURI or Concept.
+  #     #
+  #     # To define a type of Agent.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :agentType
   #
@@ -1204,15 +1204,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :annotationSaliency
   #
-  #     # To define a type of Annotation.
-  #     #
   #     # Range: string, anyURI or Concept.
+  #     #
+  #     # To define a type of Annotation.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :annotationType
   #
-  #     # Range: string or CountryCode.
-  #     #
   #     # To define the Location (e.g. country, region) to which Rating and TargetAudience do NOT apply.
+  #     #
+  #     # Range: string or CountryCode.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :appliesOutOf
   #
@@ -1224,9 +1224,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :applyTo
   #
-  #     # Range: Agent or string
-  #     #
   #     # To identify the Agent who approved the EditorialObject.
+  #     #
+  #     # Range: Agent or string
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :approvedBy
   #
@@ -1304,9 +1304,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :artefactStyle
   #
-  #     # To specify the type of an Artefact.
-  #     #
   #     # Range: string or Artefact_type.
+  #     #
+  #     # To specify the type of an Artefact.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :artefactType
   #
@@ -1336,9 +1336,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :assetName
   #
-  #     # To define a type of an Asset.
-  #     #
   #     # Range: string or anyURI or Concept.
+  #     #
+  #     # To define a type of an Asset.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :assetType
   #
@@ -1396,9 +1396,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :awardName
   #
-  #     # Range: string or Award_Type
-  #     #
   #     # To define a type of Award.
+  #     #
+  #     # Range: string or Award_Type
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :awardType
   #
@@ -1618,9 +1618,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :displayOrder
   #
-  #     # Range: string or Language.
-  #     #
   #     # the Language into which MediaResource is dubbed.
+  #     #
+  #     # Range: string or Language.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :dubbedTo
   #
@@ -1660,9 +1660,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :editorialObjectDescription
   #
-  #     # Range: an Identifier or anyURI or string.
-  #     #
   #     # An identifier attributed to an EditorialObject.
+  #     #
+  #     # Range: an Identifier or anyURI or string.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :editorialObjectId
   #
@@ -1714,9 +1714,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :emotionTimestamp
   #
-  #     # A type of Emotion.
-  #     #
   #     # Range: anyURI or string or Emotion_Type
+  #     #
+  #     # A type of Emotion.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :emotionType
   #
@@ -1822,9 +1822,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :eventStartTime
   #
-  #     # Range: Event or string
-  #     #
   #     # To define a type of Event.
+  #     #
+  #     # Range: Event or string
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :eventType
   #
@@ -1864,15 +1864,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :foodIngredient
   #
-  #     # Range: string or anyURI or Identifier.
-  #     #
   #     # A version identifier attributed to a Format.
+  #     #
+  #     # Range: string or anyURI or Identifier.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :formatId
   #
-  #     # Range: string or anyURI or identifier.
-  #     #
   #     # A version identifier attributed to a Format.
+  #     #
+  #     # Range: string or anyURI or identifier.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :formatVersionId
   #
@@ -1936,9 +1936,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :groupType
   #
-  #     # Range: string or AccessConditions.
-  #     #
   #     # To express access conditions/restrictions.
+  #     #
+  #     # Range: string or AccessConditions.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAccessConditions
   #
@@ -1960,27 +1960,27 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAffiliation
   #
-  #     # To provide a biography of an Agent.
-  #     #
   #     # Range: a string or an anyURI (e,g, a URL to a webpage) or a Biography.
+  #     #
+  #     # To provide a biography of an Agent.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAgentBiography
   #
-  #     # Range: string or CountryCode
-  #     #
   #     # To indicate the place of residence of an Agent.
+  #     #
+  #     # Range: string or CountryCode
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAgentCountryOfResidence
   #
-  #     # Range: a string or Language.
-  #     #
   #     # To provide the language(s) of a Contact/person.
+  #     #
+  #     # Range: a string or Language.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAgentLanguage
   #
-  #     # Range: string or Agent.
-  #     #
   #     # To associate an Agent to another Agent e.g. a Team.
+  #     #
+  #     # Range: string or Agent.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAgentMember
   #
@@ -1990,9 +1990,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAgentNationality
   #
-  #     # Range: string or Location
-  #     #
   #     # To indicate the place of residence of an Agent.
+  #     #
+  #     # Range: string or Location
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAgentPlaceOfResidence
   #
@@ -2055,9 +2055,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasArtefactBuyer
   #
-  #     # Range: string or Agent
-  #     #
   #     # To identify the creator of an Artefact.
+  #     #
+  #     # Range: string or Agent
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasArtefactCreator
   #
@@ -2067,15 +2067,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasArtefactLocation
   #
-  #     # To identify the owner of an Artefact.
-  #     #
   #     # Range: string or Agent
+  #     #
+  #     # To identify the owner of an Artefact.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasArtefactOwner
   #
-  #     # To specify the currency into which the price of an Artefact is expressed.
-  #     #
   #     # Range: string or CurrencyCode
+  #     #
+  #     # To specify the currency into which the price of an Artefact is expressed.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasArtefactPriceCurrency
   #
@@ -2091,9 +2091,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasArtefactRelatedEditorialObject
   #
-  #     # Range: string or Location
-  #     #
   #     # To associate an Artefact/Prop or else with a Location.
+  #     #
+  #     # Range: string or Location
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasArtefactRelatedLocation
   #
@@ -2148,9 +2148,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAssociatedRelation
   #
-  #     # Range: string or AudienceScorerecordingTechnique.
-  #     #
   #     # To identify the technique used to measure an audience.
+  #     #
+  #     # Range: string or AudienceScorerecordingTechnique.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAudienceScoreRecordingTechnique
   #
@@ -2170,9 +2170,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAudioDescription
   #
-  #     # Range: string or AudioEncodingFormat
-  #     #
   #     # To specify the audio encoding format.
+  #     #
+  #     # Range: string or AudioEncodingFormat
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAudioEncodingFormat
   #
@@ -2186,9 +2186,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAudioTrack
   #
-  #     # To link an Agent to an Award.
-  #     #
   #     # Range: string or Agent.
+  #     #
+  #     # To link an Agent to an Award.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAwardRelatedAgent
   #
@@ -2200,9 +2200,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAwardRelatedEvent
   #
-  #     # Range: a string or an Award.
-  #     #
   #     # The Award gievn to an Agent
+  #     #
+  #     # Range: a string or an Award.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasBeenAwarded
   #
@@ -2216,21 +2216,21 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCaptioningFormat
   #
-  #     # Range: string or Agent
-  #     #
   #     # To provide information on the source of             Captioning.
+  #     #
+  #     # Range: string or Agent
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCaptioningSource
   #
-  #     # A member of the cast.
-  #     #
   #     # Range: a string or a Cast
+  #     #
+  #     # A member of the cast.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCastMember
   #
-  #     # Range: a string or a Role/Concept from a controlled vocabulary.
-  #     #
   #     # To define the role of an Agent (Contact/person             or Organisation). The association in a particular context is made by e.g. declaring the hasCastRole or hasCrewRole  associated with the BusinessObject.
+  #     #
+  #     # Range: a string or a Role/Concept from a controlled vocabulary.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCastRole
   #
@@ -2254,9 +2254,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCodec
   #
-  #     # To provide a name for the vendor of the Codec.
-  #     #
   #     # Range: string or Agent.
+  #     #
+  #     # To provide a name for the vendor of the Codec.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCodecVendor
   #
@@ -2266,9 +2266,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasColourSpace
   #
-  #     # Range: a link to a Contact or a string.
-  #     #
   #     # To provide information on a Contact for an             Organisation or a physical person (e.g. the agent of an actor).
+  #     #
+  #     # Range: a link to a Contact or a string.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasContact
   #
@@ -2284,33 +2284,33 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasContainerEncodingFormat
   #
-  #     # Range: string or MimeType
-  #     #
   #     # To provide the Mime type of the Resource.
+  #     #
+  #     # Range: string or MimeType
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasContainerMimeType
   #
-  #     # To define a content editorial format e.g. magazine.
-  #     #
   #     # Range: string or ContentEditorialFormat.
+  #     #
+  #     # To define a content editorial format e.g. magazine.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasContentEditorialFormat
   #
-  #     # To identify a contributor to a Resource, a Business Object, an Event...
-  #     #
   #     # Range: string or Agent
+  #     #
+  #     # To identify a contributor to a Resource, a Business Object, an Event...
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasContributor
   #
-  #     # To express copyright.
-  #     #
   #     # Range: string or Copyright.
+  #     #
+  #     # To express copyright.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCopyright
   #
-  #     # To define a type of Costume.
-  #     #
   #     # Range: a string or Costume_type e.g. a Concept code from a vocabulary, e.g. Getty.
+  #     #
+  #     # To define a type of Costume.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCostumeType
   #
@@ -2326,9 +2326,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCountryOfDeath
   #
-  #     # To provide coverage information.
-  #     #
   #     # Range: string or Event or Location
+  #     #
+  #     # To provide coverage information.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCoverage
   #
@@ -2350,9 +2350,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCreativeCommons
   #
-  #     # To identify an Agent involved in the creation of the Resource or BusinessObject.
-  #     #
   #     # Range: string or Agent.
+  #     #
+  #     # To identify an Agent involved in the creation of the Resource or BusinessObject.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCreator
   #
@@ -2362,15 +2362,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCrewMember
   #
-  #     # Range: a string or a Role/Concept from a controlled vocabulary.
-  #     #
   #     # To define the role of an Agent (Contact/person             or Organisation). The association in a particular context is made by e.g. declaring the hasCastRole or hasCrewRole associated with the BusinessObject.
+  #     #
+  #     # Range: a string or a Role/Concept from a controlled vocabulary.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCrewRole
   #
-  #     # The country/region of origin of the cuisine
-  #     #
   #     # Range: a string or CountryCode
+  #     #
+  #     # The country/region of origin of the cuisine
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCuisineOrigin
   #
@@ -2390,9 +2390,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasDataTrack
   #
-  #     # Range: string or Department.
-  #     #
   #     # To identify a department in an organisation.
+  #     #
+  #     # Range: string or Department.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasDepartment
   #
@@ -2426,9 +2426,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEidrIdentifier
   #
-  #     # Range: String or Agent
-  #     #
   #     # To associate an Emotion with an Agent (e.g. Person or Character).
+  #     #
+  #     # Range: String or Agent
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEmotionRelatedAgent
   #
@@ -2456,9 +2456,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEventRelatedAgent
   #
-  #     # An artefact related to an Event.
-  #     #
   #     # Range: string or Artefact.
+  #     #
+  #     # An artefact related to an Event.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEventRelatedArtefact
   #
@@ -2482,9 +2482,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEventRelatedResource
   #
-  #     # Range: string or EventType
-  #     #
   #     # To define a type of Event.
+  #     #
+  #     # Range: string or EventType
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEventType
   #
@@ -2494,9 +2494,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasExploitationIssues
   #
-  #     # The format of a file.
-  #     #
   #     # Range: string or FileFormat.
+  #     #
+  #     # The format of a file.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasFileFormat
   #
@@ -2506,15 +2506,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasFoodStyle
   #
-  #     # Range: string, Format or any Format-related Concept
-  #     #
   #     # To identify a Format
+  #     #
+  #     # Range: string, Format or any Format-related Concept
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasFormat
   #
-  #     # Range: Identifier or string or anyURI.
-  #     #
   #     # An identifier attributed to a Format.
+  #     #
+  #     # Range: Identifier or string or anyURI.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasFormatId
   #
@@ -2534,15 +2534,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasIMediaIdentifier
   #
-  #     # Range: string or IPR Restrictions.
-  #     #
   #     # To express IPR Restrictions.
+  #     #
+  #     # Range: string or IPR Restrictions.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasIPRRestrictions
   #
-  #     # To provide a link to an identification picture.
-  #     #
   #     # A locator / URI or a Picture.
+  #     #
+  #     # To provide a link to an identification picture.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasIdPicture
   #
@@ -2552,21 +2552,21 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasIdentifier
   #
-  #     # To define a type of Identifer (e.g. UUID, ISAN, EIDR, in-house production Id).
-  #     #
   #     # Range: Concept or string
+  #     #
+  #     # To define a type of Identifer (e.g. UUID, ISAN, EIDR, in-house production Id).
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasIdentifierType
   #
-  #     # Range: string or Codec
-  #     #
   #     # To specify the codec of an Image.
+  #     #
+  #     # Range: string or Codec
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasImageCodec
   #
-  #     # Range: string or ImageFormat
-  #     #
   #     # To specify the format of an Image.
+  #     #
+  #     # Range: string or ImageFormat
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasImageFormat
   #
@@ -2576,9 +2576,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasIsanIdentifier
   #
-  #     # Range: string or KeyCareerEvent
-  #     #
   #     # To identify the key career events of a Person.
+  #     #
+  #     # Range: string or KeyCareerEvent
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasKeyCareerEvent
   #
@@ -2588,9 +2588,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasKeyPersonalEvent
   #
-  #     # To associate a concept, descriptive phrase or Keyword that specifies the topic of the EditorialObject.
-  #     #
   #     # Range: Keyword or string or any URI from a controlled vocabulary
+  #     #
+  #     # To associate a concept, descriptive phrase or Keyword that specifies the topic of the EditorialObject.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasKeyword
   #
@@ -2606,9 +2606,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasLicensing
   #
-  #     # Range: string or LocationCode.
-  #     #
   #     # To give the code of a Location.
+  #     #
+  #     # Range: string or LocationCode.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasLocationCode
   #
@@ -2616,9 +2616,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasLocationPicture
   #
-  #     # To associate an Artefact with a             Location.
-  #     #
   #     # Range: a string or an Artefact.
+  #     #
+  #     # To associate an Artefact with a             Location.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasLocationRelatedArtefact
   #
@@ -2638,9 +2638,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasLocationType
   #
-  #     # Range: a locator e.g. a URI or a Locator or a string.
-  #     #
   #     # A locator from where the MediaResource can be accessed.
+  #     #
+  #     # Range: a locator e.g. a URI or a Locator or a string.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasLocator
   #
@@ -2678,9 +2678,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasMetadataTrack
   #
-  #     # Range: string or MimeType
-  #     #
   #     # To specify the Mime type of a Resource.
+  #     #
+  #     # Range: string or MimeType
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasMimeType
   #
@@ -2718,9 +2718,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasPart
   #
-  #     # A type of Part.
-  #     #
   #     # Range: a string or Part_Type
+  #     #
+  #     # A type of Part.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasPartType
   #
@@ -2730,9 +2730,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasParticipatingAgent
   #
-  #     # Range: a locator/URI or a Picture.
-  #     #
   #     # To provide a visual representation of  a Rating / AufdienceRating / AudienceLevel.
+  #     #
+  #     # Range: a locator/URI or a Picture.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasPictogram
   #
@@ -2750,15 +2750,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasProducer
   #
-  #     # To identify the Location of a production
-  #     #
   #     # Range: a Location or string
+  #     #
+  #     # To identify the Location of a production
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasProductionLocation
   #
-  #     # Range: string, anyURI or Concept.
-  #     #
   #     # To associate information on Provenance to an EBUCore class.
+  #     #
+  #     # Range: string, anyURI or Concept.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasProvenance
   #
@@ -2774,9 +2774,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasPublicationHistory
   #
-  #     # To identify the publication medium.
-  #     #
   #     # Range: string or PublicationMedium.
+  #     #
+  #     # To identify the publication medium.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasPublicationMedium
   #
@@ -2784,9 +2784,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasPublicationPlanMember
   #
-  #     # Range: string or PublicationPlan_type.
-  #     #
   #     # To define a type of PublicationPlan.
+  #     #
+  #     # Range: string or PublicationPlan_type.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasPublicationPlanType
   #
@@ -2800,21 +2800,21 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasPublisher
   #
-  #     # Range: a string or a Rating.
-  #     #
   #     # To identify the presence of Rating attributed             to a Resource or BusinessObject.
+  #     #
+  #     # Range: a string or a Rating.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRating
   #
-  #     # To identify an Agent who has provided a Rating.
-  #     #
   #     # Range: string or Agent.
+  #     #
+  #     # To identify an Agent who has provided a Rating.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRatingProvider
   #
-  #     # To identify an Agent who has provided a Rating.
-  #     #
   #     # Range: string or Agent.
+  #     #
+  #     # To identify an Agent who has provided a Rating.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRatingSource
   #
@@ -2822,9 +2822,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRelatedAnimal
   #
-  #     # To identify and Artefact related to EditorialObject or a resource.
-  #     #
   #     # Range: string or Artefact.
+  #     #
+  #     # To identify and Artefact related to EditorialObject or a resource.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRelatedArtefact
   #
@@ -2848,9 +2848,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRelatedAudioTrack
   #
-  #     # To identify an Award related to EditorialObject.
-  #     #
   #     # Range: string or Award.
+  #     #
+  #     # To identify an Award related to EditorialObject.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRelatedAward
   #
@@ -2890,9 +2890,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRelatedPicture
   #
-  #     # Range: string or PublicationChannel
-  #     #
   #     # To identify a Publication Channel
+  #     #
+  #     # Range: string or PublicationChannel
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRelatedPublicationChannel
   #
@@ -2900,9 +2900,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRelatedPublicationEvent
   #
-  #     # To associate a Record with an Asset.
-  #     #
   #     # Range, a string a URI or a Record.
+  #     #
+  #     # To associate a Record with an Asset.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRelatedRecord
   #
@@ -2916,21 +2916,21 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRelatedService
   #
-  #     # Range: string or TextLine.
-  #     #
   #     # A TextLine or free text related to an EditorialObject.
+  #     #
+  #     # Range: string or TextLine.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRelatedTextLine
   #
-  #     # Range: string or Agent.
-  #     #
   #     # To define source of a Relation.
+  #     #
+  #     # Range: string or Agent.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRelationSource
   #
-  #     # A locator from where the Resource can be accessed.
-  #     #
   #     # Range: a locator e.g. a URI or a Locator.
+  #     #
+  #     # A locator from where the Resource can be accessed.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasResourceLocator
   #
@@ -2940,9 +2940,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasReview
   #
-  #     # To express Rights Clearance.
-  #     #
   #     # Range: string or Rights Clearance.
+  #     #
+  #     # To express Rights Clearance.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRightsClearance
   #
@@ -2952,15 +2952,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRightsContact
   #
-  #     # To identify an Agent (Contact/person or             Organisation) having/managing Rights.
-  #     #
   #     # Range: a string or an Agent.
+  #     #
+  #     # To identify an Agent (Contact/person or             Organisation) having/managing Rights.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRightsHolder
   #
-  #     # Range: a string or a Role/Concept from a controlled vocabulary.
-  #     #
   #     # To define the role of an Agent (Contact/person             or Organisation). The association in a particular context is made by e.g. declaring the hasCastRole or hasCrewRole  associated with the BusinessObject.
+  #     #
+  #     # Range: a string or a Role/Concept from a controlled vocabulary.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRole
   #
@@ -2984,15 +2984,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasShootingLocation
   #
-  #     # To identify the presence of Signing associated             to the BusinessObject/Resource.
-  #     #
   #     # A locator/URI to a resource or a Signing resource.
+  #     #
+  #     # To identify the presence of Signing associated             to the BusinessObject/Resource.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSigning
   #
-  #     # To specify the format used for signing.
-  #     #
   #     # Range: string or SigningFormat.
+  #     #
+  #     # To specify the format used for signing.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSigningFormat
   #
@@ -3024,9 +3024,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasStakeholder
   #
-  #     # Identifies the technical video standard of a MediaResource, i.e. NTSC or PAL.
-  #     #
   #     # Range: string or Standard
+  #     #
+  #     # Identifies the technical video standard of a MediaResource, i.e. NTSC or PAL.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasStandard
   #
@@ -3036,33 +3036,33 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasStorageId
   #
-  #     # Range:; string or Storage_Type
-  #     #
   #     # To define a type of storage associated with a locator from which a Resource can be accessed or can be retrieved.
+  #     #
+  #     # Range:; string or Storage_Type
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasStorageType
   #
-  #     # This property enables to associate an Asset with a subject which can be a string or a URI pointing to a term from a controlled vocabulary.
-  #     #
   #     # Range: string, anyURI or Subject
+  #     #
+  #     # This property enables to associate an Asset with a subject which can be a string or a URI pointing to a term from a controlled vocabulary.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSubject
   #
-  #     # To identify existing subtitling.
-  #     #
   #     # Range: string or Subtitling
+  #     #
+  #     # To identify existing subtitling.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSubtitling
   #
-  #     # The format of Subtitling.
-  #     #
   #     # Range: string or SubtitlingFormat
+  #     #
+  #     # The format of Subtitling.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSubtitlingFormat
   #
-  #     # To identify the source of the Subtitling             resource.
-  #     #
   #     # Range: a string or an Agent.
+  #     #
+  #     # To identify the source of the Subtitling             resource.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSubtitlingSource
   #
@@ -3096,9 +3096,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasTextLineRelatedAgent
   #
-  #     # To identify a Character related to a TextLine.
-  #     #
   #     # Range: string or Character.
+  #     #
+  #     # To identify a Character related to a TextLine.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasTextLineRelatedCharacter
   #
@@ -3120,9 +3120,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasTextLineType
   #
-  #     # Range: a Concept, anyURI or a string
-  #     #
   #     # This property enables to associate an Asset with a theme which can be a string or a URI pointing to a term from a controlled vocabulary. A typical example is the Eurostats NACE classification.
+  #     #
+  #     # Range: a Concept, anyURI or a string
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasTheme
   #
@@ -3138,9 +3138,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasTimelineTrackPart
   #
-  #     # To specify a type of TimelineTrack
-  #     #
   #     # Range: string or anyURI or TimelineTrack_Type.
+  #     #
+  #     # To specify a type of TimelineTrack
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasTimelineTrackType
   #
@@ -3158,9 +3158,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasTrackPart
   #
-  #     # Range: string or TrackPurpose.
-  #     #
   #     # The purpose for which the Track is provided.
+  #     #
+  #     # Range: string or TrackPurpose.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasTrackPurpose
   #
@@ -3186,15 +3186,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasVersion
   #
-  #     # Range: string or VideoCodec
-  #     #
   #     # To identify a video codec
+  #     #
+  #     # Range: string or VideoCodec
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasVideoCodec
   #
-  #     # To specify the video encoding format.
-  #     #
   #     # Range: string or VideoEncodingFormat
+  #     #
+  #     # To specify the video encoding format.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasVideoEncodingFormat
   #
@@ -3202,9 +3202,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasVideoTrack
   #
-  #     # Range: string or WrappingType.
-  #     #
   #     # To specify the type of wrapping.
+  #     #
+  #     # Range: string or WrappingType.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasWrappingType
   #
@@ -3236,9 +3236,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :idDateOfCreation
   #
-  #     # Range: string or anyURI.
-  #     #
   #     # To provide the value attribued to an Identifier.
+  #     #
+  #     # Range: string or anyURI.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :identifierValue
   #
@@ -3276,15 +3276,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :isAttributedTo
   #
-  #     # To identify a Brand.
-  #     #
   #     # Range: a string or Brand
+  #     #
+  #     # To identify a Brand.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :isBrand
   #
-  #     # To identify a character.
-  #     #
   #     # Range: string or Agent.
+  #     #
+  #     # To identify a character.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :isCharacter
   #
@@ -3330,21 +3330,21 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :isEpisodeOf
   #
-  #     # Range: string or Season.
-  #     #
   #     # The Episode of a Series or a Season.
+  #     #
+  #     # Range: string or Season.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :isEpisodeOfSeason
   #
-  #     # Range: string or Series.
-  #     #
   #     # The Episode of a Series or a Season.
+  #     #
+  #     # Range: string or Series.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :isEpisodeOfSeries
   #
-  #     # Range: a string or a FictitiousPerson.
-  #     #
   #     # To identify a Contact/Person being fictitious.
+  #     #
+  #     # Range: a string or a FictitiousPerson.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :isFictitiousPerson
   #
@@ -3366,9 +3366,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :isMediaFragmentOf
   #
-  #     # To identify a Group to which an EditorialObject is a member of.
-  #     #
   #     # Range: string or Group.
+  #     #
+  #     # To identify a Group to which an EditorialObject is a member of.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :isMemberOf
   #
@@ -3380,9 +3380,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :isNextInSequence
   #
-  #     # To identify the Service that operates the             PublicationChannel.
-  #     #
   #     # Range: string or Service.
+  #     #
+  #     # To identify the Service that operates the             PublicationChannel.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :isOperatedBy
   #
@@ -3418,9 +3418,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :isReferencedBy
   #
-  #     # Range: Service or string
-  #     #
   #     # To identify a Service assocoated to a PublicationEvent.
+  #     #
+  #     # Range: Service or string
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :isReleasedBy
   #
@@ -3442,9 +3442,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :isSeasonOf
   #
-  #     # Range: Brand or string.
-  #     #
   #     # To associate a Series with a Brand.
+  #     #
+  #     # Range: Brand or string.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :isSeriesOf
   #
@@ -3464,15 +3464,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :lineNumber
   #
-  #     # To provide a link to a Logo
-  #     #
   #     # Range: string or Logo
+  #     #
+  #     # To provide a link to a Logo
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :linkToLogo
   #
-  #     # To provide a link to a Sticker
-  #     #
   #     # Range: anyURI or Sticker.
+  #     #
+  #     # To provide a link to a Sticker
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :linkToSticker
   #
@@ -3542,9 +3542,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :locationName
   #
-  #     # Range: string or RegionCode
-  #     #
   #     # To provide a description of a particular region assocoated to the Location.
+  #     #
+  #     # Range: string or RegionCode
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :locationRegion
   #
@@ -3614,9 +3614,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :mediaResourceId
   #
-  #     # To identify a type of MediaResource, e.g. a template'.
-  #     #
   #     # Range: MediaResource_Type or string
+  #     #
+  #     # To identify a type of MediaResource, e.g. a template'.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :mediaResourceType
   #
@@ -3680,9 +3680,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :organisationDescription
   #
-  #     # The identifier attributed to an Organisation
-  #     #
   #     # Range: string or Identifier
+  #     #
+  #     # The identifier attributed to an Organisation
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :organisationId
   #
@@ -3690,9 +3690,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :organisationName
   #
-  #     # To define a type of an Organisation.
-  #     #
   #     # Range: string or anyURI or Concept.
+  #     #
+  #     # To define a type of an Organisation.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :organisationType
   #
@@ -3720,9 +3720,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :partDescription
   #
-  #     # The identifier of a Part.
-  #     #
   #     # Range: a string or Identifier
+  #     #
+  #     # The identifier of a Part.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :partId
   #
@@ -3746,9 +3746,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :personHeight
   #
-  #     # An identifier attributed to a Person.
-  #     #
   #     # Range: an Identifier or anyURI or string.
+  #     #
+  #     # An identifier attributed to a Person.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :personId
   #
@@ -3826,9 +3826,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :provenanceName
   #
-  #     # To define a type of Provenance.
-  #     #
   #     # Range: string, anyURI or Concept.
+  #     #
+  #     # To define a type of Provenance.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :provenanceType
   #
@@ -3872,9 +3872,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :publicationEventDescription
   #
-  #     # Range: Identifier, anyURI, string
-  #     #
   #     # An identifier attributed to a PublicationEvent.
+  #     #
+  #     # Range: Identifier, anyURI, string
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :publicationEventId
   #
@@ -3886,9 +3886,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :publicationEventTitle
   #
-  #     # A type of PublicationEvent.
-  #     #
   #     # Range: a string or PublicationEvent_Type
+  #     #
+  #     # A type of PublicationEvent.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :publicationEventType
   #
@@ -4028,9 +4028,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :relationTotalNumberOfGroupMembers
   #
-  #     # Range: string or Relation_Type.
-  #     #
   #     # To define a type of Relation.
+  #     #
+  #     # Range: string or Relation_Type.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :relationType
   #
@@ -4144,9 +4144,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :rightsTerritoryIncludes
   #
-  #     # Range: a string or a Rights_Type or a ContractType.
-  #     #
   #     # To identify a type of Rights.
+  #     #
+  #     # Range: a string or a Rights_Type or a ContractType.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :rightsType
   #
@@ -4364,9 +4364,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :timelineTrackDurationTimecodeDropFrame
   #
-  #     # Specifies the title or name given to the             resource.  A root for the definition of subproperties defining ebucore titles of different types. The ebucore title type can be used to define sub-properties to optionally refine the category of             the title.
-  #     #
   #     # All value of the EBU title status             classification scheme             (http://www.ebu.ch/metadata/cs/web/ebu_TitleStatusCodeCS_p.xml.htm) are candidates             subproperties of the title property as implemented for an example with             alternativeTitle.
+  #     #
+  #     # Specifies the title or name given to the             resource.  A root for the definition of subproperties defining ebucore titles of different types. The ebucore title type can be used to define sub-properties to optionally refine the category of             the title.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :title
   #
@@ -4392,9 +4392,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :trackName
   #
-  #     # Range: string or Track_Type
-  #     #
   #     # The type attributed to a Track.
+  #     #
+  #     # Range: string or Track_Type
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :trackType
   #
