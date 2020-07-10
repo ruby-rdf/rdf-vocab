@@ -158,6 +158,13 @@ module RDF::Vocab
       range: "ogc:url".freeze,
       "rdfs:seeAlso": "foaf:depiction".freeze,
       type: "rdf:Property".freeze
+    property :"image:alt",
+      comment: %(A description of what is in the image \(not a caption\). If the page specifies an og:image it should specify og:image:alt.).freeze,
+      isDefinedBy: "og:".freeze,
+      label: "image:alt".freeze,
+      range: "ogc:url".freeze,
+      "rdfs:seeAlso": "og:image".freeze,
+      type: "rdf:Property".freeze
     property :"image:height",
       comment: %(The height of an image.).freeze,
       isDefinedBy: "og:".freeze,
@@ -176,6 +183,14 @@ module RDF::Vocab
       isDefinedBy: "og:".freeze,
       label: "image type".freeze,
       range: "ogc:mime_type_str".freeze,
+      type: "rdf:Property".freeze
+    property :"image:url",
+      comment: %(Identical to og:image.).freeze,
+      isDefinedBy: "og:".freeze,
+      label: "image:url".freeze,
+      "owl:sameProperty": "og:image".freeze,
+      range: "ogc:url".freeze,
+      "rdfs:seeAlso": "og:image".freeze,
       type: "rdf:Property".freeze
     property :"image:width",
       comment: %(The width of an image.).freeze,
@@ -200,6 +215,13 @@ module RDF::Vocab
       isDefinedBy: "og:".freeze,
       label: "locale".freeze,
       range: "ogc:string".freeze,
+      type: "rdf:Property".freeze
+    property :"locale:alternate",
+      comment: %(An array of other locales this page is available in.).freeze,
+      isDefinedBy: "og:".freeze,
+      label: "locale:alternate".freeze,
+      range: "ogc:string".freeze,
+      "rdfs:seeAlso": "og:locale".freeze,
       type: "rdf:Property".freeze
     property :locality,
       comment: %([DEPRECATED] The locality of the resource e.g, "Palo Alto").freeze,

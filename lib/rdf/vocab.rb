@@ -215,19 +215,7 @@ module RDF
       marcrelators: {
         uri: "http://id.loc.gov/vocabulary/relators/",
         source: "http://id.loc.gov/vocabulary/relators.rdf",
-        class_name: "MARCRelators",
-        patch: %{
-          @prefix marcrelators: <http://id.loc.gov/vocabulary/relators/> .
-          @prefix owl: <http://www.w3.org/2002/07/owl#>.
-          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-          #DeleteExisting {
-          #  marcrelators:lee rdfs:subPropertyOf marcrelators:lei .
-          #} .
-          #AddNew {
-          #  marcrelators:role a owl:ObjectProperty;
-          #     rdfs:comment "This property and its sub-properties are used to associate a Bibliographic Resource with a Resource that played a part in the lifecycle of the Bibliographic Resource.  It is the inverse of relators:roleIn.".
-          #} .
-        }
+        class_name: "MARCRelators"
       },
       mo:     {uri: "http://purl.org/ontology/mo/", strict: false},
       mods: {
@@ -236,7 +224,40 @@ module RDF
       },
       nfo:    {uri: 'http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#', skip: true},
       oa:     {uri: "http://www.w3.org/ns/oa#"},
-      og:     {uri: "http://ogp.me/ns#", source: 'http://ogp.me/ns/ogp.me.ttl', strict: false},
+      og:     {
+        uri: "http://ogp.me/ns#",
+        source: 'http://ogp.me/ns/ogp.me.ttl',
+        strict: false,
+        patch: %{
+          @prefix og: <http://ogp.me/ns#> .
+          @prefix ogc: <http://ogp.me/ns/class#> .
+          @prefix owl: <http://www.w3.org/2002/07/owl#>.
+          @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          # Used in http://ogp.me/ but not defined
+          AddNew {
+            og:image:url a rdf:Property ;
+              rdfs:label "image:url"@en-US ;
+              rdfs:comment "Identical to og:image."@en-US ;
+              rdfs:seeAlso og:image ;
+              rdfs:isDefinedBy og: ;
+              owl:sameProperty og:image ;
+              rdfs:range ogc:url .
+            og:image:alt a rdf:Property ;
+              rdfs:label "image:alt"@en-US ;
+              rdfs:comment "A description of what is in the image (not a caption). If the page specifies an og:image it should specify og:image:alt."@en-US ;
+              rdfs:seeAlso og:image ;
+              rdfs:isDefinedBy og: ;
+              rdfs:range ogc:url .
+            og:locale:alternate a rdf:Property ;
+              rdfs:label "locale:alternate"@en-US ;
+              rdfs:comment "An array of other locales this page is available in."@en-US ;
+              rdfs:seeAlso og:locale ;
+              rdfs:isDefinedBy og: ;
+              rdfs:range ogc:string .
+          } .
+        }
+      },
       ogc:    {uri: "http://ogp.me/ns/class#", source: "http://ogp.me/ns/ogp.me.ttl", strict: false},
       ore:    {uri: "http://www.openarchives.org/ore/terms/"},
       org:    {uri: "http://www.w3.org/ns/org#"},
