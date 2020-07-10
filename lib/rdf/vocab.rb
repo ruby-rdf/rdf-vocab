@@ -248,7 +248,7 @@ module RDF
               rdfs:comment "A description of what is in the image (not a caption). If the page specifies an og:image it should specify og:image:alt."@en-US ;
               rdfs:seeAlso og:image ;
               rdfs:isDefinedBy og: ;
-              rdfs:range ogc:url .
+              rdfs:range ogc:string .
             og:locale:alternate a rdf:Property ;
               rdfs:label "locale:alternate"@en-US ;
               rdfs:comment "An array of other locales this page is available in."@en-US ;

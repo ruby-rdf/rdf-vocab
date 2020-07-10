@@ -162,7 +162,7 @@ module RDF::Vocab
       comment: %(A description of what is in the image \(not a caption\). If the page specifies an og:image it should specify og:image:alt.).freeze,
       isDefinedBy: "og:".freeze,
       label: "image:alt".freeze,
-      range: "ogc:url".freeze,
+      range: "ogc:string".freeze,
       "rdfs:seeAlso": "og:image".freeze,
       type: "rdf:Property".freeze
     property :"image:height",
