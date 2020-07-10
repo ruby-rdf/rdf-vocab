@@ -5,7 +5,48 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://purl.org/rss/1.0/>
+  #   #
   #   class RSS < RDF::StrictVocabulary
+  #     # An RSS information channel.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :channel
+  #
+  #     # An RSS image.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :image
+  #
+  #     # An RSS item.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :item
+  #
+  #     # An RSS text input.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :textinput
+  #
+  #     # A short text description of the subject.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :description
+  #
+  #     # Points to a list of rss:item elements that are members of the subject channel.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :items
+  #
+  #     # The URL to which an HTML rendering of the subject will link.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :link
+  #
+  #     # The text input field's (variable) name.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :name
+  #
+  #     # A descriptive title for the channel.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :title
+  #
+  #     # The URL of the image to used in the 'src' attribute of the channel's image tag when rendered as HTML.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :url
+  #
   #   end
   RSS = Class.new(RDF::StrictVocabulary("http://purl.org/rss/1.0/")) do
 

@@ -10,8 +10,8 @@ module RDF::Vocab
   #   #
   #   # A namespace for describing HTTP messages (http://www.w3.org/Protocols/rfc2616/rfc2616.html)
   #   # @version Working Draft 29 April 2011
-  #   # @see http://www.w3.org/TR/Content-in-RDF/
   #   # @see http://www.w3.org/WAI/intro/earl
+  #   # @see http://www.w3.org/TR/Content-in-RDF/
   #   class HT < RDF::StrictVocabulary
   #     # A connection used for HTTP transfer.
   #     # @return [RDF::Vocabulary::Term]

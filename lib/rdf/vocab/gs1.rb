@@ -455,9 +455,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :copperPerNutrientBasis
   #
-  #     # Code specifying the country for the address using ISO 3166-1.
-  #     #
   #     # A short text string code (see values defined in ISO 3166) specifying the country in which a processing or other activity is performed, for example processing, bottling, manufacturing.
+  #     #
+  #     # Code specifying the country for the address using ISO 3166-1.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :countryCode
   #

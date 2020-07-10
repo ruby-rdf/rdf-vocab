@@ -13,11 +13,11 @@ module RDF::Vocab
   #   # This ontology provides an informal representation of the concepts and terms as defined in the LDP specification.  Consult the LDP specification for normative reference.
   #   #
   #   # Vocabulary URIs defined in the Linked Data Platform (LDP) namespace.
-  #   # @see http://www.w3.org/TR/ldp/
-  #   # @see http://www.w3.org/TR/ldp-ucr/
-  #   # @see http://www.w3.org/TR/ldp-paging/
-  #   # @see http://www.w3.org/2012/ldp
   #   # @see http://www.w3.org/2011/09/LinkedData/
+  #   # @see http://www.w3.org/TR/ldp-paging/
+  #   # @see http://www.w3.org/TR/ldp-ucr/
+  #   # @see http://www.w3.org/2012/ldp
+  #   # @see http://www.w3.org/TR/ldp/
   #   class LDP < RDF::Vocabulary
   #     # An LDPC that uses a predefined predicate to simply link to its contained resources.
   #     # @return [RDF::Vocabulary::Term]

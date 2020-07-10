@@ -189,7 +189,7 @@ module RDF::Vocab
           "foaf:name": "Jakub Klímek".freeze,
           "rdfs:seeAlso": "https://jakub.klímek.com/#me".freeze
         ), term(
-          "foaf:homepage": ["http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni".freeze,"https://w3id.org/people/ralbertoni/".freeze],
+          "foaf:homepage": ["https://w3id.org/people/ralbertoni/".freeze,"http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni".freeze],
           "foaf:name": "Riccardo Albertoni".freeze,
           "rdfs:seeAlso": "https://orcid.org/0000-0001-5648-2713".freeze
         ), term(

@@ -5,7 +5,57 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://purl.org/dc/dcmitype/>
+  #   #
+  #   # DCMI Type Vocabulary
   #   class DCMIType < RDF::StrictVocabulary
+  #     # An aggregation of resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Collection
+  #
+  #     # Data encoded in a defined structure.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Dataset
+  #
+  #     # A non-persistent, time-based occurrence.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Event
+  #
+  #     # A visual representation other than text.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Image
+  #
+  #     # A resource requiring interaction from the user to be understood, executed, or experienced.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :InteractiveResource
+  #
+  #     # A series of visual representations imparting an impression of motion when shown in succession.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MovingImage
+  #
+  #     # An inanimate, three-dimensional object or substance.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PhysicalObject
+  #
+  #     # A system that provides one or more functions.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Service
+  #
+  #     # A computer program in source or compiled form.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Software
+  #
+  #     # A resource primarily intended to be heard.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Sound
+  #
+  #     # A static visual representation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :StillImage
+  #
+  #     # A resource consisting primarily of words for reading.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Text
+  #
   #   end
   DCMIType = Class.new(RDF::StrictVocabulary("http://purl.org/dc/dcmitype/")) do
 

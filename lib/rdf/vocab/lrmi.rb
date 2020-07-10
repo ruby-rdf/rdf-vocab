@@ -5,7 +5,75 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://purl.org/dcx/lrmi-terms/>
+  #   #
+  #   # LRMI RDF Specification
+  #   #
+  #   # The LRMI specification is a collection of classes and properties for markup and description of educational resources. The specification builds on the extensive vocabulary provided by Schema.org and other standards.
   #   class LRMI < RDF::Vocabulary
+  #     # An intangible item that describes an alignment between a learning resource and a node in an educational framework.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AlignmentObject
+  #
+  #     # An individual or group for whom the learning resource was created or useful.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :EducationalAudience
+  #
+  #     # A category of alignment between the learning resource and the framework node.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alignmentType
+  #
+  #     # An alignment to an established educational framework.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :educationalAlignment
+  #
+  #     # The framework to which the resource being described is aligned.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :educationalFramework
+  #
+  #     # The role that describes the target audience of the content.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :educationalRole
+  #
+  #     # The purpose of a work in the context of education.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :educationalUse
+  #
+  #     # The predominant mode of learning supported by the learning resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :interactivityType
+  #
+  #     # A resource that was used in the creation of this resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isBasedOnUrl
+  #
+  #     # The predominant type or kind characterizing the learning resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :learningResourceType
+  #
+  #     # The description of a node in an established educational framework.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :targetDescription
+  #
+  #     # The name of a node in an established educational framework.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :targetName
+  #
+  #     # The URL of a node in an established educational framework.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :targetUrl
+  #
+  #     # Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :timeRequired
+  #
+  #     # The typical expected age range.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :typicalAgeRange
+  #
+  #     # The URL where the owner specifies permissions for using the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :useRightsUrl
+  #
   #   end
   LRMI = Class.new(RDF::Vocabulary("http://purl.org/dcx/lrmi-terms/")) do
 

@@ -5,7 +5,393 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://purl.org/dc/terms/>
+  #   #
+  #   # DCMI Metadata Terms - other
   #   class DC < RDF::StrictVocabulary
+  #     # A resource that acts or has the power to act.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Agent
+  #
+  #     # A group of agents.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AgentClass
+  #
+  #     # A book, article, or other documentary resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BibliographicResource
+  #
+  #     # A digital resource format.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FileFormat
+  #
+  #     # A rate at which something recurs.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Frequency
+  #
+  #     # The extent or range of judicial, law enforcement, or other authority.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Jurisdiction
+  #
+  #     # A legal document giving official permission to do something with a resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LicenseDocument
+  #
+  #     # A system of signs, symbols, sounds, gestures, or rules used in communication.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LinguisticSystem
+  #
+  #     # A spatial region or named place.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Location
+  #
+  #     # A location, period of time, or jurisdiction.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LocationPeriodOrJurisdiction
+  #
+  #     # A file format or physical medium.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MediaType
+  #
+  #     # A media type or extent.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MediaTypeOrExtent
+  #
+  #     # A method by which resources are added to a collection.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MethodOfAccrual
+  #
+  #     # A process that is used to engender knowledge, attitudes, and skills.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MethodOfInstruction
+  #
+  #     # An interval of time that is named or defined by its start and end dates.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PeriodOfTime
+  #
+  #     # A physical material or carrier.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PhysicalMedium
+  #
+  #     # A material thing.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PhysicalResource
+  #
+  #     # A plan or course of action by an authority, intended to influence and determine decisions, actions, and other matters.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Policy
+  #
+  #     # Any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ProvenanceStatement
+  #
+  #     # A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RightsStatement
+  #
+  #     # A dimension or extent, or a time taken to play or execute.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SizeOrDuration
+  #
+  #     # A reference point against which other things can be evaluated or compared.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Standard
+  #
+  #     # A summary of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :abstract
+  #
+  #     # Information about who access the resource or an indication of its security status.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :accessRights
+  #
+  #     # The method by which items are added to a collection.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :accrualMethod
+  #
+  #     # The frequency with which items are added to a collection.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :accrualPeriodicity
+  #
+  #     # The policy governing the addition of items to a collection.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :accrualPolicy
+  #
+  #     # An alternative name for the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alternative
+  #
+  #     # A class of agents for whom the resource is intended or useful.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :audience
+  #
+  #     # Date that the resource became or will become available.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :available
+  #
+  #     # A bibliographic reference for the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bibliographicCitation
+  #
+  #     # An established standard to which the described resource conforms.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :conformsTo
+  #
+  #     # An entity responsible for making contributions to the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :contributor
+  #
+  #     # The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coverage
+  #
+  #     # Date of creation of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :created
+  #
+  #     # An entity responsible for making the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :creator
+  #
+  #     # A point or period of time associated with an event in the lifecycle of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :date
+  #
+  #     # Date of acceptance of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateAccepted
+  #
+  #     # Date of copyright of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateCopyrighted
+  #
+  #     # Date of submission of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dateSubmitted
+  #
+  #     # An account of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :description
+  #
+  #     # A class of agents, defined in terms of progression through an educational or training context, for which the described resource is intended.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :educationLevel
+  #
+  #     # The size or duration of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :extent
+  #
+  #     # The file format, physical medium, or dimensions of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :format
+  #
+  #     # A related resource that is substantially the same as the pre-existing described resource, but in another format.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasFormat
+  #
+  #     # A related resource that is included either physically or logically in the described resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasPart
+  #
+  #     # A related resource that is a version, edition, or adaptation of the described resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasVersion
+  #
+  #     # An unambiguous reference to the resource within a given context.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identifier
+  #
+  #     # A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :instructionalMethod
+  #
+  #     # A pre-existing related resource that is substantially the same as the described resource, but in another format.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isFormatOf
+  #
+  #     # A related resource in which the described resource is physically or logically included.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isPartOf
+  #
+  #     # A related resource that references, cites, or otherwise points to the described resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isReferencedBy
+  #
+  #     # A related resource that supplants, displaces, or supersedes the described resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isReplacedBy
+  #
+  #     # A related resource that requires the described resource to support its function, delivery, or coherence.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isRequiredBy
+  #
+  #     # A related resource of which the described resource is a version, edition, or adaptation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isVersionOf
+  #
+  #     # Date of formal issuance of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :issued
+  #
+  #     # A language of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :language
+  #
+  #     # A legal document giving official permission to do something with the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :license
+  #
+  #     # An entity that mediates access to the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mediator
+  #
+  #     # The material or physical carrier of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :medium
+  #
+  #     # Date on which the resource was changed.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :modified
+  #
+  #     # A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :provenance
+  #
+  #     # An entity responsible for making the resource available.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :publisher
+  #
+  #     # A related resource that is referenced, cited, or otherwise pointed to by the described resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :references
+  #
+  #     # A related resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :relation
+  #
+  #     # A related resource that is supplanted, displaced, or superseded by the described resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :replaces
+  #
+  #     # A related resource that is required by the described resource to support its function, delivery, or coherence.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :requires
+  #
+  #     # Information about rights held in and over the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rights
+  #
+  #     # A person or organization owning or managing rights over the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rightsHolder
+  #
+  #     # A related resource from which the described resource is derived.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :source
+  #
+  #     # Spatial characteristics of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spatial
+  #
+  #     # A topic of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subject
+  #
+  #     # A list of subunits of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tableOfContents
+  #
+  #     # Temporal characteristics of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :temporal
+  #
+  #     # A name given to the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :title
+  #
+  #     # The nature or genre of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :type
+  #
+  #     # Date (often a range) of validity of a resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :valid
+  #
+  #     # The set of regions in space defined by their geographic coordinates according to the DCMI Box Encoding Scheme.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Box
+  #
+  #     # The set of codes listed in ISO 3166-1 for the representation of names of countries.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ISO3166
+  #
+  #     # The set of time intervals defined by their limits according to the DCMI Period Encoding Scheme.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Period
+  #
+  #     # The set of points in space defined by their geographic coordinates according to the DCMI Point Encoding Scheme.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Point
+  #
+  #     # The set of tags, constructed according to RFC 1766, for the identification of languages.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RFC1766
+  #
+  #     # The set of tags constructed according to RFC 3066 for the identification of languages.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RFC3066
+  #
+  #     # The set of tags constructed according to RFC 4646 for the identification of languages.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RFC4646
+  #
+  #     # The set of tags constructed according to RFC 5646 for the identification of languages.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RFC5646
+  #
+  #     # The set of identifiers constructed according to the generic syntax for Uniform Resource Identifiers as specified by the Internet Engineering Task Force.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :URI
+  #
+  #     # The set of dates and times constructed according to the W3C Date and Time Formats Specification.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :W3CDTF
+  #
+  #     # The set of classes specified by the DCMI Type Vocabulary, used to categorize the nature or genre of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DCMIType
+  #
+  #     # The set of conceptual resources specified by the Dewey Decimal Classification.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DDC
+  #
+  #     # The set of media types specified by the Internet Assigned Numbers Authority.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :IMT
+  #
+  #     # The set of conceptual resources specified by the Library of Congress Classification.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LCC
+  #
+  #     # The set of labeled concepts specified by the Library of Congress Subject Headings.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LCSH
+  #
+  #     # The set of labeled concepts specified by the Medical Subject Headings.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MESH
+  #
+  #     # The set of conceptual resources specified by the National Library of Medicine Classification.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NLM
+  #
+  #     # The set of places specified by the Getty Thesaurus of Geographic Names.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TGN
+  #
+  #     # The set of conceptual resources specified by the Universal Decimal Classification.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :UDC
+  #
   #   end
   DC = Class.new(RDF::StrictVocabulary("http://purl.org/dc/terms/")) do
 

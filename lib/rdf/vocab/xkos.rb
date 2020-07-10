@@ -9,10 +9,10 @@ module RDF::Vocab
   #   # XKOS: an SKOS extension for representing statistical classifications
   #   #
   #   # This ontology is based on work initiated at Dagstuhl Schloss in September 2011
-  #   # @version Version 1.0.3 - 2016-03-15
-  #   # @version Version 1.1 - 2016-03-20
   #   # @version Version 1.0.2 - 2016-03-15
+  #   # @version Version 1.1 - 2016-03-20
   #   # @version Version 1.0.1 - 2014-11-26
+  #   # @version Version 1.0.3 - 2016-03-15
   #   class XKOS < RDF::StrictVocabulary
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :ClassificationLevel
@@ -101,9 +101,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :maxLength
   #
-  #     # immediate successor in the sequence
-  #     #
   #     # successeur immédiat dans la séquence
+  #     #
+  #     # immediate successor in the sequence
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :next
   #

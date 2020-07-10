@@ -18,9 +18,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Agent
   #
-  #     # Rationale Specific dates may apply to the particular rights statement.
-  #     #
   #     # Definition: The date range during which the particular rights statement applies or is applied to the content.
+  #     #
+  #     # Rationale Specific dates may apply to the particular rights statement.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :ApplicableDates
   #
@@ -28,35 +28,35 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Bitstream
   #
+  #     # Creation / Maintenance Notes: A preservation repository should never refer to content that it does not control. Therefore, the PREMIS working group assumed that the repository will always assign the contentLocation, probably by program.
+  #     #
   #     # Definition: Information needed to retrieve a file from the storage system, or to access a bitstream within a file.
   #     #
   #     # Usage Notes: If the preservation repository uses the objectIdentifier as a handle for retrieving data, contentLocation is implicit and does not need to be recorded.
-  #     #
-  #     # Creation / Maintenance Notes: A preservation repository should never refer to content that it does not control. Therefore, the PREMIS working group assumed that the repository will always assign the contentLocation, probably by program.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :ContentLocation
   #
-  #     # Definition: Information about the copyright status of the object(s).
-  #     #
   #     # Usage Notes: When rights basis is a copyright, copyrightInformation should be provided. Repositories may need to extend this with more detailed information. See the California Digital Library's copyrightMD schema (www.cdlib.org/inside/projects/rights/schema/) for an example of a more detailed scheme.
+  #     #
+  #     # Definition: Information about the copyright status of the object(s).
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :CopyrightInformation
   #
   #     # Creation / Maintenance Notes: If the object was created by the repository, assignment of creating application information should be straightforward. If the object was created outside the repository, it is possible this information could be supplied by the depositor. It might also be extracted from the file itself; the name of the creating application is often embedded within the file.
   #     #
-  #     # Definition: Information about the application that created the object.
-  #     #
   #     # Rationale: Information about the creating application, including the version of the application and the date the file was created, can be useful for problem solving purposes. For example, it is not uncommon for certain versions of software to be known for causing conversion errors or introducing artifacts. It is also useful to determine which rendering software is available for the digital object. For example, if you know that the Distiller program created the PDF file, you know it will be renderable with (among other programs) Adobe Reader.
+  #     #
+  #     # Definition: Information about the application that created the object.
   #     #
   #     # Usage Notes: This semantic unit applies to both objects created external to the repository and subsequently ingested, and to objects created by the repository, for example, through migration events. The creatingApplication container is repeatable if more than one application processed the object in turn. For example, a file could be created by Microsoft Word and later turned into a PDF using Adobe Acrobat. Details of both the Word and Acrobat applications may be recorded. However, if both files are stored in the repository, each file should be completely described as an Object entity and linked by using relationship information with a relationshipType “derivation.” It may also be repeated to record the creating application before the object was ingested as well as the creating application used as part of the ingest process. For example, an HTML file was created pre-ingest using Dreamweaver, and the Web crawler Heritrix then captured a snapshot of the files as part of the ingest. The amount of information needed for creatingApplication given here is minimal. For more granularity, extensibility is provided. Rather than having each repository record this locally, it would be preferable to have a registry of this information similar to format or environment registries.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :CreatingApplication
   #
-  #     # Usage Notes: This semantic unit is for additional objects that are necessary to render a file or representation, not for required software or hardware. It may also be used for a non-executable component of the object, such as a font or style sheet. For things that the software requires, see swDependency. This semantic unit does not include objects required by structural relationships, such as child content objects (e.g., figures that are part of an article), which are recorded under relationship with a relationshipType of “structural”. It is up to the repository to determine what constitutes a dependency in the context of the designated community. The objects noted may be internal or external to the preservation repository.
-  #     #
   #     # Creation / Maintenance Notes: Recommended practice is for a repository to archive objects on which other objects depend. These may be sent by the submitter of the primary object, or they may in some cases be automatically obtained by the repository. For example, a markup file will often contain links to other objects it requires such as DTDs or XML Schema. If it does, these objects can often be identified by the link and downloaded by the repository.
   #     #
   #     # Definition: Information about a non-software component or associated file needed in order to use or render the representation or file, for example, a schema, a DTD, or an entity file declaration.
+  #     #
+  #     # Usage Notes: This semantic unit is for additional objects that are necessary to render a file or representation, not for required software or hardware. It may also be used for a non-executable component of the object, such as a font or style sheet. For things that the software requires, see swDependency. This semantic unit does not include objects required by structural relationships, such as child content objects (e.g., figures that are part of an article), which are recorded under relationship with a relationshipType of “structural”. It is up to the repository to determine what constitutes a dependency in the context of the designated community. The objects noted may be internal or external to the preservation repository.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Dependency
   #
@@ -76,11 +76,11 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Event
   #
-  #     # Usage Notes: This may be used to record all error and warning messages issued by a program involved in the event or to record a pointer to an error log. If the event was a validity check (e.g., profile conformance) any anomalies or quirks discovered would be recorded here. All subunits of this semantic unit are optional. At least one subunit (i.e. eventOutcomeDetailNote and/or eventOutcomeDetailExtension) must be present if this container is included.
+  #     # Definition: A detailed description of the result or product of the event.
   #     #
   #     # Rationale: An event outcome may be sufficiently complex that a coded description is not adequate to document it.
   #     #
-  #     # Definition: A detailed description of the result or product of the event.
+  #     # Usage Notes: This may be used to record all error and warning messages issued by a program involved in the event or to record a pointer to an error log. If the event was a validity check (e.g., profile conformance) any anomalies or quirks discovered would be recorded here. All subunits of this semantic unit are optional. At least one subunit (i.e. eventOutcomeDetailNote and/or eventOutcomeDetailExtension) must be present if this container is included.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :EventOutcomeDetail
   #
@@ -94,21 +94,21 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :File
   #
-  #     # Definition: Information used to verify whether an object has been altered in an undocumented or unauthorized way.
-  #     #
   #     # Usage Notes: To perform a fixity check, a message digest calculated at some earlier time is compared with a message digest calculated at a later time. If the digests are the same, the object was not altered in the interim. Recommended practice is to use two or more message digests calculated by different algorithms. (Note that the terms “message digest” and “checksum” are commonly used interchangeably. However, the term “checksum” is more correctly used for the product of a cyclical redundancy check (CRC), whereas the term “message digest” refers to the result of a cryptographic hash function, which is what is referred to here.) The act of performing a fixity check and the date it occurred would be recorded as an Event. The result of the check would be recorded as the eventOutcome. Therefore, only the messageDigestAlgorithm and messageDigest need to be recorded as objectCharacteristics for future comparison. Representation level: It could be argued that if a representation consists of a single file or if all the files comprised by a representation are combined (e.g., zipped) into a single file, then a fixity check could be performed on the representation. However, in both cases the fixity check is actually being performed on a file, which in this case happens to be coincidental with a representation. Bitstream level: Message digests can be computed for bitstreams although they are not as common as with files. For example, the JPX format, which is a JPEG2000 format, supports the inclusion of MD5 or SHA-1 message digests in internal metadata that was calculated on any range of bytes of the file.
   #     #
   #     # Creation / Maintenance Notes: Automatically calculated and recorded by repository.
+  #     #
+  #     # Definition: Information used to verify whether an object has been altered in an undocumented or unauthorized way.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Fixity
   #
   #     # Usage Notes: A bitstream embedded within a file may have different characteristics than the larger file. For example, a bitstream in LaTex format could be embedded within an SGML file, or multiple images using different colorspaces could be embedded within a TIFF file. format must be recorded for every object. When the bitstream format can be recognized by the repository and the repository might want to treat the bitstream differently from the embedding file for preservation purposes, format can be recorded for embedded bitstreams. Although this semantic unit is mandatory, both of its subunits are optional. At least one subunit (i.e. either formatDesignation or formatRegistry) must be present if this container is included or both may be used. If the subunit (formatDesignation or formatRegistry) needs to be repeated, the entire format container is repeated. This allows for association of format designation with a particular set of format registry information. For example, if the precise format cannot be determined and two format designations are recorded, each is given within a separate format container. The format container may also be repeated for multiple format registry entries.
   #     #
-  #     # Definition: Identification of the format of a file or bitstream where format is the organization of digital information according to preset specifications.
-  #     #
   #     # Creation / Maintenance Notes: The format of a file or bitstream should be ascertained by the repository on ingest. Even if this information is provided by the submitter, directly in metadata or indirectly via the file name extension, recommended practice is to independently identify the format by parsing the file when possible. If the format cannot be identified at the time of ingest, it is valid to record that it is unknown, but the repository should subsequently make an effort to identify the format, even if manual intervention is required.
   #     #
   #     # Rationale: Many preservation activities depend on detailed knowledge about the format of the digital object. An accurate identification of format is essential. The identification provided, whether by name or pointer into a format registry, should be sufficient to associate the object with more detailed format information.
+  #     #
+  #     # Definition: Identification of the format of a file or bitstream where format is the organization of digital information according to preset specifications.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Format
   #
@@ -118,11 +118,11 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :FormatDesignation
   #
-  #     # Definition: Identifies and/or gives further information about the format by reference to an entry in a format registry.
-  #     #
   #     # Rationale: If central format registries are available to the preservation repository, they may provide an excellent way of referencing detailed format information.
   #     #
   #     # Usage Notes: Either formatDesignation or at least one instance of formatRegistry is required. If more than one formatRegistry needs to be recorded the format container should be repeated to include each additional set of formatRegistry information. The PREMIS working group assumed that a number of format registries will be developed and maintained to support digital preservation efforts. The proposal for a Global Digital Format Registry (GDFR) (http://hul.harvard.edu/gdfr/documents.html#data), for example, would create a network-accessible registry designed to store detailed specifications on formats and profiles.
+  #     #
+  #     # Definition: Identifies and/or gives further information about the format by reference to an entry in a format registry.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :FormatRegistry
   #
@@ -136,19 +136,19 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Identifier
   #
-  #     # Definition: Features of the object intended to inhibit access, use, or migration.
-  #     #
-  #     # Creation / Maintenance Notes: Inhibitors are more likely to be present on an object ingested by the repository than applied by the repository itself. It is often not possible to tell that a file has been encrypted by parsing it; the file may appear to be ASCII text. Therefore, information about inhibitors should be supplied as metadata with submitted objects when possible.
+  #     # Rationale: Format information may indicate whether a file is encrypted, but the nature of the encryption also must be recorded, as well as the access key.
   #     #
   #     # Usage Notes: Some file formats allow encryption for embedded bitstreams. Some file formats such as PDF use passwords to control access to content or specific functions. Although this is actually implemented at the bitstream level, for preservation purposes it is effectively managed at the file level; that is, passwords would not be recorded for individually addressable bitstreams. For certain types of inhibitor keys, more granularity may be required. If the inhibitor key information is identical to key information in digital signatures, use those semantic units.
   #     #
-  #     # Rationale: Format information may indicate whether a file is encrypted, but the nature of the encryption also must be recorded, as well as the access key.
+  #     # Creation / Maintenance Notes: Inhibitors are more likely to be present on an object ingested by the repository than applied by the repository itself. It is often not possible to tell that a file has been encrypted by parsing it; the file may appear to be ASCII text. Therefore, information about inhibitors should be supplied as metadata with submitted objects when possible.
+  #     #
+  #     # Definition: Features of the object intended to inhibit access, use, or migration.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Inhibitors
   #
-  #     # Definition: a set of content that is considered a single intellectual unit for purposes of management and description: for example, a particular book, map, photograph, or database. An Intellectual Entity can include other Intellectual Entities; for example, a Web site can include a Web page; a Web page can include an image. An Intellectual Entity may have one or more digital representations.
-  #     #
   #     # Intellectual entities are described via Descriptive metadata models. These are very domain-specific and are out of scope for PREMIS. Examples: Dublin Core, Mets, MARC
+  #     #
+  #     # Definition: a set of content that is considered a single intellectual unit for purposes of management and description: for example, a particular book, map, photograph, or database. An Intellectual Entity can include other Intellectual Entities; for example, a Web site can include a Web page; a Web page can include an image. An Intellectual Entity may have one or more digital representations.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :IntellectualEntity
   #
@@ -158,19 +158,19 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :LicenseInformation
   #
+  #     # Entity properties: Can be associated with one or more rights statements. Can participate in one or more events. Links between entities may be recorded from either direction and need not be bi-directional.
+  #     #
   #     # The object class aggregates information about a digital object held by a preservation repository and describes those characteristics relevant to preservation management. The only mandatory property is objectIdentifier. The object class has three subclasses: Representation, File, and Bitstream.
   #     #
   #     # Entity types:  Representation: A digital object instantiating or embodying an Intellectual Entity. A representation is the set of stored digital files and structural metadata needed to provide a complete and reasonable rendition of the Intellectual Entity. File: A named and ordered sequence of bytes that is known to an operating system. Bitstream: Contiguous or non-contiguous data within a file that has meaningful properties for preservation purposes.
-  #     #
-  #     # Entity properties: Can be associated with one or more rights statements. Can participate in one or more events. Links between entities may be recorded from either direction and need not be bi-directional.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Object
   #
   #     # Usage Notes: The semantic units included in objectCharacteristics should be treated as a set of information that pertains to a single object at a single compositionLevel. Object characteristics may be repeated when an object was created by applying two or more encodings, such as compression and encryption. In this case each repetition of objectCharacteristics would have an incrementally higher compositionLevel. When encryption is applied, the objectCharacteristics block must include an inhibitors semantic unit. A bitstream embedded within a file may have different object characteristics than the file. Where these characteristics are relevant for preservation, they should be recorded. When a single file is equivalent to a representation, objectCharacteristics may be applied and thus associated with the representation. In these cases, the relationship between the file comprising the representation and other associated files may be expressed using relationshipSubType.
   #     #
-  #     # Rationale: There are some important technical properties that apply to objects of any format. Detailed definition of format-specific properties is outside the scope of this Data Dictionary, although such properties may be included within objectCharacteristicsExtension.
-  #     #
   #     # Definition: Technical properties of a file or bitstream that are applicable to all or most formats.
+  #     #
+  #     # Rationale: There are some important technical properties that apply to objects of any format. Detailed definition of format-specific properties is outside the scope of this Data Dictionary, although such properties may be included within objectCharacteristicsExtension.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :ObjectCharacteristics
   #
@@ -178,19 +178,19 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :PremisEntity
   #
-  #     # Definition: Information indicating the decision or policy on the set of preservation functions to be applied to an object and the context in which the decision or policy was made.
-  #     #
   #     # Creation / Maintenance Notes: The preservation level may be assigned by the repository or requested by the depositor and submitted as metadata. The repository may also choose to record additional metadata indicating the context for the assignment of the preservation level.
   #     #
-  #     # Usage Notes: If the repository offers only a single preservation level, this value does not need to be explicitly recorded within the repository. Application of a particular set of preservationLevel semantic units may only cover a single representation of an object: representations in other technical forms or serving other functions may have a different preservationLevel applied. The container may be repeated if a preservation level value needs to be recorded in additional contexts (see preservationLevelRole).
-  #     #
   #     # Rationale: Some preservation repositories will offer multiple preservation options depending on factors such as the value or uniqueness of the material, the “preservability” of the format, the amount the customer is willing to pay, etc. The context surrounding the choice of a particular preservation option for an object may also require further explanation.
+  #     #
+  #     # Definition: Information indicating the decision or policy on the set of preservation functions to be applied to an object and the context in which the decision or policy was made.
+  #     #
+  #     # Usage Notes: If the repository offers only a single preservation level, this value does not need to be explicitly recorded within the repository. Application of a particular set of preservationLevel semantic units may only cover a single representation of an object: representations in other technical forms or serving other functions may have a different preservationLevel applied. The container may be repeated if a preservation level value needs to be recorded in additional contexts (see preservationLevelRole).
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :PreservationLevel
   #
-  #     # Usage Notes: The related object may or may not be held within the preservation repository. Recommended practice is that objects reside within the repository unless there is a good reason to reference an object outside. Internal and external references should be clear.
-  #     #
   #     #  Definition: The identifier and sequential context of the related resource
+  #     #
+  #     # Usage Notes: The related object may or may not be held within the preservation repository. Recommended practice is that objects reside within the repository unless there is a good reason to reference an object outside. Internal and external references should be clear.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :RelatedObjectIdentification
   #
@@ -214,11 +214,11 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :RightsStatement
   #
+  #     # Rationale: A repository may have a policy of generating digital signatures for files on ingest, or may have a need to store and later validate incoming digital signatures.
+  #     #
   #     # Definition: Information needed to use a digital signature to authenticate the signer of an object and/or the information contained in the object.
   #     #
   #     # Usage Notes: Several of the semantic components of signatureInformation are taken from the W3C’s XML-Signature Syntax and Processing; see www.w3.org/TR/2002/REC-xmldsig-core-20020212/ for more information on the structure and application of these semantic units.
-  #     #
-  #     # Rationale: A repository may have a policy of generating digital signatures for files on ingest, or may have a need to store and later validate incoming digital signatures.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Signature
   #
@@ -226,29 +226,29 @@ module RDF::Vocab
   #     #
   #     # Rationale: Objects that have the same technical properties may still differ as to the properties that should be preserved for future presentation or use.
   #     #
-  #     # Usage Notes: All of this semantic unit’s subunits are optional. At least one of the significantPropertiesValue and significantPropertiesExtension subunits must be present if this container is included or both may be used. Significant properties may be objective technical characteristics subjectively considered important, or subjectively determined characteristics. For example, a PDF may contain links that are not considered important and JavaScript that is considered important. Or future migrations of a TIFF image may require optimization for line clarity or for color; the option chosen would depend upon a curatorial judgment of the significant properties of the image. Listing significant properties implies that the repository plans to preserve these properties across time and requires them to acceptably survive preservation action; for example, to be maintained during emulation or after format migration. It also implies that the repository would note when preservation action results in modification of significant properties. In practice, significant properties might be used as measures of preservation success, as part of quality checking the results of a preservation action or evaluating the efficacy of a preservation method. For example, if the listed significant properties are not maintained after application of a particular preservation method, it may indicate a failure of the process or that the method is not well suited to the type of material. More experience with digital preservation is needed to determine the best ways of representing significant properties in general, and of representing modification of significant properties. The semantic units included in the significantProperties container aim to provide a flexible structure for describing significant properties, allowing general types of aspects, facets or attributes of an object to be declared and to be paired with specific significant details about the object pertaining to that aspect, facet or attribute. For example, some repositories may define significant properties for objects related to facets of content, appearance, structure, behavior, and context. Examples of facet:detail pairs in this case could include: significantPropertiesType = “content” significantPropertiesValue = “all textual content and images” significantPropertiesType = “behavior” significantPropertiesValue = “editable” Other repositories may choose to describe significant properties at a more granular attribute level; for example: significantPropertiesType = “page count” significantPropertiesValue = “7” significantPropertiesType = “page width” significantPropertiesValue = “210 mm” Each facet:detail pair should be contained in a separate, repeated significantProperties container. Further work on determining and describing significant properties may yield more detailed schemes to facilitate general description. Representing modification of significant properties as a result of preservation action also requires further work. One possible way involves the use of Object and Event information: Object A has significant properties volume and timing, which are recorded as significantProperties of A. In migrated version B, the timing is modified, which is noted in the eventOutcome of the migration event. Only volume is listed as a significant property of B.
-  #     #
   #     # Creation / Maintenance Notes: Significant properties may pertain to all objects of a certain class; for example, the repository can decide that for all PDF files, only the content need be preserved. In other cases, for example, for media art, the significant properties may be unique to each individual object. Where values are unique, they must be supplied by the submitter or provided by the curatorial staff of the repository.
+  #     #
+  #     # Usage Notes: All of this semantic unit’s subunits are optional. At least one of the significantPropertiesValue and significantPropertiesExtension subunits must be present if this container is included or both may be used. Significant properties may be objective technical characteristics subjectively considered important, or subjectively determined characteristics. For example, a PDF may contain links that are not considered important and JavaScript that is considered important. Or future migrations of a TIFF image may require optimization for line clarity or for color; the option chosen would depend upon a curatorial judgment of the significant properties of the image. Listing significant properties implies that the repository plans to preserve these properties across time and requires them to acceptably survive preservation action; for example, to be maintained during emulation or after format migration. It also implies that the repository would note when preservation action results in modification of significant properties. In practice, significant properties might be used as measures of preservation success, as part of quality checking the results of a preservation action or evaluating the efficacy of a preservation method. For example, if the listed significant properties are not maintained after application of a particular preservation method, it may indicate a failure of the process or that the method is not well suited to the type of material. More experience with digital preservation is needed to determine the best ways of representing significant properties in general, and of representing modification of significant properties. The semantic units included in the significantProperties container aim to provide a flexible structure for describing significant properties, allowing general types of aspects, facets or attributes of an object to be declared and to be paired with specific significant details about the object pertaining to that aspect, facet or attribute. For example, some repositories may define significant properties for objects related to facets of content, appearance, structure, behavior, and context. Examples of facet:detail pairs in this case could include: significantPropertiesType = “content” significantPropertiesValue = “all textual content and images” significantPropertiesType = “behavior” significantPropertiesValue = “editable” Other repositories may choose to describe significant properties at a more granular attribute level; for example: significantPropertiesType = “page count” significantPropertiesValue = “7” significantPropertiesType = “page width” significantPropertiesValue = “210 mm” Each facet:detail pair should be contained in a separate, repeated significantProperties container. Further work on determining and describing significant properties may yield more detailed schemes to facilitate general description. Representing modification of significant properties as a result of preservation action also requires further work. One possible way involves the use of Object and Event information: Object A has significant properties volume and timing, which are recorded as significantProperties of A. In migrated version B, the timing is modified, which is noted in the eventOutcome of the migration event. Only volume is listed as a significant property of B.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :SignificantProperties
   #
-  #     # Definition: Software required to render or use the object.
-  #     #
   #     # Creation / Maintenance Notes: If recording this explicitly, many different software environments may apply; for example, a particular object such as a PDF file may be viewable by several versions of several applications running under several operating systems and operating system versions. Although at least one software environment should be recorded, it is not necessary to record them all and each repository will have to make its own decisions about which software environments to record. Also, what appears to the user as a single rendering program can have many dependencies, including system utilities, runtime libraries, and so on, which each might have their own dependencies in turn. As with environment, metadata may be more efficiently managed in conjunction with a format registry either internal or external to a repository. In the absence of a global mechanism, repositories may be forced to develop their own local “registries” relating format to software environment.
+  #     #
+  #     # Definition: Software required to render or use the object.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Software
   #
-  #     # Usage Notes: When rights basis is a statute, statuteInformation should be provided.
-  #     #
   #     # Definition: Information about the statute allowing use of the object.
+  #     #
+  #     # Usage Notes: When rights basis is a statute, statuteInformation should be provided.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :StatuteInformation
   #
+  #     # Definition: Information about how and where a file is stored in the storage system.
+  #     #
   #     # Rationale: It is necessary for a repository to associate the contentLocation with the storageMedium.
   #     #
   #     # Usage Notes: Normally there would be a single storage location and medium for an object, because an object in another location would be considered a different object. The storage composite should be repeated if there are two or more copies that are identical bit-wise and managed as a unit except for the medium on which they are stored. They must have a single objectIdentifier and be managed as a single object by the repository. Although this semantic unit is mandatory, both of its subunits are optional. At least one subunit (i.e. either contentLocation or storageMedium) must be present or both may be used.
-  #     #
-  #     # Definition: Information about how and where a file is stored in the storage system.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Storage
   #
@@ -264,246 +264,246 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :TermOfRestriction
   #
-  #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
-  #     #
   #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/actionsGranted 
+  #     #
+  #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
   #     #
   #     # Definition: The action the preservation repository is allowed to take.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAct
   #
-  #     # Rationale: Digital provenance requires often that relationships between agents and events are documented. The role of the associated agent may need to be documented. For this, a SKOS vocabulary can be used. The LOC will publish a vocabulary at http://id.loc.gov/, denoting the agent's role. These vocabulary will publish the concepts also as subproperties to the linkingAgent property, for denoting the role of the agent in the event or rightsstatement.
-  #     #
   #     # Definition: link to the associated Agent.
+  #     #
+  #     # Rationale: Digital provenance requires often that relationships between agents and events are documented. The role of the associated agent may need to be documented. For this, a SKOS vocabulary can be used. The LOC will publish a vocabulary at http://id.loc.gov/, denoting the agent's role. These vocabulary will publish the concepts also as subproperties to the linkingAgent property, for denoting the role of the agent in the event or rightsstatement.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAgent
   #
-  #     # Rationale: This semantic unit provides a more reader-friendly version of the agent identified by the agentIdentifier.
-  #     #
   #     # Usage Note: The value is not necessarily unique.
   #     #
   #     # Definition: A text string which could be used in addition to agentIdentifier to identify an agent.
   #     #
   #     # Examples: Erik Owens, Pc
+  #     #
+  #     # Rationale: This semantic unit provides a more reader-friendly version of the agent identified by the agentIdentifier.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAgentName
   #
-  #     # Definition: Additional information about the agent. 
-  #     #
   #     # Rationale: Additional information may be needed to describe or disambiguate the agent.
+  #     #
+  #     # Definition: Additional information about the agent. 
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAgentNote
   #
-  #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
-  #     #
   #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/agentType 
   #     #
   #     # Definition: A high-level characterization of the type of agent.
+  #     #
+  #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasAgentType
   #
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasApplicableDates
   #
-  #     # Usage Notes: A file or bitstream can be subject to multiple encodings that must be decoded in reverse order (highest to lowest). For example, file A may be compressed to create file B, which is encrypted to create file C. To recreate a copy of the base file A, one would have to unencrypt file C to create file B and then uncompress file B to create file A. A compositionLevel of zero indicates that the object is a base object and not subject to further decoding, while a level of 1 or higher indicates that one or more decodings must be applied. Numbering goes lowest to highest (first encoded = 0). 0 is base object; 1-n are subsequent encodings. Use 0 as the default if there is only one compositionLevel. When multiple file objects are bundled together as filestreams within a package file object (e.g., a ZIP file), the individual filestream objects are not composition levels of the package file object. They should be considered separate objects, each with their own composition levels. For example, two encrypted files zipped together and stored in an archive as one file object would be described as three separate objects, each with its own associated metadata. The storage location of the two inner objects would point to the ZIP file, but the ZIP file itself would have only a single composition level (of zero) whose format would be “zip.”
-  #     #
-  #     # Rationale: A file or bitstream can be encoded with compression, encryption, etc., or bundled with other files or bitstreams into larger packages. Knowing the order in which these actions are taken is important if the original object or objects must be recovered.
-  #     #
   #     # Examples: 0, 1, 2
   #     #
-  #     # Definition: An indication of whether the object is subject to one or more processes of decoding or unbundling.
+  #     # Data Constraints: Non-negative integers.
+  #     #
+  #     # Usage Notes: A file or bitstream can be subject to multiple encodings that must be decoded in reverse order (highest to lowest). For example, file A may be compressed to create file B, which is encrypted to create file C. To recreate a copy of the base file A, one would have to unencrypt file C to create file B and then uncompress file B to create file A. A compositionLevel of zero indicates that the object is a base object and not subject to further decoding, while a level of 1 or higher indicates that one or more decodings must be applied. Numbering goes lowest to highest (first encoded = 0). 0 is base object; 1-n are subsequent encodings. Use 0 as the default if there is only one compositionLevel. When multiple file objects are bundled together as filestreams within a package file object (e.g., a ZIP file), the individual filestream objects are not composition levels of the package file object. They should be considered separate objects, each with their own composition levels. For example, two encrypted files zipped together and stored in an archive as one file object would be described as three separate objects, each with its own associated metadata. The storage location of the two inner objects would point to the ZIP file, but the ZIP file itself would have only a single composition level (of zero) whose format would be “zip.”
   #     #
   #     # Creation / Maintenance Notes: Composition level will generally be supplied by the repository, which should attempt to supply this value automatically. If the object was created by the repository, the creating routine knows the composition level and can supply this metadata. If the object is being ingested by the repository, repository programs will have to attempt to identify the composition level from the object itself or from externally supplied metadata.
   #     #
-  #     # Data Constraints: Non-negative integers.
+  #     # Definition: An indication of whether the object is subject to one or more processes of decoding or unbundling.
+  #     #
+  #     # Rationale: A file or bitstream can be encoded with compression, encryption, etc., or bundled with other files or bitstreams into larger packages. Knowing the order in which these actions are taken is important if the original object or objects must be recovered.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCompositionLevel
   #
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasContentLocation
   #
-  #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/contentLocationType
+  #     # Definition: The means of referencing the location of the content.
   #     #
   #     # Rationale: To understand the meaning of the value it is necessary to know what location scheme is used.
   #     #
   #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
   #     #
-  #     # Definition: The means of referencing the location of the content.
+  #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/contentLocationType
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasContentLocationType
   #
-  #     # Definition: The reference to the location of the content used by the storage system.
+  #     # Examples: http://wwasearch.loc.gov/107th/200212107035/http://house.gov/langevin/ (file), c:\apache2\htdocs\index.html (file), 64 [offset from start of file c:\apache2\htdocs\image\logo.gif] (bitstream)
   #     #
   #     # Usage Notes: This could be a fully qualified path and filename, or the information used by a resolution system (e.g., a handle) or the native information used by a storage management system. For a bitstream or filestream, this would probably be the reference point and offset of the starting position of the bitstream. It is up to the repository to determine the level of granularity that should be recorded.
   #     #
-  #     # Examples: http://wwasearch.loc.gov/107th/200212107035/http://house.gov/langevin/ (file), c:\apache2\htdocs\index.html (file), 64 [offset from start of file c:\apache2\htdocs\image\logo.gif] (bitstream)
+  #     # Definition: The reference to the location of the content used by the storage system.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasContentLocationValue
   #
   #     # Data Constraint: Values should be taken from ISO 3166.
   #     #
-  #     # Definition: The country whose copyright laws apply.
-  #     #
   #     # Rationale: Copyright law can vary from country to country.
   #     #
   #     # Examples: us, de, be
+  #     #
+  #     # Definition: The country whose copyright laws apply.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCopyrightJurisdiction
   #
-  #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/copyrightStatus
-  #     #
   #     # Definition: A coded designation for the copyright status of the object at the time the rights statement is recorded.
+  #     #
+  #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/copyrightStatus
   #     #
   #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCopyrightStatus
   #
-  #     # Example: 2001-10-26T19:32:52+00:00
+  #     # Data Constraint: To aid machine processing, value should use a structured form: xsd:dateTime
   #     #
   #     # Definition: The date that the copyright status recorded in copyrightStatus was determined.
   #     #
-  #     # Data Constraint: To aid machine processing, value should use a structured form: xsd:dateTime
+  #     # Example: 2001-10-26T19:32:52+00:00
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCopyrightStatusDeterminationDate
   #
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCreatingApplication
   #
-  #     # Definition: A designation for the name of the software program that created the object.
+  #     # Example: MSWord
   #     #
   #     # Usage Notes: The creatingApplication is the application that created the object in its current format, not the application that created the copy written to storage. For example, if a document is created by Microsoft Word and subsequently copied to archive storage by a repository’s Ingest program, the creatingApplication is Word, not the Ingest program.
   #     #
-  #     # Example: MSWord
+  #     # Definition: A designation for the name of the software program that created the object.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCreatingApplicationName
   #
-  #     # Definition: The version of the software program that created the object.
-  #     #
   #     # Example: 2000
+  #     #
+  #     # Definition: The version of the software program that created the object.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasCreatingApplicationVersion
   #
-  #     # Example: 2001-10-26T19:32:52+00:00
-  #     #
-  #     # Definition: The actual or approximate date and time the object was created.
+  #     # Data Constraint: To aid machine processing, value should use a structured form: xsd:dateTime
   #     #
   #     # Usage Notes: Use the most precise date available. This is the date the object was created by the creating application, not the date any copy was made externally or by the repository. For example, if a file is created by Microsoft Word in 2001 and two copies are made in 2003, the dateCreatedByApplication of all three files is 2001. The date a file is written to storage can be recorded as an Event. If the object itself contains internal creation and modification dates, the modification date should be used as dateCreatedByApplication. If the application is a Web harvester capturing an object at a point of time, use for date captured.
   #     #
-  #     # Data Constraint: To aid machine processing, value should use a structured form: xsd:dateTime
+  #     # Example: 2001-10-26T19:32:52+00:00
+  #     #
+  #     # Definition: The actual or approximate date and time the object was created.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasDateCreatedByApplication
   #
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasDependency
   #
+  #     # Definition: A designation for a component or associated file needed by the representation or file.
+  #     #
   #     # Rationale: It may not be self-evident from the dependencyIdentifier what the name of the object actually is.
   #     #
   #     # Example: Additional Element Set for Language Corpora
-  #     #
-  #     # Definition: A designation for a component or associated file needed by the representation or file.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasDependencyName
   #
+  #     # Data Constraint: To aid machine processing, value should use a structured form: xsd:dateTime
+  #     #
   #     # Usage Notes: Use “0000-00-00T00:00:00+00:00” for an open ended term of grant. Omit endDate if the ending date is unknown or the permission statement applies to many objects with different end dates.
   #     #
   #     # Definition: The ending date of the permission granted.
-  #     #
-  #     # Data Constraint: To aid machine processing, value should use a structured form: xsd:dateTime
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEndDate
   #
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEnvironment
   #
-  #     # Rationale: If multiple environments are described, this element can help to distinguish among them.
-  #     #
   #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/environmentCharacteristic
   #     #
-  #     # Definition: An assessment of the extent to which the described environment supports its purpose.
+  #     # Rationale: If multiple environments are described, this element can help to distinguish among them.
   #     #
   #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
+  #     #
+  #     # Definition: An assessment of the extent to which the described environment supports its purpose.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEnvironmentCharacteristic
   #
-  #     # Rationale: There may be a need to give a textual description of the environment for additional explanation.
+  #     # Definition: Additional information about the environment.
   #     #
-  #     # Example: This environment assumes that the PDF will be stored locally and used with a standalone PDF reader.
+  #     # Rationale: There may be a need to give a textual description of the environment for additional explanation.
   #     #
   #     # Usage Notes: This note could be used to record the context of the environment information. For example, if a file can be rendered through a PC client application or through a browser with a plug-in, this note could be used to identify which situation applies. The note should not be used for a textual description of environment information recorded more rigorously elsewhere.
   #     #
-  #     # Definition: Additional information about the environment.
+  #     # Example: This environment assumes that the PDF will be stored locally and used with a standalone PDF reader.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEnvironmentNote
   #
-  #     # Definition: The use(s) supported by the specified environment.
-  #     #
-  #     # Rationale: Different environments can support different uses of objects. For example, the environment needed to edit and modify a file can be quite different than the environment needed to render it.
+  #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
   #     #
   #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/environmentPurpose
   #     #
-  #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
+  #     # Definition: The use(s) supported by the specified environment.
+  #     #
+  #     # Rationale: Different environments can support different uses of objects. For example, the environment needed to edit and modify a file can be quite different than the environment needed to render it.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEnvironmentPurpose
   #
-  #     # Definition: The event associated with the object or an agent.
-  #     #
   #     # Usage Notes: Use to link to events that are not associated with relationships between objects, such as format validation, virus checking, etc.
+  #     #
+  #     # Definition: The event associated with the object or an agent.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEvent
   #
-  #     # Usage Notes: Recommended practice is to record the most specific time possible and to designate the time zone.
-  #     #
-  #     # Example: 2001-10-26T19:32:52+00:00
+  #     # Data Constraint: To aid machine processing, value should use a structured form: xsd:dateTime
   #     #
   #     # Definition: The single date and time, or date and time range, at or during which the event occurred.
   #     #
-  #     # Data Constraint: To aid machine processing, value should use a structured form: xsd:dateTime
+  #     # Example: 2001-10-26T19:32:52+00:00
+  #     #
+  #     # Usage Notes: Recommended practice is to record the most specific time possible and to designate the time zone.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEventDateTime
   #
-  #     # Usage Notes: eventDetail is not intended to be processed by machine. It may record any information about an event and/or point to information stored elsewhere.
+  #     # Definition: Additional information about the event.
   #     #
   #     # Examples: Object permanently withdrawn by request of Caroline Hunt,  Program=“MIGJP2JP2K”; version=“2.2”
   #     #
-  #     # Definition: Additional information about the event.
+  #     # Usage Notes: eventDetail is not intended to be processed by machine. It may record any information about an event and/or point to information stored elsewhere.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEventDetail
   #
-  #     # Rationale: A coded way of representing the outcome of an event may be useful for machine processing and reporting. If, for example, a fixity check fails, the event record provides both an actionable and a permanent record.
-  #     #
   #     # Usage Notes: Recommended practice is to use a controlled vocabulary that a system can act upon automatically. More detail about the outcome may be recorded in eventOutcomeDetail. Recommended practice is to define events with sufficient granularity that each event has a single outcome.
   #     #
-  #     # Examples: 00 [a code meaning “action successfully completed”], CV-01 [a code meaning “checksum validated”]
+  #     # Rationale: A coded way of representing the outcome of an event may be useful for machine processing and reporting. If, for example, a fixity check fails, the event record provides both an actionable and a permanent record.
   #     #
   #     # Data Constraint: Value should be taken from a controlled vocabulary.
   #     #
   #     # Definition: A categorization of the overall result of the event in terms of success, partial success, or failure.
+  #     #
+  #     # Examples: 00 [a code meaning “action successfully completed”], CV-01 [a code meaning “checksum validated”]
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEventOutcome
   #
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEventOutcomeDetail
   #
+  #     # Definition: A detailed description of the result or product of the event in textual form.
+  #     #
   #     # Rationale: Additional information in textual form may be needed about the outcome of the event.
   #     #
   #     # Examples: LZW compressed file, Non-standard tags found in header
-  #     #
-  #     # Definition: A detailed description of the result or product of the event in textual form.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEventOutcomeDetailNote
   #
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEventOutcomeInformation
   #
-  #     # This propety links a Event instance to an Agent instance. Via this property a distinction can be made in the linkingAgent properties based on the domain.
-  #     #
   #     # Extensions: One can extend this property to use more fine grained properties by defining the fine grained properties as subproperties of this property.
+  #     #
+  #     # This propety links a Event instance to an Agent instance. Via this property a distinction can be made in the linkingAgent properties based on the domain.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEventRelatedAgent
   #
-  #     # Extensions: One can extend this property to use more fine grained properties by defining the fine grained properties as subproperties of this property.
-  #     #
   #     # Rationale: Digital provenance often requires that relationships between objects and events are documented.
+  #     #
+  #     # Extensions: One can extend this property to use more fine grained properties by defining the fine grained properties as subproperties of this property.
   #     #
   #     # Definition: Information about an object associated with an event.
   #     # @return [RDF::Vocabulary::Term]
@@ -511,11 +511,11 @@ module RDF::Vocab
   #
   #     # Rationale: Categorizing events will aid the preservation repository in machine processing of event information, particularly in reporting.
   #     #
+  #     # Definition: A categorization of the nature of the event.
+  #     #
   #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/eventType
   #     #
   #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
-  #     #
-  #     # Definition: A categorization of the nature of the event.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEventType
   #
@@ -528,21 +528,21 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasFormatDesignation
   #
-  #     # Examples: Text/sgml, image/tiff/geotiff, Adobe PDF, DES, PGP, base64, unknown, LaTex
+  #     # Definition: A designation of the format of the file or bitstream.
   #     #
   #     # Data Constraint: Value should be taken from a controlled vocabulary.
   #     #
-  #     # Definition: A designation of the format of the file or bitstream.
+  #     # Examples: Text/sgml, image/tiff/geotiff, Adobe PDF, DES, PGP, base64, unknown, LaTex
   #     #
   #     # Usage Notes: For unidentified formats, formatName may be recorded as “unknown”.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasFormatName
   #
+  #     # Rationale: Qualifying information may be needed to supplement format designation and registry information or record a status for identification.
+  #     #
   #     # Usage Notes: The formatNote may contain free text, a reference pointer, or a value from a controlled list.
   #     #
   #     # Definition: Additional information about format.
-  #     #
-  #     # Rationale: Qualifying information may be needed to supplement format designation and registry information or record a status for identification.
   #     #
   #     # Examples: tentative identification, disjunction, multiple format identifications found
   #     # @return [RDF::Vocabulary::Term]
@@ -565,40 +565,40 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasFormatRegistryName
   #
-  #     # Rationale: The same format may be defined in different registries for different purposes. For example, one registry may give detailed format specifications while another has profile information. If multiple registries are recorded, this semantic unit can be used to distinguish among them.
+  #     # Definition: The purpose or expected use of the registry.
   #     #
   #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/formatRegistryRole
   #     #
-  #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
+  #     # Rationale: The same format may be defined in different registries for different purposes. For example, one registry may give detailed format specifications while another has profile information. If multiple registries are recorded, this semantic unit can be used to distinguish among them.
   #     #
-  #     # Definition: The purpose or expected use of the registry.
+  #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasFormatRegistryRole
   #
   #     # Examples: 6.0, 2003
   #     #
-  #     # Definition: The version of the format named in formatName.
+  #     # Usage Notes: If the format is versioned, formatVersion should be recorded. It can be either a numeric or chronological designation.
   #     #
   #     # Rationale: Many authority lists of format names are not granular enough to indicate version, for example, MIME Media types.
   #     #
-  #     # Usage Notes: If the format is versioned, formatVersion should be recorded. It can be either a numeric or chronological designation.
+  #     # Definition: The version of the format named in formatName.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasFormatVersion
   #
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasHardware
   #
-  #     # Usage Notes: Include manufacturer when this helps to identify or disambiguate the product. Include version for firmware or other components where that information is pertinent.
-  #     #
   #     # Examples: Intel Pentium III, 1 GB DRAM, Windows XPcompatible joystick
   #     #
   #     # Definition: Manufacturer, model, and version (if applicable) of the hardware.
+  #     #
+  #     # Usage Notes: Include manufacturer when this helps to identify or disambiguate the product. Include version for firmware or other components where that information is pertinent.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasHardwareName
   #
-  #     # Usage Notes: This could be an identifier or URI used to point to hardware documentation.
-  #     #
   #     # Definition: Additional requirements or instructions related to the hardware referenced in hwName.
+  #     #
+  #     # Usage Notes: This could be an identifier or URI used to point to hardware documentation.
   #     #
   #     # Examples: 32MB minimum, Required RAM for Apache is unknown
   #     #
@@ -606,9 +606,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasHardwareOtherInformation
   #
-  #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/hardwareType
-  #     #
   #     # Definition: Class or category of the hardware.
+  #     #
+  #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/hardwareType
   #     #
   #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
   #     # @return [RDF::Vocabulary::Term]
@@ -617,45 +617,45 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasIdentifier
   #
-  #     # Usage Notes: The type of the identifier may be implicit within the repository as long it can be explicitly communicated when the item is disseminated outside of it.
-  #     #
-  #     # Rationale: Identifier values cannot be assumed to be unique across domains. The combination of identifierType and identifierValue should ensure uniqueness.
-  #     #
   #     # Data Constraint: Value should be taken from controlled vocabulary.
   #     #
   #     # Definition: A designation of the domain within which the identifier is unique.
   #     #
   #     # Examples: DLC, DRS, hdl:4263537
+  #     #
+  #     # Rationale: Identifier values cannot be assumed to be unique across domains. The combination of identifierType and identifierValue should ensure uniqueness.
+  #     #
+  #     # Usage Notes: The type of the identifier may be implicit within the repository as long it can be explicitly communicated when the item is disseminated outside of it.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasIdentifierType
   #
-  #     # Defnition: The value of the Identifier.
-  #     #
   #     # Examples: 0000000312 (Representation), IU2440 (File), WAC1943.56 (File), http://nrs.harvard.edu/urn-3:FHCL.Loeb:sal (File), IU2440-1 (Bitstream)
+  #     #
+  #     # Defnition: The value of the Identifier.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasIdentifierValue
   #
+  #     # Example: [DES decryption key]
+  #     #
   #     # Usage Notes: The key should be provided if known. However, it is not advisable to actually store the inhibitorKey in plain text in an unsecure database.
   #     #
   #     # Definition: The decryption key or password.
-  #     #
-  #     # Example: [DES decryption key]
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasInhibitorKey
   #
-  #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/inhibitorTarget
-  #     #
   #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
+  #     #
+  #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/inhibitorTarget
   #     #
   #     # Definition: The content or function protected by the inhibitor.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasInhibitorTarget
   #
-  #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/inhibitorType
-  #     #
   #     # Definition: The inhibitor method employed.
   #     #
   #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
+  #     #
+  #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/inhibitorType
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasInhibitorType
   #
@@ -671,58 +671,58 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasKeyInformation
   #
-  #     # Usage Notes: This could contain the actual text of the license or agreement or a paraphrase or summary.
-  #     #
   #     # Definition: Text describing the license or agreement by which permission was granted.
+  #     #
+  #     # Usage Notes: This could contain the actual text of the license or agreement or a paraphrase or summary.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasLicenseTerms
   #
   #     # Definition: The output of the message digest algorithm.
   #     #
-  #     # Rationale: This must be stored so that it can be compared in future fixity checks.
-  #     #
   #     # Example: 7c9b35da4f2ebd436f1cf88e5a39b3a257edf4a22be3c955ac49da2e2107b67a1924419563
+  #     #
+  #     # Rationale: This must be stored so that it can be compared in future fixity checks.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasMessageDigest
   #
-  #     # Definition: The specific algorithm used to construct the message digest for the digital object.
-  #     #
   #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
+  #     #
+  #     # Definition: The specific algorithm used to construct the message digest for the digital object.
   #     #
   #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/cryptographicHashFunctions
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasMessageDigestAlgorithm
   #
-  #     # Rationale: A preservation repository may ingest files that have had message digests calculated by the submitter; checking these ensures that the file as received is the same as the file as sent. The repository may also ingest files that do not have message digests, and so must calculate the initial value upon ingest. It can be useful to know who calculated the initial value of the message digest.
+  #     # Examples: DRS, A0000978
   #     #
   #     # Usage Notes: The originator of the message digest could be represented by a string representing the agent (e.g., “NRS” referring to the archive itself) or a pointer to an agent description (e.g., “A0000987” taken here to be an agentIdentifierValue).
   #     #
-  #     # Examples: DRS, A0000978
-  #     #
-  #     # Definition: The agent that created the original message digest that is compared in a fixity check.
+  #     # Rationale: A preservation repository may ingest files that have had message digests calculated by the submitter; checking these ensures that the file as received is the same as the file as sent. The repository may also ingest files that do not have message digests, and so must calculate the initial value upon ingest. It can be useful to know who calculated the initial value of the message digest.
   #     #
   #     # Creation / Maintenance Notes: If the calculation of the initial message digest is treated by the repository as an Event, this information could be obtained from an Event record.
+  #     #
+  #     # Definition: The agent that created the original message digest that is compared in a fixity check.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasMessageDigestOriginator
   #
-  #     # Definition: Information about an object associated with an event or rightsstatement.
+  #     # Extensions: One can extend this property to use more fine grained properties by defining the fine grained properties as subproperties of this property.
   #     #
   #     # Rationale: Digital provenance often requires that relationships between objects and events are documented. / Rights statements must be associated with the objects to which they pertain, either by linking from the rights statement to the object(s) or by linking from the object(s) to the rights statement. This provides the mechanism for the link from the rights statement to an object. For denoting the role of the object, when related to an event,one can extend this ontology be defining your own subproperties, such as those given by http://id.loc.gov/vocabulary/preservation/eventRelatedObjectRole.
   #     #
-  #     # Extensions: One can extend this property to use more fine grained properties by defining the fine grained properties as subproperties of this property.
+  #     # Definition: Information about an object associated with an event or rightsstatement.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasObject
   #
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasObjectCharacteristics
   #
-  #     # Usage Notes: This is the name of the object as designated in the Submission Information Package (SIP). The object may have other names in different contexts. When two repositories are exchanging content, it would be important for the receiving repository to know and record the name of the representation at the originating repository. In the case of representations, this may be a directory name.
+  #     # Creation / Maintenance Notes: This value would always be supplied to the repository by the submitter or harvesting application. How much of the file path to preserve would be up to the repository.
   #     #
   #     # Definition: The name of the object as submitted to or harvested by the repository, before any renaming by the repository.
   #     #
   #     # Rationale: The name used within the preservation repository may not be known outside of the repository. A depositor might need to request a file by its original name. Also, the repository may need to reconstruct internal links for dissemination.
   #     #
-  #     # Creation / Maintenance Notes: This value would always be supplied to the repository by the submitter or harvesting application. How much of the file path to preserve would be up to the repository.
+  #     # Usage Notes: This is the name of the object as designated in the Submission Information Package (SIP). The object may have other names in different contexts. When two repositories are exchanging content, it would be important for the receiving repository to know and record the name of the representation at the originating repository. In the case of representations, this may be a directory name.
   #     #
   #     # Example: N419.pdf
   #     # @return [RDF::Vocabulary::Term]
@@ -731,29 +731,29 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasPreservationLevel
   #
-  #     # Examples: 2001-10-26T19:32:52+00:00
-  #     #
-  #     # Rationale: The preservationLevel applicable to an object is expected to be reviewed and changed over time, in response to changes in repository preservation requirements, policies, or capabilities relevant to the object. The date that the current preservationLevelValue was assigned aids review of decisions.
+  #     # Data Constraint: To aid machine processing, value should use a structured form: xsd:dateTime
   #     #
   #     # Definition: The date, or date and time, when a particular preservationLevelValue was assigned to the object.
   #     #
-  #     # Data Constraint: To aid machine processing, value should use a structured form: xsd:dateTime
+  #     # Rationale: The preservationLevel applicable to an object is expected to be reviewed and changed over time, in response to changes in repository preservation requirements, policies, or capabilities relevant to the object. The date that the current preservationLevelValue was assigned aids review of decisions.
+  #     #
+  #     # Examples: 2001-10-26T19:32:52+00:00
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasPreservationLevelDateAssigned
   #
-  #     # Examples: user pays, legislation, defective file, bit-level preservation only available for this format
-  #     #
   #     # Usage Notes: This optional semantic unit records the reason for applying the preservationLevelValue. This information can be particularly important when the assigned preservationLevelValue differs from usual repository policy. For example, a repository may normally assign a preservationLevelValue of “full preservation” for JPEG2000 files, but detects that a particular file is defective. This may mean that the repository’s preservation strategy for JPEG2000 may not be effective for this particular file, so the repository may assign a preservationLevelValue of “bit-level preservation” to this file, recording “defective file” as the rationale. Similarly, legislative requirements or contractual agreements may require a higher level of preservation to be assigned to a particular object than would be assigned to that class of object according to usual policy. In this case, the rationale for the assignment may be recorded as “legislation” or “user pays”, for example. preservationLevelRationale may be repeated if more than one reason needs to be recorded.
   #     #
   #     # Definition: The reason a particular preservationLevelValue was applied to      the object.
+  #     #
+  #     # Examples: user pays, legislation, defective file, bit-level preservation only available for this format
   #     #
   #     # Rationale: Application of a particular preservationLevelValue may require justification, especially if it differs from that usually applied according to repository policy.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasPreservationLevelRationale
   #
-  #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/preservationLevelRole
-  #     #
   #     # Definition: A value indicating the context in which a set of preservation options is applicable.
+  #     #
+  #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/preservationLevelRole
   #     #
   #     # Rationale: Repositories may assign preservationLevelValues in different contexts which must be differentiated, and may need to record more than one context.
   #     #
@@ -763,15 +763,15 @@ module RDF::Vocab
   #
   #     # Usage Notes: Only one preservationLevelValue may be recorded per preservationLevel container. If a further preservationLevelValue applies to the object in a different context, a separate preservationLevel container should be repeated.
   #     #
-  #     # Rationale: Some preservation repositories will offer multiple preservation options depending on factors such as the value or uniqueness of the material, the “preservability” of the format, the amount the customer is willing to pay, etc.
-  #     #
   #     # Examples: bit-level, full, fully supported with future migrations (File), 0
   #     #
   #     # Data Constraint: Value should be taken from a controlled vocabulary.
   #     #
-  #     # Definition: A value indicating the set of preservation functions expected to be applied to the object.
+  #     # Rationale: Some preservation repositories will offer multiple preservation options depending on factors such as the value or uniqueness of the material, the “preservability” of the format, the amount the customer is willing to pay, etc.
   #     #
   #     # Creation / Maintenance Notes: The preservation level may be assigned by the repository or requested by the depositor and submitted as metadata.
+  #     #
+  #     # Definition: A value indicating the set of preservation functions expected to be applied to the object.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasPreservationLevelValue
   #
@@ -779,9 +779,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRelatedObject
   #
-  #     # Definition: The order of the related object relative to other objects with the same type of relationship.
-  #     #
   #     # Rationale: This semantic unit is particularly useful for structural relationships. In order to reconstruct a representation, it may be necessary to know the order of components with sibling or part-whole relationships. For example, to render a page-image book, it is necessary to know the order of files representing pages.
+  #     #
+  #     # Definition: The order of the related object relative to other objects with the same type of relationship.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRelatedObjectSequence
   #
@@ -789,17 +789,17 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRelatedStatuteInformation
   #
-  #     # The LOC will provide a SKOS vocabulary, where the concepts can also be used as object properties at http://id.loc.gov/. These relationships will capture the relationship type and subtype. One can define its own relationships, but for interoperability reasons, these should be linked to or made a subproperty of the properties of the LOC vocabulary.
-  #     #
   #     # Extensions: One can extend this property to use more fine grained properties by defining the fine grained properties as subproperties of this property.
+  #     #
+  #     # The LOC will provide a SKOS vocabulary, where the concepts can also be used as object properties at http://id.loc.gov/. These relationships will capture the relationship type and subtype. One can define its own relationships, but for interoperability reasons, these should be linked to or made a subproperty of the properties of the LOC vocabulary.
   #     #
   #     # Definition: This property links one object to one or more other objects.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRelationship
   #
-  #     # Definition: A condition or limitation on the act.
-  #     #
   #     # Examples: No more than three, Allowed only after one year of archival retention has elapsed, Rightsholder must be notified after completion of act
+  #     #
+  #     # Definition: A condition or limitation on the act.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasRestriction
   #
@@ -846,21 +846,21 @@ module RDF::Vocab
   #
   #     # Definition: The encoding used for the values of signatureValue, keyInformation.
   #     #
-  #     # Rationale: These values cannot be interpreted correctly if the encoding is unknown.
-  #     #
   #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/signatureEncoding
+  #     #
+  #     # Rationale: These values cannot be interpreted correctly if the encoding is unknown.
   #     #
   #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSignatureEncoding
   #
-  #     # Definition: A designation for the encryption and hash algorithms used for signature generation.
-  #     #
   #     # Rationale: The same algorithms must be used for signature validation.
   #     #
   #     # Data Constraint: Values are taken from a SKOS vocabulary
   #     #
   #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
+  #     #
+  #     # Definition: A designation for the encryption and hash algorithms used for signature generation.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSignatureMethod
   #
@@ -872,23 +872,23 @@ module RDF::Vocab
   #
   #     # Definition: The operations to be performed in order to validate the digital signature.
   #     #
-  #     # Rationale: The repository should not assume that the procedure for validating any particular signature will be known many years in the future without documentation.
-  #     #
   #     # Usage Notes: This may include the canonicalization method used before calculating the message digest, if the object was normalized before signing. This value could also be a pointer to archive documentation.
+  #     #
+  #     # Rationale: The repository should not assume that the procedure for validating any particular signature will be known many years in the future without documentation.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSignatureValidationRules
   #
-  #     # Example: juS5RhJ884qoFR8flVXd/rbrSDVGn40CapgB7qeQiT+rr0NekEQ6BHhUA8dT3+BCTBUQI0dBjlml9lwzENXvS83zRECjzXbMRTUtVZiPZG2pqKPnL2YU3A9645UCjTXU+jgFumv7k78hieAGDzNci+PQ9KRmm//icT7JaYztgt4=
-  #     #
   #     # Definition: The digital signature; a value generated from the application of a private key to a message digest.
+  #     #
+  #     # Example: juS5RhJ884qoFR8flVXd/rbrSDVGn40CapgB7qeQiT+rr0NekEQ6BHhUA8dT3+BCTBUQI0dBjlml9lwzENXvS83zRECjzXbMRTUtVZiPZG2pqKPnL2YU3A9645UCjTXU+jgFumv7k78hieAGDzNci+PQ9KRmm//icT7JaYztgt4=
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSignatureValue
   #
-  #     # Rationale: The signer might also be carried in the keyInformation, but it can be accessed more conveniently if recorded here.
+  #     # Usage Notes: If the signer is an Agent known to the repository, this property can directly link to this agent. The consequence is punning: a datatype property and object property with the same name, i.e., :signer
   #     #
   #     # Definition: The individual, institution, or authority responsible for generating the signature.
   #     #
-  #     # Usage Notes: If the signer is an Agent known to the repository, this property can directly link to this agent. The consequence is punning: a datatype property and object property with the same name, i.e., :signer
+  #     # Rationale: The signer might also be carried in the keyInformation, but it can be accessed more conveniently if recorded here.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSigner
   #
@@ -897,44 +897,44 @@ module RDF::Vocab
   #
   #     # Definition: The aspect, facet, or attribute of an object about which significant properties are being described.
   #     #
-  #     # Examples: content, structure, behavior, page count, page width, typeface, hyperlinks (representation), image count (representation), color space [for an embedded image] (bitstream)
+  #     # Usage Notes: This semantic unit is optional and may be used as part of a facet:detail pair with significantPropertiesValue.
   #     #
   #     # Rationale: Repositories may choose to describe significant properties based on a particular aspect or attribute of an object.
   #     #
-  #     # Usage Notes: This semantic unit is optional and may be used as part of a facet:detail pair with significantPropertiesValue.
+  #     # Examples: content, structure, behavior, page count, page width, typeface, hyperlinks (representation), image count (representation), color space [for an embedded image] (bitstream)
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSignificantPropertiesType
   #
-  #     # Definition: Description of the characteristics of a particular object subjectively determined to be important to maintain through preservation actions.
-  #     #
-  #     # Usage Notes: If facet:detail pairs are used, the content of significantPropertiesValue should describe the significant properties of object relevant to the aspect, facet, or attribute declared in the significantPropertiesType with which it is paired. If facet:detail pairs are not used, significantPropertiesValue may be used to freely describe any characteristic of an object. significantPropertiesValue is not repeatable. Multiple significant properties should be described in separate, repeated significantProperties container units.
+  #     # Rationale: Repositories may choose to describe significant properties based on a particular aspect or attribute of an object.
   #     #
   #     # Examples: [For a Web page containing animation that is not considered essential] Content only, [For detail associated with a significantPropertiesType of "behavior"] Hyperlinks traversable, [For a Word document with embedded links that are not considered essential] Content only, [For detail associated with significantPropertiesType of "behavior"] Editable, [For detail associated with a significantPropertiesType of "page width"] 210 mm, [For a PDF with an embedded graph, where the lines' color determines the lines' meaning] Color, [For detail associated with a significantPropertiesType of "appearance"] Color
   #     #
-  #     # Rationale: Repositories may choose to describe significant properties based on a particular aspect or attribute of an object.
+  #     # Usage Notes: If facet:detail pairs are used, the content of significantPropertiesValue should describe the significant properties of object relevant to the aspect, facet, or attribute declared in the significantPropertiesType with which it is paired. If facet:detail pairs are not used, significantPropertiesValue may be used to freely describe any characteristic of an object. significantPropertiesValue is not repeatable. Multiple significant properties should be described in separate, repeated significantProperties container units.
+  #     #
+  #     # Definition: Description of the characteristics of a particular object subjectively determined to be important to maintain through preservation actions.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSignificantPropertiesValue
   #
+  #     # Usage Notes: Defining this semantic unit as size in bytes makes it unnecessary to record a unit of measurement. However, for the purpose of data exchange the unit of measurement should be stated or understood by both partners.
+  #     #
   #     # Definition: The size in bytes of the file or bitstream stored in the repository.
   #     #
-  #     # Usage Notes: Defining this semantic unit as size in bytes makes it unnecessary to record a unit of measurement. However, for the purpose of data exchange the unit of measurement should be stated or understood by both partners.
+  #     # Creation / Maintenance Notes: Automatically obtained by the repository.
   #     #
   #     # Example: 2038937
   #     #
   #     # Rationale: Size is useful for ensuring the correct number of bytes from storage have been retrieved and that an application has enough room to move or process files. It might also be used when billing for storage.
-  #     #
-  #     # Creation / Maintenance Notes: Automatically obtained by the repository.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSize
   #
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSoftware
   #
-  #     # Example: GNU gcc >=2.7.2
+  #     # Definition: The name and, if applicable, version of any software component needed by the software referenced in swName in the context of using this object.
   #     #
   #     # Usage Notes: The value should be constructed in a way that is consistent with the construction of swName and swVersion. This semantic unit identifies the software that is needed by what is recorded in swName, for example, a Perl script that depends on a Perl module. In this case the Perl script is listed in swName, with the module in swDependency within a software container.
   #     #
-  #     # Definition: The name and, if applicable, version of any software component needed by the software referenced in swName in the context of using this object.
+  #     # Example: GNU gcc >=2.7.2
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSoftwareDependency
   #
@@ -946,9 +946,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSoftwareName
   #
-  #     # Example: Install Acroread (Adobe Acrobat) first; copy nppdf.so (the plug-in) to your Mozilla plug-ins directory, and make sure a copy of (or symlink to) Acroread is in your PATH.
-  #     #
   #     # Definition: Additional requirements or instructions related to the software referenced in swName.
+  #     #
+  #     # Example: Install Acroread (Adobe Acrobat) first; copy nppdf.so (the plug-in) to your Mozilla plug-ins directory, and make sure a copy of (or symlink to) Acroread is in your PATH.
   #     #
   #     # Usage Notes: This could be a reliable persistent identifier or URI pointing to software documentation within or outside the repository.
   #     # @return [RDF::Vocabulary::Term]
@@ -956,43 +956,43 @@ module RDF::Vocab
   #
   #     # Rationale: Several different layers of software can be required to support an object.
   #     #
-  #     # Definition: Class or category of software.
-  #     #
   #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/softwareType
+  #     #
+  #     # Definition: Class or category of software.
   #     #
   #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSoftwareType
   #
-  #     # Definition: The version or versions of the software referenced in swName.
-  #     #
   #     # Usage Notes: If there is no formal version, the date of issuance can be used.
+  #     #
+  #     # Definition: The version or versions of the software referenced in swName.
   #     #
   #     # Examples: >=2.2.0, 6.0, 2003
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasSoftwareVersion
   #
-  #     # Definition: The beginning date of the permission granted.
-  #     #
   #     # Data Constraint: To aid machine processing, value should use a structured form: xsd:dateTime
+  #     #
+  #     # Definition: The beginning date of the permission granted.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasStartDate
   #
-  #     # Examples: Legal Deposit (Jersey) Law 200, National Library of New Zealand (Te Puna Mātauranga o Aotearoa) Act 2003 no 19 part 4 s 34
+  #     # Definition: An identifying designation for the statute.
   #     #
   #     # Usage Notes: Use standard citation form when applicable.
   #     #
-  #     # Definition: An identifying designation for the statute.
+  #     # Examples: Legal Deposit (Jersey) Law 200, National Library of New Zealand (Te Puna Mātauranga o Aotearoa) Act 2003 no 19 part 4 s 34
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasStatuteCitation
   #
-  #     # Definition: The date that the determination was made that the statute authorized the permission(s) noted.
+  #     # Data Constraint: To aid machine processing, value should use a structured form: xsd:dateTime
   #     #
   #     # Rationale: The permission in question may be the subject of some interpretation. These assessments are made within a specific context and at a specific time. At another time the context, and therefore the assessment, could change. For this reason it can be important to record the date of the decision.
   #     #
   #     # Example: 2001-10-26T19:32:52+00:00
   #     #
-  #     # Data Constraint: To aid machine processing, value should use a structured form: xsd:dateTime
+  #     # Definition: The date that the determination was made that the statute authorized the permission(s) noted.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasStatuteInformationDeterminationDate
   #
@@ -1009,13 +1009,13 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasStorage
   #
-  #     # Rationale: The repository needs to know the medium on which an object is stored in order to know how and when to do media refreshment and media migration.
-  #     #
-  #     # Definition: The physical medium on which the object is stored (e.g., magnetic tape, hard disk, CD-ROM, DVD).
+  #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/storageMedium
   #     #
   #     # Extensions: One can use its own SKOS vocabulary to use for this property. The precondition to do this, is to link your SKOS concepts to the SKOS concepts of the id.loc.gov vocabulary.
   #     #
-  #     # Data Constraint: Values are taken from the SKOS vocabulary: http://id.loc.gov/vocabulary/preservation/storageMedium
+  #     # Rationale: The repository needs to know the medium on which an object is stored in order to know how and when to do media refreshment and media migration.
+  #     #
+  #     # Definition: The physical medium on which the object is stored (e.g., magnetic tape, hard disk, CD-ROM, DVD).
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasStorageMedium
   #

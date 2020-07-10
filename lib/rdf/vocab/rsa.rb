@@ -8,8 +8,8 @@ module RDF::Vocab
   #   #
   #   # ontology for the RSA public private keys 
   #   # @see http://www.w3.org/ns/auth/X509Uml.svg
-  #   # @see http://en.wikipedia.org/wiki/RSA
   #   # @see http://lists.foaf-project.org/mailman/listinfo/foaf-protocols
+  #   # @see http://en.wikipedia.org/wiki/RSA
   #   class RSA < RDF::StrictVocabulary
   #     #      The union of the public and private components of an RSAKey.     Usually those pieces are not kept together     
   #     # @return [RDF::Vocabulary::Term]
