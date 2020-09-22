@@ -9,8 +9,8 @@ module RDF::Vocab
   #   # W3C PROVenance Interchange
   #   #
   #   # This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page).  If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/ Archives/Public/public-prov-comments/). All feedback is welcome.
-  #   # @see http://www.w3.org/TR/prov-o/#names-of-inverse-properties
   #   # @see http://www.w3.org/TR/prov-overview/
+  #   # @see http://www.w3.org/TR/prov-o/#names-of-inverse-properties
   #   class PROV < RDF::StrictVocabulary
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Accept
@@ -77,9 +77,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Derivation
   #
-  #     # A given dictionary forms a given structure for its members. A different structure (obtained either by insertion or removal of members) constitutes a different dictionary.
-  #     #
   #     # This concept allows for the provenance of the dictionary, but also of its constituents to be expressed. Such a notion of dictionary corresponds to a wide variety of concrete data structures, such as a maps or associative arrays.
+  #     #
+  #     # A given dictionary forms a given structure for its members. A different structure (obtained either by insertion or removal of members) constitutes a different dictionary.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Dictionary
   #
@@ -110,9 +110,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Generation
   #
-  #     # An instance of prov:Influence provides additional descriptions about the binary prov:wasInfluencedBy relation from some influenced Activity, Entity, or Agent to the influencing Activity, Entity, or Agent. For example, :stomach_ache prov:wasInfluencedBy :spoon; prov:qualifiedInfluence [ a prov:Influence; prov:entity :spoon; :foo :bar ] . Because prov:Influence is a broad relation, the more specific relations (Communication, Delegation, End, etc.) should be used when applicable.
-  #     #
   #     # Because prov:Influence is a broad relation, its most specific subclasses (e.g. prov:Communication, prov:Delegation, prov:End, prov:Revision, etc.) should be used when applicable.
+  #     #
+  #     # An instance of prov:Influence provides additional descriptions about the binary prov:wasInfluencedBy relation from some influenced Activity, Entity, or Agent to the influencing Activity, Entity, or Agent. For example, :stomach_ache prov:wasInfluencedBy :spoon; prov:qualifiedInfluence [ a prov:Influence; prov:entity :spoon; :foo :bar ] . Because prov:Influence is a broad relation, the more specific relations (Communication, Delegation, End, etc.) should be used when applicable.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Influence
   #
@@ -305,9 +305,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hadPrimarySource
   #
-  #     # The _optional_ Role that an Entity assumed in the context of an Activity. For example, :baking prov:used :spoon; prov:qualified [ a prov:Usage; prov:entity :spoon; prov:hadRole roles:mixing_implement ].
-  #     #
   #     # This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href="#owl-profile">PROV-O OWL Profile</a>.
+  #     #
+  #     # The _optional_ Role that an Entity assumed in the context of an Activity. For example, :baking prov:used :spoon; prov:qualified [ a prov:Usage; prov:entity :spoon; prov:hadRole roles:mixing_implement ].
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hadRole
   #
@@ -488,9 +488,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :wasGeneratedBy
   #
-  #     # Because prov:wasInfluencedBy is a broad relation, its more specific subproperties (e.g. prov:wasInformedBy, prov:actedOnBehalfOf, prov:wasEndedBy, etc.) should be used when applicable.
-  #     #
   #     # This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href="#owl-profile">PROV-O OWL Profile</a>.
+  #     #
+  #     # Because prov:wasInfluencedBy is a broad relation, its more specific subproperties (e.g. prov:wasInformedBy, prov:actedOnBehalfOf, prov:wasEndedBy, etc.) should be used when applicable.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :wasInfluencedBy
   #
@@ -629,10 +629,7 @@ module RDF::Vocab
 
     # Ontology definition
     ontology :"http://www.w3.org/ns/prov#",
-      comment: %(This document is published by the Provenance Working Group \(http://www.w3.org/2011/prov/wiki/Main_Page\).
-
-If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org \(subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/
-Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
+      comment: "This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page).\n\nIf you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/\nArchives/Public/public-prov-comments/). All feedback is welcome.".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov".freeze,
       label: "W3C PROVenance Interchange".freeze,
       "owl:imports": ["http://www.w3.org/ns/prov-aq#".freeze, "http://www.w3.org/ns/prov-dc#".freeze, "http://www.w3.org/ns/prov-dictionary#".freeze, "http://www.w3.org/ns/prov-links#".freeze, "http://www.w3.org/ns/prov-o#".freeze, "http://www.w3.org/ns/prov-o-inverses#".freeze],
@@ -661,7 +658,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       "prov:n": "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Activity".freeze,
       type: "owl:Class".freeze
     term :ActivityInfluence,
-      comment: [%(ActivityInfluence provides additional descriptions of an Activity's binary influence upon any other kind of resource. Instances of ActivityInfluence use the prov:activity property to cite the influencing Activity.).freeze, %(It is not recommended that the type ActivityInfluence be asserted without also asserting one of its more specific subclasses.).freeze],
+      comment: ["ActivityInfluence provides additional descriptions of an Activity's binary influence upon any other kind of resource. Instances of ActivityInfluence use the prov:activity property to cite the influencing Activity.".freeze, "It is not recommended that the type ActivityInfluence be asserted without also asserting one of its more specific subclasses.".freeze],
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "ActivityInfluence".freeze,
       "owl:disjointWith": "prov:EntityInfluence".freeze,
@@ -685,7 +682,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       "prov:n": "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Agent".freeze,
       type: "owl:Class".freeze
     term :AgentInfluence,
-      comment: [%(AgentInfluence provides additional descriptions of an Agent's binary influence upon any other kind of resource. Instances of AgentInfluence use the prov:agent property to cite the influencing Agent.).freeze, %(It is not recommended that the type AgentInfluence be asserted without also asserting one of its more specific subclasses.).freeze],
+      comment: ["AgentInfluence provides additional descriptions of an Agent's binary influence upon any other kind of resource. Instances of AgentInfluence use the prov:agent property to cite the influencing Agent.".freeze, "It is not recommended that the type AgentInfluence be asserted without also asserting one of its more specific subclasses.".freeze],
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "AgentInfluence".freeze,
       "prov:category": "qualified".freeze,
@@ -694,7 +691,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       subClassOf: "prov:Influence".freeze,
       type: "owl:Class".freeze
     term :Association,
-      comment: %(An instance of prov:Association provides additional descriptions about the binary prov:wasAssociatedWith relation from an prov:Activity to some prov:Agent that had some responsiblity for it. For example, :baking prov:wasAssociatedWith :baker; prov:qualifiedAssociation [ a prov:Association; prov:agent :baker; :foo :bar ].).freeze,
+      comment: "An instance of prov:Association provides additional descriptions about the binary prov:wasAssociatedWith relation from an prov:Activity to some prov:Agent that had some responsiblity for it. For example, :baking prov:wasAssociatedWith :baker; prov:qualifiedAssociation [ a prov:Association; prov:agent :baker; :foo :bar ].".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "Association".freeze,
       "prov:category": "qualified".freeze,
@@ -706,7 +703,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       subClassOf: "prov:AgentInfluence".freeze,
       type: "owl:Class".freeze
     term :Attribution,
-      comment: %(An instance of prov:Attribution provides additional descriptions about the binary prov:wasAttributedTo relation from an prov:Entity to some prov:Agent that had some responsible for it. For example, :cake prov:wasAttributedTo :baker; prov:qualifiedAttribution [ a prov:Attribution; prov:entity :baker; :foo :bar ].).freeze,
+      comment: "An instance of prov:Attribution provides additional descriptions about the binary prov:wasAttributedTo relation from an prov:Entity to some prov:Agent that had some responsible for it. For example, :cake prov:wasAttributedTo :baker; prov:qualifiedAttribution [ a prov:Attribution; prov:entity :baker; :foo :bar ].".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "Attribution".freeze,
       "prov:category": "qualified".freeze,
@@ -719,7 +716,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       subClassOf: "prov:AgentInfluence".freeze,
       type: "owl:Class".freeze
     term :Bundle,
-      comment: %(Note that there are kinds of bundles \(e.g. handwritten letters, audio recordings, etc.\) that are not expressed in PROV-O, but can be still be described by PROV-O.).freeze,
+      comment: "Note that there are kinds of bundles (e.g. handwritten letters, audio recordings, etc.) that are not expressed in PROV-O, but can be still be described by PROV-O.".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "Bundle".freeze,
       "prov:category": "expanded".freeze,
@@ -738,7 +735,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       subClassOf: "prov:Entity".freeze,
       type: "owl:Class".freeze
     term :Communication,
-      comment: %(An instance of prov:Communication provides additional descriptions about the binary prov:wasInformedBy relation from an informed prov:Activity to the prov:Activity that informed it. For example, :you_jumping_off_bridge prov:wasInformedBy :everyone_else_jumping_off_bridge; prov:qualifiedCommunication [ a prov:Communication; prov:activity :everyone_else_jumping_off_bridge; :foo :bar ].).freeze,
+      comment: "An instance of prov:Communication provides additional descriptions about the binary prov:wasInformedBy relation from an informed prov:Activity to the prov:Activity that informed it. For example, :you_jumping_off_bridge prov:wasInformedBy :everyone_else_jumping_off_bridge; prov:qualifiedCommunication [ a prov:Communication; prov:activity :everyone_else_jumping_off_bridge; :foo :bar ].".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "Communication".freeze,
       "prov:category": "qualified".freeze,
@@ -776,7 +773,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       subClassOf: "prov:Contributor".freeze,
       type: "owl:Class".freeze
     term :Delegation,
-      comment: %(An instance of prov:Delegation provides additional descriptions about the binary prov:actedOnBehalfOf relation from a performing prov:Agent to some prov:Agent for whom it was performed. For example, :mixing prov:wasAssociatedWith :toddler . :toddler prov:actedOnBehalfOf :mother; prov:qualifiedDelegation [ a prov:Delegation; prov:entity :mother; :foo :bar ].).freeze,
+      comment: "An instance of prov:Delegation provides additional descriptions about the binary prov:actedOnBehalfOf relation from a performing prov:Agent to some prov:Agent for whom it was performed. For example, :mixing prov:wasAssociatedWith :toddler . :toddler prov:actedOnBehalfOf :mother; prov:qualifiedDelegation [ a prov:Delegation; prov:entity :mother; :foo :bar ].".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "Delegation".freeze,
       "prov:category": "qualified".freeze,
@@ -788,7 +785,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       subClassOf: "prov:AgentInfluence".freeze,
       type: "owl:Class".freeze
     term :Derivation,
-      comment: [%(An instance of prov:Derivation provides additional descriptions about the binary prov:wasDerivedFrom relation from some derived prov:Entity to another prov:Entity from which it was derived. For example, :chewed_bubble_gum prov:wasDerivedFrom :unwrapped_bubble_gum; prov:qualifiedDerivation [ a prov:Derivation; prov:entity :unwrapped_bubble_gum; :foo :bar ].).freeze, %(The more specific forms of prov:Derivation \(i.e., prov:Revision, prov:Quotation, prov:PrimarySource\) should be asserted if they apply.).freeze],
+      comment: ["An instance of prov:Derivation provides additional descriptions about the binary prov:wasDerivedFrom relation from some derived prov:Entity to another prov:Entity from which it was derived. For example, :chewed_bubble_gum prov:wasDerivedFrom :unwrapped_bubble_gum; prov:qualifiedDerivation [ a prov:Derivation; prov:entity :unwrapped_bubble_gum; :foo :bar ].".freeze, "The more specific forms of prov:Derivation (i.e., prov:Revision, prov:Quotation, prov:PrimarySource) should be asserted if they apply.".freeze],
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "Derivation".freeze,
       "prov:category": "qualified".freeze,
@@ -801,7 +798,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       subClassOf: "prov:EntityInfluence".freeze,
       type: "owl:Class".freeze
     term :Dictionary,
-      comment: [%(A given dictionary forms a given structure for its members. A different structure \(obtained either by insertion or removal of members\) constitutes a different dictionary.).freeze, %(This concept allows for the provenance of the dictionary, but also of its constituents to be expressed. Such a notion of dictionary corresponds to a wide variety of concrete data structures, such as a maps or associative arrays.).freeze],
+      comment: ["A given dictionary forms a given structure for its members. A different structure (obtained either by insertion or removal of members) constitutes a different dictionary.".freeze, "This concept allows for the provenance of the dictionary, but also of its constituents to be expressed. Such a notion of dictionary corresponds to a wide variety of concrete data structures, such as a maps or associative arrays.".freeze],
       isDefinedBy: "prov:".freeze,
       label: "Dictionary".freeze,
       "prov:category": "collections".freeze,
@@ -812,7 +809,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       "prov:n": "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary".freeze,
       type: "owl:Class".freeze
     term :DirectQueryService,
-      comment: %(Type for a generic provenance query service. Mainly for use in RDF provenance query service descriptions, to facilitate discovery in linked data environments.).freeze,
+      comment: "Type for a generic provenance query service. Mainly for use in RDF provenance query service descriptions, to facilitate discovery in linked data environments.".freeze,
       isDefinedBy: "prov:".freeze,
       label: "ProvenanceService".freeze,
       "prov:aq": "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#provenance-query-service-discovery".freeze,
@@ -839,7 +836,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       subClassOf: ["prov:Dictionary".freeze, "prov:EmptyCollection".freeze],
       type: "owl:Class".freeze
     term :End,
-      comment: %(An instance of prov:End provides additional descriptions about the binary prov:wasEndedBy relation from some ended prov:Activity to an prov:Entity that ended it. For example, :ball_game prov:wasEndedBy :buzzer; prov:qualifiedEnd [ a prov:End; prov:entity :buzzer; :foo :bar; prov:atTime '2012-03-09T08:05:08-05:00'^^xsd:dateTime ].).freeze,
+      comment: "An instance of prov:End provides additional descriptions about the binary prov:wasEndedBy relation from some ended prov:Activity to an prov:Entity that ended it. For example, :ball_game prov:wasEndedBy :buzzer; prov:qualifiedEnd [ a prov:End; prov:entity :buzzer; :foo :bar; prov:atTime '2012-03-09T08:05:08-05:00'^^xsd:dateTime ].".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "End".freeze,
       "prov:category": "qualified".freeze,
@@ -863,7 +860,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       "prov:n": "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Entity".freeze,
       type: "owl:Class".freeze
     term :EntityInfluence,
-      comment: [%(EntityInfluence provides additional descriptions of an Entity's binary influence upon any other kind of resource. Instances of EntityInfluence use the prov:entity property to cite the influencing Entity.).freeze, %(It is not recommended that the type EntityInfluence be asserted without also asserting one of its more specific subclasses.).freeze],
+      comment: ["EntityInfluence provides additional descriptions of an Entity's binary influence upon any other kind of resource. Instances of EntityInfluence use the prov:entity property to cite the influencing Entity.".freeze, "It is not recommended that the type EntityInfluence be asserted without also asserting one of its more specific subclasses.".freeze],
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "EntityInfluence".freeze,
       "prov:category": "qualified".freeze,
@@ -872,7 +869,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       subClassOf: "prov:Influence".freeze,
       type: "owl:Class".freeze
     term :Generation,
-      comment: %(An instance of prov:Generation provides additional descriptions about the binary prov:wasGeneratedBy relation from a generated prov:Entity to the prov:Activity that generated it. For example, :cake prov:wasGeneratedBy :baking; prov:qualifiedGeneration [ a prov:Generation; prov:activity :baking; :foo :bar ].).freeze,
+      comment: "An instance of prov:Generation provides additional descriptions about the binary prov:wasGeneratedBy relation from a generated prov:Entity to the prov:Activity that generated it. For example, :cake prov:wasGeneratedBy :baking; prov:qualifiedGeneration [ a prov:Generation; prov:activity :baking; :foo :bar ].".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "Generation".freeze,
       "prov:category": "qualified".freeze,
@@ -885,7 +882,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       subClassOf: ["prov:ActivityInfluence".freeze, "prov:InstantaneousEvent".freeze],
       type: "owl:Class".freeze
     term :Influence,
-      comment: [%(An instance of prov:Influence provides additional descriptions about the binary prov:wasInfluencedBy relation from some influenced Activity, Entity, or Agent to the influencing Activity, Entity, or Agent. For example, :stomach_ache prov:wasInfluencedBy :spoon; prov:qualifiedInfluence [ a prov:Influence; prov:entity :spoon; :foo :bar ] . Because prov:Influence is a broad relation, the more specific relations \(Communication, Delegation, End, etc.\) should be used when applicable.).freeze, %(Because prov:Influence is a broad relation, its most specific subclasses \(e.g. prov:Communication, prov:Delegation, prov:End, prov:Revision, etc.\) should be used when applicable.).freeze],
+      comment: ["An instance of prov:Influence provides additional descriptions about the binary prov:wasInfluencedBy relation from some influenced Activity, Entity, or Agent to the influencing Activity, Entity, or Agent. For example, :stomach_ache prov:wasInfluencedBy :spoon; prov:qualifiedInfluence [ a prov:Influence; prov:entity :spoon; :foo :bar ] . Because prov:Influence is a broad relation, the more specific relations (Communication, Delegation, End, etc.) should be used when applicable.".freeze, "Because prov:Influence is a broad relation, its most specific subclasses (e.g. prov:Communication, prov:Delegation, prov:End, prov:Revision, etc.) should be used when applicable.".freeze],
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "Influence".freeze,
       "prov:category": "qualified".freeze,
@@ -916,7 +913,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
         )],
       type: "owl:Class".freeze
     term :InstantaneousEvent,
-      comment: %(An instantaneous event, or event for short, happens in the world and marks a change in the world, in its activities and in its entities. The term 'event' is commonly used in process algebra with a similar meaning. Events represent communications or interactions; they are assumed to be atomic and instantaneous.).freeze,
+      comment: "An instantaneous event, or event for short, happens in the world and marks a change in the world, in its activities and in its entities. The term 'event' is commonly used in process algebra with a similar meaning. Events represent communications or interactions; they are assumed to be atomic and instantaneous.".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "InstantaneousEvent".freeze,
       "prov:category": "qualified".freeze,
@@ -925,7 +922,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       "prov:definition": "The PROV data model is implicitly based on a notion of instantaneous events (or just events), that mark transitions in the world. Events include generation, usage, or invalidation of entities, as well as starting or ending of activities. This notion of event is not first-class in the data model, but it is useful for explaining its other concepts and its semantics.".freeze,
       type: "owl:Class".freeze
     term :Invalidation,
-      comment: %(An instance of prov:Invalidation provides additional descriptions about the binary prov:wasInvalidatedBy relation from an invalidated prov:Entity to the prov:Activity that invalidated it. For example, :uncracked_egg prov:wasInvalidatedBy :baking; prov:qualifiedInvalidation [ a prov:Invalidation; prov:activity :baking; :foo :bar ].).freeze,
+      comment: "An instance of prov:Invalidation provides additional descriptions about the binary prov:wasInvalidatedBy relation from an invalidated prov:Entity to the prov:Activity that invalidated it. For example, :uncracked_egg prov:wasInvalidatedBy :baking; prov:qualifiedInvalidation [ a prov:Invalidation; prov:activity :baking; :foo :bar ].".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "Invalidation".freeze,
       "prov:category": "qualified".freeze,
@@ -991,7 +988,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       subClassOf: "prov:Agent".freeze,
       type: "owl:Class".freeze
     term :Plan,
-      comment: %(There exist no prescriptive requirement on the nature of plans, their representation, the actions or steps they consist of, or their intended goals. Since plans may evolve over time, it may become necessary to track their provenance, so plans themselves are entities. Representing the plan explicitly in the provenance can be useful for various tasks: for example, to validate the execution as represented in the provenance record, to manage expectation failures, or to provide explanations.).freeze,
+      comment: "There exist no prescriptive requirement on the nature of plans, their representation, the actions or steps they consist of, or their intended goals. Since plans may evolve over time, it may become necessary to track their provenance, so plans themselves are entities. Representing the plan explicitly in the provenance can be useful for various tasks: for example, to validate the execution as represented in the provenance record, to manage expectation failures, or to provide explanations.".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "Plan".freeze,
       "prov:category": ["expanded".freeze, "qualified".freeze],
@@ -1002,7 +999,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       subClassOf: "prov:Entity".freeze,
       type: "owl:Class".freeze
     term :PrimarySource,
-      comment: %(An instance of prov:PrimarySource provides additional descriptions about the binary prov:hadPrimarySource relation from some secondary prov:Entity to an earlier, primary prov:Entity. For example, :blog prov:hadPrimarySource :newsArticle; prov:qualifiedPrimarySource [ a prov:PrimarySource; prov:entity :newsArticle; :foo :bar ] .).freeze,
+      comment: "An instance of prov:PrimarySource provides additional descriptions about the binary prov:hadPrimarySource relation from some secondary prov:Entity to an earlier, primary prov:Entity. For example, :blog prov:hadPrimarySource :newsArticle; prov:qualifiedPrimarySource [ a prov:PrimarySource; prov:entity :newsArticle; :foo :bar ] .".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "PrimarySource".freeze,
       "prov:category": "qualified".freeze,
@@ -1024,7 +1021,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       subClassOf: "prov:Role".freeze,
       type: "owl:Class".freeze
     term :Quotation,
-      comment: %(An instance of prov:Quotation provides additional descriptions about the binary prov:wasQuotedFrom relation from some taken prov:Entity from an earlier, larger prov:Entity. For example, :here_is_looking_at_you_kid prov:wasQuotedFrom :casablanca_script; prov:qualifiedQuotation [ a prov:Quotation; prov:entity :casablanca_script; :foo :bar ].).freeze,
+      comment: "An instance of prov:Quotation provides additional descriptions about the binary prov:wasQuotedFrom relation from some taken prov:Entity from an earlier, larger prov:Entity. For example, :here_is_looking_at_you_kid prov:wasQuotedFrom :casablanca_script; prov:qualifiedQuotation [ a prov:Quotation; prov:entity :casablanca_script; :foo :bar ].".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "Quotation".freeze,
       "prov:category": "qualified".freeze,
@@ -1061,7 +1058,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       subClassOf: "prov:Activity".freeze,
       type: "owl:Class".freeze
     term :Revision,
-      comment: %(An instance of prov:Revision provides additional descriptions about the binary prov:wasRevisionOf relation from some newer prov:Entity to an earlier prov:Entity. For example, :draft_2 prov:wasRevisionOf :draft_1; prov:qualifiedRevision [ a prov:Revision; prov:entity :draft_1; :foo :bar ].).freeze,
+      comment: "An instance of prov:Revision provides additional descriptions about the binary prov:wasRevisionOf relation from some newer prov:Entity to an earlier prov:Entity. For example, :draft_2 prov:wasRevisionOf :draft_1; prov:qualifiedRevision [ a prov:Revision; prov:entity :draft_1; :foo :bar ].".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "Revision".freeze,
       "prov:category": "qualified".freeze,
@@ -1093,7 +1090,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       "rdfs:seeAlso": "prov:hadRole".freeze,
       type: "owl:Class".freeze
     term :ServiceDescription,
-      comment: %(Type for a generic provenance query service. Mainly for use in RDF provenance query service descriptions, to facilitate discovery in linked data environments.).freeze,
+      comment: "Type for a generic provenance query service. Mainly for use in RDF provenance query service descriptions, to facilitate discovery in linked data environments.".freeze,
       isDefinedBy: "prov:".freeze,
       label: "ServiceDescription".freeze,
       "prov:aq": "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#provenance-query-service-discovery".freeze,
@@ -1111,7 +1108,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       subClassOf: ["owl:Thing".freeze, "prov:Agent".freeze],
       type: "owl:Class".freeze
     term :Start,
-      comment: %(An instance of prov:Start provides additional descriptions about the binary prov:wasStartedBy relation from some started prov:Activity to an prov:Entity that started it. For example, :foot_race prov:wasStartedBy :bang; prov:qualifiedStart [ a prov:Start; prov:entity :bang; :foo :bar; prov:atTime '2012-03-09T08:05:08-05:00'^^xsd:dateTime ] .).freeze,
+      comment: "An instance of prov:Start provides additional descriptions about the binary prov:wasStartedBy relation from some started prov:Activity to an prov:Entity that started it. For example, :foot_race prov:wasStartedBy :bang; prov:qualifiedStart [ a prov:Start; prov:entity :bang; :foo :bar; prov:atTime '2012-03-09T08:05:08-05:00'^^xsd:dateTime ] .".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "Start".freeze,
       "prov:category": "qualified".freeze,
@@ -1129,7 +1126,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       subClassOf: "prov:Activity".freeze,
       type: "owl:Class".freeze
     term :Usage,
-      comment: %(An instance of prov:Usage provides additional descriptions about the binary prov:used relation from some prov:Activity to an prov:Entity that it used. For example, :keynote prov:used :podium; prov:qualifiedUsage [ a prov:Usage; prov:entity :podium; :foo :bar ].).freeze,
+      comment: "An instance of prov:Usage provides additional descriptions about the binary prov:used relation from some prov:Activity to an prov:Entity that it used. For example, :keynote prov:used :podium; prov:qualifiedUsage [ a prov:Usage; prov:entity :podium; :foo :bar ].".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "Usage".freeze,
       "prov:category": "qualified".freeze,
@@ -1144,7 +1141,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
 
     # Property definitions
     property :actedOnBehalfOf,
-      comment: %(An object property to express the accountability of an agent towards another agent. The subordinate agent acted on behalf of the responsible agent in an actual activity. ).freeze,
+      comment: "An object property to express the accountability of an agent towards another agent. The subordinate agent acted on behalf of the responsible agent in an actual activity. ".freeze,
       domain: "prov:Agent".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "actedOnBehalfOf".freeze,
@@ -1198,9 +1195,7 @@ Archives/Public/public-prov-comments/\). All feedback is welcome.).freeze,
       subPropertyOf: "rdfs:seeAlso".freeze,
       type: "owl:AnnotationProperty".freeze
     property :asInBundle,
-      comment: %(prov:asInBundle is used to specify which bundle the general entity of a prov:mentionOf property is described.
-
-When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:asInBundle :b is also asserted to cite the Bundle in which :y was described.).freeze,
+      comment: "prov:asInBundle is used to specify which bundle the general entity of a prov:mentionOf property is described.\n\nWhen :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:asInBundle :b is also asserted to cite the Bundle in which :y was described.".freeze,
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-links#".freeze,
       label: "asInBundle".freeze,
@@ -1209,7 +1204,7 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       range: "prov:Bundle".freeze,
       type: "owl:ObjectProperty".freeze
     property :atLocation,
-      comment: [%(The Location of any resource.).freeze, %(This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href="#owl-profile">PROV-O OWL Profile</a>.).freeze],
+      comment: ["The Location of any resource.".freeze, "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>.".freeze],
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("prov:Activity".freeze, "prov:Agent".freeze, "prov:Entity".freeze, "prov:InstantaneousEvent".freeze)
@@ -1223,7 +1218,7 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       range: "prov:Location".freeze,
       type: "owl:ObjectProperty".freeze
     property :atTime,
-      comment: %(The time at which an InstantaneousEvent occurred, in the form of xsd:dateTime.).freeze,
+      comment: "The time at which an InstantaneousEvent occurred, in the form of xsd:dateTime.".freeze,
       domain: "prov:InstantaneousEvent".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "atTime".freeze,
@@ -1234,20 +1229,20 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       range: "xsd:dateTime".freeze,
       type: "owl:DatatypeProperty".freeze
     property :category,
-      comment: %(Classify prov-o terms into three categories, including 'starting-point', 'qualifed', and 'extended'. This classification is used by the prov-o html document to gently introduce prov-o terms to its users. ).freeze,
+      comment: "Classify prov-o terms into three categories, including 'starting-point', 'qualifed', and 'extended'. This classification is used by the prov-o html document to gently introduce prov-o terms to its users. ".freeze,
       isDefinedBy: ["http://www.w3.org/ns/prov-o#".freeze, "prov:".freeze],
       type: "owl:AnnotationProperty".freeze
     property :component,
-      comment: %(Classify prov-o terms into six components according to prov-dm, including 'agents-responsibility', 'alternate', 'annotations', 'collections', 'derivations', and 'entities-activities'. This classification is used so that readers of prov-o specification can find its correspondence with the prov-dm specification.).freeze,
+      comment: "Classify prov-o terms into six components according to prov-dm, including 'agents-responsibility', 'alternate', 'annotations', 'collections', 'derivations', and 'entities-activities'. This classification is used so that readers of prov-o specification can find its correspondence with the prov-dm specification.".freeze,
       isDefinedBy: ["http://www.w3.org/ns/prov-o#".freeze, "prov:".freeze],
       type: "owl:AnnotationProperty".freeze
     property :constraints,
-      comment: %(A reference to the principal section of the PROV-CONSTRAINTS document that describes this concept.).freeze,
+      comment: "A reference to the principal section of the PROV-CONSTRAINTS document that describes this concept.".freeze,
       isDefinedBy: ["http://www.w3.org/ns/prov-o#".freeze, "prov:".freeze],
       subPropertyOf: "rdfs:seeAlso".freeze,
       type: "owl:AnnotationProperty".freeze
     property :definition,
-      comment: %(A definition quoted from PROV-DM or PROV-CONSTRAINTS that describes the concept expressed with this OWL term.).freeze,
+      comment: "A definition quoted from PROV-DM or PROV-CONSTRAINTS that describes the concept expressed with this OWL term.".freeze,
       isDefinedBy: ["http://www.w3.org/ns/prov-o#".freeze, "prov:".freeze],
       type: "owl:AnnotationProperty".freeze
     property :derivedByInsertionFrom,
@@ -1277,7 +1272,7 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       subPropertyOf: "prov:wasDerivedFrom".freeze,
       type: "owl:ObjectProperty".freeze
     property :describesService,
-      comment: %(relates a generic provenance query service resource \(type prov:ServiceDescription\) to a specific query service description \(e.g. a prov:DirectQueryService or a sd:Service\).).freeze,
+      comment: "relates a generic provenance query service resource (type prov:ServiceDescription) to a specific query service description (e.g. a prov:DirectQueryService or a sd:Service).".freeze,
       isDefinedBy: "prov:".freeze,
       label: "describesService".freeze,
       "prov:aq": "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/rovenance-query-service-description".freeze,
@@ -1298,21 +1293,21 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       subPropertyOf: "prov:entity".freeze,
       type: "owl:ObjectProperty".freeze
     property :dm,
-      comment: %(A reference to the principal section of the PROV-DM document that describes this concept.).freeze,
+      comment: "A reference to the principal section of the PROV-DM document that describes this concept.".freeze,
       isDefinedBy: ["http://www.w3.org/ns/prov-o#".freeze, "prov:".freeze],
       subPropertyOf: "rdfs:seeAlso".freeze,
       type: "owl:AnnotationProperty".freeze
     property :editorialNote,
-      comment: %(A note by the OWL development team about how this term expresses the PROV-DM concept, or how it should be used in context of semantic web or linked data.).freeze,
+      comment: "A note by the OWL development team about how this term expresses the PROV-DM concept, or how it should be used in context of semantic web or linked data.".freeze,
       isDefinedBy: ["http://www.w3.org/ns/prov-o#".freeze, "prov:".freeze],
       type: "owl:AnnotationProperty".freeze
     property :editorsDefinition,
-      comment: %(When the prov-o term does not have a definition drawn from prov-dm, and the prov-o editor provides one.).freeze,
+      comment: "When the prov-o term does not have a definition drawn from prov-dm, and the prov-o editor provides one.".freeze,
       isDefinedBy: ["http://www.w3.org/ns/prov-o#".freeze, "prov:".freeze],
       subPropertyOf: "prov:definition".freeze,
       type: "owl:AnnotationProperty".freeze
     property :endedAtTime,
-      comment: %(The time at which an activity ended. See also prov:startedAtTime.).freeze,
+      comment: "The time at which an activity ended. See also prov:startedAtTime.".freeze,
       domain: "prov:Activity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "endedAtTime".freeze,
@@ -1347,7 +1342,7 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       subPropertyOf: "prov:influenced".freeze,
       type: "owl:ObjectProperty".freeze
     property :generatedAtTime,
-      comment: %(The time at which an entity was completely created and is available for use.).freeze,
+      comment: "The time at which an entity was completely created and is available for use.".freeze,
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "generatedAtTime".freeze,
@@ -1358,7 +1353,7 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       range: "xsd:dateTime".freeze,
       type: "owl:DatatypeProperty".freeze
     property :hadActivity,
-      comment: [%(The _optional_ Activity of an Influence, which used, generated, invalidated, or was the responsibility of some Entity. This property is _not_ used by ActivityInfluence \(use prov:activity instead\).).freeze, %(This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href="#owl-profile">PROV-O OWL Profile</a>.).freeze],
+      comment: ["The _optional_ Activity of an Influence, which used, generated, invalidated, or was the responsibility of some Entity. This property is _not_ used by ActivityInfluence (use prov:activity instead).".freeze, "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>.".freeze],
       domain: ["prov:Influence".freeze, term(
           type: "owl:Class".freeze,
           unionOf: list("prov:Delegation".freeze, "prov:Derivation".freeze, "prov:End".freeze, "prov:Start".freeze)
@@ -1385,7 +1380,7 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       range: "prov:KeyEntityPair".freeze,
       type: "owl:ObjectProperty".freeze
     property :hadGeneration,
-      comment: %(The _optional_ Generation involved in an Entity's Derivation.).freeze,
+      comment: "The _optional_ Generation involved in an Entity's Derivation.".freeze,
       domain: "prov:Derivation".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "hadGeneration".freeze,
@@ -1407,7 +1402,7 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       subPropertyOf: "prov:wasInfluencedBy".freeze,
       type: "owl:ObjectProperty".freeze
     property :hadPlan,
-      comment: %(The _optional_ Plan adopted by an Agent in Association with some Activity. Plan specifications are out of the scope of this specification.).freeze,
+      comment: "The _optional_ Plan adopted by an Agent in Association with some Activity. Plan specifications are out of the scope of this specification.".freeze,
       domain: "prov:Association".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "hadPlan".freeze,
@@ -1430,7 +1425,7 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       subPropertyOf: "prov:wasDerivedFrom".freeze,
       type: "owl:ObjectProperty".freeze
     property :hadRole,
-      comment: [%(The _optional_ Role that an Entity assumed in the context of an Activity. For example, :baking prov:used :spoon; prov:qualified [ a prov:Usage; prov:entity :spoon; prov:hadRole roles:mixing_implement ].).freeze, %(This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href="#owl-profile">PROV-O OWL Profile</a>.).freeze],
+      comment: ["The _optional_ Role that an Entity assumed in the context of an Activity. For example, :baking prov:used :spoon; prov:qualified [ a prov:Usage; prov:entity :spoon; prov:hadRole roles:mixing_implement ].".freeze, "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>.".freeze],
       domain: ["prov:Influence".freeze, term(
           type: "owl:Class".freeze,
           unionOf: list("prov:Association".freeze, "prov:InstantaneousEvent".freeze)
@@ -1445,7 +1440,7 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       range: "prov:Role".freeze,
       type: "owl:ObjectProperty".freeze
     property :hadUsage,
-      comment: %(The _optional_ Usage involved in an Entity's Derivation.).freeze,
+      comment: "The _optional_ Usage involved in an Entity's Derivation.".freeze,
       domain: "prov:Derivation".freeze,
       isDefinedBy: ["http://www.w3.org/ns/prov-o#".freeze, "prov:".freeze],
       label: "hadUsage".freeze,
@@ -1456,7 +1451,7 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       range: "prov:Usage".freeze,
       type: "owl:ObjectProperty".freeze
     property :has_anchor,
-      comment: %(Indicates anchor URI for a potentially dynamic resource instance.).freeze,
+      comment: "Indicates anchor URI for a potentially dynamic resource instance.".freeze,
       isDefinedBy: "prov:".freeze,
       label: "has_anchor".freeze,
       "prov:aq": "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#resource-represented-as-html".freeze,
@@ -1464,7 +1459,7 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       "prov:inverse": "anchorOf".freeze,
       type: "owl:ObjectProperty".freeze
     property :has_provenance,
-      comment: %(Indicates a provenance-URI for a resource; the resource identified by this property presents a provenance record about its subject or anchor resource.).freeze,
+      comment: "Indicates a provenance-URI for a resource; the resource identified by this property presents a provenance record about its subject or anchor resource.".freeze,
       isDefinedBy: "prov:".freeze,
       label: "has_provenance".freeze,
       "prov:aq": "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#resource-represented-as-html".freeze,
@@ -1472,7 +1467,7 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       "prov:inverse": "provenanceOf".freeze,
       type: "owl:ObjectProperty".freeze
     property :has_query_service,
-      comment: %(Indicates a provenance query service that can access provenance related to its subject or anchor resource.).freeze,
+      comment: "Indicates a provenance query service that can access provenance related to its subject or anchor resource.".freeze,
       isDefinedBy: "prov:".freeze,
       label: "hasProvenanceService".freeze,
       "prov:aq": "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/".freeze,
@@ -1489,7 +1484,7 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       "prov:sharesDefinitionWith": "prov:Influence".freeze,
       type: "owl:ObjectProperty".freeze
     property :influencer,
-      comment: %(Subproperties of prov:influencer are used to cite the object of an unqualified PROV-O triple whose predicate is a subproperty of prov:wasInfluencedBy \(e.g. prov:used, prov:wasGeneratedBy\). prov:influencer is used much like rdf:object is used.).freeze,
+      comment: "Subproperties of prov:influencer are used to cite the object of an unqualified PROV-O triple whose predicate is a subproperty of prov:wasInfluencedBy (e.g. prov:used, prov:wasGeneratedBy). prov:influencer is used much like rdf:object is used.".freeze,
       domain: "prov:Influence".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "influencer".freeze,
@@ -1526,7 +1521,7 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       subPropertyOf: "prov:influenced".freeze,
       type: "owl:ObjectProperty".freeze
     property :invalidatedAtTime,
-      comment: %(The time at which an entity was invalidated \(i.e., no longer usable\).).freeze,
+      comment: "The time at which an entity was invalidated (i.e., no longer usable).".freeze,
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "invalidatedAtTime".freeze,
@@ -1537,14 +1532,12 @@ When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:a
       range: "xsd:dateTime".freeze,
       type: "owl:DatatypeProperty".freeze
     property :inverse,
-      comment: %(PROV-O does not define all property inverses. The directionalities defined in PROV-O should be given preference over those not defined. However, if users wish to name the inverse of a PROV-O property, the local name given by prov:inverse should be used.).freeze,
+      comment: "PROV-O does not define all property inverses. The directionalities defined in PROV-O should be given preference over those not defined. However, if users wish to name the inverse of a PROV-O property, the local name given by prov:inverse should be used.".freeze,
       isDefinedBy: ["http://www.w3.org/ns/prov-o#".freeze, "prov:".freeze],
       "rdfs:seeAlso": "http://www.w3.org/TR/prov-o/#names-of-inverse-properties".freeze,
       type: "owl:AnnotationProperty".freeze
     property :mentionOf,
-      comment: %(prov:mentionOf is used to specialize an entity as described in another bundle. It is to be used in conjuction with prov:asInBundle.
-
-prov:asInBundle is used to cite the Bundle in which the generalization was mentioned.).freeze,
+      comment: "prov:mentionOf is used to specialize an entity as described in another bundle. It is to be used in conjuction with prov:asInBundle.\n\nprov:asInBundle is used to cite the Bundle in which the generalization was mentioned.".freeze,
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-links#".freeze,
       label: "mentionOf".freeze,
@@ -1553,12 +1546,12 @@ prov:asInBundle is used to cite the Bundle in which the generalization was menti
       subPropertyOf: "prov:specializationOf".freeze,
       type: "owl:ObjectProperty".freeze
     property :n,
-      comment: [%(A reference to the principal section of the PROV-DM document that describes this concept.).freeze, %(A reference to the principal section of the PROV-M document that describes this concept.).freeze],
+      comment: ["A reference to the principal section of the PROV-DM document that describes this concept.".freeze, "A reference to the principal section of the PROV-M document that describes this concept.".freeze],
       isDefinedBy: ["http://www.w3.org/ns/prov-o#".freeze, "prov:".freeze],
       subPropertyOf: "rdfs:seeAlso".freeze,
       type: "owl:AnnotationProperty".freeze
     property :order,
-      comment: %(The position that this OWL term should be listed within documentation. The scope of the documentation \(e.g., among all terms, among terms within a prov:category, among properties applying to a particular class, etc.\) is unspecified.).freeze,
+      comment: "The position that this OWL term should be listed within documentation. The scope of the documentation (e.g., among all terms, among terms within a prov:category, among properties applying to a particular class, etc.) is unspecified.".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       type: "owl:AnnotationProperty".freeze
     property :pairEntity,
@@ -1586,21 +1579,21 @@ prov:asInBundle is used to cite the Bundle in which the generalization was menti
       range: "rdfs:Literal".freeze,
       type: ["owl:DatatypeProperty".freeze, "owl:FunctionalProperty".freeze]
     property :pingback,
-      comment: %(Relates a resource to a provenance pingback service that may receive additional provenance links about the resource.).freeze,
+      comment: "Relates a resource to a provenance pingback service that may receive additional provenance links about the resource.".freeze,
       isDefinedBy: "prov:".freeze,
       label: "provenance pingback".freeze,
       "prov:aq": "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#provenance-pingback".freeze,
       "prov:category": "access-and-query".freeze,
       type: "owl:ObjectProperty".freeze
     property :provenanceUriTemplate,
-      comment: %(Relates a provenance service to a URI template string for constructing provenance-URIs.).freeze,
+      comment: "Relates a provenance service to a URI template string for constructing provenance-URIs.".freeze,
       isDefinedBy: "prov:".freeze,
       label: "provenanceUriTemplate".freeze,
       "prov:aq": "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/".freeze,
       "prov:category": "access-and-query".freeze,
       type: "owl:DatatypeProperty".freeze
     property :qualifiedAssociation,
-      comment: %(If this Activity prov:wasAssociatedWith Agent :ag, then it can qualify the Association using prov:qualifiedAssociation [ a prov:Association;  prov:agent :ag; :foo :bar ].).freeze,
+      comment: "If this Activity prov:wasAssociatedWith Agent :ag, then it can qualify the Association using prov:qualifiedAssociation [ a prov:Association;  prov:agent :ag; :foo :bar ].".freeze,
       domain: "prov:Activity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "qualifiedAssociation".freeze,
@@ -1613,7 +1606,7 @@ prov:asInBundle is used to cite the Bundle in which the generalization was menti
       subPropertyOf: "prov:qualifiedInfluence".freeze,
       type: "owl:ObjectProperty".freeze
     property :qualifiedAttribution,
-      comment: %(If this Entity prov:wasAttributedTo Agent :ag, then it can qualify how it was influenced using prov:qualifiedAttribution [ a prov:Attribution;  prov:agent :ag; :foo :bar ].).freeze,
+      comment: "If this Entity prov:wasAttributedTo Agent :ag, then it can qualify how it was influenced using prov:qualifiedAttribution [ a prov:Attribution;  prov:agent :ag; :foo :bar ].".freeze,
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "qualifiedAttribution".freeze,
@@ -1626,7 +1619,7 @@ prov:asInBundle is used to cite the Bundle in which the generalization was menti
       subPropertyOf: "prov:qualifiedInfluence".freeze,
       type: "owl:ObjectProperty".freeze
     property :qualifiedCommunication,
-      comment: %(If this Activity prov:wasInformedBy Activity :a, then it can qualify how it was influenced using prov:qualifiedCommunication [ a prov:Communication;  prov:activity :a; :foo :bar ].).freeze,
+      comment: "If this Activity prov:wasInformedBy Activity :a, then it can qualify how it was influenced using prov:qualifiedCommunication [ a prov:Communication;  prov:activity :a; :foo :bar ].".freeze,
       domain: "prov:Activity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "qualifiedCommunication".freeze,
@@ -1639,7 +1632,7 @@ prov:asInBundle is used to cite the Bundle in which the generalization was menti
       subPropertyOf: "prov:qualifiedInfluence".freeze,
       type: "owl:ObjectProperty".freeze
     property :qualifiedDelegation,
-      comment: %(If this Agent prov:actedOnBehalfOf Agent :ag, then it can qualify how with prov:qualifiedResponsibility [ a prov:Responsibility;  prov:agent :ag; :foo :bar ].).freeze,
+      comment: "If this Agent prov:actedOnBehalfOf Agent :ag, then it can qualify how with prov:qualifiedResponsibility [ a prov:Responsibility;  prov:agent :ag; :foo :bar ].".freeze,
       domain: "prov:Agent".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "qualifiedDelegation".freeze,
@@ -1652,7 +1645,7 @@ prov:asInBundle is used to cite the Bundle in which the generalization was menti
       subPropertyOf: "prov:qualifiedInfluence".freeze,
       type: "owl:ObjectProperty".freeze
     property :qualifiedDerivation,
-      comment: %(If this Entity prov:wasDerivedFrom Entity :e, then it can qualify how it was derived using prov:qualifiedDerivation [ a prov:Derivation;  prov:entity :e; :foo :bar ].).freeze,
+      comment: "If this Entity prov:wasDerivedFrom Entity :e, then it can qualify how it was derived using prov:qualifiedDerivation [ a prov:Derivation;  prov:entity :e; :foo :bar ].".freeze,
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "qualifiedDerivation".freeze,
@@ -1665,7 +1658,7 @@ prov:asInBundle is used to cite the Bundle in which the generalization was menti
       subPropertyOf: "prov:qualifiedInfluence".freeze,
       type: "owl:ObjectProperty".freeze
     property :qualifiedEnd,
-      comment: %(If this Activity prov:wasEndedBy Entity :e1, then it can qualify how it was ended using prov:qualifiedEnd [ a prov:End;  prov:entity :e1; :foo :bar ].).freeze,
+      comment: "If this Activity prov:wasEndedBy Entity :e1, then it can qualify how it was ended using prov:qualifiedEnd [ a prov:End;  prov:entity :e1; :foo :bar ].".freeze,
       domain: "prov:Activity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "qualifiedEnd".freeze,
@@ -1678,30 +1671,12 @@ prov:asInBundle is used to cite the Bundle in which the generalization was menti
       subPropertyOf: "prov:qualifiedInfluence".freeze,
       type: "owl:ObjectProperty".freeze
     property :qualifiedForm,
-      comment: %(This annotation property links a subproperty of prov:wasInfluencedBy with the subclass of prov:Influence and the qualifying property that are used to qualify it. 
-
-Example annotation:
-
-    prov:wasGeneratedBy prov:qualifiedForm prov:qualifiedGeneration, prov:Generation .
-
-Then this unqualified assertion:
-
-    :entity1 prov:wasGeneratedBy :activity1 .
-
-can be qualified by adding:
-
-   :entity1 prov:qualifiedGeneration :entity1Gen .
-   :entity1Gen 
-       a prov:Generation, prov:Influence;
-       prov:activity :activity1;
-       :customValue 1337 .
-
-Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1\) is mirrored as the value of the prov:activity \(or prov:entity, or prov:agent\) property on the influence class.).freeze,
+      comment: "This annotation property links a subproperty of prov:wasInfluencedBy with the subclass of prov:Influence and the qualifying property that are used to qualify it. \n\nExample annotation:\n\n    prov:wasGeneratedBy prov:qualifiedForm prov:qualifiedGeneration, prov:Generation .\n\nThen this unqualified assertion:\n\n    :entity1 prov:wasGeneratedBy :activity1 .\n\ncan be qualified by adding:\n\n   :entity1 prov:qualifiedGeneration :entity1Gen .\n   :entity1Gen \n       a prov:Generation, prov:Influence;\n       prov:activity :activity1;\n       :customValue 1337 .\n\nNote how the value of the unqualified influence (prov:wasGeneratedBy :activity1) is mirrored as the value of the prov:activity (or prov:entity, or prov:agent) property on the influence class.".freeze,
       isDefinedBy: ["http://www.w3.org/ns/prov-o#".freeze, "prov:".freeze],
       subPropertyOf: "rdfs:seeAlso".freeze,
       type: "owl:AnnotationProperty".freeze
     property :qualifiedGeneration,
-      comment: %(If this Activity prov:generated Entity :e, then it can qualify how it performed the Generation using prov:qualifiedGeneration [ a prov:Generation;  prov:entity :e; :foo :bar ].).freeze,
+      comment: "If this Activity prov:generated Entity :e, then it can qualify how it performed the Generation using prov:qualifiedGeneration [ a prov:Generation;  prov:entity :e; :foo :bar ].".freeze,
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "qualifiedGeneration".freeze,
@@ -1714,7 +1689,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       subPropertyOf: "prov:qualifiedInfluence".freeze,
       type: "owl:ObjectProperty".freeze
     property :qualifiedInfluence,
-      comment: %(Because prov:qualifiedInfluence is a broad relation, the more specific relations \(qualifiedCommunication, qualifiedDelegation, qualifiedEnd, etc.\) should be used when applicable.).freeze,
+      comment: "Because prov:qualifiedInfluence is a broad relation, the more specific relations (qualifiedCommunication, qualifiedDelegation, qualifiedEnd, etc.) should be used when applicable.".freeze,
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("prov:Activity".freeze, "prov:Agent".freeze, "prov:Entity".freeze)
@@ -1742,7 +1717,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       subPropertyOf: "prov:qualifiedDerivation".freeze,
       type: "owl:ObjectProperty".freeze
     property :qualifiedInvalidation,
-      comment: %(If this Entity prov:wasInvalidatedBy Activity :a, then it can qualify how it was invalidated using prov:qualifiedInvalidation [ a prov:Invalidation;  prov:activity :a; :foo :bar ].).freeze,
+      comment: "If this Entity prov:wasInvalidatedBy Activity :a, then it can qualify how it was invalidated using prov:qualifiedInvalidation [ a prov:Invalidation;  prov:activity :a; :foo :bar ].".freeze,
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "qualifiedInvalidation".freeze,
@@ -1755,7 +1730,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       subPropertyOf: "prov:qualifiedInfluence".freeze,
       type: "owl:ObjectProperty".freeze
     property :qualifiedPrimarySource,
-      comment: %(If this Entity prov:hadPrimarySource Entity :e, then it can qualify how using prov:qualifiedPrimarySource [ a prov:PrimarySource; prov:entity :e; :foo :bar ].).freeze,
+      comment: "If this Entity prov:hadPrimarySource Entity :e, then it can qualify how using prov:qualifiedPrimarySource [ a prov:PrimarySource; prov:entity :e; :foo :bar ].".freeze,
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "qualifiedPrimarySource".freeze,
@@ -1768,7 +1743,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       subPropertyOf: "prov:qualifiedInfluence".freeze,
       type: "owl:ObjectProperty".freeze
     property :qualifiedQuotation,
-      comment: %(If this Entity prov:wasQuotedFrom Entity :e, then it can qualify how using prov:qualifiedQuotation [ a prov:Quotation;  prov:entity :e; :foo :bar ].).freeze,
+      comment: "If this Entity prov:wasQuotedFrom Entity :e, then it can qualify how using prov:qualifiedQuotation [ a prov:Quotation;  prov:entity :e; :foo :bar ].".freeze,
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "qualifiedQuotation".freeze,
@@ -1794,7 +1769,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       subPropertyOf: "prov:qualifiedDerivation".freeze,
       type: "owl:ObjectProperty".freeze
     property :qualifiedRevision,
-      comment: %(If this Entity prov:wasRevisionOf Entity :e, then it can qualify how it was revised using prov:qualifiedRevision [ a prov:Revision;  prov:entity :e; :foo :bar ].).freeze,
+      comment: "If this Entity prov:wasRevisionOf Entity :e, then it can qualify how it was revised using prov:qualifiedRevision [ a prov:Revision;  prov:entity :e; :foo :bar ].".freeze,
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "qualifiedRevision".freeze,
@@ -1807,7 +1782,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       subPropertyOf: "prov:qualifiedInfluence".freeze,
       type: "owl:ObjectProperty".freeze
     property :qualifiedStart,
-      comment: %(If this Activity prov:wasStartedBy Entity :e1, then it can qualify how it was started using prov:qualifiedStart [ a prov:Start;  prov:entity :e1; :foo :bar ].).freeze,
+      comment: "If this Activity prov:wasStartedBy Entity :e1, then it can qualify how it was started using prov:qualifiedStart [ a prov:Start;  prov:entity :e1; :foo :bar ].".freeze,
       domain: "prov:Activity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "qualifiedStart".freeze,
@@ -1820,7 +1795,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       subPropertyOf: "prov:qualifiedInfluence".freeze,
       type: "owl:ObjectProperty".freeze
     property :qualifiedUsage,
-      comment: %(If this Activity prov:used Entity :e, then it can qualify how it used it using prov:qualifiedUsage [ a prov:Usage; prov:entity :e; :foo :bar ].).freeze,
+      comment: "If this Activity prov:used Entity :e, then it can qualify how it used it using prov:qualifiedUsage [ a prov:Usage; prov:entity :e; :foo :bar ].".freeze,
       domain: "prov:Activity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "qualifiedUsage".freeze,
@@ -1864,7 +1839,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       subPropertyOf: ["owl:topObjectProperty".freeze, "prov:alternateOf".freeze],
       type: ["owl:AnnotationProperty".freeze, "owl:ObjectProperty".freeze]
     property :startedAtTime,
-      comment: %(The time at which an activity started. See also prov:endedAtTime.).freeze,
+      comment: "The time at which an activity started. See also prov:endedAtTime.".freeze,
       domain: "prov:Activity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "startedAtTime".freeze,
@@ -1877,12 +1852,12 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
     property :todo,
       type: "owl:AnnotationProperty".freeze
     property :unqualifiedForm,
-      comment: %(Classes and properties used to qualify relationships are annotated with prov:unqualifiedForm to indicate the property used to assert an unqualified provenance relation.).freeze,
+      comment: "Classes and properties used to qualify relationships are annotated with prov:unqualifiedForm to indicate the property used to assert an unqualified provenance relation.".freeze,
       isDefinedBy: ["http://www.w3.org/ns/prov-o#".freeze, "prov:".freeze],
       subPropertyOf: "rdfs:seeAlso".freeze,
       type: "owl:AnnotationProperty".freeze
     property :used,
-      comment: %(A prov:Entity that was used by this prov:Activity. For example, :baking prov:used :spoon, :egg, :oven .).freeze,
+      comment: "A prov:Entity that was used by this prov:Activity. For example, :baking prov:used :spoon, :egg, :oven .".freeze,
       domain: "prov:Activity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "used".freeze,
@@ -1905,7 +1880,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       "prov:editorialNote": ["The editor's definition comes from http://www.w3.org/TR/rdf-primer/#rdfvalue".freeze, "This property serves the same purpose as rdf:value, but has been reintroduced to avoid some of the definitional ambiguity in the RDF specification (specifically, 'may be used in describing structured values').".freeze],
       type: "owl:DatatypeProperty".freeze
     property :wasAssociatedWith,
-      comment: %(An prov:Agent that had some \(unspecified\) responsibility for the occurrence of this prov:Activity.).freeze,
+      comment: "An prov:Agent that had some (unspecified) responsibility for the occurrence of this prov:Activity.".freeze,
       domain: "prov:Activity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "wasAssociatedWith".freeze,
@@ -1918,7 +1893,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       subPropertyOf: "prov:wasInfluencedBy".freeze,
       type: "owl:ObjectProperty".freeze
     property :wasAttributedTo,
-      comment: %(Attribution is the ascribing of an entity to an agent.).freeze,
+      comment: "Attribution is the ascribing of an entity to an agent.".freeze,
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "wasAttributedTo".freeze,
@@ -1932,7 +1907,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       subPropertyOf: "prov:wasInfluencedBy".freeze,
       type: "owl:ObjectProperty".freeze
     property :wasDerivedFrom,
-      comment: %(The more specific subproperties of prov:wasDerivedFrom \(i.e., prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource\) should be used when applicable.).freeze,
+      comment: "The more specific subproperties of prov:wasDerivedFrom (i.e., prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource) should be used when applicable.".freeze,
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "wasDerivedFrom".freeze,
@@ -1946,7 +1921,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       subPropertyOf: "prov:wasInfluencedBy".freeze,
       type: "owl:ObjectProperty".freeze
     property :wasEndedBy,
-      comment: %(End is when an activity is deemed to have ended. An end may refer to an entity, known as trigger, that terminated the activity.).freeze,
+      comment: "End is when an activity is deemed to have ended. An end may refer to an entity, known as trigger, that terminated the activity.".freeze,
       domain: "prov:Activity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "wasEndedBy".freeze,
@@ -1972,7 +1947,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       subPropertyOf: "prov:wasInfluencedBy".freeze,
       type: "owl:ObjectProperty".freeze
     property :wasInfluencedBy,
-      comment: [%(Because prov:wasInfluencedBy is a broad relation, its more specific subproperties \(e.g. prov:wasInformedBy, prov:actedOnBehalfOf, prov:wasEndedBy, etc.\) should be used when applicable.).freeze, %(This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href="#owl-profile">PROV-O OWL Profile</a>.).freeze],
+      comment: ["Because prov:wasInfluencedBy is a broad relation, its more specific subproperties (e.g. prov:wasInformedBy, prov:actedOnBehalfOf, prov:wasEndedBy, etc.) should be used when applicable.".freeze, "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>.".freeze],
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("prov:Activity".freeze, "prov:Agent".freeze, "prov:Entity".freeze)
@@ -1992,7 +1967,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
         ),
       type: "owl:ObjectProperty".freeze
     property :wasInformedBy,
-      comment: %(An activity a2 is dependent on or informed by another activity a1, by way of some unspecified entity that is generated by a1 and used by a2.).freeze,
+      comment: "An activity a2 is dependent on or informed by another activity a1, by way of some unspecified entity that is generated by a1 and used by a2.".freeze,
       domain: "prov:Activity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "wasInformedBy".freeze,
@@ -2018,7 +1993,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       subPropertyOf: "prov:wasInfluencedBy".freeze,
       type: "owl:ObjectProperty".freeze
     property :wasQuotedFrom,
-      comment: %(An entity is derived from an original entity by copying, or 'quoting', some or all of it.).freeze,
+      comment: "An entity is derived from an original entity by copying, or 'quoting', some or all of it.".freeze,
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "wasQuotedFrom".freeze,
@@ -2031,7 +2006,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       subPropertyOf: "prov:wasDerivedFrom".freeze,
       type: "owl:ObjectProperty".freeze
     property :wasRevisionOf,
-      comment: %(A revision is a derivation that revises an entity into a revised version.).freeze,
+      comment: "A revision is a derivation that revises an entity into a revised version.".freeze,
       domain: "prov:Entity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "wasRevisionOf".freeze,
@@ -2044,7 +2019,7 @@ Note how the value of the unqualified influence \(prov:wasGeneratedBy :activity1
       subPropertyOf: "prov:wasDerivedFrom".freeze,
       type: ["owl:AnnotationProperty".freeze, "owl:ObjectProperty".freeze]
     property :wasStartedBy,
-      comment: %(Start is when an activity is deemed to have started. A start may refer to an entity, known as trigger, that initiated the activity.).freeze,
+      comment: "Start is when an activity is deemed to have started. A start may refer to an entity, known as trigger, that initiated the activity.".freeze,
       domain: "prov:Activity".freeze,
       isDefinedBy: "http://www.w3.org/ns/prov-o#".freeze,
       label: "wasStartedBy".freeze,

@@ -89,7 +89,7 @@ module RDF::Vocab
 
     # Class definitions
     term :AlignmentObject,
-      comment: %(An intangible item that describes an alignment between a learning resource and a node in an educational framework.).freeze,
+      comment: "An intangible item that describes an alignment between a learning resource and a node in an educational framework.".freeze,
       "dc:issued": "2015-02-09".freeze,
       equivalentClass: "schema:AlignmentObject".freeze,
       isDefinedBy: "lrmi:".freeze,
@@ -97,7 +97,7 @@ module RDF::Vocab
       subClassOf: "schema:Intangible".freeze,
       type: "rdfs:Class".freeze
     term :EducationalAudience,
-      comment: %(An individual or group for whom the learning resource was created or useful.).freeze,
+      comment: "An individual or group for whom the learning resource was created or useful.".freeze,
       "dc:issued": "2015-02-09".freeze,
       equivalentClass: "schema:EducationalAudience".freeze,
       isDefinedBy: "lrmi:".freeze,
@@ -107,7 +107,7 @@ module RDF::Vocab
 
     # Property definitions
     property :alignmentType,
-      comment: %(A category of alignment between the learning resource and the framework node.).freeze,
+      comment: "A category of alignment between the learning resource and the framework node.".freeze,
       "dc:description": "Recommended values include: 'assesses', 'teaches', 'requires', 'textComplexity', 'readingLevel', 'educationalSubject', and 'educationLevel'.".freeze,
       "dc:issued": "2015-02-09".freeze,
       domainIncludes: ["lrmi:AlignmentObject".freeze, "schema:AlignmentObject".freeze],
@@ -117,7 +117,7 @@ module RDF::Vocab
       rangeIncludes: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :educationalAlignment,
-      comment: %(An alignment to an established educational framework.).freeze,
+      comment: "An alignment to an established educational framework.".freeze,
       "dc:issued": "2015-02-09".freeze,
       domainIncludes: "schema:CreativeWork".freeze,
       equivalentProperty: "schema:educationalAlignment".freeze,
@@ -126,7 +126,7 @@ module RDF::Vocab
       rangeIncludes: ["lrmi:AlignmentObject".freeze, "schema:AlignmentObject".freeze],
       type: "rdf:Property".freeze
     property :educationalFramework,
-      comment: %(The framework to which the resource being described is aligned.).freeze,
+      comment: "The framework to which the resource being described is aligned.".freeze,
       "dc:issued": "2015-02-09".freeze,
       domainIncludes: ["lrmi:AlignmentObject".freeze, "schema:AlignmentObject".freeze],
       equivalentProperty: "schema:educationalFramework".freeze,
@@ -135,7 +135,7 @@ module RDF::Vocab
       rangeIncludes: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :educationalRole,
-      comment: %(The role that describes the target audience of the content.).freeze,
+      comment: "The role that describes the target audience of the content.".freeze,
       "dc:description": "The educational function assumed or part played by the group for whom the resource is intended.".freeze,
       "dc:issued": "2015-02-09".freeze,
       domainIncludes: ["lrmi:EducationalAudience".freeze, "schema:EducationalAudience".freeze],
@@ -145,7 +145,7 @@ module RDF::Vocab
       rangeIncludes: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :educationalUse,
-      comment: %(The purpose of a work in the context of education.).freeze,
+      comment: "The purpose of a work in the context of education.".freeze,
       "dc:description": "For example, 'assignment', 'group work'.".freeze,
       "dc:issued": "2015-02-09".freeze,
       domainIncludes: "schema:CreativeWork".freeze,
@@ -155,7 +155,7 @@ module RDF::Vocab
       rangeIncludes: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :interactivityType,
-      comment: %(The predominant mode of learning supported by the learning resource.).freeze,
+      comment: "The predominant mode of learning supported by the learning resource.".freeze,
       "dc:description": ["Acceptable values are 'active', 'expositive', or 'mixed'.".freeze, "Based on, and mappable from, IEEE LOM 5.1: Interactivity Type.".freeze],
       "dc:issued": "2015-02-09".freeze,
       domainIncludes: "schema:CreativeWork".freeze,
@@ -165,7 +165,7 @@ module RDF::Vocab
       rangeIncludes: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :isBasedOnUrl,
-      comment: %(A resource that was used in the creation of this resource.).freeze,
+      comment: "A resource that was used in the creation of this resource.".freeze,
       "dc:description": "This term can be repeated for multiple sources.".freeze,
       "dc:issued": "2015-02-09".freeze,
       domainIncludes: "schema:CreativeWork".freeze,
@@ -175,7 +175,7 @@ module RDF::Vocab
       rangeIncludes: "xsd:anyURI".freeze,
       type: "rdf:Property".freeze
     property :learningResourceType,
-      comment: %(The predominant type or kind characterizing the learning resource.).freeze,
+      comment: "The predominant type or kind characterizing the learning resource.".freeze,
       "dc:description": "For example, 'presentation', 'handout'.".freeze,
       "dc:issued": "2015-02-09".freeze,
       domainIncludes: "schema:CreativeWork".freeze,
@@ -185,7 +185,7 @@ module RDF::Vocab
       rangeIncludes: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :targetDescription,
-      comment: %(The description of a node in an established educational framework.).freeze,
+      comment: "The description of a node in an established educational framework.".freeze,
       "dc:issued": "2015-02-09".freeze,
       domainIncludes: ["lrmi:AlignmentObject".freeze, "schema:AlignmentObject".freeze],
       equivalentProperty: "schema:targetDescription".freeze,
@@ -194,7 +194,7 @@ module RDF::Vocab
       rangeIncludes: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :targetName,
-      comment: %(The name of a node in an established educational framework.).freeze,
+      comment: "The name of a node in an established educational framework.".freeze,
       "dc:issued": "2015-02-09".freeze,
       domainIncludes: ["lrmi:AlignmentObject".freeze, "schema:AlignmentObject".freeze],
       equivalentProperty: "schema:targetName".freeze,
@@ -203,7 +203,7 @@ module RDF::Vocab
       rangeIncludes: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :targetUrl,
-      comment: %(The URL of a node in an established educational framework.).freeze,
+      comment: "The URL of a node in an established educational framework.".freeze,
       "dc:issued": "2015-02-09".freeze,
       domainIncludes: ["lrmi:AlignmentObject".freeze, "schema:AlignmentObject".freeze],
       equivalentProperty: "schema:targetUrl".freeze,
@@ -212,7 +212,7 @@ module RDF::Vocab
       rangeIncludes: "xsd:anyURI".freeze,
       type: "rdf:Property".freeze
     property :timeRequired,
-      comment: %(Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience.).freeze,
+      comment: "Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience.".freeze,
       "dc:description": ["Based on, and mappable from, IEEE LOM 5.9: Typical Learning Time.".freeze, "For example, 'PT30M' and 'PT1H25M'".freeze],
       "dc:issued": "2015-02-09".freeze,
       domainIncludes: ["lrmi:AlignmentObject".freeze, "schema:AlignmentObject".freeze],
@@ -222,7 +222,7 @@ module RDF::Vocab
       rangeIncludes: "schema:Duration".freeze,
       type: "rdf:Property".freeze
     property :typicalAgeRange,
-      comment: %(The typical expected age range.).freeze,
+      comment: "The typical expected age range.".freeze,
       "dc:description": ["Based on, and mappable from, IEEE LOM 5.7: Typical Age Range.".freeze, "For example, '7-9', '18-'.".freeze],
       "dc:issued": "2015-02-09".freeze,
       domainIncludes: "schema:CreativeWork".freeze,
@@ -232,7 +232,7 @@ module RDF::Vocab
       rangeIncludes: "xsd:string".freeze,
       type: "rdf:Property".freeze
     property :useRightsUrl,
-      comment: %(The URL where the owner specifies permissions for using the resource.).freeze,
+      comment: "The URL where the owner specifies permissions for using the resource.".freeze,
       "dc:description": "For example: 'http://creativecommons.org/licenses/by/3.0/', 'http://publisher.com/content-use-description'.".freeze,
       "dc:issued": "2015-02-09".freeze,
       domainIncludes: "schema:CreativeWork".freeze,
