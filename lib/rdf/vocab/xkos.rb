@@ -9,10 +9,10 @@ module RDF::Vocab
   #   # XKOS: an SKOS extension for representing statistical classifications
   #   #
   #   # This ontology is based on work initiated at Dagstuhl Schloss in September 2011
-  #   # @version Version 1.0.2 - 2016-03-15
+  #   # @version Version 1.0.3 - 2016-03-15
   #   # @version Version 1.1 - 2016-03-20
   #   # @version Version 1.0.1 - 2014-11-26
-  #   # @version Version 1.0.3 - 2016-03-15
+  #   # @version Version 1.0.2 - 2016-03-15
   #   class XKOS < RDF::StrictVocabulary
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :ClassificationLevel
@@ -101,9 +101,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :maxLength
   #
-  #     # successeur immédiat dans la séquence
-  #     #
   #     # immediate successor in the sequence
+  #     #
+  #     # successeur immédiat dans la séquence
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :next
   #
@@ -161,7 +161,7 @@ module RDF::Vocab
     # Ontology definition
     ontology :"http://rdf-vocabulary.ddialliance.org/xkos#",
       "cc:license": "http://creativecommons.org/licenses/by/4.0/".freeze,
-      comment: %(This ontology is based on work initiated at Dagstuhl Schloss in September 2011).freeze,
+      comment: "This ontology is based on work initiated at Dagstuhl Schloss in September 2011".freeze,
       "dc11:contributor": ["Daniel Gillman".freeze, "Jannik Jensen".freeze, "R.T.A.M. Grim".freeze, "Richard Cyganiak".freeze, "Thomas Bosch".freeze, "Wendy L. Thomas".freeze, "Yves Jaques".freeze],
       "dc11:creator": "Franck Cotton".freeze,
       "dc11:rights": "Copyright © 2016 The DDI Alliance".freeze,
@@ -339,7 +339,7 @@ module RDF::Vocab
       range: "xsd:positiveInteger".freeze,
       type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :next,
-      comment: [%(immediate successor in the sequence).freeze, %(successeur immédiat dans la séquence).freeze],
+      comment: ["immediate successor in the sequence".freeze, "successeur immédiat dans la séquence".freeze],
       isDefinedBy: "http://rdf-vocabulary.ddialliance.org/xkos".freeze,
       label: "next".freeze,
       subPropertyOf: "xkos:succeeds".freeze,
@@ -363,20 +363,20 @@ module RDF::Vocab
       range: "skos:Concept".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :plainText,
-      comment: %(This property is expected to store plain text literals, without HTML or XML markup.).freeze,
+      comment: "This property is expected to store plain text literals, without HTML or XML markup.".freeze,
       domain: "xkos:ExplanatoryNote".freeze,
       isDefinedBy: "http://rdf-vocabulary.ddialliance.org/xkos".freeze,
       label: "plain text".freeze,
       range: "rdf:PlainLiteral".freeze,
       type: ["owl:AnnotationProperty".freeze, "rdf:Property".freeze]
     property :precedes,
-      comment: %(predecessor in the sequence).freeze,
+      comment: "predecessor in the sequence".freeze,
       isDefinedBy: "http://rdf-vocabulary.ddialliance.org/xkos".freeze,
       label: "precedes".freeze,
       subPropertyOf: "xkos:sequential".freeze,
       type: ["owl:TransitiveProperty".freeze, "rdf:Property".freeze]
     property :previous,
-      comment: %(immediate predecessor in the sequence).freeze,
+      comment: "immediate predecessor in the sequence".freeze,
       isDefinedBy: "http://rdf-vocabulary.ddialliance.org/xkos".freeze,
       label: "previous".freeze,
       subPropertyOf: "xkos:precedes".freeze,
@@ -400,7 +400,7 @@ module RDF::Vocab
       subPropertyOf: "skos:broader".freeze,
       type: ["owl:ObjectProperty".freeze, "rdf:Property".freeze]
     property :succeeds,
-      comment: [%(successeur dans la séquence).freeze, %(successor in the sequence).freeze],
+      comment: ["successeur dans la séquence".freeze, "successor in the sequence".freeze],
       isDefinedBy: "http://rdf-vocabulary.ddialliance.org/xkos".freeze,
       label: "succeeds".freeze,
       subPropertyOf: "xkos:sequential".freeze,

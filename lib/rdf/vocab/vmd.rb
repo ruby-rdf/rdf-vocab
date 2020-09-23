@@ -301,52 +301,50 @@ module RDF::Vocab
 
     # Class definitions
     term :Address,
-      comment: %(Postal address for a Person or Organization.).freeze,
+      comment: "Postal address for a Person or Organization.".freeze,
       type: "rdfs:Class".freeze
     term :Breadcrumb,
-      comment: %(Represents a single Breadcrumb in a Breadcrumb trail.).freeze,
+      comment: "Represents a single Breadcrumb in a Breadcrumb trail.".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Instructions,
-      comment: %(Represents the steps to make a dish.).freeze,
+      comment: "Represents the steps to make a dish.".freeze,
       type: "rdfs:Class".freeze
     term :Nutrition,
-      comment: %(Represents the nutrition information about a recipe.).freeze,
+      comment: "Represents the nutrition information about a recipe.".freeze,
       type: "rdfs:Class".freeze
     term :Offer,
-      comment: %(Represents an offer to sell a product.).freeze,
+      comment: "Represents an offer to sell a product.".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :OfferAggregate,
-      comment: %(Represents a collection of offers to sell a product.).freeze,
+      comment: "Represents a collection of offers to sell a product.".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Organization,
-      comment: %(An Organization is a business, agency, school, etc.).freeze,
+      comment: "An Organization is a business, agency, school, etc.".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Person,
-      comment: %(Represents a Person, living/dead/fictional.).freeze,
+      comment: "Represents a Person, living/dead/fictional.".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Product,
-      comment: %(Represents a product or service in a Review or Review-aggregate.).freeze,
+      comment: "Represents a product or service in a Review or Review-aggregate.".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Rating,
-      comment: %(Represents a rating in a Review or Review-aggregate.).freeze,
+      comment: "Represents a rating in a Review or Review-aggregate.".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Recipe,
-      comment: %(A single instance of a Recipe.).freeze,
+      comment: "A single instance of a Recipe.".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :RecipeIngredient,
-      comment: %(Represents ingredients used in a recipe.).freeze,
+      comment: "Represents ingredients used in a recipe.".freeze,
       type: "rdfs:Class".freeze
     term :Review,
-      comment: %(A single instance of a Review.).freeze,
+      comment: "A single instance of a Review.".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :"Review-aggregate",
-      comment: %(Represents data from a collection of reviews.
-    Can be used whether or not there is instance-level Review data on the page.
-  ).freeze,
+      comment: "Represents data from a collection of reviews.\n    Can be used whether or not there is instance-level Review data on the page.\n  ".freeze,
       subClassOf: "vmd:Review".freeze,
       type: "rdfs:Class".freeze
     term :TimeRange,
-      comment: %(Represents the length of time it takes to prepare a recipe.).freeze,
+      comment: "Represents the length of time it takes to prepare a recipe.".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
 
     # Property definitions
@@ -361,7 +359,7 @@ module RDF::Vocab
       range: "vmd:Address".freeze,
       type: "rdf:Property".freeze
     property :affiliation,
-      comment: %(An affiliation can be specified by a string literal or an Organization instance.).freeze,
+      comment: "An affiliation can be specified by a string literal or an Organization instance.".freeze,
       domain: "vmd:Person".freeze,
       range: term(
           type: "owl:Class".freeze,
@@ -372,7 +370,7 @@ module RDF::Vocab
       domain: "vmd:RecipeIngredient".freeze,
       type: "rdf:Property".freeze
     property :author,
-      comment: %(An author of the recipe can be specified by a string literal or a Person instance.).freeze,
+      comment: "An author of the recipe can be specified by a string literal or a Person instance.".freeze,
       domain: "vmd:Recipe".freeze,
       range: term(
           type: "owl:Class".freeze,
@@ -383,11 +381,11 @@ module RDF::Vocab
       domain: "vmd:Offer".freeze,
       type: "rdf:Property".freeze
     property :average,
-      comment: %(The average of an aggregate value.).freeze,
+      comment: "The average of an aggregate value.".freeze,
       domain: "vmd:Rating".freeze,
       type: "rdf:Property".freeze
     property :best,
-      comment: %(The best value of a rating scale \(default 5\).).freeze,
+      comment: "The best value of a rating scale (default 5).".freeze,
       domain: "vmd:Rating".freeze,
       type: "rdf:Property".freeze
     property :brand,
@@ -431,7 +429,7 @@ module RDF::Vocab
         ),
       type: "rdf:Property".freeze
     property :count,
-      comment: %(The total number of items used in an aggregate \(e.g., number of reviews\).).freeze,
+      comment: "The total number of items used in an aggregate (e.g., number of reviews).".freeze,
       domain: "vmd:Review-aggregate".freeze,
       type: "rdf:Property".freeze
     property :"country-name",
@@ -450,7 +448,7 @@ module RDF::Vocab
         ),
       type: "rdf:Property".freeze
     property :dtreviewed,
-      comment: %(The date of the review.).freeze,
+      comment: "The date of the review.".freeze,
       domain: "vmd:Review".freeze,
       type: "rdf:Property".freeze
     property :duration,
@@ -482,7 +480,7 @@ module RDF::Vocab
       domain: "vmd:Product".freeze,
       type: "rdf:Property".freeze
     property :ingredient,
-      comment: %(Represents ingredients used in a recipe.).freeze,
+      comment: "Represents ingredients used in a recipe.".freeze,
       domain: "vmd:Recipe".freeze,
       range: "vmd:RecipeIngredient".freeze,
       type: "rdf:Property".freeze
@@ -490,7 +488,7 @@ module RDF::Vocab
       domain: "vmd:Instructions".freeze,
       type: "rdf:Property".freeze
     property :instructions,
-      comment: %(Represents the steps to make a dish.).freeze,
+      comment: "Represents the steps to make a dish.".freeze,
       domain: "vmd:Recipe".freeze,
       range: "vmd:Instructions".freeze,
       type: "rdf:Property".freeze
@@ -510,14 +508,14 @@ module RDF::Vocab
       domain: "vmd:OfferAggregate".freeze,
       type: "rdf:Property".freeze
     property :max,
-      comment: %(The maximum value of an aggregated Rating.).freeze,
+      comment: "The maximum value of an aggregated Rating.".freeze,
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("vmd:Rating".freeze, "vmd:TimeRange".freeze)
         ),
       type: "rdf:Property".freeze
     property :min,
-      comment: %(The minimum value of an aggregated Rating.).freeze,
+      comment: "The minimum value of an aggregated Rating.".freeze,
       domain: term(
           type: "owl:Class".freeze,
           unionOf: list("vmd:Rating".freeze, "vmd:TimeRange".freeze)
@@ -529,7 +527,7 @@ module RDF::Vocab
       domain: "vmd:Person".freeze,
       type: "rdf:Property".freeze
     property :nutrition,
-      comment: %(Represents the nutrition information about a recipe.).freeze,
+      comment: "Represents the nutrition information about a recipe.".freeze,
       domain: "vmd:Recipe".freeze,
       range: "vmd:Nutrition".freeze,
       type: "rdf:Property".freeze
@@ -561,9 +559,7 @@ module RDF::Vocab
       domain: "vmd:Offer".freeze,
       type: "rdf:Property".freeze
     property :pricerange,
-      comment: %(The price range of products and services offered
-    by a restaurant, business or other organization.
-  ).freeze,
+      comment: "The price range of products and services offered\n    by a restaurant, business or other organization.\n  ".freeze,
       domain: "vmd:Organization".freeze,
       type: "rdf:Property".freeze
     property :pricevaliduntil,
@@ -579,7 +575,7 @@ module RDF::Vocab
       domain: "vmd:Offer".freeze,
       type: "rdf:Property".freeze
     property :rating,
-      comment: %(A rating can be specified by a string literal or a Rating instance.).freeze,
+      comment: "A rating can be specified by a string literal or a Rating instance.".freeze,
       domain: "vmd:Review".freeze,
       range: term(
           type: "owl:Class".freeze,
@@ -593,7 +589,7 @@ module RDF::Vocab
       domain: "vmd:Address".freeze,
       type: "rdf:Property".freeze
     property :reviewer,
-      comment: %(A reviewer can be specified by a string literal or a Person instance.).freeze,
+      comment: "A reviewer can be specified by a string literal or a Person instance.".freeze,
       domain: "vmd:Review".freeze,
       range: term(
           type: "owl:Class".freeze,
@@ -634,7 +630,7 @@ module RDF::Vocab
         ),
       type: "rdf:Property".freeze
     property :timeRange,
-      comment: %(Represents the length of time it takes to prepare a recipe.).freeze,
+      comment: "Represents the length of time it takes to prepare a recipe.".freeze,
       domain: "vmd:Recipe".freeze,
       range: "vmd:TimeRange".freeze,
       type: "rdf:Property".freeze
@@ -661,11 +657,11 @@ module RDF::Vocab
         ),
       type: "rdf:Property".freeze
     property :value,
-      comment: %(The value of a single Rating.).freeze,
+      comment: "The value of a single Rating.".freeze,
       domain: "vmd:Rating".freeze,
       type: "rdf:Property".freeze
     property :worst,
-      comment: %(The poorest value of a rating scale \(default 1\).).freeze,
+      comment: "The poorest value of a rating scale (default 1).".freeze,
       domain: "vmd:Rating".freeze,
       type: "rdf:Property".freeze
     property :yield,

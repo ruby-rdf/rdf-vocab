@@ -307,7 +307,11 @@ module RDF
       rss:    {uri: "http://purl.org/rss/1.0/", source: "http://purl.org/rss/1.0/schema.rdf"},
       schema: {
         uri: "http://schema.org/",
-        source: "http://schema.org/version/latest/all-layers.nq"
+        source: "https://schema.org/version/latest/schemaorg-all-http.nt"
+      },
+      schemas: {
+        uri: "https://schema.org/",
+        source: "https://schema.org/version/latest/schemaorg-all-https.nt"
       },
       sd: {uri: 'http://www.w3.org/ns/sparql-service-description#', source: 'http://www.w3.org/ns/sparql-service-description.ttl'},
       sh: {uri: 'http://www.w3.org/ns/shacl#', source: 'https://www.w3.org/ns/shacl.ttl'},

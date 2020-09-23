@@ -49,7 +49,7 @@ RDF::Vocab::VOCABS.each do |id, v|
       File.open("lib/rdf/vocab/#{id}.rb_p", "w") {|f| f.write v[:patch]}
       cmd += " patch --patch-file lib/rdf/vocab/#{id}.rb_p"
     end
-    cmd += " serialize --uri '#{v[:uri]}' --output-format vocabulary"
+    cmd += " serialize --uri '#{v[:uri]}' --output-format vocabulary --ordered"
     cmd += " --module-name #{v.fetch(:module_name, "RDF::Vocab")}"
     cmd += " --class-name #{v[:class_name] ? v[:class_name] : id.to_s.upcase}"
     cmd += " --strict" if v.fetch(:strict, true)

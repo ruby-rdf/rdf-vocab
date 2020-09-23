@@ -165,7 +165,7 @@ module RDF::Vocab
 
     # Ontology definition
     ontology :"http://id.loc.gov/vocabulary/preservation/eventType/",
-      comment: %(  Event Types are actions performed within or outside the repository that affect the long term preservation of digital objects.).freeze,
+      comment: "  Event Types are actions performed within or outside the repository that affect the long term preservation of digital objects.".freeze,
       label: "Event Type".freeze,
       "mads:adminMetadata": [term(
           "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2010-06-01T00:00:01".freeze,
