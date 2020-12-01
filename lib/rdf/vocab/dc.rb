@@ -553,6 +553,7 @@ module RDF::Vocab
       "dc:issued": "2000-07-11".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Abstract".freeze,
+      subPropertyOf: ["dc11:description".freeze, "dc:description".freeze],
       type: "rdf:Property".freeze
     property :accessRights,
       comment: "Information about who access the resource or an indication of its security status.".freeze,
@@ -561,6 +562,7 @@ module RDF::Vocab
       "http://purl.org/dc/dcam/rangeIncludes": "dc:RightsStatement".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Access Rights".freeze,
+      subPropertyOf: ["dc11:rights".freeze, "dc:rights".freeze],
       type: "rdf:Property".freeze
     property :accrualMethod,
       comment: "The method by which items are added to a collection.".freeze,
@@ -596,6 +598,7 @@ module RDF::Vocab
       isDefinedBy: "dc:".freeze,
       label: "Alternative Title".freeze,
       range: "rdfs:Literal".freeze,
+      subPropertyOf: ["dc11:title".freeze, "dc:title".freeze],
       type: "rdf:Property".freeze
     property :audience,
       comment: "A class of agents for whom the resource is intended or useful.".freeze,
@@ -612,6 +615,7 @@ module RDF::Vocab
       isDefinedBy: "dc:".freeze,
       label: "Date Available".freeze,
       range: "rdfs:Literal".freeze,
+      subPropertyOf: ["dc11:date".freeze, "dc:date".freeze],
       type: "rdf:Property".freeze
     property :bibliographicCitation,
       comment: "A bibliographic reference for the resource.".freeze,
@@ -620,6 +624,7 @@ module RDF::Vocab
       isDefinedBy: "dc:".freeze,
       label: "Bibliographic Citation".freeze,
       range: "rdfs:Literal".freeze,
+      subPropertyOf: ["dc11:identifier".freeze, "dc:identifier".freeze],
       type: "rdf:Property".freeze
     property :conformsTo,
       comment: "An established standard to which the described resource conforms.".freeze,
@@ -627,6 +632,7 @@ module RDF::Vocab
       "http://purl.org/dc/dcam/rangeIncludes": "dc:Standard".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Conforms To".freeze,
+      subPropertyOf: ["dc11:relation".freeze, "dc:relation".freeze],
       type: "rdf:Property".freeze
     property :contributor,
       comment: "An entity responsible for making contributions to the resource.".freeze,
@@ -635,6 +641,7 @@ module RDF::Vocab
       "http://purl.org/dc/dcam/rangeIncludes": "dc:Agent".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Contributor".freeze,
+      subPropertyOf: "dc11:contributor".freeze,
       type: "rdf:Property".freeze
     property :coverage,
       comment: "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant.".freeze,
@@ -643,6 +650,7 @@ module RDF::Vocab
       "http://purl.org/dc/dcam/rangeIncludes": ["dc:Jurisdiction".freeze, "dc:Location".freeze, "dc:Period".freeze],
       isDefinedBy: "dc:".freeze,
       label: "Coverage".freeze,
+      subPropertyOf: "dc11:coverage".freeze,
       type: "rdf:Property".freeze
     property :created,
       comment: "Date of creation of the resource.".freeze,
@@ -651,6 +659,7 @@ module RDF::Vocab
       isDefinedBy: "dc:".freeze,
       label: "Date Created".freeze,
       range: "rdfs:Literal".freeze,
+      subPropertyOf: ["dc11:date".freeze, "dc:date".freeze],
       type: "rdf:Property".freeze
     property :creator,
       comment: "An entity responsible for making the resource.".freeze,
@@ -660,6 +669,7 @@ module RDF::Vocab
       "http://purl.org/dc/dcam/rangeIncludes": "dc:Agent".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Creator".freeze,
+      subPropertyOf: ["dc11:creator".freeze, "dc:contributor".freeze],
       type: "rdf:Property".freeze
     property :date,
       comment: "A point or period of time associated with an event in the lifecycle of the resource.".freeze,
@@ -668,6 +678,7 @@ module RDF::Vocab
       isDefinedBy: "dc:".freeze,
       label: "Date".freeze,
       range: "rdfs:Literal".freeze,
+      subPropertyOf: "dc11:date".freeze,
       type: "rdf:Property".freeze
     property :dateAccepted,
       comment: "Date of acceptance of the resource.".freeze,
@@ -676,6 +687,7 @@ module RDF::Vocab
       isDefinedBy: "dc:".freeze,
       label: "Date Accepted".freeze,
       range: "rdfs:Literal".freeze,
+      subPropertyOf: ["dc11:date".freeze, "dc:date".freeze],
       type: "rdf:Property".freeze
     property :dateCopyrighted,
       comment: "Date of copyright of the resource.".freeze,
@@ -684,6 +696,7 @@ module RDF::Vocab
       isDefinedBy: "dc:".freeze,
       label: "Date Copyrighted".freeze,
       range: "rdfs:Literal".freeze,
+      subPropertyOf: ["dc11:date".freeze, "dc:date".freeze],
       type: "rdf:Property".freeze
     property :dateSubmitted,
       comment: "Date of submission of the resource.".freeze,
@@ -692,6 +705,7 @@ module RDF::Vocab
       isDefinedBy: "dc:".freeze,
       label: "Date Submitted".freeze,
       range: "rdfs:Literal".freeze,
+      subPropertyOf: ["dc11:date".freeze, "dc:date".freeze],
       type: "rdf:Property".freeze
     property :description,
       comment: "An account of the resource.".freeze,
@@ -699,6 +713,7 @@ module RDF::Vocab
       "dc:issued": "2008-01-14".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Description".freeze,
+      subPropertyOf: "dc11:description".freeze,
       type: "rdf:Property".freeze
     property :educationLevel,
       comment: "A class of agents, defined in terms of progression through an educational or training context, for which the described resource is intended.".freeze,
@@ -706,6 +721,7 @@ module RDF::Vocab
       "http://purl.org/dc/dcam/rangeIncludes": "dc:AgentClass".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Audience Education Level".freeze,
+      subPropertyOf: "dc:audience".freeze,
       type: "rdf:Property".freeze
     property :extent,
       comment: "The size or duration of the resource.".freeze,
@@ -714,6 +730,7 @@ module RDF::Vocab
       "http://purl.org/dc/dcam/rangeIncludes": "dc:SizeOrDuration".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Extent".freeze,
+      subPropertyOf: ["dc11:format".freeze, "dc:format".freeze],
       type: "rdf:Property".freeze
     property :format,
       comment: "The file format, physical medium, or dimensions of the resource.".freeze,
@@ -722,6 +739,7 @@ module RDF::Vocab
       "http://purl.org/dc/dcam/rangeIncludes": ["dc:Extent".freeze, "dc:MediaType".freeze],
       isDefinedBy: "dc:".freeze,
       label: "Format".freeze,
+      subPropertyOf: "dc11:format".freeze,
       type: "rdf:Property".freeze
     property :hasFormat,
       comment: "A related resource that is substantially the same as the pre-existing described resource, but in another format.".freeze,
@@ -729,6 +747,7 @@ module RDF::Vocab
       "dc:issued": "2000-07-11".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Has Format".freeze,
+      subPropertyOf: ["dc11:relation".freeze, "dc:relation".freeze],
       type: "rdf:Property".freeze
     property :hasPart,
       comment: "A related resource that is included either physically or logically in the described resource.".freeze,
@@ -736,6 +755,7 @@ module RDF::Vocab
       "dc:issued": "2000-07-11".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Has Part".freeze,
+      subPropertyOf: ["dc11:relation".freeze, "dc:relation".freeze],
       type: "rdf:Property".freeze
     property :hasVersion,
       comment: "A related resource that is a version, edition, or adaptation of the described resource.".freeze,
@@ -743,6 +763,7 @@ module RDF::Vocab
       "dc:issued": "2000-07-11".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Has Version".freeze,
+      subPropertyOf: ["dc11:relation".freeze, "dc:relation".freeze],
       type: "rdf:Property".freeze
     property :identifier,
       comment: "An unambiguous reference to the resource within a given context.".freeze,
@@ -751,6 +772,7 @@ module RDF::Vocab
       isDefinedBy: "dc:".freeze,
       label: "Identifier".freeze,
       range: "rdfs:Literal".freeze,
+      subPropertyOf: "dc11:identifier".freeze,
       type: "rdf:Property".freeze
     property :instructionalMethod,
       comment: "A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support.".freeze,
@@ -766,6 +788,7 @@ module RDF::Vocab
       "dc:issued": "2000-07-11".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Is Format Of".freeze,
+      subPropertyOf: ["dc11:relation".freeze, "dc:relation".freeze],
       type: "rdf:Property".freeze
     property :isPartOf,
       comment: "A related resource in which the described resource is physically or logically included.".freeze,
@@ -773,6 +796,7 @@ module RDF::Vocab
       "dc:issued": "2000-07-11".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Is Part Of".freeze,
+      subPropertyOf: ["dc11:relation".freeze, "dc:relation".freeze],
       type: "rdf:Property".freeze
     property :isReferencedBy,
       comment: "A related resource that references, cites, or otherwise points to the described resource.".freeze,
@@ -780,6 +804,7 @@ module RDF::Vocab
       "dc:issued": "2000-07-11".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Is Referenced By".freeze,
+      subPropertyOf: ["dc11:relation".freeze, "dc:relation".freeze],
       type: "rdf:Property".freeze
     property :isReplacedBy,
       comment: "A related resource that supplants, displaces, or supersedes the described resource.".freeze,
@@ -787,6 +812,7 @@ module RDF::Vocab
       "dc:issued": "2000-07-11".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Is Replaced By".freeze,
+      subPropertyOf: ["dc11:relation".freeze, "dc:relation".freeze],
       type: "rdf:Property".freeze
     property :isRequiredBy,
       comment: "A related resource that requires the described resource to support its function, delivery, or coherence.".freeze,
@@ -794,6 +820,7 @@ module RDF::Vocab
       "dc:issued": "2000-07-11".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Is Required By".freeze,
+      subPropertyOf: ["dc11:relation".freeze, "dc:relation".freeze],
       type: "rdf:Property".freeze
     property :isVersionOf,
       comment: "A related resource of which the described resource is a version, edition, or adaptation.".freeze,
@@ -801,6 +828,7 @@ module RDF::Vocab
       "dc:issued": "2000-07-11".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Is Version Of".freeze,
+      subPropertyOf: ["dc11:relation".freeze, "dc:relation".freeze],
       type: "rdf:Property".freeze
     property :issued,
       comment: "Date of formal issuance of the resource.".freeze,
@@ -809,6 +837,7 @@ module RDF::Vocab
       isDefinedBy: "dc:".freeze,
       label: "Date Issued".freeze,
       range: "rdfs:Literal".freeze,
+      subPropertyOf: ["dc11:date".freeze, "dc:date".freeze],
       type: "rdf:Property".freeze
     property :language,
       comment: "A language of the resource.".freeze,
@@ -817,6 +846,7 @@ module RDF::Vocab
       "http://purl.org/dc/dcam/rangeIncludes": "dc:LinguisticSystem".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Language".freeze,
+      subPropertyOf: "dc11:language".freeze,
       type: "rdf:Property".freeze
     property :license,
       comment: "A legal document giving official permission to do something with the resource.".freeze,
@@ -825,6 +855,7 @@ module RDF::Vocab
       "http://purl.org/dc/dcam/rangeIncludes": "dc:LicenseDocument".freeze,
       isDefinedBy: "dc:".freeze,
       label: "License".freeze,
+      subPropertyOf: ["dc11:rights".freeze, "dc:rights".freeze],
       type: "rdf:Property".freeze
     property :mediator,
       comment: "An entity that mediates access to the resource.".freeze,
@@ -833,6 +864,7 @@ module RDF::Vocab
       "http://purl.org/dc/dcam/rangeIncludes": "dc:AgentClass".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Mediator".freeze,
+      subPropertyOf: "dc:audience".freeze,
       type: "rdf:Property".freeze
     property :medium,
       comment: "The material or physical carrier of the resource.".freeze,
@@ -841,6 +873,7 @@ module RDF::Vocab
       "http://purl.org/dc/dcam/rangeIncludes": "dc:PhysicalMedium".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Medium".freeze,
+      subPropertyOf: ["dc11:format".freeze, "dc:format".freeze],
       type: "rdf:Property".freeze
     property :modified,
       comment: "Date on which the resource was changed.".freeze,
@@ -849,6 +882,7 @@ module RDF::Vocab
       isDefinedBy: "dc:".freeze,
       label: "Date Modified".freeze,
       range: "rdfs:Literal".freeze,
+      subPropertyOf: ["dc11:date".freeze, "dc:date".freeze],
       type: "rdf:Property".freeze
     property :provenance,
       comment: "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation.".freeze,
@@ -864,6 +898,7 @@ module RDF::Vocab
       "http://purl.org/dc/dcam/rangeIncludes": "dc:Agent".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Publisher".freeze,
+      subPropertyOf: "dc11:publisher".freeze,
       type: "rdf:Property".freeze
     property :references,
       comment: "A related resource that is referenced, cited, or otherwise pointed to by the described resource.".freeze,
@@ -871,6 +906,7 @@ module RDF::Vocab
       "dc:issued": "2000-07-11".freeze,
       isDefinedBy: "dc:".freeze,
       label: "References".freeze,
+      subPropertyOf: ["dc11:relation".freeze, "dc:relation".freeze],
       type: "rdf:Property".freeze
     property :relation,
       comment: "A related resource.".freeze,
@@ -878,6 +914,7 @@ module RDF::Vocab
       "dc:issued": "2008-01-14".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Relation".freeze,
+      subPropertyOf: "dc11:relation".freeze,
       type: "rdf:Property".freeze
     property :replaces,
       comment: "A related resource that is supplanted, displaced, or superseded by the described resource.".freeze,
@@ -885,6 +922,7 @@ module RDF::Vocab
       "dc:issued": "2000-07-11".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Replaces".freeze,
+      subPropertyOf: ["dc11:relation".freeze, "dc:relation".freeze],
       type: "rdf:Property".freeze
     property :requires,
       comment: "A related resource that is required by the described resource to support its function, delivery, or coherence.".freeze,
@@ -892,6 +930,7 @@ module RDF::Vocab
       "dc:issued": "2000-07-11".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Requires".freeze,
+      subPropertyOf: ["dc11:relation".freeze, "dc:relation".freeze],
       type: "rdf:Property".freeze
     property :rights,
       comment: "Information about rights held in and over the resource.".freeze,
@@ -900,6 +939,7 @@ module RDF::Vocab
       "http://purl.org/dc/dcam/rangeIncludes": "dc:RightsStatement".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Rights".freeze,
+      subPropertyOf: "dc11:rights".freeze,
       type: "rdf:Property".freeze
     property :rightsHolder,
       comment: "A person or organization owning or managing rights over the resource.".freeze,
@@ -915,6 +955,7 @@ module RDF::Vocab
       "dc:issued": "2008-01-14".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Source".freeze,
+      subPropertyOf: ["dc11:source".freeze, "dc:relation".freeze],
       type: "rdf:Property".freeze
     property :spatial,
       comment: "Spatial characteristics of the resource.".freeze,
@@ -922,6 +963,7 @@ module RDF::Vocab
       "http://purl.org/dc/dcam/rangeIncludes": "dc:Location".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Spatial Coverage".freeze,
+      subPropertyOf: ["dc11:coverage".freeze, "dc:coverage".freeze],
       type: "rdf:Property".freeze
     property :subject,
       comment: "A topic of the resource.".freeze,
@@ -929,12 +971,14 @@ module RDF::Vocab
       "dc:issued": "2008-01-14".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Subject".freeze,
+      subPropertyOf: "dc11:subject".freeze,
       type: "rdf:Property".freeze
     property :tableOfContents,
       comment: "A list of subunits of the resource.".freeze,
       "dc:issued": "2000-07-11".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Table Of Contents".freeze,
+      subPropertyOf: ["dc11:description".freeze, "dc:description".freeze],
       type: "rdf:Property".freeze
     property :temporal,
       comment: "Temporal characteristics of the resource.".freeze,
@@ -942,6 +986,7 @@ module RDF::Vocab
       "http://purl.org/dc/dcam/rangeIncludes": "dc:PeriodOfTime".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Temporal Coverage".freeze,
+      subPropertyOf: ["dc11:coverage".freeze, "dc:coverage".freeze],
       type: "rdf:Property".freeze
     property :title,
       comment: "A name given to the resource.".freeze,
@@ -949,6 +994,7 @@ module RDF::Vocab
       isDefinedBy: "dc:".freeze,
       label: "Title".freeze,
       range: "rdfs:Literal".freeze,
+      subPropertyOf: "dc11:title".freeze,
       type: "rdf:Property".freeze
     property :type,
       comment: "The nature or genre of the resource.".freeze,
@@ -956,6 +1002,7 @@ module RDF::Vocab
       "dc:issued": "2008-01-14".freeze,
       isDefinedBy: "dc:".freeze,
       label: "Type".freeze,
+      subPropertyOf: "dc11:type".freeze,
       type: "rdf:Property".freeze
     property :valid,
       comment: "Date (often a range) of validity of a resource.".freeze,
@@ -964,6 +1011,7 @@ module RDF::Vocab
       isDefinedBy: "dc:".freeze,
       label: "Date Valid".freeze,
       range: "rdfs:Literal".freeze,
+      subPropertyOf: ["dc11:date".freeze, "dc:date".freeze],
       type: "rdf:Property".freeze
 
     # Datatype definitions
@@ -979,7 +1027,7 @@ module RDF::Vocab
       "dc:issued": "2000-07-11".freeze,
       isDefinedBy: "dc:".freeze,
       label: "ISO 3166".freeze,
-      "rdfs:seeAlso": "http://www.iso.org/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html".freeze,
+      "rdfs:seeAlso": "https://www.iso.org/obp/ui/#search".freeze,
       type: "rdfs:Datatype".freeze
     term :"ISO639-2",
       comment: "The three-letter alphabetic codes listed in ISO639-2 for the representation of names of languages.".freeze,
