@@ -20,7 +20,7 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :BaseUriSource
   #
-  #     # The class of Hydra classes. Hydra classes and their instances are dereferenceable resources.
+  #     # The class of Hydra classes.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Class
   #
@@ -52,7 +52,7 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :PartialCollectionView
   #
-  #     # The class of dereferenceable resources.
+  #     # The class of dereferenceable resources by means a client can attempt to dereference; however, the received responses should still be verified.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Resource
   #
@@ -153,7 +153,7 @@ module RDF::Vocab
   #
   #     # True if the client can change the property's value, false otherwise.
   #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :writeable
+  #     attr_reader :writable
   #
   #     # An IRI template as defined by RFC6570.
   #     # @return [RDF::Vocabulary::Term]
@@ -199,13 +199,17 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :last
   #
-  #     # Semantics of each member provided by the collection.
+  #     # This predicate is left for compatibility purposes and hydra:memberAssertion should be used instead.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :manages
   #
   #     # A member of the collection
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :member
+  #
+  #     # Semantics of each member provided by the collection.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :memberAssertion
   #
   #     # The resource following the current instance in an interlinked set of resources.
   #     # @return [RDF::Vocabulary::Term]
@@ -255,6 +259,10 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :view
   #
+  #     # This property is left for compatibility purposes and hydra:writable should be used instead.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :writeable
+  #
   #   end
   HYDRA = Class.new(RDF::StrictVocabulary("http://www.w3.org/ns/hydra/core#")) do
 
@@ -287,10 +295,10 @@ module RDF::Vocab
       type: "hydra:Class".freeze,
       "vs:term_status": "testing".freeze
     term :Class,
-      comment: "The class of Hydra classes. Hydra classes and their instances are dereferenceable resources.".freeze,
+      comment: "The class of Hydra classes.".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "Hydra Class".freeze,
-      subClassOf: ["hydra:Resource".freeze, "rdfs:Class".freeze],
+      subClassOf: "rdfs:Class".freeze,
       type: ["hydra:Resource".freeze, "rdfs:Class".freeze],
       "vs:term_status": "testing".freeze
     term :Collection,
@@ -311,14 +319,12 @@ module RDF::Vocab
       comment: "The class of IRI templates.".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "IRI Template".freeze,
-      subClassOf: "hydra:Resource".freeze,
       type: "hydra:Class".freeze,
       "vs:term_status": "testing".freeze
     term :IriTemplateMapping,
       comment: "A mapping from an IRI template variable to a property.".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "IriTemplateMapping".freeze,
-      subClassOf: "hydra:Resource".freeze,
       type: "hydra:Class".freeze,
       "vs:term_status": "testing".freeze
     term :Link,
@@ -332,7 +338,6 @@ module RDF::Vocab
       comment: "An operation.".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "Operation".freeze,
-      subClassOf: "hydra:Resource".freeze,
       type: "hydra:Class".freeze,
       "vs:term_status": "testing".freeze
     term :PartialCollectionView,
@@ -343,24 +348,21 @@ module RDF::Vocab
       type: "hydra:Class".freeze,
       "vs:term_status": "testing".freeze
     term :Resource,
-      comment: "The class of dereferenceable resources.".freeze,
+      comment: "The class of dereferenceable resources by means a client can attempt to dereference; however, the received responses should still be verified.".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "Hydra Resource".freeze,
-      subClassOf: "rdfs:Resource".freeze,
       type: "hydra:Class".freeze,
       "vs:term_status": "testing".freeze
     term :Status,
       comment: "Additional information about a status code that might be returned.".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "Status code description".freeze,
-      subClassOf: "hydra:Resource".freeze,
       type: "hydra:Class".freeze,
       "vs:term_status": "testing".freeze
     term :SupportedProperty,
       comment: "A property known to be supported by a Hydra class.".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "Supported Property".freeze,
-      subClassOf: "hydra:Resource".freeze,
       type: "hydra:Class".freeze,
       "vs:term_status": "testing".freeze
     term :TemplatedLink,
@@ -374,7 +376,6 @@ module RDF::Vocab
       comment: "A representation specifies how to serialize variable values into strings.".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "VariableRepresentation".freeze,
-      subClassOf: "hydra:Resource".freeze,
       type: "hydra:Class".freeze,
       "vs:term_status": "testing".freeze
 
@@ -537,11 +538,11 @@ module RDF::Vocab
       range: "hydra:VariableRepresentation".freeze,
       type: "rdf:Property".freeze,
       "vs:term_status": "testing".freeze
-    property :writeable,
+    property :writable,
       comment: "True if the client can change the property's value, false otherwise.".freeze,
       domain: "hydra:SupportedProperty".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
-      label: "writeable".freeze,
+      label: "writable".freeze,
       range: "xsd:boolean".freeze,
       type: "rdf:Property".freeze,
       "vs:term_status": "testing".freeze
@@ -591,7 +592,6 @@ module RDF::Vocab
       "vs:term_status": "testing".freeze
     term :collection,
       comment: "Collections somehow related to this resource.".freeze,
-      domain: "hydra:Resource".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "collection".freeze,
       range: "hydra:Collection".freeze,
@@ -610,8 +610,7 @@ module RDF::Vocab
       domain: "hydra:Operation".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "expects".freeze,
-      range: "hydra:Resource".freeze,
-      rangeIncludes: ["hydra:Class".freeze, "hydra:Resource".freeze],
+      rangeIncludes: ["hydra:Class".freeze, "hydra:Resource".freeze, "rdfs:Class".freeze, "rdfs:Resource".freeze],
       type: "hydra:Link".freeze,
       "vs:term_status": "testing".freeze
     term :first,
@@ -631,18 +630,23 @@ module RDF::Vocab
       type: "hydra:Link".freeze,
       "vs:term_status": "testing".freeze
     term :manages,
-      comment: "Semantics of each member provided by the collection.".freeze,
-      domain: "hydra:Collection".freeze,
+      comment: "This predicate is left for compatibility purposes and hydra:memberAssertion should be used instead.".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "manages".freeze,
-      "vs:term_status": "testing".freeze
+      subPropertyOf: "hydra:memberAssertion".freeze,
+      "vs:term_status": "archaic".freeze
     term :member,
       comment: "A member of the collection".freeze,
       domain: "hydra:Collection".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "member".freeze,
-      range: "hydra:Resource".freeze,
       type: "hydra:Link".freeze,
+      "vs:term_status": "testing".freeze
+    term :memberAssertion,
+      comment: "Semantics of each member provided by the collection.".freeze,
+      domain: "hydra:Collection".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
+      label: "member assertion".freeze,
       "vs:term_status": "testing".freeze
     term :next,
       comment: "The resource following the current instance in an interlinked set of resources.".freeze,
@@ -686,8 +690,7 @@ module RDF::Vocab
       domain: "hydra:Operation".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "returns".freeze,
-      range: "hydra:Resource".freeze,
-      rangeIncludes: ["hydra:Class".freeze, "hydra:Resource".freeze],
+      rangeIncludes: ["hydra:Class".freeze, "hydra:Resource".freeze, "rdfs:Class".freeze, "rdfs:Resource".freeze],
       type: "hydra:Link".freeze,
       "vs:term_status": "testing".freeze
     term :search,
@@ -708,12 +711,12 @@ module RDF::Vocab
       domain: "hydra:ApiDocumentation".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "supported classes".freeze,
-      range: "hydra:Class".freeze,
+      range: "rdfs:Class".freeze,
       type: "hydra:Link".freeze,
       "vs:term_status": "testing".freeze
     term :supportedOperation,
       comment: "An operation supported by instances of the specific Hydra class or the target of the Hydra link".freeze,
-      domainIncludes: ["hydra:Class".freeze, "hydra:Link".freeze, "hydra:SupportedProperty".freeze, "hydra:TemplatedLink".freeze],
+      domainIncludes: ["hydra:Class".freeze, "hydra:Link".freeze, "hydra:SupportedProperty".freeze, "hydra:TemplatedLink".freeze, "rdfs:Class".freeze],
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "supported operation".freeze,
       range: "hydra:Operation".freeze,
@@ -721,7 +724,7 @@ module RDF::Vocab
       "vs:term_status": "testing".freeze
     term :supportedProperty,
       comment: "The properties known to be supported by a Hydra class".freeze,
-      domain: "hydra:Class".freeze,
+      domain: "rdfs:Class".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "supported properties".freeze,
       range: "hydra:SupportedProperty".freeze,
@@ -729,11 +732,15 @@ module RDF::Vocab
       "vs:term_status": "testing".freeze
     term :view,
       comment: "A specific view of a resource.".freeze,
-      domain: "hydra:Resource".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "view".freeze,
-      range: "hydra:Resource".freeze,
       type: "hydra:Link".freeze,
       "vs:term_status": "testing".freeze
+    term :writeable,
+      comment: "This property is left for compatibility purposes and hydra:writable should be used instead.".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
+      label: "writable".freeze,
+      subPropertyOf: "hydra:writable".freeze,
+      "vs:term_status": "archaic".freeze
   end
 end
