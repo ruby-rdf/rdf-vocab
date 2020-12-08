@@ -5,9 +5,13 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://rightsstatements.org/vocab/>
+  #   #
   #   class RightsStatements < RDF::StrictVocabulary
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :irswg
+  #
   #   end
-  class RightsStatements < RDF::StrictVocabulary("http://rightsstatements.org/vocab/")
+  RightsStatements = Class.new(RDF::StrictVocabulary("http://rightsstatements.org/vocab/")) do
 
     # Extra definitions
     term :"1.0/",
@@ -21,7 +25,7 @@ module RDF::Vocab
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:modified": "2019-04-18".freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
-      notation: %(CNE).freeze,
+      notation: "CNE".freeze,
       "owl:versionInfo": "1.0".freeze,
       "skos:closeMatch": "http://www.europeana.eu/rights/unknown/".freeze,
       "skos:relatedMatch": "http://id.loc.gov/vocabulary/preservation/copyrightStatus/unk".freeze,
@@ -31,7 +35,7 @@ module RDF::Vocab
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:modified": "2019-04-18".freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
-      notation: %(InC-EDU).freeze,
+      notation: "InC-EDU".freeze,
       "owl:versionInfo": "1.0".freeze,
       "skos:relatedMatch": "http://id.loc.gov/vocabulary/preservation/copyrightStatus/cpr".freeze,
       type: ["dc:RightsStatement".freeze, "skos:Concept".freeze]
@@ -41,7 +45,7 @@ module RDF::Vocab
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:modified": "2019-04-18".freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
-      notation: %(InC-NC).freeze,
+      notation: "InC-NC".freeze,
       "owl:versionInfo": "1.0".freeze,
       "skos:closeMatch": "http://creativecommons.org/licenses/by-nc/4.0/".freeze,
       "skos:relatedMatch": "http://id.loc.gov/vocabulary/preservation/copyrightStatus/cpr".freeze,
@@ -51,7 +55,7 @@ module RDF::Vocab
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:modified": "2010-04-18".freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
-      notation: %(InC-OW-EU).freeze,
+      notation: "InC-OW-EU".freeze,
       "owl:versionInfo": "1.0".freeze,
       "skos:closeMatch": "http://www.europeana.eu/rights/orphan-work-eu/".freeze,
       "skos:relatedMatch": "http://id.loc.gov/vocabulary/preservation/copyrightStatus/cpr".freeze,
@@ -61,7 +65,7 @@ module RDF::Vocab
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:modified": "2019-04-18".freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
-      notation: %(InC-RUU).freeze,
+      notation: "InC-RUU".freeze,
       "owl:versionInfo": "1.0".freeze,
       "skos:relatedMatch": "http://id.loc.gov/vocabulary/preservation/copyrightStatus/cpr".freeze,
       type: ["dc:RightsStatement".freeze, "skos:Concept".freeze]
@@ -70,7 +74,7 @@ module RDF::Vocab
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:modified": "2019-04-18".freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
-      notation: %(InC).freeze,
+      notation: "InC".freeze,
       "owl:versionInfo": "1.0".freeze,
       "skos:closeMatch": "http://www.europeana.eu/rights/rr-f/".freeze,
       "skos:relatedMatch": "http://id.loc.gov/vocabulary/preservation/copyrightStatus/cpr".freeze,
@@ -80,7 +84,7 @@ module RDF::Vocab
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:modified": "2019-04-18".freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
-      notation: %(NKC).freeze,
+      notation: "NKC".freeze,
       "owl:versionInfo": "1.0".freeze,
       "skos:relatedMatch": "http://id.loc.gov/vocabulary/preservation/copyrightStatus/unk".freeze,
       type: ["dc:RightsStatement".freeze, "skos:Concept".freeze]
@@ -89,7 +93,7 @@ module RDF::Vocab
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:modified": "2019-04-18".freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
-      notation: %(NoC-CR).freeze,
+      notation: "NoC-CR".freeze,
       "owl:versionInfo": "1.0".freeze,
       "skos:relatedMatch": "http://id.loc.gov/vocabulary/preservation/copyrightStatus/pub".freeze,
       type: ["dc:RightsStatement".freeze, "skos:Concept".freeze]
@@ -99,7 +103,7 @@ module RDF::Vocab
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:modified": "2019-04-18".freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
-      notation: %(NoC-NC).freeze,
+      notation: "NoC-NC".freeze,
       "owl:versionInfo": "1.0".freeze,
       "skos:relatedMatch": "http://id.loc.gov/vocabulary/preservation/copyrightStatus/pub".freeze,
       type: ["dc:RightsStatement".freeze, "skos:Concept".freeze]
@@ -108,7 +112,7 @@ module RDF::Vocab
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:modified": "2019-04-18".freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
-      notation: %(NoC-OKLR).freeze,
+      notation: "NoC-OKLR".freeze,
       "owl:versionInfo": "1.0".freeze,
       "skos:relatedMatch": "http://id.loc.gov/vocabulary/preservation/copyrightStatus/pub".freeze,
       type: ["dc:RightsStatement".freeze, "skos:Concept".freeze]
@@ -117,7 +121,7 @@ module RDF::Vocab
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:modified": "2019-04-18".freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
-      notation: %(NoC-US).freeze,
+      notation: "NoC-US".freeze,
       "owl:versionInfo": "1.0".freeze,
       type: ["dc:RightsStatement".freeze, "skos:Concept".freeze]
     term :"UND/1.0/",
@@ -125,7 +129,7 @@ module RDF::Vocab
       "dc:creator": "rightsstatements:irswg".freeze,
       "dc:modified": "2019-04-18".freeze,
       inScheme: "http://rightsstatements.org/vocab/1.0/".freeze,
-      notation: %(UND).freeze,
+      notation: "UND".freeze,
       "owl:versionInfo": "1.0".freeze,
       type: ["dc:RightsStatement".freeze, "skos:Concept".freeze]
     term :"collection-ic/1.0/",

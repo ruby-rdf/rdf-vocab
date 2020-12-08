@@ -5,9 +5,38 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.w3.org/ns/auth/rsa#>
+  #   #
+  #   # ontology for the RSA public private keys 
+  #   # @see http://www.w3.org/ns/auth/X509Uml.svg
+  #   # @see http://lists.foaf-project.org/mailman/listinfo/foaf-protocols
+  #   # @see http://en.wikipedia.org/wiki/RSA
   #   class RSA < RDF::StrictVocabulary
+  #     #      The union of the public and private components of an RSAKey.     Usually those pieces are not kept together     
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RSAKey
+  #
+  #     #      A Private Key in the RSA framework      
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RSAPrivateKey
+  #
+  #     #      The RSA public key.  Padded message m are encrypted by applying the function       modulus(power(m,exponent),modulus)     
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RSAPublicKey
+  #
+  #     #         The modulus of an RSA public and private key.     This is defined as n = p*q    
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :modulus
+  #
+  #     #         The exponent used to decrypt the message        calculated as            public_exponent*private_exponent = 1 modulo totient(p*q)        The private exponent is often named 'd'     
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :private_exponent
+  #
+  #     #         The exponent used to encrypt the message. Number chosen between        1 and the totient(p*q). Often named 'e' .     
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :public_exponent
+  #
   #   end
-  class RSA < RDF::StrictVocabulary("http://www.w3.org/ns/auth/rsa#")
+  RSA = Class.new(RDF::StrictVocabulary("http://www.w3.org/ns/auth/rsa#")) do
 
     # Ontology definition
     ontology :"http://www.w3.org/ns/auth/rsa#",

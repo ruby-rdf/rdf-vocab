@@ -5,9 +5,86 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://xmlns.com/wot/0.1/>
+  #   #
+  #   # Web Of Trust vocabulary
+  #   #
+  #   # Web Of Trust (wot) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language.
+  #   # @see http://xmlns.com/foaf/0.1/
   #   class WOT < RDF::StrictVocabulary
+  #     # An encrypted document intended for a set of recipients.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :EncryptedDocument
+  #
+  #     # An endorsement resource containing a detached ascii signature.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Endorsement
+  #
+  #     # A class used to represent a PGP/GPG public key for a user (an agent, person, group or organization).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PubKey
+  #
+  #     # An event describing the action of a public key being signed by some other public key.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SigEvent
+  #
+  #     # A user (agent, person, group or organization) of a PGP/GPG public key.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :User
+  #
+  #     # A property linking a document to an endorsement resource containing a detached ascii signature.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :assurance
+  #
+  #     # A property linking an encrypted document to a recipient.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :encryptedTo
+  #
+  #     # A property linking an encrypted document to the public key that was used to encrypt it.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :encrypter
+  #
+  #     # A public key hex fingerprint string (40 digits, white space insignificant).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fingerprint
+  #
+  #     # A property to link a PubKey from a User
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasKey
+  #
+  #     # A public key hex identifier string (8 digits).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hex_id
+  #
+  #     # A property linking a public key to the user of the key.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identity
+  #
+  #     # A numeric string representing the length, in bytes, of a public key.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :length
+  #
+  #     # The location of an ascii version of a public key.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pubkeyAddress
+  #
+  #     # The date of a public key signature event.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sigdate
+  #
+  #     # A property linking a public key to a public key signature event.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :signed
+  #
+  #     # A property linking a public key signature event to the public key that was used to sign.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :signer
+  #
+  #     # The time (of day) of a public key signature event.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sigtime
+  #
   #   end
-  class WOT < RDF::StrictVocabulary("http://xmlns.com/wot/0.1/")
+  WOT = Class.new(RDF::StrictVocabulary("http://xmlns.com/wot/0.1/")) do
 
     # Ontology definition
     ontology :"http://xmlns.com/wot/0.1/",
@@ -20,7 +97,7 @@ module RDF::Vocab
 
     # Class definitions
     term :EncryptedDocument,
-      comment: %(An encrypted document intended for a set of recipients.).freeze,
+      comment: "An encrypted document intended for a set of recipients.".freeze,
       isDefinedBy: "wot:".freeze,
       label: "Encrypted Document".freeze,
       "owl:disjointWith": ["wot:Endorsement".freeze, "wot:PubKey".freeze, "wot:SigEvent".freeze, "wot:User".freeze],
@@ -28,7 +105,7 @@ module RDF::Vocab
       type: "owl:Class".freeze,
       "vs:term_status": "unstable".freeze
     term :Endorsement,
-      comment: %(An endorsement resource containing a detached ascii signature.).freeze,
+      comment: "An endorsement resource containing a detached ascii signature.".freeze,
       isDefinedBy: "wot:".freeze,
       label: "Endorsement".freeze,
       "owl:disjointWith": ["wot:EncryptedDocument".freeze, "wot:PubKey".freeze, "wot:SigEvent".freeze, "wot:User".freeze],
@@ -36,7 +113,7 @@ module RDF::Vocab
       type: "owl:Class".freeze,
       "vs:term_status": "unstable".freeze
     term :PubKey,
-      comment: %(A class used to represent a PGP/GPG public key for a user \(an agent, person, group or organization\).).freeze,
+      comment: "A class used to represent a PGP/GPG public key for a user (an agent, person, group or organization).".freeze,
       isDefinedBy: "wot:".freeze,
       label: "Public Key".freeze,
       "owl:disjointWith": ["wot:EncryptedDocument".freeze, "wot:Endorsement".freeze, "wot:SigEvent".freeze, "wot:User".freeze],
@@ -44,7 +121,7 @@ module RDF::Vocab
       type: "owl:Class".freeze,
       "vs:term_status": "stable".freeze
     term :SigEvent,
-      comment: %(An event describing the action of a public key being signed by some other public key.).freeze,
+      comment: "An event describing the action of a public key being signed by some other public key.".freeze,
       isDefinedBy: "wot:".freeze,
       label: "Key Signing Event".freeze,
       "owl:disjointWith": ["wot:EncryptedDocument".freeze, "wot:Endorsement".freeze, "wot:PubKey".freeze, "wot:User".freeze],
@@ -52,7 +129,7 @@ module RDF::Vocab
       type: "owl:Class".freeze,
       "vs:term_status": "testing".freeze
     term :User,
-      comment: %(A user \(agent, person, group or organization\) of a PGP/GPG public key.).freeze,
+      comment: "A user (agent, person, group or organization) of a PGP/GPG public key.".freeze,
       isDefinedBy: "wot:".freeze,
       label: "Key User".freeze,
       "owl:disjointWith": ["wot:EncryptedDocument".freeze, "wot:Endorsement".freeze, "wot:PubKey".freeze, "wot:SigEvent".freeze],
@@ -62,7 +139,7 @@ module RDF::Vocab
 
     # Property definitions
     property :assurance,
-      comment: %(A property linking a document to an endorsement resource containing a detached ascii signature.).freeze,
+      comment: "A property linking a document to an endorsement resource containing a detached ascii signature.".freeze,
       domain: "foaf:Document".freeze,
       isDefinedBy: "wot:".freeze,
       label: "Assurance".freeze,
@@ -70,7 +147,7 @@ module RDF::Vocab
       type: "owl:ObjectProperty".freeze,
       "vs:term_status": "stable".freeze
     property :encryptedTo,
-      comment: %(A property linking an encrypted document to a recipient.).freeze,
+      comment: "A property linking an encrypted document to a recipient.".freeze,
       domain: "wot:EncryptedDocument".freeze,
       isDefinedBy: "wot:".freeze,
       label: "Encrypted to".freeze,
@@ -78,7 +155,7 @@ module RDF::Vocab
       type: "owl:ObjectProperty".freeze,
       "vs:term_status": "unstable".freeze
     property :encrypter,
-      comment: %(A property linking an encrypted document to the public key that was used to encrypt it.).freeze,
+      comment: "A property linking an encrypted document to the public key that was used to encrypt it.".freeze,
       domain: "wot:EncryptedDocument".freeze,
       isDefinedBy: "wot:".freeze,
       label: "Encrypted by".freeze,
@@ -86,7 +163,7 @@ module RDF::Vocab
       type: ["owl:FunctionalProperty".freeze, "owl:ObjectProperty".freeze],
       "vs:term_status": "unstable".freeze
     property :fingerprint,
-      comment: %(A public key hex fingerprint string \(40 digits, white space insignificant\).).freeze,
+      comment: "A public key hex fingerprint string (40 digits, white space insignificant).".freeze,
       domain: "wot:PubKey".freeze,
       isDefinedBy: "wot:".freeze,
       label: "Fingerprint".freeze,
@@ -94,7 +171,7 @@ module RDF::Vocab
       type: ["owl:DatatypeProperty".freeze, "owl:InverseFunctionalProperty".freeze],
       "vs:term_status": "testing".freeze
     property :hasKey,
-      comment: %(A property to link a PubKey from a User).freeze,
+      comment: "A property to link a PubKey from a User".freeze,
       domain: "wot:User".freeze,
       inverseOf: "wot:identity".freeze,
       isDefinedBy: "wot:".freeze,
@@ -103,7 +180,7 @@ module RDF::Vocab
       type: "owl:ObjectProperty".freeze,
       "vs:term_status": "testing".freeze
     property :hex_id,
-      comment: %(A public key hex identifier string \(8 digits\).).freeze,
+      comment: "A public key hex identifier string (8 digits).".freeze,
       domain: "wot:PubKey".freeze,
       isDefinedBy: "wot:".freeze,
       label: "Hex identifier".freeze,
@@ -111,7 +188,7 @@ module RDF::Vocab
       type: "owl:DatatypeProperty".freeze,
       "vs:term_status": "stable".freeze
     property :identity,
-      comment: %(A property linking a public key to the user of the key.).freeze,
+      comment: "A property linking a public key to the user of the key.".freeze,
       domain: "wot:PubKey".freeze,
       isDefinedBy: "wot:".freeze,
       label: "Identity".freeze,
@@ -119,7 +196,7 @@ module RDF::Vocab
       type: ["owl:FunctionalProperty".freeze, "owl:ObjectProperty".freeze],
       "vs:term_status": "testing".freeze
     property :length,
-      comment: %(A numeric string representing the length, in bytes, of a public key.).freeze,
+      comment: "A numeric string representing the length, in bytes, of a public key.".freeze,
       domain: "wot:PubKey".freeze,
       isDefinedBy: "wot:".freeze,
       label: "Length".freeze,
@@ -127,7 +204,7 @@ module RDF::Vocab
       type: "owl:DatatypeProperty".freeze,
       "vs:term_status": "stable".freeze
     property :pubkeyAddress,
-      comment: %(The location of an ascii version of a public key.).freeze,
+      comment: "The location of an ascii version of a public key.".freeze,
       domain: "wot:PubKey".freeze,
       isDefinedBy: "wot:".freeze,
       label: "Address".freeze,
@@ -135,7 +212,7 @@ module RDF::Vocab
       type: "owl:ObjectProperty".freeze,
       "vs:term_status": "testing".freeze
     property :sigdate,
-      comment: %(The date of a public key signature event.).freeze,
+      comment: "The date of a public key signature event.".freeze,
       domain: "wot:SigEvent".freeze,
       isDefinedBy: "wot:".freeze,
       label: "Signature date".freeze,
@@ -143,7 +220,7 @@ module RDF::Vocab
       type: "owl:DatatypeProperty".freeze,
       "vs:term_status": "testing".freeze
     property :signed,
-      comment: %(A property linking a public key to a public key signature event.).freeze,
+      comment: "A property linking a public key to a public key signature event.".freeze,
       domain: "wot:PubKey".freeze,
       isDefinedBy: "wot:".freeze,
       label: "Signed".freeze,
@@ -151,7 +228,7 @@ module RDF::Vocab
       type: "owl:ObjectProperty".freeze,
       "vs:term_status": "testing".freeze
     property :signer,
-      comment: %(A property linking a public key signature event to the public key that was used to sign.).freeze,
+      comment: "A property linking a public key signature event to the public key that was used to sign.".freeze,
       domain: "wot:SigEvent".freeze,
       isDefinedBy: "wot:".freeze,
       label: "Signer".freeze,
@@ -159,7 +236,7 @@ module RDF::Vocab
       type: ["owl:FunctionalProperty".freeze, "owl:ObjectProperty".freeze],
       "vs:term_status": "unstable".freeze
     property :sigtime,
-      comment: %(The time \(of day\) of a public key signature event.).freeze,
+      comment: "The time (of day) of a public key signature event.".freeze,
       domain: "wot:SigEvent".freeze,
       isDefinedBy: "wot:".freeze,
       label: "Signature time".freeze,

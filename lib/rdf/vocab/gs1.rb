@@ -5,9 +5,1605 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://gs1.org/voc/>
+  #   #
+  #   # GS1 vocabulary
+  #   #
+  #   # The GS1 RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language.
   #   class GS1 < RDF::StrictVocabulary
+  #     # A product classification for the product other than the Global Product Classification(GPC brick value).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AdditionalProductClassificationDetails
+  #
+  #     # A set of details about one of the additives within the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AdditiveDetails
+  #
+  #     # Describes a prize or award won by a product or organization.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AwardPrizeDetails
+  #
+  #     # Any potable liquid.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Beverage
+  #
+  #     # Information on brands and sub-brands for a product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Brand
+  #
+  #     # Information about the type of certification issued by a certifying body.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CertificationDetails
+  #
+  #     #  A product that is worn on the body.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Clothing
+  #
+  #     # A set of colour code details (colour code, party controlling the code list) for the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ColourCodeDetails
+  #
+  #     # Information on an individual or department acting as point of contact for an organiation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ContactPoint
+  #
+  #     # Country is a complex data type that indicates a country and a country subdivision.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Country
+  #
+  #     # A set of diet type code details (diet type code and diet type sub code) for the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DietTypeCodeDetails
+  #
+  #     # Provides the length, width, and depth of an item with their associated unit of measure.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Dimension
+  #
+  #     # Food and Beverage Preparation Information is a complex data type that indicates a preparation state code and preparation instructions.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FoodAndBeveragePreparationInformation
+  #
+  #     # Food Beverage Tobacco Ingredient is a complex data type that includes an ingredient statement and details.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FoodBeverageTobaccoIngredientDetails
+  #
+  #     # A food, beverage or tobacco product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FoodBeverageTobaccoProduct
+  #
+  #     #  Outerwear that is worn on the feet such as shoes or boots.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Footwear
+  #
+  #     # Contains properties related specifically to fruit and vegetable products.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FruitsVegetables
+  #
+  #     # The geographic coordinates of a place or event.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GeoCoordinates
+  #
+  #     # Meat and poultry products.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MeatPoultry
+  #
+  #     # Milk butter cream yogurts cheese eggs and any substitutes for these products.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MilkButterCreamYogurtCheeseEggsSubstitutes
+  #
+  #     # A class providing nutritional value and intake percent.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NutritionMeasurementType
+  #
+  #     # An offer to transfer some rights to an item or to provide a service,for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Offer
+  #
+  #     # A set of organic claim details for the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OrganicClaimDetails
+  #
+  #     # An Organization is any legal or physical entity involved at any point in any supply chain and upon which there is a need to retrieve predefined information. An Organization is uniquely identified by a Global Location Number (GLN).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Organization
+  #
+  #     # Details on packaging for a product for example packaging type (bottle), materials, features, recycling, etc..
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PackagingDetails
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PackagingMaterialDetails
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Place
+  #
+  #     # The location at which a particular organization or person may be found or reached.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PostalAddress
+  #
+  #     # A structured value representing a monetary amount, consisting of a value and currency code.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PriceSpecification
+  #
+  #     # Any item (product or service) upon which there is a need to retrieve pre-defined information and that may be priced, or ordered, or invoiced at any point in any supply chain.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Product
+  #
+  #     # A grouping of properties related to the yield of a food or beverage product according to a specified type of preparation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ProductYieldDetails
+  #
+  #     # A point value or interval for product characteristics and other purposes. A unit of measurement is also specified.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :QuantitativeValue
+  #
+  #     # Provides URL and other information on a referenced electronic file.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ReferencedFileDetails
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ReturnablePackageDepositDetails
+  #
+  #     # Seafood Products including fish and shellfish.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Seafood
+  #
+  #     # A grouping of properties related to the representing the size of a product, by specifying a value from a specified code list.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SizeCodeDetails
+  #
+  #     # A grouping of properties related to the size of a wearable product
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SizeDetails
+  #
+  #     # A set of target market details (product release date and associated countries) for the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TargetMarketDetails
+  #
+  #     # Details on the composition of any materials used to make a product using textiles.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TextileMaterialDetails
+  #
+  #     # A code list.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TypeCode
+  #
+  #     # An assurance that the product is reliable and that repairs or replacement will be done free of charge within a given time limit and under certain conditions in the event of a defect.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :WarrantyPromise
+  #
+  #     # Products that are worn on the body.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :WearableProduct
+  #
+  #     # Code indicating a means of payment, for example, BANK_CHEQUE, CASH, etc.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :acceptedPaymentMethod
+  #
+  #     # The value associated with the Additional Organization Identification Type Value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :additionalOrganizationIdentificationTypeValue
+  #
+  #     # Relates to a set of additional product classification details
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :additionalProductClassification
+  #
+  #     # Code specifying the applied additional product classification scheme.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :additionalProductClassificationCode
+  #
+  #     # A description related to  the additional product classification code value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :additionalProductClassificationCodeDescription
+  #
+  #     # Code specifying an additional product classification other than the GS1 Global Product Classification. The applied classification scheme is specified as additional information together with the classification value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :additionalProductClassificationValue
+  #
+  #     # Additional variants necessary to communicate to the industry to help define the product. Multiple variants can be established for each GTIN for e.g. Style, Colour, and Fragrance .
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :additionalProductDescription
+  #
+  #     # Relates to details about any additives that a product may contain.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :additive
+  #
+  #     # Code indicating the level of presence of the additive.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :additiveLevelOfContainment
+  #
+  #     # The name of any additive or genetic modification contained or not contained in the product .
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :additiveName
+  #
+  #     # The postal address for an organization or place.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :address
+  #
+  #     # Code specifying the country (and country subdivision) for the address using ISO 3166-1.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :addressCountry
+  #
+  #     # Text specifying the name of the locality, for example a city.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :addressLocality
+  #
+  #     # Text specifying a province or state in abbreviated format for example NJ.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :addressRegion
+  #
+  #     # Links to afterhours contact information for an organization.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :afterHoursContact
+  #
+  #     # A legally defined geographical region where the grapes for a wine were grown also known as an appellation. It is recommended to populate this property with an ISO 3166-2 code to indicate country and subdivision.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :alcoholicBeverageSubregion
+  #
+  #     # Code specifying the level of presence of the allergen.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :allergenLevelOfContainmentCode
+  #
+  #     # The agency or other organization that defines or manages the criteria for allergen containment.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :allergenSpecificationAgency
+  #
+  #     # Free text field containing the name and version of the regulation or standard that defines the criteria of allergen containment.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :allergenSpecificationName
+  #
+  #     # Textual description of the presence or absence of allergens as governed by local rules and regulations, specified as one string.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :allergenStatement
+  #
+  #     # Code specifying the type of allergen.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :allergenType
+  #
+  #     # Describes the meat product in terms of whether it is the whole animal or part of the animal which has been cut such as the muscle, bone, organ, or fat. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :anatomicalForm
+  #
+  #     # Link to a file containing an audio clip which is relevant to the product. Examples are commercials, or instructional/ how to use audio files.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :audioFile
+  #
+  #     # The date from which the product is no longer available from the information provider, including seasonal or temporary product and services .
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :availabilityEnds
+  #
+  #     # The date from which the product is available from the information provider, including seasonal or temporary product and services.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :availabilityStarts
+  #
+  #     # The location the offered product or service is available from.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :availableAtOrFrom
+  #
+  #     # ISO 639-1 code specifying the language of a specified contact point.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :availableLanguage
+  #
+  #     # An award or prize given to the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :awardPrize
+  #
+  #     # Indicates the achievement of the product in relation to a prize or award, e.g. winner, runner-up, shortlisted.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :awardPrizeCode
+  #
+  #     # An ISO standard code identifying the country in which a prize or award is given. It is recommended to populate this property with an ISO 3166-1 country code.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :awardPrizeCountryCode
+  #
+  #     # Text that describes the awards won.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :awardPrizeDescription
+  #
+  #     # Free text listing members of the jury that awarded the prize.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :awardPrizeJury
+  #
+  #     # The name of a prize or award which the product has received.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :awardPrizeName
+  #
+  #     # The year in which a prize or award was given.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :awardPrizeYear
+  #
+  #     # The year in which the majority of ingredients are harvested and/or the alcoholic beverage is produced. Determination as to whether the vintage year is the harvest date or production date is according to requirements in the Target Market.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :beverageVintage
+  #
+  #     # Biotin Acid per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :biotinPerNutrientBasis
+  #
+  #     # The descriptive term that is used by the product manufacturer to identify whether the product makes a specific claim to contain no bones. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bonelessClaim
+  #
+  #     # The brand of the product that appears on the consumer package.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :brand
+  #
+  #     # The brand name of the product that appears on the consumer package.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :brandName
+  #
+  #     # The brand owner of the product. The organization that is responsible for allocating the GTIN to the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :brandOwner
+  #
+  #     # Calcium per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :calciumPerNutrientBasis
+  #
+  #     # Carbohydrates per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :carbohydratesPerNutrientBasis
+  #
+  #     # Free text field describing the sea zone from which the product was caught in. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :catchZone
+  #
+  #     # Information on certification to which the product complies.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :certification
+  #
+  #     # Name of the organization issuing the certification standard or other requirement being met .
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :certificationAgency
+  #
+  #     # Name of the certification standard. Free text. Example: Egg classification .
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :certificationStandard
+  #
+  #     # The product's certification standard value. Example:4.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :certificationValue
+  #
+  #     # The firmness of the cheese product for example EXTRA_HARD.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cheeseFirmness
+  #
+  #     # A descriptive way to specify a date range as some cheeses are matured over a period of time, but not an exact period. For example 3 to 4 weeks, over 1 year etc. The term maturation is also known in other markets as Aged.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cheeseMaturationPeriodDescription
+  #
+  #     # Chloride per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chloridePerNutrientBasis
+  #
+  #     # Cholesterol per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cholesterolPerNutrientBasis
+  #
+  #     # Chromium per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chromiumPerNutrientBasis
+  #
+  #     # Supplemental information to indicate the clothing cut or silhouette make of the garment. For example, silhouette details for a pair of jeans such as boot cut, or loose fit, comfort fit.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :clothingCut
+  #
+  #     # A free text description of the type of collar on the garment.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :collarType
+  #
+  #     # Relates to a set of details about the colour code for a product
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :colourCode
+  #
+  #     # The parties controlling the colour code lists. Dependent on colour code value.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :colourCodeList
+  #
+  #     # A code depicting the colour of an object according to a specific code list. The applied code list is specified as additional information together with the colour code.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :colourCodeValue
+  #
+  #     # A description of the colour of an object.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :colourDescription
+  #
+  #     # The first date/time that the buyer is allowed to sell the product to consumers. Usually related to a specific geography. ISO 8601 date format CCYY-MM-DDTHH:MM:SS.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :consumerFirstAvailabilityDateTime
+  #
+  #     # Link to a website, file, or image containing the manufacturer's recommendations for how the consumer or end user should store and handle the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :consumerHandlingStorage
+  #
+  #     # Indicates, with reference to the product branding, labelling or packaging, the descriptive term that is used by the product manufacturer to identify the period or stage in the consumer's life during which the product is considered to be suitable. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :consumerLifestage
+  #
+  #     # Additional information that should be used in advertising and in displaying.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :consumerPackageDisclaimer
+  #
+  #     # Information on consumer safety regarding the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :consumerSafetyInformation
+  #
+  #     # A code depicting restrictions imposed on the product regarding how it can be sold to the consumer for example Prescription Required.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :consumerSalesCondition
+  #
+  #     # Expresses in text the consumer storage instructions of a product which are normally held on the label or accompanying the product. This information may or may not be labelled on the pack.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :consumerStorageInstructions
+  #
+  #     # Free text containing the usage instructions of a product, which are normally held on the label or accompanying the product. This information may or may not be labelled on the pack.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :consumerUsageInstructions
+  #
+  #     # Links to information about a business location for an organization.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :contactPoint
+  #
+  #     # The function or role of a contact for example Customer Support.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :contactType
+  #
+  #     # An indication of the ease of preparation for semi-prepared products. The convenience level indicates the level of preparation in percentage required to prepare and helps the consumer to assess how long it will take to prepare the meal.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :convenienceLevelPercent
+  #
+  #     # Copper per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :copperPerNutrientBasis
+  #
+  #     # A short text string code (see values defined in ISO 3166) specifying the country in which a processing or other activity is performed, for example processing, bottling, manufacturing.
+  #     #
+  #     # Code specifying the country for the address using ISO 3166-1.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :countryCode
+  #
+  #     # The place where product is assembled.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :countryOfAssembly
+  #
+  #     # The place where the product or ingredient was last processed and tested before importation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :countryOfLastProcessing
+  #
+  #     # Code indicating the country of origin of the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :countryOfOrigin
+  #
+  #     # A description of the geographic area the item may have originated from or has been processed.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :countryOfOriginStatement
+  #
+  #     # A short text string code (see values defined in ISO 3166_2) specifying the country subdivision in which an activity is performed, for example processing, bottling, manufacturing.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :countrySubdivisionCode
+  #
+  #     # A code that identifies a county. A county is a territorial division in some countries, forming the chief unit of local administration. In the US, a county is a political and administrative division of a state.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :countyCode
+  #
+  #     # A street intersecting a main street (usually at right angles) and continuing on both sides of it.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :crossStreet
+  #
+  #     # The organization which provides product support to the trading partner organization to which merchandise is sold.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :customerSupportCentre
+  #
+  #     # The percentage of the recommended daily intake of a nutrient as recommended by authorities of the target market. Is expressed relative to the serving size and base daily value intake.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dailyValueIntakePercent
+  #
+  #     # The name of a division of an organization dealing with a specific activity
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :department
+  #
+  #     # Dependent products are products which are required to make the current product functional.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dependentProprietaryProduct
+  #
+  #     # The depth of the product, as measured according to the GS1 Package Measurement Rules. See http://www.gs1.org/package-measurement-rules-implementation-guide for more details.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :depth
+  #
+  #     # An alphanumeric size factor the brand owner wishes to communicate to the consumer. IE Jumbo, Capri, Full Length, Maxi.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :descriptiveSize
+  #
+  #     # The measurement of the diameter of the product at its largest point. For example, 165 mmt.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :diameter
+  #
+  #     # Links to multiple pairs of gs1:DietTypeCode and diet type sub code (free-form text string).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dietCode
+  #
+  #     # Code indicating the diet the product is suitable for example Kosher.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dietType
+  #
+  #     # Free text for indication of diet not stated in the list of diets.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dietTypeDescription
+  #
+  #     # Indicates a set of agreements or a certificate name that guarantees the product is permitted in a particular diet. A diet type subcode is a subclassification of a specific diet type. For example, Pareve is a diet type subcode of Kosher.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dietTypeSubcode
+  #
+  #     # The weight of the product when drained of its liquid. For example 225 grm, Jar of pickles in vinegar.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :drainedWeight
+  #
+  #     # The time period that the warranty is valid within.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :durationOfWarranty
+  #
+  #     # The current tax or duty or fee amount applicable to the product, expressed as a floating-point numeric value that is qualified by the corresponding currency. See also gs1:priceCurrency.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dutyFeeTaxAmount
+  #
+  #     # A description of tax type for example Taxes sure les supports audio.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dutyFeeTaxDescription
+  #
+  #     # The current tax or duty rate percentage applicable to the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dutyFeeTaxRate
+  #
+  #     # The quantity including unit of measure for which the offer for good or service is valid.  If this is not specified, an eligible quantity of 1 should be assumed.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eligibleQuantity
+  #
+  #     # The maximum quantity including unit of measure for which the offer for good or service is valid.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eligibleQuantityMaximum
+  #
+  #     # The minimum quantity including unit of measure for which the offer for good or service is valid.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eligibleQuantityMinimum
+  #
+  #     # Creating/sending/receiving of unstructured free text messages or documents using computer network, a mini-computer or an attached modem and regular telephone line or other electronic transmission media.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :email
+  #
+  #     # Energy from Fat per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :energyFromFatPerNutrientBasis
+  #
+  #     # Energy Per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :energyPerNutrientBasis
+  #
+  #     # A product which can be substituted for the product based on supplier-defined functional equivalence to the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :equivalentProduct
+  #
+  #     # The percentage of fat contained in milk content of the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fatInMilkContent
+  #
+  #     # Fat per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fatPerNutrientBasis
+  #
+  #     # The amount of fat contained in the base product expressed in percentage.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fatpercentageInDryMatter
+  #
+  #     # Device used for transmitting and reproducing fixed graphic material (as printing) by means of signals over telephone lines or other electronic transmission media.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :faxNumber
+  #
+  #     # Fibre per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fibrePerNutrientBasis
+  #
+  #     # The specified language to which the digital asset is targeted. It is recommended to use the ISO 639-1 language code.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fileLanguageCode
+  #
+  #     # The number of pixels along the vertical axis of the image.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :filePixelHeight
+  #
+  #     # The number of pixels along the horizontal axis of the image.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :filePixelWidth
+  #
+  #     # The type of fish for example Sea bass. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fishType
+  #
+  #     # Fluoride per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fluoridePerNutrientBasis
+  #
+  #     # Folic Acid per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :folicAcidPerNutrientBasis
+  #
+  #     # Identifies whether or not the product requires refrigeration.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :foodBeverageRefrigerationClaim
+  #
+  #     # The type of meal the food or beverage product is targeted to for example Breakfast.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :foodBeverageTargetUse
+  #
+  #     # Something that mechanically joins or affixes two or more parts together in a footwear product for example a shoe lace.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :footwearFasteningType
+  #
+  #     # The descriptive term that is used by the product manufacturer to identify whether the footwear upper is open or closed. Otherwise known as Open or Closed Upper.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :footwearUpperType
+  #
+  #     # A code determining whether the fish originated from the sea or was farmed. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :freshOrSeawaterFarmed
+  #
+  #     # Describes use of the product or service by the consumer. Should help clarify the product classification associated with the GTIN.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :functionalName
+  #
+  #     # A statement of the presence or absence of genetically modified protein or DNA.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geneticallyModifiedDeclaration
+  #
+  #     # Links to information about geocoordinates for a place.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geo
+  #
+  #     # A Global Location Number (GLN) is the GS1 Identification Key used to identify physical locations or parties. The key comprises a GS1 Company Prefix, Location Reference and Check Digit. For more information see http://www.gs1.org/gln.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :globalLocationNumber
+  #
+  #     # 8-digit code (GPC Brick Value) specifying a product category according to the GS1 Global Product Classification (GPC) standard. For more information see http://www.gs1.org/gpc
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gpcCategoryCode
+  #
+  #     # A description of the code specifying a product category according to the GS1 Global Product Classification (GPC) standard.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gpcCategoryDescription
+  #
+  #     # Used to identify the gross weight of the product. The gross weight includes all packaging materials of the product. At pallet level the productGrossWeight includes the weight of the pallet itself. For example, 200 grm, value - total pounds, total grams, etc.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :grossWeight
+  #
+  #     # The process through which fresh produce is grown and cultivated.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :growingMethod
+  #
+  #     # A Global Trade Item Number (GTIN) is the 14 digit GS1 Identification Key used to identify products. The key comprises a GS1 Company Prefix followed by an Item Reference Number and a Check Digit. See http://www.gs1.org/gtin  for more details.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gtin
+  #
+  #     # links to details of amounts refunded for returnable package in a specified region.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasReturnablePackageDeposit
+  #
+  #     # A description of health claims according to regulations of the target market.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :healthClaimDescription
+  #
+  #     # The height of the product, as measured according to the GS1 Package Measurement Rules. See http://www.gs1.org/package-measurement-rules-implementation-guide for more details.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :height
+  #
+  #     # Link to a file containing a visual representation of the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :image
+  #
+  #     # The dimensions of a product including the packaging in which the product was supplied.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :inPackageDimensions
+  #
+  #     # Any included object or device not part of the core product itself but which adds to its functionality or use.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :includedAccessories
+  #
+  #     # Links to information about ingredients of a specific Food/Beverage/Tobacco product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ingredient
+  #
+  #     # Quantity of the ingredient contained in the product as a percentage of the total product ingredients. This is used in conjunction with ingredientName.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ingredientContentPercentage
+  #
+  #     # Free text field describing an ingredient or ingredient group. Ingredients include any additives (colourings, preservatives, e-numbers, etc.) that are encompassed.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ingredientName
+  #
+  #     # Indicates a claim to an ingredient, considered to be a concern for regulatory or other reasons, and which is 'contained' within the product but may not need to specify the amount whether approximate, or an accurate measurement be given.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ingredientOfConcern
+  #
+  #     # Integer (1, 2, 3...) indicating the ingredient order by content percentage of the product. (major ingredient = 1, second ingredient = 2) etc.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ingredientSequence
+  #
+  #     # Information on the constituent ingredient make up of the product specified as one string.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ingredientStatement
+  #
+  #     # Link to a file containing the Instructions For Use.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :instructionsForUse
+  #
+  #     # Iodine per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :iodinePerNutrientBasis
+  #
+  #     # Iron per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ironPerNutrientBasis
+  #
+  #     # Indicates if radiation has been applied to the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :irradiatedCode
+  #
+  #     # Used to identify whether or not a beverage product is naturally effervescent or has been made effervescent by the addition of carbon dioxide gas.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isCarbonated
+  #
+  #     # The descriptive term that is used by the product manufacturer to identify whether or not the product contains caffeine.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isDecaffeinated
+  #
+  #     # Used to identify whether or not the product claims to be made from a concentrated formulation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isFromConcentrate
+  #
+  #     # A The indication whether or not the milk used was actively homogenised. The homogenisation of milk is a technical process in the dairy. The milk fat is milled to such an extent that further creaming is prevented.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isHomogenised
+  #
+  #     # Determines whether the product is instant.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isInstant
+  #
+  #     # Indicates, with reference to the product branding, labelling or packaging, the descriptive term that is used by the product manufacturer to identify if the product is intended as maternity wear.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isMaternity
+  #
+  #     # The descriptive term that is used by the product manufacturer to identify whether or not the product has a patterned design. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isPatterned
+  #
+  #     # The descriptive term that is used by the product manufacturer to identify whether or not a fruit or vegetable product has been de-stoned or pitted prior to being offered for sale. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isPittedStoned
+  #
+  #     # An indicator for the product to determine if the Manufacturer or Supplier has recalled the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isProductRecalled
+  #
+  #     # An indicator whether or not the cheese rind is edible. Some cheeses are coated in plastic or their surface is treated with other traditional substances to increase their shelf life. This can result in the rind no longer being edible.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isRindEdible
+  #
+  #     # Determines whether the product is seedless as grown. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isSeedless
+  #
+  #     # The descriptive term that is used by the product manufacturer to identify whether or not the product or its contents have been shelled/peeled prior to being offered for sale. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isShelledPeeled
+  #
+  #     # Determines whether the product comes pre-sliced.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isSliced
+  #
+  #     # The descriptive term that is used to identify whether the product is thermal. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isThermal
+  #
+  #     # Identifies whether the product makes claim to being vintage.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isVintage
+  #
+  #     # Determines whether product has been prewashed and is ready to eat. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isWashedReadyToEat
+  #
+  #     # The descriptive term that is used to identify whether or not the product claims to provide waterproofing to the applied surface. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isWaterproof
+  #
+  #     # Identifies whether or not the product is intended to be disposed of after single use or a limited period of use. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isWearableItemDisposable
+  #
+  #     # The product included in the offer.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :itemOffered
+  #
+  #     # The job title of the person that can be contacted for example Manager.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :jobTitle
+  #
+  #     # The fruit juice content of the product expressed as a percentage.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :juiceContentPercent
+  #
+  #     # Angular distance North or South from the earth's equator measured through 90 degrees.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :latitude
+  #
+  #     # The place associated with an organization.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :location
+  #
+  #     # The arc or portion of the earth's equator intersected between the meridian of a given place and the prime meridian and expressed in degrees
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :longitude
+  #
+  #     # Magnesium per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :magnesiumPerNutrientBasis
+  #
+  #     # An offer made by an organization.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :makesOffer
+  #
+  #     # Manganese per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :manganesePerNutrientBasis
+  #
+  #     # The organization that produces the item.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :manufacturer
+  #
+  #     # Code indicating the preparation methods that a manufacturer has used in the manufacturing of a product for example DEEP_FRY.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :manufacturerPreparationCode
+  #
+  #     # The warranty associated with the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :manufacturersWarranty
+  #
+  #     # A physical location consisting of one or more buildings with facilities for manufacturing.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :manufacturingPlant
+  #
+  #     # The method of maturity for the item for example tree ripened or jet fresh.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maturationMethod
+  #
+  #     # Provides a maximum price value as a floating-point numeric value that is qualified by the corresponding currency. See also gs1:priceCurrency
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maxPrice
+  #
+  #     # The upper limit drinking temperature of the optimum range of the drinking temperature. The optimum range of the drinking temperature is a recommendation and is based on the experience of the individual producer. Allows for the representation of the same value in different units of measure but not multiple values.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maximumOptimumConsumptionTemperature
+  #
+  #     # The fish, meat, or poultry type for this food and beverage item.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :meatPoultryType
+  #
+  #     # Provides a minimum price value as a floating-point numeric value that is qualified by the corresponding currency. See also gs1:priceCurrency
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minPrice
+  #
+  #     # The minimum amount of fish contained in a food and beverage product expressed as a measurement. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minimumFishContent
+  #
+  #     # The minimum amount of fish, meat or poultry contained in a food and beverage product expressed as a measurement.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minimumMeatPoultryContent
+  #
+  #     # The lower limit drinking temperature of the optimum range of the drinking temperature. The optimum range of the drinking temperature is a recommendation and is based on the experience of the individual producer. Allows for the representation of the same value in different units of measure but not multiple values.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :minimumOptimumConsumptionTemperature
+  #
+  #     # Molybdenum per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :molybdenumPerNutrientBasis
+  #
+  #     # Monounsaturated fat per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :monounsaturatedFatPerNutrientBasis
+  #
+  #     # The quantity of the product contained by a package, usually as claimed on the label. Indicates the net content of the total product. For fixed value products use the value claimed on the package, to avoid variable fill rate issue that arises with some product which are sold by volume or weight, and whose actual content may vary slightly from batch to batch.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :netContent
+  #
+  #     # Used to identify the net weight of the product. Net Weight excludes all packaging material, including the packaging material of all lower-level GTINs. Example:11.5 kgm.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :netWeight
+  #
+  #     # Niacin per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :niacinPerNutrientBasis
+  #
+  #     # The total number of servings contained in the package.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfServingsPerPackage
+  #
+  #     # Code indicating whether the number of servings per package is exact or approximate, for example, 4-6 adults.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfServingsPerPackageMeasurementPrecision
+  #
+  #     # A free text field specifying a range for the number of servings contained in the package. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :numberOfServingsRangeDescription
+  #
+  #     # Quantity on which the nutrient information has been based; for example, per 100 grams. When specified, nutrientBasisQuantity establishes the basis for all contained nutrient records.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nutrientBasisQuantity
+  #
+  #     # The type of quantity specified in the nutrientBasisQuantity for example measurement, serving size, or container. This is used in conjunction with the nutrientBasisQuantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nutrientBasisQuantityType
+  #
+  #     # The Code indicating whether the specified nutrient content is exact or approximate.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nutrientMeasurementPrecision
+  #
+  #     # Code indicating a nutritional claim applicable to the product, for example FAT_FREE.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nutritionalClaim
+  #
+  #     # Free text field for any additional nutritional claims.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nutritionalClaimStatement
+  #
+  #     # A description of the offer including goods or services offered for sale or use.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :offerDescription
+  #
+  #     # Relates to an organic claim about the product
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organicClaim
+  #
+  #     # A governing body that creates and maintains standards related to organic products.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organicClaimAgency
+  #
+  #     # The percent of actual organic materials per weight of the product. This is usually claimed on the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organicPercentClaim
+  #
+  #     # The name of the organization expressed in text.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organizationName
+  #
+  #     # Code indicating an organization role. Allowed code values are specified in OrganizationalRole code list.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organizationRole
+  #
+  #     # The dimensions of a product after removal from consumer packaging and assembled (if necessary) for final use. This property can be used for products such as a computer desk; entertainment centre; microwave oven; lawnmower; a floor cleaner; a grouping of table and chairs; stove; telephone; camera; large appliance (e.g. washing machines); small appliance (e.g. food processors).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :outOfPackageDimensions
+  #
+  #     # Details on the packaging for a product including type, weight and materials.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :packaging
+  #
+  #     # Code indicating a feature that facilitates the usage of the product by the consumer, for example a handle. Packaging features do not affect the core composition of the packaging type nor modify its usage.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :packagingFeature
+  #
+  #     # Code indicating specific functionality for packaging resulting from specific processes or features present in the packaging type,for example, ANTI_TAMPERING.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :packagingFunction
+  #
+  #     # Indication of which dietary or allergen marks are on the package.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :packagingMarkedDietAllergenType
+  #
+  #     # Indication of the food ingredients that the package is marked free from.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :packagingMarkedFreeFrom
+  #
+  #     # A marking that the product received recognition, endorsement, certification by following guidelines by the label issuing agency. This does not represent claims for regulatory purposes on products such as free from markings.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :packagingMarkedLabelAccreditation
+  #
+  #     # links to details about packaging material type, quantity and thickness
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :packagingMaterial
+  #
+  #     # The quantity of the packaging material of the product. Can be weight, volume or surface, can vary by country.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :packagingMaterialCompositionQuantity
+  #
+  #     # The thickness of a packaging material.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :packagingMaterialThickness
+  #
+  #     # The materials used for the packaging of the product for example glass or plastic.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :packagingMaterialType
+  #
+  #     # The process the packaging could undertake for recyclable & sustainability programs. Examples COMPOSTABLE, ENERGY_RECOVERABLE, REUSABLE.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :packagingRecyclingProcessType
+  #
+  #     # A code determining the recycling scheme the packaging of this product will fall within when recycled. Applies to recyclable packaging with or without deposit.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :packagingRecyclingScheme
+  #
+  #     # A code depicting the shape of a package for example CONE.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :packagingShape
+  #
+  #     # The dominant means used to transport, store, handle or display the product as defined by the data source. This packaging is not used to describe any manufacturing process.Recommend to use UNECE Rec 21 codes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :packagingType
+  #
+  #     # Pantothenic Acid per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pantothenicAcidPerNutrientBasis
+  #
+  #     # The type of payment term expressed as a code, for example Discount.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :paymentTerms
+  #
+  #     # The percentage of alcohol contained in product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :percentageOfAlcoholByVolume
+  #
+  #     # Phosphorus per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :phosphorusPerNutrientBasis
+  #
+  #     # Polyols per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :polyolsPerNutrientBasis
+  #
+  #     # Polyunsaturated fat per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :polyunsaturatedFatPerNutrientBasis
+  #
+  #     # The number that identifies a PO box. A PO box is a box in a post office or other postal service location assigned to an organization where postal items may be kept.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :postOfficeBoxNumber
+  #
+  #     # Text specifying the postal code for an address.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :postalCode
+  #
+  #     # Potassium per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :potassiumPerNutrientBasis
+  #
+  #     # Code specifying the preparation state of the product for which the nutrient information is valid. PREPARED, UNPREPARED.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :preparationCode
+  #
+  #     # Specifies additional precautions to be taken before preparation or consumption of the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :preparationConsumptionPrecautions
+  #
+  #     # Links to information about how to prepare a specific Food/Beverage/Tobacco product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :preparationInformation
+  #
+  #     # Free text providing instructions on how to prepare the product before serving.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :preparationInstructions
+  #
+  #     # Code indicating the preservation technique used to preserve the product from deterioration, for example, BRINING.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :preservationTechnique
+  #
+  #     # Provides a price value as a floating-point numeric value that is qualified by the corresponding currency. See also gs1:priceCurrency. The price value indicates the unit price unless the property gs1:eligibleQuantity is specified and indicates multiple units
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :price
+  #
+  #     # A string value indicating a currency from ISO 4217 for example USD .
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :priceCurrency
+  #
+  #     # The price related to an offer. If the offer is a multi-buy offer for a quantity of product greater than one unit, this should be indicated using the property gs1:eligibleQuantity
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :priceSpecification
+  #
+  #     # A product that is similar to the current product but is not exact match. Same form fit function, e.g. same product different colour, different package size, better quality.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :primaryAlternateProduct
+  #
+  #     # An understandable and useable description of a product using brand and other descriptors. This attribute is filled with as little abbreviation as possible, while keeping to a reasonable length.  This should be a meaningful description of the product with full spelling to facilitate message processing. Retailers can use this description as the base to fully understand the brand, flavour, scent etc. of the specific product, in order to accurately create a product description as needed for their internal systems. Examples: XYZ Brand Base Invisible Solid Deodorant AP Stick Spring Breeze.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productDescription
+  #
+  #     # Element for consumer facing marketing content to describe the key features or benefits of the style suitable for display purposes.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productFeatureBenefit
+  #
+  #     # The physical form or shape of the product. Used, for example, in pharmaceutical industry to indicate the formulation of the product. Defines the form the product takes and is distinct from the form of the packaging.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productFormDescription
+  #
+  #     # Additional means to the Global Trade Item Number to identify a product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productID
+  #
+  #     # Marketing message associated with the product. Consumer-friendly marketing detailed description of the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productMarketingMessage
+  #
+  #     # Consumer friendly short description of the product suitable for compact presentation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productName
+  #
+  #     # A name, used by a Brand Owner, that span multiple consumer categories or uses. E.g. (Waist Watchers).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productRange
+  #
+  #     # Product quantity after preparation. This can differ based on productYieldType
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productYield
+  #
+  #     # Code indicating the type of yield measurement specified in productYield. Examples: AFTER_DILUTION, DRAINED_WEIGHT.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productYieldType
+  #
+  #     # Indication of range in percent of the given cooking / roasting loss. Percentage that the actual weight of the product differs upward or downward from the average or estimated product yield.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productYieldVariationPercentage
+  #
+  #     # Free text assigned by the manufacturer to describe the production variant. Examples are: package series X, package series Y.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productionVariantDescription
+  #
+  #     # The start date of a production variant. The variant applies to products having a date mark (a best before date or expiration date) on the package that comes on or after the effective date.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :productionVariantEffectiveDateTime
+  #
+  #     # Protein per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :proteinPerNutrientBasis
+  #
+  #     # Free text description of the region or place the product originates from. This is to be specifically used to specify areas such as cities, mountain ranges, regions. Examples: Made in ThÃ¼ringen Mountains, Made in Paris, From the Napa Valley.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :provenanceStatement
+  #
+  #     # Link to a website containing recipes associated with the product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :recipeWebsite
+  #
+  #     # Link to a file or website containing additional information on product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :referencedFile
+  #
+  #     # The date upon which the target of this external link ceases to be effective for use.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :referencedFileEffectiveEndDateTime
+  #
+  #     # The date upon which the target of this external link begins to be effective for use.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :referencedFileEffectiveStartDateTime
+  #
+  #     # The size of the file as it is stored in an uncompressed format.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :referencedFileSize
+  #
+  #     # A Code depicting the purpose or role of file (not a MIME type) that is being referenced, for example PRODUCT_LABEL_IMAGE. This code is used when the purpose of a file is not specified in the property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :referencedFileType
+  #
+  #     # Simple text string that refers to a resource on the internet, URLs may refer to documents, resources, people, etc.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :referencedFileURL
+  #
+  #     # The prescribed, regulated or generic product name or denomination that describes the true nature of the product. For example for a food product in order to distinguish it from other foods according to country specific regulations.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :regulatedProductName
+  #
+  #     # Indicates, with reference to the product branding, labelling or packaging whether a food product which is ready to eat can be reheated if required prior to consumption.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :reheatingClaim
+  #
+  #     # The product which permanently replaces the current product. This product is sent in the record for the original item that is being replaced.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :replacedByProduct
+  #
+  #     # Indicates the product identification of an item that is being permanently replaced by this product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :replacedProduct
+  #
+  #     # Text further specifying the area of responsibility of the trade contact.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :responsibility
+  #
+  #     # The monetary amount for the individual returnable package.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :returnablePackageDepositAmount
+  #
+  #     # The geographic region associated with the returnable package deposit amount.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :returnablePackageDepositRegion
+  #
+  #     # Riboflavin per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :riboflavinPerNutrientBasis
+  #
+  #     # Salt per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :saltPerNutrientBasis
+  #
+  #     # Saturated fat per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :saturatedFatPerNutrientBasis
+  #
+  #     # The calendar year in which the product is seasonally available. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :seasonCalendarYear
+  #
+  #     # Element defines the season applicable to the item for example Winter. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :seasonName
+  #
+  #     # Code indicating the season in which the product is available, e.g. SPRING, WINTER
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :seasonParameter
+  #
+  #     # The organization seeking an offer.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :seeker
+  #
+  #     # Selenium per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :seleniumPerNutrientBasis
+  #
+  #     # The organization seeking to sell a product or service.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :seller
+  #
+  #     # Measurement value specifying the serving size in which the information per nutrient has been stated. Example: Per 100 grams.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :servingSize
+  #
+  #     # A free text field specifying the serving size for which the nutrient information has been stated for example: per 1/3 cup (42 g).
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :servingSizeDescription
+  #
+  #     # Free text field for serving suggestion.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :servingSuggestion
+  #
+  #     # The descriptive term that is used by the product manufacturer to identify the sharpness of the taste of the product for example EXTRA_SHARP. Usually the longer the aging of the product, the sharper the taste.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sharpnessOfCheese
+  #
+  #     # Links a wearable product to one or more groupings of gs1:SizeDetails representing size systems, size groups, size type and size dimensions.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :size
+  #
+  #     # Links a product to one or more groupings of gs1:SizeCodeDetails representing the size value from a specified code list.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sizeCode
+  #
+  #     # Code specifying a size code list. Allowed code values are specified in GS1 Code List SizeCodeListCode .
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sizeCodeListCode
+  #
+  #     # A code depicting the size of an object according to a specific code list. The applied code list is specified as additional information together with the size code.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sizeCodeValue
+  #
+  #     # The numerical size measurement relating to the size type.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sizeDimension
+  #
+  #     # Code indicating the type of size that is necessary to uniquely specify the size of the item, for example, BOYS.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sizeGroup
+  #
+  #     # The system that is being used to define the size for example EUROPE. Size system is used in conjunction with size group to define the size dimension.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sizeSystem
+  #
+  #     # The type of size dimension being specified for example SLEEVE.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sizeType
+  #
+  #     # Sodium per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sodiumPerNutrientBasis
+  #
+  #     # Code indicating the source of raw material used to produce the food product, for example a GOAT for milk.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sourceAnimal
+  #
+  #     # Code indicating the type of sporting activity for which the product is intended to be worn, for example FOOTBALL.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sportingActivityType
+  #
+  #     # Starch per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :starchPerNutrientBasis
+  #
+  #     # The street address expressed as free form text. The street address is printed on paper as the first lines below the name. For example, the name of the street and the number in the street or the name of a building.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :streetAddress
+  #
+  #     # An attribute that classifies products that share many of the same characteristics (attribute values) that does NOT vary by GTIN, and are presented by the supplier as a single merchandise selection for the buyer.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :styleDescription
+  #
+  #     # Second level of brand. Can be a trademark. It is the primary differentiating factor that a brand owner wants to communicate to the consumer or buyer. E.g. Yummy-Cola Classic. In this example Yummy-Cola is the brand and Classic is the sub-brand.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :subBrandName
+  #
+  #     # Sugars per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sugarsPerNutrientBasis
+  #
+  #     # Represents the number of days between a product's sell by date and its use by date.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :supplierSpecifiedMinimumConsumerStorageDays
+  #
+  #     # Identifies the target consumer age range for which a product has been designed. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :targetConsumerAge
+  #
+  #     # Identifies the target consumer gender for which a product has been designed for example MALE
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :targetConsumerGender
+  #
+  #     # Relates to a set of target market details (product release date and associated countries)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :targetMarket
+  #
+  #     # List of countries representing the target market for a particular release date indicated by gs1:consumerFirstAvailabilityDateTime
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :targetMarketCountries
+  #
+  #     # Voice/data transmission by telephone.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :telephone
+  #
+  #     # One or more links to information about the materials used in a wearable product.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :textileMaterial
+  #
+  #     # A description of the material composition used in conjunction with the material percentage.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :textileMaterialContent
+  #
+  #     # This provides a name or brief description of one material contained within the product, for example Rayon. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :textileMaterialDescription
+  #
+  #     # Corresponding net weight percentage of the product material specified via gs1:textileMaterialDescription, e.g. 70.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :textileMaterialPercentage
+  #
+  #     # The quality of material (fabric) of a product based on the total number of vertical and horizontal threads in one square inch.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :textileMaterialThreadCount
+  #
+  #     # The measured weight of the material expressed in ounces per square yard or grams per square meter.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :textileMaterialWeight
+  #
+  #     # Thiamin per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :thiaminPerNutrientBasis
+  #
+  #     # Trans Fat per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :transFatPerNutrientBasis
+  #
+  #     # A string value indicating a Measurement Unit from UN/ECE Recommendation 20, Units of Measure used in International Trade e.g. GRM = gram - see http://www.unece.org/fileadmin/DAM/cefact/recommendations/rec20/rec20_rev3_Annex3e.pdf
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :unitCode
+  #
+  #     # The material(s) used for the upper part of the footwear product. The upper is the part of a shoe, boot, slipper or other item of footwear that is above the sole.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :upperMaterialType
+  #
+  #     # The effective start date of the price .
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :validFrom
+  #
+  #     # The effective end date of the price .
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :validThrough
+  #
+  #     # A floating-point numeric value that is qualified by the corresponding measurement unit code - see gs1:measurementUnitCode
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :value
+  #
+  #     # Free text field used to identify the variant of the product. Variants are the distinguishing characteristics that differentiate products with the same brand and size including such things as the particular flavour, fragrance, taste.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :variantDescription
+  #
+  #     # The person hired by a winery or wine company who is responsible for many of the processes in the preparation, taste and quality of the wine produced. The science of wine making is referred to as oenology. The vintner is the oenologist.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vintner
+  #
+  #     # Vitamin A per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vitaminAPerNutrientBasis
+  #
+  #     # Vitamin B12 per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vitaminB12PerNutrientBasis
+  #
+  #     # Vitamin B6 per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vitaminB6PerNutrientBasis
+  #
+  #     # Vitamin C per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vitaminCPerNutrientBasis
+  #
+  #     # Vitamin D per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vitaminDPerNutrientBasis
+  #
+  #     # Vitamin E per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vitaminEPerNutrientBasis
+  #
+  #     # Vitamin K per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vitaminKPerNutrientBasis
+  #
+  #     # Warning information is additional information that outlines special requirements, warning and caution information printed on the package.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :warningCopyDescription
+  #
+  #     # The warranty associated with the product, as provided by the manufacturer.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :warranty
+  #
+  #     # The description of warranty available for the product. Allows for the representation of the same value in different languages but not for multiple values.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :warrantyScopeDescription
+  #
+  #     # The width of the product, as measured according to the GS1 Package Measurement Rules. See http://www.gs1.org/package-measurement-rules-implementation-guide for more details.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :width
+  #
+  #     # Links a wearable product to one or more groupings of gs1:SizeDetails representing size systems, size groups, size type and size dimensions.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :yield
+  #
+  #     # Zinc per specified nutrient basis quantity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :zincPerNutrientBasis
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AllergenTypeCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :AnatomicalFormCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CheeseFirmnessCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ColourCodeListCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ConsumerLifestageCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ConsumerSalesConditionsCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DietTypeCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FoodBeverageRefrigerationClaimCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FoodBeverageTargetUseCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FootwearFasteningTypeCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FreshOrSeawaterFarmedCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GrowingMethodCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LevelOfContainmentCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MaturationMethodCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MeasurementPrecisionCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NonbinaryLogicCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NutrientBasisQuantityCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NutritionalClaimTypeCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OrganicClaimAgencyCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :OrganizationRoleType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PackagingFeatureCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PackagingFunctionCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PackagingMarkedDietAllergenCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PackagingMarkedFreeFromCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PackagingMarkedLabelAccreditationCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PackagingMaterialTypeCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PackagingRecyclingProcessTypeCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PackagingRecyclingSchemeCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PackagingShapeCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PaymentMethod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PreparationTypeCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PreservationTechniqueCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ProductYieldTypeCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ReferencedFileTypeCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SeasonParameterCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SharpnessOfCheeseCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SizeGroupCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SizeSystemCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SizeTypeCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SourceAnimalCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SportingActivityTypeCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TargetConsumerGenderCode
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :UpperTypeCode
+  #
   #   end
-  class GS1 < RDF::StrictVocabulary("http://gs1.org/voc/")
+  GS1 = Class.new(RDF::StrictVocabulary("http://gs1.org/voc/")) do
 
     # Ontology definition
     ontology :"http://gs1.org/voc/",

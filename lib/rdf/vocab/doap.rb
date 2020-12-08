@@ -5,9 +5,183 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://usefulinc.com/ns/doap#>
+  #   #
+  #   # Description of a Project (DOAP) vocabulary
+  #   #
+  #   # The Description of a Project (DOAP) vocabulary, described using W3C RDF Schema and the Web Ontology Language.
   #   class DOAP < RDF::StrictVocabulary
+  #     # GNU Arch source code repository.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ArchRepository
+  #
+  #     # BitKeeper source code repository.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BKRepository
+  #
+  #     # Bazaar source code branch.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BazaarBranch
+  #
+  #     # CVS source code repository.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CVSRepository
+  #
+  #     # darcs source code repository.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DarcsRepository
+  #
+  #     # Git source code branch.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GitBranch
+  #
+  #     # Git source code repository.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GitRepository
+  #
+  #     # Mercurial source code repository.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HgRepository
+  #
+  #     # A project.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Project
+  #
+  #     # Source code repository.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Repository
+  #
+  #     # Subversion source code repository.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SVNRepository
+  #
+  #     # A specification of a system's aspects, technical or otherwise.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Specification
+  #
+  #     # Version information of a project release.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Version
+  #
+  #     # Description of target user base
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :audience
+  #
+  #     # URI of a blog related to a project
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :blog
+  #
+  #     # Web browser interface to repository.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :browse
+  #
+  #     # A category of project.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :category
+  #
+  #     # Date when something was created, in YYYY-MM-DD form. e.g. 2004-04-05
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :created
+  #
+  #     # Plain text description of a project, of 2-4 sentences in length.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :description
+  #
+  #     # Developer of software for the project.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :developer
+  #
+  #     # Contributor of documentation to the project.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :documenter
+  #
+  #     # Project contributor.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :helper
+  #
+  #     # URL of a project's homepage, 		associated with exactly one project.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :homepage
+  #
+  #     # A specification that a project implements. Could be a standard, API or legally defined level of conformance.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :implements
+  #
+  #     # ISO language code a project has been translated into
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :language
+  #
+  #     # The URI of an RDF description of the license the software is distributed under. E.g. a SPDX reference
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :license
+  #
+  #     # Location of a repository.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :location
+  #
+  #     # Maintainer of a project, a project leader.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :maintainer
+  #
+  #     # Module name of a Subversion, CVS, BitKeeper or Arch repository.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :module
+  #
+  #     # A name of something.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :name
+  #
+  #     # Operating system that a project is limited to.  Omit this property if the project is not OS-specific.
+  #     #
+  #     # Sistema operativo a que o projeto está limitado. Omita esta propriedade se o projeto não é condicionado pelo SO usado.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :os
+  #
+  #     # Indicator of software platform (non-OS specific), e.g. Java, Firefox, ECMA CLR
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :platform
+  #
+  #     # A project release.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :release
+  #
+  #     # Source code repository.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :repository
+  #
+  #     # The project that uses a repository.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :repositoryOf
+  #
+  #     # Revision identifier of a software release.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :revision
+  #
+  #     # Web page with screenshots of project.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :screenshots
+  #
+  #     # Short (8 or 9 words) plain text description of a project.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :shortdesc
+  #
+  #     # A tester or other quality control contributor.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tester
+  #
+  #     # Contributor of translations to the project.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :translator
+  #
+  #     # Vendor organization: commercial, free or otherwise
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vendor
+  #
+  #     # URL of Wiki for collaborative discussion of project.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wiki
+  #
   #   end
-  class DOAP < RDF::StrictVocabulary("http://usefulinc.com/ns/doap#")
+  DOAP = Class.new(RDF::StrictVocabulary("http://usefulinc.com/ns/doap#")) do
 
     # Ontology definition
     ontology :"http://usefulinc.com/ns/doap#",

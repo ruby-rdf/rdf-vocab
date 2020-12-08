@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require File.expand_path("../spec_helper", __FILE__)
 require 'rdf/reasoner'
+require 'rdf/turtle'
 
 describe RDF::Vocab do
   before(:all) {
@@ -58,6 +59,15 @@ describe RDF::Vocab do
         it "has at least one term", unless: id == :xhtml do
           expect(RDF::Vocab.const_get(class_name).each.to_a).not_to be_empty
         end
+      end
+    end
+
+    context "non standard prefixes" do
+      {
+        RDF::Vocab::DOAP.blog.range => RDF::Vocab::SiocTypes.Weblog,
+        RDF::Vocab::SiocServices.has_service.range => RDF::Vocab::SiocServices.Service,
+      }.each do |a, b|
+        specify {expect(a).to include(b)}
       end
     end
   end

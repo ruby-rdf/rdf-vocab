@@ -11,6 +11,7 @@ module RDF
       as:    {uri: "https://www.w3.org/ns/activitystreams#", source: 'etc/as.ttl'},
       bf2:    {uri: 'http://id.loc.gov/ontologies/bibframe/'},
       bibframe: {
+        # Obsolete
         uri: "http://bibframe.org/vocab/",
         class_name: "Bibframe",
         skip: true
@@ -60,8 +61,7 @@ module RDF
       dc:     {uri: "http://purl.org/dc/terms/"},
       dc11:   {uri: "http://purl.org/dc/elements/1.1/"},
       dcat:   {
-        uri: "http://www.w3.org/ns/dcat#",
-        source: "https://w3c.github.io/dxwg/dcat/rdf/dcat.ttl"
+        uri: "http://www.w3.org/ns/dcat#"
       },
       dcmitype: {
           uri: "http://purl.org/dc/dcmitype/",
@@ -94,19 +94,7 @@ module RDF
       ebucore: {
         uri: "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
         source: "https://www.ebu.ch/metadata/ontologies/ebucore/ebucore.rdf",
-        class_name: "EBUCore",
-        patch: %{
-          @prefix ebucore: <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#> .
-          @prefix dc: <http://purl.org/dc/terms/> .
-          @prefix dc11: <http://purl.org/dc/elements/1.1/> .
-          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-          DeleteExisting {
-            ebucore:Agent rdfs:subClassOf dc11:Agent .
-          } .
-          AddNew {
-            ebucore:Agent rdfs:subClassOf dc:Agent .
-          } .
-        }
+        class_name: "EBUCore"
       },
       edm: {
         uri: "http://www.europeana.eu/schemas/edm/",
@@ -132,8 +120,7 @@ module RDF
       fcrepo4: {
         uri: "http://fedora.info/definitions/v4/repository#",
         class_name: "Fcrepo4",
-        source: "http://fedora.info/definitions/v4/2015/07/24/repository",
-        skip: true  # Not returning triples
+        source: "http://fedora.info/definitions/v4/2015/07/24/repository"
       },
       foaf:   {uri: "http://xmlns.com/foaf/0.1/"},
       geo:    {uri: "http://www.w3.org/2003/01/geo/wgs84_pos#"},
@@ -225,22 +212,10 @@ module RDF
           AddNew {:gender a owl:DatatypeProperty .} .
         }
       },
-      marc_relators: {
+      marcrelators: {
         uri: "http://id.loc.gov/vocabulary/relators/",
         source: "http://id.loc.gov/vocabulary/relators.rdf",
-        class_name: "MARCRelators",
-        patch: %{
-          @prefix marcrelators: <http://id.loc.gov/vocabulary/relators/> .
-          @prefix owl: <http://www.w3.org/2002/07/owl#>.
-          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-          #DeleteExisting {
-          #  marcrelators:lee rdfs:subPropertyOf marcrelators:lei .
-          #} .
-          #AddNew {
-          #  marcrelators:role a owl:ObjectProperty;
-          #     rdfs:comment "This property and its sub-properties are used to associate a Bibliographic Resource with a Resource that played a part in the lifecycle of the Bibliographic Resource.  It is the inverse of relators:roleIn.".
-          #} .
-        }
+        class_name: "MARCRelators"
       },
       mo:     {uri: "http://purl.org/ontology/mo/", strict: false},
       mods: {
@@ -249,8 +224,41 @@ module RDF
       },
       nfo:    {uri: 'http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#', skip: true},
       oa:     {uri: "http://www.w3.org/ns/oa#"},
-      og:     {uri: "http://ogp.me/ns#", strict: false},
-      ogc:    {uri: "http://ogp.me/ns/class#", source: "http://ogp.me/ns", strict: false},
+      og:     {
+        uri: "http://ogp.me/ns#",
+        source: 'http://ogp.me/ns/ogp.me.ttl',
+        strict: false,
+        patch: %{
+          @prefix og: <http://ogp.me/ns#> .
+          @prefix ogc: <http://ogp.me/ns/class#> .
+          @prefix owl: <http://www.w3.org/2002/07/owl#>.
+          @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+          # Used in http://ogp.me/ but not defined
+          AddNew {
+            og:image:url a rdf:Property ;
+              rdfs:label "image:url"@en-US ;
+              rdfs:comment "Identical to og:image."@en-US ;
+              rdfs:seeAlso og:image ;
+              rdfs:isDefinedBy og: ;
+              owl:sameProperty og:image ;
+              rdfs:range ogc:url .
+            og:image:alt a rdf:Property ;
+              rdfs:label "image:alt"@en-US ;
+              rdfs:comment "A description of what is in the image (not a caption). If the page specifies an og:image it should specify og:image:alt."@en-US ;
+              rdfs:seeAlso og:image ;
+              rdfs:isDefinedBy og: ;
+              rdfs:range ogc:string .
+            og:locale:alternate a rdf:Property ;
+              rdfs:label "locale:alternate"@en-US ;
+              rdfs:comment "An array of other locales this page is available in."@en-US ;
+              rdfs:seeAlso og:locale ;
+              rdfs:isDefinedBy og: ;
+              rdfs:range ogc:string .
+          } .
+        }
+      },
+      ogc:    {uri: "http://ogp.me/ns/class#", source: "http://ogp.me/ns/ogp.me.ttl", strict: false},
       ore:    {uri: "http://www.openarchives.org/ore/terms/"},
       org:    {uri: "http://www.w3.org/ns/org#"},
       owl:    {uri: "http://www.w3.org/2002/07/owl#", alias: true},
@@ -261,10 +269,9 @@ module RDF
       pplan:  {uri: "http://purl.org/net/p-plan#"},
       premis: {
         uri: "http://www.loc.gov/premis/rdf/v1#",
-        source: "http://www.loc.gov/premis/rdf/v1.rdf",
-        skip: true  # Not returning triples
+        source: "http://www.loc.gov/premis/rdf/v1.rdf"
       },
-      premis_event_type: {
+      premiseventtype: {
         uri: "http://id.loc.gov/vocabulary/preservation/eventType/",
         source: "http://id.loc.gov/vocabulary/preservation/eventType",
         class_name: "PremisEventType"
@@ -303,15 +310,20 @@ module RDF
       rss:    {uri: "http://purl.org/rss/1.0/", source: "http://purl.org/rss/1.0/schema.rdf"},
       schema: {
         uri: "http://schema.org/",
-        source: "http://schema.org/version/latest/all-layers.nq"
+        source: "https://schema.org/version/latest/schemaorg-all-http.nt"
       },
-      sh: { uri: 'http://www.w3.org/ns/shacl#', source: 'https://www.w3.org/ns/shacl.ttl' },
+      schemas: {
+        uri: "https://schema.org/",
+        source: "https://schema.org/version/latest/schemaorg-all-https.nt"
+      },
+      sd: {uri: 'http://www.w3.org/ns/sparql-service-description#', source: 'http://www.w3.org/ns/sparql-service-description.ttl'},
+      sh: {uri: 'http://www.w3.org/ns/shacl#', source: 'https://www.w3.org/ns/shacl.ttl'},
       sioc:   {uri: "http://rdfs.org/sioc/ns#"},
-      sioc_services: {
+      siocservices: {
         uri: "http://rdfs.org/sioc/services#",
         class_name: "SiocServices"
       },
-      sioct:  {uri: "http://rdfs.org/sioc/types#", class_name: "SiocTypes"},
+      sioctypes:  {uri: "http://rdfs.org/sioc/types#", class_name: "SiocTypes"},
       skos:   {uri: "http://www.w3.org/2004/02/skos/core#"},
       skosxl: {uri: "http://www.w3.org/2008/05/skos-xl#", source: "http://www.w3.org/TR/skos-reference/skos-xl.rdf"},
       v:      {uri: "http://rdf.data-vocabulary.org/#", source: "etc/rdf.data-vocab.ttl"},
@@ -332,14 +344,13 @@ module RDF
 
     # Autoload vocabularies
     VOCABS.each do |id, params|
-      v = params.fetch(:class_name, id.to_s.upcase).to_sym
+      v = (params[:class_name] ||= id.to_s.upcase).to_sym
       autoload v, File.expand_path("../vocab/#{id}", __FILE__) unless params[:alias]
     end
 
     # Aliases for vocabularies still defined directly in RDF.rb
     def self.const_missing(constant)
       if VOCABS.fetch(constant.to_s.downcase.to_sym, {})[:alias]
-        require "rdf/vocab/#{constant.to_s.downcase}"
         const_set(constant, RDF.const_get(constant))
       else
         super

@@ -5,13 +5,167 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://id.loc.gov/vocabulary/preservation/eventType/>
+  #   #
+  #   # Event Type
+  #   #
+  #   #   Event Types are actions performed within or outside the repository that affect the long term preservation of digital objects.
   #   class PremisEventType < RDF::StrictVocabulary
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :acc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :app
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cap
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :com
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cop
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dea
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dec
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :del
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :der
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dig
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dis
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dsg
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dsp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :enc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :exe
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :exp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ext
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ffa
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fil
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fix
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :for
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ima
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ine
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ing
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ins
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :int
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ipc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ipm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ips
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mee
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mem
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mes
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mig
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pac
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :poa
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :qua
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rec
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :red
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ref
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ren
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rep
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tra
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :unp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :unq
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :val
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vir
+  #
   #   end
-  class PremisEventType < RDF::StrictVocabulary("http://id.loc.gov/vocabulary/preservation/eventType/")
+  PremisEventType = Class.new(RDF::StrictVocabulary("http://id.loc.gov/vocabulary/preservation/eventType/")) do
 
     # Ontology definition
     ontology :"http://id.loc.gov/vocabulary/preservation/eventType/",
-      comment: %(  Event Types are actions performed within or outside the repository that affect the long term preservation of digital objects.).freeze,
+      comment: "  Event Types are actions performed within or outside the repository that affect the long term preservation of digital objects.".freeze,
       label: "Event Type".freeze,
       "mads:adminMetadata": [term(
           "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2010-06-01T00:00:01".freeze,

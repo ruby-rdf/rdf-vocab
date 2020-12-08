@@ -5,16 +5,825 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://id.loc.gov/vocabulary/relators/>
+  #   #
+  #   # MARC Code List for Relators Scheme
+  #   #
+  #   # Relator terms and their associated codes designate the relationship between a name and a bibliographic resource. The relator codes are three-character lowercase alphabetic strings that serve as identifiers. Either the term or the code may be used as controlled values.
   #   class MARCRelators < RDF::StrictVocabulary
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :abr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :acp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :act
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :adi
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :adp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aft
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :anl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :anm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ann
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ant
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ape
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :apl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :app
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aqt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :arc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ard
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :arr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :art
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :asg
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :asn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ato
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :att
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :auc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aud
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aui
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :aut
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bdd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bjd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bkd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bkp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :blw
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bnd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bpd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :brd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :brl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bsl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cas
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ccp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :chr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cli
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cll
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :clr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :clt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cmm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cmp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cmt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cnd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cng
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cns
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :coe
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :col
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :com
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :con
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cos
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cot
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cou
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cov
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cpc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cpe
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cph
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cpl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cpt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :crp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :crr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :crt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :csl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :csp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cst
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ctb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cte
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ctg
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ctr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cts
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ctt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cur
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :cwt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dbp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dfd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dfe
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dft
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dgg
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dgs
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dis
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dln
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dnc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dnr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dpc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dpt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :drm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :drt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dsr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dst
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dtc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dte
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dtm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dto
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :dub
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :edc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :edm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :edt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :egr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :elg
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :elt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :eng
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :enj
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :etr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :evp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :exp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fac
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fds
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fld
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :flm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fmd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fmk
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fmo
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fmp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fnd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fpy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :frg
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gis
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :his
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hnr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hst
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ill
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ilu
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ins
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :inv
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :itr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ive
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ivr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :jud
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :jug
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lbr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lbt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ldr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :led
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lee
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :len
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :let
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lgd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lie
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lil
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lit
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lsa
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lse
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lso
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ltg
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :lyr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mcp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mdc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :med
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mfp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mfr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mod
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mon
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mrb
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mrk
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :msd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mte
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mtk
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mus
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nrt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :opn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :org
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :orm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :osp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :oth
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :own
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pan
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pbd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pbl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pdr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pfr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pht
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :plt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pma
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pmn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pop
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ppm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ppt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pra
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pre
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prg
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pro
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prs
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prv
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pta
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pte
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ptf
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pth
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ptt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :pup
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rbr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rcd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rce
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rcp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rdd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :red
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ren
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :res
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rev
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rpc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rps
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rpt
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rpy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rse
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rsg
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rsp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rsr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rst
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rth
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rtm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sad
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sce
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :scl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :scr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sds
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sec
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sgd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sgn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sht
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sll
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sng
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spk
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :spy
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :srv
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :std
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stg
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :stn
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :str
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tcd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tch
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ths
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tld
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tlp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :trc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :trl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tyd
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tyg
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :uvp
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vac
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :vdg
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wac
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wam
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wat
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wdc
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wde
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :win
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wit
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wpr
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :wst
+  #
   #   end
-  class MARCRelators < RDF::StrictVocabulary("http://id.loc.gov/vocabulary/relators/")
+  MARCRelators = Class.new(RDF::StrictVocabulary("http://id.loc.gov/vocabulary/relators/")) do
 
     # Ontology definition
     ontology :"http://id.loc.gov/vocabulary/relators/",
-      comment: %(Relator terms and their associated codes designate the relationship between a name and a bibliographic resource. The relator codes are three-character lowercase alphabetic strings that serve as identifiers. Either the term or the code may be used as controlled values.).freeze,
+      comment: "Relator terms and their associated codes designate the relationship between a name and a bibliographic resource. The relator codes are three-character lowercase alphabetic strings that serve as identifiers. Either the term or the code may be used as controlled values.".freeze,
       label: "MARC Code List for Relators Scheme".freeze,
-      "mads:hasMADSSchemeMember": ["marcrelators:abr".freeze, "marcrelators:acp".freeze, "marcrelators:act".freeze, "marcrelators:adi".freeze, "marcrelators:adp".freeze, "marcrelators:aft".freeze, "marcrelators:anl".freeze, "marcrelators:anm".freeze, "marcrelators:ann".freeze, "marcrelators:ant".freeze, "marcrelators:ape".freeze, "marcrelators:apl".freeze, "marcrelators:app".freeze, "marcrelators:aqt".freeze, "marcrelators:arc".freeze, "marcrelators:ard".freeze, "marcrelators:arr".freeze, "marcrelators:art".freeze, "marcrelators:asg".freeze, "marcrelators:asn".freeze, "marcrelators:ato".freeze, "marcrelators:att".freeze, "marcrelators:auc".freeze, "marcrelators:aud".freeze, "marcrelators:aui".freeze, "marcrelators:aus".freeze, "marcrelators:aut".freeze, "marcrelators:bdd".freeze, "marcrelators:bjd".freeze, "marcrelators:bkd".freeze, "marcrelators:bkp".freeze, "marcrelators:blw".freeze, "marcrelators:bnd".freeze, "marcrelators:bpd".freeze, "marcrelators:brd".freeze, "marcrelators:brl".freeze, "marcrelators:bsl".freeze, "marcrelators:cas".freeze, "marcrelators:ccp".freeze, "marcrelators:chr".freeze, "marcrelators:cli".freeze, "marcrelators:cll".freeze, "marcrelators:clr".freeze, "marcrelators:clt".freeze, "marcrelators:cmm".freeze, "marcrelators:cmp".freeze, "marcrelators:cmt".freeze, "marcrelators:cnd".freeze, "marcrelators:cng".freeze, "marcrelators:cns".freeze, "marcrelators:coe".freeze, "marcrelators:col".freeze, "marcrelators:com".freeze, "marcrelators:con".freeze, "marcrelators:cor".freeze, "marcrelators:cos".freeze, "marcrelators:cot".freeze, "marcrelators:cou".freeze, "marcrelators:cov".freeze, "marcrelators:cpc".freeze, "marcrelators:cpe".freeze, "marcrelators:cph".freeze, "marcrelators:cpl".freeze, "marcrelators:cpt".freeze, "marcrelators:cre".freeze, "marcrelators:crp".freeze, "marcrelators:crr".freeze, "marcrelators:crt".freeze, "marcrelators:csl".freeze, "marcrelators:csp".freeze, "marcrelators:cst".freeze, "marcrelators:ctb".freeze, "marcrelators:cte".freeze, "marcrelators:ctg".freeze, "marcrelators:ctr".freeze, "marcrelators:cts".freeze, "marcrelators:ctt".freeze, "marcrelators:cur".freeze, "marcrelators:cwt".freeze, "marcrelators:dbp".freeze, "marcrelators:dfd".freeze, "marcrelators:dfe".freeze, "marcrelators:dft".freeze, "marcrelators:dgg".freeze, "marcrelators:dgs".freeze, "marcrelators:dis".freeze, "marcrelators:dln".freeze, "marcrelators:dnc".freeze, "marcrelators:dnr".freeze, "marcrelators:dpc".freeze, "marcrelators:dpt".freeze, "marcrelators:drm".freeze, "marcrelators:drt".freeze, "marcrelators:dsr".freeze, "marcrelators:dst".freeze, "marcrelators:dtc".freeze, "marcrelators:dte".freeze, "marcrelators:dtm".freeze, "marcrelators:dto".freeze, "marcrelators:dub".freeze, "marcrelators:edc".freeze, "marcrelators:edm".freeze, "marcrelators:edt".freeze, "marcrelators:egr".freeze, "marcrelators:elg".freeze, "marcrelators:elt".freeze, "marcrelators:eng".freeze, "marcrelators:enj".freeze, "marcrelators:etr".freeze, "marcrelators:evp".freeze, "marcrelators:exp".freeze, "marcrelators:fac".freeze, "marcrelators:fds".freeze, "marcrelators:fld".freeze, "marcrelators:flm".freeze, "marcrelators:fmd".freeze, "marcrelators:fmk".freeze, "marcrelators:fmo".freeze, "marcrelators:fmp".freeze, "marcrelators:fnd".freeze, "marcrelators:fpy".freeze, "marcrelators:frg".freeze, "marcrelators:gis".freeze, "marcrelators:his".freeze, "marcrelators:hnr".freeze, "marcrelators:hst".freeze, "marcrelators:ill".freeze, "marcrelators:ilu".freeze, "marcrelators:ins".freeze, "marcrelators:inv".freeze, "marcrelators:isb".freeze, "marcrelators:itr".freeze, "marcrelators:ive".freeze, "marcrelators:ivr".freeze, "marcrelators:jud".freeze, "marcrelators:jug".freeze, "marcrelators:lbr".freeze, "marcrelators:lbt".freeze, "marcrelators:ldr".freeze, "marcrelators:led".freeze, "marcrelators:lee".freeze, "marcrelators:lel".freeze, "marcrelators:len".freeze, "marcrelators:let".freeze, "marcrelators:lgd".freeze, "marcrelators:lie".freeze, "marcrelators:lil".freeze, "marcrelators:lit".freeze, "marcrelators:lsa".freeze, "marcrelators:lse".freeze, "marcrelators:lso".freeze, "marcrelators:ltg".freeze, "marcrelators:lyr".freeze, "marcrelators:mcp".freeze, "marcrelators:mdc".freeze, "marcrelators:med".freeze, "marcrelators:mfp".freeze, "marcrelators:mfr".freeze, "marcrelators:mod".freeze, "marcrelators:mon".freeze, "marcrelators:mrb".freeze, "marcrelators:mrk".freeze, "marcrelators:msd".freeze, "marcrelators:mte".freeze, "marcrelators:mtk".freeze, "marcrelators:mus".freeze, "marcrelators:nrt".freeze, "marcrelators:opn".freeze, "marcrelators:org".freeze, "marcrelators:orm".freeze, "marcrelators:osp".freeze, "marcrelators:oth".freeze, "marcrelators:own".freeze, "marcrelators:pan".freeze, "marcrelators:pat".freeze, "marcrelators:pbd".freeze, "marcrelators:pbl".freeze, "marcrelators:pdr".freeze, "marcrelators:pfr".freeze, "marcrelators:pht".freeze, "marcrelators:plt".freeze, "marcrelators:pma".freeze, "marcrelators:pmn".freeze, "marcrelators:pop".freeze, "marcrelators:ppm".freeze, "marcrelators:ppt".freeze, "marcrelators:pra".freeze, "marcrelators:prc".freeze, "marcrelators:prd".freeze, "marcrelators:pre".freeze, "marcrelators:prf".freeze, "marcrelators:prg".freeze, "marcrelators:prm".freeze, "marcrelators:prn".freeze, "marcrelators:pro".freeze, "marcrelators:prp".freeze, "marcrelators:prs".freeze, "marcrelators:prt".freeze, "marcrelators:prv".freeze, "marcrelators:pta".freeze, "marcrelators:pte".freeze, "marcrelators:ptf".freeze, "marcrelators:pth".freeze, "marcrelators:ptt".freeze, "marcrelators:pup".freeze, "marcrelators:rbr".freeze, "marcrelators:rcd".freeze, "marcrelators:rce".freeze, "marcrelators:rcp".freeze, "marcrelators:rdd".freeze, "marcrelators:red".freeze, "marcrelators:ren".freeze, "marcrelators:res".freeze, "marcrelators:rev".freeze, "marcrelators:rpc".freeze, "marcrelators:rps".freeze, "marcrelators:rpt".freeze, "marcrelators:rpy".freeze, "marcrelators:rse".freeze, "marcrelators:rsg".freeze, "marcrelators:rsp".freeze, "marcrelators:rsr".freeze, "marcrelators:rst".freeze, "marcrelators:rth".freeze, "marcrelators:rtm".freeze, "marcrelators:sad".freeze, "marcrelators:sce".freeze, "marcrelators:scl".freeze, "marcrelators:scr".freeze, "marcrelators:sds".freeze, "marcrelators:sec".freeze, "marcrelators:sgd".freeze, "marcrelators:sgn".freeze, "marcrelators:sht".freeze, "marcrelators:sll".freeze, "marcrelators:sng".freeze, "marcrelators:spk".freeze, "marcrelators:spn".freeze, "marcrelators:spy".freeze, "marcrelators:srv".freeze, "marcrelators:std".freeze, "marcrelators:stg".freeze, "marcrelators:stl".freeze, "marcrelators:stm".freeze, "marcrelators:stn".freeze, "marcrelators:str".freeze, "marcrelators:tcd".freeze, "marcrelators:tch".freeze, "marcrelators:ths".freeze, "marcrelators:tld".freeze, "marcrelators:tlp".freeze, "marcrelators:trc".freeze, "marcrelators:trl".freeze, "marcrelators:tyd".freeze, "marcrelators:tyg".freeze, "marcrelators:uvp".freeze, "marcrelators:vac".freeze, "marcrelators:vdg".freeze, "marcrelators:wac".freeze, "marcrelators:wal".freeze, "marcrelators:wam".freeze, "marcrelators:wat".freeze, "marcrelators:wdc".freeze, "marcrelators:wde".freeze, "marcrelators:win".freeze, "marcrelators:wit".freeze, "marcrelators:wpr".freeze, "marcrelators:wst".freeze],
-      type: ["mads:MADSScheme".freeze, "skos:ConceptScheme".freeze]
+      "mads:authoritativeLabel": "".freeze,
+      "mads:hasMADSSchemeMember": ["marcrelators:".freeze, "marcrelators:abr".freeze, "marcrelators:acp".freeze, "marcrelators:act".freeze, "marcrelators:adi".freeze, "marcrelators:adp".freeze, "marcrelators:aft".freeze, "marcrelators:anl".freeze, "marcrelators:anm".freeze, "marcrelators:ann".freeze, "marcrelators:ant".freeze, "marcrelators:ape".freeze, "marcrelators:apl".freeze, "marcrelators:app".freeze, "marcrelators:aqt".freeze, "marcrelators:arc".freeze, "marcrelators:ard".freeze, "marcrelators:arr".freeze, "marcrelators:art".freeze, "marcrelators:asg".freeze, "marcrelators:asn".freeze, "marcrelators:ato".freeze, "marcrelators:att".freeze, "marcrelators:auc".freeze, "marcrelators:aud".freeze, "marcrelators:aui".freeze, "marcrelators:aus".freeze, "marcrelators:aut".freeze, "marcrelators:bdd".freeze, "marcrelators:bjd".freeze, "marcrelators:bkd".freeze, "marcrelators:bkp".freeze, "marcrelators:blw".freeze, "marcrelators:bnd".freeze, "marcrelators:bpd".freeze, "marcrelators:brd".freeze, "marcrelators:brl".freeze, "marcrelators:bsl".freeze, "marcrelators:cas".freeze, "marcrelators:ccp".freeze, "marcrelators:chr".freeze, "marcrelators:cli".freeze, "marcrelators:cll".freeze, "marcrelators:clr".freeze, "marcrelators:clt".freeze, "marcrelators:cmm".freeze, "marcrelators:cmp".freeze, "marcrelators:cmt".freeze, "marcrelators:cnd".freeze, "marcrelators:cng".freeze, "marcrelators:cns".freeze, "marcrelators:coe".freeze, "marcrelators:col".freeze, "marcrelators:com".freeze, "marcrelators:con".freeze, "marcrelators:cor".freeze, "marcrelators:cos".freeze, "marcrelators:cot".freeze, "marcrelators:cou".freeze, "marcrelators:cov".freeze, "marcrelators:cpc".freeze, "marcrelators:cpe".freeze, "marcrelators:cph".freeze, "marcrelators:cpl".freeze, "marcrelators:cpt".freeze, "marcrelators:cre".freeze, "marcrelators:crp".freeze, "marcrelators:crr".freeze, "marcrelators:crt".freeze, "marcrelators:csl".freeze, "marcrelators:csp".freeze, "marcrelators:cst".freeze, "marcrelators:ctb".freeze, "marcrelators:cte".freeze, "marcrelators:ctg".freeze, "marcrelators:ctr".freeze, "marcrelators:cts".freeze, "marcrelators:ctt".freeze, "marcrelators:cur".freeze, "marcrelators:cwt".freeze, "marcrelators:dbp".freeze, "marcrelators:dfd".freeze, "marcrelators:dfe".freeze, "marcrelators:dft".freeze, "marcrelators:dgg".freeze, "marcrelators:dgs".freeze, "marcrelators:dis".freeze, "marcrelators:dln".freeze, "marcrelators:dnc".freeze, "marcrelators:dnr".freeze, "marcrelators:dpc".freeze, "marcrelators:dpt".freeze, "marcrelators:drm".freeze, "marcrelators:drt".freeze, "marcrelators:dsr".freeze, "marcrelators:dst".freeze, "marcrelators:dtc".freeze, "marcrelators:dte".freeze, "marcrelators:dtm".freeze, "marcrelators:dto".freeze, "marcrelators:dub".freeze, "marcrelators:edc".freeze, "marcrelators:edm".freeze, "marcrelators:edt".freeze, "marcrelators:egr".freeze, "marcrelators:elg".freeze, "marcrelators:elt".freeze, "marcrelators:eng".freeze, "marcrelators:enj".freeze, "marcrelators:etr".freeze, "marcrelators:evp".freeze, "marcrelators:exp".freeze, "marcrelators:fac".freeze, "marcrelators:fds".freeze, "marcrelators:fld".freeze, "marcrelators:flm".freeze, "marcrelators:fmd".freeze, "marcrelators:fmk".freeze, "marcrelators:fmo".freeze, "marcrelators:fmp".freeze, "marcrelators:fnd".freeze, "marcrelators:fpy".freeze, "marcrelators:frg".freeze, "marcrelators:gis".freeze, "marcrelators:his".freeze, "marcrelators:hnr".freeze, "marcrelators:hst".freeze, "marcrelators:ill".freeze, "marcrelators:ilu".freeze, "marcrelators:ins".freeze, "marcrelators:inv".freeze, "marcrelators:isb".freeze, "marcrelators:itr".freeze, "marcrelators:ive".freeze, "marcrelators:ivr".freeze, "marcrelators:jud".freeze, "marcrelators:jug".freeze, "marcrelators:lbr".freeze, "marcrelators:lbt".freeze, "marcrelators:ldr".freeze, "marcrelators:led".freeze, "marcrelators:lee".freeze, "marcrelators:lel".freeze, "marcrelators:len".freeze, "marcrelators:let".freeze, "marcrelators:lgd".freeze, "marcrelators:lie".freeze, "marcrelators:lil".freeze, "marcrelators:lit".freeze, "marcrelators:lsa".freeze, "marcrelators:lse".freeze, "marcrelators:lso".freeze, "marcrelators:ltg".freeze, "marcrelators:lyr".freeze, "marcrelators:mcp".freeze, "marcrelators:mdc".freeze, "marcrelators:med".freeze, "marcrelators:mfp".freeze, "marcrelators:mfr".freeze, "marcrelators:mod".freeze, "marcrelators:mon".freeze, "marcrelators:mrb".freeze, "marcrelators:mrk".freeze, "marcrelators:msd".freeze, "marcrelators:mte".freeze, "marcrelators:mtk".freeze, "marcrelators:mus".freeze, "marcrelators:nrt".freeze, "marcrelators:opn".freeze, "marcrelators:org".freeze, "marcrelators:orm".freeze, "marcrelators:osp".freeze, "marcrelators:oth".freeze, "marcrelators:own".freeze, "marcrelators:pan".freeze, "marcrelators:pat".freeze, "marcrelators:pbd".freeze, "marcrelators:pbl".freeze, "marcrelators:pdr".freeze, "marcrelators:pfr".freeze, "marcrelators:pht".freeze, "marcrelators:plt".freeze, "marcrelators:pma".freeze, "marcrelators:pmn".freeze, "marcrelators:pop".freeze, "marcrelators:ppm".freeze, "marcrelators:ppt".freeze, "marcrelators:pra".freeze, "marcrelators:prc".freeze, "marcrelators:prd".freeze, "marcrelators:pre".freeze, "marcrelators:prf".freeze, "marcrelators:prg".freeze, "marcrelators:prm".freeze, "marcrelators:prn".freeze, "marcrelators:pro".freeze, "marcrelators:prp".freeze, "marcrelators:prs".freeze, "marcrelators:prt".freeze, "marcrelators:prv".freeze, "marcrelators:pta".freeze, "marcrelators:pte".freeze, "marcrelators:ptf".freeze, "marcrelators:pth".freeze, "marcrelators:ptt".freeze, "marcrelators:pup".freeze, "marcrelators:rbr".freeze, "marcrelators:rcd".freeze, "marcrelators:rce".freeze, "marcrelators:rcp".freeze, "marcrelators:rdd".freeze, "marcrelators:red".freeze, "marcrelators:ren".freeze, "marcrelators:res".freeze, "marcrelators:rev".freeze, "marcrelators:rpc".freeze, "marcrelators:rps".freeze, "marcrelators:rpt".freeze, "marcrelators:rpy".freeze, "marcrelators:rse".freeze, "marcrelators:rsg".freeze, "marcrelators:rsp".freeze, "marcrelators:rsr".freeze, "marcrelators:rst".freeze, "marcrelators:rth".freeze, "marcrelators:rtm".freeze, "marcrelators:sad".freeze, "marcrelators:sce".freeze, "marcrelators:scl".freeze, "marcrelators:scr".freeze, "marcrelators:sds".freeze, "marcrelators:sec".freeze, "marcrelators:sgd".freeze, "marcrelators:sgn".freeze, "marcrelators:sht".freeze, "marcrelators:sll".freeze, "marcrelators:sng".freeze, "marcrelators:spk".freeze, "marcrelators:spn".freeze, "marcrelators:spy".freeze, "marcrelators:srv".freeze, "marcrelators:std".freeze, "marcrelators:stg".freeze, "marcrelators:stl".freeze, "marcrelators:stm".freeze, "marcrelators:stn".freeze, "marcrelators:str".freeze, "marcrelators:tcd".freeze, "marcrelators:tch".freeze, "marcrelators:ths".freeze, "marcrelators:tld".freeze, "marcrelators:tlp".freeze, "marcrelators:trc".freeze, "marcrelators:trl".freeze, "marcrelators:tyd".freeze, "marcrelators:tyg".freeze, "marcrelators:uvp".freeze, "marcrelators:vac".freeze, "marcrelators:vdg".freeze, "marcrelators:wac".freeze, "marcrelators:wal".freeze, "marcrelators:wam".freeze, "marcrelators:wat".freeze, "marcrelators:wdc".freeze, "marcrelators:wde".freeze, "marcrelators:win".freeze, "marcrelators:wit".freeze, "marcrelators:wpr".freeze, "marcrelators:wst".freeze],
+      type: ["mads:Authority".freeze, "mads:MADSScheme".freeze, "skos:ConceptScheme".freeze]
 
     # Extra definitions
     term :abr,

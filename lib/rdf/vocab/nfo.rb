@@ -7,7 +7,7 @@ module RDF::Vocab
   #   # Vocabulary for <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#>
   #   class NFO < RDF::StrictVocabulary
   #   end
-  class NFO < RDF::StrictVocabulary("http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#")
+  NFO = Class.new(RDF::StrictVocabulary("http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#")) do
 
     # Class definitions
     term :Application,

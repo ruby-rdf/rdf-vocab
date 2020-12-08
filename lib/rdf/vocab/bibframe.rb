@@ -7,8 +7,7 @@ module RDF::Vocab
   #   # Vocabulary for <http://bibframe.org/vocab/>
   #   class Bibframe < RDF::StrictVocabulary
   #   end
-  class Bibframe < RDF::StrictVocabulary("http://bibframe.org/vocab/")
-
+  Bibframe = Class.new(RDF::StrictVocabulary("http://bibframe.org/vocab/")) do
     # Ontology definition
     ontology :"http://bibframe.org/vocab/",
       "dc:modified": "2014-12-10T20:23:05.638677Z".freeze,

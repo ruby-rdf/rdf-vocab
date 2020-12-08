@@ -5,9 +5,86 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://ogp.me/ns#>
+  #   #
   #   class OG < RDF::Vocabulary
+  #     # A relevant audio URL for your object.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :audio
+  #
+  #     # A one to two sentence description of your object.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :description
+  #
+  #     # The word to precede the object's title in a sentence (e.g., "the" in "the statue of liberty").  Valid values are "a", "an", "the", "", and "auto".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :determiner
+  #
+  #     # [DEPRECATED] Email of the contact for your object.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :email
+  #
+  #     # [DEPRECATED] Fax number of the contact for your object.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fax_number
+  #
+  #     # An image URL which should represent your object within the graph.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :image
+  #
+  #     # [DEPRECATED] International Standard Book Number for you object.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isbn
+  #
+  #     # [DEPRECATED] The latitude of the resource e.g., the latitude of a company.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :latitude
+  #
+  #     # A Unix locale in which this markup is rendered.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locale
+  #
+  #     # [DEPRECATED] The locality of the resource e.g, "Palo Alto"
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locality
+  #
+  #     # [DEPRECATED] The longitude of the resource e.g., the longitude of a company.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :longitude
+  #
+  #     # [DEPRECATED] Phone number of the contact for your object.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :phone_number
+  #
+  #     # [DEPRECATED] The region of the resource e.g., "CA"
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :region
+  #
+  #     # If your object is part of a larger web site, the name which should be displayed for the overall site. e.g., "IMDb".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :site_name
+  #
+  #     # The title of the object as it should appear within the graph, e.g.,  "The Rock".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :title
+  #
+  #     # The type of your object, e.g., "movie".  Depending on the type you specify, other properties may also be required.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :type
+  #
+  #     # [DEPRECATED] Universal Product Code for your object.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :upc
+  #
+  #     # The canonical URL of your object that will be used as its permanent ID in the graph, e.g., "http://www.imdb.com/title/tt0117500/".
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :url
+  #
+  #     # A relevant video URL for your object.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :video
+  #
   #   end
-  class OG < RDF::Vocabulary("http://ogp.me/ns#")
+  OG = Class.new(RDF::Vocabulary("http://ogp.me/ns#")) do
 
     # Property definitions
     property :audio,
@@ -81,6 +158,13 @@ module RDF::Vocab
       range: "ogc:url".freeze,
       "rdfs:seeAlso": "foaf:depiction".freeze,
       type: "rdf:Property".freeze
+    property :"image:alt",
+      comment: %(A description of what is in the image \(not a caption\). If the page specifies an og:image it should specify og:image:alt.).freeze,
+      isDefinedBy: "og:".freeze,
+      label: "image:alt".freeze,
+      range: "ogc:string".freeze,
+      "rdfs:seeAlso": "og:image".freeze,
+      type: "rdf:Property".freeze
     property :"image:height",
       comment: %(The height of an image.).freeze,
       isDefinedBy: "og:".freeze,
@@ -99,6 +183,14 @@ module RDF::Vocab
       isDefinedBy: "og:".freeze,
       label: "image type".freeze,
       range: "ogc:mime_type_str".freeze,
+      type: "rdf:Property".freeze
+    property :"image:url",
+      comment: %(Identical to og:image.).freeze,
+      isDefinedBy: "og:".freeze,
+      label: "image:url".freeze,
+      "owl:sameProperty": "og:image".freeze,
+      range: "ogc:url".freeze,
+      "rdfs:seeAlso": "og:image".freeze,
       type: "rdf:Property".freeze
     property :"image:width",
       comment: %(The width of an image.).freeze,
@@ -123,6 +215,13 @@ module RDF::Vocab
       isDefinedBy: "og:".freeze,
       label: "locale".freeze,
       range: "ogc:string".freeze,
+      type: "rdf:Property".freeze
+    property :"locale:alternate",
+      comment: %(An array of other locales this page is available in.).freeze,
+      isDefinedBy: "og:".freeze,
+      label: "locale:alternate".freeze,
+      range: "ogc:string".freeze,
+      "rdfs:seeAlso": "og:locale".freeze,
       type: "rdf:Property".freeze
     property :locality,
       comment: %([DEPRECATED] The locality of the resource e.g, "Palo Alto").freeze,

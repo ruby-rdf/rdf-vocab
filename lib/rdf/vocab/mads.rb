@@ -5,9 +5,595 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.loc.gov/mads/rdf/v1#>
+  #   #
+  #   # MADS/RDF (Metadata Authority Description Schema in RDF)
+  #   #
+  #   # This document describes the MADS/RDF (Metadata Authority Description Schema in RDF) vocabulary, a data model for authority and vocabulary data used within the library and information science (LIS) community, which is inclusive of museums, archives, and other cultural institutions. It is presented as an OWL ontology.                      MADS/RDF is a knowledge organization system (KOS) designed for use with controlled values for names (personal, corporate, geographic, etc.), thesauri, taxonomies, subject heading systems, and other controlled value lists. It is closely related to SKOS, the Simple Knowledge Organization System and a widely supported and adopted RDF vocabulary. Given the close relationship between the aim of MADS/RDF and the aim of SKOS, the MADS ontology has been fully mapped to SKOS.                      Unlike SKOS, however, which is very broad in its application, MADS/RDF is designed specifically to support authority data as used by and needed in the LIS community and its technology systems. For example, MADS/RDF provides a means to record data from the Machine Readable Cataloging (MARC) Authorities format in RDF for use in semantic applications and Linked Data projects.                      MADS/RDF is designed to support the description of cultural and bibliographic resources. Data described using MADS/RDF, therefore, assists with identifying and annotating bibliographic and cultural resources. MADS/RDF is not focused on the description of Real World Objects. Although a MADS/RDF description may contain information specific to the Real World Object associated with the MADS/RDF authoritative label, the MADS/RDF ontology distinguishes between these two entities – the RWO and the Authority.                      Updated: 29 October 2015. Addition of new properties, madsrdf:activityEndDate, madsrdf:activityStartDate, madsrdf:associatedLanguage, madsrdf:associatedLocale, madsrdf:birthDate, madsrdf:birthPlace, madsrdf:deathDate, madsrdf:deathPlace, madsrdf:entityDescriptor, madsrdf:establishDate, madsrdf:fieldOfActivity, madsrdf:gender, madsrdf:hasAffiliation, madsrdf:honoraryTitle, madsrdf:isIdentifiedByAuthority, madsrdf:occupation, madsrdf:prominentFamilyMember, madsrdf:terminateDate, madsrdf:fullerName, madsrdf:creationDateStart, madsrdf:creationDateEnd, madsrdf:workOrigin, madsrdf:hasChararacteristic.                       The MADS/RDF to SKOS/RDF mapping was done by Antoine Isaac. The MADS/RDF model and ontology benefited significantly as a result of the fruitful discussions surrounding his effort to map the MADS/RDF ontology to SKOS. 
+  #   # @version 1.5.0
   #   class MADS < RDF::StrictVocabulary
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Address
+  #
+  #     # A resource that describes an individual's affiliation with an organization or group, such as the nature of the affiliation and the active dates.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Affiliation
+  #
+  #     # Describes a resource whose label is a non-jurisdictional geographic entity.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Area
+  #
+  #     # A concept with a controlled label.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Authority
+  #
+  #     # Describes a resource whose label is an inhabited place incorporated as a city, town, etc.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :City
+  #
+  #     # Describes a resource whose label is a smaller unit within a populated place, e.g., a neighborhood, park, or street.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CitySection
+  #
+  #     # The label of a madsrdf:ComplexSubject is the concatenation of labels from two or more madsrdf:SimpleType descriptions, except that the combination of madsrdf:SimpleType labels for the madsrdf:ComplexSubject does not meet the conditions to be the label of a madsrdf:NameTitle resource or madsrdf:HierarchicalGeographic resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ComplexSubject
+  #
+  #     # madsrdf:ComplexType is a resource whose label is the concatenation of labels from two or more Authority descriptions or two or more Variant descriptions or some combination of Authority and Variant descriptions, each of a madsrdf:SimpleType.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ComplexType
+  #
+  #     # Describes a resource whose label represents a conference name.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ConferenceName
+  #
+  #     # Describes a resource whose label is one of seven large landmasses on Earth. These are: Asia, Africa, Europe, North America, South America, Australia, and Antarctica.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Continent
+  #
+  #     # Describes a resource whose label is the name of a corporate entity, which may include political or ecclesiastical entities.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :CorporateName
+  #
+  #     # Describes a resource whose label is a country, i.e. a political entity considered a country. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Country
+  #
+  #     # Describes a resource whose label is the largest local administrative unit, e.g. Warwickshire, in a country, e.g. England.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :County
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DateNameElement
+  #
+  #     # A former Authority.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :DeprecatedAuthority
+  #
+  #     # madsrdf:Element types describe the various parts of labels.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Element
+  #
+  #     # Describes a resource whose label is any extraterrestrial entity or space, including a solar system, a galaxy, a star system, and a planet, including a geographic feature of an individual planet.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ExtraterrestrialArea
+  #
+  #     # Describes a resource whose label represents a family name.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FamilyName
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FamilyNameElement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :FullNameElement
+  #
+  #     # Describes a resource whose label is a genre or form term. Genre terms for textual materials designate specific kinds of materials distinguished by the style or technique of their intellectual contents; for example, biographies, catechisms, essays, hymns, or reviews. Form terms designate historically and functionally specific kinds of materials as distinguished by an examination of their physical character, characteristics of their intellectual content, or the order of information within them; for example, daybooks, diaries, directories, journals, memoranda, questionnaires, syllabi, or time sheets. In the context of graphic materials, genre headings denote categories of material distinguished by vantage point, intended purpose, characteristics of the creator, publication status, or method of representation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GenreForm
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GenreFormElement
+  #
+  #     # Describes a resource whose label represents a geographic place or feature, especially when a more precise geographic determination (City, Country, Region, etc.) cannot be made.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Geographic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GeographicElement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :GivenNameElement
+  #
+  #     # A madsrdf:HierarchicalGeographic indicates that its label is the concatenation of labels from a sequence of madsrdf:Geographic types taken from one of the madsrdf:Geographic sub-classes such as madsrdf:City, madsrdf:Country, madsrdf:State, madsrdf:Region, madsrdf:Area, etc. The madsrdf:Geographic resources that constitute the madsrdf:HierarchicalGeographic should have a broader to narrower hierarchical relationship between them.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :HierarchicalGeographic
+  #
+  #     # A madsrdf:Identifier resource describes an identifier by associating the identifier value with its type. To be used to record identifiers for a resource in the absence of URIs.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Identifier
+  #
+  #     # Describes a resource whose label is a tract of land surrounded by water and smaller than a continent but is not itself a separate country. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Island
+  #
+  #     # Describes a resource whose label represents a language.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Language
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :LanguageElement
+  #
+  #     # A madsrdf:Collection is an organizational unit, members of which will have some form of intellectually unifying theme but not to the extent that it defines an independent knowledge organization system. It aggregates madsrdf:Authority descriptions or other madsrdf:MADSCollection resources.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MADSCollection
+  #
+  #     # MADS Scheme is an organizational unit that describes a knowledge organization system. It aggregates madsrdf:Authority descriptions and/or madsrdf:MADSCollection resources included in the knowledge organization system. Including a madsrdf:MADSCollection within a madsrdf:MADSScheme should be done with care; when a madsrdf:MADSCollection is part of a madsrdf:MADSScheme, then any madsrdf:Authority within that madsrdf:MADSCollection is effectively also in the madsrdf:MADSScheme.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MADSScheme
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MADSType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :MainTitleElement
+  #
+  #     # Describes a resource whose label represents a name, especially when a more precise Name type (madsrdf:ConferenceName, masdrdf:FamilyName, etc.) cannot be identified.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Name
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NameElement
+  #
+  #     # The label of a madsrdf:NameTitle resource is the concatenation of a label of a madsrdf:Name description and the label of a madsrdf:Title description. Both description types (madsrdf:Name and madsrdf:Title) are of madsrdf:SimpleType types.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NameTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :NonSortElement
+  #
+  #     # Describes a resource whose label represents an occcupation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Occupation
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PartNameElement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PartNumberElement
+  #
+  #     # Describes a resource whose label represents a personal name.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PersonalName
+  #
+  #     # Describes a resource whose label is a first order political division, e.g. Ontario, within a country, e.g. Canada. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Province
+  #
+  #     # A madsrdf:RWO is an abstract entity and identifies a Real World Object (RWO) identified by the label of a madsrdf:Authority or madsrdf:DeprecatedAuthority.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RWO
+  #
+  #     # Describes a resource whose label is an area that has the status of a jurisdiction, usually incorporating more than one first level jurisdiction. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Region
+  #
+  #     # madsrdf:SimpleType is a resource with a label constituting a single word or phrase.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SimpleType
+  #
+  #     # A resource that represents the source of information about another resource. madsrdf:Source is a type of citation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Source
+  #
+  #     # Describes a resource whose label is a first order political division, e.g. Montana, within a country, e.g. U.S.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :State
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :SubTitleElement
+  #
+  #     # Describes a resource whose label represents a time-based notion.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Temporal
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TemporalElement
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TermsOfAddressNameElement
+  #
+  #     # Describes a resource whose label is a geographical area belonging to or under the jurisdiction of a governmental authority. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Territory
+  #
+  #     # Describes a resource whose label represents a title.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Title
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TitleElement
+  #
+  #     # Describes a resource whose label represents a topic.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Topic
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TopicElement
+  #
+  #     # A resource whose label is the alternate form of an Authority or Deprecated Authority.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Variant
+  #
+  #     # Latest date in a period of activity. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :activityEndDate
+  #
+  #     # Earliest date in a period of activity. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :activityStartDate
+  #
+  #     # This relates an Authority or Variant to its administrative metadata, which is, minimimally, a Class defined outside of the MADS/RDF namespace. The RecordInfo Class from the RecordInfo ontology is recommended.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :adminMetadata
+  #
+  #     # The date an individual ceased to be affiliated with an organization.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :affiliationEnd
+  #
+  #     # The date an individual established an affiliation with an organization.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :affiliationStart
+  #
+  #     # Language that a person, organization, or family uses for publication, communication, etc., or in which a work is expressed. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :associatedLanguage
+  #
+  #     # A town, city, province, state, and/or country associated with persons, corporate bodies, families, works, and expressions.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :associatedLocale
+  #
+  #     # A lexical string representing a controlled, curated label for the Authority.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :authoritativeLabel
+  #
+  #     # The year a person was born. Date of birth may also include the month and day of the person’s birth. (RDA 9.3.2.1)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :birthDate
+  #
+  #     # The town, city, province, state, and/or country in which a person was born.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :birthPlace
+  #
+  #     # A note detailing a modification to an Authority or Variant.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :changeNote
+  #
+  #     # A note about how the madsrdf:Source relates to the resource about which the madsrdf:Source is the information source.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :citationNote
+  #
+  #     # The cited resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :citationSource
+  #
+  #     # Should use a standard term - such as 'found' or 'not found' - to indicate whether the cited resource yielded information about the resource related to the madsrdf:Source.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :citationStatus
+  #
+  #     # The city component of an address.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :city
+  #
+  #     # The classification code associated with a madsrdf:Authority.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :classification
+  #
+  #     # A code is a string of characters associated with a the authoritative or deprecated label. It may record an historical notation once used to uniquely identify a concept.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :code
+  #
+  #     # madsrdf:componentList organizes the madsrdf:SimpleType resources whose labels are represented in the label of the associated madsrdf:ComplexType resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :componentList
+  #
+  #     # Country associated with an address.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :country
+  #
+  #     # Ending date of the date range for which the beginning date is recorded in madsrdf:creationDateStart.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :creationDateEnd
+  #
+  #     # For a work, earliest date (normally the year) associated with a work; that date may be the date the work was created or first published or released. For an expression, the earliest date (normally the year) associated with an expression; that date may be the date of the earliest known manifestation of that expression. In both cases the date may be the starting date of a range or a single date.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :creationDateStart
+  #
+  #     # The year a person died. Date of death may also include the month and day of the person’s death. (RDA 9.3.3.1)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deathDate
+  #
+  #     # The town, city, province, state, and/or country in which a person died.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deathPlace
+  #
+  #     # An explanation of the meaning of an Authority, DeprecatedAuthority, or Variant description.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :definitionNote
+  #
+  #     # A note pertaining to the deletion of a resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deletionNote
+  #
+  #     # A label once considered authoritative (controlled and curated) but which is no longer.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :deprecatedLabel
+  #
+  #     # A note pertaining to the management of the label associated with the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :editorialNote
+  #
+  #     # The madsrdf:elementList property is used to organize the various parts of labels.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :elementList
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :elementValue
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :email
+  #
+  #     # Any attribute that serves to characterize a person, family or corporate body or that may be needed for differentiation from other persons. families or corporate bodies and for which separate content designation is not already defined.Or 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :entityDescriptor
+  #
+  #     # The year a corporate body was established. Date of establishment may also include the month and day of the corporate body’s establishment. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :establishDate
+  #
+  #     # A example of how the resource might be used.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :exampleNote
+  #
+  #     # The second address line, if needed.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :extendedAddress
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :extension
+  #
+  #     # Fax number
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fax
+  #
+  #     # The field of activity associated with an individual.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fieldOfActivity
+  #
+  #     # Full form of name needed to distinguish a person from another person with the same preferred name.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fullerName
+  #
+  #     # The gender with which a person identifies. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :gender
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasAbbreviationVariant
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasAcronymVariant
+  #
+  #     # Property to associate an individual, such as a foaf:Agent, to a group or organization with which an individual is or has been affiliated.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasAffiliation
+  #
+  #     # The address of the group or organization with which an individual is associated.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasAffiliationAddress
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasBroaderAuthority
+  #
+  #     # Creates a direct relationship between an Authority and a more broadly defined Authority from a different MADS Scheme.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasBroaderExternalAuthority
+  #
+  #     # A term that specifies a characteristic that differentiates a work or expression from another one. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasChararacteristic
+  #
+  #     # Records a relationship between an Authority and one that is closely related from a different MADS Scheme.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasCloseExternalAuthority
+  #
+  #     # Establishes a relationship between a CorporateName Authority and one of the same that is more broadly defined.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasCorporateParentAuthority
+  #
+  #     # Establishes a relationship between a CorporateName Authority and one of the same that is more narrowly defined.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasCorporateSubsidiaryAuthority
+  #
+  #     # Establishes a relationship between an Authority that represents the demonym - Japanese or Greek, for example - and an Authority that represents the Geographic place - Japan or Greece, respectively - associated with the demonym.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasDemonym
+  #
+  #     # Used to reference a resource that was an earlier form. This is Related type='earlier' in MADS XML.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasEarlierEstablishedForm
+  #
+  #     # Records a relationship between an Authority and one to which it matches exactly but from a different MADS Scheme.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasExactExternalAuthority
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasExpansionVariant
+  #
+  #     # Use for variants that are searchable, but not necessarily for display.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasHiddenVariant
+  #
+  #     # Associates a resource with a madsrdf:Identifier.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasIdentifier
+  #
+  #     # Use to reference the later form of a resource. This is Related type='later' in MADS XML.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasLaterEstablishedForm
+  #
+  #     # Associates an Authority or other Collection with a madsrdf:MADSCollection.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasMADSCollectionMember
+  #
+  #     # Associates an Authority or Collection with a madsrdf:MADSScheme.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasMADSSchemeMember
+  #
+  #     # Creates a direct relationship between an Authority and one that is more narrowly defined.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasNarrowerAuthority
+  #
+  #     # Creates a direct relationship between an Authority and a more narrowly defined Authority from a different MADS Scheme.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasNarrowerExternalAuthority
+  #
+  #     # Establishes a relationship between two Authority resources. It is reciprocal, so the relationship must be shared. This is Related type='equivalent' in MADS XML.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasReciprocalAuthority
+  #
+  #     # Establishes a relationship between an Authority and one from a different MADS Scheme. It is reciprocal, so the relationship must be shared.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasReciprocalExternalAuthority
+  #
+  #     # Unless the relationship can be more specifically identified, use 'hasRelatedAuthority.'
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasRelatedAuthority
+  #
+  #     # Associates a resource description with its Source.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasSource
+  #
+  #     # Identifies an Authority that is at the top of the hierarchy of authorities within the MADS Scheme.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasTopMemberOfMADSScheme
+  #
+  #     # A Variant whose label represents a translation of that of the authoritative label.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasTranslationVariant
+  #
+  #     # Associates a Variant with an Authority or Deprecrated Authority. Unless the variant type can be more specifically identified, use 'hasVariant.'
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasVariant
+  #
+  #     # A label entered for discovery purposes but not shown.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hiddenLabel
+  #
+  #     # A note pertaining to the history of the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :historyNote
+  #
+  #     # Designation indicative of royalty, nobility, or ecclesiastical rank or office, or a term of address for a person of religious vocation.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :honoraryTitle
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hours
+  #
+  #     # The scheme associated with the identifier. For example, "LCCN" would be used when the Identifier Value (madsrdf:idValue) is a LC Control Number.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :idScheme
+  #
+  #     # The value of the identifier conforming to the Identifier Scheme syntax.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :idValue
+  #
+  #     # Associates a madsrdf:Authority with the Real World Object that is the subject of the authority's label.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :identifiesRWO
+  #
+  #     # Establishes a relationship between an Authority that represents a Geographic place - Japan or Greece, for example - and an Authority that represents the demonym - Japanese or Greek, respectively - associated with the place.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isDemonymFor
+  #
+  #     # Associates a Real World Object with its Authority description.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isIdentifiedByAuthority
+  #
+  #     # Associates a Collection with a madsrdf:Authority or another madsrdf:MADSCollection.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isMemberOfMADSCollection
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isMemberOfMADSScheme
+  #
+  #     # Identifies a MADS Scheme in which the Authority is at the top of the hierarchy.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :isTopMemberOfMADSScheme
+  #
+  #     # Records the individual's role or position in the organization with which the individual is affiliated. A "job title" might be appropriate.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :natureOfAffiliation
+  #
+  #     # A note about the resource.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :note
+  #
+  #     # A profession or occupation in which the person works or has worked.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :occupation
+  #
+  #     # The group or organization with which an individual is associated.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :organization
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :phone
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :postcode
+  #
+  #     # A well-known individual who is a member of the family.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prominentFamilyMember
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :scopeNote
+  #
+  #     # Denotes a relationship between two resources. The relationship may or may or may not be reciprocated and there is no certainty that the related resource will further illuminate the original resource. Sub-properties can be used to more specifically identify the nature of the relationship.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :see
+  #
+  #     # The state associated with an address.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :state
+  #
+  #     # First line of address. For second line, use madsrdf:extendedAddress.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :streetAddress
+  #
+  #     # The year a corporate body was terminated. Date of termination may also include the month and day of the corporate body’s termination. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :terminateDate
+  #
+  #     # "Use [This Resource] For." Traditional "USE FOR" reference.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :useFor
+  #
+  #     # "Use [This Other Resource] Instead." Traditional "USE" reference.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :useInstead
+  #
+  #     # The lexical, variant form of an authoritative label.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :variantLabel
+  #
+  #     # The country or other territorial jurisdiction from which a work originated.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :workOrigin
+  #
   #   end
-  class MADS < RDF::StrictVocabulary("http://www.loc.gov/mads/rdf/v1#")
+  MADS = Class.new(RDF::StrictVocabulary("http://www.loc.gov/mads/rdf/v1#")) do
 
     # Ontology definition
     ontology :"http://www.loc.gov/mads/rdf/v1#",
@@ -30,9 +616,9 @@ module RDF::Vocab
       "dc:modified": "2019-01-04T17:01:03.065-05:00".freeze,
       label: "MADS/RDF (Metadata Authority Description Schema in RDF)".freeze,
       "owl:ontologyIRI": "mads:".freeze,
-      "owl:priorVersion": "http://id.loc.gov/ontologies/madsrdf/v1-3-1".freeze,
-      "owl:versionIRI": "http://id.loc.gov/ontologies/madsrdf/v1-4-0".freeze,
-      "owl:versionInfo": "1.4.0".freeze,
+      "owl:priorVersion": "http://id.loc.gov/ontologies/madsrdf/v1-4-0".freeze,
+      "owl:versionIRI": "http://id.loc.gov/ontologies/madsrdf/v1-5-0".freeze,
+      "owl:versionInfo": "1.5.0".freeze,
       type: "owl:Ontology".freeze
 
     # Class definitions
@@ -336,7 +922,7 @@ module RDF::Vocab
       comment: %(This relates an Authority or Variant to its administrative metadata, which is, minimimally, a Class defined outside of the MADS/RDF namespace. The RecordInfo Class from the RecordInfo ontology is recommended.).freeze,
       domain: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70091716318520".freeze, "_:g70091716332600".freeze, "_:g70091794584860".freeze)
+          unionOf: list("_:g10080".freeze, "_:g10100".freeze, "_:g10120".freeze)
         ),
       label: "Administrative Metadata".freeze,
       type: "owl:ObjectProperty".freeze
@@ -418,7 +1004,7 @@ module RDF::Vocab
       comment: %(A code is a string of characters associated with a the authoritative or deprecated label. It may record an historical notation once used to uniquely identify a concept.).freeze,
       domain: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70091717845900".freeze, "_:g70091717865180".freeze)
+          unionOf: list("_:g10600".freeze, "_:g10620".freeze)
         ),
       label: "Code".freeze,
       subPropertyOf: "skos:notation".freeze,
@@ -429,7 +1015,7 @@ module RDF::Vocab
       label: "Component List".freeze,
       range: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70091718079820".freeze, "_:g70091718098380".freeze)
+          unionOf: list("_:g10720".freeze, "_:g10740".freeze)
         ),
       type: "owl:ObjectProperty".freeze
     property :country,
@@ -484,7 +1070,7 @@ module RDF::Vocab
       label: "Element List".freeze,
       range: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70091312121580".freeze, "_:g70091717685740".freeze)
+          unionOf: list("_:g11080".freeze, "_:g11100".freeze)
         ),
       type: "owl:ObjectProperty".freeze
     property :elementValue,
@@ -639,7 +1225,7 @@ module RDF::Vocab
       label: "Has MADSCollection Member".freeze,
       range: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70091717636060".freeze, "_:g70091717654620".freeze)
+          unionOf: list("_:g11980".freeze, "_:g12000".freeze)
         ),
       subPropertyOf: "skos:member".freeze,
       type: "owl:ObjectProperty".freeze
@@ -650,7 +1236,7 @@ module RDF::Vocab
       label: "Has MADS Scheme Member".freeze,
       range: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70091312136880".freeze, "_:g70091717684180".freeze)
+          unionOf: list("_:g12140".freeze, "_:g12160".freeze)
         ),
       type: "owl:ObjectProperty".freeze
     property :hasNarrowerAuthority,
@@ -761,7 +1347,7 @@ module RDF::Vocab
       comment: %(Associates a Collection with a madsrdf:Authority or another madsrdf:MADSCollection.).freeze,
       domain: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70091312142140".freeze, "_:g70091717689040".freeze)
+          unionOf: list("_:g12720".freeze, "_:g12740".freeze)
         ),
       inverseOf: "mads:hasMADSCollectionMember".freeze,
       label: "Is Member Of MADSCollection".freeze,
@@ -770,7 +1356,7 @@ module RDF::Vocab
     property :isMemberOfMADSScheme,
       domain: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70091717831100".freeze, "_:g70091717849500".freeze)
+          unionOf: list("_:g12820".freeze, "_:g12840".freeze)
         ),
       inverseOf: "mads:hasMADSSchemeMember".freeze,
       label: "Is Member of MADS Scheme".freeze,
@@ -781,7 +1367,7 @@ module RDF::Vocab
       comment: %(Identifies a MADS Scheme in which the Authority is at the top of the hierarchy.).freeze,
       domain: term(
           type: "owl:Class".freeze,
-          unionOf: list("_:g70091718058260".freeze, "_:g70091718076240".freeze)
+          unionOf: list("_:g12960".freeze, "_:g12980".freeze)
         ),
       inverseOf: "mads:hasTopMemberOfMADSScheme".freeze,
       label: "Is Top Member of MADS Scheme".freeze,
@@ -828,16 +1414,8 @@ module RDF::Vocab
       subPropertyOf: "mads:note".freeze,
       type: "owl:AnnotationProperty".freeze
     property :see,
-      comment: %(Denotes a relationship between an Authority and/or DeprecatedAuthority. The relationship may or may or may not be reciprocated and there is no certainty that the related resource will further illuminate the original resource.).freeze,
-      domain: term(
-          type: "owl:Class".freeze,
-          unionOf: list("_:g70091716696020".freeze, "_:g70091716714260".freeze)
-        ),
+      comment: %(Denotes a relationship between two resources. The relationship may or may or may not be reciprocated and there is no certainty that the related resource will further illuminate the original resource. Sub-properties can be used to more specifically identify the nature of the relationship.).freeze,
       label: "See Also".freeze,
-      range: term(
-          type: "owl:Class".freeze,
-          unionOf: list("_:g70091716803840".freeze, "_:g70091716797920".freeze)
-        ),
       subPropertyOf: "rdfs:seeAlso".freeze,
       type: "owl:ObjectProperty".freeze
     property :state,

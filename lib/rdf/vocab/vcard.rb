@@ -5,13 +5,520 @@ require 'rdf'
 module RDF::Vocab
   # @!parse
   #   # Vocabulary for <http://www.w3.org/2006/vcard/ns#>
+  #   #
+  #   # Ontology for vCard
+  #   #
+  #   # Ontology for vCard based on RFC6350
+  #   # @version Final
   #   class VCARD < RDF::StrictVocabulary
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Acquaintance
+  #
+  #     # To specify the components of the delivery address for the  object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Address
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Agent
+  #
+  #     # This class is deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :BBS
+  #
+  #     # This class is deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Car
+  #
+  #     # Also called mobile telephone
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Cell
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Child
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Colleague
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Contact
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Coresident
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Coworker
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Crush
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Date
+  #
+  #     # This class is deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Dom
+  #
+  #     # To specify the electronic mail address for communication with the object the vCard represents. Use the hasEmail object property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Email
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Emergency
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Fax
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Female
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Friend
+  #
+  #     # Used for gender codes. The URI of the gender code must be used as the value for Gender.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Gender
+  #
+  #     # Object representing a group of persons or entities.  A group object will usually contain hasMember properties to specify the members of the group.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Group
+  #
+  #     # This implies that the property is related to an individual's personal life
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Home
+  #
+  #     # This class is deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :ISDN
+  #
+  #     # An object representing a single person or entity
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Individual
+  #
+  #     # This class is deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Internet
+  #
+  #     # This class is deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Intl
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Kin
+  #
+  #     # The parent class for all objects
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Kind
+  #
+  #     # This class is deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Label
+  #
+  #     # An object representing a named geographical place
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Location
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Male
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Me
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Met
+  #
+  #     # This class is deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Modem
+  #
+  #     # This class is deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Msg
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Muse
+  #
+  #     # To specify the components of the name of the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Name
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Neighbor
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :None
+  #
+  #     # An object representing an organization.  An organization is a single entity, and might represent a business or government, a department or division within a business or government, a club, an association, or the like. 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Organization
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Other
+  #
+  #     # This class is deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :PCS
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Pager
+  #
+  #     # This class is deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Parcel
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Parent
+  #
+  #     # This class is deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Postal
+  #
+  #     # This class is deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Pref
+  #
+  #     # Used for relation type codes. The URI of the relation type code must be used as the value for the Relation Type.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :RelatedType
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Sibling
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Spouse
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Sweetheart
+  #
+  #     # This class is deprecated. Use the hasTelephone object property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Tel
+  #
+  #     # Used for telephone type codes. The URI of the telephone type code must be used as the value for the Telephone Type.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TelephoneType
+  #
+  #     # Also called sms telephone
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Text
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :TextPhone
+  #
+  #     # Used for type codes. The URI of the type code must be used as the value for Type.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Type
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Unknown
+  #
+  #     # The vCard class is  equivalent to the new Kind class, which is the parent for the four explicit types of vCards (Individual, Organization, Location, Group)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :VCard
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Video
+  #
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Voice
+  #
+  #     # This implies that the property is related to an individual's work place
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :Work
+  #
+  #     # This class is deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :X400
+  #
+  #     # This object property has been mapped
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :adr
+  #
+  #     # This object property has been deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :agent
+  #
+  #     # The date of marriage, or equivalent, of the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :anniversary
+  #
+  #     # To specify the birth date of the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :bday
+  #
+  #     # The category information about the object, also known as tags
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :category
+  #
+  #     # This data property has been deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :class
+  #
+  #     # This object property has been mapped
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :email
+  #
+  #     # The formatted text corresponding to the name of the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :fn
+  #
+  #     # This object property has been mapped
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :geo
+  #
+  #     # Used to support property parameters for the additional name data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasAdditionalName
+  #
+  #     # To specify the components of the delivery address for the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasAddress
+  #
+  #     # To specify the busy time associated with the object. (Was called FBURL in RFC6350)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasCalendarBusy
+  #
+  #     # To specify the calendar associated with the object. (Was called CALURI in RFC6350)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasCalendarLink
+  #
+  #     # To specify the calendar user address to which a scheduling request be sent for the object. (Was called CALADRURI in RFC6350)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasCalendarRequest
+  #
+  #     # Used to support property parameters for the category data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasCategory
+  #
+  #     # Used to support property parameters for the country name data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasCountryName
+  #
+  #     # To specify the electronic mail address for communication with the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasEmail
+  #
+  #     # Used to support property parameters for the formatted name data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasFN
+  #
+  #     # Used to support property parameters for the family name data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasFamilyName
+  #
+  #     # To specify  the sex or gender identity of the object. URIs are recommended to enable interoperable sex and gender codes to be used.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasGender
+  #
+  #     # To specify information related to the global positioning of the object. May also be used as a property parameter.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasGeo
+  #
+  #     # Used to support property parameters for the given name data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasGivenName
+  #
+  #     # Used to support property parameters for the honorific prefix data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasHonorificPrefix
+  #
+  #     # Used to support property parameters for the honorific suffix data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasHonorificSuffix
+  #
+  #     # To specify the instant messaging and presence protocol communications with the object. (Was called IMPP in RFC6350)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasInstantMessage
+  #
+  #     # To specify a public key or authentication certificate associated with the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasKey
+  #
+  #     # Used to support property parameters for the language data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasLanguage
+  #
+  #     # Used to support property parameters for the locality data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasLocality
+  #
+  #     # To specify a graphic image of a logo associated with the object 
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasLogo
+  #
+  #     # To include a member in the group this object represents. (This property can only be used by Group individuals)
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasMember
+  #
+  #     # To specify the components of the name of the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasName
+  #
+  #     # Used to support property parameters for the nickname data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasNickname
+  #
+  #     # Used to support property parameters for the note data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasNote
+  #
+  #     # Used to support property parameters for the organization name data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasOrganizationName
+  #
+  #     # Used to support property parameters for the organization unit name data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasOrganizationUnit
+  #
+  #     # To specify an image or photograph information that annotates some aspect of the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasPhoto
+  #
+  #     # Used to support property parameters for the postal code data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasPostalCode
+  #
+  #     # Used to support property parameters for the region data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasRegion
+  #
+  #     # To specify a relationship between another entity and the entity represented by this object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasRelated
+  #
+  #     # Used to support property parameters for the role data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasRole
+  #
+  #     # To specify a digital sound content information that annotates some aspect of the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasSound
+  #
+  #     # To identify the source of directory information of the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasSource
+  #
+  #     # Used to support property parameters for the street address data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasStreetAddress
+  #
+  #     # To specify the telephone number for telephony communication with the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasTelephone
+  #
+  #     # Used to support property parameters for the title data property
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasTitle
+  #
+  #     # To specify a value that represents a globally unique identifier corresponding to the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasUID
+  #
+  #     # To specify a uniform resource locator associated with the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasURL
+  #
+  #     # Used to indicate the resource value of an object property that requires property parameters
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :hasValue
+  #
+  #     # This object property has been mapped
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :key
+  #
+  #     # This data property has been deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :label
+  #
+  #     # To specify the language that may be used for contacting the object. May also be used as a property parameter.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :language
+  #
+  #     # This data property has been deprecated. See hasGeo
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :latitude
+  #
+  #     # The locality (e.g. city or town) associated with the address of the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :locality
+  #
+  #     # This object property has been mapped
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :logo
+  #
+  #     # This data property has been deprecated. See hasGeo
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :longitude
+  #
+  #     # This data property has been deprecated
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :mailer
+  #
+  #     # This object property has been mapped
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :n
+  #
+  #     # The nick name associated with the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :nickname
+  #
+  #     # A note associated with the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :note
+  #
+  #     # This object property has been mapped. Use the organization-name data property.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :org
+  #
+  #     # This object property has been mapped
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :photo
+  #
+  #     # To specify the identifier for the product that created the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :prodid
+  #
+  #     # The region (e.g. state or province) associated with the address of the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :region
+  #
+  #     # To specify revision information about the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :rev
+  #
+  #     # To specify the function or part played in a particular situation by the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :role
+  #
+  #     # This object property has been mapped
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :sound
+  #
+  #     # This object property has been mapped
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tel
+  #
+  #     # To specify the position or job of the object
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :title
+  #
+  #     # To indicate time zone information that is specific to the object. May also be used as a property parameter.
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :tz
+  #
+  #     # This object property has been mapped
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :url
+  #
+  #     # Used to indicate the literal value of a data property that requires property parameters
+  #     # @return [RDF::Vocabulary::Term]
+  #     attr_reader :value
+  #
   #   end
-  class VCARD < RDF::StrictVocabulary("http://www.w3.org/2006/vcard/ns#")
+  VCARD = Class.new(RDF::StrictVocabulary("http://www.w3.org/2006/vcard/ns#")) do
 
     # Ontology definition
     ontology :"http://www.w3.org/2006/vcard/ns#",
-      comment: %(Ontology for vCard based on RFC6350).freeze,
+      comment: "Ontology for vCard based on RFC6350".freeze,
       label: "Ontology for vCard".freeze,
       "owl:versionInfo": "Final".freeze,
       type: "owl:Ontology".freeze
@@ -23,7 +530,7 @@ module RDF::Vocab
       subClassOf: "vcard:RelatedType".freeze,
       type: "owl:Class".freeze
     term :Address,
-      comment: %(To specify the components of the delivery address for the  object).freeze,
+      comment: "To specify the components of the delivery address for the  object".freeze,
       equivalentClass: term(
           type: "owl:Class".freeze,
           unionOf: list(term(
@@ -92,21 +599,21 @@ module RDF::Vocab
       subClassOf: "vcard:RelatedType".freeze,
       type: "owl:Class".freeze
     term :BBS,
-      comment: %(This class is deprecated).freeze,
+      comment: "This class is deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "BBS".freeze,
       "owl:deprecated": "true".freeze,
       subClassOf: "vcard:TelephoneType".freeze,
       type: "owl:Class".freeze
     term :Car,
-      comment: %(This class is deprecated).freeze,
+      comment: "This class is deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Car".freeze,
       "owl:deprecated": "true".freeze,
       subClassOf: "vcard:TelephoneType".freeze,
       type: "owl:Class".freeze
     term :Cell,
-      comment: %(Also called mobile telephone).freeze,
+      comment: "Also called mobile telephone".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Cell".freeze,
       subClassOf: "vcard:TelephoneType".freeze,
@@ -147,14 +654,14 @@ module RDF::Vocab
       subClassOf: "vcard:RelatedType".freeze,
       type: "owl:Class".freeze
     term :Dom,
-      comment: %(This class is deprecated).freeze,
+      comment: "This class is deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Dom".freeze,
       "owl:deprecated": "true".freeze,
       subClassOf: "vcard:Type".freeze,
       type: "owl:Class".freeze
     term :Email,
-      comment: %(To specify the electronic mail address for communication with the object the vCard represents. Use the hasEmail object property.).freeze,
+      comment: "To specify the electronic mail address for communication with the object the vCard represents. Use the hasEmail object property.".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Email".freeze,
       "owl:deprecated": "true".freeze,
@@ -180,12 +687,12 @@ module RDF::Vocab
       subClassOf: "vcard:RelatedType".freeze,
       type: "owl:Class".freeze
     term :Gender,
-      comment: %(Used for gender codes. The URI of the gender code must be used as the value for Gender.).freeze,
+      comment: "Used for gender codes. The URI of the gender code must be used as the value for Gender.".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Gender".freeze,
       type: "owl:Class".freeze
     term :Group,
-      comment: %(Object representing a group of persons or entities.  A group object will usually contain hasMember properties to specify the members of the group.).freeze,
+      comment: "Object representing a group of persons or entities.  A group object will usually contain hasMember properties to specify the members of the group.".freeze,
       equivalentClass: term(
           intersectionOf: list(term(
             onProperty: "vcard:hasMember".freeze,
@@ -205,34 +712,34 @@ module RDF::Vocab
       subClassOf: "vcard:Kind".freeze,
       type: "owl:Class".freeze
     term :Home,
-      comment: %(This implies that the property is related to an individual's personal life).freeze,
+      comment: "This implies that the property is related to an individual's personal life".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Home".freeze,
       subClassOf: "vcard:Type".freeze,
       type: "owl:Class".freeze
     term :ISDN,
-      comment: %(This class is deprecated).freeze,
+      comment: "This class is deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "ISDN".freeze,
       "owl:deprecated": "true".freeze,
       subClassOf: "vcard:Type".freeze,
       type: "owl:Class".freeze
     term :Individual,
-      comment: %(An object representing a single person or entity).freeze,
+      comment: "An object representing a single person or entity".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Individual".freeze,
       "owl:disjointWith": ["vcard:Location".freeze, "vcard:Organization".freeze],
       subClassOf: "vcard:Kind".freeze,
       type: "owl:Class".freeze
     term :Internet,
-      comment: %(This class is deprecated).freeze,
+      comment: "This class is deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Internet".freeze,
       "owl:deprecated": "true".freeze,
       subClassOf: "vcard:Type".freeze,
       type: "owl:Class".freeze
     term :Intl,
-      comment: %(This class is deprecated).freeze,
+      comment: "This class is deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Intl".freeze,
       "owl:deprecated": "true".freeze,
@@ -244,7 +751,7 @@ module RDF::Vocab
       subClassOf: "vcard:RelatedType".freeze,
       type: "owl:Class".freeze
     term :Kind,
-      comment: %(The parent class for all objects).freeze,
+      comment: "The parent class for all objects".freeze,
       equivalentClass: ["vcard:VCard".freeze, term(
           onProperty: "vcard:fn".freeze,
           "owl:minQualifiedCardinality": "1".freeze,
@@ -255,14 +762,14 @@ module RDF::Vocab
       label: "Kind".freeze,
       type: "owl:Class".freeze
     term :Label,
-      comment: %(This class is deprecated).freeze,
+      comment: "This class is deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Label".freeze,
       "owl:deprecated": "true".freeze,
       subClassOf: "vcard:Type".freeze,
       type: "owl:Class".freeze
     term :Location,
-      comment: %(An object representing a named geographical place).freeze,
+      comment: "An object representing a named geographical place".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Location".freeze,
       "owl:disjointWith": "vcard:Organization".freeze,
@@ -284,14 +791,14 @@ module RDF::Vocab
       subClassOf: "vcard:RelatedType".freeze,
       type: "owl:Class".freeze
     term :Modem,
-      comment: %(This class is deprecated).freeze,
+      comment: "This class is deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Modem".freeze,
       "owl:deprecated": "true".freeze,
       subClassOf: "vcard:TelephoneType".freeze,
       type: "owl:Class".freeze
     term :Msg,
-      comment: %(This class is deprecated).freeze,
+      comment: "This class is deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Msg".freeze,
       "owl:deprecated": "true".freeze,
@@ -303,7 +810,7 @@ module RDF::Vocab
       subClassOf: "vcard:RelatedType".freeze,
       type: "owl:Class".freeze
     term :Name,
-      comment: %(To specify the components of the name of the object).freeze,
+      comment: "To specify the components of the name of the object".freeze,
       equivalentClass: term(
           type: "owl:Class".freeze,
           unionOf: list(term(
@@ -377,8 +884,7 @@ module RDF::Vocab
       subClassOf: "vcard:Gender".freeze,
       type: "owl:Class".freeze
     term :Organization,
-      comment: %(An object representing an organization.  An organization is a single entity, and might represent a business or government, a department or division within a business or government, a club, an association, or the like.
-).freeze,
+      comment: "An object representing an organization.  An organization is a single entity, and might represent a business or government, a department or division within a business or government, a club, an association, or the like.\n".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Organization".freeze,
       subClassOf: "vcard:Kind".freeze,
@@ -389,7 +895,7 @@ module RDF::Vocab
       subClassOf: "vcard:Gender".freeze,
       type: "owl:Class".freeze
     term :PCS,
-      comment: %(This class is deprecated).freeze,
+      comment: "This class is deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "PCS".freeze,
       "owl:deprecated": "true".freeze,
@@ -401,7 +907,7 @@ module RDF::Vocab
       subClassOf: "vcard:TelephoneType".freeze,
       type: "owl:Class".freeze
     term :Parcel,
-      comment: %(This class is deprecated).freeze,
+      comment: "This class is deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Parcel".freeze,
       "owl:deprecated": "true".freeze,
@@ -413,21 +919,21 @@ module RDF::Vocab
       subClassOf: "vcard:RelatedType".freeze,
       type: "owl:Class".freeze
     term :Postal,
-      comment: %(This class is deprecated).freeze,
+      comment: "This class is deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Postal".freeze,
       "owl:deprecated": "true".freeze,
       subClassOf: "vcard:Type".freeze,
       type: "owl:Class".freeze
     term :Pref,
-      comment: %(This class is deprecated).freeze,
+      comment: "This class is deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Pref".freeze,
       "owl:deprecated": "true".freeze,
       subClassOf: "vcard:Type".freeze,
       type: "owl:Class".freeze
     term :RelatedType,
-      comment: %(Used for relation type codes. The URI of the relation type code must be used as the value for the Relation Type.).freeze,
+      comment: "Used for relation type codes. The URI of the relation type code must be used as the value for the Relation Type.".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Relation Type".freeze,
       type: "owl:Class".freeze
@@ -447,18 +953,18 @@ module RDF::Vocab
       subClassOf: "vcard:RelatedType".freeze,
       type: "owl:Class".freeze
     term :Tel,
-      comment: %(This class is deprecated. Use the hasTelephone object property.).freeze,
+      comment: "This class is deprecated. Use the hasTelephone object property.".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Tel".freeze,
       "owl:deprecated": "true".freeze,
       type: "owl:Class".freeze
     term :TelephoneType,
-      comment: %(Used for telephone type codes. The URI of the telephone type code must be used as the value for the Telephone Type.).freeze,
+      comment: "Used for telephone type codes. The URI of the telephone type code must be used as the value for the Telephone Type.".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Phone".freeze,
       type: "owl:Class".freeze
     term :Text,
-      comment: %(Also called sms telephone).freeze,
+      comment: "Also called sms telephone".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Text".freeze,
       subClassOf: "vcard:TelephoneType".freeze,
@@ -469,7 +975,7 @@ module RDF::Vocab
       subClassOf: "vcard:TelephoneType".freeze,
       type: "owl:Class".freeze
     term :Type,
-      comment: %(Used for type codes. The URI of the type code must be used as the value for Type.).freeze,
+      comment: "Used for type codes. The URI of the type code must be used as the value for Type.".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Type".freeze,
       type: "owl:Class".freeze
@@ -479,7 +985,7 @@ module RDF::Vocab
       subClassOf: "vcard:Gender".freeze,
       type: "owl:Class".freeze
     term :VCard,
-      comment: %(The vCard class is  equivalent to the new Kind class, which is the parent for the four explicit types of vCards \(Individual, Organization, Location, Group\)).freeze,
+      comment: "The vCard class is  equivalent to the new Kind class, which is the parent for the four explicit types of vCards (Individual, Organization, Location, Group)".freeze,
       equivalentClass: "vcard:Kind".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "VCard".freeze,
@@ -495,13 +1001,13 @@ module RDF::Vocab
       subClassOf: "vcard:TelephoneType".freeze,
       type: "owl:Class".freeze
     term :Work,
-      comment: %(This implies that the property is related to an individual's work place).freeze,
+      comment: "This implies that the property is related to an individual's work place".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Work".freeze,
       subClassOf: "vcard:Type".freeze,
       type: "owl:Class".freeze
     term :X400,
-      comment: %(This class is deprecated).freeze,
+      comment: "This class is deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "X400".freeze,
       "owl:deprecated": "true".freeze,
@@ -510,25 +1016,25 @@ module RDF::Vocab
 
     # Property definitions
     property :"additional-name",
-      comment: %(The additional name associated with the object).freeze,
+      comment: "The additional name associated with the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "additional name".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :adr,
-      comment: %(This object property has been mapped).freeze,
+      comment: "This object property has been mapped".freeze,
       equivalentProperty: "vcard:hasAddress".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "address".freeze,
       type: "owl:ObjectProperty".freeze
     property :agent,
-      comment: %(This object property has been deprecated).freeze,
+      comment: "This object property has been deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "agent".freeze,
       "owl:deprecated": "true".freeze,
       type: "owl:ObjectProperty".freeze
     property :anniversary,
-      comment: %(The date of marriage, or equivalent, of the object).freeze,
+      comment: "The date of marriage, or equivalent, of the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "anniversary".freeze,
       range: term(
@@ -537,7 +1043,7 @@ module RDF::Vocab
         ),
       type: "owl:DatatypeProperty".freeze
     property :bday,
-      comment: %(To specify the birth date of the object).freeze,
+      comment: "To specify the birth date of the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "birth date".freeze,
       range: term(
@@ -546,449 +1052,449 @@ module RDF::Vocab
         ),
       type: "owl:DatatypeProperty".freeze
     property :category,
-      comment: %(The category information about the object, also known as tags).freeze,
+      comment: "The category information about the object, also known as tags".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "category".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :class,
-      comment: %(This data property has been deprecated).freeze,
+      comment: "This data property has been deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "class".freeze,
       "owl:deprecated": "true".freeze,
       type: "owl:DatatypeProperty".freeze
     property :"country-name",
-      comment: %(The country name associated with the address of the object).freeze,
+      comment: "The country name associated with the address of the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "country name".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :email,
-      comment: %(This object property has been mapped).freeze,
+      comment: "This object property has been mapped".freeze,
       equivalentProperty: "vcard:hasEmail".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "email".freeze,
       type: "owl:ObjectProperty".freeze
     property :"extended-address",
-      comment: %(This data property has been deprecated).freeze,
+      comment: "This data property has been deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "extended address".freeze,
       "owl:deprecated": "true".freeze,
       type: "owl:DatatypeProperty".freeze
     property :"family-name",
-      comment: %(The family name associated with the object).freeze,
+      comment: "The family name associated with the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "family name".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :fn,
-      comment: %(The formatted text corresponding to the name of the object).freeze,
+      comment: "The formatted text corresponding to the name of the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "formatted name".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :geo,
-      comment: %(This object property has been mapped).freeze,
+      comment: "This object property has been mapped".freeze,
       equivalentProperty: "vcard:hasGeo".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "geo".freeze,
       type: "owl:ObjectProperty".freeze
     property :"given-name",
-      comment: %(The given name associated with the object).freeze,
+      comment: "The given name associated with the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "given name".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :hasAdditionalName,
-      comment: %(Used to support property parameters for the additional name data property).freeze,
+      comment: "Used to support property parameters for the additional name data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has additional name".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasAddress,
-      comment: %(To specify the components of the delivery address for the object).freeze,
+      comment: "To specify the components of the delivery address for the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has address".freeze,
       range: "vcard:Address".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasCalendarBusy,
-      comment: %(To specify the busy time associated with the object. \(Was called FBURL in RFC6350\)).freeze,
+      comment: "To specify the busy time associated with the object. (Was called FBURL in RFC6350)".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has calendar busy".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasCalendarLink,
-      comment: %(To specify the calendar associated with the object. \(Was called CALURI in RFC6350\)).freeze,
+      comment: "To specify the calendar associated with the object. (Was called CALURI in RFC6350)".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has calendar link".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasCalendarRequest,
-      comment: %(To specify the calendar user address to which a scheduling request be sent for the object. \(Was called CALADRURI in RFC6350\)).freeze,
+      comment: "To specify the calendar user address to which a scheduling request be sent for the object. (Was called CALADRURI in RFC6350)".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has calendar request".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasCategory,
-      comment: %(Used to support property parameters for the category data property).freeze,
+      comment: "Used to support property parameters for the category data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has category".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasCountryName,
-      comment: %(Used to support property parameters for the country name data property).freeze,
+      comment: "Used to support property parameters for the country name data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has country name".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasEmail,
-      comment: %(To specify the electronic mail address for communication with the object).freeze,
+      comment: "To specify the electronic mail address for communication with the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has email".freeze,
       range: "vcard:Email".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasFN,
-      comment: %(Used to support property parameters for the formatted name data property).freeze,
+      comment: "Used to support property parameters for the formatted name data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has formatted name".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasFamilyName,
-      comment: %(Used to support property parameters for the family name data property).freeze,
+      comment: "Used to support property parameters for the family name data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has family name".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasGender,
-      comment: %(To specify  the sex or gender identity of the object. URIs are recommended to enable interoperable sex and gender codes to be used.).freeze,
+      comment: "To specify  the sex or gender identity of the object. URIs are recommended to enable interoperable sex and gender codes to be used.".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has gender".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasGeo,
-      comment: %(To specify information related to the global positioning of the object. May also be used as a property parameter.).freeze,
+      comment: "To specify information related to the global positioning of the object. May also be used as a property parameter.".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has geo".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasGivenName,
-      comment: %(Used to support property parameters for the given name data property).freeze,
+      comment: "Used to support property parameters for the given name data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has given name".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasHonorificPrefix,
-      comment: %(Used to support property parameters for the honorific prefix data property).freeze,
+      comment: "Used to support property parameters for the honorific prefix data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has honorific prefix".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasHonorificSuffix,
-      comment: %(Used to support property parameters for the honorific suffix data property).freeze,
+      comment: "Used to support property parameters for the honorific suffix data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has honorific suffix".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasInstantMessage,
-      comment: %(To specify the instant messaging and presence protocol communications with the object. \(Was called IMPP in RFC6350\)).freeze,
+      comment: "To specify the instant messaging and presence protocol communications with the object. (Was called IMPP in RFC6350)".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has messaging".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasKey,
-      comment: %(To specify a public key or authentication certificate associated with the object).freeze,
+      comment: "To specify a public key or authentication certificate associated with the object".freeze,
       equivalentProperty: "vcard:key".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has key".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasLanguage,
-      comment: %(Used to support property parameters for the language data property).freeze,
+      comment: "Used to support property parameters for the language data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has language".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasLocality,
-      comment: %(Used to support property parameters for the locality data property).freeze,
+      comment: "Used to support property parameters for the locality data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has locality".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasLogo,
-      comment: %(To specify a graphic image of a logo associated with the object ).freeze,
+      comment: "To specify a graphic image of a logo associated with the object ".freeze,
       equivalentProperty: "vcard:logo".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has logo".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasMember,
-      comment: %(To include a member in the group this object represents. \(This property can only be used by Group individuals\)).freeze,
+      comment: "To include a member in the group this object represents. (This property can only be used by Group individuals)".freeze,
       domain: "vcard:Group".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has member".freeze,
       range: "vcard:Kind".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasName,
-      comment: %(To specify the components of the name of the object).freeze,
+      comment: "To specify the components of the name of the object".freeze,
       equivalentProperty: "vcard:n".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has name".freeze,
       range: "vcard:Name".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasNickname,
-      comment: %(Used to support property parameters for the nickname data property).freeze,
+      comment: "Used to support property parameters for the nickname data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has nickname".freeze,
       "rdfs:seeAlso": "vcard:nickname".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasNote,
-      comment: %(Used to support property parameters for the note data property).freeze,
+      comment: "Used to support property parameters for the note data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has note".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasOrganizationName,
-      comment: %(Used to support property parameters for the organization name data property).freeze,
+      comment: "Used to support property parameters for the organization name data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has organization name".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasOrganizationUnit,
-      comment: %(Used to support property parameters for the organization unit name data property).freeze,
+      comment: "Used to support property parameters for the organization unit name data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has organization unit name".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasPhoto,
-      comment: %(To specify an image or photograph information that annotates some aspect of the object).freeze,
+      comment: "To specify an image or photograph information that annotates some aspect of the object".freeze,
       equivalentProperty: "vcard:photo".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has photo".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasPostalCode,
-      comment: %(Used to support property parameters for the postal code data property).freeze,
+      comment: "Used to support property parameters for the postal code data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has postal code".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasRegion,
-      comment: %(Used to support property parameters for the region data property).freeze,
+      comment: "Used to support property parameters for the region data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has region".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasRelated,
-      comment: %(To specify a relationship between another entity and the entity represented by this object).freeze,
+      comment: "To specify a relationship between another entity and the entity represented by this object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has related".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasRole,
-      comment: %(Used to support property parameters for the role data property).freeze,
+      comment: "Used to support property parameters for the role data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has role".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasSound,
-      comment: %(To specify a digital sound content information that annotates some aspect of the object).freeze,
+      comment: "To specify a digital sound content information that annotates some aspect of the object".freeze,
       equivalentProperty: "vcard:sound".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has sound".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasSource,
-      comment: %(To identify the source of directory information of the object).freeze,
+      comment: "To identify the source of directory information of the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has source".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasStreetAddress,
-      comment: %(Used to support property parameters for the street address data property).freeze,
+      comment: "Used to support property parameters for the street address data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has street address".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasTelephone,
-      comment: %(To specify the telephone number for telephony communication with the object).freeze,
+      comment: "To specify the telephone number for telephony communication with the object".freeze,
       equivalentProperty: "vcard:tel".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has telephone".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasTitle,
-      comment: %(Used to support property parameters for the title data property).freeze,
+      comment: "Used to support property parameters for the title data property".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has title".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasUID,
-      comment: %(To specify a value that represents a globally unique identifier corresponding to the object).freeze,
+      comment: "To specify a value that represents a globally unique identifier corresponding to the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has uid".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasURL,
-      comment: %(To specify a uniform resource locator associated with the object).freeze,
+      comment: "To specify a uniform resource locator associated with the object".freeze,
       equivalentProperty: "vcard:url".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has url".freeze,
       type: "owl:ObjectProperty".freeze
     property :hasValue,
-      comment: %(Used to indicate the resource value of an object property that requires property parameters).freeze,
+      comment: "Used to indicate the resource value of an object property that requires property parameters".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "has value".freeze,
       type: "owl:ObjectProperty".freeze
     property :"honorific-prefix",
-      comment: %(The honorific prefix of the name associated with the object).freeze,
+      comment: "The honorific prefix of the name associated with the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "honorific prefix".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :"honorific-suffix",
-      comment: %(The honorific suffix of the name associated with the object).freeze,
+      comment: "The honorific suffix of the name associated with the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "honorific suffix".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :key,
-      comment: %(This object property has been mapped).freeze,
+      comment: "This object property has been mapped".freeze,
       equivalentProperty: "vcard:hasKey".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "key".freeze,
       type: "owl:ObjectProperty".freeze
     property :label,
-      comment: %(This data property has been deprecated).freeze,
+      comment: "This data property has been deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "label".freeze,
       "owl:deprecated": "true".freeze,
       type: "owl:DatatypeProperty".freeze
     property :language,
-      comment: %(To specify the language that may be used for contacting the object. May also be used as a property parameter.).freeze,
+      comment: "To specify the language that may be used for contacting the object. May also be used as a property parameter.".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "language".freeze,
       type: "owl:DatatypeProperty".freeze
     property :latitude,
-      comment: %(This data property has been deprecated. See hasGeo).freeze,
+      comment: "This data property has been deprecated. See hasGeo".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "latitude".freeze,
       "owl:deprecated": "true".freeze,
       type: "owl:DatatypeProperty".freeze
     property :locality,
-      comment: %(The locality \(e.g. city or town\) associated with the address of the object).freeze,
+      comment: "The locality (e.g. city or town) associated with the address of the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "locality".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :logo,
-      comment: %(This object property has been mapped).freeze,
+      comment: "This object property has been mapped".freeze,
       equivalentProperty: "vcard:hasLogo".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "logo".freeze,
       type: "owl:ObjectProperty".freeze
     property :longitude,
-      comment: %(This data property has been deprecated. See hasGeo).freeze,
+      comment: "This data property has been deprecated. See hasGeo".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "longitude".freeze,
       "owl:deprecated": "true".freeze,
       type: "owl:DatatypeProperty".freeze
     property :mailer,
-      comment: %(This data property has been deprecated).freeze,
+      comment: "This data property has been deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "mailer".freeze,
       "owl:deprecated": "true".freeze,
       type: "owl:DatatypeProperty".freeze
     property :n,
-      comment: %(This object property has been mapped).freeze,
+      comment: "This object property has been mapped".freeze,
       equivalentProperty: "vcard:hasName".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "name".freeze,
       type: "owl:ObjectProperty".freeze
     property :nickname,
-      comment: %(The nick name associated with the object).freeze,
+      comment: "The nick name associated with the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "nickname".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :note,
-      comment: %(A note associated with the object).freeze,
+      comment: "A note associated with the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "note".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :org,
-      comment: %(This object property has been mapped. Use the organization-name data property.).freeze,
+      comment: "This object property has been mapped. Use the organization-name data property.".freeze,
       equivalentProperty: "vcard:organization-name".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "organization".freeze,
       type: "owl:ObjectProperty".freeze
     property :"organization-name",
-      comment: %(To specify the organizational name associated with the object).freeze,
+      comment: "To specify the organizational name associated with the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "organization name".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :"organization-unit",
-      comment: %(To specify the organizational unit name associated with the object).freeze,
+      comment: "To specify the organizational unit name associated with the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "organizational unit name".freeze,
       range: "xsd:string".freeze,
       subPropertyOf: "vcard:organization-name".freeze,
       type: "owl:DatatypeProperty".freeze
     property :photo,
-      comment: %(This object property has been mapped).freeze,
+      comment: "This object property has been mapped".freeze,
       equivalentProperty: "vcard:hasPhoto".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "photo".freeze,
       type: "owl:ObjectProperty".freeze
     property :"post-office-box",
-      comment: %(This data property has been deprecated).freeze,
+      comment: "This data property has been deprecated".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "post office box".freeze,
       "owl:deprecated": "true".freeze,
       type: "owl:DatatypeProperty".freeze
     property :"postal-code",
-      comment: %(The postal code associated with the address of the object).freeze,
+      comment: "The postal code associated with the address of the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "postal code".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :prodid,
-      comment: %(To specify the identifier for the product that created the object).freeze,
+      comment: "To specify the identifier for the product that created the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "product id".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :region,
-      comment: %(The region \(e.g. state or province\) associated with the address of the object).freeze,
+      comment: "The region (e.g. state or province) associated with the address of the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "region".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :rev,
-      comment: %(To specify revision information about the object).freeze,
+      comment: "To specify revision information about the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "revision".freeze,
       range: "xsd:dateTime".freeze,
       type: "owl:DatatypeProperty".freeze
     property :role,
-      comment: %(To specify the function or part played in a particular situation by the object).freeze,
+      comment: "To specify the function or part played in a particular situation by the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "role".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :"sort-string",
-      comment: %(To specify the string to be used for national-language-specific sorting. Used as a property parameter only.).freeze,
+      comment: "To specify the string to be used for national-language-specific sorting. Used as a property parameter only.".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "sort as".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :sound,
-      comment: %(This object property has been mapped).freeze,
+      comment: "This object property has been mapped".freeze,
       equivalentProperty: "vcard:hasSound".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "sound".freeze,
       type: "owl:ObjectProperty".freeze
     property :"street-address",
-      comment: %(The street address associated with the address of the object).freeze,
+      comment: "The street address associated with the address of the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "street address".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :tel,
-      comment: %(This object property has been mapped).freeze,
+      comment: "This object property has been mapped".freeze,
       equivalentProperty: "vcard:hasTelephone".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "telephone".freeze,
       type: "owl:ObjectProperty".freeze
     property :title,
-      comment: %(To specify the position or job of the object).freeze,
+      comment: "To specify the position or job of the object".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "title".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :tz,
-      comment: %(To indicate time zone information that is specific to the object. May also be used as a property parameter.).freeze,
+      comment: "To indicate time zone information that is specific to the object. May also be used as a property parameter.".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "time zone".freeze,
       range: "xsd:string".freeze,
       type: "owl:DatatypeProperty".freeze
     property :url,
-      comment: %(This object property has been mapped).freeze,
+      comment: "This object property has been mapped".freeze,
       equivalentProperty: "vcard:hasURL".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "url".freeze,
       type: "owl:ObjectProperty".freeze
     property :value,
-      comment: %(Used to indicate the literal value of a data property that requires property parameters).freeze,
+      comment: "Used to indicate the literal value of a data property that requires property parameters".freeze,
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "value".freeze,
       type: "owl:DatatypeProperty".freeze
