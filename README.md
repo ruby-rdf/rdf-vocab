@@ -55,6 +55,7 @@ Also extends `RDF::Vocabulary::Format` with the `gen-vocab` command extension to
 * RDF::Vocab::PREMIS    - [Preservation Metadata Implementation Strategies Ontology](http://id.loc.gov/ontologies/premis.html) (LoC)
 * RDF::Vocab::PremisEventType - [PREMIS Event Type](http://id.loc.gov/vocabulary/preservation/eventType.html) (LoC)
 * RDF::Vocab::PROV      - [Provenance Ontology](http://www.w3.org/TR/prov-o/) (W3C)  - Alias of `RDF::PROV`
+* RDF::Vocab::RDAU      - [RDA Vocabularies](http://www.rdaregistry.info/Elements/u/)
 * RDF::Vocab::RSA       - [The RSA Ontology](http://www.w3.org/ns/auth/rsa) - Alias of `RDF::RSA`
 * RDF::Vocab::RSS       - [RDF Site Summary](http://web.resource.org/rss/1.0/) - Alias of `RDF::RSS`
 * RDF::Vocab::SCHEMA    - [Schema.org](http://schema.org) - Alias of `RDF::SCHEMA`

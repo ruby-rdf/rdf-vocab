@@ -271,13 +271,16 @@ module RDF
       },
       prov:   {uri: "http://www.w3.org/ns/prov#"},
       ptr:    {uri: "http://www.w3.org/2009/pointers#"},
+      rdau: {
+        uri: "http://rdaregistry.info/Elements/u",
+        source: "http://www.rdaregistry.info/nt/Elements/u.nt"
+      },
       rdfs:   {uri: "http://www.w3.org/2000/01/rdf-schema#", alias: true},
       rightsstatements: {
         uri: 'http://rightsstatements.org/vocab/',
         source: 'https://raw.githubusercontent.com/rightsstatements/data-model/master/rights-statements.ttl',
         class_name: 'RightsStatements'
       },
-
       rsa:    {
         uri: "http://www.w3.org/ns/auth/rsa#",
         patch: %{
