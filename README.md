@@ -73,6 +73,7 @@ will limit the vocabularies which are returned from `RDF::Vocabulary.each`, whic
 * RDF::Vocab::PremisEventType - [PREMIS Event Type](http://id.loc.gov/vocabulary/preservation/eventType.html) (LoC)
 * RDF::Vocab::PROV      - [Provenance Ontology](http://www.w3.org/TR/prov-o/) (W3C) 
 * RDF::Vocab::PTR       - [Pointer Methods in RDF 1.0](https://www.w3.org/TR/Pointers-in-RDF10/) (W3C)
+* RDF::Vocab::RDAU      - [RDA Vocabularies](http://www.rdaregistry.info/Elements/u/)
 * RDF::Vocab::RightsStatements - [Rights Statements for Cultural Heritage Institutions](https://rightsstatements.org/en/)
 * RDF::Vocab::RSA       - [The RSA Ontology](http://www.w3.org/ns/auth/rsa)
 * RDF::Vocab::RSS       - [RDF Site Summary](http://web.resource.org/rss/1.0/)
