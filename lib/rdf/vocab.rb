@@ -11,10 +11,8 @@ module RDF
       as:    {uri: "https://www.w3.org/ns/activitystreams#", source: 'etc/as.ttl'},
       bf2:    {uri: 'http://id.loc.gov/ontologies/bibframe/'},
       bibframe: {
-        # Obsolete
-        uri: "http://bibframe.org/vocab/",
-        class_name: "Bibframe",
-        skip: true
+        uri: "http://id.loc.gov/ontologies/bibframe/",
+        class_name: "Bibframe"
       },
       bibo:   {uri: "http://purl.org/ontology/bibo/", source: "etc/bibo.ttl"},
       cc:     {
