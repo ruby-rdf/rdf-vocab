@@ -1,8 +1,12 @@
 # rdf-vocab
 Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 
+[TriG][] reader/writer for [RDF.rb][RDF.rb] .
+
 [![Gem Version](https://badge.fury.io/rb/rdf-vocab.png)](https://badge.fury.io/rb/rdf-vocab)
-[![Build Status](https://travis-ci.org/ruby-rdf/rdf-vocab.png?branch=master)](https://travis-ci.org/ruby-rdf/rdf-vocab)
+[![Build Status](https://github.com/ruby-rdf/rdf-vocab/workflows/CI/badge.svg?branch=develop)](https://github.com/ruby-rdf/rdf-vocab/actions?query=workflow%3ACI)
+[![Coverage Status](https://coveralls.io/repos/ruby-rdf/rdf-vocab/badge.svg)](https://coveralls.io/github/ruby-rdf/rdf-vocab)
+[![Gitter chat](https://badges.gitter.im/ruby-rdf/rdf.png)](https://gitter.im/ruby-rdf/rdf)
 
 ## Extensions
 This gem extends `RDF::Vocabulary` with `#to_ttl`, `#to_jsonld`, and `#to_html` methods to create special-purpose vocabulary serializations. The HTML version is templated using a Haml template to allow output to be customized.
