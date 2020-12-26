@@ -18,18 +18,18 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Activity
   #
-  #     # ActivityInfluence provides additional descriptions of an Activity's binary influence upon any other kind of resource. Instances of ActivityInfluence use the prov:activity property to cite the influencing Activity.
-  #     #
   #     # It is not recommended that the type ActivityInfluence be asserted without also asserting one of its more specific subclasses.
+  #     #
+  #     # ActivityInfluence provides additional descriptions of an Activity's binary influence upon any other kind of resource. Instances of ActivityInfluence use the prov:activity property to cite the influencing Activity.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :ActivityInfluence
   #
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Agent
   #
-  #     # AgentInfluence provides additional descriptions of an Agent's binary influence upon any other kind of resource. Instances of AgentInfluence use the prov:agent property to cite the influencing Agent.
-  #     #
   #     # It is not recommended that the type AgentInfluence be asserted without also asserting one of its more specific subclasses.
+  #     #
+  #     # AgentInfluence provides additional descriptions of an Agent's binary influence upon any other kind of resource. Instances of AgentInfluence use the prov:agent property to cite the influencing Agent.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :AgentInfluence
   #
@@ -77,9 +77,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Derivation
   #
-  #     # This concept allows for the provenance of the dictionary, but also of its constituents to be expressed. Such a notion of dictionary corresponds to a wide variety of concrete data structures, such as a maps or associative arrays.
-  #     #
   #     # A given dictionary forms a given structure for its members. A different structure (obtained either by insertion or removal of members) constitutes a different dictionary.
+  #     #
+  #     # This concept allows for the provenance of the dictionary, but also of its constituents to be expressed. Such a notion of dictionary corresponds to a wide variety of concrete data structures, such as a maps or associative arrays.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Dictionary
   #
@@ -110,9 +110,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Generation
   #
-  #     # Because prov:Influence is a broad relation, its most specific subclasses (e.g. prov:Communication, prov:Delegation, prov:End, prov:Revision, etc.) should be used when applicable.
-  #     #
   #     # An instance of prov:Influence provides additional descriptions about the binary prov:wasInfluencedBy relation from some influenced Activity, Entity, or Agent to the influencing Activity, Entity, or Agent. For example, :stomach_ache prov:wasInfluencedBy :spoon; prov:qualifiedInfluence [ a prov:Influence; prov:entity :spoon; :foo :bar ] . Because prov:Influence is a broad relation, the more specific relations (Communication, Delegation, End, etc.) should be used when applicable.
+  #     #
+  #     # Because prov:Influence is a broad relation, its most specific subclasses (e.g. prov:Communication, prov:Delegation, prov:End, prov:Revision, etc.) should be used when applicable.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Influence
   #
@@ -217,9 +217,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :asInBundle
   #
-  #     # This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href="#owl-profile">PROV-O OWL Profile</a>.
-  #     #
   #     # The Location of any resource.
+  #     #
+  #     # This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href="#owl-profile">PROV-O OWL Profile</a>.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :atLocation
   #
@@ -305,9 +305,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hadPrimarySource
   #
-  #     # This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href="#owl-profile">PROV-O OWL Profile</a>.
-  #     #
   #     # The _optional_ Role that an Entity assumed in the context of an Activity. For example, :baking prov:used :spoon; prov:qualified [ a prov:Usage; prov:entity :spoon; prov:hadRole roles:mixing_implement ].
+  #     #
+  #     # This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href="#owl-profile">PROV-O OWL Profile</a>.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hadRole
   #
@@ -352,9 +352,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :mentionOf
   #
-  #     # A reference to the principal section of the PROV-DM document that describes this concept.
-  #     #
   #     # A reference to the principal section of the PROV-M document that describes this concept.
+  #     #
+  #     # A reference to the principal section of the PROV-DM document that describes this concept.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :n
   #

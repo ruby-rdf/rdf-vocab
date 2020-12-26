@@ -9,8 +9,8 @@ module RDF::Vocab
   #   # The data catalog vocabulary
   #   #
   #   # DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web. By using DCAT to describe datasets in data catalogs, publishers increase discoverability and enable applications easily to consume metadata from multiple catalogs. It further enables decentralized publishing of catalogs and facilitates federated dataset search across sites. Aggregated DCAT metadata can serve as a manifest file to facilitate digital preservation. DCAT is defined at http://www.w3.org/TR/vocab-dcat/. Any variance between that normative document and this schema is an error in this schema.
-  #   # @version Questa è una copia aggiornata del vocabolario DCAT v2.0 disponibile in https://www.w3.org/ns/dcat.ttl
   #   # @version This is an updated copy of v2.0 of the DCAT vocabulary, taken from https://www.w3.org/ns/dcat.ttl
+  #   # @version Questa è una copia aggiornata del vocabolario DCAT v2.0 disponibile in https://www.w3.org/ns/dcat.ttl
   #   class DCAT < RDF::StrictVocabulary
   #     # A curated collection of metadata about resources (e.g., datasets and data services in the context of a data catalog).
   #     # @return [RDF::Vocabulary::Term]
@@ -24,7 +24,7 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :DataService
   #
-  #     # A collection of data, published or curated by a single source, and available for access or download in one or more represenations.
+  #     # A collection of data, published or curated by a single source, and available for access or download in one or more representations.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :Dataset
   #
@@ -133,9 +133,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :service
   #
-  #     # minimum spatial separation resolvable in a dataset, measured in meters.
-  #     #
   #     # minimum spatial separation resolvable in a dataset, measured in metres.
+  #     #
+  #     # minimum spatial separation resolvable in a dataset, measured in meters.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :spatialResolutionInMeters
   #
@@ -238,7 +238,7 @@ module RDF::Vocab
           "foaf:name": "John Erickson".freeze
         )],
       "dc:license": "https://creativecommons.org/licenses/by/4.0/".freeze,
-      "dc:modified": ["2012-04-24".freeze, "2013-09-20".freeze, "2013-11-28".freeze, "2017-12-19".freeze, "2019".freeze],
+      "dc:modified": ["2012-04-24".freeze, "2013-09-20".freeze, "2013-11-28".freeze, "2017-12-19".freeze, "2019".freeze, "2020-11-30".freeze],
       editorialNote: "English language definitions updated in this revision in line with ED. Multilingual text unevenly updated.".freeze,
       "foaf:maker": term(
           "foaf:homepage": "http://www.w3.org/2011/gld/".freeze,
@@ -293,12 +293,13 @@ module RDF::Vocab
         )],
       type: "owl:Class".freeze
     term :Dataset,
-      comment: "A collection of data, published or curated by a single source, and available for access or download in one or more represenations.".freeze,
+      comment: "A collection of data, published or curated by a single source, and available for access or download in one or more representations.".freeze,
       definition: "A collection of data, published or curated by a single source, and available for access or download in one or more represenations.".freeze,
+      editorialNote: "2020-03-16 A new scopenote added and need to be translated".freeze,
       isDefinedBy: "http://www.w3.org/TR/vocab-dcat/".freeze,
       label: "Dataset".freeze,
       "skos:changeNote": "2018-02 - subclass of dctype:Dataset removed because scope of dcat:Dataset includes several other types from the dctype vocabulary.".freeze,
-      "skos:scopeNote": ["This class describes the conceptual dataset. One or more representations might be available, with differing schematic layouts and formats or serializations.".freeze, "This class represents the actual dataset as published by the dataset provider. In cases where a distinction between the actual dataset and its entry in the catalog is necessary (because metadata such as modification date and maintainer might differ), the catalog record class can be used for the latter.".freeze],
+      "skos:scopeNote": ["The notion of dataset in DCAT is broad and inclusive, with the intention of accommodating resource types arising from all communities. Data comes in many forms including numbers, text, pixels, imagery, sound and other multi-media, and potentially other types, any of which might be collected into a dataset.".freeze, "This class describes the conceptual dataset. One or more representations might be available, with differing schematic layouts and formats or serializations.".freeze, "This class represents the actual dataset as published by the dataset provider. In cases where a distinction between the actual dataset and its entry in the catalog is necessary (because metadata such as modification date and maintainer might differ), the catalog record class can be used for the latter.".freeze],
       subClassOf: "dcat:Resource".freeze,
       type: ["owl:Class".freeze, "rdfs:Class".freeze]
     term :Distribution,
@@ -333,7 +334,7 @@ module RDF::Vocab
       editorialNote: "Introduced into DCAT to complement prov:Role (whose use is limited to roles in the context of an activity, as the range of prov:hadRole).".freeze,
       label: "Role".freeze,
       "rdfs:seeAlso": "dcat:hadRole".freeze,
-      "skos:changeNote": "New class added in DCAT 2.0.".freeze,
+      "skos:changeNote": ["New class added in DCAT 2.0.".freeze, "Ny klasse tilføjet i DCAT 2.0.".freeze],
       "skos:scopeNote": ["Used in a qualified-attribution to specify the role of an Agent with respect to an Entity. It is recommended that the values be managed as a controlled vocabulary of agent roles, such as http://registry.it.csiro.au/def/isotc211/CI_RoleCode.".freeze, "Used in a qualified-relation to specify the role of an Entity with respect to another Entity. It is recommended that the values be managed as a controlled vocabulary of entity roles such as: ISO 19115 DS_AssociationTypeCode http://registry.it.csiro.au/def/isotc211/DS_AssociationTypeCode; IANA Registry of Link Relations https://www.iana.org/assignments/link-relation;  DataCite metadata schema;  MARC relators https://id.loc.gov/vocabulary/relators.".freeze],
       subClassOf: "skos:Concept".freeze,
       type: "owl:Class".freeze
@@ -363,7 +364,7 @@ module RDF::Vocab
       label: "bounding box".freeze,
       range: "rdfs:Literal".freeze,
       "skos:changeNote": "New property added in DCAT 2.0.".freeze,
-      "skos:scopeNote": "The range of this property is intentionally generic, with the purpose of allowing different geometry encodings. E.g., the geometry could be encoded with as WKT (geosparql:asWKT [GeoSPARQL]) or [GML] (geosparql:asGML [GeoSPARQL]).".freeze,
+      "skos:scopeNote": "The range of this property is intentionally generic, with the purpose of allowing different geometry encodings. E.g., the geometry could be encoded with as WKT (geosparql:wktLiteral [GeoSPARQL]) or [GML] (geosparql:asGML [GeoSPARQL]).".freeze,
       type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :byteSize,
       comment: "The size of a distribution in bytes.".freeze,
@@ -389,7 +390,7 @@ module RDF::Vocab
       label: "centroid".freeze,
       range: "rdfs:Literal".freeze,
       "skos:changeNote": "New property added in DCAT 2.0.".freeze,
-      "skos:scopeNote": "The range of this property is intentionally generic, with the purpose of allowing different geometry encodings. E.g., the geometry could be encoded with as WKT (geosparql:asWKT [GeoSPARQL]) or [GML] (geosparql:asGML [GeoSPARQL]).".freeze,
+      "skos:scopeNote": "The range of this property is intentionally generic, with the purpose of allowing different geometry encodings. E.g., the geometry could be encoded with as WKT (geosparql:wktLiteral [GeoSPARQL]) or [GML] (geosparql:asGML [GeoSPARQL]).".freeze,
       type: ["owl:DatatypeProperty".freeze, "rdf:Property".freeze]
     property :compressFormat,
       comment: "The compression format of the distribution in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file.".freeze,
@@ -454,7 +455,7 @@ module RDF::Vocab
       domain: "dcat:DataService".freeze,
       label: "description of service end-point".freeze,
       "skos:changeNote": ["New property in DCAT 2.0.".freeze, "Nueva propiedad agregada en DCAT 2.0.".freeze],
-      "skos:scopeNote": ["An endpoint description may be expressed in a machine-readable form, such as an OpenAPI (Swagger) description, an OGC GetCapabilities response, a SPARQL Service Description, an OpenSearch or WSDL document, a Hydra API description, else in text or some other informal mode if a formal representation is not possible.".freeze, "The endpoint decription gives specific details of the actual endpoint instance, while dct:conformsTo is used to indicate the general standard or specification that the endpoint implements.".freeze],
+      "skos:scopeNote": ["An endpoint description may be expressed in a machine-readable form, such as an OpenAPI (Swagger) description, an OGC GetCapabilities response, a SPARQL Service Description, an OpenSearch or WSDL document, a Hydra API description, else in text or some other informal mode if a formal representation is not possible.".freeze, "The endpoint description gives specific details of the actual endpoint instance, while dct:conformsTo is used to indicate the general standard or specification that the endpoint implements.".freeze],
       type: "owl:ObjectProperty".freeze
     property :endpointURL,
       comment: "The root location or primary endpoint of the service (a web-resolvable IRI).".freeze,

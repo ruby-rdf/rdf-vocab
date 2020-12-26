@@ -23,6 +23,7 @@ jobs:
           - 2.5
           - 2.6
           - 2.7
+          #- 3.0 # net-http-persistent
           #- ruby-head # net-http-persistent
           #- jruby # Nokogumbo
     steps:

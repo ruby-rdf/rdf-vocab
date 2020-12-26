@@ -20,25 +20,26 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version      = '>= 2.4'
 
-  spec.add_runtime_dependency     "rdf",          '~> 3.1', '>= 3.1.2'
+  spec.add_runtime_dependency     'rdf',              '~> 3.1', '>= 3.1.8'
 
   # Either of these are required for HTML vocabulary generation
-  spec.add_development_dependency "haml",         '~> 5.1'
-  spec.add_development_dependency "erubis",       '~> 2.7'
+  spec.add_development_dependency 'haml',             '~> 5.1'
+  spec.add_development_dependency 'erubis',           '~> 2.7'
 
-  spec.add_development_dependency "json-ld",      '~> 3.1'
-  spec.add_development_dependency "json-schema",  "~> 2.8"
-  spec.add_development_dependency "jsonpath",     "~> 1.0"
-  spec.add_development_dependency "ld-patch",     '~> 3.1'
-  spec.add_development_dependency "nokogiri",     '~> 1.10'
-  spec.add_development_dependency "nokogumbo",    '~> 2.0'
-  spec.add_development_dependency "rake",         "~> 13.0"
-  spec.add_development_dependency "rdf-rdfa",     '~> 3.1'
-  spec.add_development_dependency "rdf-reasoner", '~> 0.6'
-  spec.add_development_dependency "rdf-turtle",   '~> 3.1'
-  spec.add_development_dependency "rspec",        "~> 3.10"
-  spec.add_development_dependency "rspec-its",    "~> 1.3"
-  spec.add_development_dependency "yard",         "~> 0.9"
+  spec.add_development_dependency 'json-ld',          '~> 3.1'
+  spec.add_development_dependency 'json-schema',      '~> 2.8'
+  spec.add_development_dependency 'jsonpath',         '~> 1.0'
+  spec.add_development_dependency 'ld-patch',         '~> 3.1', '>= 3.1.2'
+  spec.add_development_dependency 'nokogiri',         '~> 1.10'
+  spec.add_development_dependency 'nokogumbo',        '~> 2.0'
+  spec.add_development_dependency 'rake',             '~> 13.0'
+  spec.add_development_dependency 'rdf-ordered-repo', '~> 3.1', '>= 3.1.1'
+  spec.add_development_dependency 'rdf-rdfa',         '~> 3.1'
+  spec.add_development_dependency 'rdf-reasoner',     '~> 0.6'
+  spec.add_development_dependency 'rdf-turtle',       '~> 3.1'
+  spec.add_development_dependency 'rspec',            '~> 3.10'
+  spec.add_development_dependency 'rspec-its',        '~> 1.3'
+  spec.add_development_dependency 'yard',             '~> 0.9'
 
   spec.extra_rdoc_files = %w(LICENSE README.md)
 end
