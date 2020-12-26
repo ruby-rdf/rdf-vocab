@@ -23,9 +23,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :OrderedCollection
   #
-  #     # skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.
-  #     #
   #     # The range of skos:altLabel is the class of RDF plain literals.
+  #     #
+  #     # skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :altLabel
   #
@@ -100,11 +100,11 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :note
   #
-  #     # The range of skos:prefLabel is the class of RDF plain literals.
+  #     # skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise       disjoint properties.
   #     #
   #     # A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag.
   #     #
-  #     # skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise       disjoint properties.
+  #     # The range of skos:prefLabel is the class of RDF plain literals.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :prefLabel
   #

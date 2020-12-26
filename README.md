@@ -1,8 +1,12 @@
 # rdf-vocab
 Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 
+[TriG][] reader/writer for [RDF.rb][RDF.rb] .
+
 [![Gem Version](https://badge.fury.io/rb/rdf-vocab.png)](https://badge.fury.io/rb/rdf-vocab)
-[![Build Status](https://travis-ci.org/ruby-rdf/rdf-vocab.png?branch=master)](https://travis-ci.org/ruby-rdf/rdf-vocab)
+[![Build Status](https://github.com/ruby-rdf/rdf-vocab/workflows/CI/badge.svg?branch=develop)](https://github.com/ruby-rdf/rdf-vocab/actions?query=workflow%3ACI)
+[![Coverage Status](https://coveralls.io/repos/ruby-rdf/rdf-vocab/badge.svg)](https://coveralls.io/github/ruby-rdf/rdf-vocab)
+[![Gitter chat](https://badges.gitter.im/ruby-rdf/rdf.png)](https://gitter.im/ruby-rdf/rdf)
 
 ## Extensions
 This gem extends `RDF::Vocabulary` with `#to_ttl`, `#to_jsonld`, and `#to_html` methods to create special-purpose vocabulary serializations. The HTML version is templated using a Haml template to allow output to be customized.
@@ -73,6 +77,7 @@ will limit the vocabularies which are returned from `RDF::Vocabulary.each`, whic
 * RDF::Vocab::PremisEventType - [PREMIS Event Type](http://id.loc.gov/vocabulary/preservation/eventType.html) (LoC)
 * RDF::Vocab::PROV      - [Provenance Ontology](http://www.w3.org/TR/prov-o/) (W3C) 
 * RDF::Vocab::PTR       - [Pointer Methods in RDF 1.0](https://www.w3.org/TR/Pointers-in-RDF10/) (W3C)
+* RDF::Vocab::RDAU      - [RDA Vocabularies](http://www.rdaregistry.info/Elements/u/)
 * RDF::Vocab::RightsStatements - [Rights Statements for Cultural Heritage Institutions](https://rightsstatements.org/en/)
 * RDF::Vocab::RSA       - [The RSA Ontology](http://www.w3.org/ns/auth/rsa)
 * RDF::Vocab::RSS       - [RDF Site Summary](http://web.resource.org/rss/1.0/)

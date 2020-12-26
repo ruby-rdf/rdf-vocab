@@ -390,9 +390,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :relatedReference
   #
-  #     # 
-  #     #
   #     # Relates the described MODS resource to another MODS resource which references the described resource.
+  #     #
+  #     # 
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :relatedReferencedBy
   #

@@ -8,8 +8,8 @@ module RDF::Vocab
   #   #
   #   # @version $Id: icaltzd.rdf,v 1.6 2007/06/28 18:22:09 connolly Exp $
   #   # @version subject to change with notice to www-rdf-calendar@w3.org
-  #   # @see http://lists.w3.org/Archives/Public/www-rdf-calendar/
   #   # @see http://esw.w3.org/topic/RdfCalendar
+  #   # @see http://lists.w3.org/Archives/Public/www-rdf-calendar/
   #   # @see http://www.w3.org/2002/12/cal/
   #   class ICAL < RDF::StrictVocabulary
   #     # @return [RDF::Vocabulary::Term]
@@ -106,9 +106,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :calAddress
   #
-  #     #  	    value type: TEXT
-  #     #
   #     # This property defines the calendar scale used for the calendar information specified in the iCalendar object.
+  #     #
+  #     #  	    value type: TEXT
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :calscale
   #
@@ -134,9 +134,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :comment
   #
-  #     # This property defines the date and time that a to-do was actually completed.
-  #     #
   #     #  	    value type: DATE-TIME
+  #     #
+  #     # This property defines the date and time that a to-do was actually completed.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :completed
   #
@@ -173,9 +173,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :delegatedTo
   #
-  #     # This property provides a more complete description of the calendar component, than that provided by the "SUMMARY" property.
-  #     #
   #     #  	    value type: TEXT
+  #     #
+  #     # This property provides a more complete description of the calendar component, than that provided by the "SUMMARY" property.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :description
   #
@@ -189,9 +189,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :dtend
   #
-  #     # The property indicates the date/time that the instance of the iCalendar object was created.
-  #     #
   #     #  	    value type: DATE-TIME
+  #     #
+  #     # The property indicates the date/time that the instance of the iCalendar object was created.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :dtstamp
   #
@@ -201,9 +201,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :dtstart
   #
-  #     #  	    default value type: DATE-TIME
-  #     #
   #     # This property defines the date and time that a to-do is expected to be completed.
+  #     #
+  #     #  	    default value type: DATE-TIME
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :due
   #
@@ -217,9 +217,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :encoding
   #
-  #     #  	    default value type: DATE-TIME
-  #     #
   #     # This property defines the list of date/time exceptions for a recurring calendar component.
+  #     #
+  #     #  	    default value type: DATE-TIME
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :exdate
   #
@@ -237,9 +237,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :fmttype
   #
-  #     #  	    value type: PERIOD
-  #     #
   #     # The property defines one or more free or busy time intervals.
+  #     #
+  #     #  	    value type: PERIOD
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :freebusy
   #
@@ -259,9 +259,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :language
   #
-  #     #  	    value type: DATE-TIME
-  #     #
   #     # The property specifies the date and time that the information associated with the calendar component was last revised in the calendar store. Note: This is analogous to the modification date and time for a file in the file system.
+  #     #
+  #     #  	    value type: DATE-TIME
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :lastModified
   #
@@ -281,9 +281,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :method
   #
-  #     #  	    value type: CAL-ADDRESS
-  #     #
   #     # The property defines the organizer for a calendar component.
+  #     #
+  #     #  	    value type: CAL-ADDRESS
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :organizer
   #
@@ -303,9 +303,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :priority
   #
-  #     # This property specifies the identifier for the product that created the iCalendar object.
-  #     #
   #     #  	    value type: TEXT
+  #     #
+  #     # This property specifies the identifier for the product that created the iCalendar object.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :prodid
   #
@@ -313,15 +313,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :range
   #
-  #     #  	    default value type: DATE-TIME
-  #     #
   #     # This property defines the list of date/times for a recurrence set.
+  #     #
+  #     #  	    default value type: DATE-TIME
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :rdate
   #
-  #     #  	    default value type: DATE-TIME
-  #     #
   #     # This property is used in conjunction with the "UID" and "SEQUENCE" property to identify a specific instance of a recurring "VEVENT", "VTODO" or "VJOURNAL" calendar component. The property value is the effective value of the "DTSTART" property of the recurrence instance.
+  #     #
+  #     #  	    default value type: DATE-TIME
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :recurrenceId
   #
@@ -402,23 +402,23 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :transp
   #
-  #     #  	    default value type: DURATION
-  #     #
   #     # This property specifies when an alarm will trigger.
+  #     #
+  #     #  	    default value type: DURATION
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :trigger
   #
-  #     # To specify the identifier for the time zone definition for a time component in the property value.
+  #     # This property specifies the text value that uniquely identifies the "VTIMEZONE" calendar component.
   #     #
   #     #  	    value type: TEXT
   #     #
-  #     # This property specifies the text value that uniquely identifies the "VTIMEZONE" calendar component.
+  #     # To specify the identifier for the time zone definition for a time component in the property value.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :tzid
   #
-  #     # This property specifies the customary designation for a time zone description.
-  #     #
   #     #  	    value type: TEXT
+  #     #
+  #     # This property specifies the customary designation for a time zone description.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :tzname
   #
@@ -434,30 +434,30 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :tzoffsetto
   #
-  #     #  	    value type: URI
-  #     #
   #     # The TZURL provides a means for a VTIMEZONE component to point to a network location that can be used to retrieve an up-to- date version of itself.
+  #     #
+  #     #  	    value type: URI
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :tzurl
   #
-  #     # This property defines the persistent, globally unique identifier for the calendar component.
-  #     #
   #     #  	    value type: TEXT
+  #     #
+  #     # This property defines the persistent, globally unique identifier for the calendar component.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :uid
   #
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :until
   #
-  #     #  	    value type: URI
-  #     #
   #     # This property defines a Uniform Resource Locator (URL) associated with the iCalendar object.
+  #     #
+  #     #  	    value type: URI
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :url
   #
-  #     # This property specifies the identifier corresponding to the highest version number or the minimum and maximum range of the iCalendar specification that is required in order to interpret the iCalendar object.
-  #     #
   #     #  	    value type: TEXT
+  #     #
+  #     # This property specifies the identifier corresponding to the highest version number or the minimum and maximum range of the iCalendar specification that is required in order to interpret the iCalendar object.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :version
   #

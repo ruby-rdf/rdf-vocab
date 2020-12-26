@@ -579,15 +579,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :absorbedBy
   #
-  #     # Expected value Work, Instance or Item
-  #     #
   #     # Used with Work, Instance or Item
+  #     #
+  #     # Expected value Work, Instance or Item
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :accompaniedBy
   #
-  #     # Expected value Work, Instance or Item
-  #     #
   #     # Used with Work, Instance or Item
+  #     #
+  #     # Expected value Work, Instance or Item
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :accompanies
   #
@@ -866,9 +866,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasDerivative
   #
-  #     # Expected value Work, Instance or Item
-  #     #
   #     # Used with Work, Instance or Item
+  #     #
+  #     # Expected value Work, Instance or Item
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasEquivalent
   #
@@ -881,9 +881,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasItem
   #
-  #     # Expected value Work, Instance or Item
-  #     #
   #     # Used with Work, Instance or Item
+  #     #
+  #     # Expected value Work, Instance or Item
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :hasPart
   #
@@ -1076,9 +1076,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :partNumber
   #
-  #     # Expected value Work, Instance or Item
-  #     #
   #     # Used with Work, Instance or Item
+  #     #
+  #     # Expected value Work, Instance or Item
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :partOf
   #
@@ -1127,15 +1127,15 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :reductionRatio
   #
-  #     # Expected value Work, Instance or Item
-  #     #
   #     # Used with Work, Instance or Item
+  #     #
+  #     # Expected value Work, Instance or Item
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :referencedBy
   #
-  #     # Expected value Work, Instance or Item
-  #     #
   #     # Used with Work, Instance or Item
+  #     #
+  #     # Expected value Work, Instance or Item
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :references
   #

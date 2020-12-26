@@ -25,9 +25,9 @@ module RDF::Vocab
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :labelRelation
   #
-  #     # If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource.
-  #     #
   #     # The range of skosxl:literalForm is the class of RDF plain literals.
+  #     #
+  #     # If two instances of the class skosxl:Label have the same literal form, they are not necessarily the same resource.
   #     # @return [RDF::Vocabulary::Term]
   #     attr_reader :literalForm
   #

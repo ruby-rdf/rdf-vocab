@@ -10474,12 +10474,7 @@ module RDF::Vocab
     # Ontology definition
     ontology :"http://dbpedia.org/ontology/",
       "cc:license": ["http://creativecommons.org/licenses/by-sa/3.0/".freeze, "http://www.gnu.org/copyleft/fdl.html".freeze],
-      comment: %(
-              This ontology is generated from the manually created specifications in the DBpedia Mappings
-              Wiki. Each release of this ontology corresponds to a new release of the DBpedia data set which
-              contains instance data extracted from the different language versions of Wikipedia. For
-              information regarding changes in this ontology, please refer to the DBpedia Mappings Wiki.
-            ).freeze,
+      comment: "\n              This ontology is generated from the manually created specifications in the DBpedia Mappings\n              Wiki. Each release of this ontology corresponds to a new release of the DBpedia data set which\n              contains instance data extracted from the different language versions of Wikipedia. For\n              information regarding changes in this ontology, please refer to the DBpedia Mappings Wiki.\n            ".freeze,
       "dc:creator": "DBpedia Maintainers and Contributors".freeze,
       "dc:description": "\n              The DBpedia ontology provides the classes and properties used in the DBpedia data set.\n            ".freeze,
       "dc:issued": "2008-11-17T12:00Z".freeze,
