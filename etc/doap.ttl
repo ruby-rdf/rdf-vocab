@@ -11,8 +11,8 @@
   doap:name          "RDF::Vocab" ;
   doap:homepage      <https://ruby-rdf.github.com/rdf-vocab> ;
   doap:license       <https://unlicense.org/1.0/> ;
-  doap:shortdesc     "A library of RDF vocabularies"@en ;
-  doap:description   "Defines several standard RDF vocabularies"@en ;
+  doap:shortdesc     "A library of RDF vocabularies for RDF.rb."@en ;
+  doap:description   "Defines several standard RDF vocabularies for the Ruby RDF.rb library suite."@en ;
   doap:created       "2015-04-04"^^xsd:date ;
   doap:programming-language "Ruby" ;
   doap:category      <http://dbpedia.org/resource/Resource_Description_Framework>,
