@@ -421,7 +421,7 @@ describe RDF::Vocabulary do
           expect(graph).to be_valid
         end
 
-        it "generates HTML" do
+        it "generates HTML", if: (RUBY_PLATFORM != 'java') do
           stringio = StringIO.new
           RDF::CLI.exec(["gen-vocab"], base_uri: vocab.to_uri, output_format: :html, output: stringio)
           expect(stringio.string).not_to be_empty
