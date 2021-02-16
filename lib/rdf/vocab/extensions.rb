@@ -136,7 +136,7 @@ module RDF
             po = {}
 
             # Group predicates with their values
-            graph.query(subject: subject) do |statement|
+            graph.query({subject: subject}) do |statement|
               # Sanity check this, as these are set to an empty string if not defined.
               next if [RDF::RDFS.label, RDF::RDFS.comment].include?(statement.predicate) && statement.object.to_s.empty?
               po[statement.predicate] ||= []
@@ -262,7 +262,7 @@ module RDF
             po = {}
 
             # Group predicates with their values
-            graph.query(subject: subject) do |statement|
+            graph.query({subject: subject}) do |statement|
               # Sanity check this, as these are set to an empty string if not defined.
               next if [RDF::RDFS.label, RDF::RDFS.comment].include?(statement.predicate) && statement.object.to_s.empty?
               po[statement.predicate] ||= []
@@ -451,7 +451,7 @@ module RDF
         cats = {}
         categorized = {}
         uncategorized = {}
-        graph.query(predicate: RDF.type) do |statement|
+        graph.query({predicate: RDF.type}) do |statement|
           # Only serialize statements that are in the defined vocabulary
           next unless statement.subject.uri? && statement.subject.start_with?(self.to_uri)
           case statement.object

@@ -3,109 +3,64 @@
 # This file generated automatically using rdf vocabulary format from http://purl.org/rss/1.0/
 require 'rdf'
 module RDF::Vocab
-  # @!parse
-  #   # Vocabulary for <http://purl.org/rss/1.0/>
-  #   #
-  #   class RSS < RDF::StrictVocabulary
-  #     # An RSS information channel.
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :channel
-  #
-  #     # An RSS image.
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :image
-  #
-  #     # An RSS item.
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :item
-  #
-  #     # An RSS text input.
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :textinput
-  #
-  #     # A short text description of the subject.
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :description
-  #
-  #     # Points to a list of rss:item elements that are members of the subject channel.
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :items
-  #
-  #     # The URL to which an HTML rendering of the subject will link.
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :link
-  #
-  #     # The text input field's (variable) name.
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :name
-  #
-  #     # A descriptive title for the channel.
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :title
-  #
-  #     # The URL of the image to used in the 'src' attribute of the channel's image tag when rendered as HTML.
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :url
-  #
-  #   end
   RSS = Class.new(RDF::StrictVocabulary("http://purl.org/rss/1.0/")) do
 
     # Class definitions
     term :channel,
       comment: "An RSS information channel.".freeze,
-      isDefinedBy: "rss:".freeze,
+      isDefinedBy: "http://purl.org/rss/1.0/".freeze,
       label: "Channel".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :image,
       comment: "An RSS image.".freeze,
-      isDefinedBy: "rss:".freeze,
+      isDefinedBy: "http://purl.org/rss/1.0/".freeze,
       label: "Image".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :item,
       comment: "An RSS item.".freeze,
-      isDefinedBy: "rss:".freeze,
+      isDefinedBy: "http://purl.org/rss/1.0/".freeze,
       label: "Item".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :textinput,
       comment: "An RSS text input.".freeze,
-      isDefinedBy: "rss:".freeze,
+      isDefinedBy: "http://purl.org/rss/1.0/".freeze,
       label: "Text Input".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
 
     # Property definitions
     property :description,
       comment: "A short text description of the subject.".freeze,
-      isDefinedBy: "rss:".freeze,
+      isDefinedBy: "http://purl.org/rss/1.0/".freeze,
       label: "Description".freeze,
-      subPropertyOf: "dc11:description".freeze,
-      type: "rdf:Property".freeze
+      subPropertyOf: "http://purl.org/dc/elements/1.1/description".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :items,
       comment: "Points to a list of rss:item elements that are members of the subject channel.".freeze,
-      isDefinedBy: "rss:".freeze,
+      isDefinedBy: "http://purl.org/rss/1.0/".freeze,
       label: "Items".freeze,
-      type: "rdf:Property".freeze
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :link,
       comment: "The URL to which an HTML rendering of the subject will link.".freeze,
-      isDefinedBy: "rss:".freeze,
+      isDefinedBy: "http://purl.org/rss/1.0/".freeze,
       label: "Link".freeze,
-      subPropertyOf: "dc11:identifier".freeze,
-      type: "rdf:Property".freeze
+      subPropertyOf: "http://purl.org/dc/elements/1.1/identifier".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :name,
       comment: "The text input field's (variable) name.".freeze,
-      isDefinedBy: "rss:".freeze,
+      isDefinedBy: "http://purl.org/rss/1.0/".freeze,
       label: "Name".freeze,
-      type: "rdf:Property".freeze
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :title,
       comment: "A descriptive title for the channel.".freeze,
-      isDefinedBy: "rss:".freeze,
+      isDefinedBy: "http://purl.org/rss/1.0/".freeze,
       label: "Title".freeze,
-      subPropertyOf: "dc11:title".freeze,
-      type: "rdf:Property".freeze
+      subPropertyOf: "http://purl.org/dc/elements/1.1/title".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :url,
       comment: "The URL of the image to used in the 'src' attribute of the channel's image tag when rendered as HTML.".freeze,
-      isDefinedBy: "rss:".freeze,
+      isDefinedBy: "http://purl.org/rss/1.0/".freeze,
       label: "URL".freeze,
-      subPropertyOf: "dc11:identifier".freeze,
-      type: "rdf:Property".freeze
+      subPropertyOf: "http://purl.org/dc/elements/1.1/identifier".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
   end
 end

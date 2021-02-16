@@ -3,810 +3,806 @@
 # This file generated automatically using rdf vocabulary format from http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#
 require 'rdf'
 module RDF::Vocab
-  # @!parse
-  #   # Vocabulary for <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#>
-  #   class NFO < RDF::StrictVocabulary
-  #   end
   NFO = Class.new(RDF::StrictVocabulary("http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#")) do
 
     # Class definitions
     term :Application,
       comment: %(An application).freeze,
       label: "Application".freeze,
-      subClassOf: "nfo:Software".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Archive,
       comment: %(A compressed file. May contain other files or folder inside. ).freeze,
       label: "Archive".freeze,
-      subClassOf: "nfo:DataContainer".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :ArchiveItem,
       comment: %(A file entity inside an archive.).freeze,
       label: "ArchiveItem".freeze,
-      subClassOf: "nfo:EmbeddedFileDataObject".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EmbeddedFileDataObject".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Attachment,
       comment: %(A file attached to another data object. Many data formats allow for attachments: emails, vcards, ical events, id3 and exif...).freeze,
       label: "Attachment".freeze,
-      subClassOf: "nfo:EmbeddedFileDataObject".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EmbeddedFileDataObject".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Audio,
       comment: %(A file containing audio content).freeze,
       label: "Audio".freeze,
-      subClassOf: "nfo:Media".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Bookmark,
       comment: %(A bookmark of a webbrowser. Use nie:title for the name/label, nie:contentCreated to represent the date when the user added the bookmark, and nie:contentLastModified for modifications. nfo:bookmarks to store the link.).freeze,
       label: "Bookmark".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :BookmarkFolder,
       comment: %(A folder with bookmarks of a webbrowser. Use nfo:containsBookmark to relate Bookmarks. Folders can contain subfolders, use containsBookmarkFolder to relate them.).freeze,
       label: "Bookmark Folder".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :CompressionType,
       comment: %(Type of compression. Instances of this class represent the limited set of values allowed for the nfo:compressionType property.).freeze,
       label: "CompressionType".freeze,
-      subClassOf: "rdfs:Resource".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.w3.org/2000/01/rdf-schema#Resource".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Cursor,
       comment: %(A Cursor.).freeze,
       label: "Cursor".freeze,
-      subClassOf: "nfo:RasterImage".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RasterImage".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :DataContainer,
       comment: %(A superclass for all entities, whose primary purpose is to serve as containers for other data object. They usually don't have any "meaning" by themselves. Examples include folders, archives and optical disc images.).freeze,
       label: "DataContainer".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :DeletedResource,
       comment: %(A file entity that has been deleted from the original source. Usually such entities are stored within various kinds of 'Trash' or 'Recycle Bin' folders.).freeze,
       label: "DeletedResource".freeze,
-      subClassOf: "nfo:FileDataObject".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Document,
       comment: %(A generic document. A common superclass for all documents on the desktop.).freeze,
       label: "Document".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :EmbeddedFileDataObject,
       comment: %(A file embedded in another data object. There are many ways in which a file may be embedded in another one. Use this class directly only in cases if none of the subclasses gives a better description of your case.).freeze,
       label: "EmbeddedFileDataObject".freeze,
-      subClassOf: "nfo:FileDataObject".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :EncryptionStatus,
       comment: %(The status of the encryption of an InformationElement. nfo:encryptedStatus means that the InformationElement has been encrypted and couldn't be decrypted by the extraction software, thus no content is available. nfo:decryptedStatus means that decryption was successfull and the content is available.).freeze,
       label: "EncryptionStatus".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Executable,
       comment: %(An executable file.).freeze,
       label: "Executable".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :FileDataObject,
       comment: %(A resource containing a finite sequence of bytes with arbitrary information, that is available to a computer program and is usually based on some kind of durable storage. A file is durable in the sense that it remains available for programs to use after the current program has finished.).freeze,
       label: "file".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :FileHash,
       comment: %(A fingerprint of the file, generated by some hashing function.).freeze,
       label: "FileHash".freeze,
-      subClassOf: "rdfs:Resource".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.w3.org/2000/01/rdf-schema#Resource".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Filesystem,
       comment: %(A filesystem. Examples of filesystems include hard disk partitions, removable media, but also images thereof stored in files such as ISO.).freeze,
       label: "Filesystem".freeze,
-      subClassOf: "nfo:DataContainer".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :FilesystemImage,
       comment: %(An image of a filesystem. Instances of this class may include CD images, DVD images or hard disk partition images created by various pieces of software \(e.g. Norton Ghost\). Deprecated in favor of nfo:Filesystem.).freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nao#deprecated" => %(true).freeze,
       label: "FilesystemImage".freeze,
-      subClassOf: "nfo:Filesystem".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Folder,
       comment: %(A folder/directory. Examples of folders include folders on a filesystem and message folders in a mailbox.).freeze,
       label: "Folder".freeze,
-      subClassOf: "nfo:DataContainer".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Font,
       comment: %(A font.).freeze,
       label: "Font".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :HardDiskPartition,
       comment: %(A partition on a hard disk).freeze,
       label: "HardDiskPartition".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :HtmlDocument,
       comment: %(A HTML document, may contain links to other files.).freeze,
       label: "HtmlDocument".freeze,
-      subClassOf: "nfo:PlainTextDocument".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlainTextDocument".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Icon,
       comment: %(An Icon \(regardless of whether it's a raster or a vector icon. A resource representing an icon could have two types \(Icon and Raster, or Icon and Vector\) if required.).freeze,
       label: "Icon".freeze,
-      subClassOf: "nfo:Image".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Image,
       comment: %(A file containing an image.).freeze,
       label: "Image".freeze,
-      subClassOf: "nfo:Visual".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :LocalFileDataObject,
       comment: %(A local file data object which is stored on a local file system. Its nie:url always uses the file:/ protocol. The main use of this class is to distinguish local and non-local files.).freeze,
       label: "local file".freeze,
-      subClassOf: "nfo:FileDataObject".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Media,
       comment: %(A piece of media content. This class may be used to express complex media containers with many streams of various media content \(both aural and visual\).).freeze,
       label: "Media".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :MediaFileListEntry,
       comment: %(A single node in the list of media files contained within an MediaList instance. This class is intended to provide a type all those links have. In valid NRL untyped resources cannot be linked. There are no properties defined for this class but the application may expect rdf:first and rdf:last links. The former points to the DataObject instance, interpreted as Media the latter points at another MediaFileListEntr. At the end of the list there is a link to rdf:nil.).freeze,
       label: "MediaFileListEntry".freeze,
-      subClassOf: "rdfs:Resource".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.w3.org/2000/01/rdf-schema#Resource".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :MediaList,
       comment: %(A file containing a list of media files.e.g. a playlist).freeze,
       label: "MediaList".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :MediaStream,
       comment: %(A stream of multimedia content, usually contained within a media container such as a movie \(containing both audio and video\) or a DVD \(possibly containing many streams of audio and video\). Most common interpretations for such a DataObject include Audio and Video.).freeze,
       label: "MediaStream".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :MindMap,
       comment: %(A MindMap, created by a mind-mapping utility. Examples might include FreeMind or mind mapper.).freeze,
       label: "MindMap".freeze,
-      subClassOf: "nfo:Document".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Document".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :OperatingSystem,
       comment: %(An OperatingSystem).freeze,
       label: "OperatingSystem".freeze,
-      subClassOf: "nfo:Software".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :PaginatedTextDocument,
       comment: %(A file containing a text document, that is unambiguously divided into pages. Examples might include PDF, DOC, PS, DVI etc.).freeze,
       label: "PaginatedTextDocument".freeze,
-      subClassOf: "nfo:TextDocument".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#TextDocument".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Placemark,
       comment: %(One placemark within a placemark container/file. Use nie:title for the name/label, nao:creator for defining the creator.).freeze,
       label: "Placemark".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :PlacemarkContainer,
       comment: %(A data object containing placemark\(s\). Use nie:contentCreated to represent the date when the user created the dataobject, nao:creator for defining the creator, nie:contentLastModified for modifications. nfo:containsPlacemark to refer to individual placemarks within.).freeze,
       label: "Placemark Container".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :PlainTextDocument,
       comment: %(A file containing plain text \(ASCII, Unicode or other encodings\). Examples may include TXT, HTML, XML, program source code etc.).freeze,
       label: "PlainTextDocument".freeze,
-      subClassOf: "nfo:TextDocument".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#TextDocument".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Presentation,
       comment: %(A Presentation made by some presentation software \(Corel Presentations, OpenOffice Impress, MS Powerpoint etc.\)).freeze,
       label: "Presentation".freeze,
-      subClassOf: "nfo:Document".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Document".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :RasterImage,
       comment: %(A raster image.).freeze,
       label: "RasterImage".freeze,
-      subClassOf: "nfo:Image".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :RemoteDataObject,
       comment: %(A file data object stored at a remote location. Don't confuse this class with a RemotePortAddress. This one applies to a particular resource, RemotePortAddress applies to an address, that can have various interpretations.).freeze,
       label: "RemoteDataObject".freeze,
-      subClassOf: "nfo:FileDataObject".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :RemotePortAddress,
       comment: %(An address specifying a remote host and port. Such an address can be interpreted in many ways \(examples of such interpretations include mailboxes, websites, remote calendars or filesystems\), depending on an interpretation, various kinds of data may be extracted from such an address.).freeze,
       label: "RemotePortAddress".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Software,
       comment: %(A piece of software. Examples may include applications and the operating system. This interpretation most commonly applies to SoftwareItems.).freeze,
       label: "Software".freeze,
       subClassOf: ["http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement".freeze, "http://www.semanticdesktop.org/ontologies/2007/08/15/nao#Agent".freeze],
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :SoftwareItem,
       comment: %(A DataObject representing a piece of software. Examples of interpretations of a SoftwareItem include an Application and an OperatingSystem.).freeze,
       label: "SoftwareItem".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :SoftwareService,
       comment: %(A service published by a piece of software, either by an operating system or an application. Examples of such services may include calendar, addressbook and mailbox managed by a PIM application. This category is introduced to distinguish between data available directly from the applications \(Via some Interprocess Communication Mechanisms\) and data available from files on a disk. In either case both DataObjects would receive a similar interpretation \(e.g. a Mailbox\) and wouldn't differ on the content level.).freeze,
       label: "SoftwareService".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :SourceCode,
       comment: %(Code in a compilable or interpreted programming language.).freeze,
       label: "SourceCode".freeze,
-      subClassOf: "nfo:PlainTextDocument".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlainTextDocument".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Spreadsheet,
       comment: %(A spreadsheet, created by a spreadsheet application. Examples might include Gnumeric, OpenOffice Calc or MS Excel.).freeze,
       label: "Spreadsheet".freeze,
-      subClassOf: "nfo:Document".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Document".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :TextDocument,
       comment: %(A text document).freeze,
       label: "TextDocument".freeze,
-      subClassOf: "nfo:Document".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Document".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Trash,
       comment: %(Represents a container for deleted files, a feature common in modern operating systems.).freeze,
       label: "Trash".freeze,
-      subClassOf: "nfo:DataContainer".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :VectorImage,
       label: "VectorImage".freeze,
-      subClassOf: "nfo:Image".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Video,
       comment: %(A video file.).freeze,
       label: "Video".freeze,
-      subClassOf: "nfo:Visual".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Visual,
       comment: %(File containing visual content.).freeze,
       label: "Visual".freeze,
-      subClassOf: "nfo:Media".freeze,
-      type: "rdfs:Class".freeze
+      subClassOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :WebDataObject,
       comment: %(An information resources of which representations \(files, streams\) can be retrieved through a web server. They may be generated at retrieval time. Typical examples are pages served by PHP or AJAX or mp3 streams.).freeze,
       label: "web data object".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Website,
       comment: %(A website, usually a container for remote resources, that may be interpreted as HTMLDocuments, images or other types of content.).freeze,
       label: "Website".freeze,
       subClassOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement".freeze,
-      type: "rdfs:Class".freeze
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
 
     # Property definitions
     property :aspectRatio,
       comment: %(Visual content aspect ratio. \(Width divided by Height\)).freeze,
-      domain: "nfo:Visual".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "aspectRatio".freeze,
-      range: "xsd:float".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#float".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :averageBitrate,
       comment: %(The average overall bitrate of a media container. \(i.e. the size of the piece of media in bits, divided by it's duration expressed in seconds\).).freeze,
-      domain: "nfo:Media".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "averageBitrate".freeze,
-      range: "xsd:float".freeze,
-      subPropertyOf: "nfo:rate".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#float".freeze,
+      subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#rate".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :belongsToContainer,
       comment: %(Models the containment relations between Files and Folders \(or CompressedFiles\).).freeze,
       domain: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject".freeze,
       label: "belongsToContainer".freeze,
-      range: "nfo:DataContainer".freeze,
+      range: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer".freeze,
       subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#isPartOf".freeze,
-      type: "rdf:Property".freeze
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :bitDepth,
       comment: %(A common superproperty for all properties signifying the amount of bits for an atomic unit of data. Examples of subproperties may include bitsPerSample and bitsPerPixel).freeze,
-      domain: "nfo:Media".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "bitDepth".freeze,
-      range: "rdfs:Literal".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2000/01/rdf-schema#Literal".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :bitrateType,
       comment: %(The type of the bitrate. Examples may include CBR and VBR.).freeze,
-      domain: "nfo:Media".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "bitrateType".freeze,
-      range: "xsd:string".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :bitsPerSample,
       comment: %(Amount of bits in each audio sample.).freeze,
-      domain: "nfo:Audio".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Audio".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "bitsPerSample".freeze,
-      range: "xsd:integer".freeze,
-      subPropertyOf: "nfo:bitDepth".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitDepth".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :bookmarks,
       comment: %(The address of the linked object. Usually a web URI.).freeze,
-      domain: "nfo:Bookmark".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Bookmark".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#cardinality" => %(1).freeze,
       label: "link".freeze,
       range: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject".freeze,
       subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#links".freeze,
-      type: "rdf:Property".freeze
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :channels,
       comment: %(Number of channels. This property is to be used directly if no detailed information is necessary. Otherwise use more detailed subproperties.).freeze,
-      domain: "nfo:Audio".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Audio".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "channels".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :characterCount,
       comment: %(The amount of characters in the document.).freeze,
-      domain: "nfo:TextDocument".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#TextDocument".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "characterCount".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :characterPosition,
       comment: %(Character position of the bookmark.).freeze,
-      domain: "nfo:Bookmark".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Bookmark".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "characterPosition".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :codec,
       comment: %(The name of the codec necessary to decode a piece of media.).freeze,
-      domain: "nfo:Media".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media".freeze,
       label: "codec".freeze,
-      range: "rdfs:Literal".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2000/01/rdf-schema#Literal".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :colorCount,
       comment: %(The number of colors used/available in a raster image.).freeze,
-      domain: "nfo:RasterImage".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RasterImage".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "color count".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :colorDepth,
       comment: %(Amount of bits used to express the color of each pixel.).freeze,
-      domain: "nfo:Visual".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "colorDepth".freeze,
-      range: "xsd:integer".freeze,
-      subPropertyOf: "nfo:bitDepth".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#bitDepth".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :commentCharacterCount,
       comment: %(The amount of character in comments i.e. characters ignored by the compiler/interpreter.).freeze,
-      domain: "nfo:SourceCode".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "commentCharacterCount".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :compressionType,
       comment: %(The type of the compression. Values include, 'lossy' and 'lossless'.).freeze,
-      domain: "nfo:Media".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "compressionType".freeze,
-      range: "nfo:CompressionType".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#CompressionType".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :conflicts,
       comment: %(States that a piece of software is in conflict with another piece of software.).freeze,
-      domain: "nfo:Software".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software".freeze,
       label: "conflicts".freeze,
-      range: "nfo:Software".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :containsBookmark,
       comment: %(The folder contains a bookmark.).freeze,
-      domain: "nfo:BookmarkFolder".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#BookmarkFolder".freeze,
       label: "contains bookmark".freeze,
-      range: "nfo:Bookmark".freeze,
+      range: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Bookmark".freeze,
       subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasLogicalPart".freeze,
-      type: "rdf:Property".freeze
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :containsBookmarkFolder,
       comment: %(The folder contains a bookmark folder.).freeze,
-      domain: "nfo:BookmarkFolder".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#BookmarkFolder".freeze,
       label: "contains folder".freeze,
-      range: "nfo:BookmarkFolder".freeze,
+      range: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#BookmarkFolder".freeze,
       subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasLogicalPart".freeze,
-      type: "rdf:Property".freeze
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :containsPlacemark,
       comment: %(Containment relation between placemark containers \(files\) and placemarks within.).freeze,
-      domain: "nfo:PlacemarkContainer".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PlacemarkContainer".freeze,
       label: "contains Placemark".freeze,
-      range: "nfo:Placemark".freeze,
+      range: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Placemark".freeze,
       subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasLogicalPart".freeze,
-      type: "rdf:Property".freeze
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :count,
       comment: %(A common superproperty for all properties signifying the amount of atomic media data units. Examples of subproperties may include sampleCount and frameCount.).freeze,
-      domain: "nfo:Media".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media".freeze,
       label: "count".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :definesClass,
       comment: %(Name of a class defined in the source code file.).freeze,
-      domain: "nfo:SourceCode".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode".freeze,
       label: "definesClass".freeze,
-      range: "xsd:string".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :definesFunction,
       comment: %(A name of a function/method defined in the given source code file.).freeze,
-      domain: "nfo:SourceCode".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode".freeze,
       label: "definesFunction".freeze,
-      range: "xsd:string".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :definesGlobalVariable,
       comment: %(Name of a global variable defined within the source code file.).freeze,
-      domain: "nfo:SourceCode".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode".freeze,
       label: "definesGlobalVariable".freeze,
-      range: "xsd:string".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :deletionDate,
       comment: %(The date and time of the deletion.).freeze,
-      domain: "nfo:DeletedResource".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DeletedResource".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "deletionDate".freeze,
-      range: "xsd:dateTime".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#dateTime".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :depiction,
       comment: %(Relates an information element to an image which depicts said element.).freeze,
-      domain: "rdfs:Resource".freeze,
+      domain: "http://www.w3.org/2000/01/rdf-schema#Resource".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#inverseProperty" => %(nfo:depicts).freeze,
       label: "depiction".freeze,
-      range: "nfo:Image".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :depicts,
       comment: %(Relates an image to the information elements it depicts.).freeze,
-      domain: "nfo:Image".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#inverseProperty" => %(nfo:depiction).freeze,
       label: "depicts".freeze,
-      range: "rdfs:Resource".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2000/01/rdf-schema#Resource".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :duration,
       comment: %(Duration of a media piece.).freeze,
-      domain: "nfo:Media".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "duration".freeze,
-      range: "xsd:duration".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#duration".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :encoding,
       comment: %(The encoding used for the Embedded File. Examples might include BASE64 or UUEncode).freeze,
-      domain: "nfo:EmbeddedFileDataObject".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EmbeddedFileDataObject".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "encoding".freeze,
-      range: "xsd:string".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :encryptionStatus,
       comment: %(The status of the encryption of the InformationElement.).freeze,
       domain: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "encryptionStatus".freeze,
-      range: "nfo:EncryptionStatus".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EncryptionStatus".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :fileCreated,
       comment: %(File creation date).freeze,
-      domain: "nfo:FileDataObject".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "fileCreated".freeze,
-      range: "xsd:dateTime".freeze,
+      range: "http://www.w3.org/2001/XMLSchema#dateTime".freeze,
       subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#created".freeze,
-      type: "rdf:Property".freeze
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :fileLastAccessed,
       comment: %(Time when the file was last accessed.).freeze,
-      domain: "nfo:FileDataObject".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "fileLastAccessed".freeze,
-      range: "xsd:dateTime".freeze,
+      range: "http://www.w3.org/2001/XMLSchema#dateTime".freeze,
       subPropertyOf: "dc11:date".freeze,
-      type: "rdf:Property".freeze
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :fileLastModified,
       comment: %(last modification date).freeze,
-      domain: "nfo:FileDataObject".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nao#deprecated" => %(true).freeze,
       label: "fileLastModified".freeze,
-      range: "xsd:dateTime".freeze,
+      range: "http://www.w3.org/2001/XMLSchema#dateTime".freeze,
       subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#lastModified".freeze,
-      type: "rdf:Property".freeze
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :fileName,
       comment: %(Name of the file, together with the extension).freeze,
-      domain: "nfo:FileDataObject".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "fileName".freeze,
-      range: "xsd:string".freeze,
+      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
       subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/08/15/nao#prefLabel".freeze,
-      type: "rdf:Property".freeze
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :fileOwner,
       comment: %(The owner of the file as defined by the file system access rights feature.).freeze,
-      domain: "nfo:FileDataObject".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "fileOwner".freeze,
       range: "http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact".freeze,
-      type: "rdf:Property".freeze
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :fileSize,
       comment: %(The size of the file in bytes. For compressed files it means the size of the packed file, not of the contents. For folders it means the aggregated size of all contained files and folders ).freeze,
-      domain: "nfo:FileDataObject".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "fileSize".freeze,
-      range: "xsd:integer".freeze,
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
       subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#byteSize".freeze,
-      type: "rdf:Property".freeze
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :fileUrl,
       comment: %(URL of the file. It points at the location of the file. In cases where creating a simple file:// or http:// URL for a file is difficult \(e.g. for files inside compressed archives\) the applications are encouraged to use conventions defined by Apache Commons VFS Project at http://jakarta.apache.org/  commons/ vfs/ filesystems.html.).freeze,
-      domain: "nfo:FileDataObject".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nao#deprecated" => %(true).freeze,
       label: "fileUrl".freeze,
-      range: "rdfs:Resource".freeze,
+      range: "http://www.w3.org/2000/01/rdf-schema#Resource".freeze,
       subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#url".freeze,
-      type: "rdf:Property".freeze
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :filesystemType,
       comment: %(Type of filesystem such as ext3 and ntfs.).freeze,
-      domain: "nfo:Filesystem".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "filesystemType".freeze,
-      range: "xsd:string".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :fontFamily,
       comment: %(The name of the font family.).freeze,
-      domain: "nfo:Font".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Font".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "fontFamily".freeze,
-      range: "xsd:string".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :foundry,
       comment: %(The foundry, the organization that created the font.).freeze,
-      domain: "nfo:Font".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Font".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "foundry".freeze,
       range: "http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact".freeze,
       subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nco#creator".freeze,
-      type: "rdf:Property".freeze
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :frameCount,
       comment: %(The amount of frames in a video sequence.).freeze,
-      domain: "nfo:Video".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Video".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "frameCount".freeze,
-      range: "xsd:integer".freeze,
-      subPropertyOf: "nfo:count".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#count".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :frameRate,
       comment: %(Amount of video frames per second.).freeze,
-      domain: "nfo:Video".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Video".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "frameRate".freeze,
-      range: "xsd:float".freeze,
-      subPropertyOf: "nfo:rate".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#float".freeze,
+      subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#rate".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :freeSpace,
       comment: %(Unoccupied storage space of the filesystem.).freeze,
-      domain: "nfo:Filesystem".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "freeSpace".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :frontChannels,
       comment: %(Number of front channels.).freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "frontChannels".freeze,
-      range: "xsd:integer".freeze,
-      subPropertyOf: "nfo:channels".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#channels".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :hasHash,
       comment: %(Links the file with it's hash value.).freeze,
-      domain: "nfo:FileDataObject".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nao#userVisible" => %(false).freeze,
       label: "hasHash".freeze,
-      range: "nfo:FileHash".freeze,
-      type: ["http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#DefiningProperty".freeze, "rdf:Property".freeze]
+      range: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileHash".freeze,
+      type: ["http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#DefiningProperty".freeze, "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze]
     property :hasMediaFileListEntry,
       comment: %(This property is intended to point to an RDF list of MediaFiles.).freeze,
-      domain: "nfo:MediaList".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaList".freeze,
       label: "hasMediaFileListEntry".freeze,
-      range: "nfo:MediaFileListEntry".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#MediaFileListEntry".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :hasMediaStream,
       comment: %(Connects a media container with a single media stream contained within.).freeze,
-      domain: "nfo:Media".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media".freeze,
       label: "hasMediaStream".freeze,
       range: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject".freeze,
       subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#hasPart".freeze,
-      type: "rdf:Property".freeze
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :hashAlgorithm,
       comment: %(Name of the algorithm used to compute the hash value. Examples might include CRC32, MD5, SHA, TTH etc.).freeze,
-      domain: "nfo:FileHash".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileHash".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "hashAlgorithm".freeze,
-      range: "xsd:string".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :hashValue,
       comment: %(The actual value of the hash.).freeze,
-      domain: "nfo:FileHash".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileHash".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#cardinality" => %(1).freeze,
       label: "hashValue".freeze,
-      range: "xsd:string".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :height,
       comment: %(Visual content height in pixels.).freeze,
-      domain: "nfo:Visual".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "height".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :horizontalResolution,
       comment: %(Horizontal resolution of an image \(if printed\). Expressed in DPI.).freeze,
-      domain: "nfo:Image".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "horizontalResolution".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :interlaceMode,
       comment: %(True if the image is interlaced, false if not.).freeze,
-      domain: "nfo:Visual".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "interlaceMode".freeze,
-      range: "xsd:boolean".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#boolean".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :isPasswordProtected,
       comment: %(States if a given resource is password-protected.).freeze,
-      domain: "nfo:ArchiveItem".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#ArchiveItem".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "isPasswordProtected".freeze,
-      range: "xsd:boolean".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#boolean".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :lfeChannels,
       comment: %(Number of Low Frequency Expansion \(subwoofer\) channels.).freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "lfeChannels".freeze,
-      range: "xsd:integer".freeze,
-      subPropertyOf: "nfo:channels".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#channels".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :lineCount,
       comment: %(The amount of lines in a text document).freeze,
-      domain: "nfo:TextDocument".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#TextDocument".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "lineCount".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :occupiedSpace,
       comment: %(Occupied storage space of the filesystem.).freeze,
-      domain: "nfo:Filesystem".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "occupiedSpace".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :originalLocation,
       comment: %(The original location of the deleted resource.).freeze,
-      domain: "nfo:DeletedResource".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DeletedResource".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "originalLocation".freeze,
-      range: "xsd:string".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :pageCount,
       comment: %(Number of pages.).freeze,
-      domain: "nfo:PaginatedTextDocument".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#PaginatedTextDocument".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "pageCount".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :pageNumber,
       comment: %(Page linked by the bookmark.).freeze,
-      domain: "nfo:Bookmark".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Bookmark".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "pageNumber".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :paletteSize,
       comment: %(The number of colors defined in palette of the raster image.).freeze,
-      domain: "nfo:RasterImage".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#RasterImage".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "palette size".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :permissions,
       comment: %(A string containing the permissions of a file. A feature common in many UNIX-like operating systems.).freeze,
-      domain: "nfo:FileDataObject".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "permissions".freeze,
-      range: "xsd:string".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :programmingLanguage,
       comment: %(Indicates the name of the programming language this source code file is written in. Examples might include 'C', 'C++', 'Java' etc.).freeze,
-      domain: "nfo:SourceCode".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#SourceCode".freeze,
       label: "programmingLanguage".freeze,
-      range: "xsd:string".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :rate,
       comment: %(A common superproperty for all properties specifying the media rate. Examples of subproperties may include frameRate for video and sampleRate for audio. This property is expressed in units per second.).freeze,
-      domain: "nfo:Media".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Media".freeze,
       label: "rate".freeze,
-      range: "xsd:float".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#float".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :rearChannels,
       comment: %(Number of rear channels.).freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "rearChannels".freeze,
-      range: "xsd:integer".freeze,
-      subPropertyOf: "nfo:channels".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#channels".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :sampleCount,
       comment: %(The amount of samples in an audio clip.).freeze,
-      domain: "nfo:Audio".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Audio".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "sampleCount".freeze,
-      range: "xsd:integer".freeze,
-      subPropertyOf: "nfo:count".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#count".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :sampleRate,
       comment: %(The amount of audio samples per second.).freeze,
-      domain: "nfo:Audio".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Audio".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "sampleRate".freeze,
-      range: "xsd:float".freeze,
-      subPropertyOf: "nfo:rate".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#float".freeze,
+      subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#rate".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :sideChannels,
       comment: %(Number of side channels).freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "sideChannels".freeze,
-      range: "xsd:integer".freeze,
-      subPropertyOf: "nfo:channels".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#channels".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :streamPosition,
       comment: %(Stream position of the bookmark, suitable for e.g. audio books. Expressed in milliseconds).freeze,
-      domain: "nfo:Bookmark".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Bookmark".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "streamPosition".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :supercedes,
       comment: %(States that a piece of software supercedes another piece of software.).freeze,
-      domain: "nfo:Software".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software".freeze,
       label: "supercedes".freeze,
-      range: "nfo:Software".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Software".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :totalSpace,
       comment: %(Total storage space of the filesystem, which can be different from nie:contentSize because the latter includes filesystem format overhead.).freeze,
-      domain: "nfo:Filesystem".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "totalSpace".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :uncompressedSize,
       comment: %(Uncompressed size of the content of a compressed file.).freeze,
-      domain: "nfo:Archive".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Archive".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "uncompressedSize".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :uuid,
       comment: %(Universally unique identifier of the filesystem. In the future, this property may have its parent changed to a more generic class.).freeze,
-      domain: "nfo:Filesystem".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Filesystem".freeze,
       label: "uuid".freeze,
-      range: "xsd:string".freeze,
+      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
       subPropertyOf: "http://www.semanticdesktop.org/ontologies/2007/01/19/nie#identifier".freeze,
-      type: "rdf:Property".freeze
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :verticalResolution,
       comment: %(Vertical resolution of an Image \(if printed\). Expressed in DPI).freeze,
-      domain: "nfo:Image".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Image".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "verticalResolution".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :width,
       comment: %(Visual content width in pixels.).freeze,
-      domain: "nfo:Visual".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Visual".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "width".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :wordCount,
       comment: %(The amount of words in a text document.).freeze,
-      domain: "nfo:TextDocument".freeze,
+      domain: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#TextDocument".freeze,
       :"http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality" => %(1).freeze,
       label: "wordCount".freeze,
-      range: "xsd:integer".freeze,
-      type: "rdf:Property".freeze
+      range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
 
     # Extra definitions
     term :decryptedStatus,
       label: "DecryptedStatus".freeze,
-      type: "nfo:EncryptionStatus".freeze
+      type: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EncryptionStatus".freeze
     term :encryptedStatus,
       label: "EncryptedStatus".freeze,
-      type: "nfo:EncryptionStatus".freeze
+      type: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#EncryptionStatus".freeze
     term :losslessCompressionType,
       label: "losslessCompressionType".freeze,
-      type: "nfo:CompressionType".freeze
+      type: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#CompressionType".freeze
     term :lossyCompressionType,
       label: "lossyCompressionType".freeze,
-      type: "nfo:CompressionType".freeze
+      type: "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#CompressionType".freeze
   end
 end
