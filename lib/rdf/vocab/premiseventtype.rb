@@ -3,370 +3,212 @@
 # This file generated automatically using rdf vocabulary format from http://id.loc.gov/vocabulary/preservation/eventType/
 require 'rdf'
 module RDF::Vocab
-  # @!parse
-  #   # Vocabulary for <http://id.loc.gov/vocabulary/preservation/eventType/>
-  #   #
-  #   # Event Type
-  #   #
-  #   #   Event Types are actions performed within or outside the repository that affect the long term preservation of digital objects.
-  #   class PremisEventType < RDF::StrictVocabulary
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :acc
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :app
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :cap
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :com
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :cop
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :cre
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :dea
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :dec
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :del
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :der
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :dig
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :dis
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :dsg
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :dsp
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :enc
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :exe
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :exp
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :ext
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :ffa
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :fil
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :fix
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :for
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :ima
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :ine
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :ing
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :ins
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :int
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :ipc
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :ipm
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :ips
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :mee
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :mem
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :mes
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :mig
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :mod
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :nor
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :pac
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :poa
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :prt
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :qua
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :rec
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :red
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :ref
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :ren
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :rep
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :tra
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :unp
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :unq
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :val
-  #
-  #     # @return [RDF::Vocabulary::Term]
-  #     attr_reader :vir
-  #
-  #   end
   PremisEventType = Class.new(RDF::StrictVocabulary("http://id.loc.gov/vocabulary/preservation/eventType/")) do
 
     # Ontology definition
     ontology :"http://id.loc.gov/vocabulary/preservation/eventType/",
       comment: "  Event Types are actions performed within or outside the repository that affect the long term preservation of digital objects.".freeze,
-      label: "Event Type".freeze,
-      "mads:adminMetadata": [term(
+      "http://www.loc.gov/mads/rdf/v1#adminMetadata": [term(
           "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2010-06-01T00:00:01".freeze,
-          "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "premiseventtype:dlc".freeze,
+          "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "http://id.loc.gov/vocabulary/preservation/eventType/dlc".freeze,
           "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "new".freeze,
           type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze
         ), term(
           "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2012-06-01T00:00:01".freeze,
-          "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "premiseventtype:dlc".freeze,
+          "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "http://id.loc.gov/vocabulary/preservation/eventType/dlc".freeze,
           "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "modified".freeze,
           type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze
         ), term(
           "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2017-09-07T00:00:01".freeze,
-          "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "premiseventtype:dlc".freeze,
+          "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "http://id.loc.gov/vocabulary/preservation/eventType/dlc".freeze,
           "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "modified".freeze,
           type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze
         ), term(
           "http://id.loc.gov/ontologies/RecordInfo#recordChangeDate": "2018-09-24T00:00:01".freeze,
-          "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "premiseventtype:dlc".freeze,
+          "http://id.loc.gov/ontologies/RecordInfo#recordContentSource": "http://id.loc.gov/vocabulary/preservation/eventType/dlc".freeze,
           "http://id.loc.gov/ontologies/RecordInfo#recordStatus": "modified".freeze,
           type: "http://id.loc.gov/ontologies/RecordInfo#RecordInfo".freeze
         )],
-      "mads:hasMADSSchemeMember": ["premiseventtype:acc".freeze, "premiseventtype:app".freeze, "premiseventtype:cap".freeze, "premiseventtype:com".freeze, "premiseventtype:cop".freeze, "premiseventtype:cre".freeze, "premiseventtype:dea".freeze, "premiseventtype:dec".freeze, "premiseventtype:del".freeze, "premiseventtype:der".freeze, "premiseventtype:dig".freeze, "premiseventtype:dis".freeze, "premiseventtype:dsg".freeze, "premiseventtype:dsp".freeze, "premiseventtype:enc".freeze, "premiseventtype:exe".freeze, "premiseventtype:exp".freeze, "premiseventtype:ext".freeze, "premiseventtype:ffa".freeze, "premiseventtype:fil".freeze, "premiseventtype:fix".freeze, "premiseventtype:for".freeze, "premiseventtype:ima".freeze, "premiseventtype:ine".freeze, "premiseventtype:ing".freeze, "premiseventtype:ins".freeze, "premiseventtype:int".freeze, "premiseventtype:ipc".freeze, "premiseventtype:ipm".freeze, "premiseventtype:ips".freeze, "premiseventtype:mee".freeze, "premiseventtype:mem".freeze, "premiseventtype:mes".freeze, "premiseventtype:mig".freeze, "premiseventtype:mod".freeze, "premiseventtype:nor".freeze, "premiseventtype:pac".freeze, "premiseventtype:poa".freeze, "premiseventtype:prt".freeze, "premiseventtype:qua".freeze, "premiseventtype:rec".freeze, "premiseventtype:red".freeze, "premiseventtype:ref".freeze, "premiseventtype:ren".freeze, "premiseventtype:rep".freeze, "premiseventtype:tra".freeze, "premiseventtype:unp".freeze, "premiseventtype:unq".freeze, "premiseventtype:val".freeze, "premiseventtype:vir".freeze],
-      "mads:useFor": ["http://id.loc.gov/vocabulary/preservation/actionsGranted".freeze, "http://id.loc.gov/vocabulary/preservation/environmentPurpose".freeze, "http://id.loc.gov/vocabulary/preservation/inhibitorTarget".freeze],
-      "skos:changeNote": [term(
+      "http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember": ["http://id.loc.gov/vocabulary/preservation/eventType/acc".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/app".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/cap".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/com".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/cop".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/cre".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/dea".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/dec".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/del".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/der".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/dig".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/dis".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/dsg".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/dsp".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/enc".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/exe".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/exp".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/ext".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/ffa".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/fil".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/fix".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/for".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/ima".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/ine".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/ing".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/ins".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/int".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/ipc".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/ipm".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/ips".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/mee".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/mem".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/mes".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/mig".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/mod".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/nor".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/pac".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/poa".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/prt".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/qua".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/rec".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/red".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/ref".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/ren".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/rep".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/tra".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/unp".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/unq".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/val".freeze, "http://id.loc.gov/vocabulary/preservation/eventType/vir".freeze],
+      "http://www.loc.gov/mads/rdf/v1#useFor": ["http://id.loc.gov/vocabulary/preservation/actionsGranted".freeze, "http://id.loc.gov/vocabulary/preservation/environmentPurpose".freeze, "http://id.loc.gov/vocabulary/preservation/inhibitorTarget".freeze],
+      "http://www.w3.org/2004/02/skos/core#changeNote": [term(
           "http://purl.org/vocab/changeset/schema#changeReason": "modified".freeze,
           "http://purl.org/vocab/changeset/schema#createdDate": "2012-06-01T00:00:01".freeze,
-          "http://purl.org/vocab/changeset/schema#creatorName": "premiseventtype:dlc".freeze,
+          "http://purl.org/vocab/changeset/schema#creatorName": "http://id.loc.gov/vocabulary/preservation/eventType/dlc".freeze,
           "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType".freeze,
           type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze
         ), term(
           "http://purl.org/vocab/changeset/schema#changeReason": "modified".freeze,
           "http://purl.org/vocab/changeset/schema#createdDate": "2017-09-07T00:00:01".freeze,
-          "http://purl.org/vocab/changeset/schema#creatorName": "premiseventtype:dlc".freeze,
+          "http://purl.org/vocab/changeset/schema#creatorName": "http://id.loc.gov/vocabulary/preservation/eventType/dlc".freeze,
           "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType".freeze,
           type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze
         ), term(
           "http://purl.org/vocab/changeset/schema#changeReason": "modified".freeze,
           "http://purl.org/vocab/changeset/schema#createdDate": "2018-09-24T00:00:01".freeze,
-          "http://purl.org/vocab/changeset/schema#creatorName": "premiseventtype:dlc".freeze,
+          "http://purl.org/vocab/changeset/schema#creatorName": "http://id.loc.gov/vocabulary/preservation/eventType/dlc".freeze,
           "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType".freeze,
           type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze
         ), term(
           "http://purl.org/vocab/changeset/schema#changeReason": "new".freeze,
           "http://purl.org/vocab/changeset/schema#createdDate": "2010-06-01T00:00:01".freeze,
-          "http://purl.org/vocab/changeset/schema#creatorName": "premiseventtype:dlc".freeze,
+          "http://purl.org/vocab/changeset/schema#creatorName": "http://id.loc.gov/vocabulary/preservation/eventType/dlc".freeze,
           "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType".freeze,
           type: "http://purl.org/vocab/changeset/schema#ChangeSet".freeze
         )],
-      type: ["mads:MADSScheme".freeze, "skos:ConceptScheme".freeze]
+      label: "Event Type".freeze,
+      type: ["http://www.loc.gov/mads/rdf/v1#MADSScheme".freeze, "http://www.w3.org/2004/02/skos/core#ConceptScheme".freeze]
 
     # Extra definitions
     term :acc,
-      "mads:authoritativeLabel": "accession".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "accession".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :app,
-      "mads:authoritativeLabel": "appraisal".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "appraisal".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :cap,
-      "mads:authoritativeLabel": "capture".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "capture".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :com,
-      "mads:authoritativeLabel": "compression".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "compression".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :cop,
-      "mads:authoritativeLabel": "compiling".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "compiling".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :cre,
-      "mads:authoritativeLabel": "creation".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "creation".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :dea,
-      "mads:authoritativeLabel": "deaccession".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "deaccession".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :dec,
-      "mads:authoritativeLabel": "decompression".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "decompression".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :del,
-      "mads:authoritativeLabel": "deletion".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "deletion".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :der,
-      "mads:authoritativeLabel": "decryption".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "decryption".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :dig,
-      "mads:authoritativeLabel": "digital signature validation".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "digital signature validation".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :dis,
-      "mads:authoritativeLabel": "dissemination".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "dissemination".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :dsg,
-      "mads:authoritativeLabel": "digital signature generation".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "digital signature generation".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :dsp,
-      "mads:authoritativeLabel": "displaying".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "displaying".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :enc,
-      "mads:authoritativeLabel": "encryption".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "encryption".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :exe,
-      "mads:authoritativeLabel": "execution".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "execution".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :exp,
-      "mads:authoritativeLabel": "exporting".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "exporting".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :ext,
-      "mads:authoritativeLabel": "extraction".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "extraction".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :ffa,
-      "mads:authoritativeLabel": "forensic feature analysis".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "forensic feature analysis".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :fil,
-      "mads:authoritativeLabel": "filename change".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "filename change".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :fix,
-      "mads:authoritativeLabel": "fixity check".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "fixity check".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :for,
-      "mads:authoritativeLabel": "format identification".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "format identification".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :ima,
-      "mads:authoritativeLabel": "imaging".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "imaging".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :ine,
-      "mads:authoritativeLabel": "ingestion end".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "ingestion end".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :ing,
-      "mads:authoritativeLabel": "ingestion".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "ingestion".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :ins,
-      "mads:authoritativeLabel": "ingestion start".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "ingestion start".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :int,
-      "mads:authoritativeLabel": "interpreting".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "interpreting".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :ipc,
-      "mads:authoritativeLabel": "information package creation".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "information package creation".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :ipm,
-      "mads:authoritativeLabel": "information package merging".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "information package merging".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :ips,
-      "mads:authoritativeLabel": "information package splitting".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "information package splitting".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :mee,
-      "mads:authoritativeLabel": "metadata extraction".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "metadata extraction".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :mem,
-      "mads:authoritativeLabel": "metadata modification".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "metadata modification".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :mes,
-      "mads:authoritativeLabel": "message digest calculation".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "message digest calculation".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :mig,
-      "mads:authoritativeLabel": "migration".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "migration".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :mod,
-      "mads:authoritativeLabel": "modification".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "modification".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :nor,
-      "mads:authoritativeLabel": "normalization".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "normalization".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :pac,
-      "mads:authoritativeLabel": "packing".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "packing".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :poa,
-      "mads:authoritativeLabel": "policy assignment".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "policy assignment".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :prt,
-      "mads:authoritativeLabel": "printing".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "printing".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :qua,
-      "mads:authoritativeLabel": "quarantine".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "quarantine".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :rec,
-      "mads:authoritativeLabel": "recovery".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "recovery".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :red,
-      "mads:authoritativeLabel": "redaction".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "redaction".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :ref,
-      "mads:authoritativeLabel": "refreshment".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "refreshment".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :ren,
-      "mads:authoritativeLabel": "rendering".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "rendering".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :rep,
-      "mads:authoritativeLabel": "replication".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "replication".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :tra,
-      "mads:authoritativeLabel": "transfer".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "transfer".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :unp,
-      "mads:authoritativeLabel": "unpacking".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "unpacking".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :unq,
-      "mads:authoritativeLabel": "unquarantine".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "unquarantine".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :val,
-      "mads:authoritativeLabel": "validation".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "validation".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
     term :vir,
-      "mads:authoritativeLabel": "virus check".freeze,
-      type: "mads:Authority".freeze
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "virus check".freeze,
+      type: "http://www.loc.gov/mads/rdf/v1#Authority".freeze
   end
 end

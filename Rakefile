@@ -53,7 +53,8 @@ RDF::Vocab::VOCABS.each do |id, v|
     cmd += " --module-name #{v.fetch(:module_name, "RDF::Vocab")}"
     cmd += " --class-name #{v[:class_name] ? v[:class_name] : id.to_s.upcase}"
     cmd += " --strict" if v.fetch(:strict, true)
-    cmd += " --extra #{URI.encode v[:extra].to_json}" if v[:extra]
+    cmd += " --noDoc"
+    cmd += " --extra #{URI.encode_www_form_component v[:extra].to_json}" if v[:extra]
     cmd += " -o lib/rdf/vocab/#{id}.rb_t"
     cmd += " '" + v.fetch(:source, v[:uri]) + "'"
     puts "  #{cmd}"

@@ -7,7 +7,19 @@ module RDF
   module Vocab
     autoload :VERSION,        'rdf/vocab/version'
     VOCABS = {
-      acl:    {uri: "http://www.w3.org/ns/auth/acl#"},
+      acl:    {
+        uri: "http://www.w3.org/ns/auth/acl#",
+        patch: %{
+          @prefix acl: <http://www.w3.org/ns/auth/acl#> .
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+          DeleteExisting {
+            acl:Access acl:label "access"@en .
+          } .
+          AddNew {
+            acl:Access rdfs:label "access"@en .
+          } .
+        }
+      },
       as:    {uri: "https://www.w3.org/ns/activitystreams#", source: 'etc/as.ttl'},
       bf2:    {uri: 'http://id.loc.gov/ontologies/bibframe/'},
       bibframe: {
