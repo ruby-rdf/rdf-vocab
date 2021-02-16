@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version      = '>= 2.4'
 
-  spec.add_runtime_dependency     'rdf',              '~> 3.1', '>= 3.1.11'
+  spec.add_runtime_dependency     'rdf',              '~> 3.1', '>= 3.1.12'
 
   # Either of these are required for HTML vocabulary generation
   spec.add_development_dependency 'haml',             '~> 5.1'
@@ -35,7 +35,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rdf-ordered-repo', '~> 3.1', '>= 3.1.1'
   spec.add_development_dependency 'rdf-rdfa',         '~> 3.1'
   spec.add_development_dependency 'rdf-rdfxml',       '~> 3.1', '>= 3.1.1'
-  spec.add_development_dependency 'rdf-reasoner',     '~> 0.6'
+  spec.add_development_dependency 'rdf-reasoner',     '~> 0.7'
   spec.add_development_dependency 'rdf-turtle',       '~> 3.1'
   spec.add_development_dependency 'rspec',            '~> 3.10'
   spec.add_development_dependency 'rspec-its',        '~> 1.3'
