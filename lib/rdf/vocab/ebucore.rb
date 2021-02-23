@@ -49,7 +49,7 @@ module RDF::Vocab
       type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :Agent,
       comment: "A person / contact or organisation.".freeze,
-      equivalentClass: ["http://purl.org/dc/elements/1.1/Agent".freeze, "http://xmlns.com/foaf/0.1/Agent".freeze],
+      equivalentClass: ["http://purl.org/dc/terms/Agent".freeze, "http://xmlns.com/foaf/0.1/Agent".freeze],
       label: "Agent".freeze,
       subClassOf: "http://www.w3.org/2002/07/owl#Thing".freeze,
       type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
