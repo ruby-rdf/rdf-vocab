@@ -104,7 +104,15 @@ module RDF
       ebucore: {
         uri: "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
         source: "https://www.ebu.ch/metadata/ontologies/ebucore/ebucore.rdf",
-        class_name: "EBUCore"
+        class_name: "EBUCore",
+        patch: %{
+          @prefix owl: <http://www.w3.org/2002/07/owl#>.
+          @prefix dc: <http://purl.org/dc/terms/> .
+          @prefix dc11: <http://purl.org/dc/elements/1.1/> .
+          @prefix ebucore: <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#> .
+          DeleteExisting { ebucore:Agent owl:equivalentClass dc11:Agent . } .
+          AddNew { ebucore:Agent owl:equivalentClass dc:Agent . } .
+        },
       },
       edm: {
         uri: "http://www.europeana.eu/schemas/edm/",
