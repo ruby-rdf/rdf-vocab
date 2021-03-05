@@ -1,12 +1,18 @@
 # -*- encoding: utf-8 -*-
 # frozen_string_literal: true
-# This file generated automatically using rdf vocabulary format from http://rdaregistry.info/Elements/u
+# This file generated automatically using rdf vocabulary format from http://rdaregistry.info/Elements/u/
 require 'rdf'
 module RDF::Vocab
-  RDAU = Class.new(RDF::StrictVocabulary("http://rdaregistry.info/Elements/u")) do
+  RDAU = Class.new(RDF::StrictVocabulary("http://rdaregistry.info/Elements/u/")) do
+
+    # Ontology definition
+    ontology :"http://rdaregistry.info/Elements/u/",
+      "http://purl.org/dc/elements/1.1/title": "RDA Unconstrained properties".freeze,
+      "http://xmlns.com/foaf/0.1/homepage": "http://www.rdaregistry.info/Elements/u/".freeze,
+      note: "Properties derived from RDA elements without specific or implicit restrictions to RDA entities.".freeze
 
     # Property definitions
-    property :"/P60001",
+    property :P60001,
       definition: "Relates a candidate for a degree who defends or opposes a thesis provided by a praeses in an academic disputation to a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/respondentOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -15,7 +21,7 @@ module RDF::Vocab
       label: "is respondent of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60002",
+    property :P60002,
       definition: "Relates an agent to a resource that is a thesis or dissertation associated with an academic degree that is approved by an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/degreeGrantingInstitutionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -24,7 +30,7 @@ module RDF::Vocab
       label: "is degree granting institution of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60003",
+    property :P60003,
       definition: "Relates an agent hosting an event, exhibit, conference, etc., which gave rise to a resource to a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/hostInstitutionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -33,7 +39,7 @@ module RDF::Vocab
       label: "is host institution of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60004",
+    property :P60004,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for managing the financial, technical, and organizational aspects of a production for stage, screen, sound recording, television, webcast, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/productionCompanyOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -42,7 +48,7 @@ module RDF::Vocab
       label: "is production company of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60005",
+    property :P60005,
       definition: "Relates an agent to a resource of a court governed by court rules, regardless of their official nature to a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/courtGovernedOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -51,7 +57,7 @@ module RDF::Vocab
       label: "is court governed of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60006",
+    property :P60006,
       definition: "Relates an agent to a resource brought together with resources from various sources that are arranged, described, and catalogued as a collection.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/collectorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -60,7 +66,7 @@ module RDF::Vocab
       label: "is collector of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60604".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60007",
+    property :P60007,
       definition: "Relates a curator to a resource that is listed or inventoried in an aggregate resource such as a collection of resources.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/collectionRegistrarOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -69,7 +75,7 @@ module RDF::Vocab
       label: "is collection registrar of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60604".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60008",
+    property :P60008,
       definition: "Relates an agent to a resource that is deposited into the custody of another agent without transferring ownership.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/depositorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -78,7 +84,7 @@ module RDF::Vocab
       label: "is depositor of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60628".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60009",
+    property :P60009,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for the general management and supervision of a filmed performance.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/filmDirectorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -87,7 +93,7 @@ module RDF::Vocab
       label: "is film director of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60673".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60010",
+    property :P60010,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for the general management and supervision of a radio program.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/radioDirectorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -96,7 +102,7 @@ module RDF::Vocab
       label: "is radio director of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60673".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60011",
+    property :P60011,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for the general management and supervision of a television program.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/televisionDirectorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -105,7 +111,7 @@ module RDF::Vocab
       label: "is television director of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60673".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60012",
+    property :P60012,
       definition: "Relates an agent to a resource donated to another owner.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/donorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -114,7 +120,7 @@ module RDF::Vocab
       label: "is donor of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60630".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60013",
+    property :P60013,
       definition: "Relates an agent to a resource that is sold to another owner who is an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/sellerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -123,7 +129,7 @@ module RDF::Vocab
       label: "is seller of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60630".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60014",
+    property :P60014,
       definition: "Relates an agent to a resource that is a law, regulation, constitution, court rule, etc. enacted by a government body.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/enactingJurisdictionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -132,7 +138,7 @@ module RDF::Vocab
       label: "is enacting jurisdiction of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60015",
+    property :P60015,
       definition: "Relates an agent to a place that is a jurisdiction governed by a law, regulation, etc., that was enacted by another government.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/jurisdictionGovernedOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -140,7 +146,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is jurisdiction governed of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60016",
+    property :P60016,
       definition: "Relates an agent to a resource that includes a contribution by an agent of leading of a performing group in a musical or dramatic presentation, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60843".freeze, "http://rdaregistry.info/Elements/u/P60845".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/conductorOf.en".freeze,
@@ -150,7 +156,7 @@ module RDF::Vocab
       label: "is conductor of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60017",
+    property :P60017,
       definition: "Relates an agent to a resource that includes a contribution by an agent of acting as a cast member or player in a musical or dramatic presentation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60027".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/actorOf.en".freeze,
@@ -160,7 +166,7 @@ module RDF::Vocab
       label: "is actor of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60018",
+    property :P60018,
       definition: "Relates a performer who contributes to a resource by appearing on screen to provide contextual or background information. an on-screen presenter may appear in nonfiction moving image materials or in introductions to fiction moving image materials to a resource.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60825".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/onscreenPresenterOf.en".freeze,
@@ -171,7 +177,7 @@ module RDF::Vocab
       label: "is onscreen presenter of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60019",
+    property :P60019,
       definition: "Relates an agent to a resource that includes a contribution by an agent of dancing in a musical or dramatic presentation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dancerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -180,7 +186,7 @@ module RDF::Vocab
       label: "is dancer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60020",
+    property :P60020,
       definition: "Relates an agent to a resource that includes a contribution by an agent of teaching or providing a demonstration.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/instructorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -189,7 +195,7 @@ module RDF::Vocab
       label: "is instructor of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60021",
+    property :P60021,
       definition: "Relates an agent to a resource that includes a contribution by an agent who is a performer of leading a program, often broadcast, that includes other performers.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/hostOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -198,7 +204,7 @@ module RDF::Vocab
       label: "is host of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60022",
+    property :P60022,
       definition: "Relates an agent to a resource that includes a contribution by an agent of leading a program, often broadcast, where topics are discussed, usually with participation of experts in fields related to the discussion.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/moderatorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -207,7 +213,7 @@ module RDF::Vocab
       label: "is moderator of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60023",
+    property :P60023,
       definition: "Relates an agent to a resource that includes a contribution by an agent of manipulating, controlling, or directing puppets or marionettes in a moving image production or a musical or dramatic presentation or entertainment".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/puppeteerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -216,7 +222,7 @@ module RDF::Vocab
       label: "is puppeteer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60024",
+    property :P60024,
       definition: "Relates an agent to a resource that includes a contribution by an agent of participating in a program, often broadcast, where topics are discussed, usually with participation of experts in fields related to the discussion.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/panelistOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -225,7 +231,7 @@ module RDF::Vocab
       label: "is panelist of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60025",
+    property :P60025,
       definition: "Relates an agent to a resource that includes a contribution by an agent of playing a musical instrument.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/instrumentalistOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -234,7 +240,7 @@ module RDF::Vocab
       label: "is instrumentalist of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60026",
+    property :P60026,
       definition: "Relates a performer who contributes to a resource by providing interpretation, analysis, or a discussion of the subject matter on a recording, film, or other audiovisual medium to a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/commentatorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -243,7 +249,7 @@ module RDF::Vocab
       label: "is commentator of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60027",
+    property :P60027,
       definition: "Relates an agent to a resource that includes a contribution by an agent of providing the voice for characters in radio and audio productions and for animated characters in moving image resources, as well as voice-overs in radio and television commercials, dubbed resources, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/voiceActorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -252,7 +258,7 @@ module RDF::Vocab
       label: "is voice actor of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60017".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60028",
+    property :P60028,
       definition: "Relates an agent to an resource that includes a contribution by an agent of reading aloud or giving an account of an act, occurrence, or other event.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/narratorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -261,7 +267,7 @@ module RDF::Vocab
       label: "is narrator of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60029",
+    property :P60029,
       definition: "Relates an agent to a resource that includes a contribution by an agent who is a performer of relaying a story with dramatic or theatrical interpretation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/storytellerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -270,7 +276,7 @@ module RDF::Vocab
       label: "is storyteller of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60030",
+    property :P60030,
       definition: "Relates an agent to a resource that includes a contribution by an agent of speaking words, such as a lecture, speech, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/speakerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -279,7 +285,7 @@ module RDF::Vocab
       label: "is speaker of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60031",
+    property :P60031,
       definition: "Relates an agent to a resource that includes a contribution by an agent who is a performer of voice, with or without instrumental accompaniment, to produce music.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/singerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -288,7 +294,7 @@ module RDF::Vocab
       label: "is singer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60032",
+    property :P60032,
       definition: "Relates an agent held to be a channel of communication between the earthly world and a world of spirits to a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/mediumOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -297,7 +303,7 @@ module RDF::Vocab
       label: "is medium of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60033",
+    property :P60033,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for most of the business aspects of the production of a film.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/filmProducerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -306,7 +312,7 @@ module RDF::Vocab
       label: "is film producer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60668".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60034",
+    property :P60034,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for most of the business aspects of the production of a radio program.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/radioProducerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -315,7 +321,7 @@ module RDF::Vocab
       label: "is radio producer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60668".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60035",
+    property :P60035,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for most of the business aspects of the production of a television program.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/televisionProducerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -324,21 +330,21 @@ module RDF::Vocab
       label: "is television producer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60668".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60036",
+    property :P60036,
       definition: "Relates an agent to a nomen that is a pseudonym or other appellation used by an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/alternateIdentity.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has alternate identity".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60037",
+    property :P60037,
       definition: "Relates a real agent who assumes an alternate identity to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/realIdentity.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has real identity".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60045",
+    property :P60045,
       definition: "Relates a resource to an agent who is a candidate for a degree who defends or opposes a thesis provided by the praeses in an academic disputation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/respondent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -347,14 +353,14 @@ module RDF::Vocab
       label: "has respondent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60046",
+    property :P60046,
       definition: "Relates a name to a categorization indicating that a name is insufficient to differentiate between two or more entities.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/undifferentiatedNameIndicator.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has undifferentiated name indicator".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60047",
+    property :P60047,
       altLabel: "type of agent".freeze,
       definition: "Relates an agent to a type to which an agent belongs.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/categoryOfAgent.en".freeze,
@@ -362,14 +368,14 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has category of agent".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60048",
+    property :P60048,
       definition: "Relates a resource to a categorization reflecting the format of the storage medium and housing of a carrier in combination with the type of intermediation device required to view, play, run, or otherwise access the content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/carrierType.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has carrier type".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60049",
+    property :P60049,
       definition: "Relates a resource to a categorization reflecting a fundamental form of communication in which a content is expressed and a human sense through which it is intended to be perceived.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contentType.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -377,21 +383,21 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has content type".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60050",
+    property :P60050,
       definition: "Relates a resource to a categorization reflecting the general type of intermediation device required to view, play, run, or otherwise access the content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/mediaType.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has media type".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60051",
+    property :P60051,
       definition: "Relates a resource to a categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/modeOfIssuance.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has mode of issuance".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60052",
+    property :P60052,
       definition: "Relates a resource to an appellation of resource that consists of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60139".freeze, "http://rdaregistry.info/Elements/u/P60140".freeze, "http://rdaregistry.info/Elements/u/P60945".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/identifierForResource.en".freeze,
@@ -402,7 +408,7 @@ module RDF::Vocab
       label: "has identifier for resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60919".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60053",
+    property :P60053,
       definition: "Relates an agent to an appellation of agent that consists of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/identifierForAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -411,14 +417,14 @@ module RDF::Vocab
       label: "has identifier for agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60919".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60054",
+    property :P60054,
       definition: "Relates a resource to a characteristic, other than form, date, or place of origin, that serves to differentiate a resource from another resource with the same preferred title of resource. (Deorecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/otherDistinguishingCharacteristicOfResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has other distinguishing characteristic of resource (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60055",
+    property :P60055,
       definition: "Relates a resource to a characteristic that applies to the carrier or carriers of the specific early printed resource being described and is assumed not to apply to other resources exemplifying the same resource. includes rubrication, illumination, and other hand colouring, manuscript additions, and binding. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/itemSpecificCarrierCharacteristicOfEarlyPrintedResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -426,7 +432,7 @@ module RDF::Vocab
       label: "has resource-specific carrier characteristic of early printed resource (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60056".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60056",
+    property :P60056,
       definition: "Relates a resource to a modification that is specific to a resource and is assumed not to apply to other resources exemplifying the same resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60055".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/modificationOfResource.en".freeze,
@@ -434,14 +440,14 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has modification of resource".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60057",
+    property :P60057,
       definition: "Relates a resource to a citation for a resource in the form preferred by a creator, publisher, custodian, indexing or abstracting service, or other agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/preferredCitation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has preferred citation".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60058",
+    property :P60058,
       altLabel: "has form of resource".freeze,
       definition: "Relates a resource to a type to which a resource belongs.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/categoryOfResource.en".freeze,
@@ -450,7 +456,7 @@ module RDF::Vocab
       label: "has category of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60944".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60059",
+    property :P60059,
       definition: "Relates a resource to a designation for one or more regions of the world for which a videodisc or video game carrier is encoded, indicating that playback is restricted to a device configured to decode it.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/regionalEncoding.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -458,7 +464,7 @@ module RDF::Vocab
       label: "has regional encoding".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60350".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60060",
+    property :P60060,
       definition: "Relates a resource to an agent who approves a resource that is a thesis or dissertation associated with an academic degree.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/degreeGrantingInstitution.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -467,7 +473,7 @@ module RDF::Vocab
       label: "has degree granting institution".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60061",
+    property :P60061,
       definition: "Relates a resource to an agent who hosts a conference, exhibition, or other event that gives rise to a resource, but has little or no responsibility of an agent for the content.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/hostInstitution.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -476,7 +482,7 @@ module RDF::Vocab
       label: "has host institution".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60062",
+    property :P60062,
       definition: "Relates a resource to an agent who is responsible for managing the financial, technical, and organizational aspects of a production for stage, screen, sound recording, television, webcast, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/productionCompany.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -485,7 +491,7 @@ module RDF::Vocab
       label: "has production company".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60063",
+    property :P60063,
       definition: "Relates a resource to a country with which an agent is identified.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/countryAssociatedWithPerson.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -493,7 +499,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has country associated with agent".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60064",
+    property :P60064,
       definition: "Relates a resource to a country, state, province, etc., or local place in which an organization has its headquarters. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/locationOfHeadquarters.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -501,7 +507,7 @@ module RDF::Vocab
       label: "has location of headquarters (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60325".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60065",
+    property :P60065,
       definition: "Relates a resource to a court governed by court rules, regardless of their official nature.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/courtGoverned.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -510,7 +516,7 @@ module RDF::Vocab
       label: "has court governed".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60066",
+    property :P60066,
       definition: "Relates a resource to a curator that brings together resources from various sources that are arranged, described, or catalogued as a collection.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/collector.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -519,7 +525,7 @@ module RDF::Vocab
       label: "has collector".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60376".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60067",
+    property :P60067,
       definition: "Relates a resource to a curator that lists or inventories resources in an aggregate resource such as a collection of resources.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/collectionRegistrar.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -528,7 +534,7 @@ module RDF::Vocab
       label: "has collection registrar".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60376".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60068",
+    property :P60068,
       definition: "Relates a resource to an agent who is a current owner of a resource who deposits the resource into the custody of another agent without transferring ownership.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/depositor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -537,7 +543,7 @@ module RDF::Vocab
       label: "has depositor".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60400".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60069",
+    property :P60069,
       definition: "Relates a resource to a timespan associated with a claim of protection under copyright or a similar regime.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/copyrightDate.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -545,7 +551,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has copyright date".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60070",
+    property :P60070,
       definition: "Relates a resource to a timespan during which a published resource is distributed.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfDistribution.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -554,7 +560,7 @@ module RDF::Vocab
       label: "has date of distribution".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61020".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60071",
+    property :P60071,
       definition: "Relates a resource to a timespan during which an unpublished resource is inscribed, fabricated, constructed, or otherwise produced.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfProduction.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -563,7 +569,7 @@ module RDF::Vocab
       label: "has date of production".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61020".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60072",
+    property :P60072,
       definition: "Relates a resource to a timespan during which a published resource is printed, duplicated, cast, or otherwise manufactured.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfManufacture.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -572,7 +578,7 @@ module RDF::Vocab
       label: "has date of manufacture".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61020".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60073",
+    property :P60073,
       definition: "Relates a resource to a timespan during which a published resource is published, released, or issued.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfPublication.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -581,7 +587,7 @@ module RDF::Vocab
       label: "has date of publication".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61020".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60074",
+    property :P60074,
       definition: "Relates a resource to a timespan associated with recording, filming, etc., the content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfCapture.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -589,7 +595,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has date of capture".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60075",
+    property :P60075,
       definition: "Relates a nomen to a date or range of dates that is associated with the use of an appellation of an entity.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfUsage.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -597,7 +603,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has date of usage".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60076",
+    property :P60076,
       definition: "Relates an agent to a date or range of dates indicative of a period in which an agent was active in its primary field of endeavor.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/periodOfActivityOfAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -606,28 +612,28 @@ module RDF::Vocab
       label: "has period of activity of agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60324".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60077",
+    property :P60077,
       definition: "Relates a resource to a designation of a named revision of an edition in a language or script that differs from that recorded in a designation of a named revision of an edition element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelDesignationOfNamedRevisionOfEdition.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has parallel designation of named revision of edition".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60078",
+    property :P60078,
       definition: "Relates a resource to a designation of edition in a language or script that differs from that recorded in a designation of edition element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelDesignationOfEdition.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has parallel designation of edition".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60079",
+    property :P60079,
       definition: "Relates a resource to a designation of a sequencing of a conference, etc., within a series of conferences, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/numberOfConference.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has number of conference".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60080",
+    property :P60080,
       definition: "Relates a resource to a designation in the form of numbers or alphabetic characters, or a date or other timespan, that is used to indicate a sequence of a part resource within a whole resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/numberingOfPart.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -635,7 +641,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has numbering of part".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60081",
+    property :P60081,
       definition: "Relates a resource to a designation of a sequencing of a part or parts within a series.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/numberingWithinSequence.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -644,7 +650,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has numbering within sequence".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60082",
+    property :P60082,
       definition: "Relates a resource to a designation of a sequencing of a part or parts within a subseries. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/numberingWithinSubseries.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -652,7 +658,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has numbering within subseries (Deprecated".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60083",
+    property :P60083,
       definition: "Relates a resource to a resource in a digital format that is a result of a transfer of a resource in an analog format.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/electronicReproduction.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -661,7 +667,7 @@ module RDF::Vocab
       label: "has electronic reproduction".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60272".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60084",
+    property :P60084,
       definition: "Relates a resource to an agent who is a director who is responsible for the general management and supervision of a filmed performance.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/filmDirector.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -670,7 +676,7 @@ module RDF::Vocab
       label: "has film director".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60449".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60085",
+    property :P60085,
       definition: "Relates a resource to an agent who is a director who is responsible for the general management and supervision of a radio program.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/radioDirector.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -679,7 +685,7 @@ module RDF::Vocab
       label: "has radio director".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60449".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60086",
+    property :P60086,
       definition: "Relates a resource to an agent who is a director who is responsible for the general management and supervision of a television program.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/televisionDirector.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -688,14 +694,14 @@ module RDF::Vocab
       label: "has television director".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60449".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60087",
+    property :P60087,
       definition: "Relates a resource to a name of distributor in a language or script that differs from that recorded in a name of distributor element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelNameOfDistributor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has parallel name of distributor".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60088",
+    property :P60088,
       definition: "Relates a resource to a dramatic resource adapted from another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dramatizedAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -704,21 +710,21 @@ module RDF::Vocab
       label: "is dramatized as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60089",
+    property :P60089,
       definition: "Relates an agent to a field of endeavour, area of expertise, competence, responsibility, jurisdiction etc., in which an agent is engaged.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/fieldOfActivityOfAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has field of activity of agent".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60090",
+    property :P60090,
       definition: "Relates a resource to a formal recognition of excellence or other merit given by an award- or prize-granting body, for the content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/award.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has award".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60091",
+    property :P60091,
       definition: "Relates a resource to a former owner of a resource that donated the resource to another owner.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/donor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -727,7 +733,7 @@ module RDF::Vocab
       label: "has donor".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60401".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60092",
+    property :P60092,
       definition: "Relates a resource to a former owner of a resource that sold the resource to another owner.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/seller.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -736,7 +742,7 @@ module RDF::Vocab
       label: "has seller".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60401".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60093",
+    property :P60093,
       definition: "Relates a resource to a general type of data content encoded in a computer file.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/fileType.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -744,14 +750,14 @@ module RDF::Vocab
       label: "has file type".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60350".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60095",
+    property :P60095,
       definition: "Relates a resource to a group with which an agent is affiliated or is affiliated through employment, membership, cultural identity, etc. (Deprecation)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/affiliation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has affiliation (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60096",
+    property :P60096,
       definition: "Relates a resource to an agent who is a government enacting a resourcce that is a law, regulation, constitution, court rule, or other legislation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/enactingJurisdiction.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -760,7 +766,7 @@ module RDF::Vocab
       label: "has enacting jurisdiction".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60097",
+    property :P60097,
       definition: "Relates a place that is a jurisdiction to an agent who is a government of a jurisdiction governed by a law, regulation, etc., that was enacted by another government.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/jurisdictionGoverned.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -769,21 +775,21 @@ module RDF::Vocab
       label: "has jurisdiction governed".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61018".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60098",
+    property :P60098,
       definition: "Relates a resource to a language an agent uses in its communications, when writing for publication, broadcasting, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/languageOfAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has language of agent".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60099",
+    property :P60099,
       definition: "Relates a resource to a language used for the content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/languageOfResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has language of resource".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60100",
+    property :P60100,
       definition: "Relates a resource to a larger resource of which a part is a discrete component that exactly reproduces a related resource embodying a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/facsimilePartOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -792,7 +798,7 @@ module RDF::Vocab
       label: "is facsimile part of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60101".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60101",
+    property :P60101,
       altLabel: "is contained in resource".freeze,
       definition: "Relates a resource to a resource that has another resource as a discrete component.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60100".freeze, "http://rdaregistry.info/Elements/u/P60192".freeze, "http://rdaregistry.info/Elements/u/P60193".freeze, "http://rdaregistry.info/Elements/u/P60194".freeze, "http://rdaregistry.info/Elements/u/P60317".freeze],
@@ -803,7 +809,7 @@ module RDF::Vocab
       label: "is part of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60714".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60102",
+    property :P60102,
       altLabel: "is prequel to".freeze,
       definition: "Relates a resource to a resource that extends the narrative of another resource forwards in time.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/sequel.en".freeze,
@@ -813,7 +819,7 @@ module RDF::Vocab
       label: "has sequel".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60278".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60103",
+    property :P60103,
       definition: "Relates a resource to a resource whose content partially supersedes and renders obsolete the content of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/replacedInPartBy.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -823,7 +829,7 @@ module RDF::Vocab
       label: "is replaced in part by".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60278".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60104",
+    property :P60104,
       definition: "Relates a resource to a resource whose content supersedes and renders obsolete the content of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/replacedBy.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -833,14 +839,14 @@ module RDF::Vocab
       label: "is replaced by".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60278".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60105",
+    property :P60105,
       definition: "Relates a resource to a listing of agents, families, or corporate bodies making contributions to the artistic and/or technical production of a resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/artisticAndOrTechnicalCredit.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has artistic or technical credit (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60106",
+    property :P60106,
       definition: "Relates a resource to a literary composition in verse form adapted from another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedInVerseAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -849,7 +855,7 @@ module RDF::Vocab
       label: "is adapted in verse as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60107",
+    property :P60107,
       definition: "Relates a resource to a local place in which a conference, congress, meeting, exhibition, fair, festival, etc., was held.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfConference.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -858,14 +864,14 @@ module RDF::Vocab
       label: "has place of conference".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61018".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60108",
+    property :P60108,
       definition: "Relates a resource to a name of manufacturer in a language or script that differs from that recorded in a name of manufacturer element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelNameOfManufacturer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has parallel name of manufacturer".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60109",
+    property :P60109,
       definition: "Relates a resource to a mathematical system for identifying a place covered by the cartographic content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60345".freeze, "http://rdaregistry.info/Elements/u/P60346".freeze, "http://rdaregistry.info/Elements/u/P60347".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/coordinatesOfCartographicContent.en".freeze,
@@ -874,7 +880,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has coordinates of cartographic content".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60110",
+    property :P60110,
       definition: "Relates a resource to a motion picture that is based on another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAsMotionPicture.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -883,7 +889,7 @@ module RDF::Vocab
       label: "is adapted as motion picture".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60111",
+    property :P60111,
       definition: "Relates a resource to a moving image resource in which spoken dialogue is translated into a language different from that of an original resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dubbedVersionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -892,7 +898,7 @@ module RDF::Vocab
       label: "is dubbed version of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60244".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60112",
+    property :P60112,
       definition: "Relates a resource to a moving image resource that translates spoken dialogue of an original resource into a different language.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dubbedVersion.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -901,7 +907,7 @@ module RDF::Vocab
       label: "has dubbed version".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60280".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60113",
+    property :P60113,
       definition: "Relates a resource to a musical resource that is an ornamental passage for a soloist added to a musical resource, such as a concerto, by the same or a different composer.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/cadenza.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -910,7 +916,7 @@ module RDF::Vocab
       label: "has cadenza".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60114",
+    property :P60114,
       definition: "Relates a resource to a musical resource from which melodic, thematic, or harmonic material is taken to form a discrete theme, which is repeated one or more times with subsequent modifications.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variationsBasedOn.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -919,7 +925,7 @@ module RDF::Vocab
       label: "is variations based on".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60115",
+    property :P60115,
       definition: "Relates a resource to a musical resource in which melodic, thematic, or harmonic material taken from another resource forms a discrete theme, which is repeated one or more times with subsequent modifications.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/modifiedByVariationAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -928,7 +934,7 @@ module RDF::Vocab
       label: "is modified by variation as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60116",
+    property :P60116,
       definition: "Relates a resource to a musical resource, such as a concerto, to which is added a musical resource that is an ornamental passage for a soloist by the same or a different composer.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/cadenzaComposedFor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -937,7 +943,7 @@ module RDF::Vocab
       label: "is cadenza composed for".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60117",
+    property :P60117,
       definition: "Relates a resource to a resource that is a musical or choreographic resource such as an opera, a ballet, or other resource for the musical stage, or an oratorio, that is complemented by a textual resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/librettoFor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -946,7 +952,7 @@ module RDF::Vocab
       label: "is libretto for".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60118",
+    property :P60118,
       definition: "Relates a resource to a musical resource that complements a resource that is a play or other resource for the stage that is realized as spoken word.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/incidentalMusic.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -955,7 +961,7 @@ module RDF::Vocab
       label: "has incidental music".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60723".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60119",
+    property :P60119,
       definition: "Relates an agent to a name of agent that is not selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantNameOfAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -964,7 +970,7 @@ module RDF::Vocab
       label: "has variant name of agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60368".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60120",
+    property :P60120,
       definition: "Relates a resource to a motion picture, radio program, television program, or video based on an earlier resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/remadeAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -973,7 +979,7 @@ module RDF::Vocab
       label: "is remade as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60121",
+    property :P60121,
       definition: "Relates a resource to a non-dramatic musical resource, other than an oratorio, that uses a text of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/setToMusicAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -982,7 +988,7 @@ module RDF::Vocab
       label: "is set to music as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60122",
+    property :P60122,
       definition: "Relates a resource to a note on resource that identifies an issue or part of a multipart monograph or serial, or an iteration of an integrating resource that has been used as a basis for the identification of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnIssuePartOrIterationUsedAsBasisForIdentificationOfResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -990,7 +996,7 @@ module RDF::Vocab
       label: "has note on issue, part, or iteration used as basis for identification of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60123",
+    property :P60123,
       definition: "Relates a resource to a note on resource that provides information on variations in the content characteristics of parts, issues, or iterations of a diachronic resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnChangesInContentCharacteristics.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -998,7 +1004,7 @@ module RDF::Vocab
       label: "has note on changes in content characteristics".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60124",
+    property :P60124,
       definition: "Relates a resource to a note on resource that provides information on variations in the carrier characteristics that are found on resources of parts, issues, or iterations of a diachronic resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnChangesInCarrierCharacteristics.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1006,7 +1012,7 @@ module RDF::Vocab
       label: "has note on changes in carrier characteristics".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60125",
+    property :P60125,
       definition: "Relates a resource to a note on resource that provides information on the distribution of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnDistributionStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1014,7 +1020,7 @@ module RDF::Vocab
       label: "has note on distribution statement".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60126",
+    property :P60126,
       definition: "Relates a resource to a note on resource that provides information on the manufacture of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnManufactureStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1022,7 +1028,7 @@ module RDF::Vocab
       label: "has note on manufacture statement".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60127",
+    property :P60127,
       definition: "Relates a resource to a note on resource that provides information on the production of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnProductionStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1030,7 +1036,7 @@ module RDF::Vocab
       label: "has note on production statement".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60128",
+    property :P60128,
       definition: "Relates a resource to a note on resource that provides information on the publication of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnPublicationStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1038,7 +1044,7 @@ module RDF::Vocab
       label: "has note on publication statement".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60129",
+    property :P60129,
       definition: "Relates a resource to a note providing details on the currency of the contents, on the frequency of release of issues or parts of a serial or the frequency of updates to an integrating resource, or on changes in frequency. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnFrequency.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -1046,7 +1052,7 @@ module RDF::Vocab
       label: "has note on frequency (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60130",
+    property :P60130,
       definition: "Relates a resource to note on resource that provides information on an agent, and their function, who is responsible for a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnStatementOfResponsibility.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1054,7 +1060,7 @@ module RDF::Vocab
       label: "has note on statement of responsibility".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60131",
+    property :P60131,
       definition: "Relates a resource to a note on resource that provides information on a series with which a resource is associated.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnSeriesStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1062,7 +1068,7 @@ module RDF::Vocab
       label: "has note on series statement".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60132",
+    property :P60132,
       definition: "Relates a resource to a note on resource that provides information on a copyright date.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnCopyrightDate.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1070,7 +1076,7 @@ module RDF::Vocab
       label: "has note on copyright date".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60133",
+    property :P60133,
       definition: "Relates a resource to a note on resource that provides information on the dimensions of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnDimensionsOfResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1078,7 +1084,7 @@ module RDF::Vocab
       label: "has note on dimensions of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60134",
+    property :P60134,
       definition: "Relates a resource to a note on resource that provides information on the extent of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnExtentOfResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1086,7 +1092,7 @@ module RDF::Vocab
       label: "has note on extent of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60135",
+    property :P60135,
       definition: "Relates a resource to a note providing information on the range of designators that is used to indicate a sequence of the individual parts or iterations of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnNumberingOfSequence.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1094,7 +1100,7 @@ module RDF::Vocab
       label: "has note on numbering of sequence".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60136",
+    property :P60136,
       definition: "Relates a resource to a note on resource that provides information on inaccuracies appearing in titles, complex changes in titles, or on other information relating to a title.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnTitle.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1102,7 +1108,7 @@ module RDF::Vocab
       label: "has note on title".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60137",
+    property :P60137,
       definition: "Relates a resource to a note on resource that provides information on an edition of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnEditionStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1110,7 +1116,7 @@ module RDF::Vocab
       label: "has note on edition statement".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60138",
+    property :P60138,
       definition: "Relates a resource to a novel adapted from another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAsNovel.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1119,7 +1125,7 @@ module RDF::Vocab
       label: "is adapted as novel".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60139",
+    property :P60139,
       definition: "Relates a resource to a numbering designation assigned to a notated music resource by a publisher.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/publisherNumberForNotatedMusic.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1129,7 +1135,7 @@ module RDF::Vocab
       label: "has publisher number for notated music".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60052".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60140",
+    property :P60140,
       definition: "Relates a resource to a numbering designation assigned to a notated music resource by a publisher.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/plateNumberForNotatedMusic.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1139,7 +1145,7 @@ module RDF::Vocab
       label: "has plate number for notated music".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60052".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60141",
+    property :P60141,
       definition: "Relates a resource to an agent who is a performer who contributes to a musical resource by leading a performing group in a musical or dramatic presentation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60842".freeze, "http://rdaregistry.info/Elements/u/P60844".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/conductor.en".freeze,
@@ -1149,7 +1155,7 @@ module RDF::Vocab
       label: "has conductor".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60142",
+    property :P60142,
       definition: "Relates a resource to an agent who is a performer who contributes to a resource by acting as a cast member or player in a musical or dramatic presentation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60152".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/actor.en".freeze,
@@ -1159,7 +1165,7 @@ module RDF::Vocab
       label: "has actor".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60143",
+    property :P60143,
       definition: "Relates a resource to a performer who contributes to a resource by appearing on screen to provide contextual or background information. an on-screen presenter may appear in nonfiction moving image materials or in introductions to fiction moving image materials.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60824".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/onscreenPresenter.en".freeze,
@@ -1170,7 +1176,7 @@ module RDF::Vocab
       label: "has onscreen presenter".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60144",
+    property :P60144,
       definition: "Relates a resource to an agent who is a performer who contributes to a resource by dancing in a musical or dramatic presentation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dancer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1179,14 +1185,14 @@ module RDF::Vocab
       label: "has dancer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60145",
+    property :P60145,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/instructor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       inverseOf: "http://rdaregistry.info/Elements/u/P60020".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60146",
+    property :P60146,
       definition: "Relates a resource to an agent who is a performer who contributes to a resource by leading a program, often broadcast, that includes other performers.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/host.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1195,7 +1201,7 @@ module RDF::Vocab
       label: "has host".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60147",
+    property :P60147,
       definition: "Relates a resource to a performer who contributes to a resource by leading a program, often broadcast, where topics are discussed, usually with participation of experts in fields related to the discussion.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/moderator.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1204,7 +1210,7 @@ module RDF::Vocab
       label: "has moderator".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60148",
+    property :P60148,
       definition: "Relates a resource to a performer who contributes to a resource by manipulating, controlling, or directing puppets or marionettes in a moving image production or a musical or dramatic presentation or entertainment.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/puppeteer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1213,7 +1219,7 @@ module RDF::Vocab
       label: "has puppeteer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60149",
+    property :P60149,
       definition: "Relates a resource to a performer who contributes to a resource by participating in a program, often broadcast, where topics are discussed, usually with participation of experts in fields related to the discussion.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/panelist.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1222,7 +1228,7 @@ module RDF::Vocab
       label: "has panelist".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60150",
+    property :P60150,
       definition: "Relates a resource to a performer who contributes to a resource by playing a musical instrument.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/instrumentalist.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1231,7 +1237,7 @@ module RDF::Vocab
       label: "has instrumentalist".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60151",
+    property :P60151,
       definition: "Relates a resource to a performer who contributes to a resource by providing interpretation, analysis, or a discussion of the subject matter on a recording, film, or other audiovisual medium.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/commentator.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1240,7 +1246,7 @@ module RDF::Vocab
       label: "has commentator".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60152",
+    property :P60152,
       definition: "Relates a resource to a performer who contributes to a resource by providing a voice for characters in radio and audio productions and for animated characters in moving image resources as well as by providing voice-overs in radio and television commercials, dubbed resources, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/voiceActor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1249,7 +1255,7 @@ module RDF::Vocab
       label: "has voice actor".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60142".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60153",
+    property :P60153,
       definition: "Relates a resource to an agent who is a performer who contributes to a resource by reading aloud or giving an account of an act, occurrence, or other event.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/narrator.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1258,7 +1264,7 @@ module RDF::Vocab
       label: "has narrator".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60154",
+    property :P60154,
       definition: "Relates a resource to an agent who is a performer who contributes to a resource by relaying a story with dramatic or theatrical interpretation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/storyteller.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1267,7 +1273,7 @@ module RDF::Vocab
       label: "has storyteller".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60155",
+    property :P60155,
       definition: "Relates a resource to an agent who is a performer who contributes to a resource by speaking words.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/speaker.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1276,7 +1282,7 @@ module RDF::Vocab
       label: "has speaker".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60156",
+    property :P60156,
       definition: "Relates a resource to an agent who is a performer who contributes to a resource by using their voice, with or without instrumental accompaniment, to produce music.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/singer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1285,7 +1291,7 @@ module RDF::Vocab
       label: "has singer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60157",
+    property :P60157,
       definition: "Relates a resource to an agent who claims to be a channel of communication with a world of spirits.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/medium.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1294,7 +1300,7 @@ module RDF::Vocab
       label: "has medium".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60158",
+    property :P60158,
       definition: "Relates a resource to a person, family, or corporate body other than a creator, custodian, owner, producer, publisher, distributor or manufacturer associated with a manifestation. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60884".freeze, "http://rdaregistry.info/Elements/u/P60886".freeze, "http://rdaregistry.info/Elements/u/P60887".freeze, "http://rdaregistry.info/Elements/u/P60888".freeze, "http://rdaregistry.info/Elements/u/P60890".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/otherAgentAssociatedWithAResource.en".freeze,
@@ -1303,7 +1309,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has other agent associated with a resource (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60159",
+    property :P60159,
       definition: "Relates a resource to a physical or chemical substance applied to a base material of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60344".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/appliedMaterial.en".freeze,
@@ -1312,7 +1318,7 @@ module RDF::Vocab
       label: "has applied material".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60995".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60160",
+    property :P60160,
       definition: "Relates a resource to a place associated with the distribution of a published resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60164".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfDistribution.en".freeze,
@@ -1322,7 +1328,7 @@ module RDF::Vocab
       label: "has place of distribution".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61014".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60161",
+    property :P60161,
       definition: "Relates a resource to a place that is associated with the inscription, fabrication, construction, or other method of production of an unpublished resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60166".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfProduction.en".freeze,
@@ -1332,7 +1338,7 @@ module RDF::Vocab
       label: "has place of production".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61014".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60162",
+    property :P60162,
       definition: "Relates a resource to a place that is associated with the printing, duplicating, casting, or other method of manufacturing of a published resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60165".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfManufacture.en".freeze,
@@ -1342,7 +1348,7 @@ module RDF::Vocab
       label: "has place of manufacture".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61014".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60163",
+    property :P60163,
       definition: "Relates a resource to a place associated with the publication, release, or issuing of a published resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60167".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfPublication.en".freeze,
@@ -1352,7 +1358,7 @@ module RDF::Vocab
       label: "has place of publication".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61014".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60164",
+    property :P60164,
       definition: "Relates a resource to a place of distribution in a language or script that differs from that recorded in a place of distribution element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelPlaceOfDistribution.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1360,7 +1366,7 @@ module RDF::Vocab
       label: "has parallel place of distribution".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60160".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60165",
+    property :P60165,
       definition: "Relates a resource to a place of manufacture in a language or script that differs from that recorded in a place of manufacture element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelPlaceOfManufacture.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1368,7 +1374,7 @@ module RDF::Vocab
       label: "has parallel place of manufacture".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60162".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60166",
+    property :P60166,
       definition: "Relates a resource to a place of production in a language or script that differs from that recorded in a place of production element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelPlaceOfProduction.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1376,7 +1382,7 @@ module RDF::Vocab
       label: "has parallel place of production".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60161".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60167",
+    property :P60167,
       definition: "Relates a resource to a place of publication in a language or script that differs from that recorded in a place of publication element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelPlaceOfPublication.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1384,7 +1390,7 @@ module RDF::Vocab
       label: "has parallel place of publication".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60163".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60168",
+    property :P60168,
       definition: "Relates a resource to a resource that reissues the same resource as a printed resource being described.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/reprintOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1393,7 +1399,7 @@ module RDF::Vocab
       label: "is reprint of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60297".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60169",
+    property :P60169,
       definition: "Relates a resource to an agent who is a producer who is responsible for most of the business aspects ofthe production of a film.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/filmProducer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1402,7 +1408,7 @@ module RDF::Vocab
       label: "has film producer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60441".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60170",
+    property :P60170,
       definition: "Relates a resource to an agent who is a producer who is responsible for most of the business aspects of a radio program.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/radioProducer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1411,7 +1417,7 @@ module RDF::Vocab
       label: "has radio producer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60441".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60171",
+    property :P60171,
       definition: "Relates a resource to an agent who is a producer who is responsible for most of the business aspects of a television program.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/televisionProducer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1420,21 +1426,21 @@ module RDF::Vocab
       label: "has television producer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60441".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60172",
+    property :P60172,
       definition: "Relates a resource to a name of producer in a language or script that differs from that recorded in a name of producer element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelNameOfProducer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has parallel name of producer".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60173",
+    property :P60173,
       definition: "Relates a resource to a name of publisher name in a language or script that differs from that recorded in a name of publisher element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelNameOfPublisher.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has parallel name of publisher".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60174",
+    property :P60174,
       definition: "Relates a resource to a radio program based on another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAsRadioProgram.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1443,21 +1449,21 @@ module RDF::Vocab
       label: "is adapted as radio program".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60175",
+    property :P60175,
       definition: "Relates a resource to a rank conferred as a guarantee of academic proficiency.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/academicDegree.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has academic degree".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60176",
+    property :P60176,
       definition: "Relates a resource to a record of previous ownership or custodianship of a resource, including agent, place, and timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/custodialHistoryOfResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has custodial history of resource".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60177",
+    property :P60177,
       definition: "Relates a resource to a resource that abstracts the contents of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/abstractedIn.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1466,7 +1472,7 @@ module RDF::Vocab
       label: "is abstracted in".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60178",
+    property :P60178,
       definition: "Relates a resource to a resource that is an abstracting and indexing service that indexes the contents of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/indexedIn.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1475,7 +1481,7 @@ module RDF::Vocab
       label: "is indexed in".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60179",
+    property :P60179,
       definition: "Relates a resource to a resource that consists of an exact reproduction on preservation-quality media, such as acid-free permanent or archival paper.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/preservationFacsimile.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1484,7 +1490,7 @@ module RDF::Vocab
       label: "has preservation facsimile".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60217".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60180",
+    property :P60180,
       definition: "Relates a resource to a choreographic resource based on another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAsChoreography.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1493,7 +1499,7 @@ module RDF::Vocab
       label: "is adapted as choreography".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60181",
+    property :P60181,
       definition: "Relates a resource to a resource that consists of errors discovered after the publication of a predominant resource, with their corrections.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/errata.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1502,7 +1508,7 @@ module RDF::Vocab
       label: "has errata".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60182",
+    property :P60182,
       definition: "Relates a resource to a resource that consists of pictorial content designed to explain or decorate an augmented resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/illustrations.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1511,7 +1517,7 @@ module RDF::Vocab
       label: "has illustrations".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60183",
+    property :P60183,
       definition: "Relates a resource to a resource that is a separate part of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/insert.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1520,7 +1526,7 @@ module RDF::Vocab
       label: "has insert".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60249".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60184",
+    property :P60184,
       definition: "Relates a resource to a resource that consists of a screenplay for a motion picture, based on another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAsMotionPictureScreenplay.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1529,7 +1535,7 @@ module RDF::Vocab
       label: "is adapted as motion picture screenplay".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60185".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60185",
+    property :P60185,
       definition: "Relates a resource to a resource that consists of a screenplay for a motion picture, television program, or video, based on another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60184".freeze, "http://rdaregistry.info/Elements/u/P60186".freeze, "http://rdaregistry.info/Elements/u/P60187".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAsScreenplay.en".freeze,
@@ -1539,7 +1545,7 @@ module RDF::Vocab
       label: "is adapted as screenplay".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60186",
+    property :P60186,
       definition: "Relates a resource to a resource that consists of a screenplay for a television program, based on another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAsTelevisionScreenplay.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1548,7 +1554,7 @@ module RDF::Vocab
       label: "is adapted as television screenplay".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60185".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60187",
+    property :P60187,
       definition: "Relates a resource to a resource that consists of a screenplay for a video, based on another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAsVideoScreenplay.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1557,7 +1563,7 @@ module RDF::Vocab
       label: "is adapted as video screenplay".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60185".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60188",
+    property :P60188,
       definition: "Relates a resource to a resource that consists of a script for a radio program, based on another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAsRadioScript.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1566,7 +1572,7 @@ module RDF::Vocab
       label: "is adapted as radio script".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60189",
+    property :P60189,
       definition: "Relates a resource to a resource that is both an adaptation and a translation into another language of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/freelyTranslatedAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1575,7 +1581,7 @@ module RDF::Vocab
       label: "is freely translated as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60190",
+    property :P60190,
       definition: "Relates a resource to an entity that is described by a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60239".freeze, "http://rdaregistry.info/Elements/u/P60255".freeze, "http://rdaregistry.info/Elements/u/P60288".freeze, "http://rdaregistry.info/Elements/u/P60292".freeze, "http://rdaregistry.info/Elements/u/P60298".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/descriptionOf.en".freeze,
@@ -1585,7 +1591,7 @@ module RDF::Vocab
       label: "is description of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60805".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60191",
+    property :P60191,
       definition: "Relates a resource to a resource that carries the same content as a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60195".freeze, "http://rdaregistry.info/Elements/u/P60197".freeze, "http://rdaregistry.info/Elements/u/P60272".freeze, "http://rdaregistry.info/Elements/u/P60297".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/equivalent.en".freeze,
@@ -1595,7 +1601,7 @@ module RDF::Vocab
       label: "has equivalent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60712".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60192",
+    property :P60192,
       definition: "Relates a resource to a resource that is a successive aggregating resource that inspires the editorial policy, scope, and style of another successive aggregating resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/subseriesOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1604,7 +1610,7 @@ module RDF::Vocab
       label: "is subseries of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60101".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60193",
+    property :P60193,
       altLabel: "is in series".freeze,
       definition: "Relates a resource to a resource that is a successive aggregating resource that inspires the editorial policy, scope, and style of a static resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/issueOf.en".freeze,
@@ -1614,7 +1620,7 @@ module RDF::Vocab
       label: "is issue of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60101".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60194",
+    property :P60194,
       definition: "Relates a resource to a resource into which material is inserted that is not an integral part of the publication.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/insertedIn.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1623,7 +1629,7 @@ module RDF::Vocab
       label: "is inserted in".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60101".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60195",
+    property :P60195,
       definition: "Relates a resource to a resource that carries the same content of a resource in a different format.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/alsoIssuedAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1632,7 +1638,7 @@ module RDF::Vocab
       label: "is also issued as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60191".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60196",
+    property :P60196,
       definition: "Relates a resource to a resource that is issued with a related resource, without any relationship to its content.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60237".freeze, "http://rdaregistry.info/Elements/u/P60256".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/accompaniedBy.en".freeze,
@@ -1642,7 +1648,7 @@ module RDF::Vocab
       label: "is accompanied by".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60709".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60197",
+    property :P60197,
       definition: "Relates a resource to a resource that is an exact copy of a website, used to reduce network traffic or improve the availability of the content of the original site.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/mirrorSite.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1651,7 +1657,7 @@ module RDF::Vocab
       label: "has mirror site".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60191".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60198",
+    property :P60198,
       definition: "Relates a resource to a resource paired with a related resource without either resource being considered to be predominant.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60117".freeze, "http://rdaregistry.info/Elements/u/P60201".freeze, "http://rdaregistry.info/Elements/u/P60264".freeze, "http://rdaregistry.info/Elements/u/P60267".freeze, "http://rdaregistry.info/Elements/u/P60270".freeze, "http://rdaregistry.info/Elements/u/P60285".freeze, "http://rdaregistry.info/Elements/u/P60723".freeze, "http://rdaregistry.info/Elements/u/P60724".freeze, "http://rdaregistry.info/Elements/u/P60740".freeze, "http://rdaregistry.info/Elements/u/P60741".freeze, "http://rdaregistry.info/Elements/u/P61047".freeze, "http://rdaregistry.info/Elements/u/P61048".freeze, "http://rdaregistry.info/Elements/u/P61049".freeze, "http://rdaregistry.info/Elements/u/P61050".freeze, "http://rdaregistry.info/Elements/u/P61051".freeze, "http://rdaregistry.info/Elements/u/P61052".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/complementedBy.en".freeze,
@@ -1661,7 +1667,7 @@ module RDF::Vocab
       label: "is complemented by".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60709".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60199",
+    property :P60199,
       definition: "Relates a resource to a resource that is a diachronic resource that continues the partial content of another diachronic resource that is continuing.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/separatedInto.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1671,7 +1677,7 @@ module RDF::Vocab
       label: "is separated into".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60278".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60200",
+    property :P60200,
       definition: "Relates a resource to a resource in a digital format that results from a transfer of a resource in another digital format.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/digitalTransfer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1680,7 +1686,7 @@ module RDF::Vocab
       label: "has digital transfer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60272".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60201",
+    property :P60201,
       definition: "Relates a resource to a resource that uses a screenplay and that is complemented by a textual resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60282".freeze, "http://rdaregistry.info/Elements/u/P60283".freeze, "http://rdaregistry.info/Elements/u/P60284".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/screenplayFor.en".freeze,
@@ -1690,7 +1696,7 @@ module RDF::Vocab
       label: "is screenplay for".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60202",
+    property :P60202,
       definition: "Relates a resource to a resource that is a play or other resource for the stage that is realized as spoken word and that is complemented by a musical resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/incidentalMusicFor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1699,7 +1705,7 @@ module RDF::Vocab
       label: "is incidental music for".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60724".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60203",
+    property :P60203,
       definition: "Relates a resource to a resource that abbreviates another resource in a brief, objective manner.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/abstractedAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1708,7 +1714,7 @@ module RDF::Vocab
       label: "is abstracted as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60204",
+    property :P60204,
       definition: "Relates a resource to a resource that adds to the content of a predominant resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60113".freeze, "http://rdaregistry.info/Elements/u/P60181".freeze, "http://rdaregistry.info/Elements/u/P60182".freeze, "http://rdaregistry.info/Elements/u/P60206".freeze, "http://rdaregistry.info/Elements/u/P60208".freeze, "http://rdaregistry.info/Elements/u/P60209".freeze, "http://rdaregistry.info/Elements/u/P60221".freeze, "http://rdaregistry.info/Elements/u/P60222".freeze, "http://rdaregistry.info/Elements/u/P60262".freeze, "http://rdaregistry.info/Elements/u/P60263".freeze, "http://rdaregistry.info/Elements/u/P60281".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/augmentedBy.en".freeze,
@@ -1718,7 +1724,7 @@ module RDF::Vocab
       label: "is augmented by".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60709".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60205",
+    property :P60205,
       definition: "Relates a resource to a resource that consists of a brief recapitulation of the content of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/summarizedAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1727,7 +1733,7 @@ module RDF::Vocab
       label: "is summarized as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60206",
+    property :P60206,
       definition: "Relates a resource to a resource that consists of a complete enumeration of resources arranged systematically.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/catalogue.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1736,7 +1742,7 @@ module RDF::Vocab
       label: "has catalogue".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60207",
+    property :P60207,
       definition: "Relates a resource to a resource that is an issue that is devoted to a specific topic.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/specialIssue.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1745,7 +1751,7 @@ module RDF::Vocab
       label: "has special issue".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60249".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60208",
+    property :P60208,
       definition: "Relates a resource to a resource that consists of an index of all or selected words that occur in a textual resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/concordance.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1754,7 +1760,7 @@ module RDF::Vocab
       label: "has concordance".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60209",
+    property :P60209,
       definition: "Relates a resource to a resource that consists of brief content that is essential for the completeness of a related resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/addenda.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1763,7 +1769,7 @@ module RDF::Vocab
       label: "has addenda".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60210",
+    property :P60210,
       definition: "Relates a resource to a musical or choreographic resource such as an opera, a ballet, or other resource for the musical stage, or an oratorio".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAsLibretto.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1772,7 +1778,7 @@ module RDF::Vocab
       label: "is adapted as libretto".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60211",
+    property :P60211,
       definition: "Relates a resource to a resource that is a brief evaluation of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/reviewedIn.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1781,7 +1787,7 @@ module RDF::Vocab
       label: "is reviewed in".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60215".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60212",
+    property :P60212,
       definition: "Relates a resource to a resource that is a critical evaluation of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/critiquedIn.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1790,7 +1796,7 @@ module RDF::Vocab
       label: "is critiqued in".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60215".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60213",
+    property :P60213,
       definition: "Relates a resource to a resource that is a set of explanatory or critical notes on a resource".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/commentaryIn.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1799,7 +1805,7 @@ module RDF::Vocab
       label: "is commentary in".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60215".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60214",
+    property :P60214,
       definition: "Relates a resource to a resource that copies the style or content of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60246".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/imitatedAs.en".freeze,
@@ -1809,7 +1815,7 @@ module RDF::Vocab
       label: "is imitated as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60215",
+    property :P60215,
       definition: "Relates an entity to a resource that describes a entity.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60211".freeze, "http://rdaregistry.info/Elements/u/P60212".freeze, "http://rdaregistry.info/Elements/u/P60213".freeze, "http://rdaregistry.info/Elements/u/P60218".freeze, "http://rdaregistry.info/Elements/u/P60219".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/describedIn.en".freeze,
@@ -1819,7 +1825,7 @@ module RDF::Vocab
       label: "is described in".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60806".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60216",
+    property :P60216,
       definition: "Relates a resource to a resource that enlarges upon the content of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/expandedAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1828,7 +1834,7 @@ module RDF::Vocab
       label: "is expanded as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60217",
+    property :P60217,
       definition: "Relates a resource to a resource that exactly reproduces a related resource embodying a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60179".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/facsimile.en".freeze,
@@ -1838,7 +1844,7 @@ module RDF::Vocab
       label: "has facsimile".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60272".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60218",
+    property :P60218,
       definition: "Relates a resource to a resource that examines or judges a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/evaluatedIn.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1847,7 +1853,7 @@ module RDF::Vocab
       label: "is evaluated in".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60215".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60219",
+    property :P60219,
       definition: "Relates a resource to a resource that describes the structure and composition of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/analysedIn.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1856,7 +1862,7 @@ module RDF::Vocab
       label: "is analysed in".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60215".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60220",
+    property :P60220,
       altLabel: "is sequel to".freeze,
       definition: "Relates a resource to a resource that extends the narrative of another resource backwards in time.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/prequel.en".freeze,
@@ -1866,7 +1872,7 @@ module RDF::Vocab
       label: "has prequel".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60261".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60221",
+    property :P60221,
       definition: "Relates a resource to a resource whose content augments a related resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/appendix.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1875,7 +1881,7 @@ module RDF::Vocab
       label: "has appendix".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60222",
+    property :P60222,
       definition: "Relates a resource to a resource that guides a user through the use of a predominant resource, using notes, learning and study aids, exercises, problems, questions and answers, instructor or student materials, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/guide.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1884,7 +1890,7 @@ module RDF::Vocab
       label: "has guide".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60223",
+    property :P60223,
       definition: "Relates a resource to a resource that is shortened as a related resoure without changing the general meaning or manner of presentation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/abridgementOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1893,7 +1899,7 @@ module RDF::Vocab
       label: "is abridgement of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60224",
+    property :P60224,
       definition: "Relates a resource to a resource that is abbreviated in a brief, objective manner.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/abstractOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1902,7 +1908,7 @@ module RDF::Vocab
       label: "is abstract of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60225",
+    property :P60225,
       definition: "Relates a resource to a resource that is adapted as a drama.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dramatizationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1911,7 +1917,7 @@ module RDF::Vocab
       label: "is dramatization of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60226",
+    property :P60226,
       definition: "Relates a resource to a resource that is adapted as a literary composition in verse form.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/verseAdaptationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1920,7 +1926,7 @@ module RDF::Vocab
       label: "is verse adaptation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60227",
+    property :P60227,
       definition: "Relates a resource to a resource that is adapted as a motion picture.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/motionPictureAdaptationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1929,7 +1935,7 @@ module RDF::Vocab
       label: "is motion picture adaptation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60228",
+    property :P60228,
       definition: "Relates a resource to a resource that is adapted as a novel.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/novelizationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1938,7 +1944,7 @@ module RDF::Vocab
       label: "is novelization of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60229",
+    property :P60229,
       definition: "Relates a resource to a resource that is adapted as a radio program.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/radioAdaptationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1947,7 +1953,7 @@ module RDF::Vocab
       label: "is radio adaptation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60230",
+    property :P60230,
       definition: "Relates a resource to a resource that is adapted as a television program.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/televisionAdaptationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1956,7 +1962,7 @@ module RDF::Vocab
       label: "is television adaptation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60231",
+    property :P60231,
       definition: "Relates a resource to a resource that is adapted as a screenplay for a motion picture, television program, or video.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60232".freeze, "http://rdaregistry.info/Elements/u/P60233".freeze, "http://rdaregistry.info/Elements/u/P60234".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/screenplayBasedOn.en".freeze,
@@ -1966,7 +1972,7 @@ module RDF::Vocab
       label: "is screenplay based on".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60232",
+    property :P60232,
       definition: "Relates a resource to a resource that is adapted as a screenplay for a motion picture.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/motionPictureScreenplayBasedOn.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1975,7 +1981,7 @@ module RDF::Vocab
       label: "is motion picture screenplay based on".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60231".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60233",
+    property :P60233,
       definition: "Relates a resource to a resource that is adapted as a screenplay for a television program.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/televisionScreenplayBasedOn.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1984,7 +1990,7 @@ module RDF::Vocab
       label: "is television screenplay based on".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60231".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60234",
+    property :P60234,
       definition: "Relates a resource to a resource that is adapted as a screenplay for a video.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/videoScreenplayBasedOn.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -1993,7 +1999,7 @@ module RDF::Vocab
       label: "is video screenplay based on".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60231".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60235",
+    property :P60235,
       definition: "Relates a resource to a resource that is adapted as a script for a radio program.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/radioScriptBasedOn.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2002,7 +2008,7 @@ module RDF::Vocab
       label: "is radio script based on".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60236",
+    property :P60236,
       definition: "Relates a resource to a resource that is adapted for video.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/videoAdaptationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2011,7 +2017,7 @@ module RDF::Vocab
       label: "is video adaptation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60237",
+    property :P60237,
       definition: "Relates a resource to a resource that is physically combined or joined with a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/boundWith.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2020,7 +2026,7 @@ module RDF::Vocab
       label: "is bound with".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60196".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60238",
+    property :P60238,
       definition: "Relates a resource to a resource that is a systematic and comprehensive condensing of a related resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/digestOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2029,7 +2035,7 @@ module RDF::Vocab
       label: "is digest of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60239",
+    property :P60239,
       definition: "Relates a resource to a resource whose structure is described by a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/analysisOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2038,7 +2044,7 @@ module RDF::Vocab
       label: "is analysis of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60190".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60240",
+    property :P60240,
       altLabel: "is series container of".freeze,
       definition: "Relates a resource to a resource that is a static resource that is inspired by the overall editorial policy, scope, and style of a successive aggregating resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/issue.en".freeze,
@@ -2048,7 +2054,7 @@ module RDF::Vocab
       label: "has issue".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60249".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60241",
+    property :P60241,
       definition: "Relates a resource to a resource that is modified for a purpose, use, or medium other than that for which it was originally intended.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60225".freeze, "http://rdaregistry.info/Elements/u/P60226".freeze, "http://rdaregistry.info/Elements/u/P60227".freeze, "http://rdaregistry.info/Elements/u/P60228".freeze, "http://rdaregistry.info/Elements/u/P60229".freeze, "http://rdaregistry.info/Elements/u/P60230".freeze, "http://rdaregistry.info/Elements/u/P60231".freeze, "http://rdaregistry.info/Elements/u/P60235".freeze, "http://rdaregistry.info/Elements/u/P60236".freeze, "http://rdaregistry.info/Elements/u/P60719".freeze, "http://rdaregistry.info/Elements/u/P60720".freeze, "http://rdaregistry.info/Elements/u/P60743".freeze, "http://rdaregistry.info/Elements/u/P60745".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptationOf.en".freeze,
@@ -2059,7 +2065,7 @@ module RDF::Vocab
       label: "is adaptation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60242",
+    property :P60242,
       definition: "Relates a resource to a resource that is rewritten as a musical composition for a medium of performance different from that for which a resource was originally intended.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/arrangementOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2068,7 +2074,7 @@ module RDF::Vocab
       label: "is arrangement of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60243",
+    property :P60243,
       definition: "Relates a resource to a resource that is adapted and translated into another language.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/freeTranslationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2077,7 +2083,7 @@ module RDF::Vocab
       label: "is free translation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60244",
+    property :P60244,
       definition: "Relates a resource to a resource that is translated, i.e., the text expressed in a language different from that of an original resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60111".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/translationOf.en".freeze,
@@ -2087,7 +2093,7 @@ module RDF::Vocab
       label: "is translation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60245",
+    property :P60245,
       definition: "Relates a resource to a resource that is updated, corrected, or expanded.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/revisedAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2096,7 +2102,7 @@ module RDF::Vocab
       label: "is revised as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60246",
+    property :P60246,
       definition: "Relates a resource to a resource that imitates the style or content of another resource for comic effect.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parodiedAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2105,7 +2111,7 @@ module RDF::Vocab
       label: "is parodied as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60214".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60247",
+    property :P60247,
       definition: "Relates a resource to a resource whose content incorporates the content of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/absorbedBy.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2114,7 +2120,7 @@ module RDF::Vocab
       label: "is absorbed by".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60278".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60248",
+    property :P60248,
       definition: "Relates a resource to a resource whose content incorporates the partial content of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/absorbedInPartBy.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2123,7 +2129,7 @@ module RDF::Vocab
       label: "is absorbed in part by".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60278".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60249",
+    property :P60249,
       altLabel: "is container of resource".freeze,
       definition: "Relates a resource to a resource that is a discrete component of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60183".freeze, "http://rdaregistry.info/Elements/u/P60207".freeze, "http://rdaregistry.info/Elements/u/P60240".freeze, "http://rdaregistry.info/Elements/u/P60300".freeze, "http://rdaregistry.info/Elements/u/P60316".freeze],
@@ -2134,7 +2140,7 @@ module RDF::Vocab
       label: "has part resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60714".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60250",
+    property :P60250,
       definition: "Relates a resource to a resource that is a modification of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60115".freeze, "http://rdaregistry.info/Elements/u/P60120".freeze, "http://rdaregistry.info/Elements/u/P60121".freeze, "http://rdaregistry.info/Elements/u/P60177".freeze, "http://rdaregistry.info/Elements/u/P60178".freeze, "http://rdaregistry.info/Elements/u/P60180".freeze, "http://rdaregistry.info/Elements/u/P60189".freeze, "http://rdaregistry.info/Elements/u/P60203".freeze, "http://rdaregistry.info/Elements/u/P60205".freeze, "http://rdaregistry.info/Elements/u/P60210".freeze, "http://rdaregistry.info/Elements/u/P60214".freeze, "http://rdaregistry.info/Elements/u/P60216".freeze, "http://rdaregistry.info/Elements/u/P60245".freeze, "http://rdaregistry.info/Elements/u/P60260".freeze, "http://rdaregistry.info/Elements/u/P60273".freeze, "http://rdaregistry.info/Elements/u/P60274".freeze, "http://rdaregistry.info/Elements/u/P60275".freeze, "http://rdaregistry.info/Elements/u/P60279".freeze, "http://rdaregistry.info/Elements/u/P60280".freeze, "http://rdaregistry.info/Elements/u/P60831".freeze, "http://rdaregistry.info/Elements/u/P60833".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/derivative.en".freeze,
@@ -2144,7 +2150,7 @@ module RDF::Vocab
       label: "has derivative".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60710".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60251",
+    property :P60251,
       definition: "Relates a resource to a resource that is augmented by a list of errors in a predominant resource, discovered after publication, with their corrections.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/errataTo.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2153,7 +2159,7 @@ module RDF::Vocab
       label: "is errata to".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60252",
+    property :P60252,
       definition: "Relates a resource to a resource that is augmented by a related resource that consists of material, such as notes, learning and study aids, exercises, problems, questions and answers, instructor or student materials, etc., to help a user of a predominant resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/guideTo.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2162,7 +2168,7 @@ module RDF::Vocab
       label: "is guide to".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60253",
+    property :P60253,
       definition: "Relates a resource to a resource whose content is augmented with content from a related resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/appendixTo.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2171,7 +2177,7 @@ module RDF::Vocab
       label: "is appendix to".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60254",
+    property :P60254,
       definition: "Relates a resource to a resource that is augmented by pictorial content designed to explain or decorate it.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/illustrationsFor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2180,7 +2186,7 @@ module RDF::Vocab
       label: "is illustrations for".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60255",
+    property :P60255,
       definition: "Relates a resource to a resource that is examined or judged.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/evaluationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2189,7 +2195,7 @@ module RDF::Vocab
       label: "is evaluation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60190".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60256",
+    property :P60256,
       definition: "Relates a resource to a resource that is issued on the same carrier as a resource being described.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60257".freeze, "http://rdaregistry.info/Elements/u/P60258".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/issuedWith.en".freeze,
@@ -2199,7 +2205,7 @@ module RDF::Vocab
       label: "is issued with".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60196".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60257",
+    property :P60257,
       definition: "Relates a resource to a resource that is contained on the same disc as a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/onDiscWith.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2208,7 +2214,7 @@ module RDF::Vocab
       label: "is on disc with".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60256".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60258",
+    property :P60258,
       definition: "Relates a resource to a resource that is contained on the same microform as a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/filmedWith.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2217,7 +2223,7 @@ module RDF::Vocab
       label: "is filmed with".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60256".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60259",
+    property :P60259,
       definition: "Relates a resource to a resource that is updated or otherwise complemented by an augmenting resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/supplementTo.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2226,7 +2232,7 @@ module RDF::Vocab
       label: "is supplement to".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60260",
+    property :P60260,
       definition: "Relates a resource to a resource that modifies another resource for a purpose, use, or medium other than that for which it was originally intended.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60088".freeze, "http://rdaregistry.info/Elements/u/P60106".freeze, "http://rdaregistry.info/Elements/u/P60110".freeze, "http://rdaregistry.info/Elements/u/P60138".freeze, "http://rdaregistry.info/Elements/u/P60174".freeze, "http://rdaregistry.info/Elements/u/P60185".freeze, "http://rdaregistry.info/Elements/u/P60188".freeze, "http://rdaregistry.info/Elements/u/P60354".freeze, "http://rdaregistry.info/Elements/u/P60361".freeze, "http://rdaregistry.info/Elements/u/P60721".freeze, "http://rdaregistry.info/Elements/u/P60722".freeze, "http://rdaregistry.info/Elements/u/P60742".freeze, "http://rdaregistry.info/Elements/u/P60744".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAs.en".freeze,
@@ -2237,7 +2243,7 @@ module RDF::Vocab
       label: "is adapted as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60261",
+    property :P60261,
       definition: "Relates a resource to a resource whose chronological coverage is before that of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60220".freeze, "http://rdaregistry.info/Elements/u/P60276".freeze, "http://rdaregistry.info/Elements/u/P60277".freeze, "http://rdaregistry.info/Elements/u/P60479".freeze, "http://rdaregistry.info/Elements/u/P60480".freeze, "http://rdaregistry.info/Elements/u/P60505".freeze, "http://rdaregistry.info/Elements/u/P60574".freeze, "http://rdaregistry.info/Elements/u/P60575".freeze, "http://rdaregistry.info/Elements/u/P60576".freeze, "http://rdaregistry.info/Elements/u/P60577".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/precededBy.en".freeze,
@@ -2247,7 +2253,7 @@ module RDF::Vocab
       label: "is preceded by".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60713".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60262",
+    property :P60262,
       definition: "Relates a resource to a resource that provides a guide to the organization, arrangement, and contents of an archival collection.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/findingAid.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2256,7 +2262,7 @@ module RDF::Vocab
       label: "has finding aid".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60263",
+    property :P60263,
       definition: "Relates a resource to a resource that provides a systematic, alphabetical guide to the contents of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/index.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2265,7 +2271,7 @@ module RDF::Vocab
       label: "has index".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60264",
+    property :P60264,
       definition: "Relates a resource to a resource that is realized as text that complements a resource that uses a screenplay.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60265".freeze, "http://rdaregistry.info/Elements/u/P60268".freeze, "http://rdaregistry.info/Elements/u/P60269".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/screenplay.en".freeze,
@@ -2275,7 +2281,7 @@ module RDF::Vocab
       label: "has screenplay".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60265",
+    property :P60265,
       definition: "Relates a resource to a resource that is textual resource that complements a resource that is a motion picture.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/motionPictureScreenplay.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2284,7 +2290,7 @@ module RDF::Vocab
       label: "has motion picture screenplay".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60264".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60266",
+    property :P60266,
       definition: "Relates a resource to a resource that provides text for a non-dramatic musical resource, other than an oratorio.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/musicalSettingOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2293,7 +2299,7 @@ module RDF::Vocab
       label: "is musical setting of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60267",
+    property :P60267,
       definition: "Relates a resource to a resource that is texual resource that complements a work that is a radio program.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/radioScript.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2302,7 +2308,7 @@ module RDF::Vocab
       label: "has radio script".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60268",
+    property :P60268,
       definition: "Relates a resource to a resource that is a textual resource that complements a resource that is a television program.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/televisionScreenplay.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2311,7 +2317,7 @@ module RDF::Vocab
       label: "has television screenplay".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60264".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60269",
+    property :P60269,
       definition: "Relates a resource to a resource that is a textual resource that complements a resource that is a video.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/videoScreenplay.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2320,7 +2326,7 @@ module RDF::Vocab
       label: "has video screenplay".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60264".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60270",
+    property :P60270,
       definition: "Relates a resource to a resource that is realized as text that complements a resource that is an opera or other resource for the musical stage, or an oratorio.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/libretto.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2329,7 +2335,7 @@ module RDF::Vocab
       label: "has libretto".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60271",
+    property :P60271,
       definition: "Relates a resource to a resource that reissues the same resource as a printed resource being described.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/reprintedAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2338,7 +2344,7 @@ module RDF::Vocab
       label: "is reprinted as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60272".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60272",
+    property :P60272,
       definition: "Relates a resource to a resource that reproduces a related resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60083".freeze, "http://rdaregistry.info/Elements/u/P60200".freeze, "http://rdaregistry.info/Elements/u/P60217".freeze, "http://rdaregistry.info/Elements/u/P60271".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/reproducedAs.en".freeze,
@@ -2348,7 +2354,7 @@ module RDF::Vocab
       label: "is reproduced as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60191".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60273",
+    property :P60273,
       definition: "Relates a resource to a resource that restates a content of anothere resource in a different form.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/paraphrasedAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2357,7 +2363,7 @@ module RDF::Vocab
       label: "is paraphrased as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60274",
+    property :P60274,
       definition: "Relates a resource to a resource that rewrites a musical composition for a medium of performance different from that for which a resource was originally intended.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/arrangedAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2366,7 +2372,7 @@ module RDF::Vocab
       label: "is arranged as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60275",
+    property :P60275,
       definition: "Relates a resource to a resource that shortens a related resource without changing the general meaning or manner of presentation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/abridgedAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2375,7 +2381,7 @@ module RDF::Vocab
       label: "is abridged as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60276",
+    property :P60276,
       definition: "Relates a resource to a resource that is a diachronic resource that is completed whose partial content is continued by another diachronic resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/splitFrom.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2385,7 +2391,7 @@ module RDF::Vocab
       label: "is split from".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60261".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60277",
+    property :P60277,
       definition: "Relates a resource to a resource that is a diachronic resource that is continuing whose partial content is continued by another diachronic resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/separatedFrom.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2394,7 +2400,7 @@ module RDF::Vocab
       label: "is separated from".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60261".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60278",
+    property :P60278,
       definition: "Relates a resource to a resource whose chronological coverage is after that of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60102".freeze, "http://rdaregistry.info/Elements/u/P60103".freeze, "http://rdaregistry.info/Elements/u/P60104".freeze, "http://rdaregistry.info/Elements/u/P60199".freeze, "http://rdaregistry.info/Elements/u/P60247".freeze, "http://rdaregistry.info/Elements/u/P60248".freeze, "http://rdaregistry.info/Elements/u/P60306".freeze, "http://rdaregistry.info/Elements/u/P60310".freeze, "http://rdaregistry.info/Elements/u/P60503".freeze, "http://rdaregistry.info/Elements/u/P60504".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/succeededBy.en".freeze,
@@ -2404,7 +2410,7 @@ module RDF::Vocab
       label: "is succeeded by".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60713".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60279",
+    property :P60279,
       definition: "Relates a resource to a resource that systematically and comprehensively condenses a related resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/digestedAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2413,7 +2419,7 @@ module RDF::Vocab
       label: "is digested as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60280",
+    property :P60280,
       definition: "Relates a resource to a resource that translates the text of another resource into a different language.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60112".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/translatedAs.en".freeze,
@@ -2423,7 +2429,7 @@ module RDF::Vocab
       label: "is translated as".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60281",
+    property :P60281,
       definition: "Relates a resource to a resource that updates or otherwise complements a predominant resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/supplement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2432,7 +2438,7 @@ module RDF::Vocab
       label: "has supplement".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60282",
+    property :P60282,
       definition: "Relates a resource to a resource that is a motion picture that is complemented by a textual resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/screenplayForMotionPicture.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2441,7 +2447,7 @@ module RDF::Vocab
       label: "is screenplay for motion picture".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60201".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60283",
+    property :P60283,
       definition: "Relates a resource to a resource that is a television program that is complemented by a textual resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/screenplayForTelevisionProgram.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2450,7 +2456,7 @@ module RDF::Vocab
       label: "is screenplay for television program".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60201".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60284",
+    property :P60284,
       definition: "Relates a resource to a resource that is a video that is complemented by a textual resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/screenplayForVideo.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2459,7 +2465,7 @@ module RDF::Vocab
       label: "is screenplay for video".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60201".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60285",
+    property :P60285,
       definition: "Relates a resource to a resource that is a radio program that is complemented by a textual resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/scriptForRadioProgram.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2468,7 +2474,7 @@ module RDF::Vocab
       label: "is script for radio program".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60286",
+    property :P60286,
       definition: "Relates a resource to a resource whose content is completed with brief content from a related resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/addendaTo.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2477,7 +2483,7 @@ module RDF::Vocab
       label: "is addenda to".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60287",
+    property :P60287,
       definition: "Relates a resource to a resource in a digital format that is transferred to another digital format.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/digitalTransferOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2486,7 +2492,7 @@ module RDF::Vocab
       label: "is digital transfer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60297".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60288",
+    property :P60288,
       definition: "Relates a resource to a resource used as a basis for a brief evaluation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/reviewOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2495,7 +2501,7 @@ module RDF::Vocab
       label: "is review of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60190".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60289",
+    property :P60289,
       definition: "Relates a resource to a resource used as a basis for a brief recapitulation of its content.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/summaryOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2504,7 +2510,7 @@ module RDF::Vocab
       label: "is summary of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60290",
+    property :P60290,
       definition: "Relates a resource to a resource used as a basis for a complete enumeration of resources arranged systematically.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/catalogueOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2513,7 +2519,7 @@ module RDF::Vocab
       label: "is catalogue of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60291",
+    property :P60291,
       definition: "Relates a resource to a resource used as a basis for an index of all or selected words that occur in a textual resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/concordanceTo.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2522,7 +2528,7 @@ module RDF::Vocab
       label: "is concordance to".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60292",
+    property :P60292,
       definition: "Relates a resource to a resource used as a basis for a critical evaluation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/critiqueOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2531,7 +2537,7 @@ module RDF::Vocab
       label: "is critique of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60190".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60293",
+    property :P60293,
       definition: "Relates a resource to a resource that is adapted as a choreographic resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/choreographicAdaptationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2540,7 +2546,7 @@ module RDF::Vocab
       label: "is choreographic adaptation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60294",
+    property :P60294,
       definition: "Relates a resource to a resource used as a basis for a derivative resource that enlarges upon the content of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/expandedVersionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2549,7 +2555,7 @@ module RDF::Vocab
       label: "is expanded version of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60295",
+    property :P60295,
       definition: "Relates a resource to a resource used as a basis for a new motion picture, radio program, television program, or video.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/remakeOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2558,7 +2564,7 @@ module RDF::Vocab
       label: "is remake of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60296",
+    property :P60296,
       definition: "Relates a resource to a resource used as a basis for a restating of the content of another resource in a different form.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/paraphraseOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2567,7 +2573,7 @@ module RDF::Vocab
       label: "is paraphrase of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60297",
+    property :P60297,
       definition: "Relates a resource to a resource that is used as a basis for a reproduction.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60168".freeze, "http://rdaregistry.info/Elements/u/P60287".freeze, "http://rdaregistry.info/Elements/u/P60301".freeze, "http://rdaregistry.info/Elements/u/P60469".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/reproductionOf.en".freeze,
@@ -2577,7 +2583,7 @@ module RDF::Vocab
       label: "is reproduction of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60191".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60298",
+    property :P60298,
       definition: "Relates a resource to a resource used as a basis for a set of explanatory or critical notes.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/commentaryOn.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2586,7 +2592,7 @@ module RDF::Vocab
       label: "is commentary on".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60190".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60299",
+    property :P60299,
       definition: "Relates a resource to a resource that is used as a basis for an exact reproduction on preservation-quality media, such as acid-free permanent or archival paper.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/preservationFacsimileOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2595,7 +2601,7 @@ module RDF::Vocab
       label: "is preservation facsimile of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60301".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60300",
+    property :P60300,
       definition: "Relates a resource to a resource used as a basis for an exact reproduction that is a discrete component of a larger entity.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/facsimilePart.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2604,7 +2610,7 @@ module RDF::Vocab
       label: "has facsimile part".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60249".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60301",
+    property :P60301,
       definition: "Relates a resource to a resource that is used as a basis for an exact reproduction.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60299".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/facsimileOf.en".freeze,
@@ -2614,7 +2620,7 @@ module RDF::Vocab
       label: "is facsimile of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60297".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60302",
+    property :P60302,
       definition: "Relates a resource to a resource that is used as a basis for a resource that is a systematic, alphabetical guide to its contents.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/indexTo.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2623,7 +2629,7 @@ module RDF::Vocab
       label: "is index to".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60303",
+    property :P60303,
       definition: "Relates a resource to a resource used as a basis for an updated, corrected, or expanded version.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/revisionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2632,7 +2638,7 @@ module RDF::Vocab
       label: "is revision of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60304",
+    property :P60304,
       definition: "Relates a resource to a musical or choreographic resource such as an opera, a ballet, or other resource for the musical stage, or an oratorio".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/librettoBasedOn.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2641,7 +2647,7 @@ module RDF::Vocab
       label: "is libretto based on".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60305",
+    property :P60305,
       definition: "Relates a resource to a resource used as a source for a derivative resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60114".freeze, "http://rdaregistry.info/Elements/u/P60223".freeze, "http://rdaregistry.info/Elements/u/P60224".freeze, "http://rdaregistry.info/Elements/u/P60238".freeze, "http://rdaregistry.info/Elements/u/P60241".freeze, "http://rdaregistry.info/Elements/u/P60242".freeze, "http://rdaregistry.info/Elements/u/P60243".freeze, "http://rdaregistry.info/Elements/u/P60244".freeze, "http://rdaregistry.info/Elements/u/P60266".freeze, "http://rdaregistry.info/Elements/u/P60289".freeze, "http://rdaregistry.info/Elements/u/P60293".freeze, "http://rdaregistry.info/Elements/u/P60294".freeze, "http://rdaregistry.info/Elements/u/P60295".freeze, "http://rdaregistry.info/Elements/u/P60296".freeze, "http://rdaregistry.info/Elements/u/P60303".freeze, "http://rdaregistry.info/Elements/u/P60304".freeze, "http://rdaregistry.info/Elements/u/P60308".freeze, "http://rdaregistry.info/Elements/u/P60309".freeze, "http://rdaregistry.info/Elements/u/P60311".freeze, "http://rdaregistry.info/Elements/u/P60830".freeze, "http://rdaregistry.info/Elements/u/P60832".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/basedOn.en".freeze,
@@ -2651,7 +2657,7 @@ module RDF::Vocab
       label: "is based on".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60710".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60306",
+    property :P60306,
       definition: "Relates a resource to a resource that is a diachronic resource that continues the content of another diachronic resource that is completed.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/continuedBy.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2661,7 +2667,7 @@ module RDF::Vocab
       label: "is continued by".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60278".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60307",
+    property :P60307,
       definition: "Relates a resource to a resource whose content is added to by a related resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60116".freeze, "http://rdaregistry.info/Elements/u/P60251".freeze, "http://rdaregistry.info/Elements/u/P60252".freeze, "http://rdaregistry.info/Elements/u/P60253".freeze, "http://rdaregistry.info/Elements/u/P60254".freeze, "http://rdaregistry.info/Elements/u/P60259".freeze, "http://rdaregistry.info/Elements/u/P60286".freeze, "http://rdaregistry.info/Elements/u/P60290".freeze, "http://rdaregistry.info/Elements/u/P60291".freeze, "http://rdaregistry.info/Elements/u/P60302".freeze, "http://rdaregistry.info/Elements/u/P60474".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/augmentationOf.en".freeze,
@@ -2671,7 +2677,7 @@ module RDF::Vocab
       label: "is augmentation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60709".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60308",
+    property :P60308,
       definition: "Relates a resource to a resource that is abstracted by another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/abstractsFor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2680,7 +2686,7 @@ module RDF::Vocab
       label: "is abstracts for".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60309",
+    property :P60309,
       definition: "Relates a resource to a resource whose contents have been indexed by a related resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/indexingFor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2689,7 +2695,7 @@ module RDF::Vocab
       label: "is indexing for".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60310",
+    property :P60310,
       definition: "Relates a resource to a resource whose narrative is extended backwards in time by the later resource.. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/prequelTo.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -2698,7 +2704,7 @@ module RDF::Vocab
       label: "is prequel to (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60278".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60311",
+    property :P60311,
       definition: "Relates a resource to a resource whose style or content is copied in a derivative resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60312".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/imitationOf.en".freeze,
@@ -2708,7 +2714,7 @@ module RDF::Vocab
       label: "is imitation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60312",
+    property :P60312,
       definition: "Relates a resource to a resource whose style or content is imitated for comic effect.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parodyOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2717,7 +2723,7 @@ module RDF::Vocab
       label: "is parody of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60311".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60313",
+    property :P60313,
       altLabel: "related resource".freeze,
       definition: "Relates a resource to a resource that is associated with a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61005".freeze, "http://rdaregistry.info/Elements/u/P61006".freeze, "http://rdaregistry.info/Elements/u/P61069".freeze, "http://rdaregistry.info/Elements/u/P61070".freeze],
@@ -2728,7 +2734,7 @@ module RDF::Vocab
       label: "has related resource of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61034".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60314",
+    property :P60314,
       definition: "Relates a resource to a schema or standard that is used to encode the digital content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/encodingFormat.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2736,7 +2742,7 @@ module RDF::Vocab
       label: "has encoding format".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60350".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60315",
+    property :P60315,
       definition: "Relates a resource to a serial number, opus number, or thematic index number assigned to a musical resource by a composer, publisher, or a musicologist.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60953".freeze, "http://rdaregistry.info/Elements/u/P60954".freeze, "http://rdaregistry.info/Elements/u/P60955".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/numericDesignationOfMusicalResource.en".freeze,
@@ -2746,7 +2752,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has numeric designation of musical resource".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60316",
+    property :P60316,
       definition: "Relates a resource to a resource that is a successive aggregating resource that is inspired by the overall editorial policy, scope, and style of another successive aggregating resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/subseries.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2755,7 +2761,7 @@ module RDF::Vocab
       label: "has subseries".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60249".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60317",
+    property :P60317,
       definition: "Relates a resource to a resource that has an issue that is devoted to a specific topic.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/specialIssueOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2764,7 +2770,7 @@ module RDF::Vocab
       label: "is special issue of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60101".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60318",
+    property :P60318,
       definition: "Relates a resource to a set of characters or symbols used to express the content of a resource in a form that can be perceived through touch.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/formOfTactileNotation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2772,7 +2778,7 @@ module RDF::Vocab
       label: "has form of tactile notation".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60319".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60319",
+    property :P60319,
       definition: "Relates a resource to a set of characters or symbols used to express the content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60318".freeze, "http://rdaregistry.info/Elements/u/P60320".freeze, "http://rdaregistry.info/Elements/u/P60321".freeze, "http://rdaregistry.info/Elements/u/P60322".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/formOfNotation.en".freeze,
@@ -2780,7 +2786,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has form of notation".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60320",
+    property :P60320,
       definition: "Relates a resource to a set of characters or symbols used to express movement content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/formOfNotatedMovement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2788,7 +2794,7 @@ module RDF::Vocab
       label: "has form of notated movement".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60319".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60321",
+    property :P60321,
       definition: "Relates a resource to a set of characters or symbols used to express musical content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/formOfMusicalNotation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2796,7 +2802,7 @@ module RDF::Vocab
       label: "has form of musical notation".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60319".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60322",
+    property :P60322,
       definition: "Relates a resource to a set of characters or symbols used to express written language content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/script.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2804,7 +2810,7 @@ module RDF::Vocab
       label: "has script".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60319".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60323",
+    property :P60323,
       definition: "Relates a resource to a set of technical details relating to an encoding of geospatial information in a cartographic resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/digitalRepresentationOfCartographicContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2812,7 +2818,7 @@ module RDF::Vocab
       label: "has digital representation of cartographic content".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60350".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60324",
+    property :P60324,
       definition: "Relates a resource to a significant date associated with the history of an agent, or the date or range of dates on which a conference, etc., was held, or a date with which an agent is otherwise associated. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60076".freeze, "http://rdaregistry.info/Elements/u/P60524".freeze, "http://rdaregistry.info/Elements/u/P60525".freeze, "http://rdaregistry.info/Elements/u/P60526".freeze, "http://rdaregistry.info/Elements/u/P60598".freeze, "http://rdaregistry.info/Elements/u/P60599".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateAssociatedWithAgent.en".freeze,
@@ -2822,7 +2828,7 @@ module RDF::Vocab
       label: "has date associated with agent (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61020".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60325",
+    property :P60325,
       definition: "Relates an agent to a significant location associated with an agent, or a place where an agent resides or has resided or has some connection. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60064".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeAssociatedWithAgent.en".freeze,
@@ -2832,7 +2838,7 @@ module RDF::Vocab
       label: "has place associated with agent (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61018".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60326",
+    property :P60326,
       definition: "Relates a resource to a schema or standard that is used to encode the analog video content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/videoFormat.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2840,7 +2846,7 @@ module RDF::Vocab
       label: "has video format".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60352".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60327",
+    property :P60327,
       definition: "Relates a resource to a statement associated with a title proper of a resource that relates to an identification or function of agents responsible for the creation of, or who contributes to a realization of, the intellectual or artistic content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/statementOfResponsibilityRelatingToTitleProper.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2848,7 +2854,7 @@ module RDF::Vocab
       label: "has statement of responsibility relating to title proper".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60339".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60328",
+    property :P60328,
       definition: "Relates a resource to a statement that identifies a series that is associated with a resource and a numbering of a resource within the series,".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/seriesStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2856,21 +2862,21 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has series statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60329",
+    property :P60329,
       definition: "Relates a resource to a statement identifying an edition to which a resource belongs.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/editionStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has edition statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60330",
+    property :P60330,
       definition: "Relates a resource to a statement that identifies a place of distribution, a distributor, or a date of distribution of a published resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/distributionStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has distribution statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60331",
+    property :P60331,
       definition: "Relates a resource to a statement that identifies a place of manufacture, a manufacturer, or a date of manufacture of a published resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/manufactureStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2878,7 +2884,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has manufacture statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60332",
+    property :P60332,
       definition: "Relates a resource to a statement that identifies a place of production, a producer, or a date of production of an unpublished resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/productionStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2886,42 +2892,42 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has production statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60333",
+    property :P60333,
       definition: "Relates a resource to a statement that identifies a place of publication, a publisher, or a date of publication of a published resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/publicationStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has publication statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60334",
+    property :P60334,
       definition: "Relates a resource to a statement of responsibility relating to a named revision of an edition in a language or script that differs from that recorded in a statement of responsibility relating to a named revision of an edition element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelStatementOfResponsibilityRelatingToNamedRevisionOfEdition.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has parallel statement of responsibility relating to named revision of edition".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60335",
+    property :P60335,
       definition: "Relates a resource to a statement of responsibility relating to series in a language or script that differs from that recorded in a statement of responsibility relating to series element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelStatementOfResponsibilityRelatingToSeries.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has parallel statement of responsibility relating to series".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60336",
+    property :P60336,
       definition: "Relates a resource to a statement of responsibility relating to subseries in a language or script that differs from that recorded in a statement of responsibility relating to subseries element. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelStatementOfResponsibilityRelatingToSubseries.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has parallel statement of responsibility relating to subseries (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60337",
+    property :P60337,
       definition: "Relates a resource to a statement of responsibility relating to an edition in a language or script that differs from that recorded in a statement of responsibility relating to an edition element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelStatementOfResponsibilityRelatingToEdition.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has parallel statement of responsibility relating to edition".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60338",
+    property :P60338,
       definition: "Relates a resource to a statement of responsibility relating to title proper in a language or script that differs from that recorded in a statement of responsibility relating to title proper element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelStatementOfResponsibilityRelatingToTitleProper.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2929,7 +2935,7 @@ module RDF::Vocab
       label: "has parallel statement of responsibility relating to title proper".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60339".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60339",
+    property :P60339,
       definition: "Relates a resource to a statement relating to anidentification or function of any agents responsible for the creation of, or who contributes to a realization of, the intellectual or artistic content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60327".freeze, "http://rdaregistry.info/Elements/u/P60338".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/statementOfResponsibility.en".freeze,
@@ -2937,35 +2943,35 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has statement of responsibility".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60340",
+    property :P60340,
       definition: "Relates a resource to a statement relating to an identification of agents responsible for a named revision of an edition.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/statementOfResponsibilityRelatingToNamedRevisionOfEdition.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has statement of responsibility relating to named revision of edition".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60341",
+    property :P60341,
       definition: "Relates a resource to a statement relating to an identification of agents responsible for a series.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/statementOfResponsibilityRelatingToSeries.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has statement of responsibility relating to series".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60342",
+    property :P60342,
       definition: "Relates a resource to a statement relating to an identification of agents responsible for a subseries. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/statementOfResponsibilityRelatingToSubseries.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has statement of responsibility relating to subseries (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60343",
+    property :P60343,
       definition: "Relates a resource to a statement relating to an identification of agents responsible for an edition being described but not to all editions.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/statementOfResponsibilityRelatingToEdition.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has statement of responsibility relating to edition".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60344",
+    property :P60344,
       definition: "Relates a resource to a suspension of light-sensitive chemicals used as a coating on a microfilm or microfiche.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/emulsionOnMicrofilmAndMicrofiche.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2973,7 +2979,7 @@ module RDF::Vocab
       label: "has emulsion on microfilm and microfiche".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60159".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60345",
+    property :P60345,
       definition: "Relates a resource to a place that identifies the area covered by the cartographic content of a resource using longitude of the westernmost and easternmost boundaries and latitude of the northernmost and southernmost boundaries.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/longitudeAndLatitude.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2982,7 +2988,7 @@ module RDF::Vocab
       label: "has longitude and latitude".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60109".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60346",
+    property :P60346,
       definition: "Relates a resource to a system for identifying the location of a celestial object in the sky covered by the cartographic content of a resource using angles of right ascension and declination.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/rightAscensionAndDeclination.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2991,7 +2997,7 @@ module RDF::Vocab
       label: "has right ascension and declination".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60109".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60347",
+    property :P60347,
       definition: "Relates a resource to a system for identifying the precise area covered by the cartographic content of a resource using coordinates for each vertex of a polygon.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/stringsOfCoordinatePairs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3000,14 +3006,14 @@ module RDF::Vocab
       label: "has strings of coordinate pairs".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60109".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60348",
+    property :P60348,
       definition: "Relates a resource to a system of arranging materials in an archival resource or a collection.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/systemOfOrganization.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has system of organization".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60349",
+    property :P60349,
       definition: "Relates a resource to a system used to format a video resource for television broadcast.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/broadcastStandard.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3015,7 +3021,7 @@ module RDF::Vocab
       label: "has broadcast standard".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60352".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60350",
+    property :P60350,
       definition: "Relates a resource to a technical specification relating to a digital encoding of text, image, audio, video, and other types of data in a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60059".freeze, "http://rdaregistry.info/Elements/u/P60093".freeze, "http://rdaregistry.info/Elements/u/P60314".freeze, "http://rdaregistry.info/Elements/u/P60323".freeze, "http://rdaregistry.info/Elements/u/P60519".freeze, "http://rdaregistry.info/Elements/u/P60551".freeze, "http://rdaregistry.info/Elements/u/P60587".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/digitalFileCharacteristic.en".freeze,
@@ -3023,7 +3029,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has digital file characteristic".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60351",
+    property :P60351,
       definition: "Relates a resource to a technical specification relating to an encoding of sound in a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60481".freeze, "http://rdaregistry.info/Elements/u/P60522".freeze, "http://rdaregistry.info/Elements/u/P60532".freeze, "http://rdaregistry.info/Elements/u/P60543".freeze, "http://rdaregistry.info/Elements/u/P60552".freeze, "http://rdaregistry.info/Elements/u/P60553".freeze, "http://rdaregistry.info/Elements/u/P60586".freeze, "http://rdaregistry.info/Elements/u/P60594".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/soundCharacteristic.en".freeze,
@@ -3031,7 +3037,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has sound characteristic".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60352",
+    property :P60352,
       definition: "Relates a resource to a technical specification relating to an encoding of video images in a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60326".freeze, "http://rdaregistry.info/Elements/u/P60349".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/videoCharacteristic.en".freeze,
@@ -3039,7 +3045,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has video characteristic".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60353",
+    property :P60353,
       definition: "Relates a resource to a technical specification relating to the projection of a motion picture film.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60529".freeze, "http://rdaregistry.info/Elements/u/P60585".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/projectionCharacteristicOfMotionPictureFilm.en".freeze,
@@ -3047,7 +3053,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has projection characteristic of motion picture film".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60354",
+    property :P60354,
       definition: "Relates a resource to a television program based on another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAsTelevisionProgram.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3056,7 +3062,7 @@ module RDF::Vocab
       label: "is adapted as television program".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60355",
+    property :P60355,
       definition: "Relates a resource to a title of resource that is not selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantTitleOfResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3065,14 +3071,14 @@ module RDF::Vocab
       label: "has variant title of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60367".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60356",
+    property :P60356,
       definition: "Relates an agent to a title of nobility, etc., associated with an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/hereditaryTitle.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has hereditary title".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60357",
+    property :P60357,
       definition: "Relates a resource to a title proper appearing on a later issue or part of a multipart monograph or serial that differs from that on the first or earliest issue or part. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/laterTitleProper.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -3080,7 +3086,7 @@ module RDF::Vocab
       label: "has later title proper (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60369".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60358",
+    property :P60358,
       definition: "Relates a resource to a title proper appearing on an earlier iteration of an integrating resource that differs from that on a current iteration. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/earlierTitleProper.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -3088,7 +3094,7 @@ module RDF::Vocab
       label: "has earlier title proper (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60369".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60359",
+    property :P60359,
       definition: "Relates a resource to a title that is abbreviated for purposes of indexing or identification.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/abbreviatedTitle.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3097,7 +3103,7 @@ module RDF::Vocab
       label: "has abbreviated title".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60369".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60360",
+    property :P60360,
       definition: "Relates an agent to a town, city, province, state, or country in which an agent resides or has resided, or another significant place associated with an agent other than place of birth, place of death, or residence.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfResidence.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3107,7 +3113,7 @@ module RDF::Vocab
       label: "has place of residence".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61018".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60361",
+    property :P60361,
       definition: "Relates a resource to a video based on another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAsVideo.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3116,7 +3122,7 @@ module RDF::Vocab
       label: "is adapted as video".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60362",
+    property :P60362,
       definition: "Relates an agent to a well-known individual who is a member of an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/prominentMemberOfFamily.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3124,28 +3130,28 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has prominent member of agent".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60363",
+    property :P60363,
       definition: "Relates an agent to a word or phrase indicative of royalty, nobility, or ecclesiastical rank or office, a term of address for an agent of religious vocation, or another term indicative of rank, honour, or office.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/termOfRankHonourOrOffice.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has term of rank, honour, or office".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60364",
+    property :P60364,
       definition: "Relates a resource to a word, character or group of words or characters, identifying a particular revision of a named edition.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/designationOfNamedRevisionOfEdition.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has designation of named revision of edition".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60365",
+    property :P60365,
       definition: "Relates a resource to a word, character or group of words or characters, identifying an edition to which a resource belongs.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/designationOfEdition.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has designation of edition".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60366",
+    property :P60366,
       definition: "Relates a place to an appellation of place in natural language and phrasing used in common discourse.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60548".freeze, "http://rdaregistry.info/Elements/u/P60880".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfPlace.en".freeze,
@@ -3155,7 +3161,7 @@ module RDF::Vocab
       label: "has name of place".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60939".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60367",
+    property :P60367,
       definition: "Relates a resource to an appellation of resource in natural language and phrasing used in common discourse.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60355".freeze, "http://rdaregistry.info/Elements/u/P60516".freeze, "http://rdaregistry.info/Elements/u/P60588".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/titleOfResource.en".freeze,
@@ -3165,7 +3171,7 @@ module RDF::Vocab
       label: "has title of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60369".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60368",
+    property :P60368,
       definition: "Relates an agent to an appellation of agent in natural language and phrasing used in common discourse.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60119".freeze, "http://rdaregistry.info/Elements/u/P60549".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfAgent.en".freeze,
@@ -3175,7 +3181,7 @@ module RDF::Vocab
       label: "has name of agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60909".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60369",
+    property :P60369,
       definition: "Relates an entity to an appellation in natural language and phrasing used in common discourse.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60357".freeze, "http://rdaregistry.info/Elements/u/P60358".freeze, "http://rdaregistry.info/Elements/u/P60359".freeze, "http://rdaregistry.info/Elements/u/P60367".freeze, "http://rdaregistry.info/Elements/u/P60493".freeze, "http://rdaregistry.info/Elements/u/P60507".freeze, "http://rdaregistry.info/Elements/u/P60515".freeze, "http://rdaregistry.info/Elements/u/P60589".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/title.en".freeze,
@@ -3184,14 +3190,14 @@ module RDF::Vocab
       label: "has title".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60909".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60370",
+    property :P60370,
       definition: "Relates a resource to a word, phrase, or abbreviation indicating incorporation or legal status of an agent, or any term serving to differentiate a an agent from other agents, etc., or a term other than a title that is associated with an agent’s name. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/otherDesignationAssociatedWithAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has other designation associated with agent (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60371",
+    property :P60371,
       definition: "Relates a resource to a writer of words added to a musical resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60477".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedLyrics.en".freeze,
@@ -3202,14 +3208,14 @@ module RDF::Vocab
       label: "has writer of added lyrics (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60380".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60372",
+    property :P60372,
       definition: "Relates a resource to an abstract, summary, synopsis, or other description of the content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/summarizationOfContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has summarization of content".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60373",
+    property :P60373,
       definition: "Relates a resource to an agent against whom an appeal is taken on a decision of a lower court recorded in a legal resource of a higher court.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/appellee.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3218,7 +3224,7 @@ module RDF::Vocab
       label: "has appellee".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60374",
+    property :P60374,
       definition: "Relates a resource to an agent other than a creator, custodian, owner, producer, publisher, distributor, or manufacturer associated with a resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60060".freeze, "http://rdaregistry.info/Elements/u/P60061".freeze, "http://rdaregistry.info/Elements/u/P60062".freeze, "http://rdaregistry.info/Elements/u/P60065".freeze, "http://rdaregistry.info/Elements/u/P60157".freeze, "http://rdaregistry.info/Elements/u/P60373".freeze, "http://rdaregistry.info/Elements/u/P60375".freeze, "http://rdaregistry.info/Elements/u/P60376".freeze, "http://rdaregistry.info/Elements/u/P60406".freeze, "http://rdaregistry.info/Elements/u/P60421".freeze, "http://rdaregistry.info/Elements/u/P60441".freeze, "http://rdaregistry.info/Elements/u/P60449".freeze, "http://rdaregistry.info/Elements/u/P60450".freeze, "http://rdaregistry.info/Elements/u/P60451".freeze, "http://rdaregistry.info/Elements/u/P60452".freeze, "http://rdaregistry.info/Elements/u/P60455".freeze, "http://rdaregistry.info/Elements/u/P60456".freeze, "http://rdaregistry.info/Elements/u/P60457".freeze, "http://rdaregistry.info/Elements/u/P60458".freeze, "http://rdaregistry.info/Elements/u/P60459".freeze, "http://rdaregistry.info/Elements/u/P60460".freeze, "http://rdaregistry.info/Elements/u/P60461".freeze, "http://rdaregistry.info/Elements/u/P60462".freeze, "http://rdaregistry.info/Elements/u/P60464".freeze, "http://rdaregistry.info/Elements/u/P60466".freeze, "http://rdaregistry.info/Elements/u/P60467".freeze, "http://rdaregistry.info/Elements/u/P60483".freeze, "http://rdaregistry.info/Elements/u/P60815".freeze, "http://rdaregistry.info/Elements/u/P60834".freeze, "http://rdaregistry.info/Elements/u/P60836".freeze, "http://rdaregistry.info/Elements/u/P60849".freeze, "http://rdaregistry.info/Elements/u/P60869".freeze, "http://rdaregistry.info/Elements/u/P60871".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/otherAgentAssociatedWithResource.en".freeze,
@@ -3227,7 +3233,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has other agent associated with resource (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60375",
+    property :P60375,
       definition: "Relates a resource to an agent who assigns a resource as an acknowledgement of the inspiration or support of a related agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dedicator.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3236,7 +3242,7 @@ module RDF::Vocab
       label: "has dedicator".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60376",
+    property :P60376,
       definition: "Relates a resource to an agent who conceives, aggregates, or organizes an exhibition or collection of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60066".freeze, "http://rdaregistry.info/Elements/u/P60067".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/curator.en".freeze,
@@ -3246,7 +3252,7 @@ module RDF::Vocab
       label: "has curator".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60377",
+    property :P60377,
       definition: "Relates a resource to an agent who is a contributor agent of cartography who provides measurements or dimensional relationships for a geographic area.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/surveyor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3255,7 +3261,7 @@ module RDF::Vocab
       label: "has surveyor".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60378",
+    property :P60378,
       definition: "Relates a resource to an agent who contributes to a resource by giving apparent movement to inanimate objects or drawings.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60431".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/animator.en".freeze,
@@ -3266,7 +3272,7 @@ module RDF::Vocab
       label: "has animator".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60379",
+    property :P60379,
       definition: "Relates a resource to an agent who contributes to a resource by rewriting a composition for a medium of performance different from that for which a resource was originally intended.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60426".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/arrangerOfMusic.en".freeze,
@@ -3277,7 +3283,7 @@ module RDF::Vocab
       label: "has arranger of music".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60380",
+    property :P60380,
       definition: "Relates a resource to an agent who contributes to a primarily non-textual resource by providing text, such as writing captions for photographs or descriptions of maps. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60371".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedText.en".freeze,
@@ -3287,7 +3293,7 @@ module RDF::Vocab
       label: "has writer of added text (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60392".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60381",
+    property :P60381,
       definition: "Relates a resource to an agent who contributes to a resource by an architect, inventor, or other agent by making detailed plans or drawings for buildings, ships, aircraft, machines, objects, or other constructions.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/draftsman.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3296,7 +3302,7 @@ module RDF::Vocab
       label: "has draftsman".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60382",
+    property :P60382,
       definition: "Relates a resource to an agent who contributes to a resource by writing down or notating unwritten or unnotated content, or by changing it from one system of notation to another.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60379".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/transcriber.en".freeze,
@@ -3307,7 +3313,7 @@ module RDF::Vocab
       label: "has transcriber".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60383",
+    property :P60383,
       definition: "Relates a resource to an agent who contributes to a resource by coordinating the activities of composers, sound editors, and sound mixers for a moving image production or for a musical or dramatic presentation or entertainment.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/musicalDirector.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3316,7 +3322,7 @@ module RDF::Vocab
       label: "has musical director".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60384",
+    property :P60384,
       definition: "Relates a resource to an agent who contributes to a resource by designing costumes for a moving image production or for a musical or dramatic presentation or entertainment.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/costumeDesigner.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3325,7 +3331,7 @@ module RDF::Vocab
       label: "has costume designer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60385",
+    property :P60385,
       definition: "Relates a resource to an agent who contributes to a resource by expressing linguistic content of a resource in a language different from that of previous resources.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/translator.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3335,7 +3341,7 @@ module RDF::Vocab
       label: "has translator".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60386",
+    property :P60386,
       definition: "Relates a resource to an agent who contributes to a resource by overseeing artists and craftspeople who build sets for moving image productions.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/artDirector.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3344,7 +3350,7 @@ module RDF::Vocab
       label: "has art director".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60387",
+    property :P60387,
       definition: "Relates a resource to an agent who contributes to a resource by performing music, acting, dancing, speaking, and other roles, often in a musical or dramatic presentation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60141".freeze, "http://rdaregistry.info/Elements/u/P60142".freeze, "http://rdaregistry.info/Elements/u/P60143".freeze, "http://rdaregistry.info/Elements/u/P60144".freeze, "http://rdaregistry.info/Elements/u/P60145".freeze, "http://rdaregistry.info/Elements/u/P60146".freeze, "http://rdaregistry.info/Elements/u/P60147".freeze, "http://rdaregistry.info/Elements/u/P60148".freeze, "http://rdaregistry.info/Elements/u/P60149".freeze, "http://rdaregistry.info/Elements/u/P60150".freeze, "http://rdaregistry.info/Elements/u/P60151".freeze, "http://rdaregistry.info/Elements/u/P60153".freeze, "http://rdaregistry.info/Elements/u/P60154".freeze, "http://rdaregistry.info/Elements/u/P60155".freeze, "http://rdaregistry.info/Elements/u/P60156".freeze, "http://rdaregistry.info/Elements/u/P61202".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/performer.en".freeze,
@@ -3354,7 +3360,7 @@ module RDF::Vocab
       label: "has performer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60388",
+    property :P60388,
       definition: "Relates a resource to an agent who contributes to a resource by preparing a court's opinions for publication.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/courtReporter.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3363,7 +3369,7 @@ module RDF::Vocab
       label: "has court reporter".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60389",
+    property :P60389,
       definition: "Relates a resource to an agent who contributes to a resource by providing a preface to an original resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPreface.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -3372,7 +3378,7 @@ module RDF::Vocab
       label: "has writer of preface (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60392".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60390",
+    property :P60390,
       definition: "Relates a resource to an agent who contributes to a resource by providing an interpretation or critical explanation of an original resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedCommentary.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -3381,7 +3387,7 @@ module RDF::Vocab
       label: "has writer of added commentary (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60392".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60391",
+    property :P60391,
       definition: "Relates a resource to an agent who contributes to a resource by providing an introduction to an original resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfIntroduction.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -3390,7 +3396,7 @@ module RDF::Vocab
       label: "has writer of introduction (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60392".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60392",
+    property :P60392,
       definition: "Relates a resource to an agent who contributes to a resource by providing supplementary textual content (e.g., an appendix, an introduction, a preface) to an original resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60380".freeze, "http://rdaregistry.info/Elements/u/P60389".freeze, "http://rdaregistry.info/Elements/u/P60390".freeze, "http://rdaregistry.info/Elements/u/P60391".freeze, "http://rdaregistry.info/Elements/u/P60715".freeze, "http://rdaregistry.info/Elements/u/P60716".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContent.en".freeze,
@@ -3400,7 +3406,7 @@ module RDF::Vocab
       label: "has writer of supplementary textual content (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60393",
+    property :P60393,
       definition: "Relates a resource to an agent who contributes to a resource by revising or clarifying the content, or by selecting and putting together resources, or parts of resources, by one or more creators. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60434".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/editor.en".freeze,
@@ -3411,7 +3417,7 @@ module RDF::Vocab
       label: "has editor (Deprecated".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60394",
+    property :P60394,
       definition: "Relates a resource to an agent who contributes to a resource by shortening an a related resource without changing the general meaning or manner of presentation.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60434".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/abridger.en".freeze,
@@ -3422,7 +3428,7 @@ module RDF::Vocab
       label: "has abridger".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60395",
+    property :P60395,
       definition: "Relates a resource to an agent who contributes to a resource by supervising the technical aspects of a sound or video recording session.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/recordingEngineer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3431,7 +3437,7 @@ module RDF::Vocab
       label: "has recording engineer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60396",
+    property :P60396,
       definition: "Relates a resource to an agent who is a contributor to aggregate who creates a still image resource that is embodied by an aggregate.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60750".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentOfStillImage.en".freeze,
@@ -3441,7 +3447,7 @@ module RDF::Vocab
       label: "has contributor agent of still image".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60397",
+    property :P60397,
       definition: "Relates a resource to an agent who contributes to a resource by using a recording device to capture sound or video during a recording session.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/recordist.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3450,7 +3456,7 @@ module RDF::Vocab
       label: "has recordist".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60398",
+    property :P60398,
       definition: "Relates a resource to an agent who contributes to a resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60377".freeze, "http://rdaregistry.info/Elements/u/P60378".freeze, "http://rdaregistry.info/Elements/u/P60379".freeze, "http://rdaregistry.info/Elements/u/P60381".freeze, "http://rdaregistry.info/Elements/u/P60382".freeze, "http://rdaregistry.info/Elements/u/P60383".freeze, "http://rdaregistry.info/Elements/u/P60384".freeze, "http://rdaregistry.info/Elements/u/P60385".freeze, "http://rdaregistry.info/Elements/u/P60386".freeze, "http://rdaregistry.info/Elements/u/P60387".freeze, "http://rdaregistry.info/Elements/u/P60388".freeze, "http://rdaregistry.info/Elements/u/P60392".freeze, "http://rdaregistry.info/Elements/u/P60393".freeze, "http://rdaregistry.info/Elements/u/P60394".freeze, "http://rdaregistry.info/Elements/u/P60395".freeze, "http://rdaregistry.info/Elements/u/P60396".freeze, "http://rdaregistry.info/Elements/u/P60397".freeze, "http://rdaregistry.info/Elements/u/P60399".freeze, "http://rdaregistry.info/Elements/u/P60419".freeze, "http://rdaregistry.info/Elements/u/P60422".freeze, "http://rdaregistry.info/Elements/u/P60437".freeze, "http://rdaregistry.info/Elements/u/P60446".freeze, "http://rdaregistry.info/Elements/u/P60748".freeze, "http://rdaregistry.info/Elements/u/P60749".freeze, "http://rdaregistry.info/Elements/u/P60809".freeze, "http://rdaregistry.info/Elements/u/P60811".freeze, "http://rdaregistry.info/Elements/u/P60813".freeze, "http://rdaregistry.info/Elements/u/P60824".freeze, "http://rdaregistry.info/Elements/u/P60828".freeze, "http://rdaregistry.info/Elements/u/P60838".freeze, "http://rdaregistry.info/Elements/u/P60840".freeze, "http://rdaregistry.info/Elements/u/P60851".freeze, "http://rdaregistry.info/Elements/u/P60892".freeze, "http://rdaregistry.info/Elements/u/P60894".freeze, "http://rdaregistry.info/Elements/u/P60895".freeze, "http://rdaregistry.info/Elements/u/P60896".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributor.en".freeze,
@@ -3460,7 +3466,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has contributor (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60399",
+    property :P60399,
       definition: "Relates a resource to an agent who contributes to a stage resource through the general management and supervision of a performance.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/stageDirector.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3469,7 +3475,7 @@ module RDF::Vocab
       label: "has stage director".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60400",
+    property :P60400,
       definition: "Relates a resource to an agent currently having legal possession of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60068".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/currentOwner.en".freeze,
@@ -3479,7 +3485,7 @@ module RDF::Vocab
       label: "has current owner".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60404".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60401",
+    property :P60401,
       definition: "Relates a resource to an agent formerly having legal possession of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60091".freeze, "http://rdaregistry.info/Elements/u/P60092".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/formerOwner.en".freeze,
@@ -3489,7 +3495,7 @@ module RDF::Vocab
       label: "has former owner".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60404".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60402",
+    property :P60402,
       definition: "Relates a resource to an agent having legal custody of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/custodian.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3497,7 +3503,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has custodian".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60404",
+    property :P60404,
       definition: "Relates a resource to an agent having legal possession of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60400".freeze, "http://rdaregistry.info/Elements/u/P60401".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/owner.en".freeze,
@@ -3506,7 +3512,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has owner".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60406",
+    property :P60406,
       altLabel: "has honoree".freeze,
       definition: "Relates a resource to an agent who is honoured by a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/honouree.en".freeze,
@@ -3516,7 +3522,7 @@ module RDF::Vocab
       label: "has honouree".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60407",
+    property :P60407,
       definition: "Relates a resource to an agent who is responsible for broadcasting a resource to an audience via radio, television, webcast, or other transmission media.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/broadcaster.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3525,7 +3531,7 @@ module RDF::Vocab
       label: "has broadcaster".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60444".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60408",
+    property :P60408,
       definition: "Relates a resource to an agent who is responsible for distributing a moving image resource to theatres or other distribution channels.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/filmDistributor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3534,7 +3540,7 @@ module RDF::Vocab
       label: "has film distributor".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60438".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60409",
+    property :P60409,
       definition: "Relates a resource to an agent who is responsible for manufacturing a resource by being responsible for the entire graphic design of a book, including arrangement of type and illustration, choice of materials, and process used.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/bookDesigner.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3543,7 +3549,7 @@ module RDF::Vocab
       label: "has book designer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60443".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60410",
+    property :P60410,
       definition: "Relates a resource to an agent who is responsible for manufacturing a resource by cutting letters, figures, or other marks on a surface such as a wooden or metal plate used for printing.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/engraver.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3552,7 +3558,7 @@ module RDF::Vocab
       label: "has engraver".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60443".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60411",
+    property :P60411,
       definition: "Relates a resource to an agent who is responsible for manufacturing a resource by embossing braille cells using a stylus, special embossing printer, or other device.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/brailleEmbosser.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3561,7 +3567,7 @@ module RDF::Vocab
       label: "has braille embosser".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60443".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60412",
+    property :P60412,
       definition: "Relates a resource to an agent who is responsible for manufacturing a resource by making a relief, intaglio, or planographic printing surface.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/printmaker.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3570,7 +3576,7 @@ module RDF::Vocab
       label: "has printmaker".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60443".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60413",
+    property :P60413,
       definition: "Relates a resource to an agent who is responsible for manufacturing a resource by pouring a liquid or molten substance into a mold and leaving it to solidify to take the shape of the mold.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/caster.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3579,7 +3585,7 @@ module RDF::Vocab
       label: "has caster".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60443".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60414",
+    property :P60414,
       definition: "Relates a resource to an agent who is responsible for manufacturing a resource by preparing a stone or plate for lithographic printing.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lithographer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3589,7 +3595,7 @@ module RDF::Vocab
       label: "has lithographer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60443".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60415",
+    property :P60415,
       definition: "Relates a resource to an agent who is responsible for manufacturing a resource by preparing plates used in the production of printed images or text.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/platemaker.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3598,7 +3604,7 @@ module RDF::Vocab
       label: "has platemaker".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60443".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60416",
+    property :P60416,
       definition: "Relates a resource to an agent who is responsible for manufacturing a resource by subjecting metal, glass, or some other surface used for printing, to acid or another corrosive substance.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/etcher.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3607,7 +3613,7 @@ module RDF::Vocab
       label: "has etcher".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60443".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60417",
+    property :P60417,
       definition: "Relates a resource to an agent who is responsible for manufacturing a resource by using a photomechanical process for making prints directly from a hardened film of gelatin or other colloid that has ink-receptive and ink-repellent surfaces.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/collotyper.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3616,7 +3622,7 @@ module RDF::Vocab
       label: "has collotyper".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60443".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60418",
+    property :P60418,
       definition: "Relates a resource to an agent who is responsible for manufacturing a resource of printed text, notated music, or other content from type or plates.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/printer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3625,7 +3631,7 @@ module RDF::Vocab
       label: "has printer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60443".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60419",
+    property :P60419,
       definition: "Relates a resource to an agent mentioned in an \"X presents\" credit for moving image materials and who is probably associated with production, finance, or distribution in some way.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/presenter.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3634,7 +3640,7 @@ module RDF::Vocab
       label: "has presenter".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60420",
+    property :P60420,
       definition: "Relates a resource to an academic supervisor who is responsible for advising or overseeing thesis or dissertation research for an academic degree that results in a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/degreeSupervisor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3643,7 +3649,7 @@ module RDF::Vocab
       label: "has degree supervisor".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60421",
+    property :P60421,
       definition: "Relates a resource to an agent who decorates a specific resource using precious metals or colour, often with elaborate designs and motifs.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/illuminator.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3652,7 +3658,7 @@ module RDF::Vocab
       label: "has illuminator".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60422",
+    property :P60422,
       definition: "Relates a resource to an agent who is responsible for assembling, arranging, and trimming film, video, or other moving image formats, including both visual and audio aspects.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60663".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/editorOfMovingImageResource.en".freeze,
@@ -3662,7 +3668,7 @@ module RDF::Vocab
       label: "has editor of moving image resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60423",
+    property :P60423,
       definition: "Relates a resource to an agent who is responsible for creating a computer program.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/programmer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3671,7 +3677,7 @@ module RDF::Vocab
       label: "has programmer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60424",
+    property :P60424,
       definition: "Relates a resource to an agent who is responsible for creating a design for an object.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/designer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3680,7 +3686,7 @@ module RDF::Vocab
       label: "has designer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60425",
+    property :P60425,
       definition: "Relates a resource to an agent who is responsible for a cartographic resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/cartographer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3689,7 +3695,7 @@ module RDF::Vocab
       label: "has cartographer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60426",
+    property :P60426,
       definition: "Relates a resource to an agent who is responsible for creating a musical resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/composer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3699,7 +3705,7 @@ module RDF::Vocab
       label: "has composer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60427",
+    property :P60427,
       definition: "Relates a resource to an agent who is responsible for creating a new device or process.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/inventor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3708,7 +3714,7 @@ module RDF::Vocab
       label: "has inventor".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60428",
+    property :P60428,
       definition: "Relates a resource to an agent who is responsible for creating a new resource such as a bibliography or a directory by selecting, arranging, aggregating, and editing data, information, etc.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60393".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/compiler.en".freeze,
@@ -3719,7 +3725,7 @@ module RDF::Vocab
       label: "has compiler".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60429",
+    property :P60429,
       definition: "Relates a resource to an agent who is responsible for creating a photographic resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/photographer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3728,7 +3734,7 @@ module RDF::Vocab
       label: "has photographer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60430",
+    property :P60430,
       definition: "Relates a resource to an agent who is responsible for creating a resource by acting as an interviewer, reporter, pollster, or some other kind of agent who gathers information.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/interviewer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3737,7 +3743,7 @@ module RDF::Vocab
       label: "has interviewer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60431",
+    property :P60431,
       definition: "Relates a resource to an agent who is responsible for creating an original graphic design, drawing, painting, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60475".freeze, "http://rdaregistry.info/Elements/u/P60752".freeze, "http://rdaregistry.info/Elements/u/P60753".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/artist.en".freeze,
@@ -3747,7 +3753,7 @@ module RDF::Vocab
       label: "has artist".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60432",
+    property :P60432,
       definition: "Relates a resource to an agent who is responsible for creating a resource by responding to an interviewer, usually a reporter, pollster, or some other kind of agent who gathers information.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/interviewee.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3756,7 +3762,7 @@ module RDF::Vocab
       label: "has interviewee".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60433",
+    property :P60433,
       definition: "Relates a resource to an agent who is responsible for a choreographic resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/choreographer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3765,7 +3771,7 @@ module RDF::Vocab
       label: "has choreographer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60434",
+    property :P60434,
       definition: "Relates a resource to an agent who is responsible for a textual resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60476".freeze, "http://rdaregistry.info/Elements/u/P60477".freeze, "http://rdaregistry.info/Elements/u/P60478".freeze, "http://rdaregistry.info/Elements/u/P60751".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/author.en".freeze,
@@ -3775,7 +3781,7 @@ module RDF::Vocab
       label: "has author".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60435",
+    property :P60435,
       definition: "Relates a resource to an agent who is responsible for an architectural design, including a pictorial representation intended to show how a building or other structure will look when completed.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60473".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/architect.en".freeze,
@@ -3785,7 +3791,7 @@ module RDF::Vocab
       label: "has architect".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60436",
+    property :P60436,
       definition: "Relates a resource to an agent who is responsible for creating an independent or personal film.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/filmmaker.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3794,7 +3800,7 @@ module RDF::Vocab
       label: "has filmmaker".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60437",
+    property :P60437,
       definition: "Relates a resource to an agent who is responsible for designing the overall visual appearance of a moving image production.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/productionDesigner.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3803,7 +3809,7 @@ module RDF::Vocab
       label: "has production designer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60438",
+    property :P60438,
       definition: "Relates a resource to an agent who is responsible for distributing a published resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60408".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/distributor.en".freeze,
@@ -3812,7 +3818,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has distributor".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60440",
+    property :P60440,
       definition: "Relates a resource to an agent who is responsible for inscribing, fabricating, constructing, etc., an unpublished resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/producerOfUnpublishedResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3820,7 +3826,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has producer of unpublished resource".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60441",
+    property :P60441,
       definition: "Relates a resource to an agent who is responsible for inscribing, fabricating, constructing, or other method of producing, an unpublished resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60169".freeze, "http://rdaregistry.info/Elements/u/P60170".freeze, "http://rdaregistry.info/Elements/u/P60171".freeze, "http://rdaregistry.info/Elements/u/P60889".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/producer.en".freeze,
@@ -3830,14 +3836,14 @@ module RDF::Vocab
       label: "has producer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60442",
+    property :P60442,
       definition: "Relates a resource to an agent responsible for performing, narrating, and/or presenting a resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/performerNarratorAndOrPresenter.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has performer, narrator, and/or presenter (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60443",
+    property :P60443,
       definition: "Relates a resource to an agent who is responsible for printing, duplicating, casting, or other method of manufacturing a published resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60409".freeze, "http://rdaregistry.info/Elements/u/P60410".freeze, "http://rdaregistry.info/Elements/u/P60411".freeze, "http://rdaregistry.info/Elements/u/P60412".freeze, "http://rdaregistry.info/Elements/u/P60413".freeze, "http://rdaregistry.info/Elements/u/P60414".freeze, "http://rdaregistry.info/Elements/u/P60415".freeze, "http://rdaregistry.info/Elements/u/P60416".freeze, "http://rdaregistry.info/Elements/u/P60417".freeze, "http://rdaregistry.info/Elements/u/P60418".freeze, "http://rdaregistry.info/Elements/u/P60746".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/manufacturer.en".freeze,
@@ -3847,7 +3853,7 @@ module RDF::Vocab
       label: "has manufacturer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60909".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60444",
+    property :P60444,
       definition: "Relates a resource to an agent who is responsible for publishing, releasing, or issuing a published resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60407".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/publisher.en".freeze,
@@ -3856,7 +3862,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has publisher".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60446",
+    property :P60446,
       definition: "Relates a resource to an agent who is responsible for recording the minutes of a meeting.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/minuteTaker.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3865,7 +3871,7 @@ module RDF::Vocab
       label: "has minute taker".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60447",
+    property :P60447,
       definition: "Relates a resource to an agent who is responsible for a resource".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60045".freeze, "http://rdaregistry.info/Elements/u/P60096".freeze, "http://rdaregistry.info/Elements/u/P60420".freeze, "http://rdaregistry.info/Elements/u/P60423".freeze, "http://rdaregistry.info/Elements/u/P60424".freeze, "http://rdaregistry.info/Elements/u/P60425".freeze, "http://rdaregistry.info/Elements/u/P60426".freeze, "http://rdaregistry.info/Elements/u/P60427".freeze, "http://rdaregistry.info/Elements/u/P60428".freeze, "http://rdaregistry.info/Elements/u/P60429".freeze, "http://rdaregistry.info/Elements/u/P60430".freeze, "http://rdaregistry.info/Elements/u/P60431".freeze, "http://rdaregistry.info/Elements/u/P60432".freeze, "http://rdaregistry.info/Elements/u/P60433".freeze, "http://rdaregistry.info/Elements/u/P60434".freeze, "http://rdaregistry.info/Elements/u/P60435".freeze, "http://rdaregistry.info/Elements/u/P60436".freeze, "http://rdaregistry.info/Elements/u/P60463".freeze, "http://rdaregistry.info/Elements/u/P60465".freeze, "http://rdaregistry.info/Elements/u/P60826".freeze, "http://rdaregistry.info/Elements/u/P60891".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/creator.en".freeze,
@@ -3875,7 +3881,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has creator".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60449",
+    property :P60449,
       definition: "Relates a resource to an agent who is responsible for the general management and supervision of a filmed performance, a radio or television program, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60084".freeze, "http://rdaregistry.info/Elements/u/P60085".freeze, "http://rdaregistry.info/Elements/u/P60086".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/director.en".freeze,
@@ -3885,7 +3891,7 @@ module RDF::Vocab
       label: "has director".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60450",
+    property :P60450,
       definition: "Relates a resource to an agent who is responsible for the set of technical, editorial, and intellectual procedures aimed at compensating for the degradation of a resource by bringing it back to a state as close as possible to its original condition.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/restorationist.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3894,7 +3900,7 @@ module RDF::Vocab
       label: "has restorationist".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60451",
+    property :P60451,
       definition: "Relates a resource to an agent who sponsors some aspect of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/sponsoringAgentOfResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3904,7 +3910,7 @@ module RDF::Vocab
       label: "has sponsoring agent of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60452",
+    property :P60452,
       definition: "Relates a resource to an agent who captures images, either electronically or on film or video stock, and often selects and arranges lighting.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/directorOfPhotography.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3913,7 +3919,7 @@ module RDF::Vocab
       label: "has director of photography".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60454",
+    property :P60454,
       altLabel: "related agent".freeze,
       definition: "Relates an agent to an agent who is associated with an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60633".freeze, "http://rdaregistry.info/Elements/u/P60737".freeze, "http://rdaregistry.info/Elements/u/P60853".freeze, "http://rdaregistry.info/Elements/u/P60854".freeze, "http://rdaregistry.info/Elements/u/P60855".freeze, "http://rdaregistry.info/Elements/u/P60856".freeze, "http://rdaregistry.info/Elements/u/P60861".freeze, "http://rdaregistry.info/Elements/u/P60862".freeze, "http://rdaregistry.info/Elements/u/P60863".freeze],
@@ -3924,7 +3930,7 @@ module RDF::Vocab
       label: "has related agent of agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61033".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60455",
+    property :P60455,
       definition: "Relates a resource to an agent to whom a resource is dedicated.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dedicatee.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3933,7 +3939,7 @@ module RDF::Vocab
       label: "has dedicatee".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60456",
+    property :P60456,
       definition: "Relates a resource to an agent to whom a resource or part of a resource is addressed.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/addressee.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3942,7 +3948,7 @@ module RDF::Vocab
       label: "has addressee".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60457",
+    property :P60457,
       definition: "Relates a resource to an agent who appeals a decision of a lower court recorded in a legal resource of a higher court.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/appellant.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3951,7 +3957,7 @@ module RDF::Vocab
       label: "has appellant".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60458",
+    property :P60458,
       definition: "Relates a resource to an agent who binds a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/binder.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3960,7 +3966,7 @@ module RDF::Vocab
       label: "has binder".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60459",
+    property :P60459,
       definition: "Relates a resource to an agent who brings a suit in a civil proceeding.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/plaintiff.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3969,7 +3975,7 @@ module RDF::Vocab
       label: "has plaintiff".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60460",
+    property :P60460,
       definition: "Relates a resource to an agent who has written a statement of dedication or gift on a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/inscriber.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3978,7 +3984,7 @@ module RDF::Vocab
       label: "has inscriber".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60461",
+    property :P60461,
       definition: "Relates a resource to an agent who hears and decides on legal matters in court.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/judge.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -3987,7 +3993,7 @@ module RDF::Vocab
       label: "has judge".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60462",
+    property :P60462,
       definition: "Relates a resource to an agent who is accused in a criminal proceeding or sued in a civil proceeding.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61092".freeze, "http://rdaregistry.info/Elements/u/P61094".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/defendant.en".freeze,
@@ -3997,7 +4003,7 @@ module RDF::Vocab
       label: "has defendant".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60463",
+    property :P60463,
       definition: "Relates a resource to an agent who is a faculty moderator of an academic disputation, normally proposing a thesis and participating in the ensuing disputation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/praeses.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4006,7 +4012,7 @@ module RDF::Vocab
       label: "has praeses".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60464",
+    property :P60464,
       definition: "Relates a resource to an agent who adds notes and other information to a resource by hand.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/annotator.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4015,7 +4021,7 @@ module RDF::Vocab
       label: "has annotator".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60465",
+    property :P60465,
       definition: "Relates a resource to an agent who provides consultation services, and often makes recommendations, for a related agent who is represented as a creator of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/consultant.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4024,7 +4030,7 @@ module RDF::Vocab
       label: "has consultant".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60466",
+    property :P60466,
       definition: "Relates a resource to an agent whose manuscript signature appears on a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/autographer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4033,7 +4039,7 @@ module RDF::Vocab
       label: "has autographer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60467",
+    property :P60467,
       definition: "Relates a resource to an agent who issues a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/issuingAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4042,14 +4048,14 @@ module RDF::Vocab
       label: "has issuing agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60468",
+    property :P60468,
       definition: "Relates an agent to an agent's vocation or avocation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/professionOrOccupation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has profession or occupation".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60469",
+    property :P60469,
       definition: "Relates a resource to a resource in an analog format that is transferred to a digital format.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/electronicReproductionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4058,7 +4064,7 @@ module RDF::Vocab
       label: "is electronic reproduction of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60297".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60470",
+    property :P60470,
       definition: "Relates a resource to a broad unstructured description of one or more attributes of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60122".freeze, "http://rdaregistry.info/Elements/u/P60123".freeze, "http://rdaregistry.info/Elements/u/P60124".freeze, "http://rdaregistry.info/Elements/u/P60125".freeze, "http://rdaregistry.info/Elements/u/P60126".freeze, "http://rdaregistry.info/Elements/u/P60127".freeze, "http://rdaregistry.info/Elements/u/P60128".freeze, "http://rdaregistry.info/Elements/u/P60129".freeze, "http://rdaregistry.info/Elements/u/P60130".freeze, "http://rdaregistry.info/Elements/u/P60131".freeze, "http://rdaregistry.info/Elements/u/P60132".freeze, "http://rdaregistry.info/Elements/u/P60133".freeze, "http://rdaregistry.info/Elements/u/P60134".freeze, "http://rdaregistry.info/Elements/u/P60135".freeze, "http://rdaregistry.info/Elements/u/P60136".freeze, "http://rdaregistry.info/Elements/u/P60137".freeze, "http://rdaregistry.info/Elements/u/P60868".freeze, "http://rdaregistry.info/Elements/u/P60905".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnResource.en".freeze,
@@ -4067,14 +4073,14 @@ module RDF::Vocab
       label: "has note on resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60936".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60471",
+    property :P60471,
       definition: "Relates a resource to an annotation providing additional information about resource or resource attributes. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnManifestationOrItem.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has note on manifestation or item (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60472",
+    property :P60472,
       definition: "Relates a resource to a timespan to which measurements of position for a body or orientation for an orbit are referred.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/epoch.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4082,7 +4088,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has epoch".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60473",
+    property :P60473,
       definition: "Relates a resource to an agent who is an architect who is responsible for creating landscape resources.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/landscapeArchitect.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4091,7 +4097,7 @@ module RDF::Vocab
       label: "has landscape architect".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60435".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60474",
+    property :P60474,
       definition: "Relates a resource to a resource that is an archival collection described by a guide to the organization, arrangement, and contents of the collection.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/findingAidFor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4100,7 +4106,7 @@ module RDF::Vocab
       label: "is finding aid for".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60475",
+    property :P60475,
       definition: "Relates a resource to an agent who is an artist who is responsible for creating a three-dimensional resource by modeling, carving, or similar technique.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/sculptor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4109,7 +4115,7 @@ module RDF::Vocab
       label: "has sculptor".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60431".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60476",
+    property :P60476,
       definition: "Relates a resource to an agent who is an author of a screenplay, script, or scene.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/screenwriter.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4118,7 +4124,7 @@ module RDF::Vocab
       label: "has screenwriter".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60434".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60477",
+    property :P60477,
       definition: "Relates a resource to an agent who is an author of the words of a popular song, including a song from a musical.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60478".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lyricist.en".freeze,
@@ -4129,7 +4135,7 @@ module RDF::Vocab
       label: "has lyricist".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60434".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60478",
+    property :P60478,
       definition: "Relates a resource to an agent who is an author of the words of a musical or choreographic resource such as an opera, a ballet, or other resource for the musical stage, or an oratorio.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60477".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/librettist.en".freeze,
@@ -4140,7 +4146,7 @@ module RDF::Vocab
       label: "has librettist".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60434".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60479",
+    property :P60479,
       definition: "Relates a resource to a resource whose content is partially superseded and rendered obsolete by the content of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/replacementInPartOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4150,7 +4156,7 @@ module RDF::Vocab
       label: "is replacement in part of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60261".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60480",
+    property :P60480,
       definition: "Relates a resource to a resource whose content is superseded and rendered obsolete by the content of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/replacementOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4160,7 +4166,7 @@ module RDF::Vocab
       label: "is replacement of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60261".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60481",
+    property :P60481,
       definition: "Relates a resource to an equalization system, noise-reduction system, or other processing that is used in making an audio recording.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/specialPlaybackCharacteristic.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4168,14 +4174,14 @@ module RDF::Vocab
       label: "has special playback characteristic".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60351".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60482",
+    property :P60482,
       definition: "Relates an agent to an institution commonly associated with an agent. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/associatedInstitution.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has associated institution (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60483",
+    property :P60483,
       definition: "Relates a resource to an institution or faculty conferring an academic degree on a candidate. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/grantingInstitutionOrFaculty.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -4183,28 +4189,28 @@ module RDF::Vocab
       label: "has granting institution or faculty (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60484",
+    property :P60484,
       definition: "Relates an agent to biographical or historical information about an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/agentHistory.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has agent history".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60485",
+    property :P60485,
       definition: "Relates a resource to an indication of the kinds of resource that supplement the main resources that are embodied by an augmentation aggregate.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/supplementaryContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has supplementary content".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60486",
+    property :P60486,
       definition: "Relates a resource to an indication of the kinds of image content that supplement the main resources that are embodied by an augmentation aggregate.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/illustrativeContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has illustrative content".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60487",
+    property :P60487,
       definition: "Relates a resource to an indication of the kinds of resource that provide alternative sensory modes to perceive the main resources that are embodied by an augmentation aggregate.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/accessibilityContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4212,21 +4218,21 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has accessibility content".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60488",
+    property :P60488,
       definition: "Relates a resource to a musical or physical layout of the content of a resource that is presented in the form of musical notation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/formatOfNotatedMusic.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has format of notated music".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60489",
+    property :P60489,
       definition: "Relates a resource to a statement that identifies an academic institution, degree, and year for which a resource was presented.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dissertationOrThesisInformation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has dissertation or thesis information".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60490",
+    property :P60490,
       definition: "Relates a resource to a name, address, or other means of communicating with an agent from which a resource may be obtained.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contactInformation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4234,21 +4240,21 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has contact information".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60491",
+    property :P60491,
       definition: "Relates a resource to a summary of information about the history of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/historyOfResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has history of resource".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60492",
+    property :P60492,
       definition: "Relates an agent to a summary of information about the life or history of an agent. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/biographicalInformation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has biographical information (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60493",
+    property :P60493,
       definition: "Relates a resource to a word, character, or group of words or characters that appears in conjunction with, and is subordinate to, a title proper of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/otherTitleInformation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4256,42 +4262,42 @@ module RDF::Vocab
       label: "has other title information".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60369".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60494",
+    property :P60494,
       definition: "Relates a resource to a word, character, or group of words or characters that appears in conjunction with, and is subordinate to, a title proper of a series.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/otherTitleInformationOfSeries.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has other title information of series".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60495",
+    property :P60495,
       definition: "Relates a resource to a word, character, or group of words or characters that appears in conjunction with, and is subordinate to, a title proper of a subseries. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/otherTitleInformationOfSubseries.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has other title information of subseries (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60496",
+    property :P60496,
       definition: "Relates a resource to limitations placed on access to a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/restrictionsOnAccess.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has restrictions on access".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60497",
+    property :P60497,
       definition: "Relates a resource to a limitation placed on reproduction, publication, exhibition, etc., of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/restrictionsOnUse.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has restrictions on use".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60498",
+    property :P60498,
       definition: "Relates a resource to an indication of mathematical data and other features of the cartographic content of a resource not recorded in statements of scale, projection, and coordinates.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfCartographicContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of cartographic content".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60499",
+    property :P60499,
       definition: "Relates a resource to a designation in numeric or alphabetic form presented on the first issue or part of a serial issued in a sequence of numbering.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/firstAlphanumericDesignationOfSequence.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4300,7 +4306,7 @@ module RDF::Vocab
       label: "has first alphanumeric designation of sequence".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60533".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60500",
+    property :P60500,
       definition: "Relates a resource to a designation in numeric or alphabetic form presented on the last issue or part of a serial issued in a sequence of numbering.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lastAlphanumericDesignationOfSequence.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4309,7 +4315,7 @@ module RDF::Vocab
       label: "has last alphanumeric designation of sequence".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60533".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60501",
+    property :P60501,
       definition: "Relates a resource to a designation in date form presented on the first issue or part of a serial issued in a sequence of numbering.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/firstChronologicalDesignationOfSequence.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4319,7 +4325,7 @@ module RDF::Vocab
       label: "has first chronological designation of sequence".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60533".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60502",
+    property :P60502,
       definition: "Relates a resource to a designation in date form presented on the last issue or part of a serial issued in a sequence of numbering.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lastChronologicalDesignationOfSequence.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4329,7 +4335,7 @@ module RDF::Vocab
       label: "has last chronological designation of sequence".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60533".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60503",
+    property :P60503,
       definition: "Relates a resource to a resource that is a diachronic resource that continues the partial content of another diachronic resource that is completed.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/splitInto.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4338,7 +4344,7 @@ module RDF::Vocab
       label: "is split into".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60278".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60504",
+    property :P60504,
       definition: "Relates a resource to a resource that is formed from a coming together of two or more resources.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/mergedToForm.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4347,7 +4353,7 @@ module RDF::Vocab
       label: "is merged to form".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60278".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60505",
+    property :P60505,
       definition: "Relates a resource to a resource that came together with one or more other resources to form a new resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/mergerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4356,7 +4362,7 @@ module RDF::Vocab
       label: "is merger of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60261".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60506",
+    property :P60506,
       definition: "Relates a resource to a timespan that is a point of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0°.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/equinox.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4364,7 +4370,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has equinox".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60507",
+    property :P60507,
       definition: "Relates a resource to an other title information in a language or script that differs from that recorded in an other title information element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60508".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelOtherTitleInformation.en".freeze,
@@ -4373,7 +4379,7 @@ module RDF::Vocab
       label: "has parallel other title information".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60369".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60508",
+    property :P60508,
       definition: "Relates a resource to an other title information of a series in a language or script that differs from that recorded in an other title information of series element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60509".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelOtherTitleInformationOfSeries.en".freeze,
@@ -4382,7 +4388,7 @@ module RDF::Vocab
       label: "has parallel other title information of series".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60507".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60509",
+    property :P60509,
       definition: "Relates a resource to an other title information of a subseries in a language or script that differs from that recorded in an other title information of subseries element. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelOtherTitleInformationOfSubseries.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -4390,7 +4396,7 @@ module RDF::Vocab
       label: "has parallel other title information of subseries (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60508".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60510",
+    property :P60510,
       definition: "Relates a resource to an indication of supplemental information about scale.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/additionalScaleInformation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4399,7 +4405,7 @@ module RDF::Vocab
       label: "has additional scale information".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60565".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60511",
+    property :P60511,
       altLabel: "URL".freeze,
       definition: "Relates a resource to an address of an online resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/uniformResourceLocator.en".freeze,
@@ -4408,7 +4414,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has uniform resource locator".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60512",
+    property :P60512,
       definition: "Relates an agent to an address of an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/addressOfAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4416,14 +4422,14 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has address of agent".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60513",
+    property :P60513,
       definition: "Relates a resource to an arrangement of text, images, tactile notation, or other content in a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/layout.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has layout".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60514",
+    property :P60514,
       definition: "Relates a resource to a timespan during which an academic degree is conferred by a granting institution or faculty.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/yearDegreeGranted.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4432,7 +4438,7 @@ module RDF::Vocab
       label: "has year degree granted".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60527".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60515",
+    property :P60515,
       definition: "Relates a resource to a chief name of a resource, that is, a title normally used when naming a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/titleProper.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4442,7 +4448,7 @@ module RDF::Vocab
       label: "has title proper".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60369".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60516",
+    property :P60516,
       definition: "Relates a resource to a name of a series appearing on a resource of a part of a series.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60517".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/titleOfSeries.en".freeze,
@@ -4452,7 +4458,7 @@ module RDF::Vocab
       label: "has title of series".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60367".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60517",
+    property :P60517,
       definition: "Relates a resource to a name of a series appearing on a resource of a part of a subseries. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/titleProperOfSubseries.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -4461,14 +4467,14 @@ module RDF::Vocab
       label: "has title proper of subseries (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60516".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60518",
+    property :P60518,
       definition: "Relates a resource to a chronological or geographic coverage of the content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/coverageOfContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has coverage of content".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60519",
+    property :P60519,
       definition: "Relates a resource to a clarity or fineness of detail in a digital image, expressed by a measurement of the image in pixels, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/resolution.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4476,21 +4482,21 @@ module RDF::Vocab
       label: "has resolution".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60350".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60520",
+    property :P60520,
       definition: "Relates a resource to a category of user for whom the content of a resource is intended, or for whom the content is considered suitable.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/intendedAudience.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has intended audience".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60521",
+    property :P60521,
       definition: "Relates a resource to a condition under which a publisher, distributor, etc., will normally supply a resource or the price of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/termsOfAvailability.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has terms of availability".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60522",
+    property :P60522,
       definition: "Relates a resource to a configuration of an audio track on a sound-track film.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/trackConfiguration.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4498,7 +4504,7 @@ module RDF::Vocab
       label: "has track configuration".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60351".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60523",
+    property :P60523,
       definition: "Relates a resource to a place from which a resource originated.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfOriginOfResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4507,7 +4513,7 @@ module RDF::Vocab
       label: "has place of origin of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61014".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60524",
+    property :P60524,
       definition: "Relates a resource to a date on which an agent was established or founded.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfEstablishment.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4516,7 +4522,7 @@ module RDF::Vocab
       label: "has date of establishment".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60324".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60525",
+    property :P60525,
       definition: "Relates a resource to a date on which an agent was terminated or dissolved.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfTermination.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4525,7 +4531,7 @@ module RDF::Vocab
       label: "has date of termination".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60324".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60526",
+    property :P60526,
       definition: "Relates a resource to a date or range of dates on which a conference, congress, meeting, exhibition, fair, festival, etc., was held.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfConference.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4534,7 +4540,7 @@ module RDF::Vocab
       label: "has date of conference".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60324".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60527",
+    property :P60527,
       definition: "Relates a resource to a timespan that is the earliest associated with a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60514".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfResource.en".freeze,
@@ -4544,14 +4550,14 @@ module RDF::Vocab
       label: "has date of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61020".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60528",
+    property :P60528,
       definition: "Relates a resource to a system or equipment required for access to the content of an electronic analog or digital resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/equipmentOrSystemRequirement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has equipment or system requirement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60529",
+    property :P60529,
       definition: "Relates a resource to a format that is used in the production of a projected image.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/presentationFormat.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4559,7 +4565,7 @@ module RDF::Vocab
       label: "has presentation format".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60353".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60530",
+    property :P60530,
       definition: "Relates a resource to a full form of a part of a name represented only by an initial or abbreviation in a form chosen as a preferred name, or a part of a name not included in a form chosen as a preferred name.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/fullerFormOfName.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4567,14 +4573,14 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has fuller form of name".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60531",
+    property :P60531,
       definition: "Relates an agent to a gender with which an agent identifies.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/gender.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has gender".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60532",
+    property :P60532,
       definition: "Relates a resource to a groove width of an analog disc or a groove pitch of an analog cylinder.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61105".freeze, "http://rdaregistry.info/Elements/u/P61106".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/grooveCharacteristic.en".freeze,
@@ -4583,7 +4589,7 @@ module RDF::Vocab
       label: "has groove characteristic".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60351".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60533",
+    property :P60533,
       definition: "Relates a resource to the first and last designations of a sequence of the individual parts or iterations of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60499".freeze, "http://rdaregistry.info/Elements/u/P60500".freeze, "http://rdaregistry.info/Elements/u/P60501".freeze, "http://rdaregistry.info/Elements/u/P60502".freeze, "http://rdaregistry.info/Elements/u/P60818".freeze, "http://rdaregistry.info/Elements/u/P60819".freeze, "http://rdaregistry.info/Elements/u/P60820".freeze, "http://rdaregistry.info/Elements/u/P60821".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/numberingOfSequence.en".freeze,
@@ -4591,7 +4597,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has numbering of sequence".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60534",
+    property :P60534,
       definition: "Relates a resource to an identifier that is assigned to a series by an ISSN registration agency.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/issn.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4599,35 +4605,35 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has ISSN".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60535",
+    property :P60535,
       definition: "Relates a resource to an identifier assigned to a subseries by an ISSN registration agency. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/issnOfSubseries.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has ISSN of subseries (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60536",
+    property :P60536,
       definition: "Relates a resource to an instrument, voice, or ensemble for which a musical resource was originally conceived. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/mediumOfPerformance.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has medium of performance (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60537",
+    property :P60537,
       definition: "Relates a resource to an instrument, voice, or ensemble and the number of parts, performers and hands used, or intended to be used, to perform the musical content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/mediumOfPerformanceOfMusicalContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has medium of performance of musical content".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60538",
+    property :P60538,
       definition: "Relates a resource to an interval at which an issue or part of a diachronic resource is issued.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/frequency.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has frequency".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60539",
+    property :P60539,
       definition: "Relates a resource to a measurement of a carrier or a container of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60540".freeze, "http://rdaregistry.info/Elements/u/P60541".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dimensions.en".freeze,
@@ -4635,7 +4641,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has dimensions".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60540",
+    property :P60540,
       definition: "Relates a resource to a measurement of a face of a map, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dimensionsOfCartographicImage.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4643,7 +4649,7 @@ module RDF::Vocab
       label: "has dimensions of cartographic image".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60539".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60541",
+    property :P60541,
       definition: "Relates a resource to a measurement of the pictorial area of a still image.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dimensionsOfStillImage.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4651,14 +4657,14 @@ module RDF::Vocab
       label: "has dimensions of still image".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60539".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60542",
+    property :P60542,
       definition: "Relates a resource to a method or system used to represent the surface of the earth or of a celestial sphere on a plane.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/projectionOfCartographicContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has projection of cartographic content".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60543",
+    property :P60543,
       definition: "Relates a resource to a method used to encode audio content for playback.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/typeOfRecording.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4666,7 +4672,7 @@ module RDF::Vocab
       label: "has type of recording".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60351".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60544",
+    property :P60544,
       definition: "Relates a resource to a name of an agent who is responsible for distributing a published resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfDistributor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4675,7 +4681,7 @@ module RDF::Vocab
       label: "has name of distributor".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60909".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60545",
+    property :P60545,
       definition: "Relates a resource to a nomen that is a name of an agent who is responsible for inscribing, fabricating, constructing, or other method of producing an unpublished resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfProducer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4684,7 +4690,7 @@ module RDF::Vocab
       label: "has name of producer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60909".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60546",
+    property :P60546,
       definition: "Relates a resource to a nomen that is a name of an agent who is responsible for printing, duplicating, casting, or other method of manufacturing a published resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfManufacturer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4693,7 +4699,7 @@ module RDF::Vocab
       label: "has name of manufacturer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60909".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60547",
+    property :P60547,
       definition: "Relates a resource to a name of an agent who is responsible for publishing, releasing, or issuing a published resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfPublisher.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4702,7 +4708,7 @@ module RDF::Vocab
       label: "has name of publisher".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60909".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60548",
+    property :P60548,
       definition: "Relates a place to a name of place that is selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/preferredNameOfPlace.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4711,7 +4717,7 @@ module RDF::Vocab
       label: "has preferred name of place".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60366".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60549",
+    property :P60549,
       definition: "Relates an agent to a name of agent that is selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/preferredNameOfAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4720,14 +4726,14 @@ module RDF::Vocab
       label: "has preferred name of agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60368".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60550",
+    property :P60550,
       definition: "Relates a resource to a type, number, and measurement unit that quantify an aspect of the extent of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/extent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has extent".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60551",
+    property :P60551,
       definition: "Relates a resource to a number of bytes in a digital file.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/fileSize.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4735,7 +4741,7 @@ module RDF::Vocab
       label: "has file size".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60350".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60552",
+    property :P60552,
       definition: "Relates a resource to a number of sound channels used to make a recording.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/configurationOfPlaybackChannels.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4743,7 +4749,7 @@ module RDF::Vocab
       label: "has configuration of playback channels".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60351".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60553",
+    property :P60553,
       definition: "Relates a resource to a number of tracks on an audiotape.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/tapeConfiguration.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4751,21 +4757,21 @@ module RDF::Vocab
       label: "has tape configuration".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60351".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60554",
+    property :P60554,
       definition: "Relates a resource to a physical material used for the support or backing to which the base material of a resource is attached.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/mount.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has mount".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60555",
+    property :P60555,
       definition: "Relates a resource to a place, date, or other information associated with the recording, filming, etc., of the content of a resource. ".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/captureInformation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has capture information".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60556",
+    property :P60556,
       definition: "Relates a resource to a place associated with recording, filming, etc., the content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfCapture.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4774,7 +4780,7 @@ module RDF::Vocab
       label: "has place of capture".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61014".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60557",
+    property :P60557,
       definition: "Relates a resource to an extent of resource that is a playing time, performance time, running time, or other length of time.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/duration.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4782,7 +4788,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has duration".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60558",
+    property :P60558,
       definition: "Relates a resource to an indication of the presence of colour or tone in a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/colourContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4790,7 +4796,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has colour content".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60559",
+    property :P60559,
       definition: "Relates a resource to an indication of the presence or absence of sound embodied by a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/soundContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4798,7 +4804,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has sound content".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60560",
+    property :P60560,
       definition: "Relates a resource to a process that is used to produce a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60561".freeze, "http://rdaregistry.info/Elements/u/P60562".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/productionMethod.en".freeze,
@@ -4806,7 +4812,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has production method".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60561",
+    property :P60561,
       definition: "Relates a resource to the process used to produce a tactile resource (e.g., embossing, thermoform).. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/productionMethodForTactileResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -4814,7 +4820,7 @@ module RDF::Vocab
       label: "has production method for tactile resource (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60560".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60562",
+    property :P60562,
       definition: "Relates a resource to the process used to produce an original manuscript or a copy.. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/productionMethodForManuscript.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -4822,7 +4828,7 @@ module RDF::Vocab
       label: "has production method for manuscript (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60560".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60563",
+    property :P60563,
       definition: "Relates a resource to a ratio of horizontal distances in the cartographic content of a resource to the actual distances they represent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/horizontalScaleOfCartographicContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4830,7 +4836,7 @@ module RDF::Vocab
       label: "has horizontal scale of cartographic content".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60565".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60564",
+    property :P60564,
       definition: "Relates a resource to a ratio of the dimensions of a still image or three-dimensional form embodied by a resource to the dimensions of the thing it represents.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/scaleOfStillImageOrThreeDimensionalForm.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4838,7 +4844,7 @@ module RDF::Vocab
       label: "has scale of still image or three-dimensional form".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60565".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60565",
+    property :P60565,
       definition: "Relates a resource to a ratio of the dimensions of an image or three-dimensional form to the dimensions of the thing that is represented.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60510".freeze, "http://rdaregistry.info/Elements/u/P60563".freeze, "http://rdaregistry.info/Elements/u/P60564".freeze, "http://rdaregistry.info/Elements/u/P60579".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/scale.en".freeze,
@@ -4847,14 +4853,14 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has scale".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60566",
+    property :P60566,
       definition: "Relates a resource to a numerical ratio of the width to the height of a moving image.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/aspectRatio.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has aspect ratio".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60567",
+    property :P60567,
       definition: "Relates a resource to the relationship between an original audio carrier and the carrier of a reproduction made from the original (e.g., a tape duplication master, a test pressing).. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/generationOfAudioRecording.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -4862,7 +4868,7 @@ module RDF::Vocab
       label: "has generation of audio recording (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60568".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60568",
+    property :P60568,
       definition: "Relates a resource to a relationship between an original carrier and a carrier of a reproduction that is made from the original.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60567".freeze, "http://rdaregistry.info/Elements/u/P60569".freeze, "http://rdaregistry.info/Elements/u/P60570".freeze, "http://rdaregistry.info/Elements/u/P60571".freeze, "http://rdaregistry.info/Elements/u/P60572".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/generation.en".freeze,
@@ -4870,7 +4876,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has generation".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60569",
+    property :P60569,
       definition: "Relates a resource to the relationship between an original carrier of a digital resource and the carrier of a reproduction made from the original (e.g., a derivative master).. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/generationOfDigitalResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -4878,7 +4884,7 @@ module RDF::Vocab
       label: "has generation of digital resource (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60568".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60570",
+    property :P60570,
       definition: "Relates a resource to the relationship between an original carrier of a motion picture film resource and the carrier of a reproduction made from the original (e.g., a reference print).. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/generationOfMotionPictureFilm.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -4886,7 +4892,7 @@ module RDF::Vocab
       label: "has generation of motion picture film (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60568".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60571",
+    property :P60571,
       definition: "Relates a resource to the relationship between an original carrier of a videotape resource and the carrier of a reproduction made from the original (e.g., a show copy).. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/generationOfVideotape.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -4894,7 +4900,7 @@ module RDF::Vocab
       label: "has generation of videotape (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60568".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60572",
+    property :P60572,
       definition: "Relates a resource to the relationship between an original microform carrier and the carrier of a reproduction made from the original (e.g., a printing master).. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/generationOfMicroform.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -4902,14 +4908,14 @@ module RDF::Vocab
       label: "has generation of microform (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60568".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60573",
+    property :P60573,
       definition: "Relates a resource to a relationship of the colours and tones in an image to the colours and tones of the object reproduced.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/polarity.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has polarity".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60574",
+    property :P60574,
       definition: "Relates a resource to a resource whose content is incorporated in the content of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/absorptionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4918,7 +4924,7 @@ module RDF::Vocab
       label: "is absorption of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60261".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60575",
+    property :P60575,
       definition: "Relates a resource to a resource whose partial content is incorporated in the content of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/absorptionInPartOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4927,7 +4933,7 @@ module RDF::Vocab
       label: "is absorption in part of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60261".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60576",
+    property :P60576,
       definition: "Relates a resource to a resource that is a diachronic resource that is completed whose content is continued by another diachronic resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/continuationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4937,7 +4943,7 @@ module RDF::Vocab
       label: "is continuation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60261".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60577",
+    property :P60577,
       definition: "Relates a resource to a resource whose narrative is continued by a later resource.. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/sequelTo.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -4946,14 +4952,14 @@ module RDF::Vocab
       label: "is sequel to (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60261".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60578",
+    property :P60578,
       definition: "Relates a resource to a proportional relationship between a whole sheet in a printed or manuscript resource, and the individual leaves that result if that sheet is left full, cut, or folded.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/bibliographicFormat.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has bibliographic format".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60579",
+    property :P60579,
       definition: "Relates a resource to a scale of elevation or vertical dimension of the cartographic content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/verticalScaleOfCartographicContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -4961,42 +4967,42 @@ module RDF::Vocab
       label: "has vertical scale of cartographic content".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60565".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60580",
+    property :P60580,
       definition: "Relates a resource to a set of pitch relationships that establishes the tonal centre, or principal tonal centre, used, or intended to be used, for performance of musical content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/key.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has key".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60581",
+    property :P60581,
       definition: "Relates a resource to a numerical ratio of the size of a micro-image in relation to an original from which it was produced.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/reductionRatio.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has reduction ratio".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60582",
+    property :P60582,
       definition: "Relates a resource to a size of the type that is used to represent the characters and symbols in a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/fontSize.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has font size".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60583",
+    property :P60583,
       definition: "Relates a resource to the circumstances under which a resource is directly acquired, including a method, source, and date of acquisition.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/immediateSourceOfAcquisitionOfResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has immediate source of acquisition of resource".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60584",
+    property :P60584,
       definition: "Relates a resource to a specific character of the primary content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/natureOfContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has nature of content".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60585",
+    property :P60585,
       definition: "Relates a resource to a speed at which a projected carrier must be operated to produce the moving image intended.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/projectionSpeed.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5004,7 +5010,7 @@ module RDF::Vocab
       label: "has projection speed".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60353".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60586",
+    property :P60586,
       definition: "Relates a resource to a speed at which an audio carrier must be operated to produce the sound intended.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/playingSpeed.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5012,7 +5018,7 @@ module RDF::Vocab
       label: "has playing speed".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60351".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60587",
+    property :P60587,
       definition: "Relates a resource to a speed at which streaming audio, video, or other content is designed to play..".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/encodedBitrate.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5021,7 +5027,7 @@ module RDF::Vocab
       label: "has encoded bitrate".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60350".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60588",
+    property :P60588,
       definition: "Relates a resource to a title of resource that is selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/preferredTitleOfResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5030,7 +5036,7 @@ module RDF::Vocab
       label: "has preferred title of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60367".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60589",
+    property :P60589,
       definition: "Relates a resource to a title proper in another language or script.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60590".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelTitleProper.en".freeze,
@@ -5041,7 +5047,7 @@ module RDF::Vocab
       label: "has parallel title proper".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60369".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60590",
+    property :P60590,
       definition: "Relates a resource to a title of a series in another language or script.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60591".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelTitleOfSeries.en".freeze,
@@ -5051,7 +5057,7 @@ module RDF::Vocab
       label: "has parallel title of series".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60589".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60591",
+    property :P60591,
       definition: "Relates a resource to a title proper of a subseries in another language or script. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelTitleProperOfSubseries.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -5059,7 +5065,7 @@ module RDF::Vocab
       label: "has parallel title proper of subseries (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60590".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60592",
+    property :P60592,
       definition: "Relates an agent to a place where an agent dies.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfDeath.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5068,7 +5074,7 @@ module RDF::Vocab
       label: "has place of death".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61018".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60593",
+    property :P60593,
       definition: "Relates an agent to a place where an agent is born..".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfBirth.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5077,7 +5083,7 @@ module RDF::Vocab
       label: "has place of birth".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61018".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60594",
+    property :P60594,
       definition: "Relates a resource to a type of medium used to record sound on an audio carrier.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/recordingMedium.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5085,14 +5091,14 @@ module RDF::Vocab
       label: "has recording medium".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60351".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60595",
+    property :P60595,
       definition: "Relates a resource to the underlying physical material of a microfilm, microfiche, photographic film, or motion picture film resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/baseMaterialForMicrofilmMicrofichePhotographicFilmAndMotionPictureFilm.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has base material for microfilm, microfiche, photographic film, and motion picture film (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60596",
+    property :P60596,
       definition: "Relates a resource to an underlying physical material of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/baseMaterial.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5100,7 +5106,7 @@ module RDF::Vocab
       label: "has base material".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60995".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60597",
+    property :P60597,
       definition: "Relates a resource to a title of resource that is assigned by an ISSN registration agency.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/keyTitle.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5109,7 +5115,7 @@ module RDF::Vocab
       label: "has key title".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61023".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60598",
+    property :P60598,
       definition: "Relates an agent to a year an agent died.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfDeath.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5118,7 +5124,7 @@ module RDF::Vocab
       label: "has date of death".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60324".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60599",
+    property :P60599,
       definition: "Relates an agent to a year an agent was born.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfBirth.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5127,7 +5133,7 @@ module RDF::Vocab
       label: "has date of birth".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60324".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60600",
+    property :P60600,
       definition: "Relates an agent to a resource that includes a contribution of adding written words to music. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60707".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedLyricsOf.en".freeze,
@@ -5138,7 +5144,7 @@ module RDF::Vocab
       label: "is writer of added lyrics of (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60608".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60601",
+    property :P60601,
       definition: "Relates an agent to a legal resource of a higher court that records a decision of a lower court that appeals against an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/appelleeOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5147,7 +5153,7 @@ module RDF::Vocab
       label: "is appellee of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60602",
+    property :P60602,
       definition: "Relates an agent to a resource that involves a responsibility other than creating, having custody, owning, producing, publishing, distributing, or manufacturing. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60002".freeze, "http://rdaregistry.info/Elements/u/P60003".freeze, "http://rdaregistry.info/Elements/u/P60004".freeze, "http://rdaregistry.info/Elements/u/P60005".freeze, "http://rdaregistry.info/Elements/u/P60032".freeze, "http://rdaregistry.info/Elements/u/P60601".freeze, "http://rdaregistry.info/Elements/u/P60603".freeze, "http://rdaregistry.info/Elements/u/P60604".freeze, "http://rdaregistry.info/Elements/u/P60634".freeze, "http://rdaregistry.info/Elements/u/P60650".freeze, "http://rdaregistry.info/Elements/u/P60668".freeze, "http://rdaregistry.info/Elements/u/P60673".freeze, "http://rdaregistry.info/Elements/u/P60674".freeze, "http://rdaregistry.info/Elements/u/P60675".freeze, "http://rdaregistry.info/Elements/u/P60678".freeze, "http://rdaregistry.info/Elements/u/P60689".freeze, "http://rdaregistry.info/Elements/u/P60690".freeze, "http://rdaregistry.info/Elements/u/P60691".freeze, "http://rdaregistry.info/Elements/u/P60692".freeze, "http://rdaregistry.info/Elements/u/P60693".freeze, "http://rdaregistry.info/Elements/u/P60695".freeze, "http://rdaregistry.info/Elements/u/P60696".freeze, "http://rdaregistry.info/Elements/u/P60698".freeze, "http://rdaregistry.info/Elements/u/P60700".freeze, "http://rdaregistry.info/Elements/u/P60702".freeze, "http://rdaregistry.info/Elements/u/P60703".freeze, "http://rdaregistry.info/Elements/u/P60816".freeze, "http://rdaregistry.info/Elements/u/P60835".freeze, "http://rdaregistry.info/Elements/u/P60837".freeze, "http://rdaregistry.info/Elements/u/P60850".freeze, "http://rdaregistry.info/Elements/u/P60870".freeze, "http://rdaregistry.info/Elements/u/P60872".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/otherAgentAssociatedWithResourceOf.en".freeze,
@@ -5156,7 +5162,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is other agent associated with resource of (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60603",
+    property :P60603,
       definition: "Relates an agent to a resource that is assigned as an acknowledgement of the inspiration or support of a related agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dedicatorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5165,7 +5171,7 @@ module RDF::Vocab
       label: "is dedicator of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60604",
+    property :P60604,
       definition: "Relates an agent to a resource that is aggregated or organized in an exhibition or collection.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60006".freeze, "http://rdaregistry.info/Elements/u/P60007".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/curatorOf.en".freeze,
@@ -5175,7 +5181,7 @@ module RDF::Vocab
       label: "is curator of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60605",
+    property :P60605,
       definition: "Relates an agent to a cartographic resource that incorporates a contribution by an agent of providing measurements or dimensional relationships for a geographic area that is represented.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/surveyorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5184,7 +5190,7 @@ module RDF::Vocab
       label: "is surveyor of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60606",
+    property :P60606,
       definition: "Relates an agent to a resource that includes a contribution by an agent of giving apparent movement to inanimate objects or drawings.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60660".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/animatorOf.en".freeze,
@@ -5195,7 +5201,7 @@ module RDF::Vocab
       label: "is animator of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60607",
+    property :P60607,
       definition: "Relates an agent to a resource that includes a contribution by an agent of rewriting a musical composition for a medium of performance different from that for which the resource was originally intended.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60655".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/arrangerOfMusicOf.en".freeze,
@@ -5205,7 +5211,7 @@ module RDF::Vocab
       label: "is arranger of music of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60608",
+    property :P60608,
       definition: "Relates an agent to a resource that includes a contribution of adding text, such as captions for photographs or descriptions of maps. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60600".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedTextOf.en".freeze,
@@ -5215,7 +5221,7 @@ module RDF::Vocab
       label: "is writer of added text of (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60620".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60609",
+    property :P60609,
       definition: "Relates an agent to a resource that includes a contribution by an agent of making detailed plans or drawings for buildings, ships, aircraft, machines, objects, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/draftsmanOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5224,7 +5230,7 @@ module RDF::Vocab
       label: "is draftsman of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60610",
+    property :P60610,
       definition: "Relates an agent to a resource that includes a contribution by an agent of writing down or notating previously unwritten or unnotated content, or by changing it from one system of notation to another.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60607".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/transcriberOf.en".freeze,
@@ -5235,7 +5241,7 @@ module RDF::Vocab
       label: "is transcriber of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60611",
+    property :P60611,
       definition: "Relates an agent to a resource that includes a contribution by an agent of coordinating the activities of composers, sound editors, and sound mixers for a moving image production or for a musical or dramatic presentation or entertainment.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/musicalDirectorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5244,7 +5250,7 @@ module RDF::Vocab
       label: "is musical director of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60612",
+    property :P60612,
       definition: "Relates an agent to a resource that includes a contribution by an agent of designing costumes for a moving image production or for a musical or dramatic presentation or entertainment.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/costumeDesignerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5253,7 +5259,7 @@ module RDF::Vocab
       label: "is costume designer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60613",
+    property :P60613,
       definition: "Relates an agent to a resource that includes a contribution by an agent of expressing the linguistic content of the resourc in a different language.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/translatorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5263,7 +5269,7 @@ module RDF::Vocab
       label: "is translator of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60614",
+    property :P60614,
       definition: "Relates an agent to a resource that includes a contribution by an agent of overseeing artists and craftspeople who build sets for moving image productions.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/artDirectorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5272,7 +5278,7 @@ module RDF::Vocab
       label: "is art director of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60615",
+    property :P60615,
       definition: "Relates an agent to a resource that includes a contribution by an agent of performing music, acting, dancing, speaking, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60016".freeze, "http://rdaregistry.info/Elements/u/P60017".freeze, "http://rdaregistry.info/Elements/u/P60018".freeze, "http://rdaregistry.info/Elements/u/P60019".freeze, "http://rdaregistry.info/Elements/u/P60020".freeze, "http://rdaregistry.info/Elements/u/P60021".freeze, "http://rdaregistry.info/Elements/u/P60022".freeze, "http://rdaregistry.info/Elements/u/P60023".freeze, "http://rdaregistry.info/Elements/u/P60024".freeze, "http://rdaregistry.info/Elements/u/P60025".freeze, "http://rdaregistry.info/Elements/u/P60026".freeze, "http://rdaregistry.info/Elements/u/P60028".freeze, "http://rdaregistry.info/Elements/u/P60029".freeze, "http://rdaregistry.info/Elements/u/P60030".freeze, "http://rdaregistry.info/Elements/u/P60031".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/performerOf.en".freeze,
@@ -5282,7 +5288,7 @@ module RDF::Vocab
       label: "is performer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60616",
+    property :P60616,
       definition: "Relates an agent who contributes to a resource by preparing a court's opinions for publication to a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/courtReporterOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5291,7 +5297,7 @@ module RDF::Vocab
       label: "is court reporter of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60617",
+    property :P60617,
       definition: "Relates an agent who contributes to a resource by providing an introduction to an original resource to a resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPrefaceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -5300,7 +5306,7 @@ module RDF::Vocab
       label: "is writer of introduction of (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60620".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60618",
+    property :P60618,
       definition: "Relates an agent to a resource that includes a contribution of providing an interpretation or critical explanation. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAddedCommentaryOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -5309,7 +5315,7 @@ module RDF::Vocab
       label: "is writer of added commentary of (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60620".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60619",
+    property :P60619,
       definition: "Relates an agent to a resource that includes a contribution of providing an introduction. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfIntroductionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -5318,7 +5324,7 @@ module RDF::Vocab
       label: "is writer of afterword of (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60620".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60620",
+    property :P60620,
       definition: "Relates an agent to a resource that includes a contribution of providing supplementary textual content such as an introduction or a preface. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60608".freeze, "http://rdaregistry.info/Elements/u/P60617".freeze, "http://rdaregistry.info/Elements/u/P60618".freeze, "http://rdaregistry.info/Elements/u/P60619".freeze, "http://rdaregistry.info/Elements/u/P60717".freeze, "http://rdaregistry.info/Elements/u/P60718".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfSupplementaryTextualContentOf.en".freeze,
@@ -5328,7 +5334,7 @@ module RDF::Vocab
       label: "is writer of supplementary content of  (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60621",
+    property :P60621,
       definition: "Relates an agent to a resource that includes a contribution by an agent of revision or clarification of the content, or selection and aggregation of resources, or parts of resources, by one or more creators.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/editorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5337,7 +5343,7 @@ module RDF::Vocab
       label: "is editor of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60622",
+    property :P60622,
       definition: "Relates an agent to a resource that includes a contribution by an agent of shortening another resource without changing the general meaning or manner of presentation.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60663".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/abridgerOf.en".freeze,
@@ -5347,7 +5353,7 @@ module RDF::Vocab
       label: "is abridger of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60623",
+    property :P60623,
       definition: "Relates an agent to a resource that includes a contribution by an agent of supervising the technical aspects of the audio content of a recording session.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/recordingEngineerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5356,7 +5362,7 @@ module RDF::Vocab
       label: "is recording engineer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60624",
+    property :P60624,
       definition: "Relates an agent to a resource that is an aggregate that embodies a still image resource created by an agent.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60660".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60756".freeze,
@@ -5367,7 +5373,7 @@ module RDF::Vocab
       label: "is contributor agent of still image of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60625",
+    property :P60625,
       definition: "Relates an agent to a resource that includes a contribution by an agent of using a recording device to capture sound or video during a recording session, including field recordings of natural sounds, folkloric events, music, or other performances.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/recordistOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5376,7 +5382,7 @@ module RDF::Vocab
       label: "is recordist of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60626",
+    property :P60626,
       definition: "Relates an agent to a resource that includes a contribution. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60605".freeze, "http://rdaregistry.info/Elements/u/P60606".freeze, "http://rdaregistry.info/Elements/u/P60607".freeze, "http://rdaregistry.info/Elements/u/P60609".freeze, "http://rdaregistry.info/Elements/u/P60610".freeze, "http://rdaregistry.info/Elements/u/P60611".freeze, "http://rdaregistry.info/Elements/u/P60612".freeze, "http://rdaregistry.info/Elements/u/P60613".freeze, "http://rdaregistry.info/Elements/u/P60614".freeze, "http://rdaregistry.info/Elements/u/P60615".freeze, "http://rdaregistry.info/Elements/u/P60616".freeze, "http://rdaregistry.info/Elements/u/P60620".freeze, "http://rdaregistry.info/Elements/u/P60621".freeze, "http://rdaregistry.info/Elements/u/P60622".freeze, "http://rdaregistry.info/Elements/u/P60623".freeze, "http://rdaregistry.info/Elements/u/P60624".freeze, "http://rdaregistry.info/Elements/u/P60625".freeze, "http://rdaregistry.info/Elements/u/P60627".freeze, "http://rdaregistry.info/Elements/u/P60647".freeze, "http://rdaregistry.info/Elements/u/P60651".freeze, "http://rdaregistry.info/Elements/u/P60666".freeze, "http://rdaregistry.info/Elements/u/P60671".freeze, "http://rdaregistry.info/Elements/u/P60754".freeze, "http://rdaregistry.info/Elements/u/P60755".freeze, "http://rdaregistry.info/Elements/u/P60810".freeze, "http://rdaregistry.info/Elements/u/P60812".freeze, "http://rdaregistry.info/Elements/u/P60814".freeze, "http://rdaregistry.info/Elements/u/P60825".freeze, "http://rdaregistry.info/Elements/u/P60829".freeze, "http://rdaregistry.info/Elements/u/P60839".freeze, "http://rdaregistry.info/Elements/u/P60841".freeze, "http://rdaregistry.info/Elements/u/P60852".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorOf.en".freeze,
@@ -5385,7 +5391,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is contributor of (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60627",
+    property :P60627,
       definition: "Relates an agent to a resource that includes a contribution by an agent of general management and supervision of a stage performance.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/stageDirectorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5394,7 +5400,7 @@ module RDF::Vocab
       label: "is stage director of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60628",
+    property :P60628,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for current legal possession.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60008".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/currentOwnerOf.en".freeze,
@@ -5404,7 +5410,7 @@ module RDF::Vocab
       label: "is current owner of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60632".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60629",
+    property :P60629,
       definition: "Relates an agent employed by an agent to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/employee.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5412,7 +5418,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has employee".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60630",
+    property :P60630,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for former legal possession.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60012".freeze, "http://rdaregistry.info/Elements/u/P60013".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/formerOwnerOf.en".freeze,
@@ -5422,7 +5428,7 @@ module RDF::Vocab
       label: "is former owner of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60632".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60631",
+    property :P60631,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for legal custody.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/custodianOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5430,7 +5436,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is custodian of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60632",
+    property :P60632,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for legal possession.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60628".freeze, "http://rdaregistry.info/Elements/u/P60630".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/ownerOf.en".freeze,
@@ -5439,7 +5445,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is owner of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60633",
+    property :P60633,
       definition: "Relates an agent holding an office in or commanding an agent to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60864".freeze, "http://rdaregistry.info/Elements/u/P60866".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/officer.en".freeze,
@@ -5449,7 +5455,7 @@ module RDF::Vocab
       label: "has officer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60454".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60634",
+    property :P60634,
       altLabel: "honoree of".freeze,
       definition: "Relates an agent to a resource that marks the esteem of and respect for an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/honoureeOf.en".freeze,
@@ -5459,7 +5465,7 @@ module RDF::Vocab
       label: "is honouree of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60635",
+    property :P60635,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for broadcasting to an audience via radio, television, webcast, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/broadcasterOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5468,7 +5474,7 @@ module RDF::Vocab
       label: "is broadcaster of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60670".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60636",
+    property :P60636,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for distribution of a moving image to theatres or other channels.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/filmDistributorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5477,7 +5483,7 @@ module RDF::Vocab
       label: "is film distributor of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60667".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60637",
+    property :P60637,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for the entire graphic design of a book, including arrangement of type and illustration, choice of materials, and process used.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/bookDesignerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5486,7 +5492,7 @@ module RDF::Vocab
       label: "is book designer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60669".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60638",
+    property :P60638,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for cutting letters, figures, etc., on a surface such as a wooden or metal plate used for printing.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/engraverOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5495,7 +5501,7 @@ module RDF::Vocab
       label: "is engraver of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60669".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60639",
+    property :P60639,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for embossing braille cells using a stylus, special embossing printer, or other device.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/brailleEmbosserOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5504,7 +5510,7 @@ module RDF::Vocab
       label: "is braille embosser of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60669".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60640",
+    property :P60640,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for making a relief, intaglio, or planographic printing surface.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/printmakerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5513,7 +5519,7 @@ module RDF::Vocab
       label: "is printmaker of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60669".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60641",
+    property :P60641,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for pouring a liquid or molten substance into a mold and leaving it to solidify to take the shape of the mold.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/casterOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5522,7 +5528,7 @@ module RDF::Vocab
       label: "is caster of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60669".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60642",
+    property :P60642,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for preparing a stone or plate for lithographic printing.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lithographerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5532,7 +5538,7 @@ module RDF::Vocab
       label: "is lithographer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60669".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60643",
+    property :P60643,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for preparing plates used in the production of printed images or text.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/platemakerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5541,7 +5547,7 @@ module RDF::Vocab
       label: "is platemaker of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60669".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60644",
+    property :P60644,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for subjecting metal, glass, or some other surface used for printing, to acid or another corrosive substance.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/etcherOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5550,7 +5556,7 @@ module RDF::Vocab
       label: "is etcher of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60669".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60645",
+    property :P60645,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for using a photomechanical process for making prints directly from a hardened film of gelatin or other colloid that has ink-receptive and ink-repellent surfaces.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/collotyperOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5559,7 +5565,7 @@ module RDF::Vocab
       label: "is collotyper of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60669".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60646",
+    property :P60646,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for manufacturing printed text, notated music, etc., from type or plates, such as a book, newspaper, magazine, broadside, score, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/printerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5568,7 +5574,7 @@ module RDF::Vocab
       label: "is printer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60669".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60647",
+    property :P60647,
       definition: "Relates an agent to a resource with an \"X presents:\" credit in a resource of a moving image for an agent who is probably associated with production, finance, or distribution in some way.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/presenterOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5577,7 +5583,7 @@ module RDF::Vocab
       label: "is presenter of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60648",
+    property :P60648,
       definition: "Relates an agent of which an agent is a member to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/memberOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5585,7 +5591,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is member of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60649",
+    property :P60649,
       definition: "Relates an agent to a resource that involves a responsibility as an advisor or supervisor of thesis or dissertation research, overseeing either an academic degree or thesis.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/degreeSupervisorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5594,7 +5600,7 @@ module RDF::Vocab
       label: "is degree supervisor of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60650",
+    property :P60650,
       definition: "Relates an agent to a resource that is decorated using precious metals or colour, often with elaborate designs and motifs.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/illuminatorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5603,7 +5609,7 @@ module RDF::Vocab
       label: "is illuminator of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60651",
+    property :P60651,
       definition: "Relates an agent to a resource that includes a contribution tof assembling, arranging, and trimming film, video, or other moving image formats, including both visual and audio aspects.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/editorOfMovingImageResourceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5612,7 +5618,7 @@ module RDF::Vocab
       label: "is editor of moving image resource of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60652",
+    property :P60652,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for computer programming.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/programmerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5621,7 +5627,7 @@ module RDF::Vocab
       label: "is programmer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60653",
+    property :P60653,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for design of an object.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/designerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5630,7 +5636,7 @@ module RDF::Vocab
       label: "is designer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60654",
+    property :P60654,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for a cartographic resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/cartographerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5639,7 +5645,7 @@ module RDF::Vocab
       label: "is cartographer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60655",
+    property :P60655,
       definition: "Relates an agent to a musical resource that involves a responsibility of an agent for music.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/composerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5648,7 +5654,7 @@ module RDF::Vocab
       label: "is composer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60656",
+    property :P60656,
       definition: "Relates an agent who is responsible for creating a new device or process to a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/inventorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5657,7 +5663,7 @@ module RDF::Vocab
       label: "is inventor of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60657",
+    property :P60657,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for selecting, arranging, aggregating, and editing data and information for a resource such as a bibliography or a directory.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60621".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/compilerOf.en".freeze,
@@ -5667,7 +5673,7 @@ module RDF::Vocab
       label: "is compiler of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60658",
+    property :P60658,
       definition: "Relates an agent to a resource that is a photographic resource that involves a responsibility of an agent for photography.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/photographerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5676,7 +5682,7 @@ module RDF::Vocab
       label: "is photographer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60659",
+    property :P60659,
       definition: "Relates an agent to a resource that includes a contribution by an agent of interviewing, reporting, or some other information gathering agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/interviewerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5685,7 +5691,7 @@ module RDF::Vocab
       label: "is interviewer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60660",
+    property :P60660,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for conceiving, and often implementing, an original graphic design, drawing, painting, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60705".freeze, "http://rdaregistry.info/Elements/u/P60758".freeze, "http://rdaregistry.info/Elements/u/P60759".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/artistOf.en".freeze,
@@ -5695,7 +5701,7 @@ module RDF::Vocab
       label: "is artist of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60661",
+    property :P60661,
       definition: "Relates an agent to a resource that includes a contribution by an agent of being interviewed, usually by a reporter or some other information gathering agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/intervieweeOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5704,7 +5710,7 @@ module RDF::Vocab
       label: "is interviewee of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60662",
+    property :P60662,
       definition: "Relates an agent to a choreographic resource that involves a responsibility of an agent for choreography.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/choreographerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5713,7 +5719,7 @@ module RDF::Vocab
       label: "is choreographer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60663",
+    property :P60663,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for creating a textual resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60706".freeze, "http://rdaregistry.info/Elements/u/P60707".freeze, "http://rdaregistry.info/Elements/u/P60708".freeze, "http://rdaregistry.info/Elements/u/P60757".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/authorOf.en".freeze,
@@ -5723,7 +5729,7 @@ module RDF::Vocab
       label: "is author of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60664",
+    property :P60664,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for creating an architectural design, including a pictorial representation intended to show how a building or other structure will look when completed.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60704".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/architectOf.en".freeze,
@@ -5733,7 +5739,7 @@ module RDF::Vocab
       label: "is architect of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60665",
+    property :P60665,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for an independent or personal film.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/filmmakerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5742,7 +5748,7 @@ module RDF::Vocab
       label: "is filmmaker of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60666",
+    property :P60666,
       definition: "Relates an agent to a resource that includes a contribution by an agent of designing the overall visual appearance of a moving image production.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/productionDesignerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5751,7 +5757,7 @@ module RDF::Vocab
       label: "is production designer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60667",
+    property :P60667,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for distribution.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60636".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/distributorOf.en".freeze,
@@ -5760,7 +5766,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is distributor of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60668",
+    property :P60668,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for most of the business aspects of a production for screen, sound recording, television, webcast, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60033".freeze, "http://rdaregistry.info/Elements/u/P60034".freeze, "http://rdaregistry.info/Elements/u/P60035".freeze, "http://rdaregistry.info/Elements/u/P60883".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/producerOf.en".freeze,
@@ -5770,7 +5776,7 @@ module RDF::Vocab
       label: "is producer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60669",
+    property :P60669,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for printing, duplicating, casting, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60637".freeze, "http://rdaregistry.info/Elements/u/P60638".freeze, "http://rdaregistry.info/Elements/u/P60639".freeze, "http://rdaregistry.info/Elements/u/P60640".freeze, "http://rdaregistry.info/Elements/u/P60641".freeze, "http://rdaregistry.info/Elements/u/P60642".freeze, "http://rdaregistry.info/Elements/u/P60643".freeze, "http://rdaregistry.info/Elements/u/P60644".freeze, "http://rdaregistry.info/Elements/u/P60645".freeze, "http://rdaregistry.info/Elements/u/P60646".freeze, "http://rdaregistry.info/Elements/u/P60747".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/manufacturerOf.en".freeze,
@@ -5780,7 +5786,7 @@ module RDF::Vocab
       label: "is manufacturer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60911".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60670",
+    property :P60670,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for publishing, releasing, or issuing.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60635".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/publisherOf.en".freeze,
@@ -5789,7 +5795,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is publisher of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60671",
+    property :P60671,
       definition: "Relates an agent to a resource that includes a contribution by an agent of recording the minutes of a meeting.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/minuteTakerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5798,7 +5804,7 @@ module RDF::Vocab
       label: "is minute taker of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60672",
+    property :P60672,
       definition: "Relates an agent to a resource that involves a creation responsibility.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60001".freeze, "http://rdaregistry.info/Elements/u/P60014".freeze, "http://rdaregistry.info/Elements/u/P60649".freeze, "http://rdaregistry.info/Elements/u/P60652".freeze, "http://rdaregistry.info/Elements/u/P60653".freeze, "http://rdaregistry.info/Elements/u/P60654".freeze, "http://rdaregistry.info/Elements/u/P60655".freeze, "http://rdaregistry.info/Elements/u/P60656".freeze, "http://rdaregistry.info/Elements/u/P60657".freeze, "http://rdaregistry.info/Elements/u/P60658".freeze, "http://rdaregistry.info/Elements/u/P60659".freeze, "http://rdaregistry.info/Elements/u/P60660".freeze, "http://rdaregistry.info/Elements/u/P60661".freeze, "http://rdaregistry.info/Elements/u/P60662".freeze, "http://rdaregistry.info/Elements/u/P60663".freeze, "http://rdaregistry.info/Elements/u/P60664".freeze, "http://rdaregistry.info/Elements/u/P60665".freeze, "http://rdaregistry.info/Elements/u/P60699".freeze, "http://rdaregistry.info/Elements/u/P60701".freeze, "http://rdaregistry.info/Elements/u/P60827".freeze, "http://rdaregistry.info/Elements/u/P60881".freeze, "http://rdaregistry.info/Elements/u/P60882".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/creatorOf.en".freeze,
@@ -5807,7 +5813,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is creator of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60673",
+    property :P60673,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for the general management and supervision of a filmed performance, a radio or television program, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60009".freeze, "http://rdaregistry.info/Elements/u/P60010".freeze, "http://rdaregistry.info/Elements/u/P60011".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/directorOf.en".freeze,
@@ -5817,7 +5823,7 @@ module RDF::Vocab
       label: "is director of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60674",
+    property :P60674,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for compensation of degradation by bringing it back to a state as close as possible to its original condition using a set of technical, editorial, and intellectual procedures.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/restorationistOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5826,7 +5832,7 @@ module RDF::Vocab
       label: "is restorationist of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60675",
+    property :P60675,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for sponsoring some aspect of a resource,".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/sponsoriedResourceOfAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5836,7 +5842,7 @@ module RDF::Vocab
       label: "has sponsored resource of agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60676",
+    property :P60676,
       definition: "Relates an agent sponsoring an agent to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/sponsoringAgentOfAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5844,7 +5850,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has sponsoring agent of agent".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60678",
+    property :P60678,
       definition: "Relates an agent to a resoure that involves a responsibility of an agent for capturing images, either electronically or on film or video stock, and often selecting and arranging the lighting.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/directorOfPhotographyOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5853,7 +5859,7 @@ module RDF::Vocab
       label: "is director of photography of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60679",
+    property :P60679,
       definition: "Relates an agent who employs an agent to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/employer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5861,7 +5867,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has employer".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60680",
+    property :P60680,
       definition: "Relates an agent who is hierarchically superior to a related agent to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/hierarchicalSuperior.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5869,7 +5875,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has hierarchical superior".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60681",
+    property :P60681,
       definition: "Relates an agent who is subordinate to a related agent to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/hierarchicalSubordinate.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5877,7 +5883,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has hierarchical subordinate".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60682",
+    property :P60682,
       definition: "Relates an agent who merged with a related agent to form a third to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/mergee.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5885,7 +5891,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has mergee".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60683",
+    property :P60683,
       definition: "Relates an agent who precedes a related agent to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/predecessor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5893,7 +5899,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has predecessor".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60684",
+    property :P60684,
       definition: "Relates an agent who resulted from a merger of two or more other agents to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/productOfMerger.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5901,7 +5907,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has product of merger".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60685",
+    property :P60685,
       definition: "Relates an agent who resulted from a split or division of a related agent to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/productOfSplit.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5909,7 +5915,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has product of split".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60686",
+    property :P60686,
       definition: "Relates an agent who succeeds or follows a related agent to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/successor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5917,7 +5923,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has successor".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60687",
+    property :P60687,
       definition: "Relates an agent who an agent founded to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/foundedAgentOfAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5925,7 +5931,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has founded agent of agent".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60688",
+    property :P60688,
       definition: "Relates an agent who an agent sponsors to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/sponsoringAgentOfAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5933,7 +5939,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has sponsored agent of agent".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60689",
+    property :P60689,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for being commemorated.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dedicateeOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5942,7 +5948,7 @@ module RDF::Vocab
       label: "is dedicatee of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60690",
+    property :P60690,
       definition: "Relates an agent to a resource or a portion of a resource that is addressed to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/addresseeOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5951,7 +5957,7 @@ module RDF::Vocab
       label: "is addressee of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60691",
+    property :P60691,
       definition: "Relates an agent to a resource of a higher court recording a decision of a lower court that is appealed by an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/appellantOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5960,7 +5966,7 @@ module RDF::Vocab
       label: "is appellant of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60692",
+    property :P60692,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for binding.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/binderOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5969,7 +5975,7 @@ module RDF::Vocab
       label: "is binder of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60693",
+    property :P60693,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for bringing a suit in a civil proceeding.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/plaintiffOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5978,7 +5984,7 @@ module RDF::Vocab
       label: "is plaintiff of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60694",
+    property :P60694,
       definition: "Relates an agent who founded an agent to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/founderAgentOfAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5986,7 +5992,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has founder agent of agent".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60695",
+    property :P60695,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for inscribing a text, such as a statement of dedication or gift.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/inscriberOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -5995,7 +6001,7 @@ module RDF::Vocab
       label: "is inscriber of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60696",
+    property :P60696,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for hearing and decision on legal matters in court.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/judgeOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6004,7 +6010,7 @@ module RDF::Vocab
       label: "is judge of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60697",
+    property :P60697,
       definition: "Relates an agent who is a member of an agent to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/member.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6012,7 +6018,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has member".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60698",
+    property :P60698,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for being accused in a criminal proceeding or sued in a civil proceeding.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61093".freeze, "http://rdaregistry.info/Elements/u/P61095".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/defendantOf.en".freeze,
@@ -6022,7 +6028,7 @@ module RDF::Vocab
       label: "is defendant of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60699",
+    property :P60699,
       definition: "Relates an agent to a resource that involves a responsibility as a faculty moderator of an academic disputation, normally proposing a thesis and participating in the ensuing disputation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/praesesOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6031,7 +6037,7 @@ module RDF::Vocab
       label: "is praeses of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60700",
+    property :P60700,
       definition: "Relates an agent to a resource that carries notes and other information added by hand.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/annotatorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6040,7 +6046,7 @@ module RDF::Vocab
       label: "is annotator of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60701",
+    property :P60701,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for providing consultation services, and often making recommendations, to a creator of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/consultantOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6049,7 +6055,7 @@ module RDF::Vocab
       label: "is consultant of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60702",
+    property :P60702,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for a manuscript signature appearing on it.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/autographerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6058,7 +6064,7 @@ module RDF::Vocab
       label: "is autographer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60703",
+    property :P60703,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for issuing a resource, such as an official organ of the body.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/issuingAgentOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6067,7 +6073,7 @@ module RDF::Vocab
       label: "is issuing agent of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60704",
+    property :P60704,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for architectural aspects of landscaping.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/landscapeArchitectOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6076,7 +6082,7 @@ module RDF::Vocab
       label: "is landscape architect of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60664".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60705",
+    property :P60705,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for three-dimensional modeling, carving, or similar technique.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/sculptorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6085,7 +6091,7 @@ module RDF::Vocab
       label: "is sculptor of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60660".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60706",
+    property :P60706,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for authoring a screenplay, script, or scene.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/screenwriterOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6094,7 +6100,7 @@ module RDF::Vocab
       label: "is screenwriter of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60663".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60707",
+    property :P60707,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for authoring the words of a popular song, including a song from a musical.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60708".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lyricistOf.en".freeze,
@@ -6104,7 +6110,7 @@ module RDF::Vocab
       label: "is lyricist of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60663".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60708",
+    property :P60708,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for authoring the words of an opera or other musical stage resource, or an oratorio.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60707".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/librettistOf.en".freeze,
@@ -6114,7 +6120,7 @@ module RDF::Vocab
       label: "is librettist of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60663".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60709",
+    property :P60709,
       definition: "Relates a resource to a resource that is an augmentation of, or is augmented by, or is complemented by, or accompanies, or is accompanied by a resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60196".freeze, "http://rdaregistry.info/Elements/u/P60198".freeze, "http://rdaregistry.info/Elements/u/P60204".freeze, "http://rdaregistry.info/Elements/u/P60307".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/accompanyingResourceRelationshipWith.en".freeze,
@@ -6123,7 +6129,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has accompanying resource relationship with (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60710",
+    property :P60710,
       definition: "Relates a resource to a resource that is based on or is a derivative of a related resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60250".freeze, "http://rdaregistry.info/Elements/u/P60305".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/derivativeResourceRelationshipWith.en".freeze,
@@ -6132,14 +6138,14 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has derivative resource relationship with (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60711",
+    property :P60711,
       definition: "Relates a resource to a resource that is described in or is a description of the resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/descriptiveResourceRelationshipWith.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has descriptive resource relationship with (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60712",
+    property :P60712,
       definition: "Relates a resource to a resource that is equivalent to a related resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60191".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/equivalentResourceRelationshipWith.en".freeze,
@@ -6148,7 +6154,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has equivalent resource relationship with (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60713",
+    property :P60713,
       definition: "Relates a resource to a resource that is preceded by or succeeded by a related resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60261".freeze, "http://rdaregistry.info/Elements/u/P60278".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/sequentialResourceRelationshipWith.en".freeze,
@@ -6157,7 +6163,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has sequential resource relationship with (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60714",
+    property :P60714,
       definition: "Relates a resource to a resource that is contained in or contains a related resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60101".freeze, "http://rdaregistry.info/Elements/u/P60249".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/wholePartResourceRelationshipWith.en".freeze,
@@ -6166,7 +6172,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has whole-part resource relationship with (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60715",
+    property :P60715,
       definition: "Relates a resource to an agent who contributes to a resource by providing an afterword to an original resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAfterword.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -6175,7 +6181,7 @@ module RDF::Vocab
       label: "has writer of afterword (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60392".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60716",
+    property :P60716,
       definition: "Relates a resource to an agent who contributes to a resource by providing a postface to an original resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPostface.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -6184,7 +6190,7 @@ module RDF::Vocab
       label: "has writer of postface (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60392".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60717",
+    property :P60717,
       definition: "Relates an agent to a resource that includes a contribution of providing an afterword. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfAfterwordOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -6193,7 +6199,7 @@ module RDF::Vocab
       label: "is writer of preface of (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60620".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60718",
+    property :P60718,
       definition: "Relates an agent to a resource that includes a contribution of providing a postface. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfPostfaceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -6202,7 +6208,7 @@ module RDF::Vocab
       label: "is writer of postface of (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60620".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60719",
+    property :P60719,
       definition: "Relates a resource to a resource that is adapted as a musical theatre resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/musicalTheatreAdaptationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6211,7 +6217,7 @@ module RDF::Vocab
       label: "is musical theatre adaptation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60720",
+    property :P60720,
       definition: "Relates a resource to a resource that is adapted as an opera.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/operaAdaptationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6220,7 +6226,7 @@ module RDF::Vocab
       label: "is opera adaptation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60721",
+    property :P60721,
       definition: "Relates a resource to a musical theatre resource based on another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAsMusicalTheatre.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6229,7 +6235,7 @@ module RDF::Vocab
       label: "is adapted as musical theatre".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60722",
+    property :P60722,
       definition: "Relates a resource to an opera based on another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAsOpera.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6238,7 +6244,7 @@ module RDF::Vocab
       label: "is adapted as opera".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60723",
+    property :P60723,
       definition: "Relates a resource to a musical resource that complements a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60118".freeze, "http://rdaregistry.info/Elements/u/P60725".freeze, "http://rdaregistry.info/Elements/u/P60727".freeze, "http://rdaregistry.info/Elements/u/P60729".freeze, "http://rdaregistry.info/Elements/u/P60731".freeze, "http://rdaregistry.info/Elements/u/P60732".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/music.en".freeze,
@@ -6248,7 +6254,7 @@ module RDF::Vocab
       label: "has music".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60724",
+    property :P60724,
       definition: "Relates a resource to resource that is complemented by a musical resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60202".freeze, "http://rdaregistry.info/Elements/u/P60726".freeze, "http://rdaregistry.info/Elements/u/P60728".freeze, "http://rdaregistry.info/Elements/u/P60730".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/musicFor.en".freeze,
@@ -6258,7 +6264,7 @@ module RDF::Vocab
       label: "is music for".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60725",
+    property :P60725,
       definition: "Relates a resource to a musical resource that complements a resource that is a video.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/videoMusic.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6267,7 +6273,7 @@ module RDF::Vocab
       label: "has video music".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60723".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60726",
+    property :P60726,
       definition: "Relates a resource to a resource that is a video that is complemented by a musical resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/musicForVideo.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6276,7 +6282,7 @@ module RDF::Vocab
       label: "is music for video".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60724".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60727",
+    property :P60727,
       definition: "Relates a resource to a musical resource that complements a resource that is a television program.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/televisionProgramMusic.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6285,7 +6291,7 @@ module RDF::Vocab
       label: "has television program music".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60723".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60728",
+    property :P60728,
       definition: "Relates a resource to a resource that is a television program that is complemented by a musical resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/musicForTelevisionProgram.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6294,7 +6300,7 @@ module RDF::Vocab
       label: "is music for television program".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60724".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60729",
+    property :P60729,
       definition: "Relates a resource to a musical resource that complements a resource that is a radio program.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/radioProgramMusic.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6303,7 +6309,7 @@ module RDF::Vocab
       label: "has radio program music".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60723".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60730",
+    property :P60730,
       definition: "Relates a resource to a resource that is a radio program that is complemented by a musical resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/musicForRadioProgram.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6312,7 +6318,7 @@ module RDF::Vocab
       label: "is music for radio program".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60724".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60731",
+    property :P60731,
       definition: "Relates a resource to a resource that is a motion picture that is complemented by a musical resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/musicForMotionPicture.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6321,7 +6327,7 @@ module RDF::Vocab
       label: "is music for motion picture".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60723".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60732",
+    property :P60732,
       definition: "Relates a resource to a musical resource that complements a resource that is a motion picture.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/motionPictureMusic.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6330,7 +6336,7 @@ module RDF::Vocab
       label: "has motion picture music".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60723".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60733",
+    property :P60733,
       definition: "Relates an agent who split or divided into a related agent to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/predecessorOfSplit.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6338,7 +6344,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has predecessor of split".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60736",
+    property :P60736,
       definition: "Relates an agent who formed a related agent by merging with one or more other agents to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/componentOfMerger.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6346,7 +6352,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has component of merger".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60737",
+    property :P60737,
       definition: "Relates an agent to an agent holding an office in or commanding an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60865".freeze, "http://rdaregistry.info/Elements/u/P60867".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/officerOf.en".freeze,
@@ -6356,21 +6362,21 @@ module RDF::Vocab
       label: "has officer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60454".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60738",
+    property :P60738,
       definition: "Relates an agent to an agent who acts for a local affiliated body and others at a broader organizational level.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/broaderAffiliatedAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has broader affiliated agent".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60739",
+    property :P60739,
       definition: "Relates a local agent affiliated with a broader agent which acts for it and others at a broader organizational level to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/localAffiliate.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has local affiliate".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60740",
+    property :P60740,
       definition: "Relates a resource to a resource that is a choreographic resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/choreography.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6379,7 +6385,7 @@ module RDF::Vocab
       label: "has choreography".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60741",
+    property :P60741,
       definition: "Relates a resource to a resource that is complemented by a choreographic resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/choreographyFor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6388,7 +6394,7 @@ module RDF::Vocab
       label: "is choreography for".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60742",
+    property :P60742,
       definition: "Relates a resource to a graphic novel based on another resource".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAsGraphicNovel.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6397,7 +6403,7 @@ module RDF::Vocab
       label: "is adapted as graphic novel".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60743",
+    property :P60743,
       definition: "Relates a resource to a resource that is adapted as a graphic novel.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/graphicNovelizationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6406,7 +6412,7 @@ module RDF::Vocab
       label: "is graphic novelization of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60744",
+    property :P60744,
       definition: "Relates a resource to relates a resource to a video game based on another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAsVideoGame.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6415,7 +6421,7 @@ module RDF::Vocab
       label: "is adapted as video game".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60745",
+    property :P60745,
       definition: "Relates a resource to a resource that is adapted as a video game.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/videoGameAdaptationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6424,7 +6430,7 @@ module RDF::Vocab
       label: "is video game adaptation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60746",
+    property :P60746,
       definition: "Relates a resource to an agent who is responsible for the production of paper used to manufacture a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/papermaker.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6433,7 +6439,7 @@ module RDF::Vocab
       label: "has papermaker".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60443".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60747",
+    property :P60747,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for producing paper.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/papermakerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6442,7 +6448,7 @@ module RDF::Vocab
       label: "is papermaker of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60669".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60748",
+    property :P60748,
       definition: "Relates a resource to an agent who contributes to a moving image resource by designing and creating post-production visual effects.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/visualEffectsProvider.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6451,7 +6457,7 @@ module RDF::Vocab
       label: "has visual effects provider".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60749",
+    property :P60749,
       definition: "Relates a resource to an agent who contributes to a moving image or audio resource by designing and creating on-set special effects such as on-set mechanical effects and in-camera optical effects.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/specialEffectsProvider.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6460,7 +6466,7 @@ module RDF::Vocab
       label: "has special effects provider".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60750",
+    property :P60750,
       definition: "Relates a resource to an illustrator who contributes to a comic book, graphic novel, etc., by drawing text and graphic sound effects.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/letterer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6469,7 +6475,7 @@ module RDF::Vocab
       label: "has letterer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60396".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60751",
+    property :P60751,
       definition: "Relates a resource to an agent who is an author who is appointed by an organization to report on the proceedings of its meetings.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60446".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/rapporteur.en".freeze,
@@ -6480,7 +6486,7 @@ module RDF::Vocab
       label: "has rapporteur".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60434".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60752",
+    property :P60752,
       definition: "Relates a resource to an agent who is an artist who is responsible for calligraphy where the focus of interest lies in the aesthetic value of the penmanship or graphic artistry, regardless of whether the same agent is also responsible for the inscribed text.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/calligrapher.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6489,7 +6495,7 @@ module RDF::Vocab
       label: "has calligrapher".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60431".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60753",
+    property :P60753,
       definition: "Relates a resource to an agent who is an artist who is responsible for exploiting the book form or altering its physical structure.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/bookArtist.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6498,7 +6504,7 @@ module RDF::Vocab
       label: "has book artist".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60431".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60754",
+    property :P60754,
       definition: "Relates an agent to a resource that includes a contribution by an agent of designing and creating post-production visual effects.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/visualEffectsProviderOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6507,7 +6513,7 @@ module RDF::Vocab
       label: "is visual effects provider of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60755",
+    property :P60755,
       definition: "Relates an agent to a resource that includes a contribution designing and creating on-set special effects, such as on-set mechanical effects and in-camera optical effects.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/specialEffectsProviderOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6516,7 +6522,7 @@ module RDF::Vocab
       label: "is special effects provider of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60756",
+    property :P60756,
       definition: "Relates an agent to a resource that includes a contribution by an agent of drawing text and graphic sound effects for a comic book, graphic novel, etc. ".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lettererOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6525,7 +6531,7 @@ module RDF::Vocab
       label: "is letterer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60624".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60757",
+    property :P60757,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for reporting on the proceedings of meetings of an organization.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60708".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/rapporteurOf.en".freeze,
@@ -6535,7 +6541,7 @@ module RDF::Vocab
       label: "is rapporteur of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60663".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60758",
+    property :P60758,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for calligraphy where the focus of interest lies in the aesthetic value of the penmanship or graphic artistry, regardless of whether the same agent is also responsible for the inscribed text.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/calligrapherOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6544,7 +6550,7 @@ module RDF::Vocab
       label: "is calligrapher of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60660".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60759",
+    property :P60759,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for exploiting the book form or altering its physical structure".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/bookArtistOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6553,14 +6559,14 @@ module RDF::Vocab
       label: "is book artist of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60660".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60760",
+    property :P60760,
       definition: "Relates a resource to details of a ratio of the width to the height of a moving image.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfAspectRatioDesignation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of aspect ratio designation".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60761",
+    property :P60761,
       altLabel: "has details of color content".freeze,
       definition: "Relates a resource to details of a presence of colour, tone, etc., in the content of a resource, and the specific colours, tones, etc., including black and white, present.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfColourContent.en".freeze,
@@ -6568,42 +6574,42 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of colour content".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60762",
+    property :P60762,
       definition: "Relates a resource to details of a set of characters or symbols used to express musical content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfFormOfMusicalNotation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of form of musical notation".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60763",
+    property :P60763,
       definition: "Relates a resource to details of a set of characters or symbols used to express movement content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfFormOfNotatedMovement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of form of notated movement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60764",
+    property :P60764,
       definition: "Relates a resource to details of a musical or physical layout of the content of a resource that is presented in a form of musical notation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfFormatOfNotatedMusic.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of format of notated music".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60765",
+    property :P60765,
       definition: "Relates a resource to details of a set of characters or symbols used to express the content of a resource in a form that can be perceived through touch.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfFormOfTactileNotation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of form of tactile notation".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60766",
+    property :P60766,
       definition: "Relates a resource to details of set of characters or symbols used to express written language content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfScript.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of script".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60767",
+    property :P60767,
       definition: "Relates a resource to details of a physical or chemical substance applied to a base material of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60774".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfAppliedMaterial.en".freeze,
@@ -6611,21 +6617,21 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of applied material".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60768",
+    property :P60768,
       definition: "Relates a resource to details of an underlying physical material of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfBaseMaterial.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of base material".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60769",
+    property :P60769,
       definition: "Relates a resource to details of the proportional relationship between a whole sheet in a printed or manuscript resource, and the individual leaves that result if that sheet is left full, cut, or folded.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfBibliographicFormat.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of bibliographic format".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60770",
+    property :P60770,
       definition: "Relates a resource to details of a system used to format a video resource for television broadcast.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfBroadcastStandard.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6633,7 +6639,7 @@ module RDF::Vocab
       label: "has details of broadcast standard".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60801".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60771",
+    property :P60771,
       definition: "Relates a resource to details of a number of sound channels used to make a recording.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfConfigurationOfPlaybackChannels.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6641,7 +6647,7 @@ module RDF::Vocab
       label: "has details of configuration of playback channels".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60796".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60772",
+    property :P60772,
       definition: "Relates a resource to details of a technical specification relating to a digital encoding of text, image, audio, video, and other types of data in a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60773".freeze, "http://rdaregistry.info/Elements/u/P60775".freeze, "http://rdaregistry.info/Elements/u/P60776".freeze, "http://rdaregistry.info/Elements/u/P60904".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfDigitalFileCharacteristic.en".freeze,
@@ -6649,7 +6655,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of digital file characteristic".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60773",
+    property :P60773,
       definition: "Relates a resource to details of an encoding of geospatial information in a cartographic resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfDigitalRepresentationOfCartographicContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6657,7 +6663,7 @@ module RDF::Vocab
       label: "has details of digital representation of cartographic content".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60772".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60774",
+    property :P60774,
       definition: "Relates a resource to details of a suspension of light-sensitive chemicals used as a coating on a microfilm or microfiche.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfEmulsionOnMicrofilmAndMicrofiche.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6665,7 +6671,7 @@ module RDF::Vocab
       label: "has details of emulsion on microfilm and microfiche".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60767".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60775",
+    property :P60775,
       definition: "Relates a resource to details of a schema or standard used to encode the digital content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfEncodingFormat.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6673,7 +6679,7 @@ module RDF::Vocab
       label: "has details of encoding format".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60772".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60776",
+    property :P60776,
       definition: "Relates a resource to details of a general type of data content encoded in a computer file.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfFileType.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6681,14 +6687,14 @@ module RDF::Vocab
       label: "has details of file type".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60772".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60777",
+    property :P60777,
       definition: "Relates a resource to details of a size of the type used to represent characters and symbols in a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfFontSize.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of font size".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60778",
+    property :P60778,
       definition: "Relates a resource to details of the relationship between an original audio carrier and the carrier of a reproduction made from the original (e.g., a tape duplication master, a test pressing). (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfGenerationOfAudioRecording.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -6696,7 +6702,7 @@ module RDF::Vocab
       label: "has details of generation of audio recording (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60803".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60779",
+    property :P60779,
       definition: "Relates a resource to details of the relationship between an original carrier of a digital resource and the carrier of a reproduction made from the original (e.g., a derivative master).. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfGenerationOfDigitalResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -6704,7 +6710,7 @@ module RDF::Vocab
       label: "has details of generation of digital resource (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60803".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60780",
+    property :P60780,
       definition: "Relates a resource to details of the relationship between an original microform carrier and the carrier of a reproduction made from the original (e.g., a printing master).. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfGenerationOfMicroform.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -6712,7 +6718,7 @@ module RDF::Vocab
       label: "has details of generation of microform (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60803".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60781",
+    property :P60781,
       definition: "Relates a resource to details of the relationship between an original carrier of a motion picture film resource and the carrier of a reproduction made from the original (e.g., a reference print).. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfGenerationOfMotionPictureFilm.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -6720,7 +6726,7 @@ module RDF::Vocab
       label: "has details of generation of motion picture film (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60803".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60782",
+    property :P60782,
       definition: "Relates a resource to details of the relationship between an original carrier of a videotape resource and the carrier of a reproduction made from the original (e.g., a show copy).. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfGenerationOfVideotape.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -6728,7 +6734,7 @@ module RDF::Vocab
       label: "has details of generation of videotape (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60803".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60783",
+    property :P60783,
       definition: "Relates a resource to details of a groove width of an analog disc or a groove pitch of an analog cylinder.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfGrooveCharacteristic.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6736,42 +6742,42 @@ module RDF::Vocab
       label: "has details of groove characteristic".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60796".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60784",
+    property :P60784,
       definition: "Relates a resource to details of an arrangement of text, images, tactile notation, or other content in a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfLayout.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of layout".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60785",
+    property :P60785,
       definition: "Relates a resource to details of a physical material used for the support or backing to which the base material of a resource is attached.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfMount.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of mount".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60786",
+    property :P60786,
       definition: "Relates a resource to details of a speed at which an audio carrier must be operated to produce the sound intended.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfPlayingSpeed.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of playing speed".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60787",
+    property :P60787,
       definition: "Relates a resource to details of a relationship of the colours and tones in an image to the colours and tones of the object reproduced.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfPolarity.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of polarity".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60788",
+    property :P60788,
       definition: "Relates a resource to details of a format used in the production of a projected image.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfPresentationFormat.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of presentation format".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60789",
+    property :P60789,
       definition: "Relates a resource to details of a process used to produce a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60790".freeze, "http://rdaregistry.info/Elements/u/P60791".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfProductionMethod.en".freeze,
@@ -6779,7 +6785,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of production method".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60790",
+    property :P60790,
       definition: "Relates a resource to details of a process used to produce an original manuscript or a copy. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfProductionMethodForManuscript.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -6787,7 +6793,7 @@ module RDF::Vocab
       label: "has details of production method for manuscript (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60789".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60791",
+    property :P60791,
       definition: "Relates a resource to details of a process used to produce a tactile resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfProductionMethodForTactileResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -6795,7 +6801,7 @@ module RDF::Vocab
       label: "has details of production method for tactile resource (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60789".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60792",
+    property :P60792,
       definition: "Relates a resource to details of a technical specification relating to the projection of a motion picture film.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60793".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfProjectionCharacteristicOfMotionPictureFilm.en".freeze,
@@ -6803,7 +6809,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of projection characteristic of motion picture film".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60793",
+    property :P60793,
       definition: "Relates a resource to details of a speed at which a projected carrier must be operated to produce the moving image intended.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfProjectionSpeed.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6811,7 +6817,7 @@ module RDF::Vocab
       label: "has details of projection speed".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60792".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60794",
+    property :P60794,
       definition: "Relates a resource to details of a type of medium used to record sound on an audio carrier.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfRecordingMedium.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6819,14 +6825,14 @@ module RDF::Vocab
       label: "has details of recording medium".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60796".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60795",
+    property :P60795,
       definition: "Relates a resource to details of a general designation of the size of a micro-image in relation to the original from which it was produced.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfReductionRatioDesignation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of reduction ratio designation".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60796",
+    property :P60796,
       definition: "Relates a resource to details of a technical specification relating to the encoding of sound in a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60771".freeze, "http://rdaregistry.info/Elements/u/P60783".freeze, "http://rdaregistry.info/Elements/u/P60794".freeze, "http://rdaregistry.info/Elements/u/P60797".freeze, "http://rdaregistry.info/Elements/u/P60798".freeze, "http://rdaregistry.info/Elements/u/P60799".freeze, "http://rdaregistry.info/Elements/u/P60800".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfSoundCharacteristic.en".freeze,
@@ -6834,7 +6840,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of sound characteristic".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60797",
+    property :P60797,
       definition: "Relates a resource to details of an equalization system, noise-reduction system, or other processing that is used in making an audio recording.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfSpecialPlaybackCharacteristic.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6842,7 +6848,7 @@ module RDF::Vocab
       label: "has details of special playback characteristic".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60796".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60798",
+    property :P60798,
       definition: "Relates a resource to details of a number of tracks on an audiotape.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfTapeConfiguration.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6850,7 +6856,7 @@ module RDF::Vocab
       label: "has details of tape configuration".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60796".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60799",
+    property :P60799,
       definition: "Relates a resource to details of a configuration of the audio track on a sound-track film.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfTrackConfiguration.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6858,7 +6864,7 @@ module RDF::Vocab
       label: "has details of track configuration".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60796".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60800",
+    property :P60800,
       definition: "Relates a resource to details of a method used to encode audio content for playback.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfTypeOfRecording.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6866,7 +6872,7 @@ module RDF::Vocab
       label: "has details of type of recording".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60796".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60801",
+    property :P60801,
       definition: "Relates a resource to details of a technical specification relating to an encoding of video images in a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60770".freeze, "http://rdaregistry.info/Elements/u/P60802".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfVideoCharacteristic.en".freeze,
@@ -6874,7 +6880,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of video characteristic".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60802",
+    property :P60802,
       definition: "Relates a resource to details of a schema or standard used to encode the analog video content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfVideoFormat.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6882,7 +6888,7 @@ module RDF::Vocab
       label: "has details of video format".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60801".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60803",
+    property :P60803,
       definition: "Relates a resource to details of a relationship between an original carrier and a carrier of a reproduction made from an original.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60778".freeze, "http://rdaregistry.info/Elements/u/P60779".freeze, "http://rdaregistry.info/Elements/u/P60780".freeze, "http://rdaregistry.info/Elements/u/P60781".freeze, "http://rdaregistry.info/Elements/u/P60782".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfGeneration.en".freeze,
@@ -6890,14 +6896,14 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of generation".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60804",
+    property :P60804,
       definition: "Relates a resource to details of content intended to illustrate a primary content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfIllustrativeContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of illustrative content".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60805",
+    property :P60805,
       definition: "Relates a resource to a topic that a resource is about.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60190".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/subject.en".freeze,
@@ -6906,7 +6912,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has subject".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60806",
+    property :P60806,
       definition: "Relates a resource to a resource that is about a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60215".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/subjectOf.en".freeze,
@@ -6915,7 +6921,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is subject of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60807",
+    property :P60807,
       definition: "Relates an agent to an agent who receives an academic degree from a granting institution or faculty.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/graduate.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6923,7 +6929,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has graduate".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60808",
+    property :P60808,
       definition: "Relates an agent to an institution or faculty that granted an academic degree to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/graduateOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6931,7 +6937,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is graduate of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60809",
+    property :P60809,
       definition: "Relates a resource to an agent who contributes to a resource by providing a foreword to an original resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfForeword.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -6940,7 +6946,7 @@ module RDF::Vocab
       label: "has writer of foreword (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60810",
+    property :P60810,
       definition: "Relates an agent to a resource that includes a contribution of providing a foreword. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/writerOfForewordOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -6949,7 +6955,7 @@ module RDF::Vocab
       label: "is writer of foreword of (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60811",
+    property :P60811,
       definition: "Relates a resource to an agent who contributes to a resource by designing and creating audio or sound components.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/soundDesigner.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6958,7 +6964,7 @@ module RDF::Vocab
       label: "has sound designer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60812",
+    property :P60812,
       definition: "Relates an agent to a resource that includes a contribution by an agent of designing and creating audio or sound components".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/soundDesignerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6967,7 +6973,7 @@ module RDF::Vocab
       label: "is sound designer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60813",
+    property :P60813,
       definition: "Relates a resource to an agent who contributes to a resource by designing and creating lighting components.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lightingDesigner.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6976,7 +6982,7 @@ module RDF::Vocab
       label: "has lighting designer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60814",
+    property :P60814,
       definition: "Relates an agent to a resource that includes a contribution by an agent of designing and creating lighting components.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lightingDesignerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6985,7 +6991,7 @@ module RDF::Vocab
       label: "is lighting designer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60815",
+    property :P60815,
       definition: "Relates a resource to an agent serving on a committee that supervises a thesis or dissertation of a student.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/degreeCommitteeMember.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -6994,7 +7000,7 @@ module RDF::Vocab
       label: "has degree committee member".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60816",
+    property :P60816,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for serving on a committee that supervises a thesis or dissertation of a student.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/degreeCommitteeMemberOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7003,7 +7009,7 @@ module RDF::Vocab
       label: "is degree committee member of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60817",
+    property :P60817,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for inscribing, fabrication, construction, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/producerOfUnpublishedResourceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7011,7 +7017,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is producer of unpublished resource of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60818",
+    property :P60818,
       definition: "Relates a resource to a second or subsequent system of numbering presented in the form of a date on the first issue or part of a sequence of numbering for a serial.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/firstChronologicalDesignationOfAlternativeSequence.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7021,7 +7027,7 @@ module RDF::Vocab
       label: "has first chronological designation of alternative sequence".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60533".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60819",
+    property :P60819,
       definition: "Relates a resource to a second or subsequent system of numbering presented in the form of a date on the last issue or part of a sequence of numbering for a serial.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lastChronologicalDesignationOfAlternativeSequence.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7031,7 +7037,7 @@ module RDF::Vocab
       label: "has last chronological designation of alternative sequence".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60533".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60820",
+    property :P60820,
       definition: "Relates a resource to a second or subsequent system of numbering presented in numeric or alphabetic form on the first issue or part of a sequence of numbering for a serial.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/firstAlphanumericDesignationOfAlternativeSequence.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7040,7 +7046,7 @@ module RDF::Vocab
       label: "has first alphanumeric designation of alternative sequence".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60533".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60821",
+    property :P60821,
       definition: "Relates a resource to a second or subsequent system of numbering presented in numeric or alphabetic form on the last issue or part of a sequence of numbering for a serial.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lastAlphanumericDesignationOfAlternativeSequence.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7049,21 +7055,21 @@ module RDF::Vocab
       label: "has last alphanumeric designation of alternative sequence".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60533".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60822",
+    property :P60822,
       definition: "Relates a name to a type or form of resource associated with a name chosen as a preferred name for an agent. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/scopeOfUsage.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has scope of usage (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60823",
+    property :P60823,
       definition: "Relates a resource to aetails of an extent of resource that is a playing time, performance time, running time, or other length of time.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfDuration.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of duration".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60824",
+    property :P60824,
       definition: "Relates a resource to an agent who contributes to a nonfiction moving image resource by taking an active role as a participant.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60143".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/onscreenParticipant.en".freeze,
@@ -7074,7 +7080,7 @@ module RDF::Vocab
       label: "has onscreen participant".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60825",
+    property :P60825,
       definition: "Relates an agent to a resource that includes a contribution by an agent of taking an active role as a participant.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60018".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/onscreenParticipantOf.en".freeze,
@@ -7085,7 +7091,7 @@ module RDF::Vocab
       label: "is onscreen participant of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60826",
+    property :P60826,
       definition: "Relates a resource to an agent who is responsible for commissioning a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/commissioningAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7094,7 +7100,7 @@ module RDF::Vocab
       label: "has commissioning agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60827",
+    property :P60827,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for commissioning a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/commissioningAgentOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7103,7 +7109,7 @@ module RDF::Vocab
       label: "is commissioning agent of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60828",
+    property :P60828,
       definition: "Relates a resource to an agent who contributes to a resource by researching, designing, implementing, or testing software.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/softwareDeveloper.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7112,7 +7118,7 @@ module RDF::Vocab
       label: "has software developer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60829",
+    property :P60829,
       definition: "Relates an agent to a resource that includes a contribution by an agent of researchig, designing, implementing, or testing software.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/softwareDeveloperOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7121,7 +7127,7 @@ module RDF::Vocab
       label: "is software developer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60830",
+    property :P60830,
       definition: "Relates a resource to a resource that is adapted as an oratorio.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/oratorioAdaptationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7130,7 +7136,7 @@ module RDF::Vocab
       label: "is oratorio adaptation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60831",
+    property :P60831,
       definition: "Relates a resource to an oratorio based on another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/adaptedAsOratorio.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7139,7 +7145,7 @@ module RDF::Vocab
       label: "is adapted as oratorio".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60832",
+    property :P60832,
       definition: "Relates a resource to a resource that serves as the inspiration for a related resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/inspiredBy.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7148,7 +7154,7 @@ module RDF::Vocab
       label: "is inspired by".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60833",
+    property :P60833,
       definition: "Relates a resource to a resource that was inspired by a related resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/inspirationFor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7157,7 +7163,7 @@ module RDF::Vocab
       label: "is inspiration for".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60834",
+    property :P60834,
       definition: "Relates a resource to an agent who has signed, ratified, or acceded to a treaty.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/participantInTreaty.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7166,7 +7172,7 @@ module RDF::Vocab
       label: "has participant in treaty".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60835",
+    property :P60835,
       definition: "Relates a government, international intergovernmental body, or other agent who has signed, ratified, or acceded to a treaty to a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/participantInTreatyOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7175,7 +7181,7 @@ module RDF::Vocab
       label: "is participant in treaty of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60836",
+    property :P60836,
       definition: "Relates a resource to an agent who does research in support of the creation of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/researcher.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7184,7 +7190,7 @@ module RDF::Vocab
       label: "has researcher".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60837",
+    property :P60837,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for research in support of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/researchOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7193,7 +7199,7 @@ module RDF::Vocab
       label: "is researcher of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60838",
+    property :P60838,
       definition: "Relates a resource to an agent who contributes to a resource by applying colour to drawings, prints, photographs, maps, moving images, or other content.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/colourist.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7202,7 +7208,7 @@ module RDF::Vocab
       label: "has colourist".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60839",
+    property :P60839,
       definition: "Relates an agent to a resource that includes a contribution by an agent of applying colour to drawings, prints, photographs, maps, moving images, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/colouristOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7211,7 +7217,7 @@ module RDF::Vocab
       label: "is colourist of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60840",
+    property :P60840,
       definition: "Relates a resource to an agent who contributes to a resource by applying makeup and prosthetics for a moving image production or for a musical or dramatic presentation or entertainment.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/makeupArtist.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7220,7 +7226,7 @@ module RDF::Vocab
       label: "has makeup artist".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60841",
+    property :P60841,
       definition: "Relates an agent to a resource that includes a contribution by an agent of researching, designing, implementing, or testing software.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/makeupArtistOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7229,7 +7235,7 @@ module RDF::Vocab
       label: "is makeup artist of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60842",
+    property :P60842,
       definition: "Relates a resource to a conductor who contributes to a musical resource by leading a choral performing group in a musical or dramatic presentation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/choralConductor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7238,7 +7244,7 @@ module RDF::Vocab
       label: "has choral conductor".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60141".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60843",
+    property :P60843,
       definition: "Relates an agent to a musical resource that includes a contribution by an agent of leading a choral performing group in a musical or dramatic presentation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/choralConductorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7247,7 +7253,7 @@ module RDF::Vocab
       label: "is choral conductor of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60016".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60844",
+    property :P60844,
       definition: "Relates a resource to a conductor who contributes to a musical resource by leading an instrumental performing group in a musical or dramatic presentation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/instrumentalConductor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7256,7 +7262,7 @@ module RDF::Vocab
       label: "has instrumental conductor".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60141".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60845",
+    property :P60845,
       definition: "Relates an agent to a resource that includes a contribution by an agent of conducting and leading an instrumental performing group in a musical or dramatic presentation".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/instrumentalConductorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7265,7 +7271,7 @@ module RDF::Vocab
       label: "is instrumental conductor of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60016".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60846",
+    property :P60846,
       definition: "Relates a resource to a resource created to commemorate an earlier resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/commemoration.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7274,7 +7280,7 @@ module RDF::Vocab
       label: "has commemoration".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60848".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60847",
+    property :P60847,
       definition: "Relates a resource to a resource commemorated in a later resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/commemorationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7283,7 +7289,7 @@ module RDF::Vocab
       label: "is commemoration of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60848".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60848",
+    property :P60848,
       definition: "Relates a resource to a resource that references a related resource. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60846".freeze, "http://rdaregistry.info/Elements/u/P60847".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/referentialResourceRelationship.en".freeze,
@@ -7292,7 +7298,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has referential resource relationship with (Deprecate)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60849",
+    property :P60849,
       definition: "Relates a resource to an agent who organizes a conference, exhibition, or other event that gives rise to a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/organizer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7301,7 +7307,7 @@ module RDF::Vocab
       label: "has organizer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60850",
+    property :P60850,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for organizing a conference, exhibition, or other event that gives rise to a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/organizerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7310,7 +7316,7 @@ module RDF::Vocab
       label: "is organizer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60851",
+    property :P60851,
       definition: "Relates a resource to an agent who contributes to a resource by revising the content for the purpose of suppressing parts deemed objectionable on moral, political, military, or other grounds, but leaving the nature and content substantially unchanged.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60434".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/censor.en".freeze,
@@ -7321,7 +7327,7 @@ module RDF::Vocab
       label: "has censor".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60852",
+    property :P60852,
       definition: "Relates an agent to a resource that includes a contribution for revising the content for the purpose of suppressing parts deemed objectionable on moral, political, military, or other grounds, but leaving the nature and content substantially unchanged.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60663".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/censorOf.en".freeze,
@@ -7332,7 +7338,7 @@ module RDF::Vocab
       label: "is censor of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60626".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60853",
+    property :P60853,
       definition: "Relates an agent to a fellow member of a profession, staff, or academic faculty.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60857".freeze, "http://rdaregistry.info/Elements/u/P60858".freeze, "http://rdaregistry.info/Elements/u/P60859".freeze, "http://rdaregistry.info/Elements/u/P60860".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/colleague.en".freeze,
@@ -7342,7 +7348,7 @@ module RDF::Vocab
       label: "has colleague".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60454".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60854",
+    property :P60854,
       definition: "Relates an agent to an agent who shares a bond of mutual affection or regard with a related agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/friend.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7351,7 +7357,7 @@ module RDF::Vocab
       label: "has friend".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60454".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60855",
+    property :P60855,
       definition: "Relates an agent to an agent who receives instruction at an educational institution.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/enrolledStudent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7360,7 +7366,7 @@ module RDF::Vocab
       label: "has enrolled student".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60454".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60856",
+    property :P60856,
       definition: "Relates an agent to an agent who is an educational institution that provides instruction to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/studentAt.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7369,7 +7375,7 @@ module RDF::Vocab
       label: "is student at".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60454".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60857",
+    property :P60857,
       definition: "Relates an agent to an agent who is a colleague who helps another agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/assistant.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7378,7 +7384,7 @@ module RDF::Vocab
       label: "has assistant".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60853".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60858",
+    property :P60858,
       definition: "Relates an agent to an agent who is a colleague who is helped by another agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/assistantTo.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7387,7 +7393,7 @@ module RDF::Vocab
       label: "is assistant to".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60853".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60859",
+    property :P60859,
       definition: "Relates an agent to an agent who is a colleague who works with or shares a task with a related agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/coworker.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7396,7 +7402,7 @@ module RDF::Vocab
       label: "has co-worker".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60853".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60860",
+    property :P60860,
       definition: "Relates an agent to an agent who is a colleague working with a related agent in an activity of common interest, most often a business partnership.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/partner.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7405,7 +7411,7 @@ module RDF::Vocab
       label: "has partner".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60853".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60861",
+    property :P60861,
       definition: "Relates an agent to an associate of another student who is also formally engaged in learning.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/fellowStudent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7414,7 +7420,7 @@ module RDF::Vocab
       label: "has fellow student".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60454".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60862",
+    property :P60862,
       definition: "Relates an agent to an agent who receives instruction from a related agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/student.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7423,7 +7429,7 @@ module RDF::Vocab
       label: "has student".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60454".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60863",
+    property :P60863,
       definition: "Relates an agent to an agent who instructs a related agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/teacher.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7432,7 +7438,7 @@ module RDF::Vocab
       label: "has teacher".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60454".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60864",
+    property :P60864,
       definition: "Relates an agent to an officer who is a top ranking official of an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/chiefExecutive.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7441,7 +7447,7 @@ module RDF::Vocab
       label: "has chief executive".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60633".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60865",
+    property :P60865,
       definition: "Relates an agent to an agent in which an officer is a top ranking official.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/chiefExecutiveOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7450,7 +7456,7 @@ module RDF::Vocab
       label: "is chief executive of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60737".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60866",
+    property :P60866,
       definition: "Relates an agent to an officer granted powers of administration in an agent in order to act for its benefit.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/trustee.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7459,7 +7465,7 @@ module RDF::Vocab
       label: "has trustee".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60633".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60867",
+    property :P60867,
       definition: "Relates an agent to an agent who grants powers of administration to an officer in order to act for its benefit.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/trusteeOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7468,7 +7474,7 @@ module RDF::Vocab
       label: "is trustee of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60737".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60868",
+    property :P60868,
       definition: "Relates a resource to a note on resource that provides information on an identifier for a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnIdentifierForResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7476,7 +7482,7 @@ module RDF::Vocab
       label: "has note on identifier for resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60869",
+    property :P60869,
       definition: "Relates a resource to an agent who has legal or intellectual responsibility, but not creative responsibility, for the editorial policy and content of a diachronic resource.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60393".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/editorialDirector.en".freeze,
@@ -7486,7 +7492,7 @@ module RDF::Vocab
       label: "has editorial director".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60870",
+    property :P60870,
       definition: "Relates an agent to a resource that involves a responsibility other than creating for the content of a serial, integrating resource, or multipart monographic resource.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60621".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/editorialDirectorOf.en".freeze,
@@ -7496,7 +7502,7 @@ module RDF::Vocab
       label: "is editorial director of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60871",
+    property :P60871,
       definition: "Relates a resource to an agent who is responsible for initiating a diachronic resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/founderAgentOfResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7505,7 +7511,7 @@ module RDF::Vocab
       label: "has founder agent of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60872",
+    property :P60872,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for establishing a serial, integrating resource, or multipart monograph.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/founderAgentOfResourceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7514,42 +7520,42 @@ module RDF::Vocab
       label: "is founder agent of resource of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60873",
+    property :P60873,
       definition: "Relates a resource to a general designation of the ratio of the width to the height of a moving image.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/aspectRatioDesignation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has aspect ratio designation".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60874",
+    property :P60874,
       definition: "Relates a resource to a general designation of a lack of a ratio of the dimensions of the content of an image or three-dimensional form to the dimensions of the thing it represents.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/scaleDesignation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has scale designation".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60875",
+    property :P60875,
       definition: "Relates a resource to a machine-readable representation of geospatial features.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/cartographicDataType.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has cartographic data type".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60876",
+    property :P60876,
       definition: "Relates a resource to details of a machine-readable representation of geospatial features.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfCartographicDataType.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has details of cartographic data type".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60877",
+    property :P60877,
       definition: "Relates a resource to a general designation of the size of a micro-image in relation to an original from which it was produced.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/reductionRatioDesignation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has reduction ratio designation".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60878",
+    property :P60878,
       definition: "Relates an agent to a name used as a family name.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/surname.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7557,7 +7563,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has surname".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60879",
+    property :P60879,
       definition: "Relates an agent to a name given to an agent at birth or at some later point in addition to, or instead of, a surname.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/givenName.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7565,7 +7571,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has given name".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60880",
+    property :P60880,
       definition: "Relates a place to a name of place that is not selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantNameOfPlace.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7574,7 +7580,7 @@ module RDF::Vocab
       label: "has variant name of place".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60366".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60881",
+    property :P60881,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for manipulating, recombining, mixing, and reproducing previously recorded sounds.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60886".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/remixArtistOf.en".freeze,
@@ -7585,7 +7591,7 @@ module RDF::Vocab
       label: "is remix artist of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60882",
+    property :P60882,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for most aspects of assigning parts and duties to performers.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/castingDirectorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7594,7 +7600,7 @@ module RDF::Vocab
       label: "is casting director of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60883",
+    property :P60883,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for managing most of the business aspects of an audio recording.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/audioProducerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7603,7 +7609,7 @@ module RDF::Vocab
       label: "is audio producer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60668".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60884",
+    property :P60884,
       definition: "Relates an agent to a resource that includes a contribution by an agent of managing the technical aspects of sound during the processes of recording, mixing, and reproduction.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60885".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/audioEngineerOf.en".freeze,
@@ -7613,7 +7619,7 @@ module RDF::Vocab
       label: "is audio engineer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60158".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60885",
+    property :P60885,
       definition: "Relates an agent to a resource that incorporates a contribution by an agent of manipulating, mixing and assembling the multiple tracks of an audio recording.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60881".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/mixingEngineerOf.en".freeze,
@@ -7624,7 +7630,7 @@ module RDF::Vocab
       label: "is mixing engineer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60884".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60886",
+    property :P60886,
       definition: "Relates an agent to a resource that includes a contribution by an agent of mixing recorded tracks together during a live performance or in a recording studio to appear as one continuous track.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60885".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/DJOf.en".freeze,
@@ -7635,7 +7641,7 @@ module RDF::Vocab
       label: "is DJ of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60158".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60887",
+    property :P60887,
       definition: "Relates an agent to a resource that incorporates a contribution by an agent of an agent for the general management and supervision of the process of adding new dialogue or other sounds to complete a sound track.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dubbingDirectorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7644,7 +7650,7 @@ module RDF::Vocab
       label: "is dubbing director of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60158".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60888",
+    property :P60888,
       definition: "Relates an agent to a musical resource that incorporates a contribution by an agent of using electronic audio devices or computer software to generate sounds.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60655".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/musicProgrammerOf.en".freeze,
@@ -7654,7 +7660,7 @@ module RDF::Vocab
       label: "is music programmer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60158".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60889",
+    property :P60889,
       definition: "Relates a resource to an agent who is a producer who is responsible for managing most of the business aspects of an audio recording. ".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/audioProducer.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7663,7 +7669,7 @@ module RDF::Vocab
       label: "has audio producer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60441".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60890",
+    property :P60890,
       definition: "Relates a resource to an agent who is responsible for most aspects of assigning parts and duties to performers.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/castingDirector.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7672,7 +7678,7 @@ module RDF::Vocab
       label: "has casting director".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60158".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60891",
+    property :P60891,
       definition: "Relates a resource to an agent who is responsible for creating an audio resource by manipulating, recombining, mixing, and reproducing previously recorded sounds.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60896".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/remixArtist.en".freeze,
@@ -7683,7 +7689,7 @@ module RDF::Vocab
       label: "has remix artist".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60892",
+    property :P60892,
       definition: "Relates a resource to an agent who contributes to a resource by managing the technical aspects of sound during the processes of recording, mixing, and reproduction.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60893".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/audioEngineer.en".freeze,
@@ -7693,7 +7699,7 @@ module RDF::Vocab
       label: "has audio engineer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60893",
+    property :P60893,
       definition: "Relates a resource to an audio engineer who contributes to the audio content of a resource by manipulating, mixing, and assembling the multiple tracks of a recording.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60891".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/mixingEngineer.en".freeze,
@@ -7704,7 +7710,7 @@ module RDF::Vocab
       label: "has mixing engineer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60892".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60894",
+    property :P60894,
       definition: "Relates a resource to an agent who contributes to a resource by using electronic audio devices or computer software to generate sounds.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60426".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/musicProgrammer.en".freeze,
@@ -7715,7 +7721,7 @@ module RDF::Vocab
       label: "has music programmer".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60895",
+    property :P60895,
       definition: "Relates a resource to an agent who is responsible for the general management and supervision of the process of adding new dialogue or other sounds to complete a sound track for a resource".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dubbingDirector.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7724,7 +7730,7 @@ module RDF::Vocab
       label: "has dubbing director".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60896",
+    property :P60896,
       definition: "Relates a resource to an agent who mixes recorded tracks together during a live performance or in a recording studio to appear as one continuous track.".freeze,
       "http://metadataregistry.org/uri/profile/rdakit/seeAlso": "http://rdaregistry.info/Elements/u/P60893".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/DJ.en".freeze,
@@ -7735,35 +7741,35 @@ module RDF::Vocab
       label: "has DJ".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60897",
+    property :P60897,
       definition: "Relates a resource to a distance of a point on a planet or satellite measured north and south from the equator.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/latitude.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has latitude".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60898",
+    property :P60898,
       definition: "Relates a resource to a distance of a point on a planet or satellite measured east and west from a reference meridian.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/longitude.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has longitude".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60899",
+    property :P60899,
       definition: "Relates a resource to an angular distance measured eastward on the equator from the vernal equinox to the hour circle through a celestial body, from 0 to 24 hours.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/rightAscension.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has right ascension".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60900",
+    property :P60900,
       definition: "Relates a resource to an angular distance to a body on the celestial sphere measured north or south through 90° from the celestial equator along the hour circle of the body.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/declination.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has declination".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60901",
+    property :P60901,
       definition: "Relates an agent to an agent who was absorbed by another agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/absorbedAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7771,7 +7777,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has absorbed agent".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60902",
+    property :P60902,
       definition: "Relates an agent to an agent who absorbed another agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/absorbingAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7779,7 +7785,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has absorbing agent".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60903",
+    property :P60903,
       definition: "Relates an agent to an agent that that is a conference that is jointly held with a related conference.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/jointlyHeldConference.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7787,7 +7793,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has jointly held conference".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60904",
+    property :P60904,
       definition: "Relates a resource to details of a designation for one or more regions of the world for which a videodisc or video game carrier is encoded, indicating that playback is restricted to a device configured to decode it.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/detailsOfRegionalEncoding.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7795,7 +7801,7 @@ module RDF::Vocab
       label: "has details of regional encoding".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60772".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60905",
+    property :P60905,
       definition: "Relates a resource to a note on resource that provides information associated with the recording, filming, etc., of the content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnCapture.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7804,7 +7810,7 @@ module RDF::Vocab
       label: "has note on capture".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60906",
+    property :P60906,
       definition: "Relates an entity to an appellation of entity in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60916".freeze, "http://rdaregistry.info/Elements/u/P60917".freeze, "http://rdaregistry.info/Elements/u/P61162".freeze, "http://rdaregistry.info/Elements/u/P61164".freeze, "http://rdaregistry.info/Elements/u/P61166".freeze, "http://rdaregistry.info/Elements/u/P61168".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/accessPointForEntity.en".freeze,
@@ -7814,7 +7820,7 @@ module RDF::Vocab
       label: "has access point for entity".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60909".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60909",
+    property :P60909,
       definition: "Relates an entity to a nomen that is used within a given scheme or context to refer to an entity.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60368".freeze, "http://rdaregistry.info/Elements/u/P60369".freeze, "http://rdaregistry.info/Elements/u/P60443".freeze, "http://rdaregistry.info/Elements/u/P60544".freeze, "http://rdaregistry.info/Elements/u/P60545".freeze, "http://rdaregistry.info/Elements/u/P60546".freeze, "http://rdaregistry.info/Elements/u/P60547".freeze, "http://rdaregistry.info/Elements/u/P60906".freeze, "http://rdaregistry.info/Elements/u/P60919".freeze, "http://rdaregistry.info/Elements/u/P60939".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/appellationOfEntity.en".freeze,
@@ -7823,7 +7829,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has appellation of entity".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60910",
+    property :P60910,
       definition: "Relates a nomen to an entity that has an appellation in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60918".freeze, "http://rdaregistry.info/Elements/u/P60934".freeze, "http://rdaregistry.info/Elements/u/P61163".freeze, "http://rdaregistry.info/Elements/u/P61165".freeze, "http://rdaregistry.info/Elements/u/P61167".freeze, "http://rdaregistry.info/Elements/u/P61169".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/accessPointForEntityOf.en".freeze,
@@ -7833,7 +7839,7 @@ module RDF::Vocab
       label: "is access point for entity of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60911".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60911",
+    property :P60911,
       definition: "Relates a nomen to an entity that is referred to by a nomen used within a given scheme or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60669".freeze, "http://rdaregistry.info/Elements/u/P60910".freeze, "http://rdaregistry.info/Elements/u/P60912".freeze, "http://rdaregistry.info/Elements/u/P60920".freeze, "http://rdaregistry.info/Elements/u/P60928".freeze, "http://rdaregistry.info/Elements/u/P60946".freeze, "http://rdaregistry.info/Elements/u/P60947".freeze, "http://rdaregistry.info/Elements/u/P60948".freeze, "http://rdaregistry.info/Elements/u/P60949".freeze, "http://rdaregistry.info/Elements/u/P60950".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/appellationOfEntityOf.en".freeze,
@@ -7842,7 +7848,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is appellation of entity of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60912",
+    property :P60912,
       definition: "Relates a nomen to a resource that has an appellation of resource in natural language and phrasing used in common discourse.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60925".freeze, "http://rdaregistry.info/Elements/u/P60933".freeze, "http://rdaregistry.info/Elements/u/P60958".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/titleOfResourceOf.en".freeze,
@@ -7852,28 +7858,28 @@ module RDF::Vocab
       label: "is title of resource of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60911".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60913",
+    property :P60913,
       definition: "Relates a nomen to the combination of signs that forms an appellation associated with an entity.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nomenString.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has nomen string".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60914",
+    property :P60914,
       definition: "Relates a resource to a method of indicating the horizontal and vertical dimensions of land surface and terrain.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/reliefType.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has relief type".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60915",
+    property :P60915,
       definition: "Relates a resource to a line of constant longitude passing through a given place on the surface of the earth and the terrestrial poles, from which longitude east and west is measured.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/primeMeridian.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has prime meridian".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60916",
+    property :P60916,
       definition: "Relates an entity to an access point for entity that is selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61170".freeze, "http://rdaregistry.info/Elements/u/P61171".freeze, "http://rdaregistry.info/Elements/u/P61172".freeze, "http://rdaregistry.info/Elements/u/P61173".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/authorizedAccessPointForEntity.en".freeze,
@@ -7883,7 +7889,7 @@ module RDF::Vocab
       label: "has authorized access point for entity".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60906".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60917",
+    property :P60917,
       definition: "Relates an entity to an access point for entity that is not selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61186".freeze, "http://rdaregistry.info/Elements/u/P61187".freeze, "http://rdaregistry.info/Elements/u/P61188".freeze, "http://rdaregistry.info/Elements/u/P61189".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantAccessPointForEntity.en".freeze,
@@ -7893,7 +7899,7 @@ module RDF::Vocab
       label: "has variant access point for entity".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60906".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60918",
+    property :P60918,
       definition: "Relates a nomen to an entity that has an access point for entity that is selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61174".freeze, "http://rdaregistry.info/Elements/u/P61175".freeze, "http://rdaregistry.info/Elements/u/P61176".freeze, "http://rdaregistry.info/Elements/u/P61177".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/authorizedAccessPointForEntityOf.en".freeze,
@@ -7903,7 +7909,7 @@ module RDF::Vocab
       label: "is authorized access point for entity of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60910".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60919",
+    property :P60919,
       definition: "Relates an entity to an appellation of entity that consists of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify an entity.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60052".freeze, "http://rdaregistry.info/Elements/u/P60053".freeze, "http://rdaregistry.info/Elements/u/P61178".freeze, "http://rdaregistry.info/Elements/u/P61179".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/identifierForEntity.en".freeze,
@@ -7914,7 +7920,7 @@ module RDF::Vocab
       label: "has identifier for entity".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60909".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60920",
+    property :P60920,
       definition: "Relates an appellation of agent in natural language and phrasing used in common discourse to an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60921".freeze, "http://rdaregistry.info/Elements/u/P60927".freeze, "http://rdaregistry.info/Elements/u/P61192".freeze, "http://rdaregistry.info/Elements/u/P61193".freeze, "http://rdaregistry.info/Elements/u/P61196".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfAgentOf.en".freeze,
@@ -7924,7 +7930,7 @@ module RDF::Vocab
       label: "is name of agent of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60911".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60921",
+    property :P60921,
       definition: "Relates a nomen to an agent who has a name of agent that is not selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantNameOfAgentOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7933,7 +7939,7 @@ module RDF::Vocab
       label: "is variant name of agent of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60920".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60922",
+    property :P60922,
       definition: "Relates a nomen to a place that has a name of place that is not selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantNameOfPlaceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7942,7 +7948,7 @@ module RDF::Vocab
       label: "is variant name of place of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60929".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60923",
+    property :P60923,
       definition: "Relates a nomen to a place that has a name of place that is selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/preferredNameOfPlaceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7951,7 +7957,7 @@ module RDF::Vocab
       label: "is preferred name of place of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60929".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60924",
+    property :P60924,
       definition: "Relates a nomen to a timespan that has a name of timespan that is selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/preferredNameOfTimespanOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7960,7 +7966,7 @@ module RDF::Vocab
       label: "is preferred name of timespan of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60931".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60925",
+    property :P60925,
       definition: "Relates a nomen to a resource that has a title of resource that is not selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantTitleOfResourceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7969,7 +7975,7 @@ module RDF::Vocab
       label: "is variant title of resource of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60912".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60926",
+    property :P60926,
       definition: "Relates a timespan to a name of timespan that is not selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantNameOfTimespan.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7978,7 +7984,7 @@ module RDF::Vocab
       label: "has variant name of timespan".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60935".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60927",
+    property :P60927,
       definition: "Relates a nomen to an agent who has a name of agent that is selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/preferredNameOfAgentOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -7987,7 +7993,7 @@ module RDF::Vocab
       label: "is preferred name of agent of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60920".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60928",
+    property :P60928,
       definition: "Relates a nomen to an entity that has a reference code taken from a vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60937".freeze, "http://rdaregistry.info/Elements/u/P60938".freeze, "http://rdaregistry.info/Elements/u/P61180".freeze, "http://rdaregistry.info/Elements/u/P61181".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/identifierForEntityOf.en".freeze,
@@ -7998,7 +8004,7 @@ module RDF::Vocab
       label: "is identifier for entity of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60911".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60929",
+    property :P60929,
       definition: "Relates a nomen to a place that has a name in natural language and phrasing used in common discourse.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60922".freeze, "http://rdaregistry.info/Elements/u/P60923".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfPlaceOf.en".freeze,
@@ -8008,7 +8014,7 @@ module RDF::Vocab
       label: "is name of place of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60947".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60930",
+    property :P60930,
       definition: "Relates a timespan to a name of timespan that is selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/preferredNameOfTimespan.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8017,7 +8023,7 @@ module RDF::Vocab
       label: "has preferred name of timespan".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60935".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60931",
+    property :P60931,
       definition: "Relates a nomen to a timespan that has a name in natural language and phrasing used in common discourse.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60924".freeze, "http://rdaregistry.info/Elements/u/P60932".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfTimespanOf.en".freeze,
@@ -8027,7 +8033,7 @@ module RDF::Vocab
       label: "is name of timespan of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60947".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60932",
+    property :P60932,
       definition: "Relates a nomen to a timespan that has a name of tiespan that is not selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantNameOfTimespanOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8036,7 +8042,7 @@ module RDF::Vocab
       label: "is variant name of timespan of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60931".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60933",
+    property :P60933,
       definition: "Relates a nomen to a resource that has a title of resource that is selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/preferredTitleOfResourceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8045,7 +8051,7 @@ module RDF::Vocab
       label: "is preferred title of resource of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60912".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60934",
+    property :P60934,
       definition: "Relates a nomen to an entity that has an access point for entity that is not selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantAccessPointForEntityOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8054,7 +8060,7 @@ module RDF::Vocab
       label: "is variant access point for entity of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60910".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60935",
+    property :P60935,
       definition: "Relates a timespan to an appellation of timespan in natural language and phrasing used in common discourse.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60926".freeze, "http://rdaregistry.info/Elements/u/P60930".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfTimespan.en".freeze,
@@ -8064,7 +8070,7 @@ module RDF::Vocab
       label: "has name of timespan".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60939".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60936",
+    property :P60936,
       definition: "Relates an entity to a broad unstructured description of one or more attributes of an entity.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60470".freeze, "http://rdaregistry.info/Elements/u/P60956".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnEntity.en".freeze,
@@ -8072,7 +8078,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has note on entity".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60937",
+    property :P60937,
       definition: "Relates a nomen to an agent who has an appellation of agent who is a reference code taken from a vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/identifierForAgentOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8082,7 +8088,7 @@ module RDF::Vocab
       label: "is identifier for agent of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60928".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60938",
+    property :P60938,
       definition: "Relates a nomen to a resource that has an appellation of resource that is a reference code taken from a vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60988".freeze, "http://rdaregistry.info/Elements/u/P60989".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/identifierForResourceOf.en".freeze,
@@ -8093,7 +8099,7 @@ module RDF::Vocab
       label: "is identifier for resource of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60928".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60939",
+    property :P60939,
       definition: "Relates an entity to an appellation of entity in natural language and phrasing used in common discourse.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60366".freeze, "http://rdaregistry.info/Elements/u/P60935".freeze, "http://rdaregistry.info/Elements/u/P60940".freeze, "http://rdaregistry.info/Elements/u/P60941".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfEntity.en".freeze,
@@ -8103,7 +8109,7 @@ module RDF::Vocab
       label: "has name of entity".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60909".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60940",
+    property :P60940,
       definition: "Relates an entity to a name of entity that is selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/preferredNameOfEntity.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8112,7 +8118,7 @@ module RDF::Vocab
       label: "has preferred name of entity".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60939".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60941",
+    property :P60941,
       definition: "Relates an entity to a name of entity that is not selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantNameOfEntity.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8121,7 +8127,7 @@ module RDF::Vocab
       label: "has variant name of entity".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60939".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60942",
+    property :P60942,
       definition: "Relates an agent to a nomen that is assigned to an entity by an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/assignerAgentOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8129,7 +8135,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is assigner agent of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60943",
+    property :P60943,
       definition: "Relates a nomen to an agent who assigns a nomen to an entity.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/assignedByAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8137,7 +8143,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is assigned by agent".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60944",
+    property :P60944,
       definition: "Relates an entity to a type to which an entity belongs.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60058".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/categoryOfEntity.en".freeze,
@@ -8145,7 +8151,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has category of entity".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60945",
+    property :P60945,
       definition: "Relates a resource to an identifier for resource that consists of a group of characters from specified locations in a resource combined with a date of publication or other element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/fingerprint.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8154,7 +8160,7 @@ module RDF::Vocab
       label: "has fingerprint".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60052".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60946",
+    property :P60946,
       definition: "Relates a nomen to a resource that involves a responsibility of an agent for distributing a published resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfDistributorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8163,7 +8169,7 @@ module RDF::Vocab
       label: "is name of distributor of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60911".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60947",
+    property :P60947,
       definition: "Relates a nomen to an entity that has an appellation of entity in natural language and phrasing used in common discourse.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60929".freeze, "http://rdaregistry.info/Elements/u/P60931".freeze, "http://rdaregistry.info/Elements/u/P60951".freeze, "http://rdaregistry.info/Elements/u/P60952".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfEntityOf.en".freeze,
@@ -8173,7 +8179,7 @@ module RDF::Vocab
       label: "is name of entity of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60911".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60948",
+    property :P60948,
       definition: "Relates a nomen to a resource that involves a responsibility of an agent for printing, duplicating, casting, etc., a published resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfManufacturerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8182,7 +8188,7 @@ module RDF::Vocab
       label: "is name of manufacturer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60911".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60949",
+    property :P60949,
       definition: "Relates a nomen to a resource that involves a responsibility of an agent for inscribing, fabricating, constructing, etc., an unpublished resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfProducerOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8191,7 +8197,7 @@ module RDF::Vocab
       label: "is name of producer of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60911".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60950",
+    property :P60950,
       definition: "Relates a nomen to a resource that involves a responsibility of an agent for publishing, releasing, or issuing a published resources.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfPublisherOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8200,7 +8206,7 @@ module RDF::Vocab
       label: "is name of publisher of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60911".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60951",
+    property :P60951,
       definition: "Relates a nomen to an entity that has a name of entity that is selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/preferredNameOfEntityOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8209,7 +8215,7 @@ module RDF::Vocab
       label: "is preferred name of entity of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60947".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60952",
+    property :P60952,
       definition: "Relates a nomen to an entity that has a name of entity that is not selected for preference in a specific application or context.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61182".freeze, "http://rdaregistry.info/Elements/u/P61183".freeze, "http://rdaregistry.info/Elements/u/P61184".freeze, "http://rdaregistry.info/Elements/u/P61185".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantNameOfEntityOf.en".freeze,
@@ -8219,7 +8225,7 @@ module RDF::Vocab
       label: "is variant name of entity of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60947".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60953",
+    property :P60953,
       definition: "Relates a resource to a numeric designation of musical resource that is assigned from a list of resources of a composer, usually arranged in chronological order or by categories, with the theme given for each composition or for each section of large compositions.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/thematicIndexNumber.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8228,7 +8234,7 @@ module RDF::Vocab
       label: "has thematic index number".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60315".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60954",
+    property :P60954,
       definition: "Relates a resource to a numeric designation of musical resource assigned by a composer or a reference source that indicates a sequence of musical resources that share the same title or that share the same title and the same representative medium of performance.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/serialNumber.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8237,7 +8243,7 @@ module RDF::Vocab
       label: "has serial number".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60315".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60955",
+    property :P60955,
       definition: "Relates a resource to a numeric designation of musical resource assigned from a list of resources of a composer indicating the chronological order of composition.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/opusNumber.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8246,7 +8252,7 @@ module RDF::Vocab
       label: "has opus number".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60315".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60956",
+    property :P60956,
       definition: "Relates an agent to a broad unstructured description of one or more attributes of an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8254,7 +8260,7 @@ module RDF::Vocab
       label: "has note on agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60936".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60957",
+    property :P60957,
       definition: "Relates a nomen to a resource that has a chief name of a resource, that is, a title normally used when naming a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/titleProperOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8263,7 +8269,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is title proper of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60958",
+    property :P60958,
       definition: "Relates a nomen to a resource that has a title that identifies a series to which a resource belongs.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60959".freeze, "http://rdaregistry.info/Elements/u/P61197".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/titleOfSeriesOf.en".freeze,
@@ -8273,7 +8279,7 @@ module RDF::Vocab
       label: "is title of series of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60912".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60959",
+    property :P60959,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/titleProperOfSubseriesOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       inverseOf: "http://rdaregistry.info/Elements/u/P60517".freeze,
@@ -8281,7 +8287,7 @@ module RDF::Vocab
       label: "is title proper of subseries of (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60958".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60960",
+    property :P60960,
       definition: "Relates a nomen to a musical resource that has an identifier for resource that is a numeric designation assigned from a list of resources of a composer, usually arranged in chronological order or by categories, with the theme given for each composition or for each section of large compositions.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/thematicIndexNumberOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8290,7 +8296,7 @@ module RDF::Vocab
       label: "is thematic index number of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60963".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60961",
+    property :P60961,
       definition: "Relates a nomen to a musical resource that has a numeric designation of musical resource assigned by a composer or a reference source that indicates a sequence of musical resources that share the same title or that share the same title and the same representative medium of performance.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/serialNumberOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8299,7 +8305,7 @@ module RDF::Vocab
       label: "is serial number of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60963".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60962",
+    property :P60962,
       definition: "Relates a nomen to a musical resource that has an identifier for resource that is a numeric designation assigned from a list of resources of a composer indicating chronological order of composition.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/opusNumberOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8308,7 +8314,7 @@ module RDF::Vocab
       label: "is opus number of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60963".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60963",
+    property :P60963,
       definition: "Relates a nomen to a musical resource that has an identifier for resource that is a serial number, opus number, or thematic index number assigned to a musical resource by a composer, publisher, or a musicologist.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60960".freeze, "http://rdaregistry.info/Elements/u/P60961".freeze, "http://rdaregistry.info/Elements/u/P60962".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/numericDesignationOfMusicalResourceOf.en".freeze,
@@ -8317,14 +8323,14 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is numeric designation of musical resource of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60964",
+    property :P60964,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/addressOfAgentOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       inverseOf: "http://rdaregistry.info/Elements/u/P60512".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is address of agent of (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60965",
+    property :P60965,
       definition: "Relates a place to an agent who was born in a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfBirthOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8333,7 +8339,7 @@ module RDF::Vocab
       label: "is place of birth of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61011".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60966",
+    property :P60966,
       definition: "Relates a place to a resource that has content recorded, filmed, etc. in a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfCaptureOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8342,7 +8348,7 @@ module RDF::Vocab
       label: "is place of capture of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61013".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60967",
+    property :P60967,
       definition: "Relates a place to an agent who died in a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfDeathOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8351,7 +8357,7 @@ module RDF::Vocab
       label: "is place of death of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61011".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60968",
+    property :P60968,
       definition: "Relates a place to a resource that is a published resource that is distributed from a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfDistributionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8360,7 +8366,7 @@ module RDF::Vocab
       label: "is place of distribution of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61013".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60969",
+    property :P60969,
       definition: "Relates a place to a resource that is a published resource that is printed, duplicated, cast, etc. in a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfManufactureOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8369,7 +8375,7 @@ module RDF::Vocab
       label: "is place of manufacture of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61013".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60970",
+    property :P60970,
       definition: "Relates a place to a resource which originated from a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfOriginOfResourceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8378,7 +8384,7 @@ module RDF::Vocab
       label: "is place of origin of resource of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61013".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60971",
+    property :P60971,
       definition: "Relates a place to a resource that is an unpublished resource that is inscribed, fabricated, constructed, etc. in a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfProductionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8387,7 +8393,7 @@ module RDF::Vocab
       label: "is place of production of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61013".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60972",
+    property :P60972,
       definition: "Relates a place to a resource that is a published resource that is published, released, or issued in a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfPublicationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8396,7 +8402,7 @@ module RDF::Vocab
       label: "is place of publication of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61013".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60973",
+    property :P60973,
       definition: "Relates a place to an agent who resides or has resided in, or is associated other than birth, death, or residence with a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfResidenceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8405,7 +8411,7 @@ module RDF::Vocab
       label: "is place of residence of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61011".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60974",
+    property :P60974,
       definition: "Relates a timespan to an agent who has a significant association with a timespan. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60975".freeze, "http://rdaregistry.info/Elements/u/P60977".freeze, "http://rdaregistry.info/Elements/u/P60978".freeze, "http://rdaregistry.info/Elements/u/P60980".freeze, "http://rdaregistry.info/Elements/u/P60985".freeze, "http://rdaregistry.info/Elements/u/P60990".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateAssociatedWithAgentOf.en".freeze,
@@ -8415,7 +8421,7 @@ module RDF::Vocab
       label: "is date associated with agent of (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61010".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60975",
+    property :P60975,
       definition: "Relates a timespan to an agent who was born during a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfBirthOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8424,7 +8430,7 @@ module RDF::Vocab
       label: "is date of birth of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60974".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60976",
+    property :P60976,
       definition: "Relates a timespan to a resource that is recorded, filmed, etc., during a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfCaptureOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8433,7 +8439,7 @@ module RDF::Vocab
       label: "is date of capture of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61012".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60977",
+    property :P60977,
       definition: "Relates a timespan to a conference, exhibition, or other event that gives rise to a resource that is held during a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfConferenceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8442,7 +8448,7 @@ module RDF::Vocab
       label: "is date of conference of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60974".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60978",
+    property :P60978,
       definition: "Relates a timespan to an agent who died during a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfDeathOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8451,7 +8457,7 @@ module RDF::Vocab
       label: "is date of death of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60974".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60979",
+    property :P60979,
       definition: "Relates a timespan to a resource that is a published resource that is distributed during a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfDistributionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8460,7 +8466,7 @@ module RDF::Vocab
       label: "is date of distribution of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61012".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60980",
+    property :P60980,
       definition: "Relates a timespan to an agent who is established or founded during a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfEstablishmentOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8469,7 +8475,7 @@ module RDF::Vocab
       label: "is date of establishment of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60974".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60981",
+    property :P60981,
       definition: "Relates a timespan to a resource that is a published resource that is printed, duplicated, cast, etc., during a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfManufactureOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8478,7 +8484,7 @@ module RDF::Vocab
       label: "is date of manufacture of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61012".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60982",
+    property :P60982,
       definition: "Relates a timespan to a resource that is an unpublished resource that is inscribed, fabricated, constructed, etc., during a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfProductionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8487,7 +8493,7 @@ module RDF::Vocab
       label: "is date of production of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61012".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60983",
+    property :P60983,
       definition: "Relates a timespan to a resource that is published, released, or issued in a published form during a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfPublicationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8496,7 +8502,7 @@ module RDF::Vocab
       label: "is date of publication of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61012".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60984",
+    property :P60984,
       definition: "Relates a timespan to a resource associated with an earliest timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfResourceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8505,7 +8511,7 @@ module RDF::Vocab
       label: "is date of resource of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61012".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60985",
+    property :P60985,
       definition: "Relates a timespan to an agent who is terminated or dissolved during a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfTerminationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8514,7 +8520,7 @@ module RDF::Vocab
       label: "is date of termination of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60974".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60986",
+    property :P60986,
       definition: "Relates a timespan to an appellation of an entity used during a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfUsageOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8522,7 +8528,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is date of usage of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60987",
+    property :P60987,
       definition: "Relates a resource to a significant location associated with an agent, or a place where an agent resides or has resided or has some connection. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeAssociatedWithResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -8531,7 +8537,7 @@ module RDF::Vocab
       label: "has place associated with resource (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61014".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60988",
+    property :P60988,
       definition: "Relates a nomen to a notated music resource that has an identifier for resource other than a publisher number for notated music, assigned by a publisher to indicate the printing plate used in the printing process.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/plateNumberForNotatedMusicOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8541,7 +8547,7 @@ module RDF::Vocab
       label: "is plate number for notated music of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60938".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60989",
+    property :P60989,
       definition: "Relates a resource to a numbering designation assigned to a notated music resource by a publisher.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/publisherNumberForNotatedMusicOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8551,7 +8557,7 @@ module RDF::Vocab
       label: "is publisher number for notated music of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60938".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60990",
+    property :P60990,
       definition: "Relates a timespan to an agent who is active in its primary field of endeavour during a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/periodOfActivityOfAgentOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8560,7 +8566,7 @@ module RDF::Vocab
       label: "is period of activity of agent of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60974".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60991",
+    property :P60991,
       definition: "Relates a timespan to a resource that refers to measurements of position for a body or orientation for an orbit.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/epochOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8568,7 +8574,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is epoch of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60992",
+    property :P60992,
       definition: "Relates a timespan to a resource that uses a point of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0°.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/equinoxOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8576,7 +8582,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is equinox of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60993",
+    property :P60993,
       definition: "Relates a place to an agent who is associated with a place. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeAssociatedWithAgentOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -8585,7 +8591,7 @@ module RDF::Vocab
       label: "is place associated with agent of (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61011".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60994",
+    property :P60994,
       definition: "Relates a place to a resource that is associated with a place. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeAssociatedWithResourceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -8594,7 +8600,7 @@ module RDF::Vocab
       label: "is place associated with resource of (Deprecated)".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61013".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60995",
+    property :P60995,
       definition: "Relates a resource to a physical or chemical substance that is used to create a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60159".freeze, "http://rdaregistry.info/Elements/u/P60596".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/material.en".freeze,
@@ -8602,7 +8608,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has material".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60996",
+    property :P60996,
       definition: "Relates an agent to an agent who has a well-known individual as a member.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/prominentMemberOfFamilyOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8610,7 +8616,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is prominent member of agent of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60997",
+    property :P60997,
       definition: "Relates a place to a conference, exhibition, or other formally named and convened event that gives rise to a resource and that is held in a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfConferenceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8619,7 +8625,7 @@ module RDF::Vocab
       label: "is place of conference of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61011".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60998",
+    property :P60998,
       definition: "Relates a timespan to a timespan that is the time at which a timespan starts.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/beginning.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8628,7 +8634,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has beginning".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P60999",
+    property :P60999,
       definition: "Relates a place to an agent who is identified with a country.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/countryAssociatedWithAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8636,7 +8642,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is country associated with agent of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61000",
+    property :P61000,
       definition: "Relates a timespan to a timespan that is the time at which a timespan finishes.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/ending.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8645,7 +8651,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has ending".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61001",
+    property :P61001,
       definition: "Relates a place to a place that encompasses another place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/partOfPlace.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8654,7 +8660,7 @@ module RDF::Vocab
       label: "is part of place".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61016".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61002",
+    property :P61002,
       definition: "Relates a timespan to a timespan that has another timespan as a component.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/partOfTimespan.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8663,7 +8669,7 @@ module RDF::Vocab
       label: "is part of timespan".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61017".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61003",
+    property :P61003,
       definition: "Relates a place to a place that is located within another place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/partPlace.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8672,7 +8678,7 @@ module RDF::Vocab
       label: "has part place".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61016".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61004",
+    property :P61004,
       definition: "Relates a timespan to a timespan that is a component of another timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/partTimespan.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8681,7 +8687,7 @@ module RDF::Vocab
       label: "has part timespan".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61017".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61005",
+    property :P61005,
       definition: "Relates a resource to a resource that is a binding of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/bindingOfResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8690,7 +8696,7 @@ module RDF::Vocab
       label: "has binding of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60313".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61006",
+    property :P61006,
       definition: "Relates a resource to a resource that is bound.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/bindingOfResourceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8699,14 +8705,14 @@ module RDF::Vocab
       label: "is binding of resource of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60313".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61007",
+    property :P61007,
       definition: "Relates a resource to a method used to bind a published or unpublished resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/typeOfBinding".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has type of binding".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61008",
+    property :P61008,
       definition: "Relates a resource to an agent who is associated with a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P61031".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedAgentOfResource.en".freeze,
@@ -8716,7 +8722,7 @@ module RDF::Vocab
       label: "has related agent of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61034".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61009",
+    property :P61009,
       definition: "Relates an agent to resource that is associated with an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P61032".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedResourceOfAgent.en".freeze,
@@ -8726,7 +8732,7 @@ module RDF::Vocab
       label: "has related resource of agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61038".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61010",
+    property :P61010,
       definition: "Relates a timespan to an agent who is associated with a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60974".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedAgentOfTimespan.en".freeze,
@@ -8736,7 +8742,7 @@ module RDF::Vocab
       label: "has related agent of timespan".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61035".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61011",
+    property :P61011,
       definition: "Relates a place to an agent who is associated with a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60965".freeze, "http://rdaregistry.info/Elements/u/P60967".freeze, "http://rdaregistry.info/Elements/u/P60973".freeze, "http://rdaregistry.info/Elements/u/P60993".freeze, "http://rdaregistry.info/Elements/u/P60997".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedAgentOfPlace.en".freeze,
@@ -8746,7 +8752,7 @@ module RDF::Vocab
       label: "has related agent of place".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61036".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61012",
+    property :P61012,
       definition: "Relates a timespan to a resource that is associated with a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60976".freeze, "http://rdaregistry.info/Elements/u/P60979".freeze, "http://rdaregistry.info/Elements/u/P60981".freeze, "http://rdaregistry.info/Elements/u/P60982".freeze, "http://rdaregistry.info/Elements/u/P60983".freeze, "http://rdaregistry.info/Elements/u/P60984".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedResourceOfTimespan.en".freeze,
@@ -8756,7 +8762,7 @@ module RDF::Vocab
       label: "has related resource of timespan".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61035".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61013",
+    property :P61013,
       definition: "Relates a place to resource that is associated with a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60966".freeze, "http://rdaregistry.info/Elements/u/P60968".freeze, "http://rdaregistry.info/Elements/u/P60969".freeze, "http://rdaregistry.info/Elements/u/P60970".freeze, "http://rdaregistry.info/Elements/u/P60971".freeze, "http://rdaregistry.info/Elements/u/P60972".freeze, "http://rdaregistry.info/Elements/u/P60994".freeze, "http://rdaregistry.info/Elements/u/P61191".freeze, "http://rdaregistry.info/Elements/u/P61206".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedResourceOfPlace.en".freeze,
@@ -8766,7 +8772,7 @@ module RDF::Vocab
       label: "has related resource of place".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61036".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61014",
+    property :P61014,
       definition: "Relates a resource to a place that is associated with a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60160".freeze, "http://rdaregistry.info/Elements/u/P60161".freeze, "http://rdaregistry.info/Elements/u/P60162".freeze, "http://rdaregistry.info/Elements/u/P60163".freeze, "http://rdaregistry.info/Elements/u/P60523".freeze, "http://rdaregistry.info/Elements/u/P60556".freeze, "http://rdaregistry.info/Elements/u/P60987".freeze, "http://rdaregistry.info/Elements/u/P61205".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedPlaceOfResource.en".freeze,
@@ -8776,7 +8782,7 @@ module RDF::Vocab
       label: "has related place of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61034".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61015",
+    property :P61015,
       definition: "Relates a timespan to a place that is associated with a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedPlaceOfTimespan.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8785,7 +8791,7 @@ module RDF::Vocab
       label: "has related place of timespan".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61035".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61016",
+    property :P61016,
       definition: "Relates a place to a place that is associated with a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61001".freeze, "http://rdaregistry.info/Elements/u/P61003".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedPlaceOfPlace.en".freeze,
@@ -8795,7 +8801,7 @@ module RDF::Vocab
       label: "has related place of place".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61036".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61017",
+    property :P61017,
       definition: "Relates a timespan to a timespan that is associated with a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61002".freeze, "http://rdaregistry.info/Elements/u/P61004".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedTimespanOfTimespan.en".freeze,
@@ -8805,7 +8811,7 @@ module RDF::Vocab
       label: "has related timespan of timespan".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61035".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61018",
+    property :P61018,
       definition: "Relates an agent to a place that is associated with an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60097".freeze, "http://rdaregistry.info/Elements/u/P60107".freeze, "http://rdaregistry.info/Elements/u/P60325".freeze, "http://rdaregistry.info/Elements/u/P60360".freeze, "http://rdaregistry.info/Elements/u/P60592".freeze, "http://rdaregistry.info/Elements/u/P60593".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedPlaceOfAgent.en".freeze,
@@ -8815,7 +8821,7 @@ module RDF::Vocab
       label: "has related place of agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61038".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61019",
+    property :P61019,
       definition: "Relates a place to a timespan that is associated with a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedTimespanOfPlace.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8824,7 +8830,7 @@ module RDF::Vocab
       label: "has related timespan of place".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61036".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61020",
+    property :P61020,
       definition: "Relates a resource to a timespan that is associated with a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60070".freeze, "http://rdaregistry.info/Elements/u/P60071".freeze, "http://rdaregistry.info/Elements/u/P60072".freeze, "http://rdaregistry.info/Elements/u/P60073".freeze, "http://rdaregistry.info/Elements/u/P60324".freeze, "http://rdaregistry.info/Elements/u/P60527".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedTimespanOfResource.en".freeze,
@@ -8834,7 +8840,7 @@ module RDF::Vocab
       label: "has related timespan of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61034".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61021",
+    property :P61021,
       definition: "Relates an agent to a timespan that is associated with an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedTimespanOfAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8843,7 +8849,7 @@ module RDF::Vocab
       label: "has related timespan of agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61038".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61022",
+    property :P61022,
       definition: "Relates an agent to an nomen that is associated with an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedNomenOfAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8852,7 +8858,7 @@ module RDF::Vocab
       label: "has related nomen of agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61033".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61023",
+    property :P61023,
       definition: "Relates a resource to a nomen that is associated with a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60597".freeze, "http://rdaregistry.info/Elements/u/P61203".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedNomenOfResource.en".freeze,
@@ -8862,7 +8868,7 @@ module RDF::Vocab
       label: "has related nomen of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61034".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61024",
+    property :P61024,
       definition: "Relates a timespan to a nomen that is associated with a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedNomenOfTimespan.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8871,7 +8877,7 @@ module RDF::Vocab
       label: "has related nomen of timespan".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61035".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61025",
+    property :P61025,
       definition: "Relates a place to a nomen that is associated with a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedNomenOfPlace.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8880,7 +8886,7 @@ module RDF::Vocab
       label: "has related nomen of place".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61036".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61026",
+    property :P61026,
       definition: "Relates a nomen to a nomen that is associated with a nomen.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedNomenOfNomen.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8889,7 +8895,7 @@ module RDF::Vocab
       label: "has related nomen of nomen".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61037".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61027",
+    property :P61027,
       definition: "Relates a nomen to an agent who is associated with a nomen.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedAgentOfNomen.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8898,7 +8904,7 @@ module RDF::Vocab
       label: "has related agent of nomen".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61037".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61028",
+    property :P61028,
       definition: "Relates a nomen to a place that is associated with a nomen.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedPlaceOfNomen.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8907,7 +8913,7 @@ module RDF::Vocab
       label: "has related place of nomen".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61037".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61029",
+    property :P61029,
       definition: "Relates a nomen to a timespan that is associated with a nomen.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedTimespanOfNomen.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8916,7 +8922,7 @@ module RDF::Vocab
       label: "has related timespan of nomen".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61037".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61030",
+    property :P61030,
       definition: "Relates a nomen to resource that is associated with a nomen.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61118".freeze, "http://rdaregistry.info/Elements/u/P61204".freeze, "http://rdaregistry.info/Elements/u/P61209".freeze, "http://rdaregistry.info/Elements/u/P61211".freeze, "http://rdaregistry.info/Elements/u/P61213".freeze, "http://rdaregistry.info/Elements/u/P61215".freeze, "http://rdaregistry.info/Elements/u/P61217".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedResourceOfNomen.en".freeze,
@@ -8926,7 +8932,7 @@ module RDF::Vocab
       label: "has related resource of nomen".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61037".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61031",
+    property :P61031,
       definition: "Relates a resource to an agent who makes changes to a resource without creating a new resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/modifier.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8935,7 +8941,7 @@ module RDF::Vocab
       label: "has modifier".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61008".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61032",
+    property :P61032,
       definition: "Relates an agent to a resource that is changed by an agent without creating a new resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/modifierOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -8944,7 +8950,7 @@ module RDF::Vocab
       label: "is modifier of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61009".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61033",
+    property :P61033,
       definition: "Relates an agent to an entity that is associated with an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60454".freeze, "http://rdaregistry.info/Elements/u/P61022".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedEntityOfAgent.en".freeze,
@@ -8954,7 +8960,7 @@ module RDF::Vocab
       label: "has related entity of agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61038".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61034",
+    property :P61034,
       definition: "Relates a resource to an entity that is associated with a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60313".freeze, "http://rdaregistry.info/Elements/u/P61008".freeze, "http://rdaregistry.info/Elements/u/P61014".freeze, "http://rdaregistry.info/Elements/u/P61020".freeze, "http://rdaregistry.info/Elements/u/P61023".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedEntityOfResource.en".freeze,
@@ -8964,7 +8970,7 @@ module RDF::Vocab
       label: "has related entity of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61038".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61035",
+    property :P61035,
       definition: "Relates a timespan to an entity that is associated with a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61010".freeze, "http://rdaregistry.info/Elements/u/P61012".freeze, "http://rdaregistry.info/Elements/u/P61015".freeze, "http://rdaregistry.info/Elements/u/P61017".freeze, "http://rdaregistry.info/Elements/u/P61024".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedEntityOfTimespan.en".freeze,
@@ -8974,7 +8980,7 @@ module RDF::Vocab
       label: "has related entity of timespan".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61038".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61036",
+    property :P61036,
       definition: "Relates a place to an entity that is associated with a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61011".freeze, "http://rdaregistry.info/Elements/u/P61013".freeze, "http://rdaregistry.info/Elements/u/P61016".freeze, "http://rdaregistry.info/Elements/u/P61019".freeze, "http://rdaregistry.info/Elements/u/P61025".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedEntityOfPlace.en".freeze,
@@ -8984,7 +8990,7 @@ module RDF::Vocab
       label: "has related entity of place".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61038".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61037",
+    property :P61037,
       definition: "Relates a nomen to an entity that is associated with a nomen.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61026".freeze, "http://rdaregistry.info/Elements/u/P61027".freeze, "http://rdaregistry.info/Elements/u/P61028".freeze, "http://rdaregistry.info/Elements/u/P61029".freeze, "http://rdaregistry.info/Elements/u/P61030".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedEntityOfNomen.en".freeze,
@@ -8994,7 +9000,7 @@ module RDF::Vocab
       label: "has related entity of nomen".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61038".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61038",
+    property :P61038,
       definition: "Relates an entity to an entity that is associated with an entity.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61009".freeze, "http://rdaregistry.info/Elements/u/P61018".freeze, "http://rdaregistry.info/Elements/u/P61021".freeze, "http://rdaregistry.info/Elements/u/P61033".freeze, "http://rdaregistry.info/Elements/u/P61034".freeze, "http://rdaregistry.info/Elements/u/P61035".freeze, "http://rdaregistry.info/Elements/u/P61036".freeze, "http://rdaregistry.info/Elements/u/P61037".freeze, "http://rdaregistry.info/Elements/u/P61039".freeze, "http://rdaregistry.info/Elements/u/P61040".freeze, "http://rdaregistry.info/Elements/u/P61041".freeze, "http://rdaregistry.info/Elements/u/P61042".freeze, "http://rdaregistry.info/Elements/u/P61043".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedEntityOfEntity.en".freeze,
@@ -9003,7 +9009,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has related entity of entity".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61039",
+    property :P61039,
       definition: "Relates an entity to an agent who is associated with an entity.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedAgentOfEntity.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9012,7 +9018,7 @@ module RDF::Vocab
       label: "has related agent of entity".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61038".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61040",
+    property :P61040,
       definition: "Relates an entity to a place that is associated with an entity.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedPlaceOfEntity.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9021,7 +9027,7 @@ module RDF::Vocab
       label: "has related place of entity".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61038".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61041",
+    property :P61041,
       definition: "Relates an entity to a timespan that is associated with an entity.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedTimespanOfEntity.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9030,7 +9036,7 @@ module RDF::Vocab
       label: "has related timespan of entity".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61038".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61042",
+    property :P61042,
       definition: "Relates an entity to a resource that is associated with an entity.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedResourceOfEntity.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9039,7 +9045,7 @@ module RDF::Vocab
       label: "has related resource of entity".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61038".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61043",
+    property :P61043,
       definition: "Relates an entity to a nomen that is associated with an entity.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedNomenOfEntity.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9048,14 +9054,14 @@ module RDF::Vocab
       label: "has related nomen of entity".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61038".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61044",
+    property :P61044,
       definition: "Relates a resource to a type of performer or group of performers participating, or intended to participate, in a performance of choreographic or non-musical dramatic content.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/mediumOfPerformanceOfChoreographicContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has medium of performance of choreographic content".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61045",
+    property :P61045,
       definition: "Relates a resource to a musical resource that is complemented by a textual resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lyricsFor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9064,7 +9070,7 @@ module RDF::Vocab
       label: "is lyrics for".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61048".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61046",
+    property :P61046,
       definition: "Relates a resource to a resource that is a textual resource that complements a musical resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lyrics.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9073,7 +9079,7 @@ module RDF::Vocab
       label: "has lyrics".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61047".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61047",
+    property :P61047,
       definition: "Relates a resource to a resource that is a textual resoource that complements a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P61046".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/textResource".freeze,
@@ -9083,7 +9089,7 @@ module RDF::Vocab
       label: "has text resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61048",
+    property :P61048,
       definition: "Relates a resource to a resource that is complemented by a resource that is a textual resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P61045".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/textForResource".freeze,
@@ -9093,7 +9099,7 @@ module RDF::Vocab
       label: "is text for resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61049",
+    property :P61049,
       definition: "Relates a resource to a resource that is a vocal resource and that complements a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/spokenWordResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9102,7 +9108,7 @@ module RDF::Vocab
       label: "has spoken word resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61050",
+    property :P61050,
       definition: "Relates a resource to a resource that is realized as sound and that complements a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/sounds.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9111,7 +9117,7 @@ module RDF::Vocab
       label: "has sounds".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61051",
+    property :P61051,
       definition: "Relates a resource to a resource that is complemented by a vocal resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/spokenWordForResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9120,7 +9126,7 @@ module RDF::Vocab
       label: "is spoken word for resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61052",
+    property :P61052,
       definition: "Relates a resource to a resource that is complemented by a resource that is realized as sound.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/soundsFor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9129,7 +9135,7 @@ module RDF::Vocab
       label: "is sounds for".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61053",
+    property :P61053,
       definition: "Relates a resource to a resource that is created by changing the extension plan of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61055".freeze, "http://rdaregistry.info/Elements/u/P61057".freeze, "http://rdaregistry.info/Elements/u/P61058".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/transformationByExtensionPlan.en".freeze,
@@ -9139,7 +9145,7 @@ module RDF::Vocab
       label: "has transformation by extension plan".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61067".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61054",
+    property :P61054,
       definition: "Relates a resource to a resource that has an extension plan that is changed to create a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61056".freeze, "http://rdaregistry.info/Elements/u/P61075".freeze, "http://rdaregistry.info/Elements/u/P61076".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/transformationByExtensionPlanOf.en".freeze,
@@ -9149,7 +9155,7 @@ module RDF::Vocab
       label: "is transformation by extension plan of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61068".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61055",
+    property :P61055,
       definition: "Relates a resource to a resource that is created by changing the extension plan of a resource from integrating to successive.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/sequentialVersion.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9158,7 +9164,7 @@ module RDF::Vocab
       label: "has sequential version".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61053".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61056",
+    property :P61056,
       definition: "Relates a resource to a resource that has an extension plan that is changed from successive to integrating to create a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/sequentialVersionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9167,7 +9173,7 @@ module RDF::Vocab
       label: "is sequential version of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61054".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61057",
+    property :P61057,
       definition: "Relates a resource to a resource that is created by changing the extension plan of a resource from static to successive.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/serializedVersion.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9176,7 +9182,7 @@ module RDF::Vocab
       label: "has serialized version".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61053".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61058",
+    property :P61058,
       definition: "Relates a resource to a resource that is created by changing the extension plan of a resource from integrating to static.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/staticVersion.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9185,7 +9191,7 @@ module RDF::Vocab
       label: "has static version".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61053".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61059",
+    property :P61059,
       definition: "Relates a resource to a resource that is created by changing the audience of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61061".freeze, "http://rdaregistry.info/Elements/u/P61062".freeze, "http://rdaregistry.info/Elements/u/P61063".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/transformationByAudience.en".freeze,
@@ -9195,7 +9201,7 @@ module RDF::Vocab
       label: "has transformation by audience".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61069".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61060",
+    property :P61060,
       definition: "Relates a resource to a resource that has an audience that is changed to create a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61064".freeze, "http://rdaregistry.info/Elements/u/P61065".freeze, "http://rdaregistry.info/Elements/u/P61066".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/transformationByAudienceOf.en".freeze,
@@ -9205,7 +9211,7 @@ module RDF::Vocab
       label: "is transformation by audience of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61070".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61061",
+    property :P61061,
       definition: "Relates a resource to a resource that is created by changing the language audience of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/languageVersion.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9214,7 +9220,7 @@ module RDF::Vocab
       label: "has language version".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61059".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61062",
+    property :P61062,
       definition: "Relates a resource to a resource that is created by changing the regional audience of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/regionalVersion.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9223,7 +9229,7 @@ module RDF::Vocab
       label: "has regional version".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61059".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61063",
+    property :P61063,
       definition: "Relates a resource to a resource that is created by changing the carrier of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/carrierVersion.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9232,7 +9238,7 @@ module RDF::Vocab
       label: "has carrier version".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61059".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61064",
+    property :P61064,
       definition: "Relates a resource to a resource that has a language audience that is changed to create a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/languageVersionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9241,7 +9247,7 @@ module RDF::Vocab
       label: "is language version of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61060".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61065",
+    property :P61065,
       definition: "Relates a resource to a resource that has a regional audience that is changed to create a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/regionalVersionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9250,7 +9256,7 @@ module RDF::Vocab
       label: "is regional version of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61060".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61066",
+    property :P61066,
       definition: "Relates a resource to a resource that has a carrier that is changed to create a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/carrierVersionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9259,7 +9265,7 @@ module RDF::Vocab
       label: "is carrier version of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61060".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61067",
+    property :P61067,
       definition: "Relates a resource to a resource that is created by changing the scope or editorial policy of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P61053".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/transformationByPolicy.en".freeze,
@@ -9269,7 +9275,7 @@ module RDF::Vocab
       label: "has transformation by policy".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61069".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61068",
+    property :P61068,
       definition: "Relates a resource to a resource that has a policy that is changed to create a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P61054".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/transformationByPolicyOf.en".freeze,
@@ -9279,7 +9285,7 @@ module RDF::Vocab
       label: "is transformation by policy of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61070".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61069",
+    property :P61069,
       definition: "Relates a resource to a resource that is created by changing the scope or editorial policy, the genre or literary form, the target audience, or the style of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61059".freeze, "http://rdaregistry.info/Elements/u/P61067".freeze, "http://rdaregistry.info/Elements/u/P61071".freeze, "http://rdaregistry.info/Elements/u/P61073".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/transformation.en".freeze,
@@ -9289,7 +9295,7 @@ module RDF::Vocab
       label: "has transformation".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60313".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61070",
+    property :P61070,
       definition: "Relates a resource to a resource that has a scope or editorial policy, genre or literary form, target audience, or style that is changed to create a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61060".freeze, "http://rdaregistry.info/Elements/u/P61068".freeze, "http://rdaregistry.info/Elements/u/P61072".freeze, "http://rdaregistry.info/Elements/u/P61074".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/transformationOf.en".freeze,
@@ -9299,7 +9305,7 @@ module RDF::Vocab
       label: "is transformation of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60313".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61071",
+    property :P61071,
       definition: "Relates a resource to a resource that is created by changing the style of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/transformationByStyle.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9308,7 +9314,7 @@ module RDF::Vocab
       label: "has transformation by style".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61069".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61072",
+    property :P61072,
       definition: "Relates a resource to a resource that has a style that is changed to create a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/transformationByStyleOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9317,7 +9323,7 @@ module RDF::Vocab
       label: "is transformation by style of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61070".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61073",
+    property :P61073,
       definition: "Relates a resource to a resource that is created by changing the genre or literary form of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/transformationByGenre.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9326,7 +9332,7 @@ module RDF::Vocab
       label: "has transformation by genre".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61069".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61074",
+    property :P61074,
       definition: "Relates a resource to a resource that has a genre that is changed to create a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/transformationByGenreOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9335,7 +9341,7 @@ module RDF::Vocab
       label: "is transformation by genre of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61070".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61075",
+    property :P61075,
       definition: "Relates a resource to a resource that has an extension plan that is changed from successive to static to create a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/serializedVersionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9344,7 +9350,7 @@ module RDF::Vocab
       label: "is serialized version of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61054".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61076",
+    property :P61076,
       definition: "Relates a resource to a resource that has an extension plan that is changed from static to integrated to create a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/staticVersionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9353,14 +9359,14 @@ module RDF::Vocab
       label: "is static version of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61054".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61077",
+    property :P61077,
       definition: "Relates an agent to a resource that includes a contribution by an agent of making changes to the content.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/reviserOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is reviser of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61078",
+    property :P61078,
       definition: "Relates an agent to a resource that includes a contribution by an agent to a seamless mix of kinds of content".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentToAmalgamationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9368,7 +9374,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is contributor agent to amalgamation of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61079",
+    property :P61079,
       definition: "Relates an agent to a resource that includes a contribution by an agent to a performance.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentToPerformanceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9376,7 +9382,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is contributor agent to performance of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61080",
+    property :P61080,
       definition: "Relates an agent to a resource that includes a contribution by an agent of amending text created by other agents in order to meet publication standards such as consistency, clarity, and style. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/editorOfTextOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -9384,7 +9390,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is editor of text of (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61081",
+    property :P61081,
       definition: "Relates an agent to a resource that is an aggregate that includes a contribution by an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentToAggregateOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9392,14 +9398,14 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is contributor agent to aggregate of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61082",
+    property :P61082,
       definition: "Relates a resource to an agent who contributes to a resource by making changes to the content.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/reviser.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has reviser".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61083",
+    property :P61083,
       definition: "Relates a resource to an agent who contributes to a resource that is a seamless mix of kinds of content.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentToAmalgamation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9407,7 +9413,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has contributor agent to amalgamation".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61084",
+    property :P61084,
       definition: "Relates a resource to an agent who contributes to a resource that is a performance.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentToPerformanceContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9415,7 +9421,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has contributor agent to performance".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61085",
+    property :P61085,
       definition: "Relates a resource to an agent who contributes to a resource by amending text created by other agents in order to meet publication standards such as consistency, clarity, and style,".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/editor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9423,7 +9429,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has editor".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61086",
+    property :P61086,
       definition: "Relates a resource to an agent who is responsible for creating a resource that is embodied by an aggregate.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentToAggregatedContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9431,7 +9437,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has contributor agent to aggregate".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61087",
+    property :P61087,
       definition: "Relates a resource to a resource that is chosen as part of the plan of an aggregating resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/aggregates.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9439,7 +9445,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "aggregates".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61088",
+    property :P61088,
       definition: "Relates a resource to a resource that aggregates a resource as part of the plan of an aggregating resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/aggregatedBy.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9447,14 +9453,14 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is aggregated by".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61089",
+    property :P61089,
       definition: "Relates a resource to a capacity of content to respond to actions performed by the user.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/interactivityMode.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has interactivity mode".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61090",
+    property :P61090,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for aggregation by selecting and arranging other resources.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/aggregatorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9462,7 +9468,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is aggregator of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61091",
+    property :P61091,
       definition: "Relates a resource to an agent who is responsible for creating an aggregating resource by selecting and arranging other resources.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/aggregator.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9470,7 +9476,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has aggregator".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61092",
+    property :P61092,
       definition: "Relates a resource to an agent who is accused in a criminal proceeding.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/criminalDefendant.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9479,7 +9485,7 @@ module RDF::Vocab
       label: "has criminal defendant".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60462".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61093",
+    property :P61093,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for being accused in a criminal proceeding.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/criminalDefendantOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9488,7 +9494,7 @@ module RDF::Vocab
       label: "is criminal defendant of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60698".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61094",
+    property :P61094,
       definition: "Relates a resource to an agent who is sued in a civil proceeding.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/civilDefendant.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9497,7 +9503,7 @@ module RDF::Vocab
       label: "has civil defendant".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60462".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61095",
+    property :P61095,
       definition: "Relates an agent to a resource that involves a responsibility of an agent for being sued in a civil proceeding.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/civilDefendantOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9506,21 +9512,21 @@ module RDF::Vocab
       label: "is civil defendant of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60698".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61096",
+    property :P61096,
       definition: "Relates a resource to an agent who is responsible for overseeing academic activity of any kind that results in a resource, including theses, research, and projects.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/academicSupervisor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has academic supervisor".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61097",
+    property :P61097,
       definition: "Relates a resource to a categorization reflecting an intention to extend the content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/extensionPlan.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has extension plan".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61098",
+    property :P61098,
       definition: "Relates a resource to an academic supervisor who is responsible for advising or supervising research that results in a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/researchSupervisor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9528,21 +9534,21 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has research supervisor".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61099",
+    property :P61099,
       definition: "Relates a resource to an unstructured or structured description of a range of resources for which the value of a metadata resource is valid.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/scopeOfValidity.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has scope of validity".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61100",
+    property :P61100,
       definition: "Relates a resource to a source of information for a metadata resource that is an unstructured description transcribed from a resource being described.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/recordingSource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has recording source".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61101",
+    property :P61101,
       definition: "Relates a resource to a resource in which there is evidence for a metadata resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/sourceConsulted.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9550,7 +9556,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has source consulted".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61102",
+    property :P61102,
       definition: "Relates a resource to an academic supervisor who is responsible for advising or supervising a project undertaken by a student that results in a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/projectSupervisor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9558,7 +9564,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has project supervisor".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61103",
+    property :P61103,
       definition: "Relates an agent to a resource that involves a responsibility as an academic supervisor of research that results in a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/researchSupervisorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9566,7 +9572,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is research supervisor of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61104",
+    property :P61104,
       definition: "Relates an agent to a resource that involves a responsibility as an academic supervisor of a project undertaken by a student that results in a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/projectSupervisorOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9574,7 +9580,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is project supervisor of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61105",
+    property :P61105,
       definition: "Relates a resource to a groove pitch of an analog cylinder.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/groovePitch.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9582,7 +9588,7 @@ module RDF::Vocab
       label: "has groove pitch".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60532".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61106",
+    property :P61106,
       definition: "Relates a resource to a groove width of an analog disc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/grooveWidth.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9590,7 +9596,7 @@ module RDF::Vocab
       label: "has groove width".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60532".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61107",
+    property :P61107,
       definition: "Relates a resource to a resource that is a metadata resource for which a resource provides evidence.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/sourceConsultedOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9598,7 +9604,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is source consulted of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61108",
+    property :P61108,
       definition: "Relates a timespan to a resource that is associated with a claim of protection under copyright or a similar regime during a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/copyrightDateOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9606,7 +9612,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is copyright date of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61109",
+    property :P61109,
       definition: "Relates a timespan to a resource that has an extent of resource that is a playing time, performance time, running time, or other timespan. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/durationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
@@ -9614,7 +9620,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is duration of (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61110",
+    property :P61110,
       definition: "Relates a timespan to a resource that is an academic degree conferred by a granting institution or faculty during a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/yearDegreeGrantedOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9622,7 +9628,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is year degree granted of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61111",
+    property :P61111,
       definition: "Relates a nomen to a resource that has a title of resource that has been abbreviated for purposes of indexing or identification.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/abbreviatedTitleOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9630,21 +9636,21 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is abbreviated title of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61112",
+    property :P61112,
       definition: "Relates a nomen to an agent who has an appellation of agent that is a pseudonym or other assumed identity.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/alternateIdentityOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is alternate identity of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61113",
+    property :P61113,
       definition: "Relates a nomen to an agent who has an appellation of agent that is a real identity.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/realIdentityOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is real identity of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61114",
+    property :P61114,
       definition: "Relates a nomen to a nomen that is a discrete component of another nomen.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/partNomen.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9652,7 +9658,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has part nomen".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61115",
+    property :P61115,
       definition: "Relates a nomen to a nomen that has another nomen as a discrete component.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/partOfNomen.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9660,7 +9666,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is part of nomen".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61116",
+    property :P61116,
       definition: "Relates a nomen to a resource that has a title proper in another language or script.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelTitleProperOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9668,7 +9674,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is parallel title proper of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61117",
+    property :P61117,
       definition: "Relates a nomen to a resource that has an identifier assigned by an ISSN registration agency.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/issnOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9676,7 +9682,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is ISSN of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61118",
+    property :P61118,
       definition: "Relates a nomen to a resource that has a title of resource that is assigned by an ISSN registration agency.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/keyTitleOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9685,35 +9691,35 @@ module RDF::Vocab
       label: "is key title of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61030".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61119",
+    property :P61119,
       definition: "Relates a nomen to the circumstances or situation in which an appellation of an entity is used.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contextOfUse.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has context of use".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61120",
+    property :P61120,
       definition: "Relates a nomen to a date or range of dates that is associated with the use of an appellation of an entity. (Deprecated)".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dateOfUsage.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has date of usage (Deprecated)".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61121",
+    property :P61121,
       definition: "Relates a nomen to a nomen that is based on another nomen.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/derivation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has derivation".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61122",
+    property :P61122,
       definition: "Relates a nomen to a nomen that is used as the basis of another nomen.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/derivationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is derivation of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61123",
+    property :P61123,
       definition: "Relates a nomen to a nomen that is an appellation of the same entity as another nomen.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/equivalentTo.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9721,119 +9727,119 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is equivalent to".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61124",
+    property :P61124,
       definition: "Relates an agent to a resource that is an aggregate that embodies computer content created by an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentOfComputerContentOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is contributor agent of computer content of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61125",
+    property :P61125,
       definition: "Relates an agent to a resource that is an aggregate that embodies a moving image resource created by an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentOfMovingImageOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is contributor agent of moving image of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61126",
+    property :P61126,
       definition: "Relates an agent to a resource that is an aggregate that embodies an object resource created by an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentOfObjectOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is contributor agent of object of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61127",
+    property :P61127,
       definition: "Relates an agent to a resource that is an aggregate that embodies a spoken word resource created by an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentOfSpeechOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is contributor agent of speech of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61128",
+    property :P61128,
       definition: "Relates an agent to a resource that is an aggregate that embodies a musical resource created by an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentOfMusicOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is contributor agent of music of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61129",
+    property :P61129,
       definition: "Relates an agent to a resource that is an aggregate that embodies a cartographic resource created by an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentOfCartographyOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is contributor agent of cartography of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61130",
+    property :P61130,
       definition: "Relates an agent to a resource that is an aggregate that embodies a choreographic resource created by an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentOfChoreographyOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is contributor agent of choreography of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61131",
+    property :P61131,
       definition: "Relates an agent to a resource that is an aggregate that embodies a textual resource created by an agent.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentOfTextOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is contributor agent of text of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61132",
+    property :P61132,
       definition: "Relates a resource to an agent who is a contributor to aggregate who creates a cartographic resource that is embodied by an aggregate.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentOfCartography.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has contributor agent of cartography".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61133",
+    property :P61133,
       definition: "Relates a resource to an agent who is a contributor to aggregate who creates a choreographic resource that is embodied by an aggregate.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentOfChoreography.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has contributor agent of choreography".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61134",
+    property :P61134,
       definition: "Relates a resource to an agent who is a contributor to aggregate who creates computer content that is embodied by an aggregate.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentOfComputerContent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has contributor agent of computer content".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61135",
+    property :P61135,
       definition: "Relates a resource to an agent who is a contributor to aggregate who creates a moving image resource that is embodied by an aggregate.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentOfMovingImage.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has contributor agent of moving image".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61136",
+    property :P61136,
       definition: "Relates a resource to an agent who is a contributor to aggregate who creates a musical resource that is embodied by an aggregate.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentOfMusic.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has contributor agent of music".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61137",
+    property :P61137,
       definition: "Relates a resource to an agent who is a contributor to aggregate who creates an object resource that is embodied by an aggregate.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentOfObject.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has contributor agent of object".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61138",
+    property :P61138,
       definition: "Relates a resource to an agent who is a contributor to aggregate who creates a spoken word resource that is embodied by an aggregate.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentOfSpeech.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has contributor agent of speech".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61139",
+    property :P61139,
       definition: "Relates a resource to an agent who is a contributor to aggregate who creates a textual resource that is embodied by an aggregate.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/contributorAgentOfText.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has contributor agent of text".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61140",
+    property :P61140,
       definition: "Relates a resource to a resource statement about a date that is associated with a claim of protection under copyright or a similar regime.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/resourceCopyrightStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9841,84 +9847,84 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has resource copyright statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61141",
+    property :P61141,
       definition: "Relates a resource to a resource statement about the designation of a sequence of a resource of a part, issue, or iteration of a diachronic resource. ".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/resourceDesignationOfSequenceStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has resource designation of sequence statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61142",
+    property :P61142,
       definition: "Relates a resource to a resource statement about thesis and other dissertation information.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/resourceDissertationStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has resource dissertation statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61143",
+    property :P61143,
       definition: "Relates a resource to a resource statement about data relating to the distribution of a published resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/resourceDistributionStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has resource distribution statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61144",
+    property :P61144,
       definition: "Relates a resource to a resource statement about an edition to which a resource belongs.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/resourceEditionStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has resource edition statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61145",
+    property :P61145,
       definition: "Relates a resource to a resource statement about an interval at which the resources of parts, issues, or iterations of a diachronic resource are issued.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/resourceFrequencyStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has resource frequency statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61146",
+    property :P61146,
       definition: "Relates a resource to a resource statement about a code, number, or other string, usually independent of natural language and social naming conventions, used to identify a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/resourceIdentifierStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has resource identifier statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61147",
+    property :P61147,
       definition: "Relates a resource to a resource statement about data relating to the printing, duplicating, casting, etc., of a published resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/resourceManufactureStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has resource manufacture statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61148",
+    property :P61148,
       definition: "Relates a resource to a resource statement about data relating to the inscription, fabrication, construction, etc., of an unpublished resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/resourceProductionStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has resource production statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61149",
+    property :P61149,
       definition: "Relates a resource to a resource statement about the publication, release, or issuing of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/resourcePublicationStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has resource publication statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61150",
+    property :P61150,
       definition: "Relates a resource to a resource statement about a designation for one or more regions of the world for which a videodisc or video game carrier has been encoded, indicating that playback is restricted to a device configured to decode it.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/resourceRegionalEncodingStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has resource regional encoding statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61151",
+    property :P61151,
       definition: "Relates a resource to a resource statement about a series to which a resource belongs and a sequence within the series.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/resourceSeriesStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has resource series statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61152",
+    property :P61152,
       definition: "Relates a resource to a resource statement about a series that is associated with a resource and a numbering of a resource within the series.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/resourceStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9926,7 +9932,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has resource statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61153",
+    property :P61153,
       definition: "Relates a resource to a resource statement about a name of a resource and the agent creating or contributing to the content of the resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/resourceTitleAndResponsibilityStatement.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9934,21 +9940,21 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has resource title and responsibility statement".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61154",
+    property :P61154,
       definition: "Relates a resource to a point size of the type used to represent the characters and symbols in a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/fontPointSize.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has font point size".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61155",
+    property :P61155,
       definition: "Relates a resource to a word or phrase that distinguishes a resource from another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/designationOfVersion.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has designation of version".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61156",
+    property :P61156,
       definition: "Relates a nomen to a scheme in which an appellation is established.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/schemeOfNomen.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9956,14 +9962,14 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has scheme of nomen".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61157",
+    property :P61157,
       definition: "Relates a nomen to a set of characters or symbols with which an appellation is formed.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/scriptOfNomen.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has script of nomen".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61158",
+    property :P61158,
       definition: "Relates a nomen to a resource that has an identifier for resource that consists of a group of characters from specified locations in a resource combined with a date of publication or other element.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/fingerprintOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9971,7 +9977,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is fingerprint of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61159",
+    property :P61159,
       definition: "Relates a nomen to a resource which provides evidence for the use of a nomen.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/referenceSource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -9979,21 +9985,21 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has reference source".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61160",
+    property :P61160,
       definition: "Relates a nomen to an indication of a level of authentication of the nomen of an entity.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/statusOfIdentification.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has status of identification".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61161",
+    property :P61161,
       definition: "Relates a resource to a categorization reflecting a hue of the visual content of a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/colour.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has colour".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61162",
+    property :P61162,
       definition: "Relates an agent to an appellation of agent in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/accessPointForAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10002,7 +10008,7 @@ module RDF::Vocab
       label: "has access point for agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60906".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61163",
+    property :P61163,
       definition: "Relates a nomen to an agent who has an appellation in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/accessPointForAgentOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10011,7 +10017,7 @@ module RDF::Vocab
       label: "is access point for agent of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60910".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61164",
+    property :P61164,
       definition: "Relates a place to an appellation of place in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/accessPointForPlace.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10020,7 +10026,7 @@ module RDF::Vocab
       label: "has access point for place".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60906".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61165",
+    property :P61165,
       definition: "Relates a nomen to a place that has an appellation in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/accessPointForPlaceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10029,7 +10035,7 @@ module RDF::Vocab
       label: "is access point for place of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60910".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61166",
+    property :P61166,
       definition: "Relates a resource to an appellation of resource in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/accessPointForResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10038,7 +10044,7 @@ module RDF::Vocab
       label: "has access point for resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60906".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61167",
+    property :P61167,
       definition: "Relates a nomen to a resource that has an appellation in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/accessPointForResourceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10047,7 +10053,7 @@ module RDF::Vocab
       label: "is access point for resource of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60910".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61168",
+    property :P61168,
       definition: "Relates a timespan to an appellation of timespan in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/accessPointForTimespan.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10056,7 +10062,7 @@ module RDF::Vocab
       label: "has access point for timespan".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60906".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61169",
+    property :P61169,
       definition: "Relates a nomen to a timespan that has an appellation in natural language that is taken from a vocabulary encoding scheme or is constructed using a string encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/accessPointForTimespanOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10065,7 +10071,7 @@ module RDF::Vocab
       label: "is access point for timespan of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60910".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61170",
+    property :P61170,
       definition: "Relates an agent to an access point for agent that is selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/authorizedAccessPointForAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10074,7 +10080,7 @@ module RDF::Vocab
       label: "has authorized access point for agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60916".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61171",
+    property :P61171,
       definition: "Relates a place to an access point for place that is selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/authorizedAccessPointForPlace.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10083,7 +10089,7 @@ module RDF::Vocab
       label: "has authorized access point for place".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60916".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61172",
+    property :P61172,
       definition: "Relates a resource to an access point for resource that is selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/authorizedAccessPointForResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10092,7 +10098,7 @@ module RDF::Vocab
       label: "has authorized access point for resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60916".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61173",
+    property :P61173,
       definition: "Relates a timespan to an access point for timespan that is selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/authorizedAccessPointForTimespan.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10101,7 +10107,7 @@ module RDF::Vocab
       label: "has authorized access point for timespan".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60916".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61174",
+    property :P61174,
       definition: "Relates a nomen to an agent who has an access point for agent that is selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/authorizedAccessPointForAgentOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10110,7 +10116,7 @@ module RDF::Vocab
       label: "is authorized access point for agent of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60918".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61175",
+    property :P61175,
       definition: "Relates a nomen to a place that has an access point for place that is selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/authorizedAccessPointForPlaceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10119,7 +10125,7 @@ module RDF::Vocab
       label: "is authorized access point for place of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60918".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61176",
+    property :P61176,
       definition: "Relates a nomen to a resource that has an access point for resource that is selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/authorizedAccessPointForResourceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10128,7 +10134,7 @@ module RDF::Vocab
       label: "is authorized access point for resource of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60918".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61177",
+    property :P61177,
       definition: "Relates a nomen to a timespan that has an access point for timespan that is selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/authorizedAccessPointForTimespanOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10137,7 +10143,7 @@ module RDF::Vocab
       label: "is authorized access point for timespan of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60918".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61178",
+    property :P61178,
       definition: "Relates a place to an appellation of place that consists of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/identifierForPlace.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10147,7 +10153,7 @@ module RDF::Vocab
       label: "has identifier for place".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60919".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61179",
+    property :P61179,
       definition: "Relates a timespan to an appellation of timespan that consists of a code, number, or other string, usually independent of natural language and social naming conventions, used to identify a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/identifierForTimespan.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10157,7 +10163,7 @@ module RDF::Vocab
       label: "has identifier for timespan".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60919".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61180",
+    property :P61180,
       definition: "Relates a nomen to a place that has a reference code taken from a vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/identifierForPlaceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10167,7 +10173,7 @@ module RDF::Vocab
       label: "is identifier for place of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60928".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61181",
+    property :P61181,
       definition: "Relates a nomen to a timespan that has a reference code taken from a vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/identifierForTimespanOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10177,7 +10183,7 @@ module RDF::Vocab
       label: "is identifier for timespan of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60928".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61182",
+    property :P61182,
       definition: "Relates a nomen to an agent who has an access point for agent that is not selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantAccessPointForAgentOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10186,7 +10192,7 @@ module RDF::Vocab
       label: "is variant access point for agent of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60952".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61183",
+    property :P61183,
       definition: "Relates a nomen to a place that has an access point for entity that is not selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantAccessPointForPlaceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10195,7 +10201,7 @@ module RDF::Vocab
       label: "is variant access point for place of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60952".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61184",
+    property :P61184,
       definition: "Relates a nomen to a resource that has an access point for resource that is not selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantAccessPointForResourceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10204,7 +10210,7 @@ module RDF::Vocab
       label: "is variant access point for resource of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60952".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61185",
+    property :P61185,
       definition: "Relates a nomen to a timespan that has an access point for timespan that is not selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantAccessPointForTimespanOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10213,7 +10219,7 @@ module RDF::Vocab
       label: "is variant access point for timespan of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60952".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61186",
+    property :P61186,
       definition: "Relates an agent to an access point for agent that is not selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantAccessPointForAgent.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10222,7 +10228,7 @@ module RDF::Vocab
       label: "has variant access point for agent".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60917".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61187",
+    property :P61187,
       definition: "Relates an agent to an access point for place that is not selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantAccessPointForPlace.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10231,7 +10237,7 @@ module RDF::Vocab
       label: "has variant access point for place".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60917".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61188",
+    property :P61188,
       definition: "Relates a resource to an access point for resource that is not selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantAccessPointForResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10240,7 +10246,7 @@ module RDF::Vocab
       label: "has variant access point for resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60917".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61189",
+    property :P61189,
       definition: "Relates a timespan to an access point for timespan that is not selected for preference in a specific vocabulary encoding scheme.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantAccessPointForTimespan.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10249,7 +10255,7 @@ module RDF::Vocab
       label: "has variant access point for timespan".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60917".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61190",
+    property :P61190,
       definition: "Relates a resource to a nomen for which evidence of use is provided by a resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/referenceSourceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10257,7 +10263,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is reference source of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61191",
+    property :P61191,
       definition: "Relates a place to a resource that is a cartographic resource that has an area of coverage that is described using a mathematical system to identify its boundaries or location.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P61198".freeze, "http://rdaregistry.info/Elements/u/P61200".freeze, "http://rdaregistry.info/Elements/u/P61201".freeze],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/coordinatesOfCartographicContentOf.en".freeze,
@@ -10267,7 +10273,7 @@ module RDF::Vocab
       label: "is coordinates of cartographic content of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61013".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61192",
+    property :P61192,
       definition: "Relates a nomen to an agent who has a fuller form of a name or part of a name represented by an initial, abbreviation, or shortened or otherwise modified form.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/fullerFormOfNameOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10276,7 +10282,7 @@ module RDF::Vocab
       label: "is fuller form of name of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60920".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61193",
+    property :P61193,
       definition: "Relates a nomen to an agent who uses a name given at birth or at some later point in addition to, or instead of, a surname.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/givenNameOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10285,21 +10291,21 @@ module RDF::Vocab
       label: "is given name of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60920".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61194",
+    property :P61194,
       definition: "Relates a nomen to a class of users for which a nomen is intended.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/intendedAudienceOfNomen.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has intended audience of nomen".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61195",
+    property :P61195,
       definition: "Relates a nomen to a language of an appellation.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/languageOfNomen.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has language of nomen".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61196",
+    property :P61196,
       definition: "Relates a nomen to an agent who uses a family name.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/surnameOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10308,7 +10314,7 @@ module RDF::Vocab
       label: "is surname of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60920".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61197",
+    property :P61197,
       definition: "Relates a nomen to a resource that has a title of series in another language or script.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelTitleOfSeriesOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10317,7 +10323,7 @@ module RDF::Vocab
       label: "is parallel title of series of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60958".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61198",
+    property :P61198,
       definition: "Relates a place to a resource that is a cartographic resource that has an area of coverage that is identified using longitude of the westernmost and easternmost boundaries and latitude of the northernmost and southernmost boundaries.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/longitudeAndLatitudeOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10326,14 +10332,14 @@ module RDF::Vocab
       label: "is longitude and latitude of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61191".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61199",
+    property :P61199,
       definition: "Relates a place to a delimitation of the physical territory of the place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/location.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "has location".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61200",
+    property :P61200,
       definition: "Relates a place to a resource that is a cartographic resource that has an area of coverage that is identifiedy by a polygon using coordinates for each vertex.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/stringsOfCoordinatePairsOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10342,7 +10348,7 @@ module RDF::Vocab
       label: "is strings of coordinate pairs of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61191".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61201",
+    property :P61201,
       definition: "Relates a place to a resource that is a cartographic resource that locates a celestial body that is the coverage of the resource and is identified using the angles of right ascension and declination.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/rightAscensionAndDeclinationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10351,7 +10357,7 @@ module RDF::Vocab
       label: "is right ascension and declination of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61191".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61202",
+    property :P61202,
       definition: "Relates a resource to an agent who is a performer who contributes to a resource by teaching or providing a demonstration.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/instructor.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10359,7 +10365,7 @@ module RDF::Vocab
       label: "has instructor".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61203",
+    property :P61203,
       definition: "Relates a resource to a nomen that is a name of an agent who is responsible for distributing, printing, duplicating, casting, publishing, releasing, issuing, etc., a published resource, or inscribing, fabricating, constructing, etc., an unpublished resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfAgentOfResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10368,7 +10374,7 @@ module RDF::Vocab
       label: "has name of agent of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61023".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61204",
+    property :P61204,
       definition: "Relates a nomen to a resource that has a name of agent who is responsible for distribution, printing, duplication, casting, publication, release, issue, etc., or inscription, fabrication, construction, etc.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/nameOfAgentOfResourceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10377,7 +10383,7 @@ module RDF::Vocab
       label: "is name of agent of resource of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61030".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61205",
+    property :P61205,
       definition: "Relates a resource to a place that is associated with the distribution, printing, duplicating, casting, publication, release, or issuing, etc., of a published resource, or the inscription, fabrication, construction, etc., of an unpublished resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfResource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10386,7 +10392,7 @@ module RDF::Vocab
       label: "has place of resource".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61014".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61206",
+    property :P61206,
       definition: "Relates a place to a resource that is a published resource that is distributed, printed, duplicated, cast, published, released, or issued, etc., or an unpublished resource that is inscribed, fabricated, constructed, etc., in a place.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/placeOfResourceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10395,7 +10401,7 @@ module RDF::Vocab
       label: "is place of resource of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61013".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61207",
+    property :P61207,
       definition: "Relates a timespan to a timespan that starts at the time that is a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/beginningOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10403,7 +10409,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is beginning of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61208",
+    property :P61208,
       definition: "Relates a timespan to a timespan that finishes at the time that is a timespan.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/endingOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10411,7 +10417,7 @@ module RDF::Vocab
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
       label: "is ending of".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61209",
+    property :P61209,
       definition: "Relates a nomen to a resource that has a designation that identifies its position in a sequence of individual parts of a larger resource or parts or issues of a larger resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/numberingWithinSequenceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10420,7 +10426,7 @@ module RDF::Vocab
       label: "is numbering within sequence of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61030".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61210",
+    property :P61210,
       definition: "Relates a nomen to a resource that has a designation in the form of numbers or alphabetic characters that is used to indicate the first in a concurrent sequence of numbering of parts or iterations.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/firstAlphanumericDesignationOfAlternativeSequenceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10429,7 +10435,7 @@ module RDF::Vocab
       label: "is first alphanumeric designation of alternative sequence of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61211".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61211",
+    property :P61211,
       definition: "Relates a nomen to a resource that has a designation in the form of numbers or alphabetic characters that is used to indicate the first in a sequence of numbering of parts or iterations.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P61210".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/firstAlphanumericDesignationOfSequenceOf.en".freeze,
@@ -10439,7 +10445,7 @@ module RDF::Vocab
       label: "is first alphanumeric designation of sequence of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61030".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61212",
+    property :P61212,
       definition: "Relates a nomen to a resource that has a designation in the form of a date or other timespan that is used to indicate the first in a concurrent sequence of numbering of parts or iterations.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/firstChronologicalDesignationOfAlternativeSequenceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10448,7 +10454,7 @@ module RDF::Vocab
       label: "is first chronological designation of alternative sequence of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61213".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61213",
+    property :P61213,
       definition: "Relates a nomen to a resource that has a designation in the form of a date or other timespan that is used to indicate the first in a sequence of numbering of parts or iterations.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P61212".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/firstChronologicalDesignationOfSequenceOf.en".freeze,
@@ -10458,7 +10464,7 @@ module RDF::Vocab
       label: "is first chronological designation of sequence of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61030".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61214",
+    property :P61214,
       definition: "Relates a nomen to a resource that has a designation in the form of numbers or alphabetic characters that is used to indicate the last in a concurrent sequence of numbering of parts or iterations.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lastAlphanumericDesignationOfAlternativeSequenceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10467,7 +10473,7 @@ module RDF::Vocab
       label: "is last alphanumeric designation of alternative sequence of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61215".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61215",
+    property :P61215,
       definition: "Relates a nomen to a resource that has a designation in the form of numbers or alphabetic characters that is used to indicate the last in a sequence of numbering of parts or iterations.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P61214".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lastAlphanumericDesignationOfSequenceOf.en".freeze,
@@ -10477,7 +10483,7 @@ module RDF::Vocab
       label: "is last alphanumeric designation of sequence of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61030".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61216",
+    property :P61216,
       definition: "Relates a nomen to a resource that has a designation in the form of a date or other timespan that is used to indicate the last in a concurrent sequence of numbering of parts or iterations.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lastChronologicalDesignationOfAlternativeSequenceOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -10486,7 +10492,7 @@ module RDF::Vocab
       label: "is last chronological designation of alternative sequence of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61217".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-    property :"/P61217",
+    property :P61217,
       definition: "Relates a nomen to a resource that has a designation in the form of a date or other timespan that is used to indicate the last in a sequence of numbering of parts or iterations.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P61216".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lastChronologicalDesignationOfSequenceOf.en".freeze,
@@ -10496,11 +10502,5 @@ module RDF::Vocab
       label: "is last chronological designation of sequence of".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61030".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
-
-    # Extra definitions
-    term :/,
-      "http://purl.org/dc/elements/1.1/title": "RDA Unconstrained properties".freeze,
-      "http://xmlns.com/foaf/0.1/homepage": "http://www.rdaregistry.info/Elements/u/".freeze,
-      note: "Properties derived from RDA elements without specific or implicit restrictions to RDA entities.".freeze
   end
 end
