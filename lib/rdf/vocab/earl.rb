@@ -52,6 +52,10 @@ module RDF::Vocab
       label: "Pass".freeze,
       subClassOf: "http://www.w3.org/ns/earl#OutcomeValue".freeze,
       type: ["http://www.w3.org/2000/01/rdf-schema#Class".freeze, "http://www.w3.org/2002/07/owl#Class".freeze]
+    term :Report,
+      comment: "A collection of earl:Assertion".freeze,
+      label: "Report".freeze,
+      type: ["http://www.w3.org/2000/01/rdf-schema#Class".freeze, "http://www.w3.org/2002/07/owl#Class".freeze]
     term :Software,
       comment: "any piece of software such as an authoring tool, browser, or evaluation tool".freeze,
       label: "Software".freeze,
@@ -91,6 +95,15 @@ module RDF::Vocab
       label: "Asserted By".freeze,
       range: "http://www.w3.org/ns/earl#Assertor".freeze,
       type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze, "http://www.w3.org/2002/07/owl#ObjectProperty".freeze]
+    property :assertion,
+      comment: "Test Assertions associated with an earl:Report or earl:TestCase".freeze,
+      domain: term(
+          type: "http://www.w3.org/2002/07/owl#Class".freeze,
+          unionOf: list("http://www.w3.org/ns/earl#Report".freeze, "http://www.w3.org/ns/earl#TestCase".freeze)
+        ),
+      label: "assertion".freeze,
+      range: "http://www.w3.org/ns/earl#Assertion".freeze,
+      type: ["http://www.w3.org/2000/01/rdf-schema#Property".freeze, "http://www.w3.org/2002/07/owl#ObjectProperty".freeze]
     property :info,
       comment: "additional warnings or error messages in a human-readable form".freeze,
       domain: "http://www.w3.org/ns/earl#TestResult".freeze,

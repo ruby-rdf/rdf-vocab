@@ -100,6 +100,26 @@ module RDF
       earl: {
         uri: "http://www.w3.org/ns/earl#",
         source: "http://www.w3.org/ns/earl",
+        patch: %{
+          @prefix earl: <http://www.w3.org/ns/earl#>.
+          @prefix owl: <http://www.w3.org/2002/07/owl#>.
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+          AddNew {
+            # Extends EARL to talk about collections of assertions
+            earl:Report a rdfs:Class, owl:Class ;
+              rdfs:label "Report" ;
+              rdfs:comment "A collection of earl:Assertion" .
+            earl:assertion a owl:ObjectProperty, rdfs:Property ;
+              rdfs:label "assertion" ;
+              rdfs:comment "Test Assertions associated with an earl:Report or earl:TestCase" ;
+              rdfs:domain [
+                a owl:Class ;
+                owl:unionOf (earl:Report earl:TestCase)
+              ] ;
+              rdfs:range earl:Assertion .
+          } .
+        },
       },
       ebucore: {
         uri: "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",

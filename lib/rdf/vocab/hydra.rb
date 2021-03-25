@@ -15,6 +15,7 @@ module RDF::Vocab
       "http://purl.org/dc/terms/publisher": "Hydra W3C Community Group".freeze,
       "http://purl.org/dc/terms/rights": "Copyright © 2012-2014 the Contributors to the Hydra Core Vocabulary Specification".freeze,
       "http://purl.org/vocab/vann/preferredNamespacePrefix": "hydra".freeze,
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": "https://www.hydra-cg.com/spec/latest/core/".freeze,
       label: "The Hydra Core Vocabulary".freeze,
       type: "http://www.w3.org/2002/07/owl#Ontology".freeze
 
@@ -54,6 +55,13 @@ module RDF::Vocab
       label: "Error".freeze,
       subClassOf: "http://www.w3.org/ns/hydra/core#Status".freeze,
       type: "http://www.w3.org/ns/hydra/core#Class".freeze
+    term :HeaderSpecification,
+      comment: "Specifies a possible either expected or returned header values".freeze,
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "testing".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
+      label: "Header specification".freeze,
+      subClassOf: "http://www.w3.org/ns/hydra/core#Resource".freeze,
+      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
     term :IriTemplate,
       comment: "The class of IRI templates.".freeze,
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "testing".freeze,
@@ -119,6 +127,14 @@ module RDF::Vocab
       type: "http://www.w3.org/ns/hydra/core#Class".freeze
 
     # Property definitions
+    property :closedSet,
+      comment: "Determines whether the provided set of header values is closed or not.".freeze,
+      domain: "http://www.w3.org/ns/hydra/core#HeaderSpecification".freeze,
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "testing".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
+      label: "closed set".freeze,
+      range: "http://www.w3.org/2001/XMLSchema#boolean".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :description,
       comment: "A description.".freeze,
       domainIncludes: ["http://www.w3.org/ns/hydra/core#ApiDocumentation".freeze, "http://www.w3.org/ns/hydra/core#Class".freeze, "http://www.w3.org/ns/hydra/core#Link".freeze, "http://www.w3.org/ns/hydra/core#Operation".freeze, "http://www.w3.org/ns/hydra/core#Status".freeze, "http://www.w3.org/ns/hydra/core#SupportedProperty".freeze, "http://www.w3.org/ns/hydra/core#TemplatedLink".freeze],
@@ -134,7 +150,14 @@ module RDF::Vocab
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "testing".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "expects header".freeze,
-      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
+      rangeIncludes: ["http://www.w3.org/2001/XMLSchema#string".freeze, "http://www.w3.org/ns/hydra/core#HeaderSpecification".freeze],
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
+    property :extension,
+      comment: "Hint on what kind of extensions are in use.".freeze,
+      domain: "http://www.w3.org/ns/hydra/core#ApiDocumentation".freeze,
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "testing".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
+      label: "extension".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :freetextQuery,
       comment: "A property representing a freetext query.".freeze,
@@ -142,6 +165,14 @@ module RDF::Vocab
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "testing".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "freetext query".freeze,
+      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
+    property :headerName,
+      comment: "Name of the header.".freeze,
+      domain: "http://www.w3.org/ns/hydra/core#HeaderSpecification".freeze,
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "testing".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
+      label: "header name".freeze,
       range: "http://www.w3.org/2001/XMLSchema#string".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :limit,
@@ -188,6 +219,14 @@ module RDF::Vocab
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "page reference".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
+    property :possibleValue,
+      comment: "Possible value of the header.".freeze,
+      domain: "http://www.w3.org/ns/hydra/core#HeaderSpecification".freeze,
+      "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "testing".freeze,
+      isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
+      label: "possible header value".freeze,
+      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :property,
       comment: "A property".freeze,
       domainIncludes: ["http://www.w3.org/ns/hydra/core#IriTemplateMapping".freeze, "http://www.w3.org/ns/hydra/core#SupportedProperty".freeze],
@@ -225,7 +264,7 @@ module RDF::Vocab
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "testing".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,
       label: "returns header".freeze,
-      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
+      rangeIncludes: ["http://www.w3.org/2001/XMLSchema#string".freeze, "http://www.w3.org/ns/hydra/core#HeaderSpecification".freeze],
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :statusCode,
       comment: "The HTTP status code. Please note it may happen this value will be different to actual status code received.".freeze,
