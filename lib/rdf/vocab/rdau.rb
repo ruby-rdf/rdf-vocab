@@ -7,9 +7,19 @@ module RDF::Vocab
 
     # Ontology definition
     ontology :"http://rdaregistry.info/Elements/u/",
-      "http://purl.org/dc/elements/1.1/title": "RDA Unconstrained properties".freeze,
-      "http://xmlns.com/foaf/0.1/homepage": "http://www.rdaregistry.info/Elements/u/".freeze,
-      note: "Properties derived from RDA elements without specific or implicit restrictions to RDA entities.".freeze
+      "http://creativecommons.org/ns#licence": "https://creativecommons.org/licenses/by/4.0/deed.en_US".freeze,
+      "http://purl.org/dc/elements/1.1/contributor": "RSC Technical Working Group".freeze,
+      "http://purl.org/dc/elements/1.1/creator": "RDA Steering Committee".freeze,
+      "http://purl.org/dc/elements/1.1/description": "Properties that are derived from the elements of all of the RDA entities with semantics that are independent of the IFLA Library Reference Model.".freeze,
+      "http://purl.org/dc/elements/1.1/issued": "2014-01-18".freeze,
+      "http://purl.org/dc/elements/1.1/modified": "2021-06-28".freeze,
+      "http://purl.org/dc/elements/1.1/publisher": "ALA Digital Reference".freeze,
+      "http://purl.org/dc/elements/1.1/rights": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals".freeze,
+      "http://purl.org/dc/elements/1.1/title": "Unconstrained properties".freeze,
+      "http://purl.org/dc/elements/1.1/type": "http://rdaregistry.info/termList/RDALinkedDataWork/1003".freeze,
+      "http://purl.org/vocab/vann/preferredNamespacePrefix": "rdau".freeze,
+      "http://www.w3.org/2002/07/owl#versionInfo": "v4.0.10".freeze,
+      type: "http://www.w3.org/2002/07/owl#Ontology".freeze
 
     # Property definitions
     property :P60001,
