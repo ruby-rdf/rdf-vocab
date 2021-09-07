@@ -12,14 +12,14 @@ module RDF::Vocab
       "http://purl.org/dc/elements/1.1/creator": "RDA Steering Committee".freeze,
       "http://purl.org/dc/elements/1.1/description": "Properties that are derived from the elements of all of the RDA entities with semantics that are independent of the IFLA Library Reference Model.".freeze,
       "http://purl.org/dc/elements/1.1/issued": "2014-01-18".freeze,
-      "http://purl.org/dc/elements/1.1/modified": "2021-06-28".freeze,
+      "http://purl.org/dc/elements/1.1/modified": "2021-07-20".freeze,
       "http://purl.org/dc/elements/1.1/publisher": "ALA Digital Reference".freeze,
       "http://purl.org/dc/elements/1.1/rights": "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals".freeze,
       "http://purl.org/dc/elements/1.1/title": "Unconstrained properties".freeze,
       "http://purl.org/dc/elements/1.1/type": "http://rdaregistry.info/termList/RDALinkedDataWork/1003".freeze,
       "http://purl.org/vocab/vann/preferredNamespacePrefix": "rdau".freeze,
-      "http://www.w3.org/2002/07/owl#versionInfo": "v4.0.10".freeze,
-      type: "http://www.w3.org/2002/07/owl#Ontology".freeze
+      "http://www.w3.org/2002/07/owl#versionInfo": "v4.1.0".freeze,
+      type: ["http://www.w3.org/2002/07/owl#Ontology".freeze, "owl:Ontology".freeze]
 
     # Property definitions
     property :P60001,
@@ -900,7 +900,7 @@ module RDF::Vocab
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :P60111,
-      definition: "Relates a resource to a moving image resource in which spoken dialogue is translated into a language different from that of an original resource.".freeze,
+      definition: "Relates a resource to a moving image resource whose spoken dialogue is translated into a language different from another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dubbedVersionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       inverseOf: "http://rdaregistry.info/Elements/u/P60112".freeze,
@@ -909,7 +909,7 @@ module RDF::Vocab
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60244".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :P60112,
-      definition: "Relates a resource to a moving image resource that translates spoken dialogue of an original resource into a different language.".freeze,
+      definition: "Relates a resource to a moving image resource that translates spoken dialogue of another resource into a different language.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/dubbedVersion.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       inverseOf: "http://rdaregistry.info/Elements/u/P60111".freeze,
@@ -2076,7 +2076,7 @@ module RDF::Vocab
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :P60242,
-      definition: "Relates a resource to a resource that is rewritten as a musical composition for a medium of performance different from that for which a resource was originally intended.".freeze,
+      definition: "Relates a resource to a resource whose medium of performance is modified to create a new resource that is different from another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/arrangementOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       inverseOf: "http://rdaregistry.info/Elements/u/P60274".freeze,
@@ -2094,7 +2094,7 @@ module RDF::Vocab
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :P60244,
-      definition: "Relates a resource to a resource that is translated, i.e., the text expressed in a language different from that of an original resource.".freeze,
+      definition: "Relates a resource to a resource whose language is modified to create a new resource that is different from another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60111".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/translationOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2104,7 +2104,7 @@ module RDF::Vocab
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :P60245,
-      definition: "Relates a resource to a resource that is updated, corrected, or expanded.".freeze,
+      definition: "Relates a resource to a resource that is an update, correction, or expansion of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/revisedAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       inverseOf: "http://rdaregistry.info/Elements/u/P60303".freeze,
@@ -2374,7 +2374,7 @@ module RDF::Vocab
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :P60274,
-      definition: "Relates a resource to a resource that rewrites a musical composition for a medium of performance different from that for which a resource was originally intended.".freeze,
+      definition: "Relates a resource to a resource whose medium of performance is a modification of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/arrangedAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       inverseOf: "http://rdaregistry.info/Elements/u/P60242".freeze,
@@ -2430,7 +2430,7 @@ module RDF::Vocab
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :P60280,
-      definition: "Relates a resource to a resource that translates the text of another resource into a different language.".freeze,
+      definition: "Relates a resource to a resource whose language is a modification of another resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60112".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/translatedAs.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
@@ -2640,7 +2640,7 @@ module RDF::Vocab
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :P60303,
-      definition: "Relates a resource to a resource used as a basis for an updated, corrected, or expanded version.".freeze,
+      definition: "Relates a resource to a resource that is updated, corrected, or expanded to create a new resource.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/revisionOf.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       inverseOf: "http://rdaregistry.info/Elements/u/P60245".freeze,
@@ -2658,13 +2658,13 @@ module RDF::Vocab
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :P60305,
-      definition: "Relates a resource to a resource used as a source for a derivative resource.".freeze,
+      definition: "Relates a resource to a resource that is modified to create a new resource".freeze,
       "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60114".freeze, "http://rdaregistry.info/Elements/u/P60223".freeze, "http://rdaregistry.info/Elements/u/P60224".freeze, "http://rdaregistry.info/Elements/u/P60238".freeze, "http://rdaregistry.info/Elements/u/P60241".freeze, "http://rdaregistry.info/Elements/u/P60242".freeze, "http://rdaregistry.info/Elements/u/P60243".freeze, "http://rdaregistry.info/Elements/u/P60244".freeze, "http://rdaregistry.info/Elements/u/P60266".freeze, "http://rdaregistry.info/Elements/u/P60289".freeze, "http://rdaregistry.info/Elements/u/P60293".freeze, "http://rdaregistry.info/Elements/u/P60294".freeze, "http://rdaregistry.info/Elements/u/P60295".freeze, "http://rdaregistry.info/Elements/u/P60296".freeze, "http://rdaregistry.info/Elements/u/P60303".freeze, "http://rdaregistry.info/Elements/u/P60304".freeze, "http://rdaregistry.info/Elements/u/P60308".freeze, "http://rdaregistry.info/Elements/u/P60309".freeze, "http://rdaregistry.info/Elements/u/P60311".freeze, "http://rdaregistry.info/Elements/u/P60830".freeze, "http://rdaregistry.info/Elements/u/P60832".freeze],
-      "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/basedOn.en".freeze,
+      "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/hasSource.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       inverseOf: "http://rdaregistry.info/Elements/u/P60250".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
-      label: "is based on".freeze,
+      label: "has source".freeze,
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60710".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :P60306,
@@ -3578,7 +3578,7 @@ module RDF::Vocab
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60443".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :P60412,
-      definition: "Relates a resource to an agent who is responsible for manufacturing a resource by making a relief, intaglio, or planographic printing surface.".freeze,
+      definition: "Relates a resource to a cartographic representation of the surface forms of the earth or other celestial body, real or imaginary, by means of special graphic methods.".freeze,
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/printmaker.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       inverseOf: "http://rdaregistry.info/Elements/u/P60640".freeze,
@@ -7876,11 +7876,12 @@ module RDF::Vocab
       label: "has nomen string".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :P60914,
+      altLabel: "has relief type".freeze,
       definition: "Relates a resource to a method of indicating the horizontal and vertical dimensions of land surface and terrain.".freeze,
-      "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/reliefType.en".freeze,
+      "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/reliefRepresentation.en".freeze,
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001".freeze,
       isDefinedBy: "http://rdaregistry.info/Elements/u/".freeze,
-      label: "has relief type".freeze,
+      label: "has relief representation".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
     property :P60915,
       definition: "Relates a resource to a line of constant longitude passing through a given place on the surface of the earth and the terrestrial poles, from which longitude east and west is measured.".freeze,
