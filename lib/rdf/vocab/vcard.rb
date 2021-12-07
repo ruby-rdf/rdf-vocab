@@ -22,7 +22,7 @@ module RDF::Vocab
       comment: "To specify the components of the delivery address for the  object".freeze,
       equivalentClass: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("_:g14020".freeze, "_:g14060".freeze, "_:g14100".freeze, "_:g14140".freeze, "_:g14180".freeze)
+          unionOf: list("_:g13580".freeze, "_:g13620".freeze, "_:g13660".freeze, "_:g13700".freeze, "_:g13740".freeze)
         ),
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Address".freeze,
@@ -128,7 +128,7 @@ module RDF::Vocab
     term :Group,
       comment: "Object representing a group of persons or entities.  A group object will usually contain hasMember properties to specify the members of the group.".freeze,
       equivalentClass: term(
-          intersectionOf: list("_:g13740".freeze, "_:g13780".freeze),
+          intersectionOf: list("_:g13780".freeze, "_:g13820".freeze),
           type: "http://www.w3.org/2002/07/owl#Class".freeze
         ),
       "http://www.w3.org/2002/07/owl#disjointWith": ["http://www.w3.org/2006/vcard/ns#Individual".freeze, "http://www.w3.org/2006/vcard/ns#Location".freeze, "http://www.w3.org/2006/vcard/ns#Organization".freeze],
@@ -238,7 +238,7 @@ module RDF::Vocab
       comment: "To specify the components of the name of the object".freeze,
       equivalentClass: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("_:g14320".freeze, "_:g14360".freeze, "_:g14400".freeze, "_:g14440".freeze, "_:g14480".freeze)
+          unionOf: list("_:g14560".freeze, "_:g14600".freeze, "_:g14640".freeze, "_:g14680".freeze, "_:g14720".freeze)
         ),
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Name".freeze,

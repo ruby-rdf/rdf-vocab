@@ -10,25 +10,25 @@ module RDF::Vocab
       comment: "DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web. By using DCAT to describe datasets in data catalogs, publishers increase discoverability and enable applications easily to consume metadata from multiple catalogs. It further enables decentralized publishing of catalogs and facilitates federated dataset search across sites. Aggregated DCAT metadata can serve as a manifest file to facilitate digital preservation. DCAT is defined at http://www.w3.org/TR/vocab-dcat/. Any variance between that normative document and this schema is an error in this schema.".freeze,
       editorialNote: "English language definitions updated in this revision in line with ED. Multilingual text unevenly updated.".freeze,
       "http://purl.org/dc/terms/contributor": [term(
-          "http://schema.org/affiliation": "_:g10400".freeze,
+          "http://schema.org/affiliation": "_:g10340".freeze,
+          "http://www.w3.org/2000/01/rdf-schema#seeAlso": "https://orcid.org/0000-0003-3499-8262".freeze,
+          "http://xmlns.com/foaf/0.1/homepage": "https://agbeltran.github.io".freeze,
+          "http://xmlns.com/foaf/0.1/name": "Alejandra Gonzalez-Beltran".freeze
+        ), term(
+          "http://schema.org/affiliation": "_:g10360".freeze,
           "http://www.w3.org/2000/01/rdf-schema#seeAlso": "https://orcid.org/0000-0002-3884-3420".freeze,
           "http://xmlns.com/foaf/0.1/name": "Simon J D Cox".freeze,
           "http://xmlns.com/foaf/0.1/workInfoHomepage": "http://people.csiro.au/Simon-Cox".freeze,
           type: "http://xmlns.com/foaf/0.1/Person".freeze
         ), term(
-          "http://schema.org/affiliation": "_:g10420".freeze,
-          "http://xmlns.com/foaf/0.1/name": "Vassilios Peristeras".freeze
-        ), term(
-          "http://schema.org/affiliation": "_:g10440".freeze,
+          "http://schema.org/affiliation": "_:g10380".freeze,
           "http://xmlns.com/foaf/0.1/name": "David Browning".freeze
         ), term(
           "http://schema.org/affiliation": "_:g10460".freeze,
-          "http://www.w3.org/2000/01/rdf-schema#seeAlso": "https://orcid.org/0000-0003-3499-8262".freeze,
-          "http://xmlns.com/foaf/0.1/homepage": "https://agbeltran.github.io".freeze,
-          "http://xmlns.com/foaf/0.1/name": "Alejandra Gonzalez-Beltran".freeze
-        ), term(
-          "http://schema.org/affiliation": "_:g10540".freeze,
           "http://xmlns.com/foaf/0.1/name": "Rufus Pollock".freeze
+        ), term(
+          "http://schema.org/affiliation": "_:g10480".freeze,
+          "http://xmlns.com/foaf/0.1/name": "Vassilios Peristeras".freeze
         ), term(
           "http://schema.org/affiliation": "http://www.w3.org/data#W3C".freeze,
           "http://www.w3.org/2000/01/rdf-schema#seeAlso": "http://philarcher.org/foaf.rdf#me".freeze,
@@ -47,7 +47,7 @@ module RDF::Vocab
           "http://xmlns.com/foaf/0.1/name": "Jakub Klímek".freeze
         ), term(
           "http://www.w3.org/2000/01/rdf-schema#seeAlso": "https://orcid.org/0000-0001-5648-2713".freeze,
-          "http://xmlns.com/foaf/0.1/homepage": ["https://w3id.org/people/ralbertoni/".freeze,"http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni".freeze],
+          "http://xmlns.com/foaf/0.1/homepage": ["http://www.imati.cnr.it/index.php/people/8-curricula/178-riccardo-albertoni".freeze,"https://w3id.org/people/ralbertoni/".freeze],
           "http://xmlns.com/foaf/0.1/name": "Riccardo Albertoni".freeze
         ), term(
           "http://www.w3.org/2000/01/rdf-schema#seeAlso": "https://orcid.org/0000-0001-9300-2694".freeze,
@@ -72,7 +72,7 @@ module RDF::Vocab
           "http://xmlns.com/foaf/0.1/name": "John Erickson".freeze
         )],
       "http://purl.org/dc/terms/license": "https://creativecommons.org/licenses/by/4.0/".freeze,
-      "http://purl.org/dc/terms/modified": ["2012-04-24".freeze, "2013-09-20".freeze, "2013-11-28".freeze, "2017-12-19".freeze, "2019".freeze, "2020-11-30".freeze],
+      "http://purl.org/dc/terms/modified": ["2012-04-24".freeze, "2013-09-20".freeze, "2013-11-28".freeze, "2017-12-19".freeze, "2019".freeze, "2020-11-30".freeze, "2021-09-14".freeze],
       "http://www.w3.org/2002/07/owl#imports": ["http://purl.org/dc/terms/".freeze, "http://www.w3.org/2004/02/skos/core".freeze, "http://www.w3.org/ns/prov-o#".freeze],
       "http://www.w3.org/2002/07/owl#versionInfo": ["Questa è una copia aggiornata del vocabolario DCAT v2.0 disponibile in https://www.w3.org/ns/dcat.ttl".freeze, "This is an updated copy of v2.0 of the DCAT vocabulary, taken from https://www.w3.org/ns/dcat.ttl".freeze],
       "http://xmlns.com/foaf/0.1/maker": term(
@@ -90,11 +90,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": "A web-based data catalog is typically represented as a single instance of this class.".freeze,
       isDefinedBy: "http://www.w3.org/TR/vocab-dcat/".freeze,
       label: "Catalog".freeze,
-      subClassOf: ["http://www.w3.org/ns/dcat#Dataset".freeze, term(
-          allValuesFrom: "http://www.w3.org/ns/dcat#Resource".freeze,
-          onProperty: "http://purl.org/dc/terms/hasPart".freeze,
-          type: "http://www.w3.org/2002/07/owl#Restriction".freeze
-        )],
+      subClassOf: "http://www.w3.org/ns/dcat#Dataset".freeze,
       type: ["http://www.w3.org/2000/01/rdf-schema#Class".freeze, "http://www.w3.org/2002/07/owl#Class".freeze]
     term :CatalogRecord,
       comment: "A record in a data catalog, describing the registration of a single dataset or data service.".freeze,
@@ -119,11 +115,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#changeNote": "New class added in DCAT 2.0.".freeze,
       "http://www.w3.org/2004/02/skos/core#scopeNote": ["If a dcat:DataService is bound to one or more specified Datasets, they are indicated by the dcat:servesDataset property.".freeze, "The kind of service can be indicated using the dct:type property. Its value may be taken from a controlled vocabulary such as the INSPIRE spatial data service type vocabulary.".freeze],
       label: "Data service".freeze,
-      subClassOf: ["http://purl.org/dc/dcmitype/Service".freeze, "http://www.w3.org/ns/dcat#Resource".freeze, term(
-          maxCardinality: "1".freeze,
-          onProperty: "http://www.w3.org/ns/dcat#endpointURL".freeze,
-          type: "http://www.w3.org/2002/07/owl#Restriction".freeze
-        )],
+      subClassOf: ["http://purl.org/dc/dcmitype/Service".freeze, "http://www.w3.org/ns/dcat#Resource".freeze],
       type: "http://www.w3.org/2002/07/owl#Class".freeze
     term :Dataset,
       comment: "A collection of data, published or curated by a single source, and available for access or download in one or more representations.".freeze,
@@ -148,11 +140,6 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#changeNote": "New class added in DCAT 2.0.".freeze,
       "http://www.w3.org/2004/02/skos/core#scopeNote": "Use to characterize a relationship between datasets, and potentially other resources, where the nature of the relationship is known but is not adequately characterized by the standard Dublin Core properties (dct:hasPart, dct:isPartOf, dct:conformsTo, dct:isFormatOf, dct:hasFormat, dct:isVersionOf, dct:hasVersion, dct:replaces, dct:isReplacedBy, dct:references, dct:isReferencedBy, dct:requires, dct:isRequiredBy) or PROV-O properties (prov:wasDerivedFrom, prov:wasInfluencedBy, prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource, prov:alternateOf, prov:specializationOf).".freeze,
       label: "Relationship".freeze,
-      subClassOf: term(
-          minCardinality: "1".freeze,
-          onProperty: "http://purl.org/dc/terms/relation".freeze,
-          type: "http://www.w3.org/2002/07/owl#Restriction".freeze
-        ),
       type: "http://www.w3.org/2002/07/owl#Class".freeze
     term :Resource,
       comment: "Resource published or curated by a single agent.".freeze,

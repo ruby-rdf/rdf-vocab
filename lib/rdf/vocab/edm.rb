@@ -109,7 +109,7 @@ module RDF::Vocab
       note: "This class has been mostly motivated by the need to assign a type to the “central node” in the EDM pattern, during the ingestion process, related to the XML expression of EDM at that stage. It was especially intended to fit the cases where edm:PhysicalThing  cannot be used as the type of the resource standing for the real-world object (independently of any specific data contributor perspective).".freeze,
       subClassOf: term(
           cardinality: "1".freeze,
-          onProperty: "_:g11900".freeze,
+          onProperty: "_:g11980".freeze,
           type: "http://www.w3.org/2002/07/owl#Restriction".freeze
         ),
       type: "http://www.w3.org/2002/07/owl#Class".freeze
@@ -155,7 +155,7 @@ module RDF::Vocab
       definition: "The geographic location and/or name of the repository, building, site, or other entity whose boundaries presently include the resource.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://www.europeana.eu/schemas/edm/ProvidedCHO".freeze, "_:g12720".freeze)
+          unionOf: list("http://www.europeana.eu/schemas/edm/ProvidedCHO".freeze, "_:g11900".freeze)
         ),
       equivalentProperty: ["http://www.cidoc-crm.org/rdfs/cidoc-crm#P55_has_current_location".freeze, "http://www.w3.org/2003/01/geo/wgs84_pos#location".freeze],
       label: "Current Location".freeze,
@@ -200,7 +200,7 @@ module RDF::Vocab
       definition: "This property relates a resource with the concepts it belongs to in a suitable\ntype system such as MIME or any thesaurus that captures categories of objects in a given field (e.g., the “Objects” facet in Getty’s Art and Architecture Thesaurus). It does not capture aboutness.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://www.europeana.eu/schemas/edm/ProvidedCHO".freeze, "_:g12820".freeze)
+          unionOf: list("http://www.europeana.eu/schemas/edm/ProvidedCHO".freeze, "_:g13540".freeze)
         ),
       equivalentProperty: "http://www.cidoc-crm.org/rdfs/cidoc-crm#P2_has_type".freeze,
       label: "Has Type".freeze,
@@ -226,7 +226,7 @@ module RDF::Vocab
       label: "Is Annotation Of".freeze,
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://www.europeana.eu/schemas/edm/ProvidedCHO".freeze, "_:g12260".freeze)
+          unionOf: list("http://www.europeana.eu/schemas/edm/ProvidedCHO".freeze, "_:g11840".freeze)
         ),
       subPropertyOf: ["http://purl.org/dc/elements/1.1/subject".freeze, "http://www.cidoc-crm.org/rdfs/cidoc-crm#P67_refers_to".freeze],
       type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
@@ -245,7 +245,7 @@ module RDF::Vocab
       definition: "edm:isRelatedTo is the most general contextual property in EDM. Contextual\nproperties have typically to do either with the things that have happened to or together with the object under consideration, or what the object refers to by its shape, form or features in a figural or encoded form. For sake of simplicity, we include in the contextual relationships also the scholarly classification, which may have either to do with the role and cultural connections of the object in the past, or its kind of structure, substance or contents as it can be verified at present.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://www.europeana.eu/schemas/edm/ProvidedCHO".freeze, "_:g12880".freeze)
+          unionOf: list("http://www.europeana.eu/schemas/edm/ProvidedCHO".freeze, "_:g13700".freeze)
         ),
       label: "Is Related To".freeze,
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
