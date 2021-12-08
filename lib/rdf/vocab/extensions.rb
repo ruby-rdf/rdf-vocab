@@ -23,7 +23,7 @@ module RDF
           RDF::Vocab::VOCABS.each do |n, params|
             clsname = params[:class_name].to_sym
             RDF::Vocab.const_get(clsname) # Forces class to load
-          end unless @classes_loaded
+          end unless instance_variable_defined?(:@classes_loaded) && @classes_loaded
           @classes_loaded = true
         end
         _orig_each(&block)
