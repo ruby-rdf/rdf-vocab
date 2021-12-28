@@ -117,7 +117,7 @@ then
 
 This will load all the vocabulary classes in the library.
 
-Also adds the `gen-vocab` command to the `rdf` command-line executable to generate specifically generated output in Turtle, JSON-LD, and HTML+RDFa for either built-in or arbitrary vocabularies.
+Also adds the `gen-vocab` command to the `rdf` command-line executable to generate specifically generated output in Turtle, JSON-LD, and HTML+RDFa for either built-in or arbitrary vocabularies. Other output serialization formats are also supported as generic RDF Writers and may lack the vocabulary-specific formatting of Turtle, JSON-LD, and HTML+RDFa.
 
 ## Adding new vocabularies
 
