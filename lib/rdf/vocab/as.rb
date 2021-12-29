@@ -183,7 +183,20 @@ module RDF::Vocab
       comment: "A variation of Collection in which items are strictly ordered".freeze,
       label: "OrderedCollection".freeze,
       subClassOf: term(
-          intersectionOf: list("https://www.w3.org/ns/activitystreams#Collection".freeze, "_:g16740".freeze),
+          intersectionOf: list("https://www.w3.org/ns/activitystreams#Collection".freeze, term(
+            allValuesFrom: term(
+              intersectionOf: list("https://www.w3.org/ns/activitystreams#OrderedItems".freeze, term(
+                "http://www.w3.org/2002/07/owl#complementOf": term(
+                  type: "http://www.w3.org/2002/07/owl#Class".freeze,
+                  unionOf: list("https://www.w3.org/ns/activitystreams#Object".freeze, "https://www.w3.org/ns/activitystreams#Link".freeze)
+                ).freeze,
+                type: "http://www.w3.org/2002/07/owl#Class".freeze
+              )),
+              type: "http://www.w3.org/2002/07/owl#Class".freeze
+            ).freeze,
+            onProperty: "https://www.w3.org/ns/activitystreams#items".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          )),
           type: "http://www.w3.org/2002/07/owl#Class".freeze
         ),
       type: "http://www.w3.org/2002/07/owl#Class".freeze
@@ -196,7 +209,18 @@ module RDF::Vocab
       comment: "A rdf:List variant for Objects and Links".freeze,
       label: "OrderedItems".freeze,
       subClassOf: term(
-          intersectionOf: list("http://www.w3.org/1999/02/22-rdf-syntax-ns#List".freeze, "_:g15580".freeze, "_:g15620".freeze),
+          intersectionOf: list("http://www.w3.org/1999/02/22-rdf-syntax-ns#List".freeze, term(
+            allValuesFrom: term(
+              type: "http://www.w3.org/2002/07/owl#Class".freeze,
+              unionOf: list("https://www.w3.org/ns/activitystreams#Object".freeze, "https://www.w3.org/ns/activitystreams#Link".freeze)
+            ).freeze,
+            onProperty: "http://www.w3.org/1999/02/22-rdf-syntax-ns#first".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            allValuesFrom: "https://www.w3.org/ns/activitystreams#OrderedItems".freeze,
+            onProperty: "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          )),
           type: "http://www.w3.org/2002/07/owl#Class".freeze
         ),
       type: "http://www.w3.org/2002/07/owl#Class".freeze
@@ -303,7 +327,9 @@ module RDF::Vocab
       label: "accuracy".freeze,
       range: term(
           "http://www.w3.org/2002/07/owl#onDatatype": "http://www.w3.org/2001/XMLSchema#float".freeze,
-          "http://www.w3.org/2002/07/owl#withRestrictions": list("_:g16420".freeze),
+          "http://www.w3.org/2002/07/owl#withRestrictions": list(term(
+            "http://www.w3.org/2001/XMLSchema#minInclusive": "0.0".freeze
+          )),
           type: "http://www.w3.org/2000/01/rdf-schema#Datatype".freeze
         ),
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty".freeze, "http://www.w3.org/2002/07/owl#FunctionalProperty".freeze]
@@ -409,7 +435,9 @@ module RDF::Vocab
       label: "content".freeze,
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("_:g16080".freeze, "http://www.w3.org/2001/XMLSchema#string".freeze)
+          unionOf: list(term(
+            type: "http://www.w3.org/2000/01/rdf-schema#Datatype".freeze
+          ), "http://www.w3.org/2001/XMLSchema#string".freeze)
         ),
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
     property :context,
@@ -544,7 +572,10 @@ module RDF::Vocab
       label: "items".freeze,
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("_:g15760".freeze, "https://www.w3.org/ns/activitystreams#OrderedItems".freeze)
+          unionOf: list(term(
+            type: "http://www.w3.org/2002/07/owl#Class".freeze,
+            unionOf: list("https://www.w3.org/ns/activitystreams#Object".freeze, "https://www.w3.org/ns/activitystreams#Link".freeze)
+          ), "https://www.w3.org/ns/activitystreams#OrderedItems".freeze)
         ),
       type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
     property :last,
@@ -593,7 +624,9 @@ module RDF::Vocab
       label: "name".freeze,
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("_:g16020".freeze, "http://www.w3.org/2001/XMLSchema#string".freeze)
+          unionOf: list(term(
+            type: "http://www.w3.org/2000/01/rdf-schema#Datatype".freeze
+          ), "http://www.w3.org/2001/XMLSchema#string".freeze)
         ),
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
     property :next,
@@ -685,7 +718,9 @@ module RDF::Vocab
       label: "radius".freeze,
       range: term(
           "http://www.w3.org/2002/07/owl#onDatatype": "http://www.w3.org/2001/XMLSchema#float".freeze,
-          "http://www.w3.org/2002/07/owl#withRestrictions": list("_:g17800".freeze),
+          "http://www.w3.org/2002/07/owl#withRestrictions": list(term(
+            "http://www.w3.org/2001/XMLSchema#minInclusive": "0.0".freeze
+          )),
           type: "http://www.w3.org/2000/01/rdf-schema#Datatype".freeze
         ),
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty".freeze, "http://www.w3.org/2002/07/owl#FunctionalProperty".freeze]
@@ -695,7 +730,11 @@ module RDF::Vocab
       label: "rating".freeze,
       range: term(
           "http://www.w3.org/2002/07/owl#onDatatype": "http://www.w3.org/2001/XMLSchema#float".freeze,
-          "http://www.w3.org/2002/07/owl#withRestrictions": list("_:g14400".freeze, "_:g14440".freeze),
+          "http://www.w3.org/2002/07/owl#withRestrictions": list(term(
+            "http://www.w3.org/2001/XMLSchema#minInclusive": "0.0".freeze
+          ), term(
+            "http://www.w3.org/2001/XMLSchema#maxInclusive": "5.0".freeze
+          )),
           type: "http://www.w3.org/2000/01/rdf-schema#Datatype".freeze
         ),
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty".freeze, "http://www.w3.org/2002/07/owl#DeprecatedProperty".freeze, "http://www.w3.org/2002/07/owl#FunctionalProperty".freeze]
@@ -753,7 +792,9 @@ module RDF::Vocab
       label: "summary".freeze,
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("_:g15320".freeze, "http://www.w3.org/2001/XMLSchema#string".freeze)
+          unionOf: list(term(
+            type: "http://www.w3.org/2000/01/rdf-schema#Datatype".freeze
+          ), "http://www.w3.org/2001/XMLSchema#string".freeze)
         ),
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
     property :tag,
@@ -801,7 +842,10 @@ module RDF::Vocab
       label: "units".freeze,
       range: term(
           type: "http://www.w3.org/2000/01/rdf-schema#Datatype".freeze,
-          unionOf: list("_:g14760".freeze, "http://www.w3.org/2001/XMLSchema#anyURI".freeze)
+          unionOf: list(term(
+            "http://www.w3.org/2002/07/owl#oneOf": list("inches".freeze, "feet".freeze, "miles".freeze, "cm".freeze, "m".freeze, "km".freeze),
+            type: "http://www.w3.org/2000/01/rdf-schema#Datatype".freeze
+          ), "http://www.w3.org/2001/XMLSchema#anyURI".freeze)
         ),
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty".freeze, "http://www.w3.org/2002/07/owl#FunctionalProperty".freeze]
     property :updated,

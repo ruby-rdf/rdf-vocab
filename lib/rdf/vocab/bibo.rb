@@ -113,7 +113,10 @@ module RDF::Vocab
       isDefinedBy: "http://purl.org/ontology/bibo/".freeze,
       label: "Collection".freeze,
       subClassOf: term(
-          allValuesFrom: "_:g13360".freeze,
+          allValuesFrom: term(
+            type: "http://www.w3.org/2002/07/owl#Class".freeze,
+            unionOf: list("http://purl.org/ontology/bibo/Collection".freeze, "http://purl.org/ontology/bibo/Document".freeze)
+          ).freeze,
           onProperty: "http://purl.org/dc/terms/hasPart".freeze,
           type: "http://www.w3.org/2002/07/owl#Restriction".freeze
         ),

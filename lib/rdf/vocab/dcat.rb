@@ -10,30 +10,45 @@ module RDF::Vocab
       comment: "DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web. By using DCAT to describe datasets in data catalogs, publishers increase discoverability and enable applications easily to consume metadata from multiple catalogs. It further enables decentralized publishing of catalogs and facilitates federated dataset search across sites. Aggregated DCAT metadata can serve as a manifest file to facilitate digital preservation. DCAT is defined at http://www.w3.org/TR/vocab-dcat/. Any variance between that normative document and this schema is an error in this schema.".freeze,
       editorialNote: "English language definitions updated in this revision in line with ED. Multilingual text unevenly updated.".freeze,
       "http://purl.org/dc/terms/contributor": [term(
-          "http://schema.org/affiliation": "_:g10340".freeze,
-          "http://www.w3.org/2000/01/rdf-schema#seeAlso": "https://orcid.org/0000-0003-3499-8262".freeze,
-          "http://xmlns.com/foaf/0.1/homepage": "https://agbeltran.github.io".freeze,
-          "http://xmlns.com/foaf/0.1/name": "Alejandra Gonzalez-Beltran".freeze
-        ), term(
-          "http://schema.org/affiliation": "_:g10360".freeze,
-          "http://www.w3.org/2000/01/rdf-schema#seeAlso": "https://orcid.org/0000-0002-3884-3420".freeze,
-          "http://xmlns.com/foaf/0.1/name": "Simon J D Cox".freeze,
-          "http://xmlns.com/foaf/0.1/workInfoHomepage": "http://people.csiro.au/Simon-Cox".freeze,
-          type: "http://xmlns.com/foaf/0.1/Person".freeze
-        ), term(
-          "http://schema.org/affiliation": "_:g10380".freeze,
-          "http://xmlns.com/foaf/0.1/name": "David Browning".freeze
-        ), term(
-          "http://schema.org/affiliation": "_:g10460".freeze,
-          "http://xmlns.com/foaf/0.1/name": "Rufus Pollock".freeze
-        ), term(
-          "http://schema.org/affiliation": "_:g10480".freeze,
-          "http://xmlns.com/foaf/0.1/name": "Vassilios Peristeras".freeze
-        ), term(
           "http://schema.org/affiliation": "http://www.w3.org/data#W3C".freeze,
           "http://www.w3.org/2000/01/rdf-schema#seeAlso": "http://philarcher.org/foaf.rdf#me".freeze,
           "http://xmlns.com/foaf/0.1/homepage": "http://www.w3.org/People/all#phila".freeze,
           "http://xmlns.com/foaf/0.1/name": "Phil Archer".freeze
+        ), term(
+          "http://schema.org/affiliation": term(
+            "http://xmlns.com/foaf/0.1/homepage": "http://ec.europa.eu/dgs/informatics/".freeze,
+            "http://xmlns.com/foaf/0.1/name": "European Commission, DG DIGIT".freeze
+          ).freeze,
+          "http://xmlns.com/foaf/0.1/name": "Vassilios Peristeras".freeze
+        ), term(
+          "http://schema.org/affiliation": term(
+            "http://xmlns.com/foaf/0.1/homepage": "http://okfn.org".freeze,
+            "http://xmlns.com/foaf/0.1/name": "Open Knowledge Foundation".freeze
+          ).freeze,
+          "http://xmlns.com/foaf/0.1/name": "Rufus Pollock".freeze
+        ), term(
+          "http://schema.org/affiliation": term(
+            "http://xmlns.com/foaf/0.1/homepage": "http://stfc.ac.uk".freeze,
+            "http://xmlns.com/foaf/0.1/name": "Science and Technology Facilities Council, UK".freeze
+          ).freeze,
+          "http://www.w3.org/2000/01/rdf-schema#seeAlso": "https://orcid.org/0000-0003-3499-8262".freeze,
+          "http://xmlns.com/foaf/0.1/homepage": "https://agbeltran.github.io".freeze,
+          "http://xmlns.com/foaf/0.1/name": "Alejandra Gonzalez-Beltran".freeze
+        ), term(
+          "http://schema.org/affiliation": term(
+            "http://xmlns.com/foaf/0.1/homepage": "http://www.refinitiv.com".freeze,
+            "http://xmlns.com/foaf/0.1/name": "Refinitiv".freeze
+          ).freeze,
+          "http://xmlns.com/foaf/0.1/name": "David Browning".freeze
+        ), term(
+          "http://schema.org/affiliation": term(
+            "http://xmlns.com/foaf/0.1/homepage": "https://csiro.au".freeze,
+            "http://xmlns.com/foaf/0.1/name": "Commonwealth Scientific and Industrial Research Organisation".freeze
+          ).freeze,
+          "http://www.w3.org/2000/01/rdf-schema#seeAlso": "https://orcid.org/0000-0002-3884-3420".freeze,
+          "http://xmlns.com/foaf/0.1/name": "Simon J D Cox".freeze,
+          "http://xmlns.com/foaf/0.1/workInfoHomepage": "http://people.csiro.au/Simon-Cox".freeze,
+          type: "http://xmlns.com/foaf/0.1/Person".freeze
         ), term(
           "http://www.w3.org/2000/01/rdf-schema#seeAlso": "http://makxdekkers.com/makxdekkers.rdf#me".freeze,
           "http://xmlns.com/foaf/0.1/homepage": "http://makxdekkers.com/".freeze,

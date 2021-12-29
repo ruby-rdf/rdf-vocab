@@ -38,7 +38,13 @@ module RDF::Vocab
       comment: "An instance of this class represents the legal agent making (or seeking) a particular offering. This can be a legal body or a person. A business entity has at least a primary mailing address and contact details. For this, typical address standards (vCard) and location data (geo, WGS84) can be attached. Note that the location of the business entity is not necessarily the location from which the product or service is being available (e.g. the branch or store). Use gr:Location for stores and branches.\n\t\t\nExample: Siemens Austria AG, Volkswagen Ltd., Peter Miller's Cell phone Shop LLC\n\nCompatibility with schema.org: This class is equivalent to the union of http://schema.org/Person and http://schema.org/Organization.\t\t\n".freeze,
       equivalentClass: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("_:g28000".freeze, "_:g28040".freeze)
+          unionOf: list(term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       "http://www.w3.org/2002/07/owl#disjointWith": ["http://purl.org/goodrelations/v1#Brand".freeze, "http://purl.org/goodrelations/v1#BusinessEntityType".freeze, "http://purl.org/goodrelations/v1#BusinessFunction".freeze, "http://purl.org/goodrelations/v1#DayOfWeek".freeze, "http://purl.org/goodrelations/v1#DeliveryMethod".freeze, "http://purl.org/goodrelations/v1#Location".freeze, "http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#OpeningHoursSpecification".freeze, "http://purl.org/goodrelations/v1#PaymentMethod".freeze, "http://purl.org/goodrelations/v1#PriceSpecification".freeze, "http://purl.org/goodrelations/v1#QuantitativeValue".freeze, "http://purl.org/goodrelations/v1#TypeAndQuantityNode".freeze, "http://purl.org/goodrelations/v1#WarrantyPromise".freeze, "http://purl.org/goodrelations/v1#WarrantyScope".freeze],
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
@@ -238,7 +244,10 @@ module RDF::Vocab
       comment: "The gr:PaymentMethod or methods accepted by the gr:BusinessEntity for the given gr:Offering.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "_:g40480".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "accepted payment methods (0..*)".freeze,
@@ -248,7 +257,10 @@ module RDF::Vocab
       comment: "This property points from a gr:Offering to additional offerings that can only be obtained in combination with the first offering. This can be used to model supplements and extensions that are available for a surcharge. Any gr:PriceSpecification attached to the secondary offering is to be understood as an additional charge.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "_:g37920".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "add-on (0..*)".freeze,
@@ -258,7 +270,10 @@ module RDF::Vocab
       comment: "The minimal and maximal amount of time that is required between accepting the gr:Offering and the actual usage of the resource or service. This is mostly relevant for offers regarding hotel rooms, the rental of objects, or the provisioning of services. The duration is specified relatively to the beginning of the usage of the contracted object. It is represented by attaching an instance of the class gr:QuantitativeValueInteger. The lower and upper boundaries are specified using the properties gr:hasMinValueInteger and gr:hasMaxValueInteger to that instance. The unit of measurement is specified using the property gr:hasUnitOfMeasurement with a string holding a UN/CEFACT code suitable for durations, e.g. MON (months), DAY (days), HUR (hours), or MIN (minutes).\n\nThe difference to the gr:validFrom and gr:validThrough properties is that those specify the interval during which the gr:Offering is valid, while gr:advanceBookingRequirement specifies the acceptable relative amount of time between accepting the offer and the fulfilment or usage.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "_:g31040".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "advance booking requirement (0..1)".freeze,
@@ -289,7 +304,10 @@ module RDF::Vocab
       comment: "This property specifies the end of the availability of the gr:ProductOrService included in the gr:Offering.\nThe difference to the properties gr:validFrom and gr:validThrough is that those specify the period of time during which the offer is valid and can be accepted.\n\nExample: I offer to lease my boat for the period of August 1 - August 31, 2010, but you must accept by offer no later than July 15.\n\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2008-05-30T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2008-05-30T09:30:10-09:00\n\nor\n\n2008-05-30T09:30:10+09:00.\n\nNote: There is another property gr:availableAtOrFrom, which is used to indicate the gr:Location (e.g. store or shop) from which the goods would be available.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "_:g25560".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "availability ends (0..1)".freeze,
@@ -299,7 +317,10 @@ module RDF::Vocab
       comment: "This property specifies the beginning of the availability of the gr:ProductOrService included in the gr:Offering.\nThe difference to the properties gr:validFrom and gr:validThrough is that those specify the period of time during which the offer is valid and can be accepted.\n\nExample: I offer to lease my boat for the period of August 1 - August 31, 2010, but you must accept by offer no later than July 15.\n\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2008-05-30T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2008-05-30T09:30:10-09:00\n\nor\n\n2008-05-30T09:30:10+09:00.\n\nNote: There is another property gr:availableAtOrFrom, which is used to indicate the gr:Location (e.g. store or shop) from which the goods would be available.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "_:g17400".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "availability starts (0..1)".freeze,
@@ -309,7 +330,10 @@ module RDF::Vocab
       comment: "This states that a particular gr:Offering is available at or from the given gr:Location (e.g. shop or branch).".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "_:g30880".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "available at or from (0..*)".freeze,
@@ -319,7 +343,10 @@ module RDF::Vocab
       comment: "This specifies the gr:DeliveryMethod or methods available for a given gr:Offering.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "_:g30700".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "available delivery methods (0..*)".freeze,
@@ -336,7 +363,19 @@ module RDF::Vocab
       comment: "The name of a category to which this gr:ProductOrService, gr:Offering, gr:BusinessEntity, or gr:Location belongs.\n\t\nNote 1: For products, it is better to add an rdf:type statement referring to a GoodRelations-compliant ontology for vertical industries instead, but if you just have a short text label, gr:category is simpler.\nNote 2: You can use greater signs or slashes to informally indicate a category hierarchy, e.g. \"restaurants/asian_restaurants\" or \"cables > usb_cables\"\n".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, "http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#Location".freeze, "http://purl.org/goodrelations/v1#BusinessEntity".freeze, "_:g17560".freeze, "_:g17600".freeze, "_:g17640".freeze, "_:g17680".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, "http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#Location".freeze, "http://purl.org/goodrelations/v1#BusinessEntity".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            equivalentClass: "http://purl.org/goodrelations/v1#Location".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "category (0..*)".freeze,
@@ -353,7 +392,10 @@ module RDF::Vocab
       comment: "The color of the product.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g40700".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "color (0..1)".freeze,
@@ -364,7 +406,10 @@ module RDF::Vocab
       comment: "A textual description of the condition of the product or service, or the products or services included in the offer (when attached to a gr:Offering)".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g40640".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "condition (0..1)".freeze,
@@ -374,7 +419,10 @@ module RDF::Vocab
       comment: "This property is the super property for all pure datatype properties that can be used to describe a gr:ProductOrService.\n\nIn products and services ontologies, only such properties that are no quantitative properties and that have no predefined gr:QualitativeValue instances are subproperties of this property. In practice, this refers to a few integer properties for which the integer value represents qualitative aspects, for string datatypes (as long as no predefined values exist), for boolean datatype properties, and for dates and times.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g29500".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "datatype product or service property (0..*)".freeze,
@@ -384,7 +432,10 @@ module RDF::Vocab
       comment: "This property can be used to indicate the promised delay between the receipt of the order and the goods leaving the warehouse.\n\nThe duration is specified by attaching an instance of gr:QuantitativeValueInteger. The lower and upper boundaries are specified using the properties gr:hasMinValueInteger and gr:hasMaxValueInteger to that instance. A point value can be modeled with the gr:hasValueInteger property. The unit of measurement is specified using the property gr:hasUnitOfMeasurement with a string holding a UN/CEFACT code suitable for durations, e.g. MON (months), DAY (days), HUR (hours), or MIN (minutes).".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "_:g20260".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "delivery lead time (0..1)".freeze,
@@ -394,7 +445,10 @@ module RDF::Vocab
       comment: "The depth of the product.\nTypical unit code(s): CMT for centimeters, INH for inches".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g29600".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "depth (0..1)".freeze,
@@ -427,7 +481,10 @@ module RDF::Vocab
       comment: "The types of customers (gr:BusinessEntityType) for which the given gr:Offering is valid.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "_:g41540".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "eligible customer types (0..*)".freeze,
@@ -437,7 +494,10 @@ module RDF::Vocab
       comment: "The minimal and maximal duration for which the given gr:Offering or gr:License is valid. This is mostly used for offers regarding accommodation, the rental of objects, or software licenses. The duration is specified by attaching an instance of gr:QuantitativeValue. The lower and upper boundaries are specified using the properties gr:hasMinValue and gr:hasMaxValue to that instance. If they are the same, use the gr:hasValue property. The unit of measurement is specified using the property gr:hasUnitOfMeasurement with a string holding a UN/CEFACT code suitable for durations, e.g. MON (months), DAY (days), HUR (hours), or MIN (minutes).\n\nThe difference to the gr:validFrom and gr:validThrough properties is that those specify the absiolute interval during which the gr:Offering or gr:License is valid, while gr:eligibleDuration specifies the acceptable duration of the contract or usage.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#License".freeze, "_:g38340".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#License".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "eligible duration (0..1)".freeze,
@@ -447,7 +507,10 @@ module RDF::Vocab
       comment: "This property specifies the geo-political region or regions for which the gr:Offering, gr:License, or gr:DeliveryChargeSpecification is valid using the two-character version of ISO 3166-1 (ISO 3166-1 alpha-2)  for regions or ISO 3166-2 , which breaks down the countries from ISO 3166-1 into administrative subdivisions.\n\nImportant: Do NOT use 3-letter ISO 3166-1 codes!".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#DeliveryChargeSpecification".freeze, "http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#License".freeze, "_:g33360".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#DeliveryChargeSpecification".freeze, "http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#License".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "eligible regions (0..*)".freeze,
@@ -457,7 +520,10 @@ module RDF::Vocab
       comment: "This property can be used to indicate the transaction volume, in a monetary unit, for which the gr:Offering or gr:PriceSpecification is valid. This is mostly used to specify a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases above a certain amount.\n\nThe object is a gr:PriceSpecification that uses the properties gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue to indicate the lower and upper boundaries and gr:hasCurrency to indicate the currency using the ISO 4217 standard (3 characters).".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#PriceSpecification".freeze, "_:g36560".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#PriceSpecification".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "eligible transaction volume (0..1)".freeze,
@@ -491,7 +557,13 @@ module RDF::Vocab
       comment: "This specifies the brand or brands (gr:Brand) associated with a gr:ProductOrService, or the brand or brands maintained by a gr:BusinessEntity.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, "http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g30460".freeze, "_:g30500".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, "http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has brand (0..*)".freeze,
@@ -501,7 +573,10 @@ module RDF::Vocab
       comment: "This specifies the business function of the gr:Offering, i.e. whether the gr:BusinessEntity is offering to sell, to lease, or to repair the particular type of product. In the case of bundles, it is also possible to attach individual business functions to each gr:TypeAndQuantityNode. The business function of the main gr:Offering determines the business function for all included objects or services, unless a business function attached to a gr:TypeAndQuantityNode overrides it.\n\t\nNote: While it is possible that an entity is offering multiple types of business functions for the same set of objects (e.g. rental and sales), this should usually not be stated by attaching multiple business functions to the same gr:Offering, since the gr:UnitPriceSpecification for the varying business functions will typically be very different.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#TypeAndQuantityNode".freeze, "_:g42280".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#TypeAndQuantityNode".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has business function (1..*)".freeze,
@@ -526,7 +601,10 @@ module RDF::Vocab
       comment: "The Dun & Bradstreet DUNS number for identifying a gr:BusinessEntity. The Dun & Bradstreet DUNS is a nine-digit number used to identify legal entities (but usually not branches or locations of logistical importance only).".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, "_:g41360".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has DUNS (0..1)".freeze,
@@ -536,7 +614,10 @@ module RDF::Vocab
       comment: "The EAN·UCC-13 code of the given gr:ProductOrService or gr:Offering. This code is now officially called GTIN-13 (Global Trade Identifier Number) or EAN·UCC-13. Former 12-digit UPC codes can be converted into EAN·UCC-13 code by simply adding a preceeding zero.\n\nNote 1: When using this property for searching by 12-digit UPC codes, you must add a preceeding zero digit.\nNote 2: As of January 1, 2007, the former ISBN numbers for books etc. have been integrated into the EAN·UCC-13 code. For each old ISBN-10 code, there exists a proper translation into EAN·UCC-13 by adding \"978\" or \"979\" as prefix. Since the old ISBN-10 is now deprecated, GoodRelations does not provide a property for ISBNs.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g34540".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has EAN/UCC-13 (0..*)".freeze,
@@ -547,7 +628,10 @@ module RDF::Vocab
       comment: "This specifies the interval and unit of measurement of ordering quantities for which the gr:Offering or gr:PriceSpecification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity.\nNote that if an offering is a bundle, i.e. it consists of more than one unit of a single type of good, or if the unit of measurement for the good is different from unit (Common Code C62), then gr:hasEligibleQuantity refers to units of this bundle. In other words, \"C62\" for \"Units or pieces\" is usually the appropriate unit of measurement.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#PriceSpecification".freeze, "_:g25640".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#PriceSpecification".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has eligible quantity (0..1)".freeze,
@@ -557,7 +641,10 @@ module RDF::Vocab
       comment: "The Global Trade Item Number (GTIN-14) of the given gr:ProductOrService or gr:Offering.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g34380".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has GTIN-14 (0..*)".freeze,
@@ -568,7 +655,10 @@ module RDF::Vocab
       comment: "The 8-digit Global Trade Item Number (GTIN-8) of the given gr:ProductOrService or gr:Offering, also known as EAN/UCC-8 (8-digit EAN).".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g30280".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has GTIN-8 (0..*)".freeze,
@@ -579,7 +669,13 @@ module RDF::Vocab
       comment: "The Global Location Number (GLN, sometimes also referred to as International Location Number or ILN) of the respective gr:BusinessEntity or gr:Location.\nThe Global Location Number is a thirteen-digit number used to identify parties and physical locations.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, "http://purl.org/goodrelations/v1#Location".freeze, "_:g23040".freeze, "_:g23080".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, "http://purl.org/goodrelations/v1#Location".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#Location".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has Global Location Number (0..1)".freeze,
@@ -589,7 +685,13 @@ module RDF::Vocab
       comment: "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular gr:BusinessEntity or gr:Location. See http://unstats.un.org/unsd/cr/registry/isic-4.asp for more information.\n\nNote: While ISIC codes are sometimes misused for classifying products or services, they are designed and suited only for classifying business establishments.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, "http://purl.org/goodrelations/v1#Location".freeze, "_:g41880".freeze, "_:g41920".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, "http://purl.org/goodrelations/v1#Location".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            equivalentClass: "http://purl.org/goodrelations/v1#Location".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has ISIC v4 (0..*)".freeze,
@@ -599,7 +701,10 @@ module RDF::Vocab
       comment: "This property specifies the current approximate inventory level for gr:SomeItems. The unit of measurement and the point value or interval are indicated using the attached gr:QuantitativeValueFloat instance.\n\nThis property can also be attached to a gr:Offering in cases where the included products are not modeled in more detail.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#SomeItems".freeze, "_:g29680".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#SomeItems".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has inventory level (0..1)".freeze,
@@ -609,7 +714,10 @@ module RDF::Vocab
       comment: "The Manufacturer Part Number or MPN is a unique identifier for a product, service, or bundle from the perspective of a particular manufacturer. MPNs can be assigned to products or product datasheets, or bundles. Accordingly, the domain of this property is the union of gr:ProductOrService (the common superclass of goods and datasheets), and gr:Offering.\n\nImportant: Be careful when assuming two products or services instances or offering instances to be identical based on the MPN. Since MPNs are unique only for the same gr:BusinessEntity, this holds only when the two MPN values refer to the same gr:BusinessEntity. Such can be done by taking into account the provenance of the data. \n\nUsually, the properties gr:hasEAN_UCC-13 and gr:hasGTIN-14 are much more reliable identifiers, because they are globally unique.\n\nSee also http://en.wikipedia.org/wiki/Part_number".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g26940".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has MPN (0..*)".freeze,
@@ -620,7 +728,10 @@ module RDF::Vocab
       comment: "This states that an actual product instance (gr:Individual) or a placeholder instance for multiple, unidentified such instances (gr:SomeItems) is one occurence of a particular gr:ProductOrServiceModel.\n\nExample: myFordT hasMakeAndModel FordT.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Individual".freeze, "http://purl.org/goodrelations/v1#SomeItems".freeze, "_:g29760".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Individual".freeze, "http://purl.org/goodrelations/v1#SomeItems".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has make and model (0..1)".freeze,
@@ -630,7 +741,10 @@ module RDF::Vocab
       comment: "This object property links a gr:ProductOrService to the gr:BusinessEntity that produces it. Mostly used with gr:ProductOrServiceModel.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g36620".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has manufacturer (0..1)".freeze,
@@ -700,7 +814,10 @@ module RDF::Vocab
       comment: "The North American Industry Classification System (NAICS) code for a particular gr:BusinessEntity.\nSee http://www.census.gov/eos/www/naics/ for more details.\n\nNote: While NAICS codes are sometimes misused for classifying products or services, they are designed and suited only for classifying business establishments.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, "_:g32180".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has NAICS (0..*)".freeze,
@@ -725,7 +842,10 @@ module RDF::Vocab
       comment: "This property links a gr:Location to a gr:OpeningHoursSpecification.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Location".freeze, "_:g29380".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Location".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#Location".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has opening hours specification (0..*)".freeze,
@@ -735,7 +855,10 @@ module RDF::Vocab
       comment: "This property states that the respective gr:Location is a point of sale for the respective gr:BusinessEntity. It allows linking those two types of entities without the need for a particular gr:Offering.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, "_:g23140".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has POS (0..*)".freeze,
@@ -753,7 +876,10 @@ module RDF::Vocab
       comment: "This links a gr:Offering to a gr:PriceSpecification or specifications. There can be unit price specifications, payment charge specifications, and delivery charge specifications. For each type, multiple specifications for the same gr:Offering are possible, e.g. for different quantity ranges or for different currencies, or for different combinations of gr:DeliveryMethod and target destinations.\n\nRecommended retail prices etc. can be marked by the gr:priceType property of the gr:UnitPriceSpecification.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "_:g23740".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has price specification (0..*)".freeze,
@@ -763,7 +889,13 @@ module RDF::Vocab
       comment: "The Stock Keeping Unit, or SKU is a unique identifier for a product, service, or bundle from the perspective of a particular supplier, i.e. SKUs are mostly assigned and serialized at the merchant level. \nExamples of SKUs are the ordering or parts numbers used by a particular Web shop or catalog.\n\nConsequently, the domain of gr:hasStockKeepingUnit is the union of the classes gr:Offering and gr:ProductOrService. \nIf attached to a gr:Offering, the SKU will usually reflect a merchant-specific identifier, i.e. one valid only for that particular retailer or shop. \nIf attached to a gr:ProductOrServiceModel, the SKU can reflect either the identifier used by the merchant or the part number used by the official manufacturer of that part. For the latter, gr:hasMPN is a better choice.\n\nImportant: Be careful when assuming two products or services instances or offering instances to be identical based on the SKU. Since SKUs are unique only for the same gr:BusinessEntity, this can be assumed only when you are sure that the two SKU values refer to the same business entity. Such can be done by taking into account the provenance of the data. As long as instances of gr:Offering are concerned, you can also check that the offerings are being offered by the same gr:Business Entity.\n\nUsually, the properties gr:hasEAN_UCC-13 and gr:hasGTIN-14 are much more reliable identifiers, because they are globally unique.\n\nSee also http://en.wikipedia.org/wiki/Stock_Keeping_Unit.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g35840".freeze, "_:g35880".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has Stock Keeping Unit (0..*)".freeze,
@@ -808,7 +940,10 @@ module RDF::Vocab
       comment: "This specifies the gr:WarrantyPromise made by the gr:BusinessEntity for the given gr:Offering.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "_:g30640".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "has warranty promise (0..*)".freeze,
@@ -825,7 +960,10 @@ module RDF::Vocab
       comment: "The height of the product.\nTypical unit code(s): CMT for centimeters, INH for inches".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g42200".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "height (0..1)".freeze,
@@ -843,7 +981,10 @@ module RDF::Vocab
       comment: "This object property links a gr:Offering to one or multiple gr:TypeAndQuantityNode or nodes that specify the components that are included in the respective offer.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "_:g33420".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "includes object (0..*)".freeze,
@@ -853,7 +994,10 @@ module RDF::Vocab
       comment: "This states that a particular gr:ProductOrService is an accessory or spare part for another product or service.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g30200".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "is accessory or spare part for (0..*)".freeze,
@@ -863,7 +1007,10 @@ module RDF::Vocab
       comment: "This states that a particular gr:ProductOrService is a consumable for another product or service.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g42100".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "is consumable for (0..*)".freeze,
@@ -881,7 +1028,10 @@ module RDF::Vocab
       comment: "This states that a given gr:ProductOrService is similar to another product or service. Of course, this is a subjective statement; when interpreting it, the trust in the origin of the statement should be taken into account.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g42760".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "is similar to (0..*)".freeze,
@@ -898,7 +1048,10 @@ module RDF::Vocab
       comment: "The legal name of the gr:BusinessEntity.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, "_:g33500".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "legal name (0..1)".freeze,
@@ -942,7 +1095,10 @@ module RDF::Vocab
       comment: "This links a gr:BusinessEntity to the offers (gr:Offering) it makes. If you want to express interest in receiving offers, use gr:seeks instead.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, "_:g26100".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "offers (0..*)".freeze,
@@ -959,7 +1115,13 @@ module RDF::Vocab
       comment: "This property indicates that a particular person or business owns a particular product. It can be used to expose the products in one's posession in order to empower recommender systems to suggest matching offers.\n\nNote that the product must be an instance of the class gr:Individual.\n\nThis property can also be safely applied to foaf:Agent instances.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, "_:g38640".freeze, "_:g38680".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "owns (0..*)".freeze,
@@ -984,7 +1146,10 @@ module RDF::Vocab
       comment: "This is the super property of all qualitative properties for products and services. All properties in product or service ontologies for which gr:QualitativeValue instances are specified are subproperties of this property.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g36480".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "qualitative product or service property (0..*)".freeze,
@@ -994,7 +1159,10 @@ module RDF::Vocab
       comment: "This is the super property of all quantitative  properties for products and services. All properties in product or service ontologies that specify quantitative characteristics, for which an interval is at least theoretically an appropriate value, are subproperties of this property.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g29440".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "quantitative product or service property (0..*)".freeze,
@@ -1009,7 +1177,13 @@ module RDF::Vocab
       comment: "This links a gr:BusinessEntity to gr:Offering nodes that describe what the business entity is interested in (i.e., the buy side). If you want to express interest in offering something, use gr:offers instead. Note that this substitutes the former gr:BusinessFunction gr:Buy, which is now deprecated.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, "_:g17040".freeze, "_:g17080".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "seeks (0..*)".freeze,
@@ -1019,7 +1193,10 @@ module RDF::Vocab
       comment: "The serial number or any alphanumeric identifier of a particular product. Note that serial number are unique only for the same brand or the same model, so you cannot infer from two occurrences of the same serial number that the objects to which they are attached are identical.\n\nThis property can also be attached to a gr:Offering in cases where the included products are not modeled in more detail.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Individual".freeze, "http://purl.org/goodrelations/v1#Offering".freeze, "_:g17760".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Individual".freeze, "http://purl.org/goodrelations/v1#Offering".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "serial number (0..*)".freeze,
@@ -1037,7 +1214,13 @@ module RDF::Vocab
       comment: "The Tax / Fiscal ID of the gr:BusinessEntity, e.g. the TIN in the US or the CIF/NIF in Spain. It is usually assigned by the country of residence".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, "_:g17240".freeze, "_:g17280".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "Tax ID (0..1)".freeze,
@@ -1057,7 +1240,10 @@ module RDF::Vocab
       comment: "This property specifies the beginning of the validity of the gr:Offering, gr:PriceSpecification, gr:License, or gr:OpeningHoursSpecification.\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2008-05-30T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2008-05-30T09:30:10-09:00\n\nor\n\n2008-05-30T09:30:10+09:00.\n\nNote: If multiple contradicting instances of a gr:Offering, gr:PriceSpecification, or gr:OpeningHoursSpecification exist, it is a good heuristics to assume that\n1. Information with validity information for the respective period of time ranks higher than information without validity information.\n2. Among conflicting nodes both having validity information, the one with the shorter validity span ranks higher.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#OpeningHoursSpecification".freeze, "http://purl.org/goodrelations/v1#PriceSpecification".freeze, "http://purl.org/goodrelations/v1#License".freeze, "_:g20200".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#OpeningHoursSpecification".freeze, "http://purl.org/goodrelations/v1#PriceSpecification".freeze, "http://purl.org/goodrelations/v1#License".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "valid from (0..1)".freeze,
@@ -1067,7 +1253,10 @@ module RDF::Vocab
       comment: "This property specifies the end of the validity of the gr:Offering, gr:PriceSpecification, gr:License, or gr:OpeningHoursSpecification.\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2008-05-30T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2008-05-30T09:30:10-09:00\n\nor\n2008-05-30T09:30:10+09:00.\n\nNote 1: If multiple contradicting instances of a gr:Offering, gr:PriceSpecification, or gr:OpeningHoursSpecification exist, it is a good heuristics to assume that\n1. Information with validity information for the respective period of time ranks higher than information without validity information.\n2. Among conflicting nodes both having validity information, the one with the shorter validity span ranks higher.\nNote 2: For Google, attaching a gr:validThrough statement to a gr:UnitPriceSpecification is mandatory. \n".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#OpeningHoursSpecification".freeze, "http://purl.org/goodrelations/v1#PriceSpecification".freeze, "http://purl.org/goodrelations/v1#License".freeze, "_:g33700".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#Offering".freeze, "http://purl.org/goodrelations/v1#OpeningHoursSpecification".freeze, "http://purl.org/goodrelations/v1#PriceSpecification".freeze, "http://purl.org/goodrelations/v1#License".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#Offering".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "valid through (0..1)".freeze,
@@ -1097,7 +1286,13 @@ module RDF::Vocab
       comment: "The Value-added Tax ID of the gr:BusinessEntity. See http://en.wikipedia.org/wiki/Value_added_tax_identification_number for details.".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, "_:g28800".freeze, "_:g28840".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#BusinessEntity".freeze, term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            subClassOf: "http://purl.org/goodrelations/v1#BusinessEntity".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "VAT ID (0..1)".freeze,
@@ -1107,7 +1302,10 @@ module RDF::Vocab
       comment: "The weight of the gr:ProductOrService.\nTypical unit code(s): GRM for gram, KGM for kilogram, LBR for pound".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g23940".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "weight (0..1)".freeze,
@@ -1118,7 +1316,10 @@ module RDF::Vocab
       comment: "The width of the gr:ProductOrService.\nTypical unit code(s): CMT for centimeters, INH for inches".freeze,
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, "_:g38580".freeze)
+          unionOf: list("http://purl.org/goodrelations/v1#ProductOrService".freeze, term(
+            equivalentClass: "http://purl.org/goodrelations/v1#ProductOrService".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://purl.org/goodrelations/v1".freeze,
       label: "width (0..1)".freeze,

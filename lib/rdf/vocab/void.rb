@@ -9,21 +9,21 @@ module RDF::Vocab
     term :Dataset,
       comment: "A set of RDF triples that are published, maintained or aggregated by a single provider.".freeze,
       label: "dataset".freeze,
-      type: ["http://www.w3.org/2002/07/owl#Class".freeze, "http://www.w3.org/2000/01/rdf-schema#Class".freeze]
+      type: ["http://www.w3.org/2000/01/rdf-schema#Class".freeze, "http://www.w3.org/2002/07/owl#Class".freeze]
     term :DatasetDescription,
       comment: "A web resource whose foaf:primaryTopic or foaf:topics include void:Datasets.".freeze,
       label: "dataset description".freeze,
       subClassOf: "http://xmlns.com/foaf/0.1/Document".freeze,
-      type: ["http://www.w3.org/2002/07/owl#Class".freeze, "http://www.w3.org/2000/01/rdf-schema#Class".freeze]
+      type: ["http://www.w3.org/2000/01/rdf-schema#Class".freeze, "http://www.w3.org/2002/07/owl#Class".freeze]
     term :Linkset,
       comment: "A collection of RDF links between two void:Datasets.".freeze,
       label: "linkset".freeze,
       subClassOf: "http://rdfs.org/ns/void#Dataset".freeze,
-      type: ["http://www.w3.org/2002/07/owl#Class".freeze, "http://www.w3.org/2000/01/rdf-schema#Class".freeze]
+      type: ["http://www.w3.org/2000/01/rdf-schema#Class".freeze, "http://www.w3.org/2002/07/owl#Class".freeze]
     term :TechnicalFeature,
       comment: "A technical feature of a void:Dataset, such as a supported RDF serialization format.".freeze,
       label: "technical feature".freeze,
-      type: ["http://www.w3.org/2002/07/owl#Class".freeze, "http://www.w3.org/2000/01/rdf-schema#Class".freeze]
+      type: ["http://www.w3.org/2000/01/rdf-schema#Class".freeze, "http://www.w3.org/2002/07/owl#Class".freeze]
 
     # Property definitions
     property :class,
@@ -31,7 +31,7 @@ module RDF::Vocab
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
       label: "class".freeze,
       range: "http://www.w3.org/2000/01/rdf-schema#Class".freeze,
-      type: ["http://www.w3.org/2002/07/owl#FunctionalProperty".freeze, "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze]
+      type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze, "http://www.w3.org/2002/07/owl#FunctionalProperty".freeze]
     property :classPartition,
       comment: "A subset of a void:Dataset that contains only the entities of a certain rdfs:Class.".freeze,
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
@@ -44,7 +44,7 @@ module RDF::Vocab
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
       label: "classes".freeze,
       range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
-      type: ["http://www.w3.org/2002/07/owl#DatatypeProperty".freeze, "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze]
+      type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze, "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze]
     property :dataDump,
       comment: "An RDF dump, partial or complete, of a void:Dataset.".freeze,
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
@@ -56,25 +56,25 @@ module RDF::Vocab
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
       label: "distinct objects".freeze,
       range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
-      type: ["http://www.w3.org/2002/07/owl#DatatypeProperty".freeze, "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze]
+      type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze, "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze]
     property :distinctSubjects,
       comment: "The total number of distinct subjects in a void:Dataset. In other words, the number of distinct resources that occur in the subject position of triples in the dataset.".freeze,
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
       label: "distinct subjects".freeze,
       range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
-      type: ["http://www.w3.org/2002/07/owl#DatatypeProperty".freeze, "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze]
+      type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze, "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze]
     property :documents,
       comment: "The total number of documents, for datasets that are published as a set of individual documents, such as RDF/XML documents or RDFa-annotated web pages. Non-RDF documents, such as web pages in HTML or images, are usually not included in this count. This property is intended for datasets where the total number of triples or entities is hard to determine. void:triples or void:entities should be preferred where practical.".freeze,
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
       label: "number of documents".freeze,
       range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
-      type: ["http://www.w3.org/2002/07/owl#DatatypeProperty".freeze, "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze]
+      type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze, "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze]
     property :entities,
       comment: "The total number of entities that are described in a void:Dataset.".freeze,
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
       label: "number of entities".freeze,
       range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
-      type: ["http://www.w3.org/2002/07/owl#DatatypeProperty".freeze, "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze]
+      type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze, "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze]
     property :exampleResource,
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
       label: "example resource of dataset".freeze,
@@ -102,7 +102,7 @@ module RDF::Vocab
       label: "Objects Target".freeze,
       range: "http://rdfs.org/ns/void#Dataset".freeze,
       subPropertyOf: "http://rdfs.org/ns/void#target".freeze,
-      type: ["http://www.w3.org/2002/07/owl#FunctionalProperty".freeze, "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze]
+      type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze, "http://www.w3.org/2002/07/owl#FunctionalProperty".freeze]
     property :openSearchDescription,
       comment: "An OpenSearch description document for a free-text search service over a void:Dataset.".freeze,
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
@@ -114,13 +114,13 @@ module RDF::Vocab
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
       label: "number of properties".freeze,
       range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
-      type: ["http://www.w3.org/2002/07/owl#DatatypeProperty".freeze, "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze]
+      type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze, "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze]
     property :property,
       comment: "The rdf:Property that is the predicate of all triples in a property-based partition.".freeze,
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
       label: "property".freeze,
       range: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze,
-      type: ["http://www.w3.org/2002/07/owl#FunctionalProperty".freeze, "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze]
+      type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze, "http://www.w3.org/2002/07/owl#FunctionalProperty".freeze]
     property :propertyPartition,
       comment: "A subset of a void:Dataset that contains only the triples of a certain rdf:Property.".freeze,
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
@@ -143,7 +143,7 @@ module RDF::Vocab
       label: "Subjects Target".freeze,
       range: "http://rdfs.org/ns/void#Dataset".freeze,
       subPropertyOf: "http://rdfs.org/ns/void#target".freeze,
-      type: ["http://www.w3.org/2002/07/owl#FunctionalProperty".freeze, "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze]
+      type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze, "http://www.w3.org/2002/07/owl#FunctionalProperty".freeze]
     property :subset,
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
       label: "has subset".freeze,
@@ -160,7 +160,7 @@ module RDF::Vocab
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
       label: "number of triples".freeze,
       range: "http://www.w3.org/2001/XMLSchema#integer".freeze,
-      type: ["http://www.w3.org/2002/07/owl#DatatypeProperty".freeze, "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze]
+      type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze, "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze]
     property :uriLookupEndpoint,
       comment: "Defines a simple URI look-up protocol for accessing a dataset.".freeze,
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
@@ -176,7 +176,7 @@ module RDF::Vocab
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
       label: "URI space".freeze,
       range: "http://www.w3.org/2000/01/rdf-schema#Literal".freeze,
-      type: ["http://www.w3.org/2002/07/owl#DatatypeProperty".freeze, "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze]
+      type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze, "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze]
     property :vocabulary,
       comment: "A vocabulary that is used in the dataset.".freeze,
       domain: "http://rdfs.org/ns/void#Dataset".freeze,
