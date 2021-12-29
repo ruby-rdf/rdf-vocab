@@ -81,7 +81,10 @@ module RDF::Vocab
     property :averageBitRate,
       comment: "Corresponds to 'averageBitRate' in the Ontology for Media Resources, expressed in kilobits/second.".freeze,
       domain: term(
-          intersectionOf: list("http://www.w3.org/ns/ma-ont#MediaResource".freeze, "_:g9920".freeze),
+          intersectionOf: list("http://www.w3.org/ns/ma-ont#MediaResource".freeze, term(
+            "http://www.w3.org/2002/07/owl#complementOf": "http://www.w3.org/ns/ma-ont#Image".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          )),
           type: "http://www.w3.org/2002/07/owl#Class".freeze
         ),
       range: "http://www.w3.org/2001/XMLSchema#decimal".freeze,
@@ -119,7 +122,10 @@ module RDF::Vocab
     property :duration,
       comment: "Corresponds to 'duration' in the Ontology for Media Resources.".freeze,
       domain: term(
-          intersectionOf: list("http://www.w3.org/ns/ma-ont#MediaResource".freeze, "_:g9980".freeze),
+          intersectionOf: list("http://www.w3.org/ns/ma-ont#MediaResource".freeze, term(
+            "http://www.w3.org/2002/07/owl#complementOf": "http://www.w3.org/ns/ma-ont#Image".freeze,
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          )),
           type: "http://www.w3.org/2002/07/owl#Class".freeze
         ),
       range: "http://www.w3.org/2001/XMLSchema#decimal".freeze,

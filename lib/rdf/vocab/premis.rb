@@ -49,7 +49,15 @@ module RDF::Vocab
       comment: ["Creation / Maintenance Notes: A preservation repository should never refer to content that it does not control. Therefore, the PREMIS working group assumed that the repository will always assign the contentLocation, probably by program.".freeze, "Definition: Information needed to retrieve a file from the storage system, or to access a bitstream within a file.".freeze, "Usage Notes: If the preservation repository uses the objectIdentifier as a handle for retrieving data, contentLocation is implicit and does not need to be recorded.".freeze],
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "stable".freeze,
       subClassOf: term(
-          intersectionOf: list("_:g17620".freeze, "_:g17660".freeze),
+          intersectionOf: list(term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasContentLocationType".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasContentLocationValue".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          )),
           type: "http://www.w3.org/2002/07/owl#Class".freeze
         ),
       type: "http://www.w3.org/2002/07/owl#Class".freeze
@@ -57,7 +65,15 @@ module RDF::Vocab
       comment: ["Definition: Information about the copyright status of the object(s).".freeze, "Usage Notes: When rights basis is a copyright, copyrightInformation should be provided.\nRepositories may need to extend this with more detailed information. See the California Digital Library's copyrightMD schema (www.cdlib.org/inside/projects/rights/schema/) for an example of a more detailed scheme.".freeze],
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "stable".freeze,
       subClassOf: ["http://www.loc.gov/premis/rdf/v1#RightsStatement".freeze, term(
-          intersectionOf: list("_:g16140".freeze, "_:g16180".freeze),
+          intersectionOf: list(term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasCopyrightStatus".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasCopyrightJurisdiction".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          )),
           type: "http://www.w3.org/2002/07/owl#Class".freeze
         )],
       type: "http://www.w3.org/2002/07/owl#Class".freeze
@@ -66,7 +82,19 @@ module RDF::Vocab
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "stable".freeze,
       subClassOf: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("_:g16280".freeze, "_:g16320".freeze, "_:g16360".freeze)
+          unionOf: list(term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasCreatingApplicationName".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            maxCardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasCreatingApplicationVersion".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            maxCardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasDateCreatedByApplication".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ))
         ),
       type: "http://www.w3.org/2002/07/owl#Class".freeze
     term :Dependency,
@@ -74,7 +102,15 @@ module RDF::Vocab
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "stable".freeze,
       subClassOf: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("_:g16860".freeze, "_:g16900".freeze)
+          unionOf: list(term(
+            maxCardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasIdentifier".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            minCardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasDependencyName".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ))
         ),
       type: "http://www.w3.org/2002/07/owl#Class".freeze
     term :Environment,
@@ -90,7 +126,19 @@ module RDF::Vocab
       comment: ["Entity properties:\nMust be related to one or more objects.\nCan be related to one or more agents.\nLinks between entities may be recorded from either direction and need not be bi-directional.".freeze, "The Event entity aggregates information about an action that involves one or more Object entities. Metadata about an Event would normally be recorded and stored separately from the digital object.\nWhether or not a preservation repository records an Event depends upon the importance of the event. Actions that modify objects should always be recorded. Other actions such as copying an object for backup purposes may be recorded in system logs or an audit trail but not necessarily in\nan Event entity.\nMandatory semantic units are: eventIdentifier, eventType, and eventDateTime.".freeze],
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "stable".freeze,
       subClassOf: ["http://www.loc.gov/premis/rdf/v1#PremisEntity".freeze, term(
-          intersectionOf: list("_:g18160".freeze, "_:g18200".freeze, "_:g18240".freeze),
+          intersectionOf: list(term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasEventType".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            maxCardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasIdentifier".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasEventDateTime".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          )),
           type: "http://www.w3.org/2002/07/owl#Class".freeze
         )],
       type: "http://www.w3.org/2002/07/owl#Class".freeze
@@ -126,7 +174,15 @@ module RDF::Vocab
       comment: ["Creation / Maintenance Notes: Automatically calculated and recorded by repository.".freeze, "Definition: Information used to verify whether an object has been altered in an undocumented or unauthorized way.".freeze, "Usage Notes: To perform a fixity check, a message digest calculated at some earlier time is compared with a message digest calculated at a later time. If the digests are the same, the object was not altered in the interim. Recommended practice is to use two or more message digests calculated by different algorithms. (Note that the terms “message digest” and “checksum” are commonly used interchangeably. However, the term “checksum” is more correctly used for the product of a cyclical redundancy check (CRC), whereas the term “message digest” refers to the result of a cryptographic hash function, which is what is referred to here.)\nThe act of performing a fixity check and the date it occurred would be recorded as an Event. The result of the check would be recorded as the eventOutcome. Therefore, only the messageDigestAlgorithm and messageDigest need to be recorded as objectCharacteristics for future comparison.\nRepresentation level: It could be argued that if a representation consists of a single file or if all the files comprised by a representation are combined (e.g., zipped) into a single file, then a fixity check could be performed on the representation. However, in both cases the fixity check is actually being performed on a file, which in this case happens to be coincidental with a representation.\nBitstream level: Message digests can be computed for bitstreams although they are not as common as with files. For example, the JPX format, which is a JPEG2000 format, supports the inclusion of MD5 or SHA-1 message digests in internal metadata that was calculated on any range of bytes of the file.".freeze],
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "stable".freeze,
       subClassOf: term(
-          intersectionOf: list("_:g18780".freeze, "_:g18820".freeze),
+          intersectionOf: list(term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasMessageDigestAlgorithm".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasMessageDigest".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          )),
           type: "http://www.w3.org/2002/07/owl#Class".freeze
         ),
       type: "http://www.w3.org/2002/07/owl#Class".freeze
@@ -135,7 +191,15 @@ module RDF::Vocab
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "stable".freeze,
       subClassOf: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("_:g15920".freeze, "_:g15960".freeze)
+          unionOf: list(term(
+            maxCardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasFormatDesignation".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            maxCardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasFormatRegistry".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ))
         ),
       type: "http://www.w3.org/2002/07/owl#Class".freeze
     term :FormatDesignation,
@@ -164,7 +228,15 @@ module RDF::Vocab
       comment: ["Creation / Maintenance Notes: Hardware environment information can be very difficult to provide. Many different hardware environments may apply; there are a huge number of combinations of maker and type of CPU, memory, video drivers, and so on. Although at least one hardware environment should be recorded, it is not necessary to record them all and each repository will have to make its own decisions about which hardware environments to record.\nBecause of the difficulty recording this information comprehensively, it would be optimal if central registries of environment information existed. In many cases the environment of a file object is directly associated with the format, making registry lookup by format feasible. In the absence of a global mechanism, repositories may be forced to develop their own local “registries” relating format to hwEnvironment.".freeze, "Definition: Hardware components needed by the software referenced in swName or the human user of the referenced software.".freeze],
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "stable".freeze,
       subClassOf: term(
-          intersectionOf: list("_:g16940".freeze, "_:g16980".freeze),
+          intersectionOf: list(term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasHardwareType".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasHardwareName".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          )),
           type: "http://www.w3.org/2002/07/owl#Class".freeze
         ),
       type: "http://www.w3.org/2002/07/owl#Class".freeze
@@ -245,7 +317,15 @@ module RDF::Vocab
       comment: [" Definition: The identifier and sequential context of the related resource".freeze, "Usage Notes: The related object may or may not be held within the preservation repository. Recommended practice is that objects reside within the repository unless there is a good reason to reference an object outside. Internal and external references should be clear.".freeze],
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "stable".freeze,
       subClassOf: term(
-          intersectionOf: list("_:g14700".freeze, "_:g14740".freeze),
+          intersectionOf: list(term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasRelatedObject".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasRelatedObjectSequence".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          )),
           type: "http://www.w3.org/2002/07/owl#Class".freeze
         ),
       type: "http://www.w3.org/2002/07/owl#Class".freeze
@@ -268,7 +348,15 @@ module RDF::Vocab
       comment: "Definition: The action(s) that the granting agency has allowed the repository.".freeze,
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "stable".freeze,
       subClassOf: [term(
-          intersectionOf: list("_:g17540".freeze, "_:g17580".freeze),
+          intersectionOf: list(term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasAct".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            maxCardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasTermOfGrant".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          )),
           type: "http://www.w3.org/2002/07/owl#Class".freeze
         ), term(
           maxCardinality: "1".freeze,
@@ -293,7 +381,23 @@ module RDF::Vocab
       comment: ["Definition: Information needed to use a digital signature to authenticate the signer of an object and/or the information contained in the object.".freeze, "Rationale: A repository may have a policy of generating digital signatures for files on ingest, or may have a need to store and later validate incoming digital signatures.".freeze, "Usage Notes: Several of the semantic components of signatureInformation are taken from the W3C’s XML-Signature Syntax and Processing; see www.w3.org/TR/2002/REC-xmldsig-core-20020212/ for more information on the structure and application of these semantic units.".freeze],
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "stable".freeze,
       subClassOf: term(
-          intersectionOf: list("_:g19340".freeze, "_:g19380".freeze, "_:g19420".freeze, "_:g19460".freeze),
+          intersectionOf: list(term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasSignatureEncoding".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasSignatureMethod".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasSignatureValidationRules".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasSignatureValue".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          )),
           type: "http://www.w3.org/2002/07/owl#Class".freeze
         ),
       type: "http://www.w3.org/2002/07/owl#Class".freeze
@@ -305,7 +409,15 @@ module RDF::Vocab
       comment: ["Creation / Maintenance Notes: If recording this explicitly, many different software environments may apply; for example, a particular object such as a PDF file may be viewable by several versions of several applications running under several operating systems and operating system versions. Although at least one software environment should be recorded, it is not necessary to record them all and each repository will have to make its own decisions about which software environments to record.\nAlso, what appears to the user as a single rendering program can have many dependencies, including system utilities, runtime libraries, and so on, which each might have their own dependencies in turn.\nAs with environment, metadata may be more efficiently managed in conjunction with a format registry either internal or external to a repository. In the absence of a global mechanism, repositories may be forced to develop their own local “registries” relating format to software environment.".freeze, "Definition: Software required to render or use the object.".freeze],
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "stable".freeze,
       subClassOf: term(
-          intersectionOf: list("_:g17760".freeze, "_:g17800".freeze),
+          intersectionOf: list(term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasSoftwareType".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasSoftwareName".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          )),
           type: "http://www.w3.org/2002/07/owl#Class".freeze
         ),
       type: "http://www.w3.org/2002/07/owl#Class".freeze
@@ -313,7 +425,15 @@ module RDF::Vocab
       comment: ["Definition: Information about the statute allowing use of the object.".freeze, "Usage Notes: When rights basis is a statute, statuteInformation should be provided.".freeze],
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "stable".freeze,
       subClassOf: ["http://www.loc.gov/premis/rdf/v1#RightsStatement".freeze, term(
-          intersectionOf: list("_:g15500".freeze, "_:g15540".freeze),
+          intersectionOf: list(term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasStatuteCitation".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            cardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasStatuteJurisdiction".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          )),
           type: "http://www.w3.org/2002/07/owl#Class".freeze
         )],
       type: "http://www.w3.org/2002/07/owl#Class".freeze
@@ -322,7 +442,15 @@ module RDF::Vocab
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "stable".freeze,
       subClassOf: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("_:g18340".freeze, "_:g18380".freeze)
+          unionOf: list(term(
+            maxCardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasContentLocation".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            maxCardinality: "1".freeze,
+            onProperty: "http://www.loc.gov/premis/rdf/v1#hasStorageMedium".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ))
         ),
       type: "http://www.w3.org/2002/07/owl#Class".freeze
     term :TermOfGrant,

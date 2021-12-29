@@ -493,7 +493,7 @@ module RDF::Vocab
       range: "http://www.w3.org/2000/01/rdf-schema#Class".freeze,
       type: "http://www.w3.org/ns/hydra/core#Link".freeze
     term :supportedOperation,
-      comment: "An operation supported by instances of the specific Hydra class or the target of the Hydra link".freeze,
+      comment: "An operation supported by instances of the specific Hydra class, or the target of the Hydra link, or IRI template.".freeze,
       domainIncludes: ["http://www.w3.org/2000/01/rdf-schema#Class".freeze, "http://www.w3.org/ns/hydra/core#Class".freeze, "http://www.w3.org/ns/hydra/core#Link".freeze, "http://www.w3.org/ns/hydra/core#SupportedProperty".freeze, "http://www.w3.org/ns/hydra/core#TemplatedLink".freeze],
       "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": "testing".freeze,
       isDefinedBy: "http://www.w3.org/ns/hydra/core".freeze,

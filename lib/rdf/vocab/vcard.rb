@@ -22,7 +22,62 @@ module RDF::Vocab
       comment: "To specify the components of the delivery address for the  object".freeze,
       equivalentClass: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("_:g14020".freeze, "_:g14060".freeze, "_:g14100".freeze, "_:g14140".freeze, "_:g14180".freeze)
+          unionOf: list(term(
+            intersectionOf: list(term(
+              onProperty: "http://www.w3.org/2006/vcard/ns#country-name".freeze,
+              someValuesFrom: "http://www.w3.org/2001/XMLSchema#string".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            ), term(
+              maxCardinality: "1".freeze,
+              onProperty: "http://www.w3.org/2006/vcard/ns#country-name".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            )),
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            intersectionOf: list(term(
+              onProperty: "http://www.w3.org/2006/vcard/ns#locality".freeze,
+              someValuesFrom: "http://www.w3.org/2001/XMLSchema#string".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            ), term(
+              maxCardinality: "1".freeze,
+              onProperty: "http://www.w3.org/2006/vcard/ns#locality".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            )),
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            intersectionOf: list(term(
+              onProperty: "http://www.w3.org/2006/vcard/ns#postal-code".freeze,
+              someValuesFrom: "http://www.w3.org/2001/XMLSchema#string".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            ), term(
+              maxCardinality: "1".freeze,
+              onProperty: "http://www.w3.org/2006/vcard/ns#postal-code".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            )),
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            intersectionOf: list(term(
+              onProperty: "http://www.w3.org/2006/vcard/ns#region".freeze,
+              someValuesFrom: "http://www.w3.org/2001/XMLSchema#string".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            ), term(
+              maxCardinality: "1".freeze,
+              onProperty: "http://www.w3.org/2006/vcard/ns#region".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            )),
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            intersectionOf: list(term(
+              onProperty: "http://www.w3.org/2006/vcard/ns#street-address".freeze,
+              someValuesFrom: "http://www.w3.org/2001/XMLSchema#string".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            ), term(
+              maxCardinality: "1".freeze,
+              onProperty: "http://www.w3.org/2006/vcard/ns#street-address".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            )),
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Address".freeze,
@@ -128,7 +183,16 @@ module RDF::Vocab
     term :Group,
       comment: "Object representing a group of persons or entities.  A group object will usually contain hasMember properties to specify the members of the group.".freeze,
       equivalentClass: term(
-          intersectionOf: list("_:g13740".freeze, "_:g13780".freeze),
+          intersectionOf: list(term(
+            onProperty: "http://www.w3.org/2006/vcard/ns#hasMember".freeze,
+            someValuesFrom: "http://www.w3.org/2006/vcard/ns#Kind".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          ), term(
+            "http://www.w3.org/2002/07/owl#minQualifiedCardinality": "1".freeze,
+            "http://www.w3.org/2002/07/owl#onClass": "http://www.w3.org/2006/vcard/ns#Kind".freeze,
+            onProperty: "http://www.w3.org/2006/vcard/ns#hasMember".freeze,
+            type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          )),
           type: "http://www.w3.org/2002/07/owl#Class".freeze
         ),
       "http://www.w3.org/2002/07/owl#disjointWith": ["http://www.w3.org/2006/vcard/ns#Individual".freeze, "http://www.w3.org/2006/vcard/ns#Location".freeze, "http://www.w3.org/2006/vcard/ns#Organization".freeze],
@@ -238,7 +302,62 @@ module RDF::Vocab
       comment: "To specify the components of the name of the object".freeze,
       equivalentClass: term(
           type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("_:g14320".freeze, "_:g14360".freeze, "_:g14400".freeze, "_:g14440".freeze, "_:g14480".freeze)
+          unionOf: list(term(
+            intersectionOf: list(term(
+              onProperty: "http://www.w3.org/2006/vcard/ns#additional-name".freeze,
+              someValuesFrom: "http://www.w3.org/2001/XMLSchema#string".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            ), term(
+              minCardinality: "0".freeze,
+              onProperty: "http://www.w3.org/2006/vcard/ns#additional-name".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            )),
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            intersectionOf: list(term(
+              onProperty: "http://www.w3.org/2006/vcard/ns#family-name".freeze,
+              someValuesFrom: "http://www.w3.org/2001/XMLSchema#string".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            ), term(
+              maxCardinality: "1".freeze,
+              onProperty: "http://www.w3.org/2006/vcard/ns#family-name".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            )),
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            intersectionOf: list(term(
+              onProperty: "http://www.w3.org/2006/vcard/ns#given-name".freeze,
+              someValuesFrom: "http://www.w3.org/2001/XMLSchema#string".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            ), term(
+              maxCardinality: "1".freeze,
+              onProperty: "http://www.w3.org/2006/vcard/ns#given-name".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            )),
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            intersectionOf: list(term(
+              onProperty: "http://www.w3.org/2006/vcard/ns#honorific-prefix".freeze,
+              someValuesFrom: "http://www.w3.org/2001/XMLSchema#string".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            ), term(
+              minCardinality: "0".freeze,
+              onProperty: "http://www.w3.org/2006/vcard/ns#honorific-prefix".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            )),
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ), term(
+            intersectionOf: list(term(
+              onProperty: "http://www.w3.org/2006/vcard/ns#honorific-suffix".freeze,
+              someValuesFrom: "http://www.w3.org/2001/XMLSchema#string".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            ), term(
+              minCardinality: "0".freeze,
+              onProperty: "http://www.w3.org/2006/vcard/ns#honorific-suffix".freeze,
+              type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+            )),
+            type: "http://www.w3.org/2002/07/owl#Class".freeze
+          ))
         ),
       isDefinedBy: "http://www.w3.org/2006/vcard/ns".freeze,
       label: "Name".freeze,

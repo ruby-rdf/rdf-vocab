@@ -304,7 +304,10 @@ module RDF
         uri: "http://pcdm.org/models#",
         source: "https://raw.githubusercontent.com/duraspace/pcdm/master/models.rdf"
       },
-      pplan:  {uri: "http://purl.org/net/p-plan#"},
+      pplan:  {
+        uri: "http://purl.org/net/p-plan#",
+        source: "https://www.opmw.org/p-plan.owl"
+      },
       premis: {
         uri: "http://www.loc.gov/premis/rdf/v1#",
         source: "http://www.loc.gov/premis/rdf/v1.rdf"
@@ -367,7 +370,7 @@ module RDF
       v:      {uri: "http://rdf.data-vocabulary.org/#", source: "etc/rdf.data-vocab.ttl"},
       vmd:    {uri: "http://data-vocabulary.org/", source: "etc/data-vocab.ttl"},
       vcard:  {uri: "http://www.w3.org/2006/vcard/ns#"},
-      void:   {uri: "http://rdfs.org/ns/void#", source: "http://vocab.deri.ie/void.rdf"},
+      void:   {uri: "http://rdfs.org/ns/void#", source: "https://lov.linkeddata.es/dataset/lov/vocabs/void/versions/2011-03-06.n3"},
       vs:     {uri: "http://www.w3.org/2003/06/sw-vocab-status/ns#"},
       wdrs:   {uri: "http://www.w3.org/2007/05/powder-s#"},
       wot:    {uri: "http://xmlns.com/wot/0.1/", source: "http://xmlns.com/wot/0.1/index.rdf"},
