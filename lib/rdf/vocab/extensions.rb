@@ -40,12 +40,12 @@ module RDF
           RDF::Vocab::VOCABS.transform_values(&:freeze))
       end
 
+      alias_method :_orig_from_sym, :from_sym
       ##
       # Return the vocabulary based on it's class_name symbol
       #
       # @param [Symbol] sym
       # @return [RDF::Vocabulary]
-      alias_method :_orig_from_sym, :from_sym
       def from_sym(sym)
         RDF::Vocab.const_defined?(sym.to_sym) ?
           RDF::Vocab.const_get(sym.to_sym) : _orig_from_sym(sym)
@@ -90,8 +90,8 @@ module RDF
       ##
       # Generate Turtle representation, specific to vocabularies
       #
-      # @param [RDF::Queryable] :graph Optional graph, otherwise uses statements from vocabulary.
-      # @param [Hash{#to_sym => String}] Prefixes to add to output
+      # @param [RDF::Queryable] graph Optional graph, otherwise uses statements from vocabulary.
+      # @param [Hash{#to_sym => String}] prefixes to add to output
       # @return [String]
       def to_ttl(graph: nil, prefixes: nil)
         require 'rdf/turtle'
@@ -170,8 +170,8 @@ module RDF
       ##
       # Generate JSON-LD representation, specific to vocabularies
       #
-      # @param [RDF::Queryable] :graph Optional graph, otherwise uses statements from vocabulary.
-      # @param [Hash{#to_sym => String}] Prefixes to add to output
+      # @param [RDF::Queryable] graph Optional graph, otherwise uses statements from vocabulary.
+      # @param [Hash{#to_sym => String}] prefixes to add to output
       # @return [String]
       def to_jsonld(graph: nil, prefixes: nil)
         require 'json/ld'
