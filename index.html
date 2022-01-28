@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; A library of RDF vocabularies for RDF.rb
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'>
+<h1 id="label-rdf-vocab">rdf-vocab</h1>
+
+<p>Common OWL/RDFS Vocabularies for use with Ruby <a href="https://ruby-rdf.github.io/rdf">RDF.rb</a></p>
+
+<p><a href="https://badge.fury.io/rb/rdf-vocab"><img src="https://badge.fury.io/rb/rdf-vocab.png"></a> <a href="https://github.com/ruby-rdf/rdf-vocab/actions?query=workflow%3ACI"><img src="https://github.com/ruby-rdf/rdf-vocab/workflows/CI/badge.svg?branch=develop"></a> <a href="https://coveralls.io/github/ruby-rdf/rdf-vocab?branch=develop"><img src="https://coveralls.io/repos/ruby-rdf/rdf-vocab/badge.svg?branch=develop"></a> <a href="https://gitter.im/ruby-rdf/rdf"><img src="https://badges.gitter.im/ruby-rdf/rdf.png"></a></p>
+
+<h2 id="label-Extensions">Extensions</h2>
+
+<p>This gem extends <code>RDF::Vocabulary</code> with <code>#to_ttl</code>, <code>#to_jsonld</code>, and <code>#to_html</code> methods to create special-purpose vocabulary serializations. The HTML version is templated using a Haml template to allow output to be customized.</p>
+
+<p>Also extends <code>RDF::Vocabulary::Format</code> with the <code>gen-vocab</code> command extension to the <code>rdf</code> executable.</p>
+
+<h3 id="label-Limiting+vocabularies+used+for+lookup">Limiting vocabularies used for lookup</h3>
+
+<p>As loading vocabularies can dominate processing time, the <code>RDF::Vocabulary.limit_vocabs</code> method can be used to set a specific set of vocabularies over which to reason. For example:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="RDF.html" title="RDF (module)">RDF</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="RDF/Vocabulary.html" title="RDF::Vocabulary (class)">Vocabulary</a></span></span><span class='period'>.</span><span class='id identifier rubyid_limit_vocabs'><span class='object_link'><a href="RDF/Vocabulary.html#limit_vocabs-class_method" title="RDF::Vocabulary.limit_vocabs (method)">limit_vocabs</a></span></span><span class='lparen'>(</span><span class='symbol'>:rdf</span><span class='comma'>,</span> <span class='symbol'>:rdf</span><span class='comma'>,</span> <span class='symbol'>:schema</span><span class='rparen'>)</span>
+</code></pre>
+
+<p>will limit the vocabularies which are returned from <code>RDF::Vocabulary.each</code>, which is used for reasoning and other operations over vocabularies and terms.</p>
+
+<h2 id="label-Vocabularies">Vocabularies</h2>
+<ul><li>
+<p>RDF::Vocab::ACL - <a href="http://www.w3.org/wiki/WebAccessControl">Web Access Control</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::AS - <a href="https://www.w3.org/ns/activitystreams#">Activity Streams 2.0</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::BF2 - <a href="http://id.loc.gov/ontologies/bibframe">BIBFRAME 2.0</a> (LoC)</p>
+</li><li>
+<p>RDF::Vocab::Bibframe - <a href="http://bibframe.org/vocab/">Bibliographic Framework Initiative</a> (LoC)</p>
+</li><li>
+<p>RDF::Vocab::BIBO - <a href="http://bibliontology.com">Bibliographic Ontology</a></p>
+</li><li>
+<p>RDF::Vocab::CC - <a href="http://creativecommons.org/ns#">Creative Commons Vocabulary</a> (Creative Commons)</p>
+</li><li>
+<p>RDF::Vocab::CERT - <a href="http://www.w3.org/ns/auth/cert#">Cert Ontology</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::CNT - <a href="http://www.w3.org/TR/Content-in-RDF10/">Representing Content in RDF</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::DataCite - <a href="http://purl.org/spar/datacite/">DataCite Ontology</a></p>
+</li><li>
+<p>RDF::Vocab::DBO - <a href="http://dbpedia.org/ontology/">The DBpedia Ontology</a></p>
+</li><li>
+<p>RDF::Vocab::DC - <a href="http://purl.org/dc/terms/">DCMI Metadata Terms</a> (DCMI)</p>
+</li><li>
+<p>RDF::Vocab::DC11 - <a href="http://purl.org/dc/elements/1.1/">Dublin Core Metadata Element Set</a> (DCMI)</p>
+</li><li>
+<p>RDF::Vocab::DCAT - <a href="http://www.w3.org/TR/vocab-dcat/">Data Catalog Vocabulary</a> (DCMI)</p>
+</li><li>
+<p>RDF::Vocab::DCMIType - <a href="http://dublincore.org/documents/dcmi-terms/">DCMI Type Vocabulary</a> (DCMI)</p>
+</li><li>
+<p>RDF::Vocab::DISCO - <a href="http://rdf-vocabulary.ddialliance.org/discovery#">DDI-RDF Discovery Vocabulary</a> (DDI)</p>
+</li><li>
+<p>RDF::Vocab::DOAP - <a href="https://github.com/edumbill/doap/wiki">Description of a Project (DOAP) vocabulary</a></p>
+</li><li>
+<p>RDF::Vocab::DWC - <a href="http://rs.tdwg.org/dwc/terms/">Darwin Core</a></p>
+</li><li>
+<p>RDF::Vocab::EARL - <a href="<http://www.w3.org/ns/earl#">Evaluation and Report Language (EARL) 1.0 Schema</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::EBUCore - <a href="http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#">EBUCore</a></p>
+</li><li>
+<p>RDF::Vocab::EDM - <a href="https://pro.europeana.eu/page/edm-documentation">Europeana Data Model (EDM)</a></p>
+</li><li>
+<p>RDF::Vocab::EXIF - <a href="http://www.w3.org/2003/12/exif/">Exif vocabulary workspace</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::Fcrepo4 - <a href="http://fedora.info/definitions/v4/repository">Fedora Commons Repository 4 Ontology</a></p>
+</li><li>
+<p>RDF::Vocab::FOAF - <a href="http://xmlns.com/foaf/spec/">Friend of a Friend (FOAF) vocabulary</a></p>
+</li><li>
+<p>RDF::Vocab::GEO - <a href="http://www.w3.org/2003/01/geo/wgs84_pos#">GEO Vocabulary</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::GEOJSON - <a href="https://purl.org/geojson/vocab#">GEOJSON Vocabulary</a></p>
+</li><li>
+<p>RDF::Vocab::GEONAMES - <a href="http://www.geonames.org/ontology#">GeoNames Ontology Vocabulary</a></p>
+</li><li>
+<p>RDF::Vocab::GR - <a href="http://www.heppnetz.de/projects/goodrelations/">Good Relations</a></p>
+</li><li>
+<p>RDF::Vocab::GS1 - <a href="http://gs1.org/voc/">GS1 Web Vocabulary for GS1 SmartSearch</a> (GS1)</p>
+</li><li>
+<p>RDF::Vocab::HT - <a href="http://www.w3.org/TR/HTTP-in-RDF10/">HTTP Vocabulary in RDF 1.0</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::HYDRA - <a href="http://www.w3.org/ns/hydra/core#">Hydra Core Vocabulary</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::IANA - <a href="http://www.iana.org/assignments/relation/">Link Relations</a> (IANA)</p>
+</li><li>
+<p>RDF::Vocab::ICAL - <a href="http://www.w3.org/2002/12/cal/">iCalendar vocabulary</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::Identifiers - <a href="http://id.loc.gov/vocabulary/identifiers.html">Standard Identifiers Scheme</a> (LoC)</p>
+</li><li>
+<p>RDF::Vocab::IIIF - <a href="http://iiif.io/api/presentation/2.0/">International Image Interoperability Framework Presentation API</a> (IIIF)</p>
+</li><li>
+<p>RDF::Vocab::JSONLD - <a href="http://www.w3.org/ns/json-ld">JSON-LD Vocabulary</a></p>
+</li><li>
+<p>RDF::Vocab::LDP - <a href="http://www.w3.org/TR/ldp/">Linked Data Platform</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::LRMI - <a href="http://dublincore.org/dcx/lrmi-terms/1.1/">Learning Resources Metadata Initiative</a> (DCMI)</p>
+</li><li>
+<p>RDF::Vocab::MA - <a href="http://www.w3.org/TR/mediaont-10/">Ontology for Media Resources</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::MADS - <a href="http://www.loc.gov/standards/mads/">Metadata Authority Description Schema</a> (LoC)</p>
+</li><li>
+<p>RDF::Vocab::MARCRelators - <a href="http://id.loc.gov/vocabulary/relators.html">MARC Code List for Relators</a> (LoC)</p>
+</li><li>
+<p>RDF::Vocab::MO - <a href="http://musicontology.com">Music Ontology</a></p>
+</li><li>
+<p>RDF::Vocab::MODS - <a href="http://www.loc.gov/standards/mods/">Metadata Object Description Schema</a> (LoC)</p>
+</li><li>
+<p>RDF::Vocab::NFO - <a href="http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#">NEPOMUK File Ontology</a> (NFO)</p>
+</li><li>
+<p>RDF::Vocab::OA - <a href="http://www.w3.org/ns/oa">Open Annotation Data Model</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::OG - <a href="http://ogp.me">Open Graph protocol</a></p>
+</li><li>
+<p>RDF::Vocab::OGC - <a href="http://ogp.me">Open Graph protocol classes</a></p>
+</li><li>
+<p>RDF::Vocab::ORE - <a href="http://www.openarchives.org/ore/1.0/rdfxml">Object Reuse and Exchange Ontology</a> (OAI)</p>
+</li><li>
+<p>RDF::Vocab::ORG - <a href="http://www.w3.org/TR/vocab-org/">Organization Ontology</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::PCDM - <a href="http://pcdm.org/models#">PCDM Ontology</a> (PCDM)</p>
+</li><li>
+<p>RDF::Vocab::PPLAN - <a href="http://www.opmw.org/model/p-plan/">P-Plan Ontology</a></p>
+</li><li>
+<p>RDF::Vocab::PREMIS - <a href="http://id.loc.gov/ontologies/premis.html">Preservation Metadata Implementation Strategies Ontology</a> (LoC)</p>
+</li><li>
+<p>RDF::Vocab::PremisEventType - <a href="http://id.loc.gov/vocabulary/preservation/eventType.html">PREMIS Event Type</a> (LoC)</p>
+</li><li>
+<p>RDF::Vocab::PROV - <a href="http://www.w3.org/TR/prov-o/">Provenance Ontology</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::PTR - <a href="https://www.w3.org/TR/Pointers-in-RDF10/">Pointer Methods in RDF 1.0</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::RDAU - <a href="http://www.rdaregistry.info/Elements/u/">RDA Vocabularies</a></p>
+</li><li>
+<p>RDF::Vocab::RightsStatements - <a href="https://rightsstatements.org/en/">Rights Statements for Cultural Heritage Institutions</a></p>
+</li><li>
+<p>RDF::Vocab::RSA - <a href="http://www.w3.org/ns/auth/rsa">The RSA Ontology</a></p>
+</li><li>
+<p>RDF::Vocab::RSS - <a href="http://web.resource.org/rss/1.0/">RDF Site Summary</a></p>
+</li><li>
+<p>RDF::Vocab::SCHEMA - <a href="http://schema.org">Schema.org</a></p>
+</li><li>
+<p>RDF::Vocab::SD - <a href="https://www.w3.org/TR/sparql11-service-description/">SPARQL Service Description</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::SH - <a href="https://www.w3.org/TR/shacl/">Shapes Constraint Language (SHACL)</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::SIOC - <a href="http://rdfs.org/sioc/spec/">Semantically-Interlinked Online Communities</a></p>
+</li><li>
+<p>RDF::Vocab::SiocServices - <a href="http://rdfs.org/sioc/spec/">SIOC Services</a> (SIOC)</p>
+</li><li>
+<p>RDF::Vocab::SiocTypes - <a href="http://rdfs.org/sioc/spec/">SIOC Types Ontology</a> (SIOC)</p>
+</li><li>
+<p>RDF::Vocab::SKOS - <a href="http://www.w3.org/TR/skos-reference/">Simple Knowledge Organization System</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::SKOSXL - <a href="http://www.w3.org/TR/skos-reference/skos-xl.html">SKOS eXtension for Labels</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::V - <a href="http://www.data-vocabulary.org">RDF data vocabulary</a></p>
+</li><li>
+<p>RDF::Vocab::VMD - <a href="http://www.data-vocabulary.org">RDF data vocabulary</a></p>
+</li><li>
+<p>RDF::Vocab::VCARD - <a href="http://www.w3.org/TR/vcard-rdf/">Ontology for vCards</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::VMD - <a href="http://www.data-vocabulary.org">RDF data vocabulary</a></p>
+</li><li>
+<p>RDF::Vocab::VOID - <a href="http://www.w3.org/TR/void/">Vocabulary of Interlinked Datasets</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::VS - <a href="http://www.w3.org/2003/06/sw-vocab-status/note.html">SemWeb Vocab Status ontology</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::WDRS - <a href="http://www.w3.org/TR/powder-primer/">Protocol for Web Description Resources</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::WOT - <a href="http://xmlns.com/wot/0.1/">Web of Trust</a></p>
+</li><li>
+<p>RDF::Vocab::XKOS - <a href="https://ddialliance.org/Specification/XKOS/1.2/OWL/xkos.html">XKOS An SKOS extension for representing statistical classifications</a> (DDI)</p>
+</li><li>
+<p>RDF::Vocab::XHTML - <a href="http://www.w3.org/1999/xhtml/">Extensible HyperText Markup Language</a> (W3C)</p>
+</li><li>
+<p>RDF::Vocab::XHV - <a href="http://www.w3.org/1999/xhtml/vocab">XHTML Vocabulary</a> (W3C)</p>
+</li></ul>
+
+<h2 id="label-Installation">Installation</h2>
+
+<p>Add to your Gemfile</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rdf-vocab</span><span class='tstring_end'>&quot;</span></span>
+</code></pre>
+
+<p>then</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_install'>install</span>
+</code></pre>
+
+<h2 id="label-Usage">Usage</h2>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>rdf/vocab</span><span class='tstring_end'>&quot;</span></span>
+</code></pre>
+
+<p>This will load all the vocabulary classes in the library.</p>
+
+<p>Also adds the <code>gen-vocab</code> command to the <code>rdf</code> command-line executable to generate specifically generated output in Turtle, JSON-LD, and HTML+RDFa for either built-in or arbitrary vocabularies. Other output serialization formats are also supported as generic RDF Writers and may lack the vocabulary-specific formatting of Turtle, JSON-LD, and HTML+RDFa.</p>
+
+<h2 id="label-Adding+new+vocabularies">Adding new vocabularies</h2>
+<ul><li>
+<p>First, add an entry to <code>lib/rdf/vocab.rb</code>, the key names contained within for guidance. For more information, see the documentation on <a href="https://ruby-rdf.github.io/rdf/RDF/Vocabulary">RDF::Vocabulary</a>.</p>
+</li><li>
+<p>Next, create an empty file in <code>lib/rdf/vocab</code> based on the key name for your vocabulary. For example, if you’ve added the vocabulary <code>:foo</code>, create a new empty file at <code>lib/rdf/vocab/foo.rb</code>.</p>
+</li><li>
+<p>Run <code>rake gen_vocabs</code>.</p>
+</li></ul>
+
+<h2 id="label-Authors">Authors</h2>
+<ul><li>
+<p><a href="https://github.com/dchandekstark">David Chandek-Stark</a></p>
+</li><li>
+<p><a href="https://github.com/acoburn">Aaron Coburn</a></p>
+</li><li>
+<p><a href="https://github.com/mjgiarlo">Michael J. Giarlo</a></p>
+</li><li>
+<p><a href="https://github.com/gkellogg">Gregg Kellogg</a></p>
+</li></ul>
+
+<h2 id="label-Contributing">Contributing</h2>
+
+<p>This repository uses <a href="https://github.com/nvie/gitflow">Git Flow</a> to mange development and release activity. All submissions <em>must</em> be on a feature branch based on the <em>develop</em> branch to ease staging and integration.</p>
+<ul><li>
+<p>Do your best to adhere to the existing coding conventions and idioms.</p>
+</li><li>
+<p>Don’t use hard tabs, and don’t leave trailing whitespace on any line.  Before committing, run <code>git diff --check</code> to make sure of this.</p>
+</li><li>
+<p>Do document every method you add using <a href="https://yardoc.org/">YARD</a> annotations. Read the  <a href="https://rubydoc.info/docs/yard/file/docs/GettingStarted.md">tutorial</a> or just look at the existing code for examples.</p>
+</li><li>
+<p>Don’t touch the <code>.gemspec</code> or <code>VERSION</code> files. If you need to change them,  do so on your private branch only.</p>
+</li><li>
+<p>Do note that in order for us to merge any non-trivial changes (as a rule  of thumb, additions larger than about 15 lines of code), we need an  explicit <a href="https://unlicense.org/#unlicensing-contributions">public domain dedication</a> on record from you,  which you will be asked to agree to on the first commit to a repo within the organization.  Note that the agreement applies to all repos in the <a href="https://github.com/ruby-rdf/">Ruby RDF</a> organization.</p>
+</li></ul>
+
+<h2 id="label-License">License</h2>
+
+<p>This is free and unencumbered public domain software. For more information, see <a href="https://unlicense.org">unlicense.org</a>/ or the accompanying <a href="file.LICENSE.html" title="LICENSE">LICENSE</a> file.</p>
+</div></div>
+
+      <div id="footer">
+  Generated on Fri Jan 28 20:36:35 2022 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.27 (ruby-3.1.0).
+</div>
+
+    </div>
+  </body>
+</html>
