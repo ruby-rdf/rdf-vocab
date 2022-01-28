@@ -12,6 +12,13 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Defines several standard RDF vocabularies}
   spec.homepage      = "https://github.com/ruby-rdf/rdf-vocab"
   spec.license       = "Unlicense"
+  gem.metadata           = {
+    "documentation_uri" => "https://ruby-rdf.github.io/rdf-vocab",
+    "bug_tracker_uri"   => "https://github.com/ruby-rdf/rdf-vocab/issues",
+    "homepage_uri"      => "https://github.com/ruby-rdf/rdf-vocab",
+    "mailing_list_uri"  => "https://lists.w3.org/Archives/Public/public-rdf-ruby/",
+    "source_code_uri"   => "https://github.com/ruby-rdf/rdf-vocab",
+  }
 
   spec.platform      = Gem::Platform::RUBY
   spec.files         = %w(README.md LICENSE VERSION) + Dir.glob('lib/**/*.rb')
