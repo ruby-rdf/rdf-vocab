@@ -6,6 +6,8 @@ require 'rdf/vocab/extensions'
 module RDF
   module Vocab
     autoload :VERSION,        'rdf/vocab/version'
+
+    # @!visibility private
     VOCABS = {
       acl:    {
         uri: "http://www.w3.org/ns/auth/acl#",

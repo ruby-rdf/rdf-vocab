@@ -3,437 +3,439 @@
 # This file generated automatically using rdf vocabulary format from http://fedora.info/definitions/v4/repository#
 require 'rdf'
 module RDF::Vocab
+  # Vocabulary for <http://fedora.info/definitions/v4/repository#>
+  # @!visibility private
   Fcrepo4 = Class.new(RDF::StrictVocabulary("http://fedora.info/definitions/v4/repository#")) do
 
     # Ontology definition
     ontology :"http://fedora.info/definitions/v4/repository#",
-      comment: "Ontology for the Fedora data model, intended primarily to make it possible to expose Fedora-curated RDF predicates via de-reference-able URIs.".freeze,
-      "http://www.w3.org/2002/07/owl#priorVersion": "http://fedora.info/definitions/v4/2015/05/19/repository".freeze,
-      "http://www.w3.org/2002/07/owl#versionInfo": "v4/2015/07/24".freeze,
-      label: "Fedora Commons Repository Ontology".freeze,
-      type: "http://www.w3.org/2002/07/owl#Ontology".freeze
+      comment: "Ontology for the Fedora data model, intended primarily to make it possible to expose Fedora-curated RDF predicates via de-reference-able URIs.",
+      "http://www.w3.org/2002/07/owl#priorVersion": "http://fedora.info/definitions/v4/2015/05/19/repository",
+      "http://www.w3.org/2002/07/owl#versionInfo": "v4/2015/07/24",
+      label: "Fedora Commons Repository Ontology",
+      type: "http://www.w3.org/2002/07/owl#Ontology"
 
     # Class definitions
     term :AnnotatedResource,
-      comment: "A Resource that maintains properties in its own right.".freeze,
-      label: "annotated resource".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Resource".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "A Resource that maintains properties in its own right.",
+      label: "annotated resource",
+      subClassOf: "http://fedora.info/definitions/v4/repository#Resource",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Binary,
-      comment: "A bitstream, with no further data properties.".freeze,
-      "http://www.w3.org/2002/07/owl#disjointWith": ["http://fedora.info/definitions/v4/repository#Container".freeze, "http://fedora.info/definitions/v4/repository#NonRdfSourceDescription".freeze],
-      label: "binary".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Resource".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "A bitstream, with no further data properties.",
+      "http://www.w3.org/2002/07/owl#disjointWith": ["http://fedora.info/definitions/v4/repository#Container", "http://fedora.info/definitions/v4/repository#NonRdfSourceDescription"],
+      label: "binary",
+      subClassOf: "http://fedora.info/definitions/v4/repository#Resource",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Configuration,
-      comment: "A container for transform configuration.".freeze,
-      label: "Fedora transform configuration".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "A container for transform configuration.",
+      label: "Fedora transform configuration",
+      subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Container,
-      comment: "A Fedora Container: the fundamental quantum of durable content in a Fedora repository.".freeze,
-      label: "Fedora Container".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#AnnotatedResource".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "A Fedora Container: the fundamental quantum of durable content in a Fedora repository.",
+      label: "Fedora Container",
+      subClassOf: "http://fedora.info/definitions/v4/repository#AnnotatedResource",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :EmbedResources,
-      comment: "The set of triples representing child resources of a given resource.".freeze,
-      label: "embed resources".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "The set of triples representing child resources of a given resource.",
+      label: "embed resources",
+      subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :InboundReferences,
-      comment: "The set of triples representing other repository resources which link to a given resource.".freeze,
-      label: "inbound references".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "The set of triples representing other repository resources which link to a given resource.",
+      label: "inbound references",
+      subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :NodeTypeConfiguration,
-      comment: "A container for transform node type configuration.".freeze,
-      label: "Fedora transform node type configuration".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "A container for transform node type configuration.",
+      label: "Fedora transform node type configuration",
+      subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :NonRdfSourceDescription,
-      comment: "A container for a bitstream and associated properties.".freeze,
-      "http://www.w3.org/2002/07/owl#disjointWith": "http://fedora.info/definitions/v4/repository#Container".freeze,
-      label: "Fedora NonRdfSourceDescription".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#AnnotatedResource".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "A container for a bitstream and associated properties.",
+      "http://www.w3.org/2002/07/owl#disjointWith": "http://fedora.info/definitions/v4/repository#Container",
+      label: "Fedora NonRdfSourceDescription",
+      subClassOf: "http://fedora.info/definitions/v4/repository#AnnotatedResource",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Pairtree,
-      comment: "An entity that is a an intermediary node created in a PairTree hierarchy.".freeze,
-      label: "pair tree".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "An entity that is a an intermediary node created in a PairTree hierarchy.",
+      label: "pair tree",
+      subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Relations,
-      comment: "An entity that may be related to other repository entities.".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "An entity that may be related to other repository entities.",
+      subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Resource,
-      comment: "An entity that has been committed to the repository for safekeeping. For example, Fedora objects and datastreams are resources. A Fixity is not, because the provenance of the instance is entirely internal to the repository.".freeze,
-      label: "Fedora resource".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "An entity that has been committed to the repository for safekeeping. For example, Fedora objects and datastreams are resources. A Fixity is not, because the provenance of the instance is entirely internal to the repository.",
+      label: "Fedora resource",
+      subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :ServerManaged,
-      comment: "The system-generated triples for a given resource (as opposed to explicity-declared properties).".freeze,
-      label: "server managed".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "The system-generated triples for a given resource (as opposed to explicity-declared properties).",
+      label: "server managed",
+      subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Skolem,
-      comment: "An entity that is a representation of an RDF Skolem node.".freeze,
-      label: "skolem".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Thing".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "An entity that is a representation of an RDF Skolem node.",
+      label: "skolem",
+      subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Thing,
-      comment: "Something that is contemplated in the Fedora repository model.".freeze,
-      label: "Fedora thing".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Something that is contemplated in the Fedora repository model.",
+      label: "Fedora thing",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Tombstone,
-      comment: "An entity that is a marker for a deleted node.".freeze,
-      label: "tombstone".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "An entity that is a marker for a deleted node.",
+      label: "tombstone",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Version,
-      label: "A snapshot of a Fedora object at a given point in time.".freeze,
-      subClassOf: "http://fedora.info/definitions/v4/repository#Container".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: "A snapshot of a Fedora object at a given point in time.",
+      subClassOf: "http://fedora.info/definitions/v4/repository#Container",
+      type: "http://www.w3.org/2002/07/owl#Class"
 
     # Property definitions
     property :UnmappedType,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :baseVersion,
-      domain: "http://fedora.info/definitions/v4/repository#Container".freeze,
-      label: "base version".freeze,
-      range: "http://fedora.info/definitions/v4/repository#Version".freeze,
-      type: ["http://www.w3.org/2002/07/owl#FunctionalProperty".freeze, "http://www.w3.org/2002/07/owl#ObjectProperty".freeze]
+      domain: "http://fedora.info/definitions/v4/repository#Container",
+      label: "base version",
+      range: "http://fedora.info/definitions/v4/repository#Version",
+      type: ["http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :clusterCacheMode,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :clusterMembers,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :clusterName,
-      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      range: "http://www.w3.org/2001/XMLSchema#string",
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :clusterNodeAddress,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :clusterNodeView,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :clusterPhysicalAddress,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :clusterSize,
-      range: "http://www.w3.org/2001/XMLSchema#nonNegativeInteger".freeze,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      range: "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :computedChecksum,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :computedSize,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :couldNotStoreProperty,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :created,
-      range: "http://www.w3.org/2001/XMLSchema#dateTime".freeze,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      range: "http://www.w3.org/2001/XMLSchema#dateTime",
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :createdBy,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :exportsAs,
-      label: "exports as".freeze,
-      range: "http://www.w3.org/2001/XMLSchema#anyURI".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      label: "exports as",
+      range: "http://www.w3.org/2001/XMLSchema#anyURI",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :frozenMixinTypes,
-      subPropertyOf: "http://fedora.info/definitions/v4/repository#mixinTypes".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://fedora.info/definitions/v4/repository#mixinTypes",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :frozenPrimaryType,
-      subPropertyOf: "http://fedora.info/definitions/v4/repository#primaryType".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://fedora.info/definitions/v4/repository#primaryType",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :frozenUuid,
-      subPropertyOf: "http://fedora.info/definitions/v4/repository#uuid".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://fedora.info/definitions/v4/repository#uuid",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :hasAccessRoles,
-      label: "has access roles".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      label: "has access roles",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasChild,
-      domain: "http://fedora.info/definitions/v4/repository#Container".freeze,
-      label: "has child".freeze,
+      domain: "http://fedora.info/definitions/v4/repository#Container",
+      label: "has child",
       range: term(
-          type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://fedora.info/definitions/v4/repository#NonRdfSourceDescription".freeze, "http://fedora.info/definitions/v4/repository#Container".freeze)
+          type: "http://www.w3.org/2002/07/owl#Class",
+          unionOf: list("http://fedora.info/definitions/v4/repository#NonRdfSourceDescription", "http://fedora.info/definitions/v4/repository#Container")
         ),
-      type: ["http://www.w3.org/2002/07/owl#InverseFunctionalProperty".freeze, "http://www.w3.org/2002/07/owl#ObjectProperty".freeze]
+      type: ["http://www.w3.org/2002/07/owl#InverseFunctionalProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :hasContent,
-      comment: "Indicates a binary in which content is stored for this datastream.".freeze,
-      domain: "http://fedora.info/definitions/v4/repository#NonRdfSourceDescription".freeze,
-      label: "has content".freeze,
-      range: "http://fedora.info/definitions/v4/repository#Binary".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Indicates a binary in which content is stored for this datastream.",
+      domain: "http://fedora.info/definitions/v4/repository#NonRdfSourceDescription",
+      label: "has content",
+      range: "http://fedora.info/definitions/v4/repository#Binary",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasDefaultWorkspace,
-      comment: "Indicates the default workspace of the repository.".freeze,
-      label: "has default workspace".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Indicates the default workspace of the repository.",
+      label: "has default workspace",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasFixityService,
-      label: "has fixity service".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      label: "has fixity service",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasLocation,
-      range: "http://www.w3.org/2001/XMLSchema#anyURI".freeze,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      range: "http://www.w3.org/2001/XMLSchema#anyURI",
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :hasMember,
-      comment: "Links to a newly-minted identifier which can be used to create a repository resource.".freeze,
-      label: "has member".freeze,
-      range: "http://www.w3.org/2001/XMLSchema#anyURI".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Links to a newly-minted identifier which can be used to create a repository resource.",
+      label: "has member",
+      range: "http://www.w3.org/2001/XMLSchema#anyURI",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasMoreResults,
-      label: "has more results".freeze,
-      range: "http://www.w3.org/2001/XMLSchema#boolean".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      label: "has more results",
+      range: "http://www.w3.org/2001/XMLSchema#boolean",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :hasNamespaces,
-      label: "has namespaces".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      label: "has namespaces",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasNodeType,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :hasParent,
-      domain: "http://fedora.info/definitions/v4/repository#Resource".freeze,
-      label: "has parent".freeze,
-      range: "http://fedora.info/definitions/v4/repository#Container".freeze,
-      type: ["http://www.w3.org/2002/07/owl#FunctionalProperty".freeze, "http://www.w3.org/2002/07/owl#ObjectProperty".freeze]
+      domain: "http://fedora.info/definitions/v4/repository#Resource",
+      label: "has parent",
+      range: "http://fedora.info/definitions/v4/repository#Container",
+      type: ["http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :hasResultsMember,
-      label: "has results member".freeze,
-      range: "http://fedora.info/definitions/v4/repository#Resource".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      label: "has results member",
+      range: "http://fedora.info/definitions/v4/repository#Resource",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasTransactionProvider,
-      label: "has transaction provider".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      label: "has transaction provider",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :hasVersion,
-      domain: "http://fedora.info/definitions/v4/repository#Container".freeze,
-      label: "has version".freeze,
-      range: "http://fedora.info/definitions/v4/repository#Version".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      domain: "http://fedora.info/definitions/v4/repository#Container",
+      label: "has version",
+      range: "http://fedora.info/definitions/v4/repository#Version",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasVersionLabel,
-      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      range: "http://www.w3.org/2001/XMLSchema#string",
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :hasVersions,
-      label: "has versions".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      label: "has versions",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasWorkspace,
-      comment: "Links to a workspace of the repository.".freeze,
-      label: "has workspace".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Links to a workspace of the repository.",
+      label: "has workspace",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasWorkspaces,
-      label: "has workspaces".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      label: "has workspaces",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :isCheckedOut,
-      range: "http://www.w3.org/2001/XMLSchema#boolean".freeze,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      range: "http://www.w3.org/2001/XMLSchema#boolean",
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :isContentOf,
-      comment: "Indicates a datastream for which this resource contains the content. ".freeze,
-      domain: "http://fedora.info/definitions/v4/repository#Binary".freeze,
-      label: "is content of".freeze,
-      range: "http://fedora.info/definitions/v4/repository#NonRdfSourceDescription".freeze,
-      type: ["http://www.w3.org/2002/07/owl#InverseFunctionalProperty".freeze, "http://www.w3.org/2002/07/owl#ObjectProperty".freeze]
+      comment: "Indicates a datastream for which this resource contains the content. ",
+      domain: "http://fedora.info/definitions/v4/repository#Binary",
+      label: "is content of",
+      range: "http://fedora.info/definitions/v4/repository#NonRdfSourceDescription",
+      type: ["http://www.w3.org/2002/07/owl#InverseFunctionalProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :lastModified,
-      range: "http://www.w3.org/2001/XMLSchema#dateTime".freeze,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      range: "http://www.w3.org/2001/XMLSchema#dateTime",
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :lastModifiedBy,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :mixinTypes,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :numFixityChecks,
-      range: "http://www.w3.org/2001/XMLSchema#nonNegativeInteger".freeze,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      range: "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :numFixityErrors,
-      range: "http://www.w3.org/2001/XMLSchema#nonNegativeInteger".freeze,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      range: "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :numFixityRepaired,
-      range: "http://www.w3.org/2001/XMLSchema#nonNegativeInteger".freeze,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      range: "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :numberOfChildren,
-      range: "http://www.w3.org/2001/XMLSchema#nonNegativeInteger".freeze,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      range: "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :objectCount,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :objectSize,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :predecessors,
-      domain: "http://fedora.info/definitions/v4/repository#Version".freeze,
-      label: "predecessors".freeze,
-      range: "http://fedora.info/definitions/v4/repository#Version".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      domain: "http://fedora.info/definitions/v4/repository#Version",
+      label: "predecessors",
+      range: "http://fedora.info/definitions/v4/repository#Version",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :primaryType,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryCustomRepName,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryIdentifierStability,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryJcrRepositoryName,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryJcrRepositoryVendor,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryJcrRepositoryVendorUrl,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryJcrRepositoryVersion,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryJcrSpecificationName,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryJcrSpecificationVersion,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryLevel1Supported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryLevel2Supported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryNodeTypeManagementAutocreatedDefinitionsSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryNodeTypeManagementInheritance,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryNodeTypeManagementMultipleBinaryPropertiesSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryNodeTypeManagementMultivaluedPropertiesSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryNodeTypeManagementOrderableChildNodesSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryNodeTypeManagementOverridesSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryNodeTypeManagementPrimaryItemNameSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryNodeTypeManagementPropertyTypes,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryNodeTypeManagementResidualDefinitionsSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryNodeTypeManagementSameNameSiblingsSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryNodeTypeManagementUpdateInUseSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryNodeTypeManagementValueConstraintsSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionAccessControlSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionActivitiesSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionBaselinesSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionJournaledObservationSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionLifecycleSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionLockingSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionNodeAndPropertyWithSameNameSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionNodeTypeManagementSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionObservationSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionQuerySqlSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionRetentionSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionShareableNodesSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionSimpleVersioningSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionTransactionsSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionUnfiledContentSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionUpdateMixinNodeTypesSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionUpdatePrimaryNodeTypeSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionVersioningSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionWorkspaceManagementSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionXmlExportSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryOptionXmlImportSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryQueryFullTextSearchSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryQueryJoins,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryQueryStoredQueriesSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryQueryXpathDocOrder,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryQueryXpathPosIndex,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :repositoryWriteSupported,
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :sparql,
-      label: "has sparql service".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      label: "has sparql service",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :uuid,
-      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :writable,
-      label: "writable".freeze,
-      range: "http://www.w3.org/2001/XMLSchema#boolean".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      label: "writable",
+      range: "http://www.w3.org/2001/XMLSchema#boolean",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
   end
 end
