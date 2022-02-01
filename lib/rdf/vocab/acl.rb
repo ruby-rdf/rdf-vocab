@@ -15,11 +15,11 @@ module RDF::Vocab
     # Class definitions
     term :Access,
       comment: "Any kind of access to a resource. Don't use this, use R W and RW",
-      label: "access",
+      label: {en: "access"},
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :Append,
       comment: "Append accesses are specific write access which only add information, and do not remove information.\n    For text files, for example, append access allows bytes to be added onto the end of the file.\n    For RDF graphs, Append access allows adds triples to the graph but does not remove any.\n    Append access is useful for dropbox functionality.\n    Dropbox can be used for link notification, which the information added is a notification\n    that a some link has been made elsewhere relevant to the given resource.\n    ",
-      label: "append",
+      label: {en: "append"},
       subClassOf: ["http://www.w3.org/ns/auth/acl#Access", "http://www.w3.org/ns/auth/acl#Write"],
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :AuthenticatedAgent,
@@ -33,7 +33,7 @@ module RDF::Vocab
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :Control,
       comment: "Allows read/write access to the ACL for the resource(s)",
-      label: "control",
+      label: {en: "control"},
       subClassOf: "http://www.w3.org/ns/auth/acl#Access",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :Origin,
@@ -43,11 +43,11 @@ module RDF::Vocab
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :Read,
       comment: "The class of read operations",
-      label: "read",
+      label: {en: "read"},
       subClassOf: "http://www.w3.org/ns/auth/acl#Access",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :Write,
-      label: "write",
+      label: {en: "write"},
       subClassOf: "http://www.w3.org/ns/auth/acl#Access",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
 
@@ -101,7 +101,7 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :delegates,
       comment: "Delegates a person or another agent to act on behalf of the agent.\n    For example, Alice delegates Bob to act on behalf of Alice for ACL purposes.",
-      label: "delegates",
+      label: {en: "delegates"},
       range: "http://xmlns.com/foaf/0.1/Agent",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :mode,
@@ -119,7 +119,7 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :owner,
       comment: "The person or other agent which owns this.\n    For example, the owner of a file in a filesystem.\n    There is a sense of right to control.   Typically defaults to the agent who craeted\n    something but can be changed.",
-      label: "owner",
+      label: {en: "owner"},
       range: "http://xmlns.com/foaf/0.1/Agent",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
   end

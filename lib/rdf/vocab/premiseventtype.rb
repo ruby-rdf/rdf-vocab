@@ -58,7 +58,7 @@ module RDF::Vocab
           "http://purl.org/vocab/changeset/schema#subjectOfChange": "http://id.loc.gov/vocabulary/preservation/eventType",
           type: "http://purl.org/vocab/changeset/schema#ChangeSet"
         )],
-      label: "Event Type",
+      label: {en: "Event Type"},
       type: ["http://www.loc.gov/mads/rdf/v1#MADSScheme", "http://www.w3.org/2004/02/skos/core#ConceptScheme"]
 
     # Extra definitions

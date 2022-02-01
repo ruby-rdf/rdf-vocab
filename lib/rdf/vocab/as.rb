@@ -9,119 +9,119 @@ module RDF::Vocab
 
     # Ontology definition
     ontology :"https://www.w3.org/ns/activitystreams#",
-      comment: "Extended Activity Streams 2.0 Vocabulary",
+      comment: {en: "Extended Activity Streams 2.0 Vocabulary"},
       "http://www.w3.org/2002/07/owl#imports": "http://www.w3.org/ns/prov#",
-      label: "Activity Streams 2.0",
+      label: {en: "Activity Streams 2.0"},
       type: "http://www.w3.org/2002/07/owl#Ontology"
 
     # Class definitions
     term :Accept,
-      comment: "Actor accepts the Object",
-      label: "Accept",
+      comment: {en: "Actor accepts the Object"},
+      label: {en: "Accept"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Activity,
-      comment: "An Object representing some form of Action that has been taken",
-      label: "Activity",
+      comment: {en: "An Object representing some form of Action that has been taken"},
+      label: {en: "Activity"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Object",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Add,
-      comment: "To Add an Object or Link to Something",
-      label: "Add",
+      comment: {en: "To Add an Object or Link to Something"},
+      label: {en: "Add"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Announce,
-      comment: "Actor announces the object to the target",
-      label: "Announce",
+      comment: {en: "Actor announces the object to the target"},
+      label: {en: "Announce"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Application,
-      comment: "Represents a software application of any sort",
-      label: "Application",
+      comment: {en: "Represents a software application of any sort"},
+      label: {en: "Application"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Object",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Arrive,
-      comment: "To Arrive Somewhere (can be used, for instance, to indicate that a particular entity is currently located somewhere, e.g. a \"check-in\")",
-      label: "Arrive",
+      comment: {en: "To Arrive Somewhere (can be used, for instance, to indicate that a particular entity is currently located somewhere, e.g. a \"check-in\")"},
+      label: {en: "Arrive"},
       subClassOf: "https://www.w3.org/ns/activitystreams#IntransitiveActivity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Article,
-      comment: "A written work. Typically several paragraphs long. For example, a blog post or a news article.",
-      label: "Article",
+      comment: {en: "A written work. Typically several paragraphs long. For example, a blog post or a news article."},
+      label: {en: "Article"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Object",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Audio,
-      comment: "An audio file",
-      label: "Audio",
+      comment: {en: "An audio file"},
+      label: {en: "Audio"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Document",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Block,
-      label: "Block",
+      label: {en: "Block"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Ignore",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Collection,
-      comment: "An ordered or unordered collection of Objects or Links",
-      label: "Collection",
+      comment: {en: "An ordered or unordered collection of Objects or Links"},
+      label: {en: "Collection"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Object",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :CollectionPage,
-      comment: "A subset of items from a Collection",
-      label: "CollectionPage",
+      comment: {en: "A subset of items from a Collection"},
+      label: {en: "CollectionPage"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Collection",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Create,
-      comment: "To Create Something",
-      label: "Create",
+      comment: {en: "To Create Something"},
+      label: {en: "Create"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Delete,
-      comment: "To Delete Something",
-      label: "Delete",
+      comment: {en: "To Delete Something"},
+      label: {en: "Delete"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Dislike,
-      comment: "The actor dislikes the object",
-      label: "Dislike",
+      comment: {en: "The actor dislikes the object"},
+      label: {en: "Dislike"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Document,
-      comment: "Represents a digital document/file of any sort",
-      label: "Document",
+      comment: {en: "Represents a digital document/file of any sort"},
+      label: {en: "Document"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Object",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Event,
-      comment: "An Event of any kind",
-      label: "Event",
+      comment: {en: "An Event of any kind"},
+      label: {en: "Event"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Object",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Flag,
-      comment: "To flag something (e.g. flag as inappropriate, flag as spam, etc)",
-      label: "Flag",
+      comment: {en: "To flag something (e.g. flag as inappropriate, flag as spam, etc)"},
+      label: {en: "Flag"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Follow,
-      comment: "To Express Interest in Something",
-      label: "Follow",
+      comment: {en: "To Express Interest in Something"},
+      label: {en: "Follow"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Group,
-      comment: "A Group of any kind.",
-      label: "Group",
+      comment: {en: "A Group of any kind."},
+      label: {en: "Group"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Object",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Ignore,
-      comment: "Actor is ignoring the Object",
-      label: "Ignore",
+      comment: {en: "Actor is ignoring the Object"},
+      label: {en: "Ignore"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Image,
-      comment: "An Image file",
-      label: "Image",
+      comment: {en: "An Image file"},
+      label: {en: "Image"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Document",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :IntransitiveActivity,
-      comment: "An Activity that has no direct object",
-      label: "IntransitiveActivity",
+      comment: {en: "An Activity that has no direct object"},
+      label: {en: "IntransitiveActivity"},
       subClassOf: ["https://www.w3.org/ns/activitystreams#Activity", term(
           maxCardinality: "0",
           onProperty: "https://www.w3.org/ns/activitystreams#object",
@@ -129,61 +129,61 @@ module RDF::Vocab
         )],
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Invite,
-      comment: "To invite someone or something to something",
-      label: "Invite",
+      comment: {en: "To invite someone or something to something"},
+      label: {en: "Invite"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Offer",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Join,
-      comment: "To Join Something",
-      label: "Join",
+      comment: {en: "To Join Something"},
+      label: {en: "Join"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Leave,
-      comment: "To Leave Something",
-      label: "Leave",
+      comment: {en: "To Leave Something"},
+      label: {en: "Leave"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Like,
-      comment: "To Like Something",
-      label: "Like",
+      comment: {en: "To Like Something"},
+      label: {en: "Like"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Link,
-      comment: "Represents a qualified reference to another resource. Patterned after the RFC5988 Web Linking Model",
+      comment: {en: "Represents a qualified reference to another resource. Patterned after the RFC5988 Web Linking Model"},
       "http://www.w3.org/2002/07/owl#disjointWith": "https://www.w3.org/ns/activitystreams#Object",
-      label: "Link",
+      label: {en: "Link"},
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Listen,
-      comment: "The actor listened to the object",
-      label: "Listen",
+      comment: {en: "The actor listened to the object"},
+      label: {en: "Listen"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Mention,
-      comment: "A specialized Link that represents an @mention",
-      label: "Mention",
+      comment: {en: "A specialized Link that represents an @mention"},
+      label: {en: "Mention"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Link",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Move,
       comment: "The actor is moving the object. The target specifies where the object is moving to. The origin specifies where the object is moving from.",
-      label: "Move",
+      label: {en: "Move"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Note,
-      comment: "A Short note, typically less than a single paragraph. A \"tweet\" is an example, or a \"status update\"",
-      label: "Note",
+      comment: {en: "A Short note, typically less than a single paragraph. A \"tweet\" is an example, or a \"status update\""},
+      label: {en: "Note"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Object",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Object,
-      label: "Object",
+      label: {en: "Object"},
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Offer,
-      comment: "To Offer something to someone or something",
-      label: "Offer",
+      comment: {en: "To Offer something to someone or something"},
+      label: {en: "Offer"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :OrderedCollection,
-      comment: "A variation of Collection in which items are strictly ordered",
-      label: "OrderedCollection",
+      comment: {en: "A variation of Collection in which items are strictly ordered"},
+      label: {en: "OrderedCollection"},
       subClassOf: term(
           intersectionOf: list("https://www.w3.org/ns/activitystreams#Collection", term(
             allValuesFrom: term(
@@ -203,13 +203,13 @@ module RDF::Vocab
         ),
       type: "http://www.w3.org/2002/07/owl#Class"
     term :OrderedCollectionPage,
-      comment: "An ordered subset of items from an OrderedCollection",
-      label: "OrderedCollectionPage",
+      comment: {en: "An ordered subset of items from an OrderedCollection"},
+      label: {en: "OrderedCollectionPage"},
       subClassOf: ["https://www.w3.org/ns/activitystreams#CollectionPage", "https://www.w3.org/ns/activitystreams#OrderedCollection"],
       type: "http://www.w3.org/2002/07/owl#Class"
     term :OrderedItems,
-      comment: "A rdf:List variant for Objects and Links",
-      label: "OrderedItems",
+      comment: {en: "A rdf:List variant for Objects and Links"},
+      label: {en: "OrderedItems"},
       subClassOf: term(
           intersectionOf: list("http://www.w3.org/1999/02/22-rdf-syntax-ns#List", term(
             allValuesFrom: term(
@@ -227,106 +227,106 @@ module RDF::Vocab
         ),
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Organization,
-      comment: "An Organization",
-      label: "Organization",
+      comment: {en: "An Organization"},
+      label: {en: "Organization"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Object",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Page,
-      comment: "A Web Page",
-      label: "Page",
+      comment: {en: "A Web Page"},
+      label: {en: "Page"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Object",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Person,
-      comment: "A Person",
-      label: "Person",
+      comment: {en: "A Person"},
+      label: {en: "Person"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Object",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Place,
-      comment: "A physical or logical location",
-      label: "Place",
+      comment: {en: "A physical or logical location"},
+      label: {en: "Place"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Object",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Profile,
-      comment: "A Profile Document",
-      label: "Profile",
+      comment: {en: "A Profile Document"},
+      label: {en: "Profile"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Object",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Question,
-      comment: "A question of any sort.",
-      label: "Question",
+      comment: {en: "A question of any sort."},
+      label: {en: "Question"},
       subClassOf: "https://www.w3.org/ns/activitystreams#IntransitiveActivity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Read,
-      comment: "The actor read the object",
-      label: "Read",
+      comment: {en: "The actor read the object"},
+      label: {en: "Read"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Reject,
-      comment: "Actor rejects the Object",
-      label: "Reject",
+      comment: {en: "Actor rejects the Object"},
+      label: {en: "Reject"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Relationship,
-      comment: "Represents a Social Graph relationship between two Individuals (indicated by the 'a' and 'b' properties)",
-      label: "Relationship",
+      comment: {en: "Represents a Social Graph relationship between two Individuals (indicated by the 'a' and 'b' properties)"},
+      label: {en: "Relationship"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Object",
       type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement", "http://www.w3.org/2002/07/owl#Class"]
     term :Remove,
-      comment: "To Remove Something",
-      label: "Remove",
+      comment: {en: "To Remove Something"},
+      label: {en: "Remove"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Service,
-      comment: "A service provided by some entity",
-      label: "Service",
+      comment: {en: "A service provided by some entity"},
+      label: {en: "Service"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Object",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :TentativeAccept,
-      comment: "Actor tentatively accepts the Object",
-      label: "TentativeAccept",
+      comment: {en: "Actor tentatively accepts the Object"},
+      label: {en: "TentativeAccept"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Accept",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :TentativeReject,
-      comment: "Actor tentatively rejects the object",
-      label: "TentativeReject",
+      comment: {en: "Actor tentatively rejects the object"},
+      label: {en: "TentativeReject"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Reject",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Tombstone,
-      comment: "A placeholder for a deleted object",
-      label: "Tombstone",
+      comment: {en: "A placeholder for a deleted object"},
+      label: {en: "Tombstone"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Object",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Travel,
       comment: "The actor is traveling to the target. The origin specifies where the actor is traveling from.",
-      label: "Travel",
+      label: {en: "Travel"},
       subClassOf: "https://www.w3.org/ns/activitystreams#IntransitiveActivity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Undo,
-      comment: "To Undo Something. This would typically be used to indicate that a previous Activity has been undone.",
-      label: "Undo",
+      comment: {en: "To Undo Something. This would typically be used to indicate that a previous Activity has been undone."},
+      label: {en: "Undo"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Update,
-      comment: "To Update/Modify Something",
-      label: "Update",
+      comment: {en: "To Update/Modify Something"},
+      label: {en: "Update"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Video,
-      comment: "A Video document of any kind.",
-      label: "Video",
+      comment: {en: "A Video document of any kind."},
+      label: {en: "Video"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Document",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :View,
-      comment: "The actor viewed the object",
-      label: "View",
+      comment: {en: "The actor viewed the object"},
+      label: {en: "View"},
       subClassOf: "https://www.w3.org/ns/activitystreams#Activity",
       type: "http://www.w3.org/2002/07/owl#Class"
 
     # Property definitions
     property :accuracy,
-      comment: "Specifies the accuracy around the point established by the longitude and latitude",
+      comment: {en: "Specifies the accuracy around the point established by the longitude and latitude"},
       domain: "https://www.w3.org/ns/activitystreams#Place",
-      label: "accuracy",
+      label: {en: "accuracy"},
       range: term(
           "http://www.w3.org/2002/07/owl#onDatatype": "http://www.w3.org/2001/XMLSchema#float",
           "http://www.w3.org/2002/07/owl#withRestrictions": list(term(
@@ -336,9 +336,9 @@ module RDF::Vocab
         ),
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :actor,
-      comment: "Subproperty of as:attributedTo that identifies the primary actor",
+      comment: {en: "Subproperty of as:attributedTo that identifies the primary actor"},
       domain: "https://www.w3.org/ns/activitystreams#Activity",
-      label: "actor",
+      label: {en: "actor"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
@@ -346,15 +346,15 @@ module RDF::Vocab
       subPropertyOf: "https://www.w3.org/ns/activitystreams#attributedTo",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :altitude,
-      comment: "The altitude of a place",
+      comment: {en: "The altitude of a place"},
       domain: "https://www.w3.org/ns/activitystreams#Place",
-      label: "altitude",
+      label: {en: "altitude"},
       range: "http://www.w3.org/2001/XMLSchema#float",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :anyOf,
-      comment: "Describes a possible inclusive answer or option for a question.",
+      comment: {en: "Describes a possible inclusive answer or option for a question."},
       domain: "https://www.w3.org/ns/activitystreams#Question",
-      label: "oneOf",
+      label: {en: "oneOf"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
@@ -363,7 +363,7 @@ module RDF::Vocab
     property :attachment,
       domain: "https://www.w3.org/ns/activitystreams#Object",
       equivalentProperty: "https://www.w3.org/ns/activitystreams#attachments",
-      label: "attachment",
+      label: {en: "attachment"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Link", "https://www.w3.org/ns/activitystreams#Object")
@@ -371,19 +371,19 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :attachments,
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "attachments",
+      label: {en: "attachments"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
         ),
       type: ["http://www.w3.org/2002/07/owl#DeprecatedProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :attributedTo,
-      comment: "Identifies an entity to which an object is attributed",
+      comment: {en: "Identifies an entity to which an object is attributed"},
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
         ),
-      label: "attributedTo",
+      label: {en: "attributedTo"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
@@ -391,16 +391,16 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :audience,
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "audience",
+      label: {en: "audience"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
         ),
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :author,
-      comment: "Identifies the author of an object. Deprecated. Use as:attributedTo instead",
+      comment: {en: "Identifies the author of an object. Deprecated. Use as:attributedTo instead"},
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "author",
+      label: {en: "author"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
@@ -409,7 +409,7 @@ module RDF::Vocab
       type: ["http://www.w3.org/2002/07/owl#DeprecatedProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :bcc,
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "bcc",
+      label: {en: "bcc"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
@@ -417,7 +417,7 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :bto,
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "bto",
+      label: {en: "bto"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
@@ -425,16 +425,16 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :cc,
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "cc",
+      label: {en: "cc"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
         ),
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :content,
-      comment: "The content of the object.",
+      comment: {en: "The content of the object."},
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "content",
+      label: {en: "content"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list(term(
@@ -443,9 +443,9 @@ module RDF::Vocab
         ),
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :context,
-      comment: "Specifies the context within which an object exists or an activity was performed",
+      comment: {en: "Specifies the context within which an object exists or an activity was performed"},
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "context",
+      label: {en: "context"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
@@ -453,84 +453,84 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :current,
       domain: "https://www.w3.org/ns/activitystreams#Collection",
-      label: "current",
+      label: {en: "current"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#CollectionPage", "https://www.w3.org/ns/activitystreams#Link")
         ),
       type: ["http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :deleted,
-      comment: "Specifies the date and time the object was deleted",
+      comment: {en: "Specifies the date and time the object was deleted"},
       domain: "https://www.w3.org/ns/activitystreams#Tombstone",
-      label: "deleted",
+      label: {en: "deleted"},
       range: "http://www.w3.org/2001/XMLSchema#dateTime",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :describes,
-      comment: "On a Profile object, describes the object described by the profile",
+      comment: {en: "On a Profile object, describes the object described by the profile"},
       domain: "https://www.w3.org/ns/activitystreams#Profile",
-      label: "describes",
+      label: {en: "describes"},
       range: "https://www.w3.org/ns/activitystreams#Object",
       type: ["http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :downstreamDuplicates,
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "downstreamDuplicates",
+      label: {en: "downstreamDuplicates"},
       range: "http://www.w3.org/2001/XMLSchema#anyURI",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#DeprecatedProperty"]
     property :duration,
-      comment: "The duration of the object",
+      comment: {en: "The duration of the object"},
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "duration",
+      label: {en: "duration"},
       range: "http://www.w3.org/2001/XMLSchema#duration",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :endTime,
-      comment: "The ending time of the object",
+      comment: {en: "The ending time of the object"},
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "endTime",
+      label: {en: "endTime"},
       range: "http://www.w3.org/2001/XMLSchema#dateTime",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :first,
       domain: "https://www.w3.org/ns/activitystreams#Collection",
-      label: "first",
+      label: {en: "first"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#CollectionPage", "https://www.w3.org/ns/activitystreams#Link")
         ),
       type: ["http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :formerType,
-      comment: "On a Tombstone object, describes the former type of the deleted object",
+      comment: {en: "On a Tombstone object, describes the former type of the deleted object"},
       domain: "https://www.w3.org/ns/activitystreams#Tombstone",
-      label: "formerType",
+      label: {en: "formerType"},
       range: "https://www.w3.org/ns/activitystreams#Object",
       type: ["http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :generator,
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "generator",
+      label: {en: "generator"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
         ),
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :height,
-      comment: "The display height expressed as device independent pixels",
+      comment: {en: "The display height expressed as device independent pixels"},
       domain: "https://www.w3.org/ns/activitystreams#Link",
-      label: "height",
+      label: {en: "height"},
       range: "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :href,
-      comment: "The target URI of the Link",
+      comment: {en: "The target URI of the Link"},
       domain: "https://www.w3.org/ns/activitystreams#Link",
-      label: "href",
+      label: {en: "href"},
       range: "http://www.w3.org/2001/XMLSchema#anyURI",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :hreflang,
-      comment: "A hint about the language of the referenced resource",
+      comment: {en: "A hint about the language of the referenced resource"},
       domain: "https://www.w3.org/ns/activitystreams#Link",
-      label: "hreflang",
+      label: {en: "hreflang"},
       range: "http://www.w3.org/2001/XMLSchema#language",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :icon,
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "icon",
+      label: {en: "icon"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Image", "https://www.w3.org/ns/activitystreams#Link")
@@ -541,12 +541,12 @@ module RDF::Vocab
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Link", "https://www.w3.org/ns/activitystreams#Object")
         ),
-      label: "id",
+      label: {en: "id"},
       range: "http://www.w3.org/2001/XMLSchema#anyURI",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#DeprecatedProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :image,
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "image",
+      label: {en: "image"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Image", "https://www.w3.org/ns/activitystreams#Link")
@@ -554,16 +554,16 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :inReplyTo,
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "inReplyTo",
+      label: {en: "inReplyTo"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
         ),
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :instrument,
-      comment: "Indentifies an object used (or to be used) to complete an activity",
+      comment: {en: "Indentifies an object used (or to be used) to complete an activity"},
       domain: "https://www.w3.org/ns/activitystreams#Activity",
-      label: "instrument",
+      label: {en: "instrument"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
@@ -571,7 +571,7 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :items,
       domain: "https://www.w3.org/ns/activitystreams#Collection",
-      label: "items",
+      label: {en: "items"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list(term(
@@ -582,39 +582,39 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :last,
       domain: "https://www.w3.org/ns/activitystreams#Collection",
-      label: "last",
+      label: {en: "last"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#CollectionPage", "https://www.w3.org/ns/activitystreams#Link")
         ),
       type: ["http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :latitude,
-      comment: "The latitude",
+      comment: {en: "The latitude"},
       domain: "https://www.w3.org/ns/activitystreams#Place",
-      label: "latitude",
+      label: {en: "latitude"},
       range: "http://www.w3.org/2001/XMLSchema#float",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :location,
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "location",
+      label: {en: "location"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
         ),
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :longitude,
-      comment: "The longitude",
+      comment: {en: "The longitude"},
       domain: "https://www.w3.org/ns/activitystreams#Place",
-      label: "longitude",
+      label: {en: "longitude"},
       range: "http://www.w3.org/2001/XMLSchema#float",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :mediaType,
-      comment: "The MIME Media Type",
+      comment: {en: "The MIME Media Type"},
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Link", "https://www.w3.org/ns/activitystreams#Object")
         ),
-      label: "mediaType",
+      label: {en: "mediaType"},
       range: "http://www.w3.org/2001/XMLSchema#string",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :name,
@@ -622,8 +622,8 @@ module RDF::Vocab
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
         ),
-      "http://www.w3.org/2000/01/rdf-schema#name": "The default, plain-text display name of the object or link.",
-      label: "name",
+      "http://www.w3.org/2000/01/rdf-schema#name": {en: "The default, plain-text display name of the object or link."},
+      label: {en: "name"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list(term(
@@ -633,7 +633,7 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :next,
       domain: "https://www.w3.org/ns/activitystreams#CollectionPage",
-      label: "next",
+      label: {en: "next"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#CollectionPage", "https://www.w3.org/ns/activitystreams#Link")
@@ -644,7 +644,7 @@ module RDF::Vocab
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Activity", "https://www.w3.org/ns/activitystreams#Relationship")
         ),
-      label: "object",
+      label: {en: "object"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
@@ -652,22 +652,22 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :objectType,
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "objectType",
+      label: {en: "objectType"},
       range: "http://www.w3.org/2001/XMLSchema#anyURI",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#DeprecatedProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :oneOf,
-      comment: "Describes a possible exclusive answer or option for a question.",
+      comment: {en: "Describes a possible exclusive answer or option for a question."},
       domain: "https://www.w3.org/ns/activitystreams#Question",
-      label: "oneOf",
+      label: {en: "oneOf"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
         ),
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :origin,
-      comment: "For certain activities, specifies the entity from which the action is directed.",
+      comment: {en: "For certain activities, specifies the entity from which the action is directed."},
       domain: "https://www.w3.org/ns/activitystreams#Activity",
-      label: "origin",
+      label: {en: "origin"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
@@ -675,7 +675,7 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :partOf,
       domain: "https://www.w3.org/ns/activitystreams#CollectionPage",
-      label: "partOf",
+      label: {en: "partOf"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Collection", "https://www.w3.org/ns/activitystreams#Link")
@@ -683,7 +683,7 @@ module RDF::Vocab
       type: ["http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :prev,
       domain: "https://www.w3.org/ns/activitystreams#CollectionPage",
-      label: "prev",
+      label: {en: "prev"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#CollectionPage", "https://www.w3.org/ns/activitystreams#Link")
@@ -694,7 +694,7 @@ module RDF::Vocab
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
         ),
-      label: "preview",
+      label: {en: "preview"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
@@ -702,22 +702,22 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :provider,
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "provider",
+      label: {en: "provider"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
         ),
       type: ["http://www.w3.org/2002/07/owl#DeprecatedProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :published,
-      comment: "Specifies the date and time the object was published",
+      comment: {en: "Specifies the date and time the object was published"},
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "published",
+      label: {en: "published"},
       range: "http://www.w3.org/2001/XMLSchema#dateTime",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :radius,
-      comment: "Specifies a radius around the point established by the longitude and latitude",
+      comment: {en: "Specifies a radius around the point established by the longitude and latitude"},
       domain: "https://www.w3.org/ns/activitystreams#Place",
-      label: "radius",
+      label: {en: "radius"},
       range: term(
           "http://www.w3.org/2002/07/owl#onDatatype": "http://www.w3.org/2001/XMLSchema#float",
           "http://www.w3.org/2002/07/owl#withRestrictions": list(term(
@@ -727,9 +727,9 @@ module RDF::Vocab
         ),
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :rating,
-      comment: "A numeric rating (>= 0.0, <= 5.0) for the object",
+      comment: {en: "A numeric rating (>= 0.0, <= 5.0) for the object"},
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "rating",
+      label: {en: "rating"},
       range: term(
           "http://www.w3.org/2002/07/owl#onDatatype": "http://www.w3.org/2001/XMLSchema#float",
           "http://www.w3.org/2002/07/owl#withRestrictions": list(term(
@@ -741,47 +741,47 @@ module RDF::Vocab
         ),
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#DeprecatedProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :rel,
-      comment: "The RFC 5988 or HTML5 Link Relation associated with the Link",
+      comment: {en: "The RFC 5988 or HTML5 Link Relation associated with the Link"},
       domain: "https://www.w3.org/ns/activitystreams#Link",
-      label: "rel",
+      label: {en: "rel"},
       range: "http://www.w3.org/2001/XMLSchema#string",
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :relationship,
-      comment: "On a Relationship object, describes the type of relationship",
+      comment: {en: "On a Relationship object, describes the type of relationship"},
       domain: "https://www.w3.org/ns/activitystreams#Relationship",
-      label: "relationship",
+      label: {en: "relationship"},
       range: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
       subPropertyOf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :replies,
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "replies",
+      label: {en: "replies"},
       range: "https://www.w3.org/ns/activitystreams#Collection",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :result,
       domain: "https://www.w3.org/ns/activitystreams#Activity",
-      label: "result",
+      label: {en: "result"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
         ),
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :startIndex,
-      comment: "In a strictly ordered logical collection, specifies the index position of the first item in the items list",
+      comment: {en: "In a strictly ordered logical collection, specifies the index position of the first item in the items list"},
       domain: "https://www.w3.org/ns/activitystreams#OrderedCollectionPage",
-      label: "startIndex",
+      label: {en: "startIndex"},
       range: "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :startTime,
-      comment: "The starting time of the object",
+      comment: {en: "The starting time of the object"},
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "startTime",
+      label: {en: "startTime"},
       range: "http://www.w3.org/2001/XMLSchema#dateTime",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :subject,
-      comment: "On a Relationship object, identifies the subject. e.g. when saying \"John is connected to Sally\", 'subject' refers to 'John'",
+      comment: {en: "On a Relationship object, identifies the subject. e.g. when saying \"John is connected to Sally\", 'subject' refers to 'John'"},
       domain: "https://www.w3.org/ns/activitystreams#Relationship",
-      label: "a",
+      label: {en: "a"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Link", "https://www.w3.org/ns/activitystreams#Object")
@@ -789,9 +789,9 @@ module RDF::Vocab
       subPropertyOf: "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
       type: ["http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :summary,
-      comment: "A short summary of the object",
+      comment: {en: "A short summary of the object"},
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "summary",
+      label: {en: "summary"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list(term(
@@ -801,7 +801,7 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :tag,
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "tag",
+      label: {en: "tag"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
@@ -810,7 +810,7 @@ module RDF::Vocab
     property :tags,
       domain: "https://www.w3.org/ns/activitystreams#Object",
       equivalentProperty: "https://www.w3.org/ns/activitystreams#tag",
-      label: "tags",
+      label: {en: "tags"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
@@ -818,7 +818,7 @@ module RDF::Vocab
       type: ["http://www.w3.org/2002/07/owl#DeprecatedProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :target,
       domain: "https://www.w3.org/ns/activitystreams#Activity",
-      label: "target",
+      label: {en: "target"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
@@ -826,22 +826,22 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :to,
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "to",
+      label: {en: "to"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
         ),
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :totalItems,
-      comment: "The total number of items in a logical collection",
+      comment: {en: "The total number of items in a logical collection"},
       domain: "https://www.w3.org/ns/activitystreams#Collection",
-      label: "totalItems",
+      label: {en: "totalItems"},
       range: "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :units,
-      comment: "Identifies the unit of measurement used by the radius, altitude and accuracy properties. The value can be expressed either as one of a set of predefined units or as a well-known common URI that identifies units.",
+      comment: {en: "Identifies the unit of measurement used by the radius, altitude and accuracy properties. The value can be expressed either as one of a set of predefined units or as a well-known common URI that identifies units."},
       domain: "https://www.w3.org/ns/activitystreams#Place",
-      label: "units",
+      label: {en: "units"},
       range: term(
           type: "http://www.w3.org/2000/01/rdf-schema#Datatype",
           unionOf: list(term(
@@ -851,20 +851,20 @@ module RDF::Vocab
         ),
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :updated,
-      comment: "Specifies when the object was last updated",
+      comment: {en: "Specifies when the object was last updated"},
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "updated",
+      label: {en: "updated"},
       range: "http://www.w3.org/2001/XMLSchema#dateTime",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :upstreamDuplicates,
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "upstreamDuplicates",
+      label: {en: "upstreamDuplicates"},
       range: "http://www.w3.org/2001/XMLSchema#anyURI",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#DeprecatedProperty"]
     property :url,
-      comment: "Specifies a link to a specific representation of the Object",
+      comment: {en: "Specifies a link to a specific representation of the Object"},
       domain: "https://www.w3.org/ns/activitystreams#Object",
-      label: "url",
+      label: {en: "url"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Link", "http://www.w3.org/2002/07/owl#Thing")
@@ -872,13 +872,13 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :verb,
       domain: "https://www.w3.org/ns/activitystreams#Activity",
-      label: "verb",
+      label: {en: "verb"},
       range: "http://www.w3.org/2001/XMLSchema#anyURI",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#DeprecatedProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :width,
-      comment: "Specifies the preferred display width of the content, expressed in terms of device independent pixels.",
+      comment: {en: "Specifies the preferred display width of the content, expressed in terms of device independent pixels."},
       domain: "https://www.w3.org/ns/activitystreams#Link",
-      label: "width",
+      label: {en: "width"},
       range: "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
   end

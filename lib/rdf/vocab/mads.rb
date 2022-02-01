@@ -9,7 +9,7 @@ module RDF::Vocab
 
     # Ontology definition
     ontology :"http://www.loc.gov/mads/rdf/v1#",
-      comment: "This document describes the MADS/RDF (Metadata Authority Description Schema in RDF) vocabulary, a data model for authority and vocabulary data used within the library and information science (LIS) community, which is inclusive of museums, archives, and other cultural institutions. It is presented as an OWL ontology. \n      \n      \n      MADS/RDF is a knowledge organization system (KOS) designed for use with controlled values for names (personal, corporate, geographic, etc.), thesauri, taxonomies, subject heading systems, and other controlled value lists. It is closely related to SKOS, the Simple Knowledge Organization System and a widely supported and adopted RDF vocabulary. Given the close relationship between the aim of MADS/RDF and the aim of SKOS, the MADS ontology has been fully mapped to SKOS. \n      \n      \n      Unlike SKOS, however, which is very broad in its application, MADS/RDF is designed specifically to support authority data as used by and needed in the LIS community and its technology systems. For example, MADS/RDF provides a means to record data from the Machine Readable Cataloging (MARC) Authorities format in RDF for use in semantic applications and Linked Data projects. \n      \n      \n      MADS/RDF is designed to support the description of cultural and bibliographic resources. Data described using MADS/RDF, therefore, assists with identifying and annotating bibliographic and cultural resources. MADS/RDF is not focused on the description of Real World Objects. Although a MADS/RDF description may contain information specific to the Real World Object associated with the MADS/RDF authoritative label, the MADS/RDF ontology distinguishes between these two entities – the RWO and the Authority. \n      \n      \n      Updated: 29 October 2015. Addition of new properties, madsrdf:activityEndDate, madsrdf:activityStartDate, madsrdf:associatedLanguage, madsrdf:associatedLocale, madsrdf:birthDate, madsrdf:birthPlace, madsrdf:deathDate, madsrdf:deathPlace, madsrdf:entityDescriptor, madsrdf:establishDate, madsrdf:fieldOfActivity, madsrdf:gender, madsrdf:hasAffiliation, madsrdf:honoraryTitle, madsrdf:isIdentifiedByAuthority, madsrdf:occupation, madsrdf:prominentFamilyMember, madsrdf:terminateDate, madsrdf:fullerName, madsrdf:creationDateStart, madsrdf:creationDateEnd, madsrdf:workOrigin, madsrdf:hasChararacteristic.  \n      \n      \n      The MADS/RDF to SKOS/RDF mapping was done by Antoine Isaac. The MADS/RDF model and ontology benefited significantly as a result of the fruitful discussions surrounding his effort to map the MADS/RDF ontology to SKOS. ",
+      comment: {en: "This document describes the MADS/RDF (Metadata Authority Description Schema in RDF) vocabulary, a data model for authority and vocabulary data used within the library and information science (LIS) community, which is inclusive of museums, archives, and other cultural institutions. It is presented as an OWL ontology. \n      \n      \n      MADS/RDF is a knowledge organization system (KOS) designed for use with controlled values for names (personal, corporate, geographic, etc.), thesauri, taxonomies, subject heading systems, and other controlled value lists. It is closely related to SKOS, the Simple Knowledge Organization System and a widely supported and adopted RDF vocabulary. Given the close relationship between the aim of MADS/RDF and the aim of SKOS, the MADS ontology has been fully mapped to SKOS. \n      \n      \n      Unlike SKOS, however, which is very broad in its application, MADS/RDF is designed specifically to support authority data as used by and needed in the LIS community and its technology systems. For example, MADS/RDF provides a means to record data from the Machine Readable Cataloging (MARC) Authorities format in RDF for use in semantic applications and Linked Data projects. \n      \n      \n      MADS/RDF is designed to support the description of cultural and bibliographic resources. Data described using MADS/RDF, therefore, assists with identifying and annotating bibliographic and cultural resources. MADS/RDF is not focused on the description of Real World Objects. Although a MADS/RDF description may contain information specific to the Real World Object associated with the MADS/RDF authoritative label, the MADS/RDF ontology distinguishes between these two entities – the RWO and the Authority. \n      \n      \n      Updated: 29 October 2015. Addition of new properties, madsrdf:activityEndDate, madsrdf:activityStartDate, madsrdf:associatedLanguage, madsrdf:associatedLocale, madsrdf:birthDate, madsrdf:birthPlace, madsrdf:deathDate, madsrdf:deathPlace, madsrdf:entityDescriptor, madsrdf:establishDate, madsrdf:fieldOfActivity, madsrdf:gender, madsrdf:hasAffiliation, madsrdf:honoraryTitle, madsrdf:isIdentifiedByAuthority, madsrdf:occupation, madsrdf:prominentFamilyMember, madsrdf:terminateDate, madsrdf:fullerName, madsrdf:creationDateStart, madsrdf:creationDateEnd, madsrdf:workOrigin, madsrdf:hasChararacteristic.  \n      \n      \n      The MADS/RDF to SKOS/RDF mapping was done by Antoine Isaac. The MADS/RDF model and ontology benefited significantly as a result of the fruitful discussions surrounding his effort to map the MADS/RDF ontology to SKOS. "},
       "http://purl.org/dc/terms/modified": "2019-01-04T17:01:03.065-05:00",
       "http://www.w3.org/2002/07/owl#ontologyIRI": "http://www.loc.gov/mads/rdf/v1#",
       "http://www.w3.org/2002/07/owl#priorVersion": "http://id.loc.gov/ontologies/madsrdf/v1-3-1",
@@ -20,40 +20,40 @@ module RDF::Vocab
 
     # Class definitions
     term :Address,
-      label: "Address",
+      label: {en: "Address"},
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Affiliation,
-      comment: "A resource that describes an individual's affiliation with an organization or group, such as the nature of the affiliation and the active dates.",
-      label: "Affiliation",
+      comment: {en: "A resource that describes an individual's affiliation with an organization or group, such as the nature of the affiliation and the active dates."},
+      label: {en: "Affiliation"},
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Area,
       comment: "Describes a resource whose label is a non-jurisdictional geographic entity.",
-      label: "Area Type",
+      label: {en: "Area Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Authority,
       comment: "A concept with a controlled label.",
       "http://www.w3.org/2002/07/owl#disjointWith": ["http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority", "http://www.loc.gov/mads/rdf/v1#MADSCollection", "http://www.loc.gov/mads/rdf/v1#MADSScheme", "http://www.loc.gov/mads/rdf/v1#Variant"],
-      label: "Authority",
+      label: {en: "Authority"},
       subClassOf: ["http://www.w3.org/2002/07/owl#Thing", "http://www.w3.org/2004/02/skos/core#Concept"],
       type: "http://www.w3.org/2002/07/owl#Class"
     term :City,
       comment: "Describes a resource whose label is an inhabited place incorporated as a city, town, etc.",
-      label: "City Type",
+      label: {en: "City Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :CitySection,
       comment: "Describes a resource whose label is a smaller unit within a populated place, e.g., a neighborhood, park, or street.",
-      label: "City Section Type",
+      label: {en: "City Section Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :ComplexSubject,
-      comment: "The label of a madsrdf:ComplexSubject is the concatenation of labels from two or more madsrdf:SimpleType descriptions, except that the combination of madsrdf:SimpleType labels for the madsrdf:ComplexSubject does not meet the conditions to be the label of a madsrdf:NameTitle resource or madsrdf:HierarchicalGeographic resource.",
-      label: "Complex Subject Type",
+      comment: {en: "The label of a madsrdf:ComplexSubject is the concatenation of labels from two or more madsrdf:SimpleType descriptions, except that the combination of madsrdf:SimpleType labels for the madsrdf:ComplexSubject does not meet the conditions to be the label of a madsrdf:NameTitle resource or madsrdf:HierarchicalGeographic resource."},
+      label: {en: "Complex Subject Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#ComplexType",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :ComplexType,
-      comment: "madsrdf:ComplexType is a resource whose label is the concatenation of labels from two or more Authority descriptions or two or more Variant descriptions or some combination of Authority and Variant descriptions, each of a madsrdf:SimpleType.",
+      comment: {en: "madsrdf:ComplexType is a resource whose label is the concatenation of labels from two or more Authority descriptions or two or more Variant descriptions or some combination of Authority and Variant descriptions, each of a madsrdf:SimpleType."},
       equivalentClass: term(
           cardinality: "1",
           onProperty: "http://www.loc.gov/mads/rdf/v1#componentList",
@@ -61,32 +61,32 @@ module RDF::Vocab
         ),
       "http://www.w3.org/2002/07/owl#disjointUnionOf": list("http://www.loc.gov/mads/rdf/v1#HierarchicalGeographic", "http://www.loc.gov/mads/rdf/v1#ComplexSubject", "http://www.loc.gov/mads/rdf/v1#NameTitle"),
       "http://www.w3.org/2002/07/owl#disjointWith": "http://www.loc.gov/mads/rdf/v1#SimpleType",
-      label: "Complex Type",
+      label: {en: "Complex Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#MADSType",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :ConferenceName,
       comment: "Describes a resource whose label represents a conference name.",
-      label: "Conference Name Type",
+      label: {en: "Conference Name Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Name",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Continent,
       comment: "Describes a resource whose label is one of seven large landmasses on Earth. These are: Asia, Africa, Europe, North America, South America, Australia, and Antarctica.",
-      label: "Continent Type",
+      label: {en: "Continent Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :CorporateName,
       comment: "Describes a resource whose label is the name of a corporate entity, which may include political or ecclesiastical entities.",
-      label: "Corporate Name Type",
+      label: {en: "Corporate Name Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Name",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Country,
       comment: "Describes a resource whose label is a country, i.e. a political entity considered a country. ",
-      label: "Country Type",
+      label: {en: "Country Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :County,
       comment: "Describes a resource whose label is the largest local administrative unit, e.g. Warwickshire, in a country, e.g. England.",
-      label: "County Type",
+      label: {en: "County Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :DateNameElement,
@@ -106,16 +106,16 @@ module RDF::Vocab
           onProperty: "http://www.loc.gov/mads/rdf/v1#elementValue",
           type: "http://www.w3.org/2002/07/owl#Restriction"
         ),
-      label: "Element",
+      label: {en: "Element"},
       type: "http://www.w3.org/2002/07/owl#Class"
     term :ExtraterrestrialArea,
       comment: "Describes a resource whose label is any extraterrestrial entity or space, including a solar system, a galaxy, a star system, and a planet, including a geographic feature of an individual planet.",
-      label: "Extraterrestrial Area Type",
+      label: {en: "Extraterrestrial Area Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :FamilyName,
       comment: "Describes a resource whose label represents a family name.",
-      label: "Family Name Type",
+      label: {en: "Family Name Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Name",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :FamilyNameElement,
@@ -127,21 +127,21 @@ module RDF::Vocab
       subClassOf: "http://www.loc.gov/mads/rdf/v1#NameElement",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :GenreForm,
-      comment: "Describes a resource whose label is a genre or form term. Genre terms for textual materials designate specific kinds of materials distinguished by the style or technique of their intellectual contents; for example, biographies, catechisms, essays, hymns, or reviews. Form terms designate historically and functionally specific kinds of materials as distinguished by an examination of their physical character, characteristics of their intellectual content, or the order of information within them; for example, daybooks, diaries, directories, journals, memoranda, questionnaires, syllabi, or time sheets. In the context of graphic materials, genre headings denote categories of material distinguished by vantage point, intended purpose, characteristics of the creator, publication status, or method of representation.",
-      label: "Genre/Form Type",
+      comment: {en: "Describes a resource whose label is a genre or form term. Genre terms for textual materials designate specific kinds of materials distinguished by the style or technique of their intellectual contents; for example, biographies, catechisms, essays, hymns, or reviews. Form terms designate historically and functionally specific kinds of materials as distinguished by an examination of their physical character, characteristics of their intellectual content, or the order of information within them; for example, daybooks, diaries, directories, journals, memoranda, questionnaires, syllabi, or time sheets. In the context of graphic materials, genre headings denote categories of material distinguished by vantage point, intended purpose, characteristics of the creator, publication status, or method of representation."},
+      label: {en: "Genre/Form Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :GenreFormElement,
-      label: "Genre/Form Element",
+      label: {en: "Genre/Form Element"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Element",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Geographic,
-      comment: "Describes a resource whose label represents a geographic place or feature, especially when a more precise geographic determination (City, Country, Region, etc.) cannot be made.",
-      label: "Geographic Authority",
+      comment: {en: "Describes a resource whose label represents a geographic place or feature, especially when a more precise geographic determination (City, Country, Region, etc.) cannot be made."},
+      label: {en: "Geographic Authority"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :GeographicElement,
-      label: "Geographic Element",
+      label: {en: "Geographic Element"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Element",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :GivenNameElement,
@@ -149,8 +149,8 @@ module RDF::Vocab
       subClassOf: "http://www.loc.gov/mads/rdf/v1#NameElement",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :HierarchicalGeographic,
-      comment: "A madsrdf:HierarchicalGeographic indicates that its label is the concatenation of labels from a sequence of madsrdf:Geographic types taken from one of the madsrdf:Geographic sub-classes such as madsrdf:City, madsrdf:Country, madsrdf:State, madsrdf:Region, madsrdf:Area, etc. The madsrdf:Geographic resources that constitute the madsrdf:HierarchicalGeographic should have a broader to narrower hierarchical relationship between them.",
-      label: "Hierarchical Geographic Type",
+      comment: {en: "A madsrdf:HierarchicalGeographic indicates that its label is the concatenation of labels from a sequence of madsrdf:Geographic types taken from one of the madsrdf:Geographic sub-classes such as madsrdf:City, madsrdf:Country, madsrdf:State, madsrdf:Region, madsrdf:Area, etc. The madsrdf:Geographic resources that constitute the madsrdf:HierarchicalGeographic should have a broader to narrower hierarchical relationship between them."},
+      label: {en: "Hierarchical Geographic Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#ComplexType",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Identifier,
@@ -159,13 +159,13 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Island,
       comment: "Describes a resource whose label is a tract of land surrounded by water and smaller than a continent but is not itself a separate country. ",
-      label: "Island Type",
+      label: {en: "Island Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Language,
-      comment: "Describes a resource whose label represents a language.",
+      comment: {en: "Describes a resource whose label represents a language."},
       equivalentClass: "http://purl.org/dc/terms/LinguisticSystem",
-      label: "Language Type",
+      label: {en: "Language Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :LanguageElement,
@@ -179,9 +179,9 @@ module RDF::Vocab
       subClassOf: "http://www.w3.org/2004/02/skos/core#Collection",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :MADSScheme,
-      comment: "MADS Scheme is an organizational unit that describes a knowledge organization system. It aggregates madsrdf:Authority descriptions and/or madsrdf:MADSCollection resources included in the knowledge organization system. Including a madsrdf:MADSCollection within a madsrdf:MADSScheme should be done with care; when a madsrdf:MADSCollection is part of a madsrdf:MADSScheme, then any madsrdf:Authority within that madsrdf:MADSCollection is effectively also in the madsrdf:MADSScheme.",
+      comment: {en: "MADS Scheme is an organizational unit that describes a knowledge organization system. It aggregates madsrdf:Authority descriptions and/or madsrdf:MADSCollection resources included in the knowledge organization system. Including a madsrdf:MADSCollection within a madsrdf:MADSScheme should be done with care; when a madsrdf:MADSCollection is part of a madsrdf:MADSScheme, then any madsrdf:Authority within that madsrdf:MADSCollection is effectively also in the madsrdf:MADSScheme."},
       "http://www.w3.org/2002/07/owl#disjointWith": ["http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#MADSCollection", "http://www.loc.gov/mads/rdf/v1#Variant"],
-      label: "MADS Scheme",
+      label: {en: "MADS Scheme"},
       subClassOf: "http://www.w3.org/2004/02/skos/core#ConceptScheme",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :MADSType,
@@ -193,17 +193,17 @@ module RDF::Vocab
       subClassOf: "http://www.loc.gov/mads/rdf/v1#TitleElement",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Name,
-      comment: "Describes a resource whose label represents a name, especially when a more precise Name type (madsrdf:ConferenceName, masdrdf:FamilyName, etc.) cannot be identified.",
-      label: "Name Type",
+      comment: {en: "Describes a resource whose label represents a name, especially when a more precise Name type (madsrdf:ConferenceName, masdrdf:FamilyName, etc.) cannot be identified."},
+      label: {en: "Name Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :NameElement,
-      label: "Name Element",
+      label: {en: "Name Element"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Element",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :NameTitle,
-      comment: "The label of a madsrdf:NameTitle resource is the concatenation of a label of a madsrdf:Name description and the label of a madsrdf:Title description. Both description types (madsrdf:Name and madsrdf:Title) are of madsrdf:SimpleType types.",
-      label: "Name/Title Type",
+      comment: {en: "The label of a madsrdf:NameTitle resource is the concatenation of a label of a madsrdf:Name description and the label of a madsrdf:Title description. Both description types (madsrdf:Name and madsrdf:Title) are of madsrdf:SimpleType types."},
+      label: {en: "Name/Title Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#ComplexType",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :NonSortElement,
@@ -212,7 +212,7 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Occupation,
       comment: "Describes a resource whose label represents an occcupation.",
-      label: "Occupation Type",
+      label: {en: "Occupation Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :PartNameElement,
@@ -225,12 +225,12 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#Class"
     term :PersonalName,
       comment: "Describes a resource whose label represents a personal name.",
-      label: "Personal Name Type",
+      label: {en: "Personal Name Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Name",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Province,
       comment: "Describes a resource whose label is a first order political division, e.g. Ontario, within a country, e.g. Canada. ",
-      label: "Province Type",
+      label: {en: "Province Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :RWO,
@@ -240,12 +240,12 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Region,
       comment: "Describes a resource whose label is an area that has the status of a jurisdiction, usually incorporating more than one first level jurisdiction. ",
-      label: "Region Type",
+      label: {en: "Region Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :SimpleType,
-      comment: "madsrdf:SimpleType is a resource with a label constituting a single word or phrase.",
-      label: "Simple Type",
+      comment: {en: "madsrdf:SimpleType is a resource with a label constituting a single word or phrase."},
+      label: {en: "Simple Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#MADSType",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Source,
@@ -254,7 +254,7 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#Class"
     term :State,
       comment: "Describes a resource whose label is a first order political division, e.g. Montana, within a country, e.g. U.S.",
-      label: "State Type",
+      label: {en: "State Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :SubTitleElement,
@@ -263,7 +263,7 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Temporal,
       comment: "Describes a resource whose label represents a time-based notion.",
-      label: "Temporal Type",
+      label: {en: "Temporal Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :TemporalElement,
@@ -276,31 +276,31 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Territory,
       comment: "Describes a resource whose label is a geographical area belonging to or under the jurisdiction of a governmental authority. ",
-      label: "Territory Type",
+      label: {en: "Territory Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Title,
       comment: "Describes a resource whose label represents a title.",
-      label: "Title Type",
+      label: {en: "Title Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :TitleElement,
-      label: "Title Element",
+      label: {en: "Title Element"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Element",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Topic,
       comment: "Describes a resource whose label represents a topic.",
-      label: "Topic Type",
+      label: {en: "Topic Type"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :TopicElement,
-      label: "Topic Element",
+      label: {en: "Topic Element"},
       subClassOf: "http://www.loc.gov/mads/rdf/v1#Element",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Variant,
-      comment: "A resource whose label is the alternate form of an Authority or Deprecated Authority.",
+      comment: {en: "A resource whose label is the alternate form of an Authority or Deprecated Authority."},
       "http://www.w3.org/2002/07/owl#disjointWith": ["http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#MADSCollection", "http://www.loc.gov/mads/rdf/v1#MADSScheme"],
-      label: "Variant",
+      label: {en: "Variant"},
       subClassOf: ["http://www.w3.org/2002/07/owl#Thing", "http://www.w3.org/2008/05/skos-xl#Label"],
       type: "http://www.w3.org/2002/07/owl#Class"
 
@@ -316,12 +316,12 @@ module RDF::Vocab
       label: "Activity Start",
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :adminMetadata,
-      comment: "This relates an Authority or Variant to its administrative metadata, which is, minimimally, a Class defined outside of the MADS/RDF namespace. The RecordInfo Class from the RecordInfo ontology is recommended.",
+      comment: {en: "This relates an Authority or Variant to its administrative metadata, which is, minimimally, a Class defined outside of the MADS/RDF namespace. The RecordInfo Class from the RecordInfo ontology is recommended."},
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority", "http://www.loc.gov/mads/rdf/v1#Variant")
         ),
-      label: "Administrative Metadata",
+      label: {en: "Administrative Metadata"},
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :affiliationEnd,
       comment: "The date an individual ceased to be affiliated with an organization.",
@@ -348,9 +348,9 @@ module RDF::Vocab
       range: "http://www.loc.gov/mads/rdf/v1#Geographic",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :authoritativeLabel,
-      comment: "A lexical string representing a controlled, curated label for the Authority.",
+      comment: {en: "A lexical string representing a controlled, curated label for the Authority."},
       domain: "http://www.loc.gov/mads/rdf/v1#Authority",
-      label: "Authoritative Label",
+      label: {en: "Authoritative Label"},
       subPropertyOf: ["http://www.w3.org/2000/01/rdf-schema#label", "http://www.w3.org/2004/02/skos/core#prefLabel"],
       type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :birthDate,
@@ -365,36 +365,36 @@ module RDF::Vocab
       range: "http://www.loc.gov/mads/rdf/v1#Geographic",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :changeNote,
-      comment: "A note detailing a modification to an Authority or Variant.",
+      comment: {en: "A note detailing a modification to an Authority or Variant."},
       equivalentProperty: "http://www.w3.org/2004/02/skos/core#changeNote",
-      label: "Change Note",
+      label: {en: "Change Note"},
       subPropertyOf: "http://www.loc.gov/mads/rdf/v1#note",
       type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :citationNote,
-      comment: "A note about how the madsrdf:Source relates to the resource about which the madsrdf:Source is the information source.",
+      comment: {en: "A note about how the madsrdf:Source relates to the resource about which the madsrdf:Source is the information source."},
       domain: "http://www.loc.gov/mads/rdf/v1#Source",
-      label: "Citation Note",
+      label: {en: "Citation Note"},
       type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :citationSource,
-      comment: "The cited resource.",
+      comment: {en: "The cited resource."},
       domain: "http://www.loc.gov/mads/rdf/v1#Source",
-      label: "Citation Source",
+      label: {en: "Citation Source"},
       type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :citationStatus,
-      comment: "Should use a standard term - such as 'found' or 'not found' - to indicate whether the cited resource yielded information about the resource related to the madsrdf:Source.",
+      comment: {en: "Should use a standard term - such as 'found' or 'not found' - to indicate whether the cited resource yielded information about the resource related to the madsrdf:Source."},
       domain: "http://www.loc.gov/mads/rdf/v1#Source",
-      label: "Citation Status",
+      label: {en: "Citation Status"},
       range: "http://www.w3.org/2001/XMLSchema#string",
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :city,
-      comment: "The city component of an address.",
+      comment: {en: "The city component of an address."},
       domain: "http://www.loc.gov/mads/rdf/v1#Address",
-      label: "City",
+      label: {en: "City"},
       type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :classification,
-      comment: "The classification code associated with a madsrdf:Authority.",
+      comment: {en: "The classification code associated with a madsrdf:Authority."},
       domain: "http://www.loc.gov/mads/rdf/v1#Authority",
-      label: "Classification",
+      label: {en: "Classification"},
       subPropertyOf: "http://www.w3.org/2004/02/skos/core#semanticRelation",
       type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :code,
@@ -440,9 +440,9 @@ module RDF::Vocab
       range: "http://www.loc.gov/mads/rdf/v1#Geographic",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :definitionNote,
-      comment: "An explanation of the meaning of an Authority, DeprecatedAuthority, or Variant description.",
+      comment: {en: "An explanation of the meaning of an Authority, DeprecatedAuthority, or Variant description."},
       equivalentProperty: "http://www.w3.org/2004/02/skos/core#definition",
-      label: "Definition Note",
+      label: {en: "Definition Note"},
       subPropertyOf: "http://www.loc.gov/mads/rdf/v1#note",
       type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :deletionNote,
@@ -463,7 +463,7 @@ module RDF::Vocab
       subPropertyOf: "http://www.loc.gov/mads/rdf/v1#note",
       type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :elementList,
-      comment: "The madsrdf:elementList property is used to organize the various parts of labels.",
+      comment: {en: "The madsrdf:elementList property is used to organize the various parts of labels."},
       label: "Element List",
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
@@ -583,7 +583,7 @@ module RDF::Vocab
       label: "Has Demonym",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasEarlierEstablishedForm,
-      comment: "Used to reference a resource that was an earlier form. This is Related type='earlier' in MADS XML.",
+      comment: {en: "Used to reference a resource that was an earlier form. This is Related type='earlier' in MADS XML."},
       inverseOf: "http://www.loc.gov/mads/rdf/v1#hasLaterEstablishedForm",
       label: "Has Earlier Established Form",
       subPropertyOf: "http://www.loc.gov/mads/rdf/v1#see",
@@ -598,9 +598,9 @@ module RDF::Vocab
       subPropertyOf: "http://www.loc.gov/mads/rdf/v1#hasVariant",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasHiddenVariant,
-      comment: "Use for variants that are searchable, but not necessarily for display.",
+      comment: {en: "Use for variants that are searchable, but not necessarily for display."},
       domain: "http://www.loc.gov/mads/rdf/v1#Authority",
-      label: "Has Hidden Variant",
+      label: {en: "Has Hidden Variant"},
       range: "http://www.loc.gov/mads/rdf/v1#Variant",
       subPropertyOf: "http://www.w3.org/2008/05/skos-xl#hiddenLabel",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -610,16 +610,16 @@ module RDF::Vocab
       range: "http://www.loc.gov/mads/rdf/v1#Identifier",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasLaterEstablishedForm,
-      comment: "Use to reference the later form of a resource. This is Related type='later' in MADS XML.",
+      comment: {en: "Use to reference the later form of a resource. This is Related type='later' in MADS XML."},
       inverseOf: "http://www.loc.gov/mads/rdf/v1#hasEarlierEstablishedForm",
       label: "Has Later Established Form",
       subPropertyOf: "http://www.loc.gov/mads/rdf/v1#see",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasMADSCollectionMember,
-      comment: "Associates an Authority or other Collection with a madsrdf:MADSCollection.",
+      comment: {en: "Associates an Authority or other Collection with a madsrdf:MADSCollection."},
       domain: "http://www.loc.gov/mads/rdf/v1#MADSCollection",
       inverseOf: "http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection",
-      label: "Has MADSCollection Member",
+      label: {en: "Has MADSCollection Member"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#MADSCollection")
@@ -627,7 +627,7 @@ module RDF::Vocab
       subPropertyOf: "http://www.w3.org/2004/02/skos/core#member",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasMADSSchemeMember,
-      comment: "Associates an Authority or Collection with a madsrdf:MADSScheme.",
+      comment: {en: "Associates an Authority or Collection with a madsrdf:MADSScheme."},
       domain: "http://www.loc.gov/mads/rdf/v1#MADSScheme",
       inverseOf: "http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme",
       label: "Has MADS Scheme Member",
@@ -648,7 +648,7 @@ module RDF::Vocab
       subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority", "http://www.w3.org/2004/02/skos/core#narrowMatch"],
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasReciprocalAuthority,
-      comment: "Establishes a relationship between two Authority resources. It is reciprocal, so the relationship must be shared. This is Related type='equivalent' in MADS XML.",
+      comment: {en: "Establishes a relationship between two Authority resources. It is reciprocal, so the relationship must be shared. This is Related type='equivalent' in MADS XML."},
       label: "Has Reciprocal Authority",
       subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority", "http://www.w3.org/2004/02/skos/core#related"],
       type: "http://www.w3.org/2002/07/owl#SymmetricProperty"
@@ -658,14 +658,14 @@ module RDF::Vocab
       subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority", "http://www.w3.org/2004/02/skos/core#relatedMatch"],
       type: "http://www.w3.org/2002/07/owl#SymmetricProperty"
     property :hasRelatedAuthority,
-      comment: "Unless the relationship can be more specifically identified, use 'hasRelatedAuthority.'",
+      comment: {en: "Unless the relationship can be more specifically identified, use 'hasRelatedAuthority.'"},
       domain: "http://www.loc.gov/mads/rdf/v1#Authority",
-      label: "Has Related Authority",
+      label: {en: "Has Related Authority"},
       range: "http://www.loc.gov/mads/rdf/v1#Authority",
       subPropertyOf: "http://www.w3.org/2004/02/skos/core#semanticRelation",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasSource,
-      comment: "Associates a resource description with its Source.",
+      comment: {en: "Associates a resource description with its Source."},
       label: "Has Source",
       range: "http://www.loc.gov/mads/rdf/v1#Source",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -682,7 +682,7 @@ module RDF::Vocab
       subPropertyOf: "http://www.loc.gov/mads/rdf/v1#hasVariant",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasVariant,
-      comment: "Associates a Variant with an Authority or Deprecrated Authority. Unless the variant type can be more specifically identified, use 'hasVariant.'",
+      comment: {en: "Associates a Variant with an Authority or Deprecrated Authority. Unless the variant type can be more specifically identified, use 'hasVariant.'"},
       domain: "http://www.loc.gov/mads/rdf/v1#Authority",
       label: "Has Variant",
       range: "http://www.loc.gov/mads/rdf/v1#Variant",
@@ -741,13 +741,13 @@ module RDF::Vocab
       range: "http://www.loc.gov/mads/rdf/v1#Authority",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :isMemberOfMADSCollection,
-      comment: "Associates a Collection with a madsrdf:Authority or another madsrdf:MADSCollection.",
+      comment: {en: "Associates a Collection with a madsrdf:Authority or another madsrdf:MADSCollection."},
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#MADSCollection")
         ),
       inverseOf: "http://www.loc.gov/mads/rdf/v1#hasMADSCollectionMember",
-      label: "Is Member Of MADSCollection",
+      label: {en: "Is Member Of MADSCollection"},
       range: "http://www.loc.gov/mads/rdf/v1#MADSCollection",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :isMemberOfMADSScheme,

@@ -17,56 +17,56 @@ module RDF::Vocab
 
     # Class definitions
     term :Service,
-      comment: "A Service is web service associated with a Site or part of it.",
+      comment: {en: "A Service is web service associated with a Site or part of it."},
       isDefinedBy: "http://rdfs.org/sioc/services#",
-      label: "Service",
+      label: {en: "Service"},
       type: ["http://www.w3.org/2000/01/rdf-schema#Class", "http://www.w3.org/2002/07/owl#Class"]
 
     # Property definitions
     property :has_service,
-      comment: "A Service associated with this SIOC object.",
+      comment: {en: "A Service associated with this SIOC object."},
       inverseOf: "http://rdfs.org/sioc/services#service_of",
       isDefinedBy: "http://rdfs.org/sioc/services#",
-      label: "has service",
+      label: {en: "has service"},
       range: "http://rdfs.org/sioc/services#Service",
       type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :max_results,
-      comment: "Maximum number of results results returned by a web service.",
+      comment: {en: "Maximum number of results results returned by a web service."},
       domain: "http://rdfs.org/sioc/services#Service",
       isDefinedBy: "http://rdfs.org/sioc/services#",
-      label: "max results",
+      label: {en: "max results"},
       range: "http://www.w3.org/2001/XMLSchema#integer",
       type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property", "http://www.w3.org/2002/07/owl#DatatypeProperty"]
     property :results_format,
-      comment: "Format of results returned by a web service.",
+      comment: {en: "Format of results returned by a web service."},
       domain: "http://rdfs.org/sioc/services#Service",
       isDefinedBy: "http://rdfs.org/sioc/services#",
-      label: "results format",
+      label: {en: "results format"},
       type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :service_definition,
-      comment: "Links to a web service definition of this sioc:Service.",
+      comment: {en: "Links to a web service definition of this sioc:Service."},
       domain: "http://rdfs.org/sioc/services#Service",
       isDefinedBy: "http://rdfs.org/sioc/services#",
-      label: "service definition",
+      label: {en: "service definition"},
       type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :service_endpoint,
-      comment: "URL of a web service endpoint.",
+      comment: {en: "URL of a web service endpoint."},
       domain: "http://rdfs.org/sioc/services#Service",
       isDefinedBy: "http://rdfs.org/sioc/services#",
-      label: "service endpoint",
+      label: {en: "service endpoint"},
       type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :service_of,
-      comment: "A SIOC object this Service is associated with.",
+      comment: {en: "A SIOC object this Service is associated with."},
       domain: "http://rdfs.org/sioc/services#Service",
       inverseOf: "http://rdfs.org/sioc/services#has_service",
       isDefinedBy: "http://rdfs.org/sioc/services#",
-      label: "service of",
+      label: {en: "service of"},
       type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :service_protocol,
-      comment: "A protocol used by a web service. Possible protocol values include SOAP, REST, SPARQL-QUERY, GData and OpenSearch. These will be added to this module later.",
+      comment: {en: "A protocol used by a web service. Possible protocol values include SOAP, REST, SPARQL-QUERY, GData and OpenSearch. These will be added to this module later."},
       domain: "http://rdfs.org/sioc/services#Service",
       isDefinedBy: "http://rdfs.org/sioc/services#",
-      label: "service protocol",
+      label: {en: "service protocol"},
       type: ["http://www.w3.org/1999/02/22-rdf-syntax-ns#Property", "http://www.w3.org/2002/07/owl#ObjectProperty"]
   end
 end

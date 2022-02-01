@@ -207,17 +207,17 @@ module RDF::Vocab
       subClassOf: "https://schema.org/CivicStructure",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :ArchiveComponent,
-      comment: "An intangible type to be applied to any archive content, carrying with it a set of properties required to describe archival items and collections.",
+      comment: {en: "An intangible type to be applied to any archive content, carrying with it a set of properties required to describe archival items and collections."},
       "https://schema.org/isPartOf": "https://pending.schema.org",
       "https://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/1758",
-      label: "ArchiveComponent",
+      label: {en: "ArchiveComponent"},
       subClassOf: "https://schema.org/CreativeWork",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :ArchiveOrganization,
-      comment: "An organization with archival holdings. An organization which keeps and preserves archival material and typically makes it accessible to the public.",
+      comment: {en: "An organization with archival holdings. An organization which keeps and preserves archival material and typically makes it accessible to the public."},
       "https://schema.org/isPartOf": "https://pending.schema.org",
       "https://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/1758",
-      label: "ArchiveOrganization",
+      label: {en: "ArchiveOrganization"},
       subClassOf: "https://schema.org/LocalBusiness",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :ArriveAction,
@@ -5650,13 +5650,13 @@ module RDF::Vocab
       label: "appliesToPaymentMethod",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :archiveHeld,
-      comment: "Collection, [fonds](https://en.wikipedia.org/wiki/Fonds), or item held, kept or maintained by an [[ArchiveOrganization]].",
+      comment: {en: "Collection, [fonds](https://en.wikipedia.org/wiki/Fonds), or item held, kept or maintained by an [[ArchiveOrganization]]."},
       "https://schema.org/domainIncludes": "https://schema.org/ArchiveOrganization",
       "https://schema.org/inverseOf": "https://schema.org/holdingArchive",
       "https://schema.org/isPartOf": "https://pending.schema.org",
       "https://schema.org/rangeIncludes": "https://schema.org/ArchiveComponent",
       "https://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/1758",
-      label: "archiveHeld",
+      label: {en: "archiveHeld"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :archivedAt,
       comment: "Indicates a page or other link involved in archival of a [[CreativeWork]]. In the case of [[MediaReview]], the items in a [[MediaReviewItem]] may often become inaccessible, but be archived by archival, journalistic, activist, or law enforcement organizations. In such cases, the referenced page may not directly publish the content.",
@@ -6770,12 +6770,12 @@ module RDF::Vocab
       subPropertyOf: "https://schema.org/object",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :collectionSize,
-      comment: "The number of items in the [[Collection]].",
+      comment: {en: "The number of items in the [[Collection]]."},
       "https://schema.org/domainIncludes": "https://schema.org/Collection",
       "https://schema.org/isPartOf": "https://pending.schema.org",
       "https://schema.org/rangeIncludes": "https://schema.org/Integer",
       "https://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/1759",
-      label: "collectionSize",
+      label: {en: "collectionSize"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :color,
       comment: "The color of the product.",
@@ -9366,13 +9366,13 @@ module RDF::Vocab
       label: "hiringOrganization",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :holdingArchive,
-      comment: "[[ArchiveOrganization]] that holds, keeps or maintains the [[ArchiveComponent]].",
+      comment: {en: "[[ArchiveOrganization]] that holds, keeps or maintains the [[ArchiveComponent]]."},
       "https://schema.org/domainIncludes": "https://schema.org/ArchiveComponent",
       "https://schema.org/inverseOf": "https://schema.org/archiveHeld",
       "https://schema.org/isPartOf": "https://pending.schema.org",
       "https://schema.org/rangeIncludes": "https://schema.org/ArchiveOrganization",
       "https://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/1758",
-      label: "holdingArchive",
+      label: {en: "holdingArchive"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :homeLocation,
       comment: "A contact location for a person's residence.",
@@ -10065,12 +10065,12 @@ module RDF::Vocab
       label: "itemListOrder",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :itemLocation,
-      comment: "Current location of the item.",
+      comment: {en: "Current location of the item."},
       "https://schema.org/domainIncludes": "https://schema.org/ArchiveComponent",
       "https://schema.org/isPartOf": "https://pending.schema.org",
       "https://schema.org/rangeIncludes": ["https://schema.org/Place", "https://schema.org/PostalAddress", "https://schema.org/Text"],
       "https://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/1758",
-      label: "itemLocation",
+      label: {en: "itemLocation"},
       subPropertyOf: "https://schema.org/location",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :itemOffered,
@@ -10663,12 +10663,12 @@ module RDF::Vocab
       label: "material",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :materialExtent,
-      comment: "The quantity of the materials being described or an expression of the physical space they occupy.",
+      comment: {en: "The quantity of the materials being described or an expression of the physical space they occupy."},
       "https://schema.org/domainIncludes": "https://schema.org/CreativeWork",
       "https://schema.org/isPartOf": "https://pending.schema.org",
       "https://schema.org/rangeIncludes": ["https://schema.org/QuantitativeValue", "https://schema.org/Text"],
       "https://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/1759",
-      label: "materialExtent",
+      label: {en: "materialExtent"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :mathExpression,
       comment: "A mathematical expression (e.g. 'x^2-3x=0') that may be solved for a specific variable, simplified, or transformed. This can take many formats, e.g. LaTeX, Ascii-Math, or math as you would write with a keyboard.",

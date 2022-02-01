@@ -11,7 +11,7 @@ module RDF::Vocab
     term :"1.0/",
       "http://purl.org/dc/elements/1.1/identifier": "rscs",
       "http://purl.org/dc/terms/creator": "http://rightsstatements.org/vocab/irswg",
-      "http://purl.org/dc/terms/title": "RightsStatements.org Standardized International Rights Statements",
+      "http://purl.org/dc/terms/title": {en: "RightsStatements.org Standardized International Rights Statements"},
       "http://www.w3.org/2002/07/owl#versionInfo": "1.0",
       type: "http://www.w3.org/2004/02/skos/core#ConceptScheme"
     term :"CNE/1.0/",
@@ -143,8 +143,8 @@ module RDF::Vocab
       type: "http://www.w3.org/2004/02/skos/core#Collection"
     term :irswg,
       "http://xmlns.com/foaf/0.1/homepage": "http://rightsstatements.org/",
-      "http://xmlns.com/foaf/0.1/name": "RightsStatements.org Consortium",
-      prefLabel: "RightsStatements.org Consortium",
+      "http://xmlns.com/foaf/0.1/name": {en: "RightsStatements.org Consortium"},
+      prefLabel: {en: "RightsStatements.org Consortium"},
       type: ["http://www.europeana.eu/schemas/edm/Agent", "http://xmlns.com/foaf/0.1/Group"]
   end
 end

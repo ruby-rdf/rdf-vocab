@@ -9,89 +9,89 @@ module RDF::Vocab
 
     # Ontology definition
     ontology :"http://fedora.info/definitions/v4/repository#",
-      comment: "Ontology for the Fedora data model, intended primarily to make it possible to expose Fedora-curated RDF predicates via de-reference-able URIs.",
+      comment: {en: "Ontology for the Fedora data model, intended primarily to make it possible to expose Fedora-curated RDF predicates via de-reference-able URIs."},
       "http://www.w3.org/2002/07/owl#priorVersion": "http://fedora.info/definitions/v4/2015/05/19/repository",
       "http://www.w3.org/2002/07/owl#versionInfo": "v4/2015/07/24",
-      label: "Fedora Commons Repository Ontology",
+      label: {en: "Fedora Commons Repository Ontology"},
       type: "http://www.w3.org/2002/07/owl#Ontology"
 
     # Class definitions
     term :AnnotatedResource,
-      comment: "A Resource that maintains properties in its own right.",
-      label: "annotated resource",
+      comment: {en: "A Resource that maintains properties in its own right."},
+      label: {en: "annotated resource"},
       subClassOf: "http://fedora.info/definitions/v4/repository#Resource",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Binary,
-      comment: "A bitstream, with no further data properties.",
+      comment: {en: "A bitstream, with no further data properties."},
       "http://www.w3.org/2002/07/owl#disjointWith": ["http://fedora.info/definitions/v4/repository#Container", "http://fedora.info/definitions/v4/repository#NonRdfSourceDescription"],
-      label: "binary",
+      label: {en: "binary"},
       subClassOf: "http://fedora.info/definitions/v4/repository#Resource",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Configuration,
-      comment: "A container for transform configuration.",
-      label: "Fedora transform configuration",
+      comment: {en: "A container for transform configuration."},
+      label: {en: "Fedora transform configuration"},
       subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Container,
-      comment: "A Fedora Container: the fundamental quantum of durable content in a Fedora repository.",
-      label: "Fedora Container",
+      comment: {en: "A Fedora Container: the fundamental quantum of durable content in a Fedora repository."},
+      label: {en: "Fedora Container"},
       subClassOf: "http://fedora.info/definitions/v4/repository#AnnotatedResource",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :EmbedResources,
-      comment: "The set of triples representing child resources of a given resource.",
-      label: "embed resources",
+      comment: {en: "The set of triples representing child resources of a given resource."},
+      label: {en: "embed resources"},
       subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :InboundReferences,
-      comment: "The set of triples representing other repository resources which link to a given resource.",
-      label: "inbound references",
+      comment: {en: "The set of triples representing other repository resources which link to a given resource."},
+      label: {en: "inbound references"},
       subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :NodeTypeConfiguration,
-      comment: "A container for transform node type configuration.",
-      label: "Fedora transform node type configuration",
+      comment: {en: "A container for transform node type configuration."},
+      label: {en: "Fedora transform node type configuration"},
       subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :NonRdfSourceDescription,
-      comment: "A container for a bitstream and associated properties.",
+      comment: {en: "A container for a bitstream and associated properties."},
       "http://www.w3.org/2002/07/owl#disjointWith": "http://fedora.info/definitions/v4/repository#Container",
-      label: "Fedora NonRdfSourceDescription",
+      label: {en: "Fedora NonRdfSourceDescription"},
       subClassOf: "http://fedora.info/definitions/v4/repository#AnnotatedResource",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Pairtree,
-      comment: "An entity that is a an intermediary node created in a PairTree hierarchy.",
-      label: "pair tree",
+      comment: {en: "An entity that is a an intermediary node created in a PairTree hierarchy."},
+      label: {en: "pair tree"},
       subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Relations,
-      comment: "An entity that may be related to other repository entities.",
+      comment: {en: "An entity that may be related to other repository entities."},
       subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Resource,
-      comment: "An entity that has been committed to the repository for safekeeping. For example, Fedora objects and datastreams are resources. A Fixity is not, because the provenance of the instance is entirely internal to the repository.",
-      label: "Fedora resource",
+      comment: {en: "An entity that has been committed to the repository for safekeeping. For example, Fedora objects and datastreams are resources. A Fixity is not, because the provenance of the instance is entirely internal to the repository."},
+      label: {en: "Fedora resource"},
       subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :ServerManaged,
-      comment: "The system-generated triples for a given resource (as opposed to explicity-declared properties).",
-      label: "server managed",
+      comment: {en: "The system-generated triples for a given resource (as opposed to explicity-declared properties)."},
+      label: {en: "server managed"},
       subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Skolem,
-      comment: "An entity that is a representation of an RDF Skolem node.",
-      label: "skolem",
+      comment: {en: "An entity that is a representation of an RDF Skolem node."},
+      label: {en: "skolem"},
       subClassOf: "http://fedora.info/definitions/v4/repository#Thing",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Thing,
-      comment: "Something that is contemplated in the Fedora repository model.",
-      label: "Fedora thing",
+      comment: {en: "Something that is contemplated in the Fedora repository model."},
+      label: {en: "Fedora thing"},
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Tombstone,
-      comment: "An entity that is a marker for a deleted node.",
-      label: "tombstone",
+      comment: {en: "An entity that is a marker for a deleted node."},
+      label: {en: "tombstone"},
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Version,
-      label: "A snapshot of a Fedora object at a given point in time.",
+      label: {en: "A snapshot of a Fedora object at a given point in time."},
       subClassOf: "http://fedora.info/definitions/v4/repository#Container",
       type: "http://www.w3.org/2002/07/owl#Class"
 
@@ -101,7 +101,7 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :baseVersion,
       domain: "http://fedora.info/definitions/v4/repository#Container",
-      label: "base version",
+      label: {en: "base version"},
       range: "http://fedora.info/definitions/v4/repository#Version",
       type: ["http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :clusterCacheMode,
@@ -144,7 +144,7 @@ module RDF::Vocab
       subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :exportsAs,
-      label: "exports as",
+      label: {en: "exports as"},
       range: "http://www.w3.org/2001/XMLSchema#anyURI",
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :frozenMixinTypes,
@@ -157,63 +157,63 @@ module RDF::Vocab
       subPropertyOf: "http://fedora.info/definitions/v4/repository#uuid",
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :hasAccessRoles,
-      label: "has access roles",
+      label: {en: "has access roles"},
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasChild,
       domain: "http://fedora.info/definitions/v4/repository#Container",
-      label: "has child",
+      label: {en: "has child"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("http://fedora.info/definitions/v4/repository#NonRdfSourceDescription", "http://fedora.info/definitions/v4/repository#Container")
         ),
       type: ["http://www.w3.org/2002/07/owl#InverseFunctionalProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :hasContent,
-      comment: "Indicates a binary in which content is stored for this datastream.",
+      comment: {en: "Indicates a binary in which content is stored for this datastream."},
       domain: "http://fedora.info/definitions/v4/repository#NonRdfSourceDescription",
-      label: "has content",
+      label: {en: "has content"},
       range: "http://fedora.info/definitions/v4/repository#Binary",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasDefaultWorkspace,
-      comment: "Indicates the default workspace of the repository.",
-      label: "has default workspace",
+      comment: {en: "Indicates the default workspace of the repository."},
+      label: {en: "has default workspace"},
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasFixityService,
-      label: "has fixity service",
+      label: {en: "has fixity service"},
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasLocation,
       range: "http://www.w3.org/2001/XMLSchema#anyURI",
       subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :hasMember,
-      comment: "Links to a newly-minted identifier which can be used to create a repository resource.",
-      label: "has member",
+      comment: {en: "Links to a newly-minted identifier which can be used to create a repository resource."},
+      label: {en: "has member"},
       range: "http://www.w3.org/2001/XMLSchema#anyURI",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasMoreResults,
-      label: "has more results",
+      label: {en: "has more results"},
       range: "http://www.w3.org/2001/XMLSchema#boolean",
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :hasNamespaces,
-      label: "has namespaces",
+      label: {en: "has namespaces"},
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasNodeType,
       subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :hasParent,
       domain: "http://fedora.info/definitions/v4/repository#Resource",
-      label: "has parent",
+      label: {en: "has parent"},
       range: "http://fedora.info/definitions/v4/repository#Container",
       type: ["http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :hasResultsMember,
-      label: "has results member",
+      label: {en: "has results member"},
       range: "http://fedora.info/definitions/v4/repository#Resource",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasTransactionProvider,
-      label: "has transaction provider",
+      label: {en: "has transaction provider"},
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :hasVersion,
       domain: "http://fedora.info/definitions/v4/repository#Container",
-      label: "has version",
+      label: {en: "has version"},
       range: "http://fedora.info/definitions/v4/repository#Version",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasVersionLabel,
@@ -221,23 +221,23 @@ module RDF::Vocab
       subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :hasVersions,
-      label: "has versions",
+      label: {en: "has versions"},
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasWorkspace,
-      comment: "Links to a workspace of the repository.",
-      label: "has workspace",
+      comment: {en: "Links to a workspace of the repository."},
+      label: {en: "has workspace"},
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasWorkspaces,
-      label: "has workspaces",
+      label: {en: "has workspaces"},
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :isCheckedOut,
       range: "http://www.w3.org/2001/XMLSchema#boolean",
       subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :isContentOf,
-      comment: "Indicates a datastream for which this resource contains the content. ",
+      comment: {en: "Indicates a datastream for which this resource contains the content. "},
       domain: "http://fedora.info/definitions/v4/repository#Binary",
-      label: "is content of",
+      label: {en: "is content of"},
       range: "http://fedora.info/definitions/v4/repository#NonRdfSourceDescription",
       type: ["http://www.w3.org/2002/07/owl#InverseFunctionalProperty", "http://www.w3.org/2002/07/owl#ObjectProperty"]
     property :lastModified,
@@ -274,7 +274,7 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :predecessors,
       domain: "http://fedora.info/definitions/v4/repository#Version",
-      label: "predecessors",
+      label: {en: "predecessors"},
       range: "http://fedora.info/definitions/v4/repository#Version",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :primaryType,
@@ -428,13 +428,13 @@ module RDF::Vocab
       "http://www.w3.org/1999/02/22-rdf-syntax-ns#subPropertyOf": "http://www.w3.org/2002/07/owl#topDataProperty",
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :sparql,
-      label: "has sparql service",
+      label: {en: "has sparql service"},
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :uuid,
       subPropertyOf: "http://www.w3.org/2002/07/owl#topDataProperty",
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :writable,
-      label: "writable",
+      label: {en: "writable"},
       range: "http://www.w3.org/2001/XMLSchema#boolean",
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
   end

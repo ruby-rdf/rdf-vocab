@@ -9,86 +9,86 @@ module RDF::Vocab
 
     # Class definitions
     term :Feature,
-      comment: "See RFC 7946 Section 3.2.",
+      comment: {en: "See RFC 7946 Section 3.2."},
       isDefinedBy: "http://purl.org/geojson/vocab#",
-      label: "Feature",
+      label: {en: "Feature"},
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :FeatureCollection,
-      comment: "See RFC 7946 Section 3.3.",
+      comment: {en: "See RFC 7946 Section 3.3."},
       isDefinedBy: "http://purl.org/geojson/vocab#",
-      label: "FeatureCollection",
+      label: {en: "FeatureCollection"},
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :GeometryCollection,
-      comment: "See RFC 7946 Section 3.1.8.",
+      comment: {en: "See RFC 7946 Section 3.1.8."},
       isDefinedBy: "http://purl.org/geojson/vocab#",
-      label: "GeometryCollection",
+      label: {en: "GeometryCollection"},
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :LineString,
-      comment: "See RFC 7946 Section 3.1.4.",
+      comment: {en: "See RFC 7946 Section 3.1.4."},
       isDefinedBy: "http://purl.org/geojson/vocab#",
-      label: "LineString",
+      label: {en: "LineString"},
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :MultiLineString,
-      comment: "See RFC 7946 Section 3.1.5.",
+      comment: {en: "See RFC 7946 Section 3.1.5."},
       isDefinedBy: "http://purl.org/geojson/vocab#",
-      label: "MultiLineString",
+      label: {en: "MultiLineString"},
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :MultiPoint,
-      comment: "See RFC 7946 Section 3.1.3.",
+      comment: {en: "See RFC 7946 Section 3.1.3."},
       isDefinedBy: "http://purl.org/geojson/vocab#",
-      label: "MultiPoint",
+      label: {en: "MultiPoint"},
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :MultiPolygon,
-      comment: "See RFC 7946 Section 3.1.7.",
+      comment: {en: "See RFC 7946 Section 3.1.7."},
       isDefinedBy: "http://purl.org/geojson/vocab#",
-      label: "MultiPolygon",
+      label: {en: "MultiPolygon"},
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :Point,
-      comment: "See RFC 7946 Section 3.1.2.",
+      comment: {en: "See RFC 7946 Section 3.1.2."},
       isDefinedBy: "http://purl.org/geojson/vocab#",
-      label: "Point",
+      label: {en: "Point"},
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :Polygon,
-      comment: "See RFC 7946 Section 3.1.6.",
+      comment: {en: "See RFC 7946 Section 3.1.6."},
       isDefinedBy: "http://purl.org/geojson/vocab#",
-      label: "Polygon",
+      label: {en: "Polygon"},
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
 
     # Property definitions
     property :bbox,
-      comment: "See RFC 7946 Section 5.",
+      comment: {en: "See RFC 7946 Section 5."},
       isDefinedBy: "http://purl.org/geojson/vocab#",
-      label: "bbox",
+      label: {en: "bbox"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :coordinates,
-      comment: "RFC 7946 Section 3.1.1.",
+      comment: {en: "RFC 7946 Section 3.1.1."},
       isDefinedBy: "http://purl.org/geojson/vocab#",
-      label: "coordinates",
+      label: {en: "coordinates"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :features,
-      comment: "RFC 7946 Section 3.3.",
+      comment: {en: "RFC 7946 Section 3.3."},
       isDefinedBy: "http://purl.org/geojson/vocab#",
-      label: "features",
+      label: {en: "features"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :geometry,
-      comment: "RFC 7946 Section 3.2.",
+      comment: {en: "RFC 7946 Section 3.2."},
       isDefinedBy: "http://purl.org/geojson/vocab#",
-      label: "geometry",
+      label: {en: "geometry"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :id,
-      comment: "RFC 7946 Section 3.2.",
+      comment: {en: "RFC 7946 Section 3.2."},
       isDefinedBy: "http://purl.org/geojson/vocab#",
-      label: "id",
+      label: {en: "id"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :properties,
-      comment: "RFC 7946 Section 3.2.",
+      comment: {en: "RFC 7946 Section 3.2."},
       isDefinedBy: "http://purl.org/geojson/vocab#",
-      label: "properties",
+      label: {en: "properties"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :type,
-      comment: "RFC 7946 Section 3.",
+      comment: {en: "RFC 7946 Section 3."},
       isDefinedBy: "http://purl.org/geojson/vocab#",
-      label: "type",
+      label: {en: "type"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
   end
 end

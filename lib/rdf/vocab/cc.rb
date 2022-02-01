@@ -14,29 +14,29 @@ module RDF::Vocab
 
     # Class definitions
     term :Jurisdiction,
-      comment: "the legal jurisdiction\nof a license",
-      label: "Jurisdiction",
+      comment: {"en-us": "the legal jurisdiction\nof a license"},
+      label: {"en-us": "Jurisdiction"},
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :License,
-      comment: "a set of\nrequests/permissions to users of a Work, e.g. a\ncopyright license, the public domain, information\nfor distributors",
-      label: "License",
+      comment: {"en-us": "a set of\nrequests/permissions to users of a Work, e.g. a\ncopyright license, the public domain, information\nfor distributors"},
+      label: {"en-us": "License"},
       subClassOf: "http://purl.org/dc/terms/LicenseDocument",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :Permission,
-      comment: "an action that may or\nmay not be allowed or desired",
-      label: "Permission",
+      comment: {"en-us": "an action that may or\nmay not be allowed or desired"},
+      label: {"en-us": "Permission"},
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :Prohibition,
-      comment: "something you may be\nasked not to do",
-      label: "Prohibition",
+      comment: {"en-us": "something you may be\nasked not to do"},
+      label: {"en-us": "Prohibition"},
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :Requirement,
-      comment: "an action that may or\nmay not be requested of you",
-      label: "Requirement",
+      comment: {"en-us": "an action that may or\nmay not be requested of you"},
+      label: {"en-us": "Requirement"},
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :Work,
-      comment: "a potentially\ncopyrightable work",
-      label: "Work",
+      comment: {"en-us": "a potentially\ncopyrightable work"},
+      label: {"en-us": "Work"},
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
 
     # Property definitions
@@ -50,12 +50,12 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :deprecatedOn,
       domain: "http://creativecommons.org/ns#License",
-      label: "deprecated\non",
+      label: {"en-us": "deprecated\non"},
       range: "http://www.w3.org/2001/XMLSchema-datatypes#date",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :jurisdiction,
       domain: "http://creativecommons.org/ns#License",
-      label: "jurisdiction",
+      label: {"en-us": "jurisdiction"},
       range: "http://creativecommons.org/ns#Jurisdiction",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :legalcode,
@@ -65,7 +65,7 @@ module RDF::Vocab
     property :license,
       domain: "http://creativecommons.org/ns#Work",
       "http://www.w3.org/2002/07/owl#sameAs": "http://www.w3.org/1999/xhtml/vocab#license",
-      label: "has\nlicense",
+      label: {"en-us": "has\nlicense"},
       range: "http://creativecommons.org/ns#License",
       subPropertyOf: "http://purl.org/dc/terms/license",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -76,17 +76,17 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :permits,
       domain: "http://creativecommons.org/ns#License",
-      label: "permits",
+      label: {"en-us": "permits"},
       range: "http://creativecommons.org/ns#Permission",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :prohibits,
       domain: "http://creativecommons.org/ns#License",
-      label: "prohibits",
+      label: {"en-us": "prohibits"},
       range: "http://creativecommons.org/ns#Prohibition",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :requires,
       domain: "http://creativecommons.org/ns#License",
-      label: "requires",
+      label: {"en-us": "requires"},
       range: "http://creativecommons.org/ns#Requirement",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :useGuidelines,
@@ -97,52 +97,52 @@ module RDF::Vocab
 
     # Extra definitions
     term :Attribution,
-      comment: "credit be given to\ncopyright holder and/or author",
-      label: "Attribution",
+      comment: {"en-us": "credit be given to\ncopyright holder and/or author"},
+      label: {"en-us": "Attribution"},
       type: "http://creativecommons.org/ns#Requirement"
     term :CommercialUse,
-      comment: "exercising rights for\ncommercial purposes",
-      label: "Commercial Use",
+      comment: {"en-us": "exercising rights for\ncommercial purposes"},
+      label: {"en-us": "Commercial Use"},
       type: "http://creativecommons.org/ns#Prohibition"
     term :Copyleft,
-      comment: "derivative and\ncombined works must be licensed under specified\nterms, similar to those on the original\nwork",
-      label: "Copyleft",
+      comment: {"en-us": "derivative and\ncombined works must be licensed under specified\nterms, similar to those on the original\nwork"},
+      label: {"en-us": "Copyleft"},
       type: "http://creativecommons.org/ns#Requirement"
     term :DerivativeWorks,
-      comment: "distribution of\nderivative works",
-      label: "Derivative Works",
+      comment: {"en-us": "distribution of\nderivative works"},
+      label: {"en-us": "Derivative Works"},
       type: "http://creativecommons.org/ns#Permission"
     term :Distribution,
-      comment: "distribution, public\ndisplay, and publicly performance",
-      label: "Distribution",
+      comment: {"en-us": "distribution, public\ndisplay, and publicly performance"},
+      label: {"en-us": "Distribution"},
       type: "http://creativecommons.org/ns#Permission"
     term :HighIncomeNationUse,
-      comment: "use in a\nnon-developing country",
-      label: "High Income Nation Use",
+      comment: {"en-us": "use in a\nnon-developing country"},
+      label: {"en-us": "High Income Nation Use"},
       type: "http://creativecommons.org/ns#Prohibition"
     term :LesserCopyleft,
-      comment: "derivative works must\nbe licensed under specified terms, with at least\nthe same conditions as the original work;\ncombinations with the work may be licensed under\ndifferent terms",
-      label: "Lesser Copyleft",
+      comment: {"en-us": "derivative works must\nbe licensed under specified terms, with at least\nthe same conditions as the original work;\ncombinations with the work may be licensed under\ndifferent terms"},
+      label: {"en-us": "Lesser Copyleft"},
       type: "http://creativecommons.org/ns#Requirement"
     term :Notice,
-      comment: "copyright and license\nnotices be kept intact",
-      label: "Notice",
+      comment: {"en-us": "copyright and license\nnotices be kept intact"},
+      label: {"en-us": "Notice"},
       type: "http://creativecommons.org/ns#Requirement"
     term :Reproduction,
-      comment: "making multiple\ncopies",
-      label: "Reproduction",
+      comment: {"en-us": "making multiple\ncopies"},
+      label: {"en-us": "Reproduction"},
       type: "http://creativecommons.org/ns#Permission"
     term :ShareAlike,
-      comment: "derivative works be\nlicensed under the same terms or compatible terms\nas the original work",
-      label: "Share Alike",
+      comment: {"en-us": "derivative works be\nlicensed under the same terms or compatible terms\nas the original work"},
+      label: {"en-us": "Share Alike"},
       type: "http://creativecommons.org/ns#Requirement"
     term :Sharing,
-      comment: "permits commercial\nderivatives, but only non-commercial\ndistribution",
-      label: "Sharing",
+      comment: {"en-us": "permits commercial\nderivatives, but only non-commercial\ndistribution"},
+      label: {"en-us": "Sharing"},
       type: "http://creativecommons.org/ns#Permission"
     term :SourceCode,
-      comment: "source code (the\npreferred form for making modifications) must be\nprovided when exercising some rights granted by\nthe license.",
-      label: "Source Code",
+      comment: {"en-us": "source code (the\npreferred form for making modifications) must be\nprovided when exercising some rights granted by\nthe license."},
+      label: {"en-us": "Source Code"},
       type: "http://creativecommons.org/ns#Requirement"
   end
 end

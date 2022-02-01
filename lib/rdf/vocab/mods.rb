@@ -29,7 +29,7 @@ module RDF::Vocab
       subClassOf: "http://www.w3.org/2002/07/owl#Thing",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Location,
-      comment: "An aggregator for location properties.",
+      comment: {en: "An aggregator for location properties."},
       label: "MODS - Location",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :LocationCopy,
@@ -46,7 +46,7 @@ module RDF::Vocab
       label: "MODS - Note Typed",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Part,
-      comment: "An aggregator for part properties.",
+      comment: {en: "An aggregator for part properties."},
       label: "MODS - Part",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :RoleRelationship,
