@@ -237,7 +237,7 @@
     <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>gen-vocab</span><span class='label_end'>&quot;:</span> <span class='lbrace'>{</span>
       <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Generate a vocabulary using a special serialization.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
       <span class='label'>parse:</span> <span class='kw'>false</span><span class='comma'>,</span>  <span class='comment'># Only parse if there are input files, otherwise, uses vocabulary
-</span>      <span class='label'>help:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>gen-vocab --uri &lt;vocabulary-URI&gt; [--output format ttl|jsonld|html] [options] [files]\nGenerate a vocabulary from repository using a special serialization.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
+</span>      <span class='label'>help:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>gen-vocab --uri &lt;vocabulary-URI&gt; [--output-format ttl|jsonld|html] [options] [files]\nGenerate a vocabulary from repository using a special serialization.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span>
       <span class='label'>lambda:</span> <span class='tlambda'>-&gt;</span><span class='lparen'>(</span><span class='id identifier rubyid_files'>files</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span> <span class='kw'>do</span>
         <span class='gvar'>$stdout</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Generate Vocabulary</span><span class='tstring_end'>&quot;</span></span>
         <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Must specify vocabulary URI</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:base_uri</span><span class='rbracket'>]</span>
@@ -300,7 +300,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Jan 28 20:36:35 2022 by
+  Generated on Tue Feb  8 19:27:37 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.27 (ruby-3.1.0).
 </div>
