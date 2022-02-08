@@ -1,8 +1,6 @@
 # rdf-vocab
 Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 
-[TriG][] reader/writer for [RDF.rb][RDF.rb] .
-
 [![Gem Version](https://badge.fury.io/rb/rdf-vocab.png)](https://badge.fury.io/rb/rdf-vocab)
 [![Build Status](https://github.com/ruby-rdf/rdf-vocab/workflows/CI/badge.svg?branch=develop)](https://github.com/ruby-rdf/rdf-vocab/actions?query=workflow%3ACI)
 [![Coverage Status](https://coveralls.io/repos/ruby-rdf/rdf-vocab/badge.svg?branch=develop)](https://coveralls.io/github/ruby-rdf/rdf-vocab?branch=develop)
@@ -123,7 +121,7 @@ Also adds the `gen-vocab` command to the `rdf` command-line executable to genera
 
 * First, add an entry to `lib/rdf/vocab.rb`, the key names contained within
 for guidance. For more information, see the documentation on
-[RDF::Vocabulary](https://www.rubydoc.info/github/ruby-rdf/rdf/RDF/Vocabulary).
+[RDF::Vocabulary](https://ruby-rdf.github.io/rdf/RDF/Vocabulary).
 * Next, create an empty file in `lib/rdf/vocab` based on the key name for
 your vocabulary. For example, if you've added the vocabulary `:foo`, create a
 new empty file at `lib/rdf/vocab/foo.rb`.
@@ -159,7 +157,7 @@ This is free and unencumbered public domain software. For more information,
 see <https://unlicense.org/> or the accompanying {file:LICENSE} file.
 
 [RDF]:              https://www.w3.org/RDF/
-[RDF.rb]:           https://rubydoc.info/github/ruby-rdf/rdf
+[RDF.rb]:           https://ruby-rdf.github.io/rdf
 [YARD]:             https://yardoc.org/
 [YARD-GS]:          https://rubydoc.info/docs/yard/file/docs/GettingStarted.md
 [PDD]:              https://unlicense.org/#unlicensing-contributions

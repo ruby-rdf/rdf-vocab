@@ -3,189 +3,191 @@
 # This file generated automatically using rdf vocabulary format from http://www.w3.org/2009/pointers#
 require 'rdf'
 module RDF::Vocab
+  # Vocabulary for <http://www.w3.org/2009/pointers#>
+  # @!visibility private
   PTR = Class.new(RDF::StrictVocabulary("http://www.w3.org/2009/pointers#")) do
 
     # Class definitions
     term :ByteOffsetCompoundPointer,
-      comment: "Pointer to a byte range with a defined start and a byte offset from there.".freeze,
-      label: "Byte Offset Compound Pointer".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#CompoundPointer".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Pointer to a byte range with a defined start and a byte offset from there."},
+      label: {en: "Byte Offset Compound Pointer"},
+      subClassOf: "http://www.w3.org/2009/pointers#CompoundPointer",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :ByteOffsetPointer,
-      comment: "Single pointer using a byte offset from the start of the reference.".freeze,
-      label: "Byte Offset Pointer".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#OffsetPointer".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Single pointer using a byte offset from the start of the reference."},
+      label: {en: "Byte Offset Pointer"},
+      subClassOf: "http://www.w3.org/2009/pointers#OffsetPointer",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :ByteSnippetCompoundPointer,
-      comment: "Pointer to a range with a defined start and a byte snippet from there.".freeze,
-      label: "Byte Snippet Compound Pointer".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#CompoundPointer".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Pointer to a range with a defined start and a byte snippet from there."},
+      label: {en: "Byte Snippet Compound Pointer"},
+      subClassOf: "http://www.w3.org/2009/pointers#CompoundPointer",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :CSSSelectorPointer,
-      comment: "Single pointer using a CSS selector.".freeze,
-      label: "CSS selector Pointer".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#ExpressionPointer".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Single pointer using a CSS selector."},
+      label: {en: "CSS selector Pointer"},
+      subClassOf: "http://www.w3.org/2009/pointers#ExpressionPointer",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :CharOffsetCompoundPointer,
-      comment: "Pointer to a char range with a defined start and a char offset from there.".freeze,
-      label: "Char Offset Compound Pointer".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#CompoundPointer".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Pointer to a char range with a defined start and a char offset from there."},
+      label: {en: "Char Offset Compound Pointer"},
+      subClassOf: "http://www.w3.org/2009/pointers#CompoundPointer",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :CharOffsetPointer,
-      comment: "Single pointer using a character offset from the start of the reference.".freeze,
-      label: "Char Offset Pointer".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#OffsetPointer".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Single pointer using a character offset from the start of the reference."},
+      label: {en: "Char Offset Pointer"},
+      subClassOf: "http://www.w3.org/2009/pointers#OffsetPointer",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :CharSnippetCompoundPointer,
-      comment: "Pointer to a range with a defined start and a character snippet from there.".freeze,
-      label: "Char Snippet Compound Pointer".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#CompoundPointer".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Pointer to a range with a defined start and a character snippet from there."},
+      label: {en: "Char Snippet Compound Pointer"},
+      subClassOf: "http://www.w3.org/2009/pointers#CompoundPointer",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :CompoundPointer,
-      comment: "An abstract method made of a pair of pointers to a defined section to be subclassed for extensibility.".freeze,
-      label: "Compound Pointer".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#Pointer".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "An abstract method made of a pair of pointers to a defined section to be subclassed for extensibility."},
+      label: {en: "Compound Pointer"},
+      subClassOf: "http://www.w3.org/2009/pointers#Pointer",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :EquivalentPointers,
-      comment: "Group of equivalent pointers that point to the same places.".freeze,
-      label: "Equivalent Pointers".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#PointersGroup".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Group of equivalent pointers that point to the same places."},
+      label: {en: "Equivalent Pointers"},
+      subClassOf: "http://www.w3.org/2009/pointers#PointersGroup",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :ExpressionPointer,
-      comment: "Generic single pointer that make use of an expression language such as xPath, CSS selectors, etc.".freeze,
-      label: "Expression Pointer".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#SinglePointer".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Generic single pointer that make use of an expression language such as xPath, CSS selectors, etc."},
+      label: {en: "Expression Pointer"},
+      subClassOf: "http://www.w3.org/2009/pointers#SinglePointer",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :LineCharPointer,
-      comment: "Single pointer using line and char numbers.".freeze,
-      label: "Line-Char Pointer".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#SinglePointer".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Single pointer using line and char numbers."},
+      label: {en: "Line-Char Pointer"},
+      subClassOf: "http://www.w3.org/2009/pointers#SinglePointer",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :OffsetPointer,
-      comment: "Generic single pointer based on an offset.".freeze,
-      label: "Offset Pointer".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#SinglePointer".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Generic single pointer based on an offset."},
+      label: {en: "Offset Pointer"},
+      subClassOf: "http://www.w3.org/2009/pointers#SinglePointer",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :Pointer,
-      comment: "Abstract Pointer to be subclassed for extensibility.".freeze,
-      label: "Pointer".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Abstract Pointer to be subclassed for extensibility."},
+      label: {en: "Pointer"},
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :PointersGroup,
-      comment: "Generic container for a group of Pointers".freeze,
-      label: "Pointers Group".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#Pointer".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Generic container for a group of Pointers"},
+      label: {en: "Pointers Group"},
+      subClassOf: "http://www.w3.org/2009/pointers#Pointer",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :RelatedPointers,
-      comment: "Group of related pointers you use together for some purpose.".freeze,
-      label: "Related Pointers".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#PointersGroup".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Group of related pointers you use together for some purpose."},
+      label: {en: "Related Pointers"},
+      subClassOf: "http://www.w3.org/2009/pointers#PointersGroup",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :SinglePointer,
-      comment: "Abstract pointer to a single point to be subclassed for extensibility.".freeze,
-      label: "Single Pointer".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#Pointer".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Abstract pointer to a single point to be subclassed for extensibility."},
+      label: {en: "Single Pointer"},
+      subClassOf: "http://www.w3.org/2009/pointers#Pointer",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :StartEndPointer,
-      comment: "Compound pointer to a range with a start and an end point.".freeze,
-      label: "Start-End Pointer".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#CompoundPointer".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Compound pointer to a range with a start and an end point."},
+      label: {en: "Start-End Pointer"},
+      subClassOf: "http://www.w3.org/2009/pointers#CompoundPointer",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :XMLNamespace,
-      comment: "An XML Namespace.".freeze,
-      label: "XMLNamespace".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "An XML Namespace."},
+      label: {en: "XMLNamespace"},
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :XPathPointer,
-      comment: "Single pointer using an XPath expression.".freeze,
-      label: "XPath Pointer".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#ExpressionPointer".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Single pointer using an XPath expression."},
+      label: {en: "XPath Pointer"},
+      subClassOf: "http://www.w3.org/2009/pointers#ExpressionPointer",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :XPointerPointer,
-      comment: "Single pointer using an XPointer expression.".freeze,
-      label: "XPointer Pointer".freeze,
-      subClassOf: "http://www.w3.org/2009/pointers#XPathPointer".freeze,
-      type: "http://www.w3.org/2000/01/rdf-schema#Class".freeze
+      comment: {en: "Single pointer using an XPointer expression."},
+      label: {en: "XPointer Pointer"},
+      subClassOf: "http://www.w3.org/2009/pointers#XPathPointer",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
 
     # Property definitions
     property :byteOffset,
-      comment: "Number of bytes counting from the start point.".freeze,
-      domain: "http://www.w3.org/2009/pointers#ByteOffsetCompoundPointer".freeze,
-      label: "byte offset".freeze,
-      range: "http://www.w3.org/2001/XMLSchema#positiveInteger".freeze,
-      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
+      comment: "Number of bytes counting from the start point.",
+      domain: "http://www.w3.org/2009/pointers#ByteOffsetCompoundPointer",
+      label: "byte offset",
+      range: "http://www.w3.org/2001/XMLSchema#positiveInteger",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :charNumber,
-      comment: "Char number within a line starting at one.\n\t\t".freeze,
-      domain: "http://www.w3.org/2009/pointers#LineCharPointer".freeze,
-      label: "char number".freeze,
-      range: "http://www.w3.org/2001/XMLSchema#positiveInteger".freeze,
-      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
+      comment: {en: "Char number within a line starting at one.\n\t\t"},
+      domain: "http://www.w3.org/2009/pointers#LineCharPointer",
+      label: {en: "char number"},
+      range: "http://www.w3.org/2001/XMLSchema#positiveInteger",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :charOffset,
-      comment: "Number of characters counting from the start point.".freeze,
-      domain: "http://www.w3.org/2009/pointers#CharOffsetCompoundPointer".freeze,
-      label: "char offset".freeze,
-      range: "http://www.w3.org/2001/XMLSchema#positiveInteger".freeze,
-      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
+      comment: {en: "Number of characters counting from the start point."},
+      domain: "http://www.w3.org/2009/pointers#CharOffsetCompoundPointer",
+      label: {en: "char offset"},
+      range: "http://www.w3.org/2001/XMLSchema#positiveInteger",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :endPointer,
-      comment: "Pointer to the end point of the range.".freeze,
-      domain: "http://www.w3.org/2009/pointers#StartEndPointer".freeze,
-      label: "end pointer".freeze,
-      range: "http://www.w3.org/2009/pointers#SinglePointer".freeze,
-      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
+      comment: {en: "Pointer to the end point of the range."},
+      domain: "http://www.w3.org/2009/pointers#StartEndPointer",
+      label: {en: "end pointer"},
+      range: "http://www.w3.org/2009/pointers#SinglePointer",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :expression,
-      comment: "Expressions, such as xPath or CSS selectors, that identify points.".freeze,
-      domain: "http://www.w3.org/2009/pointers#ExpressionPointer".freeze,
-      label: "expression".freeze,
-      range: "http://www.w3.org/2000/01/rdf-schema#Literal".freeze,
-      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
+      comment: {en: "Expressions, such as xPath or CSS selectors, that identify points."},
+      domain: "http://www.w3.org/2009/pointers#ExpressionPointer",
+      label: {en: "expression"},
+      range: "http://www.w3.org/2000/01/rdf-schema#Literal",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :groupPointer,
-      comment: "A Pointer that is part of a Group".freeze,
-      domain: "http://www.w3.org/2009/pointers#PointersGroup".freeze,
-      label: "groupPointer".freeze,
-      range: "http://www.w3.org/2009/pointers#Pointer".freeze,
-      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
+      comment: {en: "A Pointer that is part of a Group"},
+      domain: "http://www.w3.org/2009/pointers#PointersGroup",
+      label: {en: "groupPointer"},
+      range: "http://www.w3.org/2009/pointers#Pointer",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :lineNumber,
-      comment: "Line number within the reference starting at one.\n\t\t".freeze,
-      domain: "http://www.w3.org/2009/pointers#LineCharPointer".freeze,
-      label: "line number".freeze,
-      range: "http://www.w3.org/2001/XMLSchema#positiveInteger".freeze,
-      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
+      comment: {en: "Line number within the reference starting at one.\n\t\t"},
+      domain: "http://www.w3.org/2009/pointers#LineCharPointer",
+      label: {en: "line number"},
+      range: "http://www.w3.org/2001/XMLSchema#positiveInteger",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :namespace,
-      comment: "The namespace being used for the XPath expression.".freeze,
-      domain: "http://www.w3.org/2009/pointers#XPathPointer".freeze,
-      label: "namespace".freeze,
-      range: "http://www.w3.org/2009/pointers#XMLNamespace".freeze,
-      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
+      comment: {en: "The namespace being used for the XPath expression."},
+      domain: "http://www.w3.org/2009/pointers#XPathPointer",
+      label: {en: "namespace"},
+      range: "http://www.w3.org/2009/pointers#XMLNamespace",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :namespaceName,
-      comment: "The namespace name being used for an XML Namespace.".freeze,
-      domain: "http://www.w3.org/2009/pointers#XMLNamespace".freeze,
-      label: "namespace name".freeze,
-      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
+      comment: {en: "The namespace name being used for an XML Namespace."},
+      domain: "http://www.w3.org/2009/pointers#XMLNamespace",
+      label: {en: "namespace name"},
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :offset,
-      comment: "Offset from the start of the reference.".freeze,
-      domain: "http://www.w3.org/2009/pointers#OffsetPointer".freeze,
-      label: "offset".freeze,
-      range: "http://www.w3.org/2001/XMLSchema#positiveInteger".freeze,
-      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
+      comment: {en: "Offset from the start of the reference."},
+      domain: "http://www.w3.org/2009/pointers#OffsetPointer",
+      label: {en: "offset"},
+      range: "http://www.w3.org/2001/XMLSchema#positiveInteger",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :prefix,
-      comment: "The namespace prefix being used for an XML Namespace.".freeze,
-      domain: "http://www.w3.org/2009/pointers#XMLNamespace".freeze,
-      label: "prefix".freeze,
-      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
+      comment: {en: "The namespace prefix being used for an XML Namespace."},
+      domain: "http://www.w3.org/2009/pointers#XMLNamespace",
+      label: {en: "prefix"},
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :reference,
-      comment: "Scope within which a single pointer operates.".freeze,
-      domain: "http://www.w3.org/2009/pointers#SinglePointer".freeze,
-      label: "reference".freeze,
-      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
+      comment: {en: "Scope within which a single pointer operates."},
+      domain: "http://www.w3.org/2009/pointers#SinglePointer",
+      label: {en: "reference"},
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :startPointer,
-      comment: "Pointer to the start point of the range in a compound pointer.".freeze,
-      domain: "http://www.w3.org/2009/pointers#CompoundPointer".freeze,
-      label: "start pointer".freeze,
-      range: "http://www.w3.org/2009/pointers#SinglePointer".freeze,
-      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
+      comment: {en: "Pointer to the start point of the range in a compound pointer."},
+      domain: "http://www.w3.org/2009/pointers#CompoundPointer",
+      label: {en: "start pointer"},
+      range: "http://www.w3.org/2009/pointers#SinglePointer",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :version,
-      comment: "Version for the expression language being used.".freeze,
-      domain: "http://www.w3.org/2009/pointers#ExpressionPointer".freeze,
-      label: "version".freeze,
-      range: "http://www.w3.org/2000/01/rdf-schema#Literal".freeze,
-      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property".freeze
+      comment: {en: "Version for the expression language being used."},
+      domain: "http://www.w3.org/2009/pointers#ExpressionPointer",
+      label: {en: "version"},
+      range: "http://www.w3.org/2000/01/rdf-schema#Literal",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
   end
 end

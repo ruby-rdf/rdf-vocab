@@ -275,7 +275,7 @@ module RDF
 
             po.each do |predicate, objects|
               term = jld_context.compact_iri(predicate, vocab: true)
-              node[term] = if jld_context.container(term) == '@language'
+              node[term] = if jld_context.container(term).include?('@language')
                 lang_map = objects.inject({}) do |memo, o|
                   raise "Language-mapped term #{term} with non plain-literal #{o.inspect}" unless o.literal? && o.plain?
                   memo.merge(o.language.to_s => o.value)
@@ -499,7 +499,7 @@ module RDF
           "gen-vocab": {
             description: "Generate a vocabulary using a special serialization.",
             parse: false,  # Only parse if there are input files, otherwise, uses vocabulary
-            help: "gen-vocab --uri <vocabulary-URI> [--output format ttl|jsonld|html] [options] [files]\nGenerate a vocabulary from repository using a special serialization.",
+            help: "gen-vocab --uri <vocabulary-URI> [--output-format ttl|jsonld|html] [options] [files]\nGenerate a vocabulary from repository using a special serialization.",
             lambda: ->(files, **options) do
               $stdout.puts "Generate Vocabulary"
               raise ArgumentError, "Must specify vocabulary URI" unless options[:base_uri]

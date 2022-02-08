@@ -3,860 +3,862 @@
 # This file generated automatically using rdf vocabulary format from http://www.loc.gov/mads/rdf/v1#
 require 'rdf'
 module RDF::Vocab
+  # Vocabulary for <http://www.loc.gov/mads/rdf/v1#>
+  # @!visibility private
   MADS = Class.new(RDF::StrictVocabulary("http://www.loc.gov/mads/rdf/v1#")) do
 
     # Ontology definition
     ontology :"http://www.loc.gov/mads/rdf/v1#",
-      comment: "This document describes the MADS/RDF (Metadata Authority Description Schema in RDF) vocabulary, a data model for authority and vocabulary data used within the library and information science (LIS) community, which is inclusive of museums, archives, and other cultural institutions. It is presented as an OWL ontology. \n      \n      \n      MADS/RDF is a knowledge organization system (KOS) designed for use with controlled values for names (personal, corporate, geographic, etc.), thesauri, taxonomies, subject heading systems, and other controlled value lists. It is closely related to SKOS, the Simple Knowledge Organization System and a widely supported and adopted RDF vocabulary. Given the close relationship between the aim of MADS/RDF and the aim of SKOS, the MADS ontology has been fully mapped to SKOS. \n      \n      \n      Unlike SKOS, however, which is very broad in its application, MADS/RDF is designed specifically to support authority data as used by and needed in the LIS community and its technology systems. For example, MADS/RDF provides a means to record data from the Machine Readable Cataloging (MARC) Authorities format in RDF for use in semantic applications and Linked Data projects. \n      \n      \n      MADS/RDF is designed to support the description of cultural and bibliographic resources. Data described using MADS/RDF, therefore, assists with identifying and annotating bibliographic and cultural resources. MADS/RDF is not focused on the description of Real World Objects. Although a MADS/RDF description may contain information specific to the Real World Object associated with the MADS/RDF authoritative label, the MADS/RDF ontology distinguishes between these two entities – the RWO and the Authority. \n      \n      \n      Updated: 29 October 2015. Addition of new properties, madsrdf:activityEndDate, madsrdf:activityStartDate, madsrdf:associatedLanguage, madsrdf:associatedLocale, madsrdf:birthDate, madsrdf:birthPlace, madsrdf:deathDate, madsrdf:deathPlace, madsrdf:entityDescriptor, madsrdf:establishDate, madsrdf:fieldOfActivity, madsrdf:gender, madsrdf:hasAffiliation, madsrdf:honoraryTitle, madsrdf:isIdentifiedByAuthority, madsrdf:occupation, madsrdf:prominentFamilyMember, madsrdf:terminateDate, madsrdf:fullerName, madsrdf:creationDateStart, madsrdf:creationDateEnd, madsrdf:workOrigin, madsrdf:hasChararacteristic.  \n      \n      \n      The MADS/RDF to SKOS/RDF mapping was done by Antoine Isaac. The MADS/RDF model and ontology benefited significantly as a result of the fruitful discussions surrounding his effort to map the MADS/RDF ontology to SKOS. ".freeze,
-      "http://purl.org/dc/terms/modified": "2019-01-04T17:01:03.065-05:00".freeze,
-      "http://www.w3.org/2002/07/owl#ontologyIRI": "http://www.loc.gov/mads/rdf/v1#".freeze,
-      "http://www.w3.org/2002/07/owl#priorVersion": "http://id.loc.gov/ontologies/madsrdf/v1-3-1".freeze,
-      "http://www.w3.org/2002/07/owl#versionIRI": "http://id.loc.gov/ontologies/madsrdf/v1-4-0".freeze,
-      "http://www.w3.org/2002/07/owl#versionInfo": "1.4.0".freeze,
-      label: "MADS/RDF (Metadata Authority Description Schema in RDF)".freeze,
-      type: "http://www.w3.org/2002/07/owl#Ontology".freeze
+      comment: {en: "This document describes the MADS/RDF (Metadata Authority Description Schema in RDF) vocabulary, a data model for authority and vocabulary data used within the library and information science (LIS) community, which is inclusive of museums, archives, and other cultural institutions. It is presented as an OWL ontology. \n      \n      \n      MADS/RDF is a knowledge organization system (KOS) designed for use with controlled values for names (personal, corporate, geographic, etc.), thesauri, taxonomies, subject heading systems, and other controlled value lists. It is closely related to SKOS, the Simple Knowledge Organization System and a widely supported and adopted RDF vocabulary. Given the close relationship between the aim of MADS/RDF and the aim of SKOS, the MADS ontology has been fully mapped to SKOS. \n      \n      \n      Unlike SKOS, however, which is very broad in its application, MADS/RDF is designed specifically to support authority data as used by and needed in the LIS community and its technology systems. For example, MADS/RDF provides a means to record data from the Machine Readable Cataloging (MARC) Authorities format in RDF for use in semantic applications and Linked Data projects. \n      \n      \n      MADS/RDF is designed to support the description of cultural and bibliographic resources. Data described using MADS/RDF, therefore, assists with identifying and annotating bibliographic and cultural resources. MADS/RDF is not focused on the description of Real World Objects. Although a MADS/RDF description may contain information specific to the Real World Object associated with the MADS/RDF authoritative label, the MADS/RDF ontology distinguishes between these two entities – the RWO and the Authority. \n      \n      \n      Updated: 29 October 2015. Addition of new properties, madsrdf:activityEndDate, madsrdf:activityStartDate, madsrdf:associatedLanguage, madsrdf:associatedLocale, madsrdf:birthDate, madsrdf:birthPlace, madsrdf:deathDate, madsrdf:deathPlace, madsrdf:entityDescriptor, madsrdf:establishDate, madsrdf:fieldOfActivity, madsrdf:gender, madsrdf:hasAffiliation, madsrdf:honoraryTitle, madsrdf:isIdentifiedByAuthority, madsrdf:occupation, madsrdf:prominentFamilyMember, madsrdf:terminateDate, madsrdf:fullerName, madsrdf:creationDateStart, madsrdf:creationDateEnd, madsrdf:workOrigin, madsrdf:hasChararacteristic.  \n      \n      \n      The MADS/RDF to SKOS/RDF mapping was done by Antoine Isaac. The MADS/RDF model and ontology benefited significantly as a result of the fruitful discussions surrounding his effort to map the MADS/RDF ontology to SKOS. "},
+      "http://purl.org/dc/terms/modified": "2019-01-04T17:01:03.065-05:00",
+      "http://www.w3.org/2002/07/owl#ontologyIRI": "http://www.loc.gov/mads/rdf/v1#",
+      "http://www.w3.org/2002/07/owl#priorVersion": "http://id.loc.gov/ontologies/madsrdf/v1-3-1",
+      "http://www.w3.org/2002/07/owl#versionIRI": "http://id.loc.gov/ontologies/madsrdf/v1-4-0",
+      "http://www.w3.org/2002/07/owl#versionInfo": "1.4.0",
+      label: "MADS/RDF (Metadata Authority Description Schema in RDF)",
+      type: "http://www.w3.org/2002/07/owl#Ontology"
 
     # Class definitions
     term :Address,
-      label: "Address".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: {en: "Address"},
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Affiliation,
-      comment: "A resource that describes an individual's affiliation with an organization or group, such as the nature of the affiliation and the active dates.".freeze,
-      label: "Affiliation".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: {en: "A resource that describes an individual's affiliation with an organization or group, such as the nature of the affiliation and the active dates."},
+      label: {en: "Affiliation"},
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Area,
-      comment: "Describes a resource whose label is a non-jurisdictional geographic entity.".freeze,
-      label: "Area Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label is a non-jurisdictional geographic entity.",
+      label: {en: "Area Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Authority,
-      comment: "A concept with a controlled label.".freeze,
-      "http://www.w3.org/2002/07/owl#disjointWith": ["http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority".freeze, "http://www.loc.gov/mads/rdf/v1#MADSCollection".freeze, "http://www.loc.gov/mads/rdf/v1#MADSScheme".freeze, "http://www.loc.gov/mads/rdf/v1#Variant".freeze],
-      label: "Authority".freeze,
-      subClassOf: ["http://www.w3.org/2002/07/owl#Thing".freeze, "http://www.w3.org/2004/02/skos/core#Concept".freeze],
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "A concept with a controlled label.",
+      "http://www.w3.org/2002/07/owl#disjointWith": ["http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority", "http://www.loc.gov/mads/rdf/v1#MADSCollection", "http://www.loc.gov/mads/rdf/v1#MADSScheme", "http://www.loc.gov/mads/rdf/v1#Variant"],
+      label: {en: "Authority"},
+      subClassOf: ["http://www.w3.org/2002/07/owl#Thing", "http://www.w3.org/2004/02/skos/core#Concept"],
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :City,
-      comment: "Describes a resource whose label is an inhabited place incorporated as a city, town, etc.".freeze,
-      label: "City Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label is an inhabited place incorporated as a city, town, etc.",
+      label: {en: "City Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :CitySection,
-      comment: "Describes a resource whose label is a smaller unit within a populated place, e.g., a neighborhood, park, or street.".freeze,
-      label: "City Section Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label is a smaller unit within a populated place, e.g., a neighborhood, park, or street.",
+      label: {en: "City Section Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :ComplexSubject,
-      comment: "The label of a madsrdf:ComplexSubject is the concatenation of labels from two or more madsrdf:SimpleType descriptions, except that the combination of madsrdf:SimpleType labels for the madsrdf:ComplexSubject does not meet the conditions to be the label of a madsrdf:NameTitle resource or madsrdf:HierarchicalGeographic resource.".freeze,
-      label: "Complex Subject Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#ComplexType".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: {en: "The label of a madsrdf:ComplexSubject is the concatenation of labels from two or more madsrdf:SimpleType descriptions, except that the combination of madsrdf:SimpleType labels for the madsrdf:ComplexSubject does not meet the conditions to be the label of a madsrdf:NameTitle resource or madsrdf:HierarchicalGeographic resource."},
+      label: {en: "Complex Subject Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#ComplexType",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :ComplexType,
-      comment: "madsrdf:ComplexType is a resource whose label is the concatenation of labels from two or more Authority descriptions or two or more Variant descriptions or some combination of Authority and Variant descriptions, each of a madsrdf:SimpleType.".freeze,
+      comment: {en: "madsrdf:ComplexType is a resource whose label is the concatenation of labels from two or more Authority descriptions or two or more Variant descriptions or some combination of Authority and Variant descriptions, each of a madsrdf:SimpleType."},
       equivalentClass: term(
-          cardinality: "1".freeze,
-          onProperty: "http://www.loc.gov/mads/rdf/v1#componentList".freeze,
-          type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          cardinality: "1",
+          onProperty: "http://www.loc.gov/mads/rdf/v1#componentList",
+          type: "http://www.w3.org/2002/07/owl#Restriction"
         ),
-      "http://www.w3.org/2002/07/owl#disjointUnionOf": list("http://www.loc.gov/mads/rdf/v1#HierarchicalGeographic".freeze, "http://www.loc.gov/mads/rdf/v1#ComplexSubject".freeze, "http://www.loc.gov/mads/rdf/v1#NameTitle".freeze),
-      "http://www.w3.org/2002/07/owl#disjointWith": "http://www.loc.gov/mads/rdf/v1#SimpleType".freeze,
-      label: "Complex Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#MADSType".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      "http://www.w3.org/2002/07/owl#disjointUnionOf": list("http://www.loc.gov/mads/rdf/v1#HierarchicalGeographic", "http://www.loc.gov/mads/rdf/v1#ComplexSubject", "http://www.loc.gov/mads/rdf/v1#NameTitle"),
+      "http://www.w3.org/2002/07/owl#disjointWith": "http://www.loc.gov/mads/rdf/v1#SimpleType",
+      label: {en: "Complex Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#MADSType",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :ConferenceName,
-      comment: "Describes a resource whose label represents a conference name.".freeze,
-      label: "Conference Name Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Name".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label represents a conference name.",
+      label: {en: "Conference Name Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Name",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Continent,
-      comment: "Describes a resource whose label is one of seven large landmasses on Earth. These are: Asia, Africa, Europe, North America, South America, Australia, and Antarctica.".freeze,
-      label: "Continent Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label is one of seven large landmasses on Earth. These are: Asia, Africa, Europe, North America, South America, Australia, and Antarctica.",
+      label: {en: "Continent Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :CorporateName,
-      comment: "Describes a resource whose label is the name of a corporate entity, which may include political or ecclesiastical entities.".freeze,
-      label: "Corporate Name Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Name".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label is the name of a corporate entity, which may include political or ecclesiastical entities.",
+      label: {en: "Corporate Name Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Name",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Country,
-      comment: "Describes a resource whose label is a country, i.e. a political entity considered a country. ".freeze,
-      label: "Country Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label is a country, i.e. a political entity considered a country. ",
+      label: {en: "Country Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :County,
-      comment: "Describes a resource whose label is the largest local administrative unit, e.g. Warwickshire, in a country, e.g. England.".freeze,
-      label: "County Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label is the largest local administrative unit, e.g. Warwickshire, in a country, e.g. England.",
+      label: {en: "County Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :DateNameElement,
-      label: "Date Name Element".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#NameElement".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: "Date Name Element",
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#NameElement",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :DeprecatedAuthority,
-      comment: "A former Authority.".freeze,
-      "http://www.w3.org/2002/07/owl#disjointWith": ["http://www.loc.gov/mads/rdf/v1#Authority".freeze, "http://www.loc.gov/mads/rdf/v1#MADSCollection".freeze, "http://www.loc.gov/mads/rdf/v1#MADSScheme".freeze],
-      label: "Deprecated Authority".freeze,
-      subClassOf: "http://www.w3.org/2002/07/owl#Thing".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "A former Authority.",
+      "http://www.w3.org/2002/07/owl#disjointWith": ["http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#MADSCollection", "http://www.loc.gov/mads/rdf/v1#MADSScheme"],
+      label: "Deprecated Authority",
+      subClassOf: "http://www.w3.org/2002/07/owl#Thing",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Element,
-      comment: "madsrdf:Element types describe the various parts of labels.".freeze,
+      comment: "madsrdf:Element types describe the various parts of labels.",
       equivalentClass: term(
-          cardinality: "1".freeze,
-          onProperty: "http://www.loc.gov/mads/rdf/v1#elementValue".freeze,
-          type: "http://www.w3.org/2002/07/owl#Restriction".freeze
+          cardinality: "1",
+          onProperty: "http://www.loc.gov/mads/rdf/v1#elementValue",
+          type: "http://www.w3.org/2002/07/owl#Restriction"
         ),
-      label: "Element".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: {en: "Element"},
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :ExtraterrestrialArea,
-      comment: "Describes a resource whose label is any extraterrestrial entity or space, including a solar system, a galaxy, a star system, and a planet, including a geographic feature of an individual planet.".freeze,
-      label: "Extraterrestrial Area Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label is any extraterrestrial entity or space, including a solar system, a galaxy, a star system, and a planet, including a geographic feature of an individual planet.",
+      label: {en: "Extraterrestrial Area Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :FamilyName,
-      comment: "Describes a resource whose label represents a family name.".freeze,
-      label: "Family Name Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Name".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label represents a family name.",
+      label: {en: "Family Name Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Name",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :FamilyNameElement,
-      label: "Family Name Element".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#NameElement".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: "Family Name Element",
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#NameElement",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :FullNameElement,
-      label: "Fullname Element".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#NameElement".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: "Fullname Element",
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#NameElement",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :GenreForm,
-      comment: "Describes a resource whose label is a genre or form term. Genre terms for textual materials designate specific kinds of materials distinguished by the style or technique of their intellectual contents; for example, biographies, catechisms, essays, hymns, or reviews. Form terms designate historically and functionally specific kinds of materials as distinguished by an examination of their physical character, characteristics of their intellectual content, or the order of information within them; for example, daybooks, diaries, directories, journals, memoranda, questionnaires, syllabi, or time sheets. In the context of graphic materials, genre headings denote categories of material distinguished by vantage point, intended purpose, characteristics of the creator, publication status, or method of representation.".freeze,
-      label: "Genre/Form Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: {en: "Describes a resource whose label is a genre or form term. Genre terms for textual materials designate specific kinds of materials distinguished by the style or technique of their intellectual contents; for example, biographies, catechisms, essays, hymns, or reviews. Form terms designate historically and functionally specific kinds of materials as distinguished by an examination of their physical character, characteristics of their intellectual content, or the order of information within them; for example, daybooks, diaries, directories, journals, memoranda, questionnaires, syllabi, or time sheets. In the context of graphic materials, genre headings denote categories of material distinguished by vantage point, intended purpose, characteristics of the creator, publication status, or method of representation."},
+      label: {en: "Genre/Form Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :GenreFormElement,
-      label: "Genre/Form Element".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Element".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: {en: "Genre/Form Element"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Element",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Geographic,
-      comment: "Describes a resource whose label represents a geographic place or feature, especially when a more precise geographic determination (City, Country, Region, etc.) cannot be made.".freeze,
-      label: "Geographic Authority".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: {en: "Describes a resource whose label represents a geographic place or feature, especially when a more precise geographic determination (City, Country, Region, etc.) cannot be made."},
+      label: {en: "Geographic Authority"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :GeographicElement,
-      label: "Geographic Element".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Element".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: {en: "Geographic Element"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Element",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :GivenNameElement,
-      label: "Given Name Element".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#NameElement".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: "Given Name Element",
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#NameElement",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :HierarchicalGeographic,
-      comment: "A madsrdf:HierarchicalGeographic indicates that its label is the concatenation of labels from a sequence of madsrdf:Geographic types taken from one of the madsrdf:Geographic sub-classes such as madsrdf:City, madsrdf:Country, madsrdf:State, madsrdf:Region, madsrdf:Area, etc. The madsrdf:Geographic resources that constitute the madsrdf:HierarchicalGeographic should have a broader to narrower hierarchical relationship between them.".freeze,
-      label: "Hierarchical Geographic Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#ComplexType".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: {en: "A madsrdf:HierarchicalGeographic indicates that its label is the concatenation of labels from a sequence of madsrdf:Geographic types taken from one of the madsrdf:Geographic sub-classes such as madsrdf:City, madsrdf:Country, madsrdf:State, madsrdf:Region, madsrdf:Area, etc. The madsrdf:Geographic resources that constitute the madsrdf:HierarchicalGeographic should have a broader to narrower hierarchical relationship between them."},
+      label: {en: "Hierarchical Geographic Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#ComplexType",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Identifier,
-      comment: "A madsrdf:Identifier resource describes an identifier by associating the identifier value with its type. To be used to record identifiers for a resource in the absence of URIs.".freeze,
-      label: "Other Identifier".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "A madsrdf:Identifier resource describes an identifier by associating the identifier value with its type. To be used to record identifiers for a resource in the absence of URIs.",
+      label: "Other Identifier",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Island,
-      comment: "Describes a resource whose label is a tract of land surrounded by water and smaller than a continent but is not itself a separate country. ".freeze,
-      label: "Island Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label is a tract of land surrounded by water and smaller than a continent but is not itself a separate country. ",
+      label: {en: "Island Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Language,
-      comment: "Describes a resource whose label represents a language.".freeze,
-      equivalentClass: "http://purl.org/dc/terms/LinguisticSystem".freeze,
-      label: "Language Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: {en: "Describes a resource whose label represents a language."},
+      equivalentClass: "http://purl.org/dc/terms/LinguisticSystem",
+      label: {en: "Language Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :LanguageElement,
-      label: "Language Element".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Element".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: "Language Element",
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Element",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :MADSCollection,
-      comment: "A madsrdf:Collection is an organizational unit, members of which will have some form of intellectually unifying theme but not to the extent that it defines an independent knowledge organization system. It aggregates madsrdf:Authority descriptions or other madsrdf:MADSCollection resources.".freeze,
-      "http://www.w3.org/2002/07/owl#disjointWith": ["http://www.loc.gov/mads/rdf/v1#Authority".freeze, "http://www.loc.gov/mads/rdf/v1#MADSScheme".freeze, "http://www.loc.gov/mads/rdf/v1#Variant".freeze],
-      label: "MADS Collection".freeze,
-      subClassOf: "http://www.w3.org/2004/02/skos/core#Collection".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "A madsrdf:Collection is an organizational unit, members of which will have some form of intellectually unifying theme but not to the extent that it defines an independent knowledge organization system. It aggregates madsrdf:Authority descriptions or other madsrdf:MADSCollection resources.",
+      "http://www.w3.org/2002/07/owl#disjointWith": ["http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#MADSScheme", "http://www.loc.gov/mads/rdf/v1#Variant"],
+      label: "MADS Collection",
+      subClassOf: "http://www.w3.org/2004/02/skos/core#Collection",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :MADSScheme,
-      comment: "MADS Scheme is an organizational unit that describes a knowledge organization system. It aggregates madsrdf:Authority descriptions and/or madsrdf:MADSCollection resources included in the knowledge organization system. Including a madsrdf:MADSCollection within a madsrdf:MADSScheme should be done with care; when a madsrdf:MADSCollection is part of a madsrdf:MADSScheme, then any madsrdf:Authority within that madsrdf:MADSCollection is effectively also in the madsrdf:MADSScheme.".freeze,
-      "http://www.w3.org/2002/07/owl#disjointWith": ["http://www.loc.gov/mads/rdf/v1#Authority".freeze, "http://www.loc.gov/mads/rdf/v1#MADSCollection".freeze, "http://www.loc.gov/mads/rdf/v1#Variant".freeze],
-      label: "MADS Scheme".freeze,
-      subClassOf: "http://www.w3.org/2004/02/skos/core#ConceptScheme".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: {en: "MADS Scheme is an organizational unit that describes a knowledge organization system. It aggregates madsrdf:Authority descriptions and/or madsrdf:MADSCollection resources included in the knowledge organization system. Including a madsrdf:MADSCollection within a madsrdf:MADSScheme should be done with care; when a madsrdf:MADSCollection is part of a madsrdf:MADSScheme, then any madsrdf:Authority within that madsrdf:MADSCollection is effectively also in the madsrdf:MADSScheme."},
+      "http://www.w3.org/2002/07/owl#disjointWith": ["http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#MADSCollection", "http://www.loc.gov/mads/rdf/v1#Variant"],
+      label: {en: "MADS Scheme"},
+      subClassOf: "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :MADSType,
-      "http://www.w3.org/2002/07/owl#disjointWith": ["http://www.loc.gov/mads/rdf/v1#MADSCollection".freeze, "http://www.loc.gov/mads/rdf/v1#MADSScheme".freeze],
-      label: "MADS Type".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      "http://www.w3.org/2002/07/owl#disjointWith": ["http://www.loc.gov/mads/rdf/v1#MADSCollection", "http://www.loc.gov/mads/rdf/v1#MADSScheme"],
+      label: "MADS Type",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :MainTitleElement,
-      label: "Main Title Element".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#TitleElement".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: "Main Title Element",
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#TitleElement",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Name,
-      comment: "Describes a resource whose label represents a name, especially when a more precise Name type (madsrdf:ConferenceName, masdrdf:FamilyName, etc.) cannot be identified.".freeze,
-      label: "Name Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: {en: "Describes a resource whose label represents a name, especially when a more precise Name type (madsrdf:ConferenceName, masdrdf:FamilyName, etc.) cannot be identified."},
+      label: {en: "Name Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :NameElement,
-      label: "Name Element".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Element".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: {en: "Name Element"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Element",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :NameTitle,
-      comment: "The label of a madsrdf:NameTitle resource is the concatenation of a label of a madsrdf:Name description and the label of a madsrdf:Title description. Both description types (madsrdf:Name and madsrdf:Title) are of madsrdf:SimpleType types.".freeze,
-      label: "Name/Title Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#ComplexType".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: {en: "The label of a madsrdf:NameTitle resource is the concatenation of a label of a madsrdf:Name description and the label of a madsrdf:Title description. Both description types (madsrdf:Name and madsrdf:Title) are of madsrdf:SimpleType types."},
+      label: {en: "Name/Title Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#ComplexType",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :NonSortElement,
-      label: "Non-sort Element".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#TitleElement".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: "Non-sort Element",
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#TitleElement",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Occupation,
-      comment: "Describes a resource whose label represents an occcupation.".freeze,
-      label: "Occupation Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label represents an occcupation.",
+      label: {en: "Occupation Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :PartNameElement,
-      label: "Part Name Element".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#TitleElement".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: "Part Name Element",
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#TitleElement",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :PartNumberElement,
-      label: "Part Number Element".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#TitleElement".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: "Part Number Element",
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#TitleElement",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :PersonalName,
-      comment: "Describes a resource whose label represents a personal name.".freeze,
-      label: "Personal Name Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Name".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label represents a personal name.",
+      label: {en: "Personal Name Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Name",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Province,
-      comment: "Describes a resource whose label is a first order political division, e.g. Ontario, within a country, e.g. Canada. ".freeze,
-      label: "Province Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label is a first order political division, e.g. Ontario, within a country, e.g. Canada. ",
+      label: {en: "Province Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :RWO,
-      comment: "A madsrdf:RWO is an abstract entity and identifies a Real World Object (RWO) identified by the label of a madsrdf:Authority or madsrdf:DeprecatedAuthority.".freeze,
-      label: "Real World Object".freeze,
-      subClassOf: "http://www.w3.org/2002/07/owl#Thing".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "A madsrdf:RWO is an abstract entity and identifies a Real World Object (RWO) identified by the label of a madsrdf:Authority or madsrdf:DeprecatedAuthority.",
+      label: "Real World Object",
+      subClassOf: "http://www.w3.org/2002/07/owl#Thing",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Region,
-      comment: "Describes a resource whose label is an area that has the status of a jurisdiction, usually incorporating more than one first level jurisdiction. ".freeze,
-      label: "Region Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label is an area that has the status of a jurisdiction, usually incorporating more than one first level jurisdiction. ",
+      label: {en: "Region Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :SimpleType,
-      comment: "madsrdf:SimpleType is a resource with a label constituting a single word or phrase.".freeze,
-      label: "Simple Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#MADSType".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: {en: "madsrdf:SimpleType is a resource with a label constituting a single word or phrase."},
+      label: {en: "Simple Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#MADSType",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Source,
-      comment: "A resource that represents the source of information about another resource. madsrdf:Source is a type of citation.".freeze,
-      label: "Source".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "A resource that represents the source of information about another resource. madsrdf:Source is a type of citation.",
+      label: "Source",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :State,
-      comment: "Describes a resource whose label is a first order political division, e.g. Montana, within a country, e.g. U.S.".freeze,
-      label: "State Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label is a first order political division, e.g. Montana, within a country, e.g. U.S.",
+      label: {en: "State Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :SubTitleElement,
-      label: "Subtitle Element".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#TitleElement".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: "Subtitle Element",
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#TitleElement",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Temporal,
-      comment: "Describes a resource whose label represents a time-based notion.".freeze,
-      label: "Temporal Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label represents a time-based notion.",
+      label: {en: "Temporal Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :TemporalElement,
-      label: "Temporal Element".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Element".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: "Temporal Element",
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Element",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :TermsOfAddressNameElement,
-      label: "Terms of Address Element".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#NameElement".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: "Terms of Address Element",
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#NameElement",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Territory,
-      comment: "Describes a resource whose label is a geographical area belonging to or under the jurisdiction of a governmental authority. ".freeze,
-      label: "Territory Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label is a geographical area belonging to or under the jurisdiction of a governmental authority. ",
+      label: {en: "Territory Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Geographic",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Title,
-      comment: "Describes a resource whose label represents a title.".freeze,
-      label: "Title Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label represents a title.",
+      label: {en: "Title Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :TitleElement,
-      label: "Title Element".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Element".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: {en: "Title Element"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Element",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Topic,
-      comment: "Describes a resource whose label represents a topic.".freeze,
-      label: "Topic Type".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: "Describes a resource whose label represents a topic.",
+      label: {en: "Topic Type"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#SimpleType",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :TopicElement,
-      label: "Topic Element".freeze,
-      subClassOf: "http://www.loc.gov/mads/rdf/v1#Element".freeze,
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      label: {en: "Topic Element"},
+      subClassOf: "http://www.loc.gov/mads/rdf/v1#Element",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Variant,
-      comment: "A resource whose label is the alternate form of an Authority or Deprecated Authority.".freeze,
-      "http://www.w3.org/2002/07/owl#disjointWith": ["http://www.loc.gov/mads/rdf/v1#Authority".freeze, "http://www.loc.gov/mads/rdf/v1#MADSCollection".freeze, "http://www.loc.gov/mads/rdf/v1#MADSScheme".freeze],
-      label: "Variant".freeze,
-      subClassOf: ["http://www.w3.org/2002/07/owl#Thing".freeze, "http://www.w3.org/2008/05/skos-xl#Label".freeze],
-      type: "http://www.w3.org/2002/07/owl#Class".freeze
+      comment: {en: "A resource whose label is the alternate form of an Authority or Deprecated Authority."},
+      "http://www.w3.org/2002/07/owl#disjointWith": ["http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#MADSCollection", "http://www.loc.gov/mads/rdf/v1#MADSScheme"],
+      label: {en: "Variant"},
+      subClassOf: ["http://www.w3.org/2002/07/owl#Thing", "http://www.w3.org/2008/05/skos-xl#Label"],
+      type: "http://www.w3.org/2002/07/owl#Class"
 
     # Property definitions
     property :activityEndDate,
-      comment: "Latest date in a period of activity. ".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      label: "Activity End".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "Latest date in a period of activity. ",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      label: "Activity End",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :activityStartDate,
-      comment: "Earliest date in a period of activity. ".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      label: "Activity Start".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "Earliest date in a period of activity. ",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      label: "Activity Start",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :adminMetadata,
-      comment: "This relates an Authority or Variant to its administrative metadata, which is, minimimally, a Class defined outside of the MADS/RDF namespace. The RecordInfo Class from the RecordInfo ontology is recommended.".freeze,
+      comment: {en: "This relates an Authority or Variant to its administrative metadata, which is, minimimally, a Class defined outside of the MADS/RDF namespace. The RecordInfo Class from the RecordInfo ontology is recommended."},
       domain: term(
-          type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority".freeze, "http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority".freeze, "http://www.loc.gov/mads/rdf/v1#Variant".freeze)
+          type: "http://www.w3.org/2002/07/owl#Class",
+          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority", "http://www.loc.gov/mads/rdf/v1#Variant")
         ),
-      label: "Administrative Metadata".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      label: {en: "Administrative Metadata"},
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :affiliationEnd,
-      comment: "The date an individual ceased to be affiliated with an organization.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation".freeze,
-      label: "Affiliation Ended".freeze,
-      range: "http://www.w3.org/2001/XMLSchema#date".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "The date an individual ceased to be affiliated with an organization.",
+      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation",
+      label: "Affiliation Ended",
+      range: "http://www.w3.org/2001/XMLSchema#date",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :affiliationStart,
-      comment: "The date an individual established an affiliation with an organization.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation".freeze,
-      label: "Affiliation Started".freeze,
-      range: "http://www.w3.org/2001/XMLSchema#date".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "The date an individual established an affiliation with an organization.",
+      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation",
+      label: "Affiliation Started",
+      range: "http://www.w3.org/2001/XMLSchema#date",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :associatedLanguage,
-      comment: "Language that a person, organization, or family uses for publication, communication, etc., or in which a work is expressed. ".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      label: "Associated Language".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#Language".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Language that a person, organization, or family uses for publication, communication, etc., or in which a work is expressed. ",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      label: "Associated Language",
+      range: "http://www.loc.gov/mads/rdf/v1#Language",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :associatedLocale,
-      comment: "A town, city, province, state, and/or country associated with persons, corporate bodies, families, works, and expressions.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      label: "Associated Locale".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#Geographic".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "A town, city, province, state, and/or country associated with persons, corporate bodies, families, works, and expressions.",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      label: "Associated Locale",
+      range: "http://www.loc.gov/mads/rdf/v1#Geographic",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :authoritativeLabel,
-      comment: "A lexical string representing a controlled, curated label for the Authority.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Authority".freeze,
-      label: "Authoritative Label".freeze,
-      subPropertyOf: ["http://www.w3.org/2000/01/rdf-schema#label".freeze, "http://www.w3.org/2004/02/skos/core#prefLabel".freeze],
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: {en: "A lexical string representing a controlled, curated label for the Authority."},
+      domain: "http://www.loc.gov/mads/rdf/v1#Authority",
+      label: {en: "Authoritative Label"},
+      subPropertyOf: ["http://www.w3.org/2000/01/rdf-schema#label", "http://www.w3.org/2004/02/skos/core#prefLabel"],
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :birthDate,
-      comment: "The year a person was born. Date of birth may also include the month and day of the person’s birth. (RDA 9.3.2.1)".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      label: "Birth Date".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "The year a person was born. Date of birth may also include the month and day of the person’s birth. (RDA 9.3.2.1)",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      label: "Birth Date",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :birthPlace,
-      comment: "The town, city, province, state, and/or country in which a person was born.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      label: "Place of Birth".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#Geographic".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "The town, city, province, state, and/or country in which a person was born.",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      label: "Place of Birth",
+      range: "http://www.loc.gov/mads/rdf/v1#Geographic",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :changeNote,
-      comment: "A note detailing a modification to an Authority or Variant.".freeze,
-      equivalentProperty: "http://www.w3.org/2004/02/skos/core#changeNote".freeze,
-      label: "Change Note".freeze,
-      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#note".freeze,
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: {en: "A note detailing a modification to an Authority or Variant."},
+      equivalentProperty: "http://www.w3.org/2004/02/skos/core#changeNote",
+      label: {en: "Change Note"},
+      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#note",
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :citationNote,
-      comment: "A note about how the madsrdf:Source relates to the resource about which the madsrdf:Source is the information source.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Source".freeze,
-      label: "Citation Note".freeze,
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: {en: "A note about how the madsrdf:Source relates to the resource about which the madsrdf:Source is the information source."},
+      domain: "http://www.loc.gov/mads/rdf/v1#Source",
+      label: {en: "Citation Note"},
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :citationSource,
-      comment: "The cited resource.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Source".freeze,
-      label: "Citation Source".freeze,
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: {en: "The cited resource."},
+      domain: "http://www.loc.gov/mads/rdf/v1#Source",
+      label: {en: "Citation Source"},
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :citationStatus,
-      comment: "Should use a standard term - such as 'found' or 'not found' - to indicate whether the cited resource yielded information about the resource related to the madsrdf:Source.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Source".freeze,
-      label: "Citation Status".freeze,
-      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: {en: "Should use a standard term - such as 'found' or 'not found' - to indicate whether the cited resource yielded information about the resource related to the madsrdf:Source."},
+      domain: "http://www.loc.gov/mads/rdf/v1#Source",
+      label: {en: "Citation Status"},
+      range: "http://www.w3.org/2001/XMLSchema#string",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :city,
-      comment: "The city component of an address.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Address".freeze,
-      label: "City".freeze,
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: {en: "The city component of an address."},
+      domain: "http://www.loc.gov/mads/rdf/v1#Address",
+      label: {en: "City"},
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :classification,
-      comment: "The classification code associated with a madsrdf:Authority.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Authority".freeze,
-      label: "Classification".freeze,
-      subPropertyOf: "http://www.w3.org/2004/02/skos/core#semanticRelation".freeze,
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: {en: "The classification code associated with a madsrdf:Authority."},
+      domain: "http://www.loc.gov/mads/rdf/v1#Authority",
+      label: {en: "Classification"},
+      subPropertyOf: "http://www.w3.org/2004/02/skos/core#semanticRelation",
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :code,
-      comment: "A code is a string of characters associated with a the authoritative or deprecated label. It may record an historical notation once used to uniquely identify a concept.".freeze,
+      comment: "A code is a string of characters associated with a the authoritative or deprecated label. It may record an historical notation once used to uniquely identify a concept.",
       domain: term(
-          type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority".freeze, "http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority".freeze)
+          type: "http://www.w3.org/2002/07/owl#Class",
+          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority")
         ),
-      label: "Code".freeze,
-      subPropertyOf: "http://www.w3.org/2004/02/skos/core#notation".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      label: "Code",
+      subPropertyOf: "http://www.w3.org/2004/02/skos/core#notation",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :componentList,
-      comment: "madsrdf:componentList organizes the madsrdf:SimpleType resources whose labels are represented in the label of the associated madsrdf:ComplexType resource.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#ComplexType".freeze,
-      label: "Component List".freeze,
+      comment: "madsrdf:componentList organizes the madsrdf:SimpleType resources whose labels are represented in the label of the associated madsrdf:ComplexType resource.",
+      domain: "http://www.loc.gov/mads/rdf/v1#ComplexType",
+      label: "Component List",
       range: term(
-          type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://www.w3.org/1999/02/22-rdf-syntax-ns#List".freeze, "http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq".freeze)
+          type: "http://www.w3.org/2002/07/owl#Class",
+          unionOf: list("http://www.w3.org/1999/02/22-rdf-syntax-ns#List", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq")
         ),
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :country,
-      comment: "Country associated with an address.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Address".freeze,
-      label: "Country".freeze,
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: "Country associated with an address.",
+      domain: "http://www.loc.gov/mads/rdf/v1#Address",
+      label: "Country",
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :creationDateEnd,
-      comment: "Ending date of the date range for which the beginning date is recorded in madsrdf:creationDateStart.".freeze,
-      label: "Work end".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "Ending date of the date range for which the beginning date is recorded in madsrdf:creationDateStart.",
+      label: "Work end",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :creationDateStart,
-      comment: "For a work, earliest date (normally the year) associated with a work; that date may be the date the work was created or first published or released. For an expression, the earliest date (normally the year) associated with an expression; that date may be the date of the earliest known manifestation of that expression. In both cases the date may be the starting date of a range or a single date.".freeze,
-      label: "Work begun".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "For a work, earliest date (normally the year) associated with a work; that date may be the date the work was created or first published or released. For an expression, the earliest date (normally the year) associated with an expression; that date may be the date of the earliest known manifestation of that expression. In both cases the date may be the starting date of a range or a single date.",
+      label: "Work begun",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :deathDate,
-      comment: "The year a person died. Date of death may also include the month and day of the person’s death. (RDA 9.3.3.1)".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      label: "Death Date".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "The year a person died. Date of death may also include the month and day of the person’s death. (RDA 9.3.3.1)",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      label: "Death Date",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :deathPlace,
-      comment: "The town, city, province, state, and/or country in which a person died.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      label: "Place of Death".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#Geographic".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "The town, city, province, state, and/or country in which a person died.",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      label: "Place of Death",
+      range: "http://www.loc.gov/mads/rdf/v1#Geographic",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :definitionNote,
-      comment: "An explanation of the meaning of an Authority, DeprecatedAuthority, or Variant description.".freeze,
-      equivalentProperty: "http://www.w3.org/2004/02/skos/core#definition".freeze,
-      label: "Definition Note".freeze,
-      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#note".freeze,
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: {en: "An explanation of the meaning of an Authority, DeprecatedAuthority, or Variant description."},
+      equivalentProperty: "http://www.w3.org/2004/02/skos/core#definition",
+      label: {en: "Definition Note"},
+      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#note",
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :deletionNote,
-      comment: "A note pertaining to the deletion of a resource.".freeze,
-      label: "Deletion Note".freeze,
-      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#changeNote".freeze,
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: "A note pertaining to the deletion of a resource.",
+      label: "Deletion Note",
+      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#changeNote",
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :deprecatedLabel,
-      comment: "A label once considered authoritative (controlled and curated) but which is no longer.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority".freeze,
-      label: "Deprecated Label".freeze,
-      subPropertyOf: ["http://www.w3.org/2000/01/rdf-schema#label".freeze, "http://www.w3.org/2004/02/skos/core#hiddenLabel".freeze],
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: "A label once considered authoritative (controlled and curated) but which is no longer.",
+      domain: "http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority",
+      label: "Deprecated Label",
+      subPropertyOf: ["http://www.w3.org/2000/01/rdf-schema#label", "http://www.w3.org/2004/02/skos/core#hiddenLabel"],
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :editorialNote,
-      comment: "A note pertaining to the management of the label associated with the resource.".freeze,
-      equivalentProperty: "http://www.w3.org/2004/02/skos/core#editorialNote".freeze,
-      label: "Editorial Note".freeze,
-      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#note".freeze,
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: "A note pertaining to the management of the label associated with the resource.",
+      equivalentProperty: "http://www.w3.org/2004/02/skos/core#editorialNote",
+      label: "Editorial Note",
+      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#note",
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :elementList,
-      comment: "The madsrdf:elementList property is used to organize the various parts of labels.".freeze,
-      label: "Element List".freeze,
+      comment: {en: "The madsrdf:elementList property is used to organize the various parts of labels."},
+      label: "Element List",
       range: term(
-          type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://www.w3.org/1999/02/22-rdf-syntax-ns#List".freeze, "http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq".freeze)
+          type: "http://www.w3.org/2002/07/owl#Class",
+          unionOf: list("http://www.w3.org/1999/02/22-rdf-syntax-ns#List", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq")
         ),
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :elementValue,
-      domain: "http://www.loc.gov/mads/rdf/v1#Element".freeze,
-      label: "Element Value".freeze,
-      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      domain: "http://www.loc.gov/mads/rdf/v1#Element",
+      label: "Element Value",
+      range: "http://www.w3.org/2001/XMLSchema#string",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :email,
-      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation".freeze,
-      label: "Email".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation",
+      label: "Email",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :entityDescriptor,
-      comment: "Any attribute that serves to characterize a person, family or corporate body or that may be needed for differentiation from other persons. families or corporate bodies and for which separate content designation is not already defined.Or ".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      label: "Entity Descriptor".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "Any attribute that serves to characterize a person, family or corporate body or that may be needed for differentiation from other persons. families or corporate bodies and for which separate content designation is not already defined.Or ",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      label: "Entity Descriptor",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :establishDate,
-      comment: "The year a corporate body was established. Date of establishment may also include the month and day of the corporate body’s establishment. ".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      label: "Established".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "The year a corporate body was established. Date of establishment may also include the month and day of the corporate body’s establishment. ",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      label: "Established",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :exampleNote,
-      comment: "A example of how the resource might be used.".freeze,
-      equivalentProperty: "http://www.w3.org/2004/02/skos/core#example".freeze,
-      label: "Example Note".freeze,
-      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#note".freeze,
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: "A example of how the resource might be used.",
+      equivalentProperty: "http://www.w3.org/2004/02/skos/core#example",
+      label: "Example Note",
+      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#note",
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :extendedAddress,
-      comment: "The second address line, if needed.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Address".freeze,
-      label: "Extended Address".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "The second address line, if needed.",
+      domain: "http://www.loc.gov/mads/rdf/v1#Address",
+      label: "Extended Address",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :extension,
-      label: "Extension".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      label: "Extension",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :fax,
-      comment: "Fax number".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation".freeze,
-      label: "Fax".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "Fax number",
+      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation",
+      label: "Fax",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :fieldOfActivity,
-      comment: "The field of activity associated with an individual.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      label: "Field of Activity".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "The field of activity associated with an individual.",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      label: "Field of Activity",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :fullerName,
-      comment: "Full form of name needed to distinguish a person from another person with the same preferred name.".freeze,
-      label: "Fuller Name".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#PersonalName".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Full form of name needed to distinguish a person from another person with the same preferred name.",
+      label: "Fuller Name",
+      range: "http://www.loc.gov/mads/rdf/v1#PersonalName",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :gender,
-      comment: "The gender with which a person identifies. ".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      label: "Gender".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "The gender with which a person identifies. ",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      label: "Gender",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :hasAbbreviationVariant,
-      label: "Has Abbreviation Variant".freeze,
-      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#hasVariant".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      label: "Has Abbreviation Variant",
+      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#hasVariant",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasAcronymVariant,
-      label: "Has Acronym Variant".freeze,
-      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#hasVariant".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      label: "Has Acronym Variant",
+      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#hasVariant",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasAffiliation,
-      comment: "Property to associate an individual, such as a foaf:Agent, to a group or organization with which an individual is or has been affiliated.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      label: "Has Affiliation".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#Affiliation".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Property to associate an individual, such as a foaf:Agent, to a group or organization with which an individual is or has been affiliated.",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      label: "Has Affiliation",
+      range: "http://www.loc.gov/mads/rdf/v1#Affiliation",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasAffiliationAddress,
-      comment: "The address of the group or organization with which an individual is associated.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation".freeze,
-      label: "Has Affiliation Address".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#Address".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "The address of the group or organization with which an individual is associated.",
+      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation",
+      label: "Has Affiliation Address",
+      range: "http://www.loc.gov/mads/rdf/v1#Address",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasBroaderAuthority,
-      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority".freeze,
-      label: "Has Broader Authority".freeze,
-      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority".freeze, "http://www.w3.org/2004/02/skos/core#broader".freeze],
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority",
+      label: "Has Broader Authority",
+      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority", "http://www.w3.org/2004/02/skos/core#broader"],
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasBroaderExternalAuthority,
-      comment: "Creates a direct relationship between an Authority and a more broadly defined Authority from a different MADS Scheme.".freeze,
-      label: "Has Broader External Authority".freeze,
-      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority".freeze, "http://www.w3.org/2004/02/skos/core#broadMatch".freeze],
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Creates a direct relationship between an Authority and a more broadly defined Authority from a different MADS Scheme.",
+      label: "Has Broader External Authority",
+      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority", "http://www.w3.org/2004/02/skos/core#broadMatch"],
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasChararacteristic,
-      comment: "A term that specifies a characteristic that differentiates a work or expression from another one. ".freeze,
-      label: "Other characteristic".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "A term that specifies a characteristic that differentiates a work or expression from another one. ",
+      label: "Other characteristic",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasCloseExternalAuthority,
-      comment: "Records a relationship between an Authority and one that is closely related from a different MADS Scheme.".freeze,
-      label: "Has Close External Authority".freeze,
-      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority".freeze, "http://www.w3.org/2004/02/skos/core#closeMatch".freeze],
-      type: ["http://www.w3.org/2002/07/owl#ObjectProperty".freeze, "http://www.w3.org/2002/07/owl#SymmetricProperty".freeze]
+      comment: "Records a relationship between an Authority and one that is closely related from a different MADS Scheme.",
+      label: "Has Close External Authority",
+      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority", "http://www.w3.org/2004/02/skos/core#closeMatch"],
+      type: ["http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty"]
     property :hasCorporateParentAuthority,
-      comment: "Establishes a relationship between a CorporateName Authority and one of the same that is more broadly defined.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#CorporateName".freeze,
-      label: "Has Parent Organization".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#CorporateName".freeze,
-      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Establishes a relationship between a CorporateName Authority and one of the same that is more broadly defined.",
+      domain: "http://www.loc.gov/mads/rdf/v1#CorporateName",
+      label: "Has Parent Organization",
+      range: "http://www.loc.gov/mads/rdf/v1#CorporateName",
+      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasCorporateSubsidiaryAuthority,
-      comment: "Establishes a relationship between a CorporateName Authority and one of the same that is more narrowly defined.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#CorporateName".freeze,
-      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasCorporateParentAuthority".freeze,
-      label: "Is Parent Organization Of".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#CorporateName".freeze,
-      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Establishes a relationship between a CorporateName Authority and one of the same that is more narrowly defined.",
+      domain: "http://www.loc.gov/mads/rdf/v1#CorporateName",
+      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasCorporateParentAuthority",
+      label: "Is Parent Organization Of",
+      range: "http://www.loc.gov/mads/rdf/v1#CorporateName",
+      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasDemonym,
-      comment: "Establishes a relationship between an Authority that represents the demonym - Japanese or Greek, for example - and an Authority that represents the Geographic place - Japan or Greece, respectively - associated with the demonym.".freeze,
-      inverseOf: "http://www.loc.gov/mads/rdf/v1#isDemonymFor".freeze,
-      label: "Has Demonym".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Establishes a relationship between an Authority that represents the demonym - Japanese or Greek, for example - and an Authority that represents the Geographic place - Japan or Greece, respectively - associated with the demonym.",
+      inverseOf: "http://www.loc.gov/mads/rdf/v1#isDemonymFor",
+      label: "Has Demonym",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasEarlierEstablishedForm,
-      comment: "Used to reference a resource that was an earlier form. This is Related type='earlier' in MADS XML.".freeze,
-      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasLaterEstablishedForm".freeze,
-      label: "Has Earlier Established Form".freeze,
-      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#see".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: {en: "Used to reference a resource that was an earlier form. This is Related type='earlier' in MADS XML."},
+      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasLaterEstablishedForm",
+      label: "Has Earlier Established Form",
+      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#see",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasExactExternalAuthority,
-      comment: "Records a relationship between an Authority and one to which it matches exactly but from a different MADS Scheme.".freeze,
-      label: "Has Exact External Authority".freeze,
-      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority".freeze, "http://www.w3.org/2004/02/skos/core#exactMatch".freeze],
-      type: ["http://www.w3.org/2002/07/owl#ObjectProperty".freeze, "http://www.w3.org/2002/07/owl#SymmetricProperty".freeze, "http://www.w3.org/2002/07/owl#TransitiveProperty".freeze]
+      comment: "Records a relationship between an Authority and one to which it matches exactly but from a different MADS Scheme.",
+      label: "Has Exact External Authority",
+      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority", "http://www.w3.org/2004/02/skos/core#exactMatch"],
+      type: ["http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty"]
     property :hasExpansionVariant,
-      label: "Has Expansion Variant".freeze,
-      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#hasVariant".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      label: "Has Expansion Variant",
+      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#hasVariant",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasHiddenVariant,
-      comment: "Use for variants that are searchable, but not necessarily for display.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Authority".freeze,
-      label: "Has Hidden Variant".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#Variant".freeze,
-      subPropertyOf: "http://www.w3.org/2008/05/skos-xl#hiddenLabel".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: {en: "Use for variants that are searchable, but not necessarily for display."},
+      domain: "http://www.loc.gov/mads/rdf/v1#Authority",
+      label: {en: "Has Hidden Variant"},
+      range: "http://www.loc.gov/mads/rdf/v1#Variant",
+      subPropertyOf: "http://www.w3.org/2008/05/skos-xl#hiddenLabel",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasIdentifier,
-      comment: "Associates a resource with a madsrdf:Identifier.".freeze,
-      label: "Has Identifier".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#Identifier".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Associates a resource with a madsrdf:Identifier.",
+      label: "Has Identifier",
+      range: "http://www.loc.gov/mads/rdf/v1#Identifier",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasLaterEstablishedForm,
-      comment: "Use to reference the later form of a resource. This is Related type='later' in MADS XML.".freeze,
-      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasEarlierEstablishedForm".freeze,
-      label: "Has Later Established Form".freeze,
-      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#see".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: {en: "Use to reference the later form of a resource. This is Related type='later' in MADS XML."},
+      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasEarlierEstablishedForm",
+      label: "Has Later Established Form",
+      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#see",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasMADSCollectionMember,
-      comment: "Associates an Authority or other Collection with a madsrdf:MADSCollection.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#MADSCollection".freeze,
-      inverseOf: "http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection".freeze,
-      label: "Has MADSCollection Member".freeze,
+      comment: {en: "Associates an Authority or other Collection with a madsrdf:MADSCollection."},
+      domain: "http://www.loc.gov/mads/rdf/v1#MADSCollection",
+      inverseOf: "http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection",
+      label: {en: "Has MADSCollection Member"},
       range: term(
-          type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority".freeze, "http://www.loc.gov/mads/rdf/v1#MADSCollection".freeze)
+          type: "http://www.w3.org/2002/07/owl#Class",
+          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#MADSCollection")
         ),
-      subPropertyOf: "http://www.w3.org/2004/02/skos/core#member".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      subPropertyOf: "http://www.w3.org/2004/02/skos/core#member",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasMADSSchemeMember,
-      comment: "Associates an Authority or Collection with a madsrdf:MADSScheme.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#MADSScheme".freeze,
-      inverseOf: "http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme".freeze,
-      label: "Has MADS Scheme Member".freeze,
+      comment: {en: "Associates an Authority or Collection with a madsrdf:MADSScheme."},
+      domain: "http://www.loc.gov/mads/rdf/v1#MADSScheme",
+      inverseOf: "http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme",
+      label: "Has MADS Scheme Member",
       range: term(
-          type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority".freeze, "http://www.loc.gov/mads/rdf/v1#MADSCollection".freeze)
+          type: "http://www.w3.org/2002/07/owl#Class",
+          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#MADSCollection")
         ),
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasNarrowerAuthority,
-      comment: "Creates a direct relationship between an Authority and one that is more narrowly defined.".freeze,
-      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority".freeze,
-      label: "Has Narrower Authority".freeze,
-      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority".freeze, "http://www.w3.org/2004/02/skos/core#narrower".freeze],
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Creates a direct relationship between an Authority and one that is more narrowly defined.",
+      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority",
+      label: "Has Narrower Authority",
+      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority", "http://www.w3.org/2004/02/skos/core#narrower"],
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasNarrowerExternalAuthority,
-      comment: "Creates a direct relationship between an Authority and a more narrowly defined Authority from a different MADS Scheme.".freeze,
-      label: "Has Narrower External Authority".freeze,
-      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority".freeze, "http://www.w3.org/2004/02/skos/core#narrowMatch".freeze],
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Creates a direct relationship between an Authority and a more narrowly defined Authority from a different MADS Scheme.",
+      label: "Has Narrower External Authority",
+      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority", "http://www.w3.org/2004/02/skos/core#narrowMatch"],
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasReciprocalAuthority,
-      comment: "Establishes a relationship between two Authority resources. It is reciprocal, so the relationship must be shared. This is Related type='equivalent' in MADS XML.".freeze,
-      label: "Has Reciprocal Authority".freeze,
-      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority".freeze, "http://www.w3.org/2004/02/skos/core#related".freeze],
-      type: "http://www.w3.org/2002/07/owl#SymmetricProperty".freeze
+      comment: {en: "Establishes a relationship between two Authority resources. It is reciprocal, so the relationship must be shared. This is Related type='equivalent' in MADS XML."},
+      label: "Has Reciprocal Authority",
+      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority", "http://www.w3.org/2004/02/skos/core#related"],
+      type: "http://www.w3.org/2002/07/owl#SymmetricProperty"
     property :hasReciprocalExternalAuthority,
-      comment: "Establishes a relationship between an Authority and one from a different MADS Scheme. It is reciprocal, so the relationship must be shared.".freeze,
-      label: "Has Reciprocal External Authority".freeze,
-      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority".freeze, "http://www.w3.org/2004/02/skos/core#relatedMatch".freeze],
-      type: "http://www.w3.org/2002/07/owl#SymmetricProperty".freeze
+      comment: "Establishes a relationship between an Authority and one from a different MADS Scheme. It is reciprocal, so the relationship must be shared.",
+      label: "Has Reciprocal External Authority",
+      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority", "http://www.w3.org/2004/02/skos/core#relatedMatch"],
+      type: "http://www.w3.org/2002/07/owl#SymmetricProperty"
     property :hasRelatedAuthority,
-      comment: "Unless the relationship can be more specifically identified, use 'hasRelatedAuthority.'".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Authority".freeze,
-      label: "Has Related Authority".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#Authority".freeze,
-      subPropertyOf: "http://www.w3.org/2004/02/skos/core#semanticRelation".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: {en: "Unless the relationship can be more specifically identified, use 'hasRelatedAuthority.'"},
+      domain: "http://www.loc.gov/mads/rdf/v1#Authority",
+      label: {en: "Has Related Authority"},
+      range: "http://www.loc.gov/mads/rdf/v1#Authority",
+      subPropertyOf: "http://www.w3.org/2004/02/skos/core#semanticRelation",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasSource,
-      comment: "Associates a resource description with its Source.".freeze,
-      label: "Has Source".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#Source".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: {en: "Associates a resource description with its Source."},
+      label: "Has Source",
+      range: "http://www.loc.gov/mads/rdf/v1#Source",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasTopMemberOfMADSScheme,
-      comment: "Identifies an Authority that is at the top of the hierarchy of authorities within the MADS Scheme.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#MADSScheme".freeze,
-      label: "Has Top Member of MADS Scheme".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#Authority".freeze,
-      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember".freeze, "http://www.w3.org/2004/02/skos/core#hasTopConcept".freeze],
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Identifies an Authority that is at the top of the hierarchy of authorities within the MADS Scheme.",
+      domain: "http://www.loc.gov/mads/rdf/v1#MADSScheme",
+      label: "Has Top Member of MADS Scheme",
+      range: "http://www.loc.gov/mads/rdf/v1#Authority",
+      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember", "http://www.w3.org/2004/02/skos/core#hasTopConcept"],
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasTranslationVariant,
-      comment: "A Variant whose label represents a translation of that of the authoritative label.".freeze,
-      label: "Has Translation Variant".freeze,
-      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#hasVariant".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "A Variant whose label represents a translation of that of the authoritative label.",
+      label: "Has Translation Variant",
+      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#hasVariant",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hasVariant,
-      comment: "Associates a Variant with an Authority or Deprecrated Authority. Unless the variant type can be more specifically identified, use 'hasVariant.'".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Authority".freeze,
-      label: "Has Variant".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#Variant".freeze,
-      subPropertyOf: "http://www.w3.org/2008/05/skos-xl#altLabel".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: {en: "Associates a Variant with an Authority or Deprecrated Authority. Unless the variant type can be more specifically identified, use 'hasVariant.'"},
+      domain: "http://www.loc.gov/mads/rdf/v1#Authority",
+      label: "Has Variant",
+      range: "http://www.loc.gov/mads/rdf/v1#Variant",
+      subPropertyOf: "http://www.w3.org/2008/05/skos-xl#altLabel",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :hiddenLabel,
-      comment: "A label entered for discovery purposes but not shown.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Variant".freeze,
-      label: "Hidden Label".freeze,
-      subPropertyOf: "http://www.w3.org/2008/05/skos-xl#literalForm".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "A label entered for discovery purposes but not shown.",
+      domain: "http://www.loc.gov/mads/rdf/v1#Variant",
+      label: "Hidden Label",
+      subPropertyOf: "http://www.w3.org/2008/05/skos-xl#literalForm",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :historyNote,
-      comment: "A note pertaining to the history of the resource.".freeze,
-      equivalentProperty: "http://www.w3.org/2004/02/skos/core#historyNote".freeze,
-      label: "History Note".freeze,
-      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#note".freeze,
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: "A note pertaining to the history of the resource.",
+      equivalentProperty: "http://www.w3.org/2004/02/skos/core#historyNote",
+      label: "History Note",
+      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#note",
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :honoraryTitle,
-      comment: "Designation indicative of royalty, nobility, or ecclesiastical rank or office, or a term of address for a person of religious vocation.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      label: "Honorary Title".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "Designation indicative of royalty, nobility, or ecclesiastical rank or office, or a term of address for a person of religious vocation.",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      label: "Honorary Title",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :hours,
-      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation".freeze,
-      label: "Hours".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation",
+      label: "Hours",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :idScheme,
-      comment: "The scheme associated with the identifier. For example, \"LCCN\" would be used when the Identifier Value (madsrdf:idValue) is a LC Control Number.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Identifier".freeze,
-      label: "Identifier Scheme".freeze,
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: "The scheme associated with the identifier. For example, \"LCCN\" would be used when the Identifier Value (madsrdf:idValue) is a LC Control Number.",
+      domain: "http://www.loc.gov/mads/rdf/v1#Identifier",
+      label: "Identifier Scheme",
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :idValue,
-      comment: "The value of the identifier conforming to the Identifier Scheme syntax.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Identifier".freeze,
-      label: "Identifier Value".freeze,
-      range: "http://www.w3.org/2001/XMLSchema#string".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "The value of the identifier conforming to the Identifier Scheme syntax.",
+      domain: "http://www.loc.gov/mads/rdf/v1#Identifier",
+      label: "Identifier Value",
+      range: "http://www.w3.org/2001/XMLSchema#string",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :identifiesRWO,
-      comment: "Associates a madsrdf:Authority with the Real World Object that is the subject of the authority's label.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Authority".freeze,
-      inverseOf: "http://www.loc.gov/mads/rdf/v1#isIdentifiedByAuthority".freeze,
-      label: "Identifies RWO".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      subPropertyOf: "http://xmlns.com/foaf/0.1/focus".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Associates a madsrdf:Authority with the Real World Object that is the subject of the authority's label.",
+      domain: "http://www.loc.gov/mads/rdf/v1#Authority",
+      inverseOf: "http://www.loc.gov/mads/rdf/v1#isIdentifiedByAuthority",
+      label: "Identifies RWO",
+      range: "http://www.loc.gov/mads/rdf/v1#RWO",
+      subPropertyOf: "http://xmlns.com/foaf/0.1/focus",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :isDemonymFor,
-      comment: "Establishes a relationship between an Authority that represents a Geographic place - Japan or Greece, for example - and an Authority that represents the demonym - Japanese or Greek, respectively - associated with the place.".freeze,
-      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasDemonym".freeze,
-      label: "Is Demonym For".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Establishes a relationship between an Authority that represents a Geographic place - Japan or Greece, for example - and an Authority that represents the demonym - Japanese or Greek, respectively - associated with the place.",
+      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasDemonym",
+      label: "Is Demonym For",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :isIdentifiedByAuthority,
-      comment: "Associates a Real World Object with its Authority description.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      inverseOf: "http://www.loc.gov/mads/rdf/v1#identifiesRWO".freeze,
-      label: "Is Identified By Authority".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#Authority".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "Associates a Real World Object with its Authority description.",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      inverseOf: "http://www.loc.gov/mads/rdf/v1#identifiesRWO",
+      label: "Is Identified By Authority",
+      range: "http://www.loc.gov/mads/rdf/v1#Authority",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :isMemberOfMADSCollection,
-      comment: "Associates a Collection with a madsrdf:Authority or another madsrdf:MADSCollection.".freeze,
+      comment: {en: "Associates a Collection with a madsrdf:Authority or another madsrdf:MADSCollection."},
       domain: term(
-          type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority".freeze, "http://www.loc.gov/mads/rdf/v1#MADSCollection".freeze)
+          type: "http://www.w3.org/2002/07/owl#Class",
+          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#MADSCollection")
         ),
-      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasMADSCollectionMember".freeze,
-      label: "Is Member Of MADSCollection".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#MADSCollection".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasMADSCollectionMember",
+      label: {en: "Is Member Of MADSCollection"},
+      range: "http://www.loc.gov/mads/rdf/v1#MADSCollection",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :isMemberOfMADSScheme,
       domain: term(
-          type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority".freeze, "http://www.loc.gov/mads/rdf/v1#MADSCollection".freeze)
+          type: "http://www.w3.org/2002/07/owl#Class",
+          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#MADSCollection")
         ),
-      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember".freeze,
-      label: "Is Member of MADS Scheme".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#MADSScheme".freeze,
-      subPropertyOf: "http://www.w3.org/2004/02/skos/core#inScheme".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember",
+      label: "Is Member of MADS Scheme",
+      range: "http://www.loc.gov/mads/rdf/v1#MADSScheme",
+      subPropertyOf: "http://www.w3.org/2004/02/skos/core#inScheme",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :isTopMemberOfMADSScheme,
-      comment: "Identifies a MADS Scheme in which the Authority is at the top of the hierarchy.".freeze,
+      comment: "Identifies a MADS Scheme in which the Authority is at the top of the hierarchy.",
       domain: term(
-          type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority".freeze, "http://www.loc.gov/mads/rdf/v1#MADSCollection".freeze)
+          type: "http://www.w3.org/2002/07/owl#Class",
+          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#MADSCollection")
         ),
-      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme".freeze,
-      label: "Is Top Member of MADS Scheme".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#MADSScheme".freeze,
-      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme".freeze, "http://www.w3.org/2004/02/skos/core#topConceptOf".freeze],
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      inverseOf: "http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme",
+      label: "Is Top Member of MADS Scheme",
+      range: "http://www.loc.gov/mads/rdf/v1#MADSScheme",
+      subPropertyOf: ["http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme", "http://www.w3.org/2004/02/skos/core#topConceptOf"],
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :natureOfAffiliation,
-      comment: "Records the individual's role or position in the organization with which the individual is affiliated. A \"job title\" might be appropriate.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation".freeze,
-      label: "Nature of Affiliation".freeze,
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: "Records the individual's role or position in the organization with which the individual is affiliated. A \"job title\" might be appropriate.",
+      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation",
+      label: "Nature of Affiliation",
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :note,
-      comment: "A note about the resource.".freeze,
-      equivalentProperty: "http://www.w3.org/2004/02/skos/core#note".freeze,
-      label: "Note".freeze,
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: "A note about the resource.",
+      equivalentProperty: "http://www.w3.org/2004/02/skos/core#note",
+      label: "Note",
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :occupation,
-      comment: "A profession or occupation in which the person works or has worked.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      label: "Occupation".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#Occupation".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "A profession or occupation in which the person works or has worked.",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      label: "Occupation",
+      range: "http://www.loc.gov/mads/rdf/v1#Occupation",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :organization,
-      comment: "The group or organization with which an individual is associated.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation".freeze,
-      label: "Organization or Group".freeze,
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: "The group or organization with which an individual is associated.",
+      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation",
+      label: "Organization or Group",
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :phone,
-      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation".freeze,
-      label: "Phone".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      domain: "http://www.loc.gov/mads/rdf/v1#Affiliation",
+      label: "Phone",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :postcode,
-      domain: "http://www.loc.gov/mads/rdf/v1#Address".freeze,
-      label: "Post Code / Zip Code".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      domain: "http://www.loc.gov/mads/rdf/v1#Address",
+      label: "Post Code / Zip Code",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :prominentFamilyMember,
-      comment: "A well-known individual who is a member of the family.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      label: "Prominent Family Member".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "A well-known individual who is a member of the family.",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      label: "Prominent Family Member",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :scopeNote,
-      equivalentProperty: "http://www.w3.org/2004/02/skos/core#scopeNote".freeze,
-      label: "Scope Note".freeze,
-      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#note".freeze,
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      equivalentProperty: "http://www.w3.org/2004/02/skos/core#scopeNote",
+      label: "Scope Note",
+      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#note",
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :see,
-      comment: "Denotes a relationship between an Authority and/or DeprecatedAuthority. The relationship may or may or may not be reciprocated and there is no certainty that the related resource will further illuminate the original resource.".freeze,
+      comment: "Denotes a relationship between an Authority and/or DeprecatedAuthority. The relationship may or may or may not be reciprocated and there is no certainty that the related resource will further illuminate the original resource.",
       domain: term(
-          type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority".freeze, "http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority".freeze)
+          type: "http://www.w3.org/2002/07/owl#Class",
+          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority")
         ),
-      label: "See Also".freeze,
+      label: "See Also",
       range: term(
-          type: "http://www.w3.org/2002/07/owl#Class".freeze,
-          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority".freeze, "http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority".freeze)
+          type: "http://www.w3.org/2002/07/owl#Class",
+          unionOf: list("http://www.loc.gov/mads/rdf/v1#Authority", "http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority")
         ),
-      subPropertyOf: "http://www.w3.org/2000/01/rdf-schema#seeAlso".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      subPropertyOf: "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :state,
-      comment: "The state associated with an address.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Address".freeze,
-      label: "State".freeze,
-      type: "http://www.w3.org/2002/07/owl#AnnotationProperty".freeze
+      comment: "The state associated with an address.",
+      domain: "http://www.loc.gov/mads/rdf/v1#Address",
+      label: "State",
+      type: "http://www.w3.org/2002/07/owl#AnnotationProperty"
     property :streetAddress,
-      comment: "First line of address. For second line, use madsrdf:extendedAddress.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Address".freeze,
-      label: "Street Address".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "First line of address. For second line, use madsrdf:extendedAddress.",
+      domain: "http://www.loc.gov/mads/rdf/v1#Address",
+      label: "Street Address",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :terminateDate,
-      comment: "The year a corporate body was terminated. Date of termination may also include the month and day of the corporate body’s termination. ".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#RWO".freeze,
-      label: "Terminated".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "The year a corporate body was terminated. Date of termination may also include the month and day of the corporate body’s termination. ",
+      domain: "http://www.loc.gov/mads/rdf/v1#RWO",
+      label: "Terminated",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :useFor,
-      comment: "\"Use [This Resource] For.\" Traditional \"USE FOR\" reference.".freeze,
-      inverseOf: "http://www.loc.gov/mads/rdf/v1#useInstead".freeze,
-      label: "Use For".freeze,
-      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#see".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "\"Use [This Resource] For.\" Traditional \"USE FOR\" reference.",
+      inverseOf: "http://www.loc.gov/mads/rdf/v1#useInstead",
+      label: "Use For",
+      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#see",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :useInstead,
-      comment: "\"Use [This Other Resource] Instead.\" Traditional \"USE\" reference.".freeze,
-      label: "Use Instead".freeze,
-      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#see".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "\"Use [This Other Resource] Instead.\" Traditional \"USE\" reference.",
+      label: "Use Instead",
+      subPropertyOf: "http://www.loc.gov/mads/rdf/v1#see",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :variantLabel,
-      comment: "The lexical, variant form of an authoritative label.".freeze,
-      domain: "http://www.loc.gov/mads/rdf/v1#Variant".freeze,
-      label: "Variant Label".freeze,
-      subPropertyOf: "http://www.w3.org/2008/05/skos-xl#literalForm".freeze,
-      type: "http://www.w3.org/2002/07/owl#DatatypeProperty".freeze
+      comment: "The lexical, variant form of an authoritative label.",
+      domain: "http://www.loc.gov/mads/rdf/v1#Variant",
+      label: "Variant Label",
+      subPropertyOf: "http://www.w3.org/2008/05/skos-xl#literalForm",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :workOrigin,
-      comment: "The country or other territorial jurisdiction from which a work originated.".freeze,
-      label: "Work locale".freeze,
-      range: "http://www.loc.gov/mads/rdf/v1#Geographic".freeze,
-      type: "http://www.w3.org/2002/07/owl#ObjectProperty".freeze
+      comment: "The country or other territorial jurisdiction from which a work originated.",
+      label: "Work locale",
+      range: "http://www.loc.gov/mads/rdf/v1#Geographic",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
   end
 end
