@@ -618,11 +618,11 @@ module RDF::Vocab
       range: "http://www.w3.org/2001/XMLSchema#string",
       type: ["http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty"]
     property :name,
+      comment: {en: "The default, plain-text display name of the object or link."},
       domain: term(
           type: "http://www.w3.org/2002/07/owl#Class",
           unionOf: list("https://www.w3.org/ns/activitystreams#Object", "https://www.w3.org/ns/activitystreams#Link")
         ),
-      "http://www.w3.org/2000/01/rdf-schema#name": {en: "The default, plain-text display name of the object or link."},
       label: {en: "name"},
       range: term(
           type: "http://www.w3.org/2002/07/owl#Class",
