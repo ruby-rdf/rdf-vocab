@@ -13,14 +13,14 @@ module RDF::Vocab
       "http://creativecommons.org/ns#license": "http://creativecommons.org/licenses/by/4.0/",
       "http://purl.org/dc/elements/1.1/contributor": ["Daniel Gillman", "Jannik Jensen", "R.T.A.M. Grim", "Richard Cyganiak", "Thomas Bosch", "Wendy L. Thomas", "Yves Jaques"],
       "http://purl.org/dc/elements/1.1/creator": "Franck Cotton",
-      "http://purl.org/dc/elements/1.1/rights": "Copyright © 2016 The DDI Alliance",
+      "http://purl.org/dc/elements/1.1/rights": "Copyright © 2014-2019 The DDI Alliance",
       "http://purl.org/dc/elements/1.1/title": {en: "XKOS: an SKOS extension for representing statistical classifications", fr: "XKOS : une extension de SKOS pour la représentation des nomenclatures statistiques"},
       "http://purl.org/vocab/vann/preferredNamespacePrefix": "xkos",
       "http://purl.org/vocab/vann/preferredNamespaceUri": "http://rdf-vocabulary.ddialliance.org/xkos#",
       "http://purl.org/vocommons/voaf#classNumber": "4",
       "http://purl.org/vocommons/voaf#extends": "http://www.w3.org/2004/02/skos/core",
       "http://purl.org/vocommons/voaf#propertyNumber": "40",
-      "http://www.w3.org/2002/07/owl#versionInfo": ["Version 1.0.1 - 2014-11-26", "Version 1.0.2 - 2016-03-15", "Version 1.0.3 - 2016-03-15", "Version 1.1 - 2016-03-20"],
+      "http://www.w3.org/2002/07/owl#versionInfo": ["Version 1.0.1 - 2014-11-26", "Version 1.0.2 - 2016-03-15", "Version 1.0.3 - 2016-03-15", "Version 1.1 - 2016-03-20", "Version 1.2 - 2019-05-01"],
       type: ["http://purl.org/vocommons/voaf#Vocabulary", "http://www.w3.org/2002/07/owl#Ontology"]
 
     # Class definitions

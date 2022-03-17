@@ -89,6 +89,13 @@ module RDF::Vocab
       label: "AdultEntertainment",
       subClassOf: "http://schema.org/EntertainmentBusiness",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
+    term :AdultOrientedEnumeration,
+      comment: "Enumeration of considerations that make a product relevant or potentially restricted for adults only.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2989",
+      label: "AdultOrientedEnumeration",
+      subClassOf: "http://schema.org/Enumeration",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :AdvertiserContentArticle,
       comment: "An [[Article]] that an external entity has paid to place or to produce to its specifications. Includes [advertorials](https://en.wikipedia.org/wiki/Advertorial), sponsored content, native advertising and other paid content.",
       "http://schema.org/isPartOf": "http://pending.schema.org",
@@ -137,7 +144,7 @@ module RDF::Vocab
       "http://schema.org/isPartOf": "http://pending.schema.org",
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2646",
       label: "AmpStory",
-      subClassOf: "http://schema.org/CreativeWork",
+      subClassOf: ["http://schema.org/CreativeWork", "http://schema.org/MediaObject"],
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :AmusementPark,
       comment: "An amusement park.",
@@ -1272,6 +1279,13 @@ module RDF::Vocab
       label: "DigitalDocumentPermissionType",
       subClassOf: "http://schema.org/Enumeration",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
+    term :DigitalPlatformEnumeration,
+      comment: "Enumerates some common technology platforms, for use with properties such as [[actionPlatform]]. It is not supposed to be comprehensive - when a suitable code is not enumerated here, textual or URL values can be used instead. These codes are at a fairly high level and do not deal with versioning and other nuance. Additional codes can be suggested [in github](https://github.com/schemaorg/schemaorg/issues/3057). ",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3057",
+      label: "DigitalPlatformEnumeration",
+      subClassOf: "http://schema.org/Enumeration",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :DisagreeAction,
       comment: "The act of expressing a difference of opinion with the object. An agent disagrees to/about an object (a proposition, topic or theme) with participants.",
       label: "DisagreeAction",
@@ -1752,6 +1766,13 @@ module RDF::Vocab
       comment: "The Game type represents things which are games. These are typically rule-governed recreational activities, e.g. role-playing games in which players assume the role of characters in a fictional setting.",
       label: "Game",
       subClassOf: "http://schema.org/CreativeWork",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
+    term :GameAvailabilityEnumeration,
+      comment: "For a [[VideoGame]], such as used with a [[PlayGameAction]], an enumeration of the kind of game availability offered. ",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3058",
+      label: "GameAvailabilityEnumeration",
+      subClassOf: "http://schema.org/Enumeration",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :GamePlayMode,
       comment: "Indicates whether this game is multi-player, co-op or single-player.",
@@ -3178,6 +3199,20 @@ module RDF::Vocab
       label: "OnDemandEvent",
       subClassOf: "http://schema.org/PublicationEvent",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
+    term :OnlineBusiness,
+      comment: "A particular online business, either standalone or the online part of a broader organization. Examples include an eCommerce site, an online travel booking site, an online learning site, an online logistics and shipping provider, an online (virtual) doctor, etc.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3028",
+      label: "OnlineBusiness",
+      subClassOf: "http://schema.org/Organization",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
+    term :OnlineStore,
+      comment: "An eCommerce site.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3028",
+      label: "OnlineStore",
+      subClassOf: "http://schema.org/OnlineBusiness",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :OpeningHoursSpecification,
       comment: "A structured value providing information about the opening hours of a place or a certain service inside a place.\\n\\n\nThe place is __open__ if the [[opens]] property is specified, and __closed__ otherwise.\\n\\nIf the value for the [[closes]] property is less than the value for the [[opens]] property then the hour range is assumed to span over the next day.\n      ",
       "http://schema.org/source": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass",
@@ -3450,6 +3485,13 @@ module RDF::Vocab
       comment: "The act of playing/exercising/training/performing for enjoyment, leisure, recreation, Competition or exercise.\\n\\nRelated actions:\\n\\n* [[ListenAction]]: Unlike ListenAction (which is under ConsumeAction), PlayAction refers to performing for an audience or at an event, rather than consuming music.\\n* [[WatchAction]]: Unlike WatchAction (which is under ConsumeAction), PlayAction refers to showing/displaying for an audience or at an event, rather than consuming visual content.",
       label: "PlayAction",
       subClassOf: "http://schema.org/Action",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
+    term :PlayGameAction,
+      comment: "The act of playing a video game.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3058",
+      label: "PlayGameAction",
+      subClassOf: "http://schema.org/ConsumeAction",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :Playground,
       comment: "A playground.",
@@ -4128,6 +4170,13 @@ module RDF::Vocab
       comment: "The act of searching for an object.\\n\\nRelated actions:\\n\\n* [[FindAction]]: SearchAction generally leads to a FindAction, but not necessarily.",
       label: "SearchAction",
       subClassOf: "http://schema.org/Action",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
+    term :SearchRescueOrganization,
+      comment: "A Search and Rescue organization of some kind.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3052",
+      label: "SearchRescueOrganization",
+      subClassOf: "http://schema.org/Organization",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :SearchResultsPage,
       comment: "Web page type: Search results page.",
@@ -5103,39 +5152,39 @@ module RDF::Vocab
       rangeIncludes: "http://schema.org/Text",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :accessMode,
-      comment: "The human sensory perceptual system or cognitive faculty through which a person may process or perceive information. Expected values include: auditory, tactile, textual, visual, colorDependent, chartOnVisual, chemOnVisual, diagramOnVisual, mathOnVisual, musicOnVisual, textOnVisual.\n      ",
+      comment: "The human sensory perceptual system or cognitive faculty through which a person may process or perceive information. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessMode-vocabulary).",
       domainIncludes: "http://schema.org/CreativeWork",
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/1100",
       label: "accessMode",
       rangeIncludes: "http://schema.org/Text",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :accessModeSufficient,
-      comment: "A list of single or combined accessModes that are sufficient to understand all the intellectual content of a resource. Expected values include:  auditory, tactile, textual, visual.\n      ",
+      comment: "A list of single or combined accessModes that are sufficient to understand all the intellectual content of a resource. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessModeSufficient-vocabulary).",
       domainIncludes: "http://schema.org/CreativeWork",
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/1100",
       label: "accessModeSufficient",
       rangeIncludes: "http://schema.org/ItemList",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :accessibilityAPI,
-      comment: "Indicates that the resource is compatible with the referenced accessibility API ([WebSchemas wiki lists possible values](http://www.w3.org/wiki/WebSchemas/Accessibility)).",
+      comment: "Indicates that the resource is compatible with the referenced accessibility API. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityAPI-vocabulary).",
       domainIncludes: "http://schema.org/CreativeWork",
       label: "accessibilityAPI",
       rangeIncludes: "http://schema.org/Text",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :accessibilityControl,
-      comment: "Identifies input methods that are sufficient to fully control the described resource ([WebSchemas wiki lists possible values](http://www.w3.org/wiki/WebSchemas/Accessibility)).",
+      comment: "Identifies input methods that are sufficient to fully control the described resource. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityControl-vocabulary).",
       domainIncludes: "http://schema.org/CreativeWork",
       label: "accessibilityControl",
       rangeIncludes: "http://schema.org/Text",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :accessibilityFeature,
-      comment: "Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility ([WebSchemas wiki lists possible values](http://www.w3.org/wiki/WebSchemas/Accessibility)).",
+      comment: "Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityFeature-vocabulary).",
       domainIncludes: "http://schema.org/CreativeWork",
       label: "accessibilityFeature",
       rangeIncludes: "http://schema.org/Text",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :accessibilityHazard,
-      comment: "A characteristic of the described resource that is physiologically dangerous to some users. Related to WCAG 2.0 guideline 2.3 ([WebSchemas wiki lists possible values](http://www.w3.org/wiki/WebSchemas/Accessibility)).",
+      comment: "A characteristic of the described resource that is physiologically dangerous to some users. Related to WCAG 2.0 guideline 2.3. Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityHazard-vocabulary).",
       domainIncludes: "http://schema.org/CreativeWork",
       label: "accessibilityHazard",
       rangeIncludes: "http://schema.org/Text",
@@ -5241,7 +5290,7 @@ module RDF::Vocab
       comment: "The high level platform(s) where the Action can be performed for the given URL. To specify a specific application or operating system instance, use actionApplication.",
       domainIncludes: "http://schema.org/EntryPoint",
       label: "actionPlatform",
-      rangeIncludes: ["http://schema.org/Text", "http://schema.org/URL"],
+      rangeIncludes: ["http://schema.org/DigitalPlatformEnumeration", "http://schema.org/Text", "http://schema.org/URL"],
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :actionStatus,
       comment: "Indicates the current disposition of the Action.",
@@ -5570,6 +5619,14 @@ module RDF::Vocab
       label: "appearance",
       rangeIncludes: "http://schema.org/CreativeWork",
       subPropertyOf: "http://schema.org/workExample",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :applicableCountry,
+      comment: "A country where a particular merchant return policy applies to, for example the two-letter ISO 3166-1 alpha-2 country code.",
+      domainIncludes: "http://schema.org/MerchantReturnPolicy",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3001",
+      label: "applicableCountry",
+      rangeIncludes: ["http://schema.org/Country", "http://schema.org/Text"],
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :applicableLocation,
       comment: "The location in which the status applies.",
@@ -6550,7 +6607,7 @@ module RDF::Vocab
       domainIncludes: ["http://schema.org/ActionAccessSpecification", "http://schema.org/Invoice", "http://schema.org/Offer", "http://schema.org/PhysicalActivity", "http://schema.org/Product", "http://schema.org/Recommendation", "http://schema.org/Service", "http://schema.org/SpecialAnnouncement"],
       "http://schema.org/source": ["https://github.com/schemaorg/schemaorg/issues/1741", "https://github.com/schemaorg/schemaorg/issues/2490"],
       label: "category",
-      rangeIncludes: ["http://schema.org/PhysicalActivityCategory", "http://schema.org/Text", "http://schema.org/Thing", "http://schema.org/URL"],
+      rangeIncludes: ["http://schema.org/CategoryCode", "http://schema.org/PhysicalActivityCategory", "http://schema.org/Text", "http://schema.org/Thing", "http://schema.org/URL"],
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :causeOf,
       comment: "The condition, complication, symptom, sign, etc. caused.",
@@ -8742,19 +8799,29 @@ module RDF::Vocab
       rangeIncludes: ["http://schema.org/MedicalEntity", "http://schema.org/Text"],
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :fundedItem,
-      comment: "Indicates an item funded or sponsored through a [[Grant]].",
+      comment: "Indicates something directly or indirectly funded or sponsored through a [[Grant]]. See also [[ownershipFundingInfo]].",
       domainIncludes: "http://schema.org/Grant",
+      "http://schema.org/inverseOf": "http://schema.org/funding",
       "http://schema.org/isPartOf": "http://pending.schema.org",
       "http://schema.org/source": ["https://github.com/schemaorg/schemaorg/issues/1950", "https://github.com/schemaorg/schemaorg/issues/383", "https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#TP"],
       label: "fundedItem",
-      rangeIncludes: "http://schema.org/Thing",
+      rangeIncludes: ["http://schema.org/BioChemEntity", "http://schema.org/CreativeWork", "http://schema.org/Event", "http://schema.org/MedicalEntity", "http://schema.org/Organization", "http://schema.org/Person", "http://schema.org/Product"],
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :funder,
       comment: "A person or organization that supports (sponsors) something through some kind of financial contribution.",
-      domainIncludes: ["http://schema.org/CreativeWork", "http://schema.org/Event", "http://schema.org/MonetaryGrant", "http://schema.org/Organization", "http://schema.org/Person"],
+      domainIncludes: ["http://schema.org/CreativeWork", "http://schema.org/Event", "http://schema.org/Grant", "http://schema.org/MonetaryGrant", "http://schema.org/Organization", "http://schema.org/Person"],
       label: "funder",
       rangeIncludes: ["http://schema.org/Organization", "http://schema.org/Person"],
       subPropertyOf: "http://schema.org/sponsor",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :funding,
+      comment: "A [[Grant]] that directly or indirectly provide funding or sponsorship for this item. See also [[ownershipFundingInfo]].",
+      domainIncludes: ["http://schema.org/BioChemEntity", "http://schema.org/CreativeWork", "http://schema.org/Event", "http://schema.org/MedicalEntity", "http://schema.org/Organization", "http://schema.org/Person", "http://schema.org/Product"],
+      "http://schema.org/inverseOf": "http://schema.org/fundedItem",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": ["https://github.com/schemaorg/schemaorg/issues/383", "https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#TP"],
+      label: "funding",
+      rangeIncludes: "http://schema.org/Grant",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :game,
       comment: "Video game which is played on this server.",
@@ -8762,6 +8829,20 @@ module RDF::Vocab
       "http://schema.org/inverseOf": "http://schema.org/gameServer",
       label: "game",
       rangeIncludes: "http://schema.org/VideoGame",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :gameAvailabilityType,
+      comment: "Indicates the availability type of the game content associated with this action, such as whether it is a full version or a demo.",
+      domainIncludes: "http://schema.org/PlayGameAction",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3058",
+      label: "gameAvailabilityType",
+      rangeIncludes: ["http://schema.org/GameAvailabilityEnumeration", "http://schema.org/Text"],
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :gameEdition,
+      comment: "The edition of a video game.",
+      domainIncludes: "http://schema.org/VideoGame",
+      label: "gameEdition",
+      rangeIncludes: "http://schema.org/Text",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :gameItem,
       comment: "An item is an object within the game world that can be collected by a player or, occasionally, a non-player character.",
@@ -9018,6 +9099,14 @@ module RDF::Vocab
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2506",
       label: "handlingTime",
       rangeIncludes: "http://schema.org/QuantitativeValue",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :hasAdultConsideration,
+      comment: "Used to tag an item to be intended or suitable for consumption or use by adults only.",
+      domainIncludes: ["http://schema.org/Offer", "http://schema.org/Product"],
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2989",
+      label: "hasAdultConsideration",
+      rangeIncludes: "http://schema.org/AdultOrientedEnumeration",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :hasBioChemEntityPart,
       comment: "Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part. ",
@@ -9856,7 +9945,7 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :isFamilyFriendly,
       comment: "Indicates whether this content is family friendly.",
-      domainIncludes: "http://schema.org/CreativeWork",
+      domainIncludes: ["http://schema.org/CreativeWork", "http://schema.org/Offer", "http://schema.org/Product"],
       label: "isFamilyFriendly",
       rangeIncludes: "http://schema.org/Boolean",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -9970,6 +10059,14 @@ module RDF::Vocab
       domainIncludes: ["http://schema.org/Organization", "http://schema.org/Person", "http://schema.org/Place"],
       "http://schema.org/source": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms",
       label: "isicV4",
+      rangeIncludes: "http://schema.org/Text",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :iso6523Code,
+      comment: "An organization identifier as defined in ISO 6523(-1). Note that many existing organization identifiers such as [leiCode](http://schema.org/leiCode), [duns](http://schema.org/duns) and [vatID](http://schema.org/vatID) can be expressed as an ISO 6523 identifier by setting the ICD part of the ISO 6523 identifier accordingly. ",
+      domainIncludes: "http://schema.org/Organization",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2915",
+      label: "iso6523Code",
       rangeIncludes: "http://schema.org/Text",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :isrcCode,
@@ -10161,8 +10258,8 @@ module RDF::Vocab
       rangeIncludes: ["http://schema.org/AdministrativeArea", "http://schema.org/Text"],
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :keywords,
-      comment: "Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-      domainIncludes: "http://schema.org/CreativeWork",
+      comment: "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.",
+      domainIncludes: ["http://schema.org/CreativeWork", "http://schema.org/Event", "http://schema.org/Organization", "http://schema.org/Place", "http://schema.org/Product"],
       label: "keywords",
       rangeIncludes: ["http://schema.org/DefinedTerm", "http://schema.org/Text", "http://schema.org/URL"],
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -12414,8 +12511,9 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :provider,
       comment: "The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.",
-      domainIncludes: ["http://schema.org/CreativeWork", "http://schema.org/EducationalOccupationalProgram", "http://schema.org/Invoice", "http://schema.org/ParcelDelivery", "http://schema.org/Reservation", "http://schema.org/Service", "http://schema.org/Trip"],
-      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2289",
+      domainIncludes: ["http://schema.org/Action", "http://schema.org/CreativeWork", "http://schema.org/EducationalOccupationalProgram", "http://schema.org/Invoice", "http://schema.org/ParcelDelivery", "http://schema.org/Reservation", "http://schema.org/Service", "http://schema.org/Trip"],
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": ["https://github.com/schemaorg/schemaorg/issues/2289", "https://github.com/schemaorg/schemaorg/issues/2927"],
       label: "provider",
       rangeIncludes: ["http://schema.org/Organization", "http://schema.org/Person"],
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -15170,6 +15268,12 @@ module RDF::Vocab
       "http://schema.org/source": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ",
       label: "AlbumRelease",
       type: "http://schema.org/MusicAlbumReleaseType"
+    term :AlcoholConsideration,
+      comment: "Item contains alcohol or promotes alcohol consumption.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2989",
+      label: "AlcoholConsideration",
+      type: "http://schema.org/AdultOrientedEnumeration"
     term :AllWheelDriveConfiguration,
       comment: "All-wheel Drive is a transmission layout where the engine drives all four wheels.",
       "http://schema.org/source": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group",
@@ -15186,6 +15290,12 @@ module RDF::Vocab
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
       label: "AnaerobicActivity",
       type: "http://schema.org/PhysicalActivityCategory"
+    term :AndroidPlatform,
+      comment: "Represents the broad notion of Android-based operating systems.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3057",
+      label: "AndroidPlatform",
+      type: "http://schema.org/DigitalPlatformEnumeration"
     term :Anesthesia,
       comment: "A specific branch of medical science that pertains to study of anesthetics and their application.",
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
@@ -15438,6 +15548,12 @@ module RDF::Vocab
       comment: "Indicates that the item is damaged.",
       label: "DamagedCondition",
       type: "http://schema.org/OfferItemCondition"
+    term :DangerousGoodConsideration,
+      comment: "The item is dangerous and requires careful handling and/or special training of the user. See also the [UN Model Classification](https://unece.org/DAM/trans/danger/publi/unrec/rev17/English/02EREv17_Part2.pdf) defining the 9 classes of dangerous goods such as explosives, gases, flammables, and more.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2989",
+      label: "DangerousGoodConsideration",
+      type: "http://schema.org/AdultOrientedEnumeration"
     term :DecontextualizedContent,
       comment: "Content coded 'missing context' in a [[MediaReview]], considered in the context of how it was published or shared.\n\nFor a [[VideoObject]] to be 'missing context': Presenting unaltered video in an inaccurate manner that misrepresents the footage. For example, using incorrect dates or locations, altering the transcript or sharing brief clips from a longer video to mislead viewers. (A video rated 'original' can also be missing context.)\n\nFor an [[ImageObject]] to be 'missing context': Presenting unaltered images in an inaccurate manner to misrepresent the image and mislead the viewer. For example, a common tactic is using an unaltered image but saying it came from a different time or place. (An image rated 'original' can also be missing context.)\n\nFor an [[ImageObject]] with embedded text to be 'missing context': An unaltered image presented in an inaccurate manner to misrepresent the image and mislead the viewer. For example, a common tactic is using an unaltered image but saying it came from a different time or place. (An 'original' image with inaccurate text would generally fall in this category.)\n\nFor an [[AudioObject]] to be 'missing context': Unaltered audio presented in an inaccurate manner that misrepresents it. For example, using incorrect dates or locations, or sharing brief clips from a longer recording to mislead viewers. (Audio rated “original” can also be missing context.)\n",
       "http://schema.org/isPartOf": "http://pending.schema.org",
@@ -15456,6 +15572,12 @@ module RDF::Vocab
       "http://schema.org/source": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ",
       label: "DemoAlbum",
       type: "http://schema.org/MusicAlbumProductionType"
+    term :DemoGameAvailability,
+      comment: "Indicates demo game availability, i.e. a somehow limited demonstration of the full game.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3058",
+      label: "DemoGameAvailability",
+      type: "http://schema.org/GameAvailabilityEnumeration"
     term :Dentistry,
       comment: "A branch of medicine that is involved in the dental care.",
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
@@ -15473,6 +15595,12 @@ module RDF::Vocab
       label: "Dermatology",
       subClassOf: "http://schema.org/MedicalBusiness",
       type: "http://schema.org/MedicalSpecialty"
+    term :DesktopWebPlatform,
+      comment: "Represents the broad notion of 'desktop' browsers as a Web Platform.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3057",
+      label: "DesktopWebPlatform",
+      type: "http://schema.org/DigitalPlatformEnumeration"
     term :DiabeticDiet,
       comment: "A diet appropriate for people with diabetes.",
       label: "DiabeticDiet",
@@ -15753,6 +15881,12 @@ module RDF::Vocab
       "http://schema.org/source": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group",
       label: "FrontWheelDriveConfiguration",
       type: "http://schema.org/DriveWheelConfigurationValue"
+    term :FullGameAvailability,
+      comment: "Indicates full game availability.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3058",
+      label: "FullGameAvailability",
+      type: "http://schema.org/GameAvailabilityEnumeration"
     term :FullRefund,
       comment: "Specifies that a refund can be done in the full amount the customer paid for the product",
       "http://schema.org/isPartOf": "http://pending.schema.org",
@@ -15764,6 +15898,12 @@ module RDF::Vocab
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
       label: "Gastroenterologic",
       type: "http://schema.org/MedicalSpecialty"
+    term :GenericWebPlatform,
+      comment: "Represents the generic notion of the Web Platform. More specific codes include [[MobileWebPlatform]] and [[DesktopWebPlatform]], as an incomplete list. ",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3057",
+      label: "GenericWebPlatform",
+      type: "http://schema.org/DigitalPlatformEnumeration"
     term :Genetic,
       comment: "A specific branch of medical science that pertains to hereditary transmission and the variation of inherited characteristics and disorders.",
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
@@ -15824,6 +15964,12 @@ module RDF::Vocab
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2534",
       label: "HealthCare",
       type: "http://schema.org/GovernmentBenefitsType"
+    term :HealthcareConsideration,
+      comment: "Item is a pharmaceutical (e.g., a prescription or OTC drug) or a restricted medical device.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2989",
+      label: "HealthcareConsideration",
+      type: "http://schema.org/AdultOrientedEnumeration"
     term :HearingImpairedSupported,
       comment: "Uses devices to support users with hearing impairments.",
       label: "HearingImpairedSupported",
@@ -15854,6 +16000,12 @@ module RDF::Vocab
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2374",
       label: "HowOrWhereHealthAspect",
       type: "http://schema.org/HealthAspectEnumeration"
+    term :IOSPlatform,
+      comment: "Represents the broad notion of iOS-based operating systems.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3057",
+      label: "IOSPlatform",
+      type: "http://schema.org/DigitalPlatformEnumeration"
     term :InForce,
       comment: "Indicates that a legislation is in force.",
       exactMatch: "http://data.europa.eu/eli/ontology#InForce-inForce",
@@ -16069,6 +16221,12 @@ module RDF::Vocab
       "http://schema.org/source": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ",
       label: "MixtapeAlbum",
       type: "http://schema.org/MusicAlbumProductionType"
+    term :MobileWebPlatform,
+      comment: "Represents the broad notion of 'mobile' browsers as a Web Platform.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3057",
+      label: "MobileWebPlatform",
+      type: "http://schema.org/DigitalPlatformEnumeration"
     term :Monday,
       comment: "The day of the week between Sunday and Tuesday.",
       "http://schema.org/sameAs": "http://www.wikidata.org/entity/Q105",
@@ -16093,6 +16251,12 @@ module RDF::Vocab
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
       label: "MusculoskeletalExam",
       type: "http://schema.org/PhysicalExam"
+    term :NarcoticConsideration,
+      comment: "Item is a narcotic as defined by the [1961 UN convention](https://www.incb.org/incb/en/narcotic-drugs/Yellowlist/yellow-list.html), for example marijuna or heroin.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2989",
+      label: "NarcoticConsideration",
+      type: "http://schema.org/AdultOrientedEnumeration"
     term :Neck,
       comment: "Neck assessment with clinical examination.",
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
@@ -16742,6 +16906,12 @@ module RDF::Vocab
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
       label: "Recruiting",
       type: "http://schema.org/MedicalStudyStatus"
+    term :ReducedRelevanceForChildrenConsideration,
+      comment: "A general code for cases where relevance to children is reduced, e.g. adult education, mortgages, retirement-related products, etc.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2989",
+      label: "ReducedRelevanceForChildrenConsideration",
+      type: "http://schema.org/AdultOrientedEnumeration"
     term :RefurbishedCondition,
       comment: "Indicates that the item is refurbished.",
       label: "RefurbishedCondition",
@@ -16948,6 +17118,12 @@ module RDF::Vocab
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2374",
       label: "SelfCareHealthAspect",
       type: "http://schema.org/HealthAspectEnumeration"
+    term :SexualContentConsideration,
+      comment: "The item contains sexually oriented content such as nudity, suggestive or explicit material, or related online services, or is intended to enhance sexual activity. Examples: Erotic videos or magazine, sexual enhancement devices, sex toys.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2989",
+      label: "SexualContentConsideration",
+      type: "http://schema.org/AdultOrientedEnumeration"
     term :SideEffectsHealthAspect,
       comment: "Side effects that can be observed from the usage of the topic.",
       "http://schema.org/isPartOf": "http://pending.schema.org",
@@ -17090,6 +17266,12 @@ module RDF::Vocab
       "http://schema.org/sameAs": "http://www.wikidata.org/entity/Q129",
       label: "Thursday",
       type: "http://schema.org/DayOfWeek"
+    term :TobaccoNicotineConsideration,
+      comment: "Item contains tobacco and/or nicotine, for example cigars, cigarettes, chewing tobacco, e-cigarettes, or hookahs.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2989",
+      label: "TobaccoNicotineConsideration",
+      type: "http://schema.org/AdultOrientedEnumeration"
     term :TollFree,
       comment: "The associated telephone number is toll free.",
       label: "TollFree",
@@ -17151,6 +17333,12 @@ module RDF::Vocab
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
       label: "Ultrasound",
       type: "http://schema.org/MedicalImagingTechnique"
+    term :UnclassifiedAdultConsideration,
+      comment: "The item is suitable only for adults, without indicating why. Due to widespread use of \"adult\" as a euphemism for \"sexual\", many such items are likely suited also for the SexualContentConsideration code.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2989",
+      label: "UnclassifiedAdultConsideration",
+      type: "http://schema.org/AdultOrientedEnumeration"
     term :UnemploymentSupport,
       comment: "UnemploymentSupport: this is a benefit for unemployment support.",
       "http://schema.org/isPartOf": "http://pending.schema.org",
@@ -17202,6 +17390,18 @@ module RDF::Vocab
       "http://schema.org/source": "http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ",
       label: "VinylFormat",
       type: "http://schema.org/MusicReleaseFormatType"
+    term :ViolenceConsideration,
+      comment: "Item shows or promotes violence.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2989",
+      label: "ViolenceConsideration",
+      type: "http://schema.org/AdultOrientedEnumeration"
+    term :WeaponConsideration,
+      comment: "The item is intended to induce bodily harm, for example guns, mace, combat knives, brass knuckles, nail or other bombs, and spears.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2989",
+      label: "WeaponConsideration",
+      type: "http://schema.org/AdultOrientedEnumeration"
     term :WearableMeasurementBack,
       comment: "Measurement of the back section, for example of a jacket",
       "http://schema.org/isPartOf": "http://pending.schema.org",
