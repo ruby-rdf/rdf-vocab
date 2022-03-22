@@ -43,7 +43,7 @@ RDF::Vocab::VOCABS.each do |id, v|
   next if v[:alias] || v[:skip]
   file "lib/rdf/vocab/#{id}.rb" => :do_build do
     puts "Generate lib/rdf/vocab/#{id}.rb"
-    %x{touch lib/rdf/vocab/#{id}.rb}
+    touch "lib/rdf/vocab/#{id}.rb"
     cmd = "bundle exec rdf"
     if v[:patch]
       File.open("lib/rdf/vocab/#{id}.rb_p", "w") {|f| f.write v[:patch]}
@@ -59,11 +59,11 @@ RDF::Vocab::VOCABS.each do |id, v|
     cmd += " '" + v.fetch(:source, v[:uri]) + "'"
     puts "  #{cmd}"
     begin
-      %x{#{cmd} && sed 's/\r//g' lib/rdf/vocab/#{id}.rb_t > lib/rdf/vocab/#{id}.rb}
+      %x{#{cmd} && ruby -pe 'gsub(/\r/,"")' lib/rdf/vocab/#{id}.rb_t > lib/rdf/vocab/#{id}.rb}
     rescue
       puts "Failed to load #{id}: #{$!.message}"
     ensure
-      %x{rm -f lib/rdf/vocab/#{id}.rb_t lib/rdf/vocab/#{id}.rb_p}
+      rm_f "lib/rdf/vocab/#{id}.rb_t", "lib/rdf/vocab/#{id}.rb_p"
     end
   end
 end
