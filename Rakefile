@@ -63,7 +63,7 @@ RDF::Vocab::VOCABS.each do |id, v|
     rescue
       puts "Failed to load #{id}: #{$!.message}"
     ensure
-      rm_f "lib/rdf/vocab/#{id}.rb_t", "lib/rdf/vocab/#{id}.rb_p"
+      rm_f ["lib/rdf/vocab/#{id}.rb_t", "lib/rdf/vocab/#{id}.rb_p"]
     end
   end
 end
