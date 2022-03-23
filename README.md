@@ -140,7 +140,7 @@ New vocabularies should be generated via a pull request after cloning from GitHu
   <dt>skip</dt>
   <dd>Do not process this vocabulary, typically when the vocabulary source is inaccessible.</dd>
   <dt>patch</dt>
-  <dd>The value is taken as a string formatted as an [LD Patch][] used to correct issues in the vocabulary source that may show up when the vocabulary is validated.</dd>
+  <dd>The value is taken as a string formatted as an <a href="http://www.w3.org/TR/ldpatch/">LD Patch</a> used to correct issues in the vocabulary source that may show up when the vocabulary is validated.</dd>
   <dt>extra</dt>
   <dd>Value is a JSON Object which is added to the resulting vocabulary definition.</dd>
   </dl>
@@ -218,4 +218,4 @@ see <https://unlicense.org/> or the accompanying {file:LICENSE} file.
 [YARD]:             https://yardoc.org/
 [YARD-GS]:          https://rubydoc.info/docs/yard/file/docs/GettingStarted.md
 [PDD]:              https://unlicense.org/#unlicensing-contributions
-[[LD Patch]:       http://www.w3.org/TR/ldpatch/
+[LD Patch]:       http://www.w3.org/TR/ldpatch/
