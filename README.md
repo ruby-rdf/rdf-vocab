@@ -38,7 +38,7 @@ will limit the vocabularies which are returned from `RDF::Vocabulary.each`, whic
 * RDF::Vocab::DISCO      - [DDI-RDF Discovery Vocabulary](http://rdf-vocabulary.ddialliance.org/discovery#) (DDI)
 * RDF::Vocab::DOAP      - [Description of a Project (DOAP) vocabulary](https://github.com/edumbill/doap/wiki)
 * RDF::Vocab::DWC       - [Darwin Core](http://rs.tdwg.org/dwc/terms/)
-* RDF::Vocab::EARL      - [Evaluation and Report Language (EARL) 1.0 Schema](<http://www.w3.org/ns/earl#) (W3C)
+* RDF::Vocab::EARL      - [Evaluation and Report Language (EARL) 1.0 Schema](http://www.w3.org/ns/earl#) (W3C)
 * RDF::Vocab::EBUCore   - [EBUCore](http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#)
 * RDF::Vocab::EDM       - [Europeana Data Model (EDM)](https://pro.europeana.eu/page/edm-documentation)
 * RDF::Vocab::EXIF      - [Exif vocabulary workspace](http://www.w3.org/2003/12/exif/) (W3C)
