@@ -37,7 +37,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'json-schema',      '~> 2.8'
   gem.add_development_dependency 'jsonpath',         '~> 1.1'
   gem.add_development_dependency 'ld-patch',         '~> 3.2'
-  gem.add_development_dependency 'nokogiri',         '~> 1.12'
+  gem.add_development_dependency 'nokogiri',         '~> 1.13', '>= 1.13.8'
   gem.add_development_dependency 'rake',             '~> 13.0'
   gem.add_development_dependency 'rdf-ordered-repo', '~> 3.2'
   gem.add_development_dependency 'rdf-rdfa',         '~> 3.2'

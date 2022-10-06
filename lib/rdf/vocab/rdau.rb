@@ -14,13 +14,14 @@ module RDF::Vocab
       "http://purl.org/dc/elements/1.1/creator": "RDA Steering Committee",
       "http://purl.org/dc/elements/1.1/description": {en: "Properties that are derived from the elements of all of the RDA entities with semantics that are independent of the IFLA Library Reference Model."},
       "http://purl.org/dc/elements/1.1/issued": "2014-01-18",
-      "http://purl.org/dc/elements/1.1/modified": "2022-03-17",
+      "http://purl.org/dc/elements/1.1/modified": "2022-09-09",
       "http://purl.org/dc/elements/1.1/publisher": "ALA Digital Reference",
       "http://purl.org/dc/elements/1.1/rights": {en: "Copyright © 2020 American Library Association, Canadian Federation of Library Associations, and CILIP: Chartered Institute of Library and Information Professionals"},
-      "http://purl.org/dc/elements/1.1/title": {en: "Unconstrained properties"},
+      "http://purl.org/dc/elements/1.1/title": {en: "Unconstrained properties", fi: "Rajoittamattomat RDA-ominaisuudet"},
       "http://purl.org/dc/elements/1.1/type": "http://rdaregistry.info/termList/RDALinkedDataWork/1003",
       "http://purl.org/vocab/vann/preferredNamespacePrefix": "rdau",
-      "http://www.w3.org/2002/07/owl#versionInfo": "v5.0.2",
+      "http://www.w3.org/2002/07/owl#versionInfo": "v5.0.7",
+      note: {fi: "RDA-elementeistä johdetut ominaisuudet ilman erityisiä tai implisiittisiä rajoituksia RDA-entiteeteille."},
       type: "http://www.w3.org/2002/07/owl#Ontology"
 
     # Property definitions
@@ -30,7 +31,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60045",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is respondent of", da: "er respondent i", nl: "is respondent van"},
+      label: {en: "is respondent of", da: "er respondent i", fi: "respondentti", nl: "is respondent van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60002,
@@ -39,7 +40,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60060",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is degree granting institution of", da: "er tildelende institution for", nl: "is graadverstrekkende instantie van"},
+      label: {en: "is degree granting institution of", da: "er tildelende institution for", fi: "tutkinnon myöntävä instituutio", nl: "is graadverstrekkende instantie van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60003,
@@ -48,7 +49,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60061",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is host institution of", da: "er værtsinstitution for", nl: "is hostorganisatie van"},
+      label: {en: "is host institution of", da: "er værtsinstitution for", fi: "isäntäorganisaatio", nl: "is hostorganisatie van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60004,
@@ -57,7 +58,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60062",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is production company of", da: "er produktionsselskab for", nl: "is productiebedrijf van"},
+      label: {en: "is production company of", da: "er produktionsselskab for", fi: "tuotantoyhtiö", nl: "is productiebedrijf van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60005,
@@ -66,7 +67,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60065",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is court governed of", da: "er retsinstans underlagt", nl: "is hof geregeerd van"},
+      label: {en: "is court governed of", da: "er retsinstans underlagt", fi: "sääntöjen ohjaaman tuomioistuimen päätös", nl: "is hof geregeerd van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60006,
@@ -75,7 +76,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60066",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is collector of", da: "er samler af", nl: "is verzamelaar van"},
+      label: {en: "is collector of", da: "er samler af", fi: "kokoaja", nl: "is verzamelaar van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60007,
@@ -84,7 +85,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60067",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is collection registrar of", da: "er samlingsregistrator af", nl: "is collectieregistrator van"},
+      label: {en: "is collection registrar of", da: "er samlingsregistrator af", fi: "kokoelman luetteloija", nl: "is collectieregistrator van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60657",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60008,
@@ -93,7 +94,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60068",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is depositor of", da: "er depositor af", nl: "is bruikleengever van"},
+      label: {en: "is depositor of", da: "er depositor af", fi: "tallettaja", nl: "is bruikleengever van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60628",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60009,
@@ -102,7 +103,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60084",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is film director of", da: "er filminstruktør af", nl: "is filmregisseur van"},
+      label: {en: "is film director of", da: "er filminstruktør af", fi: "elokuvan ohjaaja", nl: "is filmregisseur van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60673",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60010,
@@ -111,7 +112,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60085",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is radio director of", da: "er radioinstruktør af", nl: "is radioregisseur van"},
+      label: {en: "is radio director of", da: "er radioinstruktør af", fi: "radio-ohjaaja", nl: "is radioregisseur van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60673",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60011,
@@ -120,7 +121,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60086",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is television director of", da: "er tv-instruktør af", nl: "is televisieregisseur van"},
+      label: {en: "is television director of", da: "er tv-instruktør af", fi: "telvisio-ohjaaja", nl: "is televisieregisseur van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60673",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60012,
@@ -129,7 +130,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60091",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is donor of", da: "donor af", nl: "is schenker van"},
+      label: {en: "is donor of", da: "donor af", fi: "lahjoittaja", nl: "is schenker van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60630",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60013,
@@ -138,7 +139,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60092",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is seller of", da: "er sælger af", nl: "is verkoper van"},
+      label: {en: "is seller of", da: "er sælger af", fi: "myyjä", nl: "is verkoper van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60630",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60014,
@@ -147,7 +148,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60096",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is enacting jurisdiction of", da: "er udøvende jurisdiktion af", nl: "is vaststellende jurisdictie van"},
+      label: {en: "is enacting jurisdiction of", da: "er udøvende jurisdiktion af", fi: "säätävän lainkäyttöalueen päätös", nl: "is vaststellende jurisdictie van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60672",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60015,
@@ -156,7 +157,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60097",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is jurisdiction governed of", da: "er jurisdiktion underlagt", nl: "is jurisdictie geregeerd van"},
+      label: {en: "is jurisdiction governed of", da: "er jurisdiktion underlagt", fi: "soveltava lainkäyttöalue yhteisölle", nl: "is jurisdictie geregeerd van"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60016,
       definition: {en: "Relates an agent to a resource that includes a contribution by an agent of leading of a performing group in a musical or dramatic presentation, etc.", da: "Relaterer en udøver, der bidrager til en musikalsk ressource ved at lede en udøvende gruppe i en musikalsk eller dramatisk præsentation etc. til en ressource."},
@@ -165,7 +166,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60141",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is conductor of", da: "er dirigent af", nl: "is dirigent van"},
+      label: {en: "is conductor of", da: "er dirigent af", fi: "johtaja", nl: "is dirigent van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60017,
@@ -175,7 +176,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60142",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is actor of", da: "er skuespiller i", nl: "is acteur van"},
+      label: {en: "is actor of", da: "er skuespiller i", fi: "näyttelijä", nl: "is acteur van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60018,
@@ -195,7 +196,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60144",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is dancer of", da: "er danser i", nl: "is danser van"},
+      label: {en: "is dancer of", da: "er danser i", fi: "tanssija", nl: "is danser van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60020,
@@ -204,7 +205,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60145",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is instructor of", da: "er lærer i", nl: "is instructeur van"},
+      label: {en: "is instructor of", da: "er lærer i", fi: "opettaja", nl: "is instructeur van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60021,
@@ -222,7 +223,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60147",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is moderator of", da: "er ordstyrer i", nl: "is moderator van"},
+      label: {en: "is moderator of", da: "er ordstyrer i", fi: "moderaattori", nl: "is moderator van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60023,
@@ -231,7 +232,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60148",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is puppeteer of", da: "er dukkefører i", nl: "is poppenspeler van"},
+      label: {en: "is puppeteer of", da: "er dukkefører i", fi: "nukketeatterin esittäjä", nl: "is poppenspeler van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60024,
@@ -240,7 +241,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60149",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is panelist of", da: "er paneldeltager i", nl: "is panellid van"},
+      label: {en: "is panelist of", da: "er paneldeltager i", fi: "panelisti", nl: "is panellid van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60025,
@@ -249,7 +250,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60150",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is instrumentalist of", da: "er musiker i", nl: "is instrumentalst van"},
+      label: {en: "is instrumentalist of", da: "er musiker i", fi: "instrumentalisti", nl: "is instrumentalst van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60026,
@@ -258,7 +259,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60151",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is commentator of", da: "er kommentator i", nl: "is commentator van"},
+      label: {en: "is commentator of", da: "er kommentator i", fi: "kommentaattori", nl: "is commentator van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60027,
@@ -267,7 +268,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60152",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is voice actor of", da: "er dubber i", nl: "is stemacteur van"},
+      label: {en: "is voice actor of", da: "er dubber i", fi: "ääninäyttelijä", nl: "is stemacteur van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60017",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60028,
@@ -276,7 +277,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60153",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is narrator of", da: "er fortæller i", nl: "is verteller van"},
+      label: {en: "is narrator of", da: "er fortæller i", fi: "kertoja", nl: "is verteller van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60029,
@@ -285,7 +286,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60154",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is storyteller of", da: "er historiefortæller i", nl: "is verhalenverteller van"},
+      label: {en: "is storyteller of", da: "er historiefortæller i", fi: "tarinankertoja", nl: "is verhalenverteller van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60030,
@@ -294,7 +295,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60155",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is speaker of", da: "er taler i", nl: "is spreker van"},
+      label: {en: "is speaker of", da: "er taler i", fi: "puhuja", nl: "is spreker van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60031,
@@ -303,7 +304,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60156",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is singer of", da: "er sanger i", nl: "is zanger van"},
+      label: {en: "is singer of", da: "er sanger i", fi: "laulaja", nl: "is zanger van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60615",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60032,
@@ -312,7 +313,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60157",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is medium of", da: "er medie i", nl: "is medium van"},
+      label: {en: "is medium of", da: "er medie i", fi: "meedio", nl: "is medium van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60602",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60033,
@@ -321,7 +322,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60169",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is film producer of", da: "er filmproducer af", nl: "is filmproducent van"},
+      label: {en: "is film producer of", da: "er filmproducer af", fi: "elokuvatuottaja", nl: "is filmproducent van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60668",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60034,
@@ -330,7 +331,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60170",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is radio producer of", da: "er radioproducer af", nl: "is radioproducent van"},
+      label: {en: "is radio producer of", da: "er radioproducer af", fi: "radiotuottaja", nl: "is radioproducent van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60668",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60035,
@@ -339,7 +340,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60171",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is television producer of", da: "er tv-producer af", nl: "is televisieproducent van"},
+      label: {en: "is television producer of", da: "er tv-producer af", fi: "televisiotuottaja", nl: "is televisieproducent van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60668",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60036,
@@ -347,14 +348,14 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/alternateIdentity.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has alternate identity", da: "har alternativ identitet", nl: "heeft alternatieve identiteit"},
+      label: {en: "has alternate identity", da: "har alternativ identitet", fi: "vaihtoehtoinen identiteetti", nl: "heeft alternatieve identiteit"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60037,
       definition: {en: "Relates a real agent who assumes an alternate identity to an agent.", da: "Relaterer en virkelig agent der antager en alternativ identitet til en agent."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/realIdentity.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has real identity", da: "har virkelig identitet", nl: "heeft echte identiteit"},
+      label: {en: "has real identity", da: "har virkelig identitet", fi: "todellinen identiteetti", nl: "heeft echte identiteit"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60045,
       definition: {en: "Relates a resource to an agent who is a candidate for a degree who defends or opposes a thesis provided by the praeses in an academic disputation.", da: "Relaterer en ressource til en kandidat til en akademisk grad, der forsvarer eller opponerer mod en tese, der er fremsat af præses i et akademisk afhandlingsforsvar."},
@@ -362,7 +363,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has respondent", da: "har respondent", nl: "heeft respondent"},
+      label: {en: "has respondent", da: "har respondent", fi: "respondentti", nl: "heeft respondent"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60046,
@@ -370,22 +371,22 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/undifferentiatedNameIndicator.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has undifferentiated name indicator", da: "har ikke entydig navneindikator", nl: "heeft niet-onderscheiden naam indicatie"},
+      label: {en: "has undifferentiated name indicator", da: "har ikke entydig navneindikator", fi: "yksilöimättömän nimen ilmaus", nl: "heeft niet-onderscheiden naam indicatie"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60047,
-      altLabel: {en: "type of agent"},
+      altLabel: {en: "type of agent", fi: "toimijan tyyppi"},
       definition: {en: "Relates an agent to a type to which an agent belongs.", da: "Relaterer en ressource til en kategorisering eller almindelig beskrivelse på en type af agent."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/categoryOfAgent.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has category of agent", da: "har type af agent", nl: "heeft categorie van actor"},
+      label: {en: "has category of agent", da: "har type af agent", fi: "toimijan kategoria", nl: "heeft categorie van actor"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60048,
       definition: {en: "Relates a resource to a categorization reflecting the format of the storage medium and housing of a carrier in combination with the type of intermediation device required to view, play, run, or otherwise access the content of a resource.", da: "Relaterer en ressource til en kategorisering der specifikt afspejler lagringsmediet og dets udstyr i kombination med den type af afspilningsudstyr, der kræves for at se, spille, fremvise etc. en ressources indhold."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/carrierType.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has carrier type", da: "har bærertype", nl: "heeft type drager"},
+      label: {en: "has carrier type", da: "har bærertype", fi: "tallennetyyppi", nl: "heeft type drager"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60049,
       definition: {en: "Relates a resource to a categorization reflecting a fundamental form of communication in which a content is expressed and a human sense through which it is intended to be perceived.", da: "Relaterer en ressource til en kategorisering, der afspejler den grundlæggende kommunikationsform, hvorigennem indholden ressourcekes, og den menneskelige sans, hvorigennem det er meningen, at det skal opfattes."},
@@ -426,7 +427,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60937",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has identifier for agent", da: "har identifikator for agent", nl: "heeft identificatie voor actor"},
+      label: {en: "has identifier for agent", da: "har identifikator for agent", fi: "toimijan tunniste", nl: "heeft identificatie voor actor"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60919",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60054,
@@ -457,7 +458,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/preferredCitation.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has preferred citation", da: "har foretrukken referenceform", nl: "heeft voorkeurscitatie"},
+      label: {en: "has preferred citation", da: "har foretrukken referenceform", fi: "ensisijainen viittausmuoto", nl: "heeft voorkeurscitatie"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60058,
       altLabel: {en: "has form of resource"},
@@ -473,7 +474,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/regionalEncoding.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has regional encoding", da: "har regional kodning", nl: "heeft regiocodering"},
+      label: {en: "has regional encoding", da: "har regional kodning", fi: "aluekoodi", nl: "heeft regiocodering"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60350",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60060,
@@ -482,7 +483,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60002",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has degree granting institution", da: "har tildelende institution", nl: "heeft graadverlenende instantie"},
+      label: {en: "has degree granting institution", da: "har tildelende institution", fi: "oppiarvon myöntävä yhteisö", nl: "heeft graadverlenende instantie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60061,
@@ -500,7 +501,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60004",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has production company", da: "har produktionsselskab", nl: "heeft productiebedrijf"},
+      label: {en: "has production company", da: "har produktionsselskab", fi: "tuotantoyhtiö", nl: "heeft productiebedrijf"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60063,
@@ -509,7 +510,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60999",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has country associated with agent", da: "har land knyttet til agent", nl: "heeft land geassocieerd met actor"},
+      label: {en: "has country associated with agent", da: "har land knyttet til agent", fi: "toimijaan liittyvä maa", nl: "heeft land geassocieerd met actor"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60064,
       definition: {en: "Relates a resource to a country, state, province, etc., or local place in which an organization has its headquarters. (Deprecated)"},
@@ -525,7 +526,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60005",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has court governed", da: "har retsinstans underlagt", nl: "heeft hof geregeerd"},
+      label: {en: "has court governed", da: "har retsinstans underlagt", fi: "sääntöjen ohjaama tuomioistuin", nl: "heeft hof geregeerd"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60066,
@@ -534,7 +535,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60006",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has collector", da: "har samler", nl: "heeft verzamelaar"},
+      label: {en: "has collector", da: "har samler", fi: "kokoelman muodostaja", nl: "heeft verzamelaar"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60067,
@@ -543,7 +544,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60007",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has collection registrar", da: "har samlingsregistrator", nl: "heeft collectieregistrator"},
+      label: {en: "has collection registrar", da: "har samlingsregistrator", fi: "kokoelman luetteloija", nl: "heeft collectieregistrator"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60428",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60068,
@@ -552,7 +553,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60008",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has depositor", da: "har depositor", nl: "heeft bruikleengever"},
+      label: {en: "has depositor", da: "har depositor", fi: "tallettaja", nl: "heeft bruikleengever"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60400",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60069,
@@ -561,7 +562,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P61108",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has copyright date", da: "har copyrightår", nl: "heeft copyrightdatum"},
+      label: {en: "has copyright date", da: "har copyrightår", fi: "tekijänoikeuden päivämäärä", nl: "heeft copyrightdatum"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60070,
       definition: {en: "Relates a resource to a timespan during which a published resource is distributed.", da: "Relaterer en ressource til et år eller dato knyttet til distributionen af en ressource i publiceret form."},
@@ -569,7 +570,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60979",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has date of distribution", da: "har distributionsår", nl: "heeft datum van distributie"},
+      label: {en: "has date of distribution", da: "har distributionsår", fi: "jakeluaika", nl: "heeft datum van distributie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61020",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60071,
@@ -578,7 +579,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60982",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has date of production", da: "har produktionsår", nl: "heeft datum van productie"},
+      label: {en: "has date of production", da: "har produktionsår", fi: "tuotantoaika", nl: "heeft datum van productie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61020",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60072,
@@ -587,7 +588,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60981",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has date of manufacture", da: "har fremstillingsår", nl: "heeft datum van vervaardiging"},
+      label: {en: "has date of manufacture", da: "har fremstillingsår", fi: "valmistusaika", nl: "heeft datum van vervaardiging"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61020",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60073,
@@ -596,7 +597,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60983",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has date of publication", da: "har udgivelsesår", nl: "heeft datum van publicatie"},
+      label: {en: "has date of publication", da: "har udgivelsesår", fi: "julkaisuaika", nl: "heeft datum van publicatie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61020",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60074,
@@ -605,7 +606,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60976",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has date of capture", da: "har optagelsestidspunkt/indspilningstidspunkt", nl: "heeft datum van vastleggen"},
+      label: {en: "has date of capture", da: "har optagelsestidspunkt/indspilningstidspunkt", fi: "tallennusajankohta", nl: "heeft datum van vastleggen"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60075,
       definition: {en: "Relates a nomen to a date or range of dates that is associated with the use of an appellation of an entity.", da: "Relaterer et navn til et år eller dato eller række af år eller datoer datoer knyttet til brugen af det navn, der er valgt som det foretrukne navn for en agent."},
@@ -613,7 +614,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60986",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has date of usage", da: "har anvendelsesperiode", nl: "heeft datum van gebruik"},
+      label: {en: "has date of usage", da: "har anvendelsesperiode", fi: "käyttöajankohta", nl: "heeft datum van gebruik"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60076,
       definition: {en: "Relates an agent to a date or range of dates indicative of a period in which an agent was active in its primary field of endeavor.", da: "Relaterer en ressource til en periode, hvori en agent var aktiv i sit primære virkefelt."},
@@ -621,7 +622,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60990",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has period of activity of agent", da: "har aktivitetsperiode for agent", nl: "heeft periode van activiteit van actor"},
+      label: {en: "has period of activity of agent", da: "har aktivitetsperiode for agent", fi: "toimijan toiminta-aika", nl: "heeft periode van activiteit van actor"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60324",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60077,
@@ -636,14 +637,14 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelDesignationOfEdition.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has parallel designation of edition", da: "har parallel udgavebetegnelse", nl: "heeft parallelle aanduiding van editie"},
+      label: {en: "has parallel designation of edition", da: "har parallel udgavebetegnelse", fi: "painoksen rinnakkainen määrite", nl: "heeft parallelle aanduiding van editie"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60079,
       definition: {en: "Relates a resource to a designation of a sequencing of a conference, etc., within a series of conferences, etc.", da: "Relaterer en ressource til en sekvensbetegnelse etc. i en række af konferencer etc."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/numberOfConference.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has number of conference", da: "har nummer på konference etc.", nl: "heeft nummer van conferentie"},
+      label: {en: "has number of conference", da: "har nummer på konference etc.", fi: "konferenssin numero", nl: "heeft nummer van conferentie"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60080,
       definition: {en: "Relates a resource to a designation in the form of numbers or alphabetic characters, or a date or other timespan, that is used to indicate a sequence of a part resource within a whole resource.", da: "Relaterer en ressource til en sekvensbetegnelse for en del eller flere dele i et større Ressource."},
@@ -651,7 +652,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "Numbering may consist of a numeral, a letter, any other character, or the combination of these with or without an accompanying caption, and/or a chronological designation.", da: "Nummerering af del kan omfatte et tal, et bogstav, ethvert andet tegn eller en kombination af disse med eller uden tilhørende tekst og/eller en kronologisk betegnelse"},
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has numbering of part", da: "har nummerering af del", nl: "heeft nummering van deel"},
+      label: {en: "has numbering of part", da: "har nummerering af del", fi: "osan numerointi", nl: "heeft nummering van deel"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60081,
       definition: {en: "Relates a resource to a designation of a sequencing of a part or parts within a series.", da: "Relaterer en ressource til en sekvensbetegnelse for en del eller flere dele i en serie."},
@@ -660,7 +661,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "Numbering may include dates or other timespans, alphanumeric or other characters, and an accompanying caption.", da: "Nummerering omfatter et tal, et bogstav, ethvert andet tegn eller en kombination af disse med eller uden tilhørende tekst og/eller en kronologisk betegnelse."},
       inverseOf: "http://rdaregistry.info/Elements/u/P61209",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has numbering within sequence", da: "har nummerering indenfor serie", nl: "heeft nummering binnen volgorde"},
+      label: {en: "has numbering within sequence", da: "har nummerering indenfor serie", fi: "sarjan sisäinen numerointi", nl: "heeft nummering binnen volgorde"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60082,
       definition: {en: "Relates a resource to a designation of a sequencing of a part or parts within a subseries. (Deprecated)", da: "Relaterer en ressource til en sekvensbetegnelse for en del eller flere dele i en underserie."},
@@ -676,7 +677,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60469",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has electronic reproduction", da: "har elektronisk reproduktion", nl: "heeft elektronische reproductie"},
+      label: {en: "has electronic reproduction", da: "har elektronisk reproduktion", fi: "kappaleen digitoitu jäljenne", nl: "heeft elektronische reproductie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60272",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60084,
@@ -685,7 +686,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60009",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has film director", da: "filminstruktør", nl: "heeft filmregisseur"},
+      label: {en: "has film director", da: "filminstruktør", fi: "elokuvaohjaaja", nl: "heeft filmregisseur"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60449",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60085,
@@ -694,7 +695,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60010",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has radio director", da: "har radioinstruktør", nl: "heeft radioregisseur"},
+      label: {en: "has radio director", da: "har radioinstruktør", fi: "radio-ohjaaja", nl: "heeft radioregisseur"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60449",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60086,
@@ -703,7 +704,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60011",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has television director", da: "har tv-instruktør", nl: "heeft televisieregisseur"},
+      label: {en: "has television director", da: "har tv-instruktør", fi: "televisio-ohjaaja", nl: "heeft televisieregisseur"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60449",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60087,
@@ -711,7 +712,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelNameOfDistributor.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has parallel name of distributor", da: "har parallelt distributørnavn", nl: "heeft parallelle naam van distributeur"},
+      label: {en: "has parallel name of distributor", da: "har parallelt distributørnavn", fi: "*jakelijan rinnakkainen nimi", nl: "heeft parallelle naam van distributeur"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60088,
       definition: {en: "Relates a resource to a dramatic resource adapted from another resource.", da: "Relaterer en ressource til en dramatisk ressource bearbejdet ud fra en oprindelig ressource."},
@@ -719,7 +720,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60225",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is dramatized as", da: "er dramatiseret som", nl: "is gedramatiseerd als"},
+      label: {en: "is dramatized as", da: "er dramatiseret som", fi: "dramatisoitu", nl: "is gedramatiseerd als"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60089,
@@ -727,14 +728,14 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/fieldOfActivityOfAgent.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has field of activity of agent", da: "har agents virkefelt", nl: "heeft veld van activiteit van actor"},
+      label: {en: "has field of activity of agent", da: "har agents virkefelt", fi: "toimijan toiminta-ala", nl: "heeft veld van activiteit van actor"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60090,
       definition: {en: "Relates a resource to a formal recognition of excellence or other merit given by an award- or prize-granting body, for the content of a resource.", da: "Relaterer en ressource til en formel anerkendelse af fortræffelig kvalitet etc., givet af en pristildelende institution for indholdet af en ressource."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/award.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has award", da: "har udmærkelse", nl: "heeft prijs"},
+      label: {en: "has award", da: "har udmærkelse", fi: "palkinto", nl: "heeft prijs"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60091,
       definition: {en: "Relates a resource to a former owner of a resource that donated the resource to another owner.", da: "Relaterer en ressource til en tidligere ejer af en ressource, der har doneret denne ressource til en anden ejer."},
@@ -742,7 +743,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60012",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has donor", da: "har donor", nl: "heeft schenker"},
+      label: {en: "has donor", da: "har donor", fi: "lahjoittaja", nl: "heeft schenker"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60401",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60092,
@@ -751,7 +752,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60013",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has seller", da: "har sælger", nl: "heeft verkoper"},
+      label: {en: "has seller", da: "har sælger", fi: "myyjä", nl: "heeft verkoper"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60401",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60093,
@@ -759,7 +760,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/fileType.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has file type", da: "har filtype", nl: "heeft bestandstype"},
+      label: {en: "has file type", da: "har filtype", fi: "tiedostotyyppi", nl: "heeft bestandstype"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60350",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60095,
@@ -775,7 +776,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60014",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has enacting jurisdiction", da: "har vedtagende jurisdiktion", nl: "heeft vaststellende jurisdictie"},
+      label: {en: "has enacting jurisdiction", da: "har vedtagende jurisdiktion", fi: "säätävä lainkäyttöalue", nl: "heeft vaststellende jurisdictie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60097,
@@ -784,7 +785,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60015",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has jurisdiction governed", da: "har jurisdiktion underlagt", nl: "heeft geregeerde jurisdictie"},
+      label: {en: "has jurisdiction governed", da: "har jurisdiktion underlagt", fi: "soveltava lainkäyttöalue", nl: "heeft geregeerde jurisdictie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61018",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60098,
@@ -792,7 +793,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/languageOfAgent.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has language of agent", da: "har agents sprog", nl: "heeft taal van actor"},
+      label: {en: "has language of agent", da: "har agents sprog", fi: "toimijan käyttämä kieli", nl: "heeft taal van actor"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60099,
       definition: {en: "Relates a resource to a language used for the content of a resource.", da: "Relaterer en ressource til et sprog, der anvendes til at udtrykke en ressources indhold."},
@@ -807,7 +808,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60300",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is facsimile part of", da: "er faksimile indeholdt i", nl: "is facsimile deel van"},
+      label: {en: "is facsimile part of", da: "er faksimile indeholdt i", fi: "näköispainos sisältyy", nl: "is facsimile deel van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60101",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60101,
@@ -822,13 +823,13 @@ module RDF::Vocab
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60714",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60102,
-      altLabel: {en: "is prequel to"},
+      altLabel: {en: "is prequel to", fi: "esiosa"},
       definition: {en: "Relates a resource to a resource that extends the narrative of another resource forwards in time.", da: "Relaterer en ressource til en senere ressource, der fortsætter en tidligere ressources fortælling."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/sequel.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60577",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has sequel", da: "er efterfølger", nl: "heeft sequel"},
+      label: {en: "has sequel", da: "er efterfølger", fi: "jatko-osa", nl: "heeft sequel"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60278",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60103,
@@ -838,7 +839,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "This relationship applies generally to single-part units, multipart monographs, and integrating resources.", da: "Denne relation anvendes generelt til enkeltstående monografier, flerbindsværker og integrerende ressourcer."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60479",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is replaced in part by", da: "er delvis erstattet af", nl: "is gedeeltelijk vervangen door"},
+      label: {en: "is replaced in part by", da: "er delvis erstattet af", fi: "osittain korvattu", nl: "is gedeeltelijk vervangen door"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60278",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60104,
@@ -848,7 +849,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "This relationship applies generally to single-part units, multipart monographs, and integrating resources.", da: "Den her relation bruges generelt til enkeltstående monografier, flerbindsværker og integrerende ressourcer."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60480",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is replaced by", nl: "is vervangen door"},
+      label: {en: "is replaced by", fi: "korvattu", nl: "is vervangen door"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60278",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60105,
@@ -864,7 +865,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60226",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is adapted in verse as", da: "bearbejdet i versform som", nl: "is bewerkt in versvorm als"},
+      label: {en: "is adapted in verse as", da: "bearbejdet i versform som", fi: "runomukaelma", nl: "is bewerkt in versvorm als"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60107,
@@ -873,7 +874,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60997",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has place of conference", da: "har sted for konference etc.", nl: "heeft plaats van conferentie"},
+      label: {en: "has place of conference", da: "har sted for konference etc.", fi: "konferenssin paikka", nl: "heeft plaats van conferentie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61018",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60108,
@@ -881,7 +882,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelNameOfManufacturer.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has parallel name of manufacturer", da: "har parallelt producentnavn", nl: "heeft parallelle naam van vervaardiger"},
+      label: {en: "has parallel name of manufacturer", da: "har parallelt producentnavn", fi: "valmistajan rinnakkainen nimi", nl: "heeft parallelle naam van vervaardiger"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60109,
       definition: {en: "Relates a resource to a mathematical system for identifying a place covered by the cartographic content of a resource.", da: "Relaterer en ressource til et matematisk system til identificering af det område, der dækkes af en ressources kartografiske indhold."},
@@ -890,7 +891,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P61191",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has coordinates of cartographic content", da: "har koordinater for kartografisk indhold", nl: "heeft coördinaten van cartografische content"},
+      label: {en: "has coordinates of cartographic content", da: "har koordinater for kartografisk indhold", fi: "kartografisen sisällön koordinaatit", nl: "heeft coördinaten van cartografische content"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60110,
       definition: {en: "Relates a resource to a motion picture that is based on another resource.", da: "Relaterer en ressource til en film baseret på en oprindelig ressource."},
@@ -898,7 +899,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60227",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is adapted as motion picture", da: "er bearbejdet som film", nl: "is bewerkt als speelfilm"},
+      label: {en: "is adapted as motion picture", da: "er bearbejdet som film", fi: "elokuvaversio", nl: "is bewerkt als speelfilm"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60111,
@@ -907,7 +908,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60112",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is dubbed version of", da: "er synkroniseret version af", nl: "is nagesynchroniseerde versie van"},
+      label: {en: "is dubbed version of", da: "er synkroniseret version af", fi: "dubattu versio", nl: "is nagesynchroniseerde versie van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60244",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60112,
@@ -916,7 +917,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60111",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has dubbed version", da: "er synkroniseret version", nl: "heeft nagesynchroniseerde versie"},
+      label: {en: "has dubbed version", da: "er synkroniseret version", fi: "dubatun version perusta", nl: "heeft nagesynchroniseerde versie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60280",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60113,
@@ -925,7 +926,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60116",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has cadenza", da: "er kadence", nl: "heeft cadens"},
+      label: {en: "has cadenza", da: "er kadence", fi: "kadenssi", nl: "heeft cadens"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60114,
@@ -934,7 +935,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60115",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is variations based on", da: "er variationer baseret på", nl: "is variatie gebaseerd op"},
+      label: {en: "is variations based on", da: "er variationer baseret på", fi: "muunnelma", nl: "is variatie gebaseerd op"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60115,
@@ -970,7 +971,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60202",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has incidental music", da: "er skuespilsmusik", nl: "heeft toneelmuziek"},
+      label: {en: "has incidental music", da: "er skuespilsmusik", fi: "taustamusiikkia", nl: "heeft toneelmuziek"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60723",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60119,
@@ -979,7 +980,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60921",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has variant name of agent", da: "har variantnavn for agent", nl: "heeft variant naam van actor"},
+      label: {en: "has variant name of agent", da: "har variantnavn for agent", fi: "toimijan varianttinimi", nl: "heeft variant naam van actor"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60368",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60120,
@@ -997,7 +998,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60266",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is set to music as", da: "er sat i musik som", nl: "is op muziek gezet als"},
+      label: {en: "is set to music as", da: "er sat i musik som", fi: "tekstiin perustuva musiikki", nl: "is op muziek gezet als"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60122,
@@ -1013,7 +1014,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnChangesInContentCharacteristics.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has note on changes in content characteristics", da: "har note om ændringer i bærerkarakteristika", nl: "heeft noot bij veranderingen in karakteristieken van content"},
+      label: {en: "has note on changes in content characteristics", da: "har note om ændringer i bærerkarakteristika", fi: "huomautus muutoksista sisällön ominaisuuksissa", nl: "heeft noot bij veranderingen in karakteristieken van content"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60124,
@@ -1021,7 +1022,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnChangesInCarrierCharacteristics.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has note on changes in carrier characteristics", da: "har note om ændringer i bærerkarakteristika", nl: "heeft noot bij veranderingen in karakteristieken van dragers"},
+      label: {en: "has note on changes in carrier characteristics", da: "har note om ændringer i bærerkarakteristika", fi: "huomautus muutoksista tallenteen ominaisuuksissa", nl: "heeft noot bij veranderingen in karakteristieken van dragers"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60125,
@@ -1029,7 +1030,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnDistributionStatement.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has note on distribution statement", da: "har note til distriubutionsbeskrivelse", nl: "heeft noot bij distributievermelding"},
+      label: {en: "has note on distribution statement", da: "har note til distriubutionsbeskrivelse", fi: "huomautus jakelumerkinnöstä", nl: "heeft noot bij distributievermelding"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60126,
@@ -1037,7 +1038,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnManufactureStatement.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has note on manufacture statement", da: "har note til produktionsbeskrivelse - publicerede ressourcer", nl: "heeft noot bij vervaardigingsvermelding"},
+      label: {en: "has note on manufacture statement", da: "har note til produktionsbeskrivelse - publicerede ressourcer", fi: "huomautus valmistusmerkinnöstä", nl: "heeft noot bij vervaardigingsvermelding"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60127,
@@ -1045,7 +1046,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnProductionStatement.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has note on production statement", da: "har note til produktionsbeskrivelse - upublicerede ressourcer", nl: "heeft noot bij productievermelding"},
+      label: {en: "has note on production statement", da: "har note til produktionsbeskrivelse - upublicerede ressourcer", fi: "huomautus tuotantomerkinnöstä", nl: "heeft noot bij productievermelding"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60128,
@@ -1053,7 +1054,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnPublicationStatement.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has note on publication statement", da: "har note til publiceringsbeskrivelse", nl: "heeft noot bij publicatievermelding"},
+      label: {en: "has note on publication statement", da: "har note til publiceringsbeskrivelse", fi: "huomautus julkaisumerkinnöstä", nl: "heeft noot bij publicatievermelding"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60129,
@@ -1069,7 +1070,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnStatementOfResponsibility.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has note on statement of responsibility", da: "har note til ophavsangivelse", nl: "heeft noot bij verantwoordelijkheidsvermelding"},
+      label: {en: "has note on statement of responsibility", da: "har note til ophavsangivelse", fi: "huomautus vastuullisuusmerkinnöstä", nl: "heeft noot bij verantwoordelijkheidsvermelding"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60131,
@@ -1077,7 +1078,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnSeriesStatement.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has note on series statement", da: "har note til seriebeskrivelse", nl: "heeft noot bij reeksvermelding"},
+      label: {en: "has note on series statement", da: "har note til seriebeskrivelse", fi: "huomautus sarjamerkinnöstä", nl: "heeft noot bij reeksvermelding"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60132,
@@ -1085,7 +1086,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnCopyrightDate.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has note on copyright date", da: "har note om copyrightår", nl: "heeft noot bij copyrightdatum"},
+      label: {en: "has note on copyright date", da: "har note om copyrightår", fi: "huomautus copyright-vuodesta", nl: "heeft noot bij copyrightdatum"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60133,
@@ -1093,7 +1094,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnDimensionsOfResource.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has note on dimensions of resource", da: "har note om ressources størrelse", nl: "heeft noot bij afmetingen van resource"},
+      label: {en: "has note on dimensions of resource", da: "har note om ressources størrelse", fi: "huomautus koosta", nl: "heeft noot bij afmetingen van resource"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60134,
@@ -1101,7 +1102,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnExtentOfResource.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has note on extent of resource", da: "har note om omfang af ressource", nl: "heeft noot bij omvang van resource"},
+      label: {en: "has note on extent of resource", da: "har note om omfang af ressource", fi: "huomautus laajuudesta", nl: "heeft noot bij omvang van resource"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60135,
@@ -1109,7 +1110,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnNumberingOfSequence.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has note on numbering of sequence", da: "har note om periodikanummerering", nl: "heeft noot bij nummering van volgorde"},
+      label: {en: "has note on numbering of sequence", da: "har note om periodikanummerering", fi: "huomautus numerointijaksosta", nl: "heeft noot bij nummering van volgorde"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60136,
@@ -1117,7 +1118,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnTitle.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has note on title", da: "har note om titel", nl: "heeft noot bij titel"},
+      label: {en: "has note on title", da: "har note om titel", fi: "huomautus nimekkeestä", nl: "heeft noot bij titel"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60137,
@@ -1125,7 +1126,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/noteOnEditionStatement.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has note on edition statement", da: "har note til udgavebeskrivelse", nl: "heeft noot bij editievermelding"},
+      label: {en: "has note on edition statement", da: "har note til udgavebeskrivelse", fi: "huomautus painosmerkinnöstä", nl: "heeft noot bij editievermelding"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60470",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60138,
@@ -1134,17 +1135,17 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60228",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is adapted as novel", da: "er bearbjdet til roman", nl: "is bewerkt als roman"},
+      label: {en: "is adapted as novel", da: "er bearbjdet til roman", fi: "romaanimukaelma", nl: "is bewerkt als roman"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60139,
       definition: {en: "Relates a resource to a numbering designation assigned to a notated music resource by a publisher.", da: "Relaterer en ressource til en nummereringsbetegnelse givet til en noteret musikressource af en udgiver."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/publisherNumberForNotatedMusic.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
-      "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "A publisher number for notated music sometimes includes initials, abbreviations, or words identifying the publisher.", da: "Editionsnummer for noteret musik indeholder sommetider initialer, forkortelser eller ord der identificerer udgiveren."},
+      "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "A publisher number for notated music sometimes includes initials, abbreviations, or words identifying the publisher.", da: "Editionsnummer for noteret musik indeholder sommetider initialer, forkortelser eller ord der identificerer udgiveren.", fi: "kustantajan nuottiaineistolle antama numero, joka voi sisältää kustantajaa identifioivia sanoja, lyhenteitä tai kirjaimia."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60989",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has publisher number for notated music", da: "har udgivers editionsnummer for noteret musik", nl: "heeft uitgeversnummer voor bladmuziek"},
+      label: {en: "has publisher number for notated music", da: "har udgivers editionsnummer for noteret musik", fi: "kustantajan nuottiaineistolle antama numero", nl: "heeft uitgeversnummer voor bladmuziek"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60052",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60140,
@@ -1154,7 +1155,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "A plate number for notated music sometimes includes initials, abbreviations, or words identifying the publisher. It is sometimes followed by a number corresponding to the number of pages or plates or a number corresponding to an individual page or plate.", da: "Pladenummer for noteret musik indeholder sommetider initialer, forkortelser eller ord der identificerer udgiveren og følges sommetider af et nummer der tilsvarer antallet af sider eller plader."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60988",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has plate number for notated music", da: "har pladenummer for noteret musik", nl: "heeft plaatnummer voor bladmuziek"},
+      label: {en: "has plate number for notated music", da: "har pladenummer for noteret musik", fi: "nuottiaineiston laattanumero", nl: "heeft plaatnummer voor bladmuziek"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60052",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60141,
@@ -1164,7 +1165,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60016",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has conductor", da: "har dirigent", nl: "heeft dirigent"},
+      label: {en: "has conductor", da: "har dirigent", fi: "johtaja", nl: "heeft dirigent"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60142,
@@ -1174,7 +1175,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60017",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has actor", da: "har skuespiller", nl: "heeft acteur"},
+      label: {en: "has actor", da: "har skuespiller", fi: "näyttelijä", nl: "heeft acteur"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60143,
@@ -1185,7 +1186,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "Appearance in nonfiction moving image materials or in introductions to fiction moving image materials is included. Appearance on screen in a non-performing role is excluded.", da: "Optræden i levende billedmaterialer af faktuel karakter eller i introduktioner til levende billedmaterialer af fiktiv karakter er omfattet. Optræden på skærmen i en ikke-fremførende rolle er ikke omfattet."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60018",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has onscreen presenter", da: "har programvært", nl: "heeft presentator op beeld"},
+      label: {en: "has onscreen presenter", da: "har programvært", fi: "esittelijä", nl: "heeft presentator op beeld"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60144,
@@ -1194,7 +1195,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60019",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has dancer", da: "har danser", nl: "heeft danser"},
+      label: {en: "has dancer", da: "har danser", fi: "tanssija", nl: "heeft danser"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60145,
@@ -1212,7 +1213,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60021",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has host", da: "har vært", nl: "heeft gastgever"},
+      label: {en: "has host", da: "har vært", fi: "juontaja", nl: "heeft gastgever"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60147,
@@ -1221,7 +1222,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60022",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has moderator", da: "har ordstyrer", nl: "heeft moderator"},
+      label: {en: "has moderator", da: "har ordstyrer", fi: "moderaattori", nl: "heeft moderator"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60148,
@@ -1230,7 +1231,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60023",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has puppeteer", da: "har dukkefører", nl: "heeft poppenspeler"},
+      label: {en: "has puppeteer", da: "har dukkefører", fi: "nukketeatterin esittäjä", nl: "heeft poppenspeler"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60149,
@@ -1239,7 +1240,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60024",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has panelist", da: "har paneldeltager", nl: "heeft panellid"},
+      label: {en: "has panelist", da: "har paneldeltager", fi: "panelisti", nl: "heeft panellid"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60150,
@@ -1248,7 +1249,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60025",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has instrumentalist", da: "har musiker", nl: "heeft instrumentalist"},
+      label: {en: "has instrumentalist", da: "har musiker", fi: "instrumentalisti", nl: "heeft instrumentalist"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60151,
@@ -1257,7 +1258,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60026",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has commentator", da: "har kommentator", nl: "heeft commentator"},
+      label: {en: "has commentator", da: "har kommentator", fi: "kommentaattori", nl: "heeft commentator"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60152,
@@ -1266,7 +1267,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60027",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has voice actor", da: "har dubber", nl: "heeft stemacteur"},
+      label: {en: "has voice actor", da: "har dubber", fi: "ääninäyttelijä", nl: "heeft stemacteur"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60142",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60153,
@@ -1275,7 +1276,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60028",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has narrator", da: "har fortæller/indlæser", nl: "heeft verteller"},
+      label: {en: "has narrator", da: "har fortæller/indlæser", fi: "kertoja", nl: "heeft verteller"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60154,
@@ -1284,7 +1285,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60029",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has storyteller", da: "har kunstnerisk fortæller", nl: "heeft verhalenverteller"},
+      label: {en: "has storyteller", da: "har kunstnerisk fortæller", fi: "tarinankertoja", nl: "heeft verhalenverteller"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60155,
@@ -1293,7 +1294,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60030",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has speaker", da: "har taler", nl: "heeft spreker"},
+      label: {en: "has speaker", da: "har taler", fi: "puhuja", nl: "heeft spreker"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60156,
@@ -1303,7 +1304,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {da: "En sangers optræden kan omfatte egentlige ord, men gør det ikke nødvendigvis."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60031",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has singer", da: "har sanger", nl: "heeft zanger"},
+      label: {en: "has singer", da: "har sanger", fi: "laulaja", nl: "heeft zanger"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60387",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60157,
@@ -1312,7 +1313,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60032",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has medium", da: "har medie", nl: "heeft medium"},
+      label: {en: "has medium", da: "har medie", fi: "meedio", nl: "heeft medium"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60158,
@@ -1330,7 +1331,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/appliedMaterial.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has applied material", da: "har anvendt materiale", nl: "heeft bevestigd materiaal"},
+      label: {en: "has applied material", da: "har anvendt materiale", fi: "päällimateriaali", nl: "heeft bevestigd materiaal"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60995",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60160,
@@ -1340,7 +1341,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60968",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has place of distribution", da: "har distributionssted", nl: "heeft plaats van distributie"},
+      label: {en: "has place of distribution", da: "har distributionssted", fi: "jakelupaikka", nl: "heeft plaats van distributie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61014",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60161,
@@ -1350,7 +1351,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60971",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has place of production", da: "har produktionssted - upublicerede ressourcer", nl: "heeft plaats van productie"},
+      label: {en: "has place of production", da: "har produktionssted - upublicerede ressourcer", fi: "tuotantopaikka", nl: "heeft plaats van productie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61014",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60162,
@@ -1360,7 +1361,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60969",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has place of manufacture", da: "har produktionssted - publicerede ressourcer", nl: "heeft plaats van vervaardiging"},
+      label: {en: "has place of manufacture", da: "har produktionssted - publicerede ressourcer", fi: "valmistuspaikka", nl: "heeft plaats van vervaardiging"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61014",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60163,
@@ -1370,7 +1371,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60972",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has place of publication", da: "har publiceringssted", nl: "heeft plaats van publicatie"},
+      label: {en: "has place of publication", da: "har publiceringssted", fi: "julkaisupaikka", nl: "heeft plaats van publicatie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61014",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60164,
@@ -1378,7 +1379,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelPlaceOfDistribution.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has parallel place of distribution", da: "har parallelt distributionssted", nl: "heeft parallelle plaats van distributie"},
+      label: {en: "has parallel place of distribution", da: "har parallelt distributionssted", fi: "rinnakkainen jakelupaikka", nl: "heeft parallelle plaats van distributie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60160",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60165,
@@ -1386,7 +1387,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelPlaceOfManufacture.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has parallel place of manufacture", da: "har parallelt produktionssted - publicerede ressourcer", nl: "heeft parallelle plaats van vervaardiging"},
+      label: {en: "has parallel place of manufacture", da: "har parallelt produktionssted - publicerede ressourcer", fi: "rinnakkainen valmistuspaikka", nl: "heeft parallelle plaats van vervaardiging"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60162",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60166,
@@ -1394,7 +1395,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelPlaceOfProduction.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has parallel place of production", da: "har parallelt produktionssted - upublicerede ressourcer", nl: "heeft parallelle plaats van productie"},
+      label: {en: "has parallel place of production", da: "har parallelt produktionssted - upublicerede ressourcer", fi: "rinnakkainen tuotantopaikka", nl: "heeft parallelle plaats van productie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60161",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60167,
@@ -1402,7 +1403,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelPlaceOfPublication.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has parallel place of publication", da: "har parallelt publiceringssted", nl: "heeft parallelle plaats van publicatie"},
+      label: {en: "has parallel place of publication", da: "har parallelt publiceringssted", fi: "rinnakkainen julkaisupaikka", nl: "heeft parallelle plaats van publicatie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60163",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60168,
@@ -1411,7 +1412,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60271",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is reprint of", da: "er genoptryk af", nl: "is herdruk van"},
+      label: {en: "is reprint of", da: "er genoptryk af", fi: "uusintajulkaisu", nl: "is herdruk van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60297",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60169,
@@ -1420,7 +1421,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60033",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has film producer", da: "har filmproducer", nl: "heeft filmproducent"},
+      label: {en: "has film producer", da: "har filmproducer", fi: "elokuvatuottaja", nl: "heeft filmproducent"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60441",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60170,
@@ -1429,7 +1430,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60034",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has radio producer", da: "har radioproducer", nl: "heeft radioproducent"},
+      label: {en: "has radio producer", da: "har radioproducer", fi: "radiotuottaja", nl: "heeft radioproducent"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60441",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60171,
@@ -1438,7 +1439,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60035",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has television producer", da: "har tv-producer", nl: "heeft televisieproducent"},
+      label: {en: "has television producer", da: "har tv-producer", fi: "televisiotuottaja", nl: "heeft televisieproducent"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60441",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60172,
@@ -1446,14 +1447,14 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelNameOfProducer.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has parallel name of producer", da: "har parallelt producentnavn", nl: "heeft parallelle naam van producent"},
+      label: {en: "has parallel name of producer", da: "har parallelt producentnavn", fi: "tuottajan rinnakkainen nimi", nl: "heeft parallelle naam van producent"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60173,
       definition: {en: "Relates a resource to a name of publisher name in a language or script that differs from that recorded in a name of publisher element.", da: "Relaterer en ressource til et udgivernavn på et andet sprog og/eller i et andet alfabet end det som er anvendt ved angivelsen af udgivernavnet."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelNameOfPublisher.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has parallel name of publisher", da: "har parallelt udgivernavn", nl: "heeft parallelle naam van uitgever"},
+      label: {en: "has parallel name of publisher", da: "har parallelt udgivernavn", fi: "kustantajan rinnakkainen nimi", nl: "heeft parallelle naam van uitgever"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60174,
       definition: {en: "Relates a resource to a radio program based on another resource.", da: "Relaterer en ressource til et radioprogram baseret på et oprindeligt udtryk."},
@@ -1461,7 +1462,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60229",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is adapted as radio program", da: "er bearbejdet til radioprogram (udtryk)", nl: "is bewerkt als radioprogramma"},
+      label: {en: "is adapted as radio program", da: "er bearbejdet til radioprogram (udtryk)", fi: "radiosovitus", nl: "is bewerkt als radioprogramma"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60175,
@@ -1469,7 +1470,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/academicDegree.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has academic degree", da: "har akademisk grad", nl: "heeft academische graad"},
+      label: {en: "has academic degree", da: "har akademisk grad", fi: "akateeminen oppiarvo", nl: "heeft academische graad"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60176,
       definition: {en: "Relates a resource to a record of previous ownership or custodianship of a resource, including agent, place, and timespan.", da: "Relaterer en ressource til en optegnelse over tidligere ejerskab eller opbevaring af en ressource."},
@@ -1484,7 +1485,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60308",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is abstracted in", da: "er sammenfattet i", nl: "is geabstraheerd in"},
+      label: {en: "is abstracted in", da: "er sammenfattet i", fi: "abstraktit", nl: "is geabstraheerd in"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60178,
@@ -1493,7 +1494,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008",
       inverseOf: "http://rdaregistry.info/Elements/u/P60309",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is indexed in (Deprecated)", da: "er indekseret i", nl: "is geïndexeerd in"},
+      label: {en: "is indexed in (Deprecated)", da: "er indekseret i", fi: "indeksointi", nl: "is geïndexeerd in"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60179,
@@ -1502,7 +1503,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60299",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has preservation facsimile", da: "har bevaringsfaksimile", nl: "heeft conservatiefacsimile"},
+      label: {en: "has preservation facsimile", da: "har bevaringsfaksimile", fi: "säilytyskopio", nl: "heeft conservatiefacsimile"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60217",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60180,
@@ -1511,7 +1512,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60293",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is adapted as choreography", da: "er bearbejdet til koreografi", nl: "is bewerkt als choreografie"},
+      label: {en: "is adapted as choreography", da: "er bearbejdet til koreografi", fi: "sovitettu koreografiaksi", nl: "is bewerkt als choreografie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60181,
@@ -1520,7 +1521,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60251",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has errata", da: "er errata", nl: "heeft errata"},
+      label: {en: "has errata", da: "er errata", fi: "painovirheluettelo", nl: "heeft errata"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60182,
@@ -1529,7 +1530,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60254",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has illustrations", da: "er illustrationer", nl: "heeft illustraties"},
+      label: {en: "has illustrations", da: "er illustrationer", fi: "kuvitus", nl: "heeft illustraties"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60183,
@@ -1538,7 +1539,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60194",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has insert", da: "er indlæg", nl: "heeft ingevoegde bijlage"},
+      label: {en: "has insert", da: "er indlæg", fi: "liite", nl: "heeft ingevoegde bijlage"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60249",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60184,
@@ -1547,7 +1548,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60232",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is adapted as motion picture screenplay", da: "er bearbejdet som film", nl: "is bewerkt als speelfilmscenario"},
+      label: {en: "is adapted as motion picture screenplay", da: "er bearbejdet som film", fi: "sovitettu elokuvakäsikirjoitukseksi", nl: "is bewerkt als speelfilmscenario"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60185",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60185,
@@ -1557,7 +1558,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60231",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is adapted as screenplay", da: "er bearbejdet som drejebog", nl: "is bewerkt als scenario"},
+      label: {en: "is adapted as screenplay", da: "er bearbejdet som drejebog", fi: "sovitettu käsikirjoitukseksi", nl: "is bewerkt als scenario"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60186,
@@ -1566,7 +1567,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60233",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is adapted as television screenplay", da: "er bearbejdet til tv-manuskript", nl: "is bewerkt als televisiescenario"},
+      label: {en: "is adapted as television screenplay", da: "er bearbejdet til tv-manuskript", fi: "sovitettu televisiokäsikirjoitukseksi", nl: "is bewerkt als televisiescenario"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60185",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60187,
@@ -1575,7 +1576,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60234",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is adapted as video screenplay", da: "er bearbejdet til videomanuskript", nl: "is bewerkt als videoscenario"},
+      label: {en: "is adapted as video screenplay", da: "er bearbejdet til videomanuskript", fi: "sovitettu videokäsikirjoitukseksi", nl: "is bewerkt als videoscenario"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60185",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60188,
@@ -1584,7 +1585,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60235",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is adapted as radio script", da: "er bearbejdet til radiomanuskript", nl: "is bewerkt als radioscript"},
+      label: {en: "is adapted as radio script", da: "er bearbejdet til radiomanuskript", fi: "sovitettu radiokäsikirjoitukseksi", nl: "is bewerkt als radioscript"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60189,
@@ -1593,7 +1594,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60243",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is freely translated as", da: "er frit oversat til", nl: "is vrij vertaald als"},
+      label: {en: "is freely translated as", da: "er frit oversat til", fi: "vapaamuotoinen käännös", nl: "is vrij vertaald als"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60190,
@@ -1603,7 +1604,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60215",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is description of", da: "er beskrivelse af", nl: "is beschrijving van"},
+      label: {en: "is description of", da: "er beskrivelse af", fi: "kuvaus", nl: "is beschrijving van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60805",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60191,
@@ -1613,7 +1614,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60191",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has equivalent", da: "har ækvivalent", nl: "heeft equivalent"},
+      label: {en: "has equivalent", da: "har ækvivalent", fi: "vastaava kappale", nl: "heeft equivalent"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60712",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60192,
@@ -1622,17 +1623,17 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60316",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is subseries of", da: "er underserie af", nl: "is onderreeks van"},
+      label: {en: "is subseries of", da: "er underserie af", fi: "alasarja", nl: "is onderreeks van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60101",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60193,
-      altLabel: {en: "is in series"},
+      altLabel: {en: "is in series", fi: "kuuluu sarjaan"},
       definition: {en: "Relates a resource to a resource that is a successive aggregating resource that inspires the editorial policy, scope, and style of a static resource.", da: "Relaterer en ressource til en ressource, i hvilket en del er blevet udgivet; en titel på en større ressource optræder på delen."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/issueOf.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60240",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is issue of", da: "er del af serie", nl: "is aflevering van"},
+      label: {en: "is issue of", da: "er del af serie", fi: "numero", nl: "is aflevering van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60101",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60194,
@@ -1641,7 +1642,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60183",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is inserted in", da: "er indlagt i", nl: "is ingevoegd in"},
+      label: {en: "is inserted in", da: "er indlagt i", fi: "liitteenä", nl: "is ingevoegd in"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60101",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60195,
@@ -1650,7 +1651,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60195",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is also issued as", da: "er også udgivet som", nl: "is ook uitgevaardigd als"},
+      label: {en: "is also issued as", da: "er også udgivet som", fi: "muu julkaisumuoto", nl: "is ook uitgevaardigd als"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60191",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60196,
@@ -1660,7 +1661,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60196",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is accompanied by", da: "er ledsaget af", nl: "is begeleid door"},
+      label: {en: "is accompanied by", da: "er ledsaget af", fi: "mukana ilmestynyt", nl: "is begeleid door"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60709",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60197,
@@ -1669,7 +1670,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60197",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has mirror site", da: "er spejlside", nl: "heeft mirror site"},
+      label: {en: "has mirror site", da: "er spejlside", fi: "peilisivusto", nl: "heeft mirror site"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60191",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60198,
@@ -1689,7 +1690,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "This element applies in general to a successive resource.", da: "Denne relation anvendes generelt for periodika."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60277",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is separated into", da: "er delvis fortsat i", nl: "is afgesplitst in"},
+      label: {en: "is separated into", da: "er delvis fortsat i", fi: "jakautunut", nl: "is afgesplitst in"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60278",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60200,
@@ -1698,7 +1699,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60287",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has digital transfer", da: "har digital overførsel", nl: "heeft digitale kopie"},
+      label: {en: "has digital transfer", da: "har digital overførsel", fi: "konvertoinnin tulos", nl: "heeft digitale kopie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60272",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60201,
@@ -1708,7 +1709,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60264",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is screenplay for", da: "er drejebog til", nl: "is scenario voor"},
+      label: {en: "is screenplay for", da: "er drejebog til", fi: "käsikirjoitus", nl: "is scenario voor"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60202,
@@ -1717,7 +1718,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60118",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is incidental music for", da: "er skuespilsmusik til", nl: "is toneelmuziek voor"},
+      label: {en: "is incidental music for", da: "er skuespilsmusik til", fi: "näytelmämusiikki", nl: "is toneelmuziek voor"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60724",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60203,
@@ -1727,7 +1728,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60224",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has abstract", da: "er sammenfattet som", nl: "is geabstraheerd als"},
+      label: {en: "has abstract", da: "er sammenfattet som", fi: "abstrakti", nl: "is geabstraheerd als"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60205",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60204,
@@ -1737,7 +1738,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60307",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is augmented by", da: "er beriget med", nl: "is aangevuld door"},
+      label: {en: "is augmented by", da: "er beriget med", fi: "laajennusosa", nl: "is aangevuld door"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60709",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60205,
@@ -1748,7 +1749,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60289",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has summary", da: "er opsummeret som", nl: "is samengevat als"},
+      label: {en: "has summary", da: "er opsummeret som", fi: "yhteenveto", nl: "is samengevat als"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60215",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60206,
@@ -1757,7 +1758,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60290",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has catalogue", da: "er katalog", nl: "heeft catalogus"},
+      label: {en: "has catalogue", da: "er katalog", fi: "luettelo", nl: "heeft catalogus"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60262",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60207,
@@ -1775,7 +1776,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60291",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has concordance", da: "er konkordans", nl: "heeft concordantie"},
+      label: {en: "has concordance", da: "er konkordans", fi: "konkordanssi", nl: "heeft concordantie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60313",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60209,
@@ -1784,7 +1785,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60286",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has addenda", da: "er tillæg", nl: "heeft toevoegingen"},
+      label: {en: "has addenda", da: "er tillæg", fi: "lisäykset", nl: "heeft toevoegingen"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60210,
@@ -1793,7 +1794,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60304",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is adapted as libretto", da: "er bearbejdet til libretto", nl: "is bewerkt als libretto"},
+      label: {en: "is adapted as libretto", da: "er bearbejdet til libretto", fi: "librettosovitus", nl: "is bewerkt als libretto"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60211,
@@ -1803,7 +1804,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60288",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is reviewed by", da: "er anmeldt i", nl: "is gerecenseerd in"},
+      label: {en: "is reviewed by", da: "er anmeldt i", fi: "arvostelu", nl: "is gerecenseerd in"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60218",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60212,
@@ -1813,7 +1814,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60292",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is critiqued by", da: "er kritiseret i", nl: "is bekritiseerd in"},
+      label: {en: "is critiqued by", da: "er kritiseret i", fi: "arvostelu", nl: "is bekritiseerd in"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60218",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60213,
@@ -1822,7 +1823,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60298",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is commentary in", da: "er kommentar i", nl: "is commentaar in"},
+      label: {en: "is commentary in", da: "er kommentar i", fi: "kommentaari", nl: "is commentaar in"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60215",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60214,
@@ -1832,7 +1833,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60311",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is imitated as", da: "er efterlignet som", nl: "is geïmiteerd in"},
+      label: {en: "is imitated as", da: "er efterlignet som", fi: "jäljitelmä", nl: "is geïmiteerd in"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60215,
@@ -1843,7 +1844,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60190",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is described by", da: "er beskrevet i", nl: "is beschreven in"},
+      label: {en: "is described by", da: "er beskrevet i", fi: "kuvaus", nl: "is beschreven in"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60806",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60216,
@@ -1852,7 +1853,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60294",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is expanded as", da: "er udvidet til", nl: "is uitgebreid als"},
+      label: {en: "is expanded as", da: "er udvidet til", fi: "laajennelma", nl: "is uitgebreid als"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60217,
@@ -1862,7 +1863,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60301",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has facsimile", da: "har faksimile", nl: "heeft facsimile"},
+      label: {en: "has facsimile", da: "har faksimile", fi: "näköispainos", nl: "heeft facsimile"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60272",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60218,
@@ -1873,7 +1874,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60255",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is evaluated by", da: "er evalueret i", nl: "is beoordeeld in"},
+      label: {en: "is evaluated by", da: "er evalueret i", fi: "arvioitu", nl: "is beoordeeld in"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60806",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60219,
@@ -1882,17 +1883,17 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60239",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is analysed in", da: "er analyseret i", nl: "is geanalyseerd in"},
+      label: {en: "is analysed in", da: "er analyseret i", fi: "analysoitu", nl: "is geanalyseerd in"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60215",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60220,
-      altLabel: {en: "is sequel to"},
+      altLabel: {en: "is sequel to", fi: "jatko-osa"},
       definition: {en: "Relates a resource to a resource that extends the narrative of another resource backwards in time.", da: "Relaterer en ressource til en ressource, der udvider en tidligere ressources fortælling bagud i tiden."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/prequel.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60310",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has prequel", da: "er forhistorie", nl: "heeft prequel"},
+      label: {en: "has prequel", da: "er forhistorie", fi: "esiosa", nl: "heeft prequel"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60261",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60221,
@@ -1901,7 +1902,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60253",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has appendix", da: "er bilag", nl: "heeft appendix"},
+      label: {en: "has appendix", da: "er bilag", fi: "lite", nl: "heeft appendix"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60222,
@@ -1910,7 +1911,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60252",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has guide", da: "er vejledning", nl: "heeft gids"},
+      label: {en: "has guide", da: "er vejledning", fi: "opas", nl: "heeft gids"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60223,
@@ -1919,7 +1920,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60275",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is abridgement of", da: "er forkortelse af", nl: "is inkorting van"},
+      label: {en: "is abridgement of", da: "er forkortelse af", fi: "lyhennelmä", nl: "is inkorting van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60224,
@@ -1928,7 +1929,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60203",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is abstract of", da: "er sammenfatning af", nl: "is abstract van"},
+      label: {en: "is abstract of", da: "er sammenfatning af", fi: "abstrakti", nl: "is abstract van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60289",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60225,
@@ -1937,7 +1938,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60088",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is dramatization of", da: "er dramatisering som", nl: "is dramatisering van"},
+      label: {en: "is dramatization of", da: "er dramatisering som", fi: "dramatisointi", nl: "is dramatisering van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60226,
@@ -1946,7 +1947,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60106",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is verse adaptation of", da: "er versbearbejdelse som", nl: "is bewerking in versvorm van"},
+      label: {en: "is verse adaptation of", da: "er versbearbejdelse som", fi: "runomukaelma", nl: "is bewerking in versvorm van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60227,
@@ -1955,7 +1956,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60110",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is motion picture adaptation of", da: "er filmatisering af", nl: "is speelfilmbewerking van"},
+      label: {en: "is motion picture adaptation of", da: "er filmatisering af", fi: "elokuvaversio", nl: "is speelfilmbewerking van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60228,
@@ -1964,7 +1965,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60138",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is novelization of", da: "er omskrivning til roman af", nl: "is romanbewerking van"},
+      label: {en: "is novelization of", da: "er omskrivning til roman af", fi: "sovitettu romaaniksi", nl: "is romanbewerking van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60229,
@@ -1973,7 +1974,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60174",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is radio adaptation of", da: "er radiobearbejdelse af", nl: "is radiobewerking van"},
+      label: {en: "is radio adaptation of", da: "er radiobearbejdelse af", fi: "radiosovitus", nl: "is radiobewerking van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60230,
@@ -1982,7 +1983,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60354",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is television adaptation of", da: "er tv-bearbejdelse af", nl: "is televisiebewerking van"},
+      label: {en: "is television adaptation of", da: "er tv-bearbejdelse af", fi: "televisiosovitus", nl: "is televisiebewerking van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60231,
@@ -1992,7 +1993,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60185",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is screenplay based on", da: "er drejebog baseret på", nl: "is scenario gebaseerd op"},
+      label: {en: "is screenplay based on", da: "er drejebog baseret på", fi: "näytelmäsovitus", nl: "is scenario gebaseerd op"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60232,
@@ -2037,7 +2038,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60361",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is video adaptation of", da: "er videobearbejdelse af", nl: "is videobewerking van"},
+      label: {en: "is video adaptation of", da: "er videobearbejdelse af", fi: "videosovitus", nl: "is videobewerking van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60241",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60237,
@@ -2047,7 +2048,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "Each resource originally exemplifies a resource that is a sheet or volume."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60237",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is bound with", da: "er indbundet sammen med", nl: "is gebonden met"},
+      label: {en: "is bound with", da: "er indbundet sammen med", fi: "yhteensidottu", nl: "is gebonden met"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60196",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60238,
@@ -2056,7 +2057,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60279",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is digest of", da: "er sammendrag af", nl: "is digest van"},
+      label: {en: "is digest of", da: "er sammendrag af", fi: "mukautettu lyhennelmä", nl: "is digest van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60239,
@@ -2065,17 +2066,17 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60219",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is analysis of", da: "er analyse af", nl: "is analyse van"},
+      label: {en: "is analysis of", da: "er analyse af", fi: "analyysi", nl: "is analyse van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60190",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60240,
-      altLabel: {en: "is series container of"},
+      altLabel: {en: "is series container of", fi: "sarjan osa"},
       definition: {en: "Relates a resource to a resource that is a static resource that is inspired by the overall editorial policy, scope, and style of a successive aggregating resource.", da: "Relaterer en ressource til en ressource, der er blevet udgivet som del af en serie."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/issue.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60193",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has issue", da: "er serieindholder af", nl: "heeft aflevering"},
+      label: {en: "has issue", da: "er serieindholder af", fi: "numero", nl: "heeft aflevering"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60249",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60241,
@@ -2086,7 +2087,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "This relationship applies to changes in form or to resources completely rewritten in the same form.", da: "Gælder for ændringer i form eller for ressourcer, der er omskrevet fuldstændigt i samme form."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60260",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is adaptation of", da: "er bearbejdelse af", nl: "is bewerking van"},
+      label: {en: "is adaptation of", da: "er bearbejdelse af", fi: "mukaelma", nl: "is bewerking van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60242,
@@ -2095,7 +2096,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60274",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is arrangement of", da: "er arrangement af", nl: "is arrangement van"},
+      label: {en: "is arrangement of", da: "er arrangement af", fi: "sovitus", nl: "is arrangement van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60243,
@@ -2104,7 +2105,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60189",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is free translation of", da: "er fri oversættelse af", nl: "is vrije vertaling van"},
+      label: {en: "is free translation of", da: "er fri oversættelse af", fi: "vapaa käännös", nl: "is vrije vertaling van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60244,
@@ -2114,7 +2115,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60280",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is translation of", da: "er oversættelse af", nl: "is vertaling van"},
+      label: {en: "is translation of", da: "er oversættelse af", fi: "käännös", nl: "is vertaling van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60245,
@@ -2123,7 +2124,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60303",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is revised as", da: "er revideret som", nl: "is herzien als"},
+      label: {en: "is revised as", da: "er revideret som", fi: "uudistettu versio", nl: "is herzien als"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60246,
@@ -2132,7 +2133,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60312",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is parodied as", da: "er parodieret som", nl: "is geparodieerd als"},
+      label: {en: "is parodied as", da: "er parodieret som", fi: "parodia", nl: "is geparodieerd als"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60214",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60247,
@@ -2141,7 +2142,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60574",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is absorbed by", da: "er indlemmet af", nl: "is opgenomen door"},
+      label: {en: "is absorbed by", da: "er indlemmet af", fi: "sulautunut", nl: "is opgenomen door"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60278",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60248,
@@ -2150,7 +2151,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60575",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is absorbed in part by", da: "er delvis indlemmet af", nl: "is gedeeltelijk opgenomen door"},
+      label: {en: "is absorbed in part by", da: "er delvis indlemmet af", fi: "sulautunut osittain", nl: "is gedeeltelijk opgenomen door"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60278",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60249,
@@ -2180,7 +2181,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60181",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is errata to", da: "er errata til", nl: "is errata bij"},
+      label: {en: "is errata to", da: "er errata til", fi: "painovirheluettelo", nl: "is errata bij"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60252,
@@ -2189,7 +2190,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60222",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is guide to", da: "er vejledning til", nl: "is gids bij"},
+      label: {en: "is guide to", da: "er vejledning til", fi: "opas", nl: "is gids bij"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60253,
@@ -2198,7 +2199,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60221",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is appendix to", da: "er bilag til", nl: "is appendix bij"},
+      label: {en: "is appendix to", da: "er bilag til", fi: "liite", nl: "is appendix bij"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60254,
@@ -2207,7 +2208,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60182",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is illustrations for", da: "er illustrationer til", nl: "is illustraties voor"},
+      label: {en: "is illustrations for", da: "er illustrationer til", fi: "kuvitus", nl: "is illustraties voor"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60255,
@@ -2216,7 +2217,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60218",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is evaluation of", da: "er evaluering af", nl: "is beschouwing van"},
+      label: {en: "is evaluation of", da: "er evaluering af", fi: "arviointi", nl: "is beschouwing van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60190",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60256,
@@ -2227,7 +2228,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60256",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is on carrier unit with", da: "er udgivet sammen med", nl: "is uitgevaardigd met"},
+      label: {en: "is on carrier unit with", da: "er udgivet sammen med", fi: "ilmestynyt yhdessä", nl: "is uitgevaardigd met"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60196",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60257,
@@ -2236,7 +2237,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60257",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is on disc with", da: "er på disc med", nl: "is op disk met"},
+      label: {en: "is on disc with", da: "er på disc med", fi: "levyllä myös", nl: "is op disk met"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60256",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60258,
@@ -2245,7 +2246,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60258",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is filmed with", da: "er filmet med", nl: "is gefilmd met"},
+      label: {en: "is filmed with", da: "er filmet med", fi: "filmillä myös", nl: "is gefilmd met"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60256",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60259,
@@ -2254,7 +2255,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60281",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is supplement to", da: "er supplement til", nl: "is supplement op"},
+      label: {en: "is supplement to", da: "er supplement til", fi: "suplementti", nl: "is supplement op"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60260,
@@ -2265,7 +2266,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "This relationship applies to changes in form or to resources completely rewritten in the same form.", da: "Denne relation gælder for ændringer i form eller for ressourcer, der er omskrevet fuldstændigt i samme form."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60241",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is adapted as", da: "er bearbejdet som", nl: "is bewerkt als"},
+      label: {en: "is adapted as", da: "er bearbejdet som", fi: "sovitettu", nl: "is bewerkt als"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60261,
@@ -2275,7 +2276,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60278",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is preceded by", da: "er forudgået af", nl: "is voorafgegaan door"},
+      label: {en: "is preceded by", da: "er forudgået af", fi: "edeltävä", nl: "is voorafgegaan door"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60713",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60262,
@@ -2285,7 +2286,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60474",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has finding aid", da: "er hjælpeverktøj", nl: "heeft vind-hulpmiddel"},
+      label: {en: "has finding aid", da: "er hjælpeverktøj", fi: "hakemisto", nl: "heeft vind-hulpmiddel"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61218",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60263,
@@ -2294,7 +2295,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60302",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has index", da: "er indeks", nl: "heeft index"},
+      label: {en: "has index", da: "er indeks", fi: "indeksi", nl: "heeft index"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60313",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60264,
@@ -2304,7 +2305,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60201",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has screenplay", da: "er manuskript", nl: "heeft scenario"},
+      label: {en: "has screenplay", da: "er manuskript", fi: "käsikirjoitus", nl: "heeft scenario"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60265,
@@ -2313,7 +2314,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60282",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has motion picture screenplay", da: "er filmmanuskript", nl: "heeft speelfilmscenario"},
+      label: {en: "has motion picture screenplay", da: "er filmmanuskript", fi: "elokuvakäsikirjoitus", nl: "heeft speelfilmscenario"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60264",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60266,
@@ -2322,7 +2323,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60121",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is musical setting of", da: "er musiksætning af", nl: "is muziek gezet op"},
+      label: {en: "is musical setting of", da: "er musiksætning af", fi: "musiikkiteoksen teksti", nl: "is muziek gezet op"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60267,
@@ -2331,7 +2332,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60285",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has radio script", da: "er radiomanuskript", nl: "heeft radioscript"},
+      label: {en: "has radio script", da: "er radiomanuskript", fi: "radio-ohjelman käsikirjoitus", nl: "heeft radioscript"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60268,
@@ -2340,7 +2341,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60283",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has television screenplay", da: "er tv-manuskript", nl: "heeft televisiescenario"},
+      label: {en: "has television screenplay", da: "er tv-manuskript", fi: "televisio-ohjelman käsikirjoitus", nl: "heeft televisiescenario"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60264",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60269,
@@ -2349,7 +2350,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60284",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has video screenplay", da: "er videomanuskript", nl: "heeft videoscenario"},
+      label: {en: "has video screenplay", da: "er videomanuskript", fi: "videon käsikirjoitus", nl: "heeft videoscenario"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60264",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60270,
@@ -2358,7 +2359,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60117",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has libretto", da: "er libretto", nl: "heeft libretto"},
+      label: {en: "has libretto", da: "er libretto", fi: "libretto", nl: "heeft libretto"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60271,
@@ -2367,7 +2368,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60168",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is reprinted as", da: "er genoptrykt som", nl: "is herdrukt als"},
+      label: {en: "is reprinted as", da: "er genoptrykt som", fi: "uusintapainos", nl: "is herdrukt als"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60272",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60272,
@@ -2377,7 +2378,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60297",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is reproduced as", da: "er reproduceret som", nl: "is gereproduceerd als"},
+      label: {en: "is reproduced as", da: "er reproduceret som", fi: "jäljenne", nl: "is gereproduceerd als"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60191",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60273,
@@ -2386,7 +2387,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60296",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is paraphrased as", da: "er parafraseret som", nl: "is geparafraseerd als"},
+      label: {en: "is paraphrased as", da: "er parafraseret som", fi: "parafraasi", nl: "is geparafraseerd als"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60274,
@@ -2395,7 +2396,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60242",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is arranged as", da: "er arrangeret som", nl: "is gearrangeerd als"},
+      label: {en: "is arranged as", da: "er arrangeret som", fi: "sovitus", nl: "is gearrangeerd als"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60275,
@@ -2404,7 +2405,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60223",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is abridged as", da: "er forkortet til", nl: "is ingekort als"},
+      label: {en: "is abridged as", da: "er forkortet til", fi: "lyhennelmä", nl: "is ingekort als"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60276,
@@ -2414,7 +2415,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "This element applies in general to a successive resource.", da: "Denne relation anvendes generelt for periodika."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60503",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is split from", da: "er delvis fortættelse af", nl: "is gesplitst uit"},
+      label: {en: "is split from", da: "er delvis fortættelse af", fi: "jakautunut", nl: "is gesplitst uit"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60261",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60277,
@@ -2423,7 +2424,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60199",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is separated from", da: "er adskilt fra", nl: "is afgesplitst van"},
+      label: {en: "is separated from", da: "er adskilt fra", fi: "eronnut", nl: "is afgesplitst van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60261",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60278,
@@ -2433,7 +2434,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60261",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is succeeded by", da: "er efterfulft af", nl: "is gevolgd door"},
+      label: {en: "is succeeded by", da: "er efterfulft af", fi: "myöhempi", nl: "is gevolgd door"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60713",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60279,
@@ -2442,7 +2443,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60238",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is digested as", da: "er sammendraget som", nl: "is digest als"},
+      label: {en: "is digested as", da: "er sammendraget som", fi: "mukautettu lyhennelmä", nl: "is digest als"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60250",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60280,
@@ -2461,7 +2462,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60259",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has supplement", da: "er supplement", nl: "heeft supplement"},
+      label: {en: "has supplement", da: "er supplement", fi: "suplementti", nl: "heeft supplement"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60204",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60282,
@@ -2470,7 +2471,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60265",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is screenplay for motion picture", da: "er manuskript til film", nl: "is scenario voor speelfilm"},
+      label: {en: "is screenplay for motion picture", da: "er manuskript til film", fi: "käsikirjoitus elokuvaan", nl: "is scenario voor speelfilm"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60201",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60283,
@@ -2479,7 +2480,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60268",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is screenplay for television program", da: "er manuskript til tv-program", nl: "is scenario voor televisieprogramma"},
+      label: {en: "is screenplay for television program", da: "er manuskript til tv-program", fi: "käsikirjoitus televisio-ohjelmaan", nl: "is scenario voor televisieprogramma"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60201",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60284,
@@ -2488,7 +2489,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60269",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is screenplay for video", da: "er bearbejdelse til video", nl: "is scenario voor video"},
+      label: {en: "is screenplay for video", da: "er bearbejdelse til video", fi: "käsikirjoitus videoon", nl: "is scenario voor video"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60201",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60285,
@@ -2497,7 +2498,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60267",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is script for radio program", da: "er manuskript til radioprogram", nl: "is script voor radioprogramma"},
+      label: {en: "is script for radio program", da: "er manuskript til radioprogram", fi: "käsikirjoitus radio-ohjelmaan", nl: "is script voor radioprogramma"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60198",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60286,
@@ -2506,7 +2507,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60209",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is addenda to", da: "er tillæg til", nl: "is toevoegingen bij"},
+      label: {en: "is addenda to", da: "er tillæg til", fi: "lisäykset", nl: "is toevoegingen bij"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60307",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60287,
@@ -2515,7 +2516,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60200",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is digital transfer of", da: "er digital overførsel af", nl: "is digitale kopie van"},
+      label: {en: "is digital transfer of", da: "er digital overførsel af", fi: "konvertoitu", nl: "is digitale kopie van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60297",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60288,
@@ -2524,7 +2525,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60211",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is review of", da: "er anmeldelse af", nl: "is recensie van"},
+      label: {en: "is review of", da: "er anmeldelse af", fi: "arvostelu", nl: "is recensie van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60190",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60289,
@@ -2534,7 +2535,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60205",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is summary of", da: "er resume af", nl: "is samenvatting van"},
+      label: {en: "is summary of", da: "er resume af", fi: "yhteenveto", nl: "is samenvatting van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60190",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60290,
@@ -2543,7 +2544,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60206",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is catalogue of", da: "er katalog over", nl: "is catalogus van"},
+      label: {en: "is catalogue of", da: "er katalog over", fi: "luettelo", nl: "is catalogus van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60474",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60291,
@@ -2553,7 +2554,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60208",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is concordance for", da: "er konkordans til", nl: "is concordantie op"},
+      label: {en: "is concordance for", da: "er konkordans til", fi: "konkordanssihakemisto", nl: "is concordantie op"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60313",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60292,
@@ -2562,7 +2563,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60212",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is critique of", da: "er kritik af", nl: "is kritiek van"},
+      label: {en: "is critique of", da: "er kritik af", fi: "kritiikki", nl: "is kritiek van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60190",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60293,
@@ -2571,7 +2572,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60180",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is choreographic adaptation of", da: "er koreografisk bearbejdelse af", nl: "is choreografische bewerking van"},
+      label: {en: "is choreographic adaptation of", da: "er koreografisk bearbejdelse af", fi: "koreografinen sovitus", nl: "is choreografische bewerking van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60294,
@@ -2580,7 +2581,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60216",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is expanded version of", da: "er udvidet version af", nl: "is uitgebreide versie van"},
+      label: {en: "is expanded version of", da: "er udvidet version af", fi: "laajennettu versio", nl: "is uitgebreide versie van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60295,
@@ -2589,7 +2590,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60120",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is remake of", da: "er genindspilning af", nl: "is remake van"},
+      label: {en: "is remake of", da: "er genindspilning af", fi: "uusintaproduktio", nl: "is remake van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60296,
@@ -2598,7 +2599,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60273",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is paraphrase of", da: "er parafrase over", nl: "is parafrase van"},
+      label: {en: "is paraphrase of", da: "er parafrase over", fi: "parafraasi", nl: "is parafrase van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60297,
@@ -2608,7 +2609,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60272",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is reproduction of", da: "er reproduktion af", nl: "is reproductie van"},
+      label: {en: "is reproduction of", da: "er reproduktion af", fi: "jäljenne", nl: "is reproductie van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60191",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60298,
@@ -2617,7 +2618,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60213",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is commentary on", da: "er kommentar til", nl: "is commentaar op"},
+      label: {en: "is commentary on", da: "er kommentar til", fi: "kommentaari", nl: "is commentaar op"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60190",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60299,
@@ -2626,7 +2627,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60179",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is preservation facsimile of", da: "er bevaringsfaksimile af", nl: "is conservatiefacsimile van"},
+      label: {en: "is preservation facsimile of", da: "er bevaringsfaksimile af", fi: "täsmällinen jäljennös", nl: "is conservatiefacsimile van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60301",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60300,
@@ -2635,7 +2636,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60100",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has facsimile part", da: "er faksimile der indeholder", nl: "heeft facsimile deel"},
+      label: {en: "has facsimile part", da: "er faksimile der indeholder", fi: "näköispainososa", nl: "heeft facsimile deel"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60249",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60301,
@@ -2645,7 +2646,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60217",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is facsimile of", da: "er faksimile af", nl: "is facsimile van"},
+      label: {en: "is facsimile of", da: "er faksimile af", fi: "näköispainos", nl: "is facsimile van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60297",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60302,
@@ -2655,7 +2656,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60263",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is index for", da: "er indeks til", nl: "is index bij"},
+      label: {en: "is index for", da: "er indeks til", fi: "hakemisto", nl: "is index bij"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60313",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60303,
@@ -2664,16 +2665,16 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60245",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is revision of", da: "er revision af", nl: "is herziening van"},
+      label: {en: "is revision of", da: "er revision af", fi: "uudistettu versio", nl: "is herziening van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60304,
-      definition: {en: "Relates a resource to a musical or choreographic resource such as an opera, a ballet, or other resource for the musical stage, or an oratorio", da: "Relaterer en ressouce til en ressource, der er blevet bearbejdet til tekst til en opera eller en anden ressource af et musikalsk sceneværk, eller til et oratorium."},
+      definition: {en: "Relates a resource to a resource that provides text for a musical or choreographic resource such as an opera, a ballet, or other resource for the musical stage, or an oratorio.", da: "Relaterer en ressouce til en ressource, der er blevet bearbejdet til tekst til en opera eller en anden ressource af et musikalsk sceneværk, eller til et oratorium."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/librettoBasedOn.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60210",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is libretto based on", da: "er libretto baseret på", nl: "is libretto gebaseerd op"},
+      label: {en: "is libretto based on", da: "er libretto baseret på", fi: "libretto", nl: "is libretto gebaseerd op"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60305,
@@ -2683,7 +2684,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60250",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has source", da: "er baseret på", nl: "is gebaseerd op"},
+      label: {en: "has source", da: "er baseret på", fi: "perustuu", nl: "is gebaseerd op"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60710",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60306,
@@ -2693,7 +2694,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "This element applies in general to a successive resource.", da: "Denne relation anvendes generelt for periodika."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60576",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is continued by", da: "er fortsat af", nl: "is voortgezet door"},
+      label: {en: "is continued by", da: "er fortsat af", fi: "jatkuu", nl: "is voortgezet door"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60278",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60307,
@@ -2703,7 +2704,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60204",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is augmentation of", da: "er berigelse af", nl: "is aanvulling van"},
+      label: {en: "is augmentation of", da: "er berigelse af", fi: "laajennusosa", nl: "is aanvulling van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60709",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60308,
@@ -2712,7 +2713,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60177",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is abstracts for", da: "er sammenfatninger af", nl: "is abstracts voor"},
+      label: {en: "is abstracts for", da: "er sammenfatninger af", fi: "abstraktit", nl: "is abstracts voor"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60309,
@@ -2721,7 +2722,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008",
       inverseOf: "http://rdaregistry.info/Elements/u/P60178",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is indexing for (Deprecated)", da: "er indeksering for", nl: "is indexering voor"},
+      label: {en: "is indexing for (Deprecated)", da: "er indeksering for", fi: "indeksointi", nl: "is indexering voor"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60310,
@@ -2740,7 +2741,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60214",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is imitation of", da: "er imitation af", nl: "is imitatie van"},
+      label: {en: "is imitation of", da: "er imitation af", fi: "jäljitelmä", nl: "is imitatie van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60305",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60312,
@@ -2749,7 +2750,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60246",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is parody of", da: "er parodi på", nl: "is parodie op"},
+      label: {en: "is parody of", da: "er parodi på", fi: "parodia", nl: "is parodie op"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60311",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60313,
@@ -2768,7 +2769,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/encodingFormat.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has encoding format", da: "har kodningsformat", nl: "heeft coderingsformaat"},
+      label: {en: "has encoding format", da: "har kodningsformat", fi: "koodausmuoto", nl: "heeft coderingsformaat"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60350",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60315,
@@ -2787,7 +2788,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60192",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has subseries", da: "er underserie", nl: "heeft onderserie"},
+      label: {en: "has subseries", da: "er underserie", fi: "alasarja", nl: "heeft onderserie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60249",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60317,
@@ -2796,7 +2797,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60207",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is special issue of", da: "er særnummer af", nl: "is themanummer van"},
+      label: {en: "is special issue of", da: "er særnummer af", fi: "erikoisnumero", nl: "is themanummer van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60101",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60318,
@@ -2804,7 +2805,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/formOfTactileNotation.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has form of tactile notation", da: "har taktil notationsform", nl: "heeft vorm van tactiele notatie"},
+      label: {en: "has form of tactile notation", da: "har taktil notationsform", fi: "taktiilin merkkijärjestelmän tyyppi", nl: "heeft vorm van tactiele notatie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60319",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60319,
@@ -2813,14 +2814,14 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/formOfNotation.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has form of notation", da: "har notationsform", nl: "heeft vorm van notatie"},
+      label: {en: "has form of notation", da: "har notationsform", fi: "merkkijärjestelmän tyyppi", nl: "heeft vorm van notatie"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60320,
       definition: {en: "Relates a resource to a set of characters or symbols used to express movement content of a resource.", da: "Relaterer en ressource til et sæt af tegn og/eller symboler, der anvendes til at udtrykke de bevægelser en ressource indeholder."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/formOfNotatedMovement.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has form of notated movement", da: "har bevægelsesnotationsform", nl: "heeft vorm van bewegingsnotatie"},
+      label: {en: "has form of notated movement", da: "har bevægelsesnotationsform", fi: "liikenotaation tyyppi", nl: "heeft vorm van bewegingsnotatie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60319",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60321,
@@ -2828,7 +2829,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/formOfMusicalNotation.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has form of musical notation", da: "har musikalsk notationsform", nl: "heeft vorm van muzieknotatie"},
+      label: {en: "has form of musical notation", da: "har musikalsk notationsform", fi: "nuottikirjoituksen tyyppi", nl: "heeft vorm van muzieknotatie"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60319",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60322,
@@ -2836,15 +2837,16 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/script.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has script", da: "har skrift", nl: "heeft schrift"},
+      label: {en: "has script", da: "har skrift", fi: "kirjoitusjärjestelmä", nl: "heeft schrift"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60319",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60323,
       definition: {en: "Relates a resource to a set of technical details relating to an encoding of geospatial information in a cartographic resource.", da: "Relaterer en ressource til et sæt af tekniske detaljer relateret til kodning af geospatiale oplysningerer i en kartografisk ressource."},
+      "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P60875",
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/digitalRepresentationOfCartographicContent.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has digital representation of cartographic content", da: "har digital repræsentation af kartografisk indhold", nl: "heeft digitale representatie van cartografische content"},
+      label: {en: "has digital representation of cartographic content", da: "har digital repræsentation af kartografisk indhold", fi: "kartografisen sisällön digitaalinen esitysmuoto", nl: "heeft digitale representatie van cartografische content"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60350",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60324,
@@ -2872,7 +2874,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/videoFormat.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has video format", da: "har videoformat", nl: "heeft videoformaat"},
+      label: {en: "has video format", da: "har videoformat", fi: "videoformaatti", nl: "heeft videoformaat"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60352",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60327,
@@ -2880,7 +2882,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/statementOfResponsibilityRelatingToTitleProper.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has statement of responsibility relating to title proper", da: "har ophavsangivelse relateret til hovedtitel", nl: "heeft verantwoordelijkheidsvermelding gerelateerd aan hoofdtitel"},
+      label: {en: "has statement of responsibility relating to title proper", da: "har ophavsangivelse relateret til hovedtitel", fi: "päänimekkeeseen liittyvä vastuullisuusmerkintö", nl: "heeft verantwoordelijkheidsvermelding gerelateerd aan hoofdtitel"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60339",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60328,
@@ -2889,21 +2891,21 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "A series statement may also include information identifying one or more subseries to which the resource being described belongs. A series statement sometimes includes statements of responsibility relating to a series or subseries.", da: "En seriebeskrivelse kan også indeholde oplysninger, der identificerer en eller flere underserier, som den beskrevne ressource er en del af. En seriebeskrivelse inkluderer sommetider en eller flere ophavsangivelser relaterede til serien eller underserien."},
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has series statement", da: "har seriebeskrivelse", nl: "heeft reeksvermelding"},
+      label: {en: "has series statement", da: "har seriebeskrivelse", fi: "sarjamerkintö", nl: "heeft reeksvermelding"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60329,
       definition: {en: "Relates a resource to a statement identifying an edition to which a resource belongs.", da: "Relaterer en ressource til oplysninger, der identificerer den udgave, en ressource hører til."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/editionStatement.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has edition statement", da: "har udgavebeskrivelse", nl: "heeft editievermelding"},
+      label: {en: "has edition statement", da: "har udgavebeskrivelse", fi: "painosmerkintö", nl: "heeft editievermelding"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60330,
       definition: {en: "Relates a resource to a statement that identifies a place of distribution, a distributor, or a date of distribution of a published resource.", da: "Relaterer en ressource til oplysninger der identificerer distributionsstedet/-stederne, distributør/-er og år eller dato/-er for distribution af en ressource i publiceret form."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/distributionStatement.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has distribution statement", da: "har distributionsbeskrivelse", nl: "heeft distributievermelding"},
+      label: {en: "has distribution statement", da: "har distributionsbeskrivelse", fi: "jakelumerkintö", nl: "heeft distributievermelding"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60331,
       definition: {en: "Relates a resource to a statement that identifies a place of manufacture, a manufacturer, or a date of manufacture of a published resource.", da: "Relaterer en ressource til oplysninger, der identificerer fremstillingssted(er), producent(er) og fremstillingsår eller -dato(er) for en ressource i publiceret form."},
@@ -2911,7 +2913,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "A manufacture statement includes a statement about the printing, duplicating, casting, etc., of a published resource."},
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has manufacture statement", da: "har produktionsbeskrivelse - publicerede ressourcer", nl: "heeft vervaardigingsvermelding"},
+      label: {en: "has manufacture statement", da: "har produktionsbeskrivelse - publicerede ressourcer", fi: "valmistusmerkintö", nl: "heeft vervaardigingsvermelding"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60332,
       definition: {en: "Relates a resource to a statement that identifies a place of production, a producer, or a date of production of an unpublished resource.", da: "Relaterer en ressource til oplysninger, der identificerer produktionssted(er), producer(e) og produktionsår eller dato(er) for en upubliceret ressource."},
@@ -2919,28 +2921,28 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "A production statement includes a statement about the inscription, fabrication, construction, etc., of an unpublished resource."},
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has production statement", da: "har produktionsbeskrivelse - upublicerede ressourcer", nl: "heeft productievermelding"},
+      label: {en: "has production statement", da: "har produktionsbeskrivelse - upublicerede ressourcer", fi: "valmistusmerkintö", nl: "heeft productievermelding"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60333,
       definition: {en: "Relates a resource to a statement that identifies a place of publication, a publisher, or a date of publication of a published resource.", da: "Relaterer en ressource til oplysninger, der identificerer publiceringssted(er), udgiver(e) og år eller dato(er) for publiceringen af en ressource."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/publicationStatement.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has publication statement", da: "har publiceringsbeskrivelse", nl: "heeft publicatievermelding"},
+      label: {en: "has publication statement", da: "har publiceringsbeskrivelse", fi: "julkaisumerkintö", nl: "heeft publicatievermelding"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60334,
       definition: {en: "Relates a resource to a statement of responsibility relating to a named revision of an edition in a language or script that differs from that recorded in a statement of responsibility relating to a named revision of an edition element.", da: "Relaterer en ressource til en ophavsangivelse på et andet sprog og/eller i et andet alfabet end det som er anvendt ved angivelsen af den navngivne revision af en udgave."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelStatementOfResponsibilityRelatingToNamedRevisionOfEdition.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has parallel statement of responsibility relating to named revision of edition", da: "har parallel ophavsangivelse relateret til en navngivet revision af en udgave", nl: "heeft parallelle verantwoordelijkheidsvermelding gerelateerd aan benoemde herziening van editie"},
+      label: {en: "has parallel statement of responsibility relating to named revision of edition", da: "har parallel ophavsangivelse relateret til en navngivet revision af en udgave", fi: "nimettyyn uudistettuun painokseen liittyvä rinnakkainen vastuullisuusmerkintö", nl: "heeft parallelle verantwoordelijkheidsvermelding gerelateerd aan benoemde herziening van editie"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60335,
       definition: {en: "Relates a resource to a statement of responsibility relating to series in a language or script that differs from that recorded in a statement of responsibility relating to series element.", da: "Relaterer en ressource til en ophavsangivelse relateret til en serie på et andet sprog og/eller i et andet alfabet end det som er anvendt ved angivelsen af en ophavsangivelse til en serie."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelStatementOfResponsibilityRelatingToSeries.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has parallel statement of responsibility relating to series", da: "har parallel ophavsangivelse relateret til serie", nl: "heeft parallelle verantwoordelijkheidsvermelding gerelateerd aan reeks"},
+      label: {en: "has parallel statement of responsibility relating to series", da: "har parallel ophavsangivelse relateret til serie", fi: "sarjan rinnakkainen vastuullisuusmerkintö", nl: "heeft parallelle verantwoordelijkheidsvermelding gerelateerd aan reeks"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60336,
       definition: {en: "Relates a resource to a statement of responsibility relating to subseries in a language or script that differs from that recorded in a statement of responsibility relating to subseries element. (Deprecated)", da: "Relaterer en ressource til en ophavsangivelse relateret til en underserie på et andet sprog og/eller i et andet alfabet end det som er anvendt ved angivelsen af en ophavsangivelse til en underserie."},
@@ -2954,14 +2956,14 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelStatementOfResponsibilityRelatingToEdition.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has parallel statement of responsibility relating to edition", da: "har parallel ophavsangivelse relateret til udgave", nl: "heeft parallelle verantwoordelijkheidsvermelding gerelateerd aan editie"},
+      label: {en: "has parallel statement of responsibility relating to edition", da: "har parallel ophavsangivelse relateret til udgave", fi: "painoksen rinnakkainen vastuullisuusmerkintö", nl: "heeft parallelle verantwoordelijkheidsvermelding gerelateerd aan editie"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60338,
       definition: {en: "Relates a resource to a statement of responsibility relating to title proper in a language or script that differs from that recorded in a statement of responsibility relating to title proper element.", da: "Relaterer en ressource til en ophavsangivelse på et andet sprog og/eller i et andet alfabet end det som er anvendt ved angivelsen af en ophavsangivelse til en hovedtitel."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/parallelStatementOfResponsibilityRelatingToTitleProper.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has parallel statement of responsibility relating to title proper", da: "har parallel ophavsangivelse relateret til hovedtitel", nl: "heeft parallelle verantwoordelijkheidsvermelding gerelateerd aan hoofdtitel"},
+      label: {en: "has parallel statement of responsibility relating to title proper", da: "har parallel ophavsangivelse relateret til hovedtitel", fi: "päänimekkeen rinnakkainen vastuullisuusmerkintö", nl: "heeft parallelle verantwoordelijkheidsvermelding gerelateerd aan hoofdtitel"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60339",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60339,
@@ -2970,7 +2972,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/statementOfResponsibility.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has statement of responsibility", da: "har ophavsangivelse", nl: "heeft verantwoordelijkheidsvermelding"},
+      label: {en: "has statement of responsibility", da: "har ophavsangivelse", fi: "vastuullisuusmerkintö", nl: "heeft verantwoordelijkheidsvermelding"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60340,
       definition: {en: "Relates a resource to a statement relating to an identification of agents responsible for a named revision of an edition.", da: "Relaterer en ressource til oplysninger relateret til identificering af en hvilken som helst agent eller agenter, der er ansvarlige for en navngivet revision af en udgave."},
@@ -2984,7 +2986,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/statementOfResponsibilityRelatingToSeries.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has statement of responsibility relating to series", da: "har ophavsangivelse relateret til serie", nl: "heeft verantwoordelijkheidsvermelding gerelateerd aan reeks"},
+      label: {en: "has statement of responsibility relating to series", da: "har ophavsangivelse relateret til serie", fi: "sarjan vastuullisuusmerkintö", nl: "heeft verantwoordelijkheidsvermelding gerelateerd aan reeks"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60342,
       definition: {en: "Relates a resource to a statement relating to an identification of agents responsible for a subseries. (Deprecated)", da: "Relaterer en ressource til oplysninger relateret til identificering af en hvilken som helst agent eller agenter, der er ansvarlige for en underserie."},
@@ -2998,14 +3000,14 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/statementOfResponsibilityRelatingToEdition.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has statement of responsibility relating to edition", da: "har ophavsangivelse relateret til udgave", nl: "heeft verantwoordelijkheidsvermelding gerelateerd aan editie"},
+      label: {en: "has statement of responsibility relating to edition", da: "har ophavsangivelse relateret til udgave", fi: "painoksen vastuullisuusmerkintö", nl: "heeft verantwoordelijkheidsvermelding gerelateerd aan editie"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60344,
       definition: {en: "Relates a resource to a suspension of light-sensitive chemicals used as a coating on a microfilm or microfiche.", da: "Relaterer en ressource til en opslæmning af lysfølsomme kemikalier, der er anvendt som belægning på en mikrofilm eller mikrofiche."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/emulsionOnMicrofilmAndMicrofiche.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has emulsion on microfilm and microfiche", da: "har emulsion på mikrofilm og mikrofiche", nl: "heeft emulsie op microfilm en microfiche"},
+      label: {en: "has emulsion on microfilm and microfiche", da: "har emulsion på mikrofilm og mikrofiche", fi: "emuloitu mikrofilmille ja mikrokortille", nl: "heeft emulsie op microfilm en microfiche"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60159",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60345,
@@ -3014,7 +3016,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P61198",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has longitude and latitude", da: "har længdegrad og breddegrad", nl: "heeft lengtegraad en breedtegraad"},
+      label: {en: "has longitude and latitude", da: "har længdegrad og breddegrad", fi: "pituus- ja leveysasteet", nl: "heeft lengtegraad en breedtegraad"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60109",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60346,
@@ -3032,7 +3034,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P61200",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has strings of coordinate pairs", da: "har hjørnekoordinater", nl: "heeft tekenreeksen van coördinatenparen"},
+      label: {en: "has strings of coordinate pairs", da: "har hjørnekoordinater", fi: "koordinaattiparit", nl: "heeft tekenreeksen van coördinatenparen"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60109",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60348,
@@ -3040,14 +3042,14 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/systemOfOrganization.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has system of organization", da: "har organiseringssystem", nl: "heeft systeem van organisatie"},
+      label: {en: "has system of organization", da: "har organiseringssystem", fi: "järjestämisperiaate", nl: "heeft systeem van organisatie"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60349,
       definition: {en: "Relates a resource to a system used to format a video resource for television broadcast.", da: "Relaterer en ressource til et system, der anvendes til at formatere en videoressource til tv-transmission."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/broadcastStandard.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has broadcast standard", da: "har transmissionsstandard", nl: "heeft uitzendstandaard"},
+      label: {en: "has broadcast standard", da: "har transmissionsstandard", fi: "lähetysstandardi", nl: "heeft uitzendstandaard"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60352",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60350,
@@ -3056,7 +3058,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/digitalFileCharacteristic.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has digital file characteristic", da: "har digitale filkarakteristika", nl: "heeft kenmerken digitale bestand"},
+      label: {en: "has digital file characteristic", da: "har digitale filkarakteristika", fi: "digitaalisen tiedoston ominaisuus", nl: "heeft kenmerken digitale bestand"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60351,
       definition: {en: "Relates a resource to a technical specification relating to an encoding of sound in a resource.", da: "Relaterer en ressource til en teknisk specifikation relateret til kodning af lyd i en ressource."},
@@ -3064,7 +3066,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/soundCharacteristic.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has sound characteristic", da: "har lydkarakteristika", nl: "heeft kenmerken geluid"},
+      label: {en: "has sound characteristic", da: "har lydkarakteristika", fi: "äänen ominaisuudet", nl: "heeft kenmerken geluid"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60352,
       definition: {en: "Relates a resource to a technical specification relating to an encoding of video images in a resource.", da: "Relaterer en ressource til en teknisk specifikation relateret til kodning af videobilleder i en ressource."},
@@ -3072,7 +3074,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/videoCharacteristic.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has video characteristic", da: "har videokarakteristika", nl: "heeft kenmerken video"},
+      label: {en: "has video characteristic", da: "har videokarakteristika", fi: "videon ominaisuudet", nl: "heeft kenmerken video"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60353,
       definition: {en: "Relates a resource to a technical specification relating to the projection of a motion picture film.", da: "Relaterer en ressource til en teknisk specifikation relateret til projektion af en film."},
@@ -3080,7 +3082,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/projectionCharacteristicOfMotionPictureFilm.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has projection characteristic of motion picture film", da: "har projektionskarakteristika for film", nl: "heeft kenmerken van de projectie van speelfilm"},
+      label: {en: "has projection characteristic of motion picture film", da: "har projektionskarakteristika for film", fi: "elokuvafilmin projisointiominaisuudet", nl: "heeft kenmerken van de projectie van speelfilm"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60354,
       definition: {en: "Relates a resource to a television program based on another resource.", da: "Relaterer en ressource til et TV-program baseret på en oprindelig ressource."},
@@ -3088,7 +3090,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60230",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is adapted as television program", da: "er bearbejdet til tv-program", nl: "is bewerkt als televisieprogramma"},
+      label: {en: "is adapted as television program", da: "er bearbejdet til tv-program", fi: "televisiosovitus (ekspressio)", nl: "is bewerkt als televisieprogramma"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60355,
@@ -3105,7 +3107,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/hereditaryTitle.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has hereditary title", da: "har arvelig titel", nl: "heeft erfelijke titel"},
+      label: {en: "has hereditary title", da: "har arvelig titel", fi: "perinnöllinen arvo", nl: "heeft erfelijke titel"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60357,
       definition: {en: "Relates a resource to a title proper appearing on a later issue or part of a multipart monograph or serial that differs from that on the first or earliest issue or part. (Deprecated)", da: "Relaterer en ressource til en hovedtitel, der optræder på et senere nummer eller en senere del af et flerbindsværk eller et periodikum, og som afviger fra den titel, der fremgår af første eller tidligste nummer eller del.."},
@@ -3129,7 +3131,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P61111",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has abbreviated title", da: "har forkortet titel", nl: "heeft afgekorte titel"},
+      label: {en: "has abbreviated title", da: "har forkortet titel", fi: "lyhennetty nimeke", nl: "heeft afgekorte titel"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60369",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60360,
@@ -3139,7 +3141,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "A place where an agent has worked or studied is included.", da: "Sted, hvor en agent har arbejdet eller studeret er omfattet."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60973",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has place of residence", da: "har opholdssted etc.", nl: "heeft plaats van verblijf"},
+      label: {en: "has place of residence", da: "har opholdssted etc.", fi: "asuinpaikka", nl: "heeft plaats van verblijf"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61018",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60361,
@@ -3148,7 +3150,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60236",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is adapted as video", da: "er bearbejdet til video", nl: "is bewerkt als video"},
+      label: {en: "is adapted as video", da: "er bearbejdet til video", fi: "sovitettu videokäsikirjoitukseksi", nl: "is bewerkt als video"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60260",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60362,
@@ -3157,14 +3159,14 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60996",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has prominent member of agent", da: "har fremtrædende medlem af agent", nl: "heeft prominent lid van actor"},
+      label: {en: "has prominent member of agent", da: "har fremtrædende medlem af agent", fi: "toimijan tunnettu jäsen", nl: "heeft prominent lid van actor"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60363,
       definition: {en: "Relates an agent to a word or phrase indicative of royalty, nobility, or ecclesiastical rank or office, a term of address for an agent of religious vocation, or another term indicative of rank, honour, or office.", da: "Relaterer en ressource til et ord eller frase, der angiver kongelighed, adelskab, gejstlig rang eller embede, eller en tiltaleform for en agent med religiøst hverv."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/termOfRankHonourOrOffice.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has term of rank, honour, or office", da: "har agents titel", nl: "heeft term van rang, eer of ambt"},
+      label: {en: "has term of rank, honour, or office", da: "har agents titel", fi: "henkilön arvonimi tai asema", nl: "heeft term van rang, eer of ambt"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60364,
       definition: {en: "Relates a resource to a word, character or group of words or characters, identifying a particular revision of a named edition.", da: "Relaterer en ressource til et ord, tegn eller en gruppe af ord og/eller tegn, der identificerer en bestemt revision af en navngiven udgave."},
@@ -3178,7 +3180,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/designationOfEdition.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has designation of edition", da: "har udgavebetegnelse", nl: "heeft aanduiding van editie"},
+      label: {en: "has designation of edition", da: "har udgavebetegnelse", fi: "painosmäärite", nl: "heeft aanduiding van editie"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60366,
       definition: {en: "Relates a place to an appellation of place in natural language and phrasing used in common discourse.", da: "Relaterer en ressource til et ord, tegn eller gruppe af ord og/eller tegn, som et sted er kendt under."},
@@ -3187,7 +3189,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60929",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has name of place", da: "har navn på et sted", nl: "heeft naam van plaats"},
+      label: {en: "has name of place", da: "har navn på et sted", fi: "paikan nimi", nl: "heeft naam van plaats"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60939",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60367,
@@ -3207,7 +3209,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60920",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has name of agent", da: "har agents navn", nl: "heeft naam van actor"},
+      label: {en: "has name of agent", da: "har agents navn", fi: "toimijan nimi", nl: "heeft naam van actor"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60909",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60369,
@@ -3216,7 +3218,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/title.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has title", da: "har titel", nl: "heeft titel"},
+      label: {en: "has title", da: "har titel", fi: "nimeke", nl: "heeft titel"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60909",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60370,
@@ -3242,7 +3244,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/summarizationOfContent.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has summarization of content", da: "har opsummering af indhold", nl: "heeft samenvatting van content"},
+      label: {en: "has summarization of content", da: "har opsummering af indhold", fi: "sisällön yhteenveto", nl: "heeft samenvatting van content"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60373,
       definition: {en: "Relates a resource to an agent against whom an appeal is taken on a decision of a lower court recorded in a legal resource of a higher court.", da: "Relaterer en ressource mod hvilken en indsigelse er gjort gennem en underrets beslutning, der er registreret i en juridisk ressource fra en højere retsinstans."},
@@ -3250,7 +3252,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60601",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has appellee", da: "har indstævnet", nl: "heeft gedaagde"},
+      label: {en: "has appellee", da: "har indstævnet", fi: "muutoksenhakijan vastapuoli", nl: "heeft gedaagde"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60374,
@@ -3268,7 +3270,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60603",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has dedicator", da: "har tilegner", nl: "heeft opdrager"},
+      label: {en: "has dedicator", da: "har tilegner", fi: "omistuksen tekijä", nl: "heeft opdrager"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60376,
@@ -3277,7 +3279,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1008",
       inverseOf: "http://rdaregistry.info/Elements/u/P60604",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has curator (Deprecated)", da: "har kurator", nl: "heeft curator"},
+      label: {en: "has curator (Deprecated)", da: "har kurator", fi: "kuraattori", nl: "heeft curator"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60377,
@@ -3286,7 +3288,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60605",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has surveyor", da: "har landmåler", nl: "heeft landmeter"},
+      label: {en: "has surveyor", da: "har landmåler", fi: "maanmittari", nl: "heeft landmeter"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60378,
@@ -3297,7 +3299,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "Creation of the drawings that are animated is excluded.", da: "Skabelse af tegninger, der er animeret, er ikke omfattet."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60606",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has animator", da: "har animator", nl: "heeft animator"},
+      label: {en: "has animator", da: "har animator", fi: "animaattori", nl: "heeft animator"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60379,
@@ -3308,7 +3310,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "Modification of the resource for the same medium of performance, etc., keeping the musical substance of the original composition essentially unchanged, is included. Substantial modification that results in the creation of a new musical resource is excluded.", da: "Bidrag omfatter ændring af en ressource for den samme besætning etc., der i alt væsentligt bevarer den originale kompositions musikalske substans uændret, og omfatter ikke væsentlige ændringer der resulterer i skabelsen af en ny musikressource."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60607",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has arranger of music", da: "har musikarrangør", nl: "heeft arrangeur van muziek"},
+      label: {en: "has arranger of music", da: "har musikarrangør", fi: "musiikin sovittaja", nl: "heeft arrangeur van muziek"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60380,
@@ -3327,7 +3329,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60609",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has draftsman", da: "har teknisk tegner", nl: "heeft technisch tekenaar"},
+      label: {en: "has draftsman", da: "har teknisk tegner", fi: "piirtäjä", nl: "heeft technisch tekenaar"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60382,
@@ -3338,7 +3340,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "Transcription of a musical resource for a different instrument or performing group is excluded.", da: "Afskrift af en musikressource for et andet instrument, eller optrædende gruppe, er ikke omfattet."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60610",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has transcriber", da: "har nedskriver", nl: "heeft transcribeerder"},
+      label: {en: "has transcriber", da: "har nedskriver", fi: "transkriboija", nl: "heeft transcribeerder"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60383,
@@ -3347,7 +3349,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60611",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has musical director", da: "har orkesterleder", nl: "heeft muzikaal director"},
+      label: {en: "has musical director", da: "har orkesterleder", fi: "musiikkijohtaja", nl: "heeft muzikaal director"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60384,
@@ -3356,7 +3358,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60612",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has costume designer", da: "har kostumedesigner", nl: "heeft kostuumontwerper"},
+      label: {en: "has costume designer", da: "har kostumedesigner", fi: "puvustaja", nl: "heeft kostuumontwerper"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60385,
@@ -3366,7 +3368,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "Translation of linguistic content between forms of the same language from different time periods is included.", da: "Oversættelse af sprogligt indhold mellem former af det samme sprog fra forskellige tidsperioder er omfattet."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60613",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has translator", da: "har oversætter", nl: "heeft vertaler"},
+      label: {en: "has translator", da: "har oversætter", fi: "kääntäjä", nl: "heeft vertaler"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60386,
@@ -3385,7 +3387,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60615",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has performer", da: "har performer", nl: "heeft uitvoerder"},
+      label: {en: "has performer", da: "har performer", fi: "esittäjä", nl: "heeft uitvoerder"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60388,
@@ -3394,7 +3396,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60616",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has court reporter", da: "har retsstenograf", nl: "heeft rechtbankverslaggever"},
+      label: {en: "has court reporter", da: "har retsstenograf", fi: "tuomioistuimen kirjuri", nl: "heeft rechtbankverslaggever"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60389,
@@ -3442,7 +3444,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "Addition of an introduction, notes, or other critical matter, or preparing a resource for production, publication, or distribution is included. Major revision, adaptation, etc., that substantially changes the nature and content of the original resource, resulting in a new resource, is excluded. (Deprecated)"},
       inverseOf: "http://rdaregistry.info/Elements/u/P60621",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has editor (Deprecated", da: "har redaktør"},
+      label: {en: "has editor (Deprecated", da: "har redaktør", fi: "leikkaaja"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60394,
@@ -3453,7 +3455,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "Substantial modification that results in the creation of a new resource is excluded.", da: "Væsentlige ændringer, der resulterer i skabelsen af en ny ressource, er ikke omfattet."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60622",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has abridger", da: "har forkorter", nl: "heeft inkorter"},
+      label: {en: "has abridger", da: "har forkorter", fi: "lyhentäjä", nl: "heeft inkorter"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60395,
@@ -3462,7 +3464,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60623",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has recording engineer", da: "har indspilningstekniker", nl: "heeft opnametechnicus"},
+      label: {en: "has recording engineer", da: "har indspilningstekniker", fi: "äänittäjä", nl: "heeft opnametechnicus"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60396,
@@ -3473,7 +3475,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {da: "Skabelse af primært kunstnerisk indhold er ikke omfattet."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60624",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has contributor agent of still image", da: "har illustrator", nl: "heeft bijdrager-actor van stilstaand beeld"},
+      label: {en: "has contributor agent of still image", da: "har illustrator", fi: "stillkuvaan osallinen toimija", nl: "heeft bijdrager-actor van stilstaand beeld"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60397,
@@ -3482,7 +3484,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60625",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has recordist", da: "har tonemester", nl: "heeft opnamemaker"},
+      label: {en: "has recordist", da: "har tonemester", fi: "taltioija", nl: "heeft opnamemaker"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60398,
@@ -3501,7 +3503,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60627",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has stage director", da: "har sceneinstruktør", nl: "heeft toneelregisseur"},
+      label: {en: "has stage director", da: "har sceneinstruktør", fi: "näyttämöohjaaja", nl: "heeft toneelregisseur"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60400,
@@ -3511,7 +3513,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60628",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has current owner", da: "har nuværende ejer", nl: "heeft huidige eigenaar"},
+      label: {en: "has current owner", da: "har nuværende ejer", fi: "nykyinen omistaja", nl: "heeft huidige eigenaar"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60404",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60401,
@@ -3521,7 +3523,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60630",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has former owner", da: "har tidligere ejer", nl: "heeft voormalige eigenaar"},
+      label: {en: "has former owner", da: "har tidligere ejer", fi: "aiempi omistaja", nl: "heeft voormalige eigenaar"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60404",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60402,
@@ -3530,7 +3532,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60631",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has custodian", da: "har forvalter", nl: "heeft curatele"},
+      label: {en: "has custodian", da: "har forvalter", fi: "säilyttäjä", nl: "heeft curatele"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60404,
       definition: {en: "Relates a resource to an agent having legal possession of a resource.", da: "Relaterer en ressource til en agent, der er i lovlig besiddelse af en ressource."},
@@ -3539,16 +3541,16 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60632",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has owner", da: "har ejer", nl: "heeft eigenaar"},
+      label: {en: "has owner", da: "har ejer", fi: "omistaja", nl: "heeft eigenaar"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60406,
-      altLabel: {en: "has honoree"},
+      altLabel: {en: "has honoree", fi: "kunnioitettu henkilö"},
       definition: {en: "Relates a resource to an agent who is honoured by a resource.", da: "Relaterer en ressource til en agent, der hædres af en ressource."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/honouree.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60634",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has honouree", da: "har festskriftmodtager", nl: "heeft geëerde"},
+      label: {en: "has honouree", da: "har festskriftmodtager", fi: "kunnioitettu henkilö", nl: "heeft geëerde"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60407,
@@ -3557,7 +3559,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60635",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has broadcaster", da: "har broadcaster", nl: "heeft uitzender"},
+      label: {en: "has broadcaster", da: "har broadcaster", fi: "lähetyksestä vastaava henkilö", nl: "heeft uitzender"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60444",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60408,
@@ -3566,26 +3568,26 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60636",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has film distributor", da: "har filmdistributør", nl: "heeft filmdistributeur"},
+      label: {en: "has film distributor", da: "har filmdistributør", fi: "elokuvan jakelija", nl: "heeft filmdistributeur"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60438",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60409,
-      definition: {en: "Relates a resource to an agent who is responsible for manufacturing a resource by being responsible for the entire graphic design of a book, including arrangement of type and illustration, choice of materials, and process used.", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressource ved at være ansvarlig for hele en bogs grafiske design, inkl. opsætning af tekst og illustrationer, materialevalg og anvendt proces."},
+      definition: {en: "Relates a resource to an agent who is responsible for creating a resource by being responsible for the entire graphic design of a book, including arrangement of type and illustration, choice of materials, and process used.", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressource ved at være ansvarlig for hele en bogs grafiske design, inkl. opsætning af tekst og illustrationer, materialevalg og anvendt proces."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/bookDesigner.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60637",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has book designer", da: "har bogdesigner", nl: "heeft boekontwerper"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60443",
+      label: {en: "has book designer", da: "har bogdesigner", fi: "graafinen suunnittelija (henkilö)", nl: "heeft boekontwerper"},
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60410,
-      definition: {en: "Relates a resource to an agent who is responsible for manufacturing a resource by cutting letters, figures, or other marks on a surface such as a wooden or metal plate used for printing.", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressource ved at udskære bogstaver, figurer etc. på en overflade såsom en træ- eller metalplade, der har været anvendt til trykning."},
+      definition: {en: "Relates a resource to an agent who is responsible for creating a resource by cutting letters, figures, or other marks on a surface such as a wooden or metal plate used for printing.        ", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressource ved at udskære bogstaver, figurer etc. på en overflade såsom en træ- eller metalplade, der har været anvendt til trykning."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/engraver.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60638",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has engraver", da: "har gravør", nl: "heeft graveur"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60443",
+      label: {en: "has engraver", da: "har gravør", fi: "kaiverrus", nl: "heeft graveur"},
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P60412",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60411,
       definition: {en: "Relates a resource to an agent who is responsible for manufacturing a resource by embossing braille cells using a stylus, special embossing printer, or other device.", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressource ved at præge brailleceller vha. en stift, særlig prægeprinter eller andet apparatur."},
@@ -3593,63 +3595,64 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60639",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has braille embosser", da: "har braillepræger", nl: "heeft brailleerder"},
+      label: {en: "has braille embosser", da: "har braillepræger", fi: "pistekirjoituksen tekijä", nl: "heeft brailleerder"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60443",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60412,
-      definition: {en: "Relates a resource to a cartographic representation of the surface forms of the earth or other celestial body, real or imaginary, by means of special graphic methods.", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressource ved at lave en relief-, dybtryks- eller fladtryksoverflade."},
+      definition: {en: "Relates a resource to an agent who is responsible for creating a resource by making a relief, intaglio, or planographic printing surface.", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressource ved at lave en relief-, dybtryks- eller fladtryksoverflade."},
+      "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60410", "http://rdaregistry.info/Elements/u/P60414", "http://rdaregistry.info/Elements/u/P60416", "http://rdaregistry.info/Elements/u/P60417"],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/printmaker.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60640",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has printmaker", da: "har grafiker", nl: "heeft maker van platen"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60443",
+      label: {en: "has printmaker", da: "har grafiker", fi: "kuvalaatan valmistaja", nl: "heeft maker van platen"},
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60413,
-      definition: {en: "Relates a resource to an agent who is responsible for manufacturing a resource by pouring a liquid or molten substance into a mold and leaving it to solidify to take the shape of the mold.", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressourcer ved at hælde en væske eller et varmt, flydende stof i en form og lade det størkne, så det har taget facon efter formen."},
+      definition: {en: "Relates a resource to an agent who is responsible for creating a resource by pouring a liquid or molten substance into a mold and leaving it to solidify to take the shape of the mold.", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressourcer ved at hælde en væske eller et varmt, flydende stof i en form og lade det størkne, så det har taget facon efter formen."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/caster.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60641",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has caster", da: "har støber", nl: "heeft gieter"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60443",
+      label: {en: "has caster", da: "har støber", fi: "valaja", nl: "heeft gieter"},
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60414,
-      definition: {en: "Relates a resource to an agent who is responsible for manufacturing a resource by preparing a stone or plate for lithographic printing.", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressource ved at forberede en sten eller plade til litografisk trykning."},
+      definition: {en: "Relates a resource to an agent who is responsible for creating a resource by preparing a stone or plate for lithographic printing.", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressource ved at forberede en sten eller plade til litografisk trykning."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/lithographer.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "A lithographer includes a graphic artist creating a design directly on the surface from which printing will be done.", da: "En litograf omfatter en grafiker, der har skabt et design direkte på overfladen, hvorfra trykning vil blive lavet."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60642",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has lithographer", da: "har litograf", nl: "heeft lithograaf"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60443",
+      label: {en: "has lithographer", da: "har litograf", fi: "litografi", nl: "heeft lithograaf"},
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P60412",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60415,
-      definition: {en: "Relates a resource to an agent who is responsible for manufacturing a resource by preparing plates used in the production of printed images or text.", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressource ved at forberede plader, der anvendes til fremstilling af trykte billeder og/eller tekst."},
+      definition: {en: "Relates a resource to an agent who is responsible for preparing plates used in the making of printed images or text in a resource.", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressource ved at forberede plader, der anvendes til fremstilling af trykte billeder og/eller tekst."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/platemaker.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60643",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has platemaker", da: "har plademager", nl: "heeft platenmaker"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60443",
+      label: {en: "has platemaker", da: "har plademager", fi: "painolaatan valmistaja", nl: "heeft platenmaker"},
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P61008",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60416,
-      definition: {en: "Relates a resource to an agent who is responsible for manufacturing a resource by subjecting metal, glass, or some other surface used for printing, to acid or another corrosive substance.", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressource ved at udsætte metal, glas eller en anden overflade, der anvendes til trykning, for syre eller et andet ætsende stof."},
+      definition: {en: "Relates a resource to an agent who is responsible for creating a resource by subjecting metal, glass, or some other surface used for printing, to acid or another corrosive substance.", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressource ved at udsætte metal, glas eller en anden overflade, der anvendes til trykning, for syre eller et andet ætsende stof."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/etcher.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60644",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has etcher", da: "har raderer", nl: "heeft etser"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60443",
+      label: {en: "has etcher", da: "har raderer", fi: "etsaaja", nl: "heeft etser"},
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P60412",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60417,
-      definition: {en: "Relates a resource to an agent who is responsible for manufacturing a resource by using a photomechanical process for making prints directly from a hardened film of gelatin or other colloid that has ink-receptive and ink-repellent surfaces.", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressource vha. en fotomekanisk proces, hvorved der er blevet lavet tryk direkte fra et hærdet gelatinelag eller andet kolloid, der har blækmodtagelige og blækafvisende overflader."},
+      definition: {en: "Relates a resource to an agent who is responsible for creating a resource by preparing a hardened film of gelatin or other colloid that has ink-receptive and ink-repellent surfaces and that is used to make prints using a photomechanical process.", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressource vha. en fotomekanisk proces, hvorved der er blevet lavet tryk direkte fra et hærdet gelatinelag eller andet kolloid, der har blækmodtagelige og blækafvisende overflader."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/collotyper.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60645",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has collotyper", da: "har lystrykker", nl: "heeft collotype-maker"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60443",
+      label: {en: "has collotyper", da: "har lystrykker", fi: "kollotypian valmistaja", nl: "heeft collotype-maker"},
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P60412",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60418,
       definition: {en: "Relates a resource to an agent who is responsible for manufacturing a resource of printed text, notated music, or other content from type or plates.", da: "Relaterer en ressource til en agent, der har været involveret i fremstillingen af en ressource af trykt tekst, noteret musik etc. fra skrift eller plader, såsom en bog, en avis, et magasin, en plakat, et partitur etc."},
@@ -3657,7 +3660,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60646",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has printer", da: "har trykker", nl: "heeft drukker"},
+      label: {en: "has printer", da: "har trykker", fi: "painaja", nl: "heeft drukker"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60443",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60419,
@@ -3666,7 +3669,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60647",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has presenter", da: "har presenter", nl: "heeft presenterende"},
+      label: {en: "has presenter", da: "har presenter", fi: "esittämisestä vastaava henkilö", nl: "heeft presenterende"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60420,
@@ -3675,7 +3678,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60649",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has degree supervisor", da: "har vejleder", nl: "heeft graad-begeleider"},
+      label: {en: "has degree supervisor", da: "har vejleder", fi: "opinnäytteen ohjaaja", nl: "heeft graad-begeleider"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60421,
@@ -3684,7 +3687,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60650",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has illuminator", da: "har illuminator", nl: "heeft verluchter"},
+      label: {en: "has illuminator", da: "har illuminator", fi: "illuminoinnin tekijä", nl: "heeft verluchter"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60422,
@@ -3694,16 +3697,16 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60651",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has editor of moving image resource", da: "klipper", nl: "heeft filmeditor van bewegend beeld-resource"},
+      label: {en: "has editor of moving image resource", da: "klipper", fi: "liikkuvan kuvan leikkaaja", nl: "heeft filmeditor van bewegend beeld-resource"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60423,
-      definition: {en: "Relates a resource to an agent who is responsible for creating a computer program.", da: "Relaterer en ressource til en agent, der er ansvarlig for at have skabt et computerprogram."},
+      definition: {en: "Relates a resource to an agent who is responsible for creating a computer program.", da: "Relaterer en ressource til en agent, der er ansvarlig for at have skabt et computerprogram.", fi: "toimija, joka on vastuussa tietokoneohjelman luomisesta."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/programmer.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60652",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has programmer", da: "har programmør", nl: "heeft programmeur"},
+      label: {en: "has programmer", da: "har programmør", fi: "ohjelmoija", nl: "heeft programmeur"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60424,
@@ -3721,7 +3724,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60654",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has cartographer", da: "har kartograf", nl: "heeft cartograaf"},
+      label: {en: "has cartographer", da: "har kartograf", fi: "kartografi", nl: "heeft cartograaf"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60426,
@@ -3731,7 +3734,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "Adaptation of another musical resource to form a distinct alteration, paraphrasing a resource or creating a resource in the general style of another composer, or creating a resource that is based on the music of another composer, is included.", da: "Bearbejdninger af en anden musikressource for at danne en distinkt forandring ved at parafrasere en ressource eller skabe en ressource i en anden komponists typiske stil, eller skabe en ressource, der er baseret på en anden komponists musik, er omfattet."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60655",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has composer", da: "komponist", nl: "heeft componist"},
+      label: {en: "has composer", da: "komponist", fi: "säveltäjä", nl: "heeft componist"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60427,
@@ -3740,7 +3743,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60656",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has inventor", da: "har opfinder", nl: "heeft uitvinder"},
+      label: {en: "has inventor", da: "har opfinder", fi: "keksijä", nl: "heeft uitvinder"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60428,
@@ -3752,7 +3755,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "A metadata description set includes a bibliography of resources, a directory of agents and places, and an analytic finding aid.", da: "Revisioner eller indholdspræciseringer, eller udvælgelse og sammensætning af værker og dele af ressourcer, af et eller flere ophav er ikke omfattet."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60657",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has compiler", da: "har kompilator", nl: "heeft samensteller"},
+      label: {en: "has compiler", da: "har kompilator", fi: "laatija", nl: "heeft samensteller"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P61091",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60429,
@@ -3761,7 +3764,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60658",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has photographer", da: "har fotograf", nl: "heeft fotograaf"},
+      label: {en: "has photographer", da: "har fotograf", fi: "valokuvaaja", nl: "heeft fotograaf"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60430,
@@ -3770,7 +3773,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60659",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has interviewer", da: "har interviewer", nl: "heeft interviewer"},
+      label: {en: "has interviewer", da: "har interviewer", fi: "haastattelija", nl: "heeft interviewer"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60431,
@@ -3780,7 +3783,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60660",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has artist", da: "har kunstner", nl: "heeft kunstenaar"},
+      label: {en: "has artist", da: "har kunstner", fi: "taiteilija", nl: "heeft kunstenaar"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60432,
@@ -3789,7 +3792,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60661",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has interviewee", da: "har interviewede", nl: "heeft geïnterviewde"},
+      label: {en: "has interviewee", da: "har interviewede", fi: "haastateltava", nl: "heeft geïnterviewde"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60433,
@@ -3798,7 +3801,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60662",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has choreographer", da: "har koreograf", nl: "heeft choreograaf"},
+      label: {en: "has choreographer", da: "har koreograf", fi: "koreografi", nl: "heeft choreograaf"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60434,
@@ -3808,7 +3811,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60663",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has author", da: "har forfatter", nl: "heeft auteur"},
+      label: {en: "has author", da: "har forfatter", fi: "kirjoittaja", nl: "heeft auteur"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60435,
@@ -3818,7 +3821,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60664",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has architect", da: "har arkitekt", nl: "heeft architect"},
+      label: {en: "has architect", da: "har arkitekt", fi: "arkkitehti", nl: "heeft architect"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60436,
@@ -3827,7 +3830,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60665",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has filmmaker", da: "har filmskaber", nl: "heeft filmmaker"},
+      label: {en: "has filmmaker", da: "har filmskaber", fi: "elokuvantekijä", nl: "heeft filmmaker"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60437,
@@ -3836,7 +3839,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60666",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has production designer", da: "har produktionsdesigner", nl: "heeft productieontwerper"},
+      label: {en: "has production designer", da: "har produktionsdesigner", fi: "tuotantosuunnittelija", nl: "heeft productieontwerper"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60438,
@@ -3846,7 +3849,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60667",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has distributor", da: "har distributør", nl: "heeft distributeur"},
+      label: {en: "has distributor", da: "har distributør", fi: "jakelija", nl: "heeft distributeur"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60440,
       definition: {en: "Relates a resource to an agent who is responsible for inscribing, fabricating, constructing, etc., an unpublished resource.", da: "Relaterer en ressource til en agent, der er ansvarlig for indgravering, fremstilling, konstruktion etc. af en manifestation i upubliceret form."},
@@ -3863,7 +3866,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60668",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has producer", da: "har producer", nl: "heeft producent"},
+      label: {en: "has producer", da: "har producer", fi: "tuottaja", nl: "heeft producent"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60442,
@@ -3875,12 +3878,12 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60443,
       definition: {en: "Relates a resource to an agent who is responsible for printing, duplicating, casting, or other method of manufacturing a published resource.", da: "Relaterer en ressource til en agent, der er ansvarlig for trykning, duplikering, støbning etc. af en ressource i publiceret form."},
-      "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60409", "http://rdaregistry.info/Elements/u/P60410", "http://rdaregistry.info/Elements/u/P60411", "http://rdaregistry.info/Elements/u/P60412", "http://rdaregistry.info/Elements/u/P60413", "http://rdaregistry.info/Elements/u/P60414", "http://rdaregistry.info/Elements/u/P60415", "http://rdaregistry.info/Elements/u/P60416", "http://rdaregistry.info/Elements/u/P60417", "http://rdaregistry.info/Elements/u/P60418", "http://rdaregistry.info/Elements/u/P60746"],
+      "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60411", "http://rdaregistry.info/Elements/u/P60418"],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/manufacturer.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60669",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has manufacturer", da: "har producent", nl: "heeft vervaardiger"},
+      label: {en: "has manufacturer", da: "har producent", fi: "valmistaja", nl: "heeft vervaardiger"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60909",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60444,
@@ -3890,7 +3893,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60670",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has publisher", da: "har udgiver", nl: "heeft uitgever"},
+      label: {en: "has publisher", da: "har udgiver", fi: "kustantaja", nl: "heeft uitgever"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60446,
       definition: {en: "Relates a resource to an agent who is responsible for recording the minutes of a meeting.", da: "Relaterer en ressource til en agent, der er ansvarlig for at have taget referat ved et møde."},
@@ -3898,18 +3901,18 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60671",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has minute taker", da: "har referent", nl: "heeft notulist"},
+      label: {en: "has minute taker", da: "har referent", fi: "pöytäkirjan laatija", nl: "heeft notulist"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60447,
       definition: {en: "Relates a resource to an agent who is responsible for a resource", da: "Relaterer en ressource til en agent, der er ansvarlig for en ressources tilblivelse."},
-      "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60045", "http://rdaregistry.info/Elements/u/P60066", "http://rdaregistry.info/Elements/u/P60096", "http://rdaregistry.info/Elements/u/P60420", "http://rdaregistry.info/Elements/u/P60423", "http://rdaregistry.info/Elements/u/P60424", "http://rdaregistry.info/Elements/u/P60425", "http://rdaregistry.info/Elements/u/P60426", "http://rdaregistry.info/Elements/u/P60427", "http://rdaregistry.info/Elements/u/P60429", "http://rdaregistry.info/Elements/u/P60430", "http://rdaregistry.info/Elements/u/P60431", "http://rdaregistry.info/Elements/u/P60432", "http://rdaregistry.info/Elements/u/P60433", "http://rdaregistry.info/Elements/u/P60434", "http://rdaregistry.info/Elements/u/P60435", "http://rdaregistry.info/Elements/u/P60436", "http://rdaregistry.info/Elements/u/P60463", "http://rdaregistry.info/Elements/u/P60465", "http://rdaregistry.info/Elements/u/P60826", "http://rdaregistry.info/Elements/u/P60891"],
+      "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60045", "http://rdaregistry.info/Elements/u/P60066", "http://rdaregistry.info/Elements/u/P60096", "http://rdaregistry.info/Elements/u/P60409", "http://rdaregistry.info/Elements/u/P60412", "http://rdaregistry.info/Elements/u/P60413", "http://rdaregistry.info/Elements/u/P60420", "http://rdaregistry.info/Elements/u/P60423", "http://rdaregistry.info/Elements/u/P60424", "http://rdaregistry.info/Elements/u/P60425", "http://rdaregistry.info/Elements/u/P60426", "http://rdaregistry.info/Elements/u/P60427", "http://rdaregistry.info/Elements/u/P60429", "http://rdaregistry.info/Elements/u/P60430", "http://rdaregistry.info/Elements/u/P60431", "http://rdaregistry.info/Elements/u/P60432", "http://rdaregistry.info/Elements/u/P60433", "http://rdaregistry.info/Elements/u/P60434", "http://rdaregistry.info/Elements/u/P60435", "http://rdaregistry.info/Elements/u/P60436", "http://rdaregistry.info/Elements/u/P60463", "http://rdaregistry.info/Elements/u/P60465", "http://rdaregistry.info/Elements/u/P60826", "http://rdaregistry.info/Elements/u/P60891"],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/creator.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "Creators include agents who are jointly responsible for the creation of a resource either performing the same role, such as in a collaboration between two writers, or performing different roles, such as in a collaboration between a composer and a lyricist.", da: "Ophav inkluderer agenter der har fælles ansvar for at have skabt en ressource, enten ved at udføre den samme rolle, som i et samarbejde mellem to forfattere, eller udføre forskellige roller, som i et samarbejde mellem fx en komponist og en sangskriver."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60672",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has creator", da: "har ophav", nl: "heeft maker"},
+      label: {en: "has creator", da: "har ophav", fi: "tekijä", nl: "heeft maker"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60449,
       definition: {en: "Relates a resource to an agent who is responsible for the general management and supervision of a filmed performance, a radio or television program, etc.", da: "Relaterer en ressource til en agent, der er ansvarlig for ledelse af og tilsyn med en filmoptagelse, et radio- eller tv-program etc."},
@@ -3918,7 +3921,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60452",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has director", da: "har instruktør", nl: "heeft regisseur"},
+      label: {en: "has director", da: "har instruktør", fi: "ohjaaja", nl: "heeft regisseur"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60450,
@@ -3927,7 +3930,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60674",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has restorationist", da: "har konservator", nl: "heeft restaurator"},
+      label: {en: "has restorationist", da: "har konservator", fi: "entisöijä", nl: "heeft restaurator"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60451,
@@ -3967,7 +3970,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60689",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has dedicatee", da: "har tilegnet", nl: "heeft opgedragene"},
+      label: {en: "has dedicatee", da: "har tilegnet", fi: "kappaleen omistuksen kohde", nl: "heeft opgedragene"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60456,
@@ -3976,7 +3979,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60690",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has addressee", da: "har adressat", nl: "heeft geadresseerde"},
+      label: {en: "has addressee", da: "har adressat", fi: "vastaanottaja", nl: "heeft geadresseerde"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60457,
@@ -3985,7 +3988,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60691",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has appellant", da: "har appellerende", nl: "heeft aanklager in beroep"},
+      label: {en: "has appellant", da: "har appellerende", fi: "has appellant", nl: "heeft aanklager in beroep"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60458,
@@ -3994,7 +3997,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60692",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has binder", da: "har bogbinder", nl: "heeft binder"},
+      label: {en: "has binder", da: "har bogbinder", fi: "binder", nl: "heeft binder"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60459,
@@ -4003,7 +4006,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60693",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has plaintiff", da: "har sagsøgende", nl: "heeft aanklager"},
+      label: {en: "has plaintiff", da: "har sagsøgende", fi: "henkilökantaja", nl: "heeft aanklager"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60460,
@@ -4012,7 +4015,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60695",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has inscriber", da: "har dedikationsskriver", nl: "heeft opdrachtschrijver"},
+      label: {en: "has inscriber", da: "har dedikationsskriver", fi: "omistuskirjoituksen kirjoittaja", nl: "heeft opdrachtschrijver"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60461,
@@ -4021,7 +4024,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60696",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has judge", da: "har dommer", nl: "heeft rechter"},
+      label: {en: "has judge", da: "har dommer", fi: "tuomari", nl: "heeft rechter"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60462,
@@ -4031,7 +4034,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60698",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has defendant", da: "har sagsøgt", nl: "heeft verweerder"},
+      label: {en: "has defendant", da: "har sagsøgt", fi: "henkilövastaaja", nl: "heeft verweerder"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60463,
@@ -4040,7 +4043,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60699",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has praeses", da: "har præses", nl: "heeft preses"},
+      label: {en: "has praeses", da: "har præses", fi: "preeses", nl: "heeft preses"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60464,
@@ -4049,7 +4052,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60700",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has annotator", da: "har annotationsskriver", nl: "heeft annotator"},
+      label: {en: "has annotator", da: "har annotationsskriver", fi: "lisähuomautusten kirjoittaja", nl: "heeft annotator"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60465,
@@ -4058,7 +4061,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60701",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has consultant", da: "har rådgiver", nl: "heeft consultant"},
+      label: {en: "has consultant", da: "har rådgiver", fi: "asiantuntija", nl: "heeft consultant"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60447",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60466,
@@ -4067,7 +4070,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60702",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has autographer", da: "har autografskriver", nl: "heeft handtekeningzetter"},
+      label: {en: "has autographer", da: "har autografskriver", fi: "nimikirjoituksen kirjoittaja", nl: "heeft handtekeningzetter"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60374",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60467,
@@ -4084,7 +4087,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/professionOrOccupation.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has profession or occupation", da: "har profession eller beskæftigelse", nl: "heeft beroep of bezigheid"},
+      label: {en: "has profession or occupation", da: "har profession eller beskæftigelse", fi: "ammatti tai tehtävä", nl: "heeft beroep of bezigheid"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60469,
       definition: {en: "Relates a resource to a resource in an analog format that is transferred to a digital format.", da: "Relaterer en ressource til en ressource i et analogt format, der er overført til et digitalt format."},
@@ -4092,7 +4095,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60083",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is electronic reproduction of", da: "er elektronisk reproduktion af", nl: "is elektronische reproductie van"},
+      label: {en: "is electronic reproduction of", da: "er elektronisk reproduktion af", fi: "digitoitu kappale", nl: "is elektronische reproductie van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60297",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60470,
@@ -4117,7 +4120,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60991",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has epoch", da: "har epoke", nl: "heeft tijdperk"},
+      label: {en: "has epoch", da: "har epoke", fi: "epookki", nl: "heeft tijdperk"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60473,
       definition: {en: "Relates a resource to an agent who is an architect who is responsible for creating landscape resources.", da: "Relaterer en ressource til en arkitekt, der er ansvarlig for at forme landskaber."},
@@ -4125,7 +4128,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60704",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has landscape architect", da: "har landskabsarkitekt", nl: "heeft landschapsarchitect"},
+      label: {en: "has landscape architect", da: "har landskabsarkitekt", fi: "maisema-arkkitehti", nl: "heeft landschapsarchitect"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60435",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60474,
@@ -4136,7 +4139,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60262",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is finding aid of", da: "er hjælpeverktøj til", nl: "is vind-hulpmiddel voor"},
+      label: {en: "is finding aid of", da: "er hjælpeverktøj til", fi: "hakemisto", nl: "is vind-hulpmiddel voor"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60190",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60475,
@@ -4145,7 +4148,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60705",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has sculptor", da: "har skulptør", nl: "heeft beeldhouwer"},
+      label: {en: "has sculptor", da: "har skulptør", fi: "kuvanveistäjä", nl: "heeft beeldhouwer"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60431",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60476,
@@ -4154,7 +4157,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60706",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has screenwriter", da: "har manuskriptforfatter", nl: "heeft scenarioschrijver"},
+      label: {en: "has screenwriter", da: "har manuskriptforfatter", fi: "käsikirjoittaja", nl: "heeft scenarioschrijver"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60434",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60477,
@@ -4165,7 +4168,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "Authoring of just dialogue from a musical is excluded", da: "Omfatter ikke forfatteren til dialogen i en musical."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60707",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has lyricist", da: "har forfatter til sangtekst", nl: "heeft liedtekstschrijver"},
+      label: {en: "has lyricist", da: "har forfatter til sangtekst", fi: "sanoittaja", nl: "heeft liedtekstschrijver"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60434",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60478,
@@ -4176,7 +4179,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "Authoring of the words of just the songs from a musical is excluded.", da: "Omfatter ikke forfatteren til sangteksterne i en musical."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60708",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has librettist", da: "har librettist", nl: "heeft librettist"},
+      label: {en: "has librettist", da: "har librettist", fi: "libretisti", nl: "heeft librettist"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60434",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60479,
@@ -4186,7 +4189,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "This element applies in general to a static resource or an integrating resource.", da: "Denne relation anvendes generelt til enkeltstående monografier, flerbindsværker og integrerende ressourcer."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60103",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is replacement in part of", da: "er delvis erstatning af", nl: "is gedeeltelijke vervanging van"},
+      label: {en: "is replacement in part of", da: "er delvis erstatning af", fi: "korvaa osittain", nl: "is gedeeltelijke vervanging van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60261",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60480,
@@ -4196,7 +4199,7 @@ module RDF::Vocab
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "This element applies in general to a static resource or an integrating resource.", da: "Denne relation anvendes generelt til enkeltstående monografier, flerbindsværker og integrerende ressourcer."},
       inverseOf: "http://rdaregistry.info/Elements/u/P60104",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "is replacement of", da: "er erstatning af", nl: "is vervanging van"},
+      label: {en: "is replacement of", da: "er erstatning af", fi: "korvaa", nl: "is vervanging van"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60261",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60481,
@@ -4204,7 +4207,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/specialPlaybackCharacteristic.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has special playback characteristic", da: "har særlige afspilningskarakteristika", nl: "heeft speciale afspeelkenmerken"},
+      label: {en: "has special playback characteristic", da: "har særlige afspilningskarakteristika", fi: "äänentoiston erityisominaisuudet", nl: "heeft speciale afspeelkenmerken"},
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60351",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60482,
@@ -4227,21 +4230,21 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/agentHistory.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has agent history", da: "har agenthistorie", nl: "heeft actor geschiedenis"},
+      label: {en: "has agent history", da: "har agenthistorie", fi: "toimijan historia", nl: "heeft actor geschiedenis"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60485,
       definition: {en: "Relates a resource to an indication of the kinds of resource that supplement the main resources that are embodied by an augmentation aggregate.", da: "Relaterer en ressource til en indikation af indhold der opdaterer eller supplerer en ressources primære indhold."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/supplementaryContent.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has supplementary content", da: "har supplerende indhold", nl: "heeft aanvullende content"},
+      label: {en: "has supplementary content", da: "har supplerende indhold", fi: "lisätty sisältö", nl: "heeft aanvullende content"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60486,
       definition: {en: "Relates a resource to an indication of the kinds of image content that supplement the main resources that are embodied by an augmentation aggregate.", da: "Relaterer en ressource til en tilstedeværelse af billedindhold, der medfølger en ressources primære indhold."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/illustrativeContent.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has illustrative content", da: "har illustrativt indhold", nl: "heeft illustratieve content"},
+      label: {en: "has illustrative content", da: "har illustrativt indhold", fi: "kuvasisältö", nl: "heeft illustratieve content"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60487,
       definition: {en: "Relates a resource to an indication of the kinds of resource that provide alternative sensory modes to perceive the main resources that are embodied by an augmentation aggregate.", da: "Relaterer en ressource til en indikation af indhold, der giver alternative sansemåder for at forstå en ressources primære indhold."},
@@ -4249,7 +4252,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       "http://www.w3.org/2004/02/skos/core#scopeNote": {en: "Accessibility content includes accessible labels, audio description, captioning, image description, sign language, and subtitles. Accessibility content does not include subtitles in a language different from the spoken content.", da: "Omfatter lydbeskrivelser, rubrikker, billedbeskrivelser, tegnsprog, og undertekster. Omfatter ikke undertekster på et andet sprog end det talte."},
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
-      label: {en: "has accessibility content", da: "har tilgængelighedsfremmende indhold", nl: "heeft toegankelijkheidscontent"},
+      label: {en: "has accessibility content", da: "har tilgængelighedsfremmende indhold", fi: "saavutettavuussisältö", nl: "heeft toegankelijkheidscontent"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60488,
       definition: {en: "Relates a resource to a musical or physical layout of the content of a resource that is presented in the form of musical notation.", da: "Relaterer en ressource til et musikalsk eller fysisk layout af en ressources indhold, der er præsenteret som musikalsk notation."},
@@ -5523,7 +5526,7 @@ module RDF::Vocab
       inverseOf: "http://rdaregistry.info/Elements/u/P60409",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
       label: {en: "is book designer of", da: "er bogdesigner for", nl: "is boekontwerper van"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60669",
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P60672",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60638,
       definition: {en: "Relates an agent to a resource that involves a responsibility of an agent for cutting letters, figures, etc., on a surface such as a wooden or metal plate used for printing.", da: "Relaterer en agent, der har været involveret i fremstillingen af en ressource ved at udskære bogstaver, figurer etc. på en overflade såsom en træ- eller metalplade, der har været anvendt til trykning til en ressource."},
@@ -5532,7 +5535,7 @@ module RDF::Vocab
       inverseOf: "http://rdaregistry.info/Elements/u/P60410",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
       label: {en: "is engraver of", da: "er gravør af", nl: "is graveur van"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60669",
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P60640",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60639,
       definition: {en: "Relates an agent to a resource that involves a responsibility of an agent for embossing braille cells using a stylus, special embossing printer, or other device.", da: "Relater en agent, der har været involveret i fremstillingen af en ressource ved at præge punktskriftsceller vha. en stift, særlig prægeprinter eller anden anordning til en ressource."},
@@ -5545,12 +5548,13 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60640,
       definition: {en: "Relates an agent to a resource that involves a responsibility of an agent for making a relief, intaglio, or planographic printing surface.", da: "Relaterer en agent, der har været involveret i fremstillingen af en ressource ved at lave en relief-, dybtryks- eller fladtryksoverflade til en ressource."},
+      "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60638", "http://rdaregistry.info/Elements/u/P60642", "http://rdaregistry.info/Elements/u/P60644", "http://rdaregistry.info/Elements/u/P60645"],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/printmakerOf.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60412",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
       label: {en: "is printmaker of", da: "er grafiker af", nl: "is prentmaker van"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60669",
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P60672",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60641,
       definition: {en: "Relates an agent to a resource that involves a responsibility of an agent for pouring a liquid or molten substance into a mold and leaving it to solidify to take the shape of the mold.", da: "Relaterer en agent, der har været involveret i fremstillingen af en ressource ved at hælde en væske eller et varmt, flydende stof i en form og lade det størkne, så det har taget form efter formen til en ressource."},
@@ -5559,7 +5563,7 @@ module RDF::Vocab
       inverseOf: "http://rdaregistry.info/Elements/u/P60413",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
       label: {en: "is caster of", da: "er støber af", nl: "is gieter van"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60669",
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P60672",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60642,
       definition: {en: "Relates an agent to a resource that involves a responsibility of an agent for preparing a stone or plate for lithographic printing.", da: "Relaterer en agent, der har været involveret i fremstillingen af en ressource ved at forberede en sten eller plade til litografisk trykning til en ressource."},
@@ -5569,16 +5573,16 @@ module RDF::Vocab
       inverseOf: "http://rdaregistry.info/Elements/u/P60414",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
       label: {en: "is lithographer of", da: "er litograf af", nl: "is lithograaf van"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60669",
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P60640",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60643,
-      definition: {en: "Relates an agent to a resource that involves a responsibility of an agent for preparing plates used in the production of printed images or text.", da: "Relaterer en agent, der har været involveret i fremstillingen af en ressource ved at forberede plader, der anvendes til fremstilling af trykte billeder og/eller tekst til en ressource."},
+      definition: {en: "Relates an agent to a resource that involves a responsibility of an agent for preparing plates used in the making of printed images or text.", da: "Relaterer en agent, der har været involveret i fremstillingen af en ressource ved at forberede plader, der anvendes til fremstilling af trykte billeder og/eller tekst til en ressource."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/platemakerOf.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60415",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
       label: {en: "is platemaker of", da: "er plademager af", nl: "is plaatmaker van"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60669",
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P61009",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60644,
       definition: {en: "Relates an agent to a resource that involves a responsibility of an agent for subjecting metal, glass, or some other surface used for printing, to acid or another corrosive substance.", da: "Relaterer en agent, der har været involveret i fremstillingen af en ressource ved at udsætte metal, glas eller en anden overflade, der anvendes til trykning, for syre eller et andet ætsende stof til en ressource."},
@@ -5587,16 +5591,16 @@ module RDF::Vocab
       inverseOf: "http://rdaregistry.info/Elements/u/P60416",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
       label: {en: "is etcher of", da: "er raderer af", nl: "is etser van"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60669",
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P60640",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60645,
-      definition: {en: "Relates an agent to a resource that involves a responsibility of an agent for using a photomechanical process for making prints directly from a hardened film of gelatin or other colloid that has ink-receptive and ink-repellent surfaces.", da: "Relaterer en agent, der har været involveret i fremstillingen af en ressource vha. en fotomekanisk proces, hvorved der er blevet lavet tryk direkte fra et hærdet gelatinelag eller andet kolloid, der har blækmodtagelige og blækafvisende overflader til en ressource."},
+      definition: {en: "Relates an agent to a resource that involves a responsibility of an agent for preparing a hardened film of gelatin or other colloid that has ink-receptive and ink-repellent surfaces and that is used to make prints using a photomechanical process.", da: "Relaterer en agent, der har været involveret i fremstillingen af en ressource vha. en fotomekanisk proces, hvorved der er blevet lavet tryk direkte fra et hærdet gelatinelag eller andet kolloid, der har blækmodtagelige og blækafvisende overflader til en ressource."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/collotyperOf.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60417",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
       label: {en: "is collotyper of", da: "er lystrykker af", nl: "is lichtdrukker van"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60669",
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P60640",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60646,
       definition: {en: "Relates an agent to a resource that involves a responsibility of an agent for manufacturing printed text, notated music, etc., from type or plates, such as a book, newspaper, magazine, broadside, score, etc.", da: "Relaterer en agent, der har været involveret i fremstillingen af en ressource af trykt tekst, noteret musik etc. fra typer eller plader, såsom en bog, en avis, et tidsskrift, en plakat, et partitur etc. til en ressource."},
@@ -5813,7 +5817,7 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60669,
       definition: {en: "Relates an agent to a resource that involves a responsibility of an agent for printing, duplicating, casting, etc.", da: "Relaterer en agent der er ansvarlig for trykning, duplikering, støbning etc., til en ressource."},
-      "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60637", "http://rdaregistry.info/Elements/u/P60638", "http://rdaregistry.info/Elements/u/P60639", "http://rdaregistry.info/Elements/u/P60640", "http://rdaregistry.info/Elements/u/P60641", "http://rdaregistry.info/Elements/u/P60642", "http://rdaregistry.info/Elements/u/P60643", "http://rdaregistry.info/Elements/u/P60644", "http://rdaregistry.info/Elements/u/P60645", "http://rdaregistry.info/Elements/u/P60646", "http://rdaregistry.info/Elements/u/P60747"],
+      "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60639", "http://rdaregistry.info/Elements/u/P60646"],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/manufacturerOf.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60443",
@@ -5841,7 +5845,7 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60672,
       definition: {en: "Relates an agent to a resource that involves a creation responsibility.", da: "Relaterer en agent der er ansvarlig for skabelse af en ressource til en ressource."},
-      "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60001", "http://rdaregistry.info/Elements/u/P60006", "http://rdaregistry.info/Elements/u/P60014", "http://rdaregistry.info/Elements/u/P60649", "http://rdaregistry.info/Elements/u/P60652", "http://rdaregistry.info/Elements/u/P60653", "http://rdaregistry.info/Elements/u/P60654", "http://rdaregistry.info/Elements/u/P60655", "http://rdaregistry.info/Elements/u/P60656", "http://rdaregistry.info/Elements/u/P60658", "http://rdaregistry.info/Elements/u/P60659", "http://rdaregistry.info/Elements/u/P60660", "http://rdaregistry.info/Elements/u/P60661", "http://rdaregistry.info/Elements/u/P60662", "http://rdaregistry.info/Elements/u/P60663", "http://rdaregistry.info/Elements/u/P60664", "http://rdaregistry.info/Elements/u/P60665", "http://rdaregistry.info/Elements/u/P60699", "http://rdaregistry.info/Elements/u/P60701", "http://rdaregistry.info/Elements/u/P60827", "http://rdaregistry.info/Elements/u/P60881", "http://rdaregistry.info/Elements/u/P60882"],
+      "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60001", "http://rdaregistry.info/Elements/u/P60006", "http://rdaregistry.info/Elements/u/P60014", "http://rdaregistry.info/Elements/u/P60637", "http://rdaregistry.info/Elements/u/P60640", "http://rdaregistry.info/Elements/u/P60641", "http://rdaregistry.info/Elements/u/P60649", "http://rdaregistry.info/Elements/u/P60652", "http://rdaregistry.info/Elements/u/P60653", "http://rdaregistry.info/Elements/u/P60654", "http://rdaregistry.info/Elements/u/P60655", "http://rdaregistry.info/Elements/u/P60656", "http://rdaregistry.info/Elements/u/P60658", "http://rdaregistry.info/Elements/u/P60659", "http://rdaregistry.info/Elements/u/P60660", "http://rdaregistry.info/Elements/u/P60661", "http://rdaregistry.info/Elements/u/P60662", "http://rdaregistry.info/Elements/u/P60663", "http://rdaregistry.info/Elements/u/P60664", "http://rdaregistry.info/Elements/u/P60665", "http://rdaregistry.info/Elements/u/P60699", "http://rdaregistry.info/Elements/u/P60701", "http://rdaregistry.info/Elements/u/P60827", "http://rdaregistry.info/Elements/u/P60881", "http://rdaregistry.info/Elements/u/P60882"],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/creatorOf.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60447",
@@ -6472,16 +6476,16 @@ module RDF::Vocab
       inverseOf: "http://rdaregistry.info/Elements/u/P60747",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
       label: {en: "has papermaker", da: "har papirproducent", nl: "heeft papierproducent"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60443",
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P61008",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60747,
-      definition: {en: "Relates an agent to a resource that involves a responsibility of an agent for producing paper.", da: "Relaterer en agent, der er ansvarlig for at producere papir der bruges til at fremstille en manifestation til en ressource."},
+      definition: {en: "Relates an agent to a resource that involves a responsibility of an agent for making paper.", da: "Relaterer en agent, der er ansvarlig for at producere papir der bruges til at fremstille en manifestation til en ressource."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/papermakerOf.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60746",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
       label: {en: "is papermaker of", da: "er papirproducent af", nl: "is papiermaker van"},
-      subPropertyOf: "http://rdaregistry.info/Elements/u/P60669",
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P61009",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60748,
       definition: {en: "Relates a resource to an agent who contributes to a moving image resource by designing and creating post-production visual effects.", da: "Relaterer en ressource til en agent, der har bidraget til en levende billed-ressource ved at designe og skabe visuelle effekter efter produktionen."},
@@ -7262,7 +7266,7 @@ module RDF::Vocab
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60398",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60841,
-      definition: {en: "Relates an agent to a resource that includes a contribution by an agent of researching, designing, implementing, or testing software.", da: "Relaterer en agent, der har bidraget til en ressource ved at lægge makeup og påsætte proteser til en levende billedproduktion eller til en musikalsk eller dramatisk præsentation eller til underholdningtil en ressource."},
+      definition: {en: "Relates an agent to a resource that includes a contribution by an agent of applying makeup and prosthetics for a moving image production or for a musical or dramatic presentation or entertainment.", da: "Relaterer en agent, der har bidraget til en ressource ved at lægge makeup og påsætte proteser til en levende billedproduktion eller til en musikalsk eller dramatisk præsentation eller til underholdningtil en ressource."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/makeupArtistOf.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P60840",
@@ -7575,6 +7579,7 @@ module RDF::Vocab
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       isDefinedBy: "http://rdaregistry.info/Elements/u/",
       label: {en: "has cartographic data type", da: "har kartografisk datatype", nl: "heeft cartografisch datatype"},
+      subPropertyOf: "http://rdaregistry.info/Elements/u/P60323",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P60876,
       definition: {en: "Relates a resource to details of a machine-readable representation of geospatial features.", da: "Relaterer en ressource til detaljer om en maskinlæsbar repræsentation af geospatiale træk."},
@@ -8750,7 +8755,7 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P61008,
       definition: {en: "Relates a resource to an agent who is associated with a resource."},
-      "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P61031",
+      "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60415", "http://rdaregistry.info/Elements/u/P60746", "http://rdaregistry.info/Elements/u/P61031"],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedAgentOfResource.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P61009",
@@ -8760,7 +8765,7 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P61009,
       definition: {en: "Relates an agent to resource that is associated with an agent."},
-      "http://metadataregistry.org/uri/profile/regap/hasSubproperty": "http://rdaregistry.info/Elements/u/P61032",
+      "http://metadataregistry.org/uri/profile/regap/hasSubproperty": ["http://rdaregistry.info/Elements/u/P60643", "http://rdaregistry.info/Elements/u/P60747", "http://rdaregistry.info/Elements/u/P61032"],
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/relatedResourceOfAgent.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P61008",
@@ -10267,7 +10272,7 @@ module RDF::Vocab
       subPropertyOf: "http://rdaregistry.info/Elements/u/P60917",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :P61187,
-      definition: {en: "Relates an agent to an access point for place that is not selected for preference in a specific vocabulary encoding scheme."},
+      definition: {en: "Relates a place to an access point for place that is not selected for preference in a specific vocabulary encoding scheme."},
       "http://metadataregistry.org/uri/profile/regap/lexicalAlias": "http://rdaregistry.info/Elements/u/variantAccessPointForPlace.en",
       "http://metadataregistry.org/uri/profile/regap/status": "http://metadataregistry.org/uri/RegStatus/1001",
       inverseOf: "http://rdaregistry.info/Elements/u/P61183",
