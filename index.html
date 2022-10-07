@@ -115,7 +115,7 @@
 </li><li>
 <p>RDF::Vocab::DWC - <a href="http://rs.tdwg.org/dwc/terms/">Darwin Core</a></p>
 </li><li>
-<p>RDF::Vocab::EARL - <a href="<http://www.w3.org/ns/earl#">Evaluation and Report Language (EARL) 1.0 Schema</a> (W3C)</p>
+<p>RDF::Vocab::EARL - <a href="http://www.w3.org/ns/earl#">Evaluation and Report Language (EARL) 1.0 Schema</a> (W3C)</p>
 </li><li>
 <p>RDF::Vocab::EBUCore - <a href="http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#">EBUCore</a></p>
 </li><li>
@@ -258,13 +258,47 @@
 <p>Also adds the <code>gen-vocab</code> command to the <code>rdf</code> command-line executable to generate specifically generated output in Turtle, JSON-LD, and HTML+RDFa for either built-in or arbitrary vocabularies. Other output serialization formats are also supported as generic RDF Writers and may lack the vocabulary-specific formatting of Turtle, JSON-LD, and HTML+RDFa.</p>
 
 <h2 id="label-Adding+new+vocabularies">Adding new vocabularies</h2>
+
+<p>Vocabularies should only be added to this gem if they are widely used. An equivalent process can be used to add a vocabulary to an arbitrary Ruby application or gem if it is more application specific.</p>
+
+<p>New vocabularies should be generated via a pull request after cloning from GitHub. Be sure to use a custom branch name before creating the PR.</p>
 <ul><li>
-<p>First, add an entry to <code>lib/rdf/vocab.rb</code>, the key names contained within for guidance. For more information, see the documentation on <a href="https://ruby-rdf.github.io/rdf/RDF/Vocabulary">RDF::Vocabulary</a>.</p>
-</li><li>
-<p>Next, create an empty file in <code>lib/rdf/vocab</code> based on the key name for your vocabulary. For example, if you’ve added the vocabulary <code>:foo</code>, create a new empty file at <code>lib/rdf/vocab/foo.rb</code>.</p>
-</li><li>
-<p>Run <code>rake gen_vocabs</code>.</p>
+<p>First, add an entry to <code>lib/rdf/vocab.rb</code>, the key is used to identify the vocabulary, and as the default basis for the prefix label to use for the vocabulary. The key names of the object value come from the following:  &lt;dl&gt;  &lt;dt&gt;uri (required)&lt;/dt&gt;  &lt;dd&gt;The namespace URI for the vocabulary.&lt;/dd&gt;  &lt;dt&gt;module_name (default RDF::Vocab)&lt;/dt&gt;  &lt;dd&gt;The Ruby module in which the vocabulary class is created.&lt;/dd&gt;  &lt;dt&gt;class_name (default from uppercase of the vocabulary identity)&lt;/dt&gt;  &lt;dd&gt;The class name of the vocabulary&lt;/dd&gt;  &lt;dt&gt;source (default from uri)&lt;/dt&gt;  &lt;dd&gt;The source used to fetch the RDF vocabulary definition (most formats supported). Defaults to the vocabulary uri.&lt;/dd&gt;  &lt;dt&gt;strict (default false)&lt;/dt&gt;  &lt;dd&gt;Creates a <em>strict</em> vocabulary, so that attempts to use undefined terms in the vocabulary namespace become errors.&lt;/dd&gt;  &lt;dt&gt;alias (Internal only)&lt;/dt&gt;  &lt;dd&gt;Indicates that this is an alias for a vocabulary defined directly in the RDF namespace.&lt;/dd&gt;  &lt;dt&gt;skip&lt;/dt&gt;  &lt;dd&gt;Do not process this vocabulary, typically when the vocabulary source is inaccessible.&lt;/dd&gt;  &lt;dt&gt;patch&lt;/dt&gt;  &lt;dd&gt;The value is taken as a string formatted as an &lt;a href=“<a href="http://www.w3.org/TR/ldpatch/">LD”>www.w3.org/TR/ldpatch/“>LD</a> Patch&lt;/a&gt; used to correct issues in the vocabulary source that may show up when the vocabulary is validated.&lt;/dd&gt;  &lt;dt&gt;extra&lt;/dt&gt;  &lt;dd&gt;Value is a JSON Object which is added to the resulting vocabulary definition.&lt;/dd&gt;  &lt;/dl&gt;</p>
 </li></ul>
+
+<p>For more information, see the documentation on <a href="https://ruby-rdf.github.io/rdf/RDF/Vocabulary">RDF::Vocabulary</a>. * Next, create an empty file in <code>lib/rdf/vocab</code> based on the key name for your vocabulary. For example, if you’ve added the vocabulary <code>:foo</code>, create a new empty file at <code>lib/rdf/vocab/foo.rb</code>. * Create an entry in the README to document the availability of the library within this gem. * Run <code>rake gen_vocabs</code>.</p>
+
+<p>After the PR is merged, it will be available in the <code>develop</code> branch until the next library release.</p>
+
+<h3 id="label-Example+vocabulary+definition">Example vocabulary definition</h3>
+
+<p>The following definition is for the EARL vocabulary, which uses the <code>patch</code> capability to address inherent problems in the vocabulary definition.</p>
+
+<pre class="code ruby"><code class="ruby">  earl: {
+    uri: &quot;http://www.w3.org/ns/earl#&quot;,
+    source: &quot;http://www.w3.org/ns/earl&quot;,
+    patch: %{
+      @prefix earl: &lt;http://www.w3.org/ns/earl#&gt;.
+      @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt;.
+      @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;.
+
+      AddNew {
+        # Extends EARL to talk about collections of assertions
+        earl:Report a rdfs:Class, owl:Class ;
+          rdfs:label &quot;Report&quot; ;
+          rdfs:comment &quot;A collection of earl:Assertion&quot; .
+        earl:assertion a owl:ObjectProperty, rdfs:Property ;
+          rdfs:label &quot;assertion&quot; ;
+          rdfs:comment &quot;Test Assertions associated with an earl:Report or earl:TestCase&quot; ;
+          rdfs:domain [
+            a owl:Class ;
+            owl:unionOf (earl:Report earl:TestCase)
+          ] ;
+          rdfs:range earl:Assertion .
+      } .
+    }
+  }
+</code></pre>
 
 <h2 id="label-Authors">Authors</h2>
 <ul><li>
@@ -298,9 +332,9 @@
 </div></div>
 
       <div id="footer">
-  Generated on Tue Feb  8 19:27:36 2022 by
-  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.27 (ruby-3.1.0).
+  Generated on Fri Oct  7 19:51:51 2022 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-3.1.2).
 </div>
 
     </div>
