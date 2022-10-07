@@ -38,7 +38,7 @@ will limit the vocabularies which are returned from `RDF::Vocabulary.each`, whic
 * RDF::Vocab::DISCO      - [DDI-RDF Discovery Vocabulary](http://rdf-vocabulary.ddialliance.org/discovery#) (DDI)
 * RDF::Vocab::DOAP      - [Description of a Project (DOAP) vocabulary](https://github.com/edumbill/doap/wiki)
 * RDF::Vocab::DWC       - [Darwin Core](http://rs.tdwg.org/dwc/terms/)
-* RDF::Vocab::EARL      - [Evaluation and Report Language (EARL) 1.0 Schema](<http://www.w3.org/ns/earl#) (W3C)
+* RDF::Vocab::EARL      - [Evaluation and Report Language (EARL) 1.0 Schema](http://www.w3.org/ns/earl#) (W3C)
 * RDF::Vocab::EBUCore   - [EBUCore](http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#)
 * RDF::Vocab::EDM       - [Europeana Data Model (EDM)](https://pro.europeana.eu/page/edm-documentation)
 * RDF::Vocab::EXIF      - [Exif vocabulary workspace](http://www.w3.org/2003/12/exif/) (W3C)
@@ -119,13 +119,70 @@ Also adds the `gen-vocab` command to the `rdf` command-line executable to genera
 
 ## Adding new vocabularies
 
-* First, add an entry to `lib/rdf/vocab.rb`, the key names contained within
-for guidance. For more information, see the documentation on
+Vocabularies should only be added to this gem if they are widely used. An equivalent process can be used to add a vocabulary to an arbitrary Ruby application or gem if it is more application specific.
+
+New vocabularies should be generated via a pull request after cloning from GitHub. Be sure to use a custom branch name before creating the PR.
+
+* First, add an entry to `lib/rdf/vocab.rb`, the key is used to identify the vocabulary, and as the default basis for the prefix label to use for the vocabulary. The key names of the object value come from the following:
+  <dl>
+  <dt>uri (required)</dt>
+  <dd>The namespace URI for the vocabulary.</dd>
+  <dt>module_name (default RDF::Vocab)</dt>
+  <dd>The Ruby module in which the vocabulary class is created.</dd>
+  <dt>class_name (default from uppercase of the vocabulary identity)</dt>
+  <dd>The class name of the vocabulary</dd>
+  <dt>source (default from uri)</dt>
+  <dd>The source used to fetch the RDF vocabulary definition (most formats supported). Defaults to the vocabulary uri.</dd>
+  <dt>strict (default false)</dt>
+  <dd>Creates a _strict_ vocabulary, so that attempts to use undefined terms in the vocabulary namespace become errors.</dd>
+  <dt>alias (Internal only)</dt>
+  <dd>Indicates that this is an alias for a vocabulary defined directly in the RDF namespace.</dd>
+  <dt>skip</dt>
+  <dd>Do not process this vocabulary, typically when the vocabulary source is inaccessible.</dd>
+  <dt>patch</dt>
+  <dd>The value is taken as a string formatted as an <a href="http://www.w3.org/TR/ldpatch/">LD Patch</a> used to correct issues in the vocabulary source that may show up when the vocabulary is validated.</dd>
+  <dt>extra</dt>
+  <dd>Value is a JSON Object which is added to the resulting vocabulary definition.</dd>
+  </dl>
+
+  For more information, see the documentation on
 [RDF::Vocabulary](https://ruby-rdf.github.io/rdf/RDF/Vocabulary).
 * Next, create an empty file in `lib/rdf/vocab` based on the key name for
 your vocabulary. For example, if you've added the vocabulary `:foo`, create a
 new empty file at `lib/rdf/vocab/foo.rb`.
+* Create an entry in the README to document the availability of the library within this gem.
 * Run `rake gen_vocabs`.
+
+After the PR is merged, it will be available in the `develop` branch until the next library release.
+
+### Example vocabulary definition
+
+The following definition is for the EARL vocabulary, which uses the `patch` capability to address inherent problems in the vocabulary definition.
+
+      earl: {
+        uri: "http://www.w3.org/ns/earl#",
+        source: "http://www.w3.org/ns/earl",
+        patch: %{
+          @prefix earl: <http://www.w3.org/ns/earl#>.
+          @prefix owl: <http://www.w3.org/2002/07/owl#>.
+          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+
+          AddNew {
+            # Extends EARL to talk about collections of assertions
+            earl:Report a rdfs:Class, owl:Class ;
+              rdfs:label "Report" ;
+              rdfs:comment "A collection of earl:Assertion" .
+            earl:assertion a owl:ObjectProperty, rdfs:Property ;
+              rdfs:label "assertion" ;
+              rdfs:comment "Test Assertions associated with an earl:Report or earl:TestCase" ;
+              rdfs:domain [
+                a owl:Class ;
+                owl:unionOf (earl:Report earl:TestCase)
+              ] ;
+              rdfs:range earl:Assertion .
+          } .
+        }
+      }
 
 ## Authors
 
@@ -161,3 +218,4 @@ see <https://unlicense.org/> or the accompanying {file:LICENSE} file.
 [YARD]:             https://yardoc.org/
 [YARD-GS]:          https://rubydoc.info/docs/yard/file/docs/GettingStarted.md
 [PDD]:              https://unlicense.org/#unlicensing-contributions
+[LD Patch]:       http://www.w3.org/TR/ldpatch/
