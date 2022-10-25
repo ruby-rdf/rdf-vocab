@@ -12,13 +12,13 @@ module RDF::Vocab
       "http://creativecommons.org/ns#license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "http://purl.org/dc/terms/creator": "",
       "http://purl.org/dc/terms/description": {en: "The Bibframe vocabulary consists of RDF classes and properties used for the description of \r\n            items cataloged principally by libraries, but may also be used to describe items cataloged by museums and archives. \r\n            Classes include the three core classes - Work, Instance, and Item - in addition to many more \r\n            classes to support description. Properties describe characteristics of the resource being \r\n            described as well as relationships among resources. For example: one Work\r\n            might be a \"translation of\" another Work; an Instance may be an \r\n            \"instance of\" a particular Bibframe Work.  Other properties describe attributes of Works and Instances.  For\r\n            example: the Bibframe property \"subject\" expresses an important attribute of a Work \r\n            (what the Work is about), and the property \"extent\" (e.g. number of pages) expresses an\r\n            attribute of an Instance."},
-      "http://purl.org/dc/terms/issued": "2021-06-10T12:00:00.000-05:00",
-      "http://purl.org/dc/terms/modified": "2021-06-24T13:27:14.395-04:00",
+      "http://purl.org/dc/terms/issued": "2022-10-06T12:00:00.000-05:00",
+      "http://purl.org/dc/terms/modified": "2022-10-18T15:48:05.075-04:00",
       "http://purl.org/dc/terms/publisher": "",
       "http://purl.org/dc/terms/rights": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "http://www.w3.org/2002/07/owl#priorVersion": "http://id.loc.gov/ontologies/bibframe-2-0-1/",
-      "http://www.w3.org/2002/07/owl#versionIRI": "http://id.loc.gov/ontologies/bibframe-2-1-0/",
-      "http://www.w3.org/2002/07/owl#versionInfo": "2.1.0",
+      "http://www.w3.org/2002/07/owl#priorVersion": "http://id.loc.gov/ontologies/bibframe-2-1-0/",
+      "http://www.w3.org/2002/07/owl#versionIRI": "http://id.loc.gov/ontologies/bibframe-2-2-0/",
+      "http://www.w3.org/2002/07/owl#versionInfo": "2.2.0",
       label: "BIBFRAME vocabulary",
       type: "http://www.w3.org/2002/07/owl#Ontology"
 
@@ -116,6 +116,11 @@ module RDF::Vocab
       label: "Base material",
       subClassOf: "http://id.loc.gov/ontologies/bibframe/Material",
       type: "http://www.w3.org/2002/07/owl#Class"
+    term :Binding,
+      definition: "Information about methods used to bind a published or unpublished resource, or other binding information.",
+      "http://purl.org/dc/terms/modified": "2022-10-03 (New [GH91])",
+      label: "Binding method",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :BookFormat,
       definition: "Result of folding a printed sheet to form a gathering of leaves.",
       "http://purl.org/dc/terms/modified": "2016-04-21 (New)",
@@ -204,8 +209,9 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Collection,
       definition: "Aggregation of resources, generally gathered together artificially.",
-      "http://purl.org/dc/terms/modified": "2016-04-21 (New)",
+      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2022-10-03 (changed subClassOf [GH92])"],
       label: "Collection",
+      subClassOf: "http://id.loc.gov/ontologies/bibframe/Work",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :CollectionArrangement,
       definition: "Information about the organization and arrangement of a collection of items. For instance, for computer files, organization and arrangement information may be the file structure and sort sequence of a file; for visual materials, this information may be how a collection is arranged.",
@@ -262,15 +268,18 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#Class"
     term :DescriptionAuthentication,
       definition: "Indication of specific types of reviews that have been carried out on the description information.",
-      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2016-04-29 (fixed class name)"],
+      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2016-04-29 (fixed class name)", "2022-10-03 (removed subClassOf [GH90])"],
       label: "Metadata authentication",
-      subClassOf: "http://id.loc.gov/ontologies/bibframe/AdminMetadata",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :DescriptionConventions,
       definition: "Rules used for the descriptive content of the resource description.",
-      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2016-04-24 (fixed class name)"],
+      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2016-04-24 (fixed class name)", "2022-10-03 (removed subClassOf [GH90])"],
       label: "Description conventions",
-      subClassOf: "http://id.loc.gov/ontologies/bibframe/AdminMetadata",
+      type: "http://www.w3.org/2002/07/owl#Class"
+    term :DescriptionLevel,
+      definition: "Designation of the descriptive content of the metadata.",
+      "http://purl.org/dc/terms/modified": "2022-10-03 (New [GH43])",
+      label: "Description level",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :DigitalCharacteristic,
       definition: "Technical specification relating to the digital encoding of text, image, audio, video, and other types of data in a resource.",
@@ -402,9 +411,8 @@ module RDF::Vocab
       type: "http://www.w3.org/2002/07/owl#Class"
     term :GenerationProcess,
       definition: "Indication of the program or process used to generate the description by application of a particular transformation.",
-      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2016-04-24 (fixed class name)"],
+      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2016-04-24 (fixed class name)", "2022-10-03 (removed subClassOf [GH90])"],
       label: "Generation process",
-      subClassOf: "http://id.loc.gov/ontologies/bibframe/AdminMetadata",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :GenreForm,
       definition: "Form category or genre to which a resource belongs.",
@@ -460,6 +468,12 @@ module RDF::Vocab
       definition: "Resource reflecting an individual, material embodiment of a Work.",
       "http://purl.org/dc/terms/modified": "2016-04-21 (New)",
       label: "Instance",
+      type: "http://www.w3.org/2002/07/owl#Class"
+    term :Integrating,
+      definition: "Resource that is added to or changed by updates that do not remain discrete but are integrated into the whole.",
+      "http://purl.org/dc/terms/modified": "2022-10-03 (New [GH91])",
+      label: "Integrating resource",
+      subClassOf: "http://id.loc.gov/ontologies/bibframe/Work",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :IntendedAudience,
       definition: "Information that identifies the specific intended or target audience or intellectual level for which the content described is considered appropriate. Also used to record interest and motivation levels and special learner characteristics.",
@@ -548,6 +562,12 @@ module RDF::Vocab
       label: "Key title",
       subClassOf: "http://id.loc.gov/ontologies/bibframe/VariantTitle",
       type: "http://www.w3.org/2002/07/owl#Class"
+    term :Kit,
+      definition: "Resource that contains a mixture of various components issued as a unit and intended primarily for instructional purposes.",
+      "http://purl.org/dc/terms/modified": "2022-10-03 (New [GH91])",
+      label: "Kit",
+      subClassOf: "http://id.loc.gov/ontologies/bibframe/MixedMaterial",
+      type: "http://www.w3.org/2002/07/owl#Class"
     term :Language,
       definition: "Language entity.",
       "http://purl.org/dc/terms/modified": "2016-04-21 (New)",
@@ -583,10 +603,10 @@ module RDF::Vocab
       subClassOf: "http://id.loc.gov/ontologies/bibframe/ProvisionActivity",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Manuscript,
-      definition: "Resource that is written in handwriting or typescript. These are generally unique resources.",
-      "http://purl.org/dc/terms/modified": "2016-04-21 (New)",
+      definition: "Resource which is written in handwriting or typescript. These are generally unique resources.",
+      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2022-10-03 (changed subClassOf [GH92])"],
       label: "Manuscript",
-      subClassOf: "http://id.loc.gov/ontologies/bibframe/Instance",
+      subClassOf: "http://id.loc.gov/ontologies/bibframe/Work",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Material,
       definition: "Substance or composition of the resource.",
@@ -611,9 +631,21 @@ module RDF::Vocab
       subClassOf: "http://id.loc.gov/ontologies/bibframe/Agent",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :MixedMaterial,
-      definition: "Resource comprised of multiple types which is not driven by software; for instance, a manuscript collection of text, photographs and sound recordings.",
-      "http://purl.org/dc/terms/modified": "2016-04-21 (New)",
+      definition: "Resource comprised of multiple types which is not driven by software. For instance, an archival collection of text, photographs and sound recordings.",
+      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2022-10-03 (revised definition [GH92])"],
       label: "Mixed material",
+      subClassOf: "http://id.loc.gov/ontologies/bibframe/Work",
+      type: "http://www.w3.org/2002/07/owl#Class"
+    term :Modification,
+      definition: "Information relating to modification of a resource.",
+      "http://purl.org/dc/terms/modified": "2022-10-03 (New [GH69])",
+      label: "Modification",
+      subClassOf: "http://id.loc.gov/ontologies/bibframe/ProvisionActivity",
+      type: "http://www.w3.org/2002/07/owl#Class"
+    term :Monograph,
+      definition: "Resource that is issued as a single physical unit or intangible single logical unit.",
+      "http://purl.org/dc/terms/modified": "2022-10-03 (New [GH91])",
+      label: "Monograph",
       subClassOf: "http://id.loc.gov/ontologies/bibframe/Work",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Mount,
@@ -634,10 +666,16 @@ module RDF::Vocab
       subClassOf: "http://id.loc.gov/ontologies/bibframe/Work",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :Multimedia,
-      definition: "Electronic resource that is a computer program (i.e., digitally encoded instructions intended to be processed and performed by a computer) or which consists of multiple media types that are software driven, such as videogames.",
-      "http://purl.org/dc/terms/modified": "2016-04-21 (New)",
+      definition: "Electronic resource which is a computer program or consists of multiple media types that are software driven, such as videogames.",
+      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2022-10-03 (revised definition [GH92])"],
       label: "Software or multimedia",
       subClassOf: "http://id.loc.gov/ontologies/bibframe/Work",
+      type: "http://www.w3.org/2002/07/owl#Class"
+    term :MusicAudio,
+      definition: "Music resource expressed in an audible form.",
+      "http://purl.org/dc/terms/modified": "2022-10-03 (New [GH91])",
+      label: "Music audio",
+      subClassOf: "http://id.loc.gov/ontologies/bibframe/Audio",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :MusicDistributorNumber,
       definition: "Identifier appearing on a resource assigned by a distributor to a specific audio recording, notated music publication, music-related publication, or videorecording.",
@@ -694,6 +732,12 @@ module RDF::Vocab
       "http://purl.org/dc/terms/modified": "2016-04-21 (New)",
       label: "NBN",
       subClassOf: "http://id.loc.gov/ontologies/bibframe/Identifier",
+      type: "http://www.w3.org/2002/07/owl#Class"
+    term :NonMusicAudio,
+      definition: "Resource expressed in an audible form, including spoken word and other non-musical sounds.",
+      "http://purl.org/dc/terms/modified": "2022-10-03 (New [GH91])",
+      label: "Non-music audio",
+      subClassOf: "http://id.loc.gov/ontologies/bibframe/Audio",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :NotatedMovement,
       definition: "Graphic, non-realized representations of movement intended to be perceived visually, e.g. dance.",
@@ -904,6 +948,18 @@ module RDF::Vocab
       "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2021-06-09 (Modified label [GH67])"],
       label: "Script",
       subClassOf: "http://id.loc.gov/ontologies/bibframe/Notation",
+      type: "http://www.w3.org/2002/07/owl#Class"
+    term :Serial,
+      definition: "Resource that is issued in successive parts, usually numbered, that has no predetermined conclusion.",
+      "http://purl.org/dc/terms/modified": "2022-10-03 (New [GH91])",
+      label: "Serial",
+      subClassOf: "http://id.loc.gov/ontologies/bibframe/Work",
+      type: "http://www.w3.org/2002/07/owl#Class"
+    term :Series,
+      definition: "Resource with a collective title that applies to a group of separate resources, each of which also has its own title.",
+      "http://purl.org/dc/terms/modified": "2022-10-03 (New [GH91])",
+      label: "Series",
+      subClassOf: "http://id.loc.gov/ontologies/bibframe/Work",
       type: "http://www.w3.org/2002/07/owl#Class"
     term :ShelfMark,
       definition: "Piece/item identifier, such as a call or other type of number.",
@@ -1266,6 +1322,13 @@ module RDF::Vocab
       range: "http://www.w3.org/2000/01/rdf-schema#Resource",
       subPropertyOf: "http://id.loc.gov/ontologies/bibframe/materialOf",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
+    property :binding,
+      definition: "A method used to bind a published or unpublished resource,or other binding information.",
+      domain: "http://id.loc.gov/ontologies/bibframe/Instance",
+      "http://purl.org/dc/terms/modified": "2022-10-03 (New [GH91])",
+      label: "Binding method",
+      range: "http://www.w3.org/2000/01/rdf-schema#Resource",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :bookFormat,
       definition: "Result of folding a printed sheet to form a gathering of leaves.",
       domain: "http://id.loc.gov/ontologies/bibframe/Instance",
@@ -1283,9 +1346,9 @@ module RDF::Vocab
     property :carrier,
       definition: "Categorization reflecting the format of the storage medium and housing of a carrier.",
       domain: "http://id.loc.gov/ontologies/bibframe/Instance",
-      "http://purl.org/dc/terms/modified": "2016-04-21 (New)",
+      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2022-10-03 (Removed range [GH72])"],
       label: "Carrier type",
-      range: "http://id.loc.gov/ontologies/bibframe/Carrier",
+      range: "http://www.w3.org/2000/01/rdf-schema#Resource",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :cartographicAttributes,
       comment: "Suggested use - With Work or Instance",
@@ -1354,9 +1417,9 @@ module RDF::Vocab
     property :content,
       definition: "Categorization reflecting the fundamental form of communication in which the content is expressed and the human sense through which it is intended to be perceived.",
       domain: "http://id.loc.gov/ontologies/bibframe/Work",
-      "http://purl.org/dc/terms/modified": "2016-04-21 (New)",
+      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2022-10-03 (Removed range [GH71])"],
       label: "Content type",
-      range: "http://id.loc.gov/ontologies/bibframe/Content",
+      range: "http://www.w3.org/2000/01/rdf-schema#Resource",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :contentAccessibility,
       comment: "Suggested use - With Work or Instance",
@@ -1526,6 +1589,13 @@ module RDF::Vocab
       "http://purl.org/dc/terms/modified": "2016-04-21 (New)",
       label: "Description language",
       range: "http://id.loc.gov/ontologies/bibframe/Language",
+      type: "http://www.w3.org/2002/07/owl#ObjectProperty"
+    property :descriptionLevel,
+      definition: "Designation of the descriptive content of the metadata.",
+      domain: "http://id.loc.gov/ontologies/bibframe/AdminMetadata",
+      "http://purl.org/dc/terms/modified": "2022-10-03 (New [GH43])",
+      label: "Description level",
+      range: "http://id.loc.gov/ontologies/bibframe/DescriptionLevel",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :descriptionModifier,
       definition: "Agency that modified a description.",
@@ -1916,9 +1986,9 @@ module RDF::Vocab
     property :intendedAudience,
       comment: "Suggested use - With Work or Instance",
       definition: "Information that identifies the specific audience or intellectual level for which the content of the resource is considered appropriate.",
-      "http://purl.org/dc/terms/modified": "2016-04-21 (New)",
+      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2022-10-03 (Removed range [GH74])"],
       label: "Intended audience",
-      range: "http://id.loc.gov/ontologies/bibframe/IntendedAudience",
+      range: "http://www.w3.org/2000/01/rdf-schema#Resource",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :issuance,
       comment: "Suggested use - With Work or Instance",
@@ -1953,9 +2023,9 @@ module RDF::Vocab
     property :language,
       definition: "Language associated with a resource or its parts.",
       domain: "http://www.w3.org/2000/01/rdf-schema#Resource",
-      "http://purl.org/dc/terms/modified": "2016-04-21 (New)",
+      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2022-10-03 (Removed range [GH70])"],
       label: "Language information",
-      range: "http://id.loc.gov/ontologies/bibframe/Language",
+      range: "http://www.w3.org/2000/01/rdf-schema#Resource",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :lastIssue,
       definition: "Ending date of a resource and/or the sequential designations.",
@@ -2003,9 +2073,9 @@ module RDF::Vocab
     property :media,
       comment: "Suggested use - With Work or Instance",
       definition: "Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource.",
-      "http://purl.org/dc/terms/modified": "2016-04-21 (New)",
+      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2022-10-03 (Removed range [GH73])"],
       label: "Media type",
-      range: "http://id.loc.gov/ontologies/bibframe/Media",
+      range: "http://www.w3.org/2000/01/rdf-schema#Resource",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :mergedToForm,
       comment: ["Suggested use - With Work or Instance", "Suggested value - Work or Instance"],
@@ -2116,9 +2186,9 @@ module RDF::Vocab
       subPropertyOf: "http://id.loc.gov/ontologies/bibframe/date",
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :originPlace,
-      definition: "Place from which the creation of the Work originated.",
-      domain: "http://id.loc.gov/ontologies/bibframe/Work",
-      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2021-06-09 (Better align definition with property name [GH50], Removed range [GH19])"],
+      comment: "Suggested use - With Work or Instance",
+      definition: "Place from which the creation of the resource originated.",
+      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2021-06-09 (Better align definition with property name [GH50], Removed range [GH19])", "2022-10-03 (updated domain [GH83])"],
       label: "Origin place",
       range: "http://www.w3.org/2000/01/rdf-schema#Resource",
       subPropertyOf: "http://id.loc.gov/ontologies/bibframe/place",
@@ -2315,17 +2385,17 @@ module RDF::Vocab
     property :replacedBy,
       comment: ["Suggested use - With Work or Instance", "Suggested value - Work or Instance"],
       definition: "Later resource used in place of an earlier resource, usually because the later resource contains updated or new information.",
-      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2016-04-29 (added inverse, updated range)"],
+      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2016-04-29 (added inverse, updated range)", "2022-10-03 (corrected label [GH85])"],
       inverseOf: "http://id.loc.gov/ontologies/bibframe/replacementOf",
-      label: "Succeeded by",
+      label: "Replaced by",
       subPropertyOf: "http://id.loc.gov/ontologies/bibframe/succeededBy",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :replacementOf,
       comment: ["Suggested use - With Work or Instance", "Suggested value - Work or Instance"],
       definition: "Earlier resource whose content has been replaced by a later resource, usually because the later resource contains updated or new information.",
-      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2016-04-29 (added inverse, updated range)"],
+      "http://purl.org/dc/terms/modified": ["2016-04-21 (New)", "2016-04-29 (added inverse, updated range)", "2022-10-03 (corrected label [GH85])"],
       inverseOf: "http://id.loc.gov/ontologies/bibframe/replacedBy",
-      label: "Preceded by",
+      label: "Replacement of",
       subPropertyOf: "http://id.loc.gov/ontologies/bibframe/precededBy",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
     property :reproductionOf,
@@ -2619,6 +2689,14 @@ module RDF::Vocab
       label: "Use and access condition",
       range: "http://id.loc.gov/ontologies/bibframe/UsageAndAccessPolicy",
       type: "http://www.w3.org/2002/07/owl#ObjectProperty"
+    property :validDate,
+      definition: "The date or date range during which the resource is accurate.",
+      domain: "http://id.loc.gov/ontologies/bibframe/Work",
+      "http://purl.org/dc/terms/modified": "2022-10-03 (New [GH68])",
+      label: "Valid date",
+      range: "http://www.w3.org/2000/01/rdf-schema#Literal",
+      subPropertyOf: "http://id.loc.gov/ontologies/bibframe/date",
+      type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
     property :variantType,
       definition: "Type of title variation, e.g., acronym, cover, spine, earlier, later, series version.",
       domain: "http://id.loc.gov/ontologies/bibframe/VariantTitle",
