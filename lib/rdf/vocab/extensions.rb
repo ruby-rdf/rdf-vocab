@@ -391,7 +391,12 @@ module RDF
         case template
         when /.haml$/
           require 'haml'
-          haml = Haml::Engine.new(File.read(template))
+          haml = if Haml.const_defined?(:Template)
+            Haml::Template.new {File.read(template)}
+          else
+           Haml::Engine.new(File.read(template))
+          end
+          
           haml.render(self, ont: expanded, context: json['@context'], prefixes: prefixes)
         when /.erb$/
           require 'erubis'

@@ -30,7 +30,7 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency     'rdf',              '~> 3.2', '>= 3.2.4'
 
   # Either of these are required for HTML vocabulary generation
-  gem.add_development_dependency 'haml',             '~> 5.2'
+  gem.add_development_dependency 'haml',             '>= 5.2', "< 7"
   gem.add_development_dependency 'erubis',           '~> 2.7'
 
   gem.add_development_dependency 'json-ld',          '~> 3.2'
