@@ -11,7 +11,7 @@ module RDF::Vocab
     ontology :"http://dbpedia.org/ontology/",
       comment: {en: "\n              This ontology is generated from the manually created specifications in the DBpedia Mappings\n              Wiki. Each release of this ontology corresponds to a new release of the DBpedia data set which\n              contains instance data extracted from the different language versions of Wikipedia. For\n              information regarding changes in this ontology, please refer to the DBpedia Mappings Wiki.\n            "},
       "http://creativecommons.org/ns#license": "http://creativecommons.org/licenses/by-sa/3.0/",
-      "http://open.vocab.org/terms/defines": ["http://dbpedia.org/datatype/Area", "http://dbpedia.org/datatype/Currency", "http://dbpedia.org/datatype/Density", "http://dbpedia.org/datatype/ElectricCurrent", "http://dbpedia.org/datatype/Energy", "http://dbpedia.org/datatype/FlowRate", "http://dbpedia.org/datatype/Force", "http://dbpedia.org/datatype/Frequency", "http://dbpedia.org/datatype/FuelEfficiency", "http://dbpedia.org/datatype/InformationUnit", "http://dbpedia.org/datatype/Length", "http://dbpedia.org/datatype/LinearMassDensity", "http://dbpedia.org/datatype/Mass", "http://dbpedia.org/datatype/PopulationDensity", "http://dbpedia.org/datatype/Power", "http://dbpedia.org/datatype/Pressure", "http://dbpedia.org/datatype/Ratio", "http://dbpedia.org/datatype/Speed", "http://dbpedia.org/datatype/Temperature", "http://dbpedia.org/datatype/Time", "http://dbpedia.org/datatype/Torque", "http://dbpedia.org/datatype/Voltage", "http://dbpedia.org/datatype/Volume", "http://dbpedia.org/datatype/acre", "http://dbpedia.org/datatype/afghanAfghani", "http://dbpedia.org/datatype/albanianLek", "http://dbpedia.org/datatype/algerianDinar", "http://dbpedia.org/datatype/ampere", "http://dbpedia.org/datatype/angolanKwanza", "http://dbpedia.org/datatype/argentinePeso", "http://dbpedia.org/datatype/armenianDram", "http://dbpedia.org/datatype/arubanGuilder", "http://dbpedia.org/datatype/astronomicalUnit", "http://dbpedia.org/datatype/australianDollar", "http://dbpedia.org/datatype/azerbaijaniManat", "http://dbpedia.org/datatype/bahamianDollar", "http://dbpedia.org/datatype/bahrainiDinar", "http://dbpedia.org/datatype/bangladeshiTaka", "http://dbpedia.org/datatype/bar", "http://dbpedia.org/datatype/barbadosDollar", "http://dbpedia.org/datatype/belarussianRuble", "http://dbpedia.org/datatype/belizeDollar", "http://dbpedia.org/datatype/bermudianDollar", "http://dbpedia.org/datatype/bhutaneseNgultrum", "http://dbpedia.org/datatype/bit", "http://dbpedia.org/datatype/bolivianBoliviano", "http://dbpedia.org/datatype/bosniaAndHerzegovinaConvertibleMarks", "http://dbpedia.org/datatype/botswanaPula", "http://dbpedia.org/datatype/brakeHorsepower", "http://dbpedia.org/datatype/brazilianReal", "http://dbpedia.org/datatype/bruneiDollar", "http://dbpedia.org/datatype/bulgarianLev", "http://dbpedia.org/datatype/burundianFranc", "http://dbpedia.org/datatype/byte", "http://dbpedia.org/datatype/calorie", "http://dbpedia.org/datatype/cambodianRiel", "http://dbpedia.org/datatype/canadianDollar", "http://dbpedia.org/datatype/capeVerdeEscudo", "http://dbpedia.org/datatype/carat", "http://dbpedia.org/datatype/caymanIslandsDollar", "http://dbpedia.org/datatype/centilitre", "http://dbpedia.org/datatype/centimetre", "http://dbpedia.org/datatype/centralAfricanCfaFranc", "http://dbpedia.org/datatype/cfpFranc", "http://dbpedia.org/datatype/chain", "http://dbpedia.org/datatype/chileanPeso", "http://dbpedia.org/datatype/colombianPeso", "http://dbpedia.org/datatype/comorianFranc", "http://dbpedia.org/datatype/congoleseFranc", "http://dbpedia.org/datatype/costaRicanColon", "http://dbpedia.org/datatype/croatianKuna", "http://dbpedia.org/datatype/cubanPeso", "http://dbpedia.org/datatype/cubicCentimetre", "http://dbpedia.org/datatype/cubicDecametre", "http://dbpedia.org/datatype/cubicDecimetre", "http://dbpedia.org/datatype/cubicFeetPerSecond", "http://dbpedia.org/datatype/cubicFeetPerYear", "http://dbpedia.org/datatype/cubicFoot", "http://dbpedia.org/datatype/cubicHectometre", "http://dbpedia.org/datatype/cubicInch", "http://dbpedia.org/datatype/cubicKilometre", "http://dbpedia.org/datatype/cubicMetre", "http://dbpedia.org/datatype/cubicMetrePerSecond", "http://dbpedia.org/datatype/cubicMetrePerYear", "http://dbpedia.org/datatype/cubicMile", "http://dbpedia.org/datatype/cubicMillimetre", "http://dbpedia.org/datatype/cubicYard", "http://dbpedia.org/datatype/czechKoruna", "http://dbpedia.org/datatype/danishKrone", "http://dbpedia.org/datatype/day", "http://dbpedia.org/datatype/decametre", "http://dbpedia.org/datatype/decibar", "http://dbpedia.org/datatype/decilitre", "http://dbpedia.org/datatype/decimetre", "http://dbpedia.org/datatype/degreeCelsius", "http://dbpedia.org/datatype/degreeFahrenheit", "http://dbpedia.org/datatype/degreeRankine", "http://dbpedia.org/datatype/djiboutianFranc", "http://dbpedia.org/datatype/dominicanPeso", "http://dbpedia.org/datatype/eastCaribbeanDollar", "http://dbpedia.org/datatype/egyptianPound", "http://dbpedia.org/datatype/engineConfiguration", "http://dbpedia.org/datatype/erg", "http://dbpedia.org/datatype/eritreanNakfa", "http://dbpedia.org/datatype/estonianKroon", "http://dbpedia.org/datatype/ethiopianBirr", "http://dbpedia.org/datatype/euro", "http://dbpedia.org/datatype/falklandIslandsPound", "http://dbpedia.org/datatype/fathom", "http://dbpedia.org/datatype/fijiDollar", "http://dbpedia.org/datatype/foot", "http://dbpedia.org/datatype/footPerMinute", "http://dbpedia.org/datatype/footPerSecond", "http://dbpedia.org/datatype/footPound", "http://dbpedia.org/datatype/fuelType", "http://dbpedia.org/datatype/furlong", "http://dbpedia.org/datatype/gambianDalasi", "http://dbpedia.org/datatype/georgianLari", "http://dbpedia.org/datatype/ghanaianCedi", "http://dbpedia.org/datatype/gibraltarPound", "http://dbpedia.org/datatype/gigabyte", "http://dbpedia.org/datatype/gigahertz", "http://dbpedia.org/datatype/gigalitre", "http://dbpedia.org/datatype/gigametre", "http://dbpedia.org/datatype/giganewton", "http://dbpedia.org/datatype/gigawatt", "http://dbpedia.org/datatype/gigawattHour", "http://dbpedia.org/datatype/grain", "http://dbpedia.org/datatype/gram", "http://dbpedia.org/datatype/gramForce", "http://dbpedia.org/datatype/gramPerCubicCentimetre", "http://dbpedia.org/datatype/gramPerKilometre", "http://dbpedia.org/datatype/gramPerMillilitre", "http://dbpedia.org/datatype/guatemalanQuetzal", "http://dbpedia.org/datatype/guineaFranc", "http://dbpedia.org/datatype/guyanaDollar", "http://dbpedia.org/datatype/haitiGourde", "http://dbpedia.org/datatype/hand", "http://dbpedia.org/datatype/hectare", "http://dbpedia.org/datatype/hectolitre", "http://dbpedia.org/datatype/hectometre", "http://dbpedia.org/datatype/hectopascal", "http://dbpedia.org/datatype/hertz", "http://dbpedia.org/datatype/honduranLempira", "http://dbpedia.org/datatype/hongKongDollar", "http://dbpedia.org/datatype/horsepower", "http://dbpedia.org/datatype/hour", "http://dbpedia.org/datatype/hungarianForint", "http://dbpedia.org/datatype/icelandKrona", "http://dbpedia.org/datatype/imperialBarrel", "http://dbpedia.org/datatype/imperialBarrelOil", "http://dbpedia.org/datatype/imperialGallon", "http://dbpedia.org/datatype/inch", "http://dbpedia.org/datatype/inchPound", "http://dbpedia.org/datatype/indianRupee", "http://dbpedia.org/datatype/indonesianRupiah", "http://dbpedia.org/datatype/inhabitantsPerSquareKilometre", "http://dbpedia.org/datatype/inhabitantsPerSquareMile", "http://dbpedia.org/datatype/iranianRial", "http://dbpedia.org/datatype/iraqiDinar", "http://dbpedia.org/datatype/israeliNewSheqel", "http://dbpedia.org/datatype/jamaicanDollar", "http://dbpedia.org/datatype/japaneseYen", "http://dbpedia.org/datatype/jordanianDinar", "http://dbpedia.org/datatype/joule", "http://dbpedia.org/datatype/kazakhstaniTenge", "http://dbpedia.org/datatype/kelvin", "http://dbpedia.org/datatype/kenyanShilling", "http://dbpedia.org/datatype/kiloampere", "http://dbpedia.org/datatype/kilobit", "http://dbpedia.org/datatype/kilobyte", "http://dbpedia.org/datatype/kilocalorie", "http://dbpedia.org/datatype/kilogram", "http://dbpedia.org/datatype/kilogramForce", "http://dbpedia.org/datatype/kilogramPerCubicMetre", "http://dbpedia.org/datatype/kilogramPerLitre", "http://dbpedia.org/datatype/kilohertz", "http://dbpedia.org/datatype/kilojoule", "http://dbpedia.org/datatype/kilolightYear", "http://dbpedia.org/datatype/kilolitre", "http://dbpedia.org/datatype/kilometre", "http://dbpedia.org/datatype/kilometrePerHour", "http://dbpedia.org/datatype/kilometrePerSecond", "http://dbpedia.org/datatype/kilometresPerLitre", "http://dbpedia.org/datatype/kilonewton", "http://dbpedia.org/datatype/kilopascal", "http://dbpedia.org/datatype/kilopond", "http://dbpedia.org/datatype/kilovolt", "http://dbpedia.org/datatype/kilowatt", "http://dbpedia.org/datatype/kilowattHour", "http://dbpedia.org/datatype/knot", "http://dbpedia.org/datatype/kuwaitiDinar", "http://dbpedia.org/datatype/kyrgyzstaniSom", "http://dbpedia.org/datatype/laoKip", "http://dbpedia.org/datatype/latvianLats", "http://dbpedia.org/datatype/lebanesePound", "http://dbpedia.org/datatype/lesothoLoti", "http://dbpedia.org/datatype/liberianDollar", "http://dbpedia.org/datatype/libyanDinar", "http://dbpedia.org/datatype/lightYear", "http://dbpedia.org/datatype/lithuanianLitas", "http://dbpedia.org/datatype/litre", "http://dbpedia.org/datatype/macanesePataca", "http://dbpedia.org/datatype/macedonianDenar", "http://dbpedia.org/datatype/malagasyAriary", "http://dbpedia.org/datatype/malawianKwacha", "http://dbpedia.org/datatype/malaysianRinggit", "http://dbpedia.org/datatype/maldivianRufiyaa", "http://dbpedia.org/datatype/mauritanianOuguiya", "http://dbpedia.org/datatype/mauritianRupee", "http://dbpedia.org/datatype/megabit", "http://dbpedia.org/datatype/megabyte", "http://dbpedia.org/datatype/megacalorie", "http://dbpedia.org/datatype/megahertz", "http://dbpedia.org/datatype/megalitre", "http://dbpedia.org/datatype/megametre", "http://dbpedia.org/datatype/meganewton", "http://dbpedia.org/datatype/megapascal", "http://dbpedia.org/datatype/megapond", "http://dbpedia.org/datatype/megavolt", "http://dbpedia.org/datatype/megawatt", "http://dbpedia.org/datatype/megawattHour", "http://dbpedia.org/datatype/metre", "http://dbpedia.org/datatype/metrePerSecond", "http://dbpedia.org/datatype/mexicanPeso", "http://dbpedia.org/datatype/microampere", "http://dbpedia.org/datatype/microlitre", "http://dbpedia.org/datatype/micrometre", "http://dbpedia.org/datatype/microsecond", "http://dbpedia.org/datatype/microvolt", "http://dbpedia.org/datatype/mile", "http://dbpedia.org/datatype/milePerHour", "http://dbpedia.org/datatype/milliampere", "http://dbpedia.org/datatype/millibar", "http://dbpedia.org/datatype/millicalorie", "http://dbpedia.org/datatype/milligram", "http://dbpedia.org/datatype/milligramForce", "http://dbpedia.org/datatype/millihertz", "http://dbpedia.org/datatype/millilitre", "http://dbpedia.org/datatype/millimetre", "http://dbpedia.org/datatype/millinewton", "http://dbpedia.org/datatype/millipascal", "http://dbpedia.org/datatype/millipond", "http://dbpedia.org/datatype/millisecond", "http://dbpedia.org/datatype/millivolt", "http://dbpedia.org/datatype/milliwatt", "http://dbpedia.org/datatype/milliwattHour", "http://dbpedia.org/datatype/minute", "http://dbpedia.org/datatype/moldovanLeu", "http://dbpedia.org/datatype/mongolianTögrög", "http://dbpedia.org/datatype/moroccanDirham", "http://dbpedia.org/datatype/mozambicanMetical", "http://dbpedia.org/datatype/myanmaKyat", "http://dbpedia.org/datatype/namibianDollar", "http://dbpedia.org/datatype/nanometre", "http://dbpedia.org/datatype/nanonewton", "http://dbpedia.org/datatype/nanosecond", "http://dbpedia.org/datatype/nautialMile", "http://dbpedia.org/datatype/nepaleseRupee", "http://dbpedia.org/datatype/netherlandsAntilleanGuilder", "http://dbpedia.org/datatype/newTaiwanDollar", "http://dbpedia.org/datatype/newZealandDollar", "http://dbpedia.org/datatype/newton", "http://dbpedia.org/datatype/newtonCentimetre", "http://dbpedia.org/datatype/newtonMetre", "http://dbpedia.org/datatype/newtonMillimetre", "http://dbpedia.org/datatype/nicaraguanCórdoba", "http://dbpedia.org/datatype/nigerianNaira", "http://dbpedia.org/datatype/northKoreanWon", "http://dbpedia.org/datatype/norwegianKrone", "http://dbpedia.org/datatype/omaniRial", "http://dbpedia.org/datatype/ounce", "http://dbpedia.org/datatype/pakistaniRupee", "http://dbpedia.org/datatype/panamanianBalboa", "http://dbpedia.org/datatype/papuaNewGuineanKina", "http://dbpedia.org/datatype/paraguayanGuarani", "http://dbpedia.org/datatype/pascal", "http://dbpedia.org/datatype/perCent", "http://dbpedia.org/datatype/perMil", "http://dbpedia.org/datatype/peruvianNuevoSol", "http://dbpedia.org/datatype/pferdestaerke", "http://dbpedia.org/datatype/philippinePeso", "http://dbpedia.org/datatype/polishZłoty", "http://dbpedia.org/datatype/pond", "http://dbpedia.org/datatype/pound", "http://dbpedia.org/datatype/poundFoot", "http://dbpedia.org/datatype/poundPerSquareInch", "http://dbpedia.org/datatype/poundSterling", "http://dbpedia.org/datatype/poundal", "http://dbpedia.org/datatype/qatariRial", "http://dbpedia.org/datatype/renminbi", "http://dbpedia.org/datatype/rod", "http://dbpedia.org/datatype/romanianNewLeu", "http://dbpedia.org/datatype/russianRouble", "http://dbpedia.org/datatype/rwandaFranc", "http://dbpedia.org/datatype/saintHelenaPound", "http://dbpedia.org/datatype/samoanTala", "http://dbpedia.org/datatype/saudiRiyal", "http://dbpedia.org/datatype/second", "http://dbpedia.org/datatype/serbianDinar", "http://dbpedia.org/datatype/seychellesRupee", "http://dbpedia.org/datatype/sierraLeoneanLeone", "http://dbpedia.org/datatype/singaporeDollar", "http://dbpedia.org/datatype/slovakKoruna", "http://dbpedia.org/datatype/solomonIslandsDollar", "http://dbpedia.org/datatype/somaliShilling", "http://dbpedia.org/datatype/southAfricanRand", "http://dbpedia.org/datatype/southKoreanWon", "http://dbpedia.org/datatype/squareCentimetre", "http://dbpedia.org/datatype/squareDecametre", "http://dbpedia.org/datatype/squareDecimetre", "http://dbpedia.org/datatype/squareFoot", "http://dbpedia.org/datatype/squareHectometre", "http://dbpedia.org/datatype/squareInch", "http://dbpedia.org/datatype/squareKilometre", "http://dbpedia.org/datatype/squareMetre", "http://dbpedia.org/datatype/squareMile", "http://dbpedia.org/datatype/squareMillimetre", "http://dbpedia.org/datatype/squareNauticalMile", "http://dbpedia.org/datatype/squareYard", "http://dbpedia.org/datatype/sriLankanRupee", "http://dbpedia.org/datatype/standardAtmosphere", "http://dbpedia.org/datatype/stone", "http://dbpedia.org/datatype/sudanesePound", "http://dbpedia.org/datatype/surinamDollar", "http://dbpedia.org/datatype/swaziLilangeni", "http://dbpedia.org/datatype/swedishKrona", "http://dbpedia.org/datatype/swissFranc", "http://dbpedia.org/datatype/syrianPound", "http://dbpedia.org/datatype/sãoToméAndPríncipeDobra", "http://dbpedia.org/datatype/tajikistaniSomoni", "http://dbpedia.org/datatype/tanzanianShilling", "http://dbpedia.org/datatype/terabyte", "http://dbpedia.org/datatype/terahertz", "http://dbpedia.org/datatype/terawattHour", "http://dbpedia.org/datatype/thaiBaht", "http://dbpedia.org/datatype/tonganPaanga", "http://dbpedia.org/datatype/tonne", "http://dbpedia.org/datatype/tonneForce", "http://dbpedia.org/datatype/trinidadAndTobagoDollar", "http://dbpedia.org/datatype/tunisianDinar", "http://dbpedia.org/datatype/turkishLira", "http://dbpedia.org/datatype/turkmenistaniManat", "http://dbpedia.org/datatype/ugandaShilling", "http://dbpedia.org/datatype/ukrainianHryvnia", "http://dbpedia.org/datatype/unitedArabEmiratesDirham", "http://dbpedia.org/datatype/uruguayanPeso", "http://dbpedia.org/datatype/usBarrel", "http://dbpedia.org/datatype/usBarrelOil", "http://dbpedia.org/datatype/usDollar", "http://dbpedia.org/datatype/usGallon", "http://dbpedia.org/datatype/uzbekistanSom", "http://dbpedia.org/datatype/valvetrain", "http://dbpedia.org/datatype/vanuatuVatu", "http://dbpedia.org/datatype/venezuelanBolívar", "http://dbpedia.org/datatype/volt", "http://dbpedia.org/datatype/watt", "http://dbpedia.org/datatype/wattHour", "http://dbpedia.org/datatype/westAfricanCfaFranc", "http://dbpedia.org/datatype/yard", "http://dbpedia.org/datatype/yemeniRial", "http://dbpedia.org/datatype/zambianKwacha", "http://dbpedia.org/datatype/zimbabweanDollar", "http://dbpedia.org/ontology/", "http://dbpedia.org/ontology/Academic", "http://dbpedia.org/ontology/AcademicConference", "http://dbpedia.org/ontology/AcademicJournal", "http://dbpedia.org/ontology/AcademicSubject", "http://dbpedia.org/ontology/Activity", "http://dbpedia.org/ontology/Actor", "http://dbpedia.org/ontology/AdministrativeRegion", "http://dbpedia.org/ontology/AdultActor", "http://dbpedia.org/ontology/Agent", "http://dbpedia.org/ontology/Agglomeration", "http://dbpedia.org/ontology/Aircraft", "http://dbpedia.org/ontology/Airline", "http://dbpedia.org/ontology/Airport", "http://dbpedia.org/ontology/Album", "http://dbpedia.org/ontology/Algorithm", "http://dbpedia.org/ontology/Altitude", "http://dbpedia.org/ontology/AmateurBoxer", "http://dbpedia.org/ontology/Ambassador", "http://dbpedia.org/ontology/AmericanFootballCoach", "http://dbpedia.org/ontology/AmericanFootballLeague", "http://dbpedia.org/ontology/AmericanFootballPlayer", "http://dbpedia.org/ontology/AmericanFootballTeam", "http://dbpedia.org/ontology/AmericanLeader", "http://dbpedia.org/ontology/Amphibian", "http://dbpedia.org/ontology/AmusementParkAttraction", "http://dbpedia.org/ontology/AnatomicalStructure", "http://dbpedia.org/ontology/Animal", "http://dbpedia.org/ontology/AnimangaCharacter", "http://dbpedia.org/ontology/Anime", "http://dbpedia.org/ontology/Annotation", "http://dbpedia.org/ontology/Arachnid", "http://dbpedia.org/ontology/Archaea", "http://dbpedia.org/ontology/Archbishop", "http://dbpedia.org/ontology/Archeologist", "http://dbpedia.org/ontology/ArcherPlayer", "http://dbpedia.org/ontology/Archipelago", "http://dbpedia.org/ontology/Architect", "http://dbpedia.org/ontology/ArchitecturalStructure", "http://dbpedia.org/ontology/Area", "http://dbpedia.org/ontology/Arena", "http://dbpedia.org/ontology/Aristocrat", "http://dbpedia.org/ontology/Arrondissement", "http://dbpedia.org/ontology/Artery", "http://dbpedia.org/ontology/Article", "http://dbpedia.org/ontology/ArtificialSatellite", "http://dbpedia.org/ontology/Artist", "http://dbpedia.org/ontology/ArtistDiscography", "http://dbpedia.org/ontology/ArtisticGenre", "http://dbpedia.org/ontology/Artwork", "http://dbpedia.org/ontology/Asteroid", "http://dbpedia.org/ontology/Astronaut", "http://dbpedia.org/ontology/Astronaut/timeInSpace", "http://dbpedia.org/ontology/Athlete", "http://dbpedia.org/ontology/Athletics", "http://dbpedia.org/ontology/AthleticsPlayer", "http://dbpedia.org/ontology/Atoll", "http://dbpedia.org/ontology/Attack", "http://dbpedia.org/ontology/AustralianFootballLeague", "http://dbpedia.org/ontology/AustralianFootballTeam", "http://dbpedia.org/ontology/AustralianRulesFootballPlayer", "http://dbpedia.org/ontology/AutoRacingLeague", "http://dbpedia.org/ontology/Automobile", "http://dbpedia.org/ontology/Automobile/fuelCapacity", "http://dbpedia.org/ontology/Automobile/wheelbase", "http://dbpedia.org/ontology/AutomobileEngine", "http://dbpedia.org/ontology/Award", "http://dbpedia.org/ontology/BackScene", "http://dbpedia.org/ontology/Bacteria", "http://dbpedia.org/ontology/BadmintonPlayer", "http://dbpedia.org/ontology/Band", "http://dbpedia.org/ontology/Bank", "http://dbpedia.org/ontology/Baronet", "http://dbpedia.org/ontology/BaseballLeague", "http://dbpedia.org/ontology/BaseballPlayer", "http://dbpedia.org/ontology/BaseballSeason", "http://dbpedia.org/ontology/BaseballTeam", "http://dbpedia.org/ontology/BasketballLeague", "http://dbpedia.org/ontology/BasketballPlayer", "http://dbpedia.org/ontology/BasketballTeam", "http://dbpedia.org/ontology/Battery", "http://dbpedia.org/ontology/Bay", "http://dbpedia.org/ontology/Beach", "http://dbpedia.org/ontology/BeachVolleyballPlayer", "http://dbpedia.org/ontology/BeautyQueen", "http://dbpedia.org/ontology/Beer", "http://dbpedia.org/ontology/Beverage", "http://dbpedia.org/ontology/Biathlete", "http://dbpedia.org/ontology/BiologicalDatabase", "http://dbpedia.org/ontology/Biologist", "http://dbpedia.org/ontology/Biomolecule", "http://dbpedia.org/ontology/Bird", "http://dbpedia.org/ontology/Blazon", "http://dbpedia.org/ontology/BloodVessel", "http://dbpedia.org/ontology/BoardGame", "http://dbpedia.org/ontology/BobsleighAthlete", "http://dbpedia.org/ontology/BodyOfWater", "http://dbpedia.org/ontology/Bodybuilder", "http://dbpedia.org/ontology/Bone", "http://dbpedia.org/ontology/Book", "http://dbpedia.org/ontology/BowlingLeague", "http://dbpedia.org/ontology/Boxer", "http://dbpedia.org/ontology/BoxingLeague", "http://dbpedia.org/ontology/Brain", "http://dbpedia.org/ontology/Brewery", "http://dbpedia.org/ontology/Bridge", "http://dbpedia.org/ontology/BritishRoyalty", "http://dbpedia.org/ontology/BroadcastNetwork", "http://dbpedia.org/ontology/Broadcaster", "http://dbpedia.org/ontology/BrownDwarf", "http://dbpedia.org/ontology/Browser", "http://dbpedia.org/ontology/Building", "http://dbpedia.org/ontology/Building/floorArea", "http://dbpedia.org/ontology/BullFighter", "http://dbpedia.org/ontology/BusCompany", "http://dbpedia.org/ontology/BusinessPerson", "http://dbpedia.org/ontology/Camera", "http://dbpedia.org/ontology/CanadianFootballLeague", "http://dbpedia.org/ontology/CanadianFootballPlayer", "http://dbpedia.org/ontology/CanadianFootballTeam", "http://dbpedia.org/ontology/Canal", "http://dbpedia.org/ontology/Canal/maximumBoatBeam", "http://dbpedia.org/ontology/Canal/maximumBoatLength", "http://dbpedia.org/ontology/Canal/originalMaximumBoatBeam", "http://dbpedia.org/ontology/Canal/originalMaximumBoatLength", "http://dbpedia.org/ontology/Canoeist", "http://dbpedia.org/ontology/Canton", "http://dbpedia.org/ontology/Cape", "http://dbpedia.org/ontology/Capital", "http://dbpedia.org/ontology/CapitalOfRegion", "http://dbpedia.org/ontology/CardGame", "http://dbpedia.org/ontology/Cardinal", "http://dbpedia.org/ontology/CardinalDirection", "http://dbpedia.org/ontology/CareerStation", "http://dbpedia.org/ontology/Cartoon", "http://dbpedia.org/ontology/Case", "http://dbpedia.org/ontology/Casino", "http://dbpedia.org/ontology/Castle", "http://dbpedia.org/ontology/Cat", "http://dbpedia.org/ontology/Caterer", "http://dbpedia.org/ontology/Cave", "http://dbpedia.org/ontology/CelestialBody", "http://dbpedia.org/ontology/Cemetery", "http://dbpedia.org/ontology/Chancellor", "http://dbpedia.org/ontology/ChartsPlacements", "http://dbpedia.org/ontology/Cheese", "http://dbpedia.org/ontology/Chef", "http://dbpedia.org/ontology/ChemicalCompound", "http://dbpedia.org/ontology/ChemicalElement", "http://dbpedia.org/ontology/ChemicalSubstance", "http://dbpedia.org/ontology/ChemicalSubstance/boilingPoint", "http://dbpedia.org/ontology/ChemicalSubstance/density", "http://dbpedia.org/ontology/ChemicalSubstance/meltingPoint", "http://dbpedia.org/ontology/ChessPlayer", "http://dbpedia.org/ontology/ChristianBishop", "http://dbpedia.org/ontology/ChristianDoctrine", "http://dbpedia.org/ontology/ChristianPatriarch", "http://dbpedia.org/ontology/Church", "http://dbpedia.org/ontology/Cinema", "http://dbpedia.org/ontology/Cipher", "http://dbpedia.org/ontology/City", "http://dbpedia.org/ontology/CityDistrict", "http://dbpedia.org/ontology/ClassicalMusicArtist", "http://dbpedia.org/ontology/ClassicalMusicComposition", "http://dbpedia.org/ontology/Cleric", "http://dbpedia.org/ontology/ClericalAdministrativeRegion", "http://dbpedia.org/ontology/ClericalOrder", "http://dbpedia.org/ontology/ClubMoss", "http://dbpedia.org/ontology/Coach", "http://dbpedia.org/ontology/CoalPit", "http://dbpedia.org/ontology/CollectionOfValuables", "http://dbpedia.org/ontology/College", "http://dbpedia.org/ontology/CollegeCoach", "http://dbpedia.org/ontology/Colour", "http://dbpedia.org/ontology/CombinationDrug", "http://dbpedia.org/ontology/Comedian", "http://dbpedia.org/ontology/ComedyGroup", "http://dbpedia.org/ontology/Comic", "http://dbpedia.org/ontology/ComicStrip", "http://dbpedia.org/ontology/ComicsCharacter", "http://dbpedia.org/ontology/ComicsCreator", "http://dbpedia.org/ontology/Community", "http://dbpedia.org/ontology/Company", "http://dbpedia.org/ontology/Competition", "http://dbpedia.org/ontology/ConcentrationCamp", "http://dbpedia.org/ontology/Congressman", "http://dbpedia.org/ontology/Conifer", "http://dbpedia.org/ontology/Constellation", "http://dbpedia.org/ontology/Contest", "http://dbpedia.org/ontology/Continent", "http://dbpedia.org/ontology/ControlledDesignationOfOriginWine", "http://dbpedia.org/ontology/Convention", "http://dbpedia.org/ontology/ConveyorSystem", "http://dbpedia.org/ontology/ConveyorSystem/diameter", "http://dbpedia.org/ontology/ConveyorSystem/height", "http://dbpedia.org/ontology/ConveyorSystem/length", "http://dbpedia.org/ontology/ConveyorSystem/mass", "http://dbpedia.org/ontology/ConveyorSystem/weight", "http://dbpedia.org/ontology/ConveyorSystem/width", "http://dbpedia.org/ontology/Country", "http://dbpedia.org/ontology/CountrySeat", "http://dbpedia.org/ontology/Covid19", "http://dbpedia.org/ontology/Crater", "http://dbpedia.org/ontology/CricketGround", "http://dbpedia.org/ontology/CricketLeague", "http://dbpedia.org/ontology/CricketTeam", "http://dbpedia.org/ontology/Cricketer", "http://dbpedia.org/ontology/Criminal", "http://dbpedia.org/ontology/CrossCountrySkier", "http://dbpedia.org/ontology/Crustacean", "http://dbpedia.org/ontology/CultivatedVariety", "http://dbpedia.org/ontology/Curler", "http://dbpedia.org/ontology/CurlingLeague", "http://dbpedia.org/ontology/Currency", "http://dbpedia.org/ontology/Cycad", "http://dbpedia.org/ontology/CyclingCompetition", "http://dbpedia.org/ontology/CyclingLeague", "http://dbpedia.org/ontology/CyclingRace", "http://dbpedia.org/ontology/CyclingTeam", "http://dbpedia.org/ontology/Cyclist", "http://dbpedia.org/ontology/DBpedian", "http://dbpedia.org/ontology/DTMRacer", "http://dbpedia.org/ontology/Dam", "http://dbpedia.org/ontology/Dancer", "http://dbpedia.org/ontology/DartsPlayer", "http://dbpedia.org/ontology/Database", "http://dbpedia.org/ontology/Deanery", "http://dbpedia.org/ontology/Decoration", "http://dbpedia.org/ontology/Deity", "http://dbpedia.org/ontology/Demographics", "http://dbpedia.org/ontology/Department", "http://dbpedia.org/ontology/Depth", "http://dbpedia.org/ontology/Deputy", "http://dbpedia.org/ontology/Desert", "http://dbpedia.org/ontology/Device", "http://dbpedia.org/ontology/DigitalCamera", "http://dbpedia.org/ontology/Dike", "http://dbpedia.org/ontology/Diocese", "http://dbpedia.org/ontology/Diploma", "http://dbpedia.org/ontology/Disease", "http://dbpedia.org/ontology/DisneyCharacter", "http://dbpedia.org/ontology/District", "http://dbpedia.org/ontology/DistrictWaterBoard", "http://dbpedia.org/ontology/Document", "http://dbpedia.org/ontology/DocumentType", "http://dbpedia.org/ontology/Dog", "http://dbpedia.org/ontology/Drama", "http://dbpedia.org/ontology/Drug", "http://dbpedia.org/ontology/Drug/boilingPoint", "http://dbpedia.org/ontology/Drug/meltingPoint", "http://dbpedia.org/ontology/Earthquake", "http://dbpedia.org/ontology/Economist", "http://dbpedia.org/ontology/EducationalInstitution", "http://dbpedia.org/ontology/Egyptologist", "http://dbpedia.org/ontology/Election", "http://dbpedia.org/ontology/ElectionDiagram", "http://dbpedia.org/ontology/ElectricalSubstation", "http://dbpedia.org/ontology/Embryology", "http://dbpedia.org/ontology/Employer", "http://dbpedia.org/ontology/EmployersOrganisation", "http://dbpedia.org/ontology/Engine", "http://dbpedia.org/ontology/Engine/acceleration", "http://dbpedia.org/ontology/Engine/co2Emission", "http://dbpedia.org/ontology/Engine/cylinderBore", "http://dbpedia.org/ontology/Engine/diameter", "http://dbpedia.org/ontology/Engine/displacement", "http://dbpedia.org/ontology/Engine/height", "http://dbpedia.org/ontology/Engine/length", "http://dbpedia.org/ontology/Engine/pistonStroke", "http://dbpedia.org/ontology/Engine/powerOutput", "http://dbpedia.org/ontology/Engine/topSpeed", "http://dbpedia.org/ontology/Engine/torqueOutput", "http://dbpedia.org/ontology/Engine/weight", "http://dbpedia.org/ontology/Engine/width", "http://dbpedia.org/ontology/Engineer", "http://dbpedia.org/ontology/Entomologist", "http://dbpedia.org/ontology/Enzyme", "http://dbpedia.org/ontology/Escalator", "http://dbpedia.org/ontology/Escalator/diameter", "http://dbpedia.org/ontology/Escalator/height", "http://dbpedia.org/ontology/Escalator/length", "http://dbpedia.org/ontology/Escalator/mass", "http://dbpedia.org/ontology/Escalator/weight", "http://dbpedia.org/ontology/Escalator/width", "http://dbpedia.org/ontology/EthnicGroup", "http://dbpedia.org/ontology/Eukaryote", "http://dbpedia.org/ontology/EurovisionSongContestEntry", "http://dbpedia.org/ontology/Event", "http://dbpedia.org/ontology/Factory", "http://dbpedia.org/ontology/Family", "http://dbpedia.org/ontology/Farmer", "http://dbpedia.org/ontology/Fashion", "http://dbpedia.org/ontology/FashionDesigner", "http://dbpedia.org/ontology/Fencer", "http://dbpedia.org/ontology/Fern", "http://dbpedia.org/ontology/FictionalCharacter", "http://dbpedia.org/ontology/FieldHockeyLeague", "http://dbpedia.org/ontology/FigureSkater", "http://dbpedia.org/ontology/File", "http://dbpedia.org/ontology/FileSystem", "http://dbpedia.org/ontology/Film", "http://dbpedia.org/ontology/FilmFestival", "http://dbpedia.org/ontology/Fish", "http://dbpedia.org/ontology/Flag", "http://dbpedia.org/ontology/FloweringPlant", "http://dbpedia.org/ontology/Food", "http://dbpedia.org/ontology/FootballLeagueSeason", "http://dbpedia.org/ontology/FootballMatch", "http://dbpedia.org/ontology/Forest", "http://dbpedia.org/ontology/FormerMunicipality", "http://dbpedia.org/ontology/FormulaOneRacer", "http://dbpedia.org/ontology/FormulaOneRacing", "http://dbpedia.org/ontology/FormulaOneTeam", "http://dbpedia.org/ontology/Fort", "http://dbpedia.org/ontology/Fungus", "http://dbpedia.org/ontology/GaelicGamesPlayer", "http://dbpedia.org/ontology/Galaxy", "http://dbpedia.org/ontology/Galaxy/apoapsis", "http://dbpedia.org/ontology/Galaxy/averageSpeed", "http://dbpedia.org/ontology/Galaxy/density", "http://dbpedia.org/ontology/Galaxy/mass", "http://dbpedia.org/ontology/Galaxy/maximumTemperature", "http://dbpedia.org/ontology/Galaxy/meanRadius", "http://dbpedia.org/ontology/Galaxy/meanTemperature", "http://dbpedia.org/ontology/Galaxy/minimumTemperature", "http://dbpedia.org/ontology/Galaxy/orbitalPeriod", "http://dbpedia.org/ontology/Galaxy/periapsis", "http://dbpedia.org/ontology/Galaxy/surfaceArea", "http://dbpedia.org/ontology/Galaxy/temperature", "http://dbpedia.org/ontology/Galaxy/volume", "http://dbpedia.org/ontology/Game", "http://dbpedia.org/ontology/Garden", "http://dbpedia.org/ontology/GatedCommunity", "http://dbpedia.org/ontology/Gene", "http://dbpedia.org/ontology/GeneLocation", "http://dbpedia.org/ontology/Genre", "http://dbpedia.org/ontology/GeologicalPeriod", "http://dbpedia.org/ontology/GeopoliticalOrganisation", "http://dbpedia.org/ontology/GeopoliticalOrganisation/areaMetro", "http://dbpedia.org/ontology/GeopoliticalOrganisation/populationDensity", "http://dbpedia.org/ontology/Ginkgo", "http://dbpedia.org/ontology/GivenName", "http://dbpedia.org/ontology/Glacier", "http://dbpedia.org/ontology/Globularswarm", "http://dbpedia.org/ontology/Gnetophytes", "http://dbpedia.org/ontology/GolfCourse", "http://dbpedia.org/ontology/GolfLeague", "http://dbpedia.org/ontology/GolfPlayer", "http://dbpedia.org/ontology/GolfTournament", "http://dbpedia.org/ontology/GovernmentAgency", "http://dbpedia.org/ontology/GovernmentCabinet", "http://dbpedia.org/ontology/GovernmentType", "http://dbpedia.org/ontology/GovernmentalAdministrativeRegion", "http://dbpedia.org/ontology/Governor", "http://dbpedia.org/ontology/GrandPrix", "http://dbpedia.org/ontology/GrandPrix/course", "http://dbpedia.org/ontology/GrandPrix/distance", "http://dbpedia.org/ontology/Grape", "http://dbpedia.org/ontology/GraveMonument", "http://dbpedia.org/ontology/GreenAlga", "http://dbpedia.org/ontology/GridironFootballPlayer", "http://dbpedia.org/ontology/GrossDomesticProduct", "http://dbpedia.org/ontology/GrossDomesticProductPerCapita", "http://dbpedia.org/ontology/Group", "http://dbpedia.org/ontology/Guitar", "http://dbpedia.org/ontology/Guitarist", "http://dbpedia.org/ontology/Gymnast", "http://dbpedia.org/ontology/HandballLeague", "http://dbpedia.org/ontology/HandballPlayer", "http://dbpedia.org/ontology/HandballTeam", "http://dbpedia.org/ontology/HighDiver", "http://dbpedia.org/ontology/Historian", "http://dbpedia.org/ontology/HistoricBuilding", "http://dbpedia.org/ontology/HistoricPlace", "http://dbpedia.org/ontology/HistoricalAreaOfAuthority", "http://dbpedia.org/ontology/HistoricalCountry", "http://dbpedia.org/ontology/HistoricalDistrict", "http://dbpedia.org/ontology/HistoricalEvent", "http://dbpedia.org/ontology/HistoricalPeriod", "http://dbpedia.org/ontology/HistoricalProvince", "http://dbpedia.org/ontology/HistoricalRegion", "http://dbpedia.org/ontology/HistoricalSettlement", "http://dbpedia.org/ontology/HockeyClub", "http://dbpedia.org/ontology/HockeyTeam", "http://dbpedia.org/ontology/Holiday", "http://dbpedia.org/ontology/HollywoodCartoon", "http://dbpedia.org/ontology/Hormone", "http://dbpedia.org/ontology/Horse", "http://dbpedia.org/ontology/HorseRace", "http://dbpedia.org/ontology/HorseRider", "http://dbpedia.org/ontology/HorseTrainer", "http://dbpedia.org/ontology/Hospital", "http://dbpedia.org/ontology/HotSpring", "http://dbpedia.org/ontology/Hotel", "http://dbpedia.org/ontology/HumanGene", "http://dbpedia.org/ontology/HumanGeneLocation", "http://dbpedia.org/ontology/Humorist", "http://dbpedia.org/ontology/IceHockeyLeague", "http://dbpedia.org/ontology/IceHockeyPlayer", "http://dbpedia.org/ontology/Identifier", "http://dbpedia.org/ontology/Ideology", "http://dbpedia.org/ontology/Image", "http://dbpedia.org/ontology/InformationAppliance", "http://dbpedia.org/ontology/Infrastructure", "http://dbpedia.org/ontology/Infrastructure/length", "http://dbpedia.org/ontology/Infrastucture", "http://dbpedia.org/ontology/InlineHockeyLeague", "http://dbpedia.org/ontology/Insect", "http://dbpedia.org/ontology/Instrument", "http://dbpedia.org/ontology/Instrumentalist", "http://dbpedia.org/ontology/Intercommunality", "http://dbpedia.org/ontology/InternationalFootballLeagueEvent", "http://dbpedia.org/ontology/InternationalOrganisation", "http://dbpedia.org/ontology/Island", "http://dbpedia.org/ontology/JewishLeader", "http://dbpedia.org/ontology/Jockey", "http://dbpedia.org/ontology/Journalist", "http://dbpedia.org/ontology/Judge", "http://dbpedia.org/ontology/LacrosseLeague", "http://dbpedia.org/ontology/LacrossePlayer", "http://dbpedia.org/ontology/Lake", "http://dbpedia.org/ontology/Lake/areaOfCatchment", "http://dbpedia.org/ontology/Lake/shoreLength", "http://dbpedia.org/ontology/Lake/volume", "http://dbpedia.org/ontology/Language", "http://dbpedia.org/ontology/LatterDaySaint", "http://dbpedia.org/ontology/LaunchPad", "http://dbpedia.org/ontology/Law", "http://dbpedia.org/ontology/LawFirm", "http://dbpedia.org/ontology/Lawyer", "http://dbpedia.org/ontology/LegalCase", "http://dbpedia.org/ontology/Legislature", "http://dbpedia.org/ontology/Letter", "http://dbpedia.org/ontology/Library", "http://dbpedia.org/ontology/Lieutenant", "http://dbpedia.org/ontology/LifeCycleEvent", "http://dbpedia.org/ontology/Ligament", "http://dbpedia.org/ontology/LightNovel", "http://dbpedia.org/ontology/Lighthouse", "http://dbpedia.org/ontology/LineOfFashion", "http://dbpedia.org/ontology/Linguist", "http://dbpedia.org/ontology/Lipid", "http://dbpedia.org/ontology/List", "http://dbpedia.org/ontology/LiteraryGenre", "http://dbpedia.org/ontology/Locality", "http://dbpedia.org/ontology/Lock", "http://dbpedia.org/ontology/Locomotive", "http://dbpedia.org/ontology/LunarCrater", "http://dbpedia.org/ontology/LunarCrater/diameter", "http://dbpedia.org/ontology/Lymph", "http://dbpedia.org/ontology/Magazine", "http://dbpedia.org/ontology/Mammal", "http://dbpedia.org/ontology/Man", "http://dbpedia.org/ontology/Manga", "http://dbpedia.org/ontology/Manhua", "http://dbpedia.org/ontology/Manhwa", "http://dbpedia.org/ontology/Manor", "http://dbpedia.org/ontology/MartialArtist", "http://dbpedia.org/ontology/MathematicalConcept", "http://dbpedia.org/ontology/Mayor", "http://dbpedia.org/ontology/MeanOfTransportation", "http://dbpedia.org/ontology/MeanOfTransportation/diameter", "http://dbpedia.org/ontology/MeanOfTransportation/height", "http://dbpedia.org/ontology/MeanOfTransportation/length", "http://dbpedia.org/ontology/MeanOfTransportation/mass", "http://dbpedia.org/ontology/MeanOfTransportation/weight", "http://dbpedia.org/ontology/MeanOfTransportation/width", "http://dbpedia.org/ontology/Media", "http://dbpedia.org/ontology/MedicalSpecialty", "http://dbpedia.org/ontology/Medician", "http://dbpedia.org/ontology/Medicine", "http://dbpedia.org/ontology/Meeting", "http://dbpedia.org/ontology/MemberOfParliament", "http://dbpedia.org/ontology/MemberResistanceMovement", "http://dbpedia.org/ontology/Memorial", "http://dbpedia.org/ontology/MetroStation", "http://dbpedia.org/ontology/MicroRegion", "http://dbpedia.org/ontology/MilitaryAircraft", "http://dbpedia.org/ontology/MilitaryConflict", "http://dbpedia.org/ontology/MilitaryPerson", "http://dbpedia.org/ontology/MilitaryService", "http://dbpedia.org/ontology/MilitaryStructure", "http://dbpedia.org/ontology/MilitaryUnit", "http://dbpedia.org/ontology/MilitaryVehicle", "http://dbpedia.org/ontology/Mill", "http://dbpedia.org/ontology/Mine", "http://dbpedia.org/ontology/Mineral", "http://dbpedia.org/ontology/Minister", "http://dbpedia.org/ontology/MixedMartialArtsEvent", "http://dbpedia.org/ontology/MixedMartialArtsLeague", "http://dbpedia.org/ontology/MobilePhone", "http://dbpedia.org/ontology/Model", "http://dbpedia.org/ontology/Mollusca", "http://dbpedia.org/ontology/Monarch", "http://dbpedia.org/ontology/Monastery", "http://dbpedia.org/ontology/MonoclonalAntibody", "http://dbpedia.org/ontology/Monument", "http://dbpedia.org/ontology/Mosque", "http://dbpedia.org/ontology/Moss", "http://dbpedia.org/ontology/MotocycleRacer", "http://dbpedia.org/ontology/MotorRace", "http://dbpedia.org/ontology/Motorcycle", "http://dbpedia.org/ontology/MotorcycleRacingLeague", "http://dbpedia.org/ontology/MotorcycleRider", "http://dbpedia.org/ontology/MotorsportRacer", "http://dbpedia.org/ontology/MotorsportSeason", "http://dbpedia.org/ontology/Mountain", "http://dbpedia.org/ontology/MountainPass", "http://dbpedia.org/ontology/MountainRange", "http://dbpedia.org/ontology/MouseGene", "http://dbpedia.org/ontology/MouseGeneLocation", "http://dbpedia.org/ontology/MovieDirector", "http://dbpedia.org/ontology/MovieGenre", "http://dbpedia.org/ontology/MovingImage", "http://dbpedia.org/ontology/MovingWalkway", "http://dbpedia.org/ontology/MovingWalkway/diameter", "http://dbpedia.org/ontology/MovingWalkway/height", "http://dbpedia.org/ontology/MovingWalkway/length", "http://dbpedia.org/ontology/MovingWalkway/mass", "http://dbpedia.org/ontology/MovingWalkway/weight", "http://dbpedia.org/ontology/MovingWalkway/width", "http://dbpedia.org/ontology/MultiVolumePublication", "http://dbpedia.org/ontology/Municipality", "http://dbpedia.org/ontology/Murderer", "http://dbpedia.org/ontology/Muscle", "http://dbpedia.org/ontology/Museum", "http://dbpedia.org/ontology/MusicComposer", "http://dbpedia.org/ontology/MusicDirector", "http://dbpedia.org/ontology/MusicFestival", "http://dbpedia.org/ontology/MusicGenre", "http://dbpedia.org/ontology/Musical", "http://dbpedia.org/ontology/MusicalArtist", "http://dbpedia.org/ontology/MusicalWork", "http://dbpedia.org/ontology/MythologicalFigure", "http://dbpedia.org/ontology/NCAATeamSeason", "http://dbpedia.org/ontology/NCAA_ٹیم_سیزن", "http://dbpedia.org/ontology/Name", "http://dbpedia.org/ontology/NarutoCharacter", "http://dbpedia.org/ontology/NascarDriver", "http://dbpedia.org/ontology/NationalAnthem", "http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete", "http://dbpedia.org/ontology/NationalFootballLeagueEvent", "http://dbpedia.org/ontology/NationalFootballLeagueSeason", "http://dbpedia.org/ontology/NationalSoccerClub", "http://dbpedia.org/ontology/NaturalEvent", "http://dbpedia.org/ontology/NaturalPlace", "http://dbpedia.org/ontology/NaturalRegion", "http://dbpedia.org/ontology/Nebula", "http://dbpedia.org/ontology/Nerve", "http://dbpedia.org/ontology/NetballPlayer", "http://dbpedia.org/ontology/Newspaper", "http://dbpedia.org/ontology/NobelPrize", "http://dbpedia.org/ontology/Noble", "http://dbpedia.org/ontology/NobleFamily", "http://dbpedia.org/ontology/Non-ProfitOrganisation", "http://dbpedia.org/ontology/NordicCombined", "http://dbpedia.org/ontology/Novel", "http://dbpedia.org/ontology/NuclearPowerStation", "http://dbpedia.org/ontology/Ocean", "http://dbpedia.org/ontology/OfficeHolder", "http://dbpedia.org/ontology/OldTerritory", "http://dbpedia.org/ontology/OlympicEvent", "http://dbpedia.org/ontology/OlympicResult", "http://dbpedia.org/ontology/Olympics", "http://dbpedia.org/ontology/On-SiteTransportation", "http://dbpedia.org/ontology/On-SiteTransportation/diameter", "http://dbpedia.org/ontology/On-SiteTransportation/height", "http://dbpedia.org/ontology/On-SiteTransportation/length", "http://dbpedia.org/ontology/On-SiteTransportation/mass", "http://dbpedia.org/ontology/On-SiteTransportation/weight", "http://dbpedia.org/ontology/On-SiteTransportation/width", "http://dbpedia.org/ontology/Openswarm", "http://dbpedia.org/ontology/Opera", "http://dbpedia.org/ontology/Organ", "http://dbpedia.org/ontology/Organisation", "http://dbpedia.org/ontology/OrganisationMember", "http://dbpedia.org/ontology/Outbreak", "http://dbpedia.org/ontology/OverseasDepartment", "http://dbpedia.org/ontology/PaintballLeague", "http://dbpedia.org/ontology/Painter", "http://dbpedia.org/ontology/Painting", "http://dbpedia.org/ontology/Pandemic", "http://dbpedia.org/ontology/Parish", "http://dbpedia.org/ontology/Park", "http://dbpedia.org/ontology/Parliament", "http://dbpedia.org/ontology/PenaltyShootOut", "http://dbpedia.org/ontology/PeriodOfArtisticStyle", "http://dbpedia.org/ontology/PeriodicalLiterature", "http://dbpedia.org/ontology/Person", "http://dbpedia.org/ontology/Person/height", "http://dbpedia.org/ontology/Person/weight", "http://dbpedia.org/ontology/PersonFunction", "http://dbpedia.org/ontology/PersonalEvent", "http://dbpedia.org/ontology/Pharaoh", "http://dbpedia.org/ontology/Philosopher", "http://dbpedia.org/ontology/PhilosophicalConcept", "http://dbpedia.org/ontology/Photographer", "http://dbpedia.org/ontology/Pilot", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/Planet", "http://dbpedia.org/ontology/Planet/apoapsis", "http://dbpedia.org/ontology/Planet/averageSpeed", "http://dbpedia.org/ontology/Planet/density", "http://dbpedia.org/ontology/Planet/mass", "http://dbpedia.org/ontology/Planet/maximumTemperature", "http://dbpedia.org/ontology/Planet/meanRadius", "http://dbpedia.org/ontology/Planet/meanTemperature", "http://dbpedia.org/ontology/Planet/minimumTemperature", "http://dbpedia.org/ontology/Planet/orbitalPeriod", "http://dbpedia.org/ontology/Planet/periapsis", "http://dbpedia.org/ontology/Planet/surfaceArea", "http://dbpedia.org/ontology/Planet/temperature", "http://dbpedia.org/ontology/Planet/volume", "http://dbpedia.org/ontology/Plant", "http://dbpedia.org/ontology/Play", "http://dbpedia.org/ontology/PlayWright", "http://dbpedia.org/ontology/PlayboyPlaymate", "http://dbpedia.org/ontology/Poem", "http://dbpedia.org/ontology/Poet", "http://dbpedia.org/ontology/PokerPlayer", "http://dbpedia.org/ontology/PoliceOfficer", "http://dbpedia.org/ontology/PoliticalConcept", "http://dbpedia.org/ontology/PoliticalFunction", "http://dbpedia.org/ontology/PoliticalParty", "http://dbpedia.org/ontology/Politician", "http://dbpedia.org/ontology/PoliticianSpouse", "http://dbpedia.org/ontology/PoloLeague", "http://dbpedia.org/ontology/Polysaccharide", "http://dbpedia.org/ontology/Pope", "http://dbpedia.org/ontology/PopulatedPlace", "http://dbpedia.org/ontology/PopulatedPlace/area", "http://dbpedia.org/ontology/PopulatedPlace/areaMetro", "http://dbpedia.org/ontology/PopulatedPlace/areaTotal", "http://dbpedia.org/ontology/PopulatedPlace/areaUrban", "http://dbpedia.org/ontology/PopulatedPlace/populationDensity", "http://dbpedia.org/ontology/PopulatedPlace/populationMetroDensity", "http://dbpedia.org/ontology/PopulatedPlace/populationUrbanDensity", "http://dbpedia.org/ontology/Population", "http://dbpedia.org/ontology/Port", "http://dbpedia.org/ontology/PowerStation", "http://dbpedia.org/ontology/Prefecture", "http://dbpedia.org/ontology/PrehistoricalPeriod", "http://dbpedia.org/ontology/Presenter", "http://dbpedia.org/ontology/President", "http://dbpedia.org/ontology/Pretender", "http://dbpedia.org/ontology/Priest", "http://dbpedia.org/ontology/PrimeMinister", "http://dbpedia.org/ontology/Prison", "http://dbpedia.org/ontology/Producer", "http://dbpedia.org/ontology/Profession", "http://dbpedia.org/ontology/Professor", "http://dbpedia.org/ontology/ProgrammingLanguage", "http://dbpedia.org/ontology/Project", "http://dbpedia.org/ontology/ProtectedArea", "http://dbpedia.org/ontology/Protein", "http://dbpedia.org/ontology/Protocol", "http://dbpedia.org/ontology/ProtohistoricalPeriod", "http://dbpedia.org/ontology/Province", "http://dbpedia.org/ontology/Psychologist", "http://dbpedia.org/ontology/PublicService", "http://dbpedia.org/ontology/PublicTransitSystem", "http://dbpedia.org/ontology/Publisher", "http://dbpedia.org/ontology/Pyramid", "http://dbpedia.org/ontology/Quote", "http://dbpedia.org/ontology/Race", "http://dbpedia.org/ontology/RaceTrack", "http://dbpedia.org/ontology/Racecourse", "http://dbpedia.org/ontology/RacingDriver", "http://dbpedia.org/ontology/RadioControlledRacingLeague", "http://dbpedia.org/ontology/RadioHost", "http://dbpedia.org/ontology/RadioProgram", "http://dbpedia.org/ontology/RadioStation", "http://dbpedia.org/ontology/RailwayLine", "http://dbpedia.org/ontology/RailwayStation", "http://dbpedia.org/ontology/RailwayTunnel", "http://dbpedia.org/ontology/RallyDriver", "http://dbpedia.org/ontology/Rebbe", "http://dbpedia.org/ontology/Rebellion", "http://dbpedia.org/ontology/RecordLabel", "http://dbpedia.org/ontology/RecordOffice", "http://dbpedia.org/ontology/Referee", "http://dbpedia.org/ontology/Reference", "http://dbpedia.org/ontology/Regency", "http://dbpedia.org/ontology/Region", "http://dbpedia.org/ontology/Reign", "http://dbpedia.org/ontology/Relationship", "http://dbpedia.org/ontology/Religious", "http://dbpedia.org/ontology/ReligiousBuilding", "http://dbpedia.org/ontology/ReligiousOrganisation", "http://dbpedia.org/ontology/Reptile", "http://dbpedia.org/ontology/ResearchProject", "http://dbpedia.org/ontology/RestArea", "http://dbpedia.org/ontology/Restaurant", "http://dbpedia.org/ontology/Resume", "http://dbpedia.org/ontology/River", "http://dbpedia.org/ontology/Road", "http://dbpedia.org/ontology/RoadJunction", "http://dbpedia.org/ontology/RoadTunnel", "http://dbpedia.org/ontology/Robot", "http://dbpedia.org/ontology/Rocket", "http://dbpedia.org/ontology/Rocket/lowerEarthOrbitPayload", "http://dbpedia.org/ontology/Rocket/mass", "http://dbpedia.org/ontology/RocketEngine", "http://dbpedia.org/ontology/RollerCoaster", "http://dbpedia.org/ontology/RomanEmperor", "http://dbpedia.org/ontology/RouteOfTransportation", "http://dbpedia.org/ontology/RouteStop", "http://dbpedia.org/ontology/Rower", "http://dbpedia.org/ontology/Royalty", "http://dbpedia.org/ontology/RugbyClub", "http://dbpedia.org/ontology/RugbyLeague", "http://dbpedia.org/ontology/RugbyPlayer", "http://dbpedia.org/ontology/Sailor", "http://dbpedia.org/ontology/Saint", "http://dbpedia.org/ontology/Sales", "http://dbpedia.org/ontology/SambaSchool", "http://dbpedia.org/ontology/Satellite", "http://dbpedia.org/ontology/School", "http://dbpedia.org/ontology/School/campusSize", "http://dbpedia.org/ontology/ScientificConcept", "http://dbpedia.org/ontology/Scientist", "http://dbpedia.org/ontology/ScreenWriter", "http://dbpedia.org/ontology/Sculptor", "http://dbpedia.org/ontology/Sculpture", "http://dbpedia.org/ontology/Sea", "http://dbpedia.org/ontology/Senator", "http://dbpedia.org/ontology/SerialKiller", "http://dbpedia.org/ontology/Settlement", "http://dbpedia.org/ontology/Ship", "http://dbpedia.org/ontology/ShoppingMall", "http://dbpedia.org/ontology/Shrine", "http://dbpedia.org/ontology/Singer", "http://dbpedia.org/ontology/Single", "http://dbpedia.org/ontology/SiteOfSpecialScientificInterest", "http://dbpedia.org/ontology/Skater", "http://dbpedia.org/ontology/SkiArea", "http://dbpedia.org/ontology/SkiResort", "http://dbpedia.org/ontology/Ski_jumper", "http://dbpedia.org/ontology/Skier", "http://dbpedia.org/ontology/Skyscraper", "http://dbpedia.org/ontology/SnookerChamp", "http://dbpedia.org/ontology/SnookerPlayer", "http://dbpedia.org/ontology/SnookerWorldRanking", "http://dbpedia.org/ontology/SoapCharacter", "http://dbpedia.org/ontology/SoccerClub", "http://dbpedia.org/ontology/SoccerClubSeason", "http://dbpedia.org/ontology/SoccerLeague", "http://dbpedia.org/ontology/SoccerLeagueSeason", "http://dbpedia.org/ontology/SoccerManager", "http://dbpedia.org/ontology/SoccerPlayer", "http://dbpedia.org/ontology/SoccerTournament", "http://dbpedia.org/ontology/SocietalEvent", "http://dbpedia.org/ontology/SoftballLeague", "http://dbpedia.org/ontology/Software", "http://dbpedia.org/ontology/Software/fileSize", "http://dbpedia.org/ontology/SolarEclipse", "http://dbpedia.org/ontology/Song", "http://dbpedia.org/ontology/SongWriter", "http://dbpedia.org/ontology/Sound", "http://dbpedia.org/ontology/SpaceMission", "http://dbpedia.org/ontology/SpaceMission/cmpEvaDuration", "http://dbpedia.org/ontology/SpaceMission/distanceTraveled", "http://dbpedia.org/ontology/SpaceMission/lunarEvaTime", "http://dbpedia.org/ontology/SpaceMission/lunarOrbitTime", "http://dbpedia.org/ontology/SpaceMission/lunarSampleMass", "http://dbpedia.org/ontology/SpaceMission/lunarSurfaceTime", "http://dbpedia.org/ontology/SpaceMission/mass", "http://dbpedia.org/ontology/SpaceMission/missionDuration", "http://dbpedia.org/ontology/SpaceMission/stationEvaDuration", "http://dbpedia.org/ontology/SpaceMission/stationVisitDuration", "http://dbpedia.org/ontology/SpaceShuttle", "http://dbpedia.org/ontology/SpaceShuttle/distance", "http://dbpedia.org/ontology/SpaceShuttle/timeInSpace", "http://dbpedia.org/ontology/SpaceStation", "http://dbpedia.org/ontology/SpaceStation/volume", "http://dbpedia.org/ontology/Spacecraft", "http://dbpedia.org/ontology/Spacecraft/apoapsis", "http://dbpedia.org/ontology/Spacecraft/cargoFuel", "http://dbpedia.org/ontology/Spacecraft/cargoGas", "http://dbpedia.org/ontology/Spacecraft/cargoWater", "http://dbpedia.org/ontology/Spacecraft/dockedTime", "http://dbpedia.org/ontology/Spacecraft/dryCargo", "http://dbpedia.org/ontology/Spacecraft/freeFlightTime", "http://dbpedia.org/ontology/Spacecraft/periapsis", "http://dbpedia.org/ontology/Spacecraft/totalCargo", "http://dbpedia.org/ontology/Spacecraft/totalMass", "http://dbpedia.org/ontology/Species", "http://dbpedia.org/ontology/SpeedSkater", "http://dbpedia.org/ontology/SpeedwayLeague", "http://dbpedia.org/ontology/SpeedwayRider", "http://dbpedia.org/ontology/SpeedwayTeam", "http://dbpedia.org/ontology/Sport", "http://dbpedia.org/ontology/SportCompetitionResult", "http://dbpedia.org/ontology/SportFacility", "http://dbpedia.org/ontology/SportsClub", "http://dbpedia.org/ontology/SportsEvent", "http://dbpedia.org/ontology/SportsLeague", "http://dbpedia.org/ontology/SportsManager", "http://dbpedia.org/ontology/SportsSeason", "http://dbpedia.org/ontology/SportsTeam", "http://dbpedia.org/ontology/SportsTeamMember", "http://dbpedia.org/ontology/SportsTeamSeason", "http://dbpedia.org/ontology/Spreadsheet", "http://dbpedia.org/ontology/Spy", "http://dbpedia.org/ontology/Square", "http://dbpedia.org/ontology/SquashPlayer", "http://dbpedia.org/ontology/Stadium", "http://dbpedia.org/ontology/Standard", "http://dbpedia.org/ontology/Star", "http://dbpedia.org/ontology/StarCluster", "http://dbpedia.org/ontology/State", "http://dbpedia.org/ontology/StatedResolution", "http://dbpedia.org/ontology/Station", "http://dbpedia.org/ontology/Statistic", "http://dbpedia.org/ontology/StillImage", "http://dbpedia.org/ontology/StormSurge", "http://dbpedia.org/ontology/Stream", "http://dbpedia.org/ontology/Stream/discharge", "http://dbpedia.org/ontology/Stream/dischargeAverage", "http://dbpedia.org/ontology/Stream/maximumDischarge", "http://dbpedia.org/ontology/Stream/minimumDischarge", "http://dbpedia.org/ontology/Stream/watershed", "http://dbpedia.org/ontology/Street", "http://dbpedia.org/ontology/SubMunicipality", "http://dbpedia.org/ontology/SumoWrestler", "http://dbpedia.org/ontology/SupremeCourtOfTheUnitedStatesCase", "http://dbpedia.org/ontology/Surfer", "http://dbpedia.org/ontology/Surname", "http://dbpedia.org/ontology/Swarm", "http://dbpedia.org/ontology/Swimmer", "http://dbpedia.org/ontology/Synagogue", "http://dbpedia.org/ontology/SystemOfLaw", "http://dbpedia.org/ontology/TableTennisPlayer", "http://dbpedia.org/ontology/Tank", "http://dbpedia.org/ontology/Tax", "http://dbpedia.org/ontology/Taxon", "http://dbpedia.org/ontology/TeamMember", "http://dbpedia.org/ontology/TeamSport", "http://dbpedia.org/ontology/TelevisionDirector", "http://dbpedia.org/ontology/TelevisionEpisode", "http://dbpedia.org/ontology/TelevisionHost", "http://dbpedia.org/ontology/TelevisionSeason", "http://dbpedia.org/ontology/TelevisionShow", "http://dbpedia.org/ontology/TelevisionStation", "http://dbpedia.org/ontology/Temple", "http://dbpedia.org/ontology/TennisLeague", "http://dbpedia.org/ontology/TennisPlayer", "http://dbpedia.org/ontology/TennisTournament", "http://dbpedia.org/ontology/Tenure", "http://dbpedia.org/ontology/TermOfOffice", "http://dbpedia.org/ontology/Territory", "http://dbpedia.org/ontology/Theatre", "http://dbpedia.org/ontology/TheatreDirector", "http://dbpedia.org/ontology/TheologicalConcept", "http://dbpedia.org/ontology/TimePeriod", "http://dbpedia.org/ontology/TopLevelDomain", "http://dbpedia.org/ontology/TopicalConcept", "http://dbpedia.org/ontology/Tournament", "http://dbpedia.org/ontology/Tower", "http://dbpedia.org/ontology/Town", "http://dbpedia.org/ontology/TrackList", "http://dbpedia.org/ontology/TradeUnion", "http://dbpedia.org/ontology/Train", "http://dbpedia.org/ontology/TrainCarriage", "http://dbpedia.org/ontology/Tram", "http://dbpedia.org/ontology/TramStation", "http://dbpedia.org/ontology/Treadmill", "http://dbpedia.org/ontology/Treaty", "http://dbpedia.org/ontology/Tunnel", "http://dbpedia.org/ontology/Type", "http://dbpedia.org/ontology/UndergroundJournal", "http://dbpedia.org/ontology/UnitOfWork", "http://dbpedia.org/ontology/University", "http://dbpedia.org/ontology/Unknown", "http://dbpedia.org/ontology/VaccinationStatistics", "http://dbpedia.org/ontology/Vaccine", "http://dbpedia.org/ontology/Valley", "http://dbpedia.org/ontology/Vein", "http://dbpedia.org/ontology/Venue", "http://dbpedia.org/ontology/Vicar", "http://dbpedia.org/ontology/VicePresident", "http://dbpedia.org/ontology/VicePrimeMinister", "http://dbpedia.org/ontology/VideoGame", "http://dbpedia.org/ontology/VideogamesLeague", "http://dbpedia.org/ontology/Village", "http://dbpedia.org/ontology/Vodka", "http://dbpedia.org/ontology/VoiceActor", "http://dbpedia.org/ontology/Volcano", "http://dbpedia.org/ontology/VolleyballCoach", "http://dbpedia.org/ontology/VolleyballLeague", "http://dbpedia.org/ontology/VolleyballPlayer", "http://dbpedia.org/ontology/WaterPoloPlayer", "http://dbpedia.org/ontology/WaterRide", "http://dbpedia.org/ontology/WaterTower", "http://dbpedia.org/ontology/Watermill", "http://dbpedia.org/ontology/WaterwayTunnel", "http://dbpedia.org/ontology/Weapon", "http://dbpedia.org/ontology/Weapon/diameter", "http://dbpedia.org/ontology/Weapon/height", "http://dbpedia.org/ontology/Weapon/length", "http://dbpedia.org/ontology/Weapon/weight", "http://dbpedia.org/ontology/Weapon/width", "http://dbpedia.org/ontology/Website", "http://dbpedia.org/ontology/WikimediaTemplate", "http://dbpedia.org/ontology/WindMotor", "http://dbpedia.org/ontology/Windmill", "http://dbpedia.org/ontology/Wine", "http://dbpedia.org/ontology/WineRegion", "http://dbpedia.org/ontology/Winery", "http://dbpedia.org/ontology/WinterSportPlayer", "http://dbpedia.org/ontology/Woman", "http://dbpedia.org/ontology/WomensTennisAssociationTournament", "http://dbpedia.org/ontology/Work", "http://dbpedia.org/ontology/Work/runtime", "http://dbpedia.org/ontology/WorldHeritageSite", "http://dbpedia.org/ontology/Wrestler", "http://dbpedia.org/ontology/WrestlingEvent", "http://dbpedia.org/ontology/Writer", "http://dbpedia.org/ontology/WrittenWork", "http://dbpedia.org/ontology/Year", "http://dbpedia.org/ontology/YearInSpaceflight", "http://dbpedia.org/ontology/Youtuber", "http://dbpedia.org/ontology/Zoo", "http://dbpedia.org/ontology/aSide", "http://dbpedia.org/ontology/abbeychurchBlessing", "http://dbpedia.org/ontology/abbeychurchBlessingCharge", "http://dbpedia.org/ontology/abbreviation", "http://dbpedia.org/ontology/ableToGrind", "http://dbpedia.org/ontology/absoluteMagnitude", "http://dbpedia.org/ontology/abstentions", "http://dbpedia.org/ontology/abstract", "http://dbpedia.org/ontology/academicAdvisor", "http://dbpedia.org/ontology/academicDiscipline", "http://dbpedia.org/ontology/academyAward", "http://dbpedia.org/ontology/acceleration", "http://dbpedia.org/ontology/access", "http://dbpedia.org/ontology/accessDate", "http://dbpedia.org/ontology/achievement", "http://dbpedia.org/ontology/acquirementDate", "http://dbpedia.org/ontology/actScore", "http://dbpedia.org/ontology/actingHeadteacher", "http://dbpedia.org/ontology/activeCases", "http://dbpedia.org/ontology/activeYears", "http://dbpedia.org/ontology/activeYearsEndDate", "http://dbpedia.org/ontology/activeYearsEndDateMgr", "http://dbpedia.org/ontology/activeYearsEndYear", "http://dbpedia.org/ontology/activeYearsEndYearMgr", "http://dbpedia.org/ontology/activeYearsStartDate", "http://dbpedia.org/ontology/activeYearsStartDateMgr", "http://dbpedia.org/ontology/activeYearsStartYear", "http://dbpedia.org/ontology/activeYearsStartYearMgr", "http://dbpedia.org/ontology/activity", "http://dbpedia.org/ontology/address", "http://dbpedia.org/ontology/addressInRoad", "http://dbpedia.org/ontology/adjacentSettlement", "http://dbpedia.org/ontology/administrativeCenter", "http://dbpedia.org/ontology/administrativeCollectivity", "http://dbpedia.org/ontology/administrativeDistrict", "http://dbpedia.org/ontology/administrativeHeadCity", "http://dbpedia.org/ontology/administrativeStatus", "http://dbpedia.org/ontology/administrator", "http://dbpedia.org/ontology/afdbId", "http://dbpedia.org/ontology/affair", "http://dbpedia.org/ontology/affiliate", "http://dbpedia.org/ontology/affiliation", "http://dbpedia.org/ontology/afiAward", "http://dbpedia.org/ontology/age", "http://dbpedia.org/ontology/ageRange", "http://dbpedia.org/ontology/agency", "http://dbpedia.org/ontology/agencyStationCode", "http://dbpedia.org/ontology/agglomeration", "http://dbpedia.org/ontology/agglomerationArea", "http://dbpedia.org/ontology/agglomerationDemographics", "http://dbpedia.org/ontology/agglomerationPopulation", "http://dbpedia.org/ontology/agglomerationPopulationTotal", "http://dbpedia.org/ontology/agglomerationPopulationYear", "http://dbpedia.org/ontology/aggregation", "http://dbpedia.org/ontology/airDate", "http://dbpedia.org/ontology/aircraftAttack", "http://dbpedia.org/ontology/aircraftBomber", "http://dbpedia.org/ontology/aircraftElectronic", "http://dbpedia.org/ontology/aircraftFighter", "http://dbpedia.org/ontology/aircraftHelicopter", "http://dbpedia.org/ontology/aircraftHelicopterAttack", "http://dbpedia.org/ontology/aircraftHelicopterCargo", "http://dbpedia.org/ontology/aircraftHelicopterMultirole", "http://dbpedia.org/ontology/aircraftHelicopterObservation", "http://dbpedia.org/ontology/aircraftHelicopterTransport", "http://dbpedia.org/ontology/aircraftHelicopterUtility", "http://dbpedia.org/ontology/aircraftInterceptor", "http://dbpedia.org/ontology/aircraftPatrol", "http://dbpedia.org/ontology/aircraftRecon", "http://dbpedia.org/ontology/aircraftTrainer", "http://dbpedia.org/ontology/aircraftTransport", "http://dbpedia.org/ontology/aircraftType", "http://dbpedia.org/ontology/aircraftUser", "http://dbpedia.org/ontology/airportUsing", "http://dbpedia.org/ontology/aitaCode", "http://dbpedia.org/ontology/albedo", "http://dbpedia.org/ontology/album", "http://dbpedia.org/ontology/albumRuntime", "http://dbpedia.org/ontology/alias", "http://dbpedia.org/ontology/allcinemaId", "http://dbpedia.org/ontology/allegiance", "http://dbpedia.org/ontology/alliance", "http://dbpedia.org/ontology/almaMater", "http://dbpedia.org/ontology/alongside", "http://dbpedia.org/ontology/alpsGroup", "http://dbpedia.org/ontology/alpsMainPart", "http://dbpedia.org/ontology/alpsMajorSector", "http://dbpedia.org/ontology/alpsSection", "http://dbpedia.org/ontology/alpsSoiusaCode", "http://dbpedia.org/ontology/alpsSubgroup", "http://dbpedia.org/ontology/alpsSubsection", "http://dbpedia.org/ontology/alpsSupergroup", "http://dbpedia.org/ontology/alternativeName", "http://dbpedia.org/ontology/alternativeTitle", "http://dbpedia.org/ontology/altitude", "http://dbpedia.org/ontology/alumni", "http://dbpedia.org/ontology/amateurDefeat", "http://dbpedia.org/ontology/amateurFight", "http://dbpedia.org/ontology/amateurKo", "http://dbpedia.org/ontology/amateurNoContest", "http://dbpedia.org/ontology/amateurTeam", "http://dbpedia.org/ontology/amateurTie", "http://dbpedia.org/ontology/amateurTitle", "http://dbpedia.org/ontology/amateurVictory", "http://dbpedia.org/ontology/amateurYear", "http://dbpedia.org/ontology/americanComedyAward", "http://dbpedia.org/ontology/amgid", "http://dbpedia.org/ontology/amsterdamCode", "http://dbpedia.org/ontology/analogChannel", "http://dbpedia.org/ontology/animal", "http://dbpedia.org/ontology/animator", "http://dbpedia.org/ontology/anniversary", "http://dbpedia.org/ontology/announcedFrom", "http://dbpedia.org/ontology/annualTemperature", "http://dbpedia.org/ontology/anthem", "http://dbpedia.org/ontology/aoCloassification", "http://dbpedia.org/ontology/apcPresident", "http://dbpedia.org/ontology/apoapsis", "http://dbpedia.org/ontology/apofocus", "http://dbpedia.org/ontology/apparentMagnitude", "http://dbpedia.org/ontology/appearance", "http://dbpedia.org/ontology/appearancesInLeague", "http://dbpedia.org/ontology/appearancesInNationalTeam", "http://dbpedia.org/ontology/appointer", "http://dbpedia.org/ontology/apprehended", "http://dbpedia.org/ontology/approach", "http://dbpedia.org/ontology/approvedByLowerParliament", "http://dbpedia.org/ontology/approvedByUpperParliament", "http://dbpedia.org/ontology/approximateCalories", "http://dbpedia.org/ontology/apskritis", "http://dbpedia.org/ontology/archipelago", "http://dbpedia.org/ontology/architect", "http://dbpedia.org/ontology/architectualBureau", "http://dbpedia.org/ontology/architecturalMovement", "http://dbpedia.org/ontology/architecturalStyle", "http://dbpedia.org/ontology/area", "http://dbpedia.org/ontology/areaCode", "http://dbpedia.org/ontology/areaDate", "http://dbpedia.org/ontology/areaLand", "http://dbpedia.org/ontology/areaMetro", "http://dbpedia.org/ontology/areaOfCatchment", "http://dbpedia.org/ontology/areaOfCatchmentQuote", "http://dbpedia.org/ontology/areaOfSearch", "http://dbpedia.org/ontology/areaQuote", "http://dbpedia.org/ontology/areaRank", "http://dbpedia.org/ontology/areaRural", "http://dbpedia.org/ontology/areaTotal", "http://dbpedia.org/ontology/areaTotalRanking", "http://dbpedia.org/ontology/areaUrban", "http://dbpedia.org/ontology/areaWater", "http://dbpedia.org/ontology/argueDate", "http://dbpedia.org/ontology/arielAward", "http://dbpedia.org/ontology/arm", "http://dbpedia.org/ontology/army", "http://dbpedia.org/ontology/arrestDate", "http://dbpedia.org/ontology/arrondissement", "http://dbpedia.org/ontology/artPatron", "http://dbpedia.org/ontology/artery", "http://dbpedia.org/ontology/artificialSnowArea", "http://dbpedia.org/ontology/artist", "http://dbpedia.org/ontology/artisticFunction", "http://dbpedia.org/ontology/asWikiText", "http://dbpedia.org/ontology/ascent", "http://dbpedia.org/ontology/asiaChampionship", "http://dbpedia.org/ontology/aspectRatio", "http://dbpedia.org/ontology/assembly", "http://dbpedia.org/ontology/assetUnderManagement", "http://dbpedia.org/ontology/assets", "http://dbpedia.org/ontology/assistantPrincipal", "http://dbpedia.org/ontology/associate", "http://dbpedia.org/ontology/associateEditor", "http://dbpedia.org/ontology/associateStar", "http://dbpedia.org/ontology/associatedAct", "http://dbpedia.org/ontology/associatedBand", "http://dbpedia.org/ontology/associatedMusicalArtist", "http://dbpedia.org/ontology/associatedRocket", "http://dbpedia.org/ontology/associationOfLocalGovernment", "http://dbpedia.org/ontology/astrazenca", "http://dbpedia.org/ontology/astrazencaCumul", "http://dbpedia.org/ontology/astrologicalSign", "http://dbpedia.org/ontology/atPage", "http://dbpedia.org/ontology/atRowNumber", "http://dbpedia.org/ontology/atcCode", "http://dbpedia.org/ontology/atcPrefix", "http://dbpedia.org/ontology/atcSuffix", "http://dbpedia.org/ontology/athletics", "http://dbpedia.org/ontology/athleticsDiscipline", "http://dbpedia.org/ontology/atomicNumber", "http://dbpedia.org/ontology/attorneyGeneral", "http://dbpedia.org/ontology/aunt", "http://dbpedia.org/ontology/australiaOpenDouble", "http://dbpedia.org/ontology/australiaOpenMixed", "http://dbpedia.org/ontology/australiaOpenSingle", "http://dbpedia.org/ontology/author", "http://dbpedia.org/ontology/authority", "http://dbpedia.org/ontology/authorityMandate", "http://dbpedia.org/ontology/authorityTitle", "http://dbpedia.org/ontology/automobileModel", "http://dbpedia.org/ontology/automobilePlatform", "http://dbpedia.org/ontology/autonomy", "http://dbpedia.org/ontology/availableSmartCard", "http://dbpedia.org/ontology/average", "http://dbpedia.org/ontology/averageAnnualGeneration", "http://dbpedia.org/ontology/averageClassSize", "http://dbpedia.org/ontology/averageDepth", "http://dbpedia.org/ontology/averageDepthQuote", "http://dbpedia.org/ontology/averageSpeed", "http://dbpedia.org/ontology/avifaunaPopulation", "http://dbpedia.org/ontology/award", "http://dbpedia.org/ontology/awardName", "http://dbpedia.org/ontology/awayColourHexCode", "http://dbpedia.org/ontology/bSide", "http://dbpedia.org/ontology/background", "http://dbpedia.org/ontology/backhand", "http://dbpedia.org/ontology/badGuy", "http://dbpedia.org/ontology/baftaAward", "http://dbpedia.org/ontology/band", "http://dbpedia.org/ontology/bandMember", "http://dbpedia.org/ontology/barPassRate", "http://dbpedia.org/ontology/barangays", "http://dbpedia.org/ontology/basedOn", "http://dbpedia.org/ontology/battery", "http://dbpedia.org/ontology/battingSide", "http://dbpedia.org/ontology/battle", "http://dbpedia.org/ontology/battleHonours", "http://dbpedia.org/ontology/bbr", "http://dbpedia.org/ontology/beatifiedBy", "http://dbpedia.org/ontology/beatifiedDate", "http://dbpedia.org/ontology/beatifiedPlace", "http://dbpedia.org/ontology/bedCount", "http://dbpedia.org/ontology/believers", "http://dbpedia.org/ontology/beltwayCity", "http://dbpedia.org/ontology/bestFinish", "http://dbpedia.org/ontology/bestLap", "http://dbpedia.org/ontology/bestRankDouble", "http://dbpedia.org/ontology/bestRankSingle", "http://dbpedia.org/ontology/bestWsopRank", "http://dbpedia.org/ontology/bestYearWsop", "http://dbpedia.org/ontology/bgafdId", "http://dbpedia.org/ontology/bibsysId", "http://dbpedia.org/ontology/bicycleInformation", "http://dbpedia.org/ontology/bigPoolRecord", "http://dbpedia.org/ontology/biggestCity", "http://dbpedia.org/ontology/billed", "http://dbpedia.org/ontology/binomial", "http://dbpedia.org/ontology/binomialAuthority", "http://dbpedia.org/ontology/bioavailability", "http://dbpedia.org/ontology/bioclimate", "http://dbpedia.org/ontology/biome", "http://dbpedia.org/ontology/bird", "http://dbpedia.org/ontology/birthDate", "http://dbpedia.org/ontology/birthName", "http://dbpedia.org/ontology/birthPlace", "http://dbpedia.org/ontology/birthSign", "http://dbpedia.org/ontology/birthYear", "http://dbpedia.org/ontology/bishopric", "http://dbpedia.org/ontology/blackLongDistancePisteNumber", "http://dbpedia.org/ontology/blackSkiPisteNumber", "http://dbpedia.org/ontology/blazon", "http://dbpedia.org/ontology/blazonCaption", "http://dbpedia.org/ontology/blazonLink", "http://dbpedia.org/ontology/blazonRatio", "http://dbpedia.org/ontology/block", "http://dbpedia.org/ontology/blockAlloy", "http://dbpedia.org/ontology/bloodGroup", "http://dbpedia.org/ontology/bloodType", "http://dbpedia.org/ontology/blueLongDistancePisteNumber", "http://dbpedia.org/ontology/blueSkiPisteNumber", "http://dbpedia.org/ontology/bnfId", "http://dbpedia.org/ontology/board", "http://dbpedia.org/ontology/bodyDiscovered", "http://dbpedia.org/ontology/bodyStyle", "http://dbpedia.org/ontology/boiler", "http://dbpedia.org/ontology/boilerPressure", "http://dbpedia.org/ontology/boilingPoint", "http://dbpedia.org/ontology/book", "http://dbpedia.org/ontology/booster", "http://dbpedia.org/ontology/border", "http://dbpedia.org/ontology/borough", "http://dbpedia.org/ontology/bourgmestre", "http://dbpedia.org/ontology/bowlRecord", "http://dbpedia.org/ontology/bowlingSide", "http://dbpedia.org/ontology/boxerStyle", "http://dbpedia.org/ontology/bpnId", "http://dbpedia.org/ontology/brainInfoNumber", "http://dbpedia.org/ontology/brainInfoType", "http://dbpedia.org/ontology/branchFrom", "http://dbpedia.org/ontology/branchTo", "http://dbpedia.org/ontology/brand", "http://dbpedia.org/ontology/breeder", "http://dbpedia.org/ontology/bridgeCarries", "http://dbpedia.org/ontology/brinCode", "http://dbpedia.org/ontology/britishComedyAwards", "http://dbpedia.org/ontology/britishOpen", "http://dbpedia.org/ontology/britishWins", "http://dbpedia.org/ontology/broadcastArea", "http://dbpedia.org/ontology/broadcastNetwork", "http://dbpedia.org/ontology/broadcastRepeater", "http://dbpedia.org/ontology/broadcastStationClass", "http://dbpedia.org/ontology/broadcastTranslator", "http://dbpedia.org/ontology/bronzeMedalDouble", "http://dbpedia.org/ontology/bronzeMedalMixed", "http://dbpedia.org/ontology/bronzeMedalSingle", "http://dbpedia.org/ontology/bronzeMedalist", "http://dbpedia.org/ontology/brother", "http://dbpedia.org/ontology/budget", "http://dbpedia.org/ontology/budgetYear", "http://dbpedia.org/ontology/builder", "http://dbpedia.org/ontology/building", "http://dbpedia.org/ontology/buildingEndDate", "http://dbpedia.org/ontology/buildingEndYear", "http://dbpedia.org/ontology/buildingStartDate", "http://dbpedia.org/ontology/buildingStartYear", "http://dbpedia.org/ontology/buildingType", "http://dbpedia.org/ontology/bustSize", "http://dbpedia.org/ontology/bustWaistHipSize", "http://dbpedia.org/ontology/cableCar", "http://dbpedia.org/ontology/calculationNeeds", "http://dbpedia.org/ontology/callSign", "http://dbpedia.org/ontology/callsignMeaning", "http://dbpedia.org/ontology/campus", "http://dbpedia.org/ontology/campusSize", "http://dbpedia.org/ontology/campusType", "http://dbpedia.org/ontology/canBaggageChecked", "http://dbpedia.org/ontology/cannonNumber", "http://dbpedia.org/ontology/canonizedBy", "http://dbpedia.org/ontology/canonizedDate", "http://dbpedia.org/ontology/canonizedPlace", "http://dbpedia.org/ontology/canton", "http://dbpedia.org/ontology/capacity", "http://dbpedia.org/ontology/capacityFactor", "http://dbpedia.org/ontology/capital", "http://dbpedia.org/ontology/capitalCoordinates", "http://dbpedia.org/ontology/capitalCountry", "http://dbpedia.org/ontology/capitalDistrict", "http://dbpedia.org/ontology/capitalElevation", "http://dbpedia.org/ontology/capitalMountain", "http://dbpedia.org/ontology/capitalPlace", "http://dbpedia.org/ontology/capitalPosition", "http://dbpedia.org/ontology/capitalRegion", "http://dbpedia.org/ontology/captureDate", "http://dbpedia.org/ontology/carNumber", "http://dbpedia.org/ontology/carbohydrate", "http://dbpedia.org/ontology/carcinogen", "http://dbpedia.org/ontology/careerPoints", "http://dbpedia.org/ontology/careerPrizeMoney", "http://dbpedia.org/ontology/careerStation", "http://dbpedia.org/ontology/cargoFuel", "http://dbpedia.org/ontology/cargoGas", "http://dbpedia.org/ontology/cargoWater", "http://dbpedia.org/ontology/casNumber", "http://dbpedia.org/ontology/casSupplemental", "http://dbpedia.org/ontology/case", "http://dbpedia.org/ontology/casualties", "http://dbpedia.org/ontology/catch", "http://dbpedia.org/ontology/category", "http://dbpedia.org/ontology/caterer", "http://dbpedia.org/ontology/catholicPercentage", "http://dbpedia.org/ontology/causalties", "http://dbpedia.org/ontology/causeOfDeath", "http://dbpedia.org/ontology/causedBy", "http://dbpedia.org/ontology/ccaState", "http://dbpedia.org/ontology/ceeb", "http://dbpedia.org/ontology/ceiling", "http://dbpedia.org/ontology/cemetery", "http://dbpedia.org/ontology/censusYear", "http://dbpedia.org/ontology/center", "http://dbpedia.org/ontology/centuryBreaks", "http://dbpedia.org/ontology/ceo", "http://dbpedia.org/ontology/ceremonialCounty", "http://dbpedia.org/ontology/certification", "http://dbpedia.org/ontology/certificationDate", "http://dbpedia.org/ontology/cesarAward", "http://dbpedia.org/ontology/chEBI", "http://dbpedia.org/ontology/chEMBL", "http://dbpedia.org/ontology/chain", "http://dbpedia.org/ontology/chairLabel", "http://dbpedia.org/ontology/chairman", "http://dbpedia.org/ontology/chairmanTitle", "http://dbpedia.org/ontology/chairperson", "http://dbpedia.org/ontology/champion", "http://dbpedia.org/ontology/championInDouble", "http://dbpedia.org/ontology/championInDoubleFemale", "http://dbpedia.org/ontology/championInDoubleMale", "http://dbpedia.org/ontology/championInMixedDouble", "http://dbpedia.org/ontology/championInSingle", "http://dbpedia.org/ontology/championInSingleFemale", "http://dbpedia.org/ontology/championInSingleMale", "http://dbpedia.org/ontology/championships", "http://dbpedia.org/ontology/chancellor", "http://dbpedia.org/ontology/channel", "http://dbpedia.org/ontology/chaplain", "http://dbpedia.org/ontology/characterInPlay", "http://dbpedia.org/ontology/chef", "http://dbpedia.org/ontology/chemSpiderId", "http://dbpedia.org/ontology/chemicalFormula", "http://dbpedia.org/ontology/chiefEditor", "http://dbpedia.org/ontology/chiefPlace", "http://dbpedia.org/ontology/child", "http://dbpedia.org/ontology/childOrganisation", "http://dbpedia.org/ontology/choreographer", "http://dbpedia.org/ontology/chorusCharacterInPlay", "http://dbpedia.org/ontology/christeningDate", "http://dbpedia.org/ontology/chromosome", "http://dbpedia.org/ontology/cinematography", "http://dbpedia.org/ontology/circle", "http://dbpedia.org/ontology/circuitLength", "http://dbpedia.org/ontology/circuitName", "http://dbpedia.org/ontology/circulation", "http://dbpedia.org/ontology/circumcised", "http://dbpedia.org/ontology/cites", "http://dbpedia.org/ontology/citizenship", "http://dbpedia.org/ontology/city", "http://dbpedia.org/ontology/cityLink", "http://dbpedia.org/ontology/cityRank", "http://dbpedia.org/ontology/citySince", "http://dbpedia.org/ontology/cityType", "http://dbpedia.org/ontology/clade", "http://dbpedia.org/ontology/class", "http://dbpedia.org/ontology/classes", "http://dbpedia.org/ontology/classification", "http://dbpedia.org/ontology/classis", "http://dbpedia.org/ontology/climate", "http://dbpedia.org/ontology/climbUpNumber", "http://dbpedia.org/ontology/closeTo", "http://dbpedia.org/ontology/closed", "http://dbpedia.org/ontology/closingDate", "http://dbpedia.org/ontology/closingFilm", "http://dbpedia.org/ontology/closingYear", "http://dbpedia.org/ontology/clothSize", "http://dbpedia.org/ontology/clothingSize", "http://dbpedia.org/ontology/club", "http://dbpedia.org/ontology/clubsRecordGoalscorer", "http://dbpedia.org/ontology/cluster", "http://dbpedia.org/ontology/cmpEvaDuration", "http://dbpedia.org/ontology/cmykCoordinateBlack", "http://dbpedia.org/ontology/cmykCoordinateCyanic", "http://dbpedia.org/ontology/cmykCoordinateMagenta", "http://dbpedia.org/ontology/cmykCoordinateYellow", "http://dbpedia.org/ontology/co2Emission", "http://dbpedia.org/ontology/coExecutiveProducer", "http://dbpedia.org/ontology/coProducer", "http://dbpedia.org/ontology/coach", "http://dbpedia.org/ontology/coachClub", "http://dbpedia.org/ontology/coachSeason", "http://dbpedia.org/ontology/coachedTeam", "http://dbpedia.org/ontology/coachingRecord", "http://dbpedia.org/ontology/coalition", "http://dbpedia.org/ontology/coastLength", "http://dbpedia.org/ontology/coastLine", "http://dbpedia.org/ontology/coatOfArms", "http://dbpedia.org/ontology/code", "http://dbpedia.org/ontology/codeBook", "http://dbpedia.org/ontology/codeDistrict", "http://dbpedia.org/ontology/codeIndex", "http://dbpedia.org/ontology/codeListOfHonour", "http://dbpedia.org/ontology/codeMemorial", "http://dbpedia.org/ontology/codeMunicipalMonument", "http://dbpedia.org/ontology/codeNationalMonument", "http://dbpedia.org/ontology/codeProvincialMonument", "http://dbpedia.org/ontology/codeSettlement", "http://dbpedia.org/ontology/codeStockExchange", "http://dbpedia.org/ontology/coden", "http://dbpedia.org/ontology/coemperor", "http://dbpedia.org/ontology/collaboration", "http://dbpedia.org/ontology/colleague", "http://dbpedia.org/ontology/collection", "http://dbpedia.org/ontology/collectionSize", "http://dbpedia.org/ontology/collectivityMinority", "http://dbpedia.org/ontology/college", "http://dbpedia.org/ontology/collegeHof", "http://dbpedia.org/ontology/colonialName", "http://dbpedia.org/ontology/colorChart", "http://dbpedia.org/ontology/colour", "http://dbpedia.org/ontology/colourHexCode", "http://dbpedia.org/ontology/colourName", "http://dbpedia.org/ontology/combatant", "http://dbpedia.org/ontology/comic", "http://dbpedia.org/ontology/comitat", "http://dbpedia.org/ontology/command", "http://dbpedia.org/ontology/commandModule", "http://dbpedia.org/ontology/commandStructure", "http://dbpedia.org/ontology/commandant", "http://dbpedia.org/ontology/commander", "http://dbpedia.org/ontology/comment", "http://dbpedia.org/ontology/commissioner", "http://dbpedia.org/ontology/commissionerDate", "http://dbpedia.org/ontology/commissioningDate", "http://dbpedia.org/ontology/committee", "http://dbpedia.org/ontology/committeeInLegislature", "http://dbpedia.org/ontology/commonName", "http://dbpedia.org/ontology/commune", "http://dbpedia.org/ontology/communityIsoCode", "http://dbpedia.org/ontology/company", "http://dbpedia.org/ontology/comparable", "http://dbpedia.org/ontology/competition", "http://dbpedia.org/ontology/competitionTitle", "http://dbpedia.org/ontology/compiler", "http://dbpedia.org/ontology/completionDate", "http://dbpedia.org/ontology/complexion", "http://dbpedia.org/ontology/complexity", "http://dbpedia.org/ontology/complications", "http://dbpedia.org/ontology/component", "http://dbpedia.org/ontology/composer", "http://dbpedia.org/ontology/compressionRatio", "http://dbpedia.org/ontology/computingInput", "http://dbpedia.org/ontology/computingMedia", "http://dbpedia.org/ontology/computingPlatform", "http://dbpedia.org/ontology/configuration", "http://dbpedia.org/ontology/confirmedCases", "http://dbpedia.org/ontology/conflict", "http://dbpedia.org/ontology/congressionalDistrict", "http://dbpedia.org/ontology/connectsReferencedTo", "http://dbpedia.org/ontology/connotation", "http://dbpedia.org/ontology/consecration", "http://dbpedia.org/ontology/conservationStatus", "http://dbpedia.org/ontology/conservationStatusSystem", "http://dbpedia.org/ontology/constellation", "http://dbpedia.org/ontology/constituencyDistrict", "http://dbpedia.org/ontology/construction", "http://dbpedia.org/ontology/constructionMaterial", "http://dbpedia.org/ontology/contest", "http://dbpedia.org/ontology/continent", "http://dbpedia.org/ontology/continentRank", "http://dbpedia.org/ontology/continentalTournament", "http://dbpedia.org/ontology/continentalTournamentBronze", "http://dbpedia.org/ontology/continentalTournamentGold", "http://dbpedia.org/ontology/continentalTournamentSilver", "http://dbpedia.org/ontology/contractAward", "http://dbpedia.org/ontology/contractor", "http://dbpedia.org/ontology/convictionDate", "http://dbpedia.org/ontology/convictionPenalty", "http://dbpedia.org/ontology/coolingSystem", "http://dbpedia.org/ontology/copilote", "http://dbpedia.org/ontology/coronationDate", "http://dbpedia.org/ontology/cosparId", "http://dbpedia.org/ontology/cost", "http://dbpedia.org/ontology/costumeDesigner", "http://dbpedia.org/ontology/council", "http://dbpedia.org/ontology/councilArea", "http://dbpedia.org/ontology/country", "http://dbpedia.org/ontology/countryCode", "http://dbpedia.org/ontology/countryOrigin", "http://dbpedia.org/ontology/countryRank", "http://dbpedia.org/ontology/countryWithFirstAstronaut", "http://dbpedia.org/ontology/countryWithFirstSatellite", "http://dbpedia.org/ontology/countryWithFirstSatelliteLaunched", "http://dbpedia.org/ontology/countryWithFirstSpaceflight", "http://dbpedia.org/ontology/county", "http://dbpedia.org/ontology/countySeat", "http://dbpedia.org/ontology/course", "http://dbpedia.org/ontology/courseArea", "http://dbpedia.org/ontology/cousurper", "http://dbpedia.org/ontology/coverArtist", "http://dbpedia.org/ontology/cpu", "http://dbpedia.org/ontology/created", "http://dbpedia.org/ontology/creationChristianBishop", "http://dbpedia.org/ontology/creationYear", "http://dbpedia.org/ontology/creativeDirector", "http://dbpedia.org/ontology/creator", "http://dbpedia.org/ontology/creatorOfDish", "http://dbpedia.org/ontology/credit", "http://dbpedia.org/ontology/crest", "http://dbpedia.org/ontology/crew", "http://dbpedia.org/ontology/crewMember", "http://dbpedia.org/ontology/crewSize", "http://dbpedia.org/ontology/crews", "http://dbpedia.org/ontology/criminalCharge", "http://dbpedia.org/ontology/criteria", "http://dbpedia.org/ontology/crosses", "http://dbpedia.org/ontology/crownDependency", "http://dbpedia.org/ontology/cuisine", "http://dbpedia.org/ontology/cultivatedVariety", "http://dbpedia.org/ontology/curator", "http://dbpedia.org/ontology/currency", "http://dbpedia.org/ontology/currencyCode", "http://dbpedia.org/ontology/currentCity", "http://dbpedia.org/ontology/currentLeague", "http://dbpedia.org/ontology/currentMember", "http://dbpedia.org/ontology/currentPartner", "http://dbpedia.org/ontology/currentProduction", "http://dbpedia.org/ontology/currentRank", "http://dbpedia.org/ontology/currentRecord", "http://dbpedia.org/ontology/currentSeason", "http://dbpedia.org/ontology/currentStatus", "http://dbpedia.org/ontology/currentTeam", "http://dbpedia.org/ontology/currentTeamManager", "http://dbpedia.org/ontology/currentTeamMember", "http://dbpedia.org/ontology/currentWorldChampion", "http://dbpedia.org/ontology/currentlyUsedFor", "http://dbpedia.org/ontology/custodian", "http://dbpedia.org/ontology/cyclistGenre", "http://dbpedia.org/ontology/cylinderBore", "http://dbpedia.org/ontology/cylinderCount", "http://dbpedia.org/ontology/dailyVaccinationsPerMillion", "http://dbpedia.org/ontology/dailyVaccinationsRaw", "http://dbpedia.org/ontology/daira", "http://dbpedia.org/ontology/dam", "http://dbpedia.org/ontology/damage", "http://dbpedia.org/ontology/damsire", "http://dbpedia.org/ontology/danseCompetition", "http://dbpedia.org/ontology/danseScore", "http://dbpedia.org/ontology/date", "http://dbpedia.org/ontology/dateAct", "http://dbpedia.org/ontology/dateAgreement", "http://dbpedia.org/ontology/dateBudget", "http://dbpedia.org/ontology/dateClosed", "http://dbpedia.org/ontology/dateCompleted", "http://dbpedia.org/ontology/dateConstruction", "http://dbpedia.org/ontology/dateExtended", "http://dbpedia.org/ontology/dateLastUpdated", "http://dbpedia.org/ontology/dateOfAbandonment", "http://dbpedia.org/ontology/dateOfBurial", "http://dbpedia.org/ontology/dateUnveiled", "http://dbpedia.org/ontology/dateUse", "http://dbpedia.org/ontology/daughter", "http://dbpedia.org/ontology/davisCup", "http://dbpedia.org/ontology/day", "http://dbpedia.org/ontology/daylightSavingTimeZone", "http://dbpedia.org/ontology/dbnlCodeDutch", "http://dbpedia.org/ontology/dcc", "http://dbpedia.org/ontology/deFactoLanguage", "http://dbpedia.org/ontology/deadInFightDate", "http://dbpedia.org/ontology/deadInFightPlace", "http://dbpedia.org/ontology/dean", "http://dbpedia.org/ontology/deanery", "http://dbpedia.org/ontology/deathAge", "http://dbpedia.org/ontology/deathCause", "http://dbpedia.org/ontology/deathDate", "http://dbpedia.org/ontology/deathPlace", "http://dbpedia.org/ontology/deathYear", "http://dbpedia.org/ontology/deaths", "http://dbpedia.org/ontology/debut", "http://dbpedia.org/ontology/debutTeam", "http://dbpedia.org/ontology/debutWork", "http://dbpedia.org/ontology/dec", "http://dbpedia.org/ontology/decay", "http://dbpedia.org/ontology/decideDate", "http://dbpedia.org/ontology/declination", "http://dbpedia.org/ontology/decommissioningDate", "http://dbpedia.org/ontology/decoration", "http://dbpedia.org/ontology/defeat", "http://dbpedia.org/ontology/defeatAsMgr", "http://dbpedia.org/ontology/definition", "http://dbpedia.org/ontology/defunct", "http://dbpedia.org/ontology/delegateMayor", "http://dbpedia.org/ontology/delegation", "http://dbpedia.org/ontology/deliveryDate", "http://dbpedia.org/ontology/deme", "http://dbpedia.org/ontology/demographics", "http://dbpedia.org/ontology/demographicsAsOf", "http://dbpedia.org/ontology/demolitionDate", "http://dbpedia.org/ontology/demolitionYear", "http://dbpedia.org/ontology/demonym", "http://dbpedia.org/ontology/denomination", "http://dbpedia.org/ontology/density", "http://dbpedia.org/ontology/department", "http://dbpedia.org/ontology/departmentCode", "http://dbpedia.org/ontology/departmentPosition", "http://dbpedia.org/ontology/depictionDescription", "http://dbpedia.org/ontology/depth", "http://dbpedia.org/ontology/depthQuote", "http://dbpedia.org/ontology/depths", "http://dbpedia.org/ontology/deputy", "http://dbpedia.org/ontology/derivative", "http://dbpedia.org/ontology/derivedWord", "http://dbpedia.org/ontology/description", "http://dbpedia.org/ontology/designCompany", "http://dbpedia.org/ontology/designer", "http://dbpedia.org/ontology/destination", "http://dbpedia.org/ontology/destructionDate", "http://dbpedia.org/ontology/detectionMethod", "http://dbpedia.org/ontology/detractor", "http://dbpedia.org/ontology/developer", "http://dbpedia.org/ontology/dfE", "http://dbpedia.org/ontology/diameter", "http://dbpedia.org/ontology/differentialDiagnosis", "http://dbpedia.org/ontology/digitalChannel", "http://dbpedia.org/ontology/digitalSubChannel", "http://dbpedia.org/ontology/diocese", "http://dbpedia.org/ontology/diploma", "http://dbpedia.org/ontology/director", "http://dbpedia.org/ontology/disappearanceDate", "http://dbpedia.org/ontology/disbanded", "http://dbpedia.org/ontology/discharge", "http://dbpedia.org/ontology/dischargeAverage", "http://dbpedia.org/ontology/disciple", "http://dbpedia.org/ontology/discipline", "http://dbpedia.org/ontology/discontinued", "http://dbpedia.org/ontology/discovered", "http://dbpedia.org/ontology/discoverer", "http://dbpedia.org/ontology/discovery", "http://dbpedia.org/ontology/disease", "http://dbpedia.org/ontology/diseasesDB", "http://dbpedia.org/ontology/diseasesDb", "http://dbpedia.org/ontology/displacement", "http://dbpedia.org/ontology/dissolutionDate", "http://dbpedia.org/ontology/dissolutionYear", "http://dbpedia.org/ontology/dissolved", "http://dbpedia.org/ontology/dist_ly", "http://dbpedia.org/ontology/dist_pc", "http://dbpedia.org/ontology/distance", "http://dbpedia.org/ontology/distanceLaps", "http://dbpedia.org/ontology/distanceToBelfast", "http://dbpedia.org/ontology/distanceToCapital", "http://dbpedia.org/ontology/distanceToCardiff", "http://dbpedia.org/ontology/distanceToCharingCross", "http://dbpedia.org/ontology/distanceToDouglas", "http://dbpedia.org/ontology/distanceToDublin", "http://dbpedia.org/ontology/distanceToEdinburgh", "http://dbpedia.org/ontology/distanceToLondon", "http://dbpedia.org/ontology/distanceToNearestCity", "http://dbpedia.org/ontology/distanceTraveled", "http://dbpedia.org/ontology/distributingCompany", "http://dbpedia.org/ontology/distributingLabel", "http://dbpedia.org/ontology/distributor", "http://dbpedia.org/ontology/district", "http://dbpedia.org/ontology/division", "http://dbpedia.org/ontology/dockedTime", "http://dbpedia.org/ontology/doctoralAdvisor", "http://dbpedia.org/ontology/doctoralStudent", "http://dbpedia.org/ontology/documentDesignation", "http://dbpedia.org/ontology/documentNumber", "http://dbpedia.org/ontology/domain", "http://dbpedia.org/ontology/dorlandsId", "http://dbpedia.org/ontology/dorlandsPrefix", "http://dbpedia.org/ontology/dorlandsSuffix", "http://dbpedia.org/ontology/dose", "http://dbpedia.org/ontology/dosesFirst", "http://dbpedia.org/ontology/dosesSecond", "http://dbpedia.org/ontology/draft", "http://dbpedia.org/ontology/draftLeague", "http://dbpedia.org/ontology/draftPick", "http://dbpedia.org/ontology/draftPosition", "http://dbpedia.org/ontology/draftRound", "http://dbpedia.org/ontology/draftTeam", "http://dbpedia.org/ontology/draftYear", "http://dbpedia.org/ontology/drainsFrom", "http://dbpedia.org/ontology/drainsTo", "http://dbpedia.org/ontology/drama", "http://dbpedia.org/ontology/dressCode", "http://dbpedia.org/ontology/drug", "http://dbpedia.org/ontology/drugbank", "http://dbpedia.org/ontology/drugs.com", "http://dbpedia.org/ontology/dryCargo", "http://dbpedia.org/ontology/dubber", "http://dbpedia.org/ontology/duration", "http://dbpedia.org/ontology/dutchArtworkCode", "http://dbpedia.org/ontology/dutchCOROPCode", "http://dbpedia.org/ontology/dutchMIPCode", "http://dbpedia.org/ontology/dutchNAIdentifier", "http://dbpedia.org/ontology/dutchPPNCode", "http://dbpedia.org/ontology/dutchRKDCode", "http://dbpedia.org/ontology/dutchWinkelID", "http://dbpedia.org/ontology/dynasty", "http://dbpedia.org/ontology/eMedicineSubject", "http://dbpedia.org/ontology/eMedicineTopic", "http://dbpedia.org/ontology/eTeatrId", "http://dbpedia.org/ontology/eastPlace", "http://dbpedia.org/ontology/ecNumber", "http://dbpedia.org/ontology/editing", "http://dbpedia.org/ontology/editor", "http://dbpedia.org/ontology/editorTitle", "http://dbpedia.org/ontology/education", "http://dbpedia.org/ontology/educationPlace", "http://dbpedia.org/ontology/educationSystem", "http://dbpedia.org/ontology/effectiveRadiatedPower", "http://dbpedia.org/ontology/egafdId", "http://dbpedia.org/ontology/einecsNumber", "http://dbpedia.org/ontology/ekatteCode", "http://dbpedia.org/ontology/electionDate", "http://dbpedia.org/ontology/electionDateLeader", "http://dbpedia.org/ontology/electionMajority", "http://dbpedia.org/ontology/elementAbove", "http://dbpedia.org/ontology/elementBlock", "http://dbpedia.org/ontology/elementGroup", "http://dbpedia.org/ontology/elementPeriod", "http://dbpedia.org/ontology/elevation", "http://dbpedia.org/ontology/elevationQuote", "http://dbpedia.org/ontology/elevatorCount", "http://dbpedia.org/ontology/elo", "http://dbpedia.org/ontology/eloRecord", "http://dbpedia.org/ontology/emblem", "http://dbpedia.org/ontology/emmyAward", "http://dbpedia.org/ontology/employer", "http://dbpedia.org/ontology/employersCelebration", "http://dbpedia.org/ontology/end", "http://dbpedia.org/ontology/endCareer", "http://dbpedia.org/ontology/endDate", "http://dbpedia.org/ontology/endDateTime", "http://dbpedia.org/ontology/endOccupation", "http://dbpedia.org/ontology/endPoint", "http://dbpedia.org/ontology/endReign", "http://dbpedia.org/ontology/endYear", "http://dbpedia.org/ontology/endYearOfInsertion", "http://dbpedia.org/ontology/endYearOfSales", "http://dbpedia.org/ontology/endangeredSince", "http://dbpedia.org/ontology/endingTheme", "http://dbpedia.org/ontology/endowment", "http://dbpedia.org/ontology/enemy", "http://dbpedia.org/ontology/engine", "http://dbpedia.org/ontology/enginePower", "http://dbpedia.org/ontology/engineType", "http://dbpedia.org/ontology/engineer", "http://dbpedia.org/ontology/ensembl", "http://dbpedia.org/ontology/enshrinedDeity", "http://dbpedia.org/ontology/entourage", "http://dbpedia.org/ontology/entrezgene", "http://dbpedia.org/ontology/eparchy", "http://dbpedia.org/ontology/episode", "http://dbpedia.org/ontology/episodeNumber", "http://dbpedia.org/ontology/epoch", "http://dbpedia.org/ontology/eptFinalTable", "http://dbpedia.org/ontology/eptItm", "http://dbpedia.org/ontology/eptTitle", "http://dbpedia.org/ontology/equipment", "http://dbpedia.org/ontology/equity", "http://dbpedia.org/ontology/era", "http://dbpedia.org/ontology/eruption", "http://dbpedia.org/ontology/eruptionYear", "http://dbpedia.org/ontology/escalafon", "http://dbpedia.org/ontology/escapeVelocity", "http://dbpedia.org/ontology/espnId", "http://dbpedia.org/ontology/established", "http://dbpedia.org/ontology/establishment", "http://dbpedia.org/ontology/ethnicGroup", "http://dbpedia.org/ontology/ethnicGroupsInYear", "http://dbpedia.org/ontology/ethnicity", "http://dbpedia.org/ontology/eurobabeIndexId", "http://dbpedia.org/ontology/europeanAffiliation", "http://dbpedia.org/ontology/europeanChampionship", "http://dbpedia.org/ontology/europeanParliamentGroup", "http://dbpedia.org/ontology/europeanUnionEntranceDate", "http://dbpedia.org/ontology/event", "http://dbpedia.org/ontology/eventDate", "http://dbpedia.org/ontology/eventDescription", "http://dbpedia.org/ontology/executiveHeadteacher", "http://dbpedia.org/ontology/executiveProducer", "http://dbpedia.org/ontology/exhibition", "http://dbpedia.org/ontology/existence", "http://dbpedia.org/ontology/expedition", "http://dbpedia.org/ontology/explorer", "http://dbpedia.org/ontology/externalOrnament", "http://dbpedia.org/ontology/extinctionDate", "http://dbpedia.org/ontology/extinctionYear", "http://dbpedia.org/ontology/eyeColor", "http://dbpedia.org/ontology/eyeColour", "http://dbpedia.org/ontology/eyes", "http://dbpedia.org/ontology/faaLocationIdentifier", "http://dbpedia.org/ontology/facilityId", "http://dbpedia.org/ontology/facultySize", "http://dbpedia.org/ontology/failedLaunches", "http://dbpedia.org/ontology/family", "http://dbpedia.org/ontology/familyMember", "http://dbpedia.org/ontology/fansgroup", "http://dbpedia.org/ontology/fareZone", "http://dbpedia.org/ontology/fastestDriver", "http://dbpedia.org/ontology/fastestDriverCountry", "http://dbpedia.org/ontology/fastestDriverTeam", "http://dbpedia.org/ontology/fastestLap", "http://dbpedia.org/ontology/fat", "http://dbpedia.org/ontology/fatalityRate", "http://dbpedia.org/ontology/fate", "http://dbpedia.org/ontology/father", "http://dbpedia.org/ontology/fauna", "http://dbpedia.org/ontology/fc", "http://dbpedia.org/ontology/fcRuns", "http://dbpedia.org/ontology/fdaUniiCode", "http://dbpedia.org/ontology/feastDay", "http://dbpedia.org/ontology/feat", "http://dbpedia.org/ontology/feature", "http://dbpedia.org/ontology/features", "http://dbpedia.org/ontology/fedCup", "http://dbpedia.org/ontology/federalState", "http://dbpedia.org/ontology/federation", "http://dbpedia.org/ontology/fees", "http://dbpedia.org/ontology/fibahof", "http://dbpedia.org/ontology/field", "http://dbpedia.org/ontology/fight", "http://dbpedia.org/ontology/fighter", "http://dbpedia.org/ontology/fileExtension", "http://dbpedia.org/ontology/fileSize", "http://dbpedia.org/ontology/fileURL", "http://dbpedia.org/ontology/filename", "http://dbpedia.org/ontology/fillingStation", "http://dbpedia.org/ontology/film", "http://dbpedia.org/ontology/filmAudioType", "http://dbpedia.org/ontology/filmColourType", "http://dbpedia.org/ontology/filmFareAward", "http://dbpedia.org/ontology/filmNumber", "http://dbpedia.org/ontology/filmPolskiId", "http://dbpedia.org/ontology/filmRuntime", "http://dbpedia.org/ontology/filmVersion", "http://dbpedia.org/ontology/finalFlight", "http://dbpedia.org/ontology/finalLost", "http://dbpedia.org/ontology/finalLostDouble", "http://dbpedia.org/ontology/finalLostSingle", "http://dbpedia.org/ontology/finalLostTeam", "http://dbpedia.org/ontology/finalPublicationDate", "http://dbpedia.org/ontology/finalPublicationYear", "http://dbpedia.org/ontology/fipsCode", "http://dbpedia.org/ontology/firstAirDate", "http://dbpedia.org/ontology/firstAppearance", "http://dbpedia.org/ontology/firstAscent", "http://dbpedia.org/ontology/firstAscentPerson", "http://dbpedia.org/ontology/firstAscentYear", "http://dbpedia.org/ontology/firstBroadcast", "http://dbpedia.org/ontology/firstDriver", "http://dbpedia.org/ontology/firstDriverCountry", "http://dbpedia.org/ontology/firstDriverTeam", "http://dbpedia.org/ontology/firstFlight", "http://dbpedia.org/ontology/firstFlightEndDate", "http://dbpedia.org/ontology/firstFlightStartDate", "http://dbpedia.org/ontology/firstGame", "http://dbpedia.org/ontology/firstLaunch", "http://dbpedia.org/ontology/firstLaunchDate", "http://dbpedia.org/ontology/firstLaunchRocket", "http://dbpedia.org/ontology/firstLeader", "http://dbpedia.org/ontology/firstMention", "http://dbpedia.org/ontology/firstOlympicEvent", "http://dbpedia.org/ontology/firstOwner", "http://dbpedia.org/ontology/firstPlace", "http://dbpedia.org/ontology/firstPopularVote", "http://dbpedia.org/ontology/firstProMatch", "http://dbpedia.org/ontology/firstPublicationDate", "http://dbpedia.org/ontology/firstPublicationYear", "http://dbpedia.org/ontology/firstPublisher", "http://dbpedia.org/ontology/firstRace", "http://dbpedia.org/ontology/firstWin", "http://dbpedia.org/ontology/firstWinner", "http://dbpedia.org/ontology/flag", "http://dbpedia.org/ontology/flagBearer", "http://dbpedia.org/ontology/flagBorder", "http://dbpedia.org/ontology/flagCaption", "http://dbpedia.org/ontology/flagLink", "http://dbpedia.org/ontology/flagSize", "http://dbpedia.org/ontology/flashPoint", "http://dbpedia.org/ontology/floodingDate", "http://dbpedia.org/ontology/floorArea", "http://dbpedia.org/ontology/floorCount", "http://dbpedia.org/ontology/flora", "http://dbpedia.org/ontology/flower", "http://dbpedia.org/ontology/flyingHours", "http://dbpedia.org/ontology/foalDate", "http://dbpedia.org/ontology/focus", "http://dbpedia.org/ontology/followedBy", "http://dbpedia.org/ontology/followingEvent", "http://dbpedia.org/ontology/follows", "http://dbpedia.org/ontology/foot", "http://dbpedia.org/ontology/footedness", "http://dbpedia.org/ontology/forces", "http://dbpedia.org/ontology/foresterDistrict", "http://dbpedia.org/ontology/format", "http://dbpedia.org/ontology/formationDate", "http://dbpedia.org/ontology/formationYear", "http://dbpedia.org/ontology/formerBandMember", "http://dbpedia.org/ontology/formerBroadcastNetwork", "http://dbpedia.org/ontology/formerCallsign", "http://dbpedia.org/ontology/formerChannel", "http://dbpedia.org/ontology/formerChoreographer", "http://dbpedia.org/ontology/formerCoach", "http://dbpedia.org/ontology/formerHighschool", "http://dbpedia.org/ontology/formerName", "http://dbpedia.org/ontology/formerPartner", "http://dbpedia.org/ontology/formerTeam", "http://dbpedia.org/ontology/formula", "http://dbpedia.org/ontology/fossil", "http://dbpedia.org/ontology/foundation", "http://dbpedia.org/ontology/foundationPlace", "http://dbpedia.org/ontology/foundedBy", "http://dbpedia.org/ontology/founder", "http://dbpedia.org/ontology/foundingDate", "http://dbpedia.org/ontology/foundingYear", "http://dbpedia.org/ontology/fourthCommander", "http://dbpedia.org/ontology/frazioni", "http://dbpedia.org/ontology/free", "http://dbpedia.org/ontology/freeDanseScore", "http://dbpedia.org/ontology/freeFlightTime", "http://dbpedia.org/ontology/freeLabel", "http://dbpedia.org/ontology/freeProgCompetition", "http://dbpedia.org/ontology/freeProgScore", "http://dbpedia.org/ontology/freeScoreCompetition", "http://dbpedia.org/ontology/frequency", "http://dbpedia.org/ontology/frequencyOfPublication", "http://dbpedia.org/ontology/frequentlyUpdated", "http://dbpedia.org/ontology/friend", "http://dbpedia.org/ontology/frontierLength", "http://dbpedia.org/ontology/frozen", "http://dbpedia.org/ontology/fuel", "http://dbpedia.org/ontology/fuelCapacity", "http://dbpedia.org/ontology/fuelConsumption", "http://dbpedia.org/ontology/fuelSystem", "http://dbpedia.org/ontology/fuelType", "http://dbpedia.org/ontology/fuelTypeName", "http://dbpedia.org/ontology/fullCompetition", "http://dbpedia.org/ontology/fullScore", "http://dbpedia.org/ontology/functionEndDate", "http://dbpedia.org/ontology/functionEndYear", "http://dbpedia.org/ontology/functionStartDate", "http://dbpedia.org/ontology/functionStartYear", "http://dbpedia.org/ontology/fundedBy", "http://dbpedia.org/ontology/galicianSpeakersDate", "http://dbpedia.org/ontology/galicianSpeakersPercentage", "http://dbpedia.org/ontology/galleryItem", "http://dbpedia.org/ontology/gameArtist", "http://dbpedia.org/ontology/gameEngine", "http://dbpedia.org/ontology/gameModus", "http://dbpedia.org/ontology/games", "http://dbpedia.org/ontology/garrison", "http://dbpedia.org/ontology/gasChambers", "http://dbpedia.org/ontology/gaudiAward", "http://dbpedia.org/ontology/gdpPerCapita", "http://dbpedia.org/ontology/geminiAward", "http://dbpedia.org/ontology/gender", "http://dbpedia.org/ontology/geneLocation", "http://dbpedia.org/ontology/geneLocationEnd", "http://dbpedia.org/ontology/geneLocationStart", "http://dbpedia.org/ontology/geneReviewsId", "http://dbpedia.org/ontology/geneReviewsName", "http://dbpedia.org/ontology/generalCouncil", "http://dbpedia.org/ontology/generalManager", "http://dbpedia.org/ontology/generationUnits", "http://dbpedia.org/ontology/genomeDB", "http://dbpedia.org/ontology/genre", "http://dbpedia.org/ontology/genus", "http://dbpedia.org/ontology/geolocDepartment", "http://dbpedia.org/ontology/geolocDual", "http://dbpedia.org/ontology/geologicPeriod", "http://dbpedia.org/ontology/geology", "http://dbpedia.org/ontology/giniCoefficient", "http://dbpedia.org/ontology/giniCoefficientAsOf", "http://dbpedia.org/ontology/giniCoefficientCategory", "http://dbpedia.org/ontology/giniCoefficientRanking", "http://dbpedia.org/ontology/glycemicIndex", "http://dbpedia.org/ontology/gnisCode", "http://dbpedia.org/ontology/gnl", "http://dbpedia.org/ontology/goalsInLeague", "http://dbpedia.org/ontology/goalsInNationalTeam", "http://dbpedia.org/ontology/goldMedalDouble", "http://dbpedia.org/ontology/goldMedalMixed", "http://dbpedia.org/ontology/goldMedalSingle", "http://dbpedia.org/ontology/goldMedalist", "http://dbpedia.org/ontology/goldenCalfAward", "http://dbpedia.org/ontology/goldenGlobeAward", "http://dbpedia.org/ontology/goldenRaspberryAward", "http://dbpedia.org/ontology/governingBody", "http://dbpedia.org/ontology/government", "http://dbpedia.org/ontology/governmentCountry", "http://dbpedia.org/ontology/governmentElevation", "http://dbpedia.org/ontology/governmentMountain", "http://dbpedia.org/ontology/governmentPlace", "http://dbpedia.org/ontology/governmentPosition", "http://dbpedia.org/ontology/governmentRegion", "http://dbpedia.org/ontology/governmentType", "http://dbpedia.org/ontology/governor", "http://dbpedia.org/ontology/governorGeneral", "http://dbpedia.org/ontology/governorate", "http://dbpedia.org/ontology/goyaAward", "http://dbpedia.org/ontology/gradName", "http://dbpedia.org/ontology/gradNum", "http://dbpedia.org/ontology/grades", "http://dbpedia.org/ontology/grammyAward", "http://dbpedia.org/ontology/grandsire", "http://dbpedia.org/ontology/grave", "http://dbpedia.org/ontology/grayPage", "http://dbpedia.org/ontology/graySubject", "http://dbpedia.org/ontology/greekName", "http://dbpedia.org/ontology/greenLongDistancePisteNumber", "http://dbpedia.org/ontology/greenSkiPisteNumber", "http://dbpedia.org/ontology/gridReference", "http://dbpedia.org/ontology/grindingCapability", "http://dbpedia.org/ontology/gross", "http://dbpedia.org/ontology/grossDomesticProduct", "http://dbpedia.org/ontology/grossDomesticProductAsOf", "http://dbpedia.org/ontology/grossDomesticProductNominalPerCapita", "http://dbpedia.org/ontology/grossDomesticProductPerPeople", "http://dbpedia.org/ontology/grossDomesticProductPurchasingPowerParityPerCapita", "http://dbpedia.org/ontology/grossDomesticProductRank", "http://dbpedia.org/ontology/ground", "http://dbpedia.org/ontology/groundsForLiquidation", "http://dbpedia.org/ontology/groupCommemorated", "http://dbpedia.org/ontology/growingGrape", "http://dbpedia.org/ontology/guest", "http://dbpedia.org/ontology/gun", "http://dbpedia.org/ontology/gymApparatus", "http://dbpedia.org/ontology/hairColor", "http://dbpedia.org/ontology/hairColour", "http://dbpedia.org/ontology/hairs", "http://dbpedia.org/ontology/hallOfFame", "http://dbpedia.org/ontology/hand", "http://dbpedia.org/ontology/handedness", "http://dbpedia.org/ontology/handisport", "http://dbpedia.org/ontology/hasAbsorbedMunicipality", "http://dbpedia.org/ontology/hasAnnotation", "http://dbpedia.org/ontology/hasChannel", "http://dbpedia.org/ontology/hasInput", "http://dbpedia.org/ontology/hasInsidePlace", "http://dbpedia.org/ontology/hasJunctionWith", "http://dbpedia.org/ontology/hasKMLData", "http://dbpedia.org/ontology/hasNaturalBust", "http://dbpedia.org/ontology/hasOutsidePlace", "http://dbpedia.org/ontology/hasSurfaceForm", "http://dbpedia.org/ontology/hasVariant", "http://dbpedia.org/ontology/head", "http://dbpedia.org/ontology/headAlloy", "http://dbpedia.org/ontology/headChef", "http://dbpedia.org/ontology/headLabel", "http://dbpedia.org/ontology/headOfFamily", "http://dbpedia.org/ontology/headquarter", "http://dbpedia.org/ontology/headteacher", "http://dbpedia.org/ontology/height", "http://dbpedia.org/ontology/heightAboveAverageTerrain", "http://dbpedia.org/ontology/heightAgainst", "http://dbpedia.org/ontology/heightAttack", "http://dbpedia.org/ontology/heir", "http://dbpedia.org/ontology/heisman", "http://dbpedia.org/ontology/heritageRegister", "http://dbpedia.org/ontology/hgncid", "http://dbpedia.org/ontology/highest", "http://dbpedia.org/ontology/highestAltitude", "http://dbpedia.org/ontology/highestBreak", "http://dbpedia.org/ontology/highestBuildingInYear", "http://dbpedia.org/ontology/highestMountain", "http://dbpedia.org/ontology/highestPlace", "http://dbpedia.org/ontology/highestPoint", "http://dbpedia.org/ontology/highestPointIsland", "http://dbpedia.org/ontology/highestPosition", "http://dbpedia.org/ontology/highestRank", "http://dbpedia.org/ontology/highestRegion", "http://dbpedia.org/ontology/highestState", "http://dbpedia.org/ontology/highschool", "http://dbpedia.org/ontology/highwaySystem", "http://dbpedia.org/ontology/hipSize", "http://dbpedia.org/ontology/historicalMap", "http://dbpedia.org/ontology/historicalName", "http://dbpedia.org/ontology/historicalRegion", "http://dbpedia.org/ontology/hof", "http://dbpedia.org/ontology/homage", "http://dbpedia.org/ontology/homeArena", "http://dbpedia.org/ontology/homeColourHexCode", "http://dbpedia.org/ontology/homeStadium", "http://dbpedia.org/ontology/homeport", "http://dbpedia.org/ontology/hometown", "http://dbpedia.org/ontology/honours", "http://dbpedia.org/ontology/hopmanCup", "http://dbpedia.org/ontology/horseRidingDiscipline", "http://dbpedia.org/ontology/house", "http://dbpedia.org/ontology/hraState", "http://dbpedia.org/ontology/hsvCoordinateHue", "http://dbpedia.org/ontology/hsvCoordinateSaturation", "http://dbpedia.org/ontology/hsvCoordinateValue", "http://dbpedia.org/ontology/hubAirport", "http://dbpedia.org/ontology/humanDevelopmentIndex", "http://dbpedia.org/ontology/humanDevelopmentIndexAsOf", "http://dbpedia.org/ontology/humanDevelopmentIndexRank", "http://dbpedia.org/ontology/humanDevelopmentIndexRankingCategory", "http://dbpedia.org/ontology/hybrid", "http://dbpedia.org/ontology/iafdId", "http://dbpedia.org/ontology/iataAirlineCode", "http://dbpedia.org/ontology/iataLocationIdentifier", "http://dbpedia.org/ontology/ibdbId", "http://dbpedia.org/ontology/icaoAirlineCode", "http://dbpedia.org/ontology/icaoLocationIdentifier", "http://dbpedia.org/ontology/icd1", "http://dbpedia.org/ontology/icd10", "http://dbpedia.org/ontology/icd9", "http://dbpedia.org/ontology/icdo", "http://dbpedia.org/ontology/iconographicAttributes", "http://dbpedia.org/ontology/id", "http://dbpedia.org/ontology/idAllocine", "http://dbpedia.org/ontology/idNumber", "http://dbpedia.org/ontology/identificationSymbol", "http://dbpedia.org/ontology/ideology", "http://dbpedia.org/ontology/iftaAward", "http://dbpedia.org/ontology/iihfHof", "http://dbpedia.org/ontology/illiteracy", "http://dbpedia.org/ontology/illustrator", "http://dbpedia.org/ontology/imageSize", "http://dbpedia.org/ontology/imdbId", "http://dbpedia.org/ontology/impactFactor", "http://dbpedia.org/ontology/impactFactorAsOf", "http://dbpedia.org/ontology/importantStation", "http://dbpedia.org/ontology/imposedDanseCompetition", "http://dbpedia.org/ontology/imposedDanseScore", "http://dbpedia.org/ontology/inCemetery", "http://dbpedia.org/ontology/inchi", "http://dbpedia.org/ontology/inclination", "http://dbpedia.org/ontology/income", "http://dbpedia.org/ontology/incumbent", "http://dbpedia.org/ontology/individualisedGnd", "http://dbpedia.org/ontology/individualisedPnd", "http://dbpedia.org/ontology/industry", "http://dbpedia.org/ontology/infantMortality", "http://dbpedia.org/ontology/inflow", "http://dbpedia.org/ontology/influenced", "http://dbpedia.org/ontology/influencedBy", "http://dbpedia.org/ontology/information", "http://dbpedia.org/ontology/informationName", "http://dbpedia.org/ontology/ingredient", "http://dbpedia.org/ontology/ingredientName", "http://dbpedia.org/ontology/initiallyUsedFor", "http://dbpedia.org/ontology/inn", "http://dbpedia.org/ontology/innervates", "http://dbpedia.org/ontology/inscription", "http://dbpedia.org/ontology/inseeCode", "http://dbpedia.org/ontology/installedCapacity", "http://dbpedia.org/ontology/institution", "http://dbpedia.org/ontology/instrument", "http://dbpedia.org/ontology/intercommunality", "http://dbpedia.org/ontology/interest", "http://dbpedia.org/ontology/internationalAffiliation", "http://dbpedia.org/ontology/internationalPhonePrefix", "http://dbpedia.org/ontology/internationalPhonePrefixLabel", "http://dbpedia.org/ontology/internationally", "http://dbpedia.org/ontology/introduced", "http://dbpedia.org/ontology/introductionDate", "http://dbpedia.org/ontology/iobdbId", "http://dbpedia.org/ontology/isCityState", "http://dbpedia.org/ontology/isHandicappedAccessible", "http://dbpedia.org/ontology/isPartOf", "http://dbpedia.org/ontology/isPartOfAnatomicalStructure", "http://dbpedia.org/ontology/isPartOfMilitaryConflict", "http://dbpedia.org/ontology/isPartOfName", "http://dbpedia.org/ontology/isPartOfWineRegion", "http://dbpedia.org/ontology/isPeerReviewed", "http://dbpedia.org/ontology/isRouteStop", "http://dbpedia.org/ontology/isbn", "http://dbpedia.org/ontology/isil", "http://dbpedia.org/ontology/island", "http://dbpedia.org/ontology/isniId", "http://dbpedia.org/ontology/iso31661Code", "http://dbpedia.org/ontology/iso6391Code", "http://dbpedia.org/ontology/iso6392Code", "http://dbpedia.org/ontology/iso6393Code", "http://dbpedia.org/ontology/isoCode", "http://dbpedia.org/ontology/isoCodeRegion", "http://dbpedia.org/ontology/issDockings", "http://dbpedia.org/ontology/issn", "http://dbpedia.org/ontology/ist", "http://dbpedia.org/ontology/istat", "http://dbpedia.org/ontology/ithfDate", "http://dbpedia.org/ontology/iucnCategory", "http://dbpedia.org/ontology/iupacName", "http://dbpedia.org/ontology/jockey", "http://dbpedia.org/ontology/jointCommunity", "http://dbpedia.org/ontology/jstor", "http://dbpedia.org/ontology/judge", "http://dbpedia.org/ontology/juniorSeason", "http://dbpedia.org/ontology/juniorTeam", "http://dbpedia.org/ontology/juniorYearsEndYear", "http://dbpedia.org/ontology/juniorYearsStartYear", "http://dbpedia.org/ontology/jureLanguage", "http://dbpedia.org/ontology/jurisdiction", "http://dbpedia.org/ontology/jutsu", "http://dbpedia.org/ontology/kegg", "http://dbpedia.org/ontology/keyPerson", "http://dbpedia.org/ontology/khlDraft", "http://dbpedia.org/ontology/khlDraftTeam", "http://dbpedia.org/ontology/khlDraftYear", "http://dbpedia.org/ontology/killedBy", "http://dbpedia.org/ontology/kinOfLanguage", "http://dbpedia.org/ontology/kindOfCoordinate", "http://dbpedia.org/ontology/kindOfCriminal", "http://dbpedia.org/ontology/kindOfCriminalAction", "http://dbpedia.org/ontology/kindOfRock", "http://dbpedia.org/ontology/kingdom", "http://dbpedia.org/ontology/knownFor", "http://dbpedia.org/ontology/ko", "http://dbpedia.org/ontology/lahHof", "http://dbpedia.org/ontology/lake", "http://dbpedia.org/ontology/land", "http://dbpedia.org/ontology/landArea", "http://dbpedia.org/ontology/landPercentage", "http://dbpedia.org/ontology/landRegistryCode", "http://dbpedia.org/ontology/landeshauptmann", "http://dbpedia.org/ontology/landingDate", "http://dbpedia.org/ontology/landingSite", "http://dbpedia.org/ontology/landingVehicle", "http://dbpedia.org/ontology/landskap", "http://dbpedia.org/ontology/landtag", "http://dbpedia.org/ontology/landtagMandate", "http://dbpedia.org/ontology/language", "http://dbpedia.org/ontology/languageCode", "http://dbpedia.org/ontology/languageFamily", "http://dbpedia.org/ontology/languageRegulator", "http://dbpedia.org/ontology/largestCity", "http://dbpedia.org/ontology/largestMetro", "http://dbpedia.org/ontology/largestSettlement", "http://dbpedia.org/ontology/largestWin", "http://dbpedia.org/ontology/lastAirDate", "http://dbpedia.org/ontology/lastAppearance", "http://dbpedia.org/ontology/lastElectionDate", "http://dbpedia.org/ontology/lastFamilyMember", "http://dbpedia.org/ontology/lastFlight", "http://dbpedia.org/ontology/lastFlightEndDate", "http://dbpedia.org/ontology/lastFlightStartDate", "http://dbpedia.org/ontology/lastLaunch", "http://dbpedia.org/ontology/lastLaunchDate", "http://dbpedia.org/ontology/lastLaunchRocket", "http://dbpedia.org/ontology/lastPosition", "http://dbpedia.org/ontology/lastProMatch", "http://dbpedia.org/ontology/lastPublicationDate", "http://dbpedia.org/ontology/lastRace", "http://dbpedia.org/ontology/lastSeason", "http://dbpedia.org/ontology/lastWin", "http://dbpedia.org/ontology/laterality", "http://dbpedia.org/ontology/latestElection", "http://dbpedia.org/ontology/latestPreviewDate", "http://dbpedia.org/ontology/latestPreviewVersion", "http://dbpedia.org/ontology/latestReleaseDate", "http://dbpedia.org/ontology/latestReleaseVersion", "http://dbpedia.org/ontology/latinName", "http://dbpedia.org/ontology/launch", "http://dbpedia.org/ontology/launchDate", "http://dbpedia.org/ontology/launchPad", "http://dbpedia.org/ontology/launchSite", "http://dbpedia.org/ontology/launchVehicle", "http://dbpedia.org/ontology/launches", "http://dbpedia.org/ontology/laurenceOlivierAward", "http://dbpedia.org/ontology/lawCountry", "http://dbpedia.org/ontology/layingDown", "http://dbpedia.org/ontology/layout", "http://dbpedia.org/ontology/lcc", "http://dbpedia.org/ontology/lccn", "http://dbpedia.org/ontology/lccnId", "http://dbpedia.org/ontology/lchfDraft", "http://dbpedia.org/ontology/lchfDraftTeam", "http://dbpedia.org/ontology/lchfDraftYear", "http://dbpedia.org/ontology/leadTeam", "http://dbpedia.org/ontology/leadYear", "http://dbpedia.org/ontology/leader", "http://dbpedia.org/ontology/leaderFunction", "http://dbpedia.org/ontology/leaderName", "http://dbpedia.org/ontology/leaderParty", "http://dbpedia.org/ontology/leaderTitle", "http://dbpedia.org/ontology/leadership", "http://dbpedia.org/ontology/league", "http://dbpedia.org/ontology/leagueManager", "http://dbpedia.org/ontology/leftChild", "http://dbpedia.org/ontology/leftTributary", "http://dbpedia.org/ontology/legalArrondissement", "http://dbpedia.org/ontology/legalArticle", "http://dbpedia.org/ontology/legalForm", "http://dbpedia.org/ontology/legislativePeriodName", "http://dbpedia.org/ontology/legislature", "http://dbpedia.org/ontology/length", "http://dbpedia.org/ontology/lengthQuote", "http://dbpedia.org/ontology/lengthReference", "http://dbpedia.org/ontology/lethalOnChickens", "http://dbpedia.org/ontology/lethalOnMice", "http://dbpedia.org/ontology/lethalOnRabbits", "http://dbpedia.org/ontology/lethalOnRats", "http://dbpedia.org/ontology/liberationDate", "http://dbpedia.org/ontology/libretto", "http://dbpedia.org/ontology/licenceLetter", "http://dbpedia.org/ontology/licenceNumber", "http://dbpedia.org/ontology/licenceNumberLabel", "http://dbpedia.org/ontology/license", "http://dbpedia.org/ontology/licensee", "http://dbpedia.org/ontology/lieutenancy", "http://dbpedia.org/ontology/lieutenancyArea", "http://dbpedia.org/ontology/lieutenant", "http://dbpedia.org/ontology/lifeExpectancy", "http://dbpedia.org/ontology/limit", "http://dbpedia.org/ontology/lineLength", "http://dbpedia.org/ontology/linguisticsTradition", "http://dbpedia.org/ontology/linkedSpace", "http://dbpedia.org/ontology/linkedTo", "http://dbpedia.org/ontology/listItemOf", "http://dbpedia.org/ontology/literaryGenre", "http://dbpedia.org/ontology/littlePoolRecord", "http://dbpedia.org/ontology/livingPlace", "http://dbpedia.org/ontology/loadLimit", "http://dbpedia.org/ontology/localAuthority", "http://dbpedia.org/ontology/localPhonePrefix", "http://dbpedia.org/ontology/locality", "http://dbpedia.org/ontology/localization", "http://dbpedia.org/ontology/localizationThumbnail", "http://dbpedia.org/ontology/localizationThumbnailCaption", "http://dbpedia.org/ontology/locatedInArea", "http://dbpedia.org/ontology/location", "http://dbpedia.org/ontology/locationCity", "http://dbpedia.org/ontology/locationCountry", "http://dbpedia.org/ontology/locationIdentifier", "http://dbpedia.org/ontology/locationName", "http://dbpedia.org/ontology/locomotive", "http://dbpedia.org/ontology/locusSupplementaryData", "http://dbpedia.org/ontology/logo", "http://dbpedia.org/ontology/longDistancePisteKilometre", "http://dbpedia.org/ontology/longDistancePisteNumber", "http://dbpedia.org/ontology/longName", "http://dbpedia.org/ontology/longtype", "http://dbpedia.org/ontology/lounge", "http://dbpedia.org/ontology/lowerAge", "http://dbpedia.org/ontology/lowerEarthOrbitPayload", "http://dbpedia.org/ontology/lowest", "http://dbpedia.org/ontology/lowestAltitude", "http://dbpedia.org/ontology/lowestMountain", "http://dbpedia.org/ontology/lowestPlace", "http://dbpedia.org/ontology/lowestPoint", "http://dbpedia.org/ontology/lowestPosition", "http://dbpedia.org/ontology/lowestRegion", "http://dbpedia.org/ontology/lowestState", "http://dbpedia.org/ontology/lunarEvaTime", "http://dbpedia.org/ontology/lunarLandingSite", "http://dbpedia.org/ontology/lunarModule", "http://dbpedia.org/ontology/lunarOrbitTime", "http://dbpedia.org/ontology/lunarRover", "http://dbpedia.org/ontology/lunarSampleMass", "http://dbpedia.org/ontology/lunarSurfaceTime", "http://dbpedia.org/ontology/lymph", "http://dbpedia.org/ontology/lyrics", "http://dbpedia.org/ontology/magazine", "http://dbpedia.org/ontology/maidenFlight", "http://dbpedia.org/ontology/maidenFlightRocket", "http://dbpedia.org/ontology/maidenVoyage", "http://dbpedia.org/ontology/mainArticleForCategory", "http://dbpedia.org/ontology/mainBuilding", "http://dbpedia.org/ontology/mainCharacter", "http://dbpedia.org/ontology/mainDomain", "http://dbpedia.org/ontology/mainFamilyBranch", "http://dbpedia.org/ontology/mainInterest", "http://dbpedia.org/ontology/mainIsland", "http://dbpedia.org/ontology/mainIslands", "http://dbpedia.org/ontology/mainOrgan", "http://dbpedia.org/ontology/mainspan", "http://dbpedia.org/ontology/maintainedBy", "http://dbpedia.org/ontology/majorIsland", "http://dbpedia.org/ontology/majorShrine", "http://dbpedia.org/ontology/majorityFloorLeader", "http://dbpedia.org/ontology/majorityLeader", "http://dbpedia.org/ontology/makeupArtist", "http://dbpedia.org/ontology/management", "http://dbpedia.org/ontology/managementCountry", "http://dbpedia.org/ontology/managementElevation", "http://dbpedia.org/ontology/managementMountain", "http://dbpedia.org/ontology/managementPlace", "http://dbpedia.org/ontology/managementPosition", "http://dbpedia.org/ontology/managementRegion", "http://dbpedia.org/ontology/manager", "http://dbpedia.org/ontology/managerClub", "http://dbpedia.org/ontology/managerSeason", "http://dbpedia.org/ontology/managerTitle", "http://dbpedia.org/ontology/managerYears", "http://dbpedia.org/ontology/managerYearsEndYear", "http://dbpedia.org/ontology/managerYearsStartYear", "http://dbpedia.org/ontology/managingEditor", "http://dbpedia.org/ontology/mandate", "http://dbpedia.org/ontology/manufactory", "http://dbpedia.org/ontology/manufacturer", "http://dbpedia.org/ontology/map", "http://dbpedia.org/ontology/mapCaption", "http://dbpedia.org/ontology/mapDescription", "http://dbpedia.org/ontology/march", "http://dbpedia.org/ontology/marketCapitalisation", "http://dbpedia.org/ontology/mascot", "http://dbpedia.org/ontology/mass", "http://dbpedia.org/ontology/massif", "http://dbpedia.org/ontology/mastersWins", "http://dbpedia.org/ontology/matchPoint", "http://dbpedia.org/ontology/material", "http://dbpedia.org/ontology/max", "http://dbpedia.org/ontology/maxAbsoluteMagnitude", "http://dbpedia.org/ontology/maxApparentMagnitude", "http://dbpedia.org/ontology/maxTime", "http://dbpedia.org/ontology/maximumArea", "http://dbpedia.org/ontology/maximumAreaQuote", "http://dbpedia.org/ontology/maximumBoatBeam", "http://dbpedia.org/ontology/maximumBoatLength", "http://dbpedia.org/ontology/maximumDepth", "http://dbpedia.org/ontology/maximumDepthQuote", "http://dbpedia.org/ontology/maximumDischarge", "http://dbpedia.org/ontology/maximumElevation", "http://dbpedia.org/ontology/maximumInclination", "http://dbpedia.org/ontology/maximumTemperature", "http://dbpedia.org/ontology/mayor", "http://dbpedia.org/ontology/mayorArticle", "http://dbpedia.org/ontology/mayorCouncillor", "http://dbpedia.org/ontology/mayorFunction", "http://dbpedia.org/ontology/mayorMandate", "http://dbpedia.org/ontology/mayorTitle", "http://dbpedia.org/ontology/mbaId", "http://dbpedia.org/ontology/meanRadius", "http://dbpedia.org/ontology/meanTemperature", "http://dbpedia.org/ontology/meaning", "http://dbpedia.org/ontology/measurements", "http://dbpedia.org/ontology/medalist", "http://dbpedia.org/ontology/media", "http://dbpedia.org/ontology/mediaItem", "http://dbpedia.org/ontology/mediaType", "http://dbpedia.org/ontology/medicalCause", "http://dbpedia.org/ontology/medicalDiagnosis", "http://dbpedia.org/ontology/medicalSpecialty", "http://dbpedia.org/ontology/medication", "http://dbpedia.org/ontology/medlinePlus", "http://dbpedia.org/ontology/meetingBuilding", "http://dbpedia.org/ontology/meetingCity", "http://dbpedia.org/ontology/meetingRoad", "http://dbpedia.org/ontology/meltingPoint", "http://dbpedia.org/ontology/member", "http://dbpedia.org/ontology/memberOfParliament", "http://dbpedia.org/ontology/membership", "http://dbpedia.org/ontology/membershipAsOf", "http://dbpedia.org/ontology/mentor", "http://dbpedia.org/ontology/mergedSettlement", "http://dbpedia.org/ontology/mergedWith", "http://dbpedia.org/ontology/mergerDate", "http://dbpedia.org/ontology/meshId", "http://dbpedia.org/ontology/meshName", "http://dbpedia.org/ontology/meshNumber", "http://dbpedia.org/ontology/messierName", "http://dbpedia.org/ontology/metropolitanBorough", "http://dbpedia.org/ontology/mgiid", "http://dbpedia.org/ontology/militaryBranch", "http://dbpedia.org/ontology/militaryCommand", "http://dbpedia.org/ontology/militaryFunction", "http://dbpedia.org/ontology/militaryGovernment", "http://dbpedia.org/ontology/militaryRank", "http://dbpedia.org/ontology/militaryService", "http://dbpedia.org/ontology/militaryUnit", "http://dbpedia.org/ontology/militaryUnitSize", "http://dbpedia.org/ontology/millSpan", "http://dbpedia.org/ontology/millType", "http://dbpedia.org/ontology/millsCodeBE", "http://dbpedia.org/ontology/millsCodeDutch", "http://dbpedia.org/ontology/millsCodeNL", "http://dbpedia.org/ontology/millsCodeNLVerdwenen", "http://dbpedia.org/ontology/millsCodeNLWindmotoren", "http://dbpedia.org/ontology/min", "http://dbpedia.org/ontology/minTime", "http://dbpedia.org/ontology/minimumArea", "http://dbpedia.org/ontology/minimumAreaQuote", "http://dbpedia.org/ontology/minimumDischarge", "http://dbpedia.org/ontology/minimumElevation", "http://dbpedia.org/ontology/minimumInclination", "http://dbpedia.org/ontology/minimumTemperature", "http://dbpedia.org/ontology/minister", "http://dbpedia.org/ontology/minority", "http://dbpedia.org/ontology/minorityFloorLeader", "http://dbpedia.org/ontology/minorityLeader", "http://dbpedia.org/ontology/mirDockings", "http://dbpedia.org/ontology/mission", "http://dbpedia.org/ontology/missionDuration", "http://dbpedia.org/ontology/missions", "http://dbpedia.org/ontology/model", "http://dbpedia.org/ontology/modelEndDate", "http://dbpedia.org/ontology/modelEndYear", "http://dbpedia.org/ontology/modelLineVehicle", "http://dbpedia.org/ontology/modelStartDate", "http://dbpedia.org/ontology/modelStartYear", "http://dbpedia.org/ontology/moderna", "http://dbpedia.org/ontology/modernaCumul", "http://dbpedia.org/ontology/molarMass", "http://dbpedia.org/ontology/molecularWeight", "http://dbpedia.org/ontology/monarch", "http://dbpedia.org/ontology/month", "http://dbpedia.org/ontology/mood", "http://dbpedia.org/ontology/mostDownPoint", "http://dbpedia.org/ontology/mostSuccessfulPlayer", "http://dbpedia.org/ontology/mostWins", "http://dbpedia.org/ontology/mother", "http://dbpedia.org/ontology/motive", "http://dbpedia.org/ontology/motto", "http://dbpedia.org/ontology/mount", "http://dbpedia.org/ontology/mountainRange", "http://dbpedia.org/ontology/mouthCountry", "http://dbpedia.org/ontology/mouthDistrict", "http://dbpedia.org/ontology/mouthElevation", "http://dbpedia.org/ontology/mouthMountain", "http://dbpedia.org/ontology/mouthPlace", "http://dbpedia.org/ontology/mouthPosition", "http://dbpedia.org/ontology/mouthRegion", "http://dbpedia.org/ontology/mouthState", "http://dbpedia.org/ontology/movement", "http://dbpedia.org/ontology/movie", "http://dbpedia.org/ontology/mukhtar", "http://dbpedia.org/ontology/municipality", "http://dbpedia.org/ontology/municipalityAbsorbedBy", "http://dbpedia.org/ontology/municipalityCode", "http://dbpedia.org/ontology/municipalityRenamedTo", "http://dbpedia.org/ontology/municipalityType", "http://dbpedia.org/ontology/museum", "http://dbpedia.org/ontology/museumType", "http://dbpedia.org/ontology/musicBand", "http://dbpedia.org/ontology/musicBrainzArtistId", "http://dbpedia.org/ontology/musicBy", "http://dbpedia.org/ontology/musicComposer", "http://dbpedia.org/ontology/musicFormat", "http://dbpedia.org/ontology/musicFusionGenre", "http://dbpedia.org/ontology/musicSubgenre", "http://dbpedia.org/ontology/musicType", "http://dbpedia.org/ontology/musicalArtist", "http://dbpedia.org/ontology/musicalBand", "http://dbpedia.org/ontology/musicalKey", "http://dbpedia.org/ontology/musicians", "http://dbpedia.org/ontology/muteCharacterInPlay", "http://dbpedia.org/ontology/mvp", "http://dbpedia.org/ontology/mythology", "http://dbpedia.org/ontology/naacpImageAward", "http://dbpedia.org/ontology/name", "http://dbpedia.org/ontology/nameAsOf", "http://dbpedia.org/ontology/nameDay", "http://dbpedia.org/ontology/nameInCantoneseChinese", "http://dbpedia.org/ontology/nameInHangulKorean", "http://dbpedia.org/ontology/nameInHanjaKorean", "http://dbpedia.org/ontology/nameInJapanese", "http://dbpedia.org/ontology/nameInMindongyuChinese", "http://dbpedia.org/ontology/nameInMinnanyuChinese", "http://dbpedia.org/ontology/nameInPinyinChinese", "http://dbpedia.org/ontology/nameInSimplifiedChinese", "http://dbpedia.org/ontology/nameInTraditionalChinese", "http://dbpedia.org/ontology/nameInWadeGilesChinese", "http://dbpedia.org/ontology/namedAfter", "http://dbpedia.org/ontology/namedByLanguage", "http://dbpedia.org/ontology/names", "http://dbpedia.org/ontology/narrator", "http://dbpedia.org/ontology/nation", "http://dbpedia.org/ontology/nationalAffiliation", "http://dbpedia.org/ontology/nationalChampionship", "http://dbpedia.org/ontology/nationalFilmAward", "http://dbpedia.org/ontology/nationalOlympicCommittee", "http://dbpedia.org/ontology/nationalRanking", "http://dbpedia.org/ontology/nationalSelection", "http://dbpedia.org/ontology/nationalTeam", "http://dbpedia.org/ontology/nationalTeamMatchPoint", "http://dbpedia.org/ontology/nationalTeamYear", "http://dbpedia.org/ontology/nationalTopographicSystemMapNumber", "http://dbpedia.org/ontology/nationalTournament", "http://dbpedia.org/ontology/nationalTournamentBronze", "http://dbpedia.org/ontology/nationalTournamentGold", "http://dbpedia.org/ontology/nationalTournamentSilver", "http://dbpedia.org/ontology/nationalYears", "http://dbpedia.org/ontology/nationality", "http://dbpedia.org/ontology/ncaaSeason", "http://dbpedia.org/ontology/ncaaTeam", "http://dbpedia.org/ontology/ncbhof", "http://dbpedia.org/ontology/nciId", "http://dbpedia.org/ontology/ndlId", "http://dbpedia.org/ontology/nearestCity", "http://dbpedia.org/ontology/neighboringMunicipality", "http://dbpedia.org/ontology/neighbourConstellations", "http://dbpedia.org/ontology/neighbourRegion", "http://dbpedia.org/ontology/neighbourhood", "http://dbpedia.org/ontology/nerve", "http://dbpedia.org/ontology/netIncome", "http://dbpedia.org/ontology/network", "http://dbpedia.org/ontology/networth", "http://dbpedia.org/ontology/newspaper", "http://dbpedia.org/ontology/nextEntity", "http://dbpedia.org/ontology/nextEvent", "http://dbpedia.org/ontology/nextMission", "http://dbpedia.org/ontology/nextTrackNumber", "http://dbpedia.org/ontology/nflCode", "http://dbpedia.org/ontology/nflSeason", "http://dbpedia.org/ontology/nflTeam", "http://dbpedia.org/ontology/ngcName", "http://dbpedia.org/ontology/nisCode", "http://dbpedia.org/ontology/nlaId", "http://dbpedia.org/ontology/nndbId", "http://dbpedia.org/ontology/noContest", "http://dbpedia.org/ontology/nobelLaureates", "http://dbpedia.org/ontology/nominee", "http://dbpedia.org/ontology/nonFictionSubject", "http://dbpedia.org/ontology/nonProfessionalCareer", "http://dbpedia.org/ontology/nord", "http://dbpedia.org/ontology/northEastPlace", "http://dbpedia.org/ontology/northPlace", "http://dbpedia.org/ontology/northWestPlace", "http://dbpedia.org/ontology/notSolubleIn", "http://dbpedia.org/ontology/notableCommander", "http://dbpedia.org/ontology/notableFeatures", "http://dbpedia.org/ontology/notableIdea", "http://dbpedia.org/ontology/notableStudent", "http://dbpedia.org/ontology/notableWine", "http://dbpedia.org/ontology/notableWork", "http://dbpedia.org/ontology/note", "http://dbpedia.org/ontology/noteOnPlaceOfBurial", "http://dbpedia.org/ontology/noteOnRestingPlace", "http://dbpedia.org/ontology/notes", "http://dbpedia.org/ontology/notifyDate", "http://dbpedia.org/ontology/novel", "http://dbpedia.org/ontology/nrhpReferenceNumber", "http://dbpedia.org/ontology/nrhpType", "http://dbpedia.org/ontology/nssdcId", "http://dbpedia.org/ontology/number", "http://dbpedia.org/ontology/numberBuilt", "http://dbpedia.org/ontology/numberOfAcademicStaff", "http://dbpedia.org/ontology/numberOfAlbums", "http://dbpedia.org/ontology/numberOfArrondissement", "http://dbpedia.org/ontology/numberOfBombs", "http://dbpedia.org/ontology/numberOfBronzeMedalsWon", "http://dbpedia.org/ontology/numberOfCanton", "http://dbpedia.org/ontology/numberOfCantons", "http://dbpedia.org/ontology/numberOfCapitalDeputies", "http://dbpedia.org/ontology/numberOfCity", "http://dbpedia.org/ontology/numberOfClasses", "http://dbpedia.org/ontology/numberOfClassesWithResource", "http://dbpedia.org/ontology/numberOfClassrooms", "http://dbpedia.org/ontology/numberOfClubs", "http://dbpedia.org/ontology/numberOfCollectionItems", "http://dbpedia.org/ontology/numberOfCompetitors", "http://dbpedia.org/ontology/numberOfCounties", "http://dbpedia.org/ontology/numberOfCountries", "http://dbpedia.org/ontology/numberOfCrew", "http://dbpedia.org/ontology/numberOfDeaths", "http://dbpedia.org/ontology/numberOfDependency", "http://dbpedia.org/ontology/numberOfDisambiguates", "http://dbpedia.org/ontology/numberOfDistrict", "http://dbpedia.org/ontology/numberOfDistricts", "http://dbpedia.org/ontology/numberOfDoctoralStudents", "http://dbpedia.org/ontology/numberOfDoors", "http://dbpedia.org/ontology/numberOfEmployees", "http://dbpedia.org/ontology/numberOfEntrances", "http://dbpedia.org/ontology/numberOfEpisodes", "http://dbpedia.org/ontology/numberOfFederalDeputies", "http://dbpedia.org/ontology/numberOfFilms", "http://dbpedia.org/ontology/numberOfGoals", "http://dbpedia.org/ontology/numberOfGoldMedalsWon", "http://dbpedia.org/ontology/numberOfGraduateStudents", "http://dbpedia.org/ontology/numberOfGraves", "http://dbpedia.org/ontology/numberOfHoles", "http://dbpedia.org/ontology/numberOfHouses", "http://dbpedia.org/ontology/numberOfIndegree", "http://dbpedia.org/ontology/numberOfIntercommunality", "http://dbpedia.org/ontology/numberOfIsland", "http://dbpedia.org/ontology/numberOfIslands", "http://dbpedia.org/ontology/numberOfLanes", "http://dbpedia.org/ontology/numberOfLaps", "http://dbpedia.org/ontology/numberOfLaunches", "http://dbpedia.org/ontology/numberOfLawyers", "http://dbpedia.org/ontology/numberOfLifts", "http://dbpedia.org/ontology/numberOfLines", "http://dbpedia.org/ontology/numberOfLiveAlbums", "http://dbpedia.org/ontology/numberOfLocations", "http://dbpedia.org/ontology/numberOfMatches", "http://dbpedia.org/ontology/numberOfMembers", "http://dbpedia.org/ontology/numberOfMembersAsOf", "http://dbpedia.org/ontology/numberOfMinistries", "http://dbpedia.org/ontology/numberOfMunicipalities", "http://dbpedia.org/ontology/numberOfMusicalArtistEntities", "http://dbpedia.org/ontology/numberOfMusicalArtistInstrument", "http://dbpedia.org/ontology/numberOfMusicalArtistStyle", "http://dbpedia.org/ontology/numberOfNeighbourhood", "http://dbpedia.org/ontology/numberOfNewlyIntroducedSports", "http://dbpedia.org/ontology/numberOfOffices", "http://dbpedia.org/ontology/numberOfOfficials", "http://dbpedia.org/ontology/numberOfOrbits", "http://dbpedia.org/ontology/numberOfOutdegree", "http://dbpedia.org/ontology/numberOfPads", "http://dbpedia.org/ontology/numberOfPages", "http://dbpedia.org/ontology/numberOfParkingSpaces", "http://dbpedia.org/ontology/numberOfParticipatingAthletes", "http://dbpedia.org/ontology/numberOfParticipatingFemaleAthletes", "http://dbpedia.org/ontology/numberOfParticipatingMaleAthletes", "http://dbpedia.org/ontology/numberOfParticipatingNations", "http://dbpedia.org/ontology/numberOfPassengers", "http://dbpedia.org/ontology/numberOfPeopleAttending", "http://dbpedia.org/ontology/numberOfPeopleLicensed", "http://dbpedia.org/ontology/numberOfPersonBornInPlace", "http://dbpedia.org/ontology/numberOfPersonEntities", "http://dbpedia.org/ontology/numberOfPersonFromUniversity", "http://dbpedia.org/ontology/numberOfPersonInOccupation", "http://dbpedia.org/ontology/numberOfPiersInWater", "http://dbpedia.org/ontology/numberOfPixels", "http://dbpedia.org/ontology/numberOfPlatformLevels", "http://dbpedia.org/ontology/numberOfPlayers", "http://dbpedia.org/ontology/numberOfPostgraduateStudents", "http://dbpedia.org/ontology/numberOfPredicates", "http://dbpedia.org/ontology/numberOfProfessionals", "http://dbpedia.org/ontology/numberOfProperties", "http://dbpedia.org/ontology/numberOfPropertiesUsed", "http://dbpedia.org/ontology/numberOfReactors", "http://dbpedia.org/ontology/numberOfRedirectedResource", "http://dbpedia.org/ontology/numberOfResource", "http://dbpedia.org/ontology/numberOfResourceOfClass", "http://dbpedia.org/ontology/numberOfResourceOfType", "http://dbpedia.org/ontology/numberOfResourceWithType", "http://dbpedia.org/ontology/numberOfRestaurants", "http://dbpedia.org/ontology/numberOfRockets", "http://dbpedia.org/ontology/numberOfRooms", "http://dbpedia.org/ontology/numberOfRun", "http://dbpedia.org/ontology/numberOfSeasons", "http://dbpedia.org/ontology/numberOfSeats", "http://dbpedia.org/ontology/numberOfSeatsInParliament", "http://dbpedia.org/ontology/numberOfSettlement", "http://dbpedia.org/ontology/numberOfSettlementsInCountry", "http://dbpedia.org/ontology/numberOfSilverMedalsWon", "http://dbpedia.org/ontology/numberOfSoccerPlayerInCountryRepre", "http://dbpedia.org/ontology/numberOfSoccerPlayersBornInPlace", "http://dbpedia.org/ontology/numberOfSoccerPlayersInTeam", "http://dbpedia.org/ontology/numberOfSpans", "http://dbpedia.org/ontology/numberOfSpeakers", "http://dbpedia.org/ontology/numberOfSports", "http://dbpedia.org/ontology/numberOfSportsEvents", "http://dbpedia.org/ontology/numberOfStaff", "http://dbpedia.org/ontology/numberOfStars", "http://dbpedia.org/ontology/numberOfStateDeputies", "http://dbpedia.org/ontology/numberOfStations", "http://dbpedia.org/ontology/numberOfStores", "http://dbpedia.org/ontology/numberOfStudents", "http://dbpedia.org/ontology/numberOfStudioAlbums", "http://dbpedia.org/ontology/numberOfSuites", "http://dbpedia.org/ontology/numberOfTeams", "http://dbpedia.org/ontology/numberOfTracks", "http://dbpedia.org/ontology/numberOfTrails", "http://dbpedia.org/ontology/numberOfTriples", "http://dbpedia.org/ontology/numberOfTurns", "http://dbpedia.org/ontology/numberOfUndergraduateStudents", "http://dbpedia.org/ontology/numberOfUniqeResources", "http://dbpedia.org/ontology/numberOfUseOfProperty", "http://dbpedia.org/ontology/numberOfVehicles", "http://dbpedia.org/ontology/numberOfVillages", "http://dbpedia.org/ontology/numberOfVineyards", "http://dbpedia.org/ontology/numberOfVisitors", "http://dbpedia.org/ontology/numberOfVisitorsAsOf", "http://dbpedia.org/ontology/numberOfVolumes", "http://dbpedia.org/ontology/numberOfVolunteers", "http://dbpedia.org/ontology/numberOfWineries", "http://dbpedia.org/ontology/numberSold", "http://dbpedia.org/ontology/nutsCode", "http://dbpedia.org/ontology/observatory", "http://dbpedia.org/ontology/occupation", "http://dbpedia.org/ontology/oclc", "http://dbpedia.org/ontology/odor", "http://dbpedia.org/ontology/offeredClasses", "http://dbpedia.org/ontology/office", "http://dbpedia.org/ontology/officerInCharge", "http://dbpedia.org/ontology/officialLanguage", "http://dbpedia.org/ontology/officialName", "http://dbpedia.org/ontology/officialOpenedBy", "http://dbpedia.org/ontology/officialSchoolColour", "http://dbpedia.org/ontology/ofsCode", "http://dbpedia.org/ontology/oilSystem", "http://dbpedia.org/ontology/okatoCode", "http://dbpedia.org/ontology/oldDistrict", "http://dbpedia.org/ontology/oldName", "http://dbpedia.org/ontology/oldProvince", "http://dbpedia.org/ontology/oldTeamCoached", "http://dbpedia.org/ontology/oldcode", "http://dbpedia.org/ontology/olivierAward", "http://dbpedia.org/ontology/olympicGames", "http://dbpedia.org/ontology/olympicGamesBronze", "http://dbpedia.org/ontology/olympicGamesGold", "http://dbpedia.org/ontology/olympicGamesSilver", "http://dbpedia.org/ontology/olympicGamesWins", "http://dbpedia.org/ontology/olympicOathSwornBy", "http://dbpedia.org/ontology/olympicOathSwornByAthlete", "http://dbpedia.org/ontology/olympicOathSwornByJudge", "http://dbpedia.org/ontology/omim", "http://dbpedia.org/ontology/onChromosome", "http://dbpedia.org/ontology/ons", "http://dbpedia.org/ontology/openAccessContent", "http://dbpedia.org/ontology/openingDate", "http://dbpedia.org/ontology/openingFilm", "http://dbpedia.org/ontology/openingTheme", "http://dbpedia.org/ontology/openingYear", "http://dbpedia.org/ontology/operatingIncome", "http://dbpedia.org/ontology/operatingSystem", "http://dbpedia.org/ontology/operator", "http://dbpedia.org/ontology/opponent", "http://dbpedia.org/ontology/opponents", "http://dbpedia.org/ontology/orbitalEccentricity", "http://dbpedia.org/ontology/orbitalFlights", "http://dbpedia.org/ontology/orbitalInclination", "http://dbpedia.org/ontology/orbitalPeriod", "http://dbpedia.org/ontology/orbits", "http://dbpedia.org/ontology/orcidId", "http://dbpedia.org/ontology/order", "http://dbpedia.org/ontology/orderDate", "http://dbpedia.org/ontology/orderInOffice", "http://dbpedia.org/ontology/ordination", "http://dbpedia.org/ontology/organ", "http://dbpedia.org/ontology/organSystem", "http://dbpedia.org/ontology/organisation", "http://dbpedia.org/ontology/organisationMember", "http://dbpedia.org/ontology/orientation", "http://dbpedia.org/ontology/origin", "http://dbpedia.org/ontology/originalDanseCompetition", "http://dbpedia.org/ontology/originalDanseScore", "http://dbpedia.org/ontology/originalEndPoint", "http://dbpedia.org/ontology/originalLanguage", "http://dbpedia.org/ontology/originalMaximumBoatBeam", "http://dbpedia.org/ontology/originalMaximumBoatLength", "http://dbpedia.org/ontology/originalName", "http://dbpedia.org/ontology/originalStartPoint", "http://dbpedia.org/ontology/originalTitle", "http://dbpedia.org/ontology/originallyUsedFor", "http://dbpedia.org/ontology/origo", "http://dbpedia.org/ontology/orogeny", "http://dbpedia.org/ontology/orpha", "http://dbpedia.org/ontology/orthologousGene", "http://dbpedia.org/ontology/other", "http://dbpedia.org/ontology/otherActivity", "http://dbpedia.org/ontology/otherAppearances", "http://dbpedia.org/ontology/otherChannel", "http://dbpedia.org/ontology/otherFamilyBranch", "http://dbpedia.org/ontology/otherFuelType", "http://dbpedia.org/ontology/otherFunction", "http://dbpedia.org/ontology/otherInformation", "http://dbpedia.org/ontology/otherLanguage", "http://dbpedia.org/ontology/otherMedia", "http://dbpedia.org/ontology/otherName", "http://dbpedia.org/ontology/otherOccupation", "http://dbpedia.org/ontology/otherParty", "http://dbpedia.org/ontology/otherServingLines", "http://dbpedia.org/ontology/otherSportsExperience", "http://dbpedia.org/ontology/otherWins", "http://dbpedia.org/ontology/outflow", "http://dbpedia.org/ontology/output", "http://dbpedia.org/ontology/outskirts", "http://dbpedia.org/ontology/overallRecord", "http://dbpedia.org/ontology/oversight", "http://dbpedia.org/ontology/owner", "http://dbpedia.org/ontology/owningCompany", "http://dbpedia.org/ontology/owningOrganisation", "http://dbpedia.org/ontology/owns", "http://dbpedia.org/ontology/painter", "http://dbpedia.org/ontology/pandemic", "http://dbpedia.org/ontology/pandemicDeaths", "http://dbpedia.org/ontology/parent", "http://dbpedia.org/ontology/parentCompany", "http://dbpedia.org/ontology/parentMountainPeak", "http://dbpedia.org/ontology/parentOrganisation", "http://dbpedia.org/ontology/parentheses", "http://dbpedia.org/ontology/parish", "http://dbpedia.org/ontology/parkingInformation", "http://dbpedia.org/ontology/parkingLotsCars", "http://dbpedia.org/ontology/parkingLotsTrucks", "http://dbpedia.org/ontology/parliament", "http://dbpedia.org/ontology/parliamentType", "http://dbpedia.org/ontology/parliamentaryGroup", "http://dbpedia.org/ontology/part", "http://dbpedia.org/ontology/partialFailedLaunches", "http://dbpedia.org/ontology/participant", "http://dbpedia.org/ontology/participatingIn", "http://dbpedia.org/ontology/particularSign", "http://dbpedia.org/ontology/partitionCoefficient", "http://dbpedia.org/ontology/partner", "http://dbpedia.org/ontology/party", "http://dbpedia.org/ontology/partyNumber", "http://dbpedia.org/ontology/passengersPerDay", "http://dbpedia.org/ontology/passengersPerYear", "http://dbpedia.org/ontology/passengersUsedSystem", "http://dbpedia.org/ontology/pastMember", "http://dbpedia.org/ontology/pastor", "http://dbpedia.org/ontology/patent", "http://dbpedia.org/ontology/patron", "http://dbpedia.org/ontology/patronSaint", "http://dbpedia.org/ontology/pccSecretary", "http://dbpedia.org/ontology/pdb", "http://dbpedia.org/ontology/peabodyAward", "http://dbpedia.org/ontology/penaltiesTeamA", "http://dbpedia.org/ontology/penaltiesTeamB", "http://dbpedia.org/ontology/penaltyScore", "http://dbpedia.org/ontology/pendamicDeaths", "http://dbpedia.org/ontology/penisLength", "http://dbpedia.org/ontology/peopleFullyVaccinated", "http://dbpedia.org/ontology/peopleName", "http://dbpedia.org/ontology/peopleVaccinated", "http://dbpedia.org/ontology/peopleVaccinatedPerHundred", "http://dbpedia.org/ontology/perCapitaIncome", "http://dbpedia.org/ontology/perCapitaIncomeAsOf", "http://dbpedia.org/ontology/perCapitaIncomeRank", "http://dbpedia.org/ontology/percentage", "http://dbpedia.org/ontology/percentageAlcohol", "http://dbpedia.org/ontology/percentageFat", "http://dbpedia.org/ontology/percentageLiteracyMen", "http://dbpedia.org/ontology/percentageLiteracyWomen", "http://dbpedia.org/ontology/percentageLiterate", "http://dbpedia.org/ontology/percentageOfAreaWater", "http://dbpedia.org/ontology/performer", "http://dbpedia.org/ontology/periapsis", "http://dbpedia.org/ontology/perifocus", "http://dbpedia.org/ontology/perimeter", "http://dbpedia.org/ontology/period", "http://dbpedia.org/ontology/perpetrator", "http://dbpedia.org/ontology/person", "http://dbpedia.org/ontology/personFunction", "http://dbpedia.org/ontology/personName", "http://dbpedia.org/ontology/personsFirstDosesCumul", "http://dbpedia.org/ontology/personsFullDosesCumul", "http://dbpedia.org/ontology/pfizer", "http://dbpedia.org/ontology/pfizerCumul", "http://dbpedia.org/ontology/pgaWins", "http://dbpedia.org/ontology/philosophicalSchool", "http://dbpedia.org/ontology/phonePrefix", "http://dbpedia.org/ontology/phonePrefixLabel", "http://dbpedia.org/ontology/photographer", "http://dbpedia.org/ontology/phylum", "http://dbpedia.org/ontology/picture", "http://dbpedia.org/ontology/pictureDescription", "http://dbpedia.org/ontology/pictureFormat", "http://dbpedia.org/ontology/picturesCommonsCategory", "http://dbpedia.org/ontology/piercing", "http://dbpedia.org/ontology/pisciculturalPopulation", "http://dbpedia.org/ontology/pistonStroke", "http://dbpedia.org/ontology/place", "http://dbpedia.org/ontology/placeOfBurial", "http://dbpedia.org/ontology/placeOfWorship", "http://dbpedia.org/ontology/plant", "http://dbpedia.org/ontology/playRole", "http://dbpedia.org/ontology/playerInTeam", "http://dbpedia.org/ontology/playerSeason", "http://dbpedia.org/ontology/playerStatus", "http://dbpedia.org/ontology/playingTime", "http://dbpedia.org/ontology/plays", "http://dbpedia.org/ontology/pluviometry", "http://dbpedia.org/ontology/podium", "http://dbpedia.org/ontology/podiums", "http://dbpedia.org/ontology/pole", "http://dbpedia.org/ontology/poleDriver", "http://dbpedia.org/ontology/poleDriverCountry", "http://dbpedia.org/ontology/poleDriverTeam", "http://dbpedia.org/ontology/polePosition", "http://dbpedia.org/ontology/poles", "http://dbpedia.org/ontology/policeName", "http://dbpedia.org/ontology/polishFilmAward", "http://dbpedia.org/ontology/politicGovernmentDepartment", "http://dbpedia.org/ontology/politicalFunction", "http://dbpedia.org/ontology/politicalLeader", "http://dbpedia.org/ontology/politicalMajority", "http://dbpedia.org/ontology/politicalPartyInLegislature", "http://dbpedia.org/ontology/politicalPartyOfLeader", "http://dbpedia.org/ontology/politicalSeats", "http://dbpedia.org/ontology/politician", "http://dbpedia.org/ontology/popularVote", "http://dbpedia.org/ontology/population", "http://dbpedia.org/ontology/populationAsOf", "http://dbpedia.org/ontology/populationDensity", "http://dbpedia.org/ontology/populationMetro", "http://dbpedia.org/ontology/populationMetroDensity", "http://dbpedia.org/ontology/populationPctChildren", "http://dbpedia.org/ontology/populationPctMen", "http://dbpedia.org/ontology/populationPctWomen", "http://dbpedia.org/ontology/populationPlace", "http://dbpedia.org/ontology/populationQuote", "http://dbpedia.org/ontology/populationRural", "http://dbpedia.org/ontology/populationRuralDensity", "http://dbpedia.org/ontology/populationTotal", "http://dbpedia.org/ontology/populationTotalRanking", "http://dbpedia.org/ontology/populationTotalReference", "http://dbpedia.org/ontology/populationUrban", "http://dbpedia.org/ontology/populationUrbanDensity", "http://dbpedia.org/ontology/populationYear", "http://dbpedia.org/ontology/portfolio", "http://dbpedia.org/ontology/portrayer", "http://dbpedia.org/ontology/position", "http://dbpedia.org/ontology/postalCode", "http://dbpedia.org/ontology/power", "http://dbpedia.org/ontology/powerOutput", "http://dbpedia.org/ontology/powerType", "http://dbpedia.org/ontology/precursor", "http://dbpedia.org/ontology/predecessor", "http://dbpedia.org/ontology/prefaceBy", "http://dbpedia.org/ontology/prefect", "http://dbpedia.org/ontology/prefectMandate", "http://dbpedia.org/ontology/prefecture", "http://dbpedia.org/ontology/prefix", "http://dbpedia.org/ontology/premiereDate", "http://dbpedia.org/ontology/premierePlace", "http://dbpedia.org/ontology/premiereYear", "http://dbpedia.org/ontology/presentMunicipality", "http://dbpedia.org/ontology/presentName", "http://dbpedia.org/ontology/presenter", "http://dbpedia.org/ontology/president", "http://dbpedia.org/ontology/presidentGeneralCouncil", "http://dbpedia.org/ontology/presidentGeneralCouncilMandate", "http://dbpedia.org/ontology/presidentRegionalCouncil", "http://dbpedia.org/ontology/presidentRegionalCouncilMandate", "http://dbpedia.org/ontology/previousDemographics", "http://dbpedia.org/ontology/previousEditor", "http://dbpedia.org/ontology/previousEntity", "http://dbpedia.org/ontology/previousEvent", "http://dbpedia.org/ontology/previousInfrastructure", "http://dbpedia.org/ontology/previousMission", "http://dbpedia.org/ontology/previousName", "http://dbpedia.org/ontology/previousPopulation", "http://dbpedia.org/ontology/previousPopulationTotal", "http://dbpedia.org/ontology/previousTrackNumber", "http://dbpedia.org/ontology/previousWork", "http://dbpedia.org/ontology/previousWorkDate", "http://dbpedia.org/ontology/price", "http://dbpedia.org/ontology/primaryFuelType", "http://dbpedia.org/ontology/primate", "http://dbpedia.org/ontology/primeMinister", "http://dbpedia.org/ontology/primogenitor", "http://dbpedia.org/ontology/principal", "http://dbpedia.org/ontology/principalArea", "http://dbpedia.org/ontology/principalEngineer", "http://dbpedia.org/ontology/proTeam", "http://dbpedia.org/ontology/probowlPick", "http://dbpedia.org/ontology/procedure", "http://dbpedia.org/ontology/producedBy", "http://dbpedia.org/ontology/producer", "http://dbpedia.org/ontology/produces", "http://dbpedia.org/ontology/product", "http://dbpedia.org/ontology/productShape", "http://dbpedia.org/ontology/production", "http://dbpedia.org/ontology/productionCompany", "http://dbpedia.org/ontology/productionEndDate", "http://dbpedia.org/ontology/productionEndYear", "http://dbpedia.org/ontology/productionStartDate", "http://dbpedia.org/ontology/productionStartYear", "http://dbpedia.org/ontology/productionYears", "http://dbpedia.org/ontology/profession", "http://dbpedia.org/ontology/programCost", "http://dbpedia.org/ontology/programmeFormat", "http://dbpedia.org/ontology/programmingLanguage", "http://dbpedia.org/ontology/project", "http://dbpedia.org/ontology/projectBudgetFunding", "http://dbpedia.org/ontology/projectBudgetTotal", "http://dbpedia.org/ontology/projectCoordinator", "http://dbpedia.org/ontology/projectEndDate", "http://dbpedia.org/ontology/projectKeyword", "http://dbpedia.org/ontology/projectObjective", "http://dbpedia.org/ontology/projectParticipant", "http://dbpedia.org/ontology/projectReferenceID", "http://dbpedia.org/ontology/projectStartDate", "http://dbpedia.org/ontology/projectType", "http://dbpedia.org/ontology/prominence", "http://dbpedia.org/ontology/promotion", "http://dbpedia.org/ontology/pronunciation", "http://dbpedia.org/ontology/prospectLeague", "http://dbpedia.org/ontology/prospectTeam", "http://dbpedia.org/ontology/protectionStatus", "http://dbpedia.org/ontology/protein", "http://dbpedia.org/ontology/protestantPercentage", "http://dbpedia.org/ontology/provCode", "http://dbpedia.org/ontology/provides", "http://dbpedia.org/ontology/province", "http://dbpedia.org/ontology/provinceIsoCode", "http://dbpedia.org/ontology/provinceLink", "http://dbpedia.org/ontology/provost", "http://dbpedia.org/ontology/pseudonym", "http://dbpedia.org/ontology/pubchem", "http://dbpedia.org/ontology/publication", "http://dbpedia.org/ontology/publicationDate", "http://dbpedia.org/ontology/publiclyAccessible", "http://dbpedia.org/ontology/publisher", "http://dbpedia.org/ontology/purchasingPowerParity", "http://dbpedia.org/ontology/purchasingPowerParityRank", "http://dbpedia.org/ontology/purchasingPowerParityYear", "http://dbpedia.org/ontology/purpose", "http://dbpedia.org/ontology/qatarClassic", "http://dbpedia.org/ontology/quebecerTitle", "http://dbpedia.org/ontology/quotation", "http://dbpedia.org/ontology/quote", "http://dbpedia.org/ontology/ra", "http://dbpedia.org/ontology/race", "http://dbpedia.org/ontology/raceHorse", "http://dbpedia.org/ontology/raceLength", "http://dbpedia.org/ontology/raceResult", "http://dbpedia.org/ontology/raceTrack", "http://dbpedia.org/ontology/raceWins", "http://dbpedia.org/ontology/races", "http://dbpedia.org/ontology/racketCatching", "http://dbpedia.org/ontology/radio", "http://dbpedia.org/ontology/radioStation", "http://dbpedia.org/ontology/radius_ly", "http://dbpedia.org/ontology/railGauge", "http://dbpedia.org/ontology/railwayLineUsingTunnel", "http://dbpedia.org/ontology/railwayPlatforms", "http://dbpedia.org/ontology/railwayRollingStock", "http://dbpedia.org/ontology/range", "http://dbpedia.org/ontology/rank", "http://dbpedia.org/ontology/rankAgreement", "http://dbpedia.org/ontology/rankArea", "http://dbpedia.org/ontology/rankInFinalMedalCount", "http://dbpedia.org/ontology/rankPopulation", "http://dbpedia.org/ontology/ranking", "http://dbpedia.org/ontology/rankingWins", "http://dbpedia.org/ontology/rankingsDoubles", "http://dbpedia.org/ontology/rankingsSingles", "http://dbpedia.org/ontology/rating", "http://dbpedia.org/ontology/ratio", "http://dbpedia.org/ontology/rebuildDate", "http://dbpedia.org/ontology/rebuilder", "http://dbpedia.org/ontology/rebuildingDate", "http://dbpedia.org/ontology/rebuildingYear", "http://dbpedia.org/ontology/recentWinner", "http://dbpedia.org/ontology/recommissioningDate", "http://dbpedia.org/ontology/recordDate", "http://dbpedia.org/ontology/recordLabel", "http://dbpedia.org/ontology/recordedIn", "http://dbpedia.org/ontology/recoveryCases", "http://dbpedia.org/ontology/rector", "http://dbpedia.org/ontology/redListIdNL", "http://dbpedia.org/ontology/redLongDistancePisteNumber", "http://dbpedia.org/ontology/redSkiPisteNumber", "http://dbpedia.org/ontology/redline", "http://dbpedia.org/ontology/refcul", "http://dbpedia.org/ontology/reference", "http://dbpedia.org/ontology/reffBourgmestre", "http://dbpedia.org/ontology/refgen", "http://dbpedia.org/ontology/refgeo", "http://dbpedia.org/ontology/refpol", "http://dbpedia.org/ontology/refseq", "http://dbpedia.org/ontology/refseqmrna", "http://dbpedia.org/ontology/refseqprotein", "http://dbpedia.org/ontology/regency", "http://dbpedia.org/ontology/regentOf", "http://dbpedia.org/ontology/regime", "http://dbpedia.org/ontology/region", "http://dbpedia.org/ontology/regionLink", "http://dbpedia.org/ontology/regionServed", "http://dbpedia.org/ontology/regionType", "http://dbpedia.org/ontology/regionalCouncil", "http://dbpedia.org/ontology/regionalLanguage", "http://dbpedia.org/ontology/regionalPrefecture", "http://dbpedia.org/ontology/registration", "http://dbpedia.org/ontology/registry", "http://dbpedia.org/ontology/registryNumber", "http://dbpedia.org/ontology/reign", "http://dbpedia.org/ontology/reignName", "http://dbpedia.org/ontology/reigningPope", "http://dbpedia.org/ontology/related", "http://dbpedia.org/ontology/relatedFunctions", "http://dbpedia.org/ontology/relatedMeanOfTransportation", "http://dbpedia.org/ontology/relatedPlaces", "http://dbpedia.org/ontology/relation", "http://dbpedia.org/ontology/relative", "http://dbpedia.org/ontology/relativeAtomicMass", "http://dbpedia.org/ontology/releaseDate", "http://dbpedia.org/ontology/releaseLocation", "http://dbpedia.org/ontology/relics", "http://dbpedia.org/ontology/relief", "http://dbpedia.org/ontology/religion", "http://dbpedia.org/ontology/religiousHead", "http://dbpedia.org/ontology/religiousHeadLabel", "http://dbpedia.org/ontology/religiousOrder", "http://dbpedia.org/ontology/reopened", "http://dbpedia.org/ontology/reopeningDate", "http://dbpedia.org/ontology/reopeningYear", "http://dbpedia.org/ontology/reportingMark", "http://dbpedia.org/ontology/representative", "http://dbpedia.org/ontology/requirement", "http://dbpedia.org/ontology/reservations", "http://dbpedia.org/ontology/residence", "http://dbpedia.org/ontology/resolution", "http://dbpedia.org/ontology/restingDate", "http://dbpedia.org/ontology/restingPlace", "http://dbpedia.org/ontology/restingPlacePosition", "http://dbpedia.org/ontology/restoreDate", "http://dbpedia.org/ontology/restriction", "http://dbpedia.org/ontology/result", "http://dbpedia.org/ontology/retentionTime", "http://dbpedia.org/ontology/retired", "http://dbpedia.org/ontology/retiredRocket", "http://dbpedia.org/ontology/retirementDate", "http://dbpedia.org/ontology/revenue", "http://dbpedia.org/ontology/revenueYear", "http://dbpedia.org/ontology/review", "http://dbpedia.org/ontology/rgbCoordinateBlue", "http://dbpedia.org/ontology/rgbCoordinateGreen", "http://dbpedia.org/ontology/rgbCoordinateRed", "http://dbpedia.org/ontology/ridId", "http://dbpedia.org/ontology/rightAscension", "http://dbpedia.org/ontology/rightChild", "http://dbpedia.org/ontology/rightTributary", "http://dbpedia.org/ontology/rivalSchool", "http://dbpedia.org/ontology/river", "http://dbpedia.org/ontology/riverBranch", "http://dbpedia.org/ontology/riverBranchOf", "http://dbpedia.org/ontology/riverMouth", "http://dbpedia.org/ontology/rkdArtistsId", "http://dbpedia.org/ontology/road", "http://dbpedia.org/ontology/rocket", "http://dbpedia.org/ontology/rocketFunction", "http://dbpedia.org/ontology/rocketStages", "http://dbpedia.org/ontology/rolandGarrosDouble", "http://dbpedia.org/ontology/rolandGarrosMixed", "http://dbpedia.org/ontology/rolandGarrosSingle", "http://dbpedia.org/ontology/role", "http://dbpedia.org/ontology/roleInEvent", "http://dbpedia.org/ontology/roofHeight", "http://dbpedia.org/ontology/rotationPeriod", "http://dbpedia.org/ontology/route", "http://dbpedia.org/ontology/routeActivity", "http://dbpedia.org/ontology/routeDirection", "http://dbpedia.org/ontology/routeEnd", "http://dbpedia.org/ontology/routeEndDirection", "http://dbpedia.org/ontology/routeEndLocation", "http://dbpedia.org/ontology/routeJunction", "http://dbpedia.org/ontology/routeLine", "http://dbpedia.org/ontology/routeNext", "http://dbpedia.org/ontology/routeNumber", "http://dbpedia.org/ontology/routePrevious", "http://dbpedia.org/ontology/routeStart", "http://dbpedia.org/ontology/routeStartDirection", "http://dbpedia.org/ontology/routeStartLocation", "http://dbpedia.org/ontology/routeTypeAbbreviation", "http://dbpedia.org/ontology/royalAnthem", "http://dbpedia.org/ontology/ruling", "http://dbpedia.org/ontology/runningMate", "http://dbpedia.org/ontology/runtime", "http://dbpedia.org/ontology/runwayDesignation", "http://dbpedia.org/ontology/runwayLength", "http://dbpedia.org/ontology/runwaySurface", "http://dbpedia.org/ontology/runwayWidth", "http://dbpedia.org/ontology/ruralMunicipality", "http://dbpedia.org/ontology/saint", "http://dbpedia.org/ontology/salary", "http://dbpedia.org/ontology/sales", "http://dbpedia.org/ontology/sameName", "http://dbpedia.org/ontology/satScore", "http://dbpedia.org/ontology/satcat", "http://dbpedia.org/ontology/satellite", "http://dbpedia.org/ontology/satellitesDeployed", "http://dbpedia.org/ontology/scale", "http://dbpedia.org/ontology/scene", "http://dbpedia.org/ontology/school", "http://dbpedia.org/ontology/schoolBoard", "http://dbpedia.org/ontology/schoolCode", "http://dbpedia.org/ontology/schoolNumber", "http://dbpedia.org/ontology/schoolPatron", "http://dbpedia.org/ontology/scientificName", "http://dbpedia.org/ontology/score", "http://dbpedia.org/ontology/screenActorsGuildAward", "http://dbpedia.org/ontology/sea", "http://dbpedia.org/ontology/season", "http://dbpedia.org/ontology/seasonManager", "http://dbpedia.org/ontology/seasonNumber", "http://dbpedia.org/ontology/seatNumber", "http://dbpedia.org/ontology/seatingCapacity", "http://dbpedia.org/ontology/second", "http://dbpedia.org/ontology/secondCommander", "http://dbpedia.org/ontology/secondDriver", "http://dbpedia.org/ontology/secondDriverCountry", "http://dbpedia.org/ontology/secondLeader", "http://dbpedia.org/ontology/secondPlace", "http://dbpedia.org/ontology/secondPopularVote", "http://dbpedia.org/ontology/secondTeam", "http://dbpedia.org/ontology/secretaryGeneral", "http://dbpedia.org/ontology/security", "http://dbpedia.org/ontology/seiyu", "http://dbpedia.org/ontology/selection", "http://dbpedia.org/ontology/selectionPoint", "http://dbpedia.org/ontology/selectionYear", "http://dbpedia.org/ontology/selibrId", "http://dbpedia.org/ontology/senator", "http://dbpedia.org/ontology/senior", "http://dbpedia.org/ontology/seniority", "http://dbpedia.org/ontology/seniunija", "http://dbpedia.org/ontology/sentence", "http://dbpedia.org/ontology/series", "http://dbpedia.org/ontology/service", "http://dbpedia.org/ontology/serviceEndDate", "http://dbpedia.org/ontology/serviceEndYear", "http://dbpedia.org/ontology/serviceModule", "http://dbpedia.org/ontology/serviceNumber", "http://dbpedia.org/ontology/serviceStartDate", "http://dbpedia.org/ontology/serviceStartYear", "http://dbpedia.org/ontology/servingRailwayLine", "http://dbpedia.org/ontology/servingSize", "http://dbpedia.org/ontology/servingTemperature", "http://dbpedia.org/ontology/sessionNumber", "http://dbpedia.org/ontology/setDesigner", "http://dbpedia.org/ontology/settingOfPlay", "http://dbpedia.org/ontology/settlement", "http://dbpedia.org/ontology/settlementAttached", "http://dbpedia.org/ontology/setupTime", "http://dbpedia.org/ontology/severeCases", "http://dbpedia.org/ontology/sex", "http://dbpedia.org/ontology/sexualOrientation", "http://dbpedia.org/ontology/shape", "http://dbpedia.org/ontology/shareDate", "http://dbpedia.org/ontology/shareOfAudience", "http://dbpedia.org/ontology/shareSource", "http://dbpedia.org/ontology/sharingOutPopulation", "http://dbpedia.org/ontology/sharingOutPopulationYear", "http://dbpedia.org/ontology/sheading", "http://dbpedia.org/ontology/shipBeam", "http://dbpedia.org/ontology/shipCrew", "http://dbpedia.org/ontology/shipDisplacement", "http://dbpedia.org/ontology/shipDraft", "http://dbpedia.org/ontology/shipLaunch", "http://dbpedia.org/ontology/shoeNumber", "http://dbpedia.org/ontology/shoeSize", "http://dbpedia.org/ontology/shoot", "http://dbpedia.org/ontology/shoots", "http://dbpedia.org/ontology/shoreLength", "http://dbpedia.org/ontology/shortProgCompetition", "http://dbpedia.org/ontology/shortProgScore", "http://dbpedia.org/ontology/show", "http://dbpedia.org/ontology/showJudge", "http://dbpedia.org/ontology/shuttle", "http://dbpedia.org/ontology/sibling", "http://dbpedia.org/ontology/signName", "http://dbpedia.org/ontology/signature", "http://dbpedia.org/ontology/significantBuilding", "http://dbpedia.org/ontology/significantDesign", "http://dbpedia.org/ontology/significantProject", "http://dbpedia.org/ontology/silCode", "http://dbpedia.org/ontology/silverMedalDouble", "http://dbpedia.org/ontology/silverMedalMixed", "http://dbpedia.org/ontology/silverMedalSingle", "http://dbpedia.org/ontology/silverMedalist", "http://dbpedia.org/ontology/simcCode", "http://dbpedia.org/ontology/similar", "http://dbpedia.org/ontology/sire", "http://dbpedia.org/ontology/siren", "http://dbpedia.org/ontology/sister", "http://dbpedia.org/ontology/sisterCollege", "http://dbpedia.org/ontology/sisterNewspaper", "http://dbpedia.org/ontology/sisterStation", "http://dbpedia.org/ontology/sixthFormStudents", "http://dbpedia.org/ontology/sizeBlazon", "http://dbpedia.org/ontology/sizeLogo", "http://dbpedia.org/ontology/sizeMap", "http://dbpedia.org/ontology/sizeThumbnail", "http://dbpedia.org/ontology/size_v", "http://dbpedia.org/ontology/skiLift", "http://dbpedia.org/ontology/skiPisteKilometre", "http://dbpedia.org/ontology/skiPisteNumber", "http://dbpedia.org/ontology/skiTow", "http://dbpedia.org/ontology/skills", "http://dbpedia.org/ontology/skinColor", "http://dbpedia.org/ontology/slogan", "http://dbpedia.org/ontology/smiles", "http://dbpedia.org/ontology/snowParkNumber", "http://dbpedia.org/ontology/soccerLeaguePromoted", "http://dbpedia.org/ontology/soccerLeagueRelegated", "http://dbpedia.org/ontology/soccerLeagueSeason", "http://dbpedia.org/ontology/soccerLeagueWinner", "http://dbpedia.org/ontology/soccerTournamentClosingSeason", "http://dbpedia.org/ontology/soccerTournamentLastChampion", "http://dbpedia.org/ontology/soccerTournamentMostSteady", "http://dbpedia.org/ontology/soccerTournamentMostSuccesfull", "http://dbpedia.org/ontology/soccerTournamentOpeningSeason", "http://dbpedia.org/ontology/soccerTournamentThisSeason", "http://dbpedia.org/ontology/soccerTournamentTopScorer", "http://dbpedia.org/ontology/solicitorGeneral", "http://dbpedia.org/ontology/solubility", "http://dbpedia.org/ontology/solvent", "http://dbpedia.org/ontology/solventWithBadSolubility", "http://dbpedia.org/ontology/solventWithGoodSolubility", "http://dbpedia.org/ontology/solventWithMediocreSolubility", "http://dbpedia.org/ontology/son", "http://dbpedia.org/ontology/soundRecording", "http://dbpedia.org/ontology/source", "http://dbpedia.org/ontology/sourceConfluence", "http://dbpedia.org/ontology/sourceConfluenceCountry", "http://dbpedia.org/ontology/sourceConfluenceElevation", "http://dbpedia.org/ontology/sourceConfluenceMountain", "http://dbpedia.org/ontology/sourceConfluencePlace", "http://dbpedia.org/ontology/sourceConfluencePosition", "http://dbpedia.org/ontology/sourceConfluenceRegion", "http://dbpedia.org/ontology/sourceConfluenceState", "http://dbpedia.org/ontology/sourceCountry", "http://dbpedia.org/ontology/sourceDistrict", "http://dbpedia.org/ontology/sourceElevation", "http://dbpedia.org/ontology/sourceMountain", "http://dbpedia.org/ontology/sourceName", "http://dbpedia.org/ontology/sourcePlace", "http://dbpedia.org/ontology/sourcePosition", "http://dbpedia.org/ontology/sourceRegion", "http://dbpedia.org/ontology/sourceState", "http://dbpedia.org/ontology/sourceText", "http://dbpedia.org/ontology/sourceWebsite", "http://dbpedia.org/ontology/southEastPlace", "http://dbpedia.org/ontology/southPlace", "http://dbpedia.org/ontology/southWestPlace", "http://dbpedia.org/ontology/sovereignCountry", "http://dbpedia.org/ontology/space", "http://dbpedia.org/ontology/spacecraft", "http://dbpedia.org/ontology/spacestation", "http://dbpedia.org/ontology/spacewalkBegin", "http://dbpedia.org/ontology/spacewalkEnd", "http://dbpedia.org/ontology/speaker", "http://dbpedia.org/ontology/specialEffects", "http://dbpedia.org/ontology/specialTrial", "http://dbpedia.org/ontology/specialist", "http://dbpedia.org/ontology/speciality", "http://dbpedia.org/ontology/specialization", "http://dbpedia.org/ontology/species", "http://dbpedia.org/ontology/speedLimit", "http://dbpedia.org/ontology/spike", "http://dbpedia.org/ontology/splitFromParty", "http://dbpedia.org/ontology/spokenIn", "http://dbpedia.org/ontology/spokesperson", "http://dbpedia.org/ontology/sport", "http://dbpedia.org/ontology/sportCountry", "http://dbpedia.org/ontology/sportDiscipline", "http://dbpedia.org/ontology/sportGoverningBody", "http://dbpedia.org/ontology/sportSpecialty", "http://dbpedia.org/ontology/sportsFunction", "http://dbpedia.org/ontology/spouse", "http://dbpedia.org/ontology/spouseName", "http://dbpedia.org/ontology/spurOf", "http://dbpedia.org/ontology/spurType", "http://dbpedia.org/ontology/squadNumber", "http://dbpedia.org/ontology/stadium", "http://dbpedia.org/ontology/staff", "http://dbpedia.org/ontology/starRating", "http://dbpedia.org/ontology/starring", "http://dbpedia.org/ontology/start", "http://dbpedia.org/ontology/startCareer", "http://dbpedia.org/ontology/startDate", "http://dbpedia.org/ontology/startDateTime", "http://dbpedia.org/ontology/startOccupation", "http://dbpedia.org/ontology/startPoint", "http://dbpedia.org/ontology/startReign", "http://dbpedia.org/ontology/startWct", "http://dbpedia.org/ontology/startWqs", "http://dbpedia.org/ontology/startYear", "http://dbpedia.org/ontology/startYearOfInsertion", "http://dbpedia.org/ontology/startYearOfSales", "http://dbpedia.org/ontology/statName", "http://dbpedia.org/ontology/statValue", "http://dbpedia.org/ontology/state", "http://dbpedia.org/ontology/stateDelegate", "http://dbpedia.org/ontology/stateOfOrigin", "http://dbpedia.org/ontology/stateOfOriginPoint", "http://dbpedia.org/ontology/stateOfOriginTeam", "http://dbpedia.org/ontology/stateOfOriginYear", "http://dbpedia.org/ontology/stationEvaDuration", "http://dbpedia.org/ontology/stationStructure", "http://dbpedia.org/ontology/stationVisitDuration", "http://dbpedia.org/ontology/statistic", "http://dbpedia.org/ontology/statisticLabel", "http://dbpedia.org/ontology/statisticValue", "http://dbpedia.org/ontology/statisticYear", "http://dbpedia.org/ontology/status", "http://dbpedia.org/ontology/statusManager", "http://dbpedia.org/ontology/statusYear", "http://dbpedia.org/ontology/stellarClassification", "http://dbpedia.org/ontology/stockExchange", "http://dbpedia.org/ontology/storyEditor", "http://dbpedia.org/ontology/strength", "http://dbpedia.org/ontology/structuralSystem", "http://dbpedia.org/ontology/student", "http://dbpedia.org/ontology/style", "http://dbpedia.org/ontology/stylisticOrigin", "http://dbpedia.org/ontology/subClassis", "http://dbpedia.org/ontology/subFamily", "http://dbpedia.org/ontology/subGenus", "http://dbpedia.org/ontology/subMunicipalityType", "http://dbpedia.org/ontology/subOrder", "http://dbpedia.org/ontology/subPrefecture", "http://dbpedia.org/ontology/subTribus", "http://dbpedia.org/ontology/subdivision", "http://dbpedia.org/ontology/subdivisionLink", "http://dbpedia.org/ontology/subdivisionName", "http://dbpedia.org/ontology/subdivisions", "http://dbpedia.org/ontology/subjectOfPlay", "http://dbpedia.org/ontology/subjectTerm", "http://dbpedia.org/ontology/sublimationPoint", "http://dbpedia.org/ontology/suborbitalFlights", "http://dbpedia.org/ontology/subprefecture", "http://dbpedia.org/ontology/subregion", "http://dbpedia.org/ontology/subsequentInfrastructure", "http://dbpedia.org/ontology/subsequentWork", "http://dbpedia.org/ontology/subsequentWorkDate", "http://dbpedia.org/ontology/subsidiary", "http://dbpedia.org/ontology/subsystem", "http://dbpedia.org/ontology/subsystemLink", "http://dbpedia.org/ontology/subtitle", "http://dbpedia.org/ontology/successfulLaunches", "http://dbpedia.org/ontology/successor", "http://dbpedia.org/ontology/sudocId", "http://dbpedia.org/ontology/summerAppearances", "http://dbpedia.org/ontology/summerTemperature", "http://dbpedia.org/ontology/superFamily", "http://dbpedia.org/ontology/superOrder", "http://dbpedia.org/ontology/superTribus", "http://dbpedia.org/ontology/superbowlWin", "http://dbpedia.org/ontology/superintendent", "http://dbpedia.org/ontology/supplementalDraftRound", "http://dbpedia.org/ontology/supplementalDraftYear", "http://dbpedia.org/ontology/supplies", "http://dbpedia.org/ontology/supply", "http://dbpedia.org/ontology/suppreddedDate", "http://dbpedia.org/ontology/surfaceArea", "http://dbpedia.org/ontology/surfaceFormOccurrenceOffset", "http://dbpedia.org/ontology/surfaceGravity", "http://dbpedia.org/ontology/surfaceType", "http://dbpedia.org/ontology/suspectedCases", "http://dbpedia.org/ontology/swimmingStyle", "http://dbpedia.org/ontology/symbol", "http://dbpedia.org/ontology/symptom", "http://dbpedia.org/ontology/synonym", "http://dbpedia.org/ontology/systemOfLaw", "http://dbpedia.org/ontology/systemRequirements", "http://dbpedia.org/ontology/tag", "http://dbpedia.org/ontology/taoiseach", "http://dbpedia.org/ontology/targetAirport", "http://dbpedia.org/ontology/targetSpaceStation", "http://dbpedia.org/ontology/taste", "http://dbpedia.org/ontology/tattoo", "http://dbpedia.org/ontology/taxon", "http://dbpedia.org/ontology/teachingStaff", "http://dbpedia.org/ontology/team", "http://dbpedia.org/ontology/teamCoached", "http://dbpedia.org/ontology/teamManager", "http://dbpedia.org/ontology/teamName", "http://dbpedia.org/ontology/teamPoint", "http://dbpedia.org/ontology/teamSize", "http://dbpedia.org/ontology/teamTitle", "http://dbpedia.org/ontology/technique", "http://dbpedia.org/ontology/televisionSeries", "http://dbpedia.org/ontology/tempPlace", "http://dbpedia.org/ontology/temperature", "http://dbpedia.org/ontology/templateName", "http://dbpedia.org/ontology/temple", "http://dbpedia.org/ontology/templeYear", "http://dbpedia.org/ontology/tenant", "http://dbpedia.org/ontology/tennisSurfaceType", "http://dbpedia.org/ontology/termOfOffice", "http://dbpedia.org/ontology/termPeriod", "http://dbpedia.org/ontology/territory", "http://dbpedia.org/ontology/terytCode", "http://dbpedia.org/ontology/tessitura", "http://dbpedia.org/ontology/testaverage", "http://dbpedia.org/ontology/theology", "http://dbpedia.org/ontology/third", "http://dbpedia.org/ontology/thirdCommander", "http://dbpedia.org/ontology/thirdDriver", "http://dbpedia.org/ontology/thirdDriverCountry", "http://dbpedia.org/ontology/thirdPlace", "http://dbpedia.org/ontology/thirdTeam", "http://dbpedia.org/ontology/throwingSide", "http://dbpedia.org/ontology/thumbnail", "http://dbpedia.org/ontology/thumbnailCaption", "http://dbpedia.org/ontology/tie", "http://dbpedia.org/ontology/time", "http://dbpedia.org/ontology/timeInSpace", "http://dbpedia.org/ontology/timeZone", "http://dbpedia.org/ontology/timeshiftChannel", "http://dbpedia.org/ontology/title", "http://dbpedia.org/ontology/titleDate", "http://dbpedia.org/ontology/titleDouble", "http://dbpedia.org/ontology/titleLanguage", "http://dbpedia.org/ontology/titleSingle", "http://dbpedia.org/ontology/toll", "http://dbpedia.org/ontology/tonyAward", "http://dbpedia.org/ontology/topFloorHeight", "http://dbpedia.org/ontology/topLevelDomain", "http://dbpedia.org/ontology/topSpeed", "http://dbpedia.org/ontology/topic", "http://dbpedia.org/ontology/torchBearer", "http://dbpedia.org/ontology/torqueOutput", "http://dbpedia.org/ontology/totalCargo", "http://dbpedia.org/ontology/totalDiscs", "http://dbpedia.org/ontology/totalIliCases", "http://dbpedia.org/ontology/totalLaunches", "http://dbpedia.org/ontology/totalMass", "http://dbpedia.org/ontology/totalPopulation", "http://dbpedia.org/ontology/totalTracks", "http://dbpedia.org/ontology/totalTravellers", "http://dbpedia.org/ontology/totalVaccinations", "http://dbpedia.org/ontology/totalVaccinationsPerHundred", "http://dbpedia.org/ontology/touristicSite", "http://dbpedia.org/ontology/tournamentOfChampions", "http://dbpedia.org/ontology/tournamentRecord", "http://dbpedia.org/ontology/towerHeight", "http://dbpedia.org/ontology/trackLength", "http://dbpedia.org/ontology/trackNumber", "http://dbpedia.org/ontology/trackWidth", "http://dbpedia.org/ontology/tradeMark", "http://dbpedia.org/ontology/tradingName", "http://dbpedia.org/ontology/trainer", "http://dbpedia.org/ontology/trainerClub", "http://dbpedia.org/ontology/trainerYears", "http://dbpedia.org/ontology/training", "http://dbpedia.org/ontology/translatedMotto", "http://dbpedia.org/ontology/translator", "http://dbpedia.org/ontology/transmission", "http://dbpedia.org/ontology/treatment", "http://dbpedia.org/ontology/tree", "http://dbpedia.org/ontology/tribus", "http://dbpedia.org/ontology/trustee", "http://dbpedia.org/ontology/tuition", "http://dbpedia.org/ontology/tvComId", "http://dbpedia.org/ontology/tvShow", "http://dbpedia.org/ontology/twinCountry", "http://dbpedia.org/ontology/twinTown", "http://dbpedia.org/ontology/type", "http://dbpedia.org/ontology/typeCoordinate", "http://dbpedia.org/ontology/typeOfElectrification", "http://dbpedia.org/ontology/typeOfGrain", "http://dbpedia.org/ontology/typeOfStorage", "http://dbpedia.org/ontology/typeOfYeast", "http://dbpedia.org/ontology/uRN", "http://dbpedia.org/ontology/uciCode", "http://dbpedia.org/ontology/ulanId", "http://dbpedia.org/ontology/umbrellaTitle", "http://dbpedia.org/ontology/unNumber", "http://dbpedia.org/ontology/uncle", "http://dbpedia.org/ontology/undraftedYear", "http://dbpedia.org/ontology/unesco", "http://dbpedia.org/ontology/unicode", "http://dbpedia.org/ontology/uniprot", "http://dbpedia.org/ontology/unitCost", "http://dbpedia.org/ontology/unitaryAuthority", "http://dbpedia.org/ontology/unitedStatesNationalBridgeId", "http://dbpedia.org/ontology/university", "http://dbpedia.org/ontology/unknownOutcomes", "http://dbpedia.org/ontology/unloCode", "http://dbpedia.org/ontology/updated", "http://dbpedia.org/ontology/upperAge", "http://dbpedia.org/ontology/urbanArea", "http://dbpedia.org/ontology/usOpenDouble", "http://dbpedia.org/ontology/usOpenMixed", "http://dbpedia.org/ontology/usOpenSingle", "http://dbpedia.org/ontology/usSales", "http://dbpedia.org/ontology/usedInWar", "http://dbpedia.org/ontology/uses", "http://dbpedia.org/ontology/usingCountry", "http://dbpedia.org/ontology/usk", "http://dbpedia.org/ontology/usopenWins", "http://dbpedia.org/ontology/usurper", "http://dbpedia.org/ontology/utcOffset", "http://dbpedia.org/ontology/v_hb", "http://dbpedia.org/ontology/vaccination", "http://dbpedia.org/ontology/vaccine", "http://dbpedia.org/ontology/value", "http://dbpedia.org/ontology/valvetrain", "http://dbpedia.org/ontology/vaporPressure", "http://dbpedia.org/ontology/variantOf", "http://dbpedia.org/ontology/varietals", "http://dbpedia.org/ontology/vehicle", "http://dbpedia.org/ontology/vehicleCode", "http://dbpedia.org/ontology/vehiclesInFleet", "http://dbpedia.org/ontology/vehiclesPerDay", "http://dbpedia.org/ontology/vein", "http://dbpedia.org/ontology/veneratedIn", "http://dbpedia.org/ontology/version", "http://dbpedia.org/ontology/viafId", "http://dbpedia.org/ontology/viceChancellor", "http://dbpedia.org/ontology/viceLeader", "http://dbpedia.org/ontology/viceLeaderParty", "http://dbpedia.org/ontology/vicePresident", "http://dbpedia.org/ontology/vicePrimeMinister", "http://dbpedia.org/ontology/vicePrincipal", "http://dbpedia.org/ontology/vicePrincipalLabel", "http://dbpedia.org/ontology/victim", "http://dbpedia.org/ontology/victims", "http://dbpedia.org/ontology/victory", "http://dbpedia.org/ontology/victoryAsMgr", "http://dbpedia.org/ontology/victoryPercentageAsMgr", "http://dbpedia.org/ontology/virtualChannel", "http://dbpedia.org/ontology/visitorStatisticsAsOf", "http://dbpedia.org/ontology/visitorsPerDay", "http://dbpedia.org/ontology/visitorsPerYear", "http://dbpedia.org/ontology/visitorsPercentageChange", "http://dbpedia.org/ontology/visitorsTotal", "http://dbpedia.org/ontology/voice", "http://dbpedia.org/ontology/voiceType", "http://dbpedia.org/ontology/volcanicActivity", "http://dbpedia.org/ontology/volcanicType", "http://dbpedia.org/ontology/volcanoId", "http://dbpedia.org/ontology/voltageOfElectrification", "http://dbpedia.org/ontology/volume", "http://dbpedia.org/ontology/volumeQuote", "http://dbpedia.org/ontology/volumes", "http://dbpedia.org/ontology/vonKlitzingConstant", "http://dbpedia.org/ontology/votesAgainst", "http://dbpedia.org/ontology/votesFor", "http://dbpedia.org/ontology/wagon", "http://dbpedia.org/ontology/waistSize", "http://dbpedia.org/ontology/war", "http://dbpedia.org/ontology/ward", "http://dbpedia.org/ontology/water", "http://dbpedia.org/ontology/waterArea", "http://dbpedia.org/ontology/waterPercentage", "http://dbpedia.org/ontology/watercourse", "http://dbpedia.org/ontology/watershed", "http://dbpedia.org/ontology/waterwayThroughTunnel", "http://dbpedia.org/ontology/wavelength", "http://dbpedia.org/ontology/weapon", "http://dbpedia.org/ontology/webcast", "http://dbpedia.org/ontology/websiteLabel", "http://dbpedia.org/ontology/weddingParentsDate", "http://dbpedia.org/ontology/weight", "http://dbpedia.org/ontology/westPlace", "http://dbpedia.org/ontology/whaDraft", "http://dbpedia.org/ontology/whaDraftTeam", "http://dbpedia.org/ontology/whaDraftYear", "http://dbpedia.org/ontology/wheelbase", "http://dbpedia.org/ontology/wholeArea", "http://dbpedia.org/ontology/width", "http://dbpedia.org/ontology/widthQuote", "http://dbpedia.org/ontology/wikiPageCharacterSize", "http://dbpedia.org/ontology/wikiPageDisambiguates", "http://dbpedia.org/ontology/wikiPageEditLink", "http://dbpedia.org/ontology/wikiPageExternalLink", "http://dbpedia.org/ontology/wikiPageExtracted", "http://dbpedia.org/ontology/wikiPageHistoryLink", "http://dbpedia.org/ontology/wikiPageID", "http://dbpedia.org/ontology/wikiPageInDegree", "http://dbpedia.org/ontology/wikiPageInterLanguageLink", "http://dbpedia.org/ontology/wikiPageLength", "http://dbpedia.org/ontology/wikiPageModified", "http://dbpedia.org/ontology/wikiPageOutDegree", "http://dbpedia.org/ontology/wikiPageRedirects", "http://dbpedia.org/ontology/wikiPageRevisionID", "http://dbpedia.org/ontology/wikiPageRevisionLink", "http://dbpedia.org/ontology/wikiPageUsesTemplate", "http://dbpedia.org/ontology/wikiPageWikiLink", "http://dbpedia.org/ontology/wikiPageWikiLinkText", "http://dbpedia.org/ontology/wikidataSplitIri", "http://dbpedia.org/ontology/wilaya", "http://dbpedia.org/ontology/wimbledonDouble", "http://dbpedia.org/ontology/wimbledonMixed", "http://dbpedia.org/ontology/wimbledonSingle", "http://dbpedia.org/ontology/wineProduced", "http://dbpedia.org/ontology/wineRegion", "http://dbpedia.org/ontology/wineYear", "http://dbpedia.org/ontology/wingArea", "http://dbpedia.org/ontology/wingspan", "http://dbpedia.org/ontology/wins", "http://dbpedia.org/ontology/winsAtAlpg", "http://dbpedia.org/ontology/winsAtAsia", "http://dbpedia.org/ontology/winsAtAus", "http://dbpedia.org/ontology/winsAtChallenges", "http://dbpedia.org/ontology/winsAtChampionships", "http://dbpedia.org/ontology/winsAtJLPGA", "http://dbpedia.org/ontology/winsAtJapan", "http://dbpedia.org/ontology/winsAtKLPGA", "http://dbpedia.org/ontology/winsAtLAGT", "http://dbpedia.org/ontology/winsAtLET", "http://dbpedia.org/ontology/winsAtLPGA", "http://dbpedia.org/ontology/winsAtMajors", "http://dbpedia.org/ontology/winsAtNWIDE", "http://dbpedia.org/ontology/winsAtOtherTournaments", "http://dbpedia.org/ontology/winsAtPGA", "http://dbpedia.org/ontology/winsAtProTournaments", "http://dbpedia.org/ontology/winsAtSenEuro", "http://dbpedia.org/ontology/winsAtSun", "http://dbpedia.org/ontology/winsInEurope", "http://dbpedia.org/ontology/winterAppearances", "http://dbpedia.org/ontology/winterTemperature", "http://dbpedia.org/ontology/woRMS", "http://dbpedia.org/ontology/wordBefore", "http://dbpedia.org/ontology/work", "http://dbpedia.org/ontology/workArea", "http://dbpedia.org/ontology/world", "http://dbpedia.org/ontology/worldChampionTitleYear", "http://dbpedia.org/ontology/worldOpen", "http://dbpedia.org/ontology/worldTeamCup", "http://dbpedia.org/ontology/worldTournament", "http://dbpedia.org/ontology/worldTournamentBronze", "http://dbpedia.org/ontology/worldTournamentGold", "http://dbpedia.org/ontology/worldTournamentSilver", "http://dbpedia.org/ontology/worstDefeat", "http://dbpedia.org/ontology/wptFinalTable", "http://dbpedia.org/ontology/wptItm", "http://dbpedia.org/ontology/wptTitle", "http://dbpedia.org/ontology/writer", "http://dbpedia.org/ontology/wsopItm", "http://dbpedia.org/ontology/wsopWinYear", "http://dbpedia.org/ontology/wsopWristband", "http://dbpedia.org/ontology/year", "http://dbpedia.org/ontology/yearElevationIntoNobility", "http://dbpedia.org/ontology/yearOfConstruction", "http://dbpedia.org/ontology/yearOfElectrification", "http://dbpedia.org/ontology/years", "http://dbpedia.org/ontology/youthClub", "http://dbpedia.org/ontology/youthWing", "http://dbpedia.org/ontology/youthYears", "http://dbpedia.org/ontology/zdb", "http://dbpedia.org/ontology/zipCode", "http://dbpedia.org/ontology/zodiacSign", "http://dbpedia.org/ontology/ɡrāpانگور", "http://dbpedia.org/ontology/آب_و_تاب", "http://dbpedia.org/ontology/آبادی_والی_جگہ", "http://dbpedia.org/ontology/آبادی_والی_جگہ/area", "http://dbpedia.org/ontology/آبادی_والی_جگہ/areaMetro", "http://dbpedia.org/ontology/آبادی_والی_جگہ/areaTotal", "http://dbpedia.org/ontology/آبادی_والی_جگہ/areaUrban", "http://dbpedia.org/ontology/آبادی_والی_جگہ/populationDensity", "http://dbpedia.org/ontology/آبادی_والی_جگہ/populationMetroDensity", "http://dbpedia.org/ontology/آبادی_والی_جگہ/populationUrbanDensity", "http://dbpedia.org/ontology/آجر", "http://dbpedia.org/ontology/آرٹیکل", "http://dbpedia.org/ontology/آرچبی_شاپ", "http://dbpedia.org/ontology/آرچر_پلیئر", "http://dbpedia.org/ontology/آرکیا", "http://dbpedia.org/ontology/آسمانی_جسم", "http://dbpedia.org/ontology/آسمانی_کھیل_کا_ممالک_کے_درمیان_مقابلہ", "http://dbpedia.org/ontology/آسٹریلوی_رولز_فٹ_بال_پلیئر", "http://dbpedia.org/ontology/آسٹریلوی_فٹ_بال_ٹیم", "http://dbpedia.org/ontology/آسٹریلوی_فٹ_بال_کی_انجمن", "http://dbpedia.org/ontology/آلہ", "http://dbpedia.org/ontology/آنکھ_کا_جالا", "http://dbpedia.org/ontology/آواز", "http://dbpedia.org/ontology/آٹوموبائل_انجن", "http://dbpedia.org/ontology/اجسامِ_آب", "http://dbpedia.org/ontology/اخبار", "http://dbpedia.org/ontology/اداکار", "http://dbpedia.org/ontology/ادبی_صنف", "http://dbpedia.org/ontology/ارضیاتی_دورانیہ", "http://dbpedia.org/ontology/اسپورٹس_لیگ", "http://dbpedia.org/ontology/اسکی_باز", "http://dbpedia.org/ontology/اسکی_کاعلاقہ", "http://dbpedia.org/ontology/اسکیٹ_کرنے_والا", "http://dbpedia.org/ontology/اشرافیہ", "http://dbpedia.org/ontology/اعصاب", "http://dbpedia.org/ontology/اعضاء_کی_خوراک", "http://dbpedia.org/ontology/اعلی_انعام", "http://dbpedia.org/ontology/اعلی_درجےکاموسیقی_فنکار", "http://dbpedia.org/ontology/اعلی_پانی_میں_ڈبکی_لگانے_والا", "http://dbpedia.org/ontology/افسانه", "http://dbpedia.org/ontology/افسانوی_شکل", "http://dbpedia.org/ontology/افسانوی_کردار", "http://dbpedia.org/ontology/اقتدارکا_تاریخی_علاقہ", "http://dbpedia.org/ontology/البم", "http://dbpedia.org/ontology/امریکن_فٹ_بال_لیگ", "http://dbpedia.org/ontology/امریکن_فٹ_بال_ٹیم", "http://dbpedia.org/ontology/امریکن_فٹ_بال_کوچ", "http://dbpedia.org/ontology/امریکی_فٹ_بال_کھلاڑی", "http://dbpedia.org/ontology/امفبیئن", "http://dbpedia.org/ontology/ان_لائن_ہاکی_لیگ", "http://dbpedia.org/ontology/انتخابات", "http://dbpedia.org/ontology/انتخابات_کا_خاکہ", "http://dbpedia.org/ontology/انتظامی_علاقہ", "http://dbpedia.org/ontology/انجمن_فٹ_بال_موسم", "http://dbpedia.org/ontology/انجن", "http://dbpedia.org/ontology/انجن/acceleration", "http://dbpedia.org/ontology/انجن/co2Emission", "http://dbpedia.org/ontology/انجن/cylinderBore", "http://dbpedia.org/ontology/انجن/diameter", "http://dbpedia.org/ontology/انجن/displacement", "http://dbpedia.org/ontology/انجن/height", "http://dbpedia.org/ontology/انجن/length", "http://dbpedia.org/ontology/انجن/pistonStroke", "http://dbpedia.org/ontology/انجن/powerOutput", "http://dbpedia.org/ontology/انجن/topSpeed", "http://dbpedia.org/ontology/انجن/torqueOutput", "http://dbpedia.org/ontology/انجن/weight", "http://dbpedia.org/ontology/انجن/width", "http://dbpedia.org/ontology/انسانی_نَسبہ", "http://dbpedia.org/ontology/انسانی_نَسبہ_کا_مقام", "http://dbpedia.org/ontology/انعام", "http://dbpedia.org/ontology/انگور", "http://dbpedia.org/ontology/انیمنگا_کردار", "http://dbpedia.org/ontology/اولمپک_نتیجہ", "http://dbpedia.org/ontology/اولمپک_کھیلوں_کی_تقریب", "http://dbpedia.org/ontology/اولمپکس", "http://dbpedia.org/ontology/اٹول", "http://dbpedia.org/ontology/اڈا", "http://dbpedia.org/ontology/ایئر_لائن", "http://dbpedia.org/ontology/ایتھلیٹکس", "http://dbpedia.org/ontology/ایجنٹ", "http://dbpedia.org/ontology/ایٹمی_بجلی_گھر", "http://dbpedia.org/ontology/ایک_طرف", "http://dbpedia.org/ontology/بائیتھلیٹ", "http://dbpedia.org/ontology/بادشاہ", "http://dbpedia.org/ontology/بادشاہی", "http://dbpedia.org/ontology/باسکٹ_بال_لیگ", "http://dbpedia.org/ontology/باسکٹ_بال_کھلاڑی", "http://dbpedia.org/ontology/باسکٹ_بال_کی_جماعت", "http://dbpedia.org/ontology/باغ", "http://dbpedia.org/ontology/بالغ_اداکار", "http://dbpedia.org/ontology/بالنگ_ٹیموں_کی_انجمن", "http://dbpedia.org/ontology/باہمی_مقابلہ", "http://dbpedia.org/ontology/بجلی_گھر", "http://dbpedia.org/ontology/برادری", "http://dbpedia.org/ontology/برازیلی_رقص_سکول", "http://dbpedia.org/ontology/براعظم", "http://dbpedia.org/ontology/براڈکاسٹ_نیٹ_ورک", "http://dbpedia.org/ontology/برطانوی_بادشاہی", "http://dbpedia.org/ontology/برف_کا_تودہ", "http://dbpedia.org/ontology/برفانی_ہاکی_لیگ", "http://dbpedia.org/ontology/برفانی_ہاکی_کا_کھلاڑی", "http://dbpedia.org/ontology/برقی_ذیلی_مرکز", "http://dbpedia.org/ontology/بس_كا_تجارتي_إدارة", "http://dbpedia.org/ontology/بستی", "http://dbpedia.org/ontology/بغیر_پُہولوں_کا_سدا_بہار_پودا", "http://dbpedia.org/ontology/بلدیہ", "http://dbpedia.org/ontology/بلندی", "http://dbpedia.org/ontology/بلی", "http://dbpedia.org/ontology/بلیزن", "http://dbpedia.org/ontology/بند", "http://dbpedia.org/ontology/بندهن", "http://dbpedia.org/ontology/بنیادی_ڈھانچہ", "http://dbpedia.org/ontology/بوبسلیگ_ایتھلیٹ", "http://dbpedia.org/ontology/بورڈ_کھیل", "http://dbpedia.org/ontology/بھورا_بونا", "http://dbpedia.org/ontology/بیرون_ملک_کے_محکمے", "http://dbpedia.org/ontology/بیس_بال_لیگ", "http://dbpedia.org/ontology/بیس_بال_کا_موسم", "http://dbpedia.org/ontology/بیس_بال_کا_کھلاڑی", "http://dbpedia.org/ontology/بیس_بال_کی_جماعت", "http://dbpedia.org/ontology/بیل_کا_مُقابلہ_کرنے_والا", "http://dbpedia.org/ontology/بیماری", "http://dbpedia.org/ontology/بین_الاقوامی_تنظیم", "http://dbpedia.org/ontology/بین_الاقوامی_فٹ_بال_لیگ_کی_تقریب", "http://dbpedia.org/ontology/بینک", "http://dbpedia.org/ontology/بیٹری", "http://dbpedia.org/ontology/بیچ_والی_بال_پلیئر", "http://dbpedia.org/ontology/بیڈمنٹن_کا_کھلاڑی", "http://dbpedia.org/ontology/بیکٹیریا", "http://dbpedia.org/ontology/تاریخی_آبادکاری", "http://dbpedia.org/ontology/تاریخی_تعمیر", "http://dbpedia.org/ontology/تاریخی_دور", "http://dbpedia.org/ontology/تاریخی_صوبہ", "http://dbpedia.org/ontology/تاریخی_ضلع", "http://dbpedia.org/ontology/تاریخی_علاقہ", "http://dbpedia.org/ontology/تاریخی_مقام", "http://dbpedia.org/ontology/تاریخی_ملک", "http://dbpedia.org/ontology/تاریخی_واقعہ", "http://dbpedia.org/ontology/تاش", "http://dbpedia.org/ontology/تالا", "http://dbpedia.org/ontology/تجارتی_ادارہ", "http://dbpedia.org/ontology/تحریری_پروگراموں_کا_مجموعہ", "http://dbpedia.org/ontology/تحریری_پروگراموں_کا_مجموعہ/fileSize", "http://dbpedia.org/ontology/تحریری_کام", "http://dbpedia.org/ontology/تربیت_کرنے_والا", "http://dbpedia.org/ontology/تشریح", "http://dbpedia.org/ontology/تصویر", "http://dbpedia.org/ontology/تصویر_کھینچنے_کا_آلہ", "http://dbpedia.org/ontology/تعلیمی_ادارے", "http://dbpedia.org/ontology/تعلیمی_مضمون", "http://dbpedia.org/ontology/تعلیمی_کانفرنس", "http://dbpedia.org/ontology/تعمیراتی_ڈھانچہ", "http://dbpedia.org/ontology/تعمیراتی_ڈھانچے", "http://dbpedia.org/ontology/تفریحی_پارک_کی_کشش", "http://dbpedia.org/ontology/تقریب", "http://dbpedia.org/ontology/تن_ساز", "http://dbpedia.org/ontology/تنظیم", "http://dbpedia.org/ontology/تنظیم_کے_رکن", "http://dbpedia.org/ontology/تِجارتی_اِدارہ", "http://dbpedia.org/ontology/تھن_والے_جانور", "http://dbpedia.org/ontology/تیراک", "http://dbpedia.org/ontology/تیز_راہ_سوار", "http://dbpedia.org/ontology/تیز_راہ_کی_انجمن", "http://dbpedia.org/ontology/تیغ_زن", "http://dbpedia.org/ontology/ثانوی_سیاره", "http://dbpedia.org/ontology/جاسوس", "http://dbpedia.org/ontology/جانور", "http://dbpedia.org/ontology/جاکی", "http://dbpedia.org/ontology/جاگیر", "http://dbpedia.org/ontology/جرمن_ٹورنگ_کار_ماسٹرزریسر", "http://dbpedia.org/ontology/جزیرہ", "http://dbpedia.org/ontology/جزیرہ_نما", "http://dbpedia.org/ontology/جسمانی_ساخت", "http://dbpedia.org/ontology/جنکگو", "http://dbpedia.org/ontology/جنگل", "http://dbpedia.org/ontology/جنینیات_کا_علم", "http://dbpedia.org/ontology/جُغرافیائی_سیاسیات_تنظیم", "http://dbpedia.org/ontology/جُغرافیائی_سیاسیات_تنظیم/areaMetro", "http://dbpedia.org/ontology/جُغرافیائی_سیاسیات_تنظیم/populationDensity", "http://dbpedia.org/ontology/جگہ", "http://dbpedia.org/ontology/جھنڈا", "http://dbpedia.org/ontology/جھیل", "http://dbpedia.org/ontology/جھیل/areaOfCatchment", "http://dbpedia.org/ontology/جھیل/shoreLength", "http://dbpedia.org/ontology/جھیل/volume", "http://dbpedia.org/ontology/جہاز", "http://dbpedia.org/ontology/جی_ایم_ایل:_خصوصیت", "http://dbpedia.org/ontology/جیو:_مقامی_چیزیں", "http://dbpedia.org/ontology/حاکم", "http://dbpedia.org/ontology/حراستی_کیمپ", "http://dbpedia.org/ontology/حرف", "http://dbpedia.org/ontology/حساب_و_شمار", "http://dbpedia.org/ontology/حملہ", "http://dbpedia.org/ontology/حکومت_کی_قسم", "http://dbpedia.org/ontology/حکومتی_انتظامی_علاقہ", "http://dbpedia.org/ontology/حیاتیاتی'ریکارڈرز_پر_مبنی_ایک_فائل'", "http://dbpedia.org/ontology/حیاتیاتی_ریکارڈرز_پر_مبنی_ایک_فائل", "http://dbpedia.org/ontology/حیاتیاتی_مرکبات", "http://dbpedia.org/ontology/خامرہ", "http://dbpedia.org/ontology/خاندان", "http://dbpedia.org/ontology/خریداری_کرنے_کے_لیے_مختص_جگہ", "http://dbpedia.org/ontology/خصوصی_سائنسی_دلچسپی_کی_سائٹ", "http://dbpedia.org/ontology/خلا_باز", "http://dbpedia.org/ontology/خلا_باز/timeInSpace", "http://dbpedia.org/ontology/خلائی_اڈہ", "http://dbpedia.org/ontology/خلائی_اڈہ/volume", "http://dbpedia.org/ontology/خلائی_جہاز", "http://dbpedia.org/ontology/خلائی_جہاز/distance", "http://dbpedia.org/ontology/خلائی_جہاز/timeInSpace", "http://dbpedia.org/ontology/خلائی_مہم", "http://dbpedia.org/ontology/خلائی_مہم/cmpEvaDuration", "http://dbpedia.org/ontology/خلائی_مہم/distanceTraveled", "http://dbpedia.org/ontology/خلائی_مہم/lunarEvaTime", "http://dbpedia.org/ontology/خلائی_مہم/lunarOrbitTime", "http://dbpedia.org/ontology/خلائی_مہم/lunarSampleMass", "http://dbpedia.org/ontology/خلائی_مہم/lunarSurfaceTime", "http://dbpedia.org/ontology/خلائی_مہم/mass", "http://dbpedia.org/ontology/خلائی_مہم/missionDuration", "http://dbpedia.org/ontology/خلائی_مہم/stationEvaDuration", "http://dbpedia.org/ontology/خلائی_مہم/stationVisitDuration", "http://dbpedia.org/ontology/خلوی_مادہ", "http://dbpedia.org/ontology/خلیج", "http://dbpedia.org/ontology/خوراک", "http://dbpedia.org/ontology/خول_دارجانور", "http://dbpedia.org/ontology/خون_کی_شریان", "http://dbpedia.org/ontology/خیالی_کردار", "http://dbpedia.org/ontology/دستاویز", "http://dbpedia.org/ontology/دماغ", "http://dbpedia.org/ontology/دوا", "http://dbpedia.org/ontology/دوا/boilingPoint", "http://dbpedia.org/ontology/دوا/meltingPoint", "http://dbpedia.org/ontology/دورانیہ_حیات_وقوعه", "http://dbpedia.org/ontology/دوڑ", "http://dbpedia.org/ontology/دہانه", "http://dbpedia.org/ontology/دیا_گیا_نام", "http://dbpedia.org/ontology/ذیلی_بلدیہ", "http://dbpedia.org/ontology/رسالہ", "http://dbpedia.org/ontology/رفتار_سکیٹر", "http://dbpedia.org/ontology/رقبہ", "http://dbpedia.org/ontology/رقص_کرنے_والا", "http://dbpedia.org/ontology/رنگ", "http://dbpedia.org/ontology/رواں_زینہ", "http://dbpedia.org/ontology/رواں_زینہ/diameter", "http://dbpedia.org/ontology/رواں_زینہ/height", "http://dbpedia.org/ontology/رواں_زینہ/length", "http://dbpedia.org/ontology/رواں_زینہ/mass", "http://dbpedia.org/ontology/رواں_زینہ/weight", "http://dbpedia.org/ontology/رواں_زینہ/width", "http://dbpedia.org/ontology/روشنی_کا_مینار", "http://dbpedia.org/ontology/روشِ_لباس", "http://dbpedia.org/ontology/رکن_پارلیمنٹ", "http://dbpedia.org/ontology/ریاست", "http://dbpedia.org/ontology/ریل_گاڑی_کا_انجن", "http://dbpedia.org/ontology/ریکارڈرز_پر_مبنی_ایک_فائل", "http://dbpedia.org/ontology/ریگستان", "http://dbpedia.org/ontology/زبان", "http://dbpedia.org/ontology/زلزلہ", "http://dbpedia.org/ontology/سائفر", "http://dbpedia.org/ontology/سائنسدان", "http://dbpedia.org/ontology/سائنسی_تصور", "http://dbpedia.org/ontology/سائیکل_سوار", "http://dbpedia.org/ontology/سائیکل_سوار_کی_جماعت", "http://dbpedia.org/ontology/سائیکلنگ_مقابلہ", "http://dbpedia.org/ontology/سائیکلنگ_ٹیم", "http://dbpedia.org/ontology/سابق_بلدیہ", "http://dbpedia.org/ontology/ساحل_سمندر", "http://dbpedia.org/ontology/ساز", "http://dbpedia.org/ontology/سازندہ", "http://dbpedia.org/ontology/سافٹ_بال_کی_انجمن", "http://dbpedia.org/ontology/سبز_طحالب", "http://dbpedia.org/ontology/ستار", "http://dbpedia.org/ontology/ستارہ", "http://dbpedia.org/ontology/ستارہ_غول", "http://dbpedia.org/ontology/سجاوٹ", "http://dbpedia.org/ontology/سرائے", "http://dbpedia.org/ontology/سرمائی_کھیل_کھیلنے_والا", "http://dbpedia.org/ontology/سرکاری_محکمہ", "http://dbpedia.org/ontology/سرگرمی", "http://dbpedia.org/ontology/سفید_رنگ_کے_خلیوں_پر_مشتمل_ایک_بے_رنگ_سیال", "http://dbpedia.org/ontology/سفیر", "http://dbpedia.org/ontology/سلسلہ_وار_قاتل", "http://dbpedia.org/ontology/سلسلہ_وار_ڈرامے_کا_کردار", "http://dbpedia.org/ontology/سمندر", "http://dbpedia.org/ontology/سنوکر_کا_فاتح", "http://dbpedia.org/ontology/سنوکر_کی_عالمی_درجہ_بندی", "http://dbpedia.org/ontology/سنوکر_کے_کھلاڑی", "http://dbpedia.org/ontology/سنگل", "http://dbpedia.org/ontology/سنیما", "http://dbpedia.org/ontology/سورج_گرہن", "http://dbpedia.org/ontology/سومو_پہلوان", "http://dbpedia.org/ontology/سپریڈ_شیٹ", "http://dbpedia.org/ontology/سپیڈ_وے_ٹیم", "http://dbpedia.org/ontology/سکہ_رائج_الوقت", "http://dbpedia.org/ontology/سیاستدان", "http://dbpedia.org/ontology/سینیٹ_کا_رُکن", "http://dbpedia.org/ontology/شخص", "http://dbpedia.org/ontology/شخص/height", "http://dbpedia.org/ontology/شخص/weight", "http://dbpedia.org/ontology/شریان", "http://dbpedia.org/ontology/شریف_خاندان", "http://dbpedia.org/ontology/شطرنج_کا_کھلاڑی", "http://dbpedia.org/ontology/شعبہ", "http://dbpedia.org/ontology/شماریات", "http://dbpedia.org/ontology/شناخت_کنندہ", "http://dbpedia.org/ontology/شوقیہ_باکسر", "http://dbpedia.org/ontology/شہر", "http://dbpedia.org/ontology/شہر_کا_ضلع", "http://dbpedia.org/ontology/صحافی", "http://dbpedia.org/ontology/صنف", "http://dbpedia.org/ontology/صنوبر_کی_قِسم_کا_پودا", "http://dbpedia.org/ontology/صوبہ", "http://dbpedia.org/ontology/ضلع", "http://dbpedia.org/ontology/ضِلَع", "http://dbpedia.org/ontology/طبی_خصوصیت", "http://dbpedia.org/ontology/طبیب", "http://dbpedia.org/ontology/طوفانی_لہر", "http://dbpedia.org/ontology/ظریف", "http://dbpedia.org/ontology/عرفیت", "http://dbpedia.org/ontology/عضو", "http://dbpedia.org/ontology/عظیم", "http://dbpedia.org/ontology/علاقہ", "http://dbpedia.org/ontology/علاقے_کا_دارالحکومت", "http://dbpedia.org/ontology/علمی_انتظامی_علاقہ", "http://dbpedia.org/ontology/عمارت", "http://dbpedia.org/ontology/عمارت/floorArea", "http://dbpedia.org/ontology/عمید_کا_عہدہ", "http://dbpedia.org/ontology/عنکبات", "http://dbpedia.org/ontology/عوامی_راہداری_کا_نظام", "http://dbpedia.org/ontology/عہدے_دار", "http://dbpedia.org/ontology/عیسائی_پادری", "http://dbpedia.org/ontology/غول", "http://dbpedia.org/ontology/غیر_منافع_بخش_تنظیم", "http://dbpedia.org/ontology/فائل", "http://dbpedia.org/ontology/فائل_سسٹم", "http://dbpedia.org/ontology/فارمولا_ون_ریسر", "http://dbpedia.org/ontology/فارمولا_ون_ریسنگ", "http://dbpedia.org/ontology/فارمولا_ون_ٹیم", "http://dbpedia.org/ontology/فرانس_کا_انتظامی_ضلع", "http://dbpedia.org/ontology/فرقہ_واریت", "http://dbpedia.org/ontology/فروخت", "http://dbpedia.org/ontology/فلم", "http://dbpedia.org/ontology/فلم_کی_صنف", "http://dbpedia.org/ontology/فلمی_میلہ", "http://dbpedia.org/ontology/فلک_بوس_عمارت", "http://dbpedia.org/ontology/فنکار", "http://dbpedia.org/ontology/فنکارانہ_صنف", "http://dbpedia.org/ontology/فنکارڈسکوگرافی", "http://dbpedia.org/ontology/فوجی_تنازعہ", "http://dbpedia.org/ontology/فوجی_خدمات", "http://dbpedia.org/ontology/فوجی_ڈھانچہ", "http://dbpedia.org/ontology/فوجی_گاڑی", "http://dbpedia.org/ontology/فوجی_ہوائی_جہاز", "http://dbpedia.org/ontology/فٹ_بال_باہمی_مقابلہ", "http://dbpedia.org/ontology/فٹ_بال_لیگ_کے_موسم", "http://dbpedia.org/ontology/فٹ_بال_مقابلہ", "http://dbpedia.org/ontology/فٹ_بال_منتظم", "http://dbpedia.org/ontology/فٹ_بال_کلب", "http://dbpedia.org/ontology/فٹ_بال_کلب_کا_موسم", "http://dbpedia.org/ontology/فٹ_بال_کی_انجمن", "http://dbpedia.org/ontology/فٹبال_کا_کھلاڑی", "http://dbpedia.org/ontology/فگر_سکیٹر۔", "http://dbpedia.org/ontology/فگرسکیٹر", "http://dbpedia.org/ontology/فہرست", "http://dbpedia.org/ontology/قاتل", "http://dbpedia.org/ontology/قاضی", "http://dbpedia.org/ontology/قانون", "http://dbpedia.org/ontology/قانونی_فرم", "http://dbpedia.org/ontology/قانونی_مقدمہ", "http://dbpedia.org/ontology/قبر_کی_یادگار", "http://dbpedia.org/ontology/قبرستان", "http://dbpedia.org/ontology/قدرتی_جگہ", "http://dbpedia.org/ontology/قدرتی_واقعہ", "http://dbpedia.org/ontology/قسم", "http://dbpedia.org/ontology/قلعہ", "http://dbpedia.org/ontology/قلم_کار", "http://dbpedia.org/ontology/قمری_گڑھا", "http://dbpedia.org/ontology/قمری_گڑھا/diameter", "http://dbpedia.org/ontology/قومی_اعلی_درجے_کا_مدرسہ_کھیل_کے_متعلق_دوستی", "http://dbpedia.org/ontology/قومی_ترانہ", "http://dbpedia.org/ontology/قومی_علاقہ", "http://dbpedia.org/ontology/قومی_فٹ_بال_لیگ_کا_موسم", "http://dbpedia.org/ontology/قومی_فٹ_بال_کلب", "http://dbpedia.org/ontology/قیمتی_اشیاء_کا_مجموعہ۔", "http://dbpedia.org/ontology/لائن_آف_فیشن", "http://dbpedia.org/ontology/لیفٹیننٹ", "http://dbpedia.org/ontology/لیکروس_لیگ", "http://dbpedia.org/ontology/لیکروس_کھلاڑی", "http://dbpedia.org/ontology/ماؤس_جین", "http://dbpedia.org/ontology/مارشل_آرٹسٹ", "http://dbpedia.org/ontology/مانگا", "http://dbpedia.org/ontology/ماہر_آثار_قدیمہ", "http://dbpedia.org/ontology/ماہر_حیاتیات", "http://dbpedia.org/ontology/ماہر_فنیات", "http://dbpedia.org/ontology/ماہر_لسانیات", "http://dbpedia.org/ontology/ماہر_مصریات", "http://dbpedia.org/ontology/ماہر_معاشیات", "http://dbpedia.org/ontology/متواتر_ادب", "http://dbpedia.org/ontology/مجرم", "http://dbpedia.org/ontology/مجسمہ", "http://dbpedia.org/ontology/مجسمہ_ساز", "http://dbpedia.org/ontology/مجلس", "http://dbpedia.org/ontology/مجلس_کے_شرکاء", "http://dbpedia.org/ontology/مجموعہ", "http://dbpedia.org/ontology/مجموعی_ملکی_پیداوار", "http://dbpedia.org/ontology/مجموعی_گھریلو_پیداوار_فی_کس", "http://dbpedia.org/ontology/محفوظ_شدہ_دستاویزات", "http://dbpedia.org/ontology/محلہ", "http://dbpedia.org/ontology/مدرسه", "http://dbpedia.org/ontology/مدرسه/campusSize", "http://dbpedia.org/ontology/مدرسہ", "http://dbpedia.org/ontology/مذہبی", "http://dbpedia.org/ontology/مذہبی_عمارت", "http://dbpedia.org/ontology/مزاحیہ", "http://dbpedia.org/ontology/مزاحیہ_تخلیق_کار۔", "http://dbpedia.org/ontology/مزاحیہ_گروہ", "http://dbpedia.org/ontology/مزار", "http://dbpedia.org/ontology/مشروب", "http://dbpedia.org/ontology/مصنف", "http://dbpedia.org/ontology/مصنوعی_سیارہ", "http://dbpedia.org/ontology/معاشرتی_واقعہ", "http://dbpedia.org/ontology/معاملہ", "http://dbpedia.org/ontology/معدنیات", "http://dbpedia.org/ontology/معروف_کھیلوں_کے_لیے_مَخصُوص_جگہ", "http://dbpedia.org/ontology/معلوماتی_آلات", "http://dbpedia.org/ontology/معمار", "http://dbpedia.org/ontology/معیاری", "http://dbpedia.org/ontology/مقابلہ", "http://dbpedia.org/ontology/مقابلہ_میں_کاریں_چلانے_والے", "http://dbpedia.org/ontology/مقامی_تھنگ", "http://dbpedia.org/ontology/مقننہ", "http://dbpedia.org/ontology/ملاح", "http://dbpedia.org/ontology/ملازمین_کی_تنظیم", "http://dbpedia.org/ontology/ملاقات", "http://dbpedia.org/ontology/ملک", "http://dbpedia.org/ontology/ملک_کی_نشست", "http://dbpedia.org/ontology/ملکہ_حسن", "http://dbpedia.org/ontology/منشیات_کا_مجموعہ۔", "http://dbpedia.org/ontology/منظم_شدہ_مجموعہ", "http://dbpedia.org/ontology/موبائل_فون", "http://dbpedia.org/ontology/موبائل_فونز", "http://dbpedia.org/ontology/موج_تختہ_پر_سوار_ہونے_والا", "http://dbpedia.org/ontology/مورخ", "http://dbpedia.org/ontology/موسیقی_چارٹس_میں_جگہ۔", "http://dbpedia.org/ontology/موسیقی_کا_فنکار", "http://dbpedia.org/ontology/موسیقی_کا_کام", "http://dbpedia.org/ontology/موسیقی_کے_ساتھ_نقل_یا_اداکاری", "http://dbpedia.org/ontology/موضوع_کا_تصور", "http://dbpedia.org/ontology/مونوکلونل_اینٹی_باڈی", "http://dbpedia.org/ontology/موٹر_سائیکل_ریسر", "http://dbpedia.org/ontology/موٹر_سائیکل_ریسنگ_لیگ", "http://dbpedia.org/ontology/موٹر_سائیکل_سوار", "http://dbpedia.org/ontology/موٹر_کار_کی_دوڑ", "http://dbpedia.org/ontology/موٹر_کار_کی_دوڑ/course", "http://dbpedia.org/ontology/موٹر_کار_کی_دوڑ/distance", "http://dbpedia.org/ontology/موٹر_کھیل_گھڑ_دوڑ_کا_گھوڑا_دوڑانے_والا", "http://dbpedia.org/ontology/موٹرسپورٹ_سیزن", "http://dbpedia.org/ontology/مُضحِکہ_خیزکردار", "http://dbpedia.org/ontology/مچھلی", "http://dbpedia.org/ontology/مکسڈ_مارشل_آرٹس_لیگ", "http://dbpedia.org/ontology/مکے_باز", "http://dbpedia.org/ontology/مکے_بازی_کھیل_کی_انجمن", "http://dbpedia.org/ontology/میئر", "http://dbpedia.org/ontology/میدان", "http://dbpedia.org/ontology/میزائل_چلانے_کی_جگہ", "http://dbpedia.org/ontology/مینار", "http://dbpedia.org/ontology/میوزک_ڈائریکٹر", "http://dbpedia.org/ontology/میوزیکل", "http://dbpedia.org/ontology/میٹرو_اسٹیشن", "http://dbpedia.org/ontology/نارمن_فرقے_کا_عيسائی", "http://dbpedia.org/ontology/ناشَر", "http://dbpedia.org/ontology/نام", "http://dbpedia.org/ontology/ناٹک", "http://dbpedia.org/ontology/ندی", "http://dbpedia.org/ontology/ندی/discharge", "http://dbpedia.org/ontology/ندی/dischargeAverage", "http://dbpedia.org/ontology/ندی/maximumDischarge", "http://dbpedia.org/ontology/ندی/minimumDischarge", "http://dbpedia.org/ontology/ندی/watershed", "http://dbpedia.org/ontology/نسلی_گروہ", "http://dbpedia.org/ontology/نشریاتی_جال", "http://dbpedia.org/ontology/نظریہ", "http://dbpedia.org/ontology/نغمہ_نگار", "http://dbpedia.org/ontology/نقل_و_حمل_کا_راستہ", "http://dbpedia.org/ontology/نقل_و_حمل_کے_ذرائع", "http://dbpedia.org/ontology/نقل_و_حمل_کے_ذرائع/diameter", "http://dbpedia.org/ontology/نقل_و_حمل_کے_ذرائع/height", "http://dbpedia.org/ontology/نقل_و_حمل_کے_ذرائع/length", "http://dbpedia.org/ontology/نقل_و_حمل_کے_ذرائع/mass", "http://dbpedia.org/ontology/نقل_و_حمل_کے_ذرائع/weight", "http://dbpedia.org/ontology/نقل_و_حمل_کے_ذرائع/width", "http://dbpedia.org/ontology/نقل_و_حمل_کے_نظام", "http://dbpedia.org/ontology/نقل_و_حمل_کے_نظام/diameter", "http://dbpedia.org/ontology/نقل_و_حمل_کے_نظام/height", "http://dbpedia.org/ontology/نقل_و_حمل_کے_نظام/length", "http://dbpedia.org/ontology/نقل_و_حمل_کے_نظام/mass", "http://dbpedia.org/ontology/نقل_و_حمل_کے_نظام/weight", "http://dbpedia.org/ontology/نقل_و_حمل_کے_نظام/width", "http://dbpedia.org/ontology/نمائندہ", "http://dbpedia.org/ontology/نيزہ_باز", "http://dbpedia.org/ontology/نَسبہ", "http://dbpedia.org/ontology/نَسبہ_کا_مقام", "http://dbpedia.org/ontology/نِشانہ_بازی", "http://dbpedia.org/ontology/نکشتر", "http://dbpedia.org/ontology/نہر", "http://dbpedia.org/ontology/نہر/maximumBoatBeam", "http://dbpedia.org/ontology/نہر/maximumBoatLength", "http://dbpedia.org/ontology/نہر/originalMaximumBoatBeam", "http://dbpedia.org/ontology/نہر/originalMaximumBoatLength", "http://dbpedia.org/ontology/نیسکار_ڈرائیور", "http://dbpedia.org/ontology/نیشنل_فٹ_بال_لیگ_تقریب", "http://dbpedia.org/ontology/نیٹ_بال_کھلاڑی", "http://dbpedia.org/ontology/والی_بال_پلیئر۔", "http://dbpedia.org/ontology/وزراء_کی_کابینہ", "http://dbpedia.org/ontology/وزیر", "http://dbpedia.org/ontology/وقت_کی_مدت", "http://dbpedia.org/ontology/ولی", "http://dbpedia.org/ontology/ونٹر_اسپورٹ_پلیئر۔", "http://dbpedia.org/ontology/وکیل", "http://dbpedia.org/ontology/ٹٹولنے_والا", "http://dbpedia.org/ontology/پادری", "http://dbpedia.org/ontology/پانی_کا_ضلعی_اقتدار", "http://dbpedia.org/ontology/پتھر_کنڈلی_کھيل_کی_انجمن", "http://dbpedia.org/ontology/پرانا_علاقہ", "http://dbpedia.org/ontology/پرجاتی", "http://dbpedia.org/ontology/پرجاتیوں", "http://dbpedia.org/ontology/پرندہ", "http://dbpedia.org/ontology/پس_منظر", "http://dbpedia.org/ontology/پل", "http://dbpedia.org/ontology/پنڈال", "http://dbpedia.org/ontology/پنیر", "http://dbpedia.org/ontology/پودا", "http://dbpedia.org/ontology/پوشاک_ساز", "http://dbpedia.org/ontology/پٹھوں", "http://dbpedia.org/ontology/پھسلن_کھیل_کا_میدان", "http://dbpedia.org/ontology/پھولوں_کا_پودا", "http://dbpedia.org/ontology/پھُرتیلاکھلاڑی", "http://dbpedia.org/ontology/پھُپھُوندی", "http://dbpedia.org/ontology/پہاڑ", "http://dbpedia.org/ontology/پہاڑی_سلسلہ", "http://dbpedia.org/ontology/پہلوان", "http://dbpedia.org/ontology/چربی", "http://dbpedia.org/ontology/چرچ", "http://dbpedia.org/ontology/چوکور", "http://dbpedia.org/ontology/چکی", "http://dbpedia.org/ontology/چھوٹا_نواب", "http://dbpedia.org/ontology/چھٹی", "http://dbpedia.org/ontology/چینی_درخت_پنکھے_کے_جیسے_پتوں_والا", "http://dbpedia.org/ontology/چینی_مزاحیہ", "http://dbpedia.org/ontology/ڈی_بی_پیڈین", "http://dbpedia.org/ontology/کار_ہنر", "http://dbpedia.org/ontology/کارخانه", "http://dbpedia.org/ontology/کاروباری_شخص", "http://dbpedia.org/ontology/کارٹون", "http://dbpedia.org/ontology/کارٹون_کا_کردار", "http://dbpedia.org/ontology/کارٹون۔", "http://dbpedia.org/ontology/کاشت_شدہ_مختلف_قسم۔", "http://dbpedia.org/ontology/کام", "http://dbpedia.org/ontology/کام_کی_اکائی", "http://dbpedia.org/ontology/کتا", "http://dbpedia.org/ontology/کتاب", "http://dbpedia.org/ontology/کتب_خانہ", "http://dbpedia.org/ontology/کثیر_حجم_کی_اشاعت", "http://dbpedia.org/ontology/کرسچن_بی_کی_دکان", "http://dbpedia.org/ontology/کروی_غول", "http://dbpedia.org/ontology/کرکٹ_انجمن", "http://dbpedia.org/ontology/کرکٹ_کا_میدان", "http://dbpedia.org/ontology/کرکٹر", "http://dbpedia.org/ontology/کزف", "http://dbpedia.org/ontology/کسان", "http://dbpedia.org/ontology/کسرتی", "http://dbpedia.org/ontology/کسی_شخص_(جاگیردار)_یا_سرکاری_ادارے_کے_دائرہ_اختیار_کا_قدیم_علاقہ", "http://dbpedia.org/ontology/کشودرگرہ", "http://dbpedia.org/ontology/کورونا_وائرس2019", "http://dbpedia.org/ontology/کَشید_گاہ", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل/diameter", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل/height", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل/length", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل/mass", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل/weight", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل/width", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل۔", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل۔/diameter", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل۔/height", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل۔/length", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل۔/mass", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل۔/weight", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل۔/width", "http://dbpedia.org/ontology/کھلاڑی", "http://dbpedia.org/ontology/کھلی_بھیڑ", "http://dbpedia.org/ontology/کھیل", "http://dbpedia.org/ontology/کھیل_کی_جماعت", "http://dbpedia.org/ontology/کھیل_کی_سہولت", "http://dbpedia.org/ontology/کھیل_کی_ٹیم", "http://dbpedia.org/ontology/کھیل_کی_ٹیم_کا_موسم", "http://dbpedia.org/ontology/کھیل_ہاکی_ٹیموں_کا_گروہ", "http://dbpedia.org/ontology/کھیلوں_کا_منتظم", "http://dbpedia.org/ontology/کھیلوں_کا_موسم", "http://dbpedia.org/ontology/کھیلوں_کا_کلب", "http://dbpedia.org/ontology/کھیلوں_کی_انجمن", "http://dbpedia.org/ontology/کھیلوں_کی_تقریب", "http://dbpedia.org/ontology/کھیلوں_کی_جماعت_کا_رکن", "http://dbpedia.org/ontology/کھیلوں_کی_لیگ", "http://dbpedia.org/ontology/کھیلوں_کے_مقابلے_کا_نتیجہ", "http://dbpedia.org/ontology/کہکشاں", "http://dbpedia.org/ontology/کہکشاں/apoapsis", "http://dbpedia.org/ontology/کہکشاں/averageSpeed", "http://dbpedia.org/ontology/کہکشاں/density", "http://dbpedia.org/ontology/کہکشاں/mass", "http://dbpedia.org/ontology/کہکشاں/maximumTemperature", "http://dbpedia.org/ontology/کہکشاں/meanRadius", "http://dbpedia.org/ontology/کہکشاں/meanTemperature", "http://dbpedia.org/ontology/کہکشاں/minimumTemperature", "http://dbpedia.org/ontology/کہکشاں/orbitalPeriod", "http://dbpedia.org/ontology/کہکشاں/periapsis", "http://dbpedia.org/ontology/کہکشاں/surfaceArea", "http://dbpedia.org/ontology/کہکشاں/temperature", "http://dbpedia.org/ontology/کہکشاں/volume", "http://dbpedia.org/ontology/کیریئر_سٹیشن", "http://dbpedia.org/ontology/کیسینو", "http://dbpedia.org/ontology/کیمیائی_عنصر", "http://dbpedia.org/ontology/کیمیائی_مادہ", "http://dbpedia.org/ontology/کیمیائی_مادہ/boilingPoint", "http://dbpedia.org/ontology/کیمیائی_مادہ/density", "http://dbpedia.org/ontology/کیمیائی_مادہ/meltingPoint", "http://dbpedia.org/ontology/کیمیائی_مادہ۔", "http://dbpedia.org/ontology/کیمیائی_مادہ۔/boilingPoint", "http://dbpedia.org/ontology/کیمیائی_مادہ۔/density", "http://dbpedia.org/ontology/کیمیائی_مادہ۔/meltingPoint", "http://dbpedia.org/ontology/کیمیائی_مرکب", "http://dbpedia.org/ontology/کینیڈین_فٹ_بال_لیگ", "http://dbpedia.org/ontology/کینیڈین_فٹ_بال_ٹیم۔", "http://dbpedia.org/ontology/کیٹرر", "http://dbpedia.org/ontology/کیپ", "http://dbpedia.org/ontology/کیڑا", "http://dbpedia.org/ontology/گالف_کا_میدان", "http://dbpedia.org/ontology/گالف_کا_کھلاڑی", "http://dbpedia.org/ontology/گالف_کی_انجمن", "http://dbpedia.org/ontology/گانا", "http://dbpedia.org/ontology/گانے_والوں_کا_گروہ", "http://dbpedia.org/ontology/گاڑی", "http://dbpedia.org/ontology/گاڑی/fuelCapacity", "http://dbpedia.org/ontology/گاڑی/wheelbase", "http://dbpedia.org/ontology/گاڑیوں_کی_ریسوں_کی_انجمن", "http://dbpedia.org/ontology/گاڑیوں_کے_مقابلے_کا_کھیل", "http://dbpedia.org/ontology/گرم_پانی_کا_قدرتی_چشمہ", "http://dbpedia.org/ontology/گرم_پانی_کاقدرتی_چشم", "http://dbpedia.org/ontology/گروہ", "http://dbpedia.org/ontology/گرڈیرون_فٹ_بال_کھلاڑی", "http://dbpedia.org/ontology/گلوکار", "http://dbpedia.org/ontology/گمٹیلا_پودا.", "http://dbpedia.org/ontology/گولف_کا_باہمی_مقابلہ", "http://dbpedia.org/ontology/گٹار_بجانے_والا", "http://dbpedia.org/ontology/گھوڑا", "http://dbpedia.org/ontology/گھوڑا_دوڑ_میں_مقابلہ_کرنا", "http://dbpedia.org/ontology/گھوڑا_سدھانے_والا", "http://dbpedia.org/ontology/گھڑ_سوار", "http://dbpedia.org/ontology/گیلک_کھیل_کا_کھلاڑی", "http://dbpedia.org/ontology/گیلک_گیم_پلیئر۔", "http://dbpedia.org/ontology/گیٹڈ_برادری", "http://dbpedia.org/ontology/ہارمون", "http://dbpedia.org/ontology/ہالی_ووڈ_کارٹون", "http://dbpedia.org/ontology/ہاکی_ٹیم", "http://dbpedia.org/ontology/ہاکی_کلب", "http://dbpedia.org/ontology/ہاکی_کھیل_کی_جماعت", "http://dbpedia.org/ontology/ہسپتال", "http://dbpedia.org/ontology/ہسپتال۔", "http://dbpedia.org/ontology/ہلکی_شراب", "http://dbpedia.org/ontology/ہلکے_ناول", "http://dbpedia.org/ontology/ہنگامہ", "http://dbpedia.org/ontology/ہوا_میں_چھلانگ_لگانے_والا", "http://dbpedia.org/ontology/ہوا_کی_سمت", "http://dbpedia.org/ontology/ہوائی_اڈہ", "http://dbpedia.org/ontology/ہوائی_جہاز", "http://dbpedia.org/ontology/ہڈی", "http://dbpedia.org/ontology/ہینڈ_بال_ٹیم", "http://dbpedia.org/ontology/ہینڈ_بال_کا_کھلاڑی", "http://dbpedia.org/ontology/ہینڈ_بال_کی_انجمن", "http://dbpedia.org/ontology/یادگار", "http://dbpedia.org/ontology/یوروویژن_گانا_مقابلہ_اندراج", "http://dbpedia.org/ontology/یوکاریوٹ", "http://dbpedia.org/ontology/یوکاریوٹ۔", "http://dbpedia.org/ontology/یوکرائٹ۔", "http://dbpedia.org/ontology/یہودی_رہنما", "http://dbpedia.org/ontology/یہودیوں_کی_عبادت_گاہ", "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString", "http://www.w3.org/2001/XMLSchema#anyURI", "http://www.w3.org/2001/XMLSchema#boolean", "http://www.w3.org/2001/XMLSchema#date", "http://www.w3.org/2001/XMLSchema#dateTime", "http://www.w3.org/2001/XMLSchema#double", "http://www.w3.org/2001/XMLSchema#float", "http://www.w3.org/2001/XMLSchema#gDay", "http://www.w3.org/2001/XMLSchema#gMonth", "http://www.w3.org/2001/XMLSchema#gMonthDay", "http://www.w3.org/2001/XMLSchema#gYear", "http://www.w3.org/2001/XMLSchema#gYearMonth", "http://www.w3.org/2001/XMLSchema#integer", "http://www.w3.org/2001/XMLSchema#negativeInteger", "http://www.w3.org/2001/XMLSchema#nonNegativeInteger", "http://www.w3.org/2001/XMLSchema#nonPositiveInteger", "http://www.w3.org/2001/XMLSchema#positiveInteger", "http://www.w3.org/2001/XMLSchema#string", "http://www.w3.org/2001/XMLSchema#time"],
+      "http://open.vocab.org/terms/defines": ["http://dbpedia.org/datatype/Area", "http://dbpedia.org/datatype/Currency", "http://dbpedia.org/datatype/Density", "http://dbpedia.org/datatype/ElectricCurrent", "http://dbpedia.org/datatype/Energy", "http://dbpedia.org/datatype/FlowRate", "http://dbpedia.org/datatype/Force", "http://dbpedia.org/datatype/Frequency", "http://dbpedia.org/datatype/FuelEfficiency", "http://dbpedia.org/datatype/InformationUnit", "http://dbpedia.org/datatype/Length", "http://dbpedia.org/datatype/LinearMassDensity", "http://dbpedia.org/datatype/Mass", "http://dbpedia.org/datatype/PopulationDensity", "http://dbpedia.org/datatype/Power", "http://dbpedia.org/datatype/Pressure", "http://dbpedia.org/datatype/Ratio", "http://dbpedia.org/datatype/Speed", "http://dbpedia.org/datatype/Temperature", "http://dbpedia.org/datatype/Time", "http://dbpedia.org/datatype/Torque", "http://dbpedia.org/datatype/Voltage", "http://dbpedia.org/datatype/Volume", "http://dbpedia.org/datatype/acre", "http://dbpedia.org/datatype/afghanAfghani", "http://dbpedia.org/datatype/albanianLek", "http://dbpedia.org/datatype/algerianDinar", "http://dbpedia.org/datatype/ampere", "http://dbpedia.org/datatype/angolanKwanza", "http://dbpedia.org/datatype/argentinePeso", "http://dbpedia.org/datatype/armenianDram", "http://dbpedia.org/datatype/arubanGuilder", "http://dbpedia.org/datatype/astronomicalUnit", "http://dbpedia.org/datatype/australianDollar", "http://dbpedia.org/datatype/azerbaijaniManat", "http://dbpedia.org/datatype/bahamianDollar", "http://dbpedia.org/datatype/bahrainiDinar", "http://dbpedia.org/datatype/bangladeshiTaka", "http://dbpedia.org/datatype/bar", "http://dbpedia.org/datatype/barbadosDollar", "http://dbpedia.org/datatype/belarussianRuble", "http://dbpedia.org/datatype/belizeDollar", "http://dbpedia.org/datatype/bermudianDollar", "http://dbpedia.org/datatype/bhutaneseNgultrum", "http://dbpedia.org/datatype/bit", "http://dbpedia.org/datatype/bolivianBoliviano", "http://dbpedia.org/datatype/bosniaAndHerzegovinaConvertibleMarks", "http://dbpedia.org/datatype/botswanaPula", "http://dbpedia.org/datatype/brakeHorsepower", "http://dbpedia.org/datatype/brazilianReal", "http://dbpedia.org/datatype/bruneiDollar", "http://dbpedia.org/datatype/bulgarianLev", "http://dbpedia.org/datatype/burundianFranc", "http://dbpedia.org/datatype/byte", "http://dbpedia.org/datatype/calorie", "http://dbpedia.org/datatype/cambodianRiel", "http://dbpedia.org/datatype/canadianDollar", "http://dbpedia.org/datatype/capeVerdeEscudo", "http://dbpedia.org/datatype/carat", "http://dbpedia.org/datatype/caymanIslandsDollar", "http://dbpedia.org/datatype/centilitre", "http://dbpedia.org/datatype/centimetre", "http://dbpedia.org/datatype/centralAfricanCfaFranc", "http://dbpedia.org/datatype/cfpFranc", "http://dbpedia.org/datatype/chain", "http://dbpedia.org/datatype/chileanPeso", "http://dbpedia.org/datatype/colombianPeso", "http://dbpedia.org/datatype/comorianFranc", "http://dbpedia.org/datatype/congoleseFranc", "http://dbpedia.org/datatype/costaRicanColon", "http://dbpedia.org/datatype/croatianKuna", "http://dbpedia.org/datatype/cubanPeso", "http://dbpedia.org/datatype/cubicCentimetre", "http://dbpedia.org/datatype/cubicDecametre", "http://dbpedia.org/datatype/cubicDecimetre", "http://dbpedia.org/datatype/cubicFeetPerSecond", "http://dbpedia.org/datatype/cubicFeetPerYear", "http://dbpedia.org/datatype/cubicFoot", "http://dbpedia.org/datatype/cubicHectometre", "http://dbpedia.org/datatype/cubicInch", "http://dbpedia.org/datatype/cubicKilometre", "http://dbpedia.org/datatype/cubicMetre", "http://dbpedia.org/datatype/cubicMetrePerSecond", "http://dbpedia.org/datatype/cubicMetrePerYear", "http://dbpedia.org/datatype/cubicMile", "http://dbpedia.org/datatype/cubicMillimetre", "http://dbpedia.org/datatype/cubicYard", "http://dbpedia.org/datatype/czechKoruna", "http://dbpedia.org/datatype/danishKrone", "http://dbpedia.org/datatype/day", "http://dbpedia.org/datatype/decametre", "http://dbpedia.org/datatype/decibar", "http://dbpedia.org/datatype/decilitre", "http://dbpedia.org/datatype/decimetre", "http://dbpedia.org/datatype/degreeCelsius", "http://dbpedia.org/datatype/degreeFahrenheit", "http://dbpedia.org/datatype/degreeRankine", "http://dbpedia.org/datatype/djiboutianFranc", "http://dbpedia.org/datatype/dominicanPeso", "http://dbpedia.org/datatype/eastCaribbeanDollar", "http://dbpedia.org/datatype/egyptianPound", "http://dbpedia.org/datatype/engineConfiguration", "http://dbpedia.org/datatype/erg", "http://dbpedia.org/datatype/eritreanNakfa", "http://dbpedia.org/datatype/estonianKroon", "http://dbpedia.org/datatype/ethiopianBirr", "http://dbpedia.org/datatype/euro", "http://dbpedia.org/datatype/falklandIslandsPound", "http://dbpedia.org/datatype/fathom", "http://dbpedia.org/datatype/fijiDollar", "http://dbpedia.org/datatype/foot", "http://dbpedia.org/datatype/footPerMinute", "http://dbpedia.org/datatype/footPerSecond", "http://dbpedia.org/datatype/footPound", "http://dbpedia.org/datatype/fuelType", "http://dbpedia.org/datatype/furlong", "http://dbpedia.org/datatype/gambianDalasi", "http://dbpedia.org/datatype/georgianLari", "http://dbpedia.org/datatype/ghanaianCedi", "http://dbpedia.org/datatype/gibraltarPound", "http://dbpedia.org/datatype/gigabyte", "http://dbpedia.org/datatype/gigahertz", "http://dbpedia.org/datatype/gigalitre", "http://dbpedia.org/datatype/gigametre", "http://dbpedia.org/datatype/giganewton", "http://dbpedia.org/datatype/gigawatt", "http://dbpedia.org/datatype/gigawattHour", "http://dbpedia.org/datatype/grain", "http://dbpedia.org/datatype/gram", "http://dbpedia.org/datatype/gramForce", "http://dbpedia.org/datatype/gramPerCubicCentimetre", "http://dbpedia.org/datatype/gramPerKilometre", "http://dbpedia.org/datatype/gramPerMillilitre", "http://dbpedia.org/datatype/guatemalanQuetzal", "http://dbpedia.org/datatype/guineaFranc", "http://dbpedia.org/datatype/guyanaDollar", "http://dbpedia.org/datatype/haitiGourde", "http://dbpedia.org/datatype/hand", "http://dbpedia.org/datatype/hectare", "http://dbpedia.org/datatype/hectolitre", "http://dbpedia.org/datatype/hectometre", "http://dbpedia.org/datatype/hectopascal", "http://dbpedia.org/datatype/hertz", "http://dbpedia.org/datatype/honduranLempira", "http://dbpedia.org/datatype/hongKongDollar", "http://dbpedia.org/datatype/horsepower", "http://dbpedia.org/datatype/hour", "http://dbpedia.org/datatype/hungarianForint", "http://dbpedia.org/datatype/icelandKrona", "http://dbpedia.org/datatype/imperialBarrel", "http://dbpedia.org/datatype/imperialBarrelOil", "http://dbpedia.org/datatype/imperialGallon", "http://dbpedia.org/datatype/inch", "http://dbpedia.org/datatype/inchPound", "http://dbpedia.org/datatype/indianRupee", "http://dbpedia.org/datatype/indonesianRupiah", "http://dbpedia.org/datatype/inhabitantsPerSquareKilometre", "http://dbpedia.org/datatype/inhabitantsPerSquareMile", "http://dbpedia.org/datatype/iranianRial", "http://dbpedia.org/datatype/iraqiDinar", "http://dbpedia.org/datatype/israeliNewSheqel", "http://dbpedia.org/datatype/jamaicanDollar", "http://dbpedia.org/datatype/japaneseYen", "http://dbpedia.org/datatype/jordanianDinar", "http://dbpedia.org/datatype/joule", "http://dbpedia.org/datatype/kazakhstaniTenge", "http://dbpedia.org/datatype/kelvin", "http://dbpedia.org/datatype/kenyanShilling", "http://dbpedia.org/datatype/kiloampere", "http://dbpedia.org/datatype/kilobit", "http://dbpedia.org/datatype/kilobyte", "http://dbpedia.org/datatype/kilocalorie", "http://dbpedia.org/datatype/kilogram", "http://dbpedia.org/datatype/kilogramForce", "http://dbpedia.org/datatype/kilogramPerCubicMetre", "http://dbpedia.org/datatype/kilogramPerLitre", "http://dbpedia.org/datatype/kilohertz", "http://dbpedia.org/datatype/kilojoule", "http://dbpedia.org/datatype/kilolightYear", "http://dbpedia.org/datatype/kilolitre", "http://dbpedia.org/datatype/kilometre", "http://dbpedia.org/datatype/kilometrePerHour", "http://dbpedia.org/datatype/kilometrePerSecond", "http://dbpedia.org/datatype/kilometresPerLitre", "http://dbpedia.org/datatype/kilonewton", "http://dbpedia.org/datatype/kilopascal", "http://dbpedia.org/datatype/kilopond", "http://dbpedia.org/datatype/kilovolt", "http://dbpedia.org/datatype/kilowatt", "http://dbpedia.org/datatype/kilowattHour", "http://dbpedia.org/datatype/knot", "http://dbpedia.org/datatype/kuwaitiDinar", "http://dbpedia.org/datatype/kyrgyzstaniSom", "http://dbpedia.org/datatype/laoKip", "http://dbpedia.org/datatype/latvianLats", "http://dbpedia.org/datatype/lebanesePound", "http://dbpedia.org/datatype/lesothoLoti", "http://dbpedia.org/datatype/liberianDollar", "http://dbpedia.org/datatype/libyanDinar", "http://dbpedia.org/datatype/lightYear", "http://dbpedia.org/datatype/lithuanianLitas", "http://dbpedia.org/datatype/litre", "http://dbpedia.org/datatype/macanesePataca", "http://dbpedia.org/datatype/macedonianDenar", "http://dbpedia.org/datatype/malagasyAriary", "http://dbpedia.org/datatype/malawianKwacha", "http://dbpedia.org/datatype/malaysianRinggit", "http://dbpedia.org/datatype/maldivianRufiyaa", "http://dbpedia.org/datatype/mauritanianOuguiya", "http://dbpedia.org/datatype/mauritianRupee", "http://dbpedia.org/datatype/megabit", "http://dbpedia.org/datatype/megabyte", "http://dbpedia.org/datatype/megacalorie", "http://dbpedia.org/datatype/megahertz", "http://dbpedia.org/datatype/megalitre", "http://dbpedia.org/datatype/megametre", "http://dbpedia.org/datatype/meganewton", "http://dbpedia.org/datatype/megapascal", "http://dbpedia.org/datatype/megapond", "http://dbpedia.org/datatype/megavolt", "http://dbpedia.org/datatype/megawatt", "http://dbpedia.org/datatype/megawattHour", "http://dbpedia.org/datatype/metre", "http://dbpedia.org/datatype/metrePerSecond", "http://dbpedia.org/datatype/mexicanPeso", "http://dbpedia.org/datatype/microampere", "http://dbpedia.org/datatype/microlitre", "http://dbpedia.org/datatype/micrometre", "http://dbpedia.org/datatype/microsecond", "http://dbpedia.org/datatype/microvolt", "http://dbpedia.org/datatype/mile", "http://dbpedia.org/datatype/milePerHour", "http://dbpedia.org/datatype/milliampere", "http://dbpedia.org/datatype/millibar", "http://dbpedia.org/datatype/millicalorie", "http://dbpedia.org/datatype/milligram", "http://dbpedia.org/datatype/milligramForce", "http://dbpedia.org/datatype/millihertz", "http://dbpedia.org/datatype/millilitre", "http://dbpedia.org/datatype/millimetre", "http://dbpedia.org/datatype/millinewton", "http://dbpedia.org/datatype/millipascal", "http://dbpedia.org/datatype/millipond", "http://dbpedia.org/datatype/millisecond", "http://dbpedia.org/datatype/millivolt", "http://dbpedia.org/datatype/milliwatt", "http://dbpedia.org/datatype/milliwattHour", "http://dbpedia.org/datatype/minute", "http://dbpedia.org/datatype/moldovanLeu", "http://dbpedia.org/datatype/mongolianTögrög", "http://dbpedia.org/datatype/moroccanDirham", "http://dbpedia.org/datatype/mozambicanMetical", "http://dbpedia.org/datatype/myanmaKyat", "http://dbpedia.org/datatype/namibianDollar", "http://dbpedia.org/datatype/nanometre", "http://dbpedia.org/datatype/nanonewton", "http://dbpedia.org/datatype/nanosecond", "http://dbpedia.org/datatype/nautialMile", "http://dbpedia.org/datatype/nepaleseRupee", "http://dbpedia.org/datatype/netherlandsAntilleanGuilder", "http://dbpedia.org/datatype/newTaiwanDollar", "http://dbpedia.org/datatype/newZealandDollar", "http://dbpedia.org/datatype/newton", "http://dbpedia.org/datatype/newtonCentimetre", "http://dbpedia.org/datatype/newtonMetre", "http://dbpedia.org/datatype/newtonMillimetre", "http://dbpedia.org/datatype/nicaraguanCórdoba", "http://dbpedia.org/datatype/nigerianNaira", "http://dbpedia.org/datatype/northKoreanWon", "http://dbpedia.org/datatype/norwegianKrone", "http://dbpedia.org/datatype/omaniRial", "http://dbpedia.org/datatype/ounce", "http://dbpedia.org/datatype/pakistaniRupee", "http://dbpedia.org/datatype/panamanianBalboa", "http://dbpedia.org/datatype/papuaNewGuineanKina", "http://dbpedia.org/datatype/paraguayanGuarani", "http://dbpedia.org/datatype/pascal", "http://dbpedia.org/datatype/perCent", "http://dbpedia.org/datatype/perMil", "http://dbpedia.org/datatype/peruvianNuevoSol", "http://dbpedia.org/datatype/pferdestaerke", "http://dbpedia.org/datatype/philippinePeso", "http://dbpedia.org/datatype/polishZłoty", "http://dbpedia.org/datatype/pond", "http://dbpedia.org/datatype/pound", "http://dbpedia.org/datatype/poundFoot", "http://dbpedia.org/datatype/poundPerSquareInch", "http://dbpedia.org/datatype/poundSterling", "http://dbpedia.org/datatype/poundal", "http://dbpedia.org/datatype/qatariRial", "http://dbpedia.org/datatype/renminbi", "http://dbpedia.org/datatype/rod", "http://dbpedia.org/datatype/romanianNewLeu", "http://dbpedia.org/datatype/russianRouble", "http://dbpedia.org/datatype/rwandaFranc", "http://dbpedia.org/datatype/saintHelenaPound", "http://dbpedia.org/datatype/samoanTala", "http://dbpedia.org/datatype/saudiRiyal", "http://dbpedia.org/datatype/second", "http://dbpedia.org/datatype/serbianDinar", "http://dbpedia.org/datatype/seychellesRupee", "http://dbpedia.org/datatype/sierraLeoneanLeone", "http://dbpedia.org/datatype/singaporeDollar", "http://dbpedia.org/datatype/slovakKoruna", "http://dbpedia.org/datatype/solomonIslandsDollar", "http://dbpedia.org/datatype/somaliShilling", "http://dbpedia.org/datatype/southAfricanRand", "http://dbpedia.org/datatype/southKoreanWon", "http://dbpedia.org/datatype/squareCentimetre", "http://dbpedia.org/datatype/squareDecametre", "http://dbpedia.org/datatype/squareDecimetre", "http://dbpedia.org/datatype/squareFoot", "http://dbpedia.org/datatype/squareHectometre", "http://dbpedia.org/datatype/squareInch", "http://dbpedia.org/datatype/squareKilometre", "http://dbpedia.org/datatype/squareMetre", "http://dbpedia.org/datatype/squareMile", "http://dbpedia.org/datatype/squareMillimetre", "http://dbpedia.org/datatype/squareNauticalMile", "http://dbpedia.org/datatype/squareYard", "http://dbpedia.org/datatype/sriLankanRupee", "http://dbpedia.org/datatype/standardAtmosphere", "http://dbpedia.org/datatype/stone", "http://dbpedia.org/datatype/sudanesePound", "http://dbpedia.org/datatype/surinamDollar", "http://dbpedia.org/datatype/swaziLilangeni", "http://dbpedia.org/datatype/swedishKrona", "http://dbpedia.org/datatype/swissFranc", "http://dbpedia.org/datatype/syrianPound", "http://dbpedia.org/datatype/sãoToméAndPríncipeDobra", "http://dbpedia.org/datatype/tajikistaniSomoni", "http://dbpedia.org/datatype/tanzanianShilling", "http://dbpedia.org/datatype/terabyte", "http://dbpedia.org/datatype/terahertz", "http://dbpedia.org/datatype/terawattHour", "http://dbpedia.org/datatype/thaiBaht", "http://dbpedia.org/datatype/tonganPaanga", "http://dbpedia.org/datatype/tonne", "http://dbpedia.org/datatype/tonneForce", "http://dbpedia.org/datatype/trinidadAndTobagoDollar", "http://dbpedia.org/datatype/tunisianDinar", "http://dbpedia.org/datatype/turkishLira", "http://dbpedia.org/datatype/turkmenistaniManat", "http://dbpedia.org/datatype/ugandaShilling", "http://dbpedia.org/datatype/ukrainianHryvnia", "http://dbpedia.org/datatype/unitedArabEmiratesDirham", "http://dbpedia.org/datatype/uruguayanPeso", "http://dbpedia.org/datatype/usBarrel", "http://dbpedia.org/datatype/usBarrelOil", "http://dbpedia.org/datatype/usDollar", "http://dbpedia.org/datatype/usGallon", "http://dbpedia.org/datatype/uzbekistanSom", "http://dbpedia.org/datatype/valvetrain", "http://dbpedia.org/datatype/vanuatuVatu", "http://dbpedia.org/datatype/venezuelanBolívar", "http://dbpedia.org/datatype/volt", "http://dbpedia.org/datatype/watt", "http://dbpedia.org/datatype/wattHour", "http://dbpedia.org/datatype/westAfricanCfaFranc", "http://dbpedia.org/datatype/yard", "http://dbpedia.org/datatype/yemeniRial", "http://dbpedia.org/datatype/zambianKwacha", "http://dbpedia.org/datatype/zimbabweanDollar", "http://dbpedia.org/ontology/", "http://dbpedia.org/ontology/Academic", "http://dbpedia.org/ontology/AcademicConference", "http://dbpedia.org/ontology/AcademicJournal", "http://dbpedia.org/ontology/AcademicSubject", "http://dbpedia.org/ontology/Activity", "http://dbpedia.org/ontology/Actor", "http://dbpedia.org/ontology/AdministrativeRegion", "http://dbpedia.org/ontology/AdultActor", "http://dbpedia.org/ontology/Agent", "http://dbpedia.org/ontology/Agglomeration", "http://dbpedia.org/ontology/Aircraft", "http://dbpedia.org/ontology/Airline", "http://dbpedia.org/ontology/Airport", "http://dbpedia.org/ontology/Album", "http://dbpedia.org/ontology/Algorithm", "http://dbpedia.org/ontology/Altitude", "http://dbpedia.org/ontology/AmateurBoxer", "http://dbpedia.org/ontology/Ambassador", "http://dbpedia.org/ontology/AmericanFootballCoach", "http://dbpedia.org/ontology/AmericanFootballLeague", "http://dbpedia.org/ontology/AmericanFootballPlayer", "http://dbpedia.org/ontology/AmericanFootballTeam", "http://dbpedia.org/ontology/AmericanLeader", "http://dbpedia.org/ontology/Amphibian", "http://dbpedia.org/ontology/AmusementParkAttraction", "http://dbpedia.org/ontology/AnatomicalStructure", "http://dbpedia.org/ontology/Animal", "http://dbpedia.org/ontology/AnimangaCharacter", "http://dbpedia.org/ontology/Anime", "http://dbpedia.org/ontology/Annotation", "http://dbpedia.org/ontology/Arachnid", "http://dbpedia.org/ontology/Archaea", "http://dbpedia.org/ontology/Archbishop", "http://dbpedia.org/ontology/Archeologist", "http://dbpedia.org/ontology/ArcherPlayer", "http://dbpedia.org/ontology/Archipelago", "http://dbpedia.org/ontology/Architect", "http://dbpedia.org/ontology/ArchitecturalStructure", "http://dbpedia.org/ontology/Archive", "http://dbpedia.org/ontology/Area", "http://dbpedia.org/ontology/Arena", "http://dbpedia.org/ontology/Aristocrat", "http://dbpedia.org/ontology/Arrondissement", "http://dbpedia.org/ontology/Artery", "http://dbpedia.org/ontology/Article", "http://dbpedia.org/ontology/ArtificialSatellite", "http://dbpedia.org/ontology/Artist", "http://dbpedia.org/ontology/ArtistDiscography", "http://dbpedia.org/ontology/ArtisticGenre", "http://dbpedia.org/ontology/Artwork", "http://dbpedia.org/ontology/Asteroid", "http://dbpedia.org/ontology/Astronaut", "http://dbpedia.org/ontology/Astronaut/timeInSpace", "http://dbpedia.org/ontology/Athlete", "http://dbpedia.org/ontology/Athletics", "http://dbpedia.org/ontology/AthleticsPlayer", "http://dbpedia.org/ontology/Atoll", "http://dbpedia.org/ontology/Attack", "http://dbpedia.org/ontology/AustralianFootballLeague", "http://dbpedia.org/ontology/AustralianFootballTeam", "http://dbpedia.org/ontology/AustralianRulesFootballPlayer", "http://dbpedia.org/ontology/AutoRacingLeague", "http://dbpedia.org/ontology/Automobile", "http://dbpedia.org/ontology/Automobile/fuelCapacity", "http://dbpedia.org/ontology/Automobile/wheelbase", "http://dbpedia.org/ontology/AutomobileEngine", "http://dbpedia.org/ontology/Award", "http://dbpedia.org/ontology/BackScene", "http://dbpedia.org/ontology/Bacteria", "http://dbpedia.org/ontology/BadmintonPlayer", "http://dbpedia.org/ontology/Band", "http://dbpedia.org/ontology/Bank", "http://dbpedia.org/ontology/Baronet", "http://dbpedia.org/ontology/BaseballLeague", "http://dbpedia.org/ontology/BaseballPlayer", "http://dbpedia.org/ontology/BaseballSeason", "http://dbpedia.org/ontology/BaseballTeam", "http://dbpedia.org/ontology/BasketballLeague", "http://dbpedia.org/ontology/BasketballPlayer", "http://dbpedia.org/ontology/BasketballTeam", "http://dbpedia.org/ontology/Battery", "http://dbpedia.org/ontology/Bay", "http://dbpedia.org/ontology/Beach", "http://dbpedia.org/ontology/BeachVolleyballPlayer", "http://dbpedia.org/ontology/BeautyQueen", "http://dbpedia.org/ontology/Beer", "http://dbpedia.org/ontology/Beverage", "http://dbpedia.org/ontology/Biathlete", "http://dbpedia.org/ontology/BiologicalDatabase", "http://dbpedia.org/ontology/Biologist", "http://dbpedia.org/ontology/Biomolecule", "http://dbpedia.org/ontology/Bird", "http://dbpedia.org/ontology/Blazon", "http://dbpedia.org/ontology/BloodVessel", "http://dbpedia.org/ontology/BoardGame", "http://dbpedia.org/ontology/BobsleighAthlete", "http://dbpedia.org/ontology/BodyOfWater", "http://dbpedia.org/ontology/Bodybuilder", "http://dbpedia.org/ontology/Bone", "http://dbpedia.org/ontology/Book", "http://dbpedia.org/ontology/BowlingLeague", "http://dbpedia.org/ontology/Boxer", "http://dbpedia.org/ontology/BoxingLeague", "http://dbpedia.org/ontology/Brain", "http://dbpedia.org/ontology/Brewery", "http://dbpedia.org/ontology/Bridge", "http://dbpedia.org/ontology/BritishRoyalty", "http://dbpedia.org/ontology/BroadcastNetwork", "http://dbpedia.org/ontology/Broadcaster", "http://dbpedia.org/ontology/BrownDwarf", "http://dbpedia.org/ontology/Browser", "http://dbpedia.org/ontology/Building", "http://dbpedia.org/ontology/Building/floorArea", "http://dbpedia.org/ontology/BullFighter", "http://dbpedia.org/ontology/BusCompany", "http://dbpedia.org/ontology/BusinessPerson", "http://dbpedia.org/ontology/Camera", "http://dbpedia.org/ontology/CanadianFootballLeague", "http://dbpedia.org/ontology/CanadianFootballPlayer", "http://dbpedia.org/ontology/CanadianFootballTeam", "http://dbpedia.org/ontology/Canal", "http://dbpedia.org/ontology/Canal/maximumBoatBeam", "http://dbpedia.org/ontology/Canal/maximumBoatLength", "http://dbpedia.org/ontology/Canal/originalMaximumBoatBeam", "http://dbpedia.org/ontology/Canal/originalMaximumBoatLength", "http://dbpedia.org/ontology/Canoeist", "http://dbpedia.org/ontology/Canton", "http://dbpedia.org/ontology/Cape", "http://dbpedia.org/ontology/Capital", "http://dbpedia.org/ontology/CapitalOfRegion", "http://dbpedia.org/ontology/CardGame", "http://dbpedia.org/ontology/Cardinal", "http://dbpedia.org/ontology/CardinalDirection", "http://dbpedia.org/ontology/CareerStation", "http://dbpedia.org/ontology/Cartoon", "http://dbpedia.org/ontology/Case", "http://dbpedia.org/ontology/Casino", "http://dbpedia.org/ontology/Castle", "http://dbpedia.org/ontology/Cat", "http://dbpedia.org/ontology/Caterer", "http://dbpedia.org/ontology/Cave", "http://dbpedia.org/ontology/CelestialBody", "http://dbpedia.org/ontology/Cemetery", "http://dbpedia.org/ontology/Chancellor", "http://dbpedia.org/ontology/ChartsPlacements", "http://dbpedia.org/ontology/Cheese", "http://dbpedia.org/ontology/Chef", "http://dbpedia.org/ontology/ChemicalCompound", "http://dbpedia.org/ontology/ChemicalElement", "http://dbpedia.org/ontology/ChemicalSubstance", "http://dbpedia.org/ontology/ChemicalSubstance/boilingPoint", "http://dbpedia.org/ontology/ChemicalSubstance/density", "http://dbpedia.org/ontology/ChemicalSubstance/meltingPoint", "http://dbpedia.org/ontology/ChessPlayer", "http://dbpedia.org/ontology/Chief", "http://dbpedia.org/ontology/ChristianBishop", "http://dbpedia.org/ontology/ChristianDoctrine", "http://dbpedia.org/ontology/ChristianPatriarch", "http://dbpedia.org/ontology/Church", "http://dbpedia.org/ontology/Cinema", "http://dbpedia.org/ontology/Cipher", "http://dbpedia.org/ontology/City", "http://dbpedia.org/ontology/CityDistrict", "http://dbpedia.org/ontology/ClassicalMusicArtist", "http://dbpedia.org/ontology/ClassicalMusicComposition", "http://dbpedia.org/ontology/Cleric", "http://dbpedia.org/ontology/ClericalAdministrativeRegion", "http://dbpedia.org/ontology/ClericalOrder", "http://dbpedia.org/ontology/ClubMoss", "http://dbpedia.org/ontology/Coach", "http://dbpedia.org/ontology/CoalPit", "http://dbpedia.org/ontology/CollectionOfValuables", "http://dbpedia.org/ontology/College", "http://dbpedia.org/ontology/CollegeCoach", "http://dbpedia.org/ontology/Colour", "http://dbpedia.org/ontology/CombinationDrug", "http://dbpedia.org/ontology/Comedian", "http://dbpedia.org/ontology/ComedyGroup", "http://dbpedia.org/ontology/Comic", "http://dbpedia.org/ontology/ComicStrip", "http://dbpedia.org/ontology/ComicsCharacter", "http://dbpedia.org/ontology/ComicsCreator", "http://dbpedia.org/ontology/Community", "http://dbpedia.org/ontology/Company", "http://dbpedia.org/ontology/Competition", "http://dbpedia.org/ontology/ConcentrationCamp", "http://dbpedia.org/ontology/Congressman", "http://dbpedia.org/ontology/Conifer", "http://dbpedia.org/ontology/Constellation", "http://dbpedia.org/ontology/Contest", "http://dbpedia.org/ontology/Continent", "http://dbpedia.org/ontology/ControlledDesignationOfOriginWine", "http://dbpedia.org/ontology/Convention", "http://dbpedia.org/ontology/ConveyorSystem", "http://dbpedia.org/ontology/ConveyorSystem/diameter", "http://dbpedia.org/ontology/ConveyorSystem/height", "http://dbpedia.org/ontology/ConveyorSystem/length", "http://dbpedia.org/ontology/ConveyorSystem/mass", "http://dbpedia.org/ontology/ConveyorSystem/weight", "http://dbpedia.org/ontology/ConveyorSystem/width", "http://dbpedia.org/ontology/Country", "http://dbpedia.org/ontology/CountrySeat", "http://dbpedia.org/ontology/Covid19", "http://dbpedia.org/ontology/Crater", "http://dbpedia.org/ontology/CricketGround", "http://dbpedia.org/ontology/CricketLeague", "http://dbpedia.org/ontology/CricketTeam", "http://dbpedia.org/ontology/Cricketer", "http://dbpedia.org/ontology/Criminal", "http://dbpedia.org/ontology/CrossCountrySkier", "http://dbpedia.org/ontology/Crustacean", "http://dbpedia.org/ontology/CultivatedVariety", "http://dbpedia.org/ontology/Curler", "http://dbpedia.org/ontology/CurlingLeague", "http://dbpedia.org/ontology/Currency", "http://dbpedia.org/ontology/Cycad", "http://dbpedia.org/ontology/CyclingCompetition", "http://dbpedia.org/ontology/CyclingLeague", "http://dbpedia.org/ontology/CyclingRace", "http://dbpedia.org/ontology/CyclingTeam", "http://dbpedia.org/ontology/Cyclist", "http://dbpedia.org/ontology/DBpedian", "http://dbpedia.org/ontology/DTMRacer", "http://dbpedia.org/ontology/Dam", "http://dbpedia.org/ontology/Dancer", "http://dbpedia.org/ontology/DartsPlayer", "http://dbpedia.org/ontology/Database", "http://dbpedia.org/ontology/Deanery", "http://dbpedia.org/ontology/Decoration", "http://dbpedia.org/ontology/Deity", "http://dbpedia.org/ontology/Demographics", "http://dbpedia.org/ontology/Department", "http://dbpedia.org/ontology/Depth", "http://dbpedia.org/ontology/Deputy", "http://dbpedia.org/ontology/Desert", "http://dbpedia.org/ontology/Device", "http://dbpedia.org/ontology/DigitalCamera", "http://dbpedia.org/ontology/Dike", "http://dbpedia.org/ontology/Diocese", "http://dbpedia.org/ontology/Diploma", "http://dbpedia.org/ontology/Disease", "http://dbpedia.org/ontology/DisneyCharacter", "http://dbpedia.org/ontology/District", "http://dbpedia.org/ontology/DistrictWaterBoard", "http://dbpedia.org/ontology/Document", "http://dbpedia.org/ontology/DocumentType", "http://dbpedia.org/ontology/Dog", "http://dbpedia.org/ontology/Drama", "http://dbpedia.org/ontology/Drug", "http://dbpedia.org/ontology/Drug/boilingPoint", "http://dbpedia.org/ontology/Drug/meltingPoint", "http://dbpedia.org/ontology/Earthquake", "http://dbpedia.org/ontology/Economist", "http://dbpedia.org/ontology/EducationalInstitution", "http://dbpedia.org/ontology/Egyptologist", "http://dbpedia.org/ontology/Election", "http://dbpedia.org/ontology/ElectionDiagram", "http://dbpedia.org/ontology/ElectricalSubstation", "http://dbpedia.org/ontology/Embryology", "http://dbpedia.org/ontology/Employer", "http://dbpedia.org/ontology/EmployersOrganisation", "http://dbpedia.org/ontology/Engine", "http://dbpedia.org/ontology/Engine/acceleration", "http://dbpedia.org/ontology/Engine/co2Emission", "http://dbpedia.org/ontology/Engine/cylinderBore", "http://dbpedia.org/ontology/Engine/diameter", "http://dbpedia.org/ontology/Engine/displacement", "http://dbpedia.org/ontology/Engine/height", "http://dbpedia.org/ontology/Engine/length", "http://dbpedia.org/ontology/Engine/pistonStroke", "http://dbpedia.org/ontology/Engine/powerOutput", "http://dbpedia.org/ontology/Engine/topSpeed", "http://dbpedia.org/ontology/Engine/torqueOutput", "http://dbpedia.org/ontology/Engine/weight", "http://dbpedia.org/ontology/Engine/width", "http://dbpedia.org/ontology/Engineer", "http://dbpedia.org/ontology/Entomologist", "http://dbpedia.org/ontology/Enzyme", "http://dbpedia.org/ontology/Escalator", "http://dbpedia.org/ontology/Escalator/diameter", "http://dbpedia.org/ontology/Escalator/height", "http://dbpedia.org/ontology/Escalator/length", "http://dbpedia.org/ontology/Escalator/mass", "http://dbpedia.org/ontology/Escalator/weight", "http://dbpedia.org/ontology/Escalator/width", "http://dbpedia.org/ontology/EthnicGroup", "http://dbpedia.org/ontology/Eukaryote", "http://dbpedia.org/ontology/EurovisionSongContestEntry", "http://dbpedia.org/ontology/Event", "http://dbpedia.org/ontology/Factory", "http://dbpedia.org/ontology/Family", "http://dbpedia.org/ontology/Farmer", "http://dbpedia.org/ontology/Fashion", "http://dbpedia.org/ontology/FashionDesigner", "http://dbpedia.org/ontology/Fencer", "http://dbpedia.org/ontology/Fern", "http://dbpedia.org/ontology/FictionalCharacter", "http://dbpedia.org/ontology/FieldHockeyLeague", "http://dbpedia.org/ontology/FigureSkater", "http://dbpedia.org/ontology/File", "http://dbpedia.org/ontology/FileSystem", "http://dbpedia.org/ontology/Film", "http://dbpedia.org/ontology/FilmFestival", "http://dbpedia.org/ontology/Fish", "http://dbpedia.org/ontology/Flag", "http://dbpedia.org/ontology/FloweringPlant", "http://dbpedia.org/ontology/Food", "http://dbpedia.org/ontology/FootballLeagueSeason", "http://dbpedia.org/ontology/FootballMatch", "http://dbpedia.org/ontology/Forest", "http://dbpedia.org/ontology/FormerMunicipality", "http://dbpedia.org/ontology/FormulaOneRacer", "http://dbpedia.org/ontology/FormulaOneRacing", "http://dbpedia.org/ontology/FormulaOneTeam", "http://dbpedia.org/ontology/Fort", "http://dbpedia.org/ontology/Fungus", "http://dbpedia.org/ontology/GaelicGamesPlayer", "http://dbpedia.org/ontology/Galaxy", "http://dbpedia.org/ontology/Galaxy/apoapsis", "http://dbpedia.org/ontology/Galaxy/averageSpeed", "http://dbpedia.org/ontology/Galaxy/density", "http://dbpedia.org/ontology/Galaxy/mass", "http://dbpedia.org/ontology/Galaxy/maximumTemperature", "http://dbpedia.org/ontology/Galaxy/meanRadius", "http://dbpedia.org/ontology/Galaxy/meanTemperature", "http://dbpedia.org/ontology/Galaxy/minimumTemperature", "http://dbpedia.org/ontology/Galaxy/orbitalPeriod", "http://dbpedia.org/ontology/Galaxy/periapsis", "http://dbpedia.org/ontology/Galaxy/surfaceArea", "http://dbpedia.org/ontology/Galaxy/temperature", "http://dbpedia.org/ontology/Galaxy/volume", "http://dbpedia.org/ontology/Game", "http://dbpedia.org/ontology/Garden", "http://dbpedia.org/ontology/GatedCommunity", "http://dbpedia.org/ontology/Gene", "http://dbpedia.org/ontology/GeneLocation", "http://dbpedia.org/ontology/Genre", "http://dbpedia.org/ontology/GeologicalPeriod", "http://dbpedia.org/ontology/GeopoliticalOrganisation", "http://dbpedia.org/ontology/GeopoliticalOrganisation/areaMetro", "http://dbpedia.org/ontology/GeopoliticalOrganisation/populationDensity", "http://dbpedia.org/ontology/Ginkgo", "http://dbpedia.org/ontology/GivenName", "http://dbpedia.org/ontology/Glacier", "http://dbpedia.org/ontology/Globularswarm", "http://dbpedia.org/ontology/Gnetophytes", "http://dbpedia.org/ontology/GolfCourse", "http://dbpedia.org/ontology/GolfLeague", "http://dbpedia.org/ontology/GolfPlayer", "http://dbpedia.org/ontology/GolfTournament", "http://dbpedia.org/ontology/GovernmentAgency", "http://dbpedia.org/ontology/GovernmentCabinet", "http://dbpedia.org/ontology/GovernmentType", "http://dbpedia.org/ontology/GovernmentalAdministrativeRegion", "http://dbpedia.org/ontology/Governor", "http://dbpedia.org/ontology/GrandPrix", "http://dbpedia.org/ontology/GrandPrix/course", "http://dbpedia.org/ontology/GrandPrix/distance", "http://dbpedia.org/ontology/Grape", "http://dbpedia.org/ontology/GraveMonument", "http://dbpedia.org/ontology/GreenAlga", "http://dbpedia.org/ontology/GridironFootballPlayer", "http://dbpedia.org/ontology/GrossDomesticProduct", "http://dbpedia.org/ontology/GrossDomesticProductPerCapita", "http://dbpedia.org/ontology/Group", "http://dbpedia.org/ontology/Guitar", "http://dbpedia.org/ontology/Guitarist", "http://dbpedia.org/ontology/Gymnast", "http://dbpedia.org/ontology/HandballLeague", "http://dbpedia.org/ontology/HandballPlayer", "http://dbpedia.org/ontology/HandballTeam", "http://dbpedia.org/ontology/HighDiver", "http://dbpedia.org/ontology/Historian", "http://dbpedia.org/ontology/HistoricBuilding", "http://dbpedia.org/ontology/HistoricPlace", "http://dbpedia.org/ontology/HistoricalAreaOfAuthority", "http://dbpedia.org/ontology/HistoricalCountry", "http://dbpedia.org/ontology/HistoricalDistrict", "http://dbpedia.org/ontology/HistoricalEvent", "http://dbpedia.org/ontology/HistoricalPeriod", "http://dbpedia.org/ontology/HistoricalProvince", "http://dbpedia.org/ontology/HistoricalRegion", "http://dbpedia.org/ontology/HistoricalSettlement", "http://dbpedia.org/ontology/HockeyClub", "http://dbpedia.org/ontology/HockeyTeam", "http://dbpedia.org/ontology/Holiday", "http://dbpedia.org/ontology/HollywoodCartoon", "http://dbpedia.org/ontology/Hormone", "http://dbpedia.org/ontology/Horse", "http://dbpedia.org/ontology/HorseRace", "http://dbpedia.org/ontology/HorseRider", "http://dbpedia.org/ontology/HorseTrainer", "http://dbpedia.org/ontology/Hospital", "http://dbpedia.org/ontology/HotSpring", "http://dbpedia.org/ontology/Hotel", "http://dbpedia.org/ontology/HumanGene", "http://dbpedia.org/ontology/HumanGeneLocation", "http://dbpedia.org/ontology/Humorist", "http://dbpedia.org/ontology/IceHockeyLeague", "http://dbpedia.org/ontology/IceHockeyPlayer", "http://dbpedia.org/ontology/Identifier", "http://dbpedia.org/ontology/Ideology", "http://dbpedia.org/ontology/Image", "http://dbpedia.org/ontology/InformationAppliance", "http://dbpedia.org/ontology/Infrastructure", "http://dbpedia.org/ontology/Infrastructure/length", "http://dbpedia.org/ontology/Infrastucture", "http://dbpedia.org/ontology/InlineHockeyLeague", "http://dbpedia.org/ontology/Insect", "http://dbpedia.org/ontology/Instrument", "http://dbpedia.org/ontology/Instrumentalist", "http://dbpedia.org/ontology/Intercommunality", "http://dbpedia.org/ontology/InternationalFootballLeagueEvent", "http://dbpedia.org/ontology/InternationalOrganisation", "http://dbpedia.org/ontology/Island", "http://dbpedia.org/ontology/JewishLeader", "http://dbpedia.org/ontology/Jockey", "http://dbpedia.org/ontology/Journalist", "http://dbpedia.org/ontology/Judge", "http://dbpedia.org/ontology/LacrosseLeague", "http://dbpedia.org/ontology/LacrossePlayer", "http://dbpedia.org/ontology/Lake", "http://dbpedia.org/ontology/Lake/areaOfCatchment", "http://dbpedia.org/ontology/Lake/shoreLength", "http://dbpedia.org/ontology/Lake/volume", "http://dbpedia.org/ontology/Language", "http://dbpedia.org/ontology/LatterDaySaint", "http://dbpedia.org/ontology/LaunchPad", "http://dbpedia.org/ontology/Law", "http://dbpedia.org/ontology/LawFirm", "http://dbpedia.org/ontology/Lawyer", "http://dbpedia.org/ontology/LegalCase", "http://dbpedia.org/ontology/Legislature", "http://dbpedia.org/ontology/Letter", "http://dbpedia.org/ontology/Library", "http://dbpedia.org/ontology/Lieutenant", "http://dbpedia.org/ontology/LifeCycleEvent", "http://dbpedia.org/ontology/Ligament", "http://dbpedia.org/ontology/LightNovel", "http://dbpedia.org/ontology/Lighthouse", "http://dbpedia.org/ontology/LineOfFashion", "http://dbpedia.org/ontology/Linguist", "http://dbpedia.org/ontology/Lipid", "http://dbpedia.org/ontology/List", "http://dbpedia.org/ontology/LiteraryGenre", "http://dbpedia.org/ontology/Locality", "http://dbpedia.org/ontology/Lock", "http://dbpedia.org/ontology/Locomotive", "http://dbpedia.org/ontology/LunarCrater", "http://dbpedia.org/ontology/LunarCrater/diameter", "http://dbpedia.org/ontology/Lymph", "http://dbpedia.org/ontology/Magazine", "http://dbpedia.org/ontology/Mammal", "http://dbpedia.org/ontology/Man", "http://dbpedia.org/ontology/Manga", "http://dbpedia.org/ontology/Manhua", "http://dbpedia.org/ontology/Manhwa", "http://dbpedia.org/ontology/Manor", "http://dbpedia.org/ontology/MartialArtist", "http://dbpedia.org/ontology/MathematicalConcept", "http://dbpedia.org/ontology/Mayor", "http://dbpedia.org/ontology/MeanOfTransportation", "http://dbpedia.org/ontology/MeanOfTransportation/diameter", "http://dbpedia.org/ontology/MeanOfTransportation/height", "http://dbpedia.org/ontology/MeanOfTransportation/length", "http://dbpedia.org/ontology/MeanOfTransportation/mass", "http://dbpedia.org/ontology/MeanOfTransportation/weight", "http://dbpedia.org/ontology/MeanOfTransportation/width", "http://dbpedia.org/ontology/Media", "http://dbpedia.org/ontology/MedicalSpecialty", "http://dbpedia.org/ontology/Medician", "http://dbpedia.org/ontology/Medicine", "http://dbpedia.org/ontology/Meeting", "http://dbpedia.org/ontology/MemberOfParliament", "http://dbpedia.org/ontology/MemberResistanceMovement", "http://dbpedia.org/ontology/Memorial", "http://dbpedia.org/ontology/MetroStation", "http://dbpedia.org/ontology/MicroRegion", "http://dbpedia.org/ontology/MilitaryAircraft", "http://dbpedia.org/ontology/MilitaryConflict", "http://dbpedia.org/ontology/MilitaryPerson", "http://dbpedia.org/ontology/MilitaryService", "http://dbpedia.org/ontology/MilitaryStructure", "http://dbpedia.org/ontology/MilitaryUnit", "http://dbpedia.org/ontology/MilitaryVehicle", "http://dbpedia.org/ontology/Mill", "http://dbpedia.org/ontology/Mine", "http://dbpedia.org/ontology/Mineral", "http://dbpedia.org/ontology/Minister", "http://dbpedia.org/ontology/MixedMartialArtsEvent", "http://dbpedia.org/ontology/MixedMartialArtsLeague", "http://dbpedia.org/ontology/MobilePhone", "http://dbpedia.org/ontology/Model", "http://dbpedia.org/ontology/Mollusca", "http://dbpedia.org/ontology/Monarch", "http://dbpedia.org/ontology/Monastery", "http://dbpedia.org/ontology/MonoclonalAntibody", "http://dbpedia.org/ontology/Monument", "http://dbpedia.org/ontology/Mosque", "http://dbpedia.org/ontology/Moss", "http://dbpedia.org/ontology/MotocycleRacer", "http://dbpedia.org/ontology/MotorRace", "http://dbpedia.org/ontology/Motorcycle", "http://dbpedia.org/ontology/MotorcycleRacingLeague", "http://dbpedia.org/ontology/MotorcycleRider", "http://dbpedia.org/ontology/MotorsportRacer", "http://dbpedia.org/ontology/MotorsportSeason", "http://dbpedia.org/ontology/Mountain", "http://dbpedia.org/ontology/MountainPass", "http://dbpedia.org/ontology/MountainRange", "http://dbpedia.org/ontology/MouseGene", "http://dbpedia.org/ontology/MouseGeneLocation", "http://dbpedia.org/ontology/MovieDirector", "http://dbpedia.org/ontology/MovieGenre", "http://dbpedia.org/ontology/MovingImage", "http://dbpedia.org/ontology/MovingWalkway", "http://dbpedia.org/ontology/MovingWalkway/diameter", "http://dbpedia.org/ontology/MovingWalkway/height", "http://dbpedia.org/ontology/MovingWalkway/length", "http://dbpedia.org/ontology/MovingWalkway/mass", "http://dbpedia.org/ontology/MovingWalkway/weight", "http://dbpedia.org/ontology/MovingWalkway/width", "http://dbpedia.org/ontology/MultiVolumePublication", "http://dbpedia.org/ontology/Municipality", "http://dbpedia.org/ontology/Murderer", "http://dbpedia.org/ontology/Muscle", "http://dbpedia.org/ontology/Museum", "http://dbpedia.org/ontology/MusicComposer", "http://dbpedia.org/ontology/MusicDirector", "http://dbpedia.org/ontology/MusicFestival", "http://dbpedia.org/ontology/MusicGenre", "http://dbpedia.org/ontology/Musical", "http://dbpedia.org/ontology/MusicalArtist", "http://dbpedia.org/ontology/MusicalWork", "http://dbpedia.org/ontology/MythologicalFigure", "http://dbpedia.org/ontology/NCAATeamSeason", "http://dbpedia.org/ontology/Name", "http://dbpedia.org/ontology/NarutoCharacter", "http://dbpedia.org/ontology/NascarDriver", "http://dbpedia.org/ontology/NationalAnthem", "http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete", "http://dbpedia.org/ontology/NationalFootballLeagueEvent", "http://dbpedia.org/ontology/NationalFootballLeagueSeason", "http://dbpedia.org/ontology/NationalSoccerClub", "http://dbpedia.org/ontology/NaturalEvent", "http://dbpedia.org/ontology/NaturalPlace", "http://dbpedia.org/ontology/NaturalRegion", "http://dbpedia.org/ontology/Nebula", "http://dbpedia.org/ontology/Nerve", "http://dbpedia.org/ontology/NetballPlayer", "http://dbpedia.org/ontology/Newspaper", "http://dbpedia.org/ontology/NobelPrize", "http://dbpedia.org/ontology/Noble", "http://dbpedia.org/ontology/NobleFamily", "http://dbpedia.org/ontology/Non-ProfitOrganisation", "http://dbpedia.org/ontology/NordicCombined", "http://dbpedia.org/ontology/Novel", "http://dbpedia.org/ontology/NuclearPowerStation", "http://dbpedia.org/ontology/Ocean", "http://dbpedia.org/ontology/OfficeHolder", "http://dbpedia.org/ontology/OldTerritory", "http://dbpedia.org/ontology/OlympicEvent", "http://dbpedia.org/ontology/OlympicResult", "http://dbpedia.org/ontology/Olympics", "http://dbpedia.org/ontology/On-SiteTransportation", "http://dbpedia.org/ontology/On-SiteTransportation/diameter", "http://dbpedia.org/ontology/On-SiteTransportation/height", "http://dbpedia.org/ontology/On-SiteTransportation/length", "http://dbpedia.org/ontology/On-SiteTransportation/mass", "http://dbpedia.org/ontology/On-SiteTransportation/weight", "http://dbpedia.org/ontology/On-SiteTransportation/width", "http://dbpedia.org/ontology/Openswarm", "http://dbpedia.org/ontology/Opera", "http://dbpedia.org/ontology/Organ", "http://dbpedia.org/ontology/Organisation", "http://dbpedia.org/ontology/OrganisationMember", "http://dbpedia.org/ontology/Outbreak", "http://dbpedia.org/ontology/OverseasDepartment", "http://dbpedia.org/ontology/PaintballLeague", "http://dbpedia.org/ontology/Painter", "http://dbpedia.org/ontology/Painting", "http://dbpedia.org/ontology/Pandemic", "http://dbpedia.org/ontology/Parish", "http://dbpedia.org/ontology/Park", "http://dbpedia.org/ontology/Parliament", "http://dbpedia.org/ontology/PenaltyShootOut", "http://dbpedia.org/ontology/PeriodOfArtisticStyle", "http://dbpedia.org/ontology/PeriodicalLiterature", "http://dbpedia.org/ontology/Person", "http://dbpedia.org/ontology/Person/height", "http://dbpedia.org/ontology/Person/weight", "http://dbpedia.org/ontology/PersonFunction", "http://dbpedia.org/ontology/PersonalEvent", "http://dbpedia.org/ontology/Pharaoh", "http://dbpedia.org/ontology/Philosopher", "http://dbpedia.org/ontology/PhilosophicalConcept", "http://dbpedia.org/ontology/Photographer", "http://dbpedia.org/ontology/Pilot", "http://dbpedia.org/ontology/Place", "http://dbpedia.org/ontology/Planet", "http://dbpedia.org/ontology/Planet/apoapsis", "http://dbpedia.org/ontology/Planet/averageSpeed", "http://dbpedia.org/ontology/Planet/density", "http://dbpedia.org/ontology/Planet/mass", "http://dbpedia.org/ontology/Planet/maximumTemperature", "http://dbpedia.org/ontology/Planet/meanRadius", "http://dbpedia.org/ontology/Planet/meanTemperature", "http://dbpedia.org/ontology/Planet/minimumTemperature", "http://dbpedia.org/ontology/Planet/orbitalPeriod", "http://dbpedia.org/ontology/Planet/periapsis", "http://dbpedia.org/ontology/Planet/surfaceArea", "http://dbpedia.org/ontology/Planet/temperature", "http://dbpedia.org/ontology/Planet/volume", "http://dbpedia.org/ontology/Plant", "http://dbpedia.org/ontology/Play", "http://dbpedia.org/ontology/PlayWright", "http://dbpedia.org/ontology/PlayboyPlaymate", "http://dbpedia.org/ontology/Poem", "http://dbpedia.org/ontology/Poet", "http://dbpedia.org/ontology/PokerPlayer", "http://dbpedia.org/ontology/PoliceOfficer", "http://dbpedia.org/ontology/PoliticalConcept", "http://dbpedia.org/ontology/PoliticalFunction", "http://dbpedia.org/ontology/PoliticalParty", "http://dbpedia.org/ontology/Politician", "http://dbpedia.org/ontology/PoliticianSpouse", "http://dbpedia.org/ontology/PoloLeague", "http://dbpedia.org/ontology/Polysaccharide", "http://dbpedia.org/ontology/Pope", "http://dbpedia.org/ontology/PopulatedPlace", "http://dbpedia.org/ontology/PopulatedPlace/area", "http://dbpedia.org/ontology/PopulatedPlace/areaMetro", "http://dbpedia.org/ontology/PopulatedPlace/areaTotal", "http://dbpedia.org/ontology/PopulatedPlace/areaUrban", "http://dbpedia.org/ontology/PopulatedPlace/populationDensity", "http://dbpedia.org/ontology/PopulatedPlace/populationMetroDensity", "http://dbpedia.org/ontology/PopulatedPlace/populationUrbanDensity", "http://dbpedia.org/ontology/Population", "http://dbpedia.org/ontology/Port", "http://dbpedia.org/ontology/PowerStation", "http://dbpedia.org/ontology/Prefecture", "http://dbpedia.org/ontology/PrehistoricalPeriod", "http://dbpedia.org/ontology/Presenter", "http://dbpedia.org/ontology/President", "http://dbpedia.org/ontology/Pretender", "http://dbpedia.org/ontology/Priest", "http://dbpedia.org/ontology/PrimeMinister", "http://dbpedia.org/ontology/Prison", "http://dbpedia.org/ontology/Producer", "http://dbpedia.org/ontology/Profession", "http://dbpedia.org/ontology/Professor", "http://dbpedia.org/ontology/ProgrammingLanguage", "http://dbpedia.org/ontology/Project", "http://dbpedia.org/ontology/ProtectedArea", "http://dbpedia.org/ontology/Protein", "http://dbpedia.org/ontology/Protocol", "http://dbpedia.org/ontology/ProtohistoricalPeriod", "http://dbpedia.org/ontology/Province", "http://dbpedia.org/ontology/Psychologist", "http://dbpedia.org/ontology/PublicService", "http://dbpedia.org/ontology/PublicTransitSystem", "http://dbpedia.org/ontology/Publisher", "http://dbpedia.org/ontology/Pyramid", "http://dbpedia.org/ontology/Quote", "http://dbpedia.org/ontology/Race", "http://dbpedia.org/ontology/RaceTrack", "http://dbpedia.org/ontology/Racecourse", "http://dbpedia.org/ontology/RacingDriver", "http://dbpedia.org/ontology/RadioControlledRacingLeague", "http://dbpedia.org/ontology/RadioHost", "http://dbpedia.org/ontology/RadioProgram", "http://dbpedia.org/ontology/RadioStation", "http://dbpedia.org/ontology/RailwayLine", "http://dbpedia.org/ontology/RailwayStation", "http://dbpedia.org/ontology/RailwayTunnel", "http://dbpedia.org/ontology/RallyDriver", "http://dbpedia.org/ontology/Rebbe", "http://dbpedia.org/ontology/Rebellion", "http://dbpedia.org/ontology/RecordLabel", "http://dbpedia.org/ontology/RecordOffice", "http://dbpedia.org/ontology/Referee", "http://dbpedia.org/ontology/Reference", "http://dbpedia.org/ontology/Regency", "http://dbpedia.org/ontology/Region", "http://dbpedia.org/ontology/Reign", "http://dbpedia.org/ontology/Relationship", "http://dbpedia.org/ontology/Religious", "http://dbpedia.org/ontology/ReligiousBuilding", "http://dbpedia.org/ontology/ReligiousOrganisation", "http://dbpedia.org/ontology/Reptile", "http://dbpedia.org/ontology/ResearchProject", "http://dbpedia.org/ontology/RestArea", "http://dbpedia.org/ontology/Restaurant", "http://dbpedia.org/ontology/Resume", "http://dbpedia.org/ontology/River", "http://dbpedia.org/ontology/Road", "http://dbpedia.org/ontology/RoadJunction", "http://dbpedia.org/ontology/RoadTunnel", "http://dbpedia.org/ontology/Robot", "http://dbpedia.org/ontology/Rocket", "http://dbpedia.org/ontology/Rocket/lowerEarthOrbitPayload", "http://dbpedia.org/ontology/Rocket/mass", "http://dbpedia.org/ontology/RocketEngine", "http://dbpedia.org/ontology/RollerCoaster", "http://dbpedia.org/ontology/RomanEmperor", "http://dbpedia.org/ontology/RouteOfTransportation", "http://dbpedia.org/ontology/RouteStop", "http://dbpedia.org/ontology/Rower", "http://dbpedia.org/ontology/Royalty", "http://dbpedia.org/ontology/RugbyClub", "http://dbpedia.org/ontology/RugbyLeague", "http://dbpedia.org/ontology/RugbyPlayer", "http://dbpedia.org/ontology/Sailor", "http://dbpedia.org/ontology/Saint", "http://dbpedia.org/ontology/Sales", "http://dbpedia.org/ontology/SambaSchool", "http://dbpedia.org/ontology/Satellite", "http://dbpedia.org/ontology/School", "http://dbpedia.org/ontology/School/campusSize", "http://dbpedia.org/ontology/ScientificConcept", "http://dbpedia.org/ontology/Scientist", "http://dbpedia.org/ontology/ScreenWriter", "http://dbpedia.org/ontology/Sculptor", "http://dbpedia.org/ontology/Sculpture", "http://dbpedia.org/ontology/Sea", "http://dbpedia.org/ontology/Senator", "http://dbpedia.org/ontology/SerialKiller", "http://dbpedia.org/ontology/Settlement", "http://dbpedia.org/ontology/Ship", "http://dbpedia.org/ontology/ShoppingMall", "http://dbpedia.org/ontology/Shrine", "http://dbpedia.org/ontology/Singer", "http://dbpedia.org/ontology/Single", "http://dbpedia.org/ontology/SingleList", "http://dbpedia.org/ontology/SiteOfSpecialScientificInterest", "http://dbpedia.org/ontology/Skater", "http://dbpedia.org/ontology/SkiArea", "http://dbpedia.org/ontology/SkiResort", "http://dbpedia.org/ontology/Ski_jumper", "http://dbpedia.org/ontology/Skier", "http://dbpedia.org/ontology/Skos", "http://dbpedia.org/ontology/Skyscraper", "http://dbpedia.org/ontology/SnookerChamp", "http://dbpedia.org/ontology/SnookerPlayer", "http://dbpedia.org/ontology/SnookerWorldRanking", "http://dbpedia.org/ontology/SoapCharacter", "http://dbpedia.org/ontology/SoccerClub", "http://dbpedia.org/ontology/SoccerClubSeason", "http://dbpedia.org/ontology/SoccerLeague", "http://dbpedia.org/ontology/SoccerLeagueSeason", "http://dbpedia.org/ontology/SoccerManager", "http://dbpedia.org/ontology/SoccerPlayer", "http://dbpedia.org/ontology/SoccerTournament", "http://dbpedia.org/ontology/SocietalEvent", "http://dbpedia.org/ontology/SoftballLeague", "http://dbpedia.org/ontology/Software", "http://dbpedia.org/ontology/Software/fileSize", "http://dbpedia.org/ontology/SolarEclipse", "http://dbpedia.org/ontology/Song", "http://dbpedia.org/ontology/SongWriter", "http://dbpedia.org/ontology/Sound", "http://dbpedia.org/ontology/SpaceMission", "http://dbpedia.org/ontology/SpaceMission/cmpEvaDuration", "http://dbpedia.org/ontology/SpaceMission/distanceTraveled", "http://dbpedia.org/ontology/SpaceMission/lunarEvaTime", "http://dbpedia.org/ontology/SpaceMission/lunarOrbitTime", "http://dbpedia.org/ontology/SpaceMission/lunarSampleMass", "http://dbpedia.org/ontology/SpaceMission/lunarSurfaceTime", "http://dbpedia.org/ontology/SpaceMission/mass", "http://dbpedia.org/ontology/SpaceMission/missionDuration", "http://dbpedia.org/ontology/SpaceMission/stationEvaDuration", "http://dbpedia.org/ontology/SpaceMission/stationVisitDuration", "http://dbpedia.org/ontology/SpaceShuttle", "http://dbpedia.org/ontology/SpaceShuttle/distance", "http://dbpedia.org/ontology/SpaceShuttle/timeInSpace", "http://dbpedia.org/ontology/SpaceStation", "http://dbpedia.org/ontology/SpaceStation/volume", "http://dbpedia.org/ontology/Spacecraft", "http://dbpedia.org/ontology/Spacecraft/apoapsis", "http://dbpedia.org/ontology/Spacecraft/cargoFuel", "http://dbpedia.org/ontology/Spacecraft/cargoGas", "http://dbpedia.org/ontology/Spacecraft/cargoWater", "http://dbpedia.org/ontology/Spacecraft/dockedTime", "http://dbpedia.org/ontology/Spacecraft/dryCargo", "http://dbpedia.org/ontology/Spacecraft/freeFlightTime", "http://dbpedia.org/ontology/Spacecraft/periapsis", "http://dbpedia.org/ontology/Spacecraft/totalCargo", "http://dbpedia.org/ontology/Spacecraft/totalMass", "http://dbpedia.org/ontology/Species", "http://dbpedia.org/ontology/SpeedSkater", "http://dbpedia.org/ontology/SpeedwayLeague", "http://dbpedia.org/ontology/SpeedwayRider", "http://dbpedia.org/ontology/SpeedwayTeam", "http://dbpedia.org/ontology/Sport", "http://dbpedia.org/ontology/SportCompetitionResult", "http://dbpedia.org/ontology/SportFacility", "http://dbpedia.org/ontology/SportsClub", "http://dbpedia.org/ontology/SportsEvent", "http://dbpedia.org/ontology/SportsLeague", "http://dbpedia.org/ontology/SportsManager", "http://dbpedia.org/ontology/SportsSeason", "http://dbpedia.org/ontology/SportsTeam", "http://dbpedia.org/ontology/SportsTeamMember", "http://dbpedia.org/ontology/SportsTeamSeason", "http://dbpedia.org/ontology/Spreadsheet", "http://dbpedia.org/ontology/Spy", "http://dbpedia.org/ontology/Square", "http://dbpedia.org/ontology/SquashPlayer", "http://dbpedia.org/ontology/Stadium", "http://dbpedia.org/ontology/Standard", "http://dbpedia.org/ontology/Star", "http://dbpedia.org/ontology/StarCluster", "http://dbpedia.org/ontology/State", "http://dbpedia.org/ontology/StatedResolution", "http://dbpedia.org/ontology/Station", "http://dbpedia.org/ontology/Statistic", "http://dbpedia.org/ontology/StillImage", "http://dbpedia.org/ontology/StormSurge", "http://dbpedia.org/ontology/Stream", "http://dbpedia.org/ontology/Stream/discharge", "http://dbpedia.org/ontology/Stream/dischargeAverage", "http://dbpedia.org/ontology/Stream/maximumDischarge", "http://dbpedia.org/ontology/Stream/minimumDischarge", "http://dbpedia.org/ontology/Stream/watershed", "http://dbpedia.org/ontology/Street", "http://dbpedia.org/ontology/SubMunicipality", "http://dbpedia.org/ontology/SumoWrestler", "http://dbpedia.org/ontology/SupremeCourtOfTheUnitedStatesCase", "http://dbpedia.org/ontology/Surfer", "http://dbpedia.org/ontology/Surname", "http://dbpedia.org/ontology/Swarm", "http://dbpedia.org/ontology/Swimmer", "http://dbpedia.org/ontology/Synagogue", "http://dbpedia.org/ontology/SystemOfLaw", "http://dbpedia.org/ontology/TableTennisPlayer", "http://dbpedia.org/ontology/Tank", "http://dbpedia.org/ontology/Tax", "http://dbpedia.org/ontology/Taxon", "http://dbpedia.org/ontology/TeamMember", "http://dbpedia.org/ontology/TeamSport", "http://dbpedia.org/ontology/TelevisionDirector", "http://dbpedia.org/ontology/TelevisionEpisode", "http://dbpedia.org/ontology/TelevisionHost", "http://dbpedia.org/ontology/TelevisionSeason", "http://dbpedia.org/ontology/TelevisionShow", "http://dbpedia.org/ontology/TelevisionStation", "http://dbpedia.org/ontology/Temple", "http://dbpedia.org/ontology/TennisLeague", "http://dbpedia.org/ontology/TennisPlayer", "http://dbpedia.org/ontology/TennisTournament", "http://dbpedia.org/ontology/Tenure", "http://dbpedia.org/ontology/TermOfOffice", "http://dbpedia.org/ontology/Territory", "http://dbpedia.org/ontology/Theatre", "http://dbpedia.org/ontology/TheatreDirector", "http://dbpedia.org/ontology/TheologicalConcept", "http://dbpedia.org/ontology/TimePeriod", "http://dbpedia.org/ontology/TopLevelDomain", "http://dbpedia.org/ontology/TopicalConcept", "http://dbpedia.org/ontology/Tournament", "http://dbpedia.org/ontology/Tower", "http://dbpedia.org/ontology/Town", "http://dbpedia.org/ontology/TrackList", "http://dbpedia.org/ontology/TradeUnion", "http://dbpedia.org/ontology/Train", "http://dbpedia.org/ontology/TrainCarriage", "http://dbpedia.org/ontology/Tram", "http://dbpedia.org/ontology/TramStation", "http://dbpedia.org/ontology/Treadmill", "http://dbpedia.org/ontology/Treaty", "http://dbpedia.org/ontology/Tunnel", "http://dbpedia.org/ontology/Type", "http://dbpedia.org/ontology/UndergroundJournal", "http://dbpedia.org/ontology/UnitOfWork", "http://dbpedia.org/ontology/University", "http://dbpedia.org/ontology/Unknown", "http://dbpedia.org/ontology/VaccinationStatistics", "http://dbpedia.org/ontology/Vaccine", "http://dbpedia.org/ontology/Valley", "http://dbpedia.org/ontology/Vein", "http://dbpedia.org/ontology/Venue", "http://dbpedia.org/ontology/Vicar", "http://dbpedia.org/ontology/VicePresident", "http://dbpedia.org/ontology/VicePrimeMinister", "http://dbpedia.org/ontology/VideoGame", "http://dbpedia.org/ontology/VideogamesLeague", "http://dbpedia.org/ontology/Village", "http://dbpedia.org/ontology/Vodka", "http://dbpedia.org/ontology/VoiceActor", "http://dbpedia.org/ontology/Volcano", "http://dbpedia.org/ontology/VolleyballCoach", "http://dbpedia.org/ontology/VolleyballLeague", "http://dbpedia.org/ontology/VolleyballPlayer", "http://dbpedia.org/ontology/WaterPoloPlayer", "http://dbpedia.org/ontology/WaterRide", "http://dbpedia.org/ontology/WaterTower", "http://dbpedia.org/ontology/Watermill", "http://dbpedia.org/ontology/WaterwayTunnel", "http://dbpedia.org/ontology/Weapon", "http://dbpedia.org/ontology/Weapon/diameter", "http://dbpedia.org/ontology/Weapon/height", "http://dbpedia.org/ontology/Weapon/length", "http://dbpedia.org/ontology/Weapon/weight", "http://dbpedia.org/ontology/Weapon/width", "http://dbpedia.org/ontology/Website", "http://dbpedia.org/ontology/WikimediaTemplate", "http://dbpedia.org/ontology/WindMotor", "http://dbpedia.org/ontology/Windmill", "http://dbpedia.org/ontology/Wine", "http://dbpedia.org/ontology/WineRegion", "http://dbpedia.org/ontology/Winery", "http://dbpedia.org/ontology/WinterSportPlayer", "http://dbpedia.org/ontology/Woman", "http://dbpedia.org/ontology/WomensTennisAssociationTournament", "http://dbpedia.org/ontology/Work", "http://dbpedia.org/ontology/Work/runtime", "http://dbpedia.org/ontology/WorkSequence", "http://dbpedia.org/ontology/WorldHeritageSite", "http://dbpedia.org/ontology/Wrestler", "http://dbpedia.org/ontology/WrestlingEvent", "http://dbpedia.org/ontology/Writer", "http://dbpedia.org/ontology/WrittenWork", "http://dbpedia.org/ontology/Year", "http://dbpedia.org/ontology/YearInSpaceflight", "http://dbpedia.org/ontology/Youtuber", "http://dbpedia.org/ontology/Zoo", "http://dbpedia.org/ontology/aSide", "http://dbpedia.org/ontology/abbeychurchBlessing", "http://dbpedia.org/ontology/abbeychurchBlessingCharge", "http://dbpedia.org/ontology/abbreviation", "http://dbpedia.org/ontology/ableToGrind", "http://dbpedia.org/ontology/absoluteMagnitude", "http://dbpedia.org/ontology/abstentions", "http://dbpedia.org/ontology/abstract", "http://dbpedia.org/ontology/academicAdvisor", "http://dbpedia.org/ontology/academicDiscipline", "http://dbpedia.org/ontology/academyAward", "http://dbpedia.org/ontology/acceleration", "http://dbpedia.org/ontology/access", "http://dbpedia.org/ontology/accessDate", "http://dbpedia.org/ontology/achievement", "http://dbpedia.org/ontology/acquirementDate", "http://dbpedia.org/ontology/actScore", "http://dbpedia.org/ontology/actingHeadteacher", "http://dbpedia.org/ontology/activeCases", "http://dbpedia.org/ontology/activeYears", "http://dbpedia.org/ontology/activeYearsEndDate", "http://dbpedia.org/ontology/activeYearsEndDateMgr", "http://dbpedia.org/ontology/activeYearsEndYear", "http://dbpedia.org/ontology/activeYearsEndYearMgr", "http://dbpedia.org/ontology/activeYearsStartDate", "http://dbpedia.org/ontology/activeYearsStartDateMgr", "http://dbpedia.org/ontology/activeYearsStartYear", "http://dbpedia.org/ontology/activeYearsStartYearMgr", "http://dbpedia.org/ontology/activity", "http://dbpedia.org/ontology/address", "http://dbpedia.org/ontology/addressInRoad", "http://dbpedia.org/ontology/adjacentSettlement", "http://dbpedia.org/ontology/administrativeCenter", "http://dbpedia.org/ontology/administrativeCollectivity", "http://dbpedia.org/ontology/administrativeDistrict", "http://dbpedia.org/ontology/administrativeHeadCity", "http://dbpedia.org/ontology/administrativeStatus", "http://dbpedia.org/ontology/administrator", "http://dbpedia.org/ontology/afdbId", "http://dbpedia.org/ontology/affair", "http://dbpedia.org/ontology/affiliate", "http://dbpedia.org/ontology/affiliation", "http://dbpedia.org/ontology/afiAward", "http://dbpedia.org/ontology/age", "http://dbpedia.org/ontology/ageRange", "http://dbpedia.org/ontology/agency", "http://dbpedia.org/ontology/agencyStationCode", "http://dbpedia.org/ontology/agglomeration", "http://dbpedia.org/ontology/agglomerationArea", "http://dbpedia.org/ontology/agglomerationDemographics", "http://dbpedia.org/ontology/agglomerationPopulation", "http://dbpedia.org/ontology/agglomerationPopulationTotal", "http://dbpedia.org/ontology/agglomerationPopulationYear", "http://dbpedia.org/ontology/aggregation", "http://dbpedia.org/ontology/airDate", "http://dbpedia.org/ontology/aircraftAttack", "http://dbpedia.org/ontology/aircraftBomber", "http://dbpedia.org/ontology/aircraftElectronic", "http://dbpedia.org/ontology/aircraftFighter", "http://dbpedia.org/ontology/aircraftHelicopter", "http://dbpedia.org/ontology/aircraftHelicopterAttack", "http://dbpedia.org/ontology/aircraftHelicopterCargo", "http://dbpedia.org/ontology/aircraftHelicopterMultirole", "http://dbpedia.org/ontology/aircraftHelicopterObservation", "http://dbpedia.org/ontology/aircraftHelicopterTransport", "http://dbpedia.org/ontology/aircraftHelicopterUtility", "http://dbpedia.org/ontology/aircraftInterceptor", "http://dbpedia.org/ontology/aircraftPatrol", "http://dbpedia.org/ontology/aircraftRecon", "http://dbpedia.org/ontology/aircraftTrainer", "http://dbpedia.org/ontology/aircraftTransport", "http://dbpedia.org/ontology/aircraftType", "http://dbpedia.org/ontology/aircraftUser", "http://dbpedia.org/ontology/airportUsing", "http://dbpedia.org/ontology/aitaCode", "http://dbpedia.org/ontology/albedo", "http://dbpedia.org/ontology/album", "http://dbpedia.org/ontology/albumRuntime", "http://dbpedia.org/ontology/alias", "http://dbpedia.org/ontology/allcinemaId", "http://dbpedia.org/ontology/allegiance", "http://dbpedia.org/ontology/alliance", "http://dbpedia.org/ontology/almaMater", "http://dbpedia.org/ontology/alongside", "http://dbpedia.org/ontology/alpsGroup", "http://dbpedia.org/ontology/alpsMainPart", "http://dbpedia.org/ontology/alpsMajorSector", "http://dbpedia.org/ontology/alpsSection", "http://dbpedia.org/ontology/alpsSoiusaCode", "http://dbpedia.org/ontology/alpsSubgroup", "http://dbpedia.org/ontology/alpsSubsection", "http://dbpedia.org/ontology/alpsSupergroup", "http://dbpedia.org/ontology/alternativeName", "http://dbpedia.org/ontology/alternativeText", "http://dbpedia.org/ontology/alternativeTitle", "http://dbpedia.org/ontology/altitude", "http://dbpedia.org/ontology/alumni", "http://dbpedia.org/ontology/amateurDefeat", "http://dbpedia.org/ontology/amateurFight", "http://dbpedia.org/ontology/amateurKo", "http://dbpedia.org/ontology/amateurNoContest", "http://dbpedia.org/ontology/amateurTeam", "http://dbpedia.org/ontology/amateurTie", "http://dbpedia.org/ontology/amateurTitle", "http://dbpedia.org/ontology/amateurVictory", "http://dbpedia.org/ontology/amateurYear", "http://dbpedia.org/ontology/americanComedyAward", "http://dbpedia.org/ontology/amgid", "http://dbpedia.org/ontology/amsterdamCode", "http://dbpedia.org/ontology/analogChannel", "http://dbpedia.org/ontology/animal", "http://dbpedia.org/ontology/animator", "http://dbpedia.org/ontology/anniversary", "http://dbpedia.org/ontology/announcedFrom", "http://dbpedia.org/ontology/annualTemperature", "http://dbpedia.org/ontology/anthem", "http://dbpedia.org/ontology/aoCloassification", "http://dbpedia.org/ontology/apcPresident", "http://dbpedia.org/ontology/apoapsis", "http://dbpedia.org/ontology/apofocus", "http://dbpedia.org/ontology/apparentMagnitude", "http://dbpedia.org/ontology/appearance", "http://dbpedia.org/ontology/appearancesInLeague", "http://dbpedia.org/ontology/appearancesInNationalTeam", "http://dbpedia.org/ontology/appointer", "http://dbpedia.org/ontology/apprehended", "http://dbpedia.org/ontology/approach", "http://dbpedia.org/ontology/approvedByLowerParliament", "http://dbpedia.org/ontology/approvedByUpperParliament", "http://dbpedia.org/ontology/approximateCalories", "http://dbpedia.org/ontology/apskritis", "http://dbpedia.org/ontology/archipelago", "http://dbpedia.org/ontology/architect", "http://dbpedia.org/ontology/architectualBureau", "http://dbpedia.org/ontology/architecturalMovement", "http://dbpedia.org/ontology/architecturalStyle", "http://dbpedia.org/ontology/area", "http://dbpedia.org/ontology/areaCode", "http://dbpedia.org/ontology/areaDate", "http://dbpedia.org/ontology/areaLand", "http://dbpedia.org/ontology/areaMetro", "http://dbpedia.org/ontology/areaOfCatchment", "http://dbpedia.org/ontology/areaOfCatchmentQuote", "http://dbpedia.org/ontology/areaOfSearch", "http://dbpedia.org/ontology/areaQuote", "http://dbpedia.org/ontology/areaRank", "http://dbpedia.org/ontology/areaRural", "http://dbpedia.org/ontology/areaTotal", "http://dbpedia.org/ontology/areaTotalRanking", "http://dbpedia.org/ontology/areaUrban", "http://dbpedia.org/ontology/areaWater", "http://dbpedia.org/ontology/argueDate", "http://dbpedia.org/ontology/arielAward", "http://dbpedia.org/ontology/arm", "http://dbpedia.org/ontology/army", "http://dbpedia.org/ontology/arrestDate", "http://dbpedia.org/ontology/arrondissement", "http://dbpedia.org/ontology/artPatron", "http://dbpedia.org/ontology/artery", "http://dbpedia.org/ontology/artificialSnowArea", "http://dbpedia.org/ontology/artist", "http://dbpedia.org/ontology/artistFunction", "http://dbpedia.org/ontology/artisticFunction", "http://dbpedia.org/ontology/asWikiText", "http://dbpedia.org/ontology/ascent", "http://dbpedia.org/ontology/asiaChampionship", "http://dbpedia.org/ontology/aspectRatio", "http://dbpedia.org/ontology/assembly", "http://dbpedia.org/ontology/assetUnderManagement", "http://dbpedia.org/ontology/assets", "http://dbpedia.org/ontology/assistantPrincipal", "http://dbpedia.org/ontology/associate", "http://dbpedia.org/ontology/associateEditor", "http://dbpedia.org/ontology/associateStar", "http://dbpedia.org/ontology/associatedAct", "http://dbpedia.org/ontology/associatedBand", "http://dbpedia.org/ontology/associatedMusicalArtist", "http://dbpedia.org/ontology/associatedRocket", "http://dbpedia.org/ontology/associationOfLocalGovernment", "http://dbpedia.org/ontology/astrazenca", "http://dbpedia.org/ontology/astrazencaCumul", "http://dbpedia.org/ontology/astrologicalSign", "http://dbpedia.org/ontology/atPage", "http://dbpedia.org/ontology/atRowNumber", "http://dbpedia.org/ontology/atcCode", "http://dbpedia.org/ontology/atcPrefix", "http://dbpedia.org/ontology/atcSuffix", "http://dbpedia.org/ontology/athletics", "http://dbpedia.org/ontology/athleticsDiscipline", "http://dbpedia.org/ontology/atomicNumber", "http://dbpedia.org/ontology/attorneyGeneral", "http://dbpedia.org/ontology/aunt", "http://dbpedia.org/ontology/australiaOpenDouble", "http://dbpedia.org/ontology/australiaOpenMixed", "http://dbpedia.org/ontology/australiaOpenSingle", "http://dbpedia.org/ontology/author", "http://dbpedia.org/ontology/authority", "http://dbpedia.org/ontology/authorityMandate", "http://dbpedia.org/ontology/authorityTitle", "http://dbpedia.org/ontology/automobileModel", "http://dbpedia.org/ontology/automobilePlatform", "http://dbpedia.org/ontology/autonomy", "http://dbpedia.org/ontology/availableSmartCard", "http://dbpedia.org/ontology/average", "http://dbpedia.org/ontology/averageAnnualGeneration", "http://dbpedia.org/ontology/averageClassSize", "http://dbpedia.org/ontology/averageDepth", "http://dbpedia.org/ontology/averageDepthQuote", "http://dbpedia.org/ontology/averageSpeed", "http://dbpedia.org/ontology/avgRevSizePerMonth", "http://dbpedia.org/ontology/avgRevSizePerYear", "http://dbpedia.org/ontology/avifaunaPopulation", "http://dbpedia.org/ontology/award", "http://dbpedia.org/ontology/awardName", "http://dbpedia.org/ontology/awayColourHexCode", "http://dbpedia.org/ontology/bSide", "http://dbpedia.org/ontology/background", "http://dbpedia.org/ontology/backhand", "http://dbpedia.org/ontology/badGuy", "http://dbpedia.org/ontology/baftaAward", "http://dbpedia.org/ontology/band", "http://dbpedia.org/ontology/bandMember", "http://dbpedia.org/ontology/barPassRate", "http://dbpedia.org/ontology/barangays", "http://dbpedia.org/ontology/basedOn", "http://dbpedia.org/ontology/battery", "http://dbpedia.org/ontology/battingSide", "http://dbpedia.org/ontology/battle", "http://dbpedia.org/ontology/battleHonours", "http://dbpedia.org/ontology/bbr", "http://dbpedia.org/ontology/beatifiedBy", "http://dbpedia.org/ontology/beatifiedDate", "http://dbpedia.org/ontology/beatifiedPlace", "http://dbpedia.org/ontology/bedCount", "http://dbpedia.org/ontology/believers", "http://dbpedia.org/ontology/beltwayCity", "http://dbpedia.org/ontology/bestFinish", "http://dbpedia.org/ontology/bestLap", "http://dbpedia.org/ontology/bestRankDouble", "http://dbpedia.org/ontology/bestRankSingle", "http://dbpedia.org/ontology/bestWsopRank", "http://dbpedia.org/ontology/bestYearWsop", "http://dbpedia.org/ontology/bgafdId", "http://dbpedia.org/ontology/bibsysId", "http://dbpedia.org/ontology/bicycleInformation", "http://dbpedia.org/ontology/bigPoolRecord", "http://dbpedia.org/ontology/biggestCity", "http://dbpedia.org/ontology/billed", "http://dbpedia.org/ontology/binomial", "http://dbpedia.org/ontology/binomialAuthority", "http://dbpedia.org/ontology/bioavailability", "http://dbpedia.org/ontology/bioclimate", "http://dbpedia.org/ontology/biome", "http://dbpedia.org/ontology/bird", "http://dbpedia.org/ontology/birthDate", "http://dbpedia.org/ontology/birthName", "http://dbpedia.org/ontology/birthPlace", "http://dbpedia.org/ontology/birthSign", "http://dbpedia.org/ontology/birthYear", "http://dbpedia.org/ontology/bishopric", "http://dbpedia.org/ontology/blackLongDistancePisteNumber", "http://dbpedia.org/ontology/blackSkiPisteNumber", "http://dbpedia.org/ontology/blazon", "http://dbpedia.org/ontology/blazonCaption", "http://dbpedia.org/ontology/blazonLink", "http://dbpedia.org/ontology/blazonRatio", "http://dbpedia.org/ontology/block", "http://dbpedia.org/ontology/blockAlloy", "http://dbpedia.org/ontology/bloodGroup", "http://dbpedia.org/ontology/bloodType", "http://dbpedia.org/ontology/blueLongDistancePisteNumber", "http://dbpedia.org/ontology/blueSkiPisteNumber", "http://dbpedia.org/ontology/bnfId", "http://dbpedia.org/ontology/board", "http://dbpedia.org/ontology/bodyDiscovered", "http://dbpedia.org/ontology/bodyStyle", "http://dbpedia.org/ontology/boiler", "http://dbpedia.org/ontology/boilerPressure", "http://dbpedia.org/ontology/boilingPoint", "http://dbpedia.org/ontology/book", "http://dbpedia.org/ontology/booster", "http://dbpedia.org/ontology/border", "http://dbpedia.org/ontology/borough", "http://dbpedia.org/ontology/bourgmestre", "http://dbpedia.org/ontology/bowlRecord", "http://dbpedia.org/ontology/bowlingSide", "http://dbpedia.org/ontology/boxerStyle", "http://dbpedia.org/ontology/bpnId", "http://dbpedia.org/ontology/brainInfoNumber", "http://dbpedia.org/ontology/brainInfoType", "http://dbpedia.org/ontology/branchFrom", "http://dbpedia.org/ontology/branchTo", "http://dbpedia.org/ontology/brand", "http://dbpedia.org/ontology/breeder", "http://dbpedia.org/ontology/bridgeCarries", "http://dbpedia.org/ontology/brinCode", "http://dbpedia.org/ontology/britishComedyAwards", "http://dbpedia.org/ontology/britishOpen", "http://dbpedia.org/ontology/britishWins", "http://dbpedia.org/ontology/broadcastArea", "http://dbpedia.org/ontology/broadcastNetwork", "http://dbpedia.org/ontology/broadcastRepeater", "http://dbpedia.org/ontology/broadcastStationClass", "http://dbpedia.org/ontology/broadcastTranslator", "http://dbpedia.org/ontology/bronzeMedalDouble", "http://dbpedia.org/ontology/bronzeMedalMixed", "http://dbpedia.org/ontology/bronzeMedalSingle", "http://dbpedia.org/ontology/bronzeMedalist", "http://dbpedia.org/ontology/brother", "http://dbpedia.org/ontology/budget", "http://dbpedia.org/ontology/budgetYear", "http://dbpedia.org/ontology/builder", "http://dbpedia.org/ontology/building", "http://dbpedia.org/ontology/buildingEndDate", "http://dbpedia.org/ontology/buildingEndYear", "http://dbpedia.org/ontology/buildingStartDate", "http://dbpedia.org/ontology/buildingStartYear", "http://dbpedia.org/ontology/buildingType", "http://dbpedia.org/ontology/bustSize", "http://dbpedia.org/ontology/bustWaistHipSize", "http://dbpedia.org/ontology/cableCar", "http://dbpedia.org/ontology/calculationNeeds", "http://dbpedia.org/ontology/callSign", "http://dbpedia.org/ontology/callsignMeaning", "http://dbpedia.org/ontology/campus", "http://dbpedia.org/ontology/campusSize", "http://dbpedia.org/ontology/campusType", "http://dbpedia.org/ontology/canBaggageChecked", "http://dbpedia.org/ontology/cannonNumber", "http://dbpedia.org/ontology/canonizedBy", "http://dbpedia.org/ontology/canonizedDate", "http://dbpedia.org/ontology/canonizedPlace", "http://dbpedia.org/ontology/canton", "http://dbpedia.org/ontology/capacity", "http://dbpedia.org/ontology/capacityFactor", "http://dbpedia.org/ontology/capital", "http://dbpedia.org/ontology/capitalCoordinates", "http://dbpedia.org/ontology/capitalCountry", "http://dbpedia.org/ontology/capitalDistrict", "http://dbpedia.org/ontology/capitalElevation", "http://dbpedia.org/ontology/capitalMountain", "http://dbpedia.org/ontology/capitalPlace", "http://dbpedia.org/ontology/capitalPosition", "http://dbpedia.org/ontology/capitalRegion", "http://dbpedia.org/ontology/captureDate", "http://dbpedia.org/ontology/carNumber", "http://dbpedia.org/ontology/carbohydrate", "http://dbpedia.org/ontology/carcinogen", "http://dbpedia.org/ontology/careerPoints", "http://dbpedia.org/ontology/careerPrizeMoney", "http://dbpedia.org/ontology/careerStation", "http://dbpedia.org/ontology/cargoFuel", "http://dbpedia.org/ontology/cargoGas", "http://dbpedia.org/ontology/cargoWater", "http://dbpedia.org/ontology/casNumber", "http://dbpedia.org/ontology/casSupplemental", "http://dbpedia.org/ontology/case", "http://dbpedia.org/ontology/casualties", "http://dbpedia.org/ontology/catch", "http://dbpedia.org/ontology/category", "http://dbpedia.org/ontology/caterer", "http://dbpedia.org/ontology/catholicPercentage", "http://dbpedia.org/ontology/causalties", "http://dbpedia.org/ontology/causeOfDeath", "http://dbpedia.org/ontology/causedBy", "http://dbpedia.org/ontology/ccaState", "http://dbpedia.org/ontology/ceeb", "http://dbpedia.org/ontology/ceiling", "http://dbpedia.org/ontology/cemetery", "http://dbpedia.org/ontology/censusYear", "http://dbpedia.org/ontology/center", "http://dbpedia.org/ontology/centuryBreaks", "http://dbpedia.org/ontology/ceo", "http://dbpedia.org/ontology/ceremonialCounty", "http://dbpedia.org/ontology/certification", "http://dbpedia.org/ontology/certificationDate", "http://dbpedia.org/ontology/cesarAward", "http://dbpedia.org/ontology/chEBI", "http://dbpedia.org/ontology/chEMBL", "http://dbpedia.org/ontology/chain", "http://dbpedia.org/ontology/chairLabel", "http://dbpedia.org/ontology/chairman", "http://dbpedia.org/ontology/chairmanTitle", "http://dbpedia.org/ontology/chairperson", "http://dbpedia.org/ontology/champion", "http://dbpedia.org/ontology/championInDouble", "http://dbpedia.org/ontology/championInDoubleFemale", "http://dbpedia.org/ontology/championInDoubleMale", "http://dbpedia.org/ontology/championInMixedDouble", "http://dbpedia.org/ontology/championInSingle", "http://dbpedia.org/ontology/championInSingleFemale", "http://dbpedia.org/ontology/championInSingleMale", "http://dbpedia.org/ontology/championships", "http://dbpedia.org/ontology/chancellor", "http://dbpedia.org/ontology/channel", "http://dbpedia.org/ontology/chaplain", "http://dbpedia.org/ontology/characterInPlay", "http://dbpedia.org/ontology/chef", "http://dbpedia.org/ontology/chemSpiderId", "http://dbpedia.org/ontology/chemicalFormula", "http://dbpedia.org/ontology/chief", "http://dbpedia.org/ontology/chiefEditor", "http://dbpedia.org/ontology/chiefPlace", "http://dbpedia.org/ontology/child", "http://dbpedia.org/ontology/childOrganisation", "http://dbpedia.org/ontology/choreographer", "http://dbpedia.org/ontology/chorusCharacterInPlay", "http://dbpedia.org/ontology/christeningDate", "http://dbpedia.org/ontology/chromosome", "http://dbpedia.org/ontology/cinematography", "http://dbpedia.org/ontology/circle", "http://dbpedia.org/ontology/circuitLength", "http://dbpedia.org/ontology/circuitName", "http://dbpedia.org/ontology/circulation", "http://dbpedia.org/ontology/circumcised", "http://dbpedia.org/ontology/cites", "http://dbpedia.org/ontology/citizenship", "http://dbpedia.org/ontology/city", "http://dbpedia.org/ontology/cityLink", "http://dbpedia.org/ontology/cityRank", "http://dbpedia.org/ontology/citySince", "http://dbpedia.org/ontology/cityType", "http://dbpedia.org/ontology/clade", "http://dbpedia.org/ontology/class", "http://dbpedia.org/ontology/classes", "http://dbpedia.org/ontology/classification", "http://dbpedia.org/ontology/classis", "http://dbpedia.org/ontology/climate", "http://dbpedia.org/ontology/climbUpNumber", "http://dbpedia.org/ontology/closeTo", "http://dbpedia.org/ontology/closed", "http://dbpedia.org/ontology/closingDate", "http://dbpedia.org/ontology/closingFilm", "http://dbpedia.org/ontology/closingYear", "http://dbpedia.org/ontology/clothSize", "http://dbpedia.org/ontology/clothingSize", "http://dbpedia.org/ontology/club", "http://dbpedia.org/ontology/clubsRecordGoalscorer", "http://dbpedia.org/ontology/cluster", "http://dbpedia.org/ontology/cmpEvaDuration", "http://dbpedia.org/ontology/cmykCoordinateBlack", "http://dbpedia.org/ontology/cmykCoordinateCyanic", "http://dbpedia.org/ontology/cmykCoordinateMagenta", "http://dbpedia.org/ontology/cmykCoordinateYellow", "http://dbpedia.org/ontology/co2Emission", "http://dbpedia.org/ontology/coExecutiveProducer", "http://dbpedia.org/ontology/coProducer", "http://dbpedia.org/ontology/coach", "http://dbpedia.org/ontology/coachClub", "http://dbpedia.org/ontology/coachSeason", "http://dbpedia.org/ontology/coachedTeam", "http://dbpedia.org/ontology/coachingRecord", "http://dbpedia.org/ontology/coalition", "http://dbpedia.org/ontology/coastLength", "http://dbpedia.org/ontology/coastLine", "http://dbpedia.org/ontology/coatOfArms", "http://dbpedia.org/ontology/code", "http://dbpedia.org/ontology/codeBook", "http://dbpedia.org/ontology/codeDistrict", "http://dbpedia.org/ontology/codeIndex", "http://dbpedia.org/ontology/codeListOfHonour", "http://dbpedia.org/ontology/codeMemorial", "http://dbpedia.org/ontology/codeMunicipalMonument", "http://dbpedia.org/ontology/codeNationalMonument", "http://dbpedia.org/ontology/codeProvincialMonument", "http://dbpedia.org/ontology/codeSettlement", "http://dbpedia.org/ontology/codeStockExchange", "http://dbpedia.org/ontology/coden", "http://dbpedia.org/ontology/coemperor", "http://dbpedia.org/ontology/collaboration", "http://dbpedia.org/ontology/colleague", "http://dbpedia.org/ontology/collection", "http://dbpedia.org/ontology/collectionSize", "http://dbpedia.org/ontology/collectivityMinority", "http://dbpedia.org/ontology/college", "http://dbpedia.org/ontology/collegeHof", "http://dbpedia.org/ontology/colonialName", "http://dbpedia.org/ontology/colorChart", "http://dbpedia.org/ontology/colour", "http://dbpedia.org/ontology/colourHexCode", "http://dbpedia.org/ontology/colourName", "http://dbpedia.org/ontology/combatant", "http://dbpedia.org/ontology/comic", "http://dbpedia.org/ontology/comitat", "http://dbpedia.org/ontology/command", "http://dbpedia.org/ontology/commandModule", "http://dbpedia.org/ontology/commandStructure", "http://dbpedia.org/ontology/commandant", "http://dbpedia.org/ontology/commander", "http://dbpedia.org/ontology/comment", "http://dbpedia.org/ontology/commissioner", "http://dbpedia.org/ontology/commissionerDate", "http://dbpedia.org/ontology/commissioningDate", "http://dbpedia.org/ontology/committee", "http://dbpedia.org/ontology/committeeInLegislature", "http://dbpedia.org/ontology/commonName", "http://dbpedia.org/ontology/commune", "http://dbpedia.org/ontology/communityIsoCode", "http://dbpedia.org/ontology/company", "http://dbpedia.org/ontology/comparable", "http://dbpedia.org/ontology/competition", "http://dbpedia.org/ontology/competitionTitle", "http://dbpedia.org/ontology/compiler", "http://dbpedia.org/ontology/completionDate", "http://dbpedia.org/ontology/complexion", "http://dbpedia.org/ontology/complexity", "http://dbpedia.org/ontology/complications", "http://dbpedia.org/ontology/component", "http://dbpedia.org/ontology/composer", "http://dbpedia.org/ontology/compressionRatio", "http://dbpedia.org/ontology/computingInput", "http://dbpedia.org/ontology/computingMedia", "http://dbpedia.org/ontology/computingPlatform", "http://dbpedia.org/ontology/configuration", "http://dbpedia.org/ontology/confirmedCases", "http://dbpedia.org/ontology/conflict", "http://dbpedia.org/ontology/congressionalDistrict", "http://dbpedia.org/ontology/connectsReferencedTo", "http://dbpedia.org/ontology/connotation", "http://dbpedia.org/ontology/consecration", "http://dbpedia.org/ontology/conservationStatus", "http://dbpedia.org/ontology/conservationStatusSystem", "http://dbpedia.org/ontology/constellation", "http://dbpedia.org/ontology/constituencyDistrict", "http://dbpedia.org/ontology/construction", "http://dbpedia.org/ontology/constructionMaterial", "http://dbpedia.org/ontology/contest", "http://dbpedia.org/ontology/continent", "http://dbpedia.org/ontology/continentRank", "http://dbpedia.org/ontology/continentalTournament", "http://dbpedia.org/ontology/continentalTournamentBronze", "http://dbpedia.org/ontology/continentalTournamentGold", "http://dbpedia.org/ontology/continentalTournamentSilver", "http://dbpedia.org/ontology/contractAward", "http://dbpedia.org/ontology/contractor", "http://dbpedia.org/ontology/convictionDate", "http://dbpedia.org/ontology/convictionPenalty", "http://dbpedia.org/ontology/coolingSystem", "http://dbpedia.org/ontology/copilote", "http://dbpedia.org/ontology/coronationDate", "http://dbpedia.org/ontology/cosparId", "http://dbpedia.org/ontology/cost", "http://dbpedia.org/ontology/costumeDesigner", "http://dbpedia.org/ontology/council", "http://dbpedia.org/ontology/councilArea", "http://dbpedia.org/ontology/country", "http://dbpedia.org/ontology/countryCode", "http://dbpedia.org/ontology/countryOrigin", "http://dbpedia.org/ontology/countryRank", "http://dbpedia.org/ontology/countryWithFirstAstronaut", "http://dbpedia.org/ontology/countryWithFirstSatellite", "http://dbpedia.org/ontology/countryWithFirstSatelliteLaunched", "http://dbpedia.org/ontology/countryWithFirstSpaceflight", "http://dbpedia.org/ontology/county", "http://dbpedia.org/ontology/countySeat", "http://dbpedia.org/ontology/course", "http://dbpedia.org/ontology/courseArea", "http://dbpedia.org/ontology/cousurper", "http://dbpedia.org/ontology/coverArtist", "http://dbpedia.org/ontology/cpu", "http://dbpedia.org/ontology/created", "http://dbpedia.org/ontology/creationChristianBishop", "http://dbpedia.org/ontology/creationYear", "http://dbpedia.org/ontology/creativeDirector", "http://dbpedia.org/ontology/creator", "http://dbpedia.org/ontology/creatorOfDish", "http://dbpedia.org/ontology/credit", "http://dbpedia.org/ontology/crest", "http://dbpedia.org/ontology/crew", "http://dbpedia.org/ontology/crewMember", "http://dbpedia.org/ontology/crewSize", "http://dbpedia.org/ontology/crews", "http://dbpedia.org/ontology/criminalCharge", "http://dbpedia.org/ontology/criteria", "http://dbpedia.org/ontology/crosses", "http://dbpedia.org/ontology/crownDependency", "http://dbpedia.org/ontology/cuisine", "http://dbpedia.org/ontology/cultivatedVariety", "http://dbpedia.org/ontology/curator", "http://dbpedia.org/ontology/currency", "http://dbpedia.org/ontology/currencyCode", "http://dbpedia.org/ontology/currentCity", "http://dbpedia.org/ontology/currentLeague", "http://dbpedia.org/ontology/currentMember", "http://dbpedia.org/ontology/currentPartner", "http://dbpedia.org/ontology/currentProduction", "http://dbpedia.org/ontology/currentRank", "http://dbpedia.org/ontology/currentRecord", "http://dbpedia.org/ontology/currentSeason", "http://dbpedia.org/ontology/currentStatus", "http://dbpedia.org/ontology/currentTeam", "http://dbpedia.org/ontology/currentTeamManager", "http://dbpedia.org/ontology/currentTeamMember", "http://dbpedia.org/ontology/currentWorldChampion", "http://dbpedia.org/ontology/currentlyUsedFor", "http://dbpedia.org/ontology/custodian", "http://dbpedia.org/ontology/cyclistGenre", "http://dbpedia.org/ontology/cylinderBore", "http://dbpedia.org/ontology/cylinderCount", "http://dbpedia.org/ontology/dailyVaccinationsPerMillion", "http://dbpedia.org/ontology/dailyVaccinationsRaw", "http://dbpedia.org/ontology/daira", "http://dbpedia.org/ontology/dam", "http://dbpedia.org/ontology/damage", "http://dbpedia.org/ontology/damsire", "http://dbpedia.org/ontology/danseCompetition", "http://dbpedia.org/ontology/danseScore", "http://dbpedia.org/ontology/date", "http://dbpedia.org/ontology/dateAct", "http://dbpedia.org/ontology/dateAgreement", "http://dbpedia.org/ontology/dateBudget", "http://dbpedia.org/ontology/dateClosed", "http://dbpedia.org/ontology/dateCompleted", "http://dbpedia.org/ontology/dateConstruction", "http://dbpedia.org/ontology/dateExtended", "http://dbpedia.org/ontology/dateLastUpdated", "http://dbpedia.org/ontology/dateOfAbandonment", "http://dbpedia.org/ontology/dateOfBurial", "http://dbpedia.org/ontology/dateUnveiled", "http://dbpedia.org/ontology/dateUse", "http://dbpedia.org/ontology/daughter", "http://dbpedia.org/ontology/day", "http://dbpedia.org/ontology/daylightSavingTimeZone", "http://dbpedia.org/ontology/dbnlCodeDutch", "http://dbpedia.org/ontology/dcc", "http://dbpedia.org/ontology/dcc:علم_کتاب_داری_کی_اعشاریہ_درجہ_بندی", "http://dbpedia.org/ontology/deFactoLanguage", "http://dbpedia.org/ontology/deadInFightDate", "http://dbpedia.org/ontology/deadInFightPlace", "http://dbpedia.org/ontology/dean", "http://dbpedia.org/ontology/deanery", "http://dbpedia.org/ontology/deathAge", "http://dbpedia.org/ontology/deathCause", "http://dbpedia.org/ontology/deathDate", "http://dbpedia.org/ontology/deathPlace", "http://dbpedia.org/ontology/deathYear", "http://dbpedia.org/ontology/deaths", "http://dbpedia.org/ontology/debut", "http://dbpedia.org/ontology/debutTeam", "http://dbpedia.org/ontology/debutWork", "http://dbpedia.org/ontology/dec", "http://dbpedia.org/ontology/decay", "http://dbpedia.org/ontology/decideDate", "http://dbpedia.org/ontology/declination", "http://dbpedia.org/ontology/decommissioningDate", "http://dbpedia.org/ontology/decoration", "http://dbpedia.org/ontology/defeat", "http://dbpedia.org/ontology/defeatAsMgr", "http://dbpedia.org/ontology/definition", "http://dbpedia.org/ontology/defunct", "http://dbpedia.org/ontology/delegateMayor", "http://dbpedia.org/ontology/delegation", "http://dbpedia.org/ontology/deliveryDate", "http://dbpedia.org/ontology/deme", "http://dbpedia.org/ontology/demographics", "http://dbpedia.org/ontology/demographicsAsOf", "http://dbpedia.org/ontology/demolitionDate", "http://dbpedia.org/ontology/demolitionYear", "http://dbpedia.org/ontology/demonym", "http://dbpedia.org/ontology/denomination", "http://dbpedia.org/ontology/density", "http://dbpedia.org/ontology/department", "http://dbpedia.org/ontology/departmentCode", "http://dbpedia.org/ontology/departmentPosition", "http://dbpedia.org/ontology/depictionDescription", "http://dbpedia.org/ontology/depth", "http://dbpedia.org/ontology/depthQuote", "http://dbpedia.org/ontology/depths", "http://dbpedia.org/ontology/deputy", "http://dbpedia.org/ontology/derivative", "http://dbpedia.org/ontology/derivedWord", "http://dbpedia.org/ontology/description", "http://dbpedia.org/ontology/designCompany", "http://dbpedia.org/ontology/designer", "http://dbpedia.org/ontology/destination", "http://dbpedia.org/ontology/destructionDate", "http://dbpedia.org/ontology/detectionMethod", "http://dbpedia.org/ontology/detractor", "http://dbpedia.org/ontology/developer", "http://dbpedia.org/ontology/dfE", "http://dbpedia.org/ontology/diameter", "http://dbpedia.org/ontology/differentialDiagnosis", "http://dbpedia.org/ontology/digitalChannel", "http://dbpedia.org/ontology/digitalSubChannel", "http://dbpedia.org/ontology/diocese", "http://dbpedia.org/ontology/diploma", "http://dbpedia.org/ontology/director", "http://dbpedia.org/ontology/disappearanceDate", "http://dbpedia.org/ontology/disbanded", "http://dbpedia.org/ontology/discharge", "http://dbpedia.org/ontology/dischargeAverage", "http://dbpedia.org/ontology/disciple", "http://dbpedia.org/ontology/discipline", "http://dbpedia.org/ontology/discontinued", "http://dbpedia.org/ontology/discovered", "http://dbpedia.org/ontology/discoverer", "http://dbpedia.org/ontology/discovery", "http://dbpedia.org/ontology/disease", "http://dbpedia.org/ontology/diseasesDB", "http://dbpedia.org/ontology/diseasesDb", "http://dbpedia.org/ontology/displacement", "http://dbpedia.org/ontology/dissolutionDate", "http://dbpedia.org/ontology/dissolutionYear", "http://dbpedia.org/ontology/dissolved", "http://dbpedia.org/ontology/dist_ly", "http://dbpedia.org/ontology/dist_pc", "http://dbpedia.org/ontology/distance", "http://dbpedia.org/ontology/distanceLaps", "http://dbpedia.org/ontology/distanceToBelfast", "http://dbpedia.org/ontology/distanceToCapital", "http://dbpedia.org/ontology/distanceToCardiff", "http://dbpedia.org/ontology/distanceToCharingCross", "http://dbpedia.org/ontology/distanceToDouglas", "http://dbpedia.org/ontology/distanceToDublin", "http://dbpedia.org/ontology/distanceToEdinburgh", "http://dbpedia.org/ontology/distanceToLondon", "http://dbpedia.org/ontology/distanceToNearestCity", "http://dbpedia.org/ontology/distanceTraveled", "http://dbpedia.org/ontology/distributingCompany", "http://dbpedia.org/ontology/distributingLabel", "http://dbpedia.org/ontology/distributor", "http://dbpedia.org/ontology/district", "http://dbpedia.org/ontology/division", "http://dbpedia.org/ontology/dockedTime", "http://dbpedia.org/ontology/doctoralAdvisor", "http://dbpedia.org/ontology/doctoralStudent", "http://dbpedia.org/ontology/documentDesignation", "http://dbpedia.org/ontology/documentNumber", "http://dbpedia.org/ontology/domain", "http://dbpedia.org/ontology/dorlandsId", "http://dbpedia.org/ontology/dorlandsPrefix", "http://dbpedia.org/ontology/dorlandsSuffix", "http://dbpedia.org/ontology/dose", "http://dbpedia.org/ontology/dosesFirst", "http://dbpedia.org/ontology/dosesSecond", "http://dbpedia.org/ontology/draft", "http://dbpedia.org/ontology/draftLeague", "http://dbpedia.org/ontology/draftPick", "http://dbpedia.org/ontology/draftPosition", "http://dbpedia.org/ontology/draftRound", "http://dbpedia.org/ontology/draftTeam", "http://dbpedia.org/ontology/draftYear", "http://dbpedia.org/ontology/drainsFrom", "http://dbpedia.org/ontology/drainsTo", "http://dbpedia.org/ontology/drama", "http://dbpedia.org/ontology/dressCode", "http://dbpedia.org/ontology/drug", "http://dbpedia.org/ontology/drugbank", "http://dbpedia.org/ontology/drugs.com", "http://dbpedia.org/ontology/dryCargo", "http://dbpedia.org/ontology/dubber", "http://dbpedia.org/ontology/duration", "http://dbpedia.org/ontology/dutchArtworkCode", "http://dbpedia.org/ontology/dutchCOROPCode", "http://dbpedia.org/ontology/dutchMIPCode", "http://dbpedia.org/ontology/dutchNAIdentifier", "http://dbpedia.org/ontology/dutchPPNCode", "http://dbpedia.org/ontology/dutchRKDCode", "http://dbpedia.org/ontology/dutchWinkelID", "http://dbpedia.org/ontology/dynasty", "http://dbpedia.org/ontology/eMedicineSubject", "http://dbpedia.org/ontology/eMedicineTopic", "http://dbpedia.org/ontology/eTeatrId", "http://dbpedia.org/ontology/eastPlace", "http://dbpedia.org/ontology/ecNumber", "http://dbpedia.org/ontology/editing", "http://dbpedia.org/ontology/editor", "http://dbpedia.org/ontology/editorTitle", "http://dbpedia.org/ontology/education", "http://dbpedia.org/ontology/educationPlace", "http://dbpedia.org/ontology/educationSystem", "http://dbpedia.org/ontology/effectiveRadiatedPower", "http://dbpedia.org/ontology/egafdId", "http://dbpedia.org/ontology/einecsNumber", "http://dbpedia.org/ontology/ekatteCode", "http://dbpedia.org/ontology/electionDate", "http://dbpedia.org/ontology/electionDateLeader", "http://dbpedia.org/ontology/electionMajority", "http://dbpedia.org/ontology/elementAbove", "http://dbpedia.org/ontology/elementBlock", "http://dbpedia.org/ontology/elementGroup", "http://dbpedia.org/ontology/elementPeriod", "http://dbpedia.org/ontology/elevation", "http://dbpedia.org/ontology/elevationQuote", "http://dbpedia.org/ontology/elevatorCount", "http://dbpedia.org/ontology/elo", "http://dbpedia.org/ontology/eloRecord", "http://dbpedia.org/ontology/emblem", "http://dbpedia.org/ontology/emmyAward", "http://dbpedia.org/ontology/employer", "http://dbpedia.org/ontology/employersCelebration", "http://dbpedia.org/ontology/end", "http://dbpedia.org/ontology/endCareer", "http://dbpedia.org/ontology/endDate", "http://dbpedia.org/ontology/endDateTime", "http://dbpedia.org/ontology/endOccupation", "http://dbpedia.org/ontology/endPoint", "http://dbpedia.org/ontology/endReign", "http://dbpedia.org/ontology/endYear", "http://dbpedia.org/ontology/endYearOfInsertion", "http://dbpedia.org/ontology/endYearOfSales", "http://dbpedia.org/ontology/endangeredSince", "http://dbpedia.org/ontology/endingTheme", "http://dbpedia.org/ontology/endowment", "http://dbpedia.org/ontology/enemy", "http://dbpedia.org/ontology/engine", "http://dbpedia.org/ontology/enginePower", "http://dbpedia.org/ontology/engineType", "http://dbpedia.org/ontology/engineer", "http://dbpedia.org/ontology/ensembl", "http://dbpedia.org/ontology/enshrinedDeity", "http://dbpedia.org/ontology/entourage", "http://dbpedia.org/ontology/entrezgene", "http://dbpedia.org/ontology/eparchy", "http://dbpedia.org/ontology/episode", "http://dbpedia.org/ontology/episodeNumber", "http://dbpedia.org/ontology/epoch", "http://dbpedia.org/ontology/eptFinalTable", "http://dbpedia.org/ontology/eptItm", "http://dbpedia.org/ontology/eptTitle", "http://dbpedia.org/ontology/equipment", "http://dbpedia.org/ontology/equity", "http://dbpedia.org/ontology/era", "http://dbpedia.org/ontology/eruption", "http://dbpedia.org/ontology/eruptionYear", "http://dbpedia.org/ontology/escalafon", "http://dbpedia.org/ontology/escapeVelocity", "http://dbpedia.org/ontology/espnId", "http://dbpedia.org/ontology/established", "http://dbpedia.org/ontology/establishment", "http://dbpedia.org/ontology/ethnicGroup", "http://dbpedia.org/ontology/ethnicGroupsInYear", "http://dbpedia.org/ontology/ethnicity", "http://dbpedia.org/ontology/eurobabeIndexId", "http://dbpedia.org/ontology/europeanAffiliation", "http://dbpedia.org/ontology/europeanChampionship", "http://dbpedia.org/ontology/europeanParliamentGroup", "http://dbpedia.org/ontology/europeanUnionEntranceDate", "http://dbpedia.org/ontology/event", "http://dbpedia.org/ontology/eventDate", "http://dbpedia.org/ontology/eventDescription", "http://dbpedia.org/ontology/executiveHeadteacher", "http://dbpedia.org/ontology/executiveProducer", "http://dbpedia.org/ontology/exhibition", "http://dbpedia.org/ontology/existence", "http://dbpedia.org/ontology/expedition", "http://dbpedia.org/ontology/explorer", "http://dbpedia.org/ontology/externalOrnament", "http://dbpedia.org/ontology/extinctionDate", "http://dbpedia.org/ontology/extinctionYear", "http://dbpedia.org/ontology/eyeColor", "http://dbpedia.org/ontology/eyeColour", "http://dbpedia.org/ontology/eyes", "http://dbpedia.org/ontology/faaLocationIdentifier", "http://dbpedia.org/ontology/facilityId", "http://dbpedia.org/ontology/facultySize", "http://dbpedia.org/ontology/failedLaunches", "http://dbpedia.org/ontology/family", "http://dbpedia.org/ontology/familyMember", "http://dbpedia.org/ontology/fansgroup", "http://dbpedia.org/ontology/fareZone", "http://dbpedia.org/ontology/fastestDriver", "http://dbpedia.org/ontology/fastestDriverCountry", "http://dbpedia.org/ontology/fastestDriverTeam", "http://dbpedia.org/ontology/fastestLap", "http://dbpedia.org/ontology/fat", "http://dbpedia.org/ontology/fatalityRate", "http://dbpedia.org/ontology/fate", "http://dbpedia.org/ontology/father", "http://dbpedia.org/ontology/fauna", "http://dbpedia.org/ontology/fc", "http://dbpedia.org/ontology/fcRuns", "http://dbpedia.org/ontology/fdaUniiCode", "http://dbpedia.org/ontology/feastDay", "http://dbpedia.org/ontology/feat", "http://dbpedia.org/ontology/feature", "http://dbpedia.org/ontology/features", "http://dbpedia.org/ontology/featuring", "http://dbpedia.org/ontology/fedCup", "http://dbpedia.org/ontology/federalState", "http://dbpedia.org/ontology/federation", "http://dbpedia.org/ontology/fees", "http://dbpedia.org/ontology/fibahof", "http://dbpedia.org/ontology/field", "http://dbpedia.org/ontology/fight", "http://dbpedia.org/ontology/fighter", "http://dbpedia.org/ontology/fileExtension", "http://dbpedia.org/ontology/fileSize", "http://dbpedia.org/ontology/fileURL", "http://dbpedia.org/ontology/filename", "http://dbpedia.org/ontology/fillingStation", "http://dbpedia.org/ontology/film", "http://dbpedia.org/ontology/filmAudioType", "http://dbpedia.org/ontology/filmColourType", "http://dbpedia.org/ontology/filmFareAward", "http://dbpedia.org/ontology/filmNumber", "http://dbpedia.org/ontology/filmPolskiId", "http://dbpedia.org/ontology/filmRuntime", "http://dbpedia.org/ontology/filmVersion", "http://dbpedia.org/ontology/finalFlight", "http://dbpedia.org/ontology/finalLost", "http://dbpedia.org/ontology/finalLostDouble", "http://dbpedia.org/ontology/finalLostSingle", "http://dbpedia.org/ontology/finalLostTeam", "http://dbpedia.org/ontology/finalPublicationDate", "http://dbpedia.org/ontology/finalPublicationYear", "http://dbpedia.org/ontology/fipsCode", "http://dbpedia.org/ontology/firstAirDate", "http://dbpedia.org/ontology/firstAppearance", "http://dbpedia.org/ontology/firstAscent", "http://dbpedia.org/ontology/firstAscentPerson", "http://dbpedia.org/ontology/firstAscentYear", "http://dbpedia.org/ontology/firstBroadcast", "http://dbpedia.org/ontology/firstDriver", "http://dbpedia.org/ontology/firstDriverCountry", "http://dbpedia.org/ontology/firstDriverTeam", "http://dbpedia.org/ontology/firstFlight", "http://dbpedia.org/ontology/firstFlightEndDate", "http://dbpedia.org/ontology/firstFlightStartDate", "http://dbpedia.org/ontology/firstGame", "http://dbpedia.org/ontology/firstLaunch", "http://dbpedia.org/ontology/firstLaunchDate", "http://dbpedia.org/ontology/firstLaunchRocket", "http://dbpedia.org/ontology/firstLeader", "http://dbpedia.org/ontology/firstMention", "http://dbpedia.org/ontology/firstOlympicEvent", "http://dbpedia.org/ontology/firstOwner", "http://dbpedia.org/ontology/firstPlace", "http://dbpedia.org/ontology/firstPopularVote", "http://dbpedia.org/ontology/firstProMatch", "http://dbpedia.org/ontology/firstPublicationDate", "http://dbpedia.org/ontology/firstPublicationYear", "http://dbpedia.org/ontology/firstPublisher", "http://dbpedia.org/ontology/firstRace", "http://dbpedia.org/ontology/firstWin", "http://dbpedia.org/ontology/firstWinner", "http://dbpedia.org/ontology/flag", "http://dbpedia.org/ontology/flagBearer", "http://dbpedia.org/ontology/flagBorder", "http://dbpedia.org/ontology/flagCaption", "http://dbpedia.org/ontology/flagLink", "http://dbpedia.org/ontology/flagSize", "http://dbpedia.org/ontology/flashPoint", "http://dbpedia.org/ontology/floodingDate", "http://dbpedia.org/ontology/floorArea", "http://dbpedia.org/ontology/floorCount", "http://dbpedia.org/ontology/flora", "http://dbpedia.org/ontology/flower", "http://dbpedia.org/ontology/flyingHours", "http://dbpedia.org/ontology/foalDate", "http://dbpedia.org/ontology/focus", "http://dbpedia.org/ontology/followedBy", "http://dbpedia.org/ontology/followingEvent", "http://dbpedia.org/ontology/follows", "http://dbpedia.org/ontology/foot", "http://dbpedia.org/ontology/footedness", "http://dbpedia.org/ontology/forces", "http://dbpedia.org/ontology/foresterDistrict", "http://dbpedia.org/ontology/format", "http://dbpedia.org/ontology/formationDate", "http://dbpedia.org/ontology/formationYear", "http://dbpedia.org/ontology/formerBandMember", "http://dbpedia.org/ontology/formerBroadcastNetwork", "http://dbpedia.org/ontology/formerCallsign", "http://dbpedia.org/ontology/formerChannel", "http://dbpedia.org/ontology/formerChoreographer", "http://dbpedia.org/ontology/formerCoach", "http://dbpedia.org/ontology/formerHighschool", "http://dbpedia.org/ontology/formerName", "http://dbpedia.org/ontology/formerPartner", "http://dbpedia.org/ontology/formerTeam", "http://dbpedia.org/ontology/formula", "http://dbpedia.org/ontology/fossil", "http://dbpedia.org/ontology/foundation", "http://dbpedia.org/ontology/foundationPlace", "http://dbpedia.org/ontology/foundedBy", "http://dbpedia.org/ontology/founder", "http://dbpedia.org/ontology/foundingDate", "http://dbpedia.org/ontology/foundingYear", "http://dbpedia.org/ontology/fourthCommander", "http://dbpedia.org/ontology/frazioni", "http://dbpedia.org/ontology/free", "http://dbpedia.org/ontology/freeDanseScore", "http://dbpedia.org/ontology/freeFlightTime", "http://dbpedia.org/ontology/freeLabel", "http://dbpedia.org/ontology/freeProgCompetition", "http://dbpedia.org/ontology/freeProgScore", "http://dbpedia.org/ontology/freeScoreCompetition", "http://dbpedia.org/ontology/frequency", "http://dbpedia.org/ontology/frequencyOfPublication", "http://dbpedia.org/ontology/frequentlyUpdated", "http://dbpedia.org/ontology/friend", "http://dbpedia.org/ontology/frontierLength", "http://dbpedia.org/ontology/frozen", "http://dbpedia.org/ontology/fuel", "http://dbpedia.org/ontology/fuelCapacity", "http://dbpedia.org/ontology/fuelConsumption", "http://dbpedia.org/ontology/fuelSystem", "http://dbpedia.org/ontology/fuelType", "http://dbpedia.org/ontology/fuelTypeName", "http://dbpedia.org/ontology/fullCompetition", "http://dbpedia.org/ontology/fullScore", "http://dbpedia.org/ontology/functionEndDate", "http://dbpedia.org/ontology/functionEndYear", "http://dbpedia.org/ontology/functionStartDate", "http://dbpedia.org/ontology/functionStartYear", "http://dbpedia.org/ontology/fundedBy", "http://dbpedia.org/ontology/galicianSpeakersDate", "http://dbpedia.org/ontology/galicianSpeakersPercentage", "http://dbpedia.org/ontology/galleryItem", "http://dbpedia.org/ontology/gameArtist", "http://dbpedia.org/ontology/gameEngine", "http://dbpedia.org/ontology/gameModus", "http://dbpedia.org/ontology/games", "http://dbpedia.org/ontology/garrison", "http://dbpedia.org/ontology/gasChambers", "http://dbpedia.org/ontology/gaudiAward", "http://dbpedia.org/ontology/gdpPerCapita", "http://dbpedia.org/ontology/geminiAward", "http://dbpedia.org/ontology/gender", "http://dbpedia.org/ontology/geneLocation", "http://dbpedia.org/ontology/geneLocationEnd", "http://dbpedia.org/ontology/geneLocationStart", "http://dbpedia.org/ontology/geneReviewsId", "http://dbpedia.org/ontology/geneReviewsName", "http://dbpedia.org/ontology/generalCouncil", "http://dbpedia.org/ontology/generalManager", "http://dbpedia.org/ontology/generationUnits", "http://dbpedia.org/ontology/genomeDB", "http://dbpedia.org/ontology/genre", "http://dbpedia.org/ontology/genus", "http://dbpedia.org/ontology/geolocDepartment", "http://dbpedia.org/ontology/geolocDual", "http://dbpedia.org/ontology/geologicPeriod", "http://dbpedia.org/ontology/geology", "http://dbpedia.org/ontology/giniCoefficient", "http://dbpedia.org/ontology/giniCoefficientAsOf", "http://dbpedia.org/ontology/giniCoefficientCategory", "http://dbpedia.org/ontology/giniCoefficientRanking", "http://dbpedia.org/ontology/glycemicIndex", "http://dbpedia.org/ontology/gnisCode", "http://dbpedia.org/ontology/gnl", "http://dbpedia.org/ontology/goalsInLeague", "http://dbpedia.org/ontology/goalsInNationalTeam", "http://dbpedia.org/ontology/goldMedalDouble", "http://dbpedia.org/ontology/goldMedalMixed", "http://dbpedia.org/ontology/goldMedalSingle", "http://dbpedia.org/ontology/goldMedalist", "http://dbpedia.org/ontology/goldenCalfAward", "http://dbpedia.org/ontology/goldenGlobeAward", "http://dbpedia.org/ontology/goldenRaspberryAward", "http://dbpedia.org/ontology/governingBody", "http://dbpedia.org/ontology/government", "http://dbpedia.org/ontology/governmentCountry", "http://dbpedia.org/ontology/governmentElevation", "http://dbpedia.org/ontology/governmentMountain", "http://dbpedia.org/ontology/governmentPlace", "http://dbpedia.org/ontology/governmentPosition", "http://dbpedia.org/ontology/governmentRegion", "http://dbpedia.org/ontology/governmentType", "http://dbpedia.org/ontology/governor", "http://dbpedia.org/ontology/governorGeneral", "http://dbpedia.org/ontology/governorate", "http://dbpedia.org/ontology/goyaAward", "http://dbpedia.org/ontology/gradName", "http://dbpedia.org/ontology/gradNum", "http://dbpedia.org/ontology/grades", "http://dbpedia.org/ontology/grammyAward", "http://dbpedia.org/ontology/grandsire", "http://dbpedia.org/ontology/grave", "http://dbpedia.org/ontology/grayPage", "http://dbpedia.org/ontology/graySubject", "http://dbpedia.org/ontology/greekName", "http://dbpedia.org/ontology/greenLongDistancePisteNumber", "http://dbpedia.org/ontology/greenSkiPisteNumber", "http://dbpedia.org/ontology/gridReference", "http://dbpedia.org/ontology/grindingCapability", "http://dbpedia.org/ontology/gross", "http://dbpedia.org/ontology/grossDomesticProduct", "http://dbpedia.org/ontology/grossDomesticProductAsOf", "http://dbpedia.org/ontology/grossDomesticProductNominalPerCapita", "http://dbpedia.org/ontology/grossDomesticProductPerPeople", "http://dbpedia.org/ontology/grossDomesticProductPurchasingPowerParityPerCapita", "http://dbpedia.org/ontology/grossDomesticProductRank", "http://dbpedia.org/ontology/ground", "http://dbpedia.org/ontology/groundsForLiquidation", "http://dbpedia.org/ontology/groupCommemorated", "http://dbpedia.org/ontology/growingGrape", "http://dbpedia.org/ontology/guest", "http://dbpedia.org/ontology/gun", "http://dbpedia.org/ontology/gymApparatus", "http://dbpedia.org/ontology/hairColor", "http://dbpedia.org/ontology/hairColour", "http://dbpedia.org/ontology/hairs", "http://dbpedia.org/ontology/hallOfFame", "http://dbpedia.org/ontology/hand", "http://dbpedia.org/ontology/handedness", "http://dbpedia.org/ontology/handisport", "http://dbpedia.org/ontology/hasAbsorbedMunicipality", "http://dbpedia.org/ontology/hasAnnotation", "http://dbpedia.org/ontology/hasChannel", "http://dbpedia.org/ontology/hasInput", "http://dbpedia.org/ontology/hasInsidePlace", "http://dbpedia.org/ontology/hasJunctionWith", "http://dbpedia.org/ontology/hasKMLData", "http://dbpedia.org/ontology/hasNaturalBust", "http://dbpedia.org/ontology/hasOutsidePlace", "http://dbpedia.org/ontology/hasSurfaceForm", "http://dbpedia.org/ontology/hasVariant", "http://dbpedia.org/ontology/head", "http://dbpedia.org/ontology/headAlloy", "http://dbpedia.org/ontology/headChef", "http://dbpedia.org/ontology/headLabel", "http://dbpedia.org/ontology/headOfFamily", "http://dbpedia.org/ontology/headquarter", "http://dbpedia.org/ontology/headteacher", "http://dbpedia.org/ontology/height", "http://dbpedia.org/ontology/heightAboveAverageTerrain", "http://dbpedia.org/ontology/heightAgainst", "http://dbpedia.org/ontology/heightAttack", "http://dbpedia.org/ontology/heir", "http://dbpedia.org/ontology/heisman", "http://dbpedia.org/ontology/heritageRegister", "http://dbpedia.org/ontology/hgncid", "http://dbpedia.org/ontology/highest", "http://dbpedia.org/ontology/highestAltitude", "http://dbpedia.org/ontology/highestBreak", "http://dbpedia.org/ontology/highestBuildingInYear", "http://dbpedia.org/ontology/highestMountain", "http://dbpedia.org/ontology/highestPlace", "http://dbpedia.org/ontology/highestPoint", "http://dbpedia.org/ontology/highestPointIsland", "http://dbpedia.org/ontology/highestPosition", "http://dbpedia.org/ontology/highestRank", "http://dbpedia.org/ontology/highestRegion", "http://dbpedia.org/ontology/highestState", "http://dbpedia.org/ontology/highschool", "http://dbpedia.org/ontology/highwaySystem", "http://dbpedia.org/ontology/hipSize", "http://dbpedia.org/ontology/historicalMap", "http://dbpedia.org/ontology/historicalName", "http://dbpedia.org/ontology/historicalRegion", "http://dbpedia.org/ontology/hof", "http://dbpedia.org/ontology/homage", "http://dbpedia.org/ontology/homeArena", "http://dbpedia.org/ontology/homeColourHexCode", "http://dbpedia.org/ontology/homeStadium", "http://dbpedia.org/ontology/homeport", "http://dbpedia.org/ontology/hometown", "http://dbpedia.org/ontology/honours", "http://dbpedia.org/ontology/hopmanCup", "http://dbpedia.org/ontology/horseRidingDiscipline", "http://dbpedia.org/ontology/house", "http://dbpedia.org/ontology/hraState", "http://dbpedia.org/ontology/hsvCoordinateHue", "http://dbpedia.org/ontology/hsvCoordinateSaturation", "http://dbpedia.org/ontology/hsvCoordinateValue", "http://dbpedia.org/ontology/hubAirport", "http://dbpedia.org/ontology/humanDevelopmentIndex", "http://dbpedia.org/ontology/humanDevelopmentIndexAsOf", "http://dbpedia.org/ontology/humanDevelopmentIndexRank", "http://dbpedia.org/ontology/humanDevelopmentIndexRankingCategory", "http://dbpedia.org/ontology/hybrid", "http://dbpedia.org/ontology/iafdId", "http://dbpedia.org/ontology/iataAirlineCode", "http://dbpedia.org/ontology/iataLocationIdentifier", "http://dbpedia.org/ontology/ibdbId", "http://dbpedia.org/ontology/icaoAirlineCode", "http://dbpedia.org/ontology/icaoLocationIdentifier", "http://dbpedia.org/ontology/icd1", "http://dbpedia.org/ontology/icd10", "http://dbpedia.org/ontology/icd9", "http://dbpedia.org/ontology/icdo", "http://dbpedia.org/ontology/iconographicAttributes", "http://dbpedia.org/ontology/id", "http://dbpedia.org/ontology/idAllocine", "http://dbpedia.org/ontology/idNumber", "http://dbpedia.org/ontology/identificationSymbol", "http://dbpedia.org/ontology/ideology", "http://dbpedia.org/ontology/iftaAward", "http://dbpedia.org/ontology/iihfHof", "http://dbpedia.org/ontology/illiteracy", "http://dbpedia.org/ontology/illustrator", "http://dbpedia.org/ontology/imageSize", "http://dbpedia.org/ontology/imdbId", "http://dbpedia.org/ontology/impactFactor", "http://dbpedia.org/ontology/impactFactorAsOf", "http://dbpedia.org/ontology/importantStation", "http://dbpedia.org/ontology/imposedDanseCompetition", "http://dbpedia.org/ontology/imposedDanseScore", "http://dbpedia.org/ontology/inCemetery", "http://dbpedia.org/ontology/inchi", "http://dbpedia.org/ontology/inclination", "http://dbpedia.org/ontology/income", "http://dbpedia.org/ontology/incumbent", "http://dbpedia.org/ontology/individualisedGnd", "http://dbpedia.org/ontology/individualisedPnd", "http://dbpedia.org/ontology/industry", "http://dbpedia.org/ontology/infantMortality", "http://dbpedia.org/ontology/inflow", "http://dbpedia.org/ontology/influenced", "http://dbpedia.org/ontology/influencedBy", "http://dbpedia.org/ontology/information", "http://dbpedia.org/ontology/informationName", "http://dbpedia.org/ontology/ingredient", "http://dbpedia.org/ontology/ingredientName", "http://dbpedia.org/ontology/initiallyUsedFor", "http://dbpedia.org/ontology/inn", "http://dbpedia.org/ontology/innervates", "http://dbpedia.org/ontology/inscription", "http://dbpedia.org/ontology/inseeCode", "http://dbpedia.org/ontology/installedCapacity", "http://dbpedia.org/ontology/institution", "http://dbpedia.org/ontology/instrument", "http://dbpedia.org/ontology/intercommunality", "http://dbpedia.org/ontology/interest", "http://dbpedia.org/ontology/internationalAffiliation", "http://dbpedia.org/ontology/internationalPhonePrefix", "http://dbpedia.org/ontology/internationalPhonePrefixLabel", "http://dbpedia.org/ontology/internationally", "http://dbpedia.org/ontology/introduced", "http://dbpedia.org/ontology/introductionDate", "http://dbpedia.org/ontology/iobdbId", "http://dbpedia.org/ontology/isCityState", "http://dbpedia.org/ontology/isHandicappedAccessible", "http://dbpedia.org/ontology/isMinorRevision", "http://dbpedia.org/ontology/isPartOf", "http://dbpedia.org/ontology/isPartOfAnatomicalStructure", "http://dbpedia.org/ontology/isPartOfMilitaryConflict", "http://dbpedia.org/ontology/isPartOfName", "http://dbpedia.org/ontology/isPartOfWineRegion", "http://dbpedia.org/ontology/isPeerReviewed", "http://dbpedia.org/ontology/isRouteStop", "http://dbpedia.org/ontology/isbn", "http://dbpedia.org/ontology/isil", "http://dbpedia.org/ontology/island", "http://dbpedia.org/ontology/isniId", "http://dbpedia.org/ontology/iso31661Code", "http://dbpedia.org/ontology/iso6391Code", "http://dbpedia.org/ontology/iso6392Code", "http://dbpedia.org/ontology/iso6393Code", "http://dbpedia.org/ontology/isoCode", "http://dbpedia.org/ontology/isoCodeRegion", "http://dbpedia.org/ontology/issDockings", "http://dbpedia.org/ontology/issn", "http://dbpedia.org/ontology/ist", "http://dbpedia.org/ontology/istat", "http://dbpedia.org/ontology/italicTitle", "http://dbpedia.org/ontology/ithfDate", "http://dbpedia.org/ontology/iucnCategory", "http://dbpedia.org/ontology/iupacName", "http://dbpedia.org/ontology/jockey", "http://dbpedia.org/ontology/jointCommunity", "http://dbpedia.org/ontology/jstor", "http://dbpedia.org/ontology/judge", "http://dbpedia.org/ontology/juniorSeason", "http://dbpedia.org/ontology/juniorTeam", "http://dbpedia.org/ontology/juniorYearsEndYear", "http://dbpedia.org/ontology/juniorYearsStartYear", "http://dbpedia.org/ontology/jureLanguage", "http://dbpedia.org/ontology/jurisdiction", "http://dbpedia.org/ontology/jutsu", "http://dbpedia.org/ontology/kegg", "http://dbpedia.org/ontology/keyPerson", "http://dbpedia.org/ontology/khlDraft", "http://dbpedia.org/ontology/khlDraftTeam", "http://dbpedia.org/ontology/khlDraftYear", "http://dbpedia.org/ontology/killedBy", "http://dbpedia.org/ontology/kinOfLanguage", "http://dbpedia.org/ontology/kindOfCoordinate", "http://dbpedia.org/ontology/kindOfCriminal", "http://dbpedia.org/ontology/kindOfCriminalAction", "http://dbpedia.org/ontology/kindOfRock", "http://dbpedia.org/ontology/kingdom", "http://dbpedia.org/ontology/knownFor", "http://dbpedia.org/ontology/ko", "http://dbpedia.org/ontology/lahHof", "http://dbpedia.org/ontology/lake", "http://dbpedia.org/ontology/land", "http://dbpedia.org/ontology/landArea", "http://dbpedia.org/ontology/landPercentage", "http://dbpedia.org/ontology/landRegistryCode", "http://dbpedia.org/ontology/landeshauptmann", "http://dbpedia.org/ontology/landingDate", "http://dbpedia.org/ontology/landingSite", "http://dbpedia.org/ontology/landingVehicle", "http://dbpedia.org/ontology/landskap", "http://dbpedia.org/ontology/landtag", "http://dbpedia.org/ontology/landtagMandate", "http://dbpedia.org/ontology/language", "http://dbpedia.org/ontology/languageCode", "http://dbpedia.org/ontology/languageFamily", "http://dbpedia.org/ontology/languageRegulator", "http://dbpedia.org/ontology/largestCity", "http://dbpedia.org/ontology/largestMetro", "http://dbpedia.org/ontology/largestSettlement", "http://dbpedia.org/ontology/largestWin", "http://dbpedia.org/ontology/lastAirDate", "http://dbpedia.org/ontology/lastAppearance", "http://dbpedia.org/ontology/lastElectionDate", "http://dbpedia.org/ontology/lastFamilyMember", "http://dbpedia.org/ontology/lastFlight", "http://dbpedia.org/ontology/lastFlightEndDate", "http://dbpedia.org/ontology/lastFlightStartDate", "http://dbpedia.org/ontology/lastLaunch", "http://dbpedia.org/ontology/lastLaunchDate", "http://dbpedia.org/ontology/lastLaunchRocket", "http://dbpedia.org/ontology/lastPosition", "http://dbpedia.org/ontology/lastProMatch", "http://dbpedia.org/ontology/lastPublicationDate", "http://dbpedia.org/ontology/lastRace", "http://dbpedia.org/ontology/lastSeason", "http://dbpedia.org/ontology/lastWin", "http://dbpedia.org/ontology/laterality", "http://dbpedia.org/ontology/latestElection", "http://dbpedia.org/ontology/latestPreviewDate", "http://dbpedia.org/ontology/latestPreviewVersion", "http://dbpedia.org/ontology/latestReleaseDate", "http://dbpedia.org/ontology/latestReleaseVersion", "http://dbpedia.org/ontology/latinName", "http://dbpedia.org/ontology/launch", "http://dbpedia.org/ontology/launchDate", "http://dbpedia.org/ontology/launchPad", "http://dbpedia.org/ontology/launchSite", "http://dbpedia.org/ontology/launchVehicle", "http://dbpedia.org/ontology/launches", "http://dbpedia.org/ontology/laurenceOlivierAward", "http://dbpedia.org/ontology/lawCountry", "http://dbpedia.org/ontology/layingDown", "http://dbpedia.org/ontology/layout", "http://dbpedia.org/ontology/lcc", "http://dbpedia.org/ontology/lccn", "http://dbpedia.org/ontology/lccnId", "http://dbpedia.org/ontology/lchfDraft", "http://dbpedia.org/ontology/lchfDraftTeam", "http://dbpedia.org/ontology/lchfDraftYear", "http://dbpedia.org/ontology/leadTeam", "http://dbpedia.org/ontology/leadYear", "http://dbpedia.org/ontology/leader", "http://dbpedia.org/ontology/leaderFunction", "http://dbpedia.org/ontology/leaderName", "http://dbpedia.org/ontology/leaderParty", "http://dbpedia.org/ontology/leaderTitle", "http://dbpedia.org/ontology/leadership", "http://dbpedia.org/ontology/league", "http://dbpedia.org/ontology/leagueManager", "http://dbpedia.org/ontology/leftChild", "http://dbpedia.org/ontology/leftTributary", "http://dbpedia.org/ontology/legalArrondissement", "http://dbpedia.org/ontology/legalArticle", "http://dbpedia.org/ontology/legalForm", "http://dbpedia.org/ontology/legislativePeriodName", "http://dbpedia.org/ontology/legislature", "http://dbpedia.org/ontology/length", "http://dbpedia.org/ontology/lengthQuote", "http://dbpedia.org/ontology/lengthReference", "http://dbpedia.org/ontology/lethalOnChickens", "http://dbpedia.org/ontology/lethalOnMice", "http://dbpedia.org/ontology/lethalOnRabbits", "http://dbpedia.org/ontology/lethalOnRats", "http://dbpedia.org/ontology/liberationDate", "http://dbpedia.org/ontology/libretto", "http://dbpedia.org/ontology/licenceLetter", "http://dbpedia.org/ontology/licenceNumber", "http://dbpedia.org/ontology/licenceNumberLabel", "http://dbpedia.org/ontology/license", "http://dbpedia.org/ontology/licensee", "http://dbpedia.org/ontology/lieutenancy", "http://dbpedia.org/ontology/lieutenancyArea", "http://dbpedia.org/ontology/lieutenant", "http://dbpedia.org/ontology/lifeExpectancy", "http://dbpedia.org/ontology/limit", "http://dbpedia.org/ontology/lineLength", "http://dbpedia.org/ontology/linguisticsTradition", "http://dbpedia.org/ontology/linkedSpace", "http://dbpedia.org/ontology/linkedTo", "http://dbpedia.org/ontology/listItemOf", "http://dbpedia.org/ontology/literaryGenre", "http://dbpedia.org/ontology/littlePoolRecord", "http://dbpedia.org/ontology/livingPlace", "http://dbpedia.org/ontology/loadLimit", "http://dbpedia.org/ontology/localAuthority", "http://dbpedia.org/ontology/localPhonePrefix", "http://dbpedia.org/ontology/locality", "http://dbpedia.org/ontology/localization", "http://dbpedia.org/ontology/localizationThumbnail", "http://dbpedia.org/ontology/localizationThumbnailCaption", "http://dbpedia.org/ontology/locatedInArea", "http://dbpedia.org/ontology/location", "http://dbpedia.org/ontology/locationCity", "http://dbpedia.org/ontology/locationCountry", "http://dbpedia.org/ontology/locationIdentifier", "http://dbpedia.org/ontology/locationName", "http://dbpedia.org/ontology/locomotive", "http://dbpedia.org/ontology/locusSupplementaryData", "http://dbpedia.org/ontology/logo", "http://dbpedia.org/ontology/longDistancePisteKilometre", "http://dbpedia.org/ontology/longDistancePisteNumber", "http://dbpedia.org/ontology/longName", "http://dbpedia.org/ontology/longtype", "http://dbpedia.org/ontology/lounge", "http://dbpedia.org/ontology/lowerAge", "http://dbpedia.org/ontology/lowerEarthOrbitPayload", "http://dbpedia.org/ontology/lowest", "http://dbpedia.org/ontology/lowestAltitude", "http://dbpedia.org/ontology/lowestMountain", "http://dbpedia.org/ontology/lowestPlace", "http://dbpedia.org/ontology/lowestPoint", "http://dbpedia.org/ontology/lowestPosition", "http://dbpedia.org/ontology/lowestRegion", "http://dbpedia.org/ontology/lowestState", "http://dbpedia.org/ontology/lunarEvaTime", "http://dbpedia.org/ontology/lunarLandingSite", "http://dbpedia.org/ontology/lunarModule", "http://dbpedia.org/ontology/lunarOrbitTime", "http://dbpedia.org/ontology/lunarRover", "http://dbpedia.org/ontology/lunarSampleMass", "http://dbpedia.org/ontology/lunarSurfaceTime", "http://dbpedia.org/ontology/lymph", "http://dbpedia.org/ontology/lyrics", "http://dbpedia.org/ontology/magazine", "http://dbpedia.org/ontology/maidenFlight", "http://dbpedia.org/ontology/maidenFlightRocket", "http://dbpedia.org/ontology/maidenVoyage", "http://dbpedia.org/ontology/mainArticleForCategory", "http://dbpedia.org/ontology/mainArtist", "http://dbpedia.org/ontology/mainBuilding", "http://dbpedia.org/ontology/mainCharacter", "http://dbpedia.org/ontology/mainDomain", "http://dbpedia.org/ontology/mainFamilyBranch", "http://dbpedia.org/ontology/mainInterest", "http://dbpedia.org/ontology/mainIsland", "http://dbpedia.org/ontology/mainIslands", "http://dbpedia.org/ontology/mainOrgan", "http://dbpedia.org/ontology/mainspan", "http://dbpedia.org/ontology/maintainedBy", "http://dbpedia.org/ontology/majorIsland", "http://dbpedia.org/ontology/majorShrine", "http://dbpedia.org/ontology/majorityFloorLeader", "http://dbpedia.org/ontology/majorityLeader", "http://dbpedia.org/ontology/makeupArtist", "http://dbpedia.org/ontology/management", "http://dbpedia.org/ontology/managementCountry", "http://dbpedia.org/ontology/managementElevation", "http://dbpedia.org/ontology/managementMountain", "http://dbpedia.org/ontology/managementPlace", "http://dbpedia.org/ontology/managementPosition", "http://dbpedia.org/ontology/managementRegion", "http://dbpedia.org/ontology/manager", "http://dbpedia.org/ontology/managerClub", "http://dbpedia.org/ontology/managerSeason", "http://dbpedia.org/ontology/managerTitle", "http://dbpedia.org/ontology/managerYears", "http://dbpedia.org/ontology/managerYearsEndYear", "http://dbpedia.org/ontology/managerYearsStartYear", "http://dbpedia.org/ontology/managingEditor", "http://dbpedia.org/ontology/mandate", "http://dbpedia.org/ontology/manufactory", "http://dbpedia.org/ontology/manufacturer", "http://dbpedia.org/ontology/map", "http://dbpedia.org/ontology/mapCaption", "http://dbpedia.org/ontology/mapDescription", "http://dbpedia.org/ontology/march", "http://dbpedia.org/ontology/marketCapitalisation", "http://dbpedia.org/ontology/mascot", "http://dbpedia.org/ontology/mass", "http://dbpedia.org/ontology/massif", "http://dbpedia.org/ontology/mastersWins", "http://dbpedia.org/ontology/matchPoint", "http://dbpedia.org/ontology/material", "http://dbpedia.org/ontology/max", "http://dbpedia.org/ontology/maxAbsoluteMagnitude", "http://dbpedia.org/ontology/maxApparentMagnitude", "http://dbpedia.org/ontology/maxTime", "http://dbpedia.org/ontology/maximumArea", "http://dbpedia.org/ontology/maximumAreaQuote", "http://dbpedia.org/ontology/maximumBoatBeam", "http://dbpedia.org/ontology/maximumBoatLength", "http://dbpedia.org/ontology/maximumDepth", "http://dbpedia.org/ontology/maximumDepthQuote", "http://dbpedia.org/ontology/maximumDischarge", "http://dbpedia.org/ontology/maximumElevation", "http://dbpedia.org/ontology/maximumInclination", "http://dbpedia.org/ontology/maximumTemperature", "http://dbpedia.org/ontology/mayor", "http://dbpedia.org/ontology/mayorArticle", "http://dbpedia.org/ontology/mayorCouncillor", "http://dbpedia.org/ontology/mayorFunction", "http://dbpedia.org/ontology/mayorMandate", "http://dbpedia.org/ontology/mayorTitle", "http://dbpedia.org/ontology/mbaId", "http://dbpedia.org/ontology/meanRadius", "http://dbpedia.org/ontology/meanTemperature", "http://dbpedia.org/ontology/meaning", "http://dbpedia.org/ontology/measurements", "http://dbpedia.org/ontology/medalist", "http://dbpedia.org/ontology/media", "http://dbpedia.org/ontology/mediaItem", "http://dbpedia.org/ontology/mediaType", "http://dbpedia.org/ontology/medicalCause", "http://dbpedia.org/ontology/medicalDiagnosis", "http://dbpedia.org/ontology/medicalSpecialty", "http://dbpedia.org/ontology/medication", "http://dbpedia.org/ontology/medlinePlus", "http://dbpedia.org/ontology/meetingBuilding", "http://dbpedia.org/ontology/meetingCity", "http://dbpedia.org/ontology/meetingRoad", "http://dbpedia.org/ontology/meltingPoint", "http://dbpedia.org/ontology/member", "http://dbpedia.org/ontology/memberOfParliament", "http://dbpedia.org/ontology/membership", "http://dbpedia.org/ontology/membershipAsOf", "http://dbpedia.org/ontology/mentor", "http://dbpedia.org/ontology/mergedSettlement", "http://dbpedia.org/ontology/mergedWith", "http://dbpedia.org/ontology/mergerDate", "http://dbpedia.org/ontology/meshId", "http://dbpedia.org/ontology/meshName", "http://dbpedia.org/ontology/meshNumber", "http://dbpedia.org/ontology/messierName", "http://dbpedia.org/ontology/metropolitanBorough", "http://dbpedia.org/ontology/mgiid", "http://dbpedia.org/ontology/militaryBranch", "http://dbpedia.org/ontology/militaryCommand", "http://dbpedia.org/ontology/militaryFunction", "http://dbpedia.org/ontology/militaryGovernment", "http://dbpedia.org/ontology/militaryRank", "http://dbpedia.org/ontology/militaryService", "http://dbpedia.org/ontology/militaryUnit", "http://dbpedia.org/ontology/militaryUnitSize", "http://dbpedia.org/ontology/millSpan", "http://dbpedia.org/ontology/millType", "http://dbpedia.org/ontology/millsCodeBE", "http://dbpedia.org/ontology/millsCodeDutch", "http://dbpedia.org/ontology/millsCodeNL", "http://dbpedia.org/ontology/millsCodeNLVerdwenen", "http://dbpedia.org/ontology/millsCodeNLWindmotoren", "http://dbpedia.org/ontology/min", "http://dbpedia.org/ontology/minTime", "http://dbpedia.org/ontology/minimumArea", "http://dbpedia.org/ontology/minimumAreaQuote", "http://dbpedia.org/ontology/minimumDischarge", "http://dbpedia.org/ontology/minimumElevation", "http://dbpedia.org/ontology/minimumInclination", "http://dbpedia.org/ontology/minimumTemperature", "http://dbpedia.org/ontology/minister", "http://dbpedia.org/ontology/minority", "http://dbpedia.org/ontology/minorityFloorLeader", "http://dbpedia.org/ontology/minorityLeader", "http://dbpedia.org/ontology/mirDockings", "http://dbpedia.org/ontology/mission", "http://dbpedia.org/ontology/missionDuration", "http://dbpedia.org/ontology/missions", "http://dbpedia.org/ontology/model", "http://dbpedia.org/ontology/modelEndDate", "http://dbpedia.org/ontology/modelEndYear", "http://dbpedia.org/ontology/modelLineVehicle", "http://dbpedia.org/ontology/modelStartDate", "http://dbpedia.org/ontology/modelStartYear", "http://dbpedia.org/ontology/moderna", "http://dbpedia.org/ontology/modernaCumul", "http://dbpedia.org/ontology/molarMass", "http://dbpedia.org/ontology/molecularWeight", "http://dbpedia.org/ontology/monarch", "http://dbpedia.org/ontology/month", "http://dbpedia.org/ontology/mood", "http://dbpedia.org/ontology/mostDownPoint", "http://dbpedia.org/ontology/mostSuccessfulPlayer", "http://dbpedia.org/ontology/mostWins", "http://dbpedia.org/ontology/mother", "http://dbpedia.org/ontology/motive", "http://dbpedia.org/ontology/motto", "http://dbpedia.org/ontology/mount", "http://dbpedia.org/ontology/mountainRange", "http://dbpedia.org/ontology/mouthCountry", "http://dbpedia.org/ontology/mouthDistrict", "http://dbpedia.org/ontology/mouthElevation", "http://dbpedia.org/ontology/mouthMountain", "http://dbpedia.org/ontology/mouthPlace", "http://dbpedia.org/ontology/mouthPosition", "http://dbpedia.org/ontology/mouthRegion", "http://dbpedia.org/ontology/mouthState", "http://dbpedia.org/ontology/movement", "http://dbpedia.org/ontology/movie", "http://dbpedia.org/ontology/mukhtar", "http://dbpedia.org/ontology/municipality", "http://dbpedia.org/ontology/municipalityAbsorbedBy", "http://dbpedia.org/ontology/municipalityCode", "http://dbpedia.org/ontology/municipalityRenamedTo", "http://dbpedia.org/ontology/municipalityType", "http://dbpedia.org/ontology/museum", "http://dbpedia.org/ontology/museumType", "http://dbpedia.org/ontology/musicBand", "http://dbpedia.org/ontology/musicBrainzArtistId", "http://dbpedia.org/ontology/musicBy", "http://dbpedia.org/ontology/musicComposer", "http://dbpedia.org/ontology/musicFormat", "http://dbpedia.org/ontology/musicFusionGenre", "http://dbpedia.org/ontology/musicSubgenre", "http://dbpedia.org/ontology/musicType", "http://dbpedia.org/ontology/musicalArtist", "http://dbpedia.org/ontology/musicalBand", "http://dbpedia.org/ontology/musicalKey", "http://dbpedia.org/ontology/musicians", "http://dbpedia.org/ontology/muteCharacterInPlay", "http://dbpedia.org/ontology/mvp", "http://dbpedia.org/ontology/mythology", "http://dbpedia.org/ontology/naacpImageAward", "http://dbpedia.org/ontology/name", "http://dbpedia.org/ontology/nameAsOf", "http://dbpedia.org/ontology/nameDay", "http://dbpedia.org/ontology/nameInCantoneseChinese", "http://dbpedia.org/ontology/nameInHangulKorean", "http://dbpedia.org/ontology/nameInHanjaKorean", "http://dbpedia.org/ontology/nameInJapanese", "http://dbpedia.org/ontology/nameInMindongyuChinese", "http://dbpedia.org/ontology/nameInMinnanyuChinese", "http://dbpedia.org/ontology/nameInPinyinChinese", "http://dbpedia.org/ontology/nameInSimplifiedChinese", "http://dbpedia.org/ontology/nameInTraditionalChinese", "http://dbpedia.org/ontology/nameInWadeGilesChinese", "http://dbpedia.org/ontology/namedAfter", "http://dbpedia.org/ontology/namedByLanguage", "http://dbpedia.org/ontology/names", "http://dbpedia.org/ontology/narrator", "http://dbpedia.org/ontology/nation", "http://dbpedia.org/ontology/nationalAffiliation", "http://dbpedia.org/ontology/nationalChampionship", "http://dbpedia.org/ontology/nationalFilmAward", "http://dbpedia.org/ontology/nationalOlympicCommittee", "http://dbpedia.org/ontology/nationalRanking", "http://dbpedia.org/ontology/nationalSelection", "http://dbpedia.org/ontology/nationalTeam", "http://dbpedia.org/ontology/nationalTeamMatchPoint", "http://dbpedia.org/ontology/nationalTeamYear", "http://dbpedia.org/ontology/nationalTopographicSystemMapNumber", "http://dbpedia.org/ontology/nationalTournament", "http://dbpedia.org/ontology/nationalTournamentBronze", "http://dbpedia.org/ontology/nationalTournamentGold", "http://dbpedia.org/ontology/nationalTournamentSilver", "http://dbpedia.org/ontology/nationalYears", "http://dbpedia.org/ontology/nationality", "http://dbpedia.org/ontology/nbRevPerMonth", "http://dbpedia.org/ontology/nbRevPerYear", "http://dbpedia.org/ontology/nbUniqueContrib", "http://dbpedia.org/ontology/ncaaSeason", "http://dbpedia.org/ontology/ncaaTeam", "http://dbpedia.org/ontology/ncbhof", "http://dbpedia.org/ontology/nciId", "http://dbpedia.org/ontology/ndlId", "http://dbpedia.org/ontology/nearestCity", "http://dbpedia.org/ontology/neighboringMunicipality", "http://dbpedia.org/ontology/neighbourConstellations", "http://dbpedia.org/ontology/neighbourRegion", "http://dbpedia.org/ontology/neighbourhood", "http://dbpedia.org/ontology/nerve", "http://dbpedia.org/ontology/netIncome", "http://dbpedia.org/ontology/network", "http://dbpedia.org/ontology/networth", "http://dbpedia.org/ontology/newspaper", "http://dbpedia.org/ontology/nextEntity", "http://dbpedia.org/ontology/nextEvent", "http://dbpedia.org/ontology/nextMission", "http://dbpedia.org/ontology/nextTrackNumber", "http://dbpedia.org/ontology/nflCode", "http://dbpedia.org/ontology/nflSeason", "http://dbpedia.org/ontology/nflTeam", "http://dbpedia.org/ontology/ngcName", "http://dbpedia.org/ontology/nisCode", "http://dbpedia.org/ontology/nlaId", "http://dbpedia.org/ontology/nndbId", "http://dbpedia.org/ontology/noContest", "http://dbpedia.org/ontology/nobelLaureates", "http://dbpedia.org/ontology/nominee", "http://dbpedia.org/ontology/nonFictionSubject", "http://dbpedia.org/ontology/nonProfessionalCareer", "http://dbpedia.org/ontology/nord", "http://dbpedia.org/ontology/northEastPlace", "http://dbpedia.org/ontology/northPlace", "http://dbpedia.org/ontology/northWestPlace", "http://dbpedia.org/ontology/notSolubleIn", "http://dbpedia.org/ontology/notableCommander", "http://dbpedia.org/ontology/notableFeatures", "http://dbpedia.org/ontology/notableIdea", "http://dbpedia.org/ontology/notableStudent", "http://dbpedia.org/ontology/notableWine", "http://dbpedia.org/ontology/notableWork", "http://dbpedia.org/ontology/note", "http://dbpedia.org/ontology/noteOnPlaceOfBurial", "http://dbpedia.org/ontology/noteOnRestingPlace", "http://dbpedia.org/ontology/notes", "http://dbpedia.org/ontology/notifyDate", "http://dbpedia.org/ontology/novel", "http://dbpedia.org/ontology/nrhpReferenceNumber", "http://dbpedia.org/ontology/nrhpType", "http://dbpedia.org/ontology/nssdcId", "http://dbpedia.org/ontology/number", "http://dbpedia.org/ontology/numberBuilt", "http://dbpedia.org/ontology/numberOfAcademicStaff", "http://dbpedia.org/ontology/numberOfAlbums", "http://dbpedia.org/ontology/numberOfArrondissement", "http://dbpedia.org/ontology/numberOfBombs", "http://dbpedia.org/ontology/numberOfBronzeMedalsWon", "http://dbpedia.org/ontology/numberOfCanton", "http://dbpedia.org/ontology/numberOfCantons", "http://dbpedia.org/ontology/numberOfCapitalDeputies", "http://dbpedia.org/ontology/numberOfCity", "http://dbpedia.org/ontology/numberOfClasses", "http://dbpedia.org/ontology/numberOfClassesWithResource", "http://dbpedia.org/ontology/numberOfClassrooms", "http://dbpedia.org/ontology/numberOfClubs", "http://dbpedia.org/ontology/numberOfCollectionItems", "http://dbpedia.org/ontology/numberOfCompetitors", "http://dbpedia.org/ontology/numberOfCounties", "http://dbpedia.org/ontology/numberOfCountries", "http://dbpedia.org/ontology/numberOfCrew", "http://dbpedia.org/ontology/numberOfDeaths", "http://dbpedia.org/ontology/numberOfDependency", "http://dbpedia.org/ontology/numberOfDisambiguates", "http://dbpedia.org/ontology/numberOfDistrict", "http://dbpedia.org/ontology/numberOfDistricts", "http://dbpedia.org/ontology/numberOfDoctoralStudents", "http://dbpedia.org/ontology/numberOfDoors", "http://dbpedia.org/ontology/numberOfEmployees", "http://dbpedia.org/ontology/numberOfEntrances", "http://dbpedia.org/ontology/numberOfEpisodes", "http://dbpedia.org/ontology/numberOfEtoilesMichelin", "http://dbpedia.org/ontology/numberOfFederalDeputies", "http://dbpedia.org/ontology/numberOfFilms", "http://dbpedia.org/ontology/numberOfGoals", "http://dbpedia.org/ontology/numberOfGoldMedalsWon", "http://dbpedia.org/ontology/numberOfGraduateStudents", "http://dbpedia.org/ontology/numberOfGraves", "http://dbpedia.org/ontology/numberOfHoles", "http://dbpedia.org/ontology/numberOfHouses", "http://dbpedia.org/ontology/numberOfIndegree", "http://dbpedia.org/ontology/numberOfIntercommunality", "http://dbpedia.org/ontology/numberOfIsland", "http://dbpedia.org/ontology/numberOfIslands", "http://dbpedia.org/ontology/numberOfLanes", "http://dbpedia.org/ontology/numberOfLaps", "http://dbpedia.org/ontology/numberOfLaunches", "http://dbpedia.org/ontology/numberOfLawyers", "http://dbpedia.org/ontology/numberOfLifts", "http://dbpedia.org/ontology/numberOfLines", "http://dbpedia.org/ontology/numberOfLiveAlbums", "http://dbpedia.org/ontology/numberOfLocations", "http://dbpedia.org/ontology/numberOfMatches", "http://dbpedia.org/ontology/numberOfMembers", "http://dbpedia.org/ontology/numberOfMembersAsOf", "http://dbpedia.org/ontology/numberOfMinistries", "http://dbpedia.org/ontology/numberOfMunicipalities", "http://dbpedia.org/ontology/numberOfMusicalArtistEntities", "http://dbpedia.org/ontology/numberOfMusicalArtistInstrument", "http://dbpedia.org/ontology/numberOfMusicalArtistStyle", "http://dbpedia.org/ontology/numberOfNeighbourhood", "http://dbpedia.org/ontology/numberOfNewlyIntroducedSports", "http://dbpedia.org/ontology/numberOfOffices", "http://dbpedia.org/ontology/numberOfOfficials", "http://dbpedia.org/ontology/numberOfOrbits", "http://dbpedia.org/ontology/numberOfOutdegree", "http://dbpedia.org/ontology/numberOfPads", "http://dbpedia.org/ontology/numberOfPages", "http://dbpedia.org/ontology/numberOfParkingSpaces", "http://dbpedia.org/ontology/numberOfParticipatingAthletes", "http://dbpedia.org/ontology/numberOfParticipatingFemaleAthletes", "http://dbpedia.org/ontology/numberOfParticipatingMaleAthletes", "http://dbpedia.org/ontology/numberOfParticipatingNations", "http://dbpedia.org/ontology/numberOfPassengers", "http://dbpedia.org/ontology/numberOfPeopleAttending", "http://dbpedia.org/ontology/numberOfPeopleLicensed", "http://dbpedia.org/ontology/numberOfPersonBornInPlace", "http://dbpedia.org/ontology/numberOfPersonEntities", "http://dbpedia.org/ontology/numberOfPersonFromUniversity", "http://dbpedia.org/ontology/numberOfPersonInOccupation", "http://dbpedia.org/ontology/numberOfPiersInWater", "http://dbpedia.org/ontology/numberOfPixels", "http://dbpedia.org/ontology/numberOfPlatformLevels", "http://dbpedia.org/ontology/numberOfPlayers", "http://dbpedia.org/ontology/numberOfPostgraduateStudents", "http://dbpedia.org/ontology/numberOfPredicates", "http://dbpedia.org/ontology/numberOfProfessionals", "http://dbpedia.org/ontology/numberOfProperties", "http://dbpedia.org/ontology/numberOfPropertiesUsed", "http://dbpedia.org/ontology/numberOfReactors", "http://dbpedia.org/ontology/numberOfRedirectedResource", "http://dbpedia.org/ontology/numberOfResource", "http://dbpedia.org/ontology/numberOfResourceOfClass", "http://dbpedia.org/ontology/numberOfResourceOfType", "http://dbpedia.org/ontology/numberOfResourceWithType", "http://dbpedia.org/ontology/numberOfRestaurants", "http://dbpedia.org/ontology/numberOfRockets", "http://dbpedia.org/ontology/numberOfRooms", "http://dbpedia.org/ontology/numberOfRun", "http://dbpedia.org/ontology/numberOfSeasons", "http://dbpedia.org/ontology/numberOfSeats", "http://dbpedia.org/ontology/numberOfSeatsInParliament", "http://dbpedia.org/ontology/numberOfSettlement", "http://dbpedia.org/ontology/numberOfSettlementsInCountry", "http://dbpedia.org/ontology/numberOfSilverMedalsWon", "http://dbpedia.org/ontology/numberOfSoccerPlayerInCountryRepre", "http://dbpedia.org/ontology/numberOfSoccerPlayersBornInPlace", "http://dbpedia.org/ontology/numberOfSoccerPlayersInTeam", "http://dbpedia.org/ontology/numberOfSpans", "http://dbpedia.org/ontology/numberOfSpeakers", "http://dbpedia.org/ontology/numberOfSports", "http://dbpedia.org/ontology/numberOfSportsEvents", "http://dbpedia.org/ontology/numberOfStaff", "http://dbpedia.org/ontology/numberOfStars", "http://dbpedia.org/ontology/numberOfStateDeputies", "http://dbpedia.org/ontology/numberOfStations", "http://dbpedia.org/ontology/numberOfStores", "http://dbpedia.org/ontology/numberOfStudents", "http://dbpedia.org/ontology/numberOfStudioAlbums", "http://dbpedia.org/ontology/numberOfSuites", "http://dbpedia.org/ontology/numberOfTeams", "http://dbpedia.org/ontology/numberOfTracks", "http://dbpedia.org/ontology/numberOfTrails", "http://dbpedia.org/ontology/numberOfTriples", "http://dbpedia.org/ontology/numberOfTurns", "http://dbpedia.org/ontology/numberOfUndergraduateStudents", "http://dbpedia.org/ontology/numberOfUniqeResources", "http://dbpedia.org/ontology/numberOfUseOfProperty", "http://dbpedia.org/ontology/numberOfVehicles", "http://dbpedia.org/ontology/numberOfVillages", "http://dbpedia.org/ontology/numberOfVineyards", "http://dbpedia.org/ontology/numberOfVisitors", "http://dbpedia.org/ontology/numberOfVisitorsAsOf", "http://dbpedia.org/ontology/numberOfVolumes", "http://dbpedia.org/ontology/numberOfVolunteers", "http://dbpedia.org/ontology/numberOfWineries", "http://dbpedia.org/ontology/numberSold", "http://dbpedia.org/ontology/nutsCode", "http://dbpedia.org/ontology/observatory", "http://dbpedia.org/ontology/occupation", "http://dbpedia.org/ontology/oclc", "http://dbpedia.org/ontology/odor", "http://dbpedia.org/ontology/offeredClasses", "http://dbpedia.org/ontology/office", "http://dbpedia.org/ontology/officerInCharge", "http://dbpedia.org/ontology/officialLanguage", "http://dbpedia.org/ontology/officialName", "http://dbpedia.org/ontology/officialOpenedBy", "http://dbpedia.org/ontology/officialSchoolColour", "http://dbpedia.org/ontology/ofsCode", "http://dbpedia.org/ontology/oilSystem", "http://dbpedia.org/ontology/okatoCode", "http://dbpedia.org/ontology/oldDistrict", "http://dbpedia.org/ontology/oldName", "http://dbpedia.org/ontology/oldProvince", "http://dbpedia.org/ontology/oldTeamCoached", "http://dbpedia.org/ontology/oldcode", "http://dbpedia.org/ontology/olivierAward", "http://dbpedia.org/ontology/olympicGames", "http://dbpedia.org/ontology/olympicGamesBronze", "http://dbpedia.org/ontology/olympicGamesGold", "http://dbpedia.org/ontology/olympicGamesSilver", "http://dbpedia.org/ontology/olympicGamesWins", "http://dbpedia.org/ontology/olympicOathSwornBy", "http://dbpedia.org/ontology/olympicOathSwornByAthlete", "http://dbpedia.org/ontology/olympicOathSwornByJudge", "http://dbpedia.org/ontology/omim", "http://dbpedia.org/ontology/onChromosome", "http://dbpedia.org/ontology/ons", "http://dbpedia.org/ontology/openAccessContent", "http://dbpedia.org/ontology/openingDate", "http://dbpedia.org/ontology/openingFilm", "http://dbpedia.org/ontology/openingTheme", "http://dbpedia.org/ontology/openingYear", "http://dbpedia.org/ontology/operatingIncome", "http://dbpedia.org/ontology/operatingSystem", "http://dbpedia.org/ontology/operator", "http://dbpedia.org/ontology/opponent", "http://dbpedia.org/ontology/opponents", "http://dbpedia.org/ontology/orbitalEccentricity", "http://dbpedia.org/ontology/orbitalFlights", "http://dbpedia.org/ontology/orbitalInclination", "http://dbpedia.org/ontology/orbitalPeriod", "http://dbpedia.org/ontology/orbits", "http://dbpedia.org/ontology/orcidId", "http://dbpedia.org/ontology/order", "http://dbpedia.org/ontology/orderDate", "http://dbpedia.org/ontology/orderInOffice", "http://dbpedia.org/ontology/ordination", "http://dbpedia.org/ontology/organ", "http://dbpedia.org/ontology/organSystem", "http://dbpedia.org/ontology/organisation", "http://dbpedia.org/ontology/organisationMember", "http://dbpedia.org/ontology/orientation", "http://dbpedia.org/ontology/origin", "http://dbpedia.org/ontology/originalDanseCompetition", "http://dbpedia.org/ontology/originalDanseScore", "http://dbpedia.org/ontology/originalEndPoint", "http://dbpedia.org/ontology/originalLanguage", "http://dbpedia.org/ontology/originalMaximumBoatBeam", "http://dbpedia.org/ontology/originalMaximumBoatLength", "http://dbpedia.org/ontology/originalName", "http://dbpedia.org/ontology/originalNotLatinTitle", "http://dbpedia.org/ontology/originalStartPoint", "http://dbpedia.org/ontology/originalTitle", "http://dbpedia.org/ontology/originallyUsedFor", "http://dbpedia.org/ontology/origo", "http://dbpedia.org/ontology/orogeny", "http://dbpedia.org/ontology/orpha", "http://dbpedia.org/ontology/orthologousGene", "http://dbpedia.org/ontology/other", "http://dbpedia.org/ontology/otherActivity", "http://dbpedia.org/ontology/otherAppearances", "http://dbpedia.org/ontology/otherChannel", "http://dbpedia.org/ontology/otherFamilyBranch", "http://dbpedia.org/ontology/otherFuelType", "http://dbpedia.org/ontology/otherFunction", "http://dbpedia.org/ontology/otherInformation", "http://dbpedia.org/ontology/otherLanguage", "http://dbpedia.org/ontology/otherMedia", "http://dbpedia.org/ontology/otherName", "http://dbpedia.org/ontology/otherOccupation", "http://dbpedia.org/ontology/otherParty", "http://dbpedia.org/ontology/otherServingLines", "http://dbpedia.org/ontology/otherSportsExperience", "http://dbpedia.org/ontology/otherWins", "http://dbpedia.org/ontology/otherWorks", "http://dbpedia.org/ontology/outflow", "http://dbpedia.org/ontology/output", "http://dbpedia.org/ontology/outputHistory", "http://dbpedia.org/ontology/outskirts", "http://dbpedia.org/ontology/overallRecord", "http://dbpedia.org/ontology/oversight", "http://dbpedia.org/ontology/owner", "http://dbpedia.org/ontology/owningCompany", "http://dbpedia.org/ontology/owningOrganisation", "http://dbpedia.org/ontology/owns", "http://dbpedia.org/ontology/painter", "http://dbpedia.org/ontology/pandemic", "http://dbpedia.org/ontology/pandemicDeaths", "http://dbpedia.org/ontology/parent", "http://dbpedia.org/ontology/parentCompany", "http://dbpedia.org/ontology/parentMountainPeak", "http://dbpedia.org/ontology/parentOrganisation", "http://dbpedia.org/ontology/parentheses", "http://dbpedia.org/ontology/parish", "http://dbpedia.org/ontology/parkingInformation", "http://dbpedia.org/ontology/parkingLotsCars", "http://dbpedia.org/ontology/parkingLotsTrucks", "http://dbpedia.org/ontology/parliament", "http://dbpedia.org/ontology/parliamentType", "http://dbpedia.org/ontology/parliamentaryGroup", "http://dbpedia.org/ontology/part", "http://dbpedia.org/ontology/partialFailedLaunches", "http://dbpedia.org/ontology/participant", "http://dbpedia.org/ontology/participatingIn", "http://dbpedia.org/ontology/particularSign", "http://dbpedia.org/ontology/partitionCoefficient", "http://dbpedia.org/ontology/partner", "http://dbpedia.org/ontology/party", "http://dbpedia.org/ontology/partyNumber", "http://dbpedia.org/ontology/passengersPerDay", "http://dbpedia.org/ontology/passengersPerYear", "http://dbpedia.org/ontology/passengersUsedSystem", "http://dbpedia.org/ontology/pastMember", "http://dbpedia.org/ontology/pastor", "http://dbpedia.org/ontology/patent", "http://dbpedia.org/ontology/patron", "http://dbpedia.org/ontology/patronSaint", "http://dbpedia.org/ontology/pccSecretary", "http://dbpedia.org/ontology/pdb", "http://dbpedia.org/ontology/peabodyAward", "http://dbpedia.org/ontology/penaltiesTeamA", "http://dbpedia.org/ontology/penaltiesTeamB", "http://dbpedia.org/ontology/penaltyScore", "http://dbpedia.org/ontology/pendamicDeaths", "http://dbpedia.org/ontology/penisLength", "http://dbpedia.org/ontology/peopleFullyVaccinated", "http://dbpedia.org/ontology/peopleName", "http://dbpedia.org/ontology/peopleVaccinated", "http://dbpedia.org/ontology/peopleVaccinatedPerHundred", "http://dbpedia.org/ontology/perCapitaIncome", "http://dbpedia.org/ontology/perCapitaIncomeAsOf", "http://dbpedia.org/ontology/perCapitaIncomeRank", "http://dbpedia.org/ontology/percentage", "http://dbpedia.org/ontology/percentageAlcohol", "http://dbpedia.org/ontology/percentageFat", "http://dbpedia.org/ontology/percentageLiteracyMen", "http://dbpedia.org/ontology/percentageLiteracyWomen", "http://dbpedia.org/ontology/percentageLiterate", "http://dbpedia.org/ontology/percentageOfAreaWater", "http://dbpedia.org/ontology/performer", "http://dbpedia.org/ontology/periapsis", "http://dbpedia.org/ontology/perifocus", "http://dbpedia.org/ontology/perimeter", "http://dbpedia.org/ontology/period", "http://dbpedia.org/ontology/perpetrator", "http://dbpedia.org/ontology/person", "http://dbpedia.org/ontology/personFunction", "http://dbpedia.org/ontology/personName", "http://dbpedia.org/ontology/personsFirstDosesCumul", "http://dbpedia.org/ontology/personsFullDosesCumul", "http://dbpedia.org/ontology/pfizer", "http://dbpedia.org/ontology/pfizerCumul", "http://dbpedia.org/ontology/pgaWins", "http://dbpedia.org/ontology/philosophicalSchool", "http://dbpedia.org/ontology/phonePrefix", "http://dbpedia.org/ontology/phonePrefixLabel", "http://dbpedia.org/ontology/photographer", "http://dbpedia.org/ontology/phylum", "http://dbpedia.org/ontology/picture", "http://dbpedia.org/ontology/pictureDescription", "http://dbpedia.org/ontology/pictureFormat", "http://dbpedia.org/ontology/picturesCommonsCategory", "http://dbpedia.org/ontology/piercing", "http://dbpedia.org/ontology/pisciculturalPopulation", "http://dbpedia.org/ontology/pistonStroke", "http://dbpedia.org/ontology/place", "http://dbpedia.org/ontology/placeOfBurial", "http://dbpedia.org/ontology/placeOfWorship", "http://dbpedia.org/ontology/plant", "http://dbpedia.org/ontology/playRole", "http://dbpedia.org/ontology/playerInTeam", "http://dbpedia.org/ontology/playerSeason", "http://dbpedia.org/ontology/playerStatus", "http://dbpedia.org/ontology/playingTime", "http://dbpedia.org/ontology/plays", "http://dbpedia.org/ontology/pluviometry", "http://dbpedia.org/ontology/podium", "http://dbpedia.org/ontology/podiums", "http://dbpedia.org/ontology/pole", "http://dbpedia.org/ontology/poleDriver", "http://dbpedia.org/ontology/poleDriverCountry", "http://dbpedia.org/ontology/poleDriverTeam", "http://dbpedia.org/ontology/polePosition", "http://dbpedia.org/ontology/poles", "http://dbpedia.org/ontology/policeName", "http://dbpedia.org/ontology/polishFilmAward", "http://dbpedia.org/ontology/politicGovernmentDepartment", "http://dbpedia.org/ontology/politicalFunction", "http://dbpedia.org/ontology/politicalLeader", "http://dbpedia.org/ontology/politicalMajority", "http://dbpedia.org/ontology/politicalPartyInLegislature", "http://dbpedia.org/ontology/politicalPartyOfLeader", "http://dbpedia.org/ontology/politicalSeats", "http://dbpedia.org/ontology/politician", "http://dbpedia.org/ontology/popularVote", "http://dbpedia.org/ontology/population", "http://dbpedia.org/ontology/populationAsOf", "http://dbpedia.org/ontology/populationDensity", "http://dbpedia.org/ontology/populationMetro", "http://dbpedia.org/ontology/populationMetroDensity", "http://dbpedia.org/ontology/populationPctChildren", "http://dbpedia.org/ontology/populationPctMen", "http://dbpedia.org/ontology/populationPctWomen", "http://dbpedia.org/ontology/populationPlace", "http://dbpedia.org/ontology/populationQuote", "http://dbpedia.org/ontology/populationRural", "http://dbpedia.org/ontology/populationRuralDensity", "http://dbpedia.org/ontology/populationTotal", "http://dbpedia.org/ontology/populationTotalRanking", "http://dbpedia.org/ontology/populationTotalReference", "http://dbpedia.org/ontology/populationUrban", "http://dbpedia.org/ontology/populationUrbanDensity", "http://dbpedia.org/ontology/populationYear", "http://dbpedia.org/ontology/portfolio", "http://dbpedia.org/ontology/portrayer", "http://dbpedia.org/ontology/position", "http://dbpedia.org/ontology/postalCode", "http://dbpedia.org/ontology/power", "http://dbpedia.org/ontology/powerOutput", "http://dbpedia.org/ontology/powerType", "http://dbpedia.org/ontology/precursor", "http://dbpedia.org/ontology/predecessor", "http://dbpedia.org/ontology/prefaceBy", "http://dbpedia.org/ontology/prefect", "http://dbpedia.org/ontology/prefectMandate", "http://dbpedia.org/ontology/prefecture", "http://dbpedia.org/ontology/prefix", "http://dbpedia.org/ontology/premiereDate", "http://dbpedia.org/ontology/premierePlace", "http://dbpedia.org/ontology/premiereYear", "http://dbpedia.org/ontology/presentMunicipality", "http://dbpedia.org/ontology/presentName", "http://dbpedia.org/ontology/presenter", "http://dbpedia.org/ontology/president", "http://dbpedia.org/ontology/presidentGeneralCouncil", "http://dbpedia.org/ontology/presidentGeneralCouncilMandate", "http://dbpedia.org/ontology/presidentRegionalCouncil", "http://dbpedia.org/ontology/presidentRegionalCouncilMandate", "http://dbpedia.org/ontology/previousDemographics", "http://dbpedia.org/ontology/previousEditor", "http://dbpedia.org/ontology/previousEntity", "http://dbpedia.org/ontology/previousEvent", "http://dbpedia.org/ontology/previousInfrastructure", "http://dbpedia.org/ontology/previousMission", "http://dbpedia.org/ontology/previousName", "http://dbpedia.org/ontology/previousPopulation", "http://dbpedia.org/ontology/previousPopulationTotal", "http://dbpedia.org/ontology/previousTrackNumber", "http://dbpedia.org/ontology/previousWork", "http://dbpedia.org/ontology/previousWorkDate", "http://dbpedia.org/ontology/price", "http://dbpedia.org/ontology/primaryFuelType", "http://dbpedia.org/ontology/primate", "http://dbpedia.org/ontology/primeMinister", "http://dbpedia.org/ontology/primogenitor", "http://dbpedia.org/ontology/principal", "http://dbpedia.org/ontology/principalArea", "http://dbpedia.org/ontology/principalEngineer", "http://dbpedia.org/ontology/proTeam", "http://dbpedia.org/ontology/probowlPick", "http://dbpedia.org/ontology/procedure", "http://dbpedia.org/ontology/producedBy", "http://dbpedia.org/ontology/producer", "http://dbpedia.org/ontology/produces", "http://dbpedia.org/ontology/product", "http://dbpedia.org/ontology/productShape", "http://dbpedia.org/ontology/production", "http://dbpedia.org/ontology/productionCompany", "http://dbpedia.org/ontology/productionEndDate", "http://dbpedia.org/ontology/productionEndYear", "http://dbpedia.org/ontology/productionStartDate", "http://dbpedia.org/ontology/productionStartYear", "http://dbpedia.org/ontology/productionYears", "http://dbpedia.org/ontology/profession", "http://dbpedia.org/ontology/programCost", "http://dbpedia.org/ontology/programmeFormat", "http://dbpedia.org/ontology/programmingLanguage", "http://dbpedia.org/ontology/project", "http://dbpedia.org/ontology/projectBudgetFunding", "http://dbpedia.org/ontology/projectBudgetTotal", "http://dbpedia.org/ontology/projectCoordinator", "http://dbpedia.org/ontology/projectEndDate", "http://dbpedia.org/ontology/projectKeyword", "http://dbpedia.org/ontology/projectObjective", "http://dbpedia.org/ontology/projectParticipant", "http://dbpedia.org/ontology/projectReferenceID", "http://dbpedia.org/ontology/projectStartDate", "http://dbpedia.org/ontology/projectType", "http://dbpedia.org/ontology/prominence", "http://dbpedia.org/ontology/promotion", "http://dbpedia.org/ontology/pronunciation", "http://dbpedia.org/ontology/prospectLeague", "http://dbpedia.org/ontology/prospectTeam", "http://dbpedia.org/ontology/protectionStatus", "http://dbpedia.org/ontology/protein", "http://dbpedia.org/ontology/protestantPercentage", "http://dbpedia.org/ontology/prov:Entity", "http://dbpedia.org/ontology/prov:Revision", "http://dbpedia.org/ontology/provCode", "http://dbpedia.org/ontology/provides", "http://dbpedia.org/ontology/province", "http://dbpedia.org/ontology/provinceIsoCode", "http://dbpedia.org/ontology/provinceLink", "http://dbpedia.org/ontology/provost", "http://dbpedia.org/ontology/pseudonym", "http://dbpedia.org/ontology/pubchem", "http://dbpedia.org/ontology/publication", "http://dbpedia.org/ontology/publicationDate", "http://dbpedia.org/ontology/publiclyAccessible", "http://dbpedia.org/ontology/publisher", "http://dbpedia.org/ontology/purchasingPowerParity", "http://dbpedia.org/ontology/purchasingPowerParityRank", "http://dbpedia.org/ontology/purchasingPowerParityYear", "http://dbpedia.org/ontology/purpose", "http://dbpedia.org/ontology/qatarClassic", "http://dbpedia.org/ontology/quebecerTitle", "http://dbpedia.org/ontology/quotation", "http://dbpedia.org/ontology/quote", "http://dbpedia.org/ontology/ra", "http://dbpedia.org/ontology/race", "http://dbpedia.org/ontology/raceHorse", "http://dbpedia.org/ontology/raceLength", "http://dbpedia.org/ontology/raceResult", "http://dbpedia.org/ontology/raceTrack", "http://dbpedia.org/ontology/raceWins", "http://dbpedia.org/ontology/races", "http://dbpedia.org/ontology/racketCatching", "http://dbpedia.org/ontology/radio", "http://dbpedia.org/ontology/radioStation", "http://dbpedia.org/ontology/radius_ly", "http://dbpedia.org/ontology/railGauge", "http://dbpedia.org/ontology/railwayLineUsingTunnel", "http://dbpedia.org/ontology/railwayPlatforms", "http://dbpedia.org/ontology/railwayRollingStock", "http://dbpedia.org/ontology/range", "http://dbpedia.org/ontology/rank", "http://dbpedia.org/ontology/rankAgreement", "http://dbpedia.org/ontology/rankArea", "http://dbpedia.org/ontology/rankInFinalMedalCount", "http://dbpedia.org/ontology/rankPopulation", "http://dbpedia.org/ontology/ranking", "http://dbpedia.org/ontology/rankingWins", "http://dbpedia.org/ontology/rankingsDoubles", "http://dbpedia.org/ontology/rankingsSingles", "http://dbpedia.org/ontology/rating", "http://dbpedia.org/ontology/ratio", "http://dbpedia.org/ontology/rebuildDate", "http://dbpedia.org/ontology/rebuilder", "http://dbpedia.org/ontology/rebuildingDate", "http://dbpedia.org/ontology/rebuildingYear", "http://dbpedia.org/ontology/recentWinner", "http://dbpedia.org/ontology/recommissioningDate", "http://dbpedia.org/ontology/recordDate", "http://dbpedia.org/ontology/recordLabel", "http://dbpedia.org/ontology/recordedIn", "http://dbpedia.org/ontology/recoveryCases", "http://dbpedia.org/ontology/rector", "http://dbpedia.org/ontology/redListIdNL", "http://dbpedia.org/ontology/redLongDistancePisteNumber", "http://dbpedia.org/ontology/redSkiPisteNumber", "http://dbpedia.org/ontology/redline", "http://dbpedia.org/ontology/refcul", "http://dbpedia.org/ontology/reference", "http://dbpedia.org/ontology/reffBourgmestre", "http://dbpedia.org/ontology/refgen", "http://dbpedia.org/ontology/refgeo", "http://dbpedia.org/ontology/refpol", "http://dbpedia.org/ontology/refseq", "http://dbpedia.org/ontology/refseqmrna", "http://dbpedia.org/ontology/refseqprotein", "http://dbpedia.org/ontology/regency", "http://dbpedia.org/ontology/regentOf", "http://dbpedia.org/ontology/regime", "http://dbpedia.org/ontology/region", "http://dbpedia.org/ontology/regionLink", "http://dbpedia.org/ontology/regionServed", "http://dbpedia.org/ontology/regionType", "http://dbpedia.org/ontology/regionalCouncil", "http://dbpedia.org/ontology/regionalLanguage", "http://dbpedia.org/ontology/regionalPrefecture", "http://dbpedia.org/ontology/registration", "http://dbpedia.org/ontology/registry", "http://dbpedia.org/ontology/registryNumber", "http://dbpedia.org/ontology/reign", "http://dbpedia.org/ontology/reignName", "http://dbpedia.org/ontology/reigningPope", "http://dbpedia.org/ontology/related", "http://dbpedia.org/ontology/relatedFunctions", "http://dbpedia.org/ontology/relatedMeanOfTransportation", "http://dbpedia.org/ontology/relatedPlaces", "http://dbpedia.org/ontology/relation", "http://dbpedia.org/ontology/relative", "http://dbpedia.org/ontology/relativeAtomicMass", "http://dbpedia.org/ontology/releaseDate", "http://dbpedia.org/ontology/releaseLocation", "http://dbpedia.org/ontology/relics", "http://dbpedia.org/ontology/relief", "http://dbpedia.org/ontology/religion", "http://dbpedia.org/ontology/religiousHead", "http://dbpedia.org/ontology/religiousHeadLabel", "http://dbpedia.org/ontology/religiousOrder", "http://dbpedia.org/ontology/reopened", "http://dbpedia.org/ontology/reopeningDate", "http://dbpedia.org/ontology/reopeningYear", "http://dbpedia.org/ontology/reportingMark", "http://dbpedia.org/ontology/representative", "http://dbpedia.org/ontology/requirement", "http://dbpedia.org/ontology/reservations", "http://dbpedia.org/ontology/residence", "http://dbpedia.org/ontology/resolution", "http://dbpedia.org/ontology/restaurant", "http://dbpedia.org/ontology/restingDate", "http://dbpedia.org/ontology/restingPlace", "http://dbpedia.org/ontology/restingPlacePosition", "http://dbpedia.org/ontology/restoreDate", "http://dbpedia.org/ontology/restriction", "http://dbpedia.org/ontology/result", "http://dbpedia.org/ontology/retentionTime", "http://dbpedia.org/ontology/retired", "http://dbpedia.org/ontology/retiredRocket", "http://dbpedia.org/ontology/retirementDate", "http://dbpedia.org/ontology/revenue", "http://dbpedia.org/ontology/revenueYear", "http://dbpedia.org/ontology/review", "http://dbpedia.org/ontology/rgbCoordinateBlue", "http://dbpedia.org/ontology/rgbCoordinateGreen", "http://dbpedia.org/ontology/rgbCoordinateRed", "http://dbpedia.org/ontology/ridId", "http://dbpedia.org/ontology/rightAscension", "http://dbpedia.org/ontology/rightChild", "http://dbpedia.org/ontology/rightTributary", "http://dbpedia.org/ontology/rivalSchool", "http://dbpedia.org/ontology/river", "http://dbpedia.org/ontology/riverBranch", "http://dbpedia.org/ontology/riverBranchOf", "http://dbpedia.org/ontology/riverMouth", "http://dbpedia.org/ontology/rkdArtistsId", "http://dbpedia.org/ontology/road", "http://dbpedia.org/ontology/rocket", "http://dbpedia.org/ontology/rocketFunction", "http://dbpedia.org/ontology/rocketStages", "http://dbpedia.org/ontology/rolandGarrosDouble", "http://dbpedia.org/ontology/rolandGarrosMixed", "http://dbpedia.org/ontology/rolandGarrosSingle", "http://dbpedia.org/ontology/role", "http://dbpedia.org/ontology/roleInEvent", "http://dbpedia.org/ontology/roofHeight", "http://dbpedia.org/ontology/rotationPeriod", "http://dbpedia.org/ontology/route", "http://dbpedia.org/ontology/routeActivity", "http://dbpedia.org/ontology/routeDirection", "http://dbpedia.org/ontology/routeEnd", "http://dbpedia.org/ontology/routeEndDirection", "http://dbpedia.org/ontology/routeEndLocation", "http://dbpedia.org/ontology/routeJunction", "http://dbpedia.org/ontology/routeLine", "http://dbpedia.org/ontology/routeNext", "http://dbpedia.org/ontology/routeNumber", "http://dbpedia.org/ontology/routePrevious", "http://dbpedia.org/ontology/routeStart", "http://dbpedia.org/ontology/routeStartDirection", "http://dbpedia.org/ontology/routeStartLocation", "http://dbpedia.org/ontology/routeTypeAbbreviation", "http://dbpedia.org/ontology/royalAnthem", "http://dbpedia.org/ontology/ruling", "http://dbpedia.org/ontology/runningMate", "http://dbpedia.org/ontology/runtime", "http://dbpedia.org/ontology/runwayDesignation", "http://dbpedia.org/ontology/runwayLength", "http://dbpedia.org/ontology/runwaySurface", "http://dbpedia.org/ontology/runwayWidth", "http://dbpedia.org/ontology/ruralMunicipality", "http://dbpedia.org/ontology/saint", "http://dbpedia.org/ontology/salary", "http://dbpedia.org/ontology/sales", "http://dbpedia.org/ontology/sameName", "http://dbpedia.org/ontology/satScore", "http://dbpedia.org/ontology/satcat", "http://dbpedia.org/ontology/satellite", "http://dbpedia.org/ontology/satellitesDeployed", "http://dbpedia.org/ontology/scale", "http://dbpedia.org/ontology/scaleFactor", "http://dbpedia.org/ontology/scene", "http://dbpedia.org/ontology/school", "http://dbpedia.org/ontology/schoolBoard", "http://dbpedia.org/ontology/schoolCode", "http://dbpedia.org/ontology/schoolNumber", "http://dbpedia.org/ontology/schoolPatron", "http://dbpedia.org/ontology/scientificName", "http://dbpedia.org/ontology/score", "http://dbpedia.org/ontology/screenActorsGuildAward", "http://dbpedia.org/ontology/sea", "http://dbpedia.org/ontology/season", "http://dbpedia.org/ontology/seasonManager", "http://dbpedia.org/ontology/seasonNumber", "http://dbpedia.org/ontology/seatNumber", "http://dbpedia.org/ontology/seatingCapacity", "http://dbpedia.org/ontology/second", "http://dbpedia.org/ontology/secondCommander", "http://dbpedia.org/ontology/secondDriver", "http://dbpedia.org/ontology/secondDriverCountry", "http://dbpedia.org/ontology/secondLeader", "http://dbpedia.org/ontology/secondPlace", "http://dbpedia.org/ontology/secondPopularVote", "http://dbpedia.org/ontology/secondTeam", "http://dbpedia.org/ontology/secretaryGeneral", "http://dbpedia.org/ontology/security", "http://dbpedia.org/ontology/seiyu", "http://dbpedia.org/ontology/selection", "http://dbpedia.org/ontology/selectionPoint", "http://dbpedia.org/ontology/selectionYear", "http://dbpedia.org/ontology/selibrId", "http://dbpedia.org/ontology/senator", "http://dbpedia.org/ontology/senior", "http://dbpedia.org/ontology/seniority", "http://dbpedia.org/ontology/seniunija", "http://dbpedia.org/ontology/sentence", "http://dbpedia.org/ontology/series", "http://dbpedia.org/ontology/service", "http://dbpedia.org/ontology/serviceEndDate", "http://dbpedia.org/ontology/serviceEndYear", "http://dbpedia.org/ontology/serviceModule", "http://dbpedia.org/ontology/serviceNumber", "http://dbpedia.org/ontology/serviceStartDate", "http://dbpedia.org/ontology/serviceStartYear", "http://dbpedia.org/ontology/servingRailwayLine", "http://dbpedia.org/ontology/servingSize", "http://dbpedia.org/ontology/servingTemperature", "http://dbpedia.org/ontology/sessionNumber", "http://dbpedia.org/ontology/setDesigner", "http://dbpedia.org/ontology/settingOfPlay", "http://dbpedia.org/ontology/settlement", "http://dbpedia.org/ontology/settlementAttached", "http://dbpedia.org/ontology/setupTime", "http://dbpedia.org/ontology/severeCases", "http://dbpedia.org/ontology/sex", "http://dbpedia.org/ontology/sexualOrientation", "http://dbpedia.org/ontology/shape", "http://dbpedia.org/ontology/shareDate", "http://dbpedia.org/ontology/shareOfAudience", "http://dbpedia.org/ontology/shareSource", "http://dbpedia.org/ontology/sharingOutPopulation", "http://dbpedia.org/ontology/sharingOutPopulationYear", "http://dbpedia.org/ontology/sheading", "http://dbpedia.org/ontology/shipBeam", "http://dbpedia.org/ontology/shipCrew", "http://dbpedia.org/ontology/shipDisplacement", "http://dbpedia.org/ontology/shipDraft", "http://dbpedia.org/ontology/shipLaunch", "http://dbpedia.org/ontology/shoeNumber", "http://dbpedia.org/ontology/shoeSize", "http://dbpedia.org/ontology/shoot", "http://dbpedia.org/ontology/shoots", "http://dbpedia.org/ontology/shoreLength", "http://dbpedia.org/ontology/shortProgCompetition", "http://dbpedia.org/ontology/shortProgScore", "http://dbpedia.org/ontology/show", "http://dbpedia.org/ontology/showJudge", "http://dbpedia.org/ontology/shuttle", "http://dbpedia.org/ontology/sibling", "http://dbpedia.org/ontology/signName", "http://dbpedia.org/ontology/signature", "http://dbpedia.org/ontology/significantBuilding", "http://dbpedia.org/ontology/significantDesign", "http://dbpedia.org/ontology/significantProject", "http://dbpedia.org/ontology/silCode", "http://dbpedia.org/ontology/silverMedalDouble", "http://dbpedia.org/ontology/silverMedalMixed", "http://dbpedia.org/ontology/silverMedalSingle", "http://dbpedia.org/ontology/silverMedalist", "http://dbpedia.org/ontology/simcCode", "http://dbpedia.org/ontology/similar", "http://dbpedia.org/ontology/singleList", "http://dbpedia.org/ontology/singleOf", "http://dbpedia.org/ontology/sire", "http://dbpedia.org/ontology/siren", "http://dbpedia.org/ontology/sister", "http://dbpedia.org/ontology/sisterCollege", "http://dbpedia.org/ontology/sisterNewspaper", "http://dbpedia.org/ontology/sisterStation", "http://dbpedia.org/ontology/sixthFormStudents", "http://dbpedia.org/ontology/sizeBlazon", "http://dbpedia.org/ontology/sizeLogo", "http://dbpedia.org/ontology/sizeMap", "http://dbpedia.org/ontology/sizeThumbnail", "http://dbpedia.org/ontology/size_v", "http://dbpedia.org/ontology/skiLift", "http://dbpedia.org/ontology/skiPisteKilometre", "http://dbpedia.org/ontology/skiPisteNumber", "http://dbpedia.org/ontology/skiTow", "http://dbpedia.org/ontology/skills", "http://dbpedia.org/ontology/skinColor", "http://dbpedia.org/ontology/slogan", "http://dbpedia.org/ontology/smiles", "http://dbpedia.org/ontology/snowParkNumber", "http://dbpedia.org/ontology/soccerLeaguePromoted", "http://dbpedia.org/ontology/soccerLeagueRelegated", "http://dbpedia.org/ontology/soccerLeagueSeason", "http://dbpedia.org/ontology/soccerLeagueWinner", "http://dbpedia.org/ontology/soccerTournamentClosingSeason", "http://dbpedia.org/ontology/soccerTournamentLastChampion", "http://dbpedia.org/ontology/soccerTournamentMostSteady", "http://dbpedia.org/ontology/soccerTournamentMostSuccesfull", "http://dbpedia.org/ontology/soccerTournamentOpeningSeason", "http://dbpedia.org/ontology/soccerTournamentThisSeason", "http://dbpedia.org/ontology/soccerTournamentTopScorer", "http://dbpedia.org/ontology/solicitorGeneral", "http://dbpedia.org/ontology/solubility", "http://dbpedia.org/ontology/solvent", "http://dbpedia.org/ontology/solventWithBadSolubility", "http://dbpedia.org/ontology/solventWithGoodSolubility", "http://dbpedia.org/ontology/solventWithMediocreSolubility", "http://dbpedia.org/ontology/son", "http://dbpedia.org/ontology/soundRecording", "http://dbpedia.org/ontology/source", "http://dbpedia.org/ontology/sourceConfluence", "http://dbpedia.org/ontology/sourceConfluenceCountry", "http://dbpedia.org/ontology/sourceConfluenceElevation", "http://dbpedia.org/ontology/sourceConfluenceMountain", "http://dbpedia.org/ontology/sourceConfluencePlace", "http://dbpedia.org/ontology/sourceConfluencePosition", "http://dbpedia.org/ontology/sourceConfluenceRegion", "http://dbpedia.org/ontology/sourceConfluenceState", "http://dbpedia.org/ontology/sourceCountry", "http://dbpedia.org/ontology/sourceDistrict", "http://dbpedia.org/ontology/sourceElevation", "http://dbpedia.org/ontology/sourceMountain", "http://dbpedia.org/ontology/sourceName", "http://dbpedia.org/ontology/sourcePlace", "http://dbpedia.org/ontology/sourcePosition", "http://dbpedia.org/ontology/sourceRegion", "http://dbpedia.org/ontology/sourceState", "http://dbpedia.org/ontology/sourceText", "http://dbpedia.org/ontology/sourceWebsite", "http://dbpedia.org/ontology/southEastPlace", "http://dbpedia.org/ontology/southPlace", "http://dbpedia.org/ontology/southWestPlace", "http://dbpedia.org/ontology/sovereignCountry", "http://dbpedia.org/ontology/space", "http://dbpedia.org/ontology/spacecraft", "http://dbpedia.org/ontology/spacestation", "http://dbpedia.org/ontology/spacewalkBegin", "http://dbpedia.org/ontology/spacewalkEnd", "http://dbpedia.org/ontology/speaker", "http://dbpedia.org/ontology/specialEffects", "http://dbpedia.org/ontology/specialTrial", "http://dbpedia.org/ontology/specialist", "http://dbpedia.org/ontology/speciality", "http://dbpedia.org/ontology/specialization", "http://dbpedia.org/ontology/species", "http://dbpedia.org/ontology/speedLimit", "http://dbpedia.org/ontology/spike", "http://dbpedia.org/ontology/splitFromParty", "http://dbpedia.org/ontology/spokenIn", "http://dbpedia.org/ontology/spokesperson", "http://dbpedia.org/ontology/sport", "http://dbpedia.org/ontology/sportCountry", "http://dbpedia.org/ontology/sportDiscipline", "http://dbpedia.org/ontology/sportGoverningBody", "http://dbpedia.org/ontology/sportSpecialty", "http://dbpedia.org/ontology/sportsFunction", "http://dbpedia.org/ontology/spouse", "http://dbpedia.org/ontology/spouseName", "http://dbpedia.org/ontology/spurOf", "http://dbpedia.org/ontology/spurType", "http://dbpedia.org/ontology/squadNumber", "http://dbpedia.org/ontology/stadium", "http://dbpedia.org/ontology/staff", "http://dbpedia.org/ontology/starRating", "http://dbpedia.org/ontology/starring", "http://dbpedia.org/ontology/start", "http://dbpedia.org/ontology/startCareer", "http://dbpedia.org/ontology/startDate", "http://dbpedia.org/ontology/startDateTime", "http://dbpedia.org/ontology/startOccupation", "http://dbpedia.org/ontology/startPoint", "http://dbpedia.org/ontology/startReign", "http://dbpedia.org/ontology/startWct", "http://dbpedia.org/ontology/startWqs", "http://dbpedia.org/ontology/startYear", "http://dbpedia.org/ontology/startYearOfInsertion", "http://dbpedia.org/ontology/startYearOfSales", "http://dbpedia.org/ontology/statName", "http://dbpedia.org/ontology/statValue", "http://dbpedia.org/ontology/state", "http://dbpedia.org/ontology/stateDelegate", "http://dbpedia.org/ontology/stateOfOrigin", "http://dbpedia.org/ontology/stateOfOriginPoint", "http://dbpedia.org/ontology/stateOfOriginTeam", "http://dbpedia.org/ontology/stateOfOriginYear", "http://dbpedia.org/ontology/stationEvaDuration", "http://dbpedia.org/ontology/stationStructure", "http://dbpedia.org/ontology/stationVisitDuration", "http://dbpedia.org/ontology/statistic", "http://dbpedia.org/ontology/statisticLabel", "http://dbpedia.org/ontology/statisticValue", "http://dbpedia.org/ontology/statisticYear", "http://dbpedia.org/ontology/status", "http://dbpedia.org/ontology/statusManager", "http://dbpedia.org/ontology/statusYear", "http://dbpedia.org/ontology/stellarClassification", "http://dbpedia.org/ontology/stockExchange", "http://dbpedia.org/ontology/storyEditor", "http://dbpedia.org/ontology/strength", "http://dbpedia.org/ontology/structuralSystem", "http://dbpedia.org/ontology/student", "http://dbpedia.org/ontology/style", "http://dbpedia.org/ontology/stylisticOrigin", "http://dbpedia.org/ontology/subClassis", "http://dbpedia.org/ontology/subFamily", "http://dbpedia.org/ontology/subGenus", "http://dbpedia.org/ontology/subMunicipalityType", "http://dbpedia.org/ontology/subOrder", "http://dbpedia.org/ontology/subPrefecture", "http://dbpedia.org/ontology/subTribus", "http://dbpedia.org/ontology/subdivision", "http://dbpedia.org/ontology/subdivisionLink", "http://dbpedia.org/ontology/subdivisionName", "http://dbpedia.org/ontology/subdivisions", "http://dbpedia.org/ontology/subjectOfPlay", "http://dbpedia.org/ontology/subjectTerm", "http://dbpedia.org/ontology/sublimationPoint", "http://dbpedia.org/ontology/suborbitalFlights", "http://dbpedia.org/ontology/subprefecture", "http://dbpedia.org/ontology/subregion", "http://dbpedia.org/ontology/subsequentInfrastructure", "http://dbpedia.org/ontology/subsequentWork", "http://dbpedia.org/ontology/subsequentWorkDate", "http://dbpedia.org/ontology/subsidiary", "http://dbpedia.org/ontology/subsystem", "http://dbpedia.org/ontology/subsystemLink", "http://dbpedia.org/ontology/subtitle", "http://dbpedia.org/ontology/successfulLaunches", "http://dbpedia.org/ontology/successor", "http://dbpedia.org/ontology/sudocId", "http://dbpedia.org/ontology/summerAppearances", "http://dbpedia.org/ontology/summerTemperature", "http://dbpedia.org/ontology/superFamily", "http://dbpedia.org/ontology/superOrder", "http://dbpedia.org/ontology/superTribus", "http://dbpedia.org/ontology/superbowlWin", "http://dbpedia.org/ontology/superintendent", "http://dbpedia.org/ontology/supplementalDraftRound", "http://dbpedia.org/ontology/supplementalDraftYear", "http://dbpedia.org/ontology/supplies", "http://dbpedia.org/ontology/supply", "http://dbpedia.org/ontology/suppreddedDate", "http://dbpedia.org/ontology/surfaceArea", "http://dbpedia.org/ontology/surfaceFormOccurrenceOffset", "http://dbpedia.org/ontology/surfaceGravity", "http://dbpedia.org/ontology/surfaceType", "http://dbpedia.org/ontology/suspectedCases", "http://dbpedia.org/ontology/swimmingStyle", "http://dbpedia.org/ontology/symbol", "http://dbpedia.org/ontology/symptom", "http://dbpedia.org/ontology/synonym", "http://dbpedia.org/ontology/systemOfLaw", "http://dbpedia.org/ontology/systemRequirements", "http://dbpedia.org/ontology/tag", "http://dbpedia.org/ontology/taoiseach", "http://dbpedia.org/ontology/targetAirport", "http://dbpedia.org/ontology/targetSpaceStation", "http://dbpedia.org/ontology/taste", "http://dbpedia.org/ontology/tattoo", "http://dbpedia.org/ontology/taxon", "http://dbpedia.org/ontology/teachingStaff", "http://dbpedia.org/ontology/team", "http://dbpedia.org/ontology/teamCoached", "http://dbpedia.org/ontology/teamManager", "http://dbpedia.org/ontology/teamName", "http://dbpedia.org/ontology/teamPoint", "http://dbpedia.org/ontology/teamSize", "http://dbpedia.org/ontology/teamTitle", "http://dbpedia.org/ontology/technique", "http://dbpedia.org/ontology/televisionSeries", "http://dbpedia.org/ontology/tempPlace", "http://dbpedia.org/ontology/temperature", "http://dbpedia.org/ontology/templateName", "http://dbpedia.org/ontology/temple", "http://dbpedia.org/ontology/templeYear", "http://dbpedia.org/ontology/tenant", "http://dbpedia.org/ontology/tennisSurfaceType", "http://dbpedia.org/ontology/termOfOffice", "http://dbpedia.org/ontology/termPeriod", "http://dbpedia.org/ontology/territory", "http://dbpedia.org/ontology/terytCode", "http://dbpedia.org/ontology/tessitura", "http://dbpedia.org/ontology/testaverage", "http://dbpedia.org/ontology/theology", "http://dbpedia.org/ontology/third", "http://dbpedia.org/ontology/thirdCommander", "http://dbpedia.org/ontology/thirdDriver", "http://dbpedia.org/ontology/thirdDriverCountry", "http://dbpedia.org/ontology/thirdPlace", "http://dbpedia.org/ontology/thirdTeam", "http://dbpedia.org/ontology/throwingSide", "http://dbpedia.org/ontology/thumbnail", "http://dbpedia.org/ontology/thumbnailCaption", "http://dbpedia.org/ontology/tie", "http://dbpedia.org/ontology/time", "http://dbpedia.org/ontology/timeInSpace", "http://dbpedia.org/ontology/timeZone", "http://dbpedia.org/ontology/timeshiftChannel", "http://dbpedia.org/ontology/title", "http://dbpedia.org/ontology/titleDate", "http://dbpedia.org/ontology/titleDouble", "http://dbpedia.org/ontology/titleLanguage", "http://dbpedia.org/ontology/titleSingle", "http://dbpedia.org/ontology/toll", "http://dbpedia.org/ontology/tonyAward", "http://dbpedia.org/ontology/topFloorHeight", "http://dbpedia.org/ontology/topLevelDomain", "http://dbpedia.org/ontology/topSpeed", "http://dbpedia.org/ontology/topic", "http://dbpedia.org/ontology/torchBearer", "http://dbpedia.org/ontology/torqueOutput", "http://dbpedia.org/ontology/totalCargo", "http://dbpedia.org/ontology/totalDiscs", "http://dbpedia.org/ontology/totalIliCases", "http://dbpedia.org/ontology/totalLaunches", "http://dbpedia.org/ontology/totalMass", "http://dbpedia.org/ontology/totalPopulation", "http://dbpedia.org/ontology/totalTracks", "http://dbpedia.org/ontology/totalTravellers", "http://dbpedia.org/ontology/totalVaccinations", "http://dbpedia.org/ontology/totalVaccinationsPerHundred", "http://dbpedia.org/ontology/touristicSite", "http://dbpedia.org/ontology/tournamentOfChampions", "http://dbpedia.org/ontology/tournamentRecord", "http://dbpedia.org/ontology/towerHeight", "http://dbpedia.org/ontology/trackLength", "http://dbpedia.org/ontology/trackNumber", "http://dbpedia.org/ontology/trackWidth", "http://dbpedia.org/ontology/tradeMark", "http://dbpedia.org/ontology/tradingName", "http://dbpedia.org/ontology/trainer", "http://dbpedia.org/ontology/trainerClub", "http://dbpedia.org/ontology/trainerYears", "http://dbpedia.org/ontology/training", "http://dbpedia.org/ontology/translatedMotto", "http://dbpedia.org/ontology/translator", "http://dbpedia.org/ontology/transmission", "http://dbpedia.org/ontology/treatment", "http://dbpedia.org/ontology/tree", "http://dbpedia.org/ontology/tribus", "http://dbpedia.org/ontology/trustee", "http://dbpedia.org/ontology/tuition", "http://dbpedia.org/ontology/tvComId", "http://dbpedia.org/ontology/tvShow", "http://dbpedia.org/ontology/twinCountry", "http://dbpedia.org/ontology/twinTown", "http://dbpedia.org/ontology/type", "http://dbpedia.org/ontology/typeCoordinate", "http://dbpedia.org/ontology/typeOfElectrification", "http://dbpedia.org/ontology/typeOfGrain", "http://dbpedia.org/ontology/typeOfStorage", "http://dbpedia.org/ontology/typeOfYeast", "http://dbpedia.org/ontology/uRN", "http://dbpedia.org/ontology/uciCode", "http://dbpedia.org/ontology/ulanId", "http://dbpedia.org/ontology/umbrellaTitle", "http://dbpedia.org/ontology/unNumber", "http://dbpedia.org/ontology/uncle", "http://dbpedia.org/ontology/undraftedYear", "http://dbpedia.org/ontology/unesco", "http://dbpedia.org/ontology/unicode", "http://dbpedia.org/ontology/uniprot", "http://dbpedia.org/ontology/unitCost", "http://dbpedia.org/ontology/unitaryAuthority", "http://dbpedia.org/ontology/unitedStatesNationalBridgeId", "http://dbpedia.org/ontology/university", "http://dbpedia.org/ontology/unknownOutcomes", "http://dbpedia.org/ontology/unloCode", "http://dbpedia.org/ontology/updated", "http://dbpedia.org/ontology/upperAge", "http://dbpedia.org/ontology/urbanArea", "http://dbpedia.org/ontology/usOpenDouble", "http://dbpedia.org/ontology/usOpenMixed", "http://dbpedia.org/ontology/usOpenSingle", "http://dbpedia.org/ontology/usSales", "http://dbpedia.org/ontology/usedInWar", "http://dbpedia.org/ontology/uses", "http://dbpedia.org/ontology/usingCountry", "http://dbpedia.org/ontology/usk", "http://dbpedia.org/ontology/usopenWins", "http://dbpedia.org/ontology/usurper", "http://dbpedia.org/ontology/utcOffset", "http://dbpedia.org/ontology/v_hb", "http://dbpedia.org/ontology/vaccination", "http://dbpedia.org/ontology/vaccine", "http://dbpedia.org/ontology/value", "http://dbpedia.org/ontology/valvetrain", "http://dbpedia.org/ontology/vaporPressure", "http://dbpedia.org/ontology/variantOf", "http://dbpedia.org/ontology/varietals", "http://dbpedia.org/ontology/vehicle", "http://dbpedia.org/ontology/vehicleCode", "http://dbpedia.org/ontology/vehiclesInFleet", "http://dbpedia.org/ontology/vehiclesPerDay", "http://dbpedia.org/ontology/vein", "http://dbpedia.org/ontology/veneratedIn", "http://dbpedia.org/ontology/version", "http://dbpedia.org/ontology/viafId", "http://dbpedia.org/ontology/viceChancellor", "http://dbpedia.org/ontology/viceLeader", "http://dbpedia.org/ontology/viceLeaderParty", "http://dbpedia.org/ontology/vicePresident", "http://dbpedia.org/ontology/vicePrimeMinister", "http://dbpedia.org/ontology/vicePrincipal", "http://dbpedia.org/ontology/vicePrincipalLabel", "http://dbpedia.org/ontology/victim", "http://dbpedia.org/ontology/victims", "http://dbpedia.org/ontology/victory", "http://dbpedia.org/ontology/victoryAsMgr", "http://dbpedia.org/ontology/victoryPercentageAsMgr", "http://dbpedia.org/ontology/virtualChannel", "http://dbpedia.org/ontology/visitorStatisticsAsOf", "http://dbpedia.org/ontology/visitorsPerDay", "http://dbpedia.org/ontology/visitorsPerYear", "http://dbpedia.org/ontology/visitorsPercentageChange", "http://dbpedia.org/ontology/visitorsTotal", "http://dbpedia.org/ontology/voice", "http://dbpedia.org/ontology/voiceType", "http://dbpedia.org/ontology/volcanicActivity", "http://dbpedia.org/ontology/volcanicType", "http://dbpedia.org/ontology/volcanoId", "http://dbpedia.org/ontology/voltageOfElectrification", "http://dbpedia.org/ontology/volume", "http://dbpedia.org/ontology/volumeQuote", "http://dbpedia.org/ontology/volumes", "http://dbpedia.org/ontology/vonKlitzingConstant", "http://dbpedia.org/ontology/votesAgainst", "http://dbpedia.org/ontology/votesFor", "http://dbpedia.org/ontology/wagon", "http://dbpedia.org/ontology/waistSize", "http://dbpedia.org/ontology/war", "http://dbpedia.org/ontology/ward", "http://dbpedia.org/ontology/water", "http://dbpedia.org/ontology/waterArea", "http://dbpedia.org/ontology/waterPercentage", "http://dbpedia.org/ontology/watercourse", "http://dbpedia.org/ontology/watershed", "http://dbpedia.org/ontology/waterwayThroughTunnel", "http://dbpedia.org/ontology/wavelength", "http://dbpedia.org/ontology/weapon", "http://dbpedia.org/ontology/webcast", "http://dbpedia.org/ontology/websiteLabel", "http://dbpedia.org/ontology/weddingParentsDate", "http://dbpedia.org/ontology/weight", "http://dbpedia.org/ontology/westPlace", "http://dbpedia.org/ontology/whaDraft", "http://dbpedia.org/ontology/whaDraftTeam", "http://dbpedia.org/ontology/whaDraftYear", "http://dbpedia.org/ontology/wheelbase", "http://dbpedia.org/ontology/wholeArea", "http://dbpedia.org/ontology/width", "http://dbpedia.org/ontology/widthQuote", "http://dbpedia.org/ontology/wikiPageCharacterSize", "http://dbpedia.org/ontology/wikiPageDisambiguates", "http://dbpedia.org/ontology/wikiPageEditLink", "http://dbpedia.org/ontology/wikiPageExternalLink", "http://dbpedia.org/ontology/wikiPageExtracted", "http://dbpedia.org/ontology/wikiPageHistoryLink", "http://dbpedia.org/ontology/wikiPageID", "http://dbpedia.org/ontology/wikiPageInDegree", "http://dbpedia.org/ontology/wikiPageInterLanguageLink", "http://dbpedia.org/ontology/wikiPageLength", "http://dbpedia.org/ontology/wikiPageLengthDelta", "http://dbpedia.org/ontology/wikiPageModified", "http://dbpedia.org/ontology/wikiPageOutDegree", "http://dbpedia.org/ontology/wikiPageRedirects", "http://dbpedia.org/ontology/wikiPageRevisionID", "http://dbpedia.org/ontology/wikiPageRevisionLink", "http://dbpedia.org/ontology/wikiPageUsesTemplate", "http://dbpedia.org/ontology/wikiPageWikiLink", "http://dbpedia.org/ontology/wikiPageWikiLinkText", "http://dbpedia.org/ontology/wikidataSplitIri", "http://dbpedia.org/ontology/wilaya", "http://dbpedia.org/ontology/wimbledonDouble", "http://dbpedia.org/ontology/wimbledonMixed", "http://dbpedia.org/ontology/wimbledonSingle", "http://dbpedia.org/ontology/wineProduced", "http://dbpedia.org/ontology/wineRegion", "http://dbpedia.org/ontology/wineYear", "http://dbpedia.org/ontology/wingArea", "http://dbpedia.org/ontology/wingspan", "http://dbpedia.org/ontology/wins", "http://dbpedia.org/ontology/winsAtAlpg", "http://dbpedia.org/ontology/winsAtAsia", "http://dbpedia.org/ontology/winsAtAus", "http://dbpedia.org/ontology/winsAtChallenges", "http://dbpedia.org/ontology/winsAtChampionships", "http://dbpedia.org/ontology/winsAtJLPGA", "http://dbpedia.org/ontology/winsAtJapan", "http://dbpedia.org/ontology/winsAtKLPGA", "http://dbpedia.org/ontology/winsAtLAGT", "http://dbpedia.org/ontology/winsAtLET", "http://dbpedia.org/ontology/winsAtLPGA", "http://dbpedia.org/ontology/winsAtMajors", "http://dbpedia.org/ontology/winsAtNWIDE", "http://dbpedia.org/ontology/winsAtOtherTournaments", "http://dbpedia.org/ontology/winsAtPGA", "http://dbpedia.org/ontology/winsAtProTournaments", "http://dbpedia.org/ontology/winsAtSenEuro", "http://dbpedia.org/ontology/winsAtSun", "http://dbpedia.org/ontology/winsInEurope", "http://dbpedia.org/ontology/winterAppearances", "http://dbpedia.org/ontology/winterTemperature", "http://dbpedia.org/ontology/woRMS", "http://dbpedia.org/ontology/wordBefore", "http://dbpedia.org/ontology/work", "http://dbpedia.org/ontology/workArea", "http://dbpedia.org/ontology/world", "http://dbpedia.org/ontology/worldChampionTitleYear", "http://dbpedia.org/ontology/worldOpen", "http://dbpedia.org/ontology/worldTeamCup", "http://dbpedia.org/ontology/worldTournament", "http://dbpedia.org/ontology/worldTournamentBronze", "http://dbpedia.org/ontology/worldTournamentGold", "http://dbpedia.org/ontology/worldTournamentSilver", "http://dbpedia.org/ontology/worstDefeat", "http://dbpedia.org/ontology/wptFinalTable", "http://dbpedia.org/ontology/wptItm", "http://dbpedia.org/ontology/wptTitle", "http://dbpedia.org/ontology/writer", "http://dbpedia.org/ontology/wsopItm", "http://dbpedia.org/ontology/wsopWinYear", "http://dbpedia.org/ontology/wsopWristband", "http://dbpedia.org/ontology/year", "http://dbpedia.org/ontology/yearElevationIntoNobility", "http://dbpedia.org/ontology/yearOfConstruction", "http://dbpedia.org/ontology/yearOfElectrification", "http://dbpedia.org/ontology/years", "http://dbpedia.org/ontology/youthClub", "http://dbpedia.org/ontology/youthWing", "http://dbpedia.org/ontology/youthYears", "http://dbpedia.org/ontology/zdb", "http://dbpedia.org/ontology/zipCode", "http://dbpedia.org/ontology/zodiacSign", "http://dbpedia.org/ontology/آب_گیری_اقتباس_کا_علاقہ", "http://dbpedia.org/ontology/آبادی", "http://dbpedia.org/ontology/آبادی_والی_جگہ", "http://dbpedia.org/ontology/آبادی_والی_جگہ/area", "http://dbpedia.org/ontology/آبادی_والی_جگہ/areaMetro", "http://dbpedia.org/ontology/آبادی_والی_جگہ/areaTotal", "http://dbpedia.org/ontology/آبادی_والی_جگہ/areaUrban", "http://dbpedia.org/ontology/آبادی_والی_جگہ/populationDensity", "http://dbpedia.org/ontology/آبادی_والی_جگہ/populationMetroDensity", "http://dbpedia.org/ontology/آبادی_والی_جگہ/populationUrbanDensity", "http://dbpedia.org/ontology/آبادیاتی", "http://dbpedia.org/ontology/آبی_پولوکا_کھلاڑی", "http://dbpedia.org/ontology/آبی_گزرگاہ_کی_سرنگ", "http://dbpedia.org/ontology/آتش_فشاں", "http://dbpedia.org/ontology/آثار_قدیمہ", "http://dbpedia.org/ontology/آجر", "http://dbpedia.org/ontology/آخری_تازہ_کاری_کی_تاریخ", "http://dbpedia.org/ontology/آدمی", "http://dbpedia.org/ontology/آسٹریلوی_رولز_فٹ_بال_پلیئر", "http://dbpedia.org/ontology/آسٹریلوی_فٹ_بال_ٹیم", "http://dbpedia.org/ontology/آسٹریلوی_فٹ_بال_کی_انجمن", "http://dbpedia.org/ontology/آسٹریلیا_اوپن_ڈبل", "http://dbpedia.org/ontology/آلہ", "http://dbpedia.org/ontology/آنکھ_کا_جالا", "http://dbpedia.org/ontology/آواز", "http://dbpedia.org/ontology/آوازکا_اداکار", "http://dbpedia.org/ontology/ابی_چرچ_کی_برکت", "http://dbpedia.org/ontology/اثاثے", "http://dbpedia.org/ontology/اجسامِ_آب", "http://dbpedia.org/ontology/اخبار", "http://dbpedia.org/ontology/ادئیگی_کی_تاریخ", "http://dbpedia.org/ontology/اداکار", "http://dbpedia.org/ontology/ادبی_صنف", "http://dbpedia.org/ontology/ارضیاتی_دورانیہ", "http://dbpedia.org/ontology/اسپورٹس_لیگ", "http://dbpedia.org/ontology/اسکی_باز", "http://dbpedia.org/ontology/اسکی_کاعلاقہ", "http://dbpedia.org/ontology/اسکیٹ_کرنے_والا", "http://dbpedia.org/ontology/اشرافیہ", "http://dbpedia.org/ontology/اعصاب", "http://dbpedia.org/ontology/اعضاء_کی_خوراک", "http://dbpedia.org/ontology/اعلی_انعام", "http://dbpedia.org/ontology/اعلی_درجےکاموسیقی_فنکار", "http://dbpedia.org/ontology/اعلی_پانی_میں_ڈبکی_لگانے_والا", "http://dbpedia.org/ontology/افسانه", "http://dbpedia.org/ontology/افسانوی_شکل", "http://dbpedia.org/ontology/افسانوی_کردار", "http://dbpedia.org/ontology/افضل", "http://dbpedia.org/ontology/اقتباس", "http://dbpedia.org/ontology/اقتدارکا_تاریخی_علاقہ", "http://dbpedia.org/ontology/الحاق", "http://dbpedia.org/ontology/امریکن_فٹ_بال_لیگ", "http://dbpedia.org/ontology/امریکن_فٹ_بال_ٹیم", "http://dbpedia.org/ontology/امریکن_فٹ_بال_کوچ", "http://dbpedia.org/ontology/امریکی_رہنما", "http://dbpedia.org/ontology/امریکی_فٹ_بال_کھلاڑی", "http://dbpedia.org/ontology/ان_لائن_ہاکی_انجمن", "http://dbpedia.org/ontology/انتخابات", "http://dbpedia.org/ontology/انتخابات_کا_خاکہ", "http://dbpedia.org/ontology/انتظامی_اجتماعیت", "http://dbpedia.org/ontology/انتظامی_درجہ", "http://dbpedia.org/ontology/انتظامی_ضلع", "http://dbpedia.org/ontology/انتظامی_علاقہ", "http://dbpedia.org/ontology/انجمن_فٹ_بال_موسم", "http://dbpedia.org/ontology/انجن", "http://dbpedia.org/ontology/انجن/acceleration", "http://dbpedia.org/ontology/انجن/co2Emission", "http://dbpedia.org/ontology/انجن/cylinderBore", "http://dbpedia.org/ontology/انجن/diameter", "http://dbpedia.org/ontology/انجن/displacement", "http://dbpedia.org/ontology/انجن/height", "http://dbpedia.org/ontology/انجن/length", "http://dbpedia.org/ontology/انجن/pistonStroke", "http://dbpedia.org/ontology/انجن/powerOutput", "http://dbpedia.org/ontology/انجن/topSpeed", "http://dbpedia.org/ontology/انجن/torqueOutput", "http://dbpedia.org/ontology/انجن/weight", "http://dbpedia.org/ontology/انجن/width", "http://dbpedia.org/ontology/انسانی_نَسبہ", "http://dbpedia.org/ontology/انسانی_نَسبہ_کا_مقام", "http://dbpedia.org/ontology/انعام", "http://dbpedia.org/ontology/انگور", "http://dbpedia.org/ontology/انیمنگا_کردار", "http://dbpedia.org/ontology/انیمے", "http://dbpedia.org/ontology/اوسط_سالانہ_پیداوار", "http://dbpedia.org/ontology/اوسط_گہرائی_اقتباس", "http://dbpedia.org/ontology/اولمپک_کا_نتیجہ", "http://dbpedia.org/ontology/اولمپک_کھیلوں_کی_تقریب", "http://dbpedia.org/ontology/اولمپکس", "http://dbpedia.org/ontology/اونچائی_سے_پانی_میں_ڈبکی_لگانے_والا", "http://dbpedia.org/ontology/اوپر_سطح_کی_ڈومین", "http://dbpedia.org/ontology/اڈا", "http://dbpedia.org/ontology/اڈل", "http://dbpedia.org/ontology/اکیڈمی_ایوارڈ", "http://dbpedia.org/ontology/ایجنسی", "http://dbpedia.org/ontology/ایجنسی_اسٹیشن_کوڈ", "http://dbpedia.org/ontology/ایٹمی_بجلی_گھر", "http://dbpedia.org/ontology/ایک_تدفین_کی_جگہ", "http://dbpedia.org/ontology/ایک_طرف", "http://dbpedia.org/ontology/ایک_فہرست", "http://dbpedia.org/ontology/اے_ایف_آئی_انعام", "http://dbpedia.org/ontology/اے_سی_تی_سکور", "http://dbpedia.org/ontology/اے_ٹی_سی_کوڈ", "http://dbpedia.org/ontology/بائیتھلیٹ", "http://dbpedia.org/ontology/بادشاہ", "http://dbpedia.org/ontology/باسکٹ_بال_کھلاڑی", "http://dbpedia.org/ontology/باسکٹ_بال_کی_انجمن", "http://dbpedia.org/ontology/باسکٹ_بال_کی_جماعت", "http://dbpedia.org/ontology/باغ", "http://dbpedia.org/ontology/بالغ_اداکار", "http://dbpedia.org/ontology/بالنگ_ٹیموں_کی_انجمن", "http://dbpedia.org/ontology/باورچی", "http://dbpedia.org/ontology/باہمی_مقابلہ", "http://dbpedia.org/ontology/بجلی_گھر", "http://dbpedia.org/ontology/بحث_کی_تاریخ", "http://dbpedia.org/ontology/برادری", "http://dbpedia.org/ontology/برازیلی_رقص_سکول", "http://dbpedia.org/ontology/براعظم", "http://dbpedia.org/ontology/برطانوی_بادشاہی", "http://dbpedia.org/ontology/برف_پر_پھسلنے_میں_جِسمانی_ورزِشوں_کا_مُقابلہ_کا_کھلاڑی", "http://dbpedia.org/ontology/برف_کا_تودہ", "http://dbpedia.org/ontology/برفانی_ہاکی_کا_کھلاڑی", "http://dbpedia.org/ontology/برفانی_ہاکی_کی_انجمن", "http://dbpedia.org/ontology/برقی_ذیلی_مرکز", "http://dbpedia.org/ontology/برقی_طاقت_پیدا_کرنے_کا_آلہ", "http://dbpedia.org/ontology/بس_كا_تِجارتی_اِدارہ", "http://dbpedia.org/ontology/بستی", "http://dbpedia.org/ontology/بشپ_کے_تحت_حلقہ", "http://dbpedia.org/ontology/بصری_کھیل", "http://dbpedia.org/ontology/بصری_کھیلوں_کی_انجمن", "http://dbpedia.org/ontology/بغیر_پُہولوں_کا_سدا_بہار_پودا", "http://dbpedia.org/ontology/بلدیہ", "http://dbpedia.org/ontology/بلندی", "http://dbpedia.org/ontology/بلی", "http://dbpedia.org/ontology/بلیزن", "http://dbpedia.org/ontology/بند", "http://dbpedia.org/ontology/بندرگاہ", "http://dbpedia.org/ontology/بندهن", "http://dbpedia.org/ontology/بنیادی_ڈھانچہ", "http://dbpedia.org/ontology/بوبسلیگ_ایتھلیٹ", "http://dbpedia.org/ontology/بوبسلیگ_کھلاڑی", "http://dbpedia.org/ontology/بورڈ_کھیل", "http://dbpedia.org/ontology/بُرج_آب", "http://dbpedia.org/ontology/بھورا_بونا", "http://dbpedia.org/ontology/بیرون_ملک_کے_محکمے", "http://dbpedia.org/ontology/بیس_بال_لیگ", "http://dbpedia.org/ontology/بیس_بال_کا_موسم", "http://dbpedia.org/ontology/بیس_بال_کا_کھلاڑی", "http://dbpedia.org/ontology/بیس_بال_کی_انجمن", "http://dbpedia.org/ontology/بیس_بال_کی_جماعت", "http://dbpedia.org/ontology/بیل_کا_مُقابلہ_کرنے_والا", "http://dbpedia.org/ontology/بیماری", "http://dbpedia.org/ontology/بین_الاقوامی_تنظیم", "http://dbpedia.org/ontology/بین_الاقوامی_فٹ_بال_انجمن_کی_تقریب", "http://dbpedia.org/ontology/بینک", "http://dbpedia.org/ontology/بیچ_والی_بال_پلیئر", "http://dbpedia.org/ontology/بیڈمنٹن_کا_کھلاڑی", "http://dbpedia.org/ontology/بے_پھول_کا_بڑے_پتوں_والا_پودا", "http://dbpedia.org/ontology/تاریخ_سے_پہلے_کے_زمانے_کا_دور", "http://dbpedia.org/ontology/تاریخ_کا_معاہدہ", "http://dbpedia.org/ontology/تاریخ_کی_نقاب_کشائی", "http://dbpedia.org/ontology/تاریخی_آبادکاری", "http://dbpedia.org/ontology/تاریخی_تعمیر", "http://dbpedia.org/ontology/تاریخی_دور", "http://dbpedia.org/ontology/تاریخی_صوبہ", "http://dbpedia.org/ontology/تاریخی_ضلع", "http://dbpedia.org/ontology/تاریخی_علاقہ", "http://dbpedia.org/ontology/تاریخی_عمارت", "http://dbpedia.org/ontology/تاریخی_مقام", "http://dbpedia.org/ontology/تاریخی_ملک", "http://dbpedia.org/ontology/تاریخی_واقعہ", "http://dbpedia.org/ontology/تاش", "http://dbpedia.org/ontology/تالا", "http://dbpedia.org/ontology/تجارتی_ادارہ", "http://dbpedia.org/ontology/تحریری_پروگراموں_کا_مجموعہ", "http://dbpedia.org/ontology/تحریری_پروگراموں_کا_مجموعہ/fileSize", "http://dbpedia.org/ontology/تحریری_کام", "http://dbpedia.org/ontology/تربیت_کرنے_والا", "http://dbpedia.org/ontology/تشریح", "http://dbpedia.org/ontology/تصور", "http://dbpedia.org/ontology/تصویر", "http://dbpedia.org/ontology/تصویر_کھینچنے_کا_آلہ", "http://dbpedia.org/ontology/تصویروں_اور_دستخط_کی_کتاب", "http://dbpedia.org/ontology/تعارفی_علامت_کا_مطلب", "http://dbpedia.org/ontology/تعارفی_نشان", "http://dbpedia.org/ontology/تعلیمی", "http://dbpedia.org/ontology/تعلیمی_ادارے", "http://dbpedia.org/ontology/تعلیمی_جریدہ", "http://dbpedia.org/ontology/تعلیمی_مضمون", "http://dbpedia.org/ontology/تعلیمی_نظم_و_ضبط", "http://dbpedia.org/ontology/تعلیمی_کانفرنس", "http://dbpedia.org/ontology/تعمیراتی_ڈھانچہ", "http://dbpedia.org/ontology/تعمیراتی_ڈھانچے", "http://dbpedia.org/ontology/تفریح_گاہ", "http://dbpedia.org/ontology/تفریحی_پارک_کی_کشش", "http://dbpedia.org/ontology/تقریب", "http://dbpedia.org/ontology/تماشا_گاہ", "http://dbpedia.org/ontology/تماشہ", "http://dbpedia.org/ontology/تن_ساز", "http://dbpedia.org/ontology/تنظیم", "http://dbpedia.org/ontology/تنظیم_کے_رکن", "http://dbpedia.org/ontology/تِجارتی_اِدارہ", "http://dbpedia.org/ontology/تکرار_کرنا", "http://dbpedia.org/ontology/تھن_والے_جانور", "http://dbpedia.org/ontology/تھیٹر_ہدایت_کار", "http://dbpedia.org/ontology/تیر_انداز_کھلاڑی", "http://dbpedia.org/ontology/تیراک", "http://dbpedia.org/ontology/تیز_راہ_سوار", "http://dbpedia.org/ontology/تیز_راہ_کی_انجمن", "http://dbpedia.org/ontology/تیز_روسی_شراب", "http://dbpedia.org/ontology/تیغ_زن", "http://dbpedia.org/ontology/ثانوی_سیاره", "http://dbpedia.org/ontology/جاسوس", "http://dbpedia.org/ontology/جامع_درس_گاہ", "http://dbpedia.org/ontology/جامع_کا_علقه", "http://dbpedia.org/ontology/جامعہ_کا_ناپ", "http://dbpedia.org/ontology/جامعہ_کی_قسم", "http://dbpedia.org/ontology/جانور", "http://dbpedia.org/ontology/جاپانی_افسانه", "http://dbpedia.org/ontology/جاگیر", "http://dbpedia.org/ontology/جراثیم", "http://dbpedia.org/ontology/جرم_فلکی", "http://dbpedia.org/ontology/جرمن_ٹورنگ_کار_ماسٹرزریسر", "http://dbpedia.org/ontology/جریدے_کا_نشر_پارہ", "http://dbpedia.org/ontology/جزیرہ", "http://dbpedia.org/ontology/جزیرہ_نما", "http://dbpedia.org/ontology/جسمانی_ساخت", "http://dbpedia.org/ontology/جل_تھلیا", "http://dbpedia.org/ontology/جماعتی_کھیل", "http://dbpedia.org/ontology/جمع_آبادیات", "http://dbpedia.org/ontology/جمع_کا_علاقہ", "http://dbpedia.org/ontology/جنکگو", "http://dbpedia.org/ontology/جنگل", "http://dbpedia.org/ontology/جنینیات_کا_علم", "http://dbpedia.org/ontology/جوہری_عدد", "http://dbpedia.org/ontology/جُغرافیائی_سیاسیات_تنظیم", "http://dbpedia.org/ontology/جُغرافیائی_سیاسیات_تنظیم/areaMetro", "http://dbpedia.org/ontology/جُغرافیائی_سیاسیات_تنظیم/populationDensity", "http://dbpedia.org/ontology/جگہ", "http://dbpedia.org/ontology/جھنڈا", "http://dbpedia.org/ontology/جھیل", "http://dbpedia.org/ontology/جھیل/areaOfCatchment", "http://dbpedia.org/ontology/جھیل/shoreLength", "http://dbpedia.org/ontology/جھیل/volume", "http://dbpedia.org/ontology/جہاز", "http://dbpedia.org/ontology/جی_ایم_ایل:_خصوصیت", "http://dbpedia.org/ontology/جیل", "http://dbpedia.org/ontology/جیو:_مقامی_چیزیں", "http://dbpedia.org/ontology/حاکم", "http://dbpedia.org/ontology/حراستی_کیمپ", "http://dbpedia.org/ontology/حرف", "http://dbpedia.org/ontology/حرکت_پذیر_پیدل_چلنے_کا_راستہ", "http://dbpedia.org/ontology/حرکت_پذیر_پیدل_چلنے_کا_راستہ/diameter", "http://dbpedia.org/ontology/حرکت_پذیر_پیدل_چلنے_کا_راستہ/height", "http://dbpedia.org/ontology/حرکت_پذیر_پیدل_چلنے_کا_راستہ/length", "http://dbpedia.org/ontology/حرکت_پذیر_پیدل_چلنے_کا_راستہ/mass", "http://dbpedia.org/ontology/حرکت_پذیر_پیدل_چلنے_کا_راستہ/weight", "http://dbpedia.org/ontology/حرکت_پذیر_پیدل_چلنے_کا_راستہ/width", "http://dbpedia.org/ontology/حساب_و_شمار", "http://dbpedia.org/ontology/حساب_کی_ضرورت", "http://dbpedia.org/ontology/حصول_کی_تاریخ", "http://dbpedia.org/ontology/حلقہ_کا_پادری", "http://dbpedia.org/ontology/حملہ", "http://dbpedia.org/ontology/حوض", "http://dbpedia.org/ontology/حکومت_کی_قسم", "http://dbpedia.org/ontology/حکومتی_انتظامی_علاقہ", "http://dbpedia.org/ontology/حیاتیاتی'ریکارڈرز_پر_مبنی_ایک_فائل'", "http://dbpedia.org/ontology/حیاتیاتی_ریکارڈرز_پر_مبنی_ایک_فائل", "http://dbpedia.org/ontology/حیاتیاتی_مرکبات", "http://dbpedia.org/ontology/خامرہ", "http://dbpedia.org/ontology/خاندان", "http://dbpedia.org/ontology/خانقاہ", "http://dbpedia.org/ontology/خدمات_عامہ", "http://dbpedia.org/ontology/خریداری_کرنے_کے_لیے_مختص_جگہ", "http://dbpedia.org/ontology/خشکی_کا_وہ_حصہ_جو_سمندر_کے_اندر_تک_چلا_گیا_ہو", "http://dbpedia.org/ontology/خصوصی_سائنسی_دلچسپی_کی_سائٹ", "http://dbpedia.org/ontology/خفیہ_پیغام", "http://dbpedia.org/ontology/خلا_باز", "http://dbpedia.org/ontology/خلا_باز/timeInSpace", "http://dbpedia.org/ontology/خلائی_اڈہ", "http://dbpedia.org/ontology/خلائی_اڈہ/volume", "http://dbpedia.org/ontology/خلائی_جہاز", "http://dbpedia.org/ontology/خلائی_جہاز/distance", "http://dbpedia.org/ontology/خلائی_جہاز/timeInSpace", "http://dbpedia.org/ontology/خلائی_مہم", "http://dbpedia.org/ontology/خلائی_مہم/cmpEvaDuration", "http://dbpedia.org/ontology/خلائی_مہم/distanceTraveled", "http://dbpedia.org/ontology/خلائی_مہم/lunarEvaTime", "http://dbpedia.org/ontology/خلائی_مہم/lunarOrbitTime", "http://dbpedia.org/ontology/خلائی_مہم/lunarSampleMass", "http://dbpedia.org/ontology/خلائی_مہم/lunarSurfaceTime", "http://dbpedia.org/ontology/خلائی_مہم/mass", "http://dbpedia.org/ontology/خلائی_مہم/missionDuration", "http://dbpedia.org/ontology/خلائی_مہم/stationEvaDuration", "http://dbpedia.org/ontology/خلائی_مہم/stationVisitDuration", "http://dbpedia.org/ontology/خلائی_پرواز_میں_سال", "http://dbpedia.org/ontology/خلاصہ", "http://dbpedia.org/ontology/خلوی_مادہ", "http://dbpedia.org/ontology/خلیج", "http://dbpedia.org/ontology/خواتین_کی_انجمن_کا_باہمی_مقابلہ", "http://dbpedia.org/ontology/خوراک", "http://dbpedia.org/ontology/خول_دارجانور", "http://dbpedia.org/ontology/خون_کی_شریان", "http://dbpedia.org/ontology/خیالی_کردار", "http://dbpedia.org/ontology/دائرہ_اختيارات", "http://dbpedia.org/ontology/دارالحکومت", "http://dbpedia.org/ontology/درہ", "http://dbpedia.org/ontology/دستاویز", "http://dbpedia.org/ontology/دستاویز_کی_قسم", "http://dbpedia.org/ontology/دفتر_کی_مدت", "http://dbpedia.org/ontology/دماغ", "http://dbpedia.org/ontology/دوائی", "http://dbpedia.org/ontology/دور", "http://dbpedia.org/ontology/دورانیہ_حیات_وقوعه", "http://dbpedia.org/ontology/دوڑ", "http://dbpedia.org/ontology/دکھاوا_کرنے_والا", "http://dbpedia.org/ontology/دہانه", "http://dbpedia.org/ontology/دیا_گیا_نام", "http://dbpedia.org/ontology/دیوتا", "http://dbpedia.org/ontology/ذاتی_تقریب", "http://dbpedia.org/ontology/ذیلی_بلدیہ", "http://dbpedia.org/ontology/رابطے_کا_ضابطہ", "http://dbpedia.org/ontology/رسائی", "http://dbpedia.org/ontology/رسائی_کی_تاریخ", "http://dbpedia.org/ontology/رسالہ", "http://dbpedia.org/ontology/رفتار_سکیٹر", "http://dbpedia.org/ontology/رفیقه_مدیر", "http://dbpedia.org/ontology/رقبہ", "http://dbpedia.org/ontology/رقص_کرنے_والا", "http://dbpedia.org/ontology/رقص_گاہ", "http://dbpedia.org/ontology/رنگ", "http://dbpedia.org/ontology/رنگ_ساز", "http://dbpedia.org/ontology/رواں_زینہ", "http://dbpedia.org/ontology/رواں_زینہ/diameter", "http://dbpedia.org/ontology/رواں_زینہ/height", "http://dbpedia.org/ontology/رواں_زینہ/length", "http://dbpedia.org/ontology/رواں_زینہ/mass", "http://dbpedia.org/ontology/رواں_زینہ/weight", "http://dbpedia.org/ontology/رواں_زینہ/width", "http://dbpedia.org/ontology/روایتی_موسیقی_کی_ترکیب", "http://dbpedia.org/ontology/روزانہ_ویکسین_خام", "http://dbpedia.org/ontology/روشنی_کا_مینار", "http://dbpedia.org/ontology/روشِ_لباس", "http://dbpedia.org/ontology/رومانیہ_کی_تصفیہ_کا_اقتدار_کا_موضوع", "http://dbpedia.org/ontology/رومن_کیتہولک_پادری", "http://dbpedia.org/ontology/رگ", "http://dbpedia.org/ontology/رہائی_کی_تاریخ", "http://dbpedia.org/ontology/ریاست", "http://dbpedia.org/ontology/ریاستہائے_متحدہ_کی_سپریم_کورٹ_کیس", "http://dbpedia.org/ontology/ریاستی_قرارداد", "http://dbpedia.org/ontology/ریاضیاتی_تصور", "http://dbpedia.org/ontology/ریل_گاڑی", "http://dbpedia.org/ontology/ریل_گاڑی_کا_انجن", "http://dbpedia.org/ontology/ریڈیو_سٹیشن", "http://dbpedia.org/ontology/ریڑھ_کی_ہڈی_کے_بغیر_جانور", "http://dbpedia.org/ontology/ریکارڈرز_پر_مبنی_ایک_فائل", "http://dbpedia.org/ontology/ریگستان", "http://dbpedia.org/ontology/زبان", "http://dbpedia.org/ontology/زلزلہ", "http://dbpedia.org/ontology/زمین_دوز_برقی_ریل_کا_اڈہ", "http://dbpedia.org/ontology/زمین_کا_علاقہ", "http://dbpedia.org/ontology/زوال", "http://dbpedia.org/ontology/زیر_زمین_جریدہ", "http://dbpedia.org/ontology/سائنسدان", "http://dbpedia.org/ontology/سائنسی_تصور", "http://dbpedia.org/ontology/سائیکل_سوار", "http://dbpedia.org/ontology/سائیکل_سوار_کی_انجمن", "http://dbpedia.org/ontology/سائیکلنگ_جماعت", "http://dbpedia.org/ontology/سائیکلنگ_دوڑ", "http://dbpedia.org/ontology/سائیکلنگ_مقابلہ", "http://dbpedia.org/ontology/سابق_بلدیہ", "http://dbpedia.org/ontology/ساحل_سمندر", "http://dbpedia.org/ontology/ساحل_سمندروالی_بال_کاکھلاڑی", "http://dbpedia.org/ontology/ساز", "http://dbpedia.org/ontology/سازندہ", "http://dbpedia.org/ontology/سافٹ_بال_انجمن", "http://dbpedia.org/ontology/سافٹ_بال_کی_انجمن", "http://dbpedia.org/ontology/سال", "http://dbpedia.org/ontology/سامان_کی_جانچ_پڑتال_کر_سکتے_ہیں", "http://dbpedia.org/ontology/سبز_طحالب", "http://dbpedia.org/ontology/ستار", "http://dbpedia.org/ontology/ستار_بجانے_والا", "http://dbpedia.org/ontology/ستارہ", "http://dbpedia.org/ontology/ستارہ_غول", "http://dbpedia.org/ontology/سجاوٹ", "http://dbpedia.org/ontology/سرائے", "http://dbpedia.org/ontology/سرمائی_کھیل_کھیلنے_والا", "http://dbpedia.org/ontology/سرنگ", "http://dbpedia.org/ontology/سرکاری_محکمہ", "http://dbpedia.org/ontology/سرگرمی", "http://dbpedia.org/ontology/سزا_دینے_کا_عمل", "http://dbpedia.org/ontology/سفید_رنگ_کے_خلیوں_پر_مشتمل_ایک_بے_رنگ_سیال", "http://dbpedia.org/ontology/سفیر", "http://dbpedia.org/ontology/سلسلہ_وار_قاتل", "http://dbpedia.org/ontology/سلسلہ_وار_ڈرامے_کا_کردار", "http://dbpedia.org/ontology/سمندر", "http://dbpedia.org/ontology/سند", "http://dbpedia.org/ontology/سنوکر_کا_فاتح", "http://dbpedia.org/ontology/سنوکر_کی_عالمی_درجہ_بندی", "http://dbpedia.org/ontology/سنوکر_کے_کھلاڑی", "http://dbpedia.org/ontology/سنگل", "http://dbpedia.org/ontology/سنیما", "http://dbpedia.org/ontology/سورج_گرہن", "http://dbpedia.org/ontology/سومو_پہلوان", "http://dbpedia.org/ontology/سپریڈ_شیٹ", "http://dbpedia.org/ontology/سپیڈ_وے_ٹیم", "http://dbpedia.org/ontology/سڑک", "http://dbpedia.org/ontology/سڑک_میں_واقع_ہے", "http://dbpedia.org/ontology/سکہ_رائج_الوقت", "http://dbpedia.org/ontology/سیارہ", "http://dbpedia.org/ontology/سیارہ/apoapsis", "http://dbpedia.org/ontology/سیارہ/averageSpeed", "http://dbpedia.org/ontology/سیارہ/density", "http://dbpedia.org/ontology/سیارہ/mass", "http://dbpedia.org/ontology/سیارہ/maximumTemperature", "http://dbpedia.org/ontology/سیارہ/meanRadius", "http://dbpedia.org/ontology/سیارہ/meanTemperature", "http://dbpedia.org/ontology/سیارہ/minimumTemperature", "http://dbpedia.org/ontology/سیارہ/orbitalPeriod", "http://dbpedia.org/ontology/سیارہ/periapsis", "http://dbpedia.org/ontology/سیارہ/surfaceArea", "http://dbpedia.org/ontology/سیارہ/temperature", "http://dbpedia.org/ontology/سیارہ/volume", "http://dbpedia.org/ontology/سیاستدان", "http://dbpedia.org/ontology/سیاستدان_میاں_بیوی", "http://dbpedia.org/ontology/سیاسی_تصور", "http://dbpedia.org/ontology/سیاسی_تقریب", "http://dbpedia.org/ontology/سیاسی_جماعت", "http://dbpedia.org/ontology/سینیٹ_کا_رُکن", "http://dbpedia.org/ontology/شاعر", "http://dbpedia.org/ontology/شاہی", "http://dbpedia.org/ontology/شخص", "http://dbpedia.org/ontology/شخص/height", "http://dbpedia.org/ontology/شخص/weight", "http://dbpedia.org/ontology/شخص_کی_تقریب", "http://dbpedia.org/ontology/شراب", "http://dbpedia.org/ontology/شراب_خانہ", "http://dbpedia.org/ontology/شراب_کا_علاقہ", "http://dbpedia.org/ontology/شروع", "http://dbpedia.org/ontology/شریان", "http://dbpedia.org/ontology/شریف_خاندان", "http://dbpedia.org/ontology/شطرنج_کا_کھلاڑی", "http://dbpedia.org/ontology/شعبہ", "http://dbpedia.org/ontology/شماریات", "http://dbpedia.org/ontology/شناخت_کنندہ", "http://dbpedia.org/ontology/شوقیہ_مکے_باز", "http://dbpedia.org/ontology/شکست", "http://dbpedia.org/ontology/شہر", "http://dbpedia.org/ontology/شہر_کا_ضلع", "http://dbpedia.org/ontology/شہر_کا_منتظم", "http://dbpedia.org/ontology/صحافی", "http://dbpedia.org/ontology/صدر", "http://dbpedia.org/ontology/صنف", "http://dbpedia.org/ontology/صنوبر_کی_قِسم_کا_پودا", "http://dbpedia.org/ontology/صوبہ", "http://dbpedia.org/ontology/ضابطہ", "http://dbpedia.org/ontology/ضلع", "http://dbpedia.org/ontology/ضِلَع", "http://dbpedia.org/ontology/طبی_خصوصیت", "http://dbpedia.org/ontology/طبیب", "http://dbpedia.org/ontology/طوفانی_لہر", "http://dbpedia.org/ontology/طيار", "http://dbpedia.org/ontology/طَنابی_گاڑی", "http://dbpedia.org/ontology/طیارہ_اڑانے_والا", "http://dbpedia.org/ontology/ظریف", "http://dbpedia.org/ontology/عالمی_ثقافتی_ورثہ", "http://dbpedia.org/ontology/عالمی_وباء", "http://dbpedia.org/ontology/عجائب_گھر", "http://dbpedia.org/ontology/عرفیت", "http://dbpedia.org/ontology/عضو", "http://dbpedia.org/ontology/عظیم", "http://dbpedia.org/ontology/علاقہ", "http://dbpedia.org/ontology/علاقے_کا_دارالحکومت", "http://dbpedia.org/ontology/علاقے_کا_درجہ", "http://dbpedia.org/ontology/علما_کا_حکم", "http://dbpedia.org/ontology/علمی_انتظامی_علاقہ", "http://dbpedia.org/ontology/عمارت", "http://dbpedia.org/ontology/عمارت/floorArea", "http://dbpedia.org/ontology/عمارتی_دفتر", "http://dbpedia.org/ontology/عمر", "http://dbpedia.org/ontology/عمید_کا_عہدہ", "http://dbpedia.org/ontology/عنکبات", "http://dbpedia.org/ontology/عوامی_راہداری_کا_نظام", "http://dbpedia.org/ontology/عورت", "http://dbpedia.org/ontology/عکسی_تصویر_اتارنے_والا", "http://dbpedia.org/ontology/عہدے_دار", "http://dbpedia.org/ontology/عیسائی_نظریہ", "http://dbpedia.org/ontology/عیسائی_پادري", "http://dbpedia.org/ontology/عیسائی_پادری", "http://dbpedia.org/ontology/غار", "http://dbpedia.org/ontology/غول", "http://dbpedia.org/ontology/غیر_منافع_بخش_تنظیم", "http://dbpedia.org/ontology/فائل", "http://dbpedia.org/ontology/فائل_سسٹم", "http://dbpedia.org/ontology/فارمولا_ون_ریسر", "http://dbpedia.org/ontology/فارمولا_ون_ریسنگ", "http://dbpedia.org/ontology/فارمولا_ون_ٹیم", "http://dbpedia.org/ontology/فراعنہ", "http://dbpedia.org/ontology/فرانس_کا_انتظامی_ضلع", "http://dbpedia.org/ontology/فرقہ_واریت", "http://dbpedia.org/ontology/فروخت", "http://dbpedia.org/ontology/فعال_سال", "http://dbpedia.org/ontology/فعال_سال_آخر_سال", "http://dbpedia.org/ontology/فعال_سال_شروع_سال_Mgr", "http://dbpedia.org/ontology/فعال_سال_کی_آخری_تاریخ_Mgr", "http://dbpedia.org/ontology/فعال_سال_کی_شروعات_کی_تاریخ", "http://dbpedia.org/ontology/فعال_کیسز", "http://dbpedia.org/ontology/فلسفی", "http://dbpedia.org/ontology/فلسفیانہ_تصور", "http://dbpedia.org/ontology/فلم", "http://dbpedia.org/ontology/فلم_کا_ہدایت_کار", "http://dbpedia.org/ontology/فلم_کی_صنف", "http://dbpedia.org/ontology/فلمی_میلہ", "http://dbpedia.org/ontology/فلک_بوس_عمارت", "http://dbpedia.org/ontology/فن_کاسرپرست", "http://dbpedia.org/ontology/فنکار", "http://dbpedia.org/ontology/فنکارانہ_انداز_کی_مدت", "http://dbpedia.org/ontology/فنکارانہ_صنف", "http://dbpedia.org/ontology/فنکارکاریکارڈ_نامہ", "http://dbpedia.org/ontology/فوج", "http://dbpedia.org/ontology/فوجی_افسر", "http://dbpedia.org/ontology/فوجی_تنازعہ", "http://dbpedia.org/ontology/فوجی_خدمات", "http://dbpedia.org/ontology/فوجی_شخص", "http://dbpedia.org/ontology/فوجی_ڈھانچہ", "http://dbpedia.org/ontology/فوجی_گاڑی", "http://dbpedia.org/ontology/فوجی_ہوائی_جہاز", "http://dbpedia.org/ontology/فوجی_یونٹ", "http://dbpedia.org/ontology/فٹ_بال_باہمی_مقابلہ", "http://dbpedia.org/ontology/فٹ_بال_تنظیم", "http://dbpedia.org/ontology/فٹ_بال_لیگ_کے_موسم", "http://dbpedia.org/ontology/فٹ_بال_مقابلہ", "http://dbpedia.org/ontology/فٹ_بال_منتظم", "http://dbpedia.org/ontology/فٹ_بال_کلب_کا_موسم", "http://dbpedia.org/ontology/فٹ_بال_کی_انجمن", "http://dbpedia.org/ontology/فٹبال_کا_کھلاڑی", "http://dbpedia.org/ontology/فگر_سکیٹر۔", "http://dbpedia.org/ontology/فگرسکیٹر", "http://dbpedia.org/ontology/فہرست", "http://dbpedia.org/ontology/قاتل", "http://dbpedia.org/ontology/قاضی", "http://dbpedia.org/ontology/قانون", "http://dbpedia.org/ontology/قانونی_فرم", "http://dbpedia.org/ontology/قانونی_مقدمہ", "http://dbpedia.org/ontology/قبر_کی_یادگار", "http://dbpedia.org/ontology/قبرستان", "http://dbpedia.org/ontology/قدرتی_جگہ", "http://dbpedia.org/ontology/قدرتی_علاقہ", "http://dbpedia.org/ontology/قدرتی_واقعہ", "http://dbpedia.org/ontology/قدیم_تاریخی_زمانہ", "http://dbpedia.org/ontology/قسم", "http://dbpedia.org/ontology/قصبہ", "http://dbpedia.org/ontology/قطار_رائج", "http://dbpedia.org/ontology/قلعہ", "http://dbpedia.org/ontology/قلم_کار", "http://dbpedia.org/ontology/قمری_گڑھا", "http://dbpedia.org/ontology/قمری_گڑھا/diameter", "http://dbpedia.org/ontology/قومی_اعلی_درجے_کا_مدرسہ_کھیل_کے_متعلق_دوستی", "http://dbpedia.org/ontology/قومی_ترانہ", "http://dbpedia.org/ontology/قومی_فٹ_بال_انجمن_تقریب", "http://dbpedia.org/ontology/قومی_فٹ_بال_تنظیم", "http://dbpedia.org/ontology/قومی_فٹ_بال_لیگ_کا_موسم", "http://dbpedia.org/ontology/قومی_کالج_ورزش_انجمن_کاموسم", "http://dbpedia.org/ontology/قیمتی_اشیاء_کا_مجموعہ", "http://dbpedia.org/ontology/لحمیات", "http://dbpedia.org/ontology/لیکروس_انجمن", "http://dbpedia.org/ontology/لیکروس_کھلاڑی", "http://dbpedia.org/ontology/ماتحت_علاقہ", "http://dbpedia.org/ontology/مارشل_کے_فنکار", "http://dbpedia.org/ontology/مانگا", "http://dbpedia.org/ontology/مانہوا", "http://dbpedia.org/ontology/ماہر_آثار_قدیمہ", "http://dbpedia.org/ontology/ماہر_حشریات", "http://dbpedia.org/ontology/ماہر_حیاتیات", "http://dbpedia.org/ontology/ماہر_فنیات", "http://dbpedia.org/ontology/ماہر_لسانیات", "http://dbpedia.org/ontology/ماہر_مصریات", "http://dbpedia.org/ontology/ماہر_معاشیات", "http://dbpedia.org/ontology/ماہر_نفسیات", "http://dbpedia.org/ontology/مبدہ", "http://dbpedia.org/ontology/متحرک_فلم", "http://dbpedia.org/ontology/متواتر_ادب", "http://dbpedia.org/ontology/مجرم", "http://dbpedia.org/ontology/مجسمہ", "http://dbpedia.org/ontology/مجسمہ_ساز", "http://dbpedia.org/ontology/مجلس", "http://dbpedia.org/ontology/مجلس_قانون_ساز", "http://dbpedia.org/ontology/مجلس_کے_شرکاء", "http://dbpedia.org/ontology/مجموعہ", "http://dbpedia.org/ontology/مجموعی_آبادی_کا_سال", "http://dbpedia.org/ontology/مجموعی_آبادی_کل", "http://dbpedia.org/ontology/مجموعی_ملکی_پیداوار", "http://dbpedia.org/ontology/مجموعی_گھریلو_پیداوار_فی_کس", "http://dbpedia.org/ontology/محصول", "http://dbpedia.org/ontology/محفوظ_شدہ_دستاویزات", "http://dbpedia.org/ontology/محفوظ_علاقہ", "http://dbpedia.org/ontology/محلہ", "http://dbpedia.org/ontology/مخروطی_مصری_مینار", "http://dbpedia.org/ontology/مخفف", "http://dbpedia.org/ontology/مخلوط_جنگ_جو_آرٹس_تقریب", "http://dbpedia.org/ontology/مخلوط_مارشل_آرٹس_کی_انجمن", "http://dbpedia.org/ontology/مدرسه", "http://dbpedia.org/ontology/مدرسه/campusSize", "http://dbpedia.org/ontology/مدرسہ", "http://dbpedia.org/ontology/مذہبی", "http://dbpedia.org/ontology/مذہبی_تصور", "http://dbpedia.org/ontology/مذہبی_تنظیم", "http://dbpedia.org/ontology/مذہبی_عمارت", "http://dbpedia.org/ontology/مردہ_لڑائی_کی_جگہ", "http://dbpedia.org/ontology/مزاحمتی_تحریک_کے_رکن", "http://dbpedia.org/ontology/مزاحیہ", "http://dbpedia.org/ontology/مزاحیہ_تخلیق_کار", "http://dbpedia.org/ontology/مزاحیہ_خاکے", "http://dbpedia.org/ontology/مزاحیہ_گروہ", "http://dbpedia.org/ontology/مزار", "http://dbpedia.org/ontology/مزدوروں_کا_اتحاد", "http://dbpedia.org/ontology/مسجد", "http://dbpedia.org/ontology/مسخرا", "http://dbpedia.org/ontology/مسدود_برادری", "http://dbpedia.org/ontology/مشترکہ_نورڈک", "http://dbpedia.org/ontology/مشروب", "http://dbpedia.org/ontology/مشیر", "http://dbpedia.org/ontology/مصنف", "http://dbpedia.org/ontology/مصنوعی_سیارہ", "http://dbpedia.org/ontology/معاشرتی_واقعہ", "http://dbpedia.org/ontology/معاملہ", "http://dbpedia.org/ontology/معاہدہ", "http://dbpedia.org/ontology/معدنیات", "http://dbpedia.org/ontology/معروف_کھیلوں_کے_لیے_مَخصُوص_جگہ", "http://dbpedia.org/ontology/معلم", "http://dbpedia.org/ontology/معلوماتی_آلات", "http://dbpedia.org/ontology/معمار", "http://dbpedia.org/ontology/معیاری", "http://dbpedia.org/ontology/مقابلہ", "http://dbpedia.org/ontology/مقابلہ_میں_کاریں_چلانے_والے", "http://dbpedia.org/ontology/مقامی_تھنگ", "http://dbpedia.org/ontology/مقامی_حکومت_کی_انجمن", "http://dbpedia.org/ontology/مقننہ", "http://dbpedia.org/ontology/ملاح", "http://dbpedia.org/ontology/ملازمین_کی_تنظیم", "http://dbpedia.org/ontology/ملاقات", "http://dbpedia.org/ontology/ملحقہ_بستی", "http://dbpedia.org/ontology/ملک", "http://dbpedia.org/ontology/ملک_کی_نشست", "http://dbpedia.org/ontology/ملکہ_حسن", "http://dbpedia.org/ontology/منتظم", "http://dbpedia.org/ontology/منحوا", "http://dbpedia.org/ontology/مندر", "http://dbpedia.org/ontology/منسلک_سازینه", "http://dbpedia.org/ontology/منشیات_کا_مجموعہ", "http://dbpedia.org/ontology/منصوبہ", "http://dbpedia.org/ontology/منظم_شدہ_مجموعہ", "http://dbpedia.org/ontology/مواصلات", "http://dbpedia.org/ontology/موبائل_فون", "http://dbpedia.org/ontology/موت_کی_جگہ", "http://dbpedia.org/ontology/موت_کی_عمر", "http://dbpedia.org/ontology/موج_تختہ_پر_سوار_ہونے_والا", "http://dbpedia.org/ontology/مورخ", "http://dbpedia.org/ontology/موسیقی_بنانے_والا", "http://dbpedia.org/ontology/موسیقی_میلہ", "http://dbpedia.org/ontology/موسیقی_چارٹس_میں_جگہ", "http://dbpedia.org/ontology/موسیقی_چارٹس_میں_جگہ۔", "http://dbpedia.org/ontology/موسیقی_کا", "http://dbpedia.org/ontology/موسیقی_کا_رہنما", "http://dbpedia.org/ontology/موسیقی_کا_فنکار", "http://dbpedia.org/ontology/موسیقی_کا_کام", "http://dbpedia.org/ontology/موسیقی_کی_صنف", "http://dbpedia.org/ontology/موسیقی_کے_ریکارڈوں_کی_فہرست", "http://dbpedia.org/ontology/موسیقی_کے_ساتھ_نقل_یا_اداکاری", "http://dbpedia.org/ontology/موضوع_کا_تصور", "http://dbpedia.org/ontology/مونوکلونل_دافِع_جِسم", "http://dbpedia.org/ontology/موٹر_سائیکل", "http://dbpedia.org/ontology/موٹر_سائیکل_دوڑانے_والا", "http://dbpedia.org/ontology/موٹر_سائیکل_ریسنگ_لیگ", "http://dbpedia.org/ontology/موٹر_سائیکل_سوار", "http://dbpedia.org/ontology/موٹر_کار_کی_دوڑ", "http://dbpedia.org/ontology/موٹر_کار_کی_دوڑ/course", "http://dbpedia.org/ontology/موٹر_کار_کی_دوڑ/distance", "http://dbpedia.org/ontology/موٹر_کھیل_میں_گاڑی_دوڑانے_والا", "http://dbpedia.org/ontology/موٹر_کھیل_کا_موسم", "http://dbpedia.org/ontology/موٹر_گاڑی_کا_انجن", "http://dbpedia.org/ontology/مُضحِکہ_خیزکردار", "http://dbpedia.org/ontology/مچھلی", "http://dbpedia.org/ontology/مکے_باز", "http://dbpedia.org/ontology/مکے_بازی_کھیل_کی_انجمن", "http://dbpedia.org/ontology/میدان", "http://dbpedia.org/ontology/میزائل_چلانے_کی_جگہ", "http://dbpedia.org/ontology/مینار", "http://dbpedia.org/ontology/نائب", "http://dbpedia.org/ontology/نائب_صدر", "http://dbpedia.org/ontology/نائب_وزیر_اعظم", "http://dbpedia.org/ontology/نارمن_فرقے_کا_عيسائی", "http://dbpedia.org/ontology/ناشر", "http://dbpedia.org/ontology/ناشَر", "http://dbpedia.org/ontology/نام", "http://dbpedia.org/ontology/نامعلوم", "http://dbpedia.org/ontology/ناٹک", "http://dbpedia.org/ontology/ناکارہ", "http://dbpedia.org/ontology/ندی", "http://dbpedia.org/ontology/ندی/discharge", "http://dbpedia.org/ontology/ندی/dischargeAverage", "http://dbpedia.org/ontology/ندی/maximumDischarge", "http://dbpedia.org/ontology/ندی/minimumDischarge", "http://dbpedia.org/ontology/ندی/watershed", "http://dbpedia.org/ontology/نسل_یا_خاندان", "http://dbpedia.org/ontology/نسلی_گروہ", "http://dbpedia.org/ontology/نشان_نجوم", "http://dbpedia.org/ontology/نشریاتی_جال", "http://dbpedia.org/ontology/نشے_کی_دوا", "http://dbpedia.org/ontology/نشے_کی_دوا/boilingPoint", "http://dbpedia.org/ontology/نشے_کی_دوا/meltingPoint", "http://dbpedia.org/ontology/نظریہ", "http://dbpedia.org/ontology/نظم", "http://dbpedia.org/ontology/نغمہ_نگار", "http://dbpedia.org/ontology/نقاشی", "http://dbpedia.org/ontology/نقصان", "http://dbpedia.org/ontology/نقطہ_نظر", "http://dbpedia.org/ontology/نقل_و_حمل_کا_راستہ", "http://dbpedia.org/ontology/نقل_و_حمل_کے_ذرائع", "http://dbpedia.org/ontology/نقل_و_حمل_کے_ذرائع/diameter", "http://dbpedia.org/ontology/نقل_و_حمل_کے_ذرائع/height", "http://dbpedia.org/ontology/نقل_و_حمل_کے_ذرائع/length", "http://dbpedia.org/ontology/نقل_و_حمل_کے_ذرائع/mass", "http://dbpedia.org/ontology/نقل_و_حمل_کے_ذرائع/weight", "http://dbpedia.org/ontology/نقل_و_حمل_کے_ذرائع/width", "http://dbpedia.org/ontology/نقل_و_حمل_کے_نظام", "http://dbpedia.org/ontology/نقل_و_حمل_کے_نظام/diameter", "http://dbpedia.org/ontology/نقل_و_حمل_کے_نظام/height", "http://dbpedia.org/ontology/نقل_و_حمل_کے_نظام/length", "http://dbpedia.org/ontology/نقل_و_حمل_کے_نظام/mass", "http://dbpedia.org/ontology/نقل_و_حمل_کے_نظام/weight", "http://dbpedia.org/ontology/نقل_و_حمل_کے_نظام/width", "http://dbpedia.org/ontology/نمائش_کرنے_والا", "http://dbpedia.org/ontology/نمائندہ", "http://dbpedia.org/ontology/نيزہ_باز", "http://dbpedia.org/ontology/نَسبہ", "http://dbpedia.org/ontology/نَسبہ_کا_مقام", "http://dbpedia.org/ontology/نکشتر", "http://dbpedia.org/ontology/نہر", "http://dbpedia.org/ontology/نہر/maximumBoatBeam", "http://dbpedia.org/ontology/نہر/maximumBoatLength", "http://dbpedia.org/ontology/نہر/originalMaximumBoatBeam", "http://dbpedia.org/ontology/نہر/originalMaximumBoatLength", "http://dbpedia.org/ontology/نیسکار_ڈرائیور", "http://dbpedia.org/ontology/نیشنل_فٹ_بال_لیگ_تقریب", "http://dbpedia.org/ontology/نیٹ_بال_کھلاڑی", "http://dbpedia.org/ontology/وادی", "http://dbpedia.org/ontology/والی_بال_پلیئر۔", "http://dbpedia.org/ontology/والی_بال_کاکھلاڑی", "http://dbpedia.org/ontology/والی_بال_کی_انجمن", "http://dbpedia.org/ontology/والی_بال_کی_تربیت_کرنے_والا", "http://dbpedia.org/ontology/وزراء_کی_کابینہ", "http://dbpedia.org/ontology/وزیر", "http://dbpedia.org/ontology/وزیراعظم", "http://dbpedia.org/ontology/وقت_وقفہ", "http://dbpedia.org/ontology/وقت_کی_مدت", "http://dbpedia.org/ontology/ولی", "http://dbpedia.org/ontology/ونٹر_اسپورٹ_پلیئر۔", "http://dbpedia.org/ontology/وکیل", "http://dbpedia.org/ontology/ویب_صفحات_کا_مجموعہ", "http://dbpedia.org/ontology/ویکسین", "http://dbpedia.org/ontology/ویکسینیشن_کے_اعدادوشمار", "http://dbpedia.org/ontology/ویکی_میڈیا_کا_سانچہ", "http://dbpedia.org/ontology/ٹرام_گاڑی", "http://dbpedia.org/ontology/ٹرام_گاڑی_کا_اڈا", "http://dbpedia.org/ontology/ٹرین_کی_بوگی", "http://dbpedia.org/ontology/ٹٹولنے_والا", "http://dbpedia.org/ontology/ٹی_وی_شو", "http://dbpedia.org/ontology/ٹی_وی_مزبان", "http://dbpedia.org/ontology/ٹی_وی_ڈرامہ", "http://dbpedia.org/ontology/ٹی_وی_کا_ہدایت_کار", "http://dbpedia.org/ontology/ٹی_وی_کی_قسط", "http://dbpedia.org/ontology/ٹیبل_ٹینس_کا_کھلاڑی", "http://dbpedia.org/ontology/ٹیلی_ویژن_مرکز", "http://dbpedia.org/ontology/ٹیم_کے_رکن", "http://dbpedia.org/ontology/ٹینس_کا_باہمی_مقابلہ", "http://dbpedia.org/ontology/ٹینس_کا_کھلاڑی", "http://dbpedia.org/ontology/ٹینس_کی_انجمن", "http://dbpedia.org/ontology/پادری", "http://dbpedia.org/ontology/پادری_کا_علاقہ", "http://dbpedia.org/ontology/پادریوں_کا_سردار", "http://dbpedia.org/ontology/پارلیمنٹ_کا_رکن", "http://dbpedia.org/ontology/پانی_کا_ضلعی_اقتدار", "http://dbpedia.org/ontology/پانی_کی_سواری", "http://dbpedia.org/ontology/پتھر_کنڈلی_کھيل_کی_انجمن", "http://dbpedia.org/ontology/پجاری", "http://dbpedia.org/ontology/پرانا_علاقہ", "http://dbpedia.org/ontology/پرجاتی", "http://dbpedia.org/ontology/پرجاتیوں", "http://dbpedia.org/ontology/پرندہ", "http://dbpedia.org/ontology/پروگرامنگ_زبان", "http://dbpedia.org/ontology/پرہیز", "http://dbpedia.org/ontology/پس_منظر", "http://dbpedia.org/ontology/پل", "http://dbpedia.org/ontology/پلے_بوائے_پلے_میٹ", "http://dbpedia.org/ontology/پن_چکی", "http://dbpedia.org/ontology/پنڈال", "http://dbpedia.org/ontology/پنیر", "http://dbpedia.org/ontology/پودا", "http://dbpedia.org/ontology/پوشاک_ساز", "http://dbpedia.org/ontology/پولو_انجمن", "http://dbpedia.org/ontology/پولیس_افسر", "http://dbpedia.org/ontology/پوکر_کھلاڑی", "http://dbpedia.org/ontology/پَوَن_چکّی_کی_طرح_کی_کّل", "http://dbpedia.org/ontology/پٹھوں", "http://dbpedia.org/ontology/پھسلن_کھیل_کا_میدان", "http://dbpedia.org/ontology/پھولوں_کا_پودا", "http://dbpedia.org/ontology/پھُرتیلاکھلاڑی", "http://dbpedia.org/ontology/پھُپھُوندی", "http://dbpedia.org/ontology/پہاڑ", "http://dbpedia.org/ontology/پہاڑی_سلسلہ", "http://dbpedia.org/ontology/پہلو_کا_تناسب", "http://dbpedia.org/ontology/پہلوان", "http://dbpedia.org/ontology/پیسنے_کے_قابل", "http://dbpedia.org/ontology/پیش_کنندہ", "http://dbpedia.org/ontology/پیشہ", "http://dbpedia.org/ontology/پیشہ_تعینات", "http://dbpedia.org/ontology/پیشہ_ور_گھڑ_سوار", "http://dbpedia.org/ontology/پینٹبال_انجمن", "http://dbpedia.org/ontology/چربی", "http://dbpedia.org/ontology/چوکور", "http://dbpedia.org/ontology/چوہے_کے_نَسبہ_کا_مقام", "http://dbpedia.org/ontology/چڑیا_گھر", "http://dbpedia.org/ontology/چکی", "http://dbpedia.org/ontology/چھوٹا_نواب", "http://dbpedia.org/ontology/چھوٹاعلاقہ", "http://dbpedia.org/ontology/چھٹی", "http://dbpedia.org/ontology/چینی_درخت_پنکھے_کے_جیسے_پتوں_والا", "http://dbpedia.org/ontology/ڈرامہ_نگار", "http://dbpedia.org/ontology/ڈزنی_کے_کردار", "http://dbpedia.org/ontology/ڈھینکلی", "http://dbpedia.org/ontology/ڈی_بی_پیڈین", "http://dbpedia.org/ontology/ڈیجیٹل_کیمرہ", "http://dbpedia.org/ontology/ڈیم", "http://dbpedia.org/ontology/ڈینس_سکور", "http://dbpedia.org/ontology/کائی", "http://dbpedia.org/ontology/کار_دوڑ", "http://dbpedia.org/ontology/کار_ہنر", "http://dbpedia.org/ontology/کارخانه", "http://dbpedia.org/ontology/کاروباری_شخص", "http://dbpedia.org/ontology/کارٹون", "http://dbpedia.org/ontology/کاشت_شدہ_مختلف_قسم", "http://dbpedia.org/ontology/کام", "http://dbpedia.org/ontology/کام/runtime", "http://dbpedia.org/ontology/کام_کی_اکائی", "http://dbpedia.org/ontology/کام_کی_ترتیب", "http://dbpedia.org/ontology/کان", "http://dbpedia.org/ontology/کتا", "http://dbpedia.org/ontology/کتاب", "http://dbpedia.org/ontology/کتب_خانہ", "http://dbpedia.org/ontology/کثِیر_شَکری", "http://dbpedia.org/ontology/کثیر_حجم_کی_اشاعت", "http://dbpedia.org/ontology/کراس_کنٹری_اسکیئر", "http://dbpedia.org/ontology/کرف_نخلی", "http://dbpedia.org/ontology/کرلنگ_کا_کھیل_کھیلنے_والا", "http://dbpedia.org/ontology/کروی_غول", "http://dbpedia.org/ontology/کرکٹ_انجمن", "http://dbpedia.org/ontology/کرکٹ_جماعت", "http://dbpedia.org/ontology/کرکٹ_کا_میدان", "http://dbpedia.org/ontology/کرکٹ_کا_کھلاڑی", "http://dbpedia.org/ontology/کسان", "http://dbpedia.org/ontology/کسرتی", "http://dbpedia.org/ontology/کسی_شخص_(جاگیردار)_یا_سرکاری_ادارے_کے_دائرہ_اختیار_کا_قدیم_علاقہ", "http://dbpedia.org/ontology/کشتی_بنانے_والا", "http://dbpedia.org/ontology/کشتی_بنانے_والاit", "http://dbpedia.org/ontology/کشتی_کی_تقریب", "http://dbpedia.org/ontology/کشودرگرہ", "http://dbpedia.org/ontology/کل_علاقے_کی_درجہ_بندی", "http://dbpedia.org/ontology/کوئلہ", "http://dbpedia.org/ontology/کورونا_وائرس2019", "http://dbpedia.org/ontology/کَشید_گاہ", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل/diameter", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل/height", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل/length", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل/mass", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل/weight", "http://dbpedia.org/ontology/کِسی_موقع_مقام_پر_نقل_و_حمل/width", "http://dbpedia.org/ontology/کھانا_دینے_والا", "http://dbpedia.org/ontology/کھلاڑی", "http://dbpedia.org/ontology/کھلی_بھیڑ", "http://dbpedia.org/ontology/کھیل", "http://dbpedia.org/ontology/کھیل_سکھانے_والا", "http://dbpedia.org/ontology/کھیل_کی_جماعت", "http://dbpedia.org/ontology/کھیل_کی_سہولت", "http://dbpedia.org/ontology/کھیل_کے_متعلق", "http://dbpedia.org/ontology/کھیل_ہاکی_ٹیموں_کی_انجمن", "http://dbpedia.org/ontology/کھیلوں_کا_منتظم", "http://dbpedia.org/ontology/کھیلوں_کا_موسم", "http://dbpedia.org/ontology/کھیلوں_کی_انجمن", "http://dbpedia.org/ontology/کھیلوں_کی_تقریب", "http://dbpedia.org/ontology/کھیلوں_کی_تنظیم", "http://dbpedia.org/ontology/کھیلوں_کی_جماعت_کا_رکن", "http://dbpedia.org/ontology/کھیلوں_کی_جماعت_کا_موسم", "http://dbpedia.org/ontology/کھیلوں_کے_مقابلے_کا_نتیجہ", "http://dbpedia.org/ontology/کہکشاں", "http://dbpedia.org/ontology/کہکشاں/apoapsis", "http://dbpedia.org/ontology/کہکشاں/averageSpeed", "http://dbpedia.org/ontology/کہکشاں/density", "http://dbpedia.org/ontology/کہکشاں/mass", "http://dbpedia.org/ontology/کہکشاں/maximumTemperature", "http://dbpedia.org/ontology/کہکشاں/meanRadius", "http://dbpedia.org/ontology/کہکشاں/meanTemperature", "http://dbpedia.org/ontology/کہکشاں/minimumTemperature", "http://dbpedia.org/ontology/کہکشاں/orbitalPeriod", "http://dbpedia.org/ontology/کہکشاں/periapsis", "http://dbpedia.org/ontology/کہکشاں/surfaceArea", "http://dbpedia.org/ontology/کہکشاں/temperature", "http://dbpedia.org/ontology/کہکشاں/volume", "http://dbpedia.org/ontology/کیمیائی_عنصر", "http://dbpedia.org/ontology/کیمیائی_مادہ", "http://dbpedia.org/ontology/کیمیائی_مادہ/boilingPoint", "http://dbpedia.org/ontology/کیمیائی_مادہ/density", "http://dbpedia.org/ontology/کیمیائی_مادہ/meltingPoint", "http://dbpedia.org/ontology/کیمیائی_مادہ۔", "http://dbpedia.org/ontology/کیمیائی_مادہ۔/boilingPoint", "http://dbpedia.org/ontology/کیمیائی_مادہ۔/density", "http://dbpedia.org/ontology/کیمیائی_مادہ۔/meltingPoint", "http://dbpedia.org/ontology/کیمیائی_مرکب", "http://dbpedia.org/ontology/کینیڈین_فٹ_بال_جماعت", "http://dbpedia.org/ontology/کینیڈین_فٹ_بال_لیگ", "http://dbpedia.org/ontology/کینیڈین_فٹ_بال_کھلاڑی", "http://dbpedia.org/ontology/کیڑا", "http://dbpedia.org/ontology/گاؤں", "http://dbpedia.org/ontology/گالف_کا_میدان", "http://dbpedia.org/ontology/گالف_کا_کھلاڑی", "http://dbpedia.org/ontology/گالف_کی_انجمن", "http://dbpedia.org/ontology/گانا", "http://dbpedia.org/ontology/گانے_والوں_کا_گروہ", "http://dbpedia.org/ontology/گاڑی", "http://dbpedia.org/ontology/گاڑی/fuelCapacity", "http://dbpedia.org/ontology/گاڑی/wheelbase", "http://dbpedia.org/ontology/گاڑیوں_کی_ریسوں_کی_انجمن", "http://dbpedia.org/ontology/گاڑیوں_کے_مقابلے_کا_کھیل", "http://dbpedia.org/ontology/گرجا", "http://dbpedia.org/ontology/گرم_موسم_بہار", "http://dbpedia.org/ontology/گرم_پانی_کا_قدرتی_چشمہ", "http://dbpedia.org/ontology/گرم_پانی_کاقدرتی_چشم", "http://dbpedia.org/ontology/گروہ", "http://dbpedia.org/ontology/گرڈیرون_فٹ_بال_کھلاڑی", "http://dbpedia.org/ontology/گلوکار", "http://dbpedia.org/ontology/گمٹیلا_پودا", "http://dbpedia.org/ontology/گولف_کا_باہمی_مقابلہ", "http://dbpedia.org/ontology/گٹار_بجانے_والا", "http://dbpedia.org/ontology/گھوڑا", "http://dbpedia.org/ontology/گھوڑا_دوڑ_میں_مقابلہ_کرنا", "http://dbpedia.org/ontology/گھوڑا_سدھانے_والا", "http://dbpedia.org/ontology/گھڑ_سوار", "http://dbpedia.org/ontology/گہرائی", "http://dbpedia.org/ontology/گیلک_کھیل_کا_کھلاڑی", "http://dbpedia.org/ontology/گیلک_گیم_پلیئر۔", "http://dbpedia.org/ontology/ہارمون", "http://dbpedia.org/ontology/ہالی_ووڈ_کارٹون", "http://dbpedia.org/ontology/ہاکی_ٹیم", "http://dbpedia.org/ontology/ہاکی_کھیل_کی_جماعت", "http://dbpedia.org/ontology/ہاکی_کی_تنظیم", "http://dbpedia.org/ontology/ہتھیار", "http://dbpedia.org/ontology/ہتھیار/diameter", "http://dbpedia.org/ontology/ہتھیار/height", "http://dbpedia.org/ontology/ہتھیار/length", "http://dbpedia.org/ontology/ہتھیار/weight", "http://dbpedia.org/ontology/ہتھیار/width", "http://dbpedia.org/ontology/ہسپتال", "http://dbpedia.org/ontology/ہسپتال۔", "http://dbpedia.org/ontology/ہلکی_شراب", "http://dbpedia.org/ontology/ہنگامہ", "http://dbpedia.org/ontology/ہوا_میں_چھلانگ_لگانے_والا", "http://dbpedia.org/ontology/ہوا_کی_سمت", "http://dbpedia.org/ontology/ہوا_کی_چکی", "http://dbpedia.org/ontology/ہوائی_اڈہ", "http://dbpedia.org/ontology/ہوائی_جہاز", "http://dbpedia.org/ontology/ہوائی_راستہ", "http://dbpedia.org/ontology/ہڈی", "http://dbpedia.org/ontology/ہینڈ_بال_جماعت", "http://dbpedia.org/ontology/ہینڈ_بال_کا_کھلاڑی", "http://dbpedia.org/ontology/ہینڈ_بال_کی_انجمن", "http://dbpedia.org/ontology/یادگار", "http://dbpedia.org/ontology/یوروویژن_گانا_مقابلہ_اندراج", "http://dbpedia.org/ontology/یونانی_لفظ_سے_ماخُوذ", "http://dbpedia.org/ontology/یوٹیب_پر_وڈیو_لگانے_والا", "http://dbpedia.org/ontology/یوکاریوٹ", "http://dbpedia.org/ontology/یوکاریوٹ۔", "http://dbpedia.org/ontology/یوکرائٹ۔", "http://dbpedia.org/ontology/یہودی_رہنما", "http://dbpedia.org/ontology/یہودیوں_کی_عبادت_گاہ", "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString", "http://www.w3.org/2001/XMLSchema#anyURI", "http://www.w3.org/2001/XMLSchema#boolean", "http://www.w3.org/2001/XMLSchema#date", "http://www.w3.org/2001/XMLSchema#dateTime", "http://www.w3.org/2001/XMLSchema#double", "http://www.w3.org/2001/XMLSchema#float", "http://www.w3.org/2001/XMLSchema#gDay", "http://www.w3.org/2001/XMLSchema#gMonth", "http://www.w3.org/2001/XMLSchema#gMonthDay", "http://www.w3.org/2001/XMLSchema#gYear", "http://www.w3.org/2001/XMLSchema#gYearMonth", "http://www.w3.org/2001/XMLSchema#integer", "http://www.w3.org/2001/XMLSchema#negativeInteger", "http://www.w3.org/2001/XMLSchema#nonNegativeInteger", "http://www.w3.org/2001/XMLSchema#nonPositiveInteger", "http://www.w3.org/2001/XMLSchema#positiveInteger", "http://www.w3.org/2001/XMLSchema#string", "http://www.w3.org/2001/XMLSchema#time"],
       "http://purl.org/dc/terms/creator": "DBpedia Maintainers and Contributors",
       "http://purl.org/dc/terms/description": {en: "\n              The DBpedia ontology provides the classes and properties used in the DBpedia data set.\n            "},
       "http://purl.org/dc/terms/issued": "2008-11-17T12:00Z",
@@ -104,6 +104,8 @@ module RDF::Vocab
     term :Architect,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ArchitecturalStructure,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :Archive,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :Area,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -334,6 +336,8 @@ module RDF::Vocab
     term :"ChemicalSubstance/meltingPoint",
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ChessPlayer,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :Chief,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ChristianBishop,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -1097,8 +1101,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :NCAATeamSeason,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :NCAA_ٹیم_سیزن,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :Name,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :NarutoCharacter,
@@ -1493,6 +1495,8 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :Single,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :SingleList,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :SiteOfSpecialScientificInterest,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :Skater,
@@ -1504,6 +1508,8 @@ module RDF::Vocab
     term :Ski_jumper,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :Skier,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :Skos,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :Skyscraper,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -1855,6 +1861,8 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :"Work/runtime",
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :WorkSequence,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :WorldHeritageSite,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :Wrestler,
@@ -1890,8 +1898,6 @@ module RDF::Vocab
     term :abstract,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :academicAdvisor,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :academicDiscipline,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :academyAward,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -1955,8 +1961,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :affiliate,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :affiliation,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :afiAward,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :age,
@@ -1983,37 +1987,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :airDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :aircraftAttack,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :aircraftBomber,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :aircraftElectronic,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :aircraftFighter,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :aircraftHelicopter,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :aircraftHelicopterAttack,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :aircraftHelicopterCargo,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :aircraftHelicopterMultirole,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :aircraftHelicopterObservation,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :aircraftHelicopterTransport,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :aircraftHelicopterUtility,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :aircraftInterceptor,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :aircraftPatrol,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :aircraftRecon,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :aircraftTrainer,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :aircraftTransport,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :aircraftType,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2025,8 +2003,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :albedo,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :album,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :albumRuntime,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :alias,
@@ -2036,8 +2012,6 @@ module RDF::Vocab
     term :allegiance,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :alliance,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :almaMater,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :alongside,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2058,6 +2032,8 @@ module RDF::Vocab
     term :alpsSupergroup,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :alternativeName,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :alternativeText,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :alternativeTitle,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2103,8 +2079,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :anthem,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :aoCloassification,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :apcPresident,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :apoapsis,
@@ -2129,19 +2103,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :approvedByUpperParliament,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :approximateCalories,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :apskritis,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :archipelago,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :architect,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :architectualBureau,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :architecturalMovement,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :architecturalStyle,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :area,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2162,8 +2130,6 @@ module RDF::Vocab
     term :areaQuote,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :areaRank,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :areaRural,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :areaTotal,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2191,7 +2157,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :artificialSnowArea,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :artist,
+    term :artistFunction,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :artisticFunction,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2203,8 +2169,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :aspectRatio,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :assembly,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :assetUnderManagement,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :assets,
@@ -2213,15 +2177,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :associate,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :associateEditor,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :associateStar,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :associatedAct,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :associatedBand,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :associatedMusicalArtist,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :associatedRocket,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2236,8 +2194,6 @@ module RDF::Vocab
     term :atPage,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :atRowNumber,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :atcCode,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :atcPrefix,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2258,8 +2214,6 @@ module RDF::Vocab
     term :australiaOpenMixed,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :australiaOpenSingle,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :author,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :authority,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2287,9 +2241,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :averageSpeed,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :avifaunaPopulation,
+    term :avgRevSizePerMonth,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :award,
+    term :avgRevSizePerYear,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :avifaunaPopulation,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :awardName,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2307,19 +2263,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :band,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :bandMember,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :barPassRate,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :barangays,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :basedOn,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :battery,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :battingSide,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :battle,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :battleHonours,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2362,8 +2310,6 @@ module RDF::Vocab
     term :billed,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :binomial,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :binomialAuthority,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :bioavailability,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2415,8 +2361,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :bodyDiscovered,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :bodyStyle,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :boiler,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :boilerPressure,
@@ -2463,10 +2407,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :britishWins,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :broadcastArea,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :broadcastNetwork,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :broadcastRepeater,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :broadcastStationClass,
@@ -2486,8 +2426,6 @@ module RDF::Vocab
     term :budget,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :budgetYear,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :builder,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :building,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2509,11 +2447,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :calculationNeeds,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :callSign,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :callsignMeaning,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :campus,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :campusSize,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2535,8 +2469,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :capacityFactor,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :capital,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :capitalCoordinates,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :capitalCountry,
@@ -2556,8 +2488,6 @@ module RDF::Vocab
     term :captureDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :carNumber,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :carbohydrate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :carcinogen,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2582,8 +2512,6 @@ module RDF::Vocab
     term :casualties,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :catch,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :category,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :caterer,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2623,37 +2551,17 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :chEMBL,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :chain,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :chairLabel,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :chairman,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :chairmanTitle,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :chairperson,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :champion,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :championInDouble,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :championInDoubleFemale,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :championInDoubleMale,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :championInMixedDouble,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :championInSingle,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :championInSingleFemale,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :championInSingleMale,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :championships,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :chancellor,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :channel,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :chaplain,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2665,11 +2573,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :chemicalFormula,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :chief,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :chiefEditor,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :chiefPlace,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :child,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :childOrganisation,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2680,8 +2588,6 @@ module RDF::Vocab
     term :christeningDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :chromosome,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :cinematography,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :circle,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2697,19 +2603,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :citizenship,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :city,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :cityLink,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :cityRank,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :citySince,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :cityType,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :clade,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :class,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :classes,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2727,8 +2627,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :closingDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :closingFilm,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :closingYear,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :clothSize,
@@ -2743,29 +2641,17 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :cmpEvaDuration,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :cmykCoordinateBlack,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :cmykCoordinateCyanic,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :cmykCoordinateMagenta,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :cmykCoordinateYellow,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :co2Emission,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :coExecutiveProducer,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :coProducer,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :coach,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :coachClub,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :coachSeason,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :coachedTeam,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :coachingRecord,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :coalition,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2819,10 +2705,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :colorChart,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :colour,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :colourHexCode,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :colourName,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :combatant,
@@ -2835,11 +2717,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :commandModule,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :commandStructure,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :commandant,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :commander,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :comment,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2859,8 +2737,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :communityIsoCode,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :company,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :comparable,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :competition,
@@ -2879,15 +2755,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :component,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :composer,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :compressionRatio,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :computingInput,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :computingMedia,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :computingPlatform,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :configuration,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2908,8 +2780,6 @@ module RDF::Vocab
     term :conservationStatusSystem,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :constellation,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :constituencyDistrict,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :construction,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2935,8 +2805,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :convictionDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :convictionPenalty,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :coolingSystem,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :copilote,
@@ -2953,21 +2821,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :councilArea,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :country,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :countryCode,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :countryOrigin,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :countryRank,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :countryWithFirstAstronaut,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :countryWithFirstSatellite,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :countryWithFirstSatelliteLaunched,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :countryWithFirstSpaceflight,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :county,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -2979,19 +2837,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :cousurper,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :coverArtist,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :cpu,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :created,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :creationChristianBishop,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :creationYear,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :creativeDirector,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :creator,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :creatorOfDish,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3001,8 +2851,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :crew,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :crewMember,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :crewSize,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :crews,
@@ -3010,8 +2858,6 @@ module RDF::Vocab
     term :criminalCharge,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :criteria,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :crosses,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :crownDependency,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3028,8 +2874,6 @@ module RDF::Vocab
     term :currentCity,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :currentLeague,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :currentMember,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :currentPartner,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3069,19 +2913,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :dam,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :damage,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :damsire,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :danseCompetition,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :danseScore,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :"data/definitions.ttl",
-      "http://open.vocab.org/terms/describes": "http://dbpedia.org/ontology/"
     term :date,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :dateAct,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :dateAgreement,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3103,19 +2941,15 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :dateUnveiled,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :dateUse,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :daughter,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :davisCup,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :day,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :daylightSavingTimeZone,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :dbnlCodeDutch,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :dcc,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"dcc:علم_کتاب_داری_کی_اعشاریہ_درجہ_بندی",
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :deFactoLanguage,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3128,8 +2962,6 @@ module RDF::Vocab
     term :deanery,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :deathAge,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :deathCause,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :deathDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3151,8 +2983,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :decideDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :declination,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :decommissioningDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :decoration,
@@ -3169,8 +2999,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :delegation,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :deliveryDate,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :deme,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :demographics,
@@ -3178,8 +3006,6 @@ module RDF::Vocab
     term :demographicsAsOf,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :demolitionDate,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :demolitionYear,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :demonym,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3201,17 +3027,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :depths,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :deputy,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :derivative,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :derivedWord,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :description,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :designCompany,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :designer,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :destination,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3220,8 +3040,6 @@ module RDF::Vocab
     term :detectionMethod,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :detractor,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :developer,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :dfE,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3237,8 +3055,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :diploma,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :director,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :disappearanceDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :disbanded,
@@ -3249,17 +3065,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :disciple,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :discipline,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :discontinued,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :discovered,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :discoverer,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :discovery,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :disease,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :diseasesDB,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3289,8 +3099,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :distanceToCharingCross,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :distanceToDouglas,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :distanceToDublin,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :distanceToEdinburgh,
@@ -3300,16 +3108,6 @@ module RDF::Vocab
     term :distanceToNearestCity,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :distanceTraveled,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :distributingCompany,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :distributingLabel,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :distributor,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :district,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :division,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :dockedTime,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3348,8 +3146,6 @@ module RDF::Vocab
     term :draftTeam,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :draftYear,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :drainsFrom,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :drainsTo,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3395,13 +3191,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ecNumber,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :editing,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :editor,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :editorTitle,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :education,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :educationPlace,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3443,8 +3233,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :emmyAward,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :employer,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :employersCelebration,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :end,
@@ -3463,25 +3251,15 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :endYear,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :endYearOfInsertion,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :endYearOfSales,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :endangeredSince,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :endingTheme,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :endowment,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :enemy,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :engine,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :enginePower,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :engineType,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :engineer,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ensembl,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3521,8 +3299,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :espnId,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :established,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :establishment,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ethnicGroup,
@@ -3533,23 +3309,17 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :eurobabeIndexId,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :europeanAffiliation,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :europeanChampionship,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :europeanParliamentGroup,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :europeanUnionEntranceDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :event,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :eventDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :eventDescription,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :executiveHeadteacher,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :executiveProducer,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :exhibition,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3573,29 +3343,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :faaLocationIdentifier,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :facilityId,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :facultySize,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :failedLaunches,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :family,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :familyMember,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :fansgroup,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :fareZone,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :fastestDriver,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :fastestDriverCountry,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :fastestDriverTeam,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :fastestLap,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :fat,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :fatalityRate,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3611,13 +3365,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :fdaUniiCode,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :feastDay,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :feat,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :feature,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :features,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :featuring,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :fedCup,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3625,11 +3379,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :federation,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :fees,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :fibahof,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :field,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :fight,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3689,12 +3439,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :firstBroadcast,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :firstDriver,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :firstDriverCountry,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :firstDriverTeam,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :firstFlight,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :firstFlightEndDate,
@@ -3709,8 +3453,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :firstLaunchRocket,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :firstLeader,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :firstMention,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :firstOlympicEvent,
@@ -3718,8 +3460,6 @@ module RDF::Vocab
     term :firstOwner,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :firstPlace,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :firstPopularVote,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :firstProMatch,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3749,8 +3489,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :flashPoint,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :floodingDate,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :floorArea,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :floorCount,
@@ -3759,15 +3497,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :flower,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :flyingHours,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :foalDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :focus,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :followedBy,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :followingEvent,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :follows,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3779,13 +3513,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :foresterDistrict,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :format,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :formationDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :formationYear,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :formerBandMember,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :formerBroadcastNetwork,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3803,8 +3533,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :formerPartner,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :formerTeam,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :formula,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :fossil,
@@ -3813,15 +3541,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :foundationPlace,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :foundedBy,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :founder,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :foundingDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :foundingYear,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :fourthCommander,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :frazioni,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3842,8 +3564,6 @@ module RDF::Vocab
     term :frequency,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :frequencyOfPublication,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :frequentlyUpdated,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :friend,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3883,17 +3603,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :galleryItem,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :gameArtist,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :gameEngine,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :gameModus,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :games,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :garrison,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :gasChambers,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :gaudiAward,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3915,15 +3627,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :generalCouncil,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :generalManager,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :generationUnits,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :genomeDB,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :genre,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :genus,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :geolocDepartment,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3932,8 +3638,6 @@ module RDF::Vocab
     term :geologicPeriod,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :geology,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :giniCoefficient,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :giniCoefficientAsOf,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -3965,8 +3669,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :goldenRaspberryAward,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :governingBody,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :government,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :governmentCountry,
@@ -3981,19 +3683,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :governmentRegion,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :governmentType,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :governor,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :governorGeneral,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :governorate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :goyaAward,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :gradName,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :gradNum,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :grades,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4031,8 +3725,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :grossDomesticProductRank,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :ground,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :groundsForLiquidation,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :groupCommemorated,
@@ -4050,8 +3742,6 @@ module RDF::Vocab
     term :hairColour,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :hairs,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :hallOfFame,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :hand,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4079,19 +3769,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :hasSurfaceForm,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :hasVariant,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :head,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :headAlloy,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :headChef,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :headLabel,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :headOfFamily,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :headquarter,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :headteacher,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4155,11 +3839,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :homeColourHexCode,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :homeStadium,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :homeport,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :hometown,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :honours,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4167,15 +3847,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :horseRidingDiscipline,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :house,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :hraState,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :hsvCoordinateHue,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :hsvCoordinateSaturation,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :hsvCoordinateValue,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :hubAirport,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4186,8 +3858,6 @@ module RDF::Vocab
     term :humanDevelopmentIndexRank,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :humanDevelopmentIndexRankingCategory,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :hybrid,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :iafdId,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4207,8 +3877,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :icd9,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :icdo,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :iconographicAttributes,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :id,
@@ -4219,15 +3887,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :identificationSymbol,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :ideology,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :iftaAward,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :iihfHof,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :illiteracy,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :illustrator,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :imageSize,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4251,27 +3915,17 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :income,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :incumbent,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :individualisedGnd,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :individualisedPnd,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :industry,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :infantMortality,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :inflow,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :influenced,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :influencedBy,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :information,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :informationName,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :ingredient,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ingredientName,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4288,8 +3942,6 @@ module RDF::Vocab
     term :installedCapacity,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :institution,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :instrument,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :intercommunality,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4313,11 +3965,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :isHandicappedAccessible,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :isPartOf,
+    term :isMinorRevision,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :isPartOfAnatomicalStructure,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :isPartOfMilitaryConflict,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :isPartOfName,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4334,8 +3984,6 @@ module RDF::Vocab
     term :island,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :isniId,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :iso31661Code,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :iso6391Code,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4354,6 +4002,8 @@ module RDF::Vocab
     term :ist,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :istat,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :italicTitle,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ithfDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4385,8 +4035,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :kegg,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :keyPerson,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :khlDraft,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :khlDraftTeam,
@@ -4404,10 +4052,6 @@ module RDF::Vocab
     term :kindOfCriminalAction,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :kindOfRock,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :kingdom,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :knownFor,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ko,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4437,21 +4081,15 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :landtagMandate,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :language,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :languageCode,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :languageFamily,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :languageRegulator,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :largestCity,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :largestMetro,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :largestSettlement,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :largestWin,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :lastAirDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4507,8 +4145,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :launchSite,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :launchVehicle,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :launches,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :laurenceOlivierAward,
@@ -4517,13 +4153,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :layingDown,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :layout,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :lcc,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :lccn,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :lccnId,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :lchfDraft,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4535,10 +4167,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :leadYear,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :leader,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :leaderFunction,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :leaderName,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :leaderParty,
@@ -4546,8 +4174,6 @@ module RDF::Vocab
     term :leaderTitle,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :leadership,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :league,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :leagueManager,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4589,8 +4215,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :licenceNumberLabel,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :license,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :licensee,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :lieutenancy,
@@ -4613,8 +4237,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :listItemOf,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :literaryGenre,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :littlePoolRecord,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :livingPlace,
@@ -4633,13 +4255,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :localizationThumbnailCaption,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :locatedInArea,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :location,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :locationCity,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :locationCountry,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :locationIdentifier,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4697,17 +4313,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :lymph,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :lyrics,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :magazine,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :maidenFlight,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :maidenFlightRocket,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :maidenVoyage,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :mainArticleForCategory,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :mainArtist,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :mainBuilding,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4717,8 +4329,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :mainFamilyBranch,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :mainInterest,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :mainIsland,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :mainIslands,
@@ -4726,8 +4336,6 @@ module RDF::Vocab
     term :mainOrgan,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :mainspan,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :maintainedBy,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :majorIsland,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4753,8 +4361,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :managementRegion,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :manager,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :managerClub,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :managerSeason,
@@ -4773,15 +4379,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :manufactory,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :manufacturer,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :map,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :mapCaption,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :mapDescription,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :march,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :marketCapitalisation,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4795,15 +4395,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :matchPoint,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :material,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :max,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :maxAbsoluteMagnitude,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :maxApparentMagnitude,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :maxTime,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :maximumArea,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4853,11 +4449,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :mediaItem,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :mediaType,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :medicalCause,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :medicalDiagnosis,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :medicalSpecialty,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4868,8 +4460,6 @@ module RDF::Vocab
     term :meetingBuilding,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :meetingCity,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :meetingRoad,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :meltingPoint,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4885,8 +4475,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :mergedSettlement,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :mergedWith,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :mergerDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :meshId,
@@ -4900,8 +4488,6 @@ module RDF::Vocab
     term :metropolitanBorough,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :mgiid,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :militaryBranch,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :militaryCommand,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -4933,8 +4519,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :min,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :minTime,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :minimumArea,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :minimumAreaQuote,
@@ -4963,8 +4547,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :missions,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :model,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :modelEndDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :modelEndYear,
@@ -4985,8 +4567,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :monarch,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :month,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :mood,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :mostDownPoint,
@@ -5002,8 +4582,6 @@ module RDF::Vocab
     term :motto,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :mount,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :mountainRange,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :mouthCountry,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5037,25 +4615,17 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :municipalityType,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :museum,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :museumType,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :musicBand,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :musicBrainzArtistId,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :musicBy,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :musicComposer,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :musicFormat,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :musicFusionGenre,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :musicSubgenre,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :musicType,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :musicalArtist,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5064,8 +4634,6 @@ module RDF::Vocab
     term :musicalKey,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :musicians,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :muteCharacterInPlay,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :mvp,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5076,8 +4644,6 @@ module RDF::Vocab
     term :name,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :nameAsOf,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :nameDay,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :nameInCantoneseChinese,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5099,25 +4665,17 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :nameInWadeGilesChinese,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :namedAfter,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :namedByLanguage,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :names,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :narrator,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :nation,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :nationalAffiliation,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :nationalChampionship,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :nationalFilmAward,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :nationalOlympicCommittee,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :nationalRanking,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :nationalSelection,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5139,7 +4697,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :nationalYears,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :nationality,
+    term :nbRevPerMonth,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :nbRevPerYear,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :nbUniqueContrib,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ncaaSeason,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5151,11 +4713,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ndlId,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :nearestCity,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :neighboringMunicipality,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :neighbourConstellations,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :neighbourRegion,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5165,8 +4723,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :netIncome,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :network,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :networth,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :newspaper,
@@ -5174,8 +4730,6 @@ module RDF::Vocab
     term :nextEntity,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :nextEvent,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :nextMission,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :nextTrackNumber,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5197,13 +4751,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :nobelLaureates,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :nominee,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :nonFictionSubject,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :nonProfessionalCareer,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :nord,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :northEastPlace,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5212,8 +4760,6 @@ module RDF::Vocab
     term :northWestPlace,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :notSolubleIn,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :notableCommander,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :notableFeatures,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5283,8 +4829,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :numberOfCrew,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :numberOfDeaths,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :numberOfDependency,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :numberOfDisambiguates,
@@ -5302,6 +4846,8 @@ module RDF::Vocab
     term :numberOfEntrances,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :numberOfEpisodes,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :numberOfEtoilesMichelin,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :numberOfFederalDeputies,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5370,8 +4916,6 @@ module RDF::Vocab
     term :numberOfOrbits,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :numberOfOutdegree,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :numberOfPads,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :numberOfPages,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5517,8 +5061,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :observatory,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :occupation,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :oclc,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :odor,
@@ -5581,17 +5123,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :openingDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :openingFilm,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :openingTheme,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :openingYear,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :operatingIncome,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :operatingSystem,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :operator,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :opponent,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5609,8 +5143,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :orcidId,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :order,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :orderDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :orderInOffice,
@@ -5621,13 +5153,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :organSystem,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :organisation,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :organisationMember,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :orientation,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :origin,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :originalDanseCompetition,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5635,13 +5163,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :originalEndPoint,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :originalLanguage,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :originalMaximumBoatBeam,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :originalMaximumBoatLength,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :originalName,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :originalNotLatinTitle,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :originalStartPoint,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5689,21 +5217,19 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :otherWins,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :otherWorks,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :outflow,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :output,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :outputHistory,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :outskirts,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :overallRecord,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :oversight,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :owner,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :owningCompany,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :owningOrganisation,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :owns,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5713,13 +5239,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :pandemicDeaths,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :parent,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :parentCompany,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :parentMountainPeak,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :parentOrganisation,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :parentheses,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5751,11 +5271,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :partner,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :party,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :partyNumber,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :passengersPerDay,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :passengersPerYear,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5766,8 +5282,6 @@ module RDF::Vocab
     term :pastor,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :patent,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :patron,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :patronSaint,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5827,8 +5341,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :perpetrator,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :person,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :personFunction,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :personName,
@@ -5843,17 +5355,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :pgaWins,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :philosophicalSchool,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :phonePrefix,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :phonePrefixLabel,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :photographer,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :phylum,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :picture,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :pictureDescription,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5891,19 +5397,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :podium,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :podiums,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :pole,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :poleDriver,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :poleDriverCountry,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :poleDriverTeam,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :polePosition,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :poles,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :policeName,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5913,17 +5409,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :politicalFunction,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :politicalLeader,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :politicalMajority,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :politicalPartyInLegislature,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :politicalPartyOfLeader,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :politicalSeats,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :politician,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :popularVote,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5942,8 +5430,6 @@ module RDF::Vocab
     term :populationPctMen,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :populationPctWomen,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :populationPlace,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :populationQuote,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5967,19 +5453,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :portrayer,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :position,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :postalCode,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :power,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :powerOutput,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :powerType,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :precursor,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :predecessor,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :prefaceBy,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -5993,17 +5473,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :premiereDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :premierePlace,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :premiereYear,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :presentMunicipality,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :presentName,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :presenter,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :president,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :presidentGeneralCouncil,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6015,15 +5489,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :previousDemographics,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :previousEditor,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :previousEntity,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :previousEvent,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :previousInfrastructure,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :previousMission,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :previousName,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6033,8 +5501,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :previousTrackNumber,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :previousWork,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :previousWorkDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :price,
@@ -6042,8 +5508,6 @@ module RDF::Vocab
     term :primaryFuelType,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :primate,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :primeMinister,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :primogenitor,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6061,23 +5525,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :producedBy,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :producer,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :produces,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :product,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :productShape,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :production,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :productionCompany,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :productionEndDate,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :productionEndYear,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :productionStartDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :productionStartYear,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6087,35 +5541,21 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :programCost,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :programmeFormat,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :programmingLanguage,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :project,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :projectBudgetFunding,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :projectBudgetTotal,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :projectCoordinator,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :projectEndDate,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :projectKeyword,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :projectObjective,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :projectParticipant,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :projectReferenceID,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :projectStartDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :projectType,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :prominence,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :promotion,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :pronunciation,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6129,11 +5569,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :protestantPercentage,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"prov:Entity",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"prov:Revision",
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :provCode,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :provides,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :province,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :provinceIsoCode,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6150,8 +5592,6 @@ module RDF::Vocab
     term :publicationDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :publiclyAccessible,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :publisher,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :purchasingPowerParity,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6183,8 +5623,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :raceWins,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :races,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :racketCatching,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :radio,
@@ -6215,8 +5653,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ranking,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :rankingWins,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :rankingsDoubles,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :rankingsSingles,
@@ -6235,13 +5671,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :recentWinner,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :recommissioningDate,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :recordDate,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :recordLabel,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :recordedIn,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :recoveryCases,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6279,11 +5709,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :regime,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :region,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :regionLink,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :regionServed,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :regionType,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6305,17 +5731,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :reigningPope,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :related,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :relatedFunctions,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :relatedMeanOfTransportation,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :relatedPlaces,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :relation,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :relative,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :relativeAtomicMass,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6327,8 +5747,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :relief,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :religion,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :religiousHead,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :religiousHeadLabel,
@@ -6336,8 +5754,6 @@ module RDF::Vocab
     term :religiousOrder,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :reopened,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :reopeningDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :reopeningYear,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6349,17 +5765,15 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :reservations,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :residence,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :resolution,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :restaurant,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :restingDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :restingPlace,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :restingPlacePosition,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :restoreDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :restriction,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6369,8 +5783,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :retired,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :retiredRocket,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :retirementDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :revenue,
@@ -6378,12 +5790,6 @@ module RDF::Vocab
     term :revenueYear,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :review,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :rgbCoordinateBlue,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :rgbCoordinateGreen,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :rgbCoordinateRed,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ridId,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6433,13 +5839,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :routeDirection,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :routeEnd,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :routeEndDirection,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :routeEndLocation,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :routeJunction,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :routeLine,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6448,8 +5850,6 @@ module RDF::Vocab
     term :routeNumber,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :routePrevious,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :routeStart,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :routeStartDirection,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6493,6 +5893,8 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :scale,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :scaleFactor,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :scene,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :school,
@@ -6513,8 +5915,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :sea,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :season,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :seasonManager,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :seasonNumber,
@@ -6525,19 +5925,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :second,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :secondCommander,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :secondDriver,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :secondDriverCountry,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :secondLeader,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :secondPlace,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :secondPopularVote,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :secondTeam,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :secretaryGeneral,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6563,10 +5951,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :sentence,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :series,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :service,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :serviceEndDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :serviceEndYear,
@@ -6578,8 +5962,6 @@ module RDF::Vocab
     term :serviceStartDate,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :serviceStartYear,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :servingRailwayLine,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :servingSize,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6671,7 +6053,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :simcCode,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :similar,
+    term :singleList,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :singleOf,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :sire,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6682,8 +6066,6 @@ module RDF::Vocab
     term :sisterCollege,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :sisterNewspaper,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :sisterStation,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :sixthFormStudents,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6751,8 +6133,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :son,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :soundRecording,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :source,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :sourceConfluence,
@@ -6803,8 +6183,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :space,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :spacecraft,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :spacestation,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :spacewalkBegin,
@@ -6829,8 +6207,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :spike,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :splitFromParty,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :spokenIn,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :spokesperson,
@@ -6847,8 +6223,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :sportsFunction,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :spouse,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :spouseName,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :spurOf,
@@ -6857,13 +6231,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :squadNumber,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :stadium,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :staff,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :starRating,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :starring,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :start,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6884,10 +6254,6 @@ module RDF::Vocab
     term :startWqs,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :startYear,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :startYearOfInsertion,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :startYearOfSales,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :statName,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6915,10 +6281,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :statisticLabel,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :statisticValue,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :statisticYear,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :status,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :statusManager,
@@ -6932,8 +6294,6 @@ module RDF::Vocab
     term :storyEditor,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :strength,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :structuralSystem,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :student,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6955,8 +6315,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :subTribus,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :subdivision,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :subdivisionLink,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :subdivisionName,
@@ -6977,11 +6335,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :subsequentInfrastructure,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :subsequentWork,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :subsequentWorkDate,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :subsidiary,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :subsystem,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -6990,8 +6344,6 @@ module RDF::Vocab
     term :subtitle,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :successfulLaunches,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :successor,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :sudocId,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7008,10 +6360,6 @@ module RDF::Vocab
     term :superbowlWin,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :superintendent,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :supplementalDraftRound,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :supplementalDraftYear,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :supplies,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7057,8 +6405,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :teachingStaff,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :team,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :teamCoached,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :teamManager,
@@ -7085,15 +6431,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :templeYear,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :tenant,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :tennisSurfaceType,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :termOfOffice,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :termPeriod,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :territory,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :terytCode,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7105,15 +6445,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :third,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :thirdCommander,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :thirdDriver,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :thirdDriverCountry,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :thirdPlace,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :thirdTeam,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :throwingSide,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7126,8 +6458,6 @@ module RDF::Vocab
     term :time,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :timeInSpace,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :timeZone,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :timeshiftChannel,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7205,8 +6535,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :translatedMotto,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :translator,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :transmission,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :treatment,
@@ -7215,19 +6543,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :tribus,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :trustee,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :tuition,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :tvComId,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :tvShow,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :twinCountry,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :twinTown,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :type,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :typeCoordinate,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7267,8 +6589,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :university,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :unknownOutcomes,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :unloCode,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :updated,
@@ -7282,10 +6602,6 @@ module RDF::Vocab
     term :usOpenMixed,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :usOpenSingle,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :usSales,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :usedInWar,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :uses,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7307,8 +6623,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :value,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :valvetrain,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :vaporPressure,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :variantOf,
@@ -7329,8 +6643,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :version,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :viafId,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :viceChancellor,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :viceLeader,
@@ -7344,8 +6656,6 @@ module RDF::Vocab
     term :vicePrincipal,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :vicePrincipalLabel,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :victim,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :victims,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7366,8 +6676,6 @@ module RDF::Vocab
     term :visitorsPercentageChange,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :visitorsTotal,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :voice,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :voiceType,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7411,11 +6719,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :waterwayThroughTunnel,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :wavelength,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :weapon,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :webcast,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :websiteLabel,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7424,8 +6728,6 @@ module RDF::Vocab
     term :weight,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :westPlace,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :whaDraft,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :whaDraftTeam,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7458,6 +6760,8 @@ module RDF::Vocab
     term :wikiPageInterLanguageLink,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :wikiPageLength,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :wikiPageLengthDelta,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :wikiPageModified,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7571,8 +6875,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :wptTitle,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :writer,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :wsopItm,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :wsopWinYear,
@@ -7587,8 +6889,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :yearOfElectrification,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :years,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :youthClub,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :youthWing,
@@ -7601,9 +6901,9 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :zodiacSign,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :ɡrāpانگور,
+    term :آب_گیری_اقتباس_کا_علاقہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :آب_و_تاب,
+    term :آبادی,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :آبادی_والی_جگہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7621,19 +6921,21 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :"آبادی_والی_جگہ/populationUrbanDensity",
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :آبادیاتی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :آبی_پولوکا_کھلاڑی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :آبی_گزرگاہ_کی_سرنگ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :آتش_فشاں,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :آثار_قدیمہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :آجر,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :آرٹیکل,
+    term :آخری_تازہ_کاری_کی_تاریخ,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :آرچبی_شاپ,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :آرچر_پلیئر,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :آرکیا,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :آسمانی_جسم,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :آسمانی_کھیل_کا_ممالک_کے_درمیان_مقابلہ,
+    term :آدمی,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :آسٹریلوی_رولز_فٹ_بال_پلیئر,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7641,17 +6943,25 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :آسٹریلوی_فٹ_بال_کی_انجمن,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :آسٹریلیا_اوپن_ڈبل,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :آلہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :آنکھ_کا_جالا,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :آواز,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :آٹوموبائل_انجن,
+    term :آوازکا_اداکار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ابی_چرچ_کی_برکت,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :اثاثے,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :اجسامِ_آب,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :اخبار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ادئیگی_کی_تاریخ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :اداکار,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7685,9 +6995,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :افسانوی_کردار,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :افضل,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :اقتباس,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :اقتدارکا_تاریخی_علاقہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :البم,
+    term :الحاق,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :امریکن_فٹ_بال_لیگ,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7695,15 +7009,21 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :امریکن_فٹ_بال_کوچ,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :امریکی_رہنما,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :امریکی_فٹ_بال_کھلاڑی,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :امفبیئن,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :ان_لائن_ہاکی_لیگ,
+    term :ان_لائن_ہاکی_انجمن,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :انتخابات,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :انتخابات_کا_خاکہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :انتظامی_اجتماعیت,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :انتظامی_درجہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :انتظامی_ضلع,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :انتظامی_علاقہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7747,35 +7067,53 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :انیمنگا_کردار,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :اولمپک_نتیجہ,
+    term :انیمے,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :اوسط_سالانہ_پیداوار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :اوسط_گہرائی_اقتباس,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :اولمپک_کا_نتیجہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :اولمپک_کھیلوں_کی_تقریب,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :اولمپکس,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :اٹول,
+    term :اونچائی_سے_پانی_میں_ڈبکی_لگانے_والا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :اوپر_سطح_کی_ڈومین,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :اڈا,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :ایئر_لائن,
+    term :اڈل,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :ایتھلیٹکس,
+    term :اکیڈمی_ایوارڈ,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :ایجنٹ,
+    term :ایجنسی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ایجنسی_اسٹیشن_کوڈ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ایٹمی_بجلی_گھر,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ایک_تدفین_کی_جگہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :ایک_طرف,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ایک_فہرست,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :اے_ایف_آئی_انعام,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :اے_سی_تی_سکور,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :اے_ٹی_سی_کوڈ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :بائیتھلیٹ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :بادشاہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :بادشاہی,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :باسکٹ_بال_لیگ,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :باسکٹ_بال_کھلاڑی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :باسکٹ_بال_کی_انجمن,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :باسکٹ_بال_کی_جماعت,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7785,9 +7123,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :بالنگ_ٹیموں_کی_انجمن,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :باورچی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :باہمی_مقابلہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :بجلی_گھر,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :بحث_کی_تاریخ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :برادری,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7795,21 +7137,29 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :براعظم,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :براڈکاسٹ_نیٹ_ورک,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :برطانوی_بادشاہی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :برف_پر_پھسلنے_میں_جِسمانی_ورزِشوں_کا_مُقابلہ_کا_کھلاڑی,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :برف_کا_تودہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :برفانی_ہاکی_لیگ,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :برفانی_ہاکی_کا_کھلاڑی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :برفانی_ہاکی_کی_انجمن,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :برقی_ذیلی_مرکز,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :بس_كا_تجارتي_إدارة,
+    term :برقی_طاقت_پیدا_کرنے_کا_آلہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :بس_كا_تِجارتی_اِدارہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :بستی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :بشپ_کے_تحت_حلقہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :بصری_کھیل,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :بصری_کھیلوں_کی_انجمن,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :بغیر_پُہولوں_کا_سدا_بہار_پودا,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7823,13 +7173,19 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :بند,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :بندرگاہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :بندهن,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :بنیادی_ڈھانچہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :بوبسلیگ_ایتھلیٹ,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :بوبسلیگ_کھلاڑی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :بورڈ_کھیل,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :بُرج_آب,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :بھورا_بونا,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7841,6 +7197,8 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :بیس_بال_کا_کھلاڑی,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :بیس_بال_کی_انجمن,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :بیس_بال_کی_جماعت,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :بیل_کا_مُقابلہ_کرنے_والا,
@@ -7849,17 +7207,21 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :بین_الاقوامی_تنظیم,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :بین_الاقوامی_فٹ_بال_لیگ_کی_تقریب,
+    term :بین_الاقوامی_فٹ_بال_انجمن_کی_تقریب,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :بینک,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :بیٹری,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :بیچ_والی_بال_پلیئر,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :بیڈمنٹن_کا_کھلاڑی,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :بیکٹیریا,
+    term :بے_پھول_کا_بڑے_پتوں_والا_پودا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تاریخ_سے_پہلے_کے_زمانے_کا_دور,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تاریخ_کا_معاہدہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تاریخ_کی_نقاب_کشائی,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :تاریخی_آبادکاری,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7872,6 +7234,8 @@ module RDF::Vocab
     term :تاریخی_ضلع,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :تاریخی_علاقہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تاریخی_عمارت,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :تاریخی_مقام,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7895,13 +7259,27 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :تشریح,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تصور,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :تصویر,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :تصویر_کھینچنے_کا_آلہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تصویروں_اور_دستخط_کی_کتاب,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تعارفی_علامت_کا_مطلب,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تعارفی_نشان,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تعلیمی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :تعلیمی_ادارے,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تعلیمی_جریدہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :تعلیمی_مضمون,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تعلیمی_نظم_و_ضبط,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :تعلیمی_کانفرنس,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7909,9 +7287,15 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :تعمیراتی_ڈھانچے,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تفریح_گاہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :تفریحی_پارک_کی_کشش,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :تقریب,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تماشا_گاہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تماشہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :تن_ساز,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7921,7 +7305,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :تِجارتی_اِدارہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تکرار_کرنا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :تھن_والے_جانور,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تھیٹر_ہدایت_کار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تیر_انداز_کھلاڑی,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :تیراک,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7929,19 +7319,35 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :تیز_راہ_کی_انجمن,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :تیز_روسی_شراب,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :تیغ_زن,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ثانوی_سیاره,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :جاسوس,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :جامع_درس_گاہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :جامع_کا_علقه,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :جامعہ_کا_ناپ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :جامعہ_کی_قسم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :جانور,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :جاکی,
+    term :جاپانی_افسانه,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :جاگیر,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :جراثیم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :جرم_فلکی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :جرمن_ٹورنگ_کار_ماسٹرزریسر,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :جریدے_کا_نشر_پارہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :جزیرہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7949,11 +7355,21 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :جسمانی_ساخت,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :جل_تھلیا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :جماعتی_کھیل,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :جمع_آبادیات,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :جمع_کا_علاقہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :جنکگو,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :جنگل,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :جنینیات_کا_علم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :جوہری_عدد,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :جُغرافیائی_سیاسیات_تنظیم,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -7977,6 +7393,8 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :"جی_ایم_ایل:_خصوصیت",
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :جیل,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :"جیو:_مقامی_چیزیں",
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :حاکم,
@@ -7985,9 +7403,31 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :حرف,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :حرکت_پذیر_پیدل_چلنے_کا_راستہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"حرکت_پذیر_پیدل_چلنے_کا_راستہ/diameter",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"حرکت_پذیر_پیدل_چلنے_کا_راستہ/height",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"حرکت_پذیر_پیدل_چلنے_کا_راستہ/length",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"حرکت_پذیر_پیدل_چلنے_کا_راستہ/mass",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"حرکت_پذیر_پیدل_چلنے_کا_راستہ/weight",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"حرکت_پذیر_پیدل_چلنے_کا_راستہ/width",
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :حساب_و_شمار,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :حساب_کی_ضرورت,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :حصول_کی_تاریخ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :حلقہ_کا_پادری,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :حملہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :حوض,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :حکومت_کی_قسم,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8003,9 +7443,17 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :خاندان,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :خانقاہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :خدمات_عامہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :خریداری_کرنے_کے_لیے_مختص_جگہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :خشکی_کا_وہ_حصہ_جو_سمندر_کے_اندر_تک_چلا_گیا_ہو,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :خصوصی_سائنسی_دلچسپی_کی_سائٹ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :خفیہ_پیغام,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :خلا_باز,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8043,9 +7491,15 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :"خلائی_مہم/stationVisitDuration",
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :خلائی_پرواز_میں_سال,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :خلاصہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :خلوی_مادہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :خلیج,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :خواتین_کی_انجمن_کا_باہمی_مقابلہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :خوراک,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8055,35 +7509,61 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :خیالی_کردار,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :دائرہ_اختيارات,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :دارالحکومت,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :درہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :دستاویز,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :دستاویز_کی_قسم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :دفتر_کی_مدت,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :دماغ,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :دوا,
+    term :دوائی,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :"دوا/boilingPoint",
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :"دوا/meltingPoint",
+    term :دور,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :دورانیہ_حیات_وقوعه,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :دوڑ,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :دکھاوا_کرنے_والا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :دہانه,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :دیا_گیا_نام,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :دیوتا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ذاتی_تقریب,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :ذیلی_بلدیہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :رابطے_کا_ضابطہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :رسائی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :رسائی_کی_تاریخ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :رسالہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :رفتار_سکیٹر,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :رفیقه_مدیر,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :رقبہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :رقص_کرنے_والا,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :رقص_گاہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :رنگ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :رنگ_ساز,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :رواں_زینہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8099,15 +7579,37 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :"رواں_زینہ/width",
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :روایتی_موسیقی_کی_ترکیب,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :روزانہ_ویکسین_خام,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :روشنی_کا_مینار,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :روشِ_لباس,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :رکن_پارلیمنٹ,
+    term :رومانیہ_کی_تصفیہ_کا_اقتدار_کا_موضوع,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :رومن_کیتہولک_پادری,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :رگ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :رہائی_کی_تاریخ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ریاست,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ریاستہائے_متحدہ_کی_سپریم_کورٹ_کیس,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ریاستی_قرارداد,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ریاضیاتی_تصور,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ریل_گاڑی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :ریل_گاڑی_کا_انجن,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ریڈیو_سٹیشن,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ریڑھ_کی_ہڈی_کے_بغیر_جانور,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ریکارڈرز_پر_مبنی_ایک_فائل,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8117,7 +7619,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :زلزلہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :سائفر,
+    term :زمین_دوز_برقی_ریل_کا_اڈہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :زمین_کا_علاقہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :زوال,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :زیر_زمین_جریدہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :سائنسدان,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8125,25 +7633,37 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :سائیکل_سوار,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :سائیکل_سوار_کی_جماعت,
+    term :سائیکل_سوار_کی_انجمن,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :سائیکلنگ_جماعت,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :سائیکلنگ_دوڑ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :سائیکلنگ_مقابلہ,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :سائیکلنگ_ٹیم,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :سابق_بلدیہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ساحل_سمندر,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ساحل_سمندروالی_بال_کاکھلاڑی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :ساز,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :سازندہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :سافٹ_بال_انجمن,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :سافٹ_بال_کی_انجمن,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :سال,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :سامان_کی_جانچ_پڑتال_کر_سکتے_ہیں,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :سبز_طحالب,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ستار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ستار_بجانے_والا,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ستارہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8155,9 +7675,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :سرمائی_کھیل_کھیلنے_والا,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :سرنگ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :سرکاری_محکمہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :سرگرمی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :سزا_دینے_کا_عمل,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :سفید_رنگ_کے_خلیوں_پر_مشتمل_ایک_بے_رنگ_سیال,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8168,6 +7692,8 @@ module RDF::Vocab
     term :سلسلہ_وار_ڈرامے_کا_کردار,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :سمندر,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :سند,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :سنوکر_کا_فاتح,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8187,17 +7713,71 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :سپیڈ_وے_ٹیم,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :سڑک,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :سڑک_میں_واقع_ہے,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :سکہ_رائج_الوقت,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :سیارہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"سیارہ/apoapsis",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"سیارہ/averageSpeed",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"سیارہ/density",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"سیارہ/mass",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"سیارہ/maximumTemperature",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"سیارہ/meanRadius",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"سیارہ/meanTemperature",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"سیارہ/minimumTemperature",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"سیارہ/orbitalPeriod",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"سیارہ/periapsis",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"سیارہ/surfaceArea",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"سیارہ/temperature",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"سیارہ/volume",
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :سیاستدان,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :سیاستدان_میاں_بیوی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :سیاسی_تصور,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :سیاسی_تقریب,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :سیاسی_جماعت,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :سینیٹ_کا_رُکن,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :شاعر,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :شاہی,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :شخص,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :"شخص/height",
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :"شخص/weight",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :شخص_کی_تقریب,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :شراب,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :شراب_خانہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :شراب_کا_علاقہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :شروع,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :شریان,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8211,19 +7791,27 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :شناخت_کنندہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :شوقیہ_باکسر,
+    term :شوقیہ_مکے_باز,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :شکست,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :شہر,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :شہر_کا_ضلع,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :شہر_کا_منتظم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :صحافی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :صدر,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :صنف,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :صنوبر_کی_قِسم_کا_پودا,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :صوبہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ضابطہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ضلع,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8235,7 +7823,19 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :طوفانی_لہر,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :طيار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :طَنابی_گاڑی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :طیارہ_اڑانے_والا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :ظریف,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :عالمی_ثقافتی_ورثہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :عالمی_وباء,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :عجائب_گھر,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :عرفیت,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8247,11 +7847,19 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :علاقے_کا_دارالحکومت,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :علاقے_کا_درجہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :علما_کا_حکم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :علمی_انتظامی_علاقہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :عمارت,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :"عمارت/floorArea",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :عمارتی_دفتر,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :عمر,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :عمید_کا_عہدہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8259,9 +7867,19 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :عوامی_راہداری_کا_نظام,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :عورت,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :عکسی_تصویر_اتارنے_والا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :عہدے_دار,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :عیسائی_نظریہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :عیسائی_پادري,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :عیسائی_پادری,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :غار,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :غول,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8277,13 +7895,33 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :فارمولا_ون_ٹیم,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :فراعنہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :فرانس_کا_انتظامی_ضلع,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :فرقہ_واریت,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :فروخت,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :فعال_سال,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :فعال_سال_آخر_سال,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :فعال_سال_شروع_سال_Mgr,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :فعال_سال_کی_آخری_تاریخ_Mgr,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :فعال_سال_کی_شروعات_کی_تاریخ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :فعال_کیسز,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :فلسفی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :فلسفیانہ_تصور,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :فلم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :فلم_کا_ہدایت_کار,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :فلم_کی_صنف,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8291,15 +7929,25 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :فلک_بوس_عمارت,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :فن_کاسرپرست,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :فنکار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :فنکارانہ_انداز_کی_مدت,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :فنکارانہ_صنف,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :فنکارڈسکوگرافی,
+    term :فنکارکاریکارڈ_نامہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :فوج,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :فوجی_افسر,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :فوجی_تنازعہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :فوجی_خدمات,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :فوجی_شخص,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :فوجی_ڈھانچہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8307,15 +7955,17 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :فوجی_ہوائی_جہاز,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :فوجی_یونٹ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :فٹ_بال_باہمی_مقابلہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :فٹ_بال_تنظیم,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :فٹ_بال_لیگ_کے_موسم,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :فٹ_بال_مقابلہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :فٹ_بال_منتظم,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :فٹ_بال_کلب,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :فٹ_بال_کلب_کا_موسم,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8345,9 +7995,17 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :قدرتی_جگہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :قدرتی_علاقہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :قدرتی_واقعہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :قدیم_تاریخی_زمانہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :قسم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :قصبہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :قطار_رائج,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :قلعہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8361,29 +8019,33 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :قومی_ترانہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :قومی_علاقہ,
+    term :قومی_فٹ_بال_انجمن_تقریب,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :قومی_فٹ_بال_تنظیم,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :قومی_فٹ_بال_لیگ_کا_موسم,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :قومی_فٹ_بال_کلب,
+    term :قومی_کالج_ورزش_انجمن_کاموسم,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :قیمتی_اشیاء_کا_مجموعہ۔,
+    term :قیمتی_اشیاء_کا_مجموعہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :لائن_آف_فیشن,
+    term :لحمیات,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :لیفٹیننٹ,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :لیکروس_لیگ,
+    term :لیکروس_انجمن,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :لیکروس_کھلاڑی,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :ماؤس_جین,
+    term :ماتحت_علاقہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :مارشل_آرٹسٹ,
+    term :مارشل_کے_فنکار,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مانگا,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مانہوا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :ماہر_آثار_قدیمہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ماہر_حشریات,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ماہر_حیاتیات,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8395,6 +8057,12 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ماہر_معاشیات,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ماہر_نفسیات,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مبدہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :متحرک_فلم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :متواتر_ادب,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مجرم,
@@ -8405,17 +8073,35 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مجلس,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مجلس_قانون_ساز,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :مجلس_کے_شرکاء,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مجموعہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مجموعی_آبادی_کا_سال,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مجموعی_آبادی_کل,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مجموعی_ملکی_پیداوار,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مجموعی_گھریلو_پیداوار_فی_کس,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :محصول,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :محفوظ_شدہ_دستاویزات,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :محفوظ_علاقہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :محلہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مخروطی_مصری_مینار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مخفف,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مخلوط_جنگ_جو_آرٹس_تقریب,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مخلوط_مارشل_آرٹس_کی_انجمن,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مدرسه,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8425,17 +8111,39 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مذہبی,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مذہبی_تصور,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مذہبی_تنظیم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :مذہبی_عمارت,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مردہ_لڑائی_کی_جگہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مزاحمتی_تحریک_کے_رکن,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مزاحیہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :مزاحیہ_تخلیق_کار۔,
+    term :مزاحیہ_تخلیق_کار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مزاحیہ_خاکے,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مزاحیہ_گروہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مزار,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مزدوروں_کا_اتحاد,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مسجد,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مسخرا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مسدود_برادری,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مشترکہ_نورڈک,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :مشروب,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مشیر,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مصنف,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8445,9 +8153,13 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :معاملہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :معاہدہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :معدنیات,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :معروف_کھیلوں_کے_لیے_مَخصُوص_جگہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :معلم,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :معلوماتی_آلات,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8461,6 +8173,8 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مقامی_تھنگ,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مقامی_حکومت_کی_انجمن,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :مقننہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ملاح,
@@ -8469,37 +8183,69 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ملاقات,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ملحقہ_بستی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :ملک,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ملک_کی_نشست,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ملکہ_حسن,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :منشیات_کا_مجموعہ۔,
+    term :منتظم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :منحوا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مندر,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :منسلک_سازینه,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :منشیات_کا_مجموعہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :منصوبہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :منظم_شدہ_مجموعہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :مواصلات,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :موبائل_فون,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :موبائل_فونز,
+    term :موت_کی_جگہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :موت_کی_عمر,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :موج_تختہ_پر_سوار_ہونے_والا,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مورخ,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :موسیقی_بنانے_والا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :موسیقی_میلہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :موسیقی_چارٹس_میں_جگہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :موسیقی_چارٹس_میں_جگہ۔,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :موسیقی_کا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :موسیقی_کا_رہنما,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :موسیقی_کا_فنکار,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :موسیقی_کا_کام,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :موسیقی_کی_صنف,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :موسیقی_کے_ریکارڈوں_کی_فہرست,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :موسیقی_کے_ساتھ_نقل_یا_اداکاری,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :موضوع_کا_تصور,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :مونوکلونل_اینٹی_باڈی,
+    term :مونوکلونل_دافِع_جِسم,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :موٹر_سائیکل_ریسر,
+    term :موٹر_سائیکل,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :موٹر_سائیکل_دوڑانے_والا,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :موٹر_سائیکل_ریسنگ_لیگ,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8511,21 +8257,19 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :"موٹر_کار_کی_دوڑ/distance",
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :موٹر_کھیل_گھڑ_دوڑ_کا_گھوڑا_دوڑانے_والا,
+    term :موٹر_کھیل_میں_گاڑی_دوڑانے_والا,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :موٹرسپورٹ_سیزن,
+    term :موٹر_کھیل_کا_موسم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :موٹر_گاڑی_کا_انجن,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مُضحِکہ_خیزکردار,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مچھلی,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :مکسڈ_مارشل_آرٹس_لیگ,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :مکے_باز,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مکے_بازی_کھیل_کی_انجمن,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :میئر,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :میدان,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8533,19 +8277,25 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :مینار,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :میوزک_ڈائریکٹر,
+    term :نائب,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :میوزیکل,
+    term :نائب_صدر,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :میٹرو_اسٹیشن,
+    term :نائب_وزیر_اعظم,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :نارمن_فرقے_کا_عيسائی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ناشر,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ناشَر,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :نام,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :نامعلوم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :ناٹک,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ناکارہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ندی,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8559,13 +8309,31 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :"ندی/watershed",
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :نسل_یا_خاندان,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :نسلی_گروہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :نشان_نجوم,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :نشریاتی_جال,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :نشے_کی_دوا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"نشے_کی_دوا/boilingPoint",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"نشے_کی_دوا/meltingPoint",
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :نظریہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :نظم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :نغمہ_نگار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :نقاشی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :نقصان,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :نقطہ_نظر,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :نقل_و_حمل_کا_راستہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8597,6 +8365,8 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :"نقل_و_حمل_کے_نظام/width",
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :نمائش_کرنے_والا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :نمائندہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :نيزہ_باز,
@@ -8604,8 +8374,6 @@ module RDF::Vocab
     term :نَسبہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :نَسبہ_کا_مقام,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :نِشانہ_بازی,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :نکشتر,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8625,11 +8393,23 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :نیٹ_بال_کھلاڑی,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :وادی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :والی_بال_پلیئر۔,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :والی_بال_کاکھلاڑی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :والی_بال_کی_انجمن,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :والی_بال_کی_تربیت_کرنے_والا,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :وزراء_کی_کابینہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :وزیر,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :وزیراعظم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :وقت_وقفہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :وقت_کی_مدت,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8639,13 +8419,59 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :وکیل,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ویب_صفحات_کا_مجموعہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ویکسین,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ویکسینیشن_کے_اعدادوشمار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ویکی_میڈیا_کا_سانچہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ٹرام_گاڑی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ٹرام_گاڑی_کا_اڈا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ٹرین_کی_بوگی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :ٹٹولنے_والا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ٹی_وی_شو,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ٹی_وی_مزبان,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ٹی_وی_ڈرامہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ٹی_وی_کا_ہدایت_کار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ٹی_وی_کی_قسط,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ٹیبل_ٹینس_کا_کھلاڑی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ٹیلی_ویژن_مرکز,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ٹیم_کے_رکن,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ٹینس_کا_باہمی_مقابلہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ٹینس_کا_کھلاڑی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ٹینس_کی_انجمن,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :پادری,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پادری_کا_علاقہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پادریوں_کا_سردار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پارلیمنٹ_کا_رکن,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :پانی_کا_ضلعی_اقتدار,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پانی_کی_سواری,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :پتھر_کنڈلی_کھيل_کی_انجمن,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پجاری,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :پرانا_علاقہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8655,9 +8481,17 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :پرندہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پروگرامنگ_زبان,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پرہیز,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :پس_منظر,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :پل,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پلے_بوائے_پلے_میٹ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پن_چکی,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :پنڈال,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8666,6 +8500,14 @@ module RDF::Vocab
     term :پودا,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :پوشاک_ساز,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پولو_انجمن,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پولیس_افسر,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پوکر_کھلاڑی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پَوَن_چکّی_کی_طرح_کی_کّل,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :پٹھوں,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8681,25 +8523,57 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :پہاڑی_سلسلہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پہلو_کا_تناسب,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :پہلوان,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پیسنے_کے_قابل,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پیش_کنندہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پیشہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پیشہ_تعینات,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پیشہ_ور_گھڑ_سوار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :پینٹبال_انجمن,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :چربی,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :چرچ,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :چوکور,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :چوہے_کے_نَسبہ_کا_مقام,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :چڑیا_گھر,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :چکی,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :چھوٹا_نواب,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :چھوٹاعلاقہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :چھٹی,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :چینی_درخت_پنکھے_کے_جیسے_پتوں_والا,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :چینی_مزاحیہ,
+    term :ڈرامہ_نگار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ڈزنی_کے_کردار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ڈھینکلی,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ڈی_بی_پیڈین,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ڈیجیٹل_کیمرہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ڈیم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ڈینس_سکور,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :کائی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :کار_دوڑ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کار_ہنر,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8709,15 +8583,17 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کارٹون,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :کارٹون_کا_کردار,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :کارٹون۔,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :کاشت_شدہ_مختلف_قسم۔,
+    term :کاشت_شدہ_مختلف_قسم,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کام,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"کام/runtime",
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :کام_کی_اکائی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :کام_کی_ترتیب,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :کان,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کتا,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8725,19 +8601,25 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کتب_خانہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :کثِیر_شَکری,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :کثیر_حجم_کی_اشاعت,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :کرسچن_بی_کی_دکان,
+    term :کراس_کنٹری_اسکیئر,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :کرف_نخلی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :کرلنگ_کا_کھیل_کھیلنے_والا,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کروی_غول,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کرکٹ_انجمن,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :کرکٹ_جماعت,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :کرکٹ_کا_میدان,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :کرکٹر,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :کزف,
+    term :کرکٹ_کا_کھلاڑی,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کسان,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8745,7 +8627,17 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :"کسی_شخص_(جاگیردار)_یا_سرکاری_ادارے_کے_دائرہ_اختیار_کا_قدیم_علاقہ",
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :کشتی_بنانے_والا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :کشتی_بنانے_والاit,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :کشتی_کی_تقریب,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :کشودرگرہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :کل_علاقے_کی_درجہ_بندی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :کوئلہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کورونا_وائرس2019,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8765,19 +8657,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :"کِسی_موقع_مقام_پر_نقل_و_حمل/width",
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :کِسی_موقع_مقام_پر_نقل_و_حمل۔,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :"کِسی_موقع_مقام_پر_نقل_و_حمل۔/diameter",
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :"کِسی_موقع_مقام_پر_نقل_و_حمل۔/height",
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :"کِسی_موقع_مقام_پر_نقل_و_حمل۔/length",
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :"کِسی_موقع_مقام_پر_نقل_و_حمل۔/mass",
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :"کِسی_موقع_مقام_پر_نقل_و_حمل۔/weight",
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :"کِسی_موقع_مقام_پر_نقل_و_حمل۔/width",
+    term :کھانا_دینے_والا,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کھلاڑی,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8785,29 +8665,29 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کھیل,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :کھیل_سکھانے_والا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :کھیل_کی_جماعت,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کھیل_کی_سہولت,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :کھیل_کی_ٹیم,
+    term :کھیل_کے_متعلق,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :کھیل_کی_ٹیم_کا_موسم,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :کھیل_ہاکی_ٹیموں_کا_گروہ,
+    term :کھیل_ہاکی_ٹیموں_کی_انجمن,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کھیلوں_کا_منتظم,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کھیلوں_کا_موسم,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :کھیلوں_کا_کلب,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :کھیلوں_کی_انجمن,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کھیلوں_کی_تقریب,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :کھیلوں_کی_تنظیم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :کھیلوں_کی_جماعت_کا_رکن,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :کھیلوں_کی_لیگ,
+    term :کھیلوں_کی_جماعت_کا_موسم,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کھیلوں_کے_مقابلے_کا_نتیجہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8839,10 +8719,6 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :"کہکشاں/volume",
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :کیریئر_سٹیشن,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :کیسینو,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :کیمیائی_عنصر,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کیمیائی_مادہ,
@@ -8863,15 +8739,15 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کیمیائی_مرکب,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :کینیڈین_فٹ_بال_جماعت,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :کینیڈین_فٹ_بال_لیگ,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :کینیڈین_فٹ_بال_ٹیم۔,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :کیٹرر,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :کیپ,
+    term :کینیڈین_فٹ_بال_کھلاڑی,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :کیڑا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :گاؤں,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :گالف_کا_میدان,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8893,6 +8769,10 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :گاڑیوں_کے_مقابلے_کا_کھیل,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :گرجا,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :گرم_موسم_بہار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :گرم_پانی_کا_قدرتی_چشمہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :گرم_پانی_کاقدرتی_چشم,
@@ -8903,7 +8783,7 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :گلوکار,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :"گمٹیلا_پودا.",
+    term :گمٹیلا_پودا,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :گولف_کا_باہمی_مقابلہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8917,11 +8797,11 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :گھڑ_سوار,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :گہرائی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :گیلک_کھیل_کا_کھلاڑی,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :گیلک_گیم_پلیئر۔,
-      isDefinedBy: "http://dbpedia.org/ontology/"
-    term :گیٹڈ_برادری,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ہارمون,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8929,9 +8809,21 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ہاکی_ٹیم,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :ہاکی_کلب,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :ہاکی_کھیل_کی_جماعت,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ہاکی_کی_تنظیم,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ہتھیار,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"ہتھیار/diameter",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"ہتھیار/height",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"ہتھیار/length",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"ہتھیار/weight",
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :"ہتھیار/width",
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ہسپتال,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8939,21 +8831,23 @@ module RDF::Vocab
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ہلکی_شراب,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :ہلکے_ناول,
-      isDefinedBy: "http://dbpedia.org/ontology/"
     term :ہنگامہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ہوا_میں_چھلانگ_لگانے_والا,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ہوا_کی_سمت,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ہوا_کی_چکی,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :ہوائی_اڈہ,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ہوائی_جہاز,
       isDefinedBy: "http://dbpedia.org/ontology/"
+    term :ہوائی_راستہ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
     term :ہڈی,
       isDefinedBy: "http://dbpedia.org/ontology/"
-    term :ہینڈ_بال_ٹیم,
+    term :ہینڈ_بال_جماعت,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :ہینڈ_بال_کا_کھلاڑی,
       isDefinedBy: "http://dbpedia.org/ontology/"
@@ -8962,6 +8856,10 @@ module RDF::Vocab
     term :یادگار,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :یوروویژن_گانا_مقابلہ_اندراج,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :یونانی_لفظ_سے_ماخُوذ,
+      isDefinedBy: "http://dbpedia.org/ontology/"
+    term :یوٹیب_پر_وڈیو_لگانے_والا,
       isDefinedBy: "http://dbpedia.org/ontology/"
     term :یوکاریوٹ,
       isDefinedBy: "http://dbpedia.org/ontology/"

@@ -391,7 +391,7 @@ module RDF
         case template
         when /.haml$/
           require 'haml'
-          haml = if Haml.const_defined?(:Template)
+          haml = if Haml::VERSION >= "6"
             Haml::Template.new {File.read(template)}
           else
            Haml::Engine.new(File.read(template))
