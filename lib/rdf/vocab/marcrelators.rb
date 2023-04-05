@@ -64,7 +64,7 @@ module RDF::Vocab
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Appellee",
       type: "http://www.loc.gov/mads/rdf/v1#Authority"
     term :apl,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Apppellant",
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Appellant",
       type: "http://www.loc.gov/mads/rdf/v1#Authority"
     term :app,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Applicant",
