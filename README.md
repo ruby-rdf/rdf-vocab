@@ -1,7 +1,7 @@
 # rdf-vocab
 Common OWL/RDFS Vocabularies for use with Ruby [RDF.rb][]
 
-[![Gem Version](https://badge.fury.io/rb/rdf-vocab.png)](https://badge.fury.io/rb/rdf-vocab)
+[![Gem Version](https://badge.fury.io/rb/rdf-vocab.svg)](https://badge.fury.io/rb/rdf-vocab)
 [![Build Status](https://github.com/ruby-rdf/rdf-vocab/workflows/CI/badge.svg?branch=develop)](https://github.com/ruby-rdf/rdf-vocab/actions?query=workflow%3ACI)
 [![Coverage Status](https://coveralls.io/repos/ruby-rdf/rdf-vocab/badge.svg?branch=develop)](https://coveralls.io/github/ruby-rdf/rdf-vocab?branch=develop)
 [![Gitter chat](https://badges.gitter.im/ruby-rdf/rdf.png)](https://gitter.im/ruby-rdf/rdf)
