@@ -28,7 +28,7 @@ group :development, :test do
   gem 'sxp',                git: 'https://github.com/dryruby/sxp.rb.git',               branch: 'develop'
   #gem 'linkeddata',         git: 'https://github.com/ruby-rdf/linkeddata.git',          branch: 'develop'
 
-  gem 'simplecov',          '~> 0.21',  platforms: :mri
+  gem 'simplecov',          '~> 0.22',  platforms: :mri
   gem 'simplecov-lcov',     '~> 0.8',  platforms: :mri
 end
 
