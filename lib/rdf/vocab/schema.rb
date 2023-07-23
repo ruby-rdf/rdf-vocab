@@ -2522,7 +2522,7 @@ module RDF::Vocab
       subClassOf: "http://schema.org/Enumeration",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :MediaObject,
-      comment: "A media object, such as an image, video, or audio object embedded in a web page or a downloadable dataset, i.e. DataDownload. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 [[AudioObject]]s).",
+      comment: "A media object, such as an image, video, audio, or text object embedded in a web page or a downloadable dataset i.e. DataDownload. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).",
       label: "MediaObject",
       subClassOf: "http://schema.org/CreativeWork",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
@@ -3558,6 +3558,12 @@ module RDF::Vocab
       comment: "A police station.",
       label: "PoliceStation",
       subClassOf: ["http://schema.org/CivicStructure", "http://schema.org/EmergencyService"],
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
+    term :PoliticalParty,
+      comment: "Organization: Political Party.",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3282",
+      label: "PoliticalParty",
+      subClassOf: "http://schema.org/Organization",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :Pond,
       comment: "A pond.",
@@ -4633,6 +4639,12 @@ module RDF::Vocab
       comment: "A file composed primarily of text.",
       label: "TextDigitalDocument",
       subClassOf: "http://schema.org/DigitalDocument",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
+    term :TextObject,
+      comment: "A text file. The text can be unformatted or contain markup, html, etc.",
+      equivalentClass: "http://purl.org/dc/dcmitype/Text",
+      label: "TextObject",
+      subClassOf: "http://schema.org/MediaObject",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :TheaterEvent,
       comment: "Event type: Theater performance.",
@@ -7745,7 +7757,7 @@ module RDF::Vocab
       domainIncludes: "http://schema.org/Thing",
       equivalentProperty: "http://purl.org/dc/terms/description",
       label: "description",
-      rangeIncludes: "http://schema.org/Text",
+      rangeIncludes: ["http://schema.org/Text", "http://schema.org/TextObject"],
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :device,
       comment: "Device required to run the application. Used in cases where a specific make/model is required to run the application.",
@@ -10946,7 +10958,7 @@ module RDF::Vocab
       rangeIncludes: "http://schema.org/Integer",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :maximumVirtualAttendeeCapacity,
-      comment: "The maximum physical attendee capacity of an [[Event]] whose [[eventAttendanceMode]] is [[OnlineEventAttendanceMode]] (or the online aspects, in the case of a [[MixedEventAttendanceMode]]). ",
+      comment: "The maximum virtual attendee capacity of an [[Event]] whose [[eventAttendanceMode]] is [[OnlineEventAttendanceMode]] (or the online aspects, in the case of a [[MixedEventAttendanceMode]]). ",
       domainIncludes: "http://schema.org/Event",
       "http://schema.org/isPartOf": "http://pending.schema.org",
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/1842",
@@ -10981,7 +10993,7 @@ module RDF::Vocab
       "http://schema.org/isPartOf": "http://pending.schema.org",
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/1425",
       label: "measurementMethod",
-      rangeIncludes: ["http://schema.org/MeasurementMethodEnum", "http://schema.org/Text", "http://schema.org/URL"],
+      rangeIncludes: ["http://schema.org/DefinedTerm", "http://schema.org/MeasurementMethodEnum", "http://schema.org/Text", "http://schema.org/URL"],
       subPropertyOf: "http://schema.org/measurementTechnique",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :measurementQualifier,
@@ -10998,7 +11010,7 @@ module RDF::Vocab
       "http://schema.org/isPartOf": "http://pending.schema.org",
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/1425",
       label: "measurementTechnique",
-      rangeIncludes: ["http://schema.org/MeasurementMethodEnum", "http://schema.org/Text", "http://schema.org/URL"],
+      rangeIncludes: ["http://schema.org/DefinedTerm", "http://schema.org/MeasurementMethodEnum", "http://schema.org/Text", "http://schema.org/URL"],
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :mechanismOfAction,
       comment: "The specific biochemical interaction through which this drug or supplement produces its pharmacological effect.",
@@ -14630,8 +14642,8 @@ module RDF::Vocab
       rangeIncludes: "http://schema.org/Text",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :titleEIDR,
-      comment: "An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]] representing at the most general/abstract level, a work of film or television.\n\nFor example, the motion picture known as \"Ghostbusters\" has a titleEIDR of  \"10.5240/7EC7-228A-510A-053E-CBB8-J\". This title (or work) may have several variants, which EIDR calls \"edits\". See [[editEIDR]].\n\nSince schema.org types like [[Movie]] and [[TVEpisode]] can be used for both works and their multiple expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description.\n",
-      domainIncludes: ["http://schema.org/Movie", "http://schema.org/TVEpisode"],
+      comment: "An [EIDR](https://eidr.org/) (Entertainment Identifier Registry) [[identifier]] representing at the most general/abstract level, a work of film or television.\n\nFor example, the motion picture known as \"Ghostbusters\" has a titleEIDR of  \"10.5240/7EC7-228A-510A-053E-CBB8-J\". This title (or work) may have several variants, which EIDR calls \"edits\". See [[editEIDR]].\n\nSince schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description.\n",
+      domainIncludes: ["http://schema.org/Movie", "http://schema.org/TVEpisode", "http://schema.org/TVSeason", "http://schema.org/TVSeries"],
       "http://schema.org/isPartOf": "http://pending.schema.org",
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2469",
       label: "titleEIDR",
@@ -14871,6 +14883,12 @@ module RDF::Vocab
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
       label: "tributary",
       rangeIncludes: "http://schema.org/AnatomicalStructure",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :tripOrigin,
+      comment: "The location of origin of the trip, prior to any destination(s).",
+      domainIncludes: "http://schema.org/Trip",
+      label: "tripOrigin",
+      rangeIncludes: "http://schema.org/Place",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :typeOfBed,
       comment: "The type of bed to which the BedDetail refers, i.e. the type of bed available in the quantity indicated by quantity.",

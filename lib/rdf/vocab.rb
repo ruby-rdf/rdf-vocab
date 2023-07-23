@@ -9,19 +9,7 @@ module RDF
 
     # @!visibility private
     VOCABS = {
-      acl:    {
-        uri: "http://www.w3.org/ns/auth/acl#",
-        patch: %{
-          @prefix acl: <http://www.w3.org/ns/auth/acl#> .
-          @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-          DeleteExisting {
-            acl:Access acl:label "access"@en .
-          } .
-          AddNew {
-            acl:Access rdfs:label "access"@en .
-          } .
-        }
-      },
+      acl:    {uri: "http://www.w3.org/ns/auth/acl#"},
       as:    {uri: "https://www.w3.org/ns/activitystreams#", source: 'etc/as.ttl'},
       bf2:    {uri: 'http://id.loc.gov/ontologies/bibframe/'},
       bibframe: {
@@ -69,7 +57,10 @@ module RDF
         class_name: "DataCite",
         skip: true
       },
-      dbo:    {uri: "http://dbpedia.org/ontology/", source: "http://dbpedia.org/data3/.ttl"},
+      dbo:    {
+        uri: "http://dbpedia.org/ontology/",
+        skip: true # as of 2023-07-23, not available for download at previous location
+      },
       dc:     {uri: "http://purl.org/dc/terms/"},
       dc11:   {uri: "http://purl.org/dc/elements/1.1/"},
       dcat:   {
