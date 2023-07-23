@@ -10,7 +10,7 @@ module RDF::Vocab
     # Ontology definition
     ontology :"http://www.w3.org/ns/auth/acl#",
       comment: "Defines the class Authorization and its essential properties,\n    and also some classes of access such as read and write. ",
-      "http://purl.org/dc/elements/1.1/title": "Basic Access Control ontology"
+      "http://purl.org/dc/terms/title": "Basic Access Control ontology"
 
     # Class definitions
     term :Access,
@@ -53,8 +53,9 @@ module RDF::Vocab
 
     # Property definitions
     property :accessControl,
-      comment: "The Access Control file for this information resource.\n        This may of course be a virtual resource implemented by the access control system.\n        Note also HTTP's header  Link:  foo.meta ;rel=meta can be used for this.",
+      comment: "The Access Control file for this information resource.\n        This may of course be a virtual resource implemented by the access control system.\n        Note that HTTP header `Link: <foo.acl>; rel=\"acl\"` can also be used for this.",
       domain: "http://www.w3.org/2006/gen/ont#InformationResource",
+      "http://www.w3.org/2000/01/rdf-schema#seeAlso": "https://solidproject.org/TR/wac#acl-link-relation",
       label: "access control",
       range: "http://www.w3.org/2006/gen/ont#InformationResource",
       subPropertyOf: "http://www.w3.org/2000/01/rdf-schema#seeAlso",
@@ -90,7 +91,7 @@ module RDF::Vocab
       range: "http://www.w3.org/2006/vcard/ns#Group",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :default,
-      comment: "If a resource has no ACL file (it is 404),\n        then access to the resource if given by the ACL of the immediately\n        containing directory, or failing that (404) the ACL of the recursively next\n        containing directory which has an ACL file.\n        Within that ACL file,\n        any Authentication which has that directory as its acl:default applies to the\n        resource. (The highest directory must have an ACL file.)\n",
+      comment: "If a resource has no ACL file (it is 404),\n        then access to the resource is given by the ACL of the immediately\n        containing directory, or failing that (404) the ACL of the recursively next\n        containing directory which has an ACL file.\n        Within that ACL file,\n        any Authorization which has that directory as its acl:default applies to the\n        resource. (The highest directory must have an ACL file.)\n",
       domain: "http://www.w3.org/ns/auth/acl#Authorization",
       label: "default access for things in this",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -118,7 +119,7 @@ module RDF::Vocab
       range: "http://www.w3.org/ns/auth/acl#Origin",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :owner,
-      comment: "The person or other agent which owns this.\n    For example, the owner of a file in a filesystem.\n    There is a sense of right to control.   Typically defaults to the agent who craeted\n    something but can be changed.",
+      comment: "The person or other agent which owns this.\n    For example, the owner of a file in a filesystem.\n    There is a sense of \"right to control\".   Typically defaults to the agent who created\n    something, but can be changed.",
       label: {en: "owner"},
       range: "http://xmlns.com/foaf/0.1/Agent",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
