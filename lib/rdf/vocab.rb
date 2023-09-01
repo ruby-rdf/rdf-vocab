@@ -61,14 +61,24 @@ module RDF
         uri: "http://dbpedia.org/ontology/",
         skip: true # as of 2023-07-23, not available for download at previous location
       },
-      dc:     {uri: "http://purl.org/dc/terms/"},
-      dc11:   {uri: "http://purl.org/dc/elements/1.1/"},
+      dc:     {
+        # https://www.dublincore.org/schemas/rdfs/
+        uri: "http://purl.org/dc/terms/",
+        source: 'https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.nt'
+      },
+      dc11:   {
+        # https://www.dublincore.org/schemas/rdfs/
+        uri: "http://purl.org/dc/elements/1.1/",
+        source: 'https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_elements.nt'
+      },
       dcat:   {
         uri: "http://www.w3.org/ns/dcat#"
       },
       dcmitype: {
-          uri: "http://purl.org/dc/dcmitype/",
-          class_name: "DCMIType"
+        # https://www.dublincore.org/schemas/rdfs/
+        uri: "http://purl.org/dc/dcmitype/",
+        source: 'https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_type.nt',
+        class_name: "DCMIType"
       },
       disco: {
         uri: "http://rdf-vocabulary.ddialliance.org/discovery#",
@@ -231,7 +241,11 @@ module RDF
           } .
         }
       },
-      lrmi:   {uri: "http://purl.org/dcx/lrmi-terms/", strict: false},
+      lrmi:   {
+        # https://www.dublincore.org/schemas/rdfs/
+        uri: "http://purl.org/dcx/lrmi-terms/",
+        strict: false
+      },
       ma:     {uri: "http://www.w3.org/ns/ma-ont#", source: "http://www.w3.org/ns/ma-ont.rdf", strict: false},
       mads: {
         uri: "http://www.loc.gov/mads/rdf/v1#",
