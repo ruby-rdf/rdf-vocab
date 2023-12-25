@@ -184,6 +184,10 @@ The following definition is for the EARL vocabulary, which uses the `patch` capa
         }
       }
 
+## Change Log
+
+See [Release Notes on GitHub](https://github.com/ruby-rdf/rdf-vocab/releases)
+
 ## Authors
 
 * [David Chandek-Stark](https://github.com/dchandekstark)
