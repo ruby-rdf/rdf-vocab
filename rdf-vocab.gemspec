@@ -30,21 +30,21 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency     'rdf',              '~> 3.3'
 
   # Either of these are required for HTML vocabulary generation
-  gem.add_development_dependency 'haml',             '~> 6.1'
+  gem.add_development_dependency 'haml',             '~> 6.3'
   gem.add_development_dependency 'erubis',           '~> 2.7'
 
   gem.add_development_dependency 'json-ld',          '~> 3.3'
-  gem.add_development_dependency 'json-schema',      '~> 4.0'
+  gem.add_development_dependency 'json-schema',      '~> 4.3'
   gem.add_development_dependency 'jsonpath',         '~> 1.1'
   gem.add_development_dependency 'ld-patch',         '~> 3.3'
-  gem.add_development_dependency 'nokogiri',         '~> 1.15', '>= 1.15.4'
-  gem.add_development_dependency 'rake',             '~> 13.0'
+  gem.add_development_dependency 'nokogiri',         '~> 1.16', '>= 1.16.5'
+  gem.add_development_dependency 'rake',             '~> 13.2'
   gem.add_development_dependency 'rdf-ordered-repo', '~> 3.3'
   gem.add_development_dependency 'rdf-rdfa',         '~> 3.3'
   gem.add_development_dependency 'rdf-rdfxml',       '~> 3.3'
   gem.add_development_dependency 'rdf-reasoner',     '~> 0.8'
   gem.add_development_dependency 'rdf-turtle',       '~> 3.3'
-  gem.add_development_dependency 'rspec',            '~> 3.12'
+  gem.add_development_dependency 'rspec',            '~> 3.13'
   gem.add_development_dependency 'rspec-its',        '~> 1.3'
   gem.add_development_dependency 'uuidtools',        '~> 2.2' # needed by json-schema
   gem.add_development_dependency 'yard',             '~> 0.9'
