@@ -12,7 +12,7 @@ module RDF::Vocab
       "http://purl.org/dc/elements/1.1/creator": "Edd Wilder-James",
       "http://purl.org/dc/elements/1.1/description": ["The Description of a Project (DOAP) vocabulary, described using W3C RDF Schema and the Web Ontology Language.", {cs: "Slovník Description of a Project (DOAP, Popis projektu), popsaný použitím W3C RDF Schema a Web Ontology Language.", de: "Das Vokabular \"Description of a Project (DOAP)\", beschrieben durch W3C RDF Schema and the Web Ontology Language.", es: "El vocabulario Description of a Project (DOAP, Descripción de un Proyecto), descrito usando RDF Schema de W3C\n\t\ty Web Ontology Language.", fr: "Le vocabulaire Description Of A Project (DOAP, Description D'Un Projet),\n\t\tdécrit en utilisant RDF Schema du W3C et OWL.", pt: "Vocabulário de descrição de um Projeto (DOAP - Description of a Project), descrito no esquema (schema) W3C RDF e na Web Ontology Language."}],
       "http://purl.org/dc/elements/1.1/format": "application/rdf+xml",
-      "http://purl.org/dc/elements/1.1/rights": "Copyright © 2004-2018 Edd Dumbill, Edd Wilder-James",
+      "http://purl.org/dc/elements/1.1/rights": "Copyright © The DOAP Authors",
       "http://purl.org/dc/elements/1.1/title": "Description of a Project (DOAP) vocabulary",
       "http://www.w3.org/2002/07/owl#imports": "http://xmlns.com/foaf/0.1/",
       "http://xmlns.com/foaf/0.1/maker": term(
@@ -153,7 +153,7 @@ module RDF::Vocab
       range: "http://www.w3.org/2000/01/rdf-schema#Literal",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :developer,
-      comment: {en: "Developer of software for the project.", cs: "Vývojář softwaru projektu.", de: "Software-Entwickler für eine Projekt.", es: "Desarrollador de software para el proyecto.", fr: "Développeur pour le projet.", pt: "Programador de software para o projeto."},
+      comment: {en: "Developer of software for the project.", cs: "Vývojář softwaru projektu.", de: "Software-Entwickler für das Projekt.", es: "Desarrollador de software para el proyecto.", fr: "Développeur pour le projet.", pt: "Programador de software para o projeto."},
       domain: "http://usefulinc.com/ns/doap#Project",
       isDefinedBy: "http://usefulinc.com/ns/doap#",
       label: {en: "developer", cs: "vývojář", de: "Entwickler", es: "desarrollador", fr: "développeur", pt: "programador"},
@@ -166,8 +166,14 @@ module RDF::Vocab
       label: {en: "developer forum"},
       range: "http://rdfs.org/sioc/ns#Container",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :documentation,
+      comment: {en: "Documentation of the project.", fr: "Aide pour l’utilisation de ce projet."},
+      domain: "http://usefulinc.com/ns/doap#Project",
+      isDefinedBy: "http://usefulinc.com/ns/doap#",
+      label: {en: "documentation", fr: "aide"},
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :documenter,
-      comment: {en: "Contributor of documentation to the project.", cs: "Spoluautor dokumentace projektu.", de: "Mitarbeiter an der Dokumentation eines Projektes.", es: "Proveedor de documentación para el proyecto.", fr: "Collaborateur à la documentation du projet.", pt: "Contribuidor para a documentação do projeto."},
+      comment: {en: "Contributor of documentation to the project.", cs: "Spoluautor dokumentace projektu.", de: "Mitarbeiter an der Dokumentation des Projektes.", es: "Proveedor de documentación para el proyecto.", fr: "Collaborateur à la documentation du projet.", pt: "Contribuidor para a documentação do projeto."},
       domain: "http://usefulinc.com/ns/doap#Project",
       isDefinedBy: "http://usefulinc.com/ns/doap#",
       label: {en: "documenter", cs: "dokumentarista", de: "Dokumentator", es: "escritor de ayuda", fr: "rédacteur de l'aide", pt: "documentador"},
@@ -213,7 +219,7 @@ module RDF::Vocab
       range: "http://usefulinc.com/ns/doap#Specification",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :language,
-      comment: {en: "ISO language code a project has been translated into", pt: "Código de idioma ISO do projeto para o qual foi traduzido"},
+      comment: {en: "BCP47 language code a project has been translated into", pt: "Código de idioma BCP47 do projeto para o qual foi traduzido"},
       domain: "http://usefulinc.com/ns/doap#Project",
       isDefinedBy: "http://usefulinc.com/ns/doap#",
       label: {en: "language", pt: "idioma"},
@@ -324,6 +330,20 @@ module RDF::Vocab
       isDefinedBy: "http://usefulinc.com/ns/doap#",
       label: {en: "screenshots", cs: "snímek obrazovky", de: "Screenshots", es: "capturas de pantalla", fr: "captures d'écran", pt: "capturas de ecrãs"},
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :"security-contact",
+      comment: {en: "The Agent that should be contacted\n\tif security issues are found with the project."},
+      domain: "http://usefulinc.com/ns/doap#Project",
+      isDefinedBy: "http://usefulinc.com/ns/doap#",
+      label: {en: "security contact"},
+      range: "http://xmlns.com/foaf/0.1/Agent",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :"security-policy",
+      comment: {en: "URL of the security policy of a project."},
+      domain: "http://usefulinc.com/ns/doap#Project",
+      isDefinedBy: "http://usefulinc.com/ns/doap#",
+      label: {en: "security policy"},
+      subPropertyOf: "http://xmlns.com/foaf/0.1/page",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :"service-endpoint",
       comment: {en: "The URI of a web service endpoint where software as a service may be accessed"},
       domain: "http://usefulinc.com/ns/doap#Project",
@@ -332,7 +352,7 @@ module RDF::Vocab
       range: "http://www.w3.org/2000/01/rdf-schema#Resource",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :shortdesc,
-      comment: {en: "Short (8 or 9 words) plain text description of a project.", cs: "Krátký (8 nebo 9 slov) čistě textový popis projektu.", de: "Kurzbeschreibung (8 oder 9 Wörter) eines Projects als einfacher Text.", es: "Descripción corta (8 o 9 palabras) en texto plano de un proyecto.", fr: "Texte descriptif concis (8 ou 9 mots) d'un projet.", pt: "Descrição curta (com 8 ou 9 palavras) de um projeto em texto apenas."},
+      comment: {en: "Short (8 or 9 words) plain text description of a project.", cs: "Krátký (8 nebo 9 slov) čistě textový popis projektu.", de: "Kurzbeschreibung (8 oder 9 Wörter) eines Projekts als einfacher Text.", es: "Descripción corta (8 o 9 palabras) en texto plano de un proyecto.", fr: "Texte descriptif concis (8 ou 9 mots) d'un projet.", pt: "Descrição curta (com 8 ou 9 palavras) de um projeto em texto apenas."},
       isDefinedBy: "http://usefulinc.com/ns/doap#",
       label: {en: "short description", cs: "krátký popis", de: "Kurzbeschreibung", es: "descripción corta", fr: "description courte", pt: "descrição curta"},
       range: "http://www.w3.org/2000/01/rdf-schema#Literal",
@@ -352,7 +372,7 @@ module RDF::Vocab
       range: "http://xmlns.com/foaf/0.1/Person",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :translator,
-      comment: {en: "Contributor of translations to the project.", cs: "Spoluautor překladu projektu.", de: "Mitarbeiter an den Übersetzungen eines Projektes.", es: "Proveedor de traducciones al proyecto.", fr: "Collaborateur à la traduction du projet.", pt: "Contribuidor das traduções para o projeto."},
+      comment: {en: "Contributor of translations to the project.", cs: "Spoluautor překladu projektu.", de: "Mitarbeiter an den Übersetzungen des Projektes.", es: "Proveedor de traducciones al proyecto.", fr: "Collaborateur à la traduction du projet.", pt: "Contribuidor das traduções para o projeto."},
       domain: "http://usefulinc.com/ns/doap#Project",
       isDefinedBy: "http://usefulinc.com/ns/doap#",
       label: {en: "translator", cs: "překladatel", de: "Übersetzer", es: "traductor", fr: "traducteur", pt: "tradutor"},

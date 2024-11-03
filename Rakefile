@@ -3,6 +3,7 @@ $:.unshift(File.expand_path(File.join(File.dirname(__FILE__), 'lib')))
 require 'rdf'
 require 'rdf/vocab'
 require 'json'
+require 'uri'
 begin
   require 'linkeddata'
 rescue LoadError
