@@ -633,7 +633,7 @@ module RDF::Vocab
       subClassOf: "http://schema.org/Audience",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :BusinessEntityType,
-      comment: "A business entity type is a conceptual entity representing the legal form, the size, the main line of business, the position in the value chain, or any combination thereof, of an organization or business person.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#Business\\n* http://purl.org/goodrelations/v1#Enduser\\n* http://purl.org/goodrelations/v1#PublicInstitution\\n* http://purl.org/goodrelations/v1#Reseller\n\t  ",
+      comment: "A business entity type is a conceptual entity representing the legal form, the size, the main line of business, the position in the value chain, or any combination thereof, of an organization or business person.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#Business\\n* http://purl.org/goodrelations/v1#Enduser\\n* http://purl.org/goodrelations/v1#PublicInstitution\\n* http://purl.org/goodrelations/v1#Reseller\n    ",
       "http://schema.org/contributor": "http://schema.org/docs/collab/GoodRelationsClass",
       label: "BusinessEntityType",
       subClassOf: "http://schema.org/Enumeration",
@@ -954,7 +954,7 @@ module RDF::Vocab
       subClassOf: "http://schema.org/Organization",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :ConstraintNode,
-      comment: "The ConstraintNode type is provided to support usecases in which a node in a structured data graph is described with properties which appear to describe a single entity, but are being used in a situation where they serve a more abstract purpose. A [[ConstraintNode]] can be described using [[constraintProperty]] and [[numConstraints]]. These constraint properties can serve a \n    variety of purposes, and their values may sometimes be understood to indicate sets of possible values rather than single, exact and specific values.",
+      comment: "The ConstraintNode type is provided to support usecases in which a node in a structured data graph is described with properties which appear to describe a single entity, but are being used in a situation where they serve a more abstract purpose. A [[ConstraintNode]] can be described using [[constraintProperty]] and [[numConstraints]]. These constraint properties can serve a\n    variety of purposes, and their values may sometimes be understood to indicate sets of possible values rather than single, exact and specific values.",
       "http://schema.org/isPartOf": "http://pending.schema.org",
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2564",
       label: "ConstraintNode",
@@ -1068,7 +1068,7 @@ module RDF::Vocab
       subClassOf: "http://schema.org/CreativeWork",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :CreativeWorkSeries,
-      comment: "A CreativeWorkSeries in schema.org is a group of related items, typically but not necessarily of the same kind. CreativeWorkSeries are usually organized into some order, often chronological. Unlike [[ItemList]] which is a general purpose data structure for lists of things, the emphasis with CreativeWorkSeries is on published materials (written e.g. books and periodicals, or media such as TV, radio and games).\\n\\nSpecific subtypes are available for describing [[TVSeries]], [[RadioSeries]], [[MovieSeries]], [[BookSeries]], [[Periodical]] and [[VideoGameSeries]]. In each case, the [[hasPart]] / [[isPartOf]] properties can be used to relate the CreativeWorkSeries to its parts. The general CreativeWorkSeries type serves largely just to organize these more specific and practical subtypes.\\n\\nIt is common for properties applicable to an item from the series to be usefully applied to the containing group. Schema.org attempts to anticipate some of these cases, but publishers should be free to apply properties of the series parts to the series as a whole wherever they seem appropriate.\n\t  ",
+      comment: "A CreativeWorkSeries in schema.org is a group of related items, typically but not necessarily of the same kind. CreativeWorkSeries are usually organized into some order, often chronological. Unlike [[ItemList]] which is a general purpose data structure for lists of things, the emphasis with CreativeWorkSeries is on published materials (written e.g. books and periodicals, or media such as TV, radio and games).\\n\\nSpecific subtypes are available for describing [[TVSeries]], [[RadioSeries]], [[MovieSeries]], [[BookSeries]], [[Periodical]] and [[VideoGameSeries]]. In each case, the [[hasPart]] / [[isPartOf]] properties can be used to relate the CreativeWorkSeries to its parts. The general CreativeWorkSeries type serves largely just to organize these more specific and practical subtypes.\\n\\nIt is common for properties applicable to an item from the series to be usefully applied to the containing group. Schema.org attempts to anticipate some of these cases, but publishers should be free to apply properties of the series parts to the series as a whole wherever they seem appropriate.\n    ",
       label: "CreativeWorkSeries",
       subClassOf: ["http://schema.org/CreativeWork", "http://schema.org/Series"],
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
@@ -1347,7 +1347,7 @@ module RDF::Vocab
     term :DonateAction,
       comment: "The act of providing goods, services, or money without compensation, often for philanthropic reasons.",
       label: "DonateAction",
-      subClassOf: "http://schema.org/TradeAction",
+      subClassOf: "http://schema.org/TransferAction",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :DoseSchedule,
       comment: "A specific dosing schedule for a drug or supplement.",
@@ -2845,6 +2845,20 @@ module RDF::Vocab
       label: "MeetingRoom",
       subClassOf: "http://schema.org/Room",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
+    term :MemberProgram,
+      comment: "A MemberProgram defines a loyalty (or membership) program that provides its members with certain benefits, for example better pricing, free shipping or returns, or the ability to earn loyalty points. Member programs may have multiple tiers, for example silver and gold members, each with different benefits.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3563",
+      label: "MemberProgram",
+      subClassOf: "http://schema.org/Intangible",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
+    term :MemberProgramTier,
+      comment: "A MemberProgramTier specifies a tier under a loyalty (member) program, for example \"gold\".",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3563",
+      label: "MemberProgramTier",
+      subClassOf: "http://schema.org/Intangible",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :MensClothingStore,
       comment: "A men's clothing store.",
       label: "MensClothingStore",
@@ -3184,7 +3198,7 @@ module RDF::Vocab
       subClassOf: "http://schema.org/StructuredValue",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :Observation,
-      comment: "Instances of the class [[Observation]] are used to specify observations about an entity at a particular time. The principal properties of an [[Observation]] are [[observationAbout]], [[measuredProperty]], [[statType]], [[value] and [[observationDate]]  and [[measuredProperty]]. Some but not all Observations represent a [[QuantitativeValue]]. Quantitative observations can be about a [[StatisticalVariable]], which is an abstract specification about which we can make observations that are grounded at a particular location and time. \n    \nObservations can also encode a subset of simple RDF-like statements (its observationAbout, a StatisticalVariable, defining the measuredPoperty; its observationAbout property indicating the entity the statement is about, and [[value]] )\n\nIn the context of a quantitative knowledge graph, typical properties could include [[measuredProperty]], [[observationAbout]], [[observationDate]], [[value]], [[unitCode]], [[unitText]], [[measurementMethod]].\n    ",
+      comment: "Instances of the class [[Observation]] are used to specify observations about an entity at a particular time. The principal properties of an [[Observation]] are [[observationAbout]], [[measuredProperty]], [[statType]], [[value] and [[observationDate]]  and [[measuredProperty]]. Some but not all Observations represent a [[QuantitativeValue]]. Quantitative observations can be about a [[StatisticalVariable]], which is an abstract specification about which we can make observations that are grounded at a particular location and time.\n\nObservations can also encode a subset of simple RDF-like statements (its observationAbout, a StatisticalVariable, defining the measuredPoperty; its observationAbout property indicating the entity the statement is about, and [[value]] )\n\nIn the context of a quantitative knowledge graph, typical properties could include [[measuredProperty]], [[observationAbout]], [[observationDate]], [[value]], [[unitCode]], [[unitText]], [[measurementMethod]].\n    ",
       "http://schema.org/isPartOf": "http://pending.schema.org",
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2291",
       label: "Observation",
@@ -3413,16 +3427,23 @@ module RDF::Vocab
       subClassOf: "http://schema.org/PriceSpecification",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :PaymentMethod,
-      comment: "A payment method is a standardized procedure for transferring the monetary amount for a purchase. Payment methods are characterized by the legal and technical structures used, and by the organization or group carrying out the transaction.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#ByBankTransferInAdvance\\n* http://purl.org/goodrelations/v1#ByInvoice\\n* http://purl.org/goodrelations/v1#Cash\\n* http://purl.org/goodrelations/v1#CheckInAdvance\\n* http://purl.org/goodrelations/v1#COD\\n* http://purl.org/goodrelations/v1#DirectDebit\\n* http://purl.org/goodrelations/v1#GoogleCheckout\\n* http://purl.org/goodrelations/v1#PayPal\\n* http://purl.org/goodrelations/v1#PaySwarm\n        ",
+      comment: "A payment method is a standardized procedure for transferring the monetary amount for a purchase. Payment methods are characterized by the legal and technical structures used, and by the organization or group carrying out the transaction. The following legacy values should be accepted:\n    \\n\\n* http://purl.org/goodrelations/v1#ByBankTransferInAdvance\\n* http://purl.org/goodrelations/v1#ByInvoice\\n* http://purl.org/goodrelations/v1#Cash\\n* http://purl.org/goodrelations/v1#CheckInAdvance\\n* http://purl.org/goodrelations/v1#COD\\n* http://purl.org/goodrelations/v1#DirectDebit\\n* http://purl.org/goodrelations/v1#GoogleCheckout\\n* http://purl.org/goodrelations/v1#PayPal\\n* http://purl.org/goodrelations/v1#PaySwarm\\n\\nStructured values are recommended for newer payment methods.",
       "http://schema.org/contributor": "http://schema.org/docs/collab/GoodRelationsClass",
       label: "PaymentMethod",
+      subClassOf: "http://schema.org/Intangible",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
+    term :PaymentMethodType,
+      comment: "The type of payment method, only for generic payment types, specific forms of payments, like card payment should be expressed using subclasses of PaymentMethod.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3537",
+      label: "PaymentMethodType",
       subClassOf: "http://schema.org/Enumeration",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :PaymentService,
       comment: "A Service to transfer funds from a person or organization to a beneficiary person or organization.",
       "http://schema.org/contributor": "http://schema.org/docs/collab/FIBO",
       label: "PaymentService",
-      subClassOf: "http://schema.org/FinancialProduct",
+      subClassOf: ["http://schema.org/FinancialProduct", "http://schema.org/PaymentMethod"],
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :PaymentStatusType,
       comment: "A specific payment status. For example, PaymentDue, PaymentComplete, etc.",
@@ -4721,6 +4742,13 @@ module RDF::Vocab
       comment: "The act of reaching a draw in a competitive activity.",
       label: "TieAction",
       subClassOf: "http://schema.org/AchieveAction",
+      type: "http://www.w3.org/2000/01/rdf-schema#Class"
+    term :TierBenefitEnumeration,
+      comment: "An enumeration of possible benefits as part of a loyalty (members) program.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3563",
+      label: "TierBenefitEnumeration",
+      subClassOf: "http://schema.org/Enumeration",
       type: "http://www.w3.org/2000/01/rdf-schema#Class"
     term :Time,
       comment: "A point in time recurring on multiple days in the form hh:mm:ss[Z|(+|-)hh:mm] (see [XML schema for details](http://www.w3.org/TR/xmlschema-2/#time)).",
@@ -8163,7 +8191,7 @@ module RDF::Vocab
       rangeIncludes: "http://schema.org/MedicalTherapy",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :duration,
-      comment: "The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).",
+      comment: "The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).",
       domainIncludes: ["http://schema.org/Audiobook", "http://schema.org/Episode", "http://schema.org/Event", "http://schema.org/MediaObject", "http://schema.org/Movie", "http://schema.org/MusicRecording", "http://schema.org/MusicRelease", "http://schema.org/QuantitativeValueDistribution", "http://schema.org/Schedule"],
       "http://schema.org/source": ["https://github.com/schemaorg/schemaorg/issues/1457", "https://github.com/schemaorg/schemaorg/issues/1698"],
       label: "duration",
@@ -8915,10 +8943,10 @@ module RDF::Vocab
       rangeIncludes: "http://schema.org/Text",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :founder,
-      comment: "A person who founded this organization.",
+      comment: "A person or organization who founded this organization.",
       domainIncludes: "http://schema.org/Organization",
       label: "founder",
-      rangeIncludes: "http://schema.org/Person",
+      rangeIncludes: ["http://schema.org/Organization", "http://schema.org/Person"],
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :founders,
       comment: "A person who founded this organization.",
@@ -9456,6 +9484,13 @@ module RDF::Vocab
       label: "hasMeasurement",
       rangeIncludes: "http://schema.org/QuantitativeValue",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :hasMemberProgram,
+      comment: "MemberProgram offered by an Organization, for example an eCommerce merchant or an airline.",
+      domainIncludes: "http://schema.org/Organization",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3563",
+      label: "hasMemberProgram",
+      rangeIncludes: "http://schema.org/MemberProgram",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :hasMenu,
       comment: "Either the actual menu as a structured representation, as text, or a URL of the menu.",
       domainIncludes: "http://schema.org/FoodEstablishment",
@@ -9534,6 +9569,28 @@ module RDF::Vocab
       "http://schema.org/source": "http://www.bioschemas.org",
       label: "hasRepresentation",
       rangeIncludes: ["http://schema.org/PropertyValue", "http://schema.org/Text", "http://schema.org/URL"],
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :hasTierBenefit,
+      comment: "A member benefit for a particular tier of a loyalty program.",
+      domainIncludes: "http://schema.org/MemberProgramTier",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3563",
+      label: "hasTierBenefit",
+      rangeIncludes: "http://schema.org/TierBenefitEnumeration",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :hasTierRequirement,
+      comment: "A requirement for a user to join a membership tier, for example: a CreditCard if the tier requires sign up for a credit card, A UnitPriceSpecification if the user is required to pay a (periodic) fee, or a MonetaryAmount if the user needs to spend a minimum amount to join the tier. If a tier is free to join then this property does not need to be specified.",
+      domainIncludes: "http://schema.org/MemberProgramTier",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3563",
+      label: "hasTierRequirement",
+      rangeIncludes: ["http://schema.org/CreditCard", "http://schema.org/MonetaryAmount", "http://schema.org/Text", "http://schema.org/UnitPriceSpecification"],
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :hasTiers,
+      comment: "The tiers of a member program.",
+      domainIncludes: "http://schema.org/MemberProgram",
+      "http://schema.org/inverseOf": "http://schema.org/isTierOf",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3563",
+      label: "hasTiers",
+      rangeIncludes: "http://schema.org/MemberProgramTier",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :hasVariant,
       comment: "Indicates a [[Product]] that is a member of this [[ProductGroup]] (or [[ProductModel]]).",
@@ -9722,8 +9779,8 @@ module RDF::Vocab
       rangeIncludes: "http://schema.org/Hospital",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :hostingOrganization,
-      comment: "The organization (airline, travelers' club, etc.) the membership is made with.",
-      domainIncludes: "http://schema.org/ProgramMembership",
+      comment: "The Organization (airline, travelers' club, retailer, etc.) the membership is made with or which offers the  MemberProgram.",
+      domainIncludes: ["http://schema.org/MemberProgram", "http://schema.org/ProgramMembership"],
       label: "hostingOrganization",
       rangeIncludes: "http://schema.org/Organization",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -10255,6 +10312,14 @@ module RDF::Vocab
       "http://schema.org/contributor": "http://schema.org/docs/collab/GoodRelationsTerms",
       label: "isSimilarTo",
       rangeIncludes: ["http://schema.org/Product", "http://schema.org/Service"],
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :isTierOf,
+      comment: "The member program this tier is a part of.",
+      domainIncludes: "http://schema.org/MemberProgramTier",
+      "http://schema.org/inverseOf": "http://schema.org/hasTiers",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3563",
+      label: "isTierOf",
+      rangeIncludes: "http://schema.org/MemberProgram",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :isUnlabelledFallback,
       comment: "This can be marked 'true' to indicate that some published [[DeliveryTimeSettings]] or [[ShippingRateSettings]] are intended to apply to all [[OfferShippingDetails]] published by the same merchant, when referenced by a [[shippingSettingsLink]] in those settings. It is not meaningful to use a 'true' value for this property alongside a transitTimeLabel (for [[DeliveryTimeSettings]]) or shippingLabel (for [[ShippingRateSettings]]), since this property is for use with unlabelled settings.",
@@ -11192,7 +11257,7 @@ module RDF::Vocab
       domainIncludes: ["http://schema.org/Organization", "http://schema.org/Person"],
       "http://schema.org/inverseOf": "http://schema.org/member",
       label: "memberOf",
-      rangeIncludes: ["http://schema.org/Organization", "http://schema.org/ProgramMembership"],
+      rangeIncludes: ["http://schema.org/MemberProgramTier", "http://schema.org/Organization", "http://schema.org/ProgramMembership"],
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :members,
       comment: "A member of this organization.",
@@ -11209,7 +11274,7 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :membershipPointsEarned,
       comment: "The number of membership points earned by the member. If necessary, the unitText can be used to express the units the points are issued in. (E.g. stars, miles, etc.)",
-      domainIncludes: "http://schema.org/ProgramMembership",
+      domainIncludes: ["http://schema.org/MemberProgramTier", "http://schema.org/PriceSpecification", "http://schema.org/ProgramMembership"],
       "http://schema.org/isPartOf": "http://pending.schema.org",
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2085",
       label: "membershipPointsEarned",
@@ -12204,6 +12269,14 @@ module RDF::Vocab
       label: "paymentMethodId",
       rangeIncludes: "http://schema.org/Text",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :paymentMethodType,
+      comment: "The type of a payment method.",
+      domainIncludes: "http://schema.org/PaymentMethod",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3537",
+      label: "paymentMethodType",
+      rangeIncludes: "http://schema.org/PaymentMethodType",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :paymentStatus,
       comment: "The status of payment; whether the invoice has been paid or not.",
       domainIncludes: "http://schema.org/Invoice",
@@ -12560,7 +12633,7 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :price,
       comment: "The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.\\n\\nUsage guidelines:\\n\\n* Use the [[priceCurrency]] property (with standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. \"USD\"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. \"BTC\"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. \"Ithaca HOUR\") instead of including [ambiguous symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign) such as '$' in the value.\\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.\\n* Note that both [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute) and Microdata syntax allow the use of a \"content=\" attribute for publishing simple machine-readable values alongside more human-friendly formatting.\\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n      ",
-      domainIncludes: ["http://schema.org/Offer", "http://schema.org/PriceSpecification", "http://schema.org/TradeAction"],
+      domainIncludes: ["http://schema.org/DonateAction", "http://schema.org/Offer", "http://schema.org/PriceSpecification", "http://schema.org/TradeAction"],
       label: "price",
       rangeIncludes: ["http://schema.org/Number", "http://schema.org/Text"],
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -12581,7 +12654,7 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :priceCurrency,
       comment: "The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\\n\\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. \"USD\"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. \"BTC\"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. \"Ithaca HOUR\".",
-      domainIncludes: ["http://schema.org/Offer", "http://schema.org/PriceSpecification", "http://schema.org/Reservation", "http://schema.org/Ticket", "http://schema.org/TradeAction"],
+      domainIncludes: ["http://schema.org/DonateAction", "http://schema.org/Offer", "http://schema.org/PriceSpecification", "http://schema.org/Reservation", "http://schema.org/Ticket", "http://schema.org/TradeAction"],
       label: "priceCurrency",
       rangeIncludes: "http://schema.org/Text",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
@@ -12593,7 +12666,7 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :priceSpecification,
       comment: "One or more detailed price specifications, indicating the unit price and delivery or payment charges.",
-      domainIncludes: ["http://schema.org/Demand", "http://schema.org/Offer", "http://schema.org/TradeAction"],
+      domainIncludes: ["http://schema.org/Demand", "http://schema.org/DonateAction", "http://schema.org/Offer", "http://schema.org/TradeAction"],
       "http://schema.org/contributor": "http://schema.org/docs/collab/GoodRelationsTerms",
       label: "priceSpecification",
       rangeIncludes: "http://schema.org/PriceSpecification",
@@ -12745,6 +12818,13 @@ module RDF::Vocab
       label: "proficiencyLevel",
       rangeIncludes: "http://schema.org/Text",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :program,
+      comment: "The [MemberProgram](http://schema.org/MemberProgram) associated with a [ProgramMembership](http://schema.org/ProgramMembership).",
+      domainIncludes: "http://schema.org/ProgramMembership",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3563",
+      label: "program",
+      rangeIncludes: "http://schema.org/MemberProgram",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :programMembershipUsed,
       comment: "Any membership in a frequent flyer, hotel loyalty program, etc. being applied to the reservation.",
       domainIncludes: "http://schema.org/Reservation",
@@ -12752,7 +12832,7 @@ module RDF::Vocab
       rangeIncludes: "http://schema.org/ProgramMembership",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :programName,
-      comment: "The program providing the membership.",
+      comment: "The program providing the membership. It is preferable to use [:program](http://schema.org/program) instead.",
       domainIncludes: "http://schema.org/ProgramMembership",
       label: "programName",
       rangeIncludes: "http://schema.org/Text",
@@ -13119,7 +13199,7 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :refundType,
       comment: "A refund type, from an enumerated list.",
-      domainIncludes: "http://schema.org/MerchantReturnPolicy",
+      domainIncludes: ["http://schema.org/MerchantReturnPolicy", "http://schema.org/MerchantReturnPolicySeasonalOverride"],
       "http://schema.org/isPartOf": "http://pending.schema.org",
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2288",
       label: "refundType",
@@ -13382,7 +13462,7 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :restockingFee,
       comment: "Use [[MonetaryAmount]] to specify a fixed restocking fee for product returns, or use [[Number]] to specify a percentage of the product price paid by the customer.",
-      domainIncludes: "http://schema.org/MerchantReturnPolicy",
+      domainIncludes: ["http://schema.org/MerchantReturnPolicy", "http://schema.org/MerchantReturnPolicySeasonalOverride"],
       "http://schema.org/isPartOf": "http://pending.schema.org",
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2880",
       label: "restockingFee",
@@ -13410,7 +13490,7 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :returnFees,
       comment: "The type of return fees for purchased products (for any return reason).",
-      domainIncludes: "http://schema.org/MerchantReturnPolicy",
+      domainIncludes: ["http://schema.org/MerchantReturnPolicy", "http://schema.org/MerchantReturnPolicySeasonalOverride"],
       "http://schema.org/isPartOf": "http://pending.schema.org",
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2288",
       label: "returnFees",
@@ -13426,7 +13506,7 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :returnMethod,
       comment: "The type of return method offered, specified from an enumeration.",
-      domainIncludes: "http://schema.org/MerchantReturnPolicy",
+      domainIncludes: ["http://schema.org/MerchantReturnPolicy", "http://schema.org/MerchantReturnPolicySeasonalOverride"],
       "http://schema.org/isPartOf": "http://pending.schema.org",
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2880",
       label: "returnMethod",
@@ -13458,7 +13538,7 @@ module RDF::Vocab
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :returnShippingFeesAmount,
       comment: "Amount of shipping costs for product returns (for any reason). Applicable when property [[returnFees]] equals [[ReturnShippingFees]].",
-      domainIncludes: "http://schema.org/MerchantReturnPolicy",
+      domainIncludes: ["http://schema.org/MerchantReturnPolicy", "http://schema.org/MerchantReturnPolicySeasonalOverride"],
       "http://schema.org/isPartOf": "http://pending.schema.org",
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2880",
       label: "returnShippingFeesAmount",
@@ -14249,7 +14329,7 @@ module RDF::Vocab
       rangeIncludes: ["http://schema.org/DateTime", "http://schema.org/Time"],
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :statType,
-      comment: "Indicates the kind of statistic represented by a [[StatisticalVariable]], e.g. mean, count etc. The value of statType is a property, either from within Schema.org (e.g. [[count]], [[median]], [[marginOfError]], [[maxValue]], [[minValue]]) or from other compatible (e.g. RDF) systems such as DataCommons.org or Wikidata.org. ",
+      comment: "Indicates the kind of statistic represented by a [[StatisticalVariable]], e.g. mean, count etc. The value of statType is a property, either from within Schema.org (e.g. [[median]], [[marginOfError]], [[maxValue]], [[minValue]]) or from other compatible (e.g. RDF) systems such as DataCommons.org or Wikidata.org. ",
       domainIncludes: "http://schema.org/StatisticalVariable",
       "http://schema.org/isPartOf": "http://pending.schema.org",
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2564",
@@ -15161,6 +15241,13 @@ module RDF::Vocab
       label: "validFor",
       rangeIncludes: "http://schema.org/Duration",
       type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    property :validForMemberTier,
+      comment: "The membership program tier an Offer (or a PriceSpecification, OfferShippingDetails, or MerchantReturnPolicy under an Offer) is valid for.",
+      domainIncludes: ["http://schema.org/MerchantReturnPolicy", "http://schema.org/Offer", "http://schema.org/OfferShippingDetails", "http://schema.org/PriceSpecification"],
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3563",
+      label: "validForMemberTier",
+      rangeIncludes: "http://schema.org/MemberProgramTier",
+      type: "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     property :validFrom,
       comment: "The date when the item becomes valid.",
       domainIncludes: ["http://schema.org/Certification", "http://schema.org/Demand", "http://schema.org/LocationFeatureSpecification", "http://schema.org/MonetaryAmount", "http://schema.org/Offer", "http://schema.org/OpeningHoursSpecification", "http://schema.org/Permit", "http://schema.org/PriceSpecification"],
@@ -15794,11 +15881,23 @@ module RDF::Vocab
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2534",
       label: "BusinessSupport",
       type: "http://schema.org/GovernmentBenefitsType"
+    term :ByBankTransferInAdvance,
+      comment: "Payment in advance by bank transfer, equivalent to <code>http://purl.org/goodrelations/v1#ByBankTransferInAdvance</code>.",
+      label: "ByBankTransferInAdvance",
+      type: "http://schema.org/PaymentMethodType"
+    term :ByInvoice,
+      comment: "Payment by invoice, typically after the goods were delivered, equivalent to <code>http://purl.org/goodrelations/v1#ByInvoice</code>.",
+      label: "ByInvoice",
+      type: "http://schema.org/PaymentMethodType"
     term :CDFormat,
       comment: "CDFormat.",
       "http://schema.org/contributor": "http://schema.org/docs/collab/MBZ",
       label: "CDFormat",
       type: "http://schema.org/MusicReleaseFormatType"
+    term :COD,
+      comment: "Cash on Delivery (COD) payment, equivalent to <code>http://purl.org/goodrelations/v1#COD</code>.",
+      label: "COD",
+      type: "http://schema.org/PaymentMethodType"
     term :CT,
       comment: "X-ray computed tomography imaging.",
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
@@ -15819,6 +15918,10 @@ module RDF::Vocab
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
       label: "CaseSeries",
       type: "http://schema.org/MedicalObservationalStudyDesign"
+    term :Cash,
+      comment: "Payment using cash, on premises, equivalent to <code>http://purl.org/goodrelations/v1#Cash</code>.",
+      label: "Cash",
+      type: "http://schema.org/PaymentMethodType"
     term :CassetteFormat,
       comment: "CassetteFormat.",
       "http://schema.org/contributor": "http://schema.org/docs/collab/MBZ",
@@ -15848,6 +15951,10 @@ module RDF::Vocab
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2543",
       label: "CharitableIncorporatedOrganization",
       type: "http://schema.org/UKNonprofitType"
+    term :CheckInAdvance,
+      comment: "Payment in advance by sending a check, equivalent to <code>http://purl.org/goodrelations/v1#CheckInAdvance</code>.",
+      label: "CheckInAdvance",
+      type: "http://schema.org/PaymentMethodType"
     term :Chiropractic,
       comment: "A system of medicine focused on the relationship between the body's structure, mainly the spine, and its functioning.",
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
@@ -16043,6 +16150,10 @@ module RDF::Vocab
       "http://schema.org/contributor": "http://schema.org/docs/collab/MBZ",
       label: "DigitalFormat",
       type: "http://schema.org/MusicReleaseFormatType"
+    term :DirectDebit,
+      comment: "Payment in advance by direct debit from the bank, equivalent to <code>http://purl.org/goodrelations/v1#DirectDebit</code>.",
+      label: "DirectDebit",
+      type: "http://schema.org/PaymentMethodType"
     term :DisabilitySupport,
       comment: "DisabilitySupport: this is a benefit for disability support.",
       "http://schema.org/isPartOf": "http://pending.schema.org",
@@ -16445,6 +16556,10 @@ module RDF::Vocab
       comment: "Indicates that the item is available only at physical locations.",
       label: "InStoreOnly",
       type: "http://schema.org/ItemAvailability"
+    term :InStorePrepay,
+      comment: "Payment in advance in some form of shop or kiosk for goods purchased online.",
+      label: "InStorePrepay",
+      type: "http://schema.org/PaymentMethodType"
     term :Infectious,
       comment: "Something in medical science that pertains to infectious diseases, i.e. caused by bacterial, viral, fungal or parasitic infections.",
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
@@ -16526,7 +16641,7 @@ module RDF::Vocab
       label: "LimitedByGuaranteeCharity",
       type: "http://schema.org/UKNonprofitType"
     term :ListPrice,
-      comment: "Represents the list price (the price a product is actually advertised for) of an offered product.",
+      comment: "Represents the list price of an offered product.",
       "http://schema.org/isPartOf": "http://pending.schema.org",
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2712",
       label: "ListPrice",
@@ -16583,6 +16698,10 @@ module RDF::Vocab
       "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/2712",
       label: "MSRP",
       type: "http://schema.org/PriceTypeEnumeration"
+    term :MadeToOrder,
+      comment: "Indicates that the item is made to order (custom made).",
+      label: "MadeToOrder",
+      type: "http://schema.org/ItemAvailability"
     term :Male,
       comment: "The male gender.",
       label: "Male",
@@ -17215,6 +17334,10 @@ module RDF::Vocab
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
       label: "PharmacySpecialty",
       type: "http://schema.org/MedicalSpecialty"
+    term :PhoneCarrierPayment,
+      comment: "Payment by billing via the phone carrier.",
+      label: "PhoneCarrierPayment",
+      type: "http://schema.org/PaymentMethodType"
     term :Physiotherapy,
       comment: "The practice of treatment of disease, injury, or deformity by physical methods such as massage, heat treatment, and exercise rather than by drugs or surgery.",
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
@@ -17382,6 +17505,12 @@ module RDF::Vocab
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
       label: "Registry",
       type: "http://schema.org/MedicalObservationalStudyDesign"
+    term :RegularPrice,
+      comment: "Represents the regular price (typically the previous advertised price before a sale) of an offered product. Often displayed as a strike-through price.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3583",
+      label: "RegularPrice",
+      type: "http://schema.org/PriceTypeEnumeration"
     term :ReimbursementCap,
       comment: "The drug's cost represents the maximum reimbursement paid by an insurer for the drug.",
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
@@ -17425,6 +17554,10 @@ module RDF::Vocab
       comment: "The status of a reservation when a request has been sent, but not confirmed.",
       label: "ReservationPending",
       type: "http://schema.org/ReservationStatusType"
+    term :Reserved,
+      comment: "Indicates that the item is reserved and therefore not available.",
+      label: "Reserved",
+      type: "http://schema.org/ItemAvailability"
     term :RespiratoryTherapy,
       comment: "The therapy that is concerned with the maintenance or improvement of respiratory function (as in patients with pulmonary disease).",
       "http://schema.org/isPartOf": "http://health-lifesci.schema.org",
@@ -17727,6 +17860,30 @@ module RDF::Vocab
       "http://schema.org/sameAs": "http://www.wikidata.org/entity/Q129",
       label: "Thursday",
       type: "http://schema.org/DayOfWeek"
+    term :TierBenefitLoyaltyPoints,
+      comment: "Benefit of the tier is earning of loyalty points.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3563",
+      label: "TierBenefitLoyaltyPoints",
+      type: "http://schema.org/TierBenefitEnumeration"
+    term :TierBenefitLoyaltyPrice,
+      comment: "Benefit of the tier is a members-only price.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3563",
+      label: "TierBenefitLoyaltyPrice",
+      type: "http://schema.org/TierBenefitEnumeration"
+    term :TierBenefitLoyaltyReturns,
+      comment: "Benefit of the tier is members-only returns, for example free unlimited returns.",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3563",
+      label: "TierBenefitLoyaltyReturns",
+      type: "http://schema.org/TierBenefitEnumeration"
+    term :TierBenefitLoyaltyShipping,
+      comment: "Benefit of the tier is a members-only shipping price or speed (for example free shipping or 1-day shipping).",
+      "http://schema.org/isPartOf": "http://pending.schema.org",
+      "http://schema.org/source": "https://github.com/schemaorg/schemaorg/issues/3563",
+      label: "TierBenefitLoyaltyShipping",
+      type: "http://schema.org/TierBenefitEnumeration"
     term :TobaccoNicotineConsideration,
       comment: "Item contains tobacco and/or nicotine, for example cigars, cigarettes, chewing tobacco, e-cigarettes, or hookahs.",
       "http://schema.org/isPartOf": "http://pending.schema.org",
