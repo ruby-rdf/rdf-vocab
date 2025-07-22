@@ -989,5 +989,25 @@ module RDF::Vocab
       isDefinedBy: "http://www.w3.org/2006/vcard/ns",
       label: {en: "value"},
       type: "http://www.w3.org/2002/07/owl#DatatypeProperty"
+
+    # Extra definitions
+    term :AddressBook,
+      comment: {en: "This term is not part of vCard as defined by the IETF"},
+      isDefinedBy: "https://raw.githack.com/solid/contacts/refs/heads/main/vcard-extension-addressbook.ttl"
+    term :WebID,
+      comment: {en: "This term is not part of vCard as defined by the IETF"},
+      isDefinedBy: "https://raw.githack.com/solid/contacts/refs/heads/main/vcard-extension-addressbook.ttl"
+    term :groupIndex,
+      comment: {en: "This term is not part of vCard as defined by the IETF"},
+      isDefinedBy: "https://raw.githack.com/solid/contacts/refs/heads/main/vcard-extension-addressbook.ttl"
+    term :inAddressBook,
+      comment: {en: "This term is not part of vCard as defined by the IETF"},
+      isDefinedBy: "https://raw.githack.com/solid/contacts/refs/heads/main/vcard-extension-addressbook.ttl"
+    term :includesGroup,
+      comment: {en: "This term is not part of vCard as defined by the IETF"},
+      isDefinedBy: "https://raw.githack.com/solid/contacts/refs/heads/main/vcard-extension-addressbook.ttl"
+    term :nameEmailIndex,
+      comment: {en: "This term is not part of vCard as defined by the IETF"},
+      isDefinedBy: "https://raw.githack.com/solid/contacts/refs/heads/main/vcard-extension-addressbook.ttl"
   end
 end

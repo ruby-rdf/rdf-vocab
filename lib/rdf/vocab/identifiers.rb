@@ -17,695 +17,921 @@ module RDF::Vocab
       type: ["http://www.loc.gov/mads/rdf/v1#MADSScheme", "http://www.w3.org/2004/02/skos/core#ConceptScheme"]
 
     # Property definitions
+    property :agorha,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "AGORHA (Accès global et organisé aux ressources en histoire de l'art)",
+      "http://www.loc.gov/mads/rdf/v1#code": "agorha",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :agrovoc,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "AGROVOC multilingual agricultural thesaurus",
+      "http://www.loc.gov/mads/rdf/v1#code": "agrovoc",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :allmovie,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "AllMovie",
+      "http://www.loc.gov/mads/rdf/v1#code": "allmovie",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :allmusic,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "AllMusic",
+      "http://www.loc.gov/mads/rdf/v1#code": "allmusic",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :allocine,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "AlloCiné",
+      "http://www.loc.gov/mads/rdf/v1#code": "allocine",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :amnbo,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "American National Biography Online",
+      "http://www.loc.gov/mads/rdf/v1#code": "amnbo",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ansi,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "American National Standards Institute and National Information Standards Organisation number for an ANSI or ANSI/NISO standard",
+      "http://www.loc.gov/mads/rdf/v1#code": "ansi",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :archinl,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "archINFORM index of locations",
+      "http://www.loc.gov/mads/rdf/v1#code": "archinl",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :archinpe,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "archINFORM index of persons",
+      "http://www.loc.gov/mads/rdf/v1#code": "archinpe",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :archinpr,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "archINFORM projects",
+      "http://www.loc.gov/mads/rdf/v1#code": "archinpr",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :archna,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Archnet authorities",
+      "http://www.loc.gov/mads/rdf/v1#code": "archna",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :archns,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Archnet sites",
+      "http://www.loc.gov/mads/rdf/v1#code": "archns",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ark,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Archival resource key (ARK) identifiers",
+      "http://www.loc.gov/mads/rdf/v1#code": "ark",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :artsy,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Artsy",
+      "http://www.loc.gov/mads/rdf/v1#code": "artsy",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :artukart,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Art UK artists",
+      "http://www.loc.gov/mads/rdf/v1#code": "artukart",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :artukaw,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Art UK artworks",
+      "http://www.loc.gov/mads/rdf/v1#code": "artukaw",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :arxiv,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "arXiv",
+      "http://www.loc.gov/mads/rdf/v1#code": "arxiv",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :atg,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Agricultural thesaurus and glossary",
+      "http://www.loc.gov/mads/rdf/v1#code": "atg",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ausbn,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Australian business number (ABN)",
+      "http://www.loc.gov/mads/rdf/v1#code": "ausbn",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :auscn,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Australian company number (ACN)",
+      "http://www.loc.gov/mads/rdf/v1#code": "auscn",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ausnzst,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Australian/New Zealand standards",
+      "http://www.loc.gov/mads/rdf/v1#code": "ausnzst",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ausrn,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Australian registered body number (ABRN)",
+      "http://www.loc.gov/mads/rdf/v1#code": "ausrn",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ausst,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Australian standards (Standards Australia)",
+      "http://www.loc.gov/mads/rdf/v1#code": "ausst",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :balat,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "BALaT (Belgian art links and tools) People & institutions",
+      "http://www.loc.gov/mads/rdf/v1#code": "balat",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :bbcth,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "BBC things",
+      "http://www.loc.gov/mads/rdf/v1#code": "bbcth",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :bbrainza,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "BookBrainz author",
+      "http://www.loc.gov/mads/rdf/v1#code": "bbrainza",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :bbrainzp,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "BookBrainz publisher",
+      "http://www.loc.gov/mads/rdf/v1#code": "bbrainzp",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :bbrainzw,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "BookBrainz work",
+      "http://www.loc.gov/mads/rdf/v1#code": "bbrainzw",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :bdrc,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Buddhist Digital Resource Center",
+      "http://www.loc.gov/mads/rdf/v1#code": "bdrc",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :bdusc,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Biographical directory of the United States Congress",
+      "http://www.loc.gov/mads/rdf/v1#code": "bdusc",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :belvku,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Belvedere Künstler",
+      "http://www.loc.gov/mads/rdf/v1#code": "belvku",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :belvwrk,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Belvedere Werke",
+      "http://www.loc.gov/mads/rdf/v1#code": "belvwrk",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :benezit,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Benezit dictionary of artists",
+      "http://www.loc.gov/mads/rdf/v1#code": "benezit",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :bew,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Biographies of the entomologists of the world",
+      "http://www.loc.gov/mads/rdf/v1#code": "bew",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :bfi,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "BFI - British Film Institute",
+      "http://www.loc.gov/mads/rdf/v1#code": "bfi",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :bhb,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Bibliography of the Hebrew book",
+      "http://www.loc.gov/mads/rdf/v1#code": "bhb",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :bibbi,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "BIBBI autoriteter",
+      "http://www.loc.gov/mads/rdf/v1#code": "bibbi",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :bigenc,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Большая российская энциклопедия = Bolʹshai︠a︡ rossiĭskai︠a︡ ėnt︠s︡iklopedii︠a︡ (Great Russian Encyclopedia)",
+      "http://www.loc.gov/mads/rdf/v1#code": "bigenc",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :bnfcg,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "BnF catalogue général",
+      "http://www.loc.gov/mads/rdf/v1#code": "bnfcg",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :bpn,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Biografisch Portaal van Nederland = Biography portal of the Netherlands",
+      "http://www.loc.gov/mads/rdf/v1#code": "bpn",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :bsi,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "British Standards Institution",
+      "http://www.loc.gov/mads/rdf/v1#code": "bsi",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :cabt,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "CABI thesaurus",
+      "http://www.loc.gov/mads/rdf/v1#code": "cabt",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :cana,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Canadiana authorities",
+      "http://www.loc.gov/mads/rdf/v1#code": "cana",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :cantic,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "CANTIC (Catàleg d'autoritats de noms i títols de Catalunya)",
+      "http://www.loc.gov/mads/rdf/v1#code": "cantic",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :cbwpid,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Collective biographies of women",
+      "http://www.loc.gov/mads/rdf/v1#code": "cbwpid",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :cerl,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "CERL thesaurus",
+      "http://www.loc.gov/mads/rdf/v1#code": "cerl",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :cgndb,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Canadian geographical names database",
+      "http://www.loc.gov/mads/rdf/v1#code": "cgndb",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :clara,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Clara: database of women artists",
+      "http://www.loc.gov/mads/rdf/v1#code": "clara",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :cnbksy,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Quan guo bao kan suo yin (CNBKSY)",
+      "http://www.loc.gov/mads/rdf/v1#code": "cnbksy",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :conccc,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Congress.gov congressional committee codes",
+      "http://www.loc.gov/mads/rdf/v1#code": "conccc",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :csfdcz,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Česko-Slovenská filmová databáze",
+      "http://www.loc.gov/mads/rdf/v1#code": "csfdcz",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :danacode,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Danacode",
+      "http://www.loc.gov/mads/rdf/v1#code": "danacode",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :darome,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Digital atlas of the Roman Empire",
+      "http://www.loc.gov/mads/rdf/v1#code": "darome",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :datoses,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "datos.bne.es",
+      "http://www.loc.gov/mads/rdf/v1#code": "datoses",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :discogs,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Discogs",
+      "http://www.loc.gov/mads/rdf/v1#code": "discogs",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :dkfilm,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Det Danske Filminstitut Filmdatabasen",
+      "http://www.loc.gov/mads/rdf/v1#code": "dkfilm",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :dma,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Digital musikkarkiv",
+      "http://www.loc.gov/mads/rdf/v1#code": "dma",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :doi,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Digital object identifier",
+      "http://www.loc.gov/mads/rdf/v1#code": "doi",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :dpb,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Dictionnaire des peintres belges",
+      "http://www.loc.gov/mads/rdf/v1#code": "dpb",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ean,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "International article number",
+      "http://www.loc.gov/mads/rdf/v1#code": "ean",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ecli,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "European case law identifier",
+      "http://www.loc.gov/mads/rdf/v1#code": "ecli",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :eidr,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "EIDR: entertainment identifier registry",
+      "http://www.loc.gov/mads/rdf/v1#code": "eidr",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :elsst,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "ELSST thesaurus - European language social science thesaurus",
+      "http://www.loc.gov/mads/rdf/v1#code": "elsst",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :"emanus-vlid",
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Digital platform for manuscript material from Swiss libraries and archives",
+      "http://www.loc.gov/mads/rdf/v1#code": "emanus-vlid",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :emlo,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Early modern letters online",
+      "http://www.loc.gov/mads/rdf/v1#code": "emlo",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :"erara-vlid",
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "The platform for digitized rare books from Swiss institutions",
+      "http://www.loc.gov/mads/rdf/v1#code": "erara-vlid",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :famsea,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "FamilySearch",
+      "http://www.loc.gov/mads/rdf/v1#code": "famsea",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :fast,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "FAST: faceted application of subject terminology",
+      "http://www.loc.gov/mads/rdf/v1#code": "fast",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :fidecp,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Fide chess profile",
+      "http://www.loc.gov/mads/rdf/v1#code": "fidecp",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :filmaff,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Film affinity",
+      "http://www.loc.gov/mads/rdf/v1#code": "filmaff",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :filmport,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "filmportal.de",
+      "http://www.loc.gov/mads/rdf/v1#code": "filmport",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :findagr,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Find a Grave",
+      "http://www.loc.gov/mads/rdf/v1#code": "findagr",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :fisa,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "FIS athlete",
+      "http://www.loc.gov/mads/rdf/v1#code": "fisa",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :freebase,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Freebase",
+      "http://www.loc.gov/mads/rdf/v1#code": "freebase",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :gacsch,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Global agricultural concept space (GACS)",
+      "http://www.loc.gov/mads/rdf/v1#code": "gacsch",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :gec,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Gran enciclopèdia catalana",
+      "http://www.loc.gov/mads/rdf/v1#code": "gec",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :gemet,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "GEMET thesaurus",
+      "http://www.loc.gov/mads/rdf/v1#code": "gemet",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :geogndb,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Geographic names database",
+      "http://www.loc.gov/mads/rdf/v1#code": "geogndb",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :geonames,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "GeoNames",
+      "http://www.loc.gov/mads/rdf/v1#code": "geonames",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :geprishisp,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "GEPRIS Historisch ID (Person)",
+      "http://www.loc.gov/mads/rdf/v1#code": "geprishisp",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :gettyaat,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Art & architecture theasurus online",
+      "http://www.loc.gov/mads/rdf/v1#code": "gettyaat",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :gettyart,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "J. Paul Getty Museum artists",
+      "http://www.loc.gov/mads/rdf/v1#code": "gettyart",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :gettyobj,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "J. Paul Getty Museum objects",
+      "http://www.loc.gov/mads/rdf/v1#code": "gettyobj",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :gettytgn,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Getty thesaurus of geographic names online",
+      "http://www.loc.gov/mads/rdf/v1#code": "gettytgn",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :gettyulan,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Union list of artist names online",
+      "http://www.loc.gov/mads/rdf/v1#code": "gettyulan",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :gnd,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Gemeinsame Normdatei",
+      "http://www.loc.gov/mads/rdf/v1#code": "gnd",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :gnis,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Geographic names information system (GNIS)",
+      "http://www.loc.gov/mads/rdf/v1#code": "gnis",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :goodra,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Goodreads authors",
+      "http://www.loc.gov/mads/rdf/v1#code": "goodra",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :gtaa,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Gemeenschappelijke Thesaurus voor Audiovisuele Archieven",
+      "http://www.loc.gov/mads/rdf/v1#code": "gtaa",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :"gtin-14",
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Global trade identification number 14 (EAN/UCC-128 or ITF-14)",
+      "http://www.loc.gov/mads/rdf/v1#code": "gtin-14",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :hdl,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Handle",
+      "http://www.loc.gov/mads/rdf/v1#code": "hdl",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :iaafa,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "World Athletics",
+      "http://www.loc.gov/mads/rdf/v1#code": "iaafa",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ibdb,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "IBDB: Internet Broadway database",
+      "http://www.loc.gov/mads/rdf/v1#code": "ibdb",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :iconauth,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Iconography authority",
+      "http://www.loc.gov/mads/rdf/v1#code": "iconauth",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :iconclass,
+      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Iconclass",
+      "http://www.loc.gov/mads/rdf/v1#code": "iconclass",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
     property :id,
       comment: "Generic Identifier property.  It is expected that one will use one of its many subproperties.",
       label: "Identifier",
       type: "rdf:Property"
-
-    # Extra definitions
-    term :agorha,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "AGORHA (Accès global et organisé aux ressources en histoire de l'art)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :agrovoc,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "AGROVOC multilingual agricultural thesaurus",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :allmovie,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "AllMovie",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :allmusic,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "AllMusic",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :allocine,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "AlloCiné",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :amnbo,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "American National Biography Online",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ansi,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "American National Standards Institute and National Information Standards Organisation number for an ANSI or ANSI/NISO standard",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :archinl,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "archINFORM index of locations",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :archinpe,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "archINFORM index of persons",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :archinpr,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "archINFORM projects",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :archna,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Archnet authorities",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :archns,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Archnet sites",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ark,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Archival resource key (ARK) identifiers",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :artsy,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Artsy",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :artukart,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Art UK artists",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :artukaw,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Art UK artworks",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :arxiv,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "arXiv",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :atg,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Agricultural thesaurus and glossary",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ausbn,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Australian business number (ABN)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :auscn,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Australian company number (ACN)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ausnzst,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Australian/New Zealand standards",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ausrn,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Australian registered body number (ABRN)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ausst,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Australian standards (Standards Australia)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :balat,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "BALaT (Belgian art links and tools) People & institutions",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :bbcth,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "BBC things",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :bbrainza,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "BookBrainz author",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :bbrainzp,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "BookBrainz publisher",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :bbrainzw,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "BookBrainz work",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :bdrc,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Buddhist Digital Resource Center",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :bdusc,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Biographical directory of the United States Congress",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :belvku,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Belvedere Künstler",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :belvwrk,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Belvedere Werke",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :benezit,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Benezit dictionary of artists",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :bew,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Biographies of the entomologists of the world",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :bfi,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "BFI - British Film Institute",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :bhb,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Bibliography of the Hebrew book",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :bibbi,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "BIBBI autoriteter",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :bigenc,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Большая российская энциклопедия = Bolʹshai︠a︡ rossiĭskai︠a︡ ėnt︠s︡iklopedii︠a︡ (Great Russian Encyclopedia)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :bnfcg,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "BnF catalogue général",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :bpn,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Biografisch Portaal van Nederland = Biography portal of the Netherlands",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :bsi,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "British Standards Institution",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :cabt,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "CABI thesaurus",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :cana,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Canadiana authorities",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :cantic,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "CANTIC (Catàleg d'autoritats de noms i títols de Catalunya)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :cbwpid,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Collective biographies of women",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :cerl,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "CERL thesaurus",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :cgndb,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Canadian geographical names database",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :clara,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Clara: database of women artists",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :cnbksy,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Quan guo bao kan suo yin (CNBKSY)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :conccc,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Congress.gov congressional committee codes",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :csfdcz,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Česko-Slovenská filmová databáze",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :danacode,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Danacode",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :darome,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Digital atlas of the Roman Empire",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :datoses,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "datos.bne.es",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :discogs,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Discogs",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :dkfilm,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Det Danske Filminstitut Filmdatabasen",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :dma,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Digital musikkarkiv",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :doi,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Digital object identifier",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :dpb,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Dictionnaire des peintres belges",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ean,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "International article number",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ecli,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "European case law identifier",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :eidr,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "EIDR: entertainment identifier registry",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :elsst,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "ELSST thesaurus - European language social science thesaurus",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :"emanus-vlid",
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Digital platform for manuscript material from Swiss libraries and archives",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :emlo,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Early modern letters online",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :"erara-vlid",
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "The platform for digitized rare books from Swiss institutions",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :famsea,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "FamilySearch",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :fast,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "FAST: faceted application of subject terminology",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :fidecp,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Fide chess profile",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :filmaff,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Film affinity",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :filmport,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "filmportal.de",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :findagr,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Find a Grave",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :fisa,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "FIS athlete",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :freebase,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Freebase",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :gacsch,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Global agricultural concept space (GACS)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :gec,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Gran enciclopèdia catalana",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :gemet,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "GEMET thesaurus",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :geogndb,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Geographic names database",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :geonames,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "GeoNames",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :geprishisp,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "GEPRIS Historisch ID (Person)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :gettyaat,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Art & architecture theasurus online",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :gettyart,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "J. Paul Getty Museum artists",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :gettyobj,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "J. Paul Getty Museum objects",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :gettytgn,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Getty thesaurus of geographic names online",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :gettyulan,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Union list of artist names online",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :gnd,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Gemeinsame Normdatei",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :gnis,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Geographic names information system (GNIS)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :goodra,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Goodreads authors",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :gtaa,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Gemeenschappelijke Thesaurus voor Audiovisuele Archieven",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :"gtin-14",
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Global trade identification number 14 (EAN/UCC-128 or ITF-14)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :hdl,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Handle",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :iaafa,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "World Athletics",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ibdb,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "IBDB: Internet Broadway database",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :iconauth,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Iconography authority",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :iconclass,
-      "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Iconclass",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :idref,
+    property :idref,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "IdRef: identifiants et référentiels",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ilot,
+      "http://www.loc.gov/mads/rdf/v1#code": "idref",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ilot,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "ILO Thesaurus",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :imdb,
+      "http://www.loc.gov/mads/rdf/v1#code": "ilot",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :imdb,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "IMDB: Internet Movie Database",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :inspire,
+      "http://www.loc.gov/mads/rdf/v1#code": "imdb",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :inspire,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "INSPIRE HEP",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :isan,
+      "http://www.loc.gov/mads/rdf/v1#code": "inspire",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :isan,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "International standard audiovisual number",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :isbn,
+      "http://www.loc.gov/mads/rdf/v1#code": "isan",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :isbn,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "International standard book number",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :"isbn-a",
+      "http://www.loc.gov/mads/rdf/v1#code": "isbn",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :"isbn-a",
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "International standard book number (the actionable ISBN)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :isbnre,
+      "http://www.loc.gov/mads/rdf/v1#code": "isbn-a",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :isbnre,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "ISBN (International Standard Book Number) registrant element",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :isbnsbn,
+      "http://www.loc.gov/mads/rdf/v1#code": "isbnre",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :isbnsbn,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Identificativo SBN",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :isfdbau,
+      "http://www.loc.gov/mads/rdf/v1#code": "isbnsbn",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :isfdbau,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "ISFDB author directory",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :isfdbaw,
+      "http://www.loc.gov/mads/rdf/v1#code": "isfdbau",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :isfdbaw,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "ISFDB award directory",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :isfdbma,
+      "http://www.loc.gov/mads/rdf/v1#code": "isfdbaw",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :isfdbma,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "ISFDB magazine directory",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :isfdbpu,
+      "http://www.loc.gov/mads/rdf/v1#code": "isfdbma",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :isfdbpu,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "ISFDB publisher directory",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :isil,
+      "http://www.loc.gov/mads/rdf/v1#code": "isfdbpu",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :isil,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "ISIL (International standard identifier for libraries and related organizations)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ismm,
+      "http://www.loc.gov/mads/rdf/v1#code": "isil",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ismm,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "International standard music number",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :isni,
+      "http://www.loc.gov/mads/rdf/v1#code": "ismm",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :isni,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "International standard name identifier",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :iso,
+      "http://www.loc.gov/mads/rdf/v1#code": "isni",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :iso,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "International Organization for Standardization number for an ISO standard",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :isrc,
+      "http://www.loc.gov/mads/rdf/v1#code": "iso",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :isrc,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "International standard recording code",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :issn,
+      "http://www.loc.gov/mads/rdf/v1#code": "isrc",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :issn,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "International standard serial number",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :"issn-l",
+      "http://www.loc.gov/mads/rdf/v1#code": "issn",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :"issn-l",
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Linking International standard serial number",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :"issue-number",
+      "http://www.loc.gov/mads/rdf/v1#code": "issn-l",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :"issue-number",
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Sound recording issue number",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :istc,
+      "http://www.loc.gov/mads/rdf/v1#code": "issue-number",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :istc,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "International standard text code",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :iswc,
+      "http://www.loc.gov/mads/rdf/v1#code": "istc",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :iswc,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "International standard musical work code",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :"it-acnp",
+      "http://www.loc.gov/mads/rdf/v1#code": "iswc",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :"it-acnp",
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Catalogo italiano dei periodici",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :itar,
+      "http://www.loc.gov/mads/rdf/v1#code": "it-acnp",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :itar,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "ITAR (Importtjeneste og autoritetsregistre)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :kaken,
+      "http://www.loc.gov/mads/rdf/v1#code": "itar",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :kaken,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Researcher Number of the Grants-in-Aid for Scientific Research (KAKENHI) Program",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :kda,
+      "http://www.loc.gov/mads/rdf/v1#code": "kaken",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :kda,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Kunstindeks Danmark artist",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :kdw,
+      "http://www.loc.gov/mads/rdf/v1#code": "kda",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :kdw,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Kunstindeks Danmark work",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :kinopo,
+      "http://www.loc.gov/mads/rdf/v1#code": "kdw",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :kinopo,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "KinoPoisk",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :knpam,
+      "http://www.loc.gov/mads/rdf/v1#code": "kinopo",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :knpam,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Russian National Heritage Registry for Books",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ktga,
+      "http://www.loc.gov/mads/rdf/v1#code": "knpam",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ktga,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Author ID of the Union Catalogue Database of Japanese Texts",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ktgw,
+      "http://www.loc.gov/mads/rdf/v1#code": "ktga",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ktgw,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Work ID of the Union Catalogue Database of Japanese Texts",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :kulturnav,
+      "http://www.loc.gov/mads/rdf/v1#code": "ktgw",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :kulturnav,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Kulturnav",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :lattes,
+      "http://www.loc.gov/mads/rdf/v1#code": "kulturnav",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :lattes,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Curriculo Lattes",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :lccn,
+      "http://www.loc.gov/mads/rdf/v1#code": "lattes",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :lccn,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Library of Congress control number",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :lcmd,
+      "http://www.loc.gov/mads/rdf/v1#code": "lccn",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :lcmd,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Library of Congress Manuscript Division field of history codes",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :lei,
+      "http://www.loc.gov/mads/rdf/v1#code": "lcmd",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :lei,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Legal entity identifier system",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :libaus,
+      "http://www.loc.gov/mads/rdf/v1#code": "lei",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :libaus,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Libraries Australia",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :local,
+      "http://www.loc.gov/mads/rdf/v1#code": "libaus",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :local,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Locally defined identifier",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :manto,
+      "http://www.loc.gov/mads/rdf/v1#code": "local",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :manto,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "MANTO",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :margaz,
+      "http://www.loc.gov/mads/rdf/v1#code": "manto",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :margaz,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Marine Gazetteer",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :"matrix-number",
+      "http://www.loc.gov/mads/rdf/v1#code": "margaz",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :"matrix-number",
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Sound recording matrix number",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :mesh,
+      "http://www.loc.gov/mads/rdf/v1#code": "matrix-number",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :mesh,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Medical Subject Headings",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :mocofo,
+      "http://www.loc.gov/mads/rdf/v1#code": "mesh",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :mocofo,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Musée d'Orsay Catalogue des oeuvres fiche oeuvre",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :moma,
+      "http://www.loc.gov/mads/rdf/v1#code": "mocofo",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :moma,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Museum of Modern Art",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :morana,
+      "http://www.loc.gov/mads/rdf/v1#code": "moma",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :morana,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Musée d'Orsay Répertoire des artistes notice artiste",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :moviemetf,
+      "http://www.loc.gov/mads/rdf/v1#code": "morana",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :moviemetf,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "MovieMeter films",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :moviemetr,
+      "http://www.loc.gov/mads/rdf/v1#code": "moviemetf",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :moviemetr,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "MovieMeter regisseurs",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :munzing,
+      "http://www.loc.gov/mads/rdf/v1#code": "moviemetr",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :munzing,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Munzinger",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :muscl,
+      "http://www.loc.gov/mads/rdf/v1#code": "munzing",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :muscl,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Music Sales Classical",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :"music-plate",
+      "http://www.loc.gov/mads/rdf/v1#code": "muscl",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :"music-plate",
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Publisher's music plate number",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :"music-publisher",
+      "http://www.loc.gov/mads/rdf/v1#code": "music-plate",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :"music-publisher",
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Publisher-assigned music number",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :musicb,
+      "http://www.loc.gov/mads/rdf/v1#code": "music-publisher",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :musicb,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "MusicBrainz",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :nacat,
+      "http://www.loc.gov/mads/rdf/v1#code": "musicb",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :nacat,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "National Archives Catalog",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :nagv,
+      "http://www.loc.gov/mads/rdf/v1#code": "nacat",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :nagv,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "The National Archives (Great Britain)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :natgazfid,
+      "http://www.loc.gov/mads/rdf/v1#code": "nagv",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :natgazfid,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "U.S. National Gazetteer Feature Name Identifier",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :nga,
+      "http://www.loc.gov/mads/rdf/v1#code": "natgazfid",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :nga,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "National Gallery of Art",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ngva,
+      "http://www.loc.gov/mads/rdf/v1#code": "nga",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ngva,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "National Gallery of Victoria artist",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ngvw,
+      "http://www.loc.gov/mads/rdf/v1#code": "ngva",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ngvw,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "National Gallery of Victoria work",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :nii,
+      "http://www.loc.gov/mads/rdf/v1#code": "ngvw",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :nii,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Author Authority ID of NACSIS-CAT",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :nipo,
+      "http://www.loc.gov/mads/rdf/v1#code": "nii",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :nipo,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "NIPO (Número de Identificación de las Publicaciones Oficiales)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :nlg,
+      "http://www.loc.gov/mads/rdf/v1#code": "nipo",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :nlg,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "National Library of Greece",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :nndb,
+      "http://www.loc.gov/mads/rdf/v1#code": "nlg",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :nndb,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "NNDB (Notable Names Database)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :npg,
+      "http://www.loc.gov/mads/rdf/v1#code": "nndb",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :npg,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "National Portrait Gallery",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :nstc,
+      "http://www.loc.gov/mads/rdf/v1#code": "npg",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :nstc,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "National Standard Text Code",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :nzggn,
+      "http://www.loc.gov/mads/rdf/v1#code": "nstc",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :nzggn,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "New Zealand gazetteer of place names",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :oalex,
+      "http://www.loc.gov/mads/rdf/v1#code": "nzggn",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :oalex,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "OpenAlex",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :odnb,
+      "http://www.loc.gov/mads/rdf/v1#code": "oalex",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :odnb,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Oxford Dictionary of National Biography",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ofdb,
+      "http://www.loc.gov/mads/rdf/v1#code": "odnb",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ofdb,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "OFDb: Online-Filmdatenbank",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :onix,
+      "http://www.loc.gov/mads/rdf/v1#code": "ofdb",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :onix,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "ONIX (Online Information Exchange)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :opensm,
+      "http://www.loc.gov/mads/rdf/v1#code": "onix",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :opensm,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "OpenStreetMap",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :orcid,
+      "http://www.loc.gov/mads/rdf/v1#code": "opensm",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :orcid,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Open researcher and contributor identifier",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :orgnr,
+      "http://www.loc.gov/mads/rdf/v1#code": "orcid",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :orgnr,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Norwegian national organization number",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :oxforddnb,
+      "http://www.loc.gov/mads/rdf/v1#code": "orgnr",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :oxforddnb,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Oxford biography index",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :pcadbu,
+      "http://www.loc.gov/mads/rdf/v1#code": "oxforddnb",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :pcadbu,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Pacific Coast Architecture Database - buildings list",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :pcadpe,
+      "http://www.loc.gov/mads/rdf/v1#code": "pcadbu",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :pcadpe,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Pacific Coast Architecture Database - persons list",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :pcadpf,
+      "http://www.loc.gov/mads/rdf/v1#code": "pcadpe",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :pcadpf,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Pacific Coast Architecture Database - practices and firms",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :permid,
+      "http://www.loc.gov/mads/rdf/v1#code": "pcadpf",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :permid,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "PermID",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :picnypl,
+      "http://www.loc.gov/mads/rdf/v1#code": "permid",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :picnypl,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "PIC - Photographers' Identities Catalog",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :pleiades,
+      "http://www.loc.gov/mads/rdf/v1#code": "picnypl",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :pleiades,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Pleiades: a gazetteer of past places",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :pmc,
+      "http://www.loc.gov/mads/rdf/v1#code": "pleiades",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :pmc,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "PubMed Central",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :pmid,
+      "http://www.loc.gov/mads/rdf/v1#code": "pmc",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :pmid,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "PubMed",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :pnta,
+      "http://www.loc.gov/mads/rdf/v1#code": "pmid",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :pnta,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Personen uit de Nederlandse Thesaurus van Auteursnamen",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :porthu,
+      "http://www.loc.gov/mads/rdf/v1#code": "pnta",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :porthu,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "PORT.hu",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :prabook,
+      "http://www.loc.gov/mads/rdf/v1#code": "porthu",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :prabook,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Prabook",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :rid,
+      "http://www.loc.gov/mads/rdf/v1#code": "prabook",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :rid,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "ResearcherID",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :rijkspid,
+      "http://www.loc.gov/mads/rdf/v1#code": "rid",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :rijkspid,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Rijksmuseum persistent identifiers",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :rism,
+      "http://www.loc.gov/mads/rdf/v1#code": "rijkspid",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :rism,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Repertoire International des Sources Musicale (RISM)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :rkda,
+      "http://www.loc.gov/mads/rdf/v1#code": "rism",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :rkda,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "RKDartists",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ror,
+      "http://www.loc.gov/mads/rdf/v1#code": "rkda",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ror,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Research Organization Registry",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :s2a3bd,
+      "http://www.loc.gov/mads/rdf/v1#code": "ror",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :s2a3bd,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "S2A3 biographical database of southern African science",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :saam,
+      "http://www.loc.gov/mads/rdf/v1#code": "s2a3bd",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :saam,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Smithsonian American Art Museum",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :scholaru,
+      "http://www.loc.gov/mads/rdf/v1#code": "saam",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :scholaru,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Scholar Universe",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :scope,
+      "http://www.loc.gov/mads/rdf/v1#code": "scholaru",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :scope,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Scope",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :scopus,
+      "http://www.loc.gov/mads/rdf/v1#code": "scope",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :scopus,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Scopus author identifier",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :sici,
+      "http://www.loc.gov/mads/rdf/v1#code": "scopus",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :sici,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Serial item and contribution identifier",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :smgp,
+      "http://www.loc.gov/mads/rdf/v1#code": "sici",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :smgp,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Science Museum Group People",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :snac,
+      "http://www.loc.gov/mads/rdf/v1#code": "smgp",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :snac,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Social Networks and Archival Context",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :spotify,
+      "http://www.loc.gov/mads/rdf/v1#code": "snac",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :spotify,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Spotify",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :sprfbsb,
+      "http://www.loc.gov/mads/rdf/v1#code": "spotify",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :sprfbsb,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Sports Reference: Baseball",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :sprfbsk,
+      "http://www.loc.gov/mads/rdf/v1#code": "sprfbsb",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :sprfbsk,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Sports Reference: Basketball",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :sprfcbb,
+      "http://www.loc.gov/mads/rdf/v1#code": "sprfbsk",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :sprfcbb,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Sports Reference: College Basketball",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :sprfcfb,
+      "http://www.loc.gov/mads/rdf/v1#code": "sprfcbb",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :sprfcfb,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Sports Reference: College Football",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :sprfhoc,
+      "http://www.loc.gov/mads/rdf/v1#code": "sprfcfb",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :sprfhoc,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Sports Reference: Hockey",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :sprfoly,
+      "http://www.loc.gov/mads/rdf/v1#code": "sprfhoc",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :sprfoly,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Sports Reference: Olympic Sports",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :sprfpfb,
+      "http://www.loc.gov/mads/rdf/v1#code": "sprfoly",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :sprfpfb,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Sports Reference: Pro Football",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :ssaut,
+      "http://www.loc.gov/mads/rdf/v1#code": "sprfpfb",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :ssaut,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Semantic Scholar (Author)",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :"stock-number",
+      "http://www.loc.gov/mads/rdf/v1#code": "ssaut",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :"stock-number",
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Publisher, distributor, or vendor stock number",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :strn,
+      "http://www.loc.gov/mads/rdf/v1#code": "stock-number",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :strn,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Standard technical report number",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :stw,
+      "http://www.loc.gov/mads/rdf/v1#code": "strn",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :stw,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Standard-Thesaurus Wirtschaft = STW thesaurus for economics",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :svfilm,
+      "http://www.loc.gov/mads/rdf/v1#code": "stw",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :svfilm,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Svensk Filmdatabas",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :tatearid,
+      "http://www.loc.gov/mads/rdf/v1#code": "svfilm",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :tatearid,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Tate artist identifier",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :theatr,
+      "http://www.loc.gov/mads/rdf/v1#code": "tatearid",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :theatr,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Theatricalia",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :tpce,
+      "http://www.loc.gov/mads/rdf/v1#code": "theatr",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :tpce,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Tesauros del Patrimonio Cultural de España",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :trove,
+      "http://www.loc.gov/mads/rdf/v1#code": "tpce",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :trove,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Trove",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :twnaf,
+      "http://www.loc.gov/mads/rdf/v1#code": "trove",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :twnaf,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Taiwan name authority file",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :unescot,
+      "http://www.loc.gov/mads/rdf/v1#code": "twnaf",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :unescot,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "UNESCO thesaurus = Thésaurus de l'UNESCO = Tesauro de la UNESCO",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :upc,
+      "http://www.loc.gov/mads/rdf/v1#code": "unescot",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :upc,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Universal product code",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :urbe,
+      "http://www.loc.gov/mads/rdf/v1#code": "upc",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :urbe,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Parsifal",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :uri,
+      "http://www.loc.gov/mads/rdf/v1#code": "urbe",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :uri,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Uniform resource identifier",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :urn,
+      "http://www.loc.gov/mads/rdf/v1#code": "uri",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :urn,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Uniform resource name",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :vd16,
+      "http://www.loc.gov/mads/rdf/v1#code": "urn",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :vd16,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Verzeichnis der Drucke des 16. Jahrhunderts",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :vd17,
+      "http://www.loc.gov/mads/rdf/v1#code": "vd16",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :vd17,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Verzeichnis der Drucke des 17. Jahrhunderts",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :vd18,
+      "http://www.loc.gov/mads/rdf/v1#code": "vd17",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :vd18,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Verzeichnis der Drucke des 18. Jahrhunderts",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :vera,
+      "http://www.loc.gov/mads/rdf/v1#code": "vd18",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :vera,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Danish Authority File",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :vgmdb,
+      "http://www.loc.gov/mads/rdf/v1#code": "vera",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :vgmdb,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "VGMdb artists",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :viaf,
+      "http://www.loc.gov/mads/rdf/v1#code": "vgmdb",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :viaf,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Virtual International Authority File number",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :"videorecording-identifer",
+      "http://www.loc.gov/mads/rdf/v1#code": "viaf",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :"videorecording-identifer",
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Publisher-assigned videorecording number",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :wikidata,
+      "http://www.loc.gov/mads/rdf/v1#code": "videorecording-identifer",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :wikidata,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Wikidata",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :wndla,
+      "http://www.loc.gov/mads/rdf/v1#code": "wikidata",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :wndla,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "Web NDL authorities",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :worldcat,
+      "http://www.loc.gov/mads/rdf/v1#code": "wndla",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :worldcat,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "WorldCat Entities",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :xgamea,
+      "http://www.loc.gov/mads/rdf/v1#code": "worldcat",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :xgamea,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "X Games athletes",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
-    term :zbaut,
+      "http://www.loc.gov/mads/rdf/v1#code": "xgamea",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
+    property :zbaut,
       "http://www.loc.gov/mads/rdf/v1#authoritativeLabel": "ZooBank",
-      type: "http://www.loc.gov/mads/rdf/v1#Authority"
+      "http://www.loc.gov/mads/rdf/v1#code": "zbaut",
+      type: ["http://id.loc.gov/ontologies/bibframe/Identifier", "http://www.loc.gov/mads/rdf/v1#Authority", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"]
   end
 end
